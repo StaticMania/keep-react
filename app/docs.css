@@ -1,0 +1,10 @@
+#mainContent h2 {
+  @apply font-bold text-xl text-slate-900 mb-4 mt-5 first:mt-0;
+}
+#mainContent > p {
+  @apply font-normal text-base text-slate-500 mb-3 mt-4;
+}
+
+.tabActive {
+  @apply bg-slate-25 border-slate-900 border-b-2 font-bold;
+}

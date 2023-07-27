@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/core": "^7.22.9",
     "@floating-ui/react-dom-interactions": "^0.13.3",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.12",
     "@types/node": "20.4.5",
     "@types/react": "18.2.16",
     "@types/react-dom": "18.2.7",
@@ -29,6 +33,8 @@
     "react-dom": "18.2.0",
     "react-indiana-drag-scroll": "^2.2.0",
     "recharts": "^2.7.2",
+    "rehype-slug": "^5.1.0",
+    "remark-toc": "^8.0.1",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
@@ -36,6 +42,7 @@
   "devDependencies": {
     "@floating-ui/react": "^0.24.8",
     "@tailwindcss/forms": "^0.5.4",
+    "@types/babel__core": "^7.20.1",
     "@types/rc-slider": "^9.3.1",
     "@types/react-datepicker": "^4.15.0",
     "@types/react-syntax-highlighter": "^15.5.7",
