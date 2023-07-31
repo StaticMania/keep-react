@@ -5,7 +5,7 @@ import AlertDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "Get started with the alert component to show contextual information to the user such as when validating forms or showing errors based on React and Tailwind CSS",
+    "The Alert component in the Keep Design System allows you to display important messages, notifications, or warnings to users. With customizable options for style, close icon, border, and state, you can create visually appealing and informative alerts that align with your design requirements.",
   title: "Alert - Keep Design System",
 };
 

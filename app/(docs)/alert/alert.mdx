@@ -1,18 +1,67 @@
-## Alert
-
-import { DefaultAlert, AlertString } from "./variant";
+import { DefaultAlert, DefaultAlertCode } from "./variant/DefaultAlert";
+import {
+  AlertWithRounded,
+  AlertWithRoundedCode,
+} from "./variant/AlertWithRounded";
+import { AlertWithBorder, AlertWithBorderCode } from "./variant/AlertBorder";
+import {
+  AlertWithColorVariant,
+  AlertWithColorVariantCode,
+} from "./variant/AlertColorVariant";
+import {
+  AlertWithBorderAccent,
+  AlertWithBorderAccentCode,
+} from "./variant/AlertWithBorderAccent";
 import CodePreview from "@/components/CodePreview";
 
-<CodePreview element={<DefaultAlert />} code={AlertString}>
+import { Alert } from "@/src/components/Alert";
+import Link from "next/link";
+import { Info } from "phosphor-react";
 
+## Default Alert
+
+The alert has a default style with no additional visual elements.
+
+<CodePreview code={DefaultAlertCode}>
+  <DefaultAlert />
 </CodePreview>
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+## Rounded Alert
 
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then
+The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
 
-Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
 
-Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then
+<CodePreview code={AlertWithRoundedCode}>
+  <AlertWithRounded />
+</CodePreview>
 
-<CodePreview element={<DefaultAlert />} code={AlertString} />
+## Alert With Border
+
+The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
+
+Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
+
+<CodePreview code={AlertWithBorderCode}>
+  <AlertWithBorder />
+</CodePreview>
+
+## Alert With Border Accent
+
+The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
+
+Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
+
+<CodePreview code={AlertWithBorderAccentCode}>
+  <AlertWithBorderAccent />
+</CodePreview>
+
+## Alert With Color Variant
+
+The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
+
+Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
+
+<CodePreview code={AlertWithColorVariantCode}>
+  <AlertWithColorVariant />
+</CodePreview>

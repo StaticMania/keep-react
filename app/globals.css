@@ -280,6 +280,7 @@ main::-webkit-scrollbar-thumb {
 
 pre::-webkit-scrollbar {
   height: 8px !important;
+  width: 5px;
 }
 pre::-webkit-scrollbar-track {
   background-color: #d7dfe9 !important;

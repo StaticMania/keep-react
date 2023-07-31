@@ -8,3 +8,7 @@
 .tabActive {
   @apply bg-slate-25 border-slate-900 border-b-2 font-bold;
 }
+
+#mainContent code {
+  @apply bg-slate-50 py-1 px-2 rounded;
+}

@@ -3,7 +3,10 @@ import slug from "rehype-slug";
 import mdx from "@next/mdx";
 import tableOfContents from "remark-toc";
 
-const nextConfig = {};
+const nextConfig = {
+  pageExtensions: ["mdx", "tsx"],
+  reactStrictMode: true,
+};
 
 const withMDX = mdx({
   extension: /\.mdx?$/,

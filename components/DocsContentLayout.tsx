@@ -13,14 +13,12 @@ export const DocsContentLayout: FC<DocsContentLayoutProps> = function ({
   children,
 }) {
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-800">
+    <div className="divide-y divide-slate-200 ">
       <div className="pb-8">
-        <h1 className="mb-2 inline-block w-full text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+        <h1 className="mb-2 inline-block w-full text-3xl font-extrabold tracking-tight text-slate-900">
           {title}
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          {description}
-        </p>
+        <p className="text-lg text-slate-600">{description}</p>
       </div>
       <div id="mainContent" className="py-8">
         {children}
