@@ -1,5 +1,9 @@
 import { DefaultAlert, DefaultAlertCode } from "./variant/DefaultAlert";
 import {
+  AlertWithDismissIcon,
+  AlertWithDismissIconCode,
+} from "./variant/AlertWithDismissIcon";
+import {
   AlertWithRounded,
   AlertWithRoundedCode,
 } from "./variant/AlertWithRounded";
@@ -13,24 +17,34 @@ import {
   AlertWithBorderAccentCode,
 } from "./variant/AlertWithBorderAccent";
 import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
 
 import { Alert } from "@/src/components/Alert";
 import Link from "next/link";
 import { Info } from "phosphor-react";
+import { alertApiData } from "./alertApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
 
 ## Default Alert
 
-The alert has a default style with no additional visual elements.
+The default alert is a simple and clean design without any extra visual elements. It's perfect for straightforward notifications that don't require any specific styling.
 
 <CodePreview code={DefaultAlertCode}>
   <DefaultAlert />
 </CodePreview>
 
+## Alert With Dissmiss Icon
+
+The dismiss icon allows users to close an alert when needed. To add the dismiss icon to the alert, you should pass a handler function to the onDismiss prop.
+
+<CodePreview code={AlertWithDismissIconCode}>
+  <AlertWithDismissIcon />
+</CodePreview>
+
 ## Rounded Alert
 
-The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
-
-Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
+If you want a softer and more friendly look, the rounded alert is a great choice. By setting the `rounded` prop to `true`, the alert will have rounded corners, giving it a gentle and approachable appearance.
 
 <CodePreview code={AlertWithRoundedCode}>
   <AlertWithRounded />
@@ -38,9 +52,7 @@ Inside of the `<Alert>` component you can add any type of content such as text, 
 
 ## Alert With Border
 
-The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
-
-Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
+Adding a border to an alert can make it stand out and draw attention. Use the `withBorder` prop set to `true` to give the alert a distinct border.
 
 <CodePreview code={AlertWithBorderCode}>
   <AlertWithBorder />
@@ -48,9 +60,7 @@ Inside of the `<Alert>` component you can add any type of content such as text, 
 
 ## Alert With Border Accent
 
-The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
-
-Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
+For a touch of elegance, the border-accented alert is a fantastic option. Set the `withBorderAccent` prop to `true`, and by default, the border accent will appear on the `left` side of the alert. For a right-side accent, use `withBorderAccentPosition="right"`. You can even customize the `top` and `bottom` positions.
 
 <CodePreview code={AlertWithBorderAccentCode}>
   <AlertWithBorderAccent />
@@ -58,10 +68,18 @@ Inside of the `<Alert>` component you can add any type of content such as text, 
 
 ## Alert With Color Variant
 
-The default alert component is a simple alert box with a text inside it and you can use the `color` prop to change the color of the alert box and the `title` prop to add a title to the alert box.
-
-Inside of the `<Alert>` component you can add any type of content such as text, images, or other components as they will be considered children of the alert box.
+Colorful alerts can help differentiate various types of messages. By default, the alert color is `info`, but you can choose from a range of color options. Simply set the `color` prop to `success`, `warning`, `error`, `gray`, or `info` to match the alert with your design theme.
 
 <CodePreview code={AlertWithColorVariantCode}>
   <AlertWithColorVariant />
 </CodePreview>
+
+## Api
+
+<ComponentApi data={alertApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.alert} />

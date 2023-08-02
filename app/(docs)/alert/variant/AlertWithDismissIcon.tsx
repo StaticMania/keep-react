@@ -1,16 +1,15 @@
 "use client";
 import { Alert } from "@/src/components/Alert";
+import { WarningCircle } from "phosphor-react";
 import Link from "next/link";
-import { Info } from "phosphor-react";
 
-const AlertWithRounded = () => {
+const AlertWithDismissIcon = () => {
   const onDissMiss = () => {
     console.log("Dissmiss icon clicked");
   };
   return (
     <Alert
       onDismiss={onDissMiss}
-      rounded={true}
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -20,7 +19,7 @@ const AlertWithRounded = () => {
           </Link>
         </div>
       }
-      icon={<Info size={24} color="#0F3CD9" />}
+      icon={<WarningCircle size={24} color="#0F3CD9" />}
     >
       <p className="text-lg font-semibold text-blue-600">
         Default message - make it short
@@ -29,20 +28,19 @@ const AlertWithRounded = () => {
   );
 };
 
-const AlertWithRoundedCode = `
+const AlertWithDismissIconCode = `
 "use client";
 import { Alert } from "keep-design";
+import { WarningCircle } from "phosphor-react";
 import Link from "next/link";
-import { Info } from "phosphor-react";
 
-const AlertWithRounded = () => {
+const AlertWithDismissIcon = () => {
   const onDissMiss = () => {
     console.log("Dissmiss icon clicked");
   };
   return (
     <Alert
       onDismiss={onDissMiss}
-      rounded={true}
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -52,14 +50,13 @@ const AlertWithRounded = () => {
           </Link>
         </div>
       }
-      icon={<Info size={24} color="#0F3CD9" />}
+      icon={<WarningCircle size={24} color="#0F3CD9" />}
     >
       <p className="text-lg font-semibold text-blue-600">
         Default message - make it short
       </p>
     </Alert>
   );
-};
-`;
+}`;
 
-export { AlertWithRounded, AlertWithRoundedCode };
+export { AlertWithDismissIcon, AlertWithDismissIconCode };

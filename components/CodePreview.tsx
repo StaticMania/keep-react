@@ -85,7 +85,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
               language="tsx"
               style={dracula}
               customStyle={{
-                height: "380px",
+                maxHeight: "380px",
               }}
             >
               {code}

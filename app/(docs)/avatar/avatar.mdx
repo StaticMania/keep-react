@@ -1,0 +1,73 @@
+import { DefaultAvatar, DefaultAvatarCode } from "./variant/DefaultAvatar";
+import { ShapeAvatar, ShapeAvatarCode } from "./variant/ShapeAvatar";
+import { SizesOfAvatar, SizesOfAvatarCode } from "./variant/SizesOfAvatar";
+import { ImageOfAvatar, ImageOfAvatarCode } from "./variant/ImageOfAvatar";
+import { StatusOfAvatar, StatusOfAvatarCode } from "./variant/StatusOfAvatar";
+import {
+  NotificationOfAvatar,
+  NotificationOfAvatarCode,
+} from "./variant/NotificationOfAvatar";
+import { avatarApiData } from "./avatarApi";
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Default Avatar
+
+When the placeholder option is enabled, a default avatar image is displayed when no user image is available.
+
+<CodePreview code={DefaultAvatarCode}>
+  <DefaultAvatar />
+</CodePreview>
+
+## Shape of Avatar
+
+You can choose from three different shapes for the avatar. To change the shape, use the `shape` prop with values: "round," "roundSquare," or "square."
+
+<CodePreview code={ShapeAvatarCode}>
+  <ShapeAvatar />
+</CodePreview>
+
+## Sizes of Avatar
+
+There are various avatar sizes to fit your design. To change the size, use the `size` prop with values: `xs` `sm` `md` `lg` `xl` `2xl`
+
+<CodePreview code={SizesOfAvatarCode}>
+  <SizesOfAvatar />
+</CodePreview>
+
+## Image of Avatar
+
+Instead of an icon, you can display a user's image. Use the `img` prop and provide the path to the user's image, whether it's a local or remote URL.
+
+<CodePreview code={ImageOfAvatarCode}>
+  <ImageOfAvatar />
+</CodePreview>
+
+## Status of Avatar
+
+Avatar Status
+The avatar's status reflects the user's availability. To show the user's status, use the `status` prop with values: `online` `offline` `away` or `busy`. You can also customize the status position with the `statusPosition` prop, which accepts values: `bottom-left` `bottom-right` `top-left` or `top-right`
+
+<CodePreview code={StatusOfAvatarCode}>
+  <StatusOfAvatar />
+</CodePreview>
+
+## Notification of Avatar
+
+You can use the avatar to indicate notifications for the user. Use the status prop with values: "online," "offline," "away," or "busy," and set the `statusType` prop to `notification` to display notification indicators.
+
+<CodePreview code={NotificationOfAvatarCode}>
+  <NotificationOfAvatar />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={avatarApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.avatar} />

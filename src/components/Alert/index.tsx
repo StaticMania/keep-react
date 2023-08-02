@@ -57,7 +57,7 @@ export const Alert: FC<AlertProps> = ({
   icon: Icon,
   onDismiss,
   dismiss = false,
-  rounded = true,
+  rounded = false,
   withBorder = false,
   withBorderAccent = false,
   withBorderAccentPosition = "left",

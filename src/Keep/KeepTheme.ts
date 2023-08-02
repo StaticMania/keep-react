@@ -1,4 +1,5 @@
 import { keepAlertTheme } from "../components/Alert";
+import { keepAvatarTheme } from "../components/Avatar/Avatar";
 import { DeepPartial } from "../helpers/deep-partial";
 
 export interface KeepCheckboxShape {
@@ -102,4 +103,5 @@ export type CustomKeepTheme = DeepPartial<KeepTheme>;
 
 export interface KeepTheme {
   alert: keepAlertTheme;
+  avatar: keepAvatarTheme;
 }

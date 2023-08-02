@@ -12,3 +12,7 @@
 #mainContent code {
   @apply bg-slate-50 py-1 px-2 rounded;
 }
+
+#mainContent #cssCode {
+  @apply bg-transparent;
+}
