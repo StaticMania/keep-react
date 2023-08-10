@@ -4,7 +4,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="pb-6 bg-white lg:pb-0">
+    <header className="pb-6 bg-white lg:pb-0 fixed w-full border-b border-slate-100 z-50">
       <div className="container">
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">

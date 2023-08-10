@@ -1,3 +1,4 @@
+import { keepAccordionTheme } from "../components/Accordion";
 import { keepAlertTheme } from "../components/Alert";
 import { keepAvatarTheme } from "../components/Avatar/Avatar";
 import { DeepPartial } from "../helpers/deep-partial";
@@ -104,4 +105,5 @@ export type CustomKeepTheme = DeepPartial<KeepTheme>;
 export interface KeepTheme {
   alert: keepAlertTheme;
   avatar: keepAvatarTheme;
+  accordion: keepAccordionTheme;
 }

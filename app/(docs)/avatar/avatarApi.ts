@@ -22,14 +22,14 @@ export const avatarApiData: ComponentApiProps[] = [
   {
     id: 4,
     propsName: "size",
-    propsType: "keyof AvatarSizes",
+    propsType: "'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'",
     propsDescription:
       "Specifies the size of the avatar. Possible values are: 'xs', 'sm', 'md', 'lg', 'xl', or '2xl'.",
   },
   {
     id: 5,
     propsName: "shape",
-    propsType: "keyof KeepShapes",
+    propsType: " 'round' | 'roundSquare' | 'square'",
     propsDescription:
       "Determines the shape of the avatar. Possible values are: 'round', 'roundSquare', or 'square'.",
   },
@@ -54,14 +54,14 @@ export const avatarApiData: ComponentApiProps[] = [
   {
     id: 9,
     propsName: "statusType",
-    propsType: "keyof KeepAvatarStatusType",
+    propsType: "'dot' | 'notification'",
     propsDescription:
-      "Specifies the type of status. Possible values are: 'away', 'busy', 'offline', or 'online'.",
+      "Specifies the type of status. Possible values are: 'dot', 'notification'",
   },
   {
     id: 10,
     propsName: "statusPosition",
-    propsType: "keyof KeepPositions",
+    propsType: "'bottom-left' | 'bottom-right' | 'top-left' | 'top-right'",
     propsDescription: "Specifies the position of the status indicator.",
   },
   {
