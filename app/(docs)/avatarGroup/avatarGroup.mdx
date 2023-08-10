@@ -1,0 +1,67 @@
+import {
+  DefaultAvatarGroupCode,
+  DefaultAvatarGroup,
+} from "./variant/DefaultAvatarGroup";
+import {
+  AvatarWithAddIcon,
+  AvatarWithAddIconCode,
+} from "./variant/AvatarWithAddIcon";
+import {
+  AvatarWithCounter,
+  AvatarWithCounterCode,
+} from "./variant/AvatarWithCounter";
+import {
+  AvatarWithPlusCounter,
+  AvatarWithPlusCounterCode,
+} from "./variant/AvatarWithAddCounter";
+import { avatarApiData } from "../avatar/avatarApi";
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+## Default Avatar Group
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={DefaultAvatarGroupCode}>
+  <DefaultAvatarGroup />
+</CodePreview>
+
+## Avatar Group With Add Icon
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={AvatarWithAddIconCode}>
+  <AvatarWithAddIcon />
+</CodePreview>
+
+## Avatar Group With Counter
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={AvatarWithCounterCode}>
+  <AvatarWithCounter />
+</CodePreview>
+
+## Avatar Group With Plus Counter
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={AvatarWithPlusCounterCode}>
+  <AvatarWithPlusCounter />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={avatarApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.avatar} />
