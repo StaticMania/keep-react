@@ -1,0 +1,66 @@
+import { DefaultButtonCode, DefaultButton } from "./variant/DefaultButton";
+import { ColorsOfButton, ColorsOfButtonCode } from "./variant/ColorsOfButton";
+import { SizesOfButton, SizesOfButtonCode } from "./variant/SizesOfButton";
+import { ShapeOfButton, ShapeOfButtonCode } from "./variant/ShapeOfButton";
+import { ButtonWithIcon, ButtonWithIconCode } from "./variant/ButtonWithIcon";
+
+import { buttonApiData } from "./buttonApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+## All the variants of buttons
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={DefaultButtonCode}>
+  <DefaultButton />
+</CodePreview>
+
+## All the color variant of Button
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={ColorsOfButtonCode}>
+  <ColorsOfButton />
+</CodePreview>
+
+## All the sizes of Button
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={SizesOfButtonCode}>
+  <SizesOfButton />
+</CodePreview>
+
+## Shape of Button
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={ShapeOfButtonCode}>
+  <ShapeOfButton />
+</CodePreview>
+
+## Button With Icon
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+<CodePreview code={ButtonWithIconCode}>
+  <ButtonWithIcon />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={buttonApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.button} />
