@@ -1,0 +1,61 @@
+import {
+  DefaultButtonGroup,
+  DefaultButtonGroupCode,
+} from "./variant/DefaultButtonGroup";
+import {
+  ButtonGroupWithIcon,
+  ButtonGroupWithIconCode,
+} from "./variant/ButtonGroupWithIcon";
+import {
+  ButtonGroupWithColor,
+  ButtonGroupWithColorCode,
+} from "./variant/ButtonGroupWithColor";
+import {
+  ButtonGroupWithOnlyIcon,
+  ButtonGroupWithOnlyIconCode,
+} from "./variant/ButtonGroupWithOnlyIcon";
+
+import { buttonApiData } from "../button/buttonApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+## Default Button Group
+
+<CodePreview code={DefaultButtonGroupCode}>
+  <DefaultButtonGroup />
+</CodePreview>
+
+## Button Group with Icon
+
+<CodePreview code={ButtonGroupWithIconCode}>
+  <ButtonGroupWithIcon />
+</CodePreview>
+
+## Button Group with All Colors
+
+<CodePreview code={ButtonGroupWithColorCode}>
+  <ButtonGroupWithColor />
+</CodePreview>
+
+## Button Group with only icon
+
+<CodePreview code={ButtonGroupWithIconCode}>
+  <ButtonGroupWithOnlyIcon />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={buttonApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.button} />
