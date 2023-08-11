@@ -1,6 +1,7 @@
 import { keepAccordionTheme } from "../components/Accordion";
 import { keepAlertTheme } from "../components/Alert";
 import { keepAvatarTheme } from "../components/Avatar/Avatar";
+import { keepBadgeTheme } from "../components/Badge";
 import { keepButtonTheme } from "../components/Button";
 import { keepButtonGroupTheme } from "../components/Button/ButtonGroup";
 import { DeepPartial } from "../helpers/deep-partial";
@@ -110,4 +111,5 @@ export interface KeepTheme {
   accordion: keepAccordionTheme;
   button: keepButtonTheme;
   buttonGroup: keepButtonGroupTheme;
+  badge: keepBadgeTheme;
 }

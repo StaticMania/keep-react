@@ -1,6 +1,7 @@
 import { accordionTheme } from "../components/Accordion/theme";
 import { alertTheme } from "../components/Alert/theme";
 import { avatarTheme } from "../components/Avatar/theme";
+import { badgeTheme } from "../components/Badge/theme";
 import { buttonGroupTheme, buttonTheme } from "../components/Button/theme";
 
 const defaultTheme = {
@@ -9,6 +10,7 @@ const defaultTheme = {
   accordion: accordionTheme,
   button: buttonTheme,
   buttonGroup: buttonGroupTheme,
+  badge: badgeTheme,
 };
 
 export default defaultTheme;

@@ -1,0 +1,134 @@
+"use client";
+import { Badge } from "@/src/components/Badge";
+
+const VariantOfBadge = () => {
+  return (
+    <div>
+      <h2>Light Variant Of Badge</h2>
+      <div className="flex flex-wrap items-end gap-2">
+        <Badge size="xs" colorType="light" color="info">
+          Default
+        </Badge>
+        <Badge size="xs" colorType="light" color="gray">
+          Gray Badge
+        </Badge>
+        <Badge size="xs" colorType="light" color="error">
+          Error Badges
+        </Badge>
+        <Badge size="xs" colorType="light" color="success">
+          Success Badges
+        </Badge>
+        <Badge size="xs" colorType="light" color="warning">
+          Warning Badges
+        </Badge>
+      </div>
+      <h2>Dark Variant Of Badge</h2>
+      <div className="flex flex-wrap items-end gap-2">
+        <Badge size="sm" colorType="strong" color="info">
+          Default
+        </Badge>
+        <Badge size="sm" colorType="strong" color="gray">
+          Gray Badge
+        </Badge>
+        <Badge size="sm" colorType="strong" color="error">
+          Error Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" color="success">
+          Success Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" color="warning">
+          Warning Badges
+        </Badge>
+      </div>
+      <h2>Text Variant Of Badge</h2>
+      <div className="flex flex-wrap items-end gap-2">
+        <Badge size="sm" colorType="strong" badgeType="text" color="info">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="gray">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="error">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="success">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="warning">
+          Badges
+        </Badge>
+      </div>
+    </div>
+  );
+};
+
+const VariantOfBadgeCode = `
+"use client";
+import { Badge } from "keep-design";
+
+const VariantOfBadge = () => {
+  return (
+    <div>
+      <h2>Light Variant Of Badge</h2>
+      <div className="flex flex-wrap items-end gap-2">
+        <Badge size="xs" colorType="light" color="info">
+          Default
+        </Badge>
+        <Badge size="xs" colorType="light" color="gray">
+          Gray Badge
+        </Badge>
+        <Badge size="xs" colorType="light" color="error">
+          Error Badges
+        </Badge>
+        <Badge size="xs" colorType="light" color="success">
+          Success Badges
+        </Badge>
+        <Badge size="xs" colorType="light" color="warning">
+          Warning Badges
+        </Badge>
+      </div>
+      <h2>Dark Variant Of Badge</h2>
+      <div className="flex flex-wrap items-end gap-2">
+        <Badge size="sm" colorType="strong" color="info">
+          Default
+        </Badge>
+        <Badge size="sm" colorType="strong" color="gray">
+          Gray Badge
+        </Badge>
+        <Badge size="sm" colorType="strong" color="error">
+          Error Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" color="success">
+          Success Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" color="warning">
+          Warning Badges
+        </Badge>
+      </div>
+      <h2>Text Variant Of Badge</h2>
+      <div className="flex flex-wrap items-end gap-2">
+        <Badge size="sm" colorType="strong" badgeType="text" color="info">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="gray">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="error">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="success">
+          Badges
+        </Badge>
+        <Badge size="sm" colorType="strong" badgeType="text" color="warning">
+          Badges
+        </Badge>
+      </div>
+    </div>
+  );
+};
+
+export default VariantOfBadge;
+
+`;
+
+export { VariantOfBadge, VariantOfBadgeCode };

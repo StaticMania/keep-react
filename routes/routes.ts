@@ -11,4 +11,5 @@ export const routes: routerPath[] = [
   { id: 4, name: "Accordion", href: "/accordion" },
   { id: 5, name: "Button", href: "/button" },
   { id: 6, name: "Button Group", href: "/buttonGroup" },
+  { id: 7, name: "Badge", href: "/badge" },
 ];
