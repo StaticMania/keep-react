@@ -5,6 +5,8 @@ import { keepBadgeTheme } from "../components/Badge";
 import { keepBreadCrumbTheme } from "../components/Breadcrumb";
 import { keepButtonTheme } from "../components/Button";
 import { keepButtonGroupTheme } from "../components/Button/ButtonGroup";
+import { KeepCardTheme } from "../components/Card";
+import { KeepCarouselTheme } from "../components/Carousel";
 import { DeepPartial } from "../helpers/deep-partial";
 
 export interface KeepCheckboxShape {
@@ -114,4 +116,6 @@ export interface KeepTheme {
   buttonGroup: keepButtonGroupTheme;
   badge: keepBadgeTheme;
   breadcrumb: keepBreadCrumbTheme;
+  card: KeepCardTheme;
+  carousel: KeepCarouselTheme;
 }

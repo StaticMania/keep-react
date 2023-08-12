@@ -13,4 +13,7 @@ export const routes: routerPath[] = [
   { id: 6, name: "Button Group", href: "/buttonGroup" },
   { id: 7, name: "Badge", href: "/badge" },
   { id: 8, name: "BreadCrumb", href: "/breadcrumb" },
+  { id: 9, name: "Card", href: "/card" },
+  { id: 10, name: "Carousel", href: "/carousel" },
+  { id: 11, name: "Play Button", href: "/playButton" },
 ];
