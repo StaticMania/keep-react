@@ -8,6 +8,7 @@ import { cardTheme } from "../components/Card/theme";
 import { carouselTheme } from "../components/Carousel/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
+import { tooltipTheme } from "../components/Tooltip/theme";
 
 const defaultTheme = {
   alert: alertTheme,
@@ -21,6 +22,7 @@ const defaultTheme = {
   carousel: carouselTheme,
   progress: progressTheme,
   notification: notificationTheme,
+  tooltip: tooltipTheme,
 };
 
 export default defaultTheme;

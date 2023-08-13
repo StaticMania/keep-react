@@ -1,0 +1,75 @@
+import { DefaultTooltip, DefaultTooltipCode } from "./variant/DefaultTooltip";
+import { TooltipStyles, TooltipStylesCode } from "./variant/TooltipStyles";
+import {
+  TooltipWithLargeText,
+  TooltipWithLargeTextCode,
+} from "./variant/TooltipWithLargeText";
+import {
+  TooltipTriggering,
+  TooltipTriggeringCode,
+} from "./variant/TooltipTriggering";
+import {
+  TooltipPlacement,
+  TooltipPlacementCode,
+} from "./variant/TooltipPlacement";
+
+import { tooltipDataApi } from "./tooltipApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Tooltips component in the Keep Design System allows you to provide additional information or context to users when they hover over or interact with specific elements. With customizable options for type, theme, and arrow placement, you can create versatile tooltips that fit your design needs.
+
+## Default Tooltip
+
+Tooltips appear on hover over an element and help convey concise explanations, tips, or labels. By using the Default Tooltip, you can enhance user understanding and improve the overall usability of your interface.
+
+<CodePreview code={DefaultTooltipCode}>
+  <DefaultTooltip />
+</CodePreview>
+
+## Tooltip Styles
+
+The Keep Design System offers two distinct styles for tooltips: light and dark. To apply the dark style, simply use the style="dark" attribute when implementing the tooltip. By default, tooltips will adopt the dark style. This flexibility allows you to seamlessly integrate tooltips that align with your design theme.
+
+<CodePreview code={TooltipStylesCode}>
+  <TooltipStyles />
+</CodePreview>
+
+## Tooltip Placement
+
+You can choose from four placement options: top, bottom, left, and right. This flexibility allows you to enhance user interactions by offering relevant information in a visually intuitive manner. To set the placement of a tooltip, use the placement prop with the desired value, such as `placement="top"`.
+
+<CodePreview code={TooltipPlacementCode}>
+  <TooltipPlacement />
+</CodePreview>
+
+## Tooltip Trigger
+
+Tooltips within the Keep Design System can be triggered using two different methods: `hover` and `click`. You can choose the trigger that best suits your user experience and interaction design. By default, tooltips are triggered on `hover`, providing users with instant context when they hover over a specific element. Alternatively, you can opt for a `click` trigger. If you want to use the `click` trigger, simply include the `trigger` prop with the value `click` in your tooltip component. For example, `trigger="click"`.
+
+<CodePreview code={TooltipTriggeringCode}>
+  <TooltipTriggering />
+</CodePreview>
+
+## Tooltip With Large Text
+
+The tooltip's `content` prop contains longer text content, and the `title` and other attributes are set as previously specified. Feel free to adjust the text content and other attributes as needed for your application's context.
+
+<CodePreview code={TooltipWithLargeTextCode}>
+  <TooltipWithLargeText />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={tooltipDataApi} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.tooltip} />
