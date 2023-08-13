@@ -6,6 +6,7 @@ import { breadcrumbtheme } from "../components/Breadcrumb/theme";
 import { buttonGroupTheme, buttonTheme } from "../components/Button/theme";
 import { cardTheme } from "../components/Card/theme";
 import { carouselTheme } from "../components/Carousel/theme";
+import { progressTheme } from "../components/Progress/theme";
 
 const defaultTheme = {
   alert: alertTheme,
@@ -17,6 +18,7 @@ const defaultTheme = {
   breadcrumb: breadcrumbtheme,
   card: cardTheme,
   carousel: carouselTheme,
+  progress: progressTheme,
 };
 
 export default defaultTheme;

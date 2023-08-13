@@ -5,7 +5,7 @@ import { FacebookLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
 
 const ProfileCard = () => {
   return (
-    <div className="flex flex-col gap-5 items-center justify-center">
+    <div className="flex flex-col flex-wrap gap-5 items-center justify-center">
       {/*=== PROFILE CARD ONE=== */}
       <Card className="max-w-lg p-6">
         <Card.Description>
