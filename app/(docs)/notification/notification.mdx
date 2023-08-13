@@ -1,0 +1,69 @@
+import {
+  DefaultNotification,
+  DefaultNotificationCode,
+} from "./variant/DefaultNotification";
+import {
+  NotificationWithIcon,
+  NotificationWithIconCode,
+} from "./variant/NotificationWithIcon";
+import {
+  NotificationWithAvatar,
+  NotificationWithAvatarCode,
+} from "./variant/NotificationWithAvatar";
+import {
+  NotificationWithCard,
+  NotificationWithCardCode,
+} from "./variant/NotificationWithCard";
+
+import { notificationApi } from "./notificationApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Notification component in the Keep Design System allows you to display informative messages or alerts to users. With various styles and options for positioning, you can effectively communicate important updates or messages in a visually appealing manner.
+
+## Default Notification
+
+Default Notification component in the Keep Design System allows you to display informative messages or alerts to users.
+
+<CodePreview code={DefaultNotificationCode}>
+  <DefaultNotification />
+</CodePreview>
+
+## Notification With Icon
+
+The Notification component in the Keep Design System can be enhanced with icons, providing users with visual cues alongside the message. This combination of text and icon ensures that notifications are both informative and easily comprehensible.
+
+<CodePreview code={NotificationWithIconCode}>
+  <NotificationWithIcon />
+</CodePreview>
+
+## Notification With Avatar
+
+The Notification component in the Keep Design System can include avatars, allowing you to associate user images with notifications. This integration enhances user recognition and engagement by providing personalized and context-rich notifications.
+
+<CodePreview code={NotificationWithAvatarCode}>
+  <NotificationWithAvatar />
+</CodePreview>
+
+## Notification With Card
+
+The Notification component in the Keep Design System can be enhanced with a card layout, allowing you to present notifications in a visually structured manner. This design accommodates more content and context, providing users with detailed and informative notifications.
+
+<CodePreview code={NotificationWithCardCode}>
+  <NotificationWithCard />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={notificationApi} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.notification} />

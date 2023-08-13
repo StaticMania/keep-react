@@ -7,6 +7,7 @@ import { keepButtonTheme } from "../components/Button";
 import { keepButtonGroupTheme } from "../components/Button/ButtonGroup";
 import { KeepCardTheme } from "../components/Card";
 import { KeepCarouselTheme } from "../components/Carousel";
+import { keepNotificationTheme } from "../components/Notification";
 import { keepProgressTheme } from "../components/Progress";
 import { DeepPartial } from "../helpers/deep-partial";
 
@@ -120,4 +121,5 @@ export interface KeepTheme {
   card: KeepCardTheme;
   carousel: KeepCarouselTheme;
   progress: keepProgressTheme;
+  notification: keepNotificationTheme;
 }
