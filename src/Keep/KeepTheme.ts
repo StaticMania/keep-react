@@ -12,6 +12,7 @@ import { keepModalTheme } from "../components/Modal";
 import { keepNotificationTheme } from "../components/Notification";
 import { keepProgressTheme } from "../components/Progress";
 import { keepRatingTheme } from "../components/Rating";
+import { KeepSidebarTheme } from "../components/Sidebar";
 import { KeepSpinnerTheme } from "../components/Spinner";
 import { keepTabTheme } from "../components/Tabs";
 import { keepToastTheme } from "../components/Toast";
@@ -134,4 +135,5 @@ export interface KeepTheme {
   spinner: KeepSpinnerTheme;
   toast: keepToastTheme;
   tabs: keepTabTheme;
+  sidebar: KeepSidebarTheme;
 }

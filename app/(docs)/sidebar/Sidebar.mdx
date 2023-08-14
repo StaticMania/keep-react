@@ -1,0 +1,52 @@
+import { DefaultSidebar, DefaultSidebarCode } from "./variant/DefaultSidebar";
+import {
+  SidebarWithContentSeparator,
+  SidebarWithContentSeparatorCode,
+} from "./variant/SidebarWithContentSeparator";
+import {
+  SidebarWithBranding,
+  SidebarWithBrandingCode,
+} from "./variant/SidebarWithBranding";
+import { SidebarWithCTA, SidebarWithCTACode } from "./variant/SidebarWithCTA";
+import {
+  SidebarWithDropdown,
+  SidebarWithDropdownCode,
+} from "./variant/SidebarWithDropdown";
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+A Sidebar Component is a user interface element commonly found in web and mobile applications. It provides a dedicated space at the side of the main content area to display navigation links, menu items, or other relevant information. The sidebar is often used to help users navigate between different sections of the application, access important features, or view contextual details.
+
+## Default Sidebar
+
+<CodePreview code={DefaultSidebarCode}>
+  <DefaultSidebar />
+</CodePreview>
+
+## Sidebar With Dropdown
+
+<CodePreview code={SidebarWithDropdownCode}>
+  <SidebarWithDropdown />
+</CodePreview>
+
+## Sidebar With Logo Branding
+
+<CodePreview code={SidebarWithBrandingCode}>
+  <SidebarWithBranding />
+</CodePreview>
+
+## Sidebar With Content Separator
+
+<CodePreview code={SidebarWithContentSeparatorCode}>
+  <SidebarWithContentSeparator />
+</CodePreview>
+
+## Sidebar With Call to Action
+
+<CodePreview code={SidebarWithCTACode}>
+  <SidebarWithCTA />
+</CodePreview>

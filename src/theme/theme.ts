@@ -10,6 +10,7 @@ import { modalTheme } from "../components/Modal/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
 import { ratingTheme } from "../components/Rating/theme";
+import { sidebarTheme } from "../components/Sidebar/theme";
 import { spinnerTheme } from "../components/Spinner/theme";
 import { tabTheme } from "../components/Tabs/theme";
 import { toastTheme } from "../components/Toast/theme";
@@ -33,6 +34,7 @@ const defaultTheme = {
   spinner: spinnerTheme,
   toast: toastTheme,
   tabs: tabTheme,
+  sidebar: sidebarTheme,
 };
 
 export default defaultTheme;
