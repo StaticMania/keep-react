@@ -12,6 +12,7 @@ import { keepModalTheme } from "../components/Modal";
 import { keepNotificationTheme } from "../components/Notification";
 import { keepProgressTheme } from "../components/Progress";
 import { keepRatingTheme } from "../components/Rating";
+import { KeepSpinnerTheme } from "../components/Spinner";
 import { DeepPartial } from "../helpers/deep-partial";
 
 export interface KeepCheckboxShape {
@@ -128,4 +129,5 @@ export interface KeepTheme {
   tooltip: KeepFloatingTheme;
   modal: keepModalTheme;
   rating: keepRatingTheme;
+  spinner: KeepSpinnerTheme;
 }
