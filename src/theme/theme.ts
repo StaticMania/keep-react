@@ -12,6 +12,7 @@ import { progressTheme } from "../components/Progress/theme";
 import { ratingTheme } from "../components/Rating/theme";
 import { sidebarTheme } from "../components/Sidebar/theme";
 import { spinnerTheme } from "../components/Spinner/theme";
+import { switchTheme } from "../components/Switch/theme";
 import { tabTheme } from "../components/Tabs/theme";
 import { toastTheme } from "../components/Toast/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
@@ -35,6 +36,7 @@ const defaultTheme = {
   toast: toastTheme,
   tabs: tabTheme,
   sidebar: sidebarTheme,
+  switch: switchTheme,
 };
 
 export default defaultTheme;

@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/core": "^7.22.9",
     "@floating-ui/react-dom-interactions": "^0.13.3",
+    "@headlessui/react": "^1.7.16",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.4.12",

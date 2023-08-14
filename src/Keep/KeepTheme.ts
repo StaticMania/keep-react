@@ -14,6 +14,7 @@ import { keepProgressTheme } from "../components/Progress";
 import { keepRatingTheme } from "../components/Rating";
 import { KeepSidebarTheme } from "../components/Sidebar";
 import { KeepSpinnerTheme } from "../components/Spinner";
+import { keepToggleTheme } from "../components/Switch";
 import { keepTabTheme } from "../components/Tabs";
 import { keepToastTheme } from "../components/Toast";
 import { DeepPartial } from "../helpers/deep-partial";
@@ -136,4 +137,5 @@ export interface KeepTheme {
   toast: keepToastTheme;
   tabs: keepTabTheme;
   sidebar: KeepSidebarTheme;
+  switch: keepToggleTheme;
 }
