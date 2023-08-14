@@ -13,6 +13,7 @@ import { keepNotificationTheme } from "../components/Notification";
 import { keepProgressTheme } from "../components/Progress";
 import { keepRatingTheme } from "../components/Rating";
 import { KeepSpinnerTheme } from "../components/Spinner";
+import { keepToastTheme } from "../components/Toast";
 import { DeepPartial } from "../helpers/deep-partial";
 
 export interface KeepCheckboxShape {
@@ -130,4 +131,5 @@ export interface KeepTheme {
   modal: keepModalTheme;
   rating: keepRatingTheme;
   spinner: KeepSpinnerTheme;
+  toast: keepToastTheme;
 }

@@ -1,0 +1,54 @@
+import { DefaultToast, DefaultToastCode } from "./variant/DefaultToast";
+import { ColorsOfToast, ColorsOfToastCode } from "./variant/ColorsOfToast";
+import { MessageToast, MessageToastCode } from "./variant/MessageToast";
+import {
+  InteractiveToast,
+  InteractiveToastCode,
+} from "./variant/InteractiveToast";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Toast Component is a user interface element commonly used in web and mobile applications to display brief, non-intrusive notifications or messages to users. These notifications typically appear as small pop-up windows that temporarily overlay the screen, often in a corner or edge of the interface. Toasts are designed to provide important updates, alerts, or feedback without disrupting the user's workflow.
+
+## Default Toast Style
+
+The "Default Toast" presents notifications using a standardized layout. It includes icons, headings, and interactive toggles to enhance user interaction.
+
+<CodePreview code={DefaultToastCode}>
+  <DefaultToast />
+</CodePreview>
+
+## Colorful Toasts
+
+Toast messages are available in different colors, allowing for clear distinction. Colors include "success," "warning," and "error."
+
+<CodePreview code={ColorsOfToastCode}>
+  <ColorsOfToast />
+</CodePreview>
+
+## Informative Toasts
+
+These toasts deliver messages with a focus on the content. They include icons, headings, and interactive elements.
+
+<CodePreview code={MessageToastCode}>
+  <MessageToast />
+</CodePreview>
+
+## Interactive Toast Experience
+
+With a similar structure to the previous example, interactive toasts provide users with engaging ways to interact with the displayed message.
+
+<CodePreview code={InteractiveToastCode}>
+  <InteractiveToast />
+</CodePreview>
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.toast} />

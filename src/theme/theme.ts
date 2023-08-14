@@ -11,6 +11,7 @@ import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
 import { ratingTheme } from "../components/Rating/theme";
 import { spinnerTheme } from "../components/Spinner/theme";
+import { toastTheme } from "../components/Toast/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
 
 const defaultTheme = {
@@ -29,6 +30,7 @@ const defaultTheme = {
   modal: modalTheme,
   rating: ratingTheme,
   spinner: spinnerTheme,
+  toast: toastTheme,
 };
 
 export default defaultTheme;
