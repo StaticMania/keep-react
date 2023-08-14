@@ -9,6 +9,7 @@ import { carouselTheme } from "../components/Carousel/theme";
 import { modalTheme } from "../components/Modal/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
+import { ratingTheme } from "../components/Rating/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
 
 const defaultTheme = {
@@ -25,6 +26,7 @@ const defaultTheme = {
   notification: notificationTheme,
   tooltip: tooltipTheme,
   modal: modalTheme,
+  rating: ratingTheme,
 };
 
 export default defaultTheme;
