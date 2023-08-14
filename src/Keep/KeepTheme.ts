@@ -13,6 +13,7 @@ import { keepNotificationTheme } from "../components/Notification";
 import { keepProgressTheme } from "../components/Progress";
 import { keepRatingTheme } from "../components/Rating";
 import { KeepSidebarTheme } from "../components/Sidebar";
+import { keepSkeletonTheme } from "../components/Skeleton";
 import { KeepSpinnerTheme } from "../components/Spinner";
 import { keepToggleTheme } from "../components/Switch";
 import { keepTabTheme } from "../components/Tabs";
@@ -138,4 +139,5 @@ export interface KeepTheme {
   tabs: keepTabTheme;
   sidebar: KeepSidebarTheme;
   switch: keepToggleTheme;
+  skeleton: keepSkeletonTheme;
 }

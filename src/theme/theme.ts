@@ -11,6 +11,7 @@ import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
 import { ratingTheme } from "../components/Rating/theme";
 import { sidebarTheme } from "../components/Sidebar/theme";
+import { skeletonTheme } from "../components/Skeleton/theme";
 import { spinnerTheme } from "../components/Spinner/theme";
 import { switchTheme } from "../components/Switch/theme";
 import { tabTheme } from "../components/Tabs/theme";
@@ -37,6 +38,7 @@ const defaultTheme = {
   tabs: tabTheme,
   sidebar: sidebarTheme,
   switch: switchTheme,
+  skeleton: skeletonTheme,
 };
 
 export default defaultTheme;

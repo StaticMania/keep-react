@@ -1,0 +1,71 @@
+import {
+  DefaultSkeleton,
+  DefaultSkeletonCode,
+} from "./variant/DefaultSkeleton";
+import { SkeletonLayout, SkeletonLayoutCode } from "./variant/SkeletonLayout";
+import { CommentLayout, CommentLayoutCode } from "./variant/CommentLayout";
+import { PostSkeleton, PostSkeletonCode } from "./variant/PostSkeleton";
+import {
+  SkeletonWithAnimation,
+  SkeletonWithAnimationCode,
+} from "./variant/SkeletonWithAnimation";
+import {
+  ParagraphSkeleton,
+  ParagraphSkeletonCode,
+} from "./variant/ParagraphSkeleton";
+import { SkeletonApiData } from "./SkeletonApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Preloader component in the Keep Design System provides a visual indication of an ongoing process or loading state. With various options for type and device, you can choose the appropriate preloader style to enhance the user experience on both web and mobile platforms.
+
+## Default Skeleton
+
+<CodePreview code={DefaultSkeletonCode}>
+  <DefaultSkeleton />
+</CodePreview>
+
+## Skeleton Layout
+
+<CodePreview code={SkeletonLayoutCode}>
+  <SkeletonLayout />
+</CodePreview>
+
+## Comment Layout
+
+<CodePreview code={CommentLayoutCode}>
+  <CommentLayout />
+</CodePreview>
+
+## Post Skeleton
+
+<CodePreview code={PostSkeletonCode}>
+  <PostSkeleton />
+</CodePreview>
+
+## Paragraph Skeleton
+
+<CodePreview code={ParagraphSkeletonCode}>
+  <ParagraphSkeleton />
+</CodePreview>
+
+## Skeleton With Animation
+
+<CodePreview code={SkeletonWithAnimationCode}>
+  <SkeletonWithAnimation />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={SkeletonApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.skeleton} />
