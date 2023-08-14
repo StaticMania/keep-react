@@ -6,6 +6,7 @@ import { breadcrumbtheme } from "../components/Breadcrumb/theme";
 import { buttonGroupTheme, buttonTheme } from "../components/Button/theme";
 import { cardTheme } from "../components/Card/theme";
 import { carouselTheme } from "../components/Carousel/theme";
+import { modalTheme } from "../components/Modal/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
@@ -23,6 +24,7 @@ const defaultTheme = {
   progress: progressTheme,
   notification: notificationTheme,
   tooltip: tooltipTheme,
+  modal: modalTheme,
 };
 
 export default defaultTheme;
