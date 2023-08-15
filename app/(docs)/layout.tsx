@@ -10,8 +10,6 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const toc = document.querySelector("#table-of-contents + ul")?.innerHTML;
     setTableOfContents(toc ?? "");
-
-    console.log(toc);
   }, [pathname]);
   return (
     <div className="container pt-10">

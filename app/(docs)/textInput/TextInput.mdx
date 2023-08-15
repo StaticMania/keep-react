@@ -1,0 +1,87 @@
+import { DefaultInputCode, DefaultInput } from "./variant/DefaultInput";
+import { InputWithIcon, InputWithIconCode } from "./variant/InputWithIcon";
+import { InputWithAddon, InputWithAddonCode } from "./variant/InputWithAddon";
+import { InputFieldURL, InputFieldURLCode } from "./variant/InputFieldURL";
+import {
+  InputWithOutBorder,
+  InputWithOutBorderCode,
+} from "./variant/InputWithOutBorder";
+import {
+  InputColorVariant,
+  InputColorVariantCode,
+} from "./variant/InputColorVariant";
+import {
+  InputWithAddonAndIcon,
+  InputWithAddonAndIconCode,
+} from "./variant/InputWithAddonAndIcon";
+import {
+  LevelAndHelperText,
+  LevelAndHelperTextCode,
+} from "./variant/LevelAndHelperText";
+import {
+  InputFieldWithLevel,
+  InputFieldWithLevelCode,
+} from "./variant/InputFieldWithLevel";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Input Component is a fundamental user interface element used to collect user input or data in various forms, such as text, numbers, dates, or selections. It provides a space where users can type or select information, allowing them to interact with the application and provide necessary inputs.
+
+## Default Text Input
+
+<CodePreview code={DefaultInputCode}>
+  <DefaultInput />
+</CodePreview>
+
+## Input Field With Level
+
+<CodePreview code={InputFieldWithLevelCode}>
+  <InputFieldWithLevel />
+</CodePreview>
+
+## Input Field With Level
+
+<CodePreview code={LevelAndHelperTextCode}>
+  <LevelAndHelperText />
+</CodePreview>
+
+## Input With Icon
+
+<CodePreview code={InputWithIconCode}>
+  <InputWithIcon />
+</CodePreview>
+
+## Input With Addon
+
+<CodePreview code={InputWithAddonCode}>
+  <InputWithAddon />
+</CodePreview>
+
+## Input With Addon And Icon
+
+<CodePreview code={InputWithAddonAndIconCode}>
+  <InputWithAddonAndIcon />
+</CodePreview>
+
+## Input Field URL
+
+<CodePreview code={InputFieldURLCode}>
+  <InputFieldURL />
+</CodePreview>
+
+## Input Color Variant
+
+<CodePreview code={InputColorVariantCode}>
+  <InputColorVariant />
+</CodePreview>
+
+## Input Without Border
+
+<CodePreview code={InputWithOutBorderCode}>
+  <InputWithOutBorder />
+</CodePreview>

@@ -11,6 +11,7 @@ import { keepCheckboxTheme } from "../components/CheckBox";
 import { keepDropdownTheme } from "../components/Dropdown";
 import { keepEmptyTheme } from "../components/Empty";
 import { KeepFloatingTheme } from "../components/Floating";
+import { keepFormControlTheme } from "../components/FormControls/formControls";
 import { keepModalTheme } from "../components/Modal";
 import { keepNotificationTheme } from "../components/Notification";
 import { keepProgressTheme } from "../components/Progress";
@@ -156,4 +157,5 @@ export interface KeepTheme {
   statistic: keepStatisticTheme;
   upload: keepUploadTheme;
   checkbox: keepCheckboxTheme;
+  formControls: keepFormControlTheme;
 }

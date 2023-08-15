@@ -9,6 +9,7 @@ import { carouselTheme } from "../components/Carousel/theme";
 import { checkboxTheme } from "../components/CheckBox/theme";
 import { dropdownTheme } from "../components/Dropdown/theme";
 import { emptyTheme } from "../components/Empty/theme";
+import { formControlsTheme } from "../components/FormControls/theme";
 import { modalTheme } from "../components/Modal/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
@@ -55,6 +56,7 @@ const defaultTheme = {
   upload: uploadTheme,
   dropdown: dropdownTheme,
   checkbox: checkboxTheme,
+  formControls: formControlsTheme,
 };
 
 export default defaultTheme;
