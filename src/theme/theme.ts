@@ -6,6 +6,8 @@ import { breadcrumbtheme } from "../components/Breadcrumb/theme";
 import { buttonGroupTheme, buttonTheme } from "../components/Button/theme";
 import { cardTheme } from "../components/Card/theme";
 import { carouselTheme } from "../components/Carousel/theme";
+import { checkboxTheme } from "../components/CheckBox/theme";
+import { dropdownTheme } from "../components/Dropdown/theme";
 import { emptyTheme } from "../components/Empty/theme";
 import { modalTheme } from "../components/Modal/theme";
 import { notificationTheme } from "../components/Notification/theme";
@@ -22,6 +24,7 @@ import { tagTheme } from "../components/Tag/theme";
 import { stepTheme } from "../components/Timeline/theme";
 import { toastTheme } from "../components/Toast/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
+import { uploadTheme } from "../components/Upload/theme";
 
 const defaultTheme = {
   alert: alertTheme,
@@ -49,6 +52,9 @@ const defaultTheme = {
   stepper: stepTheme,
   empty: emptyTheme,
   statistic: statisticsTheme,
+  upload: uploadTheme,
+  dropdown: dropdownTheme,
+  checkbox: checkboxTheme,
 };
 
 export default defaultTheme;

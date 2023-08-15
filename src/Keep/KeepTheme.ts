@@ -7,6 +7,8 @@ import { keepButtonTheme } from "../components/Button";
 import { keepButtonGroupTheme } from "../components/Button/ButtonGroup";
 import { KeepCardTheme } from "../components/Card";
 import { KeepCarouselTheme } from "../components/Carousel";
+import { keepCheckboxTheme } from "../components/CheckBox";
+import { keepDropdownTheme } from "../components/Dropdown";
 import { keepEmptyTheme } from "../components/Empty";
 import { KeepFloatingTheme } from "../components/Floating";
 import { keepModalTheme } from "../components/Modal";
@@ -23,6 +25,7 @@ import { keepTabTheme } from "../components/Tabs";
 import { keepTagTheme } from "../components/Tag";
 import { keepStepperTheme } from "../components/Timeline";
 import { keepToastTheme } from "../components/Toast";
+import { keepUploadTheme } from "../components/Upload";
 import { DeepPartial } from "../helpers/deep-partial";
 
 export interface KeepCheckboxShape {
@@ -134,6 +137,7 @@ export interface KeepTheme {
   breadcrumb: keepBreadCrumbTheme;
   card: KeepCardTheme;
   carousel: KeepCarouselTheme;
+  dropdown: keepDropdownTheme;
   progress: keepProgressTheme;
   notification: keepNotificationTheme;
   tooltip: KeepFloatingTheme;
@@ -150,4 +154,6 @@ export interface KeepTheme {
   stepper: keepStepperTheme;
   empty: keepEmptyTheme;
   statistic: keepStatisticTheme;
+  upload: keepUploadTheme;
+  checkbox: keepCheckboxTheme;
 }

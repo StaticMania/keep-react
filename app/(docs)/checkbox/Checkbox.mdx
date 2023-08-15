@@ -1,0 +1,40 @@
+import {
+  DefaultCheckbox,
+  DefaultCheckboxCode,
+} from "./variant/DefaultCheckbox";
+import {
+  CheckboxWithLevel,
+  CheckboxWithLevelCode,
+} from "./variant/CheckboxWithLevel";
+import { CheckBoxApiData } from "./CheckboxApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Checkbox component in the Keep Design System allows users to make selections from a set of options or toggle a single option on or off. With customizable options for labels, sizes, types, statuses, and states, you can create versatile checkboxes that fit your design needs.
+
+## Default Checkbox
+
+<CodePreview code={DefaultCheckboxCode}>
+  <DefaultCheckbox />
+</CodePreview>
+
+## Checkbox With Level
+
+<CodePreview code={CheckboxWithLevelCode}>
+  <CheckboxWithLevel />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={CheckBoxApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.checkbox} />

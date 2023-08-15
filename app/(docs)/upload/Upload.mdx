@@ -1,0 +1,105 @@
+import { DefaultUpload, DefaultUploadCode } from "./variant/DefaultUpload";
+import { UploadPending, UploadPendingCode } from "./variant/UploadPending";
+import { UploadFailed, UploadFailedCode } from "./variant/UploadFailed";
+import { UploadSuccess, UploadSuccessCode } from "./variant/UploadSuccess";
+import { UploadDisabled, UploadDisabledCode } from "./variant/UploadDisabled";
+import {
+  HorizontalDisabledUpload,
+  HorizontalDisabledUploadCode,
+} from "./variant/HorizontalDisabledUpload";
+import {
+  HorizontalUploadSuccess,
+  HorizontalUploadSuccessCode,
+} from "./variant/HorizontalUploadSuccess";
+import {
+  HorizontalUploadFailed,
+  HorizontalUploadFailedCode,
+} from "./variant/HorizontailUploadFailed";
+import {
+  HorizontalUploadPending,
+  HorizontalUploadPendingCode,
+} from "./variant/HorizontalUploadPending";
+import {
+  HorizontalUpload,
+  HorizontalUploadCode,
+} from "./variant/HorizontalUpload";
+import { uploadApiData } from "./UploadApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Upload Component is a user interface element that enables users to upload files or media from their local device to a web application or platform. It provides a means to select files, preview them if applicable, and initiate the upload process. The component is essential for allowing users to share content, images, documents, and other files with the application or website.
+
+## Default Upload
+
+<CodePreview code={DefaultUploadCode}>
+  <DefaultUpload />
+</CodePreview>
+
+## Upload Pending
+
+<CodePreview code={UploadPendingCode}>
+  <UploadPending />
+</CodePreview>
+
+## Upload Failed
+
+<CodePreview code={UploadFailedCode}>
+  <UploadFailed />
+</CodePreview>
+
+## Upload Success
+
+<CodePreview code={UploadSuccessCode}>
+  <UploadSuccess />
+</CodePreview>
+
+## Horizontal Upload
+
+<CodePreview code={HorizontalUploadCode}>
+  <HorizontalUpload />
+</CodePreview>
+
+## Horizontal Upload Pending
+
+<CodePreview code={HorizontalUploadPendingCode}>
+  <HorizontalUploadPending />
+</CodePreview>
+
+## Horizontal Upload Failed
+
+<CodePreview code={HorizontalUploadFailedCode}>
+  <HorizontalUploadFailed />
+</CodePreview>
+
+## Horizontal Upload Success
+
+<CodePreview code={HorizontalUploadSuccessCode}>
+  <HorizontalUploadSuccess />
+</CodePreview>
+
+## Horizontal Disabled Upload
+
+<CodePreview code={HorizontalDisabledUploadCode}>
+  <HorizontalDisabledUpload />
+</CodePreview>
+
+## Upload Disabled
+
+<CodePreview code={UploadDisabledCode}>
+  <UploadDisabled />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={uploadApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.upload} />
