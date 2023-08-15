@@ -16,6 +16,7 @@ import { KeepSidebarTheme } from "../components/Sidebar";
 import { keepSkeletonTheme } from "../components/Skeleton";
 import { KeepSpinnerTheme } from "../components/Spinner";
 import { keepToggleTheme } from "../components/Switch";
+import { keepTableTheme } from "../components/Table";
 import { keepTabTheme } from "../components/Tabs";
 import { keepTagTheme } from "../components/Tag";
 import { keepToastTheme } from "../components/Toast";
@@ -142,4 +143,5 @@ export interface KeepTheme {
   switch: keepToggleTheme;
   skeleton: keepSkeletonTheme;
   tag: keepTagTheme;
+  table: keepTableTheme;
 }

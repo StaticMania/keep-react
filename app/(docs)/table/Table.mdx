@@ -1,0 +1,64 @@
+import { DefaultTable, DefaultTableCode } from "./variant/DefaultTable";
+import { OrdersTable, OrdersTableCode } from "./variant/OrdersTable";
+import { StripedTable, StripedTableCode } from "./variant/StripedTable";
+import { BorderedTable, BorderedTableCode } from "./variant/BorderedTable";
+import { HoverableTableCode, HoverableTable } from "./variant/HoverableTable";
+import {
+  FilesUploadedTable,
+  FilesUploadedTableCode,
+} from "./variant/FilesUploadedTable";
+import {
+  TransactionsTable,
+  TransactionsTableCode,
+} from "./variant/TransactionsTable";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+A Table Component is a fundamental user interface element used to present data in a structured and organized format. Tables consist of rows and columns, with each row representing a data entry and each column representing a specific attribute or field. Tables are commonly used to display tabular data, such as lists, grids, or datasets, making information easier to comprehend and compare.
+
+## Default Table
+
+<CodePreview code={DefaultTableCode}>
+  <DefaultTable />
+</CodePreview>
+
+## Transactions Table
+
+<CodePreview code={TransactionsTableCode}>
+  <TransactionsTable />
+</CodePreview>
+
+## Orders Table
+
+<CodePreview code={OrdersTableCode}>
+  <OrdersTable />
+</CodePreview>
+
+## Files Uploaded Table
+
+<CodePreview code={FilesUploadedTableCode}>
+  <FilesUploadedTable />
+</CodePreview>
+
+## Hoverable Table
+
+<CodePreview code={HoverableTableCode}>
+  <HoverableTable />
+</CodePreview>
+
+## Striped Table
+
+<CodePreview code={StripedTableCode}>
+  <StripedTable />
+</CodePreview>
+
+## Bordered Table
+
+<CodePreview code={BorderedTableCode}>
+  <BorderedTable />
+</CodePreview>
