@@ -1,0 +1,80 @@
+import {
+  DefaultStatistic,
+  DefaultStatisticCode,
+} from "./variant/DefaultStatistic";
+import {
+  StatisticWithProgressRate,
+  StatisticWithProgressRateCode,
+} from "./variant/StatisticWithProgressRate";
+import {
+  StatisticWithFilterButton,
+  StatisticWithFilterButtonCode,
+} from "./variant/StatisticWithFilterButton";
+import {
+  StatisticWithAvatar,
+  StatisticWithAvatarCode,
+} from "./variant/StatisticWithAvatar";
+import {
+  StatisticWithIcon,
+  StatisticWithIconCode,
+} from "./variant/StatisticWithIcon";
+import {
+  StatisticWithDollarSign,
+  StatisticWithDollarSignCode,
+} from "./variant/StatisticWithDollarSign";
+import { statisticApiData } from "./StatisticApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Statistic component in the Keep Design System allows you to display statistical information in a visually appealing and informative manner. With customizable options for type, number format, and additional features, you can present data in a way that best suits your design requirements.
+
+## Default Statistic
+
+<CodePreview code={DefaultStatisticCode}>
+  <DefaultStatistic />
+</CodePreview>
+
+## Statistic With Progress Rate
+
+<CodePreview code={StatisticWithProgressRateCode}>
+  <StatisticWithProgressRate />
+</CodePreview>
+
+## Statistic With Dollar Sign
+
+<CodePreview code={StatisticWithDollarSignCode}>
+  <StatisticWithDollarSign />
+</CodePreview>
+
+## Statistic With Filter Button
+
+<CodePreview code={StatisticWithFilterButtonCode}>
+  <StatisticWithFilterButton />
+</CodePreview>
+
+## Statistic With Avatar
+
+<CodePreview code={StatisticWithAvatarCode}>
+  <StatisticWithAvatar />
+</CodePreview>
+
+## Statistic With Icon
+
+<CodePreview code={StatisticWithIconCode}>
+  <StatisticWithIcon />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={statisticApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.statistic} />

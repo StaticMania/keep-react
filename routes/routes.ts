@@ -33,4 +33,5 @@ export const routes: routerPath[] = [
   { id: 26, name: "Steps", href: "/step" },
   { id: 27, name: "Timeline", href: "/timeline" },
   { id: 28, name: "Empty", href: "/empty" },
+  { id: 29, name: "Statistic", href: "/statistic" },
 ];

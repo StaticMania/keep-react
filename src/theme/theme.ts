@@ -14,6 +14,7 @@ import { ratingTheme } from "../components/Rating/theme";
 import { sidebarTheme } from "../components/Sidebar/theme";
 import { skeletonTheme } from "../components/Skeleton/theme";
 import { spinnerTheme } from "../components/Spinner/theme";
+import { statisticsTheme } from "../components/Statistic/theme";
 import { switchTheme } from "../components/Switch/theme";
 import { tableTheme } from "../components/Table/theme";
 import { tabTheme } from "../components/Tabs/theme";
@@ -47,6 +48,7 @@ const defaultTheme = {
   table: tableTheme,
   stepper: stepTheme,
   empty: emptyTheme,
+  statistic: statisticsTheme,
 };
 
 export default defaultTheme;

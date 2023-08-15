@@ -16,6 +16,7 @@ import { keepRatingTheme } from "../components/Rating";
 import { KeepSidebarTheme } from "../components/Sidebar";
 import { keepSkeletonTheme } from "../components/Skeleton";
 import { KeepSpinnerTheme } from "../components/Spinner";
+import { keepStatisticTheme } from "../components/Statistic";
 import { keepToggleTheme } from "../components/Switch";
 import { keepTableTheme } from "../components/Table";
 import { keepTabTheme } from "../components/Tabs";
@@ -148,4 +149,5 @@ export interface KeepTheme {
   table: keepTableTheme;
   stepper: keepStepperTheme;
   empty: keepEmptyTheme;
+  statistic: keepStatisticTheme;
 }
