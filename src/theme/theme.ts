@@ -15,6 +15,7 @@ import { skeletonTheme } from "../components/Skeleton/theme";
 import { spinnerTheme } from "../components/Spinner/theme";
 import { switchTheme } from "../components/Switch/theme";
 import { tabTheme } from "../components/Tabs/theme";
+import { tagTheme } from "../components/Tag/theme";
 import { toastTheme } from "../components/Toast/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
 
@@ -39,6 +40,7 @@ const defaultTheme = {
   sidebar: sidebarTheme,
   switch: switchTheme,
   skeleton: skeletonTheme,
+  tag: tagTheme,
 };
 
 export default defaultTheme;
