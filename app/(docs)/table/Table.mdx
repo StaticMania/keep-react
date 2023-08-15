@@ -11,6 +11,7 @@ import {
   TransactionsTable,
   TransactionsTableCode,
 } from "./variant/TransactionsTable";
+import { tableApiData } from "./TableApi";
 
 import CodePreview from "@/components/CodePreview";
 import CssThemePreview from "@/components/CssThemePreview";
@@ -62,3 +63,13 @@ A Table Component is a fundamental user interface element used to present data i
 <CodePreview code={BorderedTableCode}>
   <BorderedTable />
 </CodePreview>
+
+## Api
+
+<ComponentApi data={tableApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.table} />

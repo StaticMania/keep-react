@@ -4,6 +4,7 @@ import {
   TagWithDashedBorder,
   TagWithDashedBorderCode,
 } from "./variant/TagWithDashedBorder";
+import { tagApiData } from "./TagApi";
 
 import CodePreview from "@/components/CodePreview";
 import CssThemePreview from "@/components/CssThemePreview";
@@ -31,3 +32,13 @@ The Color Tag Component in the Keep Design System allows you to visually represe
 <CodePreview code={TagWithDashedBorderCode}>
   <TagWithDashedBorder />
 </CodePreview>
+
+## Api
+
+<ComponentApi data={tagApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.tag} />

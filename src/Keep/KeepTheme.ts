@@ -7,6 +7,7 @@ import { keepButtonTheme } from "../components/Button";
 import { keepButtonGroupTheme } from "../components/Button/ButtonGroup";
 import { KeepCardTheme } from "../components/Card";
 import { KeepCarouselTheme } from "../components/Carousel";
+import { keepEmptyTheme } from "../components/Empty";
 import { KeepFloatingTheme } from "../components/Floating";
 import { keepModalTheme } from "../components/Modal";
 import { keepNotificationTheme } from "../components/Notification";
@@ -19,6 +20,7 @@ import { keepToggleTheme } from "../components/Switch";
 import { keepTableTheme } from "../components/Table";
 import { keepTabTheme } from "../components/Tabs";
 import { keepTagTheme } from "../components/Tag";
+import { keepStepperTheme } from "../components/Timeline";
 import { keepToastTheme } from "../components/Toast";
 import { DeepPartial } from "../helpers/deep-partial";
 
@@ -144,4 +146,6 @@ export interface KeepTheme {
   skeleton: keepSkeletonTheme;
   tag: keepTagTheme;
   table: keepTableTheme;
+  stepper: keepStepperTheme;
+  empty: keepEmptyTheme;
 }

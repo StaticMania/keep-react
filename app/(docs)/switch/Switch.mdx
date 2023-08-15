@@ -6,6 +6,7 @@ import {
   SwitchWithBackgroundCode,
 } from "./variant/SwitchWithBackground";
 import { SwitchWithIcon, SwitchWithIconCode } from "./variant/SwitchWithIcon";
+import { toggleApiData } from "./SwitchApi";
 
 import CodePreview from "@/components/CodePreview";
 import CssThemePreview from "@/components/CssThemePreview";
@@ -45,3 +46,13 @@ The Tab Group Component in the Keep Design System allows you to organize and dis
 <CodePreview code={DisabledSwitchCode}>
   <DisabledSwitch />
 </CodePreview>
+
+## Api
+
+<ComponentApi data={toggleApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.switch} />

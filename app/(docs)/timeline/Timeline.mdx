@@ -1,0 +1,60 @@
+import {
+  DefaultTimeline,
+  DefaultTimelineCode,
+} from "./variant/DefaultTimeline";
+import {
+  HorizontalTimeline,
+  HorizontalTimelineCode,
+} from "./variant/HorizontalTimeline";
+import {
+  DashedBorderTimeline,
+  DashedBorderTimelineCode,
+} from "./variant/DashedBorderTimeline";
+import {
+  TimelineWithImage,
+  TimelineWithImageCode,
+} from "./variant/TimelineWithImage";
+import { timelineApiData } from "./TimelineApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Timeline Component is a graphical representation used to visualize a sequence of events or activities over time. It presents information in a chronological order, allowing users to track the progression of events, milestones, or changes. Timelines often include markers, labels, and other visual cues to enhance understanding and engagement.
+
+## Default Timeline
+
+<CodePreview code={DefaultTimelineCode}>
+  <DefaultTimeline />
+</CodePreview>
+
+## Horizontal Timeline
+
+<CodePreview code={HorizontalTimelineCode}>
+  <HorizontalTimeline />
+</CodePreview>
+
+## Dashed Border Timeline
+
+<CodePreview code={DashedBorderTimelineCode}>
+  <DashedBorderTimeline />
+</CodePreview>
+
+## Timeline With Image
+
+<CodePreview code={TimelineWithImageCode}>
+  <TimelineWithImage />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={timelineApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.stepper} />

@@ -6,6 +6,7 @@ import { breadcrumbtheme } from "../components/Breadcrumb/theme";
 import { buttonGroupTheme, buttonTheme } from "../components/Button/theme";
 import { cardTheme } from "../components/Card/theme";
 import { carouselTheme } from "../components/Carousel/theme";
+import { emptyTheme } from "../components/Empty/theme";
 import { modalTheme } from "../components/Modal/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
@@ -17,6 +18,7 @@ import { switchTheme } from "../components/Switch/theme";
 import { tableTheme } from "../components/Table/theme";
 import { tabTheme } from "../components/Tabs/theme";
 import { tagTheme } from "../components/Tag/theme";
+import { stepTheme } from "../components/Timeline/theme";
 import { toastTheme } from "../components/Toast/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
 
@@ -43,6 +45,8 @@ const defaultTheme = {
   skeleton: skeletonTheme,
   tag: tagTheme,
   table: tableTheme,
+  stepper: stepTheme,
+  empty: emptyTheme,
 };
 
 export default defaultTheme;

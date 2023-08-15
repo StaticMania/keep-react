@@ -1,0 +1,61 @@
+import { DefaultStep, DefaultStepCode } from "./variant/DefaultStep";
+import { StepWithoutBg, StepWithoutBgCode } from "./variant/StepWithoutBg";
+import { StepWithRing, StepWithRingCode } from "./variant/StepWithRing";
+import {
+  DashedBorderStep,
+  DashedBorderStepCode,
+} from "./variant/DashedBorderStep";
+import {
+  IncompletedStep,
+  IncompletedStepCode,
+} from "./variant/IncompletedStep";
+import { stepApiData } from "./StepApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Steps Component is a user interface element used to guide users through a multi-step process or workflow. It presents a visual representation of the various stages or steps a user needs to complete in a sequential order. Each step is typically accompanied by a title, description, and an indicator of completion status, helping users track their progress.
+
+## Default Step
+
+<CodePreview code={DefaultStepCode}>
+  <DefaultStep />
+</CodePreview>
+
+## Incompleted Step
+
+<CodePreview code={IncompletedStepCode}>
+  <IncompletedStep />
+</CodePreview>
+
+## Step Without Background color
+
+<CodePreview code={StepWithoutBgCode}>
+  <StepWithoutBg />
+</CodePreview>
+
+## Step With Ring
+
+<CodePreview code={StepWithRingCode}>
+  <StepWithRing />
+</CodePreview>
+
+## Step With Dashed Border
+
+<CodePreview code={DashedBorderStepCode}>
+  <DashedBorderStep />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={stepApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.stepper} />

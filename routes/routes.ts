@@ -30,4 +30,7 @@ export const routes: routerPath[] = [
   { id: 23, name: "Skeleton", href: "/skeleton" },
   { id: 24, name: "Tag", href: "/tag" },
   { id: 25, name: "Table", href: "/table" },
+  { id: 26, name: "Steps", href: "/step" },
+  { id: 27, name: "Timeline", href: "/timeline" },
+  { id: 28, name: "Empty", href: "/empty" },
 ];
