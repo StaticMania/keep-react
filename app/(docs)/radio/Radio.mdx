@@ -1,0 +1,41 @@
+import { DefaultRadio, DefaultRadioCode } from "./variant/DefaultRadio";
+import { RadioCheckIcon, RadioCheckIconCode } from "./variant/RadioCheckIcon";
+import { SizesOfRadio, SizesOfRadioCode } from "./variant/SizesOfRadio";
+import { radioApiData } from "./RadioApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Radio Input Component is a user interface element used for selecting a single option from a set of mutually exclusive choices. It presents a list of options, and users can choose one option at a time by clicking on a radio button associated with each choice.
+
+## Default Radio Input
+
+<CodePreview code={DefaultRadioCode}>
+  <DefaultRadio />
+</CodePreview>
+
+## Radio Check Icon
+
+<CodePreview code={RadioCheckIconCode}>
+  <RadioCheckIcon />
+</CodePreview>
+
+## Sizes Of Radio
+
+<CodePreview code={SizesOfRadioCode}>
+  <SizesOfRadio />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={radioApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.formControls.radio} />

@@ -1,0 +1,40 @@
+import {
+  DefaultNumberInput,
+  DefaultNumberInputCode,
+} from "./variant/DefaultNumberInput";
+import {
+  SizesOfNumberInput,
+  SizesOfNumberInputCode,
+} from "./variant/SizesOfNumberInput";
+import { numberInputApiData } from "./NumberInputApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Number Input Component is a user interface element designed for collecting numeric input from users. It provides a field where users can enter numerical values, such as integers or decimals, using keyboard input or arrow buttons.
+
+## Default Number Input
+
+<CodePreview code={DefaultNumberInputCode}>
+  <DefaultNumberInput />
+</CodePreview>
+
+## Sizes Of Number Input
+
+<CodePreview code={SizesOfNumberInputCode}>
+  <SizesOfNumberInput />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={numberInputApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.formControls.numberInput} />

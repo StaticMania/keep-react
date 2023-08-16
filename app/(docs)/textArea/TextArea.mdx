@@ -1,0 +1,60 @@
+import {
+  DefaultTextArea,
+  DefaultTextAreaCode,
+} from "./variant/DefaultTextArea";
+import {
+  ColorVariantOfTextArea,
+  ColorVariantOfTextAreaCode,
+} from "./variant/ColorVariantOfTextArea";
+import {
+  TextAreaWithOutBorder,
+  TextAreaWithOutBorderCode,
+} from "./variant/TextAreaWithOutBorder";
+import {
+  TextAreaWithHelperText,
+  TextAreaWithHelperTextCode,
+} from "./variant/TextAreaWithHelperText";
+import { textareaApiData } from "./TextAreaApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Textarea Input Component is a user interface element used to collect and display multiline text input from users. It provides an expandable box where users can enter a larger amount of text, such as comments, descriptions, or messages.
+
+## Default TextArea
+
+<CodePreview code={DefaultTextAreaCode}>
+  <DefaultTextArea />
+</CodePreview>
+
+## Color variant Of TextArea
+
+<CodePreview code={ColorVariantOfTextAreaCode}>
+  <ColorVariantOfTextArea />
+</CodePreview>
+
+## TextArea Without Border
+
+<CodePreview code={TextAreaWithOutBorderCode}>
+  <TextAreaWithOutBorder />
+</CodePreview>
+
+## TextArea With HelperText
+
+<CodePreview code={TextAreaWithHelperTextCode}>
+  <TextAreaWithHelperText />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={textareaApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.formControls.textarea} />

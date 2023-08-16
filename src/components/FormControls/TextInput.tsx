@@ -68,59 +68,16 @@ export interface TextInputSizes extends Pick<KeepSizes, "sm" | "md" | "lg"> {
 
 export interface TextInputProps
   extends Omit<ComponentProps<"input">, "ref" | "color" | "className"> {
-  /**
-   * Avaiable Size for input text
-   *
-   * `"sm"` `"md"` `"lg"` `"xl"` `"2xl"`
-   */
   sizing?: keyof TextInputSizes;
-
-  /**
-   * Input Text background color show or not?
-   */
   withBg?: boolean;
-  /**
-   * Input Text border show or not?
-   */
   border?: boolean;
-  /**
-   * Input Text shadow show or not?
-   */
   shadow?: boolean;
-  /**
-   * Input Text field disabled or not?
-   */
   disabled?: boolean;
-  /**
-   * Input Text helper text
-   */
   helperText?: ReactNode;
-  /**
-   * Input Text Field with Addon Icon
-   */
   addon?: ReactNode;
-
-  /**
-   * Input Text Field Addon icon position
-   *
-   * `"left"` `"right"`
-   */
   addonPosition?: "left" | "right";
-  /**
-   * Input Text Field With Icon
-   */
   icon?: ReactNode;
-  /**
-   * Input Text Field icon position
-   *
-   * `"left"` `"right"`
-   */
   iconPosition?: "left" | "right";
-  /**
-   * Avaiable color variant for input text field
-   *
-   * `"gray"` `"info"` `"error"` `"warning"` `"success"`
-   */
   color?: keyof TextInputColors;
   value?: string;
   handleOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;

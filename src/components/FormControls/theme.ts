@@ -233,7 +233,7 @@ export const formControlsTheme: keepFormControlTheme = {
     },
   },
   textarea: {
-    base: "appearance-none form-textarea block w-full border-0 focus:outline-none focus:ring-0",
+    base: "appearance-none form-textarea block w-full border-0 focus:outline-none focus:ring-0 p-3",
     disabled: "disabled:cursor-not-allowed disabled:opacity-50",
     colors: {
       default:
