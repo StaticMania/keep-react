@@ -14,7 +14,7 @@ export const dropdownTheme: keepDropdownTheme = {
       },
       placement: "-4px",
     },
-    base: "z-10 w-fit rounded-md divide-y divide-gray-100 border border-slate-200 shadow-lg",
+    base: "z-50 w-fit rounded-md divide-y divide-gray-100 border border-slate-200 shadow-lg",
     content: "py-1 text-sm text-slate-700",
     divider: "my-1 h-px bg-slate-100",
     header: "block py-2 px-4 text-sm text-slate-700",
