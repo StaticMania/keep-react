@@ -41,4 +41,5 @@ export const routes: routerPath[] = [
   { id: 34, name: "Radio", href: "/radio" },
   { id: 35, name: "Text Area", href: "/textArea" },
   { id: 36, name: "Number Input", href: "/numberInput" },
+  { id: 37, name: "Search Bar", href: "/searchBar" },
 ];

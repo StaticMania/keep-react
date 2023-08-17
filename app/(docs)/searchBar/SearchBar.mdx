@@ -1,0 +1,70 @@
+import {
+  DefaultSearchBar,
+  DefaultSearchBarCode,
+} from "./variant/DefaultSearchBar";
+import {
+  SearchBarWithIcon,
+  SearchBarWithIconCode,
+} from "./variant/SearchBarWithIcon";
+import {
+  SearchBarWithRightSideIcon,
+  SearchBarWithRightSideIconCode,
+} from "./variant/SearchBarWithRightSideIcon";
+import {
+  SearchBarWithColorVariant,
+  SearchBarWithColorVariantCode,
+} from "./variant/SearchBarWithColorVariant";
+import {
+  DisabledSearchBar,
+  DisabledSearchBarCode,
+} from "./variant/DisabledSearchBar";
+import { searchBarApiData } from "./SearchBarApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Preloader component in the Keep Design System provides a visual indication of an ongoing process or loading state. With various options for type and device, you can choose the appropriate preloader style to enhance the user experience on both web and mobile platforms.
+
+## Default SearchBar
+
+<CodePreview code={DefaultSearchBarCode}>
+  <DefaultSearchBar />
+</CodePreview>
+
+## SearchBar With Icon
+
+<CodePreview code={SearchBarWithIconCode}>
+  <SearchBarWithIcon />
+</CodePreview>
+
+## SearchBar With Right Side Icon
+
+<CodePreview code={SearchBarWithRightSideIconCode}>
+  <SearchBarWithRightSideIcon />
+</CodePreview>
+
+## SearchBar With Color Variant
+
+<CodePreview code={SearchBarWithColorVariantCode}>
+  <SearchBarWithColorVariant />
+</CodePreview>
+
+## Disabled SearchBar
+
+<CodePreview code={DisabledSearchBarCode}>
+  <DisabledSearchBar />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={searchBarApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.formControls.textInput} />
