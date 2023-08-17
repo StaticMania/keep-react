@@ -26,6 +26,7 @@ import { tagTheme } from "../components/Tag/theme";
 import { stepTheme } from "../components/Timeline/theme";
 import { toastTheme } from "../components/Toast/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
+import { treeTheme } from "../components/Tree/theme";
 import { uploadTheme } from "../components/Upload/theme";
 
 const defaultTheme = {
@@ -59,6 +60,7 @@ const defaultTheme = {
   checkbox: checkboxTheme,
   checkboxGroup: checkboxGroupTheme,
   formControls: formControlsTheme,
+  tree: treeTheme,
 };
 
 export default defaultTheme;

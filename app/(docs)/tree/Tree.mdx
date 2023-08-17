@@ -1,0 +1,77 @@
+import { DefaultTree, DefaultTreeCode } from "./variant/DefaultTree";
+import {
+  TreeWithCheckboxFolder,
+  TreeWithCheckboxFolderCode,
+} from "./variant/TreeWithCheckboxFolder";
+import {
+  TreeItemsWithFolderIcon,
+  TreeItemsWithFolderIconCode,
+} from "./variant/TreeWithFolderIcon";
+import {
+  TreeWithCheckbox,
+  TreeWithCheckboxCode,
+} from "./variant/TreeWithCheckbox";
+import {
+  TreeItemsWithBorder,
+  TreeItemsWithBorderCode,
+} from "./variant/TreeItemsWithBorder";
+import {
+  TreeWithItemsNumber,
+  TreeWithItemsNumberCode,
+} from "./variant/TreeWithItemsNumber";
+import { treeApiData } from "./TreeApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Default Tree Component is a user interface element that enables users to upload files or media from their local device to a web application or platform. It provides a means to select files, preview them if applicable, and initiate the upload process. The component is essential for allowing users to share content, images, documents, and other files with the application or website.
+
+## Default Tree
+
+<CodePreview code={DefaultTreeCode}>
+  <DefaultTree />
+</CodePreview>
+
+## Tree With Items Number
+
+<CodePreview code={TreeWithItemsNumberCode}>
+  <TreeWithItemsNumber />
+</CodePreview>
+
+## Tree Items With Border
+
+<CodePreview code={TreeItemsWithBorderCode}>
+  <TreeItemsWithBorder />
+</CodePreview>
+
+## Tree With Checkbox
+
+<CodePreview code={TreeWithCheckboxCode}>
+  <TreeWithCheckbox />
+</CodePreview>
+
+## Tree Items With Folder Icon
+
+<CodePreview code={TreeItemsWithFolderIconCode}>
+  <TreeItemsWithFolderIcon />
+</CodePreview>
+
+## Tree With Checkbox Folder Icon
+
+<CodePreview code={TreeWithCheckboxFolderCode}>
+  <TreeWithCheckboxFolder />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={treeApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.tree} />

@@ -27,6 +27,7 @@ import { keepTabTheme } from "../components/Tabs";
 import { keepTagTheme } from "../components/Tag";
 import { keepStepperTheme } from "../components/Timeline";
 import { keepToastTheme } from "../components/Toast";
+import { keepTreeTheme } from "../components/Tree";
 import { keepUploadTheme } from "../components/Upload";
 import { DeepPartial } from "../helpers/deep-partial";
 
@@ -160,4 +161,5 @@ export interface KeepTheme {
   checkbox: keepCheckboxTheme;
   formControls: keepFormControlTheme;
   checkboxGroup: keepCheckboxGroupTheme;
+  tree: keepTreeTheme;
 }
