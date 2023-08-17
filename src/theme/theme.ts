@@ -7,6 +7,7 @@ import { buttonGroupTheme, buttonTheme } from "../components/Button/theme";
 import { cardTheme } from "../components/Card/theme";
 import { carouselTheme } from "../components/Carousel/theme";
 import { checkboxTheme } from "../components/CheckBox/theme";
+import { checkboxGroupTheme } from "../components/CheckboxGroup/theme";
 import { dropdownTheme } from "../components/Dropdown/theme";
 import { emptyTheme } from "../components/Empty/theme";
 import { formControlsTheme } from "../components/FormControls/theme";
@@ -56,6 +57,7 @@ const defaultTheme = {
   upload: uploadTheme,
   dropdown: dropdownTheme,
   checkbox: checkboxTheme,
+  checkboxGroup: checkboxGroupTheme,
   formControls: formControlsTheme,
 };
 

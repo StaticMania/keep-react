@@ -4,7 +4,7 @@ import SearchBarDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "Search Bar Component is a user interface element commonly found in web and mobile applications. It provides a dedicated space at the side of the main content area to display navigation links, menu items, or other relevant information. The sidebar is often used to help users navigate between different sections of the application, access important features, or view contextual details.",
+    "The Search Bar component provides a user interface element for entering search queries. It includes various customization options such as placeholder text, color variants, size variations, icons, and additional content. The component can be configured with search input addons and icons, along with their respective positions. ",
   title: "Search Bar  - Keep Design System",
 };
 

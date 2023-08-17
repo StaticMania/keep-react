@@ -42,4 +42,6 @@ export const routes: routerPath[] = [
   { id: 35, name: "Text Area", href: "/textArea" },
   { id: 36, name: "Number Input", href: "/numberInput" },
   { id: 37, name: "Search Bar", href: "/searchBar" },
+  { id: 38, name: "Date Picker", href: "/datePicker" },
+  { id: 39, name: "CheckBox Group", href: "/checkboxGroup" },
 ];

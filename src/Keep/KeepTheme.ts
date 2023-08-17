@@ -8,6 +8,7 @@ import { keepButtonGroupTheme } from "../components/Button/ButtonGroup";
 import { KeepCardTheme } from "../components/Card";
 import { KeepCarouselTheme } from "../components/Carousel";
 import { keepCheckboxTheme } from "../components/CheckBox";
+import { keepCheckboxGroupTheme } from "../components/CheckboxGroup";
 import { keepDropdownTheme } from "../components/Dropdown";
 import { keepEmptyTheme } from "../components/Empty";
 import { KeepFloatingTheme } from "../components/Floating";
@@ -158,4 +159,5 @@ export interface KeepTheme {
   upload: keepUploadTheme;
   checkbox: keepCheckboxTheme;
   formControls: keepFormControlTheme;
+  checkboxGroup: keepCheckboxGroupTheme;
 }
