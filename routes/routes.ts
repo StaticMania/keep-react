@@ -45,4 +45,6 @@ export const routes: routerPath[] = [
   { id: 38, name: "Date Picker", href: "/datePicker" },
   { id: 39, name: "CheckBox Group", href: "/checkboxGroup" },
   { id: 40, name: "Tree", href: "/tree" },
+  { id: 41, name: "Navbar", href: "/navbar" },
+  { id: 42, name: "Area Chart", href: "/areaChart" },
 ];

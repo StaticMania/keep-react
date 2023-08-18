@@ -1,0 +1,58 @@
+import {
+  DefaultAreaChart,
+  DefaultAreaChartCode,
+} from "./variant/DefaultAreaChart";
+import {
+  AreaChartWithTooltip,
+  AreaChartWithTooltipCode,
+} from "./variant/AreaChartWithTooltip";
+import {
+  AreaChartWithDoubleSeries,
+  AreaChartWithDoubleSeriesCode,
+} from "./variant/AreaChartDoubleSeries";
+import {
+  AreaChartWithGridGraphLine,
+  AreaChartWithGridGraphLineCode,
+} from "./variant/ChartWithGridlineGraphline";
+import {
+  SmoothAreaChart,
+  SmoothAreaChartCode,
+} from "./variant/SmoothAreaChart";
+import { areaChartAPIData } from "./AreaChartApi";
+
+import CodePreview from "@/components/CodePreview";
+import CssThemePreview from "@/components/CssThemePreview";
+import ComponentApi from "@/components/ComponentApi";
+import { useTheme } from "@/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+
+## Default Area Chart
+
+<CodePreview code={DefaultAreaChartCode}>
+  <DefaultAreaChart />
+</CodePreview>
+
+## Area Chart With Double Series
+
+<CodePreview code={AreaChartWithDoubleSeriesCode}>
+  <AreaChartWithDoubleSeries />
+</CodePreview>
+
+## Area Chart With GridLine and GraphLine
+
+<CodePreview code={AreaChartWithGridGraphLineCode}>
+  <AreaChartWithGridGraphLine />
+</CodePreview>
+
+## Natural type Area Chart
+
+<CodePreview code={SmoothAreaChartCode}>
+  <SmoothAreaChart />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={areaChartAPIData} />

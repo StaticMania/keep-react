@@ -18,7 +18,7 @@ module.exports = {
       base: [
         "16px",
         {
-          lineHeight: "28px",
+          lineHeight: "24px",
           letterSpacing: "-0.3px",
         },
       ],

@@ -12,6 +12,7 @@ import { dropdownTheme } from "../components/Dropdown/theme";
 import { emptyTheme } from "../components/Empty/theme";
 import { formControlsTheme } from "../components/FormControls/theme";
 import { modalTheme } from "../components/Modal/theme";
+import { navbarTheme } from "../components/Navbar/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { progressTheme } from "../components/Progress/theme";
 import { ratingTheme } from "../components/Rating/theme";
@@ -61,6 +62,7 @@ const defaultTheme = {
   checkboxGroup: checkboxGroupTheme,
   formControls: formControlsTheme,
   tree: treeTheme,
+  navbar: navbarTheme,
 };
 
 export default defaultTheme;

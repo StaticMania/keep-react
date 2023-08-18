@@ -14,7 +14,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="container pt-10">
       <div className="grid grid-cols-12 gap-5">
-        <aside className="col-span-2">
+        <aside className="lg:col-span-2 lg:block hidden">
           <div className="py-5 px-4 border-r border-r-slate-100">
             <ul className="flex flex-col gap-2">
               {routes.map((route) => (
@@ -31,10 +31,10 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </aside>
 
-        <div className="col-span-8">
+        <div className="lg:col-span-9 col-span-12 lg:block w-full">
           <div className="flex-grow overflow-y-auto p-4">{children}</div>
         </div>
-        <aside className="col-span-2">
+        <aside className="lg:col-span-1 lg:block hidden">
           <div className="right-0 hidden w-64 flex-none pl-8 xl:block xl:text-sm">
             <div className="sticky top-20 flex h-[calc(100vh-5rem)] flex-col justify-between overflow-y-auto pb-6">
               <div className="mb-8">

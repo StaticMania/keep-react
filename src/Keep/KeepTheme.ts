@@ -14,6 +14,7 @@ import { keepEmptyTheme } from "../components/Empty";
 import { KeepFloatingTheme } from "../components/Floating";
 import { keepFormControlTheme } from "../components/FormControls/formControls";
 import { keepModalTheme } from "../components/Modal";
+import { KeepNavbarTheme } from "../components/Navbar";
 import { keepNotificationTheme } from "../components/Notification";
 import { keepProgressTheme } from "../components/Progress";
 import { keepRatingTheme } from "../components/Rating";
@@ -162,4 +163,5 @@ export interface KeepTheme {
   formControls: keepFormControlTheme;
   checkboxGroup: keepCheckboxGroupTheme;
   tree: keepTreeTheme;
+  navbar: KeepNavbarTheme;
 }
