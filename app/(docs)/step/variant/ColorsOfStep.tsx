@@ -1,25 +1,30 @@
 "use client";
-import { Step } from "@/src/components/Step";
 
-const StepWithRing = () => {
+import { Step } from "@/src/components/Step";
+import { DownloadSimple } from "phosphor-react";
+
+const ColorsOfStep = () => {
   return (
-    <Step withRing={true} withBg={false}>
-      <Step.Item>
-        <Step.Point>1</Step.Point>
+    <Step color="error">
+      <Step.Item completed={true}>
+        <Step.Point completed={true}>1</Step.Point>
         <Step.Title>Step Title 1</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Step.Content>
       </Step.Item>
-      <Step.Item>
-        <Step.Point>2</Step.Point>
+      <Step.Item completed={true}>
+        <Step.Point completed={true}>2</Step.Point>
         <Step.Title>Step Title 2</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Step.Content>
       </Step.Item>
-      <Step.Item>
-        <Step.Point>3</Step.Point>
+      <Step.Item active={true}>
+        <Step.Point
+          completed={true}
+          icon={<DownloadSimple size={20} color="#fff" />}
+        />
         <Step.Title>Step Title 3</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -36,29 +41,33 @@ const StepWithRing = () => {
   );
 };
 
-const StepWithRingCode = `
+const ColorsOfStepCode = `
 "use client";
 import { Step } from "keep-design";
+import { DownloadSimple } from "phosphor-react";
 
-const StepWithRing = () => {
+const ColorsOfStep = () => {
   return (
-    <Step withBorder={true} withBg={false}>
-      <Step.Item>
-        <Step.Point>1</Step.Point>
+    <Step>
+      <Step.Item completed={true}>
+        <Step.Point completed={true}>1</Step.Point>
         <Step.Title>Step Title 1</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Step.Content>
       </Step.Item>
-      <Step.Item>
-        <Step.Point>2</Step.Point>
+      <Step.Item completed={true}>
+        <Step.Point completed={true}>2</Step.Point>
         <Step.Title>Step Title 2</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Step.Content>
       </Step.Item>
-      <Step.Item>
-        <Step.Point>3</Step.Point>
+      <Step.Item active={true}>
+        <Step.Point
+          completed={true}
+          icon={<DownloadSimple size={20} color="#fff" />}
+        />
         <Step.Title>Step Title 3</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -75,7 +84,7 @@ const StepWithRing = () => {
   );
 };
 
-export default StepWithRing;
+export default ColorsOfStep;
 `;
 
-export { StepWithRing, StepWithRingCode };
+export { ColorsOfStep, ColorsOfStepCode };

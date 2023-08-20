@@ -30,6 +30,7 @@ export interface ToggleProps {
   label?: ReactNode;
   withIcon?: boolean;
   disabled?: boolean;
+  onChange?: (action: boolean) => void;
   size?: keyof ToggleSizes;
   bgColor?: "primary" | "slate";
 }
@@ -44,11 +45,14 @@ const ToggleComponent: FC<ToggleProps> = ({
   disabled = false,
   withIcon = false,
   size = "sm",
+  onChange,
   ...props
 }) => {
   const [enabled, setEnabled] = useState(false);
   const theirProps = excludeClassName(props);
   const theme = useTheme().theme.switch;
+
+  onChange && onChange(enabled);
 
   const showWithIcon = (enabled: boolean, size: keyof ToggleSizes): string => {
     if (enabled) {
@@ -73,8 +77,10 @@ const ToggleComponent: FC<ToggleProps> = ({
       data-testid="toggle-element"
       {...theirProps}
       className="inline-flex items-center"
+      id="test-switch"
     >
       <Switch
+        id="test-switchId"
         checked={disabled ? disabled : enabled}
         onChange={setEnabled}
         className={classNames(

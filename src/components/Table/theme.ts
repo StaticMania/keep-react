@@ -2,7 +2,7 @@ import { keepTableTheme } from "./Table";
 
 export const tableTheme: keepTableTheme = {
   root: {
-    base: "w-full text-left text-sm text-gray-500",
+    base: "w-full text-left text-sm text-gray-500 z-50",
     shadow: "absolute bg-white w-full h-full top-0 left-0 -z-10",
     wrapper: "relative",
   },

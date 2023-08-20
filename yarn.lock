@@ -3682,11 +3682,6 @@ rc-util@^5.21.0, rc-util@^5.24.4, rc-util@^5.26.0, rc-util@^5.27.0, rc-util@^5.3
     "@babel/runtime" "^7.18.3"
     react-is "^16.12.0"
 
-react-chartjs-2@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/react-chartjs-2/-/react-chartjs-2-5.2.0.tgz#43c1e3549071c00a1a083ecbd26c1ad34d385f5d"
-  integrity sha512-98iN5aguJyVSxp5U3CblRLH67J8gkfyGNbiK3c+l1QI/G4irHMPQw44aEPmjVag+YKTyQ260NcF82GTQ3bdscA==
-
 react-datepicker@^4.16.0:
   version "4.16.0"
   resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-4.16.0.tgz#b9dd389bb5611a1acc514bba1dd944be21dd877f"
@@ -3822,10 +3817,10 @@ recharts-scale@^0.4.4:
   dependencies:
     decimal.js-light "^2.4.1"
 
-recharts@^2.7.2:
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.7.2.tgz#6d813681910ad33a4bbf3bdd06c6f64f20b39319"
-  integrity sha512-HMKRBkGoOXHW+7JcRa6+MukPSifNtJlqbc+JreGVNA407VLE/vOP+8n3YYjprDVVIF9E2ZgwWnL3D7K/LUFzBg==
+recharts@2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.6.2.tgz#f26dc7954ab9df8e49a50aa36ed9c7177bd0a0a5"
+  integrity sha512-dVhNfgI21LlF+4AesO3mj+i+9YdAAjoGaDWIctUgH/G2iy14YVtb/DSUeic77xr19rbKCiq+pQGfeg2kJQDHig==
   dependencies:
     classnames "^2.2.5"
     eventemitter3 "^4.0.1"

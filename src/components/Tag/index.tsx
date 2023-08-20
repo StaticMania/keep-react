@@ -20,6 +20,9 @@ export interface keepTagTheme {
     base: string;
     color: TagColors;
   };
+  children: {
+    colors: TagColors;
+  };
 }
 
 export interface TagProps
@@ -67,9 +70,16 @@ export const Tag: FC<TagProps> = ({
       role="tag"
     >
       {leftIcon && (
-        <span className={classNames(theme.icon.left)}>{leftIcon}</span>
+        <span
+          className={classNames(theme.icon.left, theme.children.colors[color])}
+        >
+          {leftIcon}
+        </span>
       )}
-      {children}
+
+      <span className={classNames(theme.children.colors[color])}>
+        {children}
+      </span>
       {onDismiss && typeof onDismiss === "function" && (
         <>
           {leftIcon && (
@@ -79,7 +89,10 @@ export const Tag: FC<TagProps> = ({
           )}
           <span
             onClick={(e) => (disabled ? e.stopPropagation() : onDismiss())}
-            className={classNames(!disabled && theme.disabled.off)}
+            className={classNames(
+              !disabled && theme.disabled.off,
+              !disabled && theme.children.colors[color]
+            )}
           >
             {dismissIcon}
           </span>

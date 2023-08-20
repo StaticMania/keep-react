@@ -1,0 +1,10 @@
+#tableScrollBar::-webkit-scrollbar {
+  height: 8px !important;
+}
+#tableScrollBar::-webkit-scrollbar-track {
+  background-color: #f9fafb;
+}
+#tableScrollBar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d7dfe9;
+}

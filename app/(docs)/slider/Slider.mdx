@@ -1,9 +1,14 @@
 import { DefaultSlider, DefaultSliderCode } from "./variant/DefaultSlider";
 import { SliderWithDots, SliderWithDotsCode } from "./variant/SliderWithDots";
 import {
+  SliderTooltipPosition,
+  SliderTooltipPositionCode,
+} from "./variant/SliderTooltipPosition";
+import {
   SliderWithMarks,
   SliderWithMarksCode,
 } from "./variant/SliderWithMarks";
+import { sliderAPIData } from "./SliderApi";
 
 import CodePreview from "@/components/CodePreview";
 import CssThemePreview from "@/components/CssThemePreview";
@@ -16,7 +21,7 @@ The slider component in the Keep Design System allows users to select a value wi
 
 ## Default Slider
 
-The Default Rating is a pre-configured or initial rating value within the context of a rating component. It represents the default score assigned to an item or content when a user hasn't provided a specific rating.
+The `DefaultSlider` component uses the "keep-design" library's `Slider` component. It's designed for selecting a range of values from 100 to 1000. The initial range is set at 100 to 300. The slider shows value `tooltips` at the `top`. Users can easily drag the range selection thanks to the `draggableTrack` feature. When values are changed, the `onChange` callback logs the new selection to the console.
 
 <CodePreview code={DefaultSliderCode}>
   <DefaultSlider />
@@ -24,7 +29,7 @@ The Default Rating is a pre-configured or initial rating value within the contex
 
 ## Slider With Dots
 
-The Default Rating is a pre-configured or initial rating value within the context of a rating component. It represents the default score assigned to an item or content when a user hasn't provided a specific rating.
+Enabling the dots feature in the slider is done using the dots={true} prop. To further customize the dots, you can include an additional prop called step. This step prop takes a numerical value, and it determines the spacing between the dots on the slider line.
 
 <CodePreview code={SliderWithDotsCode}>
   <SliderWithDots />
@@ -32,8 +37,20 @@ The Default Rating is a pre-configured or initial rating value within the contex
 
 ## Slider With Marks
 
-The Default Rating is a pre-configured or initial rating value within the context of a rating component. It represents the default score assigned to an item or content when a user hasn't provided a specific rating.
+Enabling the `marks` feature in the slider allows you to display specific marked points along the slider line.
 
 <CodePreview code={SliderWithMarksCode}>
   <SliderWithMarks />
 </CodePreview>
+
+## Slider With Tooltip Position
+
+Control the position of the tooltips in the slider by using the tooltip prop. Setting `tooltip="top"` will display the tooltips above the slider thumb, while `tooltip="bottom"` will display them below the slider thumb. If tooltip position is `tooltip="none"` then tooltip will be hidden.
+
+<CodePreview code={SliderTooltipPositionCode}>
+  <SliderTooltipPosition />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={sliderAPIData} />

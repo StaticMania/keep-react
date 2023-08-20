@@ -3,16 +3,16 @@ import { Step } from "@/src/components/Step";
 
 const DashedBorderStep = () => {
   return (
-    <Step withBorder={true} borderType="dashed" withBg={true}>
-      <Step.Item>
-        <Step.Point>1</Step.Point>
+    <Step borderType="dashed" withBg={true} color="info">
+      <Step.Item completed>
+        <Step.Point completed>1</Step.Point>
         <Step.Title>Step Title 1</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Step.Content>
       </Step.Item>
-      <Step.Item>
-        <Step.Point>2</Step.Point>
+      <Step.Item completed>
+        <Step.Point completed>2</Step.Point>
         <Step.Title>Step Title 2</Step.Title>
         <Step.Content>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.

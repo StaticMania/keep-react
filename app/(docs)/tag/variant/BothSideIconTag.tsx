@@ -1,15 +1,13 @@
 "use client";
+import { useState } from "react";
 import { Tag } from "@/src/components/Tag";
 import { CrownSimple, X } from "phosphor-react";
-import React, { useState } from "react";
 
-const TagWithDashedBorder = () => {
+const BothSideIconTag = () => {
   const [dismiss, setDismiss] = useState(false);
-
   const onDismiss = () => {
     setDismiss(!dismiss);
   };
-
   return (
     <div className="flex w-full flex-row gap-2">
       <Tag
@@ -18,67 +16,60 @@ const TagWithDashedBorder = () => {
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="error"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="info"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="success"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="warning"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="teal"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="purple"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
@@ -86,19 +77,17 @@ const TagWithDashedBorder = () => {
   );
 };
 
-const TagWithDashedBorderCode = `
-"use client";
+const BothSideIconTagCode = `
+import { useState } from "react";
 import { Tag } from "keep-design";
 import { CrownSimple, X } from "phosphor-react";
-import React, { useState } from "react";
 
-const TagWithDashedBorder = () => {
+const BothSideIconTag = () => {
   const [dismiss, setDismiss] = useState(false);
 
   const onDismiss = () => {
     setDismiss(!dismiss);
   };
-
   return (
     <div className="flex w-full flex-row gap-2">
       <Tag
@@ -107,67 +96,60 @@ const TagWithDashedBorder = () => {
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="error"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="info"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="success"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="warning"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="teal"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
       <Tag
         color="purple"
-        dismiss={dismiss}
+        dismiss={false}
         onDismiss={onDismiss}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
       >
         Tag
       </Tag>
@@ -175,8 +157,8 @@ const TagWithDashedBorder = () => {
   );
 };
 
-export default TagWithDashedBorder;
+export default BothSideIconTag;
 
 `;
 
-export { TagWithDashedBorder, TagWithDashedBorderCode };
+export { BothSideIconTag, BothSideIconTagCode };

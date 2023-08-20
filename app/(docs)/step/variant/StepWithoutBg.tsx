@@ -3,7 +3,7 @@ import { Step } from "@/src/components/Step";
 
 const StepWithoutBg = () => {
   return (
-    <Step withBorder={true} withBg={false}>
+    <Step withRing={true} withBg={false}>
       <Step.Item>
         <Step.Point>1</Step.Point>
         <Step.Title>Step Title 1</Step.Title>
@@ -39,10 +39,9 @@ const StepWithoutBg = () => {
 const StepWithoutBgCode = `
 "use client";
 import { Step } from "keep-design";
-
 const StepWithoutBg = () => {
   return (
-    <Step withBorder={true} withBg={false}>
+    <Step withRing={true} withBg={false}>
       <Step.Item>
         <Step.Point>1</Step.Point>
         <Step.Title>Step Title 1</Step.Title>

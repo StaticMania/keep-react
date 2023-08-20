@@ -15,9 +15,11 @@ import { useTheme } from "@/src/Keep/ThemeContex";
 
 ## Table of Contents
 
-The Tab Group Component in the Keep Design System allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container. With customizable options for size, type, and status, you can create versatile and visually appealing tab groups that align with your design aesthetic.
+The Toggle Switch component provides a user-friendly way to enable or disable a setting or feature. It presents a visual representation of two states, typically "on" and "off," allowing users to easily toggle between them. The Toggle Switch component is highly versatile and can be integrated into various user interfaces to enhance user interactions and control options.
 
 ## Default switch
+
+The "Default Switch" component provides a visual representation of two states, typically "on" and "off," allowing users to effortlessly toggle between them.
 
 <CodePreview code={DefaultSwitchCode}>
   <DefaultSwitch />
@@ -25,11 +27,15 @@ The Tab Group Component in the Keep Design System allows you to organize and dis
 
 ## Switch With Icon
 
+Enhance the visual appeal of the switch by adding icons. Simply enable the withIcon prop with withIcon={true}.
+
 <CodePreview code={SwitchWithIconCode}>
   <SwitchWithIcon />
 </CodePreview>
 
 ## Switch With Background
+
+Elevate the design by choosing between two background color variants: `bgColor="primary"` and `bgColor="slate"`.
 
 <CodePreview code={SwitchWithBackgroundCode}>
   <SwitchWithBackground />
@@ -37,11 +43,15 @@ The Tab Group Component in the Keep Design System allows you to organize and dis
 
 ## Sizes of Switch
 
+Adapt the switch size to suit your design with three size variants: `sm`, `md`, and `lg`. Simply set the size prop to `"sm"`, `"md"`, or `"lg"`.
+
 <CodePreview code={SwitchSizesCode}>
   <SwitchSizes />
 </CodePreview>
 
 ## Disabled Switch
+
+Disable the switch component by utilizing the `disabled` prop with `disabled={true}`.
 
 <CodePreview code={DisabledSwitchCode}>
   <DisabledSwitch />
@@ -49,10 +59,12 @@ The Tab Group Component in the Keep Design System allows you to organize and dis
 
 ## Api
 
+Refer to the API documentation for detailed information about the Toggle Switch component.
+
 <ComponentApi data={toggleApiData} />
 
 ## Theme
 
-To learn more about how to customize the appearance of components, please see the Theme docs.
+To achieve the desired appearance for your application, explore the Theme documentation to customize the look of the components.
 
 <CssThemePreview code={useTheme().theme.switch} />

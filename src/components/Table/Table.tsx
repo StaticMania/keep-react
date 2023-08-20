@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import "./Table.css";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { keepTableBodyTheme } from "./TableBody";
 import { TableBody } from "./TableBody";

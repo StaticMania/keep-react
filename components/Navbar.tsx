@@ -35,7 +35,7 @@ const Navbar = () => {
                 d="M4 8h16M4 16h16"
               />
             </svg>
-            {/* Menu open: "block", Menu closed: "hidden" */}
+
             <svg
               className="hidden w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
@@ -78,13 +78,6 @@ const Navbar = () => {
               Resources
             </Link>
           </div>
-          <a
-            href="#"
-            className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700"
-            role="button"
-          >
-            Get started
-          </a>
         </nav>
       </div>
     </header>

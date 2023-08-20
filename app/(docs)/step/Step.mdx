@@ -1,6 +1,7 @@
 import { DefaultStep, DefaultStepCode } from "./variant/DefaultStep";
 import { StepWithoutBg, StepWithoutBgCode } from "./variant/StepWithoutBg";
 import { StepWithRing, StepWithRingCode } from "./variant/StepWithRing";
+import { ColorsOfStep, ColorsOfStepCode } from "./variant/ColorsOfStep";
 import {
   DashedBorderStep,
   DashedBorderStepCode,
@@ -22,11 +23,23 @@ Steps Component is a user interface element used to guide users through a multi-
 
 ## Default Step
 
+The Default Step refers to the fundamental and default configuration of a Steps Component within a user interface. It provides a clear visual representation of each step in a multi-step process.
+
 <CodePreview code={DefaultStepCode}>
   <DefaultStep />
 </CodePreview>
 
+## Color variant of Step
+
+The Step component comes in various color variants to suit your design needs. By adjusting the `color` prop, you can choose from our color options to represent the status or significance of each step. Available colors: `"info" | "error" | "success" | "warning" | "gray"`
+
+<CodePreview code={ColorsOfStepCode}>
+  <ColorsOfStep />
+</CodePreview>
+
 ## Incompleted Step
+
+An Incomplete Step refers to a step within a multi-step process or workflow that has not yet been completed by the user.
 
 <CodePreview code={IncompletedStepCode}>
   <IncompletedStep />
@@ -34,17 +47,23 @@ Steps Component is a user interface element used to guide users through a multi-
 
 ## Step Without Background color
 
+A Step Without Background Color is a step within a Steps Component that lacks a distinct background color to indicate its status. By adjusting the `withBg={true | false}` props, we can observe the two different variants of the step component.
+
 <CodePreview code={StepWithoutBgCode}>
   <StepWithoutBg />
 </CodePreview>
 
 ## Step With Ring
 
+Add a ring around a step component by setting the withRing prop to true.
+
 <CodePreview code={StepWithRingCode}>
   <StepWithRing />
 </CodePreview>
 
 ## Step With Dashed Border
+
+To change the border style between two steps and apply a dashed line, use the `borderType="dashed"` prop.
 
 <CodePreview code={DashedBorderStepCode}>
   <DashedBorderStep />

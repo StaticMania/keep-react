@@ -64,7 +64,7 @@ const BarChart: FC<BarChartProps> = ({
   secondaryDataKey,
 }) => {
   const RenderBarChart = (
-    <BarChartCom width={width} height={height} data={chartData}>
+    <BarChartCom id="testId" width={width} height={height} data={chartData}>
       {showGridLine && (
         <CartesianGrid strokeDasharray="4 4" fill="#E9EFF6" y={1000} />
       )}

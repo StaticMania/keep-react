@@ -6,7 +6,12 @@ const TabsWithIcon = () => {
   return (
     <div className="flex flex-col gap-5">
       <h1 className="text-xl font-bold text-slate-900">Left Side Icon Tabs</h1>
-      <Tabs aria-label="Default tabs" style="underline" borderPosition="bottom">
+      <Tabs
+        aria-label="Default tabs"
+        style="underline"
+        borderPosition="bottom"
+        iconPosition="left"
+      >
         <Tabs.Item title="Profile" icon={<User size={20} />}>
           Profile content
         </Tabs.Item>
@@ -65,7 +70,7 @@ import { Gear, GridFour, Phone, User, WarningCircle } from "phosphor-react";
 
 const TabsWithIcon = () => {
   return (
-    <Tabs aria-label="Default tabs" style="underline" borderPosition="bottom">
+    <Tabs aria-label="Default tabs" style="underline" borderPosition="bottom" iconPosition="right">
       <Tabs.Item title="Profile" icon={<User size={20} />}>
         Profile content
       </Tabs.Item>

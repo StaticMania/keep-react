@@ -1,3 +1,6 @@
+/* Data Picker CSS Import */
+@import "react-datepicker/dist/react-datepicker.css";
+
 /* Date picker root element style */
 .react-datepicker {
   font-family: inherit;

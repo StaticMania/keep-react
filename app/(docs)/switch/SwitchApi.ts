@@ -30,4 +30,10 @@ export const toggleApiData = [
     propsType: '"primary" | "slate"',
     propsDescription: "Sets the background color variant of the toggle.",
   },
+  {
+    id: 6,
+    propsName: "onChange",
+    propsType: "(action:boolean)=> void",
+    propsDescription: "onChange is called when the toggle enabled",
+  },
 ];

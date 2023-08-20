@@ -1,64 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* RC-ToolTip Slider CSS Import */
-@import "~rc-slider/assets/index.css";
-@import "~rc-tooltip/assets/bootstrap.css";
-
 /* Data Picker CSS Import */
 @import "react-datepicker/dist/react-datepicker.css";
-
-/* target the scrollbar */
-
-.rc-slider-rail {
-  background-color: #e8edff;
-}
-.rc-slider-track {
-  background-color: #1b4dff;
-}
-
-.rc-slider-handle {
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border: 2px solid #1b4dff;
-  opacity: 1;
-}
-.rc-slider-handle:hover {
-  border-color: #1b4dff !important;
-}
-.rc-slider-step,
-.rc-slider-track,
-.rc-slider-rail {
-  height: 10px;
-}
-.rc-slider-handle-dragging {
-  box-shadow: 0 0 0 5px #b4c4ff !important;
-  border-color: #1b4dff !important;
-}
-.rc-tooltip-inner {
-  font-weight: 600;
-  background-color: #2d3643;
-}
-.rc-slider-dot {
-  bottom: 0px;
-  width: 10px;
-  height: 10px;
-}
-.rc-slider-dot-active {
-  border-color: #94abff;
-}
-.rc-slider-mark-text {
-  top: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #1b4dff;
-}
-.rc-slider-disabled {
-  background-color: unset;
-}
-.rc-slider-disabled > .rc-slider-handle:hover {
-  border-color: #cccccc !important;
-}
 
 @tailwind base;
 @tailwind components;
@@ -74,6 +17,10 @@
 
   body {
     font-family: "Inter", sans-serif;
+  }
+
+  html {
+    @apply scroll-smooth;
   }
 }
 
