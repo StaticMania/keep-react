@@ -31,9 +31,11 @@ import { useTheme } from "@/src/Keep/ThemeContex";
 
 ## Table of Contents
 
-Input Component is a fundamental user interface element used to collect user input or data in various forms, such as text, numbers, dates, or selections. It provides a space where users can type or select information, allowing them to interact with the application and provide necessary inputs.
+The Text Input component is a fundamental user interface element used for capturing text-based user input. It provides a designated area where users can enter text, such as words, numbers, or symbols, into an application or website. Text inputs are versatile and can be used for various purposes, including search bars, login forms, comment sections, and more.
 
 ## Default Text Input
+
+The Default Text Input is a standard user interface element used for capturing text input from users.
 
 <CodePreview code={DefaultInputCode}>
   <DefaultInput />
@@ -41,11 +43,15 @@ Input Component is a fundamental user interface element used to collect user inp
 
 ## Input Field With Level
 
+The Input Field With Level component enhances the standard text input by introducing hierarchical levels. This feature is particularly useful when capturing text input within a structured context.
+
 <CodePreview code={InputFieldWithLevelCode}>
   <InputFieldWithLevel />
 </CodePreview>
 
-## Input Field With Level
+## Input Field With Helpertext
+
+The Input Field With Helper Text component includes a standard text input enhanced with informative helper text.
 
 <CodePreview code={LevelAndHelperTextCode}>
   <LevelAndHelperText />
@@ -53,11 +59,15 @@ Input Component is a fundamental user interface element used to collect user inp
 
 ## Input With Icon
 
+The Input Field With Icon component combines a standard text input with an accompanying icon.Icons can provide context, suggest input type, or offer additional information to users.
+
 <CodePreview code={InputWithIconCode}>
   <InputWithIcon />
 </CodePreview>
 
 ## Input With Addon
+
+The Input Field With Addon component pairs a standard text input with a functional addon element. This addon can be positioned on either the `left` or `right` side of the input field.
 
 <CodePreview code={InputWithAddonCode}>
   <InputWithAddon />
@@ -65,23 +75,31 @@ Input Component is a fundamental user interface element used to collect user inp
 
 ## Input With Addon And Icon
 
+The Input With Addon and Icon component offers a comprehensive input experience by combining an icon and a functional addon element.
+
 <CodePreview code={InputWithAddonAndIconCode}>
   <InputWithAddonAndIcon />
 </CodePreview>
 
 ## Input Field URL
 
+The Input Field with URL component combines various elements to facilitate URL input. It includes a label to provide context, a text input field for entering the URL.
+
 <CodePreview code={InputFieldURLCode}>
   <InputFieldURL />
 </CodePreview>
 
-## Input Color Variant
+## Input Field Color Variant
+
+The Input Field with Color Variant component offers a customizable input experience by incorporating color variations.Available color variants for the input field are : `gray` `info` `success` `error` and `warning`
 
 <CodePreview code={InputColorVariantCode}>
   <InputColorVariant />
 </CodePreview>
 
 ## Input Without Border
+
+The Borderless Input Field component offers a minimalist approach to text input by removing the standard border. To do that, you need to add a props called `border={false}`.
 
 <CodePreview code={InputWithOutBorderCode}>
   <InputWithOutBorder />

@@ -9,7 +9,7 @@ const DefaultInput = () => {
 
 const DefaultInputCode = `
 "use client";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { TextInput } from "keep-design";
 
 const DefaultInput = () => {
   return (
