@@ -17,7 +17,7 @@ export const TimelineContent: FC<TimelineContentProps> = ({
   return (
     <div
       data-testid="timeline-content"
-      className={classNames({ "mt-3 sm:pr-8": horizontal }, className)}
+      className={classNames({ "mt-4 -ms-2 sm:pr-8": horizontal }, className)}
       {...props}
     >
       {children}

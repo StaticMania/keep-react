@@ -59,7 +59,7 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
     >
       {children}
       {Icon ? (
-        <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 ring-8 ring-white">
+        <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-500 ring-8 ring-white">
           <span aria-hidden className="h-3 w-3 text-blue-500">
             {Icon}
           </span>

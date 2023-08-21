@@ -9,14 +9,14 @@ const DefaultTimeline = () => {
       <Timeline.Item>
         <Timeline.Point />
         <Timeline.Content>
-          <Timeline.Time>April 2023</Timeline.Time>
-          <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
+          <Timeline.Time>August 2023</Timeline.Time>
+          <Timeline.Title>Mobile App Development</Timeline.Title>
           <Timeline.Body>
-            Get access to over 20+ pages including a dashboard layout, charts,
-            kanban board, calendar, and pre-order E-commerce & Marketing pages.
+            Launching our new mobile app on both iOS and Android platforms,
+            providing users with seamless access to our services on the go.
           </Timeline.Body>
           <Button type="primary" size="sm">
-            Learn More
+            Discover App Features
             <ArrowRight className="ml-2 h-3 w-3" />
           </Button>
         </Timeline.Content>
@@ -24,23 +24,23 @@ const DefaultTimeline = () => {
       <Timeline.Item>
         <Timeline.Point />
         <Timeline.Content>
-          <Timeline.Time>March 2023</Timeline.Time>
-          <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+          <Timeline.Time>July 2023</Timeline.Time>
+          <Timeline.Title>Enhanced User Analytics</Timeline.Title>
           <Timeline.Body>
-            All of the pages and components are first designed in Figma and we
-            keep a parity between the two versions even as we update the
-            project.
+            Introducing advanced user analytics to gain deeper insights into
+            user behavior and improve overall user experience.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
         <Timeline.Point />
         <Timeline.Content>
-          <Timeline.Time>April 2023</Timeline.Time>
-          <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
+          <Timeline.Time>June 2023</Timeline.Time>
+          <Timeline.Title>New Feature Rollout</Timeline.Title>
           <Timeline.Body>
-            Get started with dozens of web components and interactive elements
-            built on top of Tailwind CSS.
+            Rolling out a set of new features, including real-time chat support,
+            enhanced search functionality, and personalized content
+            recommendations.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>
@@ -59,14 +59,14 @@ const DefaultTimeline = () => {
       <Timeline.Item>
         <Timeline.Point />
         <Timeline.Content>
-          <Timeline.Time>April 2023</Timeline.Time>
-          <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
+          <Timeline.Time>August 2023</Timeline.Time>
+          <Timeline.Title>Mobile App Development</Timeline.Title>
           <Timeline.Body>
-            Get access to over 20+ pages including a dashboard layout, charts,
-            kanban board, calendar, and pre-order E-commerce & Marketing pages.
+            Launching our new mobile app on both iOS and Android platforms,
+            providing users with seamless access to our services on the go.
           </Timeline.Body>
           <Button type="primary" size="sm">
-            Learn More
+            Discover App Features
             <ArrowRight className="ml-2 h-3 w-3" />
           </Button>
         </Timeline.Content>
@@ -74,23 +74,23 @@ const DefaultTimeline = () => {
       <Timeline.Item>
         <Timeline.Point />
         <Timeline.Content>
-          <Timeline.Time>March 2023</Timeline.Time>
-          <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+          <Timeline.Time>July 2023</Timeline.Time>
+          <Timeline.Title>Enhanced User Analytics</Timeline.Title>
           <Timeline.Body>
-            All of the pages and components are first designed in Figma and we
-            keep a parity between the two versions even as we update the
-            project.
+            Introducing advanced user analytics to gain deeper insights into
+            user behavior and improve overall user experience.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
         <Timeline.Point />
         <Timeline.Content>
-          <Timeline.Time>April 2023</Timeline.Time>
-          <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
+          <Timeline.Time>June 2023</Timeline.Time>
+          <Timeline.Title>New Feature Rollout</Timeline.Title>
           <Timeline.Body>
-            Get started with dozens of web components and interactive elements
-            built on top of Tailwind CSS.
+            Rolling out a set of new features, including real-time chat support,
+            enhanced search functionality, and personalized content
+            recommendations.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>

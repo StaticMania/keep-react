@@ -1,6 +1,6 @@
 "use client";
 import { Timeline } from "@/src/components/Timeline";
-import { CalendarBlank } from "phosphor-react";
+import { CalendarBlank, Clock, Gift } from "phosphor-react";
 
 const HorizontalTimeline = () => {
   return (
@@ -8,36 +8,40 @@ const HorizontalTimeline = () => {
       <Timeline.Item>
         <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
         <Timeline.Content>
-          <Timeline.Title>Keep Library v1.0.0</Timeline.Title>
-          <Timeline.Time>Released on December 2, 2021</Timeline.Time>
+          <Timeline.Title>New Years Day</Timeline.Title>
+          <Timeline.Time>January 1st</Timeline.Time>
           <Timeline.Body>
-            Get started with dozens of web components and interactive elements.
+            Celebrating the start of a new year with friends and family.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
         <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
         <Timeline.Content>
-          <Timeline.Title>Keep Library v1.1.0</Timeline.Title>
-          <Timeline.Time>Released on December 23, 2021</Timeline.Time>
+          <Timeline.Title>Birthday Bash</Timeline.Title>
+          <Timeline.Time>May 15th</Timeline.Time>
           <Timeline.Body>
-            Get started with dozens of web components and interactive elements.
+            Throwing a fun-filled birthday party to celebrate another year of
+            life.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
         <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
         <Timeline.Content>
-          <Timeline.Title>Keep Library v1.3.0</Timeline.Title>
-          <Timeline.Time>Released on January 5, 2022</Timeline.Time>
+          <Timeline.Title>Independence Day</Timeline.Title>
+          <Timeline.Time>July 4th</Timeline.Time>
           <Timeline.Body>
-            Get started with dozens of web components and interactive elements.
+            Enjoying a spectacular display of fireworks and patriotic
+            festivities.
           </Timeline.Body>
         </Timeline.Content>
       </Timeline.Item>
     </Timeline>
   );
 };
+
+export default HorizontalTimeline;
 
 const HorizontalTimelineCode = `
 "use client";
