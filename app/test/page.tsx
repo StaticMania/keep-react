@@ -4,9 +4,10 @@ import Image from "next/image";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
 import { Button } from "@/src/components/Button";
 import { DefaultTable } from "../(docs)/table/variant/DefaultTable";
+import { CheckBox } from "@/src/components/CheckBox";
 const page = () => {
   return (
-    <DefaultTable />
+    // <DefaultTable />
     // <header className="py-5 border-b border-b-slate-50">
     //   <nav className="container mx-auto flex items-center justify-between gap-5">
     //     <div className="flex items-center">
@@ -64,6 +65,15 @@ const page = () => {
     //     </div>
     //   </nav>
     // </header>
+    <CheckBox
+      size="md"
+      variant="withoutCheck"
+      type="circle"
+      checked={true}
+      label=""
+      id="two"
+      name="countries"
+    />
   );
 };
 

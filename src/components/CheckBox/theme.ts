@@ -21,7 +21,7 @@ export const checkboxTheme: keepCheckboxTheme = {
     withoutCheck: {
       error:
         'border border-error-100 focus:ring-0 focus:ring-offset-0 checked:bg-none checked:bg-error-25 checked:after:content-[" "] checked:after:bg-error-600 checked:border checked:border-error-500 checked:hover:bg-transparent checked:hover:border checked:hover:border-error-500 checked:focus:bg-transparent checked:focus:border checked:focus:border-error-500',
-      info: 'border border-primary-100 focus:ring-0 focus:ring-offset-0 checked:bg-none checked:bg-slate-25 checked:after:content-[" "] checked:after:bg-primary-600 checked:border checked:border-primary-500 checked:hover:bg-transparent checked:hover:border checked:hover:border-primary-500 checked:focus:bg-transparent checked:focus:border checked:focus:border-primary-500',
+      info: 'border border-primary-100 focus:ring-0 focus:ring-offset-0  checked:bg-slate-25 checked:after:content-[" "] checked:after:bg-primary-500 checked:border checked:border-primary-500 checked:hover:bg-transparent checked:hover:border checked:hover:border-primary-500 checked:focus:bg-transparent checked:focus:border checked:focus:border-primary-500',
       success:
         'border border-success-100 focus:ring-0 focus:ring-offset-0 checked:bg-none checked:bg-success-25 checked:after:content-[" "] checked:after:bg-success-600 checked:border checked:border-success-500 checked:hover:bg-transparent checked:hover:border checked:hover:border-success-500 checked:focus:bg-transparent checked:focus:border checked:focus:border-success-500',
       warning:
