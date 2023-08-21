@@ -8,7 +8,7 @@ const StatisticWithAvatar = () => {
         <Statistic.Img img="/images/avatar/avatar-4.png" />
         <div>
           <div className="flex items-center gap-2">
-            <Statistic.Amount>{1212122}</Statistic.Amount>
+            <Statistic.Amount>{7381237}</Statistic.Amount>
             <Statistic.Rate>1.5</Statistic.Rate>
           </div>
           <Statistic.Title>Memebers</Statistic.Title>
@@ -29,7 +29,7 @@ const StatisticWithAvatar = () => {
         <Statistic.Img img="/images/avatar/avatar-4.png" />
         <div>
           <div className="flex items-center gap-2">
-            <Statistic.Amount>{1212122}</Statistic.Amount>
+            <Statistic.Amount>{7381237}</Statistic.Amount>
             <Statistic.Rate>1.5</Statistic.Rate>
           </div>
           <Statistic.Title>Memebers</Statistic.Title>

@@ -5,7 +5,7 @@ const DefaultStatistic = () => {
   return (
     <Statistic>
       <Statistic.Title>Memebers</Statistic.Title>
-      <Statistic.Amount>{1212122}</Statistic.Amount>
+      <Statistic.Amount>{7381237}</Statistic.Amount>
     </Statistic>
   );
 };
@@ -18,7 +18,7 @@ const DefaultStatistic = () => {
   return (
     <Statistic>
       <Statistic.Title>Memebers</Statistic.Title>
-      <Statistic.Amount>{1212122}</Statistic.Amount>
+      <Statistic.Amount>{7381237}</Statistic.Amount>
     </Statistic>
   );
 };
