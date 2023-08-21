@@ -4,7 +4,7 @@ import DropdownDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "The Dropdown Component in the Keep Design System allows users to select options from a dropdown menu. With customizable options for the type, supporting text, arrow icon, and search box, you can create dropdowns that align with your design and provide an intuitive user experience.",
+    "The Dropdown Component is a versatile user interface element that provides users with a menu of selectable options. With a wide range of customization options, including labels, icons, search bars, checkboxes, and more, the Dropdown Component enhances user interaction by offering intuitive and flexible selection functionalities.",
   title: "Dropdown - Keep Design System",
 };
 
