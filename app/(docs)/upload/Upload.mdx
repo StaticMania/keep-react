@@ -36,11 +36,15 @@ Upload Component is a user interface element that enables users to upload files 
 
 ## Default Upload
 
+The Default Upload component enables users to choose and upload a file.The `onFileChange` callback is used to handle the file selection and update the selected file's name.
+
 <CodePreview code={DefaultUploadCode}>
   <DefaultUpload />
 </CodePreview>
 
 ## Upload Pending
+
+The `progressType` prop is set to `"pending"` to indicate that the progress is pending.
 
 <CodePreview code={UploadPendingCode}>
   <UploadPending />
@@ -48,11 +52,15 @@ Upload Component is a user interface element that enables users to upload files 
 
 ## Upload Failed
 
+The `progressType` prop is set to `"error"` to indicate that the progress is failed.
+
 <CodePreview code={UploadFailedCode}>
   <UploadFailed />
 </CodePreview>
 
 ## Upload Success
+
+The `progressType` prop is set to `"success"` to indicate that the progress is success.
 
 <CodePreview code={UploadSuccessCode}>
   <UploadSuccess />
@@ -60,11 +68,15 @@ Upload Component is a user interface element that enables users to upload files 
 
 ## Horizontal Upload
 
+The `horizontal` prop is set to `true`, allowing for a horizontal layout.
+
 <CodePreview code={HorizontalUploadCode}>
   <HorizontalUpload />
 </CodePreview>
 
 ## Horizontal Upload Pending
+
+The `progressType="pending"` and `horizontal={true}` props indicate that the horizontal upload progress is pending.
 
 <CodePreview code={HorizontalUploadPendingCode}>
   <HorizontalUploadPending />
@@ -72,11 +84,15 @@ Upload Component is a user interface element that enables users to upload files 
 
 ## Horizontal Upload Failed
 
+The `progressType="error"` and `horizontal={true}` props indicate that the horizontal upload progress is failed.
+
 <CodePreview code={HorizontalUploadFailedCode}>
   <HorizontalUploadFailed />
 </CodePreview>
 
 ## Horizontal Upload Success
+
+The `progressType="success"` and `horizontal={true}` props indicate that the horizontal upload progress is success.
 
 <CodePreview code={HorizontalUploadSuccessCode}>
   <HorizontalUploadSuccess />
@@ -84,11 +100,15 @@ Upload Component is a user interface element that enables users to upload files 
 
 ## Horizontal Disabled Upload
 
+The `horizontal={true}` and `disabled={true}` props indicate that the horizontal upload disabled.
+
 <CodePreview code={HorizontalDisabledUploadCode}>
   <HorizontalDisabledUpload />
 </CodePreview>
 
 ## Upload Disabled
+
+The `disabled={true}` prop indicate that the upload component is disabled.
 
 <CodePreview code={UploadDisabledCode}>
   <UploadDisabled />
