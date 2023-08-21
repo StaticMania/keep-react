@@ -1,6 +1,7 @@
 import { DefaultRadio, DefaultRadioCode } from "./variant/DefaultRadio";
 import { RadioCheckIcon, RadioCheckIconCode } from "./variant/RadioCheckIcon";
 import { SizesOfRadio, SizesOfRadioCode } from "./variant/SizesOfRadio";
+import { RadioVariant, RadioVariantCode } from "./variant/RadioVariant";
 import { radioApiData } from "./RadioApi";
 
 import CodePreview from "@/components/CodePreview";
@@ -14,17 +15,31 @@ Radio Input Component is a user interface element used for selecting a single op
 
 ## Default Radio Input
 
+The Default Radio Input is a fundamental user interface element that allows users to choose a single option from a group of options. It presents a list of choices, each accompanied by a radio button.
+
 <CodePreview code={DefaultRadioCode}>
   <DefaultRadio />
 </CodePreview>
 
+## Radio shape variant
+
+The Radio Shape Variant component introduces different shape options for radio inputs, allowing you to customize the appearance of radio buttons. The available shape variants are: `"circle"` and `"square"`.
+
+<CodePreview code={RadioVariantCode}>
+  <RadioVariant />
+</CodePreview>
+
 ## Radio Check Icon
+
+The Radio Check Icon component is an enhanced version of the radio input with a checked icon feature. When the `checkedIcon` attribute is set to `true`, it displays a visual indicator (icon) that represents the checked state of the radio button.
 
 <CodePreview code={RadioCheckIconCode}>
   <RadioCheckIcon />
 </CodePreview>
 
 ## Sizes Of Radio
+
+The Sizes of Radio component offers different size options for radio inputs to suit various design preferences and layouts. The available sizes include: `sm` `md` and `lg`.
 
 <CodePreview code={SizesOfRadioCode}>
   <SizesOfRadio />

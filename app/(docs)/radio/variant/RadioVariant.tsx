@@ -1,164 +1,168 @@
 "use client";
+
+import { useState } from "react";
 import { Label } from "@/src/components/FormControls/Label";
 import { Radio } from "@/src/components/FormControls/Radio";
-import { useState } from "react";
 
-const RadioCheckIcon = () => {
+const RadioVariant = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelected(e.target.value);
   };
+
   return (
-    <fieldset className="flex flex-col gap-3" id="radio">
-      <legend className="mb-3">Choose your favorite Technology</legend>
+    <fieldset className="flex flex-col gap-3">
+      <legend className="mb-3">Choose your favorite country</legend>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="React"
-          name="technology"
-          value="react"
+          id="united-state-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="USA"
         />
-        <Label htmlFor="React">React Js</Label>
+        <Label htmlFor="united-state-1">United States</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="Vue Js"
-          name="technology"
-          value="Vue Js"
+          id="germany-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="Germany"
         />
-        <Label htmlFor="Vue Js">Vue Js</Label>
+        <Label htmlFor="germany-1">Germany</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="Angular Js"
-          name="technology"
-          value="Angular Js"
+          id="spain-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="Spain"
         />
-        <Label htmlFor="Angular Js">Angular Js</Label>
+        <Label htmlFor="spain-1">Spain</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="sv"
-          name="technology"
-          value="Sveltkit"
+          id="uk-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="United Kingdom"
         />
-        <Label htmlFor="sv">Sveltkit</Label>
+        <Label htmlFor="uk-1">United Kingdom</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="Solid Js"
-          name="technology"
-          value="Solid Js"
+          id="china-1"
+          name="countries"
+          selected={selected}
+          onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="China"
           disabled={true}
-          selected={selected}
-          onOptionChange={handleOptionChange}
         />
-        <Label htmlFor="Solid Js" disabled={true}>
-          Solid Js (disabled)
+        <Label htmlFor="china-1" disabled={true}>
+          China (disabled)
         </Label>
       </div>
     </fieldset>
   );
 };
 
-const RadioCheckIconCode = `
+const RadioVariantCode = `
 "use client";
 import { useState } from "react";
 import { Label,Radio } from "keep-design";
 
-const RadioCheckIcon = () => {
+const RadioVariant = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (e) => {
     setSelected(e.target.value);
   };
+
   return (
-    <fieldset className="ml-5 flex flex-col gap-3" id="radio">
-      <legend className="mb-3">Choose your favorite Technology</legend>
+    <fieldset className="flex flex-col gap-3">
+      <legend className="mb-3">Choose your favorite country</legend>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="React"
-          name="technology"
-          value="react"
+          id="united-state-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="USA"
         />
-        <Label htmlFor="React">React Js</Label>
+        <Label htmlFor="united-state-1">United States</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="Vue Js"
-          name="technology"
-          value="Vue Js"
+          id="germany-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="Germany"
         />
-        <Label htmlFor="Vue Js">Vue Js</Label>
+        <Label htmlFor="germany-1">Germany</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="Angular Js"
-          name="technology"
-          value="Angular Js"
+          id="spain-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="Spain"
         />
-        <Label htmlFor="Angular Js">Angular Js</Label>
+        <Label htmlFor="spain-1">Spain</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="sv"
-          name="technology"
-          value="Sveltkit"
+          id="uk-1"
+          name="countries"
           selected={selected}
           onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="United Kingdom"
         />
-        <Label htmlFor="sv">Sveltkit</Label>
+        <Label htmlFor="uk-1">United Kingdom</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="Solid Js"
-          name="technology"
-          value="Solid Js"
+          id="china-1"
+          name="countries"
+          selected={selected}
+          onOptionChange={handleOptionChange}
+          radioShape="square"
+          value="China"
           disabled={true}
-          selected={selected}
-          onOptionChange={handleOptionChange}
         />
-        <Label htmlFor="Solid Js" disabled={true}>
-          Solid Js (disabled)
+        <Label htmlFor="china-1" disabled={true}>
+          China (disabled)
         </Label>
       </div>
     </fieldset>
   );
 };
 
-export default RadioCheckIcon;
+export default RadioVariant;
+
 `;
 
-export { RadioCheckIcon, RadioCheckIconCode };
+export { RadioVariant, RadioVariantCode };

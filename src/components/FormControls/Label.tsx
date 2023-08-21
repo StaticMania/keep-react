@@ -22,12 +22,14 @@ export interface LabelProps
   color?: keyof LabelColors;
   value?: string;
   disabled?: boolean;
+  htmlFor?: string;
 }
 
 export const Label: FC<LabelProps> = ({
   children,
   color = "default",
   disabled = false,
+  htmlFor,
   value,
   ...props
 }): JSX.Element => {
@@ -35,6 +37,7 @@ export const Label: FC<LabelProps> = ({
   const theirProps = excludeClassName(props);
   return (
     <label
+      htmlFor={htmlFor}
       className={classNames(
         theme.base,
         theme.colors[color],
