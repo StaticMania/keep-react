@@ -31,9 +31,11 @@ import { useTheme } from "@/src/Keep/ThemeContex";
 
 ## Table of Contents
 
-Checkbox Group component enables users to select multiple options from a predefined list using checkboxes. It streamlines the process of selecting multiple items by presenting them together and allowing users to make their choices simultaneously. The Checkbox Group component offers various options for customization, including layout, styling, and handling user interactions.
+A Checkbox Group is a user interface element that allows users to select multiple options from a list by checking corresponding checkboxes. This component is often used when users need to choose from a set of related options, and they can select one or more options simultaneously.
 
 ## Default Checkbox Group
+
+The DefaultCheckboxGroup is a pre-designed Checkbox Group component that lets users select a single option from a list of checkboxes.
 
 <CodePreview code={DefaultCheckboxGroupCode}>
   <DefaultCheckboxGroup />
@@ -41,11 +43,15 @@ Checkbox Group component enables users to select multiple options from a predefi
 
 ## Circle Checkbox Group
 
+When the `checkboxType` is set to `"circle"` the checkboxes within the group are displayed in a circular shape rather than the traditional `square` shape.
+
 <CodePreview code={CircleCheckboxGroupCode}>
   <CircleCheckboxGroup />
 </CodePreview>
 
 ## Checkbox Group With Icon
+
+A Checkbox Group with Icon is a Checkbox Group component that includes an icon next to each checkbox option. In this case, the `icon` prop is used to specify the icon that should be displayed alongside the checkboxes.
 
 <CodePreview code={CheckboxGroupWithIconCode}>
   <CheckboxGroupWithIcon />
@@ -53,17 +59,23 @@ Checkbox Group component enables users to select multiple options from a predefi
 
 ## Checkbox Group With Logo
 
+A Checkbox Group with Logo is a Checkbox Group component that includes a logo image next to each checkbox option using the `img` prop.
+
 <CodePreview code={CheckboxGroupWithLogoCode}>
   <CheckboxGroupWithLogo />
 </CodePreview>
 
 ## Checkbox Group With Avatar
 
+A Checkbox Group with Avatar is a Checkbox Group component that features an avatar image next to each checkbox option using the `img` prop.
+
 <CodePreview code={CheckboxGroupWithAvatarCode}>
   <CheckboxGroupWithAvatar />
 </CodePreview>
 
 ## Checkbox Group With Image
+
+A Checkbox Group with image is a Checkbox Group component that displays an image next to each checkbox option using the `img` prop.
 
 <CodePreview code={CheckboxGroupWithImageCode}>
   <CheckboxGroupWithImage />
