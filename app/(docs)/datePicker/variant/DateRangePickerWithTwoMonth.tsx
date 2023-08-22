@@ -15,7 +15,6 @@ const DateRangePickerWithTwoMonth = () => {
 
 const DateRangePickerWithTwoMonthCode = `
 "use client";
-
 import { useState } from "react";
 import { DatePicker } from "keep-design";
 

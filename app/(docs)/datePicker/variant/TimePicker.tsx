@@ -7,22 +7,21 @@ const TimePicker = () => {
   const [time, setTime] = useState<string | null | Date>();
   return (
     <DatePicker timePicker={setTime}>
-      <DatePicker.Year />
+      <DatePicker.Time />
     </DatePicker>
   );
 };
 
 const TimePickerCode = `
 "use client";
-
 import { useState } from "react";
 import { DatePicker } from "keep-design";
 
 const TimePicker = () => {
-  const [time, setTime] = useState<string | null | Date>();
+  const [time, setTime] = useState(null);
   return (
     <DatePicker timePicker={setTime}>
-      <DatePicker.Year />
+      <DatePicker.Time />
     </DatePicker>
   );
 };

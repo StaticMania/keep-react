@@ -19,7 +19,7 @@ import { useState } from "react";
 import { DatePicker } from "keep-design";
 
 const YearPicker = () => {
-  const [yearPicker, setYearPicker] = useState<number | Date | null>();
+  const [yearPicker, setYearPicker] = useState();
   return (
     <DatePicker yearPicker={setYearPicker}>
       <DatePicker.Year />
