@@ -4,7 +4,7 @@ import TreeDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "Tree Component is a user interface element that enables users to upload files or media from their local device to a web application or platform. It provides a means to select files, preview them if applicable, and initiate the upload process. The component is essential for allowing users to share content, images, documents, and other files with the application or website.",
+    "A Tree component is a user interface element that visually represents hierarchical data structures, often resembling a branching tree. It's commonly used to display parent-child relationships or nested information in a way that's easy to navigate and understand.",
   title: "Tree - Keep Design System",
 };
 
