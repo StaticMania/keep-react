@@ -1,17 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import tsx from "react-syntax-highlighter/dist/esm/languages/prism/tsx";
-import { Check, Copy, GithubLogo } from "phosphor-react";
+import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Check, Copy } from "phosphor-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CodePreviewProps {
   children: React.ReactNode;
   code: string;
 }
-
-SyntaxHighlighter.registerLanguage("tsx", tsx);
 
 const CodePreview = ({ children, code }: CodePreviewProps) => {
   const [copy, setCopy] = useState<Boolean>(false);
@@ -35,67 +33,80 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
   }
   const [active, setActive] = useState(0);
   return (
-    <>
-      <div className="flex text-center flex-wrap -mb-px border-slate-200 border-b my-10">
+    <div className="border border-slate-200 rounded-md my-10 shadow-sm overflow-hidden">
+      <div className="flex text-center flex-wrap -mb-px bg-white border-slate-200 border-b px-5">
         <button
           type="button"
           onClick={() => setActive(0)}
-          className={`flex items-center justify-center px-5 py-2.5 text-base font-medium first:ml-0 text-slate-900  ${
-            active === 0 ? "tabActive" : ""
+          className={`flex -mb-[0.7px] items-center justify-center px-5 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] first:ml-0 text-slate-400 border-b border-b-transparent  ${
+            active === 0 ? "text-slate-900 !border-b-slate-900" : ""
           }`}
         >
           Preview
         </button>
         <button
           onClick={() => setActive(1)}
-          className={`flex items-center justify-center px-5 py-2.5 text-base font-medium first:ml-0 text-slate-900  ${
-            active === 1 ? "tabActive" : ""
+          className={`flex items-center justify-center px-5 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] first:ml-0 text-slate-400 border-b border-b-transparent  ${
+            active === 1 ? "text-slate-900 !border-b-slate-900" : ""
           }`}
         >
           Code
         </button>
       </div>
 
-      <div className="my-5">
+      <div>
         {active ? (
           <div className="relative">
-            <div className="absolute top-5 right-10 flex items-center justify-between border border-slate-800">
+            <div className="absolute top-5 right-10 flex items-center justify-between gap-3">
               <Link
                 href="/"
-                className="bg-slate-800 hover:bg-slate-200 text-white duration-200 transition-all py-2 px-5 hover:text-slate-800"
+                className="bg-slate-800 hover:bg-slate-700 transition-all duration-300 h-9 w-9 flex items-center justify-center rounded-md"
               >
-                <GithubLogo size={20} />
+                <Image
+                  src="/images/icon/github-white.svg"
+                  height={20}
+                  width={20}
+                  alt="github"
+                />
               </Link>
               <button
-                className="bg-slate-800 hover:bg-slate-200 text-white duration-200 transition-all py-2 px-5 hover:text-slate-800"
+                className="bg-slate-900 border-2 border-slate-800 hover:bg-slate-700 hover:border-transparent transition-all duration-300 h-9 w-9 flex items-center justify-center rounded-md"
                 onClick={() => handleCopyToClipboard({ text: code })}
               >
                 {copy ? (
-                  <span className="flex gap-1  text-xs items-center">
-                    <Check size={20} />
-                    Copied
+                  <span className="flex text-xs items-center">
+                    <Check size={20} color="white" />
                   </span>
                 ) : (
-                  <Copy size={20} />
+                  <Copy size={20} color="white" />
                 )}
               </button>
             </div>
-
             <SyntaxHighlighter
-              language="tsx"
-              style={dracula}
+              language="jsx"
+              style={coldarkDark}
               customStyle={{
-                maxHeight: "380px",
+                maxHeight: "420px",
+                borderRadius: "0px",
+                paddingLeft: "40px",
+                paddingBottom: "30px",
+                marginTop: "0px",
+                background: "#1C222B",
+                fontSize: "14px",
+                lineHeight: "28px",
+                letterSpacing: "-0.2px",
               }}
             >
               {code}
             </SyntaxHighlighter>
           </div>
         ) : (
-          <div className="p-10 border border-slate-100 rounded">{children}</div>
+          <div className="p-5 mix-h-[420px] flex items-center justify-center">
+            <div className="w-full h-full">{children}</div>
+          </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

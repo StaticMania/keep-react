@@ -3,7 +3,7 @@ import { Accordion } from "@/src/components/Accordion";
 
 const DefaultAccordion = () => {
   return (
-    <Accordion>
+    <Accordion showIcon>
       <Accordion.Panel>
         <Accordion.Title>Is there a free version available?</Accordion.Title>
         <Accordion.Content>

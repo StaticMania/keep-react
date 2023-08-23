@@ -3,6 +3,7 @@ import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useAccordionContext } from "./AccordionPanelContext";
 import { useTheme } from "@/src/Keep/ThemeContex";
 import { DeepPartial } from "@/src/helpers/deep-partial";
+import { mergeDeep } from "@/src/helpers/mergeDeep";
 
 export interface keepAccordionComponentTheme {
   base: string;
@@ -16,12 +17,13 @@ export interface AccordionContentProps
 export const AccordionContent: FC<AccordionContentProps> = ({
   children,
   className,
+  theme: customTheme = {},
   ...props
 }) => {
   const { isOpen } = useAccordionContext();
 
-  const theme = useTheme().theme.accordion.content;
-
+  const oldTheme = useTheme().theme.accordion.content;
+  const theme = mergeDeep(oldTheme, customTheme);
   return (
     <div
       className={classNames(theme.base, className)}

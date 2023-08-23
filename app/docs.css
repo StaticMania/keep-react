@@ -1,31 +1,26 @@
 #mainContent h2 {
-  @apply font-bold text-xl text-slate-900 mb-4 mt-5 first:mt-0;
+  @apply font-semibold leading-6 tracking-[-0.3px] text-lg text-slate-900 pb-2 border-b border-b-slate-200;
 }
 #mainContent > p {
-  @apply font-normal text-base text-slate-500 mb-3 mt-4;
+  @apply font-normal text-base leading-6 tracking-[-0.3px] text-slate-700 mt-4;
 }
 #mainContent > ul li {
   @apply font-normal text-base text-slate-500 mb-3 mt-4;
-}
-
-.tabActive {
-  @apply bg-slate-25 border-slate-900 border-b-2 font-bold;
 }
 
 #mainContent code {
   @apply bg-slate-50 py-1 px-2 rounded;
 }
 
+#mainContent pre > code {
+  @apply !font-inter;
+}
 #mainContent #cssCode {
   @apply bg-transparent;
 }
 
 #mainContent #sectionLink {
   @apply ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100;
-}
-
-#mainContent > #table-of-contents + ul + h2 {
-  @apply mt-0;
 }
 
 #mainContent > #table-of-contents {
@@ -57,9 +52,24 @@
 }
 
 #visible-table-of-contents li {
-  @apply pb-3;
+  @apply my-2 -ml-px pl-3 text-slate-500 border-l leading-7 tracking-[-0.2px] text-sm border-l-transparent hover:border-l-slate-900 hover:text-slate-900  active:text-slate-900;
 }
 
-#visible-table-of-contents a {
-  @apply inline-block border-l border-white pl-2.5 font-medium transition-none duration-200 after:ml-2 after:text-primary-700 after:opacity-0 after:transition-opacity after:duration-100 after:content-['#'] hover:border-gray-300 hover:text-gray-900 hover:after:opacity-100 dark:border-gray-900 dark:after:text-primary-700 dark:hover:border-gray-700 dark:hover:text-white;
+#visible-table-of-contents li:has(.active-link) {
+  @apply text-slate-900 border-l-slate-900 hover:text-slate-900  active:text-slate-900 transition-colors duration-300;
+}
+
+#linkPage::-webkit-scrollbar {
+  width: 4px !important;
+}
+#linkPage::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+#linkPage::-webkit-scrollbar-thumb {
+  background-color: #e9eff6 !important;
+  border-radius: 10px;
+}
+
+.tabActive {
+  @apply !text-slate-900 border-b-slate-900;
 }

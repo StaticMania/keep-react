@@ -14,6 +14,7 @@ import { useSidebarContext } from "./SidebarContext";
 import { useSidebarItemContext } from "./SidebarItemContext";
 import { KeepColors } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { mergeDeep } from "@/src/helpers/mergeDeep";
 
 export interface KeepSidebarItemTheme {
   active: string;
@@ -99,6 +100,7 @@ const SidebarItem = forwardRef<Element, SidebarItemProps>(
       icon: Icon,
       label,
       labelColor = "info",
+      theme: customTheme = {},
       ...props
     },
     ref
@@ -106,7 +108,8 @@ const SidebarItem = forwardRef<Element, SidebarItemProps>(
     const id = useId();
     const { isCollapsed } = useSidebarContext();
     const { isInsideCollapse } = useSidebarItemContext();
-    const theme = useTheme().theme.sidebar.item;
+    const oldTheme = useTheme().theme.sidebar.item;
+    const theme = mergeDeep(oldTheme, customTheme);
 
     return (
       <ListItem id={id} isCollapsed={isCollapsed} tooltipChildren={children}>

@@ -13,16 +13,16 @@ export const DocsContentLayout: FC<DocsContentLayoutProps> = function ({
   children,
 }) {
   return (
-    <div className="divide-y divide-slate-200 ">
-      <div className="pb-8">
-        <h1 className="mb-2 inline-block w-full text-3xl font-extrabold tracking-tight text-slate-900">
+    <div>
+      <div className="mb-[50px]">
+        <h1 className="mb-2 inline-block w-full text-[26px] font-semibold leading-10 tracking-[-0.5px] text-slate-900">
           {title}
         </h1>
-        <p className="text-lg text-slate-600">{description}</p>
+        <p className="text-base leading-6 text-slate-700 tracking-[-0.3px]">
+          {description}
+        </p>
       </div>
-      <div id="mainContent" className="py-8">
-        {children}
-      </div>
+      <div id="mainContent">{children}</div>
     </div>
   );
 };

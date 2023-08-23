@@ -5,10 +5,10 @@ export const sidebarTheme: KeepSidebarTheme = {
     base: "h-full",
     collapsed: {
       on: "w-16",
-      off: "w-64",
+      off: "w-full",
     },
     inner:
-      "h-full overflow-y-auto overflow-x-hidden rounded bg-white py-4 px-3 shadow",
+      "h-full overflow-y-auto overflow-x-hidden rounded bg-white py-4 px-3",
   },
   collapse: {
     button:

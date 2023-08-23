@@ -6,14 +6,14 @@ export const useMDXComponents: (components: MDXComponents) => MDXComponents = (
   return {
     h2: (props) => (
       <h2
-        className="group relative text-2xl font-bold text-gray-900 before:invisible before:-mt-20 before:block before:h-24 before:content-[''] before:dark:text-white"
+        className="section-title group relative before:invisible before:-mt-20 before:block before:h-28 before:content-['']"
         {...props}
       >
         {props.children}
         <a
           aria-label={`Link to this section: ${props.children}`}
           href={`#${props.id}`}
-          className="ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100 dark:text-primary-500"
+          className="ml-2 text-slate-500 opacity-0 transition-opacity group-hover:opacity-100"
         >
           #
         </a>

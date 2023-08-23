@@ -14,6 +14,7 @@ import type { KeepSidebarLogoTheme } from "./SidebarLogo";
 import SidebarLogo from "./SidebarLogo";
 import { KeepBoolean } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { mergeDeep } from "@/src/helpers/mergeDeep";
 
 export interface KeepSidebarTheme {
   root: {
@@ -39,9 +40,11 @@ const SidebarComponent: FC<SidebarProps> = ({
   children,
   collapseBehavior = "collapse",
   collapsed: isCollapsed = false,
+  theme: customTheme = {},
   ...props
 }) => {
-  const theme = useTheme().theme.sidebar;
+  const oldTheme = useTheme().theme.sidebar;
+  const theme = mergeDeep(oldTheme, customTheme);
 
   return (
     <SidebarContext.Provider value={{ isCollapsed }}>

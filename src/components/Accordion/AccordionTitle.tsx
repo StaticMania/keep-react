@@ -1,10 +1,11 @@
 import classNames from "classnames";
-import { MinusCircle } from "phosphor-react";
+import { MinusCircle, PlusCircle } from "phosphor-react";
 import type { ComponentProps, FC } from "react";
 import { useAccordionContext } from "./AccordionPanelContext";
 import { KeepBoolean, KeepHeadingLevel } from "@/src/Keep/KeepTheme";
 import { DeepPartial } from "@/src/helpers/deep-partial";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { mergeDeep } from "@/src/helpers/mergeDeep";
 
 export interface keepAccordionTitleTheme {
   arrow: {
@@ -32,19 +33,23 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
   as: Heading = "h1",
   children,
   className,
+  theme: customTheme = {},
   ...props
 }) => {
   const {
-    arrowIcon: ArrowIcon,
+    showIcon,
     flush,
     isOpen,
     setOpen,
     iconPosition,
     disabled,
+    closeIcon: CloseIcon,
+    openIcon: OpenIcon,
   } = useAccordionContext();
   const onClick = () => typeof setOpen !== "undefined" && setOpen();
 
-  const theme = useTheme().theme.accordion.title;
+  const oldTheme = useTheme().theme.accordion.title;
+  const theme = mergeDeep(oldTheme, customTheme);
 
   return (
     <button
@@ -62,13 +67,33 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
       disabled={disabled}
       {...props}
     >
-      {iconPosition === "left" &&
-        (!isOpen ? ArrowIcon : <MinusCircle size={24} color="#5E718D" />)}
+      {iconPosition === "left" && !isOpen && CloseIcon && CloseIcon}
+      {iconPosition === "left" && isOpen && OpenIcon && OpenIcon}
+      {(iconPosition === "left" || !iconPosition) &&
+        !isOpen &&
+        !CloseIcon &&
+        !OpenIcon &&
+        showIcon && <PlusCircle size={24} color="#5E718D" />}
+      {(iconPosition === "left" || !iconPosition) &&
+        isOpen &&
+        !CloseIcon &&
+        !OpenIcon &&
+        showIcon && <MinusCircle size={24} color="#5E718D" />}
       <Heading className={theme.heading} data-testid="keep-accordion-heading">
         {children}
       </Heading>
-      {iconPosition === "right" &&
-        (!isOpen ? ArrowIcon : <MinusCircle size={24} color="#5E718D" />)}
+      {iconPosition === "right" && !isOpen && CloseIcon && CloseIcon}
+      {iconPosition === "right" && isOpen && OpenIcon && OpenIcon}
+      {(iconPosition === "right" || !iconPosition) &&
+        !isOpen &&
+        !CloseIcon &&
+        !OpenIcon &&
+        showIcon && <PlusCircle size={24} color="#5E718D" />}
+      {(iconPosition === "right" || !iconPosition) &&
+        isOpen &&
+        !CloseIcon &&
+        !OpenIcon &&
+        showIcon && <MinusCircle size={24} color="#5E718D" />}
     </button>
   );
 };

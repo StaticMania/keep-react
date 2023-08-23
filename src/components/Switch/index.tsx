@@ -101,13 +101,17 @@ const ToggleComponent: FC<ToggleProps> = ({
           )}
         />
       </Switch>
-      {typeof label !== "undefined" && (
-        <label
-          className={classNames(theme.label[size], disabled && theme.disabled)}
-        >
-          {label}
-        </label>
-      )}
+      {typeof label !== "undefined" ||
+        (!label && (
+          <label
+            className={classNames(
+              theme.label[size],
+              disabled && theme.disabled
+            )}
+          >
+            {label}
+          </label>
+        ))}
     </div>
   );
 };

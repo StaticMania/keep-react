@@ -17,6 +17,7 @@ import { AccordionTitle } from "./AccordionTitle";
 import { DeepPartial } from "@/src/helpers/deep-partial";
 import { KeepBoolean } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { mergeDeep } from "@/src/helpers/mergeDeep";
 
 export interface keepAccordionTheme {
   root: keepAccordionRootTheme;
@@ -32,7 +33,9 @@ export interface keepAccordionRootTheme {
 export interface AccordionProps
   extends PropsWithChildren<ComponentProps<"div">> {
   alwaysOpen?: boolean;
-  arrowIcon?: ReactNode;
+  showIcon?: boolean;
+  openIcon?: ReactNode;
+  closeIcon?: ReactNode;
   children:
     | ReactElement<AccordionPanelProps>
     | ReactElement<AccordionPanelProps>[];
@@ -45,13 +48,16 @@ export interface AccordionProps
 
 const AccordionComponent: FC<AccordionProps> = ({
   alwaysOpen = false,
-  arrowIcon = <PlusCircle size={24} color="#5E718D" />,
+  showIcon = true,
+  openIcon,
+  closeIcon,
   children,
   flush = false,
   collapseAll = false,
   className,
   iconPosition = "right",
   disabled = false,
+  theme: customTheme = {},
   ...props
 }) => {
   const [isOpen, setOpen] = useState(collapseAll ? -1 : 0);
@@ -61,18 +67,30 @@ const AccordionComponent: FC<AccordionProps> = ({
       Children.map(children, (child, i) =>
         cloneElement(child, {
           alwaysOpen,
-          arrowIcon,
+          showIcon,
           flush,
+          closeIcon,
+          openIcon,
           disabled,
           iconPosition,
           isOpen: isOpen === i,
           setOpen: () => setOpen(isOpen === i ? -1 : i),
         })
       ),
-    [alwaysOpen, arrowIcon, children, flush, isOpen, iconPosition, disabled]
+    [
+      alwaysOpen,
+      showIcon,
+      children,
+      flush,
+      isOpen,
+      iconPosition,
+      disabled,
+      closeIcon,
+      openIcon,
+    ]
   );
-
-  const theme = useTheme().theme.accordion.root;
+  const oldTheme = useTheme().theme.accordion.root;
+  const theme = mergeDeep(oldTheme, customTheme);
 
   return (
     <div

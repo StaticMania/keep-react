@@ -8,6 +8,9 @@ import type { SidebarItemProps } from "./SidebarItem";
 import { SidebarItemContext } from "./SidebarItemContext";
 import { KeepBoolean } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { DeepPartial } from "@/src/helpers/deep-partial";
+import { KeepSidebarTheme } from ".";
+import { mergeDeep } from "@/src/helpers/mergeDeep";
 
 export interface KeepSidebarCollapseTheme {
   button: string;
@@ -31,6 +34,7 @@ export interface SidebarCollapseProps
     ComponentProps<"button"> {
   onClick?: ComponentProps<"button">["onClick"];
   open?: boolean;
+  theme?: DeepPartial<KeepSidebarTheme>;
 }
 
 const SidebarCollapse: FC<SidebarCollapseProps> = ({
@@ -39,12 +43,15 @@ const SidebarCollapse: FC<SidebarCollapseProps> = ({
   icon: Icon,
   label,
   open = false,
+  theme: customTheme = {},
   ...props
 }) => {
   const id = useId();
   const { isCollapsed } = useSidebarContext();
   const [isOpen, setOpen] = useState(open);
-  const theme = useTheme().theme.sidebar.collapse;
+
+  const oldTheme = useTheme().theme.sidebar.collapse;
+  const theme = mergeDeep(oldTheme, customTheme);
 
   useEffect(() => setOpen(open), [open]);
 

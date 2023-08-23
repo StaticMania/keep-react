@@ -48,3 +48,16 @@ export const routes: routerPath[] = [
   { id: 41, name: "Navbar", href: "/navbar" },
   { id: 42, name: "Area Chart", href: "/areaChart" },
 ];
+
+export const gettingStartedRoutes: routerPath[] = [
+  {
+    id: 1,
+    name: "Introduction",
+    href: "/introduction",
+  },
+  {
+    id: 2,
+    name: "Installation",
+    href: "/installation",
+  },
+];

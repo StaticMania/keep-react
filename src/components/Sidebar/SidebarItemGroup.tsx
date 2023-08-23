@@ -10,6 +10,7 @@ export interface SidebarItemGroupProps
 const SidebarItemGroup: FC<SidebarItemGroupProps> = ({
   children,
   className,
+
   ...props
 }) => {
   const theme = useTheme().theme.sidebar.itemGroup;
