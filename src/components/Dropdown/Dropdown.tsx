@@ -134,7 +134,7 @@ const DropdownComponent: FC<DropdownProps> = ({
 
     useEffect(() => {
       if (ref.current) setButtonWidth?.(ref.current.clientWidth);
-    }, [ref]);
+    }, [ref, setButtonWidth]);
 
     return inline ? (
       <button ref={ref} className={theme.inlineWrapper}>

@@ -1,1 +1,3 @@
-export default (): boolean => typeof window !== 'undefined';
+export const windowExists: () => boolean = () => {
+  return typeof window !== "undefined";
+};

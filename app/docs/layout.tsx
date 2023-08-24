@@ -10,6 +10,8 @@ import { Sections } from "@/types/types";
 const DocsLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string>("");
+  const [allSection, setAllSection] = useState<NodeListOf<Element> | []>([]);
+
   const [tableOfContents, setTableOfContents] =
     useState<HTMLUListElement | null>(null);
 
@@ -18,28 +20,26 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
     const toc = document.querySelector<HTMLUListElement>(
       "#table-of-contents + ul"
     );
+    const sections: NodeListOf<Element> =
+      document?.querySelectorAll(".section-title");
+
+    if (sections !== null && sections.length > 0) {
+      setAllSection(sections);
+    }
     setTableOfContents(toc);
   }, [pathname]);
 
   // link is active or not active
   const IsActive = (str: string) => {
     const lastPart = pathname.toLocaleLowerCase().split("/").pop();
-    return str.toLocaleLowerCase() === "/" + lastPart;
+    const strLastPart = str.toLocaleLowerCase().split("/").pop();
+    return strLastPart === lastPart;
   };
 
-  // get all the section on a page
-  const sections = document?.querySelectorAll(".section-title");
-
-  const newIdArr: Sections[] = Array.from(sections).map((section, index) => ({
+  const newIdArr: Sections[] = Array.from(allSection).map((section, index) => ({
     id: index + 1,
     idName: section.id,
   }));
-
-  if (sections) {
-    sections.forEach((section, index) => {
-      newIdArr.push({ id: index + 1, idName: section.id });
-    });
-  }
 
   if (tableOfContents) {
     const linkElements = tableOfContents.querySelectorAll("li a");

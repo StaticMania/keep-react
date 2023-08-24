@@ -17,7 +17,7 @@ import {
   useState,
 } from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
-import windowExists from "../../helpers/window-exists";
+import { windowExists } from "../../helpers/window-exists";
 import { KeepColors } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
 

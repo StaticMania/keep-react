@@ -6,7 +6,7 @@ import { ThemeContext, useThemeMode } from "./ThemeContex";
 import { DeepPartial } from "../helpers/deep-partial";
 import { mergeDeep } from "../helpers/mergeDeep";
 import defaultTheme from "../theme/theme";
-import windowExists from "../helpers/window-exists";
+import { windowExists } from "../helpers/window-exists";
 
 export interface ThemeProps {
   dark?: boolean;
