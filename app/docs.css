@@ -9,11 +9,11 @@
 }
 
 #mainContent code {
-  @apply bg-slate-50 py-1 px-2 rounded;
+  @apply bg-slate-50  py-1 px-2 rounded;
 }
 
 #mainContent pre > code {
-  @apply !font-inter;
+  @apply !font-inter !pl-0;
 }
 #mainContent #cssCode {
   @apply bg-transparent;

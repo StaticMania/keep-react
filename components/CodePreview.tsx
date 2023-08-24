@@ -57,10 +57,10 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
       <div>
         {active ? (
           <div className="relative">
-            <div className="absolute top-5 right-10 flex items-center justify-between gap-3">
+            <div className="absolute md:top-5 -top-10 lg:right-10 right-3 flex items-center justify-between gap-3">
               <Link
                 href="/"
-                className="bg-slate-800 hover:bg-slate-700 transition-all duration-300 h-9 w-9 flex items-center justify-center rounded-md"
+                className="bg-slate-800 hover:bg-slate-700 transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
               >
                 <Image
                   src="/images/icon/github-white.svg"
@@ -70,7 +70,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
                 />
               </Link>
               <button
-                className="bg-slate-900 border-2 border-slate-800 hover:bg-slate-700 hover:border-transparent transition-all duration-300 h-9 w-9 flex items-center justify-center rounded-md"
+                className="bg-slate-900 border-2 border-slate-800 hover:bg-slate-700 hover:border-transparent transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
                 onClick={() => handleCopyToClipboard({ text: code })}
               >
                 {copy ? (
@@ -89,7 +89,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
                 maxHeight: "420px",
                 borderRadius: "0px",
                 paddingLeft: "40px",
-                paddingBottom: "30px",
+                paddingBottom: "20px",
                 marginTop: "0px",
                 background: "#1C222B",
                 fontSize: "14px",
@@ -97,7 +97,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
                 letterSpacing: "-0.2px",
               }}
             >
-              {code}
+              {code.trim()}
             </SyntaxHighlighter>
           </div>
         ) : (

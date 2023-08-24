@@ -4,8 +4,10 @@ import { Badge } from "@/src/components/Badge";
 const VariantOfBadge = () => {
   return (
     <div>
-      <h2>Light Variant Of Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Light Variant Of Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge size="xs" colorType="light" color="info">
           Default
         </Badge>
@@ -22,8 +24,10 @@ const VariantOfBadge = () => {
           Warning Badges
         </Badge>
       </div>
-      <h2>Dark Variant Of Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Dark Variant Of Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge size="sm" colorType="strong" color="info">
           Default
         </Badge>
@@ -40,8 +44,10 @@ const VariantOfBadge = () => {
           Warning Badges
         </Badge>
       </div>
-      <h2>Text Variant Of Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Text Variant Of Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge size="sm" colorType="strong" badgeType="text" color="info">
           Badges
         </Badge>
@@ -69,8 +75,10 @@ import { Badge } from "keep-design";
 const VariantOfBadge = () => {
   return (
     <div>
-      <h2>Light Variant Of Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Light Variant Of Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge size="xs" colorType="light" color="info">
           Default
         </Badge>
@@ -87,8 +95,10 @@ const VariantOfBadge = () => {
           Warning Badges
         </Badge>
       </div>
-      <h2>Dark Variant Of Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Dark Variant Of Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge size="sm" colorType="strong" color="info">
           Default
         </Badge>
@@ -105,8 +115,10 @@ const VariantOfBadge = () => {
           Warning Badges
         </Badge>
       </div>
-      <h2>Text Variant Of Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Text Variant Of Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge size="sm" colorType="strong" badgeType="text" color="info">
           Badges
         </Badge>

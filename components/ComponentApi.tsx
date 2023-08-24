@@ -8,16 +8,16 @@ interface ComponentProps {
 const ComponentApi: FC<ComponentProps> = ({ data }) => {
   return (
     <div className="w-full mx-auto overflow-auto">
-      <table className="table-auto md:w-full text-left whitespace-no-wrap lg:min-w-min min-w-max">
+      <table className="table-auto mt-10 md:w-full text-left whitespace-no-wrap lg:min-w-min min-w-max">
         <thead>
           <tr>
-            <th className="px-4 py-3 tracking-wider font-medium text-slate-900 text-sm bg-slate-25 rounded-tl rounded-bl">
+            <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50 rounded-tl rounded-bl">
               Property
             </th>
-            <th className="px-4 py-3 tracking-wider font-medium text-slate-900 text-sm bg-slate-25">
+            <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50">
               Description
             </th>
-            <th className="px-4 py-3 tracking-wider font-medium text-slate-900 text-sm bg-slate-25">
+            <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50 rounded-tr rounded-br">
               Type
             </th>
           </tr>
@@ -26,13 +26,13 @@ const ComponentApi: FC<ComponentProps> = ({ data }) => {
           {data?.map((item) => {
             return (
               <tr key={item.id}>
-                <td className="border-t border-slate-50 px-4 py-3">
+                <td className="border-t border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px]">
                   {item.propsName}
                 </td>
-                <td className="border-t border-slate-50 px-4 py-3">
+                <td className="border-t border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px]">
                   {item.propsDescription}
                 </td>
-                <td className="border-t border-slate-50 px-4 py-3">
+                <td className="border-t border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px]">
                   {item.propsType}
                 </td>
               </tr>

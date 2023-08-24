@@ -5,8 +5,10 @@ import { Crown, ShieldCheck } from "phosphor-react";
 const IconWithBadge = () => {
   return (
     <div>
-      <h2>Left Side Icon With Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Left Side Icon With Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge
           size="sm"
           colorType="strong"
@@ -53,8 +55,10 @@ const IconWithBadge = () => {
           Badges
         </Badge>
       </div>
-      <h2>Right Side Icon With Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">
+        Right Side Icon With Badge
+      </h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge
           size="sm"
           colorType="strong"
@@ -112,8 +116,8 @@ import { Badge } from "keep-design";
 const IconWithBadge = () => {
   return (
      <div>
-      <h2>Left Side Icon With Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">Left Side Icon With Badge</h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge
           size="sm"
           colorType="strong"
@@ -160,8 +164,8 @@ const IconWithBadge = () => {
           Badges
         </Badge>
       </div>
-      <h2>Right Side Icon With Badge</h2>
-      <div className="flex flex-wrap items-end gap-2">
+      <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">Right Side Icon With Badge</h2>
+      <div className="flex flex-wrap items-end gap-2 my-3">
         <Badge
           size="sm"
           colorType="strong"

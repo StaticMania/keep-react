@@ -9,6 +9,22 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/",
+        destination: "/docs/getting-started/Introduction",
+        permanent: true,
+      },
+      {
+        source: "/home",
+        destination: "https://keepdesign.io",
+        permanent: true,
+      },
+      {
+        source: "/figma",
+        destination:
+          "https://www.figma.com/file/J2i6VhncmepyLt8OS7i0GQ/Keep-Design-System---Pro-Version?type=design&node-id=5608-101847&mode=design&t=JLGK6sLhkhrpVetM-0",
+        permanent: true,
+      },
+      {
         source: "/introduction",
         destination: "/docs/getting-started/Introduction",
         permanent: true,
