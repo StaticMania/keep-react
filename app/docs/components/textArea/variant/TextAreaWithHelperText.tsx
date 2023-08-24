@@ -8,7 +8,7 @@ const TextAreaWithHelperText = () => {
       placeholder="Leave a comment..."
       withBg={true}
       border={false}
-      color="gray"
+      color="success"
       rows={4}
       helperText={
         <span className="font-medium text-slate-500">
@@ -30,7 +30,7 @@ const TextAreaWithHelperText = () => {
       placeholder="Leave a comment..."
       withBg={true}
       border={false}
-      color="gray"
+      color="success"
       rows={4}
       helperText={
         <span className="font-medium text-slate-500">

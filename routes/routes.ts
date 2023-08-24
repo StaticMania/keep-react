@@ -53,12 +53,12 @@ export const gettingStartedRoutes: routerPath[] = [
   {
     id: 1,
     name: "Introduction",
-    href: "/docs/getting-stated/introduction",
+    href: "/docs/getting-started/Introduction",
   },
   {
     id: 2,
     name: "Installation",
-    href: "/docs/getting-stated/installation",
+    href: "/docs/getting-started/Installation",
   },
 ];
 

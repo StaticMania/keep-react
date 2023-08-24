@@ -13,7 +13,10 @@ import {
 
 const SidebarWithBranding = () => {
   return (
-    <Sidebar aria-label="Sidebar with multi-level dropdown example">
+    <Sidebar
+      aria-label="Sidebar with multi-level dropdown example"
+      className="max-w-xs"
+    >
       <Sidebar.Logo href="" img="/images/keepLogo.svg" imgAlt="Keep logo" />
       <Sidebar.Items>
         <Sidebar.ItemGroup>

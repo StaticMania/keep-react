@@ -7,7 +7,7 @@ const ColorVariantOfTextArea = () => {
       id="comment"
       placeholder="Leave a comment..."
       withBg={true}
-      color="error"
+      color="success"
       border={true}
       rows={4}
     />
@@ -24,7 +24,7 @@ const ColorVariantOfTextArea = () => {
       id="comment"
       placeholder="Leave a comment..."
       withBg={true}
-      color="error"
+      color="success"
       border={true}
       rows={4}
     />

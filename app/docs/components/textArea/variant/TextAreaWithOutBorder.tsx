@@ -8,7 +8,7 @@ const TextAreaWithOutBorder = () => {
       placeholder="Leave a comment..."
       withBg={true}
       border={false}
-      color="gray"
+      color="success"
       rows={4}
     />
   );
@@ -25,7 +25,7 @@ const TextAreaWithOutBorder = () => {
       placeholder="Leave a comment..."
       withBg={true}
       border={false}
-      color="gray"
+      color="success"
       rows={4}
     />
   );
