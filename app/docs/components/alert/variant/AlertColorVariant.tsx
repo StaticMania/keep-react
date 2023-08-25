@@ -27,7 +27,7 @@ const AlertWithColorVariant = () => {
         }
         icon={<Info size={24} color="#0F3CD9" />}
       >
-        <p className="text-lg font-semibold text-blue-600">
+        <p className="md:text-lg text-base font-semibold text-blue-600">
           Default message - make it short
         </p>
       </Alert>
@@ -49,7 +49,7 @@ const AlertWithColorVariant = () => {
         }
         icon={<Info size={24} color="gray" />}
       >
-        <p className="text-lg font-semibold text-slate-900">
+        <p className="md:text-lg text-base font-semibold text-slate-900">
           Default message - make it short
         </p>
       </Alert>
@@ -71,7 +71,7 @@ const AlertWithColorVariant = () => {
         }
         icon={<CheckCircle size={24} color="#0A9952" />}
       >
-        <p className="text-lg font-semibold text-green-600">
+        <p className="md:text-lg text-base font-semibold text-green-600">
           Default message - make it short
         </p>
       </Alert>
@@ -93,7 +93,7 @@ const AlertWithColorVariant = () => {
         }
         icon={<WarningCircle size={24} color="#D8A800" />}
       >
-        <p className="text-lg font-semibold text-yellow-600">
+        <p className="md:text-lg text-base font-semibold text-yellow-600">
           Default message - make it short
         </p>
       </Alert>
@@ -115,7 +115,7 @@ const AlertWithColorVariant = () => {
         }
         icon={<XCircle size={24} color="#E92215" />}
       >
-        <p className="text-lg font-semibold text-error-500">
+        <p className="md:text-lg text-base font-semibold text-error-500">
           Default message - make it short
         </p>
       </Alert>
@@ -151,7 +151,7 @@ const AlertWithColorVariant = () => {
       }
       icon={<Info size={24} color="gray" />}
     >
-      <p className="text-lg font-semibold text-slate-900">
+      <p className="md:text-lg text-base font-semibold text-slate-900">
         Default message - make it short
       </p>
     </Alert>

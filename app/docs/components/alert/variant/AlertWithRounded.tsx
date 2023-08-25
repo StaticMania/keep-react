@@ -22,7 +22,7 @@ const AlertWithRounded = () => {
       }
       icon={<Info size={24} color="#0F3CD9" />}
     >
-      <p className="text-lg font-semibold text-blue-600">
+      <p className="md:text-lg text-base font-semibold text-blue-600">
         Default message - make it short
       </p>
     </Alert>
@@ -54,7 +54,7 @@ const AlertWithRounded = () => {
       }
       icon={<Info size={24} color="#0F3CD9" />}
     >
-      <p className="text-lg font-semibold text-blue-600">
+      <p className="md:text-lg text-base font-semibold text-blue-600">
         Default message - make it short
       </p>
     </Alert>
