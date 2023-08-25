@@ -11,12 +11,12 @@ const BreadcrumbWithSeparatorIcon = () => {
         separatorIcon={<ArrowsLeftRight size={20} color="#AFBACA" />}
       >
         <Breadcrumb.Item href="#" icon={<House size={24} color="#AFBACA" />}>
-          Breadcrumb Item
+          Products
         </Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
         <Breadcrumb.Item active="base" href="#">
-          Breadcrumb item
+          Product
         </Breadcrumb.Item>
       </Breadcrumb>
       <Breadcrumb
@@ -25,12 +25,12 @@ const BreadcrumbWithSeparatorIcon = () => {
         separatorIcon={<ArrowsLeftRight size={20} color="#AFBACA" />}
       >
         <Breadcrumb.Item href="#" icon={<House size={24} color="#AFBACA" />}>
-          Breadcrumb Item
+          Products
         </Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
         <Breadcrumb.Item active="border" href="#">
-          Breadcrumb item
+          Product
         </Breadcrumb.Item>
       </Breadcrumb>
       <Breadcrumb
@@ -39,12 +39,12 @@ const BreadcrumbWithSeparatorIcon = () => {
         separatorIcon={<ArrowsLeftRight size={20} color="#AFBACA" />}
       >
         <Breadcrumb.Item href="#" icon={<House size={24} color="#AFBACA" />}>
-          Breadcrumb Item
+          Products
         </Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
         <Breadcrumb.Item active="bar" href="#">
-          Breadcrumb item
+          Product
         </Breadcrumb.Item>
       </Breadcrumb>
     </div>

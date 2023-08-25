@@ -10,11 +10,11 @@ const BreadcrumbWithBorder = () => {
         aria-label="Default breadcrumb example"
         separatorIcon={<CaretRight size={20} color="#AFBACA" />}
       >
-        <Breadcrumb.Item href="#">Breadcrumb Item</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
         <Breadcrumb.Item active="base" href="#">
-          Breadcrumb item
+          Product
         </Breadcrumb.Item>
       </Breadcrumb>
       <Breadcrumb
@@ -22,20 +22,24 @@ const BreadcrumbWithBorder = () => {
         aria-label="Default breadcrumb example"
         separatorIcon={<CaretRight size={20} color="#AFBACA" />}
       >
-        <Breadcrumb.Item href="#">Breadcrumb Item</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="border">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item active="border" href="#">
+          Product
+        </Breadcrumb.Item>
       </Breadcrumb>
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
         separatorIcon={<CaretRight size={20} color="#AFBACA" />}
       >
-        <Breadcrumb.Item href="#">Breadcrumb Item</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="bar">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item active="bar" href="#">
+          Product
+        </Breadcrumb.Item>
       </Breadcrumb>
     </div>
   );
@@ -54,11 +58,11 @@ const BreadcrumbWithBorder = () => {
         aria-label="Default breadcrumb example"
         separatorIcon={<CaretRight size={20} color="#AFBACA" />}
       >
-        <Breadcrumb.Item href="#">Breadcrumb Item</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
         <Breadcrumb.Item active="base" href="#">
-          Breadcrumb item
+          Product
         </Breadcrumb.Item>
       </Breadcrumb>
       <Breadcrumb
@@ -66,24 +70,29 @@ const BreadcrumbWithBorder = () => {
         aria-label="Default breadcrumb example"
         separatorIcon={<CaretRight size={20} color="#AFBACA" />}
       >
-        <Breadcrumb.Item href="#">Breadcrumb Item</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="border">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item active="border" href="#">
+          Product
+        </Breadcrumb.Item>
       </Breadcrumb>
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
         separatorIcon={<CaretRight size={20} color="#AFBACA" />}
       >
-        <Breadcrumb.Item href="#">Breadcrumb Item</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="bar">Breadcrumb item</Breadcrumb.Item>
+        <Breadcrumb.Item active="bar" href="#">
+          Product
+        </Breadcrumb.Item>
       </Breadcrumb>
     </div>
   );
 };
+
 export default BreadcrumbWithBorder;
 `;
 
