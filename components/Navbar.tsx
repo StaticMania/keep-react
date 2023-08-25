@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-white fixed w-full border-b border-slate-100 z-[999]">
-      <div className="2xl:container px-5 relative">
+      <div className="container relative">
         <nav className="flex items-center justify-between py-4 ">
           <div className="flex items-center space-x-28">
             <Link href="/" className="flex">
@@ -210,7 +210,7 @@ const Navbar = () => {
                       base: "",
                     }}
                   >
-                    <ul className="mt-3 space-y-2 border-l border-l-slate-100">
+                    <ul className="mt-3 pb-32 space-y-2 border-l border-l-slate-100">
                       {routes.map((route) => (
                         <li key={route.id}>
                           <Link

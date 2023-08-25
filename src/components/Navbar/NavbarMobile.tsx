@@ -19,23 +19,28 @@ export interface keepMobileMenuTheme {
 const NavbarMobile: FC<NavbarMobileProps> = ({ children }) => {
   const [showNav, setShowNav] = useState(false);
   const theme = useTheme().theme.navbar.mobileMenu;
+  console.log(showNav);
   return (
     <>
-      <button onClick={() => setShowNav(!showNav)}>
-        <List size="28" color="gray" />
-      </button>
       <div
         className={classNames(
           theme.base,
           showNav ? theme.open.on : theme.open.off
         )}
       >
-        <button
-          className={classNames(theme.close)}
-          onClick={() => setShowNav(!showNav)}
-        >
-          <X size="28" color="gray" />
-        </button>
+        {showNav ? (
+          <button
+            className={classNames(theme.close)}
+            onClick={() => setShowNav(!showNav)}
+          >
+            <X size="28" color="gray" />
+          </button>
+        ) : (
+          <button onClick={() => setShowNav(!showNav)}>
+            <List size="28" color="gray" />
+          </button>
+        )}
+
         {children}
       </div>
     </>

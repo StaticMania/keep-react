@@ -147,7 +147,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
                   base: "",
                 }}
               >
-                <ul className="mt-3 space-y-2 border-l border-l-slate-100">
+                <ul className="mt-3 pb-32 space-y-2 border-l border-l-slate-100">
                   {routes.map((route) => (
                     <li key={route.id}>
                       <Link

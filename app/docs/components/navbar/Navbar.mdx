@@ -1,8 +1,21 @@
 import { DefaultNavbar, DefaultNavbarCode } from "./variant/DefaultNavbar";
 import {
+  NavbarWithSearchBar,
+  NavbarWithSearchBarCode,
+} from "./variant/NavbarWithSearchBar";
+import {
+  NavbarWithMobileMenu,
+  NavbarWithMobileMenuCode,
+} from "./variant/NavbarWithMobileMenu";
+import {
+  NavbarWithCenterLogo,
+  NavbarWithCenterLogoCode,
+} from "./variant/NavbarWithCenterLogo";
+import {
   NavbarWithSearchIcon,
   NavbarWithSearchIconCode,
 } from "./variant/NavbarWithSearchIcon";
+import { NavbarApiData } from "./NavbarApi";
 
 import CodePreview from "@/components/CodePreview";
 import CssThemePreview from "@/components/CssThemePreview";
@@ -24,3 +37,31 @@ Navbar component in the Keep Design System allows you to display informative mes
 <CodePreview code={NavbarWithSearchIconCode}>
   <NavbarWithSearchIcon />
 </CodePreview>
+
+## Navbar With Center Logo
+
+<CodePreview code={NavbarWithCenterLogoCode}>
+  <NavbarWithCenterLogo />
+</CodePreview>
+
+## Navbar With Mobile Menu
+
+<CodePreview code={NavbarWithMobileMenuCode}>
+  <NavbarWithMobileMenu />
+</CodePreview>
+
+## Navbar With SearchBar
+
+<CodePreview code={NavbarWithSearchBarCode}>
+  <NavbarWithSearchBar />
+</CodePreview>
+
+## Api
+
+<ComponentApi data={NavbarApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.navbar} />
