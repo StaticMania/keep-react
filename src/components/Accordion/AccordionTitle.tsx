@@ -73,12 +73,12 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
         !isOpen &&
         !CloseIcon &&
         !OpenIcon &&
-        showIcon && <PlusCircle size={24} color="#5E718D" />}
+        showIcon && <PlusCircle color="#5E718D" />}
       {(iconPosition === "left" || !iconPosition) &&
         isOpen &&
         !CloseIcon &&
         !OpenIcon &&
-        showIcon && <MinusCircle size={24} color="#5E718D" />}
+        showIcon && <MinusCircle color="#5E718D" />}
       <Heading className={theme.heading} data-testid="keep-accordion-heading">
         {children}
       </Heading>
@@ -88,12 +88,12 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
         !isOpen &&
         !CloseIcon &&
         !OpenIcon &&
-        showIcon && <PlusCircle size={24} color="#5E718D" />}
+        showIcon && <PlusCircle color="#5E718D" />}
       {(iconPosition === "right" || !iconPosition) &&
         isOpen &&
         !CloseIcon &&
         !OpenIcon &&
-        showIcon && <MinusCircle size={24} color="#5E718D" />}
+        showIcon && <MinusCircle color="#5E718D" />}
     </button>
   );
 };

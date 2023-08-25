@@ -5,76 +5,45 @@ const AccordionCollapseAll = () => {
   return (
     <Accordion collapseAll={true}>
       <Accordion.Panel>
-        <Accordion.Title>Is there a free version available?</Accordion.Title>
+        <Accordion.Title>
+          What is the purpose of the Keep Design System?
+        </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
           <p>
-            Check out this guide to learn how to and start developing websites
-            even faster with components on top of Tailwind CSS.
-          </p>
-        </Accordion.Content>
-      </Accordion.Panel>
-      <Accordion.Panel>
-        <Accordion.Title>Is there a Figma file available?</Accordion.Title>
-        <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            officia laudantium est atque qui illum voluptatibus nam placeat,
-            dolores eaque ut id quisquam. Veniam, nulla at quos rem laudantium
-            ullam?
-          </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis
-            voluptatibus, illo nostrum fugit inventore.
+            The Keep Design System is a collection of UI components, styles, and
+            guidelines that ensure consistency and a unified user experience
+            across our products. It simplifies the design and development
+            process by providing ready-to-use components that can be easily
+            customized and integrated into various applications.
           </p>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Title>
-          What are the differences between Keep Design System and Tailwind UI?
+          How do I customize the color scheme of components?
         </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            The main difference is that the core components from Keep Design
-            System are open source under the MIT license, whereas Tailwind UI is
-            a paid product. Another difference is that keep Design relies on
-            smaller and standalone components, whereas Tailwind UI offers
-            sections of pages.
+          <p>
+            The Keep Design System offers a range of color variants for
+            components. To customize the color scheme, you can use the available
+            color options such as gray,info,error,warning and success. Simply
+            set the desired color variant as a prop when using the component,
+            and it will reflect the chosen color.
           </p>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            However, we actually recommend using both keep Design, keep Design
-            Pro, and even Tailwind UI as there is no technical reason stopping
-            you from using the best of two worlds.
+        </Accordion.Content>
+      </Accordion.Panel>
+      <Accordion.Panel>
+        <Accordion.Title>
+          Can I add additional content to notifications?
+        </Accordion.Title>
+        <Accordion.Content>
+          <p>
+            Yes, the Notification component in the Keep Design System allows you
+            to include extra content alongside the primary message. The
+            additionalContent prop can be used to display supplementary
+            information, such as buttons, links, or icons, within the
+            notification to provide users with more context and options.
           </p>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            Learn more about these technologies:
-          </p>
-          <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-            <li>
-              <a
-                href="https://keep Design.com/pro/"
-                className="text-blue-600 hover:underline dark:text-blue-500"
-              >
-                keep Design Pro
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://tailwindui.com/"
-                rel="nofollow"
-                className="text-blue-600 hover:underline dark:text-blue-500"
-              >
-                Tailwind UI
-              </a>
-            </li>
-          </ul>
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
@@ -89,76 +58,45 @@ const AccordionCollapseAll = () => {
   return (
     <Accordion collapseAll={true}>
       <Accordion.Panel>
-        <Accordion.Title>Is there a free version available?</Accordion.Title>
+        <Accordion.Title>
+          What is the purpose of the Keep Design System?
+        </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </p>
           <p>
-            Check out this guide to learn how to and start developing websites
-            even faster with components on top of Tailwind CSS.
-          </p>
-        </Accordion.Content>
-      </Accordion.Panel>
-      <Accordion.Panel>
-        <Accordion.Title>Is there a Figma file available?</Accordion.Title>
-        <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            officia laudantium est atque qui illum voluptatibus nam placeat,
-            dolores eaque ut id quisquam. Veniam, nulla at quos rem laudantium
-            ullam?
-          </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis
-            voluptatibus, illo nostrum fugit inventore.
+            The Keep Design System is a collection of UI components, styles, and
+            guidelines that ensure consistency and a unified user experience
+            across our products. It simplifies the design and development
+            process by providing ready-to-use components that can be easily
+            customized and integrated into various applications.
           </p>
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Title>
-          What are the differences between Keep Design System and Tailwind UI?
+          How do I customize the color scheme of components?
         </Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            The main difference is that the core components from Keep Design
-            System are open source under the MIT license, whereas Tailwind UI is
-            a paid product. Another difference is that keep Design relies on
-            smaller and standalone components, whereas Tailwind UI offers
-            sections of pages.
+          <p>
+            The Keep Design System offers a range of color variants for
+            components. To customize the color scheme, you can use the available
+            color options such as gray,info,error,warning and success. Simply
+            set the desired color variant as a prop when using the component,
+            and it will reflect the chosen color.
           </p>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            However, we actually recommend using both keep Design, keep Design
-            Pro, and even Tailwind UI as there is no technical reason stopping
-            you from using the best of two worlds.
+        </Accordion.Content>
+      </Accordion.Panel>
+      <Accordion.Panel>
+        <Accordion.Title>
+          Can I add additional content to notifications?
+        </Accordion.Title>
+        <Accordion.Content>
+          <p>
+            Yes, the Notification component in the Keep Design System allows you
+            to include extra content alongside the primary message. The
+            additionalContent prop can be used to display supplementary
+            information, such as buttons, links, or icons, within the
+            notification to provide users with more context and options.
           </p>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            Learn more about these technologies:
-          </p>
-          <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-            <li>
-              <a
-                href="https://keep Design.com/pro/"
-                className="text-blue-600 hover:underline dark:text-blue-500"
-              >
-                keep Design Pro
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://tailwindui.com/"
-                rel="nofollow"
-                className="text-blue-600 hover:underline dark:text-blue-500"
-              >
-                Tailwind UI
-              </a>
-            </li>
-          </ul>
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>

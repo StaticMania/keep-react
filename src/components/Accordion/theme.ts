@@ -8,7 +8,7 @@ export const accordionTheme: keepAccordionTheme = {
     },
   },
   content: {
-    base: "py-5 px-5 text-slate-500 font-normal",
+    base: "py-5 px-5 md:text-base text-sm text-slate-500 font-normal",
   },
   title: {
     disabled: "cursor-not-allowed opacity-50",
@@ -19,7 +19,7 @@ export const accordionTheme: keepAccordionTheme = {
         on: "rotate-180",
       },
     },
-    base: "flex w-full items-center  py-5 px-5 text-left font-medium text-xl text-slate-800 bg-slate-50 hover:bg-slate-100",
+    base: "flex w-full items-center py-5 px-5 text-left font-medium md:text-xl text-md text-slate-800 bg-slate-50 hover:bg-slate-100",
     iconPosition: {
       left: "gap-5",
       right: "justify-between",
