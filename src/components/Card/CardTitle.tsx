@@ -13,7 +13,7 @@ const CardTitle: React.FC<CardTitleProps> = ({ children, className }) => {
       className={classNames(
         className
           ? className
-          : "text-xl font-bold tracking-tight text-slate-700"
+          : "md:text-xl text-base font-bold tracking-tight text-slate-700"
       )}
     >
       {children}

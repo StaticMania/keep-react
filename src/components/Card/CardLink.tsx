@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
-import React from "react";
 import Link from "next/link";
 
 interface CardLinkProps {
@@ -24,7 +23,7 @@ const CardLink: React.FC<CardLinkProps> = ({
       className={classNames(
         className
           ? className
-          : "flex items-center gap-1 font-medium text-primary-500"
+          : "flex items-center gap-1 text-xs md:text-base font-medium text-primary-500"
       )}
     >
       {icon && iconPosition === "right" && icon}

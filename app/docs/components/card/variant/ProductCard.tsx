@@ -65,7 +65,7 @@ const ProductCard = () => {
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="space-y-4 p-6">
-          <Card.Title className="flex items-center gap-2 text-xl font-medium text-slate-700">
+          <Card.Title className="flex items-center gap-2 text-sm md:text-xl font-medium text-slate-700">
             <MapPinLine size={20} color="#5E718D" />
             <span>Garden Street,Ring Road</span>
           </Card.Title>
@@ -90,8 +90,13 @@ const ProductCard = () => {
             </Card.Title>
           </Card.Container>
           <Card.Container className="my-3 flex items-center justify-between">
-            <Button type="primary">Check Out</Button>
-            <Card.Title className="text-2xl font-semibold text-slate-700">
+            <Button type="primary" customClass="md:block hidden">
+              Check Out
+            </Button>
+            <Button type="primary" size="xs" customClass="md:hidden block">
+              Check Out
+            </Button>
+            <Card.Title className="text-lg md:text-2xl font-semibold text-slate-700">
               $649,00
             </Card.Title>
           </Card.Container>
@@ -105,7 +110,7 @@ const ProductCard = () => {
       >
         <Card.Container className="space-y-3 p-6">
           <Card.Container>
-            <Card.Title className="text-xl font-semibold text-slate-700">
+            <Card.Title className="text-md md:text-xl font-semibold text-slate-700">
               Keep design podcast
             </Card.Title>
             <Card.Description className="text-sm font-medium text-slate-500">
@@ -217,7 +222,7 @@ const ProductCard = () => {
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="space-y-4 p-6">
-          <Card.Title className="flex items-center gap-2 text-xl font-medium text-slate-700">
+          <Card.Title className="flex items-center gap-2 text-sm md:text-xl font-medium text-slate-700">
             <MapPinLine size={20} color="#5E718D" />
             <span>Garden Street,Ring Road</span>
           </Card.Title>
@@ -242,8 +247,13 @@ const ProductCard = () => {
             </Card.Title>
           </Card.Container>
           <Card.Container className="my-3 flex items-center justify-between">
-            <Button type="primary">Check Out</Button>
-            <Card.Title className="text-2xl font-semibold text-slate-700">
+            <Button type="primary" customClass="md:block hidden">
+              Check Out
+            </Button>
+            <Button type="primary" size="xs" customClass="md:hidden block">
+              Check Out
+            </Button>
+            <Card.Title className="text-lg md:text-2xl font-semibold text-slate-700">
               $649,00
             </Card.Title>
           </Card.Container>
@@ -257,7 +267,7 @@ const ProductCard = () => {
       >
         <Card.Container className="space-y-3 p-6">
           <Card.Container>
-            <Card.Title className="text-xl font-semibold text-slate-700">
+            <Card.Title className="text-md md:text-xl font-semibold text-slate-700">
               Keep design podcast
             </Card.Title>
             <Card.Description className="text-sm font-medium text-slate-500">

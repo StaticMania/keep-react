@@ -14,7 +14,9 @@ const CardDescription: React.FC<CardDescriptionProps> = ({
   return (
     <p
       className={classNames(
-        className ? className : "font-normal text-base text-slate-500"
+        className
+          ? className
+          : "font-normal md:text-base text-xs text-slate-500"
       )}
     >
       {children}
