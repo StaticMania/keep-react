@@ -13,7 +13,7 @@ const NotificationWithAvatar = () => {
       onDismiss={onDismiss}
       className="max-w-[400px]"
       additionalContent={
-        <div className="mt-2.5 text-base font-normal text-slate-500">
+        <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
           typesetting industry.
           <div className="mt-6 flex">
@@ -37,9 +37,9 @@ const NotificationWithAvatar = () => {
         </div>
       }
     >
-      <h3 className="text-xl font-medium text-slate-700">
+      <h3 className="text-base md:text-xl font-medium text-slate-700">
         Rono Pixel
-        <span className="pl-2 text-sm font-medium text-slate-400">
+        <span className="pl-2 text-xs md:text-sm font-medium text-slate-400">
           Product Designer
         </span>
       </h3>
@@ -61,7 +61,7 @@ const NotificationWithAvatar = () => {
       onDismiss={onDismiss}
       className="max-w-[400px]"
       additionalContent={
-        <div className="mt-2.5 text-base font-normal text-slate-500">
+        <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
           typesetting industry.
           <div className="mt-6 flex">
@@ -80,14 +80,14 @@ const NotificationWithAvatar = () => {
         </div>
       }
       infoIcon={
-        <div className="h-10 w-10">
-          <Avatar shape="round" img="/assets/images/avatar/avatar-1.png" />
+        <div className="h-12 w-12">
+          <Avatar shape="round" size="md" img="/images/avatar/avatar-4.png" />
         </div>
       }
     >
-      <h3 className="text-xl font-medium text-slate-700">
+      <h3 className="text-base md:text-xl font-medium text-slate-700">
         Rono Pixel
-        <span className="pl-2 text-sm font-medium text-slate-400">
+        <span className="pl-2 text-xs md:text-sm font-medium text-slate-400">
           Product Designer
         </span>
       </h3>

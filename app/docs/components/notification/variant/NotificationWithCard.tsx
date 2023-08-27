@@ -13,7 +13,7 @@ const NotificationWithCard = () => {
       onDismiss={onDismiss}
       headerBannerSrc="/images/banner/banner.png"
       additionalContent={
-        <div className="mt-2.5 text-base font-normal text-slate-500">
+        <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
           typesetting industry.
           <div className="mt-6 flex">
@@ -27,13 +27,13 @@ const NotificationWithCard = () => {
               customClass="ml-3"
               width="half"
             >
-              View Figma File
+              View Figma
             </Button>
           </div>
         </div>
       }
     >
-      <h3 className="text-xl font-medium text-slate-700">
+      <h3 className="text-base md:text-xl font-medium text-slate-700">
         Welcome Keep Design
       </h3>
     </Notification>
@@ -55,7 +55,7 @@ const NotificationWithCard = () => {
       onDismiss={onDismiss}
       headerBannerSrc="/images/banner/banner.png"
       additionalContent={
-        <div className="mt-2.5 text-base font-normal text-slate-500">
+        <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
           typesetting industry.
           <div className="mt-6 flex">
@@ -69,13 +69,13 @@ const NotificationWithCard = () => {
               customClass="ml-3"
               width="half"
             >
-              View Figma File
+              View Figma
             </Button>
           </div>
         </div>
       }
     >
-      <h3 className="text-xl font-medium text-slate-700">
+      <h3 className="text-base md:text-xl font-medium text-slate-700">
         Welcome Keep Design
       </h3>
     </Notification>

@@ -14,7 +14,7 @@ const DefaultNotification = () => {
       className="max-w-sm"
       additionalContent={
         <div className="mt-2.5">
-          <p className="text-base font-normal text-slate-500">
+          <p className="text-sm md:text-base font-normal text-slate-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry.
           </p>
@@ -34,7 +34,7 @@ const DefaultNotification = () => {
         </div>
       }
     >
-      <h3 className="text-xl font-medium text-slate-700">
+      <h3 className="text-base md:text-xl font-medium text-slate-700">
         Can we store cookies?
       </h3>
     </Notification>
@@ -57,7 +57,7 @@ const DefaultNotification = () => {
       className="max-w-sm"
       additionalContent={
         <div className="mt-2.5">
-          <p className="text-base font-normal text-slate-500">
+          <p className="text-sm md:text-base font-normal text-slate-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry.
           </p>
@@ -77,7 +77,7 @@ const DefaultNotification = () => {
         </div>
       }
     >
-      <h3 className="text-xl font-medium text-slate-700">
+      <h3 className="text-base md:text-xl font-medium text-slate-700">
         Can we store cookies?
       </h3>
     </Notification>
