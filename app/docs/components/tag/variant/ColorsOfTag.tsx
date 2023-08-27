@@ -3,7 +3,7 @@ import { Tag } from "@/src/components/Tag";
 
 const ColorsOfTag = () => {
   return (
-    <div className="flex w-full flex-row gap-2">
+    <div className="flex w-full flex-row flex-wrap gap-2">
       <Tag color="gray">Gray Tag</Tag>
       <Tag color="error">Error Tag</Tag>
       <Tag color="info">Info Tag</Tag>
@@ -22,7 +22,7 @@ import { Tag } from "keep-design";
 
 const ColorsOfTag = () => {
   return (
-    <div className="flex w-full flex-row gap-2">
+    <>
       <Tag color="gray">Gray Tag</Tag>
       <Tag color="error">Error Tag</Tag>
       <Tag color="info">Info Tag</Tag>
@@ -31,7 +31,7 @@ const ColorsOfTag = () => {
       <Tag color="teal">Teal Tag</Tag>
       <Tag color="purple">Purple Tag</Tag>
       <Tag disabled={true}>Disabled Tag</Tag>
-    </div>
+    </>
   );
 };
 

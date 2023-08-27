@@ -11,7 +11,7 @@ const TagWithDashedBorder = () => {
   };
 
   return (
-    <div className="flex w-full flex-row gap-2">
+    <div className="flex w-full flex-row flex-wrap gap-2">
       <Tag
         disabled={true}
         dismiss={dismiss}

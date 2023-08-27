@@ -14,7 +14,7 @@ const HorizontalDisabledUpload = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       horizontal={true}
       disabled={true}
     />
@@ -38,7 +38,7 @@ const HorizontalDisabledUpload = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       horizontal={true}
       disabled={true}
     />

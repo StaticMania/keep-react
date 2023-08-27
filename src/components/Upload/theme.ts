@@ -8,13 +8,13 @@ export const uploadTheme: keepUploadTheme = {
       base: "flex w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-slate-300",
       root: "flex flex-col items-center justify-center pt-5 pb-6",
       icon: "flex h-16 w-16 items-center justify-center rounded-full border border-slate-100 bg-white",
-      dragDrop: "mb-2 text-xl font-semibold text-slate-500",
-      fileType: "text-sm text-slate-400",
+      dragDrop: "mb-2 text-base md:text-xl font-semibold text-slate-500",
+      fileType: "text-center text-xs md:text-sm text-slate-400",
 
       upload: {
         base: "relative mt-5 flex cursor-pointer flex-col items-center space-y-2",
         input: "absolute top-0 left-0 scale-100 opacity-0",
-        fileName: "text-sm text-slate-400",
+        fileName: "text-xs md:text-sm text-slate-400 text-center",
       },
     },
   },
@@ -54,7 +54,7 @@ export const uploadTheme: keepUploadTheme = {
           fileType: "text-sm text-slate-400",
         },
         upload: {
-          base: "relative flex cursor-pointer items-center  gap-5",
+          base: "relative hidden md:flex cursor-pointer items-center  md:gap-5",
           input: "absolute top-0 left-0 scale-100 opacity-0",
           fileName: "text-sm text-slate-400",
         },

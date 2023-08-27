@@ -5,14 +5,16 @@ import { File, FolderNotchOpen } from "phosphor-react";
 
 const TreeItemsWithFolderIcon = () => {
   return (
-    <Tree
-      showBorder={true}
-      showItemsNumber={true}
-      showIcon={true}
-      ParentIcon={<FolderNotchOpen size={20} color="#3D4A5C" />}
-      ChildIcon={<File size={20} color="#3D4A5C" />}
-      nodes={nodes}
-    />
+    <div className="py-5 overflow-x-auto">
+      <Tree
+        showBorder={true}
+        showItemsNumber={true}
+        showIcon={true}
+        ParentIcon={<FolderNotchOpen size={20} color="#3D4A5C" />}
+        ChildIcon={<File size={20} color="#3D4A5C" />}
+        nodes={nodes}
+      />
+    </div>
   );
 };
 

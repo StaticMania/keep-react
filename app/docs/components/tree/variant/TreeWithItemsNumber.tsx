@@ -3,7 +3,11 @@ import Tree from "@/src/components/Tree";
 import { nodes } from "./DefaultTree";
 
 const TreeWithItemsNumber = () => {
-  return <Tree showItemsNumber={true} nodes={nodes} />;
+  return (
+    <div className="py-5 overflow-x-auto">
+      <Tree showItemsNumber={true} nodes={nodes} />
+    </div>
+  );
 };
 
 const TreeWithItemsNumberCode = `

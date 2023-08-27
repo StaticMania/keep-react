@@ -14,7 +14,7 @@ const UploadFailed = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       showProgressBar={true}
       progressType="error"
       progress={36}
@@ -40,7 +40,7 @@ const UploadFailed = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       showProgressBar={true}
       progressType="error"
       progress={36}

@@ -11,7 +11,9 @@ const UploadDisabled = () => {
       setFileName(file.name);
     }
   };
-  return <Upload onFileChange={handleFileChange} file="" disabled={true} />;
+  return (
+    <Upload onFileChange={handleFileChange} file={fileName} disabled={true} />
+  );
 };
 
 const UploadDisabledCode = `
@@ -28,7 +30,7 @@ const UploadDisabled = () => {
       setFileName(file.name);
     }
   };
-  return <Upload onFileChange={handleFileChange} file="" disabled={true} />;
+  return <Upload onFileChange={handleFileChange} file={fileName} disabled={true} />;
 };
 
 export default UploadDisabled;

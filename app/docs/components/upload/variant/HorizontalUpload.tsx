@@ -11,7 +11,9 @@ const HorizontalUpload = () => {
       setFileName(file.name);
     }
   };
-  return <Upload onFileChange={handleFileChange} file="" horizontal={true} />;
+  return (
+    <Upload onFileChange={handleFileChange} file={fileName} horizontal={true} />
+  );
 };
 
 const HorizontalUploadCode = `
@@ -28,7 +30,7 @@ const HorizontalUpload = () => {
       setFileName(file.name);
     }
   };
-  return <Upload onFileChange={handleFileChange} file="" horizontal={true} />;
+  return <Upload onFileChange={handleFileChange} file={fileName} horizontal={true} />;
 };
 
 export default HorizontalUpload;

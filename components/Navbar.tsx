@@ -107,7 +107,7 @@ const Navbar = () => {
 
           <div
             id="linkPage"
-            className={`lg:hidden fixed h-screen md:w-72 w-full bg-slate-50 right-0 top-[71px] overflow-y-auto border-l border-l-slate-100 pl-8 transition-all duration-300 ${
+            className={`lg:hidden fixed h-screen w-72 bg-white right-0 top-[71px] overflow-y-auto border-l border-l-slate-100 pl-8 transition-all duration-300 ${
               active ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -196,6 +196,7 @@ const Navbar = () => {
                 openIcon={<CaretUp size={18} color="#000000e6" />}
                 iconPosition="right"
                 className="bg-transparent border-none"
+                collapseAll={true}
               >
                 <Accordion.Panel>
                   <Accordion.Title

@@ -14,7 +14,7 @@ const HorizontalUploadFailed = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       horizontal={true}
       showProgressBar={true}
       progressType="error"
@@ -41,7 +41,7 @@ const HorizontalUploadFailed = () => {
   return (
     <Upload
         onFileChange={handleFileChange}
-        file=""
+        file={fileName}
         horizontal={true}
         showProgressBar={true}
         progressType="error"

@@ -15,7 +15,7 @@ export const TimelineBody: FC<TimelineBodyProps> = ({
   return (
     <p
       className={classNames(
-        "!mb-4 text-lg font-normal text-slate-500",
+        "!mb-4 text-xs md:text-lg font-normal text-slate-500",
         className
       )}
       {...props}

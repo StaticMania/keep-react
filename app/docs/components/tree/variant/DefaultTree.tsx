@@ -16,18 +16,18 @@ export const nodes = [
             children: [
               {
                 id: 2.2,
-                title: "Hero Text",
+                title: "Hero",
                 children: [
-                  { id: 2.3, title: "Heading / Tag line" },
-                  { id: 2.4, title: "Sub Heading Line" },
-                  { id: 2.5, title: "Description Text" },
+                  { id: 2.3, title: "Heading" },
+                  { id: 2.4, title: "Sub Heading" },
+                  { id: 2.5, title: "Description" },
                 ],
               },
             ],
           },
           {
             id: 2.6,
-            title: "Contact Page",
+            title: "Contact",
             children: [
               {
                 id: 2.7,
@@ -40,8 +40,8 @@ export const nodes = [
       },
       {
         id: 4.3,
-        title: "Blog Page",
-        children: [{ id: 412, title: "Blog Category" }],
+        title: "Blog",
+        children: [{ id: 412, title: "Category" }],
       },
     ],
   },
@@ -56,7 +56,11 @@ export const nodes = [
 ];
 
 const DefaultTree = () => {
-  return <Tree nodes={nodes} />;
+  return (
+    <div className="py-5 overflow-x-auto">
+      <Tree nodes={nodes} />
+    </div>
+  );
 };
 
 const DefaultTreeCode = `

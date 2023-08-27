@@ -52,9 +52,15 @@ const UploadHorizontal: FC = () => {
               <p className={classNames(theme.label.root.iconBox.dragDrop)}>
                 Drag and Drop files here
               </p>
-              <p className={classNames(theme.label.root.iconBox.fileType)}>
-                Files supported: PDF, XSLS, JPEG, PNG, Scanner
-              </p>
+              {file ? (
+                <p className={classNames(theme.label.root.upload.fileName)}>
+                  FileName : {file}
+                </p>
+              ) : (
+                <p className={classNames(theme.label.root.iconBox.fileType)}>
+                  Files supported: PDF, XSLS, JPEG, PNG, Scanner
+                </p>
+              )}
             </div>
           </div>
 

@@ -14,7 +14,7 @@ const HorizontalUploadPending = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       horizontal={true}
       showProgressBar={true}
       progressType="pending"
@@ -41,7 +41,7 @@ const HorizontalUploadPending = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       horizontal={true}
       showProgressBar={true}
       progressType="pending"

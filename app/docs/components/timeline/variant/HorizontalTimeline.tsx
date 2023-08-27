@@ -1,43 +1,45 @@
 "use client";
 import { Timeline } from "@/src/components/Timeline";
-import { CalendarBlank, Clock, Gift } from "phosphor-react";
+import { CalendarBlank } from "phosphor-react";
 
 const HorizontalTimeline = () => {
   return (
-    <Timeline horizontal={true}>
-      <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
-        <Timeline.Content>
-          <Timeline.Title>New Years Day</Timeline.Title>
-          <Timeline.Time>January 1st</Timeline.Time>
-          <Timeline.Body>
-            Celebrating the start of a new year with friends and family.
-          </Timeline.Body>
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
-        <Timeline.Content>
-          <Timeline.Title>Birthday Bash</Timeline.Title>
-          <Timeline.Time>May 15th</Timeline.Time>
-          <Timeline.Body>
-            Throwing a fun-filled birthday party to celebrate another year of
-            life.
-          </Timeline.Body>
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
-        <Timeline.Content>
-          <Timeline.Title>Independence Day</Timeline.Title>
-          <Timeline.Time>July 4th</Timeline.Time>
-          <Timeline.Body>
-            Enjoying a spectacular display of fireworks and patriotic
-            festivities.
-          </Timeline.Body>
-        </Timeline.Content>
-      </Timeline.Item>
-    </Timeline>
+    <div className="px-5 py-6">
+      <Timeline horizontal={true}>
+        <Timeline.Item>
+          <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
+          <Timeline.Content>
+            <Timeline.Title>New Years Day</Timeline.Title>
+            <Timeline.Time>January 1st</Timeline.Time>
+            <Timeline.Body>
+              Celebrating the start of a new year with friends and family.
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
+          <Timeline.Content>
+            <Timeline.Title>Birthday Bash</Timeline.Title>
+            <Timeline.Time>May 15th</Timeline.Time>
+            <Timeline.Body>
+              Throwing a fun-filled birthday party to celebrate another year of
+              life.
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
+          <Timeline.Content>
+            <Timeline.Title>Independence Day</Timeline.Title>
+            <Timeline.Time>July 4th</Timeline.Time>
+            <Timeline.Body>
+              Enjoying a spectacular display of fireworks and patriotic
+              festivities.
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Item>
+      </Timeline>
+    </div>
   );
 };
 

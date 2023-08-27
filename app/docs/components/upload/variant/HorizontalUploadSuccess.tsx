@@ -14,7 +14,7 @@ const HorizontalUploadSuccess = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       horizontal={true}
       showProgressBar={true}
       progressType="success"
@@ -39,7 +39,7 @@ const HorizontalUploadSuccess = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       horizontal={true}
       showProgressBar={true}
       progressType="success"

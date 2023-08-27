@@ -14,7 +14,7 @@ const UploadSuccess = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       showProgressBar={true}
       progressType="success"
     />
@@ -38,7 +38,7 @@ const UploadSuccess = () => {
   return (
     <Upload
       onFileChange={handleFileChange}
-      file=""
+      file={fileName}
       showProgressBar={true}
       progressType="success"
     />

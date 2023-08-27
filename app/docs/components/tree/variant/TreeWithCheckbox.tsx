@@ -4,12 +4,14 @@ import { nodes } from "./DefaultTree";
 
 const TreeWithCheckbox = () => {
   return (
-    <Tree
-      showCheckbox={true}
-      showItemsNumber={true}
-      showBorder={true}
-      nodes={nodes}
-    />
+    <div className="py-5 overflow-x-auto">
+      <Tree
+        showCheckbox={true}
+        showItemsNumber={true}
+        showBorder={true}
+        nodes={nodes}
+      />
+    </div>
   );
 };
 

@@ -3,7 +3,11 @@ import Tree from "@/src/components/Tree";
 import { nodes } from "./DefaultTree";
 
 const TreeItemsWithBorder = () => {
-  return <Tree showItemsNumber={true} showBorder={true} nodes={nodes} />;
+  return (
+    <div className="py-5 overflow-x-auto">
+      <Tree showItemsNumber={true} showBorder={true} nodes={nodes} />
+    </div>
+  );
 };
 
 const TreeItemsWithBorderCode = `

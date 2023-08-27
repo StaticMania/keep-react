@@ -1,49 +1,51 @@
 "use client";
 import { Button } from "@/src/components/Button";
 import { Timeline } from "@/src/components/Timeline";
-import { ArrowRight, CalendarBlank, Clock } from "phosphor-react";
+import { ArrowRight, CalendarBlank } from "phosphor-react";
 
 const DashedBorderTimeline = () => {
   return (
-    <Timeline timelineBarType="dashed">
-      <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
-        <Timeline.Content>
-          <Timeline.Time>February 2023</Timeline.Time>
-          <Timeline.Title>New Feature Launch</Timeline.Title>
-          <Timeline.Body>
-            Introducing a set of exciting new features that enhance user
-            experience and functionality.
-          </Timeline.Body>
-          <Button type="primary" size="sm">
-            Explore Features
-            <ArrowRight className="ml-2 h-3 w-3" />
-          </Button>
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
-        <Timeline.Content>
-          <Timeline.Time>March 2023</Timeline.Time>
-          <Timeline.Title>User Interface Refinement</Timeline.Title>
-          <Timeline.Body>
-            Embarking on a user interface refinement phase to improve aesthetics
-            and usability.
-          </Timeline.Body>
-        </Timeline.Content>
-      </Timeline.Item>
-      <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
-        <Timeline.Content>
-          <Timeline.Time>April 2023</Timeline.Time>
-          <Timeline.Title>Performance Optimization</Timeline.Title>
-          <Timeline.Body>
-            Focusing on performance optimization to ensure a seamless and
-            efficient user experience.
-          </Timeline.Body>
-        </Timeline.Content>
-      </Timeline.Item>
-    </Timeline>
+    <div className="px-5 py-6">
+      <Timeline timelineBarType="dashed">
+        <Timeline.Item>
+          <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+          <Timeline.Content>
+            <Timeline.Time>February 2023</Timeline.Time>
+            <Timeline.Title>New Feature Launch</Timeline.Title>
+            <Timeline.Body>
+              Introducing a set of exciting new features that enhance user
+              experience and functionality.
+            </Timeline.Body>
+            <Button type="primary" size="sm">
+              Explore Features
+              <ArrowRight className="ml-2 h-3 w-3" />
+            </Button>
+          </Timeline.Content>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+          <Timeline.Content>
+            <Timeline.Time>March 2023</Timeline.Time>
+            <Timeline.Title>User Interface Refinement</Timeline.Title>
+            <Timeline.Body>
+              Embarking on a user interface refinement phase to improve
+              aesthetics and usability.
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+          <Timeline.Content>
+            <Timeline.Time>April 2023</Timeline.Time>
+            <Timeline.Title>Performance Optimization</Timeline.Title>
+            <Timeline.Body>
+              Focusing on performance optimization to ensure a seamless and
+              efficient user experience.
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Item>
+      </Timeline>
+    </div>
   );
 };
 

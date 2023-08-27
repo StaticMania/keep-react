@@ -12,7 +12,7 @@ export const sidebarTheme: KeepSidebarTheme = {
   },
   collapse: {
     button:
-      "group flex w-full items-center rounded-lg p-2 text-base font-normal text-slate-900 transition duration-75 hover:bg-slate-100",
+      "group flex w-full items-center rounded-lg p-2 text-sm md:text-base font-normal text-slate-900 transition duration-75 hover:bg-slate-100",
     icon: {
       base: "h-6 w-6 text-slate-500 transition duration-75 group-hover:text-slate-900",
       open: {
@@ -43,7 +43,7 @@ export const sidebarTheme: KeepSidebarTheme = {
     },
   },
   item: {
-    base: "flex items-center justify-center rounded-lg p-2 text-base font-normal text-slate-900 hover:bg-slate-100",
+    base: "flex items-center justify-center rounded-lg p-2 text-sm md:text-base font-normal text-slate-900 hover:bg-slate-100",
     active: "bg-slate-100",
     collapsed: {
       insideCollapse: "group w-full pl-8 transition duration-75",
