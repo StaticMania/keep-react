@@ -2,7 +2,7 @@
   @apply font-semibold leading-6 tracking-[-0.3px] text-lg text-slate-900 pb-2 border-b border-b-slate-200;
 }
 #mainContent > p {
-  @apply font-normal text-base leading-6 tracking-[-0.3px] text-slate-700 mt-4;
+  @apply font-normal text-sm md:text-base leading-6 tracking-[-0.3px] text-slate-700 mt-4;
 }
 #mainContent > ul li {
   @apply font-normal text-base text-slate-500 mb-3 mt-4;

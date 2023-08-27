@@ -71,11 +71,11 @@ const HistoryModal = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-sm md:text-base leading-relaxed text-slate-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classica.
             </p>
-            <div className="mb-6 flex items-center gap-2">
+            <div className="md:mb-6 mb-4 flex items-center gap-2">
               <Avatar
                 shape="round"
                 img="/images/avatar/avatar-4.png"
@@ -101,7 +101,7 @@ const HistoryModal = () => {
             />
             <label
               htmlFor="checked-checkbox"
-              className="ml-2 text-base font-medium text-slate-500"
+              className="ml-2 text-sm md:text-base font-medium text-slate-500"
             >
               Don’t ask again
             </label>
@@ -192,11 +192,11 @@ const HistoryModal = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-sm md:text-base leading-relaxed text-slate-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classica.
             </p>
-            <div className="mb-6 flex items-center gap-2">
+            <div className="md:mb-6 mb-4 flex items-center gap-2">
               <Avatar
                 shape="round"
                 img="/images/avatar/avatar-4.png"
@@ -222,7 +222,7 @@ const HistoryModal = () => {
             />
             <label
               htmlFor="checked-checkbox"
-              className="ml-2 text-base font-medium text-slate-500"
+              className="ml-2 text-sm md:text-base font-medium text-slate-500"
             >
               Don’t ask again
             </label>

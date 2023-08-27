@@ -22,11 +22,11 @@ const ConfirmationModal = () => {
       </Button>
       <Modal show={showInfoModal} popup={true} size="sm">
         <Modal.Body>
-          <div className="flex items-start gap-2">
+          <div className="flex items-center md:items-start gap-2">
             <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-xl font-semibold text-[#2D3643]">
+            <h3 className="text-base md:text-xl font-semibold text-slate-900">
               Do you want to upload this file?
             </h3>
           </div>
@@ -99,11 +99,11 @@ const ConfirmationModal = () => {
       </Button>
       <Modal show={showInfoModal} popup={true} size="sm">
         <Modal.Body>
-          <div className="flex items-start gap-2">
+          <div className="flex items-center md:items-start gap-2">
             <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-xl font-semibold text-[#2D3643]">
+            <h3 className="text-base md:text-xl font-semibold text-slate-900">
               Do you want to upload this file?
             </h3>
           </div>

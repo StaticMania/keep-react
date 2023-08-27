@@ -43,14 +43,14 @@ export const checkboxGroupTheme: keepCheckboxGroupTheme = {
     spacing: "py-3.5 px-5",
     order: "order-2",
     title: {
-      base: "text-lg font-medium leading-5",
+      base: "text-base md:text-lg font-normal md:font-medium leading-5",
       selected: {
         on: "text-primary-500",
         off: "text-slate-700",
       },
     },
     description: {
-      base: "mt-1 text-base font-normal",
+      base: "mt-1 text-xs md:text-base font-normal",
       selected: {
         on: "text-primary-400",
         off: "text-slate-400",

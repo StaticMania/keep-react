@@ -8,7 +8,7 @@ const CheckboxGroupWithImage = () => {
     setSelected(e.target.value);
   };
   return (
-    <form className="space-y-4 p-5">
+    <form className="space-y-4 md:p-5">
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."

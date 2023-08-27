@@ -24,11 +24,12 @@ const DefaultModal = () => {
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showModal}
+        position="center"
       >
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-sm md:text-base leading-relaxed text-slate-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -52,7 +53,7 @@ const DefaultModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-sm md:text-base leading-relaxed text-slate-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -96,11 +97,12 @@ const DefaultModal = () => {
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showModal}
+        position="center"
       >
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-sm md:text-base leading-relaxed text-slate-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -124,7 +126,7 @@ const DefaultModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-sm md:text-base leading-relaxed text-slate-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>

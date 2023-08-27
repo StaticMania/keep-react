@@ -18,7 +18,7 @@ export const DocsContentLayout: FC<DocsContentLayoutProps> = function ({
         <h1 className="mb-2 inline-block w-full text-2xl md:text-[26px] font-semibold leading-10 tracking-[-0.5px] text-slate-900">
           {title}
         </h1>
-        <p className="text-base leading-6 text-slate-700 tracking-[-0.3px]">
+        <p className="text-sm md:text-base leading-6 text-slate-700 tracking-[-0.3px]">
           {description}
         </p>
       </div>

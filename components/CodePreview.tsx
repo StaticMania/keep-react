@@ -101,7 +101,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
             </SyntaxHighlighter>
           </div>
         ) : (
-          <div className="p-5 mix-h-[420px] flex items-center justify-center">
+          <div className="md:p-5 p-2 mix-h-[420px] flex items-center justify-center">
             <div className="w-full h-full">{children}</div>
           </div>
         )}

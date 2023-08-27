@@ -1,13 +1,13 @@
 import { keepModalTheme } from ".";
 
 export const modalTheme: keepModalTheme = {
-  base: "fixed top-0 right-0 left-0 z-50 h-modal overflow-y-auto overflow-x-hidden md:inset-0 md:h-full",
+  base: "fixed z-[90] inset-0 flex items-center justify-center top-20",
   show: {
     on: "flex bg-gray-900 bg-opacity-50",
     off: "hidden",
   },
   content: {
-    base: "relative h-full w-full p-4 md:h-auto",
+    base: "relative h-full w-full p-4 h-auto",
     inner: "relative rounded-lg bg-white shadow p-6",
   },
   body: {
@@ -18,7 +18,7 @@ export const modalTheme: keepModalTheme = {
     base: "rounded-t pb-2",
     popup: "!p-2 !border-b-0",
     iconSection: "flex items-start  justify-between",
-    title: "pt-2 text-3xl font-semibold text-slate-800",
+    title: "pt-2 text-lg md:text-3xl font-semibold text-slate-800",
     headerIcon: {
       base: "w-10 h-10 flex items-center justify-center rounded-md",
       icon: "",
