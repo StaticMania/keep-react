@@ -4,8 +4,8 @@ import Introduction from ".";
 
 export const metadata: Metadata = {
   description:
-    "The Introduction page provides clear and concise instructions for setting up and integrating a software package, library, or application into your system. It guides users through the steps required to successfully install and configure the software, ensuring a smooth and error-free setup process.",
-  title: "Introduction - Keep Design System",
+    "Keep Design System is an open-source UI component library built with React and Tailwind CSS. It offers a comprehensive collection of ready-to-use UI components, carefully designed and crafted to simplify the process of creating modern and consistent user interfaces.",
+  title: "Keep Design System - UI Component Library",
 };
 
 const page: NextPage = () => {

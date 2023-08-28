@@ -204,6 +204,18 @@
   }
 }
 
+.ais-SearchBox-input {
+  @apply focus:outline-none w-[95%] bg-slate-50;
+}
+
+.ais-SearchBox-reset {
+  @apply hidden;
+}
+
+.ais-SearchBox-submitIcon {
+  @apply h-3.5 w-3.5 fill-slate-500;
+}
+
 #sidebar ::-webkit-scrollbar {
   width: 4px;
 }
