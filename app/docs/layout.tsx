@@ -43,6 +43,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
 
   if (tableOfContents) {
     const linkElements = tableOfContents.querySelectorAll("li a");
+
     linkElements.forEach((link) => {
       const href = link.getAttribute("href");
       if ("#" + activeSection === href) {
@@ -85,7 +86,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
     <div className="2xl:container pt-12 px-5">
       <aside
         id="linkPage"
-        className="lg:block hidden fixed top-20 pt-8  z-20  left-0 lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100vw-75vw)] bg-white  overflow-y-auto h-screen border-r border-r-slate-100"
+        className="lg:block hidden fixed top-20 pt-8  z-20  left-0 lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] bg-white  overflow-y-auto h-screen border-r border-r-slate-100"
       >
         <div className="pr-3 space-y-3 w-56 ml-auto">
           <Accordion

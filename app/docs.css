@@ -76,16 +76,16 @@
 
 /* Search */
 
-.DocSearch .DocSearch-Modal {
-  @apply mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
+.DocSearch.DocSearch-Modal {
+  @apply !font-inter mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
 }
 
 .DocSearch.DocSearch-Button {
-  @apply m-0 ml-0 flex h-[40px] w-[40px] items-center justify-center rounded-lg border bg-white p-2 shadow-none hover:bg-gray-100 hover:shadow-none focus:shadow-none focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:ring-gray-700 md:mr-0 md:w-52 md:justify-between md:border-solid md:border-gray-300 md:bg-gray-50 dark:md:bg-gray-700 xl:w-64 xl:pl-4;
+  @apply border border-slate-100 md:h-[45px] md:bg-slate-50 hover:bg-slate-100 px-3 lg:w-64 rounded-md hover:ring-0;
 }
 
 .DocSearch .DocSearch-Button-Placeholder {
-  @apply text-sm font-normal text-gray-500 dark:text-gray-400;
+  @apply text-base font-normal text-slate-500;
 }
 
 .DocSearch .DocSearch-Search-Icon {
@@ -106,11 +106,11 @@
 }
 
 .DocSearch .DocSearch-Button-Key {
-  @apply m-0 w-auto bg-none pb-0 pt-1 text-xs font-normal text-gray-500 shadow-none dark:text-gray-400;
+  @apply m-0 w-auto bg-none pb-0 pt-1 text-xs font-normal text-slate-500 shadow-none;
 }
 
 .DocSearch.DocSearch-Button .DocSearch-Search-Icon {
-  @apply text-gray-500;
+  @apply text-slate-500;
 }
 
 .DocSearch .DocSearch-Hit-icon {
@@ -118,35 +118,35 @@
 }
 
 .DocSearch .DocSearch-Hits mark {
-  @apply text-cyan-600 decoration-cyan-600 decoration-2 underline-offset-2 dark:text-white dark:decoration-white;
+  @apply text-slate-600 decoration-cyan-600 decoration-2 underline-offset-2;
 }
 
 .DocSearch .DocSearch-Hit[aria-selected="true"] a {
-  @apply bg-cyan-700 dark:bg-cyan-600;
+  @apply bg-cyan-700;
 }
 
 .DocSearch .DocSearch-Hit-source {
-  @apply bg-white pb-1 text-gray-700 dark:bg-gray-700 dark:text-gray-400;
+  @apply bg-white pb-1 text-gray-700;
 }
 
 .DocSearch .DocSearch-Container {
-  @apply bg-gray-900 bg-opacity-50 dark:bg-opacity-80;
+  @apply bg-gray-900 bg-opacity-50;
 }
 
 .DocSearch .DocSearch-Modal {
-  @apply shadow-none dark:bg-gray-700;
+  @apply shadow-none;
 }
 
 .DocSearch .DocSearch-SearchBar {
-  @apply border-b border-gray-100 p-0 dark:border-gray-600;
+  @apply border-b border-slate-100 p-0;
 }
 
 .DocSearch .DocSearch-Form {
-  @apply shadow-none dark:bg-gray-700;
+  @apply shadow-none;
 }
 
 .DocSearch .DocSearch-Input {
-  @apply text-sm text-gray-500 shadow-none focus:shadow-none focus:outline-none focus:ring-0 dark:bg-gray-700 dark:text-white;
+  @apply text-sm text-slate-500 shadow-none focus:shadow-none focus:outline-none focus:ring-0;
 }
 
 .DocSearch .DocSearch-LoadingIndicator svg,
@@ -159,11 +159,11 @@
 }
 
 .DocSearch .DocSearch-Footer {
-  @apply h-12 border-t border-gray-100 shadow-none dark:border-gray-600 dark:bg-gray-700;
+  @apply h-12 border-t border-slate-100 shadow-none;
 }
 
 .DocSearch .DocSearch-Dropdown {
-  @apply bg-white dark:bg-gray-700;
+  @apply bg-white;
 }
 
 .DocSearch .DocSearch-Hit {
@@ -171,9 +171,11 @@
 }
 
 .DocSearch .DocSearch-Hit a {
-  @apply rounded-lg bg-gray-50 shadow-none dark:bg-gray-600 dark:hover:bg-cyan-600;
+  @apply rounded-md !bg-slate-100  shadow-none;
 }
-
+.DocSearch .DocSearch-Hit[aria-selected="true"] a {
+  @apply rounded-md !bg-slate-900  shadow-none;
+}
 .DocSearch .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-Select-Icon,
 .DocSearch .DocSearch-Hit-action-button {
   @apply hidden;
@@ -197,17 +199,9 @@
 }
 
 .DocSearch .DocSearch-Title {
-  @apply mb-1 text-lg font-normal text-gray-700 dark:text-gray-200;
-}
-
-.DocSearch .DocSearch-Hit-Container {
-  @apply dark:text-gray-300;
-}
-
-.DocSearch .DocSearch-Logo svg {
-  @apply dark:text-gray-400;
+  @apply mb-1 text-lg font-normal text-slate-700;
 }
 
 .DocSearch .DocSearch-Reset {
-  @apply hover:text-black dark:text-gray-300 dark:hover:text-white;
+  @apply hover:text-black;
 }

@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/src/components/Button";
 import { Toggle } from "@/src/components/Switch";
-import { CaretDown, CaretUp, List, MagnifyingGlass, X } from "phosphor-react";
+import { CaretDown, CaretUp, List, X } from "phosphor-react";
 import { gettingStartedRoutes, navbarRoutes, routes } from "@/routes/routes";
 import { Accordion } from "@/src/components/Accordion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { TextInput } from "@/src/components/FormControls/TextInput";
-import SearchModal from "./SearchModal";
+import { DocSearch } from "@docsearch/react";
+import "@docsearch/css";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -21,22 +21,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setActive(false);
-    closeModal();
   }, [pathname]);
-
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-  const handleSearchModal = () => {
-    openModal();
-  };
 
   return (
     <header className="bg-white fixed w-full border-b border-slate-100 z-50">
@@ -65,19 +50,12 @@ const Navbar = () => {
             </div>
           </div>
 
-          {showModal && <SearchModal setShowModal={setShowModal} />}
           <div className="lg:flex gap-3 hidden">
             <div>
-              <TextInput
-                id="#id-yml3mm"
-                placeholder="Search Anything"
-                color="gray"
-                sizing="md"
-                type="text"
-                addon={<MagnifyingGlass size={20} color="#5E718D" />}
-                addonPosition="left"
-                onClick={handleSearchModal}
-                readOnly
+              <DocSearch
+                appId="Z0C31MASPO"
+                indexName="keep-design"
+                apiKey="efc95879a56f785250b1da08b43e8c19"
               />
             </div>
 
@@ -89,7 +67,7 @@ const Navbar = () => {
                 alt="github"
               />
             </Button>
-            <div className="bg-primary-25 flex items-center justify-center rounded-md px-3 border border-transparent hover:bg-primary-50 active:bg-primary-50 focus:ring-4 focus:ring-primary-50 ">
+            <div className="bg-primary-25 flex items-center justify-center rounded-md px-3 border border-transparent hover:bg-primary-50 active:bg-primary-50 focus:ring-4 focus:ring-primary-50">
               <Toggle bgColor="slate" label="" size="sm" withIcon={true} />
             </div>
             <Link
@@ -99,16 +77,16 @@ const Navbar = () => {
               get started
             </Link>
           </div>
-          <div className="lg:hidden flex justify-between gap-3">
-            <Button size="xs" href="/">
-              <Image
-                src="/images/icon/github.svg"
-                height={20}
-                width={20}
-                alt="github"
+          <div className="lg:hidden flex justify-between gap-4">
+            <div>
+              <DocSearch
+                appId="Z0C31MASPO"
+                indexName="keep-design"
+                apiKey="efc95879a56f785250b1da08b43e8c19"
               />
-            </Button>
-            <div className="bg-primary-25 flex items-center justify-center rounded-md px-3 border border-transparent hover:bg-primary-50 active:bg-primary-50 focus:ring-4 focus:ring-primary-50 ">
+            </div>
+
+            <div className="flex items-center justify-center">
               <Toggle bgColor="slate" label="" size="sm" withIcon={true} />
             </div>
             <Button size="xs" onClick={() => setActive(!active)}>
