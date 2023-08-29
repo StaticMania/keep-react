@@ -9,7 +9,7 @@ import {
   useRole,
 } from "@floating-ui/react-dom-interactions";
 import classNames from "classnames";
-import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import {
@@ -141,7 +141,9 @@ export const Floating: FC<FloatingProps> = ({
         })}
       >
         {title && <div className={theme.title}>{title}</div>}
-        <div className={theme.content}>{content}</div>
+        <div className={theme.content} data-testid="keep-tooltip-arrow">
+          {content}
+        </div>
         {arrow && (
           <div
             className={classNames(theme.arrow.base, {
@@ -149,7 +151,6 @@ export const Floating: FC<FloatingProps> = ({
               [theme.arrow.style.light]: style === "light",
               [theme.arrow.style.auto]: style === "auto",
             })}
-            data-testid="keep-tooltip-arrow"
             ref={arrowRef}
             style={{
               top: arrowY ?? " ",

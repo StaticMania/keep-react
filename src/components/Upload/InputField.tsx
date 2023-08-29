@@ -31,12 +31,10 @@ const InputField: FC = () => {
     useUploadContext();
   const theme = useTheme().theme.upload.input;
 
-  const id = `#id-${Math.random() * 100 + 1}`;
-
   return (
     <div className={classNames(theme.base)}>
       <label
-        htmlFor={id}
+        htmlFor="upload"
         className={classNames(theme.label.base, disabled && theme.disabled)}
       >
         <div className={classNames(theme.label.root)}>
@@ -54,7 +52,7 @@ const InputField: FC = () => {
               Choose File
             </Button>
             <input
-              id={id}
+              id="upload"
               type="file"
               className={classNames(theme.label.upload.input)}
               onChange={onFileChange}

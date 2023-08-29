@@ -2,7 +2,6 @@ import { KeepBoolean, KeepColors, KeepSizes } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
-import { useId } from "react";
 
 export interface keepProgressTheme {
   base: string;
@@ -31,41 +30,13 @@ export interface keepProgressTheme {
 
 export interface ProgressProps
   extends PropsWithChildren<ComponentProps<"div">> {
-  /**
-   * It defines the available sizes options for progress
-   *
-   * `"sm"` `"md"` `"lg"` `"xl"`
-   */
   size?: keyof ProgressSizes;
-  /**
-   * Progress level text
-   */
   label?: string;
-  /**
-   * It defines the available position for progress
-   *
-   * `"inside"` `"outside"` `"none"`
-   */
   labelPosition?: "inside" | "outside" | "none";
-  /**
-   * Lavel Progress show or not?
-   */
   labelProgress?: boolean;
-  /**
-   * Show Popup Label Progress show or not?
-   */
   showPopupLabelProgress?: boolean;
-  /**
-   * Progress bar rounded or not?
-   */
   rounded?: boolean;
-  /**
-   * Progress bar bordered or not?
-   */
   bordered?: boolean;
-  /**
-   * It defines the progress control for progress
-   */
   progress: number;
 }
 
@@ -94,13 +65,12 @@ export const Progress: FC<ProgressProps> = ({
   className,
   ...props
 }): JSX.Element => {
-  const id = useId();
   const theme = useTheme().theme.progress;
 
   return (
     <>
       <div
-        id={id}
+        id="progress-id"
         aria-label={label}
         aria-valuenow={progress}
         role="progressbar"

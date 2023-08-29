@@ -35,12 +35,11 @@ const UploadHorizontal: FC = () => {
     useUploadContext();
 
   const theme = useTheme().theme.upload.uploadHorizontal;
-  const id = `#id-${Math.random() * 100}`;
 
   return (
     <div className={classNames(theme.base)}>
       <label
-        htmlFor={id}
+        htmlFor="horizontal_upload"
         className={classNames(theme.label.base, disabled && theme.disabled)}
       >
         <div className={classNames(theme.label.root.base)}>
@@ -81,7 +80,7 @@ const UploadHorizontal: FC = () => {
             </Button>
 
             <input
-              id={id}
+              id="horizontal_upload"
               type="file"
               className={classNames(theme.label.root.upload.input)}
               onChange={onFileChange}

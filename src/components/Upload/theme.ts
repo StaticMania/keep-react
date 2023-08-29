@@ -19,7 +19,7 @@ export const uploadTheme: keepUploadTheme = {
     },
   },
   uploadFailed: {
-    base: "relative z-50 w-full rounded-lg border border-error-50 p-2.5 px-5",
+    base: "relative z-40 w-full rounded-lg border border-error-50 p-2.5 px-5",
     bgColor:
       "absolute top-0 left-0 z-[-1] h-full rounded-l-lg bg-error-100 p-5 overflow-hidden",
     root: {
@@ -62,7 +62,7 @@ export const uploadTheme: keepUploadTheme = {
     },
   },
   uploadPending: {
-    base: "relative z-50 w-full rounded-lg border border-slate-200 p-2.5 px-5",
+    base: "relative z-20 w-full rounded-lg border border-slate-200 p-2.5 px-5",
     bgColor:
       "absolute top-0 left-0 z-[-1] h-full rounded-l-lg bg-blue-50 p-5 overflow-hidden",
     root: {
@@ -84,7 +84,7 @@ export const uploadTheme: keepUploadTheme = {
     },
   },
   uploadSuccess: {
-    base: "relative z-50 w-full rounded-lg border border-success-100 p-2.5 px-5",
+    base: "relative z-40 w-full rounded-lg border border-success-100 p-2.5 px-5",
     bgColor:
       "absolute top-0 left-0 z-[-1] h-full w-full rounded-lg bg-success-25 p-5",
     root: {
