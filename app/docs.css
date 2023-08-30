@@ -77,11 +77,9 @@
 /* Search */
 
 .DocSearch-Modal {
-  @apply !font-inter mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
-
-  /* @apply !font-inter mx-auto !mt-[4rem] md:max-h-[calc(100vh-2rem)] max-h-[calc(100vh-10rem)]
+  @apply !font-inter mx-auto mt-[4rem] md:max-h-[calc(100vh-2rem)] max-h-[calc(100vh-10rem)] my-auto
    max-w-[calc(100vw-3rem)] md:max-w-[calc(100vw-2rem)] overflow-hidden rounded-md lg:mt-[4rem]
-    lg:max-h-none lg:max-w-xl; */
+    lg:max-h-none lg:max-w-xl;
 }
 
 .DocSearch.DocSearch-Button {
