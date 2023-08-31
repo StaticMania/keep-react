@@ -1,4 +1,5 @@
-import { FC } from "react";
+"use client";
+import { FC, useEffect, useState } from "react";
 import {
   Bar,
   BarChart as BarChartCom,
@@ -63,6 +64,7 @@ const BarChart: FC<BarChartProps> = ({
   barSize = 6,
   secondaryDataKey,
 }) => {
+  const [client, setClient] = useState(false);
   const RenderBarChart = (
     <BarChartCom id="testId" width={width} height={height} data={chartData}>
       {showGridLine && (
@@ -137,7 +139,12 @@ const BarChart: FC<BarChartProps> = ({
       )}
     </BarChartCom>
   );
-  return <>{RenderBarChart}</>;
+
+  useEffect(() => {
+    setClient(true);
+  }, []);
+
+  return <>{client ? RenderBarChart : null}</>;
 };
 
 export default BarChart;

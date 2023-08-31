@@ -49,7 +49,6 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-
           <div className="lg:flex gap-3 hidden">
             <div>
               <DocSearch
@@ -68,7 +67,13 @@ const Navbar = () => {
               />
             </Button>
             <div className="bg-primary-25 flex items-center justify-center rounded-md px-3 border border-transparent hover:bg-primary-50 active:bg-primary-50 focus:ring-4 focus:ring-primary-50">
-              <Toggle bgColor="slate" label="" size="sm" withIcon={true} />
+              <Toggle
+                bgColor="slate"
+                label=""
+                size="sm"
+                withIcon={true}
+                disabled
+              />
             </div>
             <Link
               href="/installation"
@@ -87,7 +92,13 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center justify-center">
-              <Toggle bgColor="slate" label="" size="sm" withIcon={true} />
+              <Toggle
+                bgColor="slate"
+                label=""
+                size="sm"
+                withIcon={true}
+                disabled
+              />
             </div>
             <Button size="xs" onClick={() => setActive(!active)}>
               {active ? (
@@ -101,7 +112,6 @@ const Navbar = () => {
               )}
             </Button>
           </div>
-
           <div
             id="linkPage"
             className={`lg:hidden fixed h-screen w-72 bg-white right-0 top-[71px] overflow-y-auto border-l border-l-slate-100 pl-8 transition-all duration-300 ${
@@ -208,7 +218,7 @@ const Navbar = () => {
                       base: "",
                     }}
                   >
-                    <ul className="mt-3 pb-32 space-y-2 border-l border-l-slate-100">
+                    <ul className="mt-3 pb-24 space-y-2 border-l border-l-slate-100">
                       {routes.map((route) => (
                         <li key={route.id}>
                           <Link

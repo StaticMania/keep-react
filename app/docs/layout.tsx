@@ -83,7 +83,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
   }, [newIdArr]);
 
   return (
-    <div className="2xl:container pt-12 px-5">
+    <section className="2xl:container pt-12 px-5">
       <aside
         id="linkPage"
         className="lg:block hidden fixed top-20 pt-8  z-20  left-0 lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] bg-white  overflow-y-auto h-screen border-r border-r-slate-100"
@@ -148,7 +148,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
                   base: "",
                 }}
               >
-                <ul className="mt-3 pb-32 space-y-2 border-l border-l-slate-100">
+                <ul className="mt-3 pb-24 space-y-2 border-l border-l-slate-100">
                   {routes.map((route) => (
                     <li key={route.id}>
                       <Link
@@ -170,7 +170,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </aside>
       <main className="lg:pl-[calc(100vw-75vw)] lg:w-[calc(100vw-5vw)]  md:w-[calc(100vw-10vw)] w-[calc(100vw-10vw)]  xl:pl-[calc(100vw-75vw)] xl:w-[calc(100vw-25vw)] 2xl:pl-[calc(100%-82%)] 2xl:w-[calc(100vw-35vw)]">
-        <div className="overflow-y-auto px-4">{children}</div>
+        <div className="overflow-y-auto px-4 pb-10">{children}</div>
       </main>
       <aside
         id="linkPage"
@@ -192,7 +192,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </aside>
-    </div>
+    </section>
   );
 };
 

@@ -18,6 +18,10 @@ import {
   DisabledAccordionCode,
   DisabledAccordion,
 } from "./variant/DisabledAccordion";
+import {
+  AccordionWithCustomIcon,
+  AccordionWithCustomIconCode,
+} from "./variant/AccordionWithCustomIcon";
 import CodePreview from "@/components/CodePreview";
 import CssThemePreview from "@/components/CssThemePreview";
 import ComponentApi from "@/components/ComponentApi";
@@ -26,54 +30,59 @@ import { accordionApiData } from "./accordionApi";
 
 ## Table of Contents
 
-Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+The Accordion Component in the Keep Design System allows you to create collapsible sections of content, commonly known as accordions. Users can toggle the visibility of the content by clicking on the disclosure button. With customizable options for the theme, open state, type, and state, you can create accordion components that fit seamlessly into your design and provide an intuitive user experience.
 
 ## Default Accordion
 
-Default Accordion Component allows you to create collapsible sections of content, commonly known as accordions.Users can toggle the visibility of the content by clicking on the disclosure button.
+The Default Accordion Component allows you to craft collapsible content sections. Users can reveal and hide the content by simply clicking on the disclosure button.
 
 <CodePreview code={DefaultAccordionCode}>
   <DefaultAccordion />
 </CodePreview>
 
-## Accordion collapseAll
+## Controlling Collapse Behavior
 
-The `collapseAll` property of the Accordion allows you to control the default state of the accordion panels. When set to `true`, all panels are collapsed by default. Users can then expand individual panels by clicking on them.
+The `collapseAll` property lets you control the initial state of accordion panels. When set to `true`, all panels are collapsed by default. Users can then expand individual panels as needed.
 
 <CodePreview code={AccordionCollapseAllCode}>
   <AccordionCollapseAll />
 </CodePreview>
 
-## Accordion With Left Side Icon
+## Visual Context with Left-Side Icons
 
-By using the `iconPosition="left"` property of the AccordionPanel component, you can shift the icon on the left side of the accordion panel header. This icon can be used to provide context or indicate the content within the panel.
+Using the `iconPosition="left"` property in the AccordionPanel, you can position icons on the left side of the panel header. This allows you to offer context or indicate the content within the panel.
 
 <CodePreview code={AccordionWithLeftSideIconCode}>
   <AccordionWithLeftSideIcon />
 </CodePreview>
 
-## Accordion Always Open
+## Customizing Icons
 
-By using the `alwaysOpen={true}` property of the Accordion component, you can configure all panels to remain open at all times. This means that users won't need to manually expand or collapse panels, as all content will be readily visible.
+If you prefer custom icons, you have the freedom to choose your preferred icons for the accordion's open and close states. Utilize the `openIcon` and `closeIcon` props for this purpose.
+
+<CodePreview code={AccordionWithCustomIconCode}>
+  <AccordionWithCustomIcon />
+</CodePreview>
+
+## Panels That Stay Open
+
+With the `alwaysOpen={true}` property, you can configure all panels to remain expanded. This eliminates the need for users to manually toggle panels, ensuring all content is consistently visible.
 
 <CodePreview code={AccordionAlwaysOpenCode}>
   <AccordionAlwaysOpen />
 </CodePreview>
 
-## Disabled Accordion
+## Disabled Accordions
 
-By setting the `disabled={true}` property of specific AccordionPanel components, you can make those panels non-interactive. This ensures that users cannot expand or collapse these panels, allowing you to control the visibility of certain content.
+If you need to control which panels users can interact with, the `disabled` property on specific AccordionPanel components makes certain panels non-interactive.
 
 <CodePreview code={DisabledAccordionCode}>
   <DisabledAccordion />
 </CodePreview>
 
-## Api
+## Learn More
+
+For a comprehensive understanding of the API and how to customize component appearances, refer to the provided API documentation and Theme information.
 
 <ComponentApi data={accordionApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
 <CssThemePreview code={useTheme().theme.accordion} />

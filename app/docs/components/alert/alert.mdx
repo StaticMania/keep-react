@@ -28,62 +28,51 @@ import { useTheme } from "@/src/Keep/ThemeContex";
 
 ## Table of Contents
 
-Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+The Alert component in the Keep Design System allows you to display important messages, notifications, or warnings to users. With customizable options for style, close icon, border, and state, you can create visually appealing and informative alerts that align with your design requirements.
 
 ## Default Alert
 
-The default alert is a simple and clean design without any extra visual elements. It's perfect for straightforward notifications that don't require any specific styling.
+The Default Alert is a clean and simple design, ideal for conveying straightforward notifications without any elaborate visuals.
 
 <CodePreview code={DefaultAlertCode}>
   <DefaultAlert />
 </CodePreview>
 
-## Alert With Dissmiss Icon
+## Dismissable Alerts
 
-The dismiss icon allows users to close an alert when needed. To add the dismiss icon to the alert, you should pass a handler function to the onDismiss prop.
+For alerts that users can close, the Dismiss Icon comes in handy. Pass a handler function to the `onDismiss` prop to enable this feature.
 
 <CodePreview code={AlertWithDismissIconCode}>
   <AlertWithDismissIcon />
 </CodePreview>
 
-## Rounded Alert
+## Softly Rounded Alerts
 
-If you want a softer and more friendly look, the rounded alert is a great choice. By setting the `rounded` prop to `true`, the alert will have rounded corners, giving it a gentle and approachable appearance.
+If you prefer a more approachable appearance, the Rounded Alert is a great option. By setting the `rounded` prop to `true`, the alert corners become rounded, giving it a friendly touch.
 
 <CodePreview code={AlertWithRoundedCode}>
   <AlertWithRounded />
 </CodePreview>
 
-## Alert With Border
+## Accented Border Alerts
 
-Adding a border to an alert can make it stand out and draw attention. Use the `withBorder` prop set to `true` to give the alert a distinct border.
-
-<CodePreview code={AlertWithBorderCode}>
-  <AlertWithBorder />
-</CodePreview>
-
-## Alert With Border Accent
-
-For a touch of elegance, the border-accented alert is a fantastic option. Set the `withBorderAccent` prop to `true`, and by default, the border accent will appear on the `left` side of the alert. For a right-side accent, use `withBorderAccentPosition="right"`. You can even customize the `top` and `bottom` positions.
+To make alerts stand out, you can add a border using the `withBorder` prop set to `true`. For an elegant accent, use the `withBorderAccent` prop. By default, the accent appears on the left, but you can customize its position using `withBorderAccentPosition="left"|"right"|"top"|"bottom"`.
 
 <CodePreview code={AlertWithBorderAccentCode}>
   <AlertWithBorderAccent />
 </CodePreview>
 
-## Alert With Color Variant
+## Color Variants of Alerts
 
-Colorful alerts can help differentiate various types of messages. By default, the alert color is `info`, but you can choose from a range of color options. Simply set the `color` prop to `success`, `warning`, `error`, `gray`, or `info` to match the alert with your design theme.
+Colors can convey the nature of alerts. While the default color is `info`, you can choose from `success`, `warning`, `error`, `gray`, or `info`. Simply set the `color` prop accordingly.
 
 <CodePreview code={AlertWithColorVariantCode}>
   <AlertWithColorVariant />
 </CodePreview>
 
-## Api
+## Learn More
+
+For detailed information about the API and how to tailor the appearance of components, explore the provided API documentation and Theme details.
 
 <ComponentApi data={alertApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
 <CssThemePreview code={useTheme().theme.alert} />

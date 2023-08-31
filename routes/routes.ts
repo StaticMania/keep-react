@@ -50,6 +50,13 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
+    id: 43,
+    name: "Bar Chart",
+    href: "/docs/components/barChart",
+    tag: false,
+    deprecate: false,
+  },
+  {
     id: 7,
     name: "BreadCrumb",
     href: "/docs/components/breadcrumb",

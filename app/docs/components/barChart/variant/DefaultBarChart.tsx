@@ -193,7 +193,6 @@ const DefaultBarChart = () => {
 };
 
 export default DefaultBarChart;
-
 `;
 
 export { DefaultBarChart, DefaultBarChartCode };

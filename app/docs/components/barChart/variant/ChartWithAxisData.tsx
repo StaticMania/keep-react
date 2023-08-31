@@ -27,7 +27,6 @@ const ChartWithAxisData = () => {
 const ChartWithAxisDataCode = `
 "use client";
 import BarChart from "keep-design";
-
 const BarChartData = [
   {
     name: "2",

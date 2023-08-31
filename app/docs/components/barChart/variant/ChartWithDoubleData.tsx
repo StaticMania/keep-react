@@ -1,33 +1,30 @@
 "use client";
-
 import BarChart from "@/src/components/Chart/BarChart";
 import { BarChartData } from "./DefaultBarChart";
 
-const BarChartWithGridLine = () => {
+const ChartWithDoubleData = () => {
   return (
     <BarChart
       height={250}
-      width={500}
+      width={700}
+      active
+      activeIndex={5}
       dataKey="price"
       chartData={BarChartData}
       barRadius={20}
-      showLegend={true}
-      showBackGround={true}
-      showXaxis={true}
-      showGridLine={true}
-      showYaxis={true}
-      active={true}
-      activeIndex={5}
-      activeColor="#1B4DFF"
-      inActiveColor="#94ABFF"
-      showTooltip={true}
+      showLegend
+      showBackGround
+      showXaxis
+      showYaxis
+      showTooltip
+      secondaryDataKey="sell"
     />
   );
 };
 
-const BarChartWithAxisDataCode = `
+const ChartWithDoubleDataCode = `
 "use client";
-import BarChart from "keep-design";
+import {BarChart} from "keep-react";
 const BarChartData = [
   {
     name: "2",
@@ -106,29 +103,27 @@ const BarChartData = [
   },
 ];
 
-const ChartWithGridLine = () => {
+const ChartWithDoubleData = () => {
   return (
     <BarChart
       height={250}
-      width={500}
+      width={700}
+      active
+      activeIndex={5}
       dataKey="price"
       chartData={BarChartData}
       barRadius={20}
-      showLegend={true}
-      showBackGround={true}
-      showXaxis={true}
-      showYaxis={true}
-      showTooltip={true}
-      active={true}
-      activeIndex={5}
-      activeColor="#1B4DFF"
-      inActiveColor="#94ABFF"
-      showGridLine={true}
+      showLegend
+      showBackGround
+      showXaxis
+      showYaxis
+      showTooltip
+      secondaryDataKey="sell"
     />
   );
 };
 
-export default ChartWithGridLine;
+export default ChartWithDoubleData;
 `;
 
-export { BarChartWithGridLine, BarChartWithAxisDataCode };
+export { ChartWithDoubleData, ChartWithDoubleDataCode };
