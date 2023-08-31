@@ -4,36 +4,35 @@ export const accordionApiData = [
     propsName: "alwaysOpen",
     propsType: "boolean",
     propsDescription: "Keep all panels always open.",
-  },
-  {
-    id: 2,
-    propsName: "arrowIcon",
-    propsType: "ReactNode",
-    propsDescription: "Custom arrow icon for toggle.",
+    default: "false",
   },
   {
     id: 3,
     propsName: "flush",
     propsType: "boolean",
     propsDescription: "Accordion without outer border and rounded corners.",
+    default: "false",
   },
   {
     id: 4,
     propsName: "collapseAll",
     propsType: "boolean",
     propsDescription: "Collapse all panels by default.",
+    default: "false",
   },
 
   {
     id: 6,
     propsName: "iconPosition",
-    propsType: "string",
+    propsType: ["left", "right"],
     propsDescription: "Position of the arrow icon.",
+    default: "left",
   },
   {
     id: 7,
     propsName: "disabled",
     propsType: "boolean",
     propsDescription: "Disable interaction with the accordion.",
+    default: "false",
   },
 ];
