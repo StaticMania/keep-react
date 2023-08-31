@@ -4,24 +4,27 @@ export const RatingDataApi = [
     propsName: "Size",
     propsType: "number",
     propsDescription: "rating icon size in number format",
+    default: "30",
   },
   {
     id: 2,
     propsName: "filledType",
-    propsType: "string",
-    propsDescription:
-      "rating start icon type (Available: fill,regular,duotone,bold,light,thin)",
+    propsType: ["fill", "regular", "duotone", "bold", "light", "thin"],
+    propsDescription: "rating start icon type",
+    default: "fill",
   },
   {
     id: 3,
     propsName: "starType",
-    propsType: "string",
-    propsDescription: "rating start icon type (Available: full,half)",
+    propsType: ["full", "half"],
+    propsDescription: "Rating start icon type.",
+    default: "full",
   },
   {
     id: 4,
     propsName: "percentFilled",
     propsType: "number",
     propsDescription: "rating progress number",
+    default: "70",
   },
 ];

@@ -4,6 +4,7 @@ import { ProfileCard, ProfileCardCode } from "./variant/ProfileCard";
 import { PostCard, PostCardCode } from "./variant/PostCard";
 import { ProductCard, ProductCardCode } from "./variant/ProductCard";
 import { PricingCard, PricingCardCode } from "./variant/PricingCard";
+import { cardAPIData } from "./cardApi";
 import {
   ProfileCardWithCover,
   ProfileCardWithCoverCode,
@@ -73,3 +74,13 @@ It offers a structured layout that includes details such as the plan name, price
 <CodePreview code={PricingCardCode}>
   <PricingCard />
 </CodePreview>
+
+## API
+
+<ComponentApi data={cardAPIData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.card} />

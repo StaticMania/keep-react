@@ -5,6 +5,7 @@ export const notificationApi = [
     propsType: "ReactNode",
     propsDescription:
       "Additional content to be displayed within the notification.",
+    default: "ReactNode",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const notificationApi = [
     propsType: "ReactNode",
     propsDescription:
       "Icon to be displayed in the notification as an informational indicator.",
+    default: "ReactNode",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const notificationApi = [
     propsType: "boolean",
     propsDescription:
       "Determines whether the notification can be dismissed by the user.",
+    default: "false",
   },
   {
     id: 4,
@@ -26,12 +29,14 @@ export const notificationApi = [
     propsType: "string",
     propsDescription:
       "Source URL for an image to be used as the header banner of the notification.",
+    default: "URL",
   },
   {
     id: 5,
     propsName: "onDismiss",
-    propsType: "boolean | (() => void)",
+    propsType: "function",
     propsDescription:
       "Callback function triggered when the notification is dismissed.",
+    default: "boolean | (() => void)",
   },
 ];

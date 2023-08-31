@@ -4,6 +4,7 @@ export const NavbarApiData = [
     propsName: "menuOpen",
     propsType: "boolean",
     propsDescription: "Controls whether the menu is open or closed.",
+    default: "false",
   },
   {
     id: 2,
@@ -11,6 +12,7 @@ export const NavbarApiData = [
     propsType: "boolean",
     propsDescription:
       "Determines whether the navbar should be fluid or fixed-width.",
+    default: "false",
   },
   {
     id: 3,
@@ -18,6 +20,7 @@ export const NavbarApiData = [
     propsType: "boolean",
     propsDescription:
       "Specifies whether the navbar should have rounded corners.",
+    default: "false",
   },
   {
     id: 4,
@@ -25,5 +28,6 @@ export const NavbarApiData = [
     propsType: "boolean",
     propsDescription:
       "Controls whether a border should be added to the navbar.",
+    default: "false",
   },
 ];

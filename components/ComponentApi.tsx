@@ -50,7 +50,7 @@ const ComponentApi: FC<ComponentProps> = ({ data }) => {
                         </pre>
                       ))}
                 </td>
-                <td className="border-t border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px]">
+                <td className="border-t text-slate-500 border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px]">
                   {item.default ? item.default : "None"}
                 </td>
               </tr>
