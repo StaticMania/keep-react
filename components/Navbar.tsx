@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/src/components/Button";
-import { Toggle } from "@/src/components/Switch";
 import { CaretDown, CaretUp, List, X } from "phosphor-react";
 import { gettingStartedRoutes, navbarRoutes, routes } from "@/routes/routes";
 import { Accordion } from "@/src/components/Accordion";
@@ -24,8 +23,8 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <header className="bg-white fixed w-full border-b border-slate-100 z-50">
-      <div className="container relative">
+    <header className="bg-white fixed top-0 w-full border-b border-slate-100 z-50">
+      <div className="2xl:container relative px-6">
         <nav className="flex items-center justify-between py-4 ">
           <div className="flex items-center space-x-28">
             <Link href="/" className="flex">
@@ -49,7 +48,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <div className="lg:flex gap-3 hidden">
+          <div className="lg:flex items-center gap-3 hidden">
             <div>
               <DocSearch
                 appId="Z0C31MASPO"
@@ -66,15 +65,6 @@ const Navbar = () => {
                 alt="github"
               />
             </Button>
-            <div className="bg-primary-25 flex items-center justify-center rounded-md px-3 border border-transparent hover:bg-primary-50 active:bg-primary-50 focus:ring-4 focus:ring-primary-50">
-              <Toggle
-                bgColor="slate"
-                label=""
-                size="sm"
-                withIcon={true}
-                disabled
-              />
-            </div>
             <Link
               href="/installation"
               className="text-sm px-4 py-2.5 transition-all duration-75 ease-in group  h-min w-fit capitalize justify-center text-center font-medium rounded-md text-white bg-slate-900 border border-slate-900 hover:bg-slate-800 active:bg-slate-900 focus:ring-4 focus:ring-slate-800"
@@ -82,39 +72,35 @@ const Navbar = () => {
               get started
             </Link>
           </div>
-          <div className="lg:hidden flex justify-between gap-4">
-            <div>
-              <DocSearch
-                appId="Z0C31MASPO"
-                indexName="keep-design"
-                apiKey="efc95879a56f785250b1da08b43e8c19"
+          <div className="lg:hidden flex items-center justify-between gap-4">
+            <DocSearch
+              appId="Z0C31MASPO"
+              indexName="keep-design"
+              apiKey="efc95879a56f785250b1da08b43e8c19"
+            />
+            <Link href="/">
+              <Image
+                src="/images/icon/github.svg"
+                height={24}
+                width={24}
+                alt="github"
               />
-            </div>
-
-            <div className="flex items-center justify-center">
-              <Toggle
-                bgColor="slate"
-                label=""
-                size="sm"
-                withIcon={true}
-                disabled
-              />
-            </div>
-            <Button size="xs" onClick={() => setActive(!active)}>
+            </Link>
+            <button onClick={() => setActive(!active)}>
               {active ? (
                 <span>
-                  <X size={18} color="#000000e6" />
+                  <X size={24} color="#000000e6" />
                 </span>
               ) : (
                 <span>
-                  <List size={18} color="#000000e6" />
+                  <List size={24} color="#000000e6" />
                 </span>
               )}
-            </Button>
+            </button>
           </div>
           <div
             id="linkPage"
-            className={`lg:hidden fixed h-screen w-72 bg-white right-0 top-[71px] overflow-y-auto border-l border-l-slate-100 pl-8 transition-all duration-300 ${
+            className={`lg:hidden fixed h-screen w-72 bg-white right-0 top-[73px] overflow-y-auto border-l border-l-slate-100 pl-8 transition-all duration-300 ${
               active ? "translate-x-0" : "translate-x-full"
             }`}
           >

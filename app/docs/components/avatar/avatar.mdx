@@ -15,33 +15,33 @@ import { useTheme } from "@/src/Keep/ThemeContex";
 
 ## Table of Contents
 
-Use the accordion component and its options to expand and collapse the content inside each panel based on state reactivity from React and Tailwind CSS
+The Avatar component in the Keep Design System allows you to display user avatars or profile images in a consistent and visually appealing manner. With customizable options for placeholders, shapes, status icons, and sizes, you can create versatile avatars to suit your design needs.
 
 ## Default Avatar
 
-When the placeholder option is enabled, a default avatar image is displayed when no user image is available.
+When you enable the placeholder option, a default avatar image appears when there's no user image available.
 
 <CodePreview code={DefaultAvatarCode}>
   <DefaultAvatar />
 </CodePreview>
 
-## Shape of Avatar
+## Avatar Shapes
 
-You can choose from three different shapes for the avatar. To change the shape, use the `shape` prop with values: "round," "roundSquare," or "square."
+Choose from three different avatar shapes: round, round square, or square. Just use the `shape` prop with values: `"round"`, `"roundSquare"`, or `"square"`.
 
 <CodePreview code={ShapeAvatarCode}>
   <ShapeAvatar />
 </CodePreview>
 
-## Sizes of Avatar
+## Avatar Sizes
 
-There are various avatar sizes to fit your design. To change the size, use the `size` prop with values: `xs` `sm` `md` `lg` `xl` `2xl`
+There are various avatar sizes to fit your design. To change the size, use the `size` prop with values: `xs`, `sm`, `md`, `lg`, `xl`, or `2xl`.
 
 <CodePreview code={SizesOfAvatarCode}>
   <SizesOfAvatar />
 </CodePreview>
 
-## Image of Avatar
+## Using User Images
 
 Instead of an icon, you can display a user's image. Use the `img` prop and provide the path to the user's image, whether it's a local or remote URL.
 
@@ -49,29 +49,30 @@ Instead of an icon, you can display a user's image. Use the `img` prop and provi
   <ImageOfAvatar />
 </CodePreview>
 
-## Status of Avatar
+## Avatar Status
 
-Avatar Status
-The avatar's status reflects the user's availability. To show the user's status, use the `status` prop with values: `online` `offline` `away` or `busy`. You can also customize the status position with the `statusPosition` prop, which accepts values: `bottom-left` `bottom-right` `top-left` or `top-right`
+The avatar's status reflects the user's availability. You can show the user's status using the `status` prop with values: `online`, `offline`, `away`, or `busy`. You can also customize the status position with the `statusPosition` prop, which accepts values: `bottom-left`, `bottom-right`, `top-left`, or `top-right`.
 
 <CodePreview code={StatusOfAvatarCode}>
   <StatusOfAvatar />
 </CodePreview>
 
-## Notification of Avatar
+## Avatar Notifications
 
-You can use the avatar to indicate notifications for the user. Use the status prop with values: "online," "offline," "away," or "busy," and set the `statusType` prop to `notification` to display notification indicators.
+You can use the avatar to indicate notifications for the user. Use the `status` prop with values: `"online"`, `"offline"`, `"away"`, or `"busy"` and set the `statusType` prop to `notification` to display notification indicators.
 
 <CodePreview code={NotificationOfAvatarCode}>
   <NotificationOfAvatar />
 </CodePreview>
 
-## Api
+## API Reference
+
+For detailed information about all the props and options, refer to the API section below.
 
 <ComponentApi data={avatarApiData} />
 
-## Theme
+## Theme Customization
 
-To learn more about how to customize the appearance of components, please see the Theme docs.
+Explore how to customize the appearance of avatars and other components in our Theme documentation.
 
 <CssThemePreview code={useTheme().theme.avatar} />

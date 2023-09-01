@@ -33,7 +33,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
   }
   const [active, setActive] = useState(0);
   return (
-    <div className="border border-slate-200 rounded-md my-10 shadow-sm overflow-hidden">
+    <div className="border border-slate-200 rounded-md my-10 shadow-sm overflow-hidden w-full">
       <div className="flex text-center flex-wrap -mb-px bg-white border-slate-200 border-b px-5">
         <button
           type="button"
@@ -101,8 +101,8 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
             </SyntaxHighlighter>
           </div>
         ) : (
-          <div className="md:p-5 p-2 mix-h-[420px] overflow-auto flex items-center justify-center">
-            <div className="w-full h-full">{children}</div>
+          <div className="md:p-5 px-2 py-3 mix-h-[420px] w-full flex items-center justify-center">
+            <div className="w-full h-full overflow-auto z-30">{children}</div>
           </div>
         )}
       </div>

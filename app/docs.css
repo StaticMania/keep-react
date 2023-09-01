@@ -76,14 +76,12 @@
 
 /* Search */
 
-.DocSearch-Modal {
-  @apply !font-inter mx-auto mt-[4rem] md:max-h-[calc(100vh-2rem)] max-h-[calc(100vh-10rem)] my-auto
-   max-w-[calc(100vw-3rem)] md:max-w-[calc(100vw-2rem)] overflow-hidden rounded-md lg:mt-[4rem]
-    lg:max-h-none lg:max-w-xl;
+.DocSearch .DocSearch-Modal {
+  @apply mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-3rem)] overflow-hidden rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
 }
 
-.DocSearch.DocSearch-Button {
-  @apply border border-slate-100 md:h-[45px]  bg-transparent md:bg-slate-50 hover:bg-slate-100 px-3 lg:w-64 rounded-md hover:ring-0;
+.DocSearch-Button {
+  @apply bg-transparent h-0 m-0 p-0 lg:border lg:border-slate-100 lg:h-11 lg:bg-slate-25 lg:px-3 lg:w-64 lg:rounded-md;
 }
 
 .DocSearch .DocSearch-Button-Placeholder {
@@ -91,7 +89,7 @@
 }
 
 .DocSearch .DocSearch-Search-Icon {
-  @apply h-4 w-4 text-transparent md:mr-1 md:h-3 md:w-3 !important;
+  @apply h-5 w-5 text-transparent md:mr-1 !important;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%236A7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
 }
 
@@ -100,7 +98,7 @@
 }
 
 .DocSearch .DocSearch-Button-Keys {
-  @apply min-w-0 items-center;
+  @apply hidden;
 }
 
 .DocSearch .DocSearch-Button-Key:first-child {

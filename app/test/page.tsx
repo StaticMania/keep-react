@@ -1,37 +1,52 @@
 "use client";
-import BarChart from "@/src/components/Chart/BarChart";
+
+import { Avatar } from "@/src/components/Avatar/Avatar";
 
 const page = () => {
-  const data = [
-    { name: "2", price: 340, sell: 140 },
-    { name: "4", price: 300, sell: 200 },
-    { name: "6", price: 170, sell: 120 },
-    { name: "8", price: 190, sell: 130 },
-    { name: "10", price: 450, sell: 120 },
-    { name: "12", price: 400, sell: 213 },
-    { name: "14", price: 250, sell: 180 },
-    { name: "16", price: 320, sell: 150 },
-    { name: "18", price: 280, sell: 160 },
-    { name: "20", price: 390, sell: 110 },
-    { name: "22", price: 220, sell: 90 },
-    { name: "24", price: 360, sell: 170 },
-    { name: "26", price: 410, sell: 140 },
-    { name: "28", price: 280, sell: 200 },
-    { name: "30", price: 330, sell: 160 },
-  ];
   return (
-    <div>
-      <BarChart
-        height={250}
-        width={500}
-        dataKey="price"
-        chartData={data}
-        barRadius={20}
-        active
-        activeIndex={5}
-        activeColor="#1B4DFF"
-        inActiveColor="#94ABFF"
-      />
+    <div className="py-10 flex items-center justify-center">
+      <Avatar.Group>
+        <Avatar
+          shape="round"
+          size="md"
+          stacked={true}
+          img="./images/avatar/avatar-1.png"
+        />
+        <Avatar
+          shape="round"
+          size="md"
+          stacked={true}
+          img="/images/avatar/avatar-2.png"
+        />
+        <Avatar
+          shape="round"
+          size="md"
+          stacked={true}
+          img="/images/avatar/avatar-3.png"
+        />
+        <Avatar
+          shape="round"
+          size="md"
+          stacked={true}
+          img="/images/avatar/avatar-4.png"
+        />
+        <Avatar
+          shape="round"
+          size="md"
+          stacked={true}
+          img="/images/avatar/avatar-5.png"
+        />
+        <Avatar shape="round" size="md" stacked={true} />
+        <Avatar shape="round" size="md" stacked={true} />
+        <Avatar.Counter size="md" total={99} href="/" />
+        <Avatar.Add
+          icon="/images/icon/plus.png"
+          bg="#444D61"
+          size="md"
+          ringColor="ring-[#444D61]"
+          iconColor="text-white"
+        />
+      </Avatar.Group>
     </div>
   );
 };

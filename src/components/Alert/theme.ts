@@ -1,7 +1,7 @@
 import type { keepAlertTheme } from ".";
 
 export const alertTheme: keepAlertTheme = {
-  base: "py-[18px] px-6 max-w-[496px]",
+  base: "py-[18px] px-6 max-w-lg",
   dismiss: "hidden",
   border: {
     off: "border-0",

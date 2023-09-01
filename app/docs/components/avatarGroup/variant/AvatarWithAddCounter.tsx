@@ -35,7 +35,6 @@ const AvatarWithPlusCounter = () => {
         img="/images/avatar/avatar-5.png"
       />
       <Avatar shape="round" size="md" stacked={true} />
-      <Avatar shape="round" size="md" stacked={true} />
       <Avatar.Counter size="md" total={99} href="/" />
       <Avatar.Add
         icon="/images/icon/plus.png"
