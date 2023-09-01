@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { PlusCircle } from "phosphor-react";
 import type {
   ComponentProps,
   FC,

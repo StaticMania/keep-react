@@ -29,10 +29,11 @@ function cloneDeep<T>(source: T) {
  * @param source The source object from which to copy properties.
  * @return A new merged and deep copied object.
  */
-export function mergeDeep<T extends object, S extends object>(
+
+export const mergeDeep = <T extends object, S extends object>(
   target: T,
   source: S
-): T & S {
+): T & S => {
   if (isObject(source) && Object.keys(source).length === 0) {
     return cloneDeep({ ...target, ...source });
   }
@@ -55,4 +56,8 @@ export function mergeDeep<T extends object, S extends object>(
   }
 
   return output;
+};
+
+export function removeFragment(element: JSX.Element) {
+  return element.props.children;
 }

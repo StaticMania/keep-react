@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@babel/core": "^7.22.9",
@@ -43,6 +45,14 @@
   },
   "devDependencies": {
     "@floating-ui/react": "^0.24.8",
+    "@storybook/addon-essentials": "7.4.0",
+    "@storybook/addon-interactions": "7.4.0",
+    "@storybook/addon-links": "7.4.0",
+    "@storybook/addon-onboarding": "1.0.8",
+    "@storybook/blocks": "7.4.0",
+    "@storybook/nextjs": "7.4.0",
+    "@storybook/react": "7.4.0",
+    "@storybook/testing-library": "0.2.0",
     "@tailwindcss/forms": "^0.5.4",
     "@types/babel__core": "^7.20.1",
     "@types/prismjs": "^1.26.0",
@@ -52,8 +62,10 @@
     "@types/recharts": "^1.8.24",
     "classnames": "^2.3.2",
     "cross-env": "^7.0.3",
+    "eslint-plugin-storybook": "^0.6.13",
     "prop-types": "^15.8.1",
     "react-element-to-jsx-string": "^15.0.0",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "storybook": "7.4.0"
   }
 }
