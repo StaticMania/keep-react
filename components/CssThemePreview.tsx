@@ -1,9 +1,6 @@
 import React from "react";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-  coldarkDark,
-  dracula,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import tsx from "react-syntax-highlighter/dist/esm/languages/prism/tsx";
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 const CssThemePreview = ({ code }: { code: string }) => {

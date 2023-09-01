@@ -13,7 +13,7 @@
 }
 
 #mainContent pre > code {
-  @apply !font-inter !pl-0;
+  @apply !pl-0;
 }
 #mainContent #cssCode {
   @apply bg-transparent;

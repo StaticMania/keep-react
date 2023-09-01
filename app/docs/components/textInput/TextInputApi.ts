@@ -2,33 +2,37 @@ export const textInputApiData = [
   {
     id: 1,
     propsName: "sizing",
-    propsType: "string",
-    propsDescription:
-      "Sets the size of the input text component.(sm | md | lg)",
+    propsType: ["sm", "md", "lg"],
+    propsDescription: "Sets the size of the input text component.",
+    default: "md",
   },
   {
     id: 2,
     propsName: "withBg",
     propsType: "boolean",
     propsDescription: "Applies a background style to the input text component.",
+    default: "false",
   },
   {
     id: 3,
     propsName: "border",
     propsType: "boolean",
     propsDescription: "Displays a border around the input text component.",
+    default: "false",
   },
   {
     id: 4,
     propsName: "shadow",
     propsType: "boolean",
     propsDescription: "Applies a shadow effect to the input text component.",
+    default: "false",
   },
   {
     id: 5,
     propsName: "disabled",
     propsType: "boolean",
     propsDescription: "Disables interactions with the input text component.",
+    default: "false",
   },
   {
     id: 6,
@@ -36,6 +40,7 @@ export const textInputApiData = [
     propsType: "ReactNode",
     propsDescription:
       "Additional helper text or information related to the input text.",
+    default: "text",
   },
   {
     id: 7,
@@ -43,42 +48,49 @@ export const textInputApiData = [
     propsType: "ReactNode",
     propsDescription:
       "Additional content or icons added as an input text addon.",
+    default: "<Lock/>",
   },
   {
     id: 8,
     propsName: "addonPosition",
-    propsType: '"left" | "right"',
+    propsType: ["left", "right"],
     propsDescription: "Specifies the position of the input text addon.",
+    default: "left",
   },
   {
     id: 9,
     propsName: "icon",
     propsType: "ReactNode",
     propsDescription: "Icon displayed within the input text component.",
+    default: "<EyeSlash/>",
   },
   {
     id: 10,
     propsName: "iconPosition",
-    propsType: '"left" | "right"',
+    propsType: ["left", "right"],
     propsDescription: "Specifies the position of the input text icon.",
+    default: "right",
   },
   {
     id: 11,
     propsName: "color",
-    propsType: "string",
+    propsType: ["gray", "info", "error", "warning", "success"],
     propsDescription:
-      "Specifies the color variant of the input text component.(gray | info | error | warning | success)",
+      "Specifies the color variant of the input text component.",
+    default: "gray",
   },
   {
     id: 12,
     propsName: "value",
     propsType: "string",
     propsDescription: "Value of the input text field.",
+    default: "None",
   },
   {
     id: 13,
     propsName: "handleOnChange",
     propsType: "(e: ChangeEvent) => void",
     propsDescription: "Callback function when the input text value changes.",
+    default: "Function",
   },
 ];

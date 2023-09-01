@@ -93,7 +93,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
                 marginTop: "0px",
                 background: "#1C222B",
                 fontSize: "14px",
-                lineHeight: "28px",
+                lineHeight: "22px",
                 letterSpacing: "-0.2px",
               }}
             >
