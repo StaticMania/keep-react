@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 /* Data Picker CSS Import */
 @import "react-datepicker/dist/react-datepicker.css";
 
@@ -16,7 +14,7 @@
   }
 
   body {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-inter), sans-serif;
     background-color: #f9fafb;
   }
 

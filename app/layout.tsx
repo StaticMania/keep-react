@@ -1,11 +1,10 @@
 import "./docs.css";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Keep Design System",
