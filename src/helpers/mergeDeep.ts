@@ -1,3 +1,5 @@
+import React from "react";
+
 /**
  * Check if provided parameter is plain object
  * @param item
@@ -61,3 +63,10 @@ export const mergeDeep = <T extends object, S extends object>(
 export function removeFragment(element: JSX.Element) {
   return element.props.children;
 }
+
+export const mergeChildren = (...components: React.ReactNode[]) =>
+  React.Children.toArray(components).reduce<React.ReactNode[]>(
+    (merged, child) =>
+      Array.isArray(child) ? merged.concat(child) : merged.concat([child]),
+    []
+  );

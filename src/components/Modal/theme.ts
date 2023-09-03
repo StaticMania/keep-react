@@ -1,7 +1,7 @@
 import { keepModalTheme } from ".";
 
 export const modalTheme: keepModalTheme = {
-  base: "fixed z-[90] inset-0 flex items-center justify-center top-20",
+  base: "fixed z-[90] inset-0 flex items-center justify-center top-0",
   show: {
     on: "flex bg-gray-900 bg-opacity-50",
     off: "hidden",

@@ -21,7 +21,7 @@ export const alertTheme: keepAlertTheme = {
   },
   wrapper: "flex",
   infoButton: {
-    base: "pr-3.5 pl-1",
+    base: "pr-3.5",
   },
   closeButton: {
     base: "-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg p-1.5 focus:ring-2",

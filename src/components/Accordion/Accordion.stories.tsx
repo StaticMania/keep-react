@@ -3,7 +3,6 @@ import { Accordion } from ".";
 import { removeFragment } from "@/src/helpers/mergeDeep";
 
 const meta: Meta<typeof Accordion> = {
-  title: "Design System/Components/Accordion",
   tags: ["autodocs"],
   component: Accordion,
   parameters: {

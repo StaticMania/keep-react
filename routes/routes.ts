@@ -169,6 +169,13 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
+    id: 44,
+    name: "Pagination",
+    href: "/docs/components/pagination",
+    tag: false,
+    deprecate: false,
+  },
+  {
     id: 23,
     name: "Radio",
     href: "/docs/components/radio",

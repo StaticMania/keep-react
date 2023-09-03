@@ -23,7 +23,11 @@ const AvatarAdd: React.FC<AvatarAddProps> = ({
 
   return (
     <div
-      className={classNames(theme.add.base, theme.size[size], ringColor)}
+      className={classNames(
+        theme.add.base,
+        theme.add.iconSize["xl"],
+        ringColor
+      )}
       style={{ backgroundColor: bg }}
     >
       {icon ? (

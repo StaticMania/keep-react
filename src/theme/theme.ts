@@ -14,6 +14,7 @@ import { formControlsTheme } from "../components/FormControls/theme";
 import { modalTheme } from "../components/Modal/theme";
 import { navbarTheme } from "../components/Navbar/theme";
 import { notificationTheme } from "../components/Notification/theme";
+import { paginationTheme } from "../components/Pagination/theme";
 import { progressTheme } from "../components/Progress/theme";
 import { ratingTheme } from "../components/Rating/theme";
 import { sidebarTheme } from "../components/Sidebar/theme";
@@ -63,6 +64,7 @@ const defaultTheme = {
   formControls: formControlsTheme,
   tree: treeTheme,
   navbar: navbarTheme,
+  pagination: paginationTheme,
 };
 
 export default defaultTheme;
