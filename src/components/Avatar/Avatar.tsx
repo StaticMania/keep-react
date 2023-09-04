@@ -104,7 +104,7 @@ export interface KeepAvatarStatusFontSize {
 export interface AvatarProps extends PropsWithChildren<ComponentProps<"div">> {
   alt?: string;
   bordered?: boolean;
-  img?: string | undefined;
+  img?: string;
   size?: keyof AvatarSizes;
   shape?: keyof KeepShapes;
   stacked?: boolean;

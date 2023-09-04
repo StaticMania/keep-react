@@ -58,8 +58,6 @@ const DefaultSearchBar = () => {
   );
 };
 
-export default DefaultSearchBar;
-
 const DefaultSearchBarCode = `
 "use client";
 import { useState } from "react";

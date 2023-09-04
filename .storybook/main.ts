@@ -25,6 +25,7 @@ const config: StorybookConfig = {
     config.resolve!.plugins = [new TsconfigPathsPlugin()];
     return config;
   },
+  staticDirs: ["../public"],
 };
 
 export default config;

@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import AvatarGroup from "./AvatarGroup";
 import { mergeChildren, removeFragment } from "@/src/helpers/mergeDeep";
 import { Avatar } from "./Avatar";
-
 const meta: Meta<typeof AvatarGroup> = {
   component: AvatarGroup,
   tags: ["autodocs"],

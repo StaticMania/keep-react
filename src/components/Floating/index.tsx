@@ -7,7 +7,7 @@ import {
   useHover,
   useInteractions,
   useRole,
-} from "@floating-ui/react-dom-interactions";
+} from "@floating-ui/react";
 import classNames from "classnames";
 import type { FC, ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
@@ -85,9 +85,7 @@ export const Floating: FC<FloatingProps> = ({
   });
   const {
     context,
-    floating,
     middlewareData: { arrow: { x: arrowX, y: arrowY } = {} },
-    reference,
     refs,
     strategy,
     update,
@@ -116,7 +114,7 @@ export const Floating: FC<FloatingProps> = ({
     <>
       <div
         className={theme.target}
-        {...getReferenceProps({ ref: reference })}
+        {...getReferenceProps({ ref: refs.setReference })}
         data-testid="keep-tooltip-target"
       >
         {children}
@@ -130,7 +128,7 @@ export const Floating: FC<FloatingProps> = ({
             !open && theme.hidden,
             theme.style[style]
           ),
-          ref: floating,
+          ref: refs.setFloating,
           style: {
             position: strategy,
             top: y ?? " ",

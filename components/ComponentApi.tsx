@@ -10,8 +10,8 @@ const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400"] });
 
 const ComponentApi: FC<ComponentProps> = ({ data }) => {
   return (
-    <div className={spaceMono.className + " w-full mx-auto overflow-auto"}>
-      <table className="table-auto mt-10 mb-6 md:w-full text-left whitespace-no-wrap lg:min-w-min min-w-max bg-white border border-slate-100">
+    <div className={spaceMono.className + " w-full mx-auto overflow-auto "}>
+      <table className="table-auto mt-10 mb-6 md:w-full text-left whitespace-no-wrap lg:min-w-min min-w-max bg-white border border-slate-100 z-50">
         <thead>
           <tr>
             <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50 rounded-tl rounded-bl">

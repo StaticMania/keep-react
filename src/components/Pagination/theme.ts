@@ -27,9 +27,9 @@ export const paginationTheme: keepPaginationTheme = {
     },
 
     selector: {
-      base: "w-10 bg-white py-2 text-slate-700 font-medium leading-tight hover:bg-slate-100 hover:text-slate-700",
+      base: "w-10  h-10 bg-white py-2 text-slate-700 font-medium leading-tight hover:bg-slate-100 hover:text-slate-700",
       active: {
-        base: "bg-slate-700 hover:bg-slate-700 !text-white",
+        base: "!bg-slate-700 hover:!bg-slate-800 !text-white",
         circle: "rounded-full",
         roundSquare: "rounded-md",
       },
