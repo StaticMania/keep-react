@@ -92,7 +92,7 @@ type Story = StoryObj<typeof SearchBar>;
 
 const DefaultSearch = () => {
   const [data, setData] = useState<Book[]>([]);
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOnChange2 = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase();
     const results = books.filter((book) =>
       book.name.toLowerCase().includes(searchTerm)
@@ -110,7 +110,7 @@ const DefaultSearch = () => {
       placeholder="Search Anything"
       addon={<MagnifyingGlass size={20} color="#5E718D" />}
       addonPosition="left"
-      handleOnChange={handleOnChange}
+      handleOnChange={handleOnChange2}
     >
       <ul>
         {data.map((book) => (

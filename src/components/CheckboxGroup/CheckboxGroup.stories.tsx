@@ -224,7 +224,7 @@ const CheckboxGroupWithAvatarCom = () => {
         title="Leslie Alexander"
         description="Digital product designer - Static Design System."
         checkboxType="circle"
-        img="/avatar/avatar-1.png"
+        img="/images/avatar/avatar-1.png"
         imgShape="circle"
         value="value16"
         selected={selected}
@@ -234,7 +234,7 @@ const CheckboxGroupWithAvatarCom = () => {
         title="Carlin Tebb"
         description="Digital product designer - Static Design System."
         checkboxType="circle"
-        img="/avatar/avatar-2.png"
+        img="/images/avatar/avatar-2.png"
         imgShape="circle"
         value="value17"
         selected={selected}
@@ -244,7 +244,7 @@ const CheckboxGroupWithAvatarCom = () => {
         title="Bellanca Sherringham"
         description="Digital product designer - Static Design System."
         checkboxType="circle"
-        img="/avatar/avatar-3.png"
+        img="/images/avatar/avatar-3.png"
         imgShape="circle"
         value="value18"
         selected={selected}
@@ -254,7 +254,7 @@ const CheckboxGroupWithAvatarCom = () => {
         title="Guy Hawkins"
         description="Digital product designer - Static Design System."
         checkboxType="circle"
-        img="/avatar/avatar-4.png"
+        img="/images/avatar/avatar-4.png"
         imgShape="circle"
         value="value19"
         selected={selected}
@@ -274,7 +274,7 @@ const CheckboxGroupWithImageCom = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/banner/banner.png"
+        img="/images/banner/banner.png"
         imgShape="square"
         checkboxType="circle"
         value="value20"
@@ -284,7 +284,7 @@ const CheckboxGroupWithImageCom = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/banner/banner.png"
+        img="/images/banner/banner.png"
         imgShape="square"
         checkboxType="circle"
         value="value21"
@@ -294,7 +294,7 @@ const CheckboxGroupWithImageCom = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/banner/banner.png"
+        img="/images/banner/banner.png"
         imgShape="square"
         checkboxType="circle"
         value="value22"
@@ -304,7 +304,7 @@ const CheckboxGroupWithImageCom = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/banner/banner.png"
+        img="/images/banner/banner.png"
         imgShape="square"
         checkboxType="circle"
         value="value23"

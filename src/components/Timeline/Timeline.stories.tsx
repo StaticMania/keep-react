@@ -3,6 +3,7 @@ import { ArrowRight, CalendarBlank } from "phosphor-react";
 import { Timeline } from ".";
 import { Button } from "../Button";
 import { removeFragment } from "@/src/helpers/mergeDeep";
+import Image from "next/image";
 
 const meta: Meta<typeof Timeline> = {
   component: Timeline,
@@ -65,15 +66,14 @@ export const DefaultTimeline: Story = {
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>
-            <Timeline.Time>February 2023</Timeline.Time>
-            <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
+            <Timeline.Time>August 2023</Timeline.Time>
+            <Timeline.Title>Mobile App Development</Timeline.Title>
             <Timeline.Body>
-              Get access to over 20+ pages including a dashboard layout, charts,
-              kanban board, calendar, and pre-order E-commerce & Marketing
-              pages.
+              Launching our new mobile app on both iOS and Android platforms,
+              providing users with seamless access to our services on the go.
             </Timeline.Body>
             <Button type="primary" size="sm">
-              Learn More
+              Discover App Features
               <ArrowRight className="ml-2 h-3 w-3" />
             </Button>
           </Timeline.Content>
@@ -81,23 +81,23 @@ export const DefaultTimeline: Story = {
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>
-            <Timeline.Time>March 2023</Timeline.Time>
-            <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+            <Timeline.Time>July 2023</Timeline.Time>
+            <Timeline.Title>Enhanced User Analytics</Timeline.Title>
             <Timeline.Body>
-              All of the pages and components are first designed in Figma and we
-              keep a parity between the two versions even as we update the
-              project.
+              Introducing advanced user analytics to gain deeper insights into
+              user behavior and improve overall user experience.
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>
-            <Timeline.Time>April 2023</Timeline.Time>
-            <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
+            <Timeline.Time>June 2023</Timeline.Time>
+            <Timeline.Title>New Feature Rollout</Timeline.Title>
             <Timeline.Body>
-              Get started with dozens of web components and interactive elements
-              built on top of Tailwind CSS.
+              Rolling out a set of new features, including real-time chat
+              support, enhanced search functionality, and personalized content
+              recommendations.
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Item>
@@ -112,63 +112,46 @@ export const TimelineWithGradientPoint: Story = {
     gradientPoint: true,
   },
 };
-export const VerticalTimeline: Story = {
+export const HorizontalTimeline: Story = {
   args: {
     children: removeFragment(
       <>
         <Timeline.Item>
           <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
           <Timeline.Content>
-            <Timeline.Time>February 2023</Timeline.Time>
-            <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
+            <Timeline.Title>Keep Library v1.0.0</Timeline.Title>
+            <Timeline.Time>Released on December 2, 2021</Timeline.Time>
             <Timeline.Body>
-              Get access to over 20+ pages including a dashboard layout, charts,
-              kanban board, calendar, and pre-order E-commerce & Marketing
-              pages.
-            </Timeline.Body>
-            <Button type="primary" size="sm">
-              Learn More
-              <ArrowRight className="ml-2 h-3 w-3" />
-            </Button>
-          </Timeline.Content>
-        </Timeline.Item>
-        <Timeline.Item>
-          <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
-          <Timeline.Content>
-            <Timeline.Time>March 2023</Timeline.Time>
-            <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
-            <Timeline.Body>
-              All of the pages and components are first designed in Figma and we
-              keep a parity between the two versions even as we update the
-              project.
+              Get started with dozens of web components and interactive
+              elements.
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
           <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
           <Timeline.Content>
-            <Timeline.Time>April 2023</Timeline.Time>
-            <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
+            <Timeline.Title>Keep Library v1.1.0</Timeline.Title>
+            <Timeline.Time>Released on December 23, 2021</Timeline.Time>
             <Timeline.Body>
-              Get started with dozens of web components and interactive elements
-              built on top of Tailwind CSS.
+              Get started with dozens of web components and interactive
+              elements.
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={<CalendarBlank size={12} color="#ffffff" />} />
+          <Timeline.Content>
+            <Timeline.Title>Keep Library v1.3.0</Timeline.Title>
+            <Timeline.Time>Released on January 5, 2022</Timeline.Time>
+            <Timeline.Body>
+              Get started with dozens of web components and interactive
+              elements.
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Item>
       </>
     ),
-  },
-};
-export const StepperTimeline: Story = {
-  args: {
-    ...VerticalTimeline.args,
     horizontal: true,
-  },
-};
-export const DashedBorderTimeline: Story = {
-  args: {
-    ...VerticalTimeline.args,
-    timelineBarType: "dashed",
   },
 };
 
@@ -187,7 +170,13 @@ export const TimelineWithImage: Story = {
               kanban board, calendar, and pre-order E-commerce & Marketing
               pages.
             </Timeline.Body>
-            <img src="../assets/images/banner/timeline.png" alt="timeline" />
+
+            <Image
+              height={220}
+              width={400}
+              src="/images/banner/timeline.png"
+              alt="timeline"
+            />
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
@@ -200,9 +189,11 @@ export const TimelineWithImage: Story = {
               keep a parity between the two versions even as we update the
               project.
             </Timeline.Body>
-            <img
-              className="rounded-lg"
-              src="../assets/images/banner/banner.png"
+
+            <Image
+              height={213}
+              width={340}
+              src="/images/banner/banner.png"
               alt="timeline"
             />
           </Timeline.Content>

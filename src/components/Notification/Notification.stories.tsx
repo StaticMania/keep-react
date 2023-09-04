@@ -37,6 +37,7 @@ type Story = StoryObj<typeof Notification>;
 export const DefaultNotification: Story = {
   args: {
     dismiss: false,
+    className: "max-w-sm",
     additionalContent: (
       <div className="mt-2.5 text-base font-normal text-slate-500">
         Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -61,6 +62,7 @@ export const DefaultNotification: Story = {
 export const NotificationWithIcon: Story = {
   args: {
     dismiss: false,
+    className: "max-w-[400px]",
     infoIcon: (
       <Button type="default" circle={true} size="xs">
         <span>
@@ -93,9 +95,10 @@ export const NotificationWithIcon: Story = {
 export const NotificationWithAvatar: Story = {
   args: {
     dismiss: false,
+    className: "max-w-[400px]",
     infoIcon: (
       <div className="h-10 w-10">
-        <Avatar shape="round" img="/images/avatar/avatar-1.png" />
+        <Avatar shape="round" img="/images/avatar/avatar-4.png" />
       </div>
     ),
     additionalContent: (
@@ -126,8 +129,8 @@ export const NotificationWithAvatar: Story = {
 export const NotificationWithCard: Story = {
   args: {
     dismiss: false,
-
-    headerBannerSrc: "../assets/images/banner/banner.png",
+    className: "max-w-sm",
+    headerBannerSrc: "/images/banner/banner.png",
     additionalContent: (
       <div className="mt-2.5 text-base font-normal text-slate-500">
         Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -158,7 +161,9 @@ export const NotificationWithCard: Story = {
 export const NotificationCardWithFullButton: Story = {
   args: {
     dismiss: false,
-    headerBannerSrc: "../assets/images/banner/banner.png",
+    className: "max-w-sm",
+    headerBannerSrc: "/images/banner/banner.png",
+
     additionalContent: (
       <div className="mt-2.5 text-base font-normal text-slate-500">
         Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -190,6 +195,7 @@ export const NotificationCardWithFullButton: Story = {
 export const NotificationCardWithButtonIcon: Story = {
   args: {
     dismiss: false,
+    className: "max-w-sm",
     additionalContent: (
       <div className="mt-2.5 text-base font-normal text-slate-500">
         <div className="mt-6 flex gap-5">
@@ -216,7 +222,7 @@ export const NotificationCardWithButtonIcon: Story = {
           industry.
         </p>
         <img
-          src="../assets/images/banner/banner.png"
+          src="/images/banner/banner.png"
           alt="header img"
           className="rounded-lg"
         />

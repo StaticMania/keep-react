@@ -94,19 +94,9 @@ export const DefaultTag: Story = {
     disabled: false,
     borderType: "solid",
     dismiss: false,
-    children: <span className="text-sm font-medium text-slate-500">Tag</span>,
-    leftIcon: <CrownSimple size={20} color="#5E718D" />,
-    dismissIcon: <X size={20} color="#5E718D" />,
-  },
-};
-
-export const EmptyTag: Story = {
-  args: {
-    color: "gray",
-    disabled: false,
-    borderType: "solid",
-    dismiss: false,
-    children: <span className="text-sm font-medium text-slate-500">Tag</span>,
+    leftIcon: null,
+    dismissIcon: null,
+    children: "Default Tag",
   },
 };
 
@@ -114,36 +104,42 @@ export const ErrorTag: Story = {
   args: {
     ...DefaultTag.args,
     color: "error",
+    children: "Error Tag",
   },
 };
 export const InfoTag: Story = {
   args: {
     ...DefaultTag.args,
     color: "info",
+    children: "Info Tag",
   },
 };
 export const WarningTag: Story = {
   args: {
     ...DefaultTag.args,
     color: "warning",
+    children: "Warning Tag",
   },
 };
 export const SuccessTag: Story = {
   args: {
     ...DefaultTag.args,
     color: "success",
+    children: "Success Tag",
   },
 };
 export const TealTag: Story = {
   args: {
     ...DefaultTag.args,
     color: "teal",
+    children: "Teal Tag",
   },
 };
 export const PurpleTag: Story = {
   args: {
     ...DefaultTag.args,
     color: "purple",
+    children: "Purple Tag",
   },
 };
 export const DashedTag: Story = {
@@ -151,14 +147,22 @@ export const DashedTag: Story = {
     ...DefaultTag.args,
     color: "gray",
     borderType: "dashed",
+    children: "Dashed Border",
   },
 };
-export const TagWithIcon: Story = {
+export const TagWithLeftSideIcon: Story = {
   args: {
     ...DefaultTag.args,
     color: "gray",
     leftIcon: <CrownSimple size={20} color="#5E718D" />,
-    dismissIcon: <X size={20} color="#5E718D" />,
+  },
+};
+export const TagWithBothSideIcon: Story = {
+  args: {
+    ...DefaultTag.args,
+    color: "gray",
+    leftIcon: <CrownSimple size={20} color="#5E718D" />,
+    dismissIcon: <X color="#5E718D" size={20} />,
   },
 };
 export const TagWithDashedBorder: Story = {

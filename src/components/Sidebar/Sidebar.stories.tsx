@@ -57,7 +57,7 @@ const meta: Meta<typeof Sidebar> = {
   decorators: [
     (Story) => {
       return (
-        <div className="w-fit border border-slate-50 shadow-lg">
+        <div className="max-w-xs shadow-lg">
           <Story />
         </div>
       );
@@ -71,39 +71,37 @@ type Story = StoryObj<typeof Sidebar>;
 export const DefaultSidebar: Story = {
   args: {
     children: (
-      <Sidebar.Items>
-        <Sidebar.ItemGroup>
-          <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
-            Dashboard
-          </Sidebar.Item>
-          <Sidebar.Item icon={<ShoppingCart size={24} />}>
-            E-commerce
-          </Sidebar.Item>
-          <Sidebar.Item
-            href="#"
-            icon={<LockSimple size={24} />}
-            label="pro"
-            labelColor="gray"
-          >
-            Components
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<Chat size={24} />} label="3">
-            Inbox
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<Users size={24} />}>
-            Users
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<ShoppingBagOpen size={24} />}>
-            Products
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<SignIn size={24} />}>
-            Sign In
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={<UserPlus size={24} />}>
-            Sign Up
-          </Sidebar.Item>
-        </Sidebar.ItemGroup>
-      </Sidebar.Items>
+      <Sidebar.ItemGroup>
+        <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
+          Dashboard
+        </Sidebar.Item>
+        <Sidebar.Item icon={<ShoppingCart size={24} />}>
+          E-commerce
+        </Sidebar.Item>
+        <Sidebar.Item
+          href="#"
+          icon={<LockSimple size={24} />}
+          label="pro"
+          labelColor="gray"
+        >
+          Components
+        </Sidebar.Item>
+        <Sidebar.Item href="#" icon={<Chat size={24} />} label="3">
+          Inbox
+        </Sidebar.Item>
+        <Sidebar.Item href="#" icon={<Users size={24} />}>
+          Users
+        </Sidebar.Item>
+        <Sidebar.Item href="#" icon={<ShoppingBagOpen size={24} />}>
+          Products
+        </Sidebar.Item>
+        <Sidebar.Item href="#" icon={<SignIn size={24} />}>
+          Sign In
+        </Sidebar.Item>
+        <Sidebar.Item href="#" icon={<UserPlus size={24} />}>
+          Sign Up
+        </Sidebar.Item>
+      </Sidebar.ItemGroup>
     ),
   },
 };
@@ -147,11 +145,7 @@ export const SidebarWithLogoBranding: Story = {
   args: {
     children: removeFragment(
       <>
-        <Sidebar.Logo
-          href=""
-          img="/images/company/logo.png"
-          imgAlt="Keep logo"
-        ></Sidebar.Logo>
+        <Sidebar.Logo href="" img="/images/keepLogo.svg" imgAlt="Keep logo" />
         <Sidebar.Items>
           <Sidebar.ItemGroup>
             <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>

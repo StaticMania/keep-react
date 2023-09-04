@@ -12,6 +12,7 @@ import { Button } from "../Button";
 import { TextInput } from "../FormControls/TextInput";
 import { Navbar } from "./";
 import { removeFragment } from "@/src/helpers/mergeDeep";
+import Image from "next/image";
 
 const meta: Meta<typeof Navbar> = {
   tags: ["autodocs"],
@@ -67,26 +68,28 @@ export const DefaultNavbar: Story = {
       <>
         <div className="flex items-center gap-5">
           <Navbar.Brand href="/">
-            <img
-              src="../assets/images/company/logo.png"
-              className="mr-3 h-6 pr-5 sm:h-9 md:border-r md:border-gray-50"
-              alt="Keep Logo"
+            <Image
+              src="/images/keepLogo.svg"
+              width="113"
+              height={40}
+              alt="logo"
+              className="mr-3 pr-5 md:border-r md:border-gray-50"
             />
           </Navbar.Brand>
           <Navbar.Collapse>
-            <Navbar.Link href="#">
+            <Navbar.Link href="/navbar">
               Work
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
-            <Navbar.Link href="#">
-              Case Study
+            <Navbar.Link href="/navbar">
+              Projects
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
-            <Navbar.Link href="#">
+            <Navbar.Link href="/navbar">
               Resources
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
-            <Navbar.Link href="#">
+            <Navbar.Link href="/navbar">
               About
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
@@ -109,37 +112,36 @@ export const NavbarWithSearchIcon: Story = {
       <>
         <div className="flex items-center gap-5">
           <Navbar.Brand href="/">
-            <img
-              src="../assets/images/company/logo.png"
-              className="mr-3 h-6 pr-5 sm:h-9 md:border-r md:border-gray-50"
-              alt="Keep Logo"
+            <Image
+              src="/images/keepLogo.svg"
+              width={113}
+              height={40}
+              alt="logo"
+              className="md:pr-5 md:border-r md:border-slate-200"
             />
           </Navbar.Brand>
           <Navbar.Collapse>
-            <Navbar.Link href="#">
+            <Navbar.Link href="/navbar">
               Work
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
-            <Navbar.Link href="#">
-              Case Study
+            <Navbar.Link href="/navbar">
+              Projects
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
-            <Navbar.Link href="#">
-              Download
-              <CaretDown size={20} color="#455468" />
-            </Navbar.Link>
-            <Navbar.Link href="#">
+            <Navbar.Link href="/navbar">
               Resources
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
-            <Navbar.Link href="#" className="md:hidden">
+            <Navbar.Link href="/contact" className="md:hidden">
               Contact
               <CaretDown size={20} color="#455468" />
             </Navbar.Link>
           </Navbar.Collapse>
         </div>
+
         <div className="flex items-center gap-2">
-          <div className="flex md:order-2">
+          <div className="flex lg:order-2">
             <Button type="link" size="xs" color="#455468">
               <span className="pr-2">
                 <MagnifyingGlass size={20} color="#455468" />
@@ -147,13 +149,71 @@ export const NavbarWithSearchIcon: Story = {
               Search
             </Button>
           </div>
-          <div className="flex md:order-3">
+          <div className="flex lg:order-3">
             <Button
               type="outlinePrimary"
               size="sm"
-              customClass="hidden md:flex"
+              customClass="hidden lg:flex"
             >
               Contact
+            </Button>
+            <Navbar.Toggle />
+          </div>
+        </div>
+      </>
+    ),
+  },
+};
+export const NavbarWithCenterLogo: Story = {
+  args: {
+    rounded: true,
+    children: removeFragment(
+      <>
+        <div className="hidden items-center gap-5 lg:flex">
+          <Navbar.Collapse>
+            <Navbar.Link href="/">
+              Work
+              <CaretDown size={20} color="#455468" />
+            </Navbar.Link>
+            <Navbar.Link href="/">
+              Project
+              <CaretDown size={20} color="#455468" />
+            </Navbar.Link>
+            <Navbar.Link href="/">
+              Download
+              <CaretDown size={20} color="#455468" />
+            </Navbar.Link>
+          </Navbar.Collapse>
+        </div>
+
+        <Navbar.Brand href="/">
+          <Image
+            src="/images/keepLogo.svg"
+            width={113}
+            height={40}
+            alt="logo"
+          />
+        </Navbar.Brand>
+
+        <Navbar.Collapse className="lg:hidden">
+          <Navbar.Link href="/">Tutorial</Navbar.Link>
+          <Navbar.Link href="/">About</Navbar.Link>
+          <Navbar.Link href="/">Work</Navbar.Link>
+          <Navbar.Link href="/">Case Study</Navbar.Link>
+          <Navbar.Link href="/">Download</Navbar.Link>
+        </Navbar.Collapse>
+
+        <div className="flex items-center gap-2">
+          <Navbar.Collapse className="hidden lg:block">
+            <Navbar.Link href="/">Tutorial</Navbar.Link>
+            <Navbar.Link href="/">About</Navbar.Link>
+          </Navbar.Collapse>
+          <div className="flex lg:order-2">
+            <Button type="link" size="xs" color="#455468">
+              <span className="pr-2">
+                <MagnifyingGlass size={20} color="#455468" />
+              </span>
+              Search
             </Button>
             <Navbar.Toggle />
           </div>
@@ -167,20 +227,25 @@ export const NavbarWithMobileMenu: Story = {
     children: removeFragment(
       <>
         <Navbar.Brand href="/">
-          <img
-            src="../assets/images/company/logo.png"
-            className="mr-3 h-6 pr-5 sm:h-9"
-            alt="Keep Logo"
-          />
+          <Navbar.Brand href="/">
+            <Image
+              src="/images/keepLogo.svg"
+              width={113}
+              height={40}
+              alt="logo"
+              className="mr-3 h-6 pr-5 sm:h-9"
+            />
+          </Navbar.Brand>
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <Button type="link" size="xs" color="#455468">
-            <span className="hidden pr-2 md:block">
-              <List size={24} color="#455468" />
-            </span>
-            <Navbar.Toggle />
-            Menu
-          </Button>
+          <Navbar.Mobile>
+            <ul className="mt-5 flex flex-col items-center justify-center gap-5">
+              <Navbar.Link href="/">Home</Navbar.Link>
+              <Navbar.Link href="/">About</Navbar.Link>
+              <Navbar.Link href="/">Services</Navbar.Link>
+              <Navbar.Link href="/">Blog</Navbar.Link>
+            </ul>
+          </Navbar.Mobile>
         </div>
       </>
     ),
@@ -188,50 +253,21 @@ export const NavbarWithMobileMenu: Story = {
     rounded: true,
   },
 };
-export const NavbarWithMobileMenuAndSearchIcon: Story = {
+export const NavbarWithSearchAndSocialIcons: Story = {
   args: {
     children: removeFragment(
       <>
         <Navbar.Brand href="/">
-          <img
-            src="../assets/images/company/logo.png"
+          <Image
+            src="/images/keepLogo.svg"
+            width={113}
+            height={40}
+            alt="logo"
             className="mr-3 h-6 pr-5 sm:h-9"
-            alt="Keep Logo"
           />
         </Navbar.Brand>
-        <div className="flex items-center md:order-2">
-          <Button type="link" size="xs" color="#455468">
-            <span className="pr-2">
-              <MagnifyingGlass size={20} color="#455468" />
-            </span>
-            Search
-          </Button>
-          <Button type="link" size="xs" color="#455468">
-            <span className="hidden pr-2 md:block">
-              <List size={24} color="#455468" />
-            </span>
-            <Navbar.Toggle />
-            Menu
-          </Button>
-        </div>
-      </>
-    ),
-    fluid: true,
-    rounded: true,
-  },
-};
-export const NavbarWithSearchBarAndSocialIcons: Story = {
-  args: {
-    children: removeFragment(
-      <>
-        <Navbar.Brand href="/">
-          <img
-            src="../assets/images/company/logo.png"
-            className="mr-3 h-6 pr-5 sm:h-9"
-            alt="Keep Logo"
-          />
-        </Navbar.Brand>
-        <div className="hidden items-center md:order-2 md:flex">
+
+        <div className="hidden items-center lg:order-2 lg:flex">
           <TextInput
             id="username"
             placeholder="Search anything"
@@ -260,6 +296,7 @@ export const NavbarWithSearchBarAndSocialIcons: Story = {
               <YoutubeLogo size={20} color="#5E718D" />
             </span>
           </Button>
+
           <Button type="link" size="xs" color="#455468">
             <span className="pr-2">
               <List size={20} color="#455468" />
@@ -267,8 +304,10 @@ export const NavbarWithSearchBarAndSocialIcons: Story = {
             Menu
           </Button>
         </div>
+
         <Navbar.Toggle />
-        <Navbar.Collapse className="md:hidden">
+
+        <Navbar.Collapse className="lg:hidden">
           <div className="mx-auto w-5/6">
             <TextInput
               id="username"
@@ -279,7 +318,7 @@ export const NavbarWithSearchBarAndSocialIcons: Story = {
               addonPosition="left"
             />
           </div>
-          <div className="flex items-center justify-end pr-3 ">
+          <div className="flex items-center justify-center">
             <Button type="link" size="xs" color="#455468">
               <span className="pr-2">
                 <FacebookLogo size={20} color="#5E718D" />
@@ -302,61 +341,6 @@ export const NavbarWithSearchBarAndSocialIcons: Story = {
             </Button>
           </div>
         </Navbar.Collapse>
-      </>
-    ),
-    fluid: true,
-    rounded: true,
-  },
-};
-export const NavbarForMobileDevice: Story = {
-  args: {
-    children: removeFragment(
-      <>
-        <Navbar.Brand href="/">
-          <img
-            src="../assets/images/company/logo.png"
-            className="mr-3 h-6 pr-5 sm:h-9"
-            alt="Keep Logo"
-          />
-        </Navbar.Brand>
-        <div className="flex items-center md:order-2">
-          <Button type="link" size="xs" color="#455468">
-            <Navbar.Toggle />
-            <span className="hidden md:block">
-              <List size={24} weight="bold" color="#455468" />
-            </span>
-          </Button>
-        </div>
-      </>
-    ),
-    fluid: true,
-    rounded: true,
-  },
-};
-export const NavbarForMobileDeviceAndSearch: Story = {
-  args: {
-    children: removeFragment(
-      <>
-        <Navbar.Brand href="/">
-          <img
-            src="../assets/images/company/logo.png"
-            className="mr-3 h-6 pr-5 sm:h-9"
-            alt="Keep Logo"
-          />
-        </Navbar.Brand>
-        <div className="flex items-center md:order-2">
-          <Button type="link" size="xs" color="#455468">
-            <span className="pr-2">
-              <MagnifyingGlass size={20} color="#455468" />
-            </span>
-          </Button>
-          <Button type="link" size="xs" color="#455468">
-            <span className="hidden md:block">
-              <List size={24} color="#455468" />
-            </span>
-            <Navbar.Toggle />
-          </Button>
-        </div>
       </>
     ),
     fluid: true,

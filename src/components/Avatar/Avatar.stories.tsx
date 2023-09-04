@@ -8,6 +8,8 @@ const meta: Meta<typeof Avatar> = {
     size: {
       control: "select",
       options: ["xs", "sm", "md", "lg", "xl", "2xl"],
+      description: "Specifies the size of the avatar",
+
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "xl" },
@@ -15,30 +17,50 @@ const meta: Meta<typeof Avatar> = {
     },
     totalNotification: {
       table: {
-        type: { summary: "string" },
+        type: { summary: "The total number of notifications to be displayed." },
         defaultValue: { summary: "99" },
       },
     },
-    alt: { control: { type: "string", defaultValue: "avatar" } },
-
+    alt: {
+      description: "Alternative text for the avatar image.",
+    },
     statusPosition: {
       control: "select",
       options: ["bottom-left", "bottom-right", "top-left", "top-right"],
       table: {
-        type: { summary: "string" },
+        type: { summary: "Specifies the position of the status indicator." },
         defaultValue: { summary: "top-right" },
       },
     },
-
+    statusType: {
+      description:
+        "Specifies the type of status. Possible values are: 'dot', 'notification'",
+      defaultValue: "dot",
+      type: "string",
+    },
     children: {
       description: "It define text about the avatar",
       defaultValue: "avatar",
       type: "string",
     },
-  },
-  parameters: {
-    componentSubtitle:
-      "The Avatar component in the Keep Design System allows you to display user avatars or profile images in a consistent and visually appealing manner. With customizable options for placeholders, shapes, status icons, and sizes, you can create versatile avatars to suit your design needs.",
+    shape: {
+      description: "Determines the shape of the avatar.",
+    },
+    status: {
+      description: "Reflects the user's availability status.",
+    },
+    rounded: {
+      description: "Determines if the avatar has rounded corners.",
+    },
+    stacked: {
+      description: "Specifies if avatars should be stacked together.",
+    },
+    img: {
+      description: "Path to the user's image to be displayed in the avatar.",
+    },
+    bordered: {
+      description: "Determines if the avatar has a border.",
+    },
   },
   decorators: [
     (Story) => (

@@ -7,10 +7,6 @@ import Link from "next/link";
 const meta: Meta<typeof Alert> = {
   component: Alert,
   tags: ["autodocs"],
-  parameters: {
-    componentSubtitle:
-      "The Alert component in the Keep Design System allows you to display important messages, notifications, or warnings to users. With customizable options for style, close icon, border, and state, you can create visually appealing and informative alerts that align with your design requirements.",
-  },
   argTypes: {
     color: {
       control: "select",
