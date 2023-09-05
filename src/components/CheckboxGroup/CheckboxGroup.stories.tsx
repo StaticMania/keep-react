@@ -6,7 +6,63 @@ import CheckboxGroup from ".";
 const meta: Meta<typeof CheckboxGroup> = {
   component: CheckboxGroup,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    checkboxType: {
+      description: "Specifies the type of checkbox style: square or circular.",
+      control: "select",
+      options: ["circle", "square"],
+      table: {
+        defaultValue: { summary: "square" },
+      },
+    },
+    checkboxPosition: {
+      description:
+        "Specifies the position of the checkbox relative to the label.",
+      control: "select",
+      options: ["left", "right"],
+      table: {
+        defaultValue: { summary: "left" },
+      },
+    },
+    title: {
+      description: "Main title or label for the checkbox group.",
+
+      table: {
+        control: "",
+        defaultValue: { summary: "Static Design.." },
+      },
+    },
+    description: {
+      description:
+        "Additional description or information about the checkbox group.",
+    },
+
+    icon: {
+      description: "Optional icon displayed alongside the checkbox group.",
+    },
+    img: {
+      description: "URL of an image displayed alongside the checkbox group.",
+    },
+    value: {
+      description: "Value of the currently selected checkbox.",
+    },
+    selected: {
+      description: "Selected checkbox.",
+    },
+    fieldName: {
+      description: "Field Name",
+    },
+    imgShape: {
+      control: "select",
+      options: ["square", "circle"],
+      description: "Specifies the shape of the image: square or circular.",
+    },
+    select: {
+      control: "select",
+      options: ["multiple", "single"],
+      description: "Value of the pre-selected checkbox, if any.",
+    },
+  },
 };
 
 export default meta;

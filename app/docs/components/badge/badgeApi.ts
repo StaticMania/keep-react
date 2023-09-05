@@ -17,7 +17,7 @@ export const badgeApiData = [
     id: 3,
     propsName: "badgeType",
     propsType: ["default", "outline", "text"],
-    propsDescription: "Type of the badge ('default', 'outline', or 'text').",
+    propsDescription: "Type of the badge",
     default: "default",
   },
   {
@@ -67,8 +67,7 @@ export const badgeApiData = [
     id: 11,
     propsName: "dotPosition",
     propsType: ["left", "right"],
-    propsDescription:
-      "Position of the dot inside the badge ('left' or 'right').",
+    propsDescription: "Position of the dot inside the badge",
     default: "right",
   },
 ];

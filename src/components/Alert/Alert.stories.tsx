@@ -17,9 +17,10 @@ const meta: Meta<typeof Alert> = {
       },
       description: "What background color to use like",
     },
-
-    withBorder: Boolean,
-    withBorderAccent: Boolean,
+    rounded: { description: "Adds rounded corners to the alert." },
+    dismiss: { description: "Enables or disables the dismiss icon." },
+    withBorder: { description: "Adds a border around the alert." },
+    withBorderAccent: { description: "Adds a border accent to the alert." },
     withBorderAccentPosition: {
       control: "select",
       options: ["left", "right", "top", "bottom"],

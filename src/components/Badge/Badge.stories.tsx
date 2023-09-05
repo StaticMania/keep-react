@@ -23,6 +23,7 @@ const meta: Meta<typeof Badge> = {
   ],
   argTypes: {
     size: {
+      description: "Size variant of the badge.",
       control: "select",
       options: ["xs", "sm"],
       table: {
@@ -31,12 +32,14 @@ const meta: Meta<typeof Badge> = {
       },
     },
     iconPosition: {
+      description: "Position of the icon inside the badge.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "left" },
       },
     },
     color: {
+      description: "Available Badge color.",
       control: "select",
       options: ["error", "gray", "info", "success", "warning"],
       table: {
@@ -45,6 +48,7 @@ const meta: Meta<typeof Badge> = {
       },
     },
     colorType: {
+      description: "Color type of the badge",
       control: "select",
       options: ["light", "strong"],
       table: {
@@ -53,6 +57,7 @@ const meta: Meta<typeof Badge> = {
       },
     },
     badgeType: {
+      description: "Type of the badge ('default', 'outline', or 'text').",
       control: "select",
       options: ["default", "outline", "text"],
       table: {
@@ -61,20 +66,30 @@ const meta: Meta<typeof Badge> = {
       },
     },
     href: {
+      description: "URL to navigate when the badge is clicked.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
       },
     },
     icon: {
+      description: "Icon element to be displayed inside the badge.",
       control: {
         disable: true,
       },
     },
-  },
-  parameters: {
-    componentSubtitle:
-      "A badge component is a small UI element that displays a short text or a numerical value, typically used to indicate the status, quantity, or category of a related item. Badges are usually displayed as small colored circles or rectangles, with the text or number centered inside.",
+    className: {
+      description: "Custom CSS class to be added to the badge",
+    },
+    dot: {
+      description: "Show a dot on the badge",
+    },
+    dotPosition: {
+      description: "Position of the dot inside the badge",
+    },
+    children: {
+      description: "Badge text",
+    },
   },
 };
 

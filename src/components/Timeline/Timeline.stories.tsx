@@ -176,6 +176,7 @@ export const TimelineWithImage: Story = {
               width={400}
               src="/images/banner/timeline.png"
               alt="timeline"
+              className="rounded-lg"
             />
           </Timeline.Content>
         </Timeline.Item>
@@ -195,6 +196,7 @@ export const TimelineWithImage: Story = {
               width={340}
               src="/images/banner/banner.png"
               alt="timeline"
+              className="rounded-lg"
             />
           </Timeline.Content>
         </Timeline.Item>

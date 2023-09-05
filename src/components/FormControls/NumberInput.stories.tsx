@@ -5,7 +5,18 @@ import { NumberInput } from "./NumberInput";
 const meta: Meta<typeof NumberInput> = {
   component: NumberInput,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    sizing: {
+      table: {
+        control: "select",
+        options: ["sm", "md", "lg"],
+        table: {
+          type: { summary: "sm | md | lg" },
+          defaultValue: { summary: "md" },
+        },
+      },
+    },
+  },
 };
 
 export default meta;
