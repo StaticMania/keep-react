@@ -11,27 +11,54 @@ const meta: Meta<typeof Modal> = {
   argTypes: {
     onClose: {
       type: "function",
+      description: "Function to be called when the modal is closed.",
     },
     popup: {
-      description: "Modal Type",
+      control: "boolean",
+      description: "Optional boolean flag for rendering modal as a popup.",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
     },
     root: {
       description: "Modal Inner Element",
     },
     show: {
-      description: "Modal show or not?",
+      control: "boolean",
+      description: "Controls the visibility of the modal.",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
     },
     icon: {
-      description: "Modal icon",
+      description: "Optional icon to be displayed within the modal.",
     },
     size: {
-      description: "Modal sizes",
+      description: "Defines the size of the modal.",
+      control: "select",
+      options: [
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "2xl",
+        "3xl",
+        "4xl",
+        "5xl",
+        "6xl",
+        "7xl",
+      ],
     },
+
     modalType: {
       description: "Modal avaiale type",
     },
     position: {
-      description: "Modal avaiale position",
+      description: "Determines the position of the modal on the screen.",
+      control: "select",
+      options: ["bottom", "top", "left", "right", "center"],
     },
   },
 };

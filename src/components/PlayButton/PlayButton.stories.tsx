@@ -18,7 +18,7 @@ const meta: Meta<typeof PlayButton> = {
       table: {
         defaultValue: { summary: "md" },
       },
-      control: "radio",
+      control: "select",
       options: ["xs", "sm", "md", "lg", "xl", "2xl"],
     },
     type: {
@@ -26,12 +26,26 @@ const meta: Meta<typeof PlayButton> = {
       table: {
         defaultValue: { summary: "primary" },
       },
-      control: "radio",
-      options: ["primary", "text", "outlineGray", "gradient"],
+      control: "select",
+      options: ["primary", "text", "outlineGray", "blur"],
     },
     icon: {
       description: "Play icon",
       control: { type: null },
+    },
+    circle: {
+      description: "Play button circle or not?",
+      control: "boolean",
+      table: {
+        defaultValue: { summary: false },
+      },
+    },
+    className: {
+      description: "Play button custom className",
+      control: "text",
+      table: {
+        defaultValue: { summary: "" },
+      },
     },
   },
 };

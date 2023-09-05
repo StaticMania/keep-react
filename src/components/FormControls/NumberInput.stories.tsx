@@ -7,13 +7,56 @@ const meta: Meta<typeof NumberInput> = {
   tags: ["autodocs"],
   argTypes: {
     sizing: {
+      description: "Sets the size of the number input component.",
+      control: "select",
+      options: ["sm", "md", "lg"],
       table: {
-        control: "select",
-        options: ["sm", "md", "lg"],
-        table: {
-          type: { summary: "sm | md | lg" },
-          defaultValue: { summary: "md" },
-        },
+        type: { summary: "string" },
+        defaultValue: { summary: "md" },
+      },
+    },
+    iconPosition: {
+      description:
+        "Specifies the position of the icon within the number input.",
+      control: "select",
+      options: ["right", "left"],
+
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "right" },
+      },
+    },
+    disabled: {
+      description: "Disables interactions with the number input component.",
+      control: "boolean",
+    },
+    value: {
+      description: "Value of the number input field.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "0" },
+      },
+    },
+    icon: {
+      description: "Icon displayed within the number input component.",
+      table: {
+        type: { summary: "ReactNode" },
+        defaultValue: { summary: "" },
+      },
+    },
+    setValue: {
+      description: "Setter function to update the value of the number input.",
+      table: {
+        type: { summary: "number" },
+        defaultValue: { summary: "function" },
+      },
+    },
+    helperText: {
+      description:
+        "Additional helper text or information related to the number input.",
+      table: {
+        type: { summary: "text" },
+        defaultValue: { summary: "" },
       },
     },
   },

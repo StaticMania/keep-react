@@ -11,18 +11,21 @@ const meta: Meta<typeof Progress> = {
 
   argTypes: {
     label: {
+      description: "Progress level text.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
       },
     },
     labelPosition: {
+      description: "Defines the available position for progress label.",
+      control: "select",
+      options: ["inside", "outside", "none"],
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "none" },
+        defaultValue: { summary: "outside" },
       },
     },
-
     color: {
       control: "select",
       options: ["info", "error", "success", "warning", "indigo", "purple"],
@@ -35,6 +38,7 @@ const meta: Meta<typeof Progress> = {
     size: {
       control: "select",
       options: ["sm", "md", "lg", "xl"],
+      description: "Defines the available sizes options for progress",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "md" },
@@ -42,9 +46,42 @@ const meta: Meta<typeof Progress> = {
     },
     progress: {
       control: { type: "number", min: 0, max: 100, step: 1 },
+      description: "Defines the progress control for the progress bar",
       table: {
         type: { summary: "number" },
         defaultValue: { summary: 45 },
+      },
+    },
+    labelProgress: {
+      description: "Specifies whether the progress label is shown.",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    showPopupLabelProgress: {
+      description: "Specifies whether the popup label progress is shown",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    rounded: {
+      description: "Specifies whether the progress bar is rounded.",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    bordered: {
+      description: "Specifies whether the progress bar is bordered.",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
     },
   },

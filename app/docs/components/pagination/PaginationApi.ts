@@ -32,7 +32,7 @@ export const paginationApiData = [
     propsName: "layout",
     propsType: ["navigation", "pagination", "table"],
     propsDescription: "Layout style.",
-    default: '"pagination"',
+    default: "pagination",
   },
   {
     id: 6,

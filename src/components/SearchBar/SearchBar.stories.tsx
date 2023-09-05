@@ -39,7 +39,7 @@ const meta: Meta<typeof SearchBar> = {
         type: { summary: "string" },
         defaultValue: { summary: "gray" },
       },
-      description: "Input Field colors",
+      description: "Specifies the color variant of the search input component.",
     },
     placeholder: {
       table: {
@@ -51,6 +51,7 @@ const meta: Meta<typeof SearchBar> = {
 
     addonPosition: {
       description: "Addon Position",
+      control: "radio",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "left" },
@@ -58,6 +59,7 @@ const meta: Meta<typeof SearchBar> = {
     },
     iconPosition: {
       description: "Icon Position",
+      control: "radio",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "left" },
@@ -70,6 +72,30 @@ const meta: Meta<typeof SearchBar> = {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "md" },
+      },
+    },
+    disabled: {
+      control: "boolean",
+      description: "Disables interactions with the search input component",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    bordered: {
+      control: "boolean",
+      description: "Displays a border around the search input component",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    withBg: {
+      control: "boolean",
+      description: "Applies a background style to the search input component.",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
       },
     },
     icon: {

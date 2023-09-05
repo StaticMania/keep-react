@@ -21,24 +21,28 @@ const meta: Meta<typeof TextInput> = {
     color: {
       control: "select",
       options: ["gray", "info", "error", "warning", "success"],
+      description: "Specifies the color variant of the input text component.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "gray" },
       },
     },
     withBg: {
+      description: "Applies a background style to the input text component.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
       },
     },
     border: {
+      description: "Displays a border around the input text component.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
       },
     },
     shadow: {
+      description: "Applies a shadow effect to the input text component.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -53,12 +57,18 @@ const meta: Meta<typeof TextInput> = {
     },
 
     addonPosition: {
+      control: "select",
+      options: ["left", "right"],
+      description: "Specifies the position of the input text addon.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "left" },
       },
     },
     iconPosition: {
+      control: "select",
+      options: ["left", "right"],
+      description: "Specifies the position of the input text icon.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "left" },
@@ -67,11 +77,20 @@ const meta: Meta<typeof TextInput> = {
     sizing: {
       control: "select",
       options: ["sm", "md", "lg"],
+      description: "Sets the size of the input text component.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "md" },
       },
     },
+    helperText: {
+      description:
+        "Additional helper text or information related to the input text.",
+    },
+    value: {
+      description: "Value of the input text field",
+    },
+
     icon: {
       control: {
         disable: true,

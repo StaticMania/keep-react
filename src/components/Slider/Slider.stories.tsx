@@ -12,27 +12,96 @@ const meta: Meta<typeof Slider> = {
       },
     },
     min: {
+      description: "Minimum value of the slider",
       table: {
         type: { summary: "number" },
         defaultValue: { summary: 100 },
       },
     },
     max: {
+      description: "Maximum value of the slider",
       table: {
         type: { summary: "number" },
         defaultValue: { summary: 1000 },
       },
     },
     range: {
+      description: "Determines whether the slider displays a range color",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    dots: {
+      description: "Determines whether dots are displayed on the slider",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    reverse: {
+      description: "Determines if the slider values are shown in reverse",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    disabled: {
+      description: "Determines if the slider is disabled",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    pushable: {
+      description:
+        "Allows pushing neighboring handles. Can be boolean or number.",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    allowCross: {
+      description: "Allows the handles to cross each other on the slider",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+    },
+    draggableTrack: {
+      description: "Allows dragging the entire track to set values",
+      control: "boolean",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
     },
     defaultValue: {
+      description: "Initial default value or values for the slider.",
       table: {
         type: { summary: '"number" | "Object"' },
         defaultValue: { summary: 300 },
+      },
+    },
+    marks: {
+      description: "Defines points on the slider with custom labels.",
+    },
+    onChange: {
+      description: "Callback function when the slider value changes",
+    },
+    tooltip: {
+      description: "Specifies the position of the tooltip or hides it",
+      options: ["top", "bottom", "none"],
+      control: "select",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "top" },
       },
     },
   },

@@ -28,28 +28,33 @@ const meta: Meta<typeof Navbar> = {
       },
     },
     rounded: {
-      description: "Navbar rounded or not?",
+      control: "boolean",
+      description: "Specifies whether the navbar should have rounded corners.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
     },
     menuOpen: {
-      description: "Navbar menu open or not?",
+      control: "boolean",
+      description: "Controls whether the menu is open or closed.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
     },
     fluid: {
-      description: "Navbar fluid or not?",
+      control: "boolean",
+      description:
+        "Determines whether the navbar should be fluid or fixed-width.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
     },
     border: {
-      description: "Navbar border show or not?",
+      control: "boolean",
+      description: "Controls whether a border should be added to the navbar.",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },

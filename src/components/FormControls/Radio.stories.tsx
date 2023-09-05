@@ -14,6 +14,29 @@ const meta: Meta<typeof Radio> = {
       },
       description: "Radio avaiable size",
     },
+    radioShape: {
+      control: "select",
+      options: ["circle", "square"],
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "circle" },
+      },
+      description: "Avaiable radio shape",
+    },
+    value: {
+      table: {
+        type: { summary: "boolen" },
+        defaultValue: { summary: true },
+      },
+      description: "Value associated with the radio input.",
+    },
+    selected: {
+      table: {
+        type: { summary: "boolen" },
+        defaultValue: { summary: true },
+      },
+      description: "Currently selected value in a group of radio inputs.",
+    },
     checked: {
       table: {
         type: { summary: "boolean" },

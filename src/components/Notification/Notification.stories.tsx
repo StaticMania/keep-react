@@ -9,20 +9,33 @@ const meta: Meta<typeof Notification> = {
   tags: ["autodocs"],
   args: {},
   argTypes: {
+    headerBannerSrc: {
+      description:
+        "Source URL for an image to be used as the header banner of the notification",
+    },
     children: {
       control: {
         disable: true,
       },
     },
+    infoIcon: {
+      description:
+        "Icon to be displayed in the notification as an informational indicator",
+      control: {
+        disable: true,
+      },
+    },
     additionalContent: {
+      description:
+        "Additional content to be displayed within the notification.",
       control: {
         disable: true,
       },
     },
     onDismiss: {
-      control: {
-        disable: true,
-      },
+      description:
+        "Determines whether the notification can be dismissed by the user",
+      control: "boolean",
     },
   },
   parameters: {
@@ -91,7 +104,6 @@ export const NotificationWithIcon: Story = {
     ),
   },
 };
-
 export const NotificationWithAvatar: Story = {
   args: {
     dismiss: false,
@@ -125,7 +137,6 @@ export const NotificationWithAvatar: Story = {
     ),
   },
 };
-
 export const NotificationWithCard: Story = {
   args: {
     dismiss: false,
@@ -191,7 +202,6 @@ export const NotificationCardWithFullButton: Story = {
     ),
   },
 };
-
 export const NotificationCardWithButtonIcon: Story = {
   args: {
     dismiss: false,

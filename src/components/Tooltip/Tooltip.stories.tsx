@@ -27,19 +27,25 @@ const meta: Meta<typeof Tooltip> = {
       description: "Children is a button element where user can click or hover",
     },
     trigger: {
+      description: "Trigger mode for displaying the tooltip",
+      control: "radio",
+      options: ["hover", "click"],
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "gray" },
+        defaultValue: { summary: "hover" },
       },
     },
-    style: {
+    placement: {
+      description: "Placement of the tooltip",
+      control: "select",
+      options: ["top", "bottom", "left", "right"],
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "dark" },
+        defaultValue: { summary: "top" },
       },
     },
-
     animation: {
+      description: "Animation duration class for the tooltip",
       control: "select",
       options: [
         "duration-0",
@@ -52,6 +58,43 @@ const meta: Meta<typeof Tooltip> = {
         "duration-700",
         "duration-1000",
       ],
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "duration-300" },
+      },
+    },
+    style: {
+      description: "Style of the tooltip",
+      control: "select",
+      options: ["dark", "light"],
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "dark" },
+      },
+    },
+    arrow: {
+      description: "Show or hide the tooltip arrow sign",
+      control: "boolean",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "true" },
+      },
+    },
+    content: {
+      description: "Content of the tooltip",
+      control: "text",
+      table: {
+        type: { summary: "text" },
+        defaultValue: { summary: "" },
+      },
+    },
+    title: {
+      description: "Title of the tooltip",
+      control: "text",
+      table: {
+        type: { summary: "text" },
+        defaultValue: { summary: "" },
+      },
     },
   },
   parameters: {
