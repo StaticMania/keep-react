@@ -1,6 +1,7 @@
-import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { DeepPartial } from "../../helpers/deep-partial";
+
+import classNames from "classnames";
 import { useTableContext } from "./TableContext";
 import { useTheme } from "@/src/Keep/ThemeContex";
 
@@ -9,11 +10,9 @@ export interface keepTableRowTheme {
   hovered: string;
   striped: string;
 }
-
 export interface TableRowProps extends PropsWithChildren, ComponentProps<"tr"> {
   theme?: DeepPartial<keepTableRowTheme>;
 }
-
 export const TableRow: FC<TableRowProps> = ({
   children,
   className,

@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { ComponentProps, forwardRef, ReactNode } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import type { PositionInButtonGroup } from "./ButtonGroup";
-import ButtonGroup from "./ButtonGroup";
+import { ButtonGroup } from "./ButtonGroup";
 import {
   KeepBoolean,
   KeepButtonType,

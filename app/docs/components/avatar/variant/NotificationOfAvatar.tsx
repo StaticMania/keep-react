@@ -1,4 +1,4 @@
-import { Avatar } from "@/src/components/Avatar/Avatar";
+import { Avatar } from "@/src/components";
 
 const NotificationOfAvatar = () => {
   return (
@@ -45,7 +45,7 @@ const NotificationOfAvatar = () => {
 };
 
 const NotificationOfAvatarCode = `
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 const NotificationOfAvatar = () => {
   return (
       <Avatar 

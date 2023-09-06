@@ -1,6 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Spinner } from "@/src/components/Spinner";
+import { Button, Spinner } from "@/src/components";
 
 const SpinnerButton = () => {
   return (
@@ -23,7 +22,7 @@ const SpinnerButton = () => {
 
 const SpinnerButtonCode = `
 "use client";
-import { Button,Spinner } from "keep-design";
+import { Button,Spinner } from "keep-react";
 
 const SpinnerButton = () => {
   return (

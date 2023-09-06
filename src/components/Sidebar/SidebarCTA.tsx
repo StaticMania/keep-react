@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { DeepPartial } from "../../helpers/deep-partial";
+
 import { useSidebarContext } from "./SidebarContext";
 import { KeepColors } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
@@ -35,7 +36,7 @@ export interface KeepSidebarCTAColors
   [key: string]: string;
 }
 
-const SidebarCTA: FC<SidebarCTAProps> = ({
+export const SidebarCTA: FC<SidebarCTAProps> = ({
   children,
   color = "info",
   className,
@@ -57,4 +58,3 @@ const SidebarCTA: FC<SidebarCTAProps> = ({
 };
 
 SidebarCTA.displayName = "Sidebar.CTA";
-export default SidebarCTA;

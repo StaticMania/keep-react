@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
+import { Button } from "@/src/components";
 import { ShoppingCart, Spinner } from "phosphor-react";
 
 const ShapeOfButton = () => {
@@ -31,7 +31,7 @@ const ShapeOfButton = () => {
 
 const ShapeOfButtonCode = `
 "use client";
-import { Button } from "keep-design";
+import { Button } from "keep-react";
 import { ShoppingCart } from "phosphor-react";
 
 const ShapeOfButton = () => {

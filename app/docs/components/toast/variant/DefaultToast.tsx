@@ -1,6 +1,6 @@
 "use client";
-import { Toast } from "@/src/components/Toast";
 import { Fire } from "phosphor-react";
+import { Toast } from "@/src/components";
 
 const DefaultToast = () => {
   return (
@@ -20,7 +20,7 @@ const DefaultToast = () => {
 
 const DefaultToastCode = `
 "use client";
-import { Toast } from "keep-design";
+import { Toast } from "keep-react";
 import { Fire } from "phosphor-react";
 
 const DefaultToast = () => {

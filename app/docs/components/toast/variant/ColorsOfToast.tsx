@@ -1,5 +1,5 @@
 "use client";
-import { Toast } from "@/src/components/Toast";
+import { Toast } from "@/src/components";
 import { Check, Warning, X } from "phosphor-react";
 
 const ColorsOfToast = () => {
@@ -44,7 +44,7 @@ const ColorsOfToast = () => {
 
 const ColorsOfToastCode = `
 "use client";
-import { Toast } from "keep-design";
+import { Toast } from "keep-react";
 import { Check, Warning, X } from "phosphor-react";
 
 const ColorsOfToast = () => {

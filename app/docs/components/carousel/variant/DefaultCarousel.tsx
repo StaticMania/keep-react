@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { Carousel } from "@/src/components/Carousel";
 import Image from "next/image";
+import { Carousel } from "@/src/components";
 
 const DefaultCarousel = () => {
   return (
@@ -37,7 +37,7 @@ const DefaultCarousel = () => {
 };
 const DefaultCarouselCode = `
 "use client";
-import { Carousel } from "keep-design";
+import { Carousel } from "keep-react";
 import Image from "next/image";
 
 const DefaultCarousel = () => {

@@ -1,10 +1,11 @@
 import { FC, ReactNode } from "react";
-import Amount, { keepAmountTheme } from "./Amout";
-import Rate, { keepRateTheme } from "./Rate";
+import { Rate, type keepRateTheme } from "./Rate";
+import { Title, type keepTitleTheme } from "./Title";
+import { StatusIcon, type keepIconTheme } from "./StatusIcon";
+import { Amount, type keepAmountTheme } from "./Amout";
+
+import { UserImg } from "./UserImg";
 import { StatisticContext } from "./StatisticContext";
-import StatusIcon, { keepIconTheme } from "./StatusIcon";
-import Title, { keepTitleTheme } from "./Title";
-import UserImg from "./UserImg";
 
 export interface keepStatisticTheme {
   rate: keepRateTheme;

@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
+import { Badge } from "@/src/components";
 import { Check, Checks, CloudCheck, XCircle } from "phosphor-react";
 
 const OnlyIconOfBadge = () => {
@@ -51,7 +51,7 @@ const OnlyIconOfBadge = () => {
 
 const OnlyIconOfBadgeCode = `
 "use client";
-import { Badge } from "keep-design";
+import { Badge } from "keep-react";
 import { Check, Checks, CloudCheck, XCircle } from "phosphor-react";
 
 const OnlyIconOfBadge = () => {

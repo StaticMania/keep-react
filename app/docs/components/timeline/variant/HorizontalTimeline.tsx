@@ -1,5 +1,5 @@
 "use client";
-import { Timeline } from "@/src/components/Timeline";
+import { Timeline } from "@/src/components";
 import { CalendarBlank } from "phosphor-react";
 
 const HorizontalTimeline = () => {
@@ -47,7 +47,7 @@ export default HorizontalTimeline;
 
 const HorizontalTimelineCode = `
 "use client";
-import { Timeline } from "keep-design";
+import { Timeline } from "keep-react";
 import { CalendarBlank } from "phosphor-react";
 
 const HorizontalTimeline = () => {

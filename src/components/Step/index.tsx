@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import type { FC, PropsWithChildren } from "react";
+
+import classNames from "classnames";
 import { StepBody } from "./StepBody";
 import { StepContent } from "./StepContent";
 import { StepContext } from "./StepContext";

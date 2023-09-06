@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import BarChart from "./BarChart";
+import { BarChart } from "./BarChart";
 const BarChartData = [
   {
     name: "2",

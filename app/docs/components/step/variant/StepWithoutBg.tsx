@@ -1,5 +1,5 @@
 "use client";
-import { Step } from "@/src/components/Step";
+import { Step } from "@/src/components";
 
 const StepWithoutBg = () => {
   return (
@@ -38,7 +38,7 @@ const StepWithoutBg = () => {
 
 const StepWithoutBgCode = `
 "use client";
-import { Step } from "keep-design";
+import { Step } from "keep-react";
 const StepWithoutBg = () => {
   return (
     <Step withRing={true} withBg={false}>

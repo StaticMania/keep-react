@@ -1,4 +1,4 @@
-import { Avatar } from "@/src/components/Avatar/Avatar";
+import { Avatar } from "@/src/components";
 
 const StatusOfAvatar = () => {
   return (
@@ -36,7 +36,7 @@ const StatusOfAvatar = () => {
 };
 
 const StatusOfAvatarCode = `
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 const StatusOfAvatar = () => {
   return (
       <Avatar shape="round" size="xl" status="online"  statusPosition="bottom-left"  img="/images/avatar/avatar-4.png" />

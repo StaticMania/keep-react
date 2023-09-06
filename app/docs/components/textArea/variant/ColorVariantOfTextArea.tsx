@@ -1,5 +1,5 @@
 "use client";
-import { Textarea } from "@/src/components/FormControls/Textarea";
+import { Textarea } from "@/src/components";
 
 const ColorVariantOfTextArea = () => {
   return (
@@ -16,7 +16,7 @@ const ColorVariantOfTextArea = () => {
 
 const ColorVariantOfTextAreaCode = `
 "use client";
-import { Textarea } from "keep-design";
+import { Textarea } from "keep-react";
 
 const ColorVariantOfTextArea = () => {
   return (

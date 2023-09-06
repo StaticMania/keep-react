@@ -1,6 +1,6 @@
 "use client";
+import { Slider } from "@/src/components";
 
-import { Slider } from "@/src/components/Slider";
 const SliderTooltipPosition = () => {
   return (
     <Slider
@@ -16,7 +16,7 @@ const SliderTooltipPosition = () => {
 
 const SliderTooltipPositionCode = `
 "use client";
-import { Slider } from "keep-design";
+import { Slider } from "keep-react";
 const SliderTooltipPosition = () => {
   return (
     <Slider

@@ -1,8 +1,7 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Modal } from "@/src/components/Modal";
+import { useState } from "react";
 import { CloudArrowUp } from "phosphor-react";
-import React, { useState } from "react";
+import { Button, Modal } from "@/src/components";
 
 const DefaultModal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -74,7 +73,7 @@ const DefaultModal = () => {
 const DefaultModalCode = `
 "use client";
 import { useState } from "react";
-import { Modal,Button } from "keep-design";
+import { Modal,Button } from "keep-react";
 import { CloudArrowUp } from "phosphor-react";
 
 const DefaultModal = () => {

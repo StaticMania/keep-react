@@ -1,5 +1,6 @@
 "use client";
-import { Spinner } from "@/src/components/Spinner";
+import { Spinner } from "@/src/components";
+
 const SpinnerColors = () => {
   return (
     <div className="my-5 ml-5 flex w-full items-end gap-3">
@@ -16,7 +17,8 @@ const SpinnerColors = () => {
 
 const SpinnerColorsCode = `
 "use client";
-import { Spinner } from "keep-design";
+import { Spinner } from "keep-react";
+
 const SpinnerColors = () => {
   return (
     <div className="my-5 ml-5 flex w-full items-end gap-3">

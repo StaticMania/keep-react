@@ -1,8 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Badge } from "@/src/components/Badge";
-import { Button } from "@/src/components/Button";
-import { Table } from "@/src/components/Table";
+import { Avatar, Badge, Button, Table } from "@/src/components";
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline } from "phosphor-react";
 
 const TransactionsTable = () => {
@@ -339,7 +336,7 @@ const TransactionsTable = () => {
 
 const TransactionsTableCode = `
 "use client";
-import { Avatar,Badge,Button,Table } from "keep-design";
+import { Avatar,Badge,Button,Table } from "keep-react";
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline } from "phosphor-react";
 
 const TransactionsTable = () => {

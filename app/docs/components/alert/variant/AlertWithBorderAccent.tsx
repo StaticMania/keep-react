@@ -1,5 +1,5 @@
 "use client";
-import { Alert } from "@/src/components/Alert";
+import { Alert } from "@/src/components";
 import Link from "next/link";
 import { Info } from "phosphor-react";
 
@@ -99,7 +99,7 @@ const AlertWithBorderAccent = () => {
 
 const AlertWithBorderAccentCode = `
 "use client";
-import { Alert } from "keep-design";
+import { Alert } from "keep-react";
 import Link from "next/link";
 import { Info } from "phosphor-react";
 

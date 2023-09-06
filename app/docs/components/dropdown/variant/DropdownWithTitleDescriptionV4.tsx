@@ -1,7 +1,5 @@
 "use client";
-
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { Dropdown, TextInput } from "@/src/components";
 import {
   CaretRight,
   FacebookLogo,
@@ -118,7 +116,7 @@ const DropdownWithTitleDescriptionV4 = () => {
 
 const DropdownWithTitleDescriptionV4Code = `
 "use client";
-import { Dropdown,TextInput } from "keep-design";
+import { Dropdown,TextInput } from "keep-react";
 import {
   CaretRight,
   FacebookLogo,

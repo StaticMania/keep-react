@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { useStatisticContext } from "./StatisticContext";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { useStatisticContext } from "./StatisticContext";
 
 export interface keepAmountTheme {
   base: string;
@@ -18,7 +18,7 @@ function formatNumber(number: number): string {
   return formattedNumber;
 }
 
-const Amount: FC<AmountProps> = ({ children }) => {
+export const Amount: FC<AmountProps> = ({ children }) => {
   const theme = useTheme().theme.statistic;
   const { showDollar } = useStatisticContext();
   return (
@@ -28,5 +28,3 @@ const Amount: FC<AmountProps> = ({ children }) => {
     </h3>
   );
 };
-
-export default Amount;

@@ -1,5 +1,5 @@
 "use client";
-import { Sidebar } from "@/src/components/Sidebar";
+import { Sidebar } from "@/src/components";
 import {
   ChartBar,
   Chat,
@@ -55,7 +55,7 @@ const SidebarWithContentSeparator = () => {
 const SidebarWithContentSeparatorCode = `
 
 "use client";
-import { Sidebar } from "keep-design";
+import { Sidebar } from "keep-react";
 import {
   ChartBar,
   Chat,

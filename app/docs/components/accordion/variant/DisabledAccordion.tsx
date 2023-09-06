@@ -1,5 +1,5 @@
 "use client";
-import { Accordion } from "@/src/components/Accordion";
+import { Accordion } from "@/src/components";
 
 const DisabledAccordion = () => {
   return (
@@ -31,7 +31,7 @@ const DisabledAccordion = () => {
 
 const DisabledAccordionCode = `
 "use client";
-import { Accordion } from "keep-design";
+import { Accordion } from "keep-react";
 
 const DisabledAccordion = () => {
   return (

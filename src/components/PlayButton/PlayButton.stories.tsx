@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Play } from "phosphor-react";
-import PlayButton from ".";
+import { PlayButton } from ".";
 
 const meta: Meta<typeof PlayButton> = {
   component: PlayButton,

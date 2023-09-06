@@ -25,7 +25,7 @@ export interface PositionInButtonGroup {
   end: string;
 }
 
-const ButtonGroup: FC<ButtonGroupProps> = ({
+export const ButtonGroup: FC<ButtonGroupProps> = ({
   children,
   pill,
   ...props
@@ -57,4 +57,3 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
 };
 
 ButtonGroup.displayName = "Button.Group";
-export default ButtonGroup;

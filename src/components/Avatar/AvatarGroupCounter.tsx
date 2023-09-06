@@ -9,13 +9,12 @@ export type AvatarGroupdCounterProps = PropsWithChildren<{
   size?: keyof AvatarSizes;
 }>;
 
-const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({
+export const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({
   total,
   href,
   size = "md",
 }) => {
   const theme = useTheme().theme.avatar;
-
   return (
     <a
       className={classNames(
@@ -31,4 +30,3 @@ const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({
 };
 
 AvatarGroupCounter.displayName = "Avatar.GroupCounter";
-export default AvatarGroupCounter;

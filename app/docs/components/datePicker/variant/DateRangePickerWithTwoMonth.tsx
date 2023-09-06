@@ -1,8 +1,7 @@
 "use client";
-
-import { DatePicker } from "@/src/components/DatePicker";
-import { rangePicker } from "@/src/components/DatePicker/DatePickerContext";
 import { useState } from "react";
+import { DatePicker } from "@/src/components";
+import { rangePicker } from "@/src/components/DatePicker/DatePickerContext";
 
 const DateRangePickerWithTwoMonth = () => {
   const [rangeDate, setRangeDate] = useState<rangePicker>();
@@ -16,7 +15,7 @@ const DateRangePickerWithTwoMonth = () => {
 const DateRangePickerWithTwoMonthCode = `
 "use client";
 import { useState } from "react";
-import { DatePicker } from "keep-design";
+import { DatePicker } from "keep-react";
 
 const DateRangePickerWithTwoMonth = () => {
   const [rangeDate, setRangeDate] = useState(null);

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { DatePicker } from "@/src/components/DatePicker";
+import { DatePicker } from "@/src/components";
 
 const MonthPicker = () => {
   const [monthPicker, setMonthPicker] = useState<Date | null | string>();
@@ -14,7 +14,7 @@ const MonthPicker = () => {
 const MonthPickerCode = `
 "use client";
 import { useState } from "react";
-import { DatePicker } from "keep-design";
+import { DatePicker } from "keep-react";
 
 const MonthPicker = () => {
   const [monthPicker, setMonthPicker] = useState(null);

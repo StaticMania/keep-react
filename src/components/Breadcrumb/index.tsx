@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { BreadcrumbContext } from "./BreadcrumbContext";
-import BreadcrumbItem from "./BreadcrumbItem";
+import { BreadcrumbItem } from "./BreadcrumbItem";
 import { useTheme } from "@/src/Keep/ThemeContex";
 
 export interface keepBreadCrumbTheme {

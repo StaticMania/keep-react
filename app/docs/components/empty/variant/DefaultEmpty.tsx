@@ -1,5 +1,5 @@
 "use client";
-import { Empty } from "@/src/components/Empty";
+import { Empty } from "@/src/components";
 
 const DefaultEmpty = () => {
   return (
@@ -13,7 +13,7 @@ const DefaultEmpty = () => {
 
 const DefaultEmptyCode = `
 "use client";
-import { Empty } from "keep-design";
+import { Empty } from "keep-react";
 
 const DefaultEmpty = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Rating } from "@/src/components/Rating";
+import { Rating } from "@/src/components";
 
 const RatingTypes = () => {
   return (
@@ -12,7 +12,7 @@ const RatingTypes = () => {
 
 const RatingTypesCode = `
 "use client";
-import { Rating } from "keep-design";
+import { Rating } from "keep-react";
 
 const RatingTypes = () => {
   return (

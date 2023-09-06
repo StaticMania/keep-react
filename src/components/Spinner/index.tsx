@@ -1,7 +1,8 @@
-import { KeepColors, KeepSizes } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import classNames from "classnames";
 import type { ComponentProps, FC } from "react";
+
+import classNames from "classnames";
+import { useTheme } from "@/src/Keep/ThemeContex";
+import { KeepColors, KeepSizes } from "@/src/Keep/KeepTheme";
 
 export interface KeepSpinnerTheme {
   base: string;

@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { Carousel } from "@/src/components/Carousel";
-import { ArrowLineLeft, ArrowLineRight } from "phosphor-react";
 import Image from "next/image";
+import { Carousel } from "@/src/components";
+import { ArrowLineLeft, ArrowLineRight } from "phosphor-react";
 
 const CarouselWithCustomControlIcon = () => {
   return (
@@ -51,7 +51,7 @@ const CarouselWithCustomControlIcon = () => {
 
 const CarouselWithCustomControlIconCode = `
 "use client";
-import { Carousel } from "keep-design";
+import { Carousel } from "keep-react";
 import { ArrowLineLeft, ArrowLineRight } from "phosphor-react";
 import Image from "next/image";
 

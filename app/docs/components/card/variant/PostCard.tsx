@@ -1,7 +1,6 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
-import { Card } from "@/src/components/Card";
 import Image from "next/image";
+import { Badge, Card } from "@/src/components";
 import { CaretRight } from "phosphor-react";
 
 const PostCard = () => {
@@ -72,7 +71,7 @@ const PostCard = () => {
 
 const PostCardCode = `
 "use client";
-import { Card } from "keep-design";
+import { Card } from "keep-react";
 import Image from "next/image";
 
 const PostCard = () => {

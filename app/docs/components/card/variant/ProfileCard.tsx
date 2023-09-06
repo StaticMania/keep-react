@@ -1,6 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Card } from "@/src/components/Card";
+import { Avatar, Card } from "@/src/components";
 import { FacebookLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
 
 const ProfileCard = () => {
@@ -112,7 +111,7 @@ const ProfileCard = () => {
 
 const ProfileCardCode = `
 "use client";
-import { Avatar,Card } from "keep-design";
+import { Avatar,Card } from "keep-react";
 import { FacebookLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
 
 const ProfileCard = () => {

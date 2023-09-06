@@ -49,44 +49,36 @@ export interface keepTabTheme {
   };
   tabpanel: string;
 }
-
 export interface TabStyles {
   default: string;
   underline: string;
   pills: string;
   fullWidth: string;
 }
-
 export interface BorderPosition {
   top: string;
   bottom: string;
 }
-
 export interface TabStyleItemProps {
   base: string;
   active: KeepBoolean;
   borderPosition: BorderPosition;
 }
-
 export type TabStyleItem<Type> = {
   [K in keyof Type]: TabStyleItemProps;
 };
-
 export type TabItemStatus = "active" | "notActive";
 
 interface TabEventProps {
   target: number;
 }
-
 interface TabKeyboardEventProps extends TabEventProps {
   event: KeyboardEvent<HTMLButtonElement>;
 }
-
 export interface TabNotificationColors
   extends Pick<KeepColors, "error" | "gray" | "info" | "success" | "warning"> {
   [key: string]: string;
 }
-
 export interface TabsProps
   extends PropsWithChildren<Omit<ComponentProps<"div">, "style" | "ref">> {
   style?: keyof TabStyles;
@@ -94,11 +86,9 @@ export interface TabsProps
   borderPosition?: "top" | "bottom";
   onActiveTabChange?: (activeTab: number) => void;
 }
-
 export interface TabsRef {
   setActiveTab: (activeTab: number) => void;
 }
-
 export const TabsComponent = forwardRef<TabsRef, TabsProps>(
   (
     {
@@ -269,7 +259,6 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
     );
   }
 );
-
 TabsComponent.displayName = "Tabs";
 TabItem.displayName = "Tabs.Item";
 export const Tabs = Object.assign(TabsComponent, { Item: TabItem });

@@ -1,7 +1,6 @@
 "use client";
-
-import { NumberInput } from "@/src/components/FormControls/NumberInput";
 import { useState } from "react";
+import { NumberInput } from "@/src/components";
 
 const DefaultNumberInput = () => {
   const [value, setValue] = useState(100);
@@ -10,8 +9,8 @@ const DefaultNumberInput = () => {
 
 const DefaultNumberInputCode = `
 "use client";
-import { NumberInput } from "keep-design";
 import { useState } from "react";
+import { NumberInput } from "keep-react";
 
 const DefaultNumberInput = () => {
   const [value, setValue] = useState(100);

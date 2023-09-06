@@ -1,6 +1,5 @@
 "use client";
-
-import { Dropdown } from "@/src/components/Dropdown";
+import { Dropdown } from "@/src/components";
 import {
   FacebookLogo,
   GoogleLogo,
@@ -47,7 +46,7 @@ const DropdownWithLogo = () => {
 };
 const DropdownWithLogoCode = `
 "use client";
-import { Dropdown } from "keep-design";
+import { Dropdown } from "keep-react";
 import {
   FacebookLogo,
   GoogleLogo,

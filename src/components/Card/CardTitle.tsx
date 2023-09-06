@@ -7,7 +7,10 @@ interface CardTitleProps {
   className?: string;
 }
 
-const CardTitle: React.FC<CardTitleProps> = ({ children, className }) => {
+export const CardTitle: React.FC<CardTitleProps> = ({
+  children,
+  className,
+}) => {
   return (
     <p
       className={classNames(
@@ -20,5 +23,3 @@ const CardTitle: React.FC<CardTitleProps> = ({ children, className }) => {
     </p>
   );
 };
-
-export default CardTitle;

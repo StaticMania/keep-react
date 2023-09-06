@@ -1,7 +1,5 @@
 "use client";
-
-import { Button } from "@/src/components/Button";
-import { Tooltip } from "@/src/components/Tooltip";
+import { Button, Tooltip } from "@/src/components";
 
 const TooltipTriggering = () => {
   return (
@@ -34,7 +32,7 @@ const TooltipTriggering = () => {
 
 const TooltipTriggeringCode = `
 "use client";
-import {Tooltip,Button } from "keep-design";
+import {Tooltip,Button } from "keep-react";
 
 const TooltipTriggering = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
+import { Badge } from "@/src/components";
 import { Crown, ShieldCheck } from "phosphor-react";
 
 const IconWithBadge = () => {
@@ -111,7 +111,7 @@ const IconWithBadge = () => {
 
 const IconWithBadgeCode = `
 "use client";
-import { Badge } from "keep-design";
+import { Badge } from "keep-react";
 
 const IconWithBadge = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Toggle } from "@/src/components/Switch";
+import { Toggle } from "@/src/components";
 
 const SwitchWithIcon = () => {
   return <Toggle bgColor="primary" label="Toggle" size="md" withIcon={true} />;
@@ -7,7 +7,7 @@ const SwitchWithIcon = () => {
 
 const SwitchWithIconCode = `
 "use client";
-import { Toggle } from "keep-design";
+import { Toggle } from "keep-react";
 
 const SwitchWithIcon = () => {
   return <Toggle bgColor="primary" label="Toggle" size="md" withIcon={true} />;

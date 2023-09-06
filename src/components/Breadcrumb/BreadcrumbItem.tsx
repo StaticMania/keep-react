@@ -12,7 +12,7 @@ export interface BreadcrumbItemProps
   disabled?: boolean;
 }
 
-const BreadcrumbItem = forwardRef<
+export const BreadcrumbItem = forwardRef<
   HTMLAnchorElement | HTMLSpanElement,
   BreadcrumbItemProps
 >(
@@ -57,6 +57,4 @@ const BreadcrumbItem = forwardRef<
     );
   }
 );
-
 BreadcrumbItem.displayName = "Breadcrumb.Item";
-export default BreadcrumbItem;

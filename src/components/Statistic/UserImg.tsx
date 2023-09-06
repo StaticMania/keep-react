@@ -5,8 +5,6 @@ interface UserImgProps {
   img: string;
 }
 
-const UserImg: FC<UserImgProps> = ({ img }) => {
+export const UserImg: FC<UserImgProps> = ({ img }) => {
   return <Avatar size="lg" shape="round" img={img} />;
 };
-
-export default UserImg;

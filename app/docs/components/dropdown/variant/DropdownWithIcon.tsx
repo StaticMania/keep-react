@@ -1,5 +1,5 @@
 "use client";
-import { Dropdown } from "@/src/components/Dropdown";
+import { Dropdown } from "@/src/components";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithIcon = () => {
@@ -40,7 +40,7 @@ const DropdownWithIcon = () => {
 
 const DropdownWithIconCode = `
 "use client";
-import { Dropdown } from "keep-design";
+import { Dropdown } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithIcon = () => {

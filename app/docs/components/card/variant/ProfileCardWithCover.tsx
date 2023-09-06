@@ -1,9 +1,6 @@
 "use client";
-
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Button } from "@/src/components/Button";
-import { Card } from "@/src/components/Card";
 import { Heart } from "phosphor-react";
+import { Avatar, Button, Card } from "@/src/components";
 
 const ProfileCardWithCover = () => {
   return (
@@ -122,7 +119,7 @@ const ProfileCardWithCover = () => {
 
 const ProfileCardWithCoverCode = `
 "use client";
-import { Avatar,Button,Card } from "keep-design";
+import { Avatar,Button,Card } from "keep-react";
 
 const ProfileCardWithCover = () => {
   return (

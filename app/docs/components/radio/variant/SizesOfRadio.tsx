@@ -1,7 +1,6 @@
 "use client";
-import { Label } from "@/src/components/FormControls/Label";
-import { Radio } from "@/src/components/FormControls/Radio";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Label, Radio } from "@/src/components";
 
 const SizesOfRadio = () => {
   const [selected, setSelected] = useState("");
@@ -53,8 +52,8 @@ const SizesOfRadio = () => {
 
 const SizesOfRadioCode = `
 "use client";
-import { Label,Radio } from "keep-design";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Label, Radio } from "keep-react";
 
 const SizesOfRadio = () => {
   const [selected, setSelected] = useState("");

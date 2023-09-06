@@ -6,8 +6,9 @@ import type {
   PropsWithChildren,
   ReactNode,
 } from "react";
-import { forwardRef, useId } from "react";
 import type { DeepPartial } from "../../helpers/deep-partial";
+
+import { forwardRef, useId } from "react";
 import { Badge } from "../Badge";
 import { Tooltip } from "../Tooltip";
 import { useSidebarContext } from "./SidebarContext";
@@ -90,7 +91,7 @@ const Children: FC<PropsWithChildren<{ id: string }>> = ({ id, children }) => {
   );
 };
 
-const SidebarItem = forwardRef<Element, SidebarItemProps>(
+export const SidebarItem = forwardRef<Element, SidebarItemProps>(
   (
     {
       active: isActive,
@@ -159,4 +160,3 @@ const SidebarItem = forwardRef<Element, SidebarItemProps>(
 );
 
 SidebarItem.displayName = "Sidebar.Item";
-export default SidebarItem;

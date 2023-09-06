@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@/src/components/Skeleton";
+import { Skeleton } from "@/src/components";
 
 const SkeletonWithAnimation = () => {
   return (

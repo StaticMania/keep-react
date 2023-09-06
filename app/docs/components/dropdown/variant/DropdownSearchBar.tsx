@@ -1,7 +1,6 @@
 "use client";
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
 import { CaretRight } from "phosphor-react";
+import { Dropdown, TextInput } from "@/src/components";
 
 const DropdownSearchBar = () => {
   return (
@@ -49,7 +48,7 @@ const DropdownSearchBar = () => {
 
 const DropdownSearchBarCode = `
 "use client";
-import { Dropdown,TextInput } from "keep-design";
+import { Dropdown,TextInput } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
 const DropdownSearchBar = () => {

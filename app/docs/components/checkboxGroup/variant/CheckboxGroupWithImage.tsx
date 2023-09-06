@@ -1,6 +1,6 @@
 "use client";
-import CheckboxGroup from "@/src/components/CheckboxGroup";
 import { useState } from "react";
+import { CheckboxGroup } from "@/src/components";
 
 const CheckboxGroupWithImage = () => {
   const [selected, setSelected] = useState("");

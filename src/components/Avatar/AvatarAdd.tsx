@@ -12,7 +12,7 @@ export type AvatarAddProps = PropsWithChildren<{
   ringColor?: string;
 }>;
 
-const AvatarAdd: React.FC<AvatarAddProps> = ({
+export const AvatarAdd: React.FC<AvatarAddProps> = ({
   icon,
   size = "md",
   bg = "#F0F3F7",
@@ -57,4 +57,3 @@ const AvatarAdd: React.FC<AvatarAddProps> = ({
 };
 
 AvatarAdd.displayName = "Avatar.Add";
-export default AvatarAdd;

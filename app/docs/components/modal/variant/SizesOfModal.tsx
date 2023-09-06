@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Button } from "@/src/components/Button";
-import { Modal } from "@/src/components/Modal";
 import { CloudArrowUp } from "phosphor-react";
+import { Button, Modal } from "@/src/components";
 
 const SizesOfModal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -43,7 +42,7 @@ const SizesOfModal = () => {
 const SizesOfModalCode = `
 "use client";
 import { useState } from "react";
-import { Button,Modal } from "keep-design";
+import { Button,Modal } from "keep-react";
 import { CloudArrowUp } from "phosphor-react";
 
 const SizesOfModal = () => {

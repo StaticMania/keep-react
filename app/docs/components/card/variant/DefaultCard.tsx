@@ -1,5 +1,5 @@
 "use client";
-import { Card } from "@/src/components/Card";
+import { Card } from "@/src/components";
 import { CaretRight } from "phosphor-react";
 
 const DefaultCard = () => {
@@ -23,7 +23,7 @@ const DefaultCard = () => {
 
 const DefaultCardCode = `
 "use client";
-import { Card } from "keep-design";
+import { Card } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
 const DefaultCard = () => {

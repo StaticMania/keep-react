@@ -1,6 +1,6 @@
-import { Dropdown } from "@/src/components/Dropdown";
+"use client";
 import { CaretRight } from "phosphor-react";
-import React from "react";
+import { Dropdown } from "@/src/components";
 
 const DropdownWithSearchAndIcon = () => {
   return (

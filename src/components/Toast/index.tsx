@@ -1,9 +1,10 @@
-import classNames from "classnames";
-import type { ComponentProps, FC, PropsWithChildren } from "react";
-import { useState } from "react";
 import type { Duration } from "./ToastContext";
-import { ToastContext } from "./ToastContext";
+import type { ComponentProps, FC, PropsWithChildren } from "react";
+
+import { useState } from "react";
+import classNames from "classnames";
 import { ToastToggle } from "./ToastToggle";
+import { ToastContext } from "./ToastContext";
 import { useTheme } from "@/src/Keep/ThemeContex";
 
 export interface keepToastTheme {
@@ -14,11 +15,9 @@ export interface keepToastTheme {
     base: string;
   };
 }
-
 export interface ToastProps extends PropsWithChildren<ComponentProps<"div">> {
   duration?: Duration;
 }
-
 const durationstyle: Record<Duration, string> = {
   75: "duration-75",
   100: "duration-100",
@@ -29,7 +28,6 @@ const durationstyle: Record<Duration, string> = {
   700: "duration-700",
   1000: "duration-1000",
 };
-
 const ToastComponent: FC<ToastProps> = ({
   children,
   duration = 300,

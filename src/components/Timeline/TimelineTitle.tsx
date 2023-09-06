@@ -1,5 +1,5 @@
-import { KeepHeadingLevel } from "@/src/Keep/KeepTheme";
 import classNames from "classnames";
+import { KeepHeadingLevel } from "@/src/Keep/KeepTheme";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 export type TimelineTitleProps = PropsWithChildren<

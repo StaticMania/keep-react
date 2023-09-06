@@ -1,6 +1,5 @@
 "use client";
-
-import { CheckBox } from "@/src/components/CheckBox";
+import { CheckBox } from "@/src/components";
 
 const DefaultCheckbox = () => {
   return (
@@ -13,7 +12,7 @@ const DefaultCheckbox = () => {
 
 const DefaultCheckboxCode = `
 "use client";
-import { CheckBox } from "keep-design";
+import { CheckBox } from "keep-react";
 
 const DefaultCheckbox = () => {
   return (

@@ -1,11 +1,11 @@
-import { Avatar } from "@/src/components/Avatar/Avatar";
+import { Avatar } from "@/src/components";
 
 const DefaultAvatar = () => {
   return <Avatar />;
 };
 
 const DefaultAvatarCode = `
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 const DefaultAvatar = () => {
   return <Avatar/>;
 };

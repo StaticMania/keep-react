@@ -1,5 +1,5 @@
 "use client";
-import { Progress } from "@/src/components/Progress";
+import { Progress } from "@/src/components";
 
 const VariantOfProgress = () => {
   return (
@@ -13,7 +13,7 @@ const VariantOfProgress = () => {
 
 const VariantOfProgressCode = `
 "use client";
-import { Progress } from "keep-design";
+import { Progress } from "keep-react";
 
 const VariantOfProgress = () => {
   return (

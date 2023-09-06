@@ -1,5 +1,5 @@
 "use client";
-import { Rating } from "@/src/components/Rating";
+import { Rating } from "@/src/components";
 
 const RatingWithProgress = () => {
   return (
@@ -15,7 +15,7 @@ const RatingWithProgress = () => {
 
 const RatingWithProgressCode = `
 "use client";
-import { Rating } from "keep-design";
+import { Rating } from "keep-react";
 
 const RatingWithProgress = () => {
   return (

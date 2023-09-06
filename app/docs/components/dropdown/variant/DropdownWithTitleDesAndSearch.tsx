@@ -1,8 +1,6 @@
 "use client";
-
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
 import { CaretRight, Crown } from "phosphor-react";
+import { Dropdown, TextInput } from "@/src/components";
 
 const DropdownWithTitleDesAndSearch = () => {
   return (

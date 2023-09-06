@@ -1,6 +1,5 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
-import { Sidebar } from "@/src/components/Sidebar";
+import { Sidebar, Badge } from "@/src/components";
 import {
   ChartBar,
   Chat,
@@ -92,7 +91,7 @@ const SidebarWithCTA = () => {
 
 const SidebarWithCTACode = `
 "use client";
-import { Badge,Sidebar } from "keep-design";
+import { Badge,Sidebar } from "keep-react";
 import {
   ChartBar,
   Chat,

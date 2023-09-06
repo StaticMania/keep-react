@@ -1,8 +1,6 @@
 "use client";
-
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
 import { CaretRight } from "phosphor-react";
+import { Dropdown, TextInput } from "@/src/components";
 
 const DropdownWithTitleDescriptionV3 = () => {
   return (
@@ -73,7 +71,7 @@ const DropdownWithTitleDescriptionV3 = () => {
 
 const DropdownWithTitleDescriptionV3Code = `
 "use client";
-import { Dropdown,TextInput } from "keep-design";
+import { Dropdown,TextInput } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithTitleDescriptionV3 = () => {

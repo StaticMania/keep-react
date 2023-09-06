@@ -1,5 +1,5 @@
 "use client";
-import { Breadcrumb } from "@/src/components/Breadcrumb";
+import { Breadcrumb } from "@/src/components";
 import { ArrowsLeftRight, House } from "phosphor-react";
 
 const BreadcrumbWithSeparatorIcon = () => {
@@ -53,7 +53,7 @@ const BreadcrumbWithSeparatorIcon = () => {
 
 const BreadcrumbWithSeparatorIconCode = `
 "use client";
-import { Breadcrumb } from "keep-design";
+import { Breadcrumb } from "keep-react";
 import { ArrowsLeftRight, House } from "phosphor-react";
 
 const BreadcrumbWithSeparatorIcon = () => {

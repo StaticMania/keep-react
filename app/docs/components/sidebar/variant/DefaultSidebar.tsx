@@ -1,5 +1,5 @@
 "use client";
-import { Sidebar } from "@/src/components/Sidebar";
+import { Sidebar } from "@/src/components";
 import {
   Chat,
   LockSimple,
@@ -54,7 +54,7 @@ const DefaultSidebar = () => {
 
 const DefaultSidebarCode = `
 "use client";
-import { Sidebar } from "@/src/components/Sidebar";
+import { Sidebar } from "keep-react";
 import {
   Chat,
   LockSimple,

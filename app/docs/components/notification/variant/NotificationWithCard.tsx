@@ -1,6 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Notification } from "@/src/components/Notification";
+import { Button, Notification } from "@/src/components";
 
 const NotificationWithCard = () => {
   const onDismiss = () => {
@@ -42,7 +41,7 @@ const NotificationWithCard = () => {
 
 const NotificationWithCardCode = `
 "use client";
-import { Notification,Button } from "keep-design";
+import { Notification,Button } from "keep-react";
 
 const NotificationWithCard = () => {
   const onDismiss = () => {

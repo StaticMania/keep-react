@@ -1,5 +1,5 @@
 "use client";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { TextInput } from "@/src/components";
 
 const DefaultInput = () => {
   return (
@@ -9,7 +9,7 @@ const DefaultInput = () => {
 
 const DefaultInputCode = `
 "use client";
-import { TextInput } from "keep-design";
+import { TextInput } from "keep-react";
 
 const DefaultInput = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Tag } from "@/src/components/Tag";
+import { Tag } from "@/src/components";
 
 const DefaultTag = () => {
   return (
@@ -11,7 +11,7 @@ const DefaultTag = () => {
 
 const DefaultTagCode = `
 "use client";
-import { Tag } from "keep-design";
+import { Tag } from "keep-react";
 const DefaultTag = () => {
   return <Tag color="gray">Default Tag</Tag>;
 };

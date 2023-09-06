@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
+import { Badge } from "@/src/components";
 
 const VariantOfBadge = () => {
   return (
@@ -70,7 +70,7 @@ const VariantOfBadge = () => {
 
 const VariantOfBadgeCode = `
 "use client";
-import { Badge } from "keep-design";
+import { Badge } from "keep-react";
 
 const VariantOfBadge = () => {
   return (

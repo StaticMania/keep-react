@@ -1,6 +1,6 @@
 "use client";
-import { Upload } from "@/src/components/Upload";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Upload } from "@/src/components";
 
 const HorizontalUploadSuccess = () => {
   const [fileName, setFileName] = useState("");
@@ -24,8 +24,8 @@ const HorizontalUploadSuccess = () => {
 
 const HorizontalUploadSuccessCode = `
 "use client";
-import { Upload } from "keep-design";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Upload } from "keep-react";
 
 const HorizontalUploadSuccess = () => {
   const [fileName, setFileName] = useState("");

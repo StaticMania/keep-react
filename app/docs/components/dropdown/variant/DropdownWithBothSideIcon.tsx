@@ -1,5 +1,5 @@
 "use client";
-import { Dropdown } from "@/src/components/Dropdown";
+import { Dropdown } from "@/src/components";
 import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
 
 const DropdownWithBothSideIcon = () => {
@@ -40,7 +40,7 @@ const DropdownWithBothSideIcon = () => {
 
 const DropdownWithBothSideIconCode = `
 "use client";
-import { Dropdown } from "keep-design";
+import { Dropdown } from "keep-react";
 import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
 
 const DropdownWithBothSideIcon = () => {

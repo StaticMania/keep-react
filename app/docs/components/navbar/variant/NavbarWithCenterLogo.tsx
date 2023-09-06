@@ -1,7 +1,6 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Navbar } from "@/src/components/Navbar";
 import Image from "next/image";
+import { Navbar, Button } from "@/src/components";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
 
 const NavbarWithCenterLogo = () => {
@@ -101,7 +100,7 @@ const NavbarWithCenterLogo = () => {
 const NavbarWithCenterLogoCode = `
 "use client";
 import Image from "next/image";
-import { Button,Navbar } from "keep-design";
+import { Button,Navbar } from "keep-react";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
 
 const NavbarWithCenterLogo = () => {

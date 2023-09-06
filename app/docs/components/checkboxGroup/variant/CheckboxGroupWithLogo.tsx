@@ -1,6 +1,6 @@
 "use client";
-import CheckboxGroup from "@/src/components/CheckboxGroup";
 import { useState } from "react";
+import { CheckboxGroup } from "@/src/components";
 
 const CheckboxGroupWithLogo = () => {
   const [selected, setSelected] = useState("");
@@ -54,7 +54,7 @@ const CheckboxGroupWithLogo = () => {
 };
 const CheckboxGroupWithLogoCode = `
 "use client";
-import CheckboxGroup from "keep-design";
+import CheckboxGroup from "keep-react";
 import { useState } from "react";
 
 const CheckboxGroupWithLogo = () => {

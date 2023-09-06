@@ -1,8 +1,10 @@
-import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
+
+import classNames from "classnames";
 import { TableContext } from "./TableContext";
 import { DeepPartial } from "@/src/helpers/deep-partial";
 import { useTheme } from "@/src/Keep/ThemeContex";
+
 export interface keepTableHeadCellTheme {
   base: string;
   icon: {

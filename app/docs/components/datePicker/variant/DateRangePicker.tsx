@@ -15,7 +15,7 @@ const DateRangePicker = () => {
 const DateRangePickerCode = `
 "use client";
 import { useState } from "react";
-import { DatePicker} from "keep-design";
+import { DatePicker} from "keep-react";
 
 const DateRangePicker = () => {
   const [rangeDate, setRangeDate] = useState(null);

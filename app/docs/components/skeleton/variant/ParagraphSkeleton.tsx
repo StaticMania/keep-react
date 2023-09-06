@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@/src/components/Skeleton";
+import { Skeleton } from "@/src/components";
 
 const ParagraphSkeleton = () => {
   return (
@@ -24,7 +24,7 @@ const ParagraphSkeleton = () => {
 
 const ParagraphSkeletonCode = `
 "use client";
-import { Skeleton } from "keep-design";
+import { Skeleton } from "keep-react";
 
 const ParagraphSkeleton = () => {
   return (

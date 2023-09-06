@@ -1,5 +1,5 @@
 "use client";
-import { Sidebar } from "@/src/components/Sidebar";
+import { Sidebar } from "@/src/components";
 import {
   Chat,
   Handbag,
@@ -54,7 +54,7 @@ const SidebarWithBranding = () => {
 
 const SidebarWithBrandingCode = `
 "use client";
-import { Sidebar } from "keep-design";
+import { Sidebar } from "keep-react";
 import {
   Chat,
   Handbag,

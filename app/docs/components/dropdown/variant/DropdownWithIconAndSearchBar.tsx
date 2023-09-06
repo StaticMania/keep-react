@@ -1,6 +1,5 @@
 "use client";
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { Dropdown, TextInput } from "@/src/components";
 import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
 
 const DropdownWithIconAndSearchBar = () => {
@@ -41,7 +40,7 @@ const DropdownWithIconAndSearchBar = () => {
 
 const DropdownWithIconAndSearchBarCode = `
 "use client";
-import { Dropdown,TextInput } from "keep-design";
+import { Dropdown,TextInput } from "keep-react";
 import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
 
 const DropdownWithIconAndSearchBar = () => {

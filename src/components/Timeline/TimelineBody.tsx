@@ -6,7 +6,6 @@ export type TimelineBodyProps = PropsWithChildren<
     className?: string;
   }
 >;
-
 export const TimelineBody: FC<TimelineBodyProps> = ({
   children,
   className,

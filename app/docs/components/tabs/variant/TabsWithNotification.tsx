@@ -1,5 +1,5 @@
 "use client";
-import { Tabs } from "@/src/components/Tabs";
+import { Tabs } from "@/src/components";
 
 const TabsWithNotification = () => {
   return (
@@ -22,7 +22,7 @@ const TabsWithNotification = () => {
 
 const TabsWithNotificationCode = `
 "use client";
-import { Tabs } from "keep-design";
+import { Tabs } from "keep-react";
 
 const TabsWithNotification = () => {
   return (

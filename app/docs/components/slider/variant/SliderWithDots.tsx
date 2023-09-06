@@ -1,5 +1,5 @@
 "use client";
-import { Slider } from "@/src/components/Slider";
+import { Slider } from "@/src/components";
 
 const SliderWithDots = () => {
   return (
@@ -16,7 +16,7 @@ const SliderWithDots = () => {
 
 const SliderWithDotsCode = `
 "use client";
-import { Slider } from "keep-design";
+import { Slider } from "keep-react";
 
 const SliderWithDots = () => {
   return (

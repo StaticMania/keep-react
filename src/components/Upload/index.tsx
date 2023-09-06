@@ -1,15 +1,16 @@
-import { FC } from "react";
+import type { FC } from "react";
 import type { keepInputFieldTheme } from "./InputField";
-import InputField from "./InputField";
-import { UploadContext } from "./UploadContext";
 import type { keepUploadFailedTheme } from "./UploadFailed";
-import UploadFailed from "./UploadFailed";
 import type { UploadHorizontalTheme } from "./UploadHorizontal";
-import UploadHorizontal from "./UploadHorizontal";
 import type { UploadPendingTheme } from "./UploadPending";
-import UploadPending from "./UploadPending";
 import type { UploadSuccessTheme } from "./UploadSuccess";
-import UploadSuccess from "./UploadSuccess";
+
+import { InputField } from "./InputField";
+import { UploadFailed } from "./UploadFailed";
+import { UploadHorizontal } from "./UploadHorizontal";
+import { UploadPending } from "./UploadPending";
+import { UploadSuccess } from "./UploadSuccess";
+import { UploadContext } from "./UploadContext";
 
 export interface keepUploadTheme {
   input: keepInputFieldTheme;
@@ -18,7 +19,6 @@ export interface keepUploadTheme {
   uploadPending: UploadPendingTheme;
   uploadSuccess: UploadSuccessTheme;
 }
-
 interface UploadComponentProps {
   file?: string;
   horizontal?: boolean;
@@ -29,7 +29,6 @@ interface UploadComponentProps {
   uploadTime?: string;
   onFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
-
 const UploadComponent: FC<UploadComponentProps> = ({
   file,
   horizontal = false,

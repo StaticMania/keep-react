@@ -1,7 +1,6 @@
 "use client";
-import { Label } from "@/src/components/FormControls/Label";
-import { Radio } from "@/src/components/FormControls/Radio";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Label, Radio } from "@/src/components";
 
 const DefaultRadio = () => {
   const [selected, setSelected] = useState("");
@@ -82,7 +81,7 @@ const DefaultRadio = () => {
 const DefaultRadioCode = `
 "use client";
 import  { useState } from "react";
-import { Label,Radio } from "keep-design";
+import { Label,Radio } from "keep-react";
 
 const DefaultRadio = () => {
   const [selected, setSelected] = useState("");

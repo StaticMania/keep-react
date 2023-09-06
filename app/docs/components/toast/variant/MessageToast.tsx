@@ -1,5 +1,5 @@
 "use client";
-import { Toast } from "@/src/components/Toast";
+import { Toast } from "@/src/components";
 import { TelegramLogo } from "phosphor-react";
 
 const MessageToast = () => {
@@ -19,7 +19,7 @@ const MessageToast = () => {
 
 const MessageToastCode = `
 "use client";
-import { Toast } from "keep-design";
+import { Toast } from "keep-react";
 import { TelegramLogo } from "phosphor-react";
 
 const MessageToast = () => {

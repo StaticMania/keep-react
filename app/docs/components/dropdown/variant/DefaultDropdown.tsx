@@ -1,5 +1,5 @@
 "use client";
-import { Dropdown } from "@/src/components/Dropdown";
+import { Dropdown } from "@/src/components";
 
 const DefaultDropdown = () => {
   return (
@@ -19,7 +19,7 @@ const DefaultDropdown = () => {
 
 const DefaultDropdownCode = `
 "use client";
-import { Dropdown } from "keep-design";
+import { Dropdown } from "keep-react";
 
 const DefaultDropdown = () => {
   return (

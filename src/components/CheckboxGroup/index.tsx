@@ -81,7 +81,7 @@ export interface keepCheckboxGroupTheme {
   };
 }
 
-const CheckboxGroup: FC<CheckboxGroupProps> = ({
+export const CheckboxGroup: FC<CheckboxGroupProps> = ({
   checkboxType = "square",
   title,
   description,
@@ -195,5 +195,3 @@ const CheckboxGroup: FC<CheckboxGroupProps> = ({
     </label>
   );
 };
-
-export default CheckboxGroup;

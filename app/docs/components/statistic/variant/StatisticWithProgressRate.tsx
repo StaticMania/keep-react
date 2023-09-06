@@ -1,5 +1,5 @@
 "use client";
-import { Statistic } from "@/src/components/Statistic";
+import { Statistic } from "@/src/components";
 
 const StatisticWithProgressRate = () => {
   return (
@@ -15,7 +15,7 @@ const StatisticWithProgressRate = () => {
 
 const StatisticWithProgressRateCode = `
 "use client";
-import { Statistic } from "keep-design";
+import { Statistic } from "keep-react";
 
 const StatisticWithProgressRate = () => {
   return (

@@ -1,6 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Tooltip } from "@/src/components/Tooltip";
+import { Button, Tooltip } from "@/src/components";
 
 const DefaultTooltip = () => {
   return (
@@ -20,7 +19,7 @@ const DefaultTooltip = () => {
 
 const DefaultTooltipCode = `
 "use client";
-import { Button,Tooltip } from "keep-design";
+import { Button,Tooltip } from "keep-react";
 
 const DefaultTooltip = () => {
   return (

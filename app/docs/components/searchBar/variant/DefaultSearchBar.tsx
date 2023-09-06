@@ -1,8 +1,7 @@
 "use client";
-import { Dropdown } from "@/src/components/Dropdown";
-import { SearchBar } from "@/src/components/SearchBar";
-import { ArrowRight, MagnifyingGlass } from "phosphor-react";
 import { useState } from "react";
+import { SearchBar, Dropdown } from "@/src/components";
+import { ArrowRight, MagnifyingGlass } from "phosphor-react";
 
 export interface Book {
   id: number;
@@ -61,7 +60,7 @@ const DefaultSearchBar = () => {
 const DefaultSearchBarCode = `
 "use client";
 import { useState } from "react";
-import { Dropdown,SearchBar } from "keep-design";
+import { Dropdown,SearchBar } from "keep-react";
 import { ArrowRight, MagnifyingGlass } from "phosphor-react";
 
 const books = [

@@ -1,5 +1,5 @@
 "use client";
-import { Spinner } from "@/src/components/Spinner";
+import { Spinner } from "@/src/components";
 
 const DefaultSpinner = () => {
   return <Spinner color="info" size="lg" />;
@@ -7,7 +7,7 @@ const DefaultSpinner = () => {
 
 const DefaultSpinnerCode = `
 "use client";
-import { Spinner } from "keep-design";
+import { Spinner } from "keep-react";
 
 const DefaultSpinner = () => {
   return <Spinner color="info" size="lg" />;

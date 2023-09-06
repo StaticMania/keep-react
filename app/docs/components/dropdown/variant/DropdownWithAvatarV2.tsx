@@ -1,8 +1,5 @@
 "use client";
-
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { Avatar, Dropdown, TextInput } from "@/src/components";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithAvatarV2 = () => {
@@ -112,7 +109,7 @@ const DropdownWithAvatarV2 = () => {
 
 const DropdownWithAvatarV2Code = `
 "use client";
-import { Avatar,Dropdown,TextInput } from "keep-design";
+import { Avatar,Dropdown,TextInput } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithAvatarV2 = () => {

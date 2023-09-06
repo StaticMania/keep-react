@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { Carousel } from "@/src/components/Carousel";
 import Image from "next/image";
+import { Carousel } from "@/src/components";
 
 const CarousellWithTextControll = () => {
   return (

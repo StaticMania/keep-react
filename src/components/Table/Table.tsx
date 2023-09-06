@@ -1,16 +1,17 @@
-import classNames from "classnames";
 import "./Table.css";
+import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { keepTableBodyTheme } from "./TableBody";
+import type { TableContextType } from "./TableContext";
+import type { keepTableHeadTheme } from "./TableHead";
+import type { keepTableRowTheme } from "./TableRow";
+
 import { TableBody } from "./TableBody";
 import { keepTableCaptionTheme, TableCaption } from "./TableCaption";
 import { TableCell } from "./TableCell";
-import type { TableContextType } from "./TableContext";
 import { TableContext } from "./TableContext";
-import type { keepTableHeadTheme } from "./TableHead";
 import { TableHead } from "./TableHead";
 import { TableHeadCell } from "./TableHeadCell";
-import type { keepTableRowTheme } from "./TableRow";
 import { TableRow } from "./TableRow";
 import { DeepPartial } from "@/src/helpers/deep-partial";
 import { useTheme } from "@/src/Keep/ThemeContex";
@@ -22,13 +23,11 @@ export interface keepTableTheme {
   body: keepTableBodyTheme;
   caption: keepTableCaptionTheme;
 }
-
 export interface keepTableRootTheme {
   base: string;
   shadow: string;
   wrapper: string;
 }
-
 export interface TableProps
   extends PropsWithChildren,
     ComponentProps<"table">,
@@ -38,7 +37,6 @@ export interface TableProps
   showBorder?: boolean;
   showBorderPosition?: "left" | "right";
 }
-
 const TableComponent: FC<TableProps> = ({
   children,
   className,

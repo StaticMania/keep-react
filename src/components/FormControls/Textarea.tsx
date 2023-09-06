@@ -2,7 +2,7 @@ import classNames from "classnames";
 import type { ComponentProps, ReactNode } from "react";
 import { forwardRef } from "react";
 import { excludeClassName } from "../../helpers/exclude";
-import HelperText from "./HelperText";
+import { HelperText } from "./HelperText";
 import type { KeepBoolean, KeepColors } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
 

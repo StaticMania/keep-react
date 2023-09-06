@@ -1,5 +1,5 @@
 "use client";
-import { Breadcrumb } from "@/src/components/Breadcrumb";
+import { Breadcrumb } from "@/src/components";
 import { CaretRight } from "phosphor-react";
 
 const BreadcrumbWithBorder = () => {
@@ -47,7 +47,7 @@ const BreadcrumbWithBorder = () => {
 
 const BreadcrumbWithBorderCode = `
 "use client";
-import { Breadcrumb } from "keep-design";
+import { Breadcrumb } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
 const BreadcrumbWithBorder = () => {

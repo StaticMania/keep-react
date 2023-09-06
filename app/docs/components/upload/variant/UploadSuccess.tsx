@@ -1,6 +1,6 @@
 "use client";
-import { Upload } from "@/src/components/Upload";
 import { useState } from "react";
+import { Upload } from "@/src/components";
 
 const UploadSuccess = () => {
   const [fileName, setFileName] = useState("");
@@ -23,13 +23,13 @@ const UploadSuccess = () => {
 
 const UploadSuccessCode = `
 "use client";
-import { Upload } from "keep-design";
 import { useState } from "react";
+import { Upload } from "keep-react";
 
 const UploadSuccess = () => {
   const [fileName, setFileName] = useState("");
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (event) => {
     const file = event.target.files && event.target.files[0];
     if (file) {
       setFileName(file.name);

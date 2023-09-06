@@ -1,5 +1,5 @@
 "use client";
-import Tree from "@/src/components/Tree";
+import { Tree } from "@/src/components";
 import { nodes } from "./DefaultTree";
 
 const TreeWithCheckbox = () => {
@@ -17,7 +17,7 @@ const TreeWithCheckbox = () => {
 
 const TreeWithCheckboxCode = `
 "use client";
-import Tree from "keep-design";
+import {Tree} from "keep-design";
 const nodes = [
   {
     id: 1,

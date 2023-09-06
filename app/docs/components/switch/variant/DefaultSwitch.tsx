@@ -1,5 +1,5 @@
 "use client";
-import { Toggle } from "@/src/components/Switch";
+import { Toggle } from "@/src/components";
 
 const DefaultSwitch = () => {
   return <Toggle bgColor="primary" size="md" />;
@@ -7,7 +7,7 @@ const DefaultSwitch = () => {
 
 const DefaultSwitchCode = `
 "use client";
-import { Toggle } from "keep-design";
+import { Toggle } from "keep-react";
 
 const DefaultSwitch = () => {
   return <Toggle bgColor="primary" size="md" />;

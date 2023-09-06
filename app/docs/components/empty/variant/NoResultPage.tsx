@@ -1,5 +1,5 @@
 "use client";
-import { Empty } from "@/src/components/Empty";
+import { Empty } from "@/src/components";
 
 const NoResultPage = () => {
   return (
@@ -14,7 +14,7 @@ const NoResultPage = () => {
 
 const NoResultPageCode = `
 "use client";
-import { Empty } from "keep-design";
+import { Empty } from "keep-react";
 
 const NoResultPage = () => {
   return (

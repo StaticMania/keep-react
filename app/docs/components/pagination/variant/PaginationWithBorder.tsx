@@ -1,6 +1,6 @@
 "use client";
-import { Pagination } from "@/src/components/Pagination";
 import { useState } from "react";
+import { Pagination } from "@/src/components";
 
 const PaginationWithBorder = () => {
   const [currentPage, setCurrentPage] = useState(1);

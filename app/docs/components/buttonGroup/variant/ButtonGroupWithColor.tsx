@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
+import { Button } from "@/src/components";
 
 const ButtonGroupWithColor = () => {
   return (
@@ -16,7 +16,7 @@ const ButtonGroupWithColor = () => {
 
 const ButtonGroupWithColorCode = `
 "use client";
-import { Button } from "keep-design";
+import { Button } from "keep-react";
 
 const ButtonGroupWithColor = () => {
   return (

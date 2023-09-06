@@ -1,7 +1,6 @@
 "use client";
-
 import { useState } from "react";
-import { DatePicker } from "@/src/components/DatePicker";
+import { DatePicker } from "@/src/components";
 
 const DefaultDatePicker = () => {
   const [date, setDate] = useState<Date | null>(null);
@@ -15,7 +14,7 @@ const DefaultDatePicker = () => {
 const DefaultDatePickerCode = `
 "use client";
 import { useState } from "react";
-import { DatePicker } from "keep-design";
+import { DatePicker } from "keep-react";
 
 const DefaultDatePicker = () => {
   const [date, setDate] = useState(null);

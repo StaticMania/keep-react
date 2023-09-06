@@ -1,5 +1,5 @@
 "use client";
-import { Carousel } from "@/src/components/Carousel";
+import { Carousel } from "@/src/components";
 
 const MultipleCarousel = () => {
   return (
@@ -46,7 +46,7 @@ const MultipleCarousel = () => {
 const MultipleCarouselCode = `
 
 "use client";
-import { Carousel } from "keep-design";
+import { Carousel } from "keep-react";
 
 const MultipleCarousel = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@/src/components/Skeleton";
+import { Skeleton } from "@/src/components";
 
 const DefaultSkeleton = () => {
   return (
@@ -13,7 +13,7 @@ const DefaultSkeleton = () => {
 
 const DefaultSkeletonCode = `
 "use client";
-import { Skeleton } from "keep-design";
+import { Skeleton } from "keep-react";
 
 const DefaultSkeleton = () => {
   return (

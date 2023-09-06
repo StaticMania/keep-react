@@ -1,9 +1,9 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import CustomInput from "./CustomInput";
-
 import { useDatePickerContext } from "./DatePickerContext";
-const SingleDatePicker: React.FC = () => {
+
+export const SingleDatePicker: React.FC = () => {
   const { showTwoMonth, singleDatePicker } = useDatePickerContext();
   const [date, setDate] = useState<Date | null>();
   const handleChange = (date: Date | null) => {
@@ -24,5 +24,3 @@ const SingleDatePicker: React.FC = () => {
     ></DatePicker>
   );
 };
-
-export default SingleDatePicker;

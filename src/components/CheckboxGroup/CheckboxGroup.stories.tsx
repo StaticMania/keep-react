@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { SquaresFour } from "phosphor-react";
 import { useState } from "react";
-import CheckboxGroup from ".";
+import { CheckboxGroup } from ".";
 
 const meta: Meta<typeof CheckboxGroup> = {
   component: CheckboxGroup,

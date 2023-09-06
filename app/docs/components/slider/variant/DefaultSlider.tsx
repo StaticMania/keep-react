@@ -1,5 +1,5 @@
 "use client";
-import { Slider } from "@/src/components/Slider";
+import { Slider } from "@/src/components";
 
 const DefaultSlider = () => {
   return (
@@ -17,7 +17,7 @@ const DefaultSlider = () => {
 
 const DefaultSliderCode = `
 "use client";
-import { Slider } from "keep-design";
+import { Slider } from "keep-react";
 
 const DefaultSlider = () => {
   return (

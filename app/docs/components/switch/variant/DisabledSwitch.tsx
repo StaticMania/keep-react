@@ -1,5 +1,5 @@
 "use client";
-import { Toggle } from "@/src/components/Switch";
+import { Toggle } from "@/src/components";
 
 const DisabledSwitch = () => {
   return (
@@ -9,7 +9,7 @@ const DisabledSwitch = () => {
 
 const DisabledSwitchCode = `
 "use client";
-import { Toggle } from "keep-design";
+import { Toggle } from "keep-react";
 
 const DisabledSwitch = () => {
   return (

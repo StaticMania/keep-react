@@ -1,5 +1,5 @@
 "use client";
-import { Breadcrumb } from "@/src/components/Breadcrumb";
+import { Breadcrumb } from "@/src/components";
 import { CaretRight, House } from "phosphor-react";
 import React from "react";
 

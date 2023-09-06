@@ -1,5 +1,6 @@
 "use client";
-import { Spinner } from "@/src/components/Spinner";
+import { Spinner } from "@/src/components";
+
 const SpinnerSizes = () => {
   return (
     <div className="flex w-full items-end gap-3">
@@ -14,7 +15,8 @@ const SpinnerSizes = () => {
 
 const SpinnerSizesCode = `
 "use client";
-import { Spinner } from "keep-design";
+import { Spinner } from "keep-react";
+
 const SpinnerSizes = () => {
   return (
     <div className="flex w-full items-end gap-3">

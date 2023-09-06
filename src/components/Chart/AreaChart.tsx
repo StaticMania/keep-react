@@ -23,7 +23,7 @@ interface AreaChartProps {
   chartData?: unknown[];
 }
 
-const AreaChart: FC<AreaChartProps> = ({
+export const AreaChart: FC<AreaChartProps> = ({
   showGridLine = false,
   showTooltip = false,
   chartType = "linear",
@@ -108,5 +108,3 @@ const AreaChart: FC<AreaChartProps> = ({
 
   return <>{RenderLineChart}</>;
 };
-
-export default AreaChart;

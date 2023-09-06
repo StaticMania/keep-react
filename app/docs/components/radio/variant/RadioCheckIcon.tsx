@@ -1,7 +1,6 @@
 "use client";
-import { Label } from "@/src/components/FormControls/Label";
-import { Radio } from "@/src/components/FormControls/Radio";
 import { useState } from "react";
+import { Label, Radio } from "@/src/components";
 
 const RadioCheckIcon = () => {
   const [selected, setSelected] = useState("");
@@ -81,7 +80,7 @@ const RadioCheckIcon = () => {
 const RadioCheckIconCode = `
 "use client";
 import { useState } from "react";
-import { Label,Radio } from "keep-design";
+import { Label,Radio } from "keep-react";
 
 const RadioCheckIcon = () => {
   const [selected, setSelected] = useState("");

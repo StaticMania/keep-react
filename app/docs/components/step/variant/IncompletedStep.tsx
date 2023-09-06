@@ -1,5 +1,5 @@
 "use client";
-import { Step } from "@/src/components/Step";
+import { Step } from "@/src/components";
 
 const IncompletedStep = () => {
   return (
@@ -38,7 +38,7 @@ const IncompletedStep = () => {
 
 const IncompletedStepCode = `
 "use client";
-import { Step } from "keep-design";
+import { Step } from "keep-react";
 
 const IncompletedStep = () => {
   return (

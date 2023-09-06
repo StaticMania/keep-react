@@ -101,5 +101,3 @@ export const Alert: FC<AlertProps> = ({
     </div>
   );
 };
-
-Alert.displayName = "Alert";

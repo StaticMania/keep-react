@@ -22,7 +22,7 @@ export interface HelperTextProps
   disabled?: boolean;
 }
 
-const HelperText: FC<HelperTextProps> = ({
+export const HelperText: FC<HelperTextProps> = ({
   value,
   children,
   disabled = false,
@@ -45,5 +45,3 @@ const HelperText: FC<HelperTextProps> = ({
     </p>
   );
 };
-
-export default HelperText;

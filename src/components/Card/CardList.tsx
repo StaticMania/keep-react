@@ -6,8 +6,6 @@ interface CardListProps {
   className?: string;
 }
 
-const CardList: React.FC<CardListProps> = ({ children, className }) => {
+export const CardList: React.FC<CardListProps> = ({ children, className }) => {
   return <li className={classNames(className)}>{children}</li>;
 };
-
-export default CardList;

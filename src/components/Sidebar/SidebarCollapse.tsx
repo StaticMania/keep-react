@@ -1,10 +1,11 @@
+import type { ComponentProps, FC, PropsWithChildren } from "react";
+import type { SidebarItemProps } from "./SidebarItem";
+
 import classNames from "classnames";
 import { CaretDown } from "phosphor-react";
-import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useEffect, useId, useState } from "react";
 import { Tooltip } from "../Tooltip";
 import { useSidebarContext } from "./SidebarContext";
-import type { SidebarItemProps } from "./SidebarItem";
 import { SidebarItemContext } from "./SidebarItemContext";
 import { KeepBoolean } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
@@ -37,7 +38,7 @@ export interface SidebarCollapseProps
   theme?: DeepPartial<KeepSidebarTheme>;
 }
 
-const SidebarCollapse: FC<SidebarCollapseProps> = ({
+export const SidebarCollapse: FC<SidebarCollapseProps> = ({
   children,
   className,
   icon: Icon,
@@ -116,6 +117,4 @@ const SidebarCollapse: FC<SidebarCollapseProps> = ({
     </Wrapper>
   );
 };
-
 SidebarCollapse.displayName = "Sidebar.Collapse";
-export default SidebarCollapse;

@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
+import { Badge } from "@/src/components";
 
 const SizesOfBadge = () => {
   return (
@@ -25,7 +25,7 @@ const SizesOfBadge = () => {
 
 const SizesOfBadgeCode = `
 "use client";
-import { Badge } from "keep-design";
+import { Badge } from "keep-react";
 
 const SizesOfBadge = () => {
   return (

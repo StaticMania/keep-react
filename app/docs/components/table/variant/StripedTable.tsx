@@ -1,7 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Button } from "@/src/components/Button";
-import { Table } from "@/src/components/Table";
+import { Avatar, Button, Table } from "@/src/components";
 import { Cube, DotsThreeOutline } from "phosphor-react";
 
 const StripedTable = () => {
@@ -442,7 +440,7 @@ const StripedTable = () => {
 
 const StripedTableCode = `
 "use client";
-import { Avatar,Button,Table } from "keep-design";
+import { Avatar,Button,Table } from "keep-react";
 import { Cube, DotsThreeOutline } from "phosphor-react";
 
 const StripedTable = () => {

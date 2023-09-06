@@ -1,5 +1,5 @@
 "use client";
-import { Accordion } from "@/src/components/Accordion";
+import { Accordion } from "@/src/components";
 import { CaretDown, CaretUp } from "phosphor-react";
 
 const AccordionWithCustomIcon = () => {
@@ -57,7 +57,7 @@ const AccordionWithCustomIcon = () => {
 
 const AccordionWithCustomIconCode = `
 "use client";
-import { Accordion } from "keep-design";
+import { Accordion } from "keep-react";
 import { CaretDown, CaretUp } from "phosphor-react";
 
 const AccordionWithCustomIcon = () => {

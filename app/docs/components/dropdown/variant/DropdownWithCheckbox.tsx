@@ -1,7 +1,5 @@
 "use client";
-
-import { CheckBox } from "@/src/components/CheckBox";
-import { Dropdown } from "@/src/components/Dropdown";
+import { CheckBox, Dropdown } from "@/src/components";
 
 const DropdownWithCheckbox = () => {
   return (
@@ -65,7 +63,7 @@ const DropdownWithCheckbox = () => {
 
 const DropdownWithCheckboxCode = `
 "use client";
-import { CheckBox,Dropdown } from "keep-design";
+import { CheckBox,Dropdown } from "keep-react";
 
 const DropdownWithCheckbox = () => {
   return (

@@ -2,9 +2,9 @@ import { CaretLeft, CaretRight } from "phosphor-react";
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import CustomInput from "./CustomInput";
-
 import { useDatePickerContext } from "./DatePickerContext";
-const YearPicker: React.FC = () => {
+
+export const YearPicker: React.FC = () => {
   const { yearPicker } = useDatePickerContext();
   const [startDate, setStartDate] = useState<Date | null>(null);
   const handleDateChange = (date: Date | null) => {
@@ -56,5 +56,3 @@ const YearPicker: React.FC = () => {
     />
   );
 };
-
-export default YearPicker;

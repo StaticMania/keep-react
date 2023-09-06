@@ -1,9 +1,9 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import CustomInput from "./CustomInput";
-
 import { useDatePickerContext } from "./DatePickerContext";
-const DateRangePicker: React.FC = () => {
+
+export const DateRangePicker: React.FC = () => {
   const { showTwoMonth, rangeDate } = useDatePickerContext();
   const [selectedStartDate, setSelectedStartDate] = useState<Date | null>(null);
   const [selectedEndDate, setSelectedEndDate] = useState<Date | null>(null);
@@ -31,5 +31,3 @@ const DateRangePicker: React.FC = () => {
     />
   );
 };
-
-export default DateRangePicker;

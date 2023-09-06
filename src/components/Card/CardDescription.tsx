@@ -1,13 +1,12 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
-import React from "react";
 
 interface CardDescriptionProps {
   children?: ReactNode;
   className?: string;
 }
 
-const CardDescription: React.FC<CardDescriptionProps> = ({
+export const CardDescription: React.FC<CardDescriptionProps> = ({
   children,
   className,
 }) => {
@@ -23,5 +22,3 @@ const CardDescription: React.FC<CardDescriptionProps> = ({
     </p>
   );
 };
-
-export default CardDescription;

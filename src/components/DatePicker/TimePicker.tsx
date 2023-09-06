@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
 import DatePicker from "react-datepicker";
 import CustomInput from "./CustomInput";
-
 import { useDatePickerContext } from "./DatePickerContext";
-const TimePicker: FC = () => {
+
+export const TimePicker: FC = () => {
   const { timePicker } = useDatePickerContext();
   const [selectedTime, setSelectedTime] = useState(new Date());
 
@@ -37,5 +37,3 @@ const TimePicker: FC = () => {
     />
   );
 };
-
-export default TimePicker;

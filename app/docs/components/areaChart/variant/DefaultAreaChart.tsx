@@ -1,5 +1,5 @@
 "use client";
-import AreaChart from "@/src/components/Chart/AreaChart";
+import { AreaChart } from "@/src/components";
 export const chartData = [
   {
     name: "1",
@@ -59,7 +59,7 @@ const DefaultAreaChart = () => {
 
 const DefaultAreaChartCode = `
 "use client";
-import AreaChart from "keep-design";
+import AreaChart from "keep-react";
 const chartData = [
   {
     name: "1",

@@ -1,10 +1,10 @@
-import { Switch } from "@headlessui/react";
-import classNames from "classnames";
 import type { FC, ReactNode } from "react";
 import { useState } from "react";
-import { excludeClassName } from "../../helpers/exclude";
+import classNames from "classnames";
+import { Switch } from "@headlessui/react";
 import { KeepSizes } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { excludeClassName } from "../../helpers/exclude";
 
 export interface keepToggleTheme {
   base: string;

@@ -1,6 +1,6 @@
 "use client";
-import PlayButton from "@/src/components/PlayButton";
 import { Play } from "phosphor-react";
+import { PlayButton } from "@/src/components";
 
 const CirclePlayButton = () => {
   return (
@@ -15,7 +15,7 @@ const CirclePlayButton = () => {
 
 const CirclePlayButtonCode = `
 "use client";
-import PlayButton from "keep-design";
+import {PlayButton} from "keep-react";
 import { Play } from "phosphor-react";
 
 const CirclePlayButton = () => {

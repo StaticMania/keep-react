@@ -1,5 +1,5 @@
 "use client";
-import { Statistic } from "@/src/components/Statistic";
+import { Statistic } from "@/src/components";
 
 const DefaultStatistic = () => {
   return (
@@ -12,7 +12,7 @@ const DefaultStatistic = () => {
 
 const DefaultStatisticCode = `
 "use client";
-import { Statistic } from "keep-design";
+import { Statistic } from "keep-react";
 
 const DefaultStatistic = () => {
   return (

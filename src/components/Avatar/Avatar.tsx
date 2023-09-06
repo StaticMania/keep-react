@@ -2,9 +2,9 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
-import AvatarAdd from "./AvatarAdd";
-import AvatarGroup from "./AvatarGroup";
-import AvatarGroupCounter from "./AvatarGroupCounter";
+import { AvatarAdd } from "./AvatarAdd";
+import { AvatarGroup } from "./AvatarGroup";
+import { AvatarGroupCounter } from "./AvatarGroupCounter";
 import { KeepPositions, KeepShapes, KeepSizes } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
 
@@ -226,6 +226,7 @@ const AvatarComponent: FC<AvatarProps> = ({
 };
 
 AvatarComponent.displayName = "Avatar";
+
 export const Avatar = Object.assign(AvatarComponent, {
   Group: AvatarGroup,
   Counter: AvatarGroupCounter,

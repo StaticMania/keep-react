@@ -1,10 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import { Book, books } from "./DefaultSearchBar";
-import { SearchBar } from "@/src/components/SearchBar";
+import { SearchBar, Dropdown } from "@/src/components";
 import { ArrowRight, MagnifyingGlass } from "phosphor-react";
-import { Dropdown } from "@/src/components/Dropdown";
 
 const SearchBarWithIcon = () => {
   const [data, setData] = useState<Book[]>([]);

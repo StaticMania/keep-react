@@ -1,6 +1,5 @@
 "use client";
-
-import { Dropdown } from "@/src/components/Dropdown";
+import { Dropdown } from "@/src/components";
 
 const DropdownWithTitleDescription = () => {
   return (
@@ -56,7 +55,7 @@ const DropdownWithTitleDescription = () => {
 
 const DropdownWithTitleDescriptionCode = `
 "use client";
-import { Dropdown,TextInput } from "keep-design";
+import { Dropdown,TextInput } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithTitleDescription = () => {

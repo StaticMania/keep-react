@@ -1,7 +1,6 @@
 "use client";
-
 import { useState } from "react";
-import { DatePicker } from "@/src/components/DatePicker";
+import { DatePicker } from "@/src/components";
 
 const YearPicker = () => {
   const [yearPicker, setYearPicker] = useState<number | Date | null>();
@@ -16,7 +15,7 @@ const YearPickerCode = `
 "use client";
 
 import { useState } from "react";
-import { DatePicker } from "keep-design";
+import { DatePicker } from "keep-react";
 
 const YearPicker = () => {
   const [yearPicker, setYearPicker] = useState();

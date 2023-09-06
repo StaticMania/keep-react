@@ -1,6 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import React from "react";
+import { Avatar } from "@/src/components";
 
 const AvatarWithAddIcon = () => {
   return (
@@ -50,7 +49,7 @@ const AvatarWithAddIcon = () => {
 
 const AvatarWithAddIconCode = `
 'use client';
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 
 const AvatarWithAddIcon = () => {
   return (

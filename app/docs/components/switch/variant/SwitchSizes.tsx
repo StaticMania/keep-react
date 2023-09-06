@@ -1,5 +1,5 @@
 "use client";
-import { Toggle } from "@/src/components/Switch";
+import { Toggle } from "@/src/components";
 
 const SwitchSizes = () => {
   return (
@@ -14,7 +14,7 @@ const SwitchSizes = () => {
 const SwitchSizesCode = `
 "use client";
 import { useState } from "react";
-import { Toggle } from "keep-design";
+import { Toggle } from "keep-react";
 
 const SwitchSizes = () => {
   return (

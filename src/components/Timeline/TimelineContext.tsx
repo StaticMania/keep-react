@@ -4,11 +4,9 @@ export type TimelineContext = {
   horizontal?: boolean;
   gradientPoint?: boolean;
 };
-
 export const TimelineContext = createContext<TimelineContext | undefined>(
   undefined
 );
-
 export function useTimelineContext(): TimelineContext {
   const context = useContext(TimelineContext);
 

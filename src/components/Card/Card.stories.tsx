@@ -19,14 +19,19 @@ import {
   Users,
   XCircle,
 } from "phosphor-react";
-import { Card } from ".";
-import { Badge } from "../Badge";
-import { Button } from "../Button";
-import PlayButton from "../PlayButton";
-import { Progress } from "../Progress";
-import { Rating } from "../Rating";
+
+import {
+  Card,
+  Badge,
+  Button,
+  PlayButton,
+  Progress,
+  Rating,
+  Avatar,
+} from "@/src/components";
+
+import Image from "next/image";
 import { removeFragment } from "@/src/helpers/mergeDeep";
-import { Avatar } from "../Avatar/Avatar";
 
 const meta: Meta<typeof Card> = {
   component: Card,
@@ -126,7 +131,7 @@ export const DefaultCard: Story = {
         </h5>
         <p className="font-normal text-slate-500">
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industrys standard dummy text ever
           since the 1500s, when an unknown printer took.
         </p>
         <a href="/" className="flex items-center gap-1 text-primary-600">
@@ -161,8 +166,8 @@ export const CardWithIcon: Story = {
             </h5>
             <p className="font-normal text-slate-500">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took.
+              industry. Lorem Ipsum has been the standard dummy text ever since
+              the 1500s, when an unknown printer took.
             </p>
             <a href="/" className="flex items-center gap-1 text-primary-600">
               <span>Learn More</span>
@@ -190,8 +195,8 @@ export const CardWithListIcon: Story = {
               </h5>
               <p className="font-normal text-slate-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took.
+                industry. Lorem Ipsum has been the standard dummy text ever
+                since the 1500s, when an unknown printer took.
               </p>
             </div>
           </div>
@@ -230,8 +235,7 @@ export const CardWithImage: Story = {
     ),
     className: "max-w-lg",
     horizontal: true,
-    imgSrc:
-      "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    imgSrc: "/images/banner/blog2.jpg",
   },
 
   decorators: DefaultCard.decorators,
@@ -270,8 +274,7 @@ export const CardWithAvatar: Story = {
 export const CardWithProfile: Story = {
   args: {
     className: "max-w-sm",
-    imgSrc:
-      "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    imgSrc: "/images/banner/blog.jpg",
     children: removeFragment(
       <>
         <Card.Container className="flex items-center justify-between p-5">
@@ -307,8 +310,7 @@ export const CardWithProfile: Story = {
 };
 export const CardWithProfileDetails: Story = {
   args: {
-    imgSrc:
-      "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    imgSrc: "/images/banner/blog.jpg",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -399,7 +401,7 @@ export const CardWithPostCard: Story = {
 };
 export const CardWithRating: Story = {
   args: {
-    imgSrc: "https://finder.createx.studio/img/city-guide/home/new-1.jpg",
+    imgSrc: "/images/banner/blog.jpg",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -440,8 +442,10 @@ export const RecentPostsCard: Story = {
     children: (
       <Card.Container className="flex items-start border-none">
         <Card.Container>
-          <img
-            src="https://finder.createx.studio/img/real-estate/blog/th02.jpg"
+          <Image
+            height={600}
+            width={200}
+            src="/images/banner/blog2.jpg"
             alt="blog"
             className="rounded-xl"
           />
@@ -475,8 +479,7 @@ export const RecentPostsCard: Story = {
 export const EcommerceProductCard: Story = {
   args: {
     className: "max-w-xs overflow-hidden rounded-md",
-    imgSrc:
-      "https://images.unsplash.com/photo-1584590069631-1c180f90a54c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    imgSrc: "/images/banner/product-1.avif",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -520,8 +523,7 @@ export const EcommerceProductCard: Story = {
 export const ProductCard: Story = {
   args: {
     className: "max-w-xs overflow-hidden rounded-md",
-    imgSrc:
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    imgSrc: "/images/banner/product-2.avif",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -574,8 +576,7 @@ export const ProductCard: Story = {
 export const PodcastCard: Story = {
   args: {
     className: "max-w-xs overflow-hidden rounded-md",
-    imgSrc:
-      "https://images.unsplash.com/photo-1590602846989-e99596d2a6ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    imgSrc: "/images/banner/product-3.avif",
     imgSize: "md",
     children: (
       <Card.Container className="space-y-3 p-6">
@@ -634,60 +635,75 @@ export const PricingCard: Story = {
     className: "max-w-xs p-6",
     children: (
       <Card.Container>
-        <Card.Container className="border-b border-b-slate-50">
-          <Card.Title className="text-base font-medium text-slate-500">
-            Basic
+        <Card.Container className="md:h-[60px] h-[48px] w-[48px] md:w-[60px] bg-primary-25 flex items-center justify-center rounded-full">
+          <Image
+            src="/images/icon/pricing.png"
+            height={24}
+            width={24}
+            alt="card"
+          />
+        </Card.Container>
+        <Card.Container>
+          <Card.Title className="text-base md:text-xl font-medium text-primary-500">
+            Business
           </Card.Title>
-          <Card.Title className="flex items-center">
-            <span className="text-7xl font-bold text-slate-800">$599</span>
+          <Card.Title className="flex items-center my-3">
+            <span className="text-5xl md:text-9xl font-bold text-slate-800">
+              $79
+            </span>
             <span className="ml-1 text-base font-medium text-slate-400">
-              / Month
+              / mth
             </span>
           </Card.Title>
+          <Card.Description className="text-sm md:text-base text-slate-700">
+            Until recently, the prevailing view assumed.
+          </Card.Description>
         </Card.Container>
         <Card.Container tag="ul" className="my-4 space-y-5">
           <Card.List className="flex items-center gap-1.5">
-            <CheckCircle size={24} color="#02542B" weight="fill" />
-            <span>One Month Free Access</span>
+            <CheckCircle size={24} color="#1B4DFF" />
+            <span className="text-sm md:text-base text-slate-700">
+              One Month Free Access
+            </span>
           </Card.List>
           <Card.List className="flex items-center gap-1.5">
-            <CheckCircle size={24} color="#02542B" weight="fill" />
-            <span>All The Component Access</span>
+            <CheckCircle size={24} color="#1B4DFF" />
+            <span className="text-sm md:text-base text-slate-700">
+              All The Component Access
+            </span>
           </Card.List>
           <Card.List className="flex items-center gap-1.5">
-            <CheckCircle size={24} color="#02542B" weight="fill" />
-            <span>Access Html Component</span>
+            <CheckCircle size={24} color="#1B4DFF" />
+            <span className="text-sm md:text-base text-slate-700">
+              Access Html Component
+            </span>
           </Card.List>
           <Card.List className="flex items-center gap-1.5">
-            <CheckCircle size={24} color="#02542B" weight="fill" />
-            <span>Access React Component</span>
-          </Card.List>
-          <Card.List className="flex items-center gap-1.5">
-            <XCircle size={24} color="#AB0A00" weight="fill" />
-            <span>Access Angular Component</span>
-          </Card.List>
-
-          <Card.List className="flex items-center gap-1.5">
-            <XCircle size={24} color="#AB0A00" weight="fill" />
-            <span>Access Lifetime</span>
+            <CheckCircle size={24} color="#1B4DFF" />
+            <span className="text-sm md:text-base text-slate-700">
+              Access React Component
+            </span>
           </Card.List>
         </Card.Container>
         <Card.Container>
-          <Button type="primary" width="full">
+          <Button type="primary" width="full" customClass="md:block hidden">
             Pro Access
           </Button>
-
-          <Card.Description className="mt-3 text-base font-normal text-slate-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-            doloribus minus alias molestias delectus eum.
-          </Card.Description>
+          <Button
+            type="primary"
+            width="full"
+            size="xs"
+            customClass="md:hidden block"
+          >
+            Pro Access
+          </Button>
         </Card.Container>
       </Card.Container>
     ),
   },
   decorators: [
     (Story) => (
-      <div className="mx-auto max-w-2xl">
+      <div className="max-w-sm p-6">
         <Story />
       </div>
     ),

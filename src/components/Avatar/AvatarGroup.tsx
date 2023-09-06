@@ -4,7 +4,7 @@ export type AvatarGroupProps = PropsWithChildren<{
   children: ReactNode;
 }>;
 
-const AvatarGroup: React.FC<AvatarGroupProps> = ({ children }) => {
+export const AvatarGroup: React.FC<AvatarGroupProps> = ({ children }) => {
   return (
     <div
       data-testid="avatar-group-element"
@@ -16,4 +16,3 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({ children }) => {
 };
 
 AvatarGroup.displayName = "Avatar.Group";
-export default AvatarGroup;

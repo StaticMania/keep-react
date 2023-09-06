@@ -25,7 +25,7 @@ const SizesOfNumberInput = () => {
 
 const SizesOfNumberInputCode = `
 "use client";
-import { NumberInput } from "keep-design";
+import { NumberInput } from "keep-react";
 import { useState } from "react";
 
 const SizesOfNumberInput = () => {

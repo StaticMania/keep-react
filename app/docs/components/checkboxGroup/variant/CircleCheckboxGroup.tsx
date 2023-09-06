@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import CheckboxGroup from "@/src/components/CheckboxGroup";
+import { CheckboxGroup } from "@/src/components";
 
 const CircleCheckboxGroup = () => {
   const [selected, setSelected] = useState("");
@@ -56,7 +56,7 @@ const CircleCheckboxGroup = () => {
 const CircleCheckboxGroupCode = `
 "use client";
 import { useState } from "react";
-import CheckboxGroup from "keep-design";
+import CheckboxGroup from "keep-react";
 
 const CircleCheckboxGroup = () => {
   const [selected, setSelected] = useState("");

@@ -1,10 +1,9 @@
 "use client";
-import { Upload } from "@/src/components/Upload";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Upload } from "@/src/components";
 
 const UploadDisabled = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files && event.target.files[0];
     if (file) {
@@ -18,13 +17,12 @@ const UploadDisabled = () => {
 
 const UploadDisabledCode = `
 "use client";
-import { Upload } from "keep-desing";
-import React, { useState } from "react";
+import  { useState } from "react";
+import { Upload } from "keep-react";
 
 const UploadDisabled = () => {
   const [fileName, setFileName] = useState("");
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (event) => {
     const file = event.target.files && event.target.files[0];
     if (file) {
       setFileName(file.name);

@@ -1,5 +1,5 @@
 "use client";
-import { Tabs } from "@/src/components/Tabs";
+import { Tabs } from "@/src/components";
 
 const BorderedTabs = () => {
   return (
@@ -32,7 +32,7 @@ const BorderedTabs = () => {
 
 const BorderedTabsCode = `
 "use client";
-import { Tabs } from "keep-design";
+import { Tabs } from "keep-react";
 
 const BorderedTabs = () => {
   return (

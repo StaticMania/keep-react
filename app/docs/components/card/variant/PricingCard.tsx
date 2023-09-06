@@ -1,8 +1,7 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Card } from "@/src/components/Card";
-import { CheckCircle } from "phosphor-react";
 import Image from "next/image";
+import { CheckCircle } from "phosphor-react";
+import { Button, Card } from "@/src/components";
 
 const PricingCard = () => {
   return (
@@ -78,7 +77,7 @@ const PricingCard = () => {
 
 const PricingCardCode = `
 "use client";
-import { Button,Card } from "keep-design";
+import { Button,Card } from "keep-react";
 import { CheckCircle } from "phosphor-react";
 import Image from "next/image";
 

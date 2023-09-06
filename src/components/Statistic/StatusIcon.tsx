@@ -15,7 +15,7 @@ interface StatusIconProps {
   icon: ReactNode;
 }
 
-const StatusIcon: FC<StatusIconProps> = ({ icon }) => {
+export const StatusIcon: FC<StatusIconProps> = ({ icon }) => {
   const { iconBg } = useStatisticContext();
 
   const theme = useTheme().theme.statistic;
@@ -31,5 +31,3 @@ const StatusIcon: FC<StatusIconProps> = ({ icon }) => {
     </div>
   );
 };
-
-export default StatusIcon;

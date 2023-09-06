@@ -1,7 +1,6 @@
 "use client";
-import { Label } from "@/src/components/FormControls/Label";
-import { TextInput } from "@/src/components/FormControls/TextInput";
 import { WarningCircle } from "phosphor-react";
+import { Label, TextInput } from "@/src/components";
 
 const InputWithIcon = () => {
   return (
@@ -20,7 +19,7 @@ const InputWithIcon = () => {
 
 const InputWithIconCode = `
 "use client";
-import { Label ,TextInput} from "keep-design";
+import { Label ,TextInput} from "keep-react";
 
 const InputWithIcon = () => {
   return (

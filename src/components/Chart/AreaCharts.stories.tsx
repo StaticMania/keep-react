@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import AreaChart from "./AreaChart";
+import { AreaChart } from "./AreaChart";
 
 const chartData = [
   {

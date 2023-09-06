@@ -1,6 +1,5 @@
 "use client";
-
-import { Tag } from "@/src/components/Tag";
+import { Tag } from "@/src/components";
 import { CrownSimple } from "phosphor-react";
 
 const LeftSideIconTag = () => {
@@ -36,7 +35,7 @@ const LeftSideIconTag = () => {
 
 const LeftSideIconTagCode = `
 "use client";
-import { Tag } from "keep-design";
+import { Tag } from "keep-react";
 import { CrownSimple } from "phosphor-react";
 
 const LeftSideIconTag = () => {

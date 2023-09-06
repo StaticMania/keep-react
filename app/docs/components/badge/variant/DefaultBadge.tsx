@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
+import { Badge } from "@/src/components";
 
 const DefaultBadge = () => {
   return (
@@ -25,7 +25,7 @@ const DefaultBadge = () => {
 
 const DefaultBadgeCode = `
 "use client";
-import { Badge } from "keep-design";
+import { Badge } from "keep-react";
 
 const DefaultBadge = () => {
   return (

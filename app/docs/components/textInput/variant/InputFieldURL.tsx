@@ -1,7 +1,5 @@
 "use client";
-
-import { Label } from "@/src/components/FormControls/Label";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { Label, TextInput } from "@/src/components";
 import { WarningCircle } from "phosphor-react";
 
 const InputFieldURL = () => {
@@ -27,7 +25,7 @@ const InputFieldURL = () => {
 const InputFieldURLCode = `
 "use client";
 
-import { Label,TextInput } from "keep-design";
+import { Label,TextInput } from "keep-react";
 import { WarningCircle } from "phosphor-react";
 
 const InputFieldURL = () => {

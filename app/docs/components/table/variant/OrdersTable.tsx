@@ -1,7 +1,6 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
-import { Button } from "@/src/components/Button";
-import { Table } from "@/src/components/Table";
+import Image from "next/image";
+import { Badge, Button, Table } from "@/src/components";
 import {
   CalendarBlank,
   Crown,
@@ -13,7 +12,6 @@ import {
   Spinner,
   Tag,
 } from "phosphor-react";
-import Image from "next/image";
 
 const OrdersTable = () => {
   return (
@@ -394,7 +392,7 @@ const OrdersTable = () => {
 
 const OrdersTableCode = `
 "use client";
-import { Badge,Table,Button } from "keep-design";
+import { Badge,Table,Button } from "keep-react";
 import {
   CalendarBlank,
   Crown,

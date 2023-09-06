@@ -1,6 +1,6 @@
 "use client";
-import { Timeline } from "@/src/components/Timeline";
 import Image from "next/image";
+import { Timeline } from "@/src/components";
 
 const TimelineWithImage = () => {
   return (
@@ -63,7 +63,7 @@ const TimelineWithImage = () => {
 
 const TimelineWithImageCode = `
 "use client";
-import { Timeline } from "keep-design";
+import { Timeline } from "keep-react";
 import Image from "next/image";
 
 const TimelineWithImage = () => {

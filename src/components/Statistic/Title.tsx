@@ -17,7 +17,7 @@ interface TitleProps {
   children: string;
 }
 
-const Title: FC<TitleProps> = ({ children }) => {
+export const Title: FC<TitleProps> = ({ children }) => {
   const { showFilter } = useStatisticContext();
 
   const theme = useTheme().theme.statistic;
@@ -38,5 +38,3 @@ const Title: FC<TitleProps> = ({ children }) => {
     </div>
   );
 };
-
-export default Title;

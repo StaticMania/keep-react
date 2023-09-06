@@ -1,5 +1,5 @@
 "use client";
-import AreaChart from "@/src/components/Chart/AreaChart";
+import { AreaChart } from "@/src/components";
 import { chartData } from "./DefaultAreaChart";
 
 const SmoothAreaChart = () => {
@@ -19,7 +19,7 @@ const SmoothAreaChart = () => {
 
 const SmoothAreaChartCode = `
 "use client";
-import AreaChart from "keep-design";
+import AreaChart from "keep-react";
 const chartData = [
   {
     name: "1",

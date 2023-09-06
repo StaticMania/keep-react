@@ -1,11 +1,11 @@
-import classNames from "classnames";
-import { FileArrowUp } from "phosphor-react";
 import { FC } from "react";
 import { Button } from "../Button";
+import classNames from "classnames";
+import { FileArrowUp } from "phosphor-react";
+import { UploadFailed } from "./UploadFailed";
+import { UploadPending } from "./UploadPending";
+import { UploadSuccess } from "./UploadSuccess";
 import { useUploadContext } from "./UploadContext";
-import UploadFailed from "./UploadFailed";
-import UploadPending from "./UploadPending";
-import UploadSuccess from "./UploadSuccess";
 import { useTheme } from "@/src/Keep/ThemeContex";
 
 export interface keepInputFieldTheme {
@@ -25,8 +25,7 @@ export interface keepInputFieldTheme {
     };
   };
 }
-
-const InputField: FC = () => {
+export const InputField: FC = () => {
   const { disabled, onFileChange, file, showProgressBar, progressType } =
     useUploadContext();
   const theme = useTheme().theme.upload.input;
@@ -84,5 +83,3 @@ const InputField: FC = () => {
     </div>
   );
 };
-
-export default InputField;

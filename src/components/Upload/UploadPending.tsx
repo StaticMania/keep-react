@@ -1,9 +1,9 @@
-import classNames from "classnames";
-import { Pause, X } from "phosphor-react";
 import { FC } from "react";
+import classNames from "classnames";
 import { Progress } from "../Progress";
-import { useUploadContext } from "./UploadContext";
+import { Pause, X } from "phosphor-react";
 import { useTheme } from "@/src/Keep/ThemeContex";
+import { useUploadContext } from "./UploadContext";
 
 export interface UploadPendingTheme {
   base: string;
@@ -25,7 +25,7 @@ export interface UploadPendingTheme {
   };
 }
 
-const UploadPending: FC = () => {
+export const UploadPending: FC = () => {
   const theme = useTheme().theme.upload.uploadPending;
   const { progress, uploadTime } = useUploadContext();
   return (
@@ -60,5 +60,3 @@ const UploadPending: FC = () => {
     </div>
   );
 };
-
-export default UploadPending;

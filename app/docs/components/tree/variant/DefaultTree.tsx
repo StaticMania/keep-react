@@ -1,6 +1,6 @@
 "use client";
+import { Tree } from "@/src/components";
 
-import Tree from "@/src/components/Tree";
 export const nodes = [
   {
     id: 1,
@@ -65,7 +65,7 @@ const DefaultTree = () => {
 
 const DefaultTreeCode = `
 "use client";
-import Tree from "keep-design";
+import {Tree} from "keep-react";
 const nodes = [
   {
     id: 1,

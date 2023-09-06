@@ -1,5 +1,5 @@
 "use client";
-import { Textarea } from "@/src/components/FormControls/Textarea";
+import { Textarea } from "@/src/components";
 
 const DefaultTextArea = () => {
   return (
@@ -16,7 +16,7 @@ const DefaultTextArea = () => {
 
 const DefaultTextAreaCode = `
 "use client";
-import { Textarea } from "keep-design";
+import { Textarea } from "keep-react";
 
 const DefaultTextArea = () => {
   return (

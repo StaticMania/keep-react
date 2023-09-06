@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { useTimelineContext } from "./TimelineContext";
+import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 
 export type TimelnePointProps = PropsWithChildren<
   ComponentProps<"div"> & {

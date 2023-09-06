@@ -1,7 +1,7 @@
 "use client";
-import { Tag } from "@/src/components/Tag";
+import { useState } from "react";
+import { Tag } from "@/src/components";
 import { CrownSimple, X } from "phosphor-react";
-import React, { useState } from "react";
 
 const TagWithDashedBorder = () => {
   const [dismiss, setDismiss] = useState(false);
@@ -88,7 +88,7 @@ const TagWithDashedBorder = () => {
 
 const TagWithDashedBorderCode = `
 "use client";
-import { Tag } from "keep-design";
+import { Tag } from "keep-react";
 import { CrownSimple, X } from "phosphor-react";
 import React, { useState } from "react";
 

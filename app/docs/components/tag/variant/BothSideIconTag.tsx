@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Tag } from "@/src/components/Tag";
+import { Tag } from "@/src/components";
 import { CrownSimple, X } from "phosphor-react";
 
 const BothSideIconTag = () => {
@@ -79,7 +79,7 @@ const BothSideIconTag = () => {
 
 const BothSideIconTagCode = `
 import { useState } from "react";
-import { Tag } from "keep-design";
+import { Tag } from "keep-react";
 import { CrownSimple, X } from "phosphor-react";
 
 const BothSideIconTag = () => {

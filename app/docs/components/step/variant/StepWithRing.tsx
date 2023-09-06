@@ -1,5 +1,5 @@
 "use client";
-import { Step } from "@/src/components/Step";
+import { Step } from "@/src/components";
 
 const StepWithRing = () => {
   return (
@@ -38,7 +38,7 @@ const StepWithRing = () => {
 
 const StepWithRingCode = `
 "use client";
-import { Step } from "keep-design";
+import { Step } from "keep-react";
 
 const StepWithRing = () => {
   return (

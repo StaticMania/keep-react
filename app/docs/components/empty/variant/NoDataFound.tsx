@@ -1,5 +1,5 @@
 "use client";
-import { Empty } from "@/src/components/Empty";
+import { Empty } from "@/src/components";
 
 const NoDataFound = () => {
   return (
@@ -15,7 +15,7 @@ const NoDataFound = () => {
 
 const NoDataFoundCode = `
 "use client";
-import { Empty } from "keep-design";
+import { Empty } from "keep-react";
 
 const NoDataFound = () => {
   return (

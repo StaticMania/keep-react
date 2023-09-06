@@ -1,6 +1,5 @@
 "use client";
-
-import BarChart from "@/src/components/Chart/BarChart";
+import { BarChart } from "@/src/components";
 import { BarChartData } from "./DefaultBarChart";
 
 const BarChartWithGridLine = () => {
@@ -27,7 +26,7 @@ const BarChartWithGridLine = () => {
 
 const BarChartWithAxisDataCode = `
 "use client";
-import BarChart from "keep-design";
+import BarChart from "keep-react";
 const BarChartData = [
   {
     name: "2",

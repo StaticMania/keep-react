@@ -1,7 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Button } from "@/src/components/Button";
-import { Notification } from "@/src/components/Notification";
+import { Notification, Button, Avatar } from "@/src/components";
 
 const NotificationWithAvatar = () => {
   const onDismiss = () => {
@@ -49,7 +47,7 @@ const NotificationWithAvatar = () => {
 
 const NotificationWithAvatarCode = `
 "use client";
-import { Notification,Button,Avatar } from "keep-design";
+import { Notification,Button,Avatar } from "keep-react";
 
 const NotificationWithAvatar = () => {
   const onDismiss = () => {

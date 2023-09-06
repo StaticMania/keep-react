@@ -63,7 +63,7 @@ export const handleRender: SliderProps["handleRender"] = (node, props) => {
   );
 };
 
-const TooltipSlider = ({
+export const TooltipSlider = ({
   tipFormatter,
   tipProps,
   ...props
@@ -86,5 +86,3 @@ const TooltipSlider = ({
 
   return <Slider {...props} handleRender={tipHandleRender} />;
 };
-
-export default TooltipSlider;

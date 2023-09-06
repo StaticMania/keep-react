@@ -39,7 +39,7 @@ interface BarChartProps {
   YAxisDataKey?: string;
 }
 
-const BarChart: FC<BarChartProps> = ({
+export const BarChart: FC<BarChartProps> = ({
   showGridLine = false,
   showTooltip = false,
   showXaxis = false,
@@ -146,5 +146,3 @@ const BarChart: FC<BarChartProps> = ({
 
   return <>{client ? RenderBarChart : null}</>;
 };
-
-export default BarChart;

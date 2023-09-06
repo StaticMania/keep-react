@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import TooltipSlider from "./ToolTipSlider";
+import { TooltipSlider } from "./ToolTipSlider";
 import { excludeClassName } from "@/src/helpers/exclude";
 import "./Slider.css";
 export interface MarkObj {

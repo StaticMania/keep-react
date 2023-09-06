@@ -1,5 +1,5 @@
 "use client";
-import { Carousel } from "@/src/components/Carousel";
+import { Carousel } from "@/src/components";
 import Image from "next/image";
 
 const StaticCarousel = () => {
@@ -37,7 +37,7 @@ const StaticCarousel = () => {
 
 const StaticCarouselCode = `
 "use client";
-import { Carousel } from "keep-design";
+import { Carousel } from "keep-react";
 import Image from "next/image";
 
 const StaticCarousel = () => {

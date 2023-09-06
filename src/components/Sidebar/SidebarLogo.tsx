@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
+
+import classNames from "classnames";
 import { useId } from "react";
 import { useSidebarContext } from "./SidebarContext";
 import { useTheme } from "@/src/Keep/ThemeContex";
@@ -20,7 +21,7 @@ export interface SidebarLogoProps
   imgAlt?: string;
 }
 
-const SidebarLogo: FC<SidebarLogoProps> = ({
+export const SidebarLogo: FC<SidebarLogoProps> = ({
   children,
   className,
   href,
@@ -49,6 +50,4 @@ const SidebarLogo: FC<SidebarLogoProps> = ({
     </a>
   );
 };
-
 SidebarLogo.displayName = "Sidebar.Logo";
-export default SidebarLogo;

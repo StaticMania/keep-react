@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { FC, ReactNode } from "react";
-import SkeletonAvator from "./SkeletonAvator";
-import SkeletonLine from "./SkeletonLine";
+import { SkeletonAvator } from "./SkeletonAvator";
+import { SkeletonLine } from "./SkeletonLine";
 import { useTheme } from "@/src/Keep/ThemeContex";
 
 export interface keepSkeletonTheme {

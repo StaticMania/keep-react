@@ -1,6 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Toast } from "@/src/components/Toast";
+import { Button, Toast } from "@/src/components";
 import { ArrowsClockwise } from "phosphor-react";
 
 const InteractiveToast = () => {
@@ -38,7 +37,7 @@ const InteractiveToast = () => {
 
 const InteractiveToastCode = `
 "use client";
-import { Button,Toast } from "keep-design";
+import { Button,Toast } from "keep-react";
 import { ArrowsClockwise } from "phosphor-react";
 
 const InteractiveToast = () => {

@@ -1,10 +1,7 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Badge } from "@/src/components/Badge";
-import { Button } from "@/src/components/Button";
-import { Table } from "@/src/components/Table";
-import { ArrowDown, Cube, DotsThreeOutline } from "phosphor-react";
 import Image from "next/image";
+import { Avatar, Badge, Button, Table } from "@/src/components";
+import { ArrowDown, Cube, DotsThreeOutline } from "phosphor-react";
 
 const DefaultTable = () => {
   return (
@@ -403,7 +400,7 @@ const DefaultTable = () => {
 
 const DefaultTableCode = `
 "use client";
-import { Avatar,Badge,Button,Table } from "keep-design";
+import { Avatar,Badge,Button,Table } from "keep-react";
 import { ArrowDown, Cube, DotsThreeOutline } from "phosphor-react";
 import Image from "next/image";
 

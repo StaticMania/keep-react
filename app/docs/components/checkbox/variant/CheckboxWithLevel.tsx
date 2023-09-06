@@ -1,5 +1,5 @@
 "use client";
-import { CheckBox } from "@/src/components/CheckBox";
+import { CheckBox } from "@/src/components";
 
 const CheckboxWithLevel = () => {
   return (
@@ -12,7 +12,7 @@ const CheckboxWithLevel = () => {
 
 const CheckboxWithLevelCode = `
 "use client";
-import { CheckBox } from "keep-design";
+import { CheckBox } from "keep-react";
 
 const CheckboxWithLevel = () => {
   return (

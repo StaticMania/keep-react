@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Button } from "@/src/components/Button";
-import { Navbar } from "@/src/components/Navbar";
+import { Navbar, Button } from "@/src/components";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
 
 const NavbarWithSearchIcon = () => {
@@ -66,7 +65,7 @@ const NavbarWithSearchIcon = () => {
 const NavbarWithSearchIconCode = `
 "use client";
 import Image from "next/image";
-import { Button,Navbar } from "keep-design";
+import { Button,Navbar } from "keep-react";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
 
 const NavbarWithSearchIcon = () => {

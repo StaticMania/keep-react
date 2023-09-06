@@ -1,5 +1,5 @@
 "use client";
-import { Statistic } from "@/src/components/Statistic";
+import { Statistic } from "@/src/components";
 
 const StatisticWithAvatar = () => {
   return (
@@ -20,7 +20,7 @@ const StatisticWithAvatar = () => {
 
 const StatisticWithAvatarCode = `
 "use client";
-import { Statistic } from "keep-design";
+import { Statistic } from "keep-react";
 
 const StatisticWithAvatar = () => {
   return (

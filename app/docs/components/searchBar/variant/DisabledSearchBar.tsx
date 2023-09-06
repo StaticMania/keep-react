@@ -1,6 +1,5 @@
 "use client";
-
-import { SearchBar } from "@/src/components/SearchBar";
+import { SearchBar } from "@/src/components";
 import { MagnifyingGlass } from "phosphor-react";
 
 const DisabledSearchBar = () => {
@@ -16,7 +15,7 @@ const DisabledSearchBar = () => {
 
 const DisabledSearchBarCode = `
 "use client";
-import { SearchBar } from "keep-design";
+import { SearchBar } from "keep-react";
 import { MagnifyingGlass } from "phosphor-react";
 
 const DisabledSearchBar = () => {

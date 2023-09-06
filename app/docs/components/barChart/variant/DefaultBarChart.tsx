@@ -1,6 +1,7 @@
 "use client";
 
-import BarChart from "@/src/components/Chart/BarChart";
+import { BarChart } from "@/src/components";
+
 export const BarChartData = [
   {
     name: "2",
@@ -97,7 +98,7 @@ const DefaultBarChart = () => {
 
 const DefaultBarChartCode = `
 "use client";
-import BarChart from "keep-design";
+import {BarChart} from "keep-react";
 const BarChartData = [
   {
     name: "2",

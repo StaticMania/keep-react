@@ -1,6 +1,5 @@
 "use client";
-import { Label } from "@/src/components/FormControls/Label";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { Label, TextInput } from "@/src/components";
 
 const InputFieldWithLevel = () => {
   return (
@@ -18,7 +17,7 @@ const InputFieldWithLevel = () => {
 const InputFieldWithLevelCode = `
 "use client";
 
-import { Label,TextInput } from "keep-design";
+import { Label,TextInput } from "keep-react";
 
 const InputFieldWithLevel = () => {
   return (

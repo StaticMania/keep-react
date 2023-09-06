@@ -1,4 +1,4 @@
-import { Avatar } from "@/src/components/Avatar/Avatar";
+import { Avatar } from "@/src/components";
 
 const ShapeAvatar = () => {
   return (
@@ -11,7 +11,7 @@ const ShapeAvatar = () => {
 };
 
 const ShapeAvatarCode = `
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 const ShapeAvatar = () => {
   return (
       <Avatar shape="round" />

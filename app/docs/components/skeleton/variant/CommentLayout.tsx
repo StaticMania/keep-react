@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@/src/components/Skeleton";
+import { Skeleton } from "@/src/components";
 
 const CommentLayout = () => {
   return (
@@ -21,7 +21,7 @@ const CommentLayout = () => {
 
 const CommentLayoutCode = `
 "use client";
-import { Skeleton } from "keep-design";
+import { Skeleton } from "keep-react";
 
 const CommentLayout = () => {
   return (

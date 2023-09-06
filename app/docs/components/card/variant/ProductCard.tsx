@@ -1,9 +1,5 @@
 "use client";
-import { Badge } from "@/src/components/Badge";
-import { Button } from "@/src/components/Button";
-import { Card } from "@/src/components/Card";
-import PlayButton from "@/src/components/PlayButton";
-import { Progress } from "@/src/components/Progress";
+import { Badge, PlayButton, Card, Button, Progress } from "@/src/components";
 import {
   ArrowsOutSimple,
   Bed,
@@ -160,7 +156,7 @@ import { Badge,
 Button,
 Card,
 PlayButton,
-Progress } from "keep-design";
+Progress } from "keep-react";
 import {
   ArrowsOutSimple,
   Bed,

@@ -1,7 +1,7 @@
 "use client";
+import { Cookie } from "phosphor-react";
 import { Button } from "@/src/components/Button";
 import { Notification } from "@/src/components/Notification";
-import { Cookie } from "phosphor-react";
 
 const NotificationWithIcon = () => {
   const onDismiss = () => {
@@ -48,7 +48,7 @@ const NotificationWithIcon = () => {
 
 const NotificationWithIconCode = `
 "use client";
-import { Notification,Button } from "keep-design";
+import { Notification,Button } from "keep-react";
 import { Cookie } from "phosphor-react";
 
 const NotificationWithIcon = () => {

@@ -1,5 +1,5 @@
 "use client";
-import { Progress } from "@/src/components/Progress";
+import { Progress } from "@/src/components";
 
 const ColorsOfProgress = () => {
   return (
@@ -34,7 +34,7 @@ const ColorsOfProgress = () => {
 
 const ColorsOfProgressCode = `
 "use client";
-import { Progress } from "keep-design";
+import { Progress } from "keep-react";
 
 const ColorsOfProgress = () => {
   return (

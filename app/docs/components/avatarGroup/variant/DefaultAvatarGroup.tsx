@@ -1,5 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
+import { Avatar } from "@/src/components";
 
 const DefaultAvatarGroup = () => {
   return (
@@ -42,7 +42,7 @@ const DefaultAvatarGroup = () => {
 
 const DefaultAvatarGroupCode = `
 "use client";
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 const DefaultAvatarGroup = () => {
   return (
     <Avatar.Group>

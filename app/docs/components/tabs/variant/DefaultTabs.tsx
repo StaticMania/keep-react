@@ -1,5 +1,5 @@
 "use client";
-import { Tabs } from "@/src/components/Tabs";
+import { Tabs } from "@/src/components";
 
 const DefaultTabs = () => {
   return (
@@ -19,7 +19,7 @@ const DefaultTabs = () => {
 
 const DefaultTabsCode = `
 "use client";
-import { Tabs } from "keep-design";
+import { Tabs } from "keep-react";
 
 const DefaultTabs = () => {
   return (

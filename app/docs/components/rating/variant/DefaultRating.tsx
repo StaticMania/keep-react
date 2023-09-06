@@ -1,6 +1,6 @@
 "use client";
+import { Rating } from "@/src/components";
 
-import { Rating } from "@/src/components/Rating";
 const DefaultRating = () => {
   return (
     <Rating size={30}>
@@ -15,7 +15,8 @@ const DefaultRating = () => {
 
 const DefaultRatingCode = `
 "use client";
-import { Rating } from "keep-design";
+import { Rating } from "keep-react";
+
 const DefaultRating = () => {
   return (
     <Rating size={30}>

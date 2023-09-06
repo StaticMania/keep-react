@@ -1,11 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import { Book, books } from "./DefaultSearchBar";
-import { SearchBar } from "@/src/components/SearchBar";
-import { Button } from "@/src/components/Button";
 import { ArrowRight, MapPinLine } from "phosphor-react";
-import { Dropdown } from "@/src/components/Dropdown";
+import { SearchBar, Dropdown, Button } from "@/src/components";
 
 const SearchBarWithColorVariant = () => {
   const [data, setData] = useState<Book[]>([]);
@@ -63,7 +60,7 @@ const SearchBarWithColorVariantCode = `
 "use client";
 
 import { useState } from "react";
-import { SearchBar,Button,Dropdown } from "keep-design";
+import { SearchBar,Button,Dropdown } from "keep-react";
 import { ArrowRight, MapPinLine } from "phosphor-react";
 
 const books = [

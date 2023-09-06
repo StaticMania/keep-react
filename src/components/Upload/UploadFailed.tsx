@@ -25,7 +25,7 @@ export interface keepUploadFailedTheme {
   };
 }
 
-const UploadFailed: FC = () => {
+export const UploadFailed: FC = () => {
   const theme = useTheme().theme.upload.uploadFailed;
   const { progress, uploadTime } = useUploadContext();
   return (
@@ -60,5 +60,3 @@ const UploadFailed: FC = () => {
     </div>
   );
 };
-
-export default UploadFailed;

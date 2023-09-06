@@ -1,5 +1,5 @@
 "use client";
-import { Alert } from "@/src/components/Alert";
+import { Alert } from "@/src/components";
 import { WarningCircle } from "phosphor-react";
 import Link from "next/link";
 
@@ -30,7 +30,7 @@ const AlertWithDismissIcon = () => {
 
 const AlertWithDismissIconCode = `
 "use client";
-import { Alert } from "keep-design";
+import { Alert } from "keep-react";
 import { WarningCircle } from "phosphor-react";
 import Link from "next/link";
 

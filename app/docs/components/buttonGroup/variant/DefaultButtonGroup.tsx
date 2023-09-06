@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
+import { Button } from "@/src/components";
 
 const DefaultButtonGroup = () => {
   return (
@@ -13,7 +13,7 @@ const DefaultButtonGroup = () => {
 
 const DefaultButtonGroupCode = `
 "use client";
-import { Button } from "keep-design";
+import { Button } from "keep-react";
 
 const DefaultButtonGroup = () => {
   return (

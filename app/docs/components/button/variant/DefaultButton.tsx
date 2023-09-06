@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
+import { Button } from "@/src/components";
 
 const DefaultButton = () => {
   return (
@@ -32,7 +32,7 @@ const DefaultButton = () => {
 
 const DefaultButtonCode = `
 "use client";
-import { Button } from "keep-design";
+import { Button } from "keep-react";
 
 const DefaultButton = () => {
   return (

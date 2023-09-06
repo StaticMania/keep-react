@@ -16,7 +16,7 @@ export interface keepMobileMenuTheme {
   close: string;
 }
 
-const NavbarMobile: FC<NavbarMobileProps> = ({ children }) => {
+export const NavbarMobile: FC<NavbarMobileProps> = ({ children }) => {
   const [showNav, setShowNav] = useState(false);
   const theme = useTheme().theme.navbar.mobileMenu;
   console.log(showNav);
@@ -46,5 +46,3 @@ const NavbarMobile: FC<NavbarMobileProps> = ({ children }) => {
     </>
   );
 };
-
-export default NavbarMobile;

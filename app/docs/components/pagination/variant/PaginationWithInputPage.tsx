@@ -1,6 +1,6 @@
 "use client";
-import { Pagination } from "@/src/components/Pagination";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Pagination } from "@/src/components";
 
 const PaginationWithInputPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -37,7 +37,7 @@ const PaginationWithInputPage = () => {
 };
 const PaginationWithInputPageCode = `
 "use client";
-import { Pagination } from "keep-design";
+import { Pagination } from "keep-react";
 import React, { useState } from "react";
 
 const PaginationWithInputPage = () => {

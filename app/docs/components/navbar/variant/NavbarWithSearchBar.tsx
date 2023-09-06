@@ -1,5 +1,6 @@
 "use client";
-import { Navbar } from "@/src/components/Navbar";
+import Image from "next/image";
+import { Navbar, Button, TextInput } from "@/src/components";
 import {
   FacebookLogo,
   InstagramLogo,
@@ -8,9 +9,6 @@ import {
   TwitterLogo,
   YoutubeLogo,
 } from "phosphor-react";
-import Image from "next/image";
-import { Button } from "@/src/components/Button";
-import { TextInput } from "@/src/components/FormControls/TextInput";
 
 const NavbarWithSearchBar = () => {
   return (
@@ -107,7 +105,7 @@ const NavbarWithSearchBar = () => {
 
 const NavbarWithSearchBarCode = `
 "use client";
-import { Navbar,TextInput,Button } from "keep-design";
+import { Navbar,TextInput,Button } from "keep-react";
 import {
   FacebookLogo,
   InstagramLogo,

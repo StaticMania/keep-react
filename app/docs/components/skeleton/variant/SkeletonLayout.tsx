@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@/src/components/Skeleton";
+import { Skeleton } from "@/src/components";
 
 const SkeletonLayout = () => {
   return (
@@ -18,7 +18,7 @@ const SkeletonLayout = () => {
 
 const SkeletonLayoutCode = `
 "use client";
-import { Skeleton } from "keep-design";
+import { Skeleton } from "keep-react";
 
 const SkeletonLayout = () => {
   return (

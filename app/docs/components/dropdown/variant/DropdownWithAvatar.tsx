@@ -1,7 +1,5 @@
 "use client";
-
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Dropdown } from "@/src/components/Dropdown";
+import { Avatar, Dropdown } from "@/src/components";
 
 const DropdownWithAvatar = () => {
   return (
@@ -78,7 +76,7 @@ const DropdownWithAvatar = () => {
 
 const DropdownWithAvatarCode = `
 "use client";
-import { Avatar,Dropdown } from "keep-design";
+import { Avatar,Dropdown } from "keep-react";
 
 const DropdownWithAvatar = () => {
   return (

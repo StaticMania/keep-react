@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { Carousel } from "@/src/components/Carousel";
+import { Carousel } from "@/src/components";
 import Image from "next/image";
 
 const CarouselWithIndicator = () => {
@@ -38,7 +38,7 @@ const CarouselWithIndicator = () => {
 
 const CarouselWithIndicatorCode = `
 "use client";
-import { Carousel } from "keep-design";
+import { Carousel } from "keep-react";
 import Image from "next/image";
 
 const CarouselWithIndicator = () => {

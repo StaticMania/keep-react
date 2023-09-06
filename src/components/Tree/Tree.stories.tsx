@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { File, FolderNotchOpen } from "phosphor-react";
-import Tree from ".";
+import { Tree } from ".";
 const nodes = [
   {
     id: 1,
@@ -144,7 +144,6 @@ export const TreeWithCheckboxItemsNumberAndBorder: Story = {
     showBorder: true,
   },
 };
-
 export const TreeWithItemsNumberAndBorder: Story = {
   args: {
     ...DefaultTree.args,

@@ -3,9 +3,9 @@ import { FileArrowUp } from "phosphor-react";
 import { FC } from "react";
 import { Button } from "../Button";
 import { useUploadContext } from "./UploadContext";
-import UploadFailed from "./UploadFailed";
-import UploadPending from "./UploadPending";
-import UploadSuccess from "./UploadSuccess";
+import { UploadFailed } from "./UploadFailed";
+import { UploadPending } from "./UploadPending";
+import { UploadSuccess } from "./UploadSuccess";
 import { useTheme } from "@/src/Keep/ThemeContex";
 
 export interface UploadHorizontalTheme {
@@ -30,7 +30,7 @@ export interface UploadHorizontalTheme {
   };
 }
 
-const UploadHorizontal: FC = () => {
+export const UploadHorizontal: FC = () => {
   const { disabled, showProgressBar, progressType, file, onFileChange } =
     useUploadContext();
 
@@ -101,5 +101,3 @@ const UploadHorizontal: FC = () => {
     </div>
   );
 };
-
-export default UploadHorizontal;

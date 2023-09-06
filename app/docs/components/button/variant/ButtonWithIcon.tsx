@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
+import { Button } from "@/src/components";
 import { Gear, SquaresFour, Cube } from "phosphor-react";
 
 const ButtonWithIcon = () => {
@@ -23,7 +23,7 @@ const ButtonWithIcon = () => {
 
 const ButtonWithIconCode = `
 "use client";
-import { Button } from "keep-design";
+import { Button } from "keep-react";
 import { Gear, SquaresFour, Cube } from "phosphor-react";
 
 const ButtonWithIcon = () => {

@@ -1,5 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
+import { Avatar } from "@/src/components";
 
 const AvatarWithPlusCounter = () => {
   return (
@@ -49,7 +49,7 @@ const AvatarWithPlusCounter = () => {
 
 const AvatarWithPlusCounterCode = `
 "use client";
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 const DefaultAvatarGroup = () => {
   return (
     <Avatar.Group>

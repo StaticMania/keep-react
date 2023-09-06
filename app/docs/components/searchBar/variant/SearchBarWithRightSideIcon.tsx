@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
-import { Button } from "@/src/components/Button";
-import { SearchBar } from "@/src/components/SearchBar";
-import { ArrowRight, MapPinLine } from "phosphor-react";
 import { Book, books } from "./DefaultSearchBar";
-import { Dropdown } from "@/src/components/Dropdown";
+import { ArrowRight, MapPinLine } from "phosphor-react";
+import { SearchBar, Dropdown, Button } from "@/src/components";
 
 const SearchBarWithRightSideIcon = () => {
   const [data, setData] = useState<Book[]>([]);
@@ -59,7 +57,7 @@ const SearchBarWithRightSideIcon = () => {
 const SearchBarWithRightSideIconCode = `
 "use client";
 import { useState } from "react";
-import { Button,SearchBar,Dropdown } from "keep-design";
+import { Button,SearchBar,Dropdown } from "keep-react";
 import { ArrowRight, MapPinLine } from "phosphor-react";
 
 const books = [

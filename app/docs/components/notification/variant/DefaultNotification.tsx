@@ -1,7 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Notification } from "@/src/components/Notification";
-import React from "react";
+import { Button, Notification } from "@/src/components";
 
 const DefaultNotification = () => {
   const onDismiss = () => {
@@ -44,7 +42,7 @@ const DefaultNotification = () => {
 const DefaultNotificationCode = `
 
 "use client";
-import { Notification,Button } from "keep-design";
+import { Notification,Button } from "keep-react";
 
 const DefaultNotification = () => {
   const onDismiss = () => {

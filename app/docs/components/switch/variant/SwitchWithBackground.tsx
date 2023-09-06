@@ -1,5 +1,5 @@
 "use client";
-import { Toggle } from "@/src/components/Switch";
+import { Toggle } from "@/src/components";
 
 const SwitchWithBackground = () => {
   return (
@@ -11,7 +11,7 @@ const SwitchWithBackground = () => {
 };
 const SwitchWithBackgroundCode = `
 "use client";
-import { Toggle } from "keep-design";
+import { Toggle } from "keep-react";
 
 const SwitchWithBackground = () => {
   return (

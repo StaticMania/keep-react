@@ -1,5 +1,5 @@
 "use clietn";
-import { Statistic } from "@/src/components/Statistic";
+import { Statistic } from "@/src/components";
 
 const StatisticWithFilterButton = () => {
   return (
@@ -17,7 +17,7 @@ const StatisticWithFilterButton = () => {
 
 const StatisticWithFilterButtonCode = `
 "use clietn";
-import { Statistic } from "keep-design";
+import { Statistic } from "keep-react";
 
 const StatisticWithFilterButton = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Accordion } from "@/src/components/Accordion";
+import { Accordion } from "@/src/components";
 
 const DefaultAccordion = () => {
   return (
@@ -25,7 +25,7 @@ const DefaultAccordion = () => {
 const DefaultAccordionCode = `
 
 "use client";
-import { Accordion } from "keep-design";
+import { Accordion } from "keep-react";
 const DefaultAccordion = () => {
   return (
     <Accordion>

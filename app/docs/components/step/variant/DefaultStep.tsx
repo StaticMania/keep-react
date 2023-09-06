@@ -1,5 +1,5 @@
 "use client";
-import { Step } from "@/src/components/Step";
+import { Step } from "@/src/components";
 import { DownloadSimple } from "phosphor-react";
 
 const DefaultStep = () => {
@@ -42,7 +42,7 @@ const DefaultStep = () => {
 
 const DefaultStepCode = `
 "use client";
-import { Step } from "keep-design";
+import { Step } from "keep-react";
 import { DownloadSimple } from "phosphor-react";
 
 const DefaultStep = () => {

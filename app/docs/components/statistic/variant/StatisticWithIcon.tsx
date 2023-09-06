@@ -1,6 +1,6 @@
 "use client";
-import { Statistic } from "@/src/components/Statistic";
 import { Users } from "phosphor-react";
+import { Statistic } from "@/src/components";
 
 const StatisticWithIcon = () => {
   return (
@@ -21,8 +21,8 @@ const StatisticWithIcon = () => {
 
 const StatisticWithIconCode = `
 "use client";
-import { Statistic } from "keep-design";
 import { Users } from "phosphor-react";
+import { Statistic } from "keep-react";
 
 const StatisticWithIcon = () => {
   return (

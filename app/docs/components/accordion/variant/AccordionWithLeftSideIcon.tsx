@@ -1,5 +1,5 @@
 "use client";
-import { Accordion } from "@/src/components/Accordion";
+import { Accordion } from "@/src/components";
 
 const AccordionWithLeftSideIcon = () => {
   return (
@@ -52,7 +52,7 @@ const AccordionWithLeftSideIcon = () => {
 
 const AccordionWithLeftSideIconCode = `
 "use client";
-import { Accordion } from "keep-design";
+import { Accordion } from "keep-react";
 
 const AccordionWithLeftSideIcon = () => {
   return (

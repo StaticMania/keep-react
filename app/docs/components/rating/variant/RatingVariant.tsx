@@ -1,5 +1,5 @@
 "use client";
-import { Rating } from "@/src/components/Rating";
+import { Rating } from "@/src/components";
 
 const VariantOfRating = () => {
   return (
@@ -16,7 +16,8 @@ const VariantOfRating = () => {
 
 const VariantOfRatingCode = `
 "use client";
-import { Rating } from "keep-design";
+import { Rating } from "keep-react";
+
 const VariantOfRating = () => {
   return (
     <Rating size={30}>

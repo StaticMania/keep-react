@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-
 import { Upload } from ".";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Upload> = {
   component: Upload,
@@ -98,7 +97,6 @@ export const UploadSuccess: Story = {
     progressType: "success",
   },
 };
-
 export const HorizontalUpload: Story = { args: { horizontal: true } };
 export const HorizontalUploadPending: Story = {
   args: {
@@ -123,7 +121,6 @@ export const HorizontalUploadSuccess: Story = {
     progressType: "success",
   },
 };
-
 export const UploadDisabled: Story = { args: { disabled: true } };
 export const HorizontalUploadDisabled: Story = {
   args: { disabled: true, horizontal: true },

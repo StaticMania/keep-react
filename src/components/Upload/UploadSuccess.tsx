@@ -21,7 +21,7 @@ export interface UploadSuccessTheme {
   };
 }
 
-const UploadSuccess: FC = () => {
+export const UploadSuccess: FC = () => {
   const theme = useTheme().theme.upload.uploadSuccess;
   return (
     <div className={classNames(theme.base)}>
@@ -51,5 +51,3 @@ const UploadSuccess: FC = () => {
     </div>
   );
 };
-
-export default UploadSuccess;

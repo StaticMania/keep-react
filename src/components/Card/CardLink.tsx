@@ -10,7 +10,7 @@ interface CardLinkProps {
   iconPosition?: "left" | "right";
 }
 
-const CardLink: React.FC<CardLinkProps> = ({
+export const CardLink: React.FC<CardLinkProps> = ({
   children,
   className,
   href = "/",
@@ -32,5 +32,3 @@ const CardLink: React.FC<CardLinkProps> = ({
     </Link>
   );
 };
-
-export default CardLink;

@@ -1,5 +1,5 @@
 "use client";
-import { Step } from "@/src/components/Step";
+import { Step } from "@/src/components";
 
 const DashedBorderStep = () => {
   return (
@@ -38,7 +38,7 @@ const DashedBorderStep = () => {
 
 const DashedBorderStepCode = `
 "use client";
-import { Step } from "keep-design";
+import { Step } from "keep-react";
 
 const DashedBorderStep = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Avatar } from "@/src/components/Avatar/Avatar";
+import { Avatar } from "@/src/components";
 
 const AvatarWithCounter = () => {
   return (
@@ -43,7 +43,7 @@ const AvatarWithCounter = () => {
 
 const AvatarWithCounterCode = `
 "use client";
-import { Avatar } from "keep-design";
+import { Avatar } from "keep-react";
 
 const AvatarWithCounter = () => {
   return (

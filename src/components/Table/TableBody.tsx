@@ -1,5 +1,5 @@
-import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
+import classNames from "classnames";
 import { keepTableCellTheme } from "./TableCell";
 import { DeepPartial } from "@/src/helpers/deep-partial";
 import { useTheme } from "@/src/Keep/ThemeContex";

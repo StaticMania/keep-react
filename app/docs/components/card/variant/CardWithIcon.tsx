@@ -1,6 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Card } from "@/src/components/Card";
+import { Button, Card } from "@/src/components";
 import {
   ArchiveTray,
   CaretRight,
@@ -59,7 +58,7 @@ const CardWithIcon = () => {
         </Card.Container>
       </Card>
       {/* ===CARD THREE=== */}
-      <Card className="md:p-6 p-5 max-w-[240px]">
+      <Card className="md:p-6 p-5 max-w-[280px]">
         <Card.Container className="flex items-center justify-center">
           <PencilCircle size={80} color="#1B4DFF" />
         </Card.Container>
@@ -84,7 +83,7 @@ const CardWithIcon = () => {
 };
 
 const CardWithIconCode = `
-import { Button,Card } from "keep-design";
+import { Button,Card } from "keep-react";
 import {
   ArchiveTray,
   CaretRight,

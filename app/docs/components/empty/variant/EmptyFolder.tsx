@@ -1,5 +1,5 @@
 "use client";
-import { Empty } from "@/src/components/Empty";
+import { Empty } from "@/src/components";
 
 const EmptyFolder = () => {
   return (
@@ -14,7 +14,7 @@ const EmptyFolder = () => {
 
 const EmptyFolderCode = `
 "use client";
-import { Empty } from "keep-design";
+import { Empty } from "keep-react";
 
 const EmptyFolder = () => {
   return (

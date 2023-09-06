@@ -10,11 +10,9 @@ export type TableContextType = {
   showBorder?: boolean;
   showBorderPosition?: "left" | "right";
 };
-
 export const TableContext = createContext<TableContextType | undefined>(
   undefined
 );
-
 export function useTableContext(): TableContextType {
   const context = useContext(TableContext);
 

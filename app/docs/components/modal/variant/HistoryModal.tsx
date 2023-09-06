@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Avatar } from "@/src/components/Avatar/Avatar";
-import { Button } from "@/src/components/Button";
-import { Modal } from "@/src/components/Modal";
+import { Avatar, Modal, Button } from "@/src/components";
 import { CloudArrowUp, UserPlus } from "phosphor-react";
 
 const HistoryModal = () => {
@@ -123,7 +121,7 @@ const HistoryModal = () => {
 const HistoryModalCode = `
 "use client";
 import { useState } from "react";
-import { Avatar,Button,Modal } from "keep-design";
+import { Avatar,Button,Modal } from "keep-react";
 import { CloudArrowUp, UserPlus } from "phosphor-react";
 
 const HistoryModal = () => {

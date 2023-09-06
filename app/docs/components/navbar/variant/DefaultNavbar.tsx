@@ -1,8 +1,7 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Navbar } from "@/src/components/Navbar";
-import { CaretDown } from "phosphor-react";
 import Image from "next/image";
+import { CaretDown } from "phosphor-react";
+import { Navbar, Button } from "@/src/components";
 
 const DefaultNavbar = () => {
   return (
@@ -50,7 +49,7 @@ const DefaultNavbar = () => {
 
 const DefaultNavbarCode = `
 "use client";
-import { Navbar,Button } from "keep-design";
+import { Navbar,Button } from "keep-react";
 import { CaretDown } from "phosphor-react";
 import Image from "next/image";
 

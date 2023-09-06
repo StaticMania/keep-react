@@ -1,6 +1,5 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Timeline } from "@/src/components/Timeline";
+import { Button, Timeline } from "@/src/components";
 import { ArrowRight, CalendarBlank } from "phosphor-react";
 
 const DashedBorderTimeline = () => {
@@ -53,7 +52,7 @@ export default DashedBorderTimeline;
 
 const DashedBorderTimelineCode = `
 "use client";
-import { Button,Timeline } from "keep-design";
+import { Button,Timeline } from "keep-react";
 import { ArrowRight, CalendarBlank } from "phosphor-react";
 
 const DashedBorderTimeline = () => {

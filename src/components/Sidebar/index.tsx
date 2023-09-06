@@ -2,16 +2,17 @@ import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { DeepPartial } from "../../helpers/deep-partial";
 import type { KeepSidebarCollapseTheme } from "./SidebarCollapse";
-import SidebarCollapse from "./SidebarCollapse";
-import { SidebarContext } from "./SidebarContext";
 import type { KeepSidebarCTATheme } from "./SidebarCTA";
-import SidebarCTA from "./SidebarCTA";
 import type { KeepSidebarItemTheme } from "./SidebarItem";
-import SidebarItem from "./SidebarItem";
-import SidebarItemGroup from "./SidebarItemGroup";
-import SidebarItems from "./SidebarItems";
 import type { KeepSidebarLogoTheme } from "./SidebarLogo";
-import SidebarLogo from "./SidebarLogo";
+
+import { SidebarCollapse } from "./SidebarCollapse";
+import { SidebarContext } from "./SidebarContext";
+import { SidebarCTA } from "./SidebarCTA";
+import { SidebarItem } from "./SidebarItem";
+import { SidebarItemGroup } from "./SidebarItemGroup";
+import { SidebarItems } from "./SidebarItems";
+import { SidebarLogo } from "./SidebarLogo";
 import { KeepBoolean } from "@/src/Keep/KeepTheme";
 import { useTheme } from "@/src/Keep/ThemeContex";
 import { mergeDeep } from "@/src/helpers/mergeDeep";
@@ -63,8 +64,8 @@ const SidebarComponent: FC<SidebarProps> = ({
     </SidebarContext.Provider>
   );
 };
-
 SidebarComponent.displayName = "Sidebar";
+
 export const Sidebar = Object.assign(SidebarComponent, {
   Collapse: SidebarCollapse,
   CTA: SidebarCTA,

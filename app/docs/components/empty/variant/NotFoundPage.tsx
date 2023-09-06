@@ -1,5 +1,5 @@
 "use client";
-import { Empty } from "@/src/components/Empty";
+import { Empty } from "@/src/components";
 
 const NotFoundPage = () => {
   return (
@@ -14,7 +14,7 @@ const NotFoundPage = () => {
 
 const NotFoundPageCode = `
 "use client";
-import { Empty } from "keep-design";
+import { Empty } from "keep-react";
 
 const NotFoundPage = () => {
   return (

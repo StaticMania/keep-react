@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import type { FC, PropsWithChildren } from "react";
+
 import { StepPointColor, StepPointSizes } from "../Step";
 import { TimelineBody } from "./TimelineBody";
 import { TimelineContent } from "./TimelineContent";

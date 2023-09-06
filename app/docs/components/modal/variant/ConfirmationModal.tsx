@@ -78,7 +78,7 @@ const ConfirmationModal = () => {
 const ConfirmationModalCode = `
 "use client";
 import  { useState } from "react";
-import { Button,Modal } from "keep-design";
+import { Button,Modal } from "keep-react";
 import { CloudArrowUp, Trash } from "phosphor-react";
 
 const ConfirmationModal = () => {

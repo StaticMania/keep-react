@@ -1,7 +1,7 @@
-import { useTheme } from "@/src/Keep/ThemeContex";
-import classNames from "classnames";
-import { ArrowUp } from "phosphor-react";
 import { FC } from "react";
+import { ArrowUp } from "phosphor-react";
+import classNames from "classnames";
+import { useTheme } from "@/src/Keep/ThemeContex";
 
 export interface keepRateTheme {
   base?: string;
@@ -11,7 +11,7 @@ interface RateProps {
   children?: string;
 }
 
-const Rate: FC<RateProps> = ({ children }) => {
+export const Rate: FC<RateProps> = ({ children }) => {
   const theme = useTheme().theme.statistic;
   return (
     <p className={classNames(theme.rate.base)}>
@@ -22,5 +22,3 @@ const Rate: FC<RateProps> = ({ children }) => {
     </p>
   );
 };
-
-export default Rate;

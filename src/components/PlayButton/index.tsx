@@ -11,7 +11,7 @@ interface PlayButtonProps {
   className?: string;
 }
 
-const PlayButton: FC<PlayButtonProps> = ({
+export const PlayButton: FC<PlayButtonProps> = ({
   title,
   type = "primary",
   icon,
@@ -35,5 +35,3 @@ const PlayButton: FC<PlayButtonProps> = ({
     </Button>
   );
 };
-
-export default PlayButton;

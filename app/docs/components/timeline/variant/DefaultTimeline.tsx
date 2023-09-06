@@ -1,7 +1,6 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Timeline } from "@/src/components/Timeline";
 import { ArrowRight } from "phosphor-react";
+import { Button, Timeline } from "@/src/components";
 
 const DefaultTimeline = () => {
   return (
@@ -52,7 +51,7 @@ const DefaultTimeline = () => {
 
 const DefaultTimelineCode = `
 "use client";
-import { Button,Timeline } from "keep-design";
+import { Button,Timeline } from "keep-react";
 import { ArrowRight } from "phosphor-react";
 
 const DefaultTimeline = () => {

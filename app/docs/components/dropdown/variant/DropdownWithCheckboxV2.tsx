@@ -1,9 +1,6 @@
 "use client";
-
-import { CheckBox } from "@/src/components/CheckBox";
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
 import { CaretRight } from "phosphor-react";
+import { CheckBox, Dropdown, TextInput } from "@/src/components";
 
 const DropdownWithCheckboxV2 = () => {
   return (
@@ -82,8 +79,8 @@ const DropdownWithCheckboxV2 = () => {
 
 const DropdownWithCheckboxV2Code = `
 "use client";
-import { CheckBox,TextInput,Dropdown } from "keep-design";
 import { CaretRight } from "phosphor-react";
+import { CheckBox,TextInput,Dropdown } from "keep-react";
 
 const DropdownWithCheckboxV2 = () => {
   return (

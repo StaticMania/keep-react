@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@/src/components/Skeleton";
+import { Skeleton } from "@/src/components";
 
 const PostSkeleton = () => {
   return (
@@ -36,7 +36,7 @@ const PostSkeleton = () => {
 
 const PostSkeletonCode = `
 "use client";
-import { Skeleton } from "keep-design";
+import { Skeleton } from "keep-react";
 
 const PostSkeleton = () => {
   return (

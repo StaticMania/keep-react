@@ -1,6 +1,5 @@
 "use client";
-
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { TextInput } from "@/src/components";
 import { Envelope } from "phosphor-react";
 
 const InputWithAddon = () => {
@@ -18,7 +17,7 @@ const InputWithAddon = () => {
 
 const InputWithAddonCode = `
 "use client";
-import { TextInput } from "keep-design";
+import { TextInput } from "keep-react";
 import { Envelope } from "phosphor-react";
 
 const InputWithAddon = () => {

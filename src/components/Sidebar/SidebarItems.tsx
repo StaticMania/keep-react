@@ -1,12 +1,13 @@
+import type { ComponentProps, FC, PropsWithChildren } from "react";
+
 import { useTheme } from "@/src/Keep/ThemeContex";
 import classNames from "classnames";
-import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 export interface SidebarItemsProps
   extends PropsWithChildren,
     ComponentProps<"div"> {}
 
-const SidebarItems: FC<SidebarItemsProps> = ({
+export const SidebarItems: FC<SidebarItemsProps> = ({
   children,
   className,
   ...props
@@ -25,4 +26,3 @@ const SidebarItems: FC<SidebarItemsProps> = ({
 };
 
 SidebarItems.displayName = "Sidebar.Items";
-export default SidebarItems;

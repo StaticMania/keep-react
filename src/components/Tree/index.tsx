@@ -8,7 +8,6 @@ interface Node {
   title: string;
   children?: Node[];
 }
-
 interface Props {
   nodes: Node[];
   showIcon?: boolean;
@@ -18,7 +17,6 @@ interface Props {
   ChildIcon?: ReactNode;
   showCheckbox?: boolean;
 }
-
 export interface keepTreeTheme {
   base: string;
   list: {
@@ -55,8 +53,7 @@ export interface keepTreeTheme {
     off: string;
   };
 }
-
-const Tree: React.FC<Props> = ({
+export const Tree: React.FC<Props> = ({
   nodes,
   showIcon = false,
   showItemsNumber = false,
@@ -152,5 +149,3 @@ const Tree: React.FC<Props> = ({
 
   return <ul className={classNames(theme.base)}>{nodes.map(renderNode)}</ul>;
 };
-
-export default Tree;

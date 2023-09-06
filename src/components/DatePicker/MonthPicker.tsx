@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import CustomInput from "./CustomInput";
 
 import { useDatePickerContext } from "./DatePickerContext";
-const MonthPicker: React.FC = () => {
+export const MonthPicker: React.FC = () => {
   const { monthPicker } = useDatePickerContext();
   const [month, setMonth] = useState(new Date());
   const handleMonthChange = (date: Date) => {
@@ -57,5 +57,3 @@ const MonthPicker: React.FC = () => {
     />
   );
 };
-
-export default MonthPicker;

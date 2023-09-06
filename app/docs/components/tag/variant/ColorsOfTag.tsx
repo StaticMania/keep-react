@@ -1,5 +1,5 @@
 "use client";
-import { Tag } from "@/src/components/Tag";
+import { Tag } from "@/src/components";
 
 const ColorsOfTag = () => {
   return (
@@ -18,7 +18,7 @@ const ColorsOfTag = () => {
 
 const ColorsOfTagCode = `
 "use client";
-import { Tag } from "keep-design";
+import { Tag } from "keep-react";
 
 const ColorsOfTag = () => {
   return (
