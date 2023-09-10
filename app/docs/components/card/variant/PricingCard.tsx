@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { CheckCircle } from "phosphor-react";
-import { Button, Card } from "@/src/components";
+import { Button, Card } from "~/src";
 
 const PricingCard = () => {
   return (

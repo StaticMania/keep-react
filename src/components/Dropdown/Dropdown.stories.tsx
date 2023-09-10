@@ -15,7 +15,7 @@ import {
 import { Dropdown } from ".";
 import { CheckBox } from "../CheckBox";
 import { TextInput } from "../FormControls/TextInput";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 import { Avatar } from "../Avatar/Avatar";
 
 const meta: Meta<typeof Dropdown> = {

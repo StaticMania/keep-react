@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { FC, ReactNode } from "react";
 import { useStatisticContext } from "./StatisticContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepIconTheme {
   base: string;
@@ -11,7 +11,7 @@ export interface keepIconTheme {
   };
 }
 
-interface StatusIconProps {
+export interface StatusIconProps {
   icon: ReactNode;
 }
 

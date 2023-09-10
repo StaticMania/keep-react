@@ -1,5 +1,5 @@
 "use client";
-import { Tree } from "@/src/components";
+import { Tree } from "~/src";
 
 export const nodes = [
   {

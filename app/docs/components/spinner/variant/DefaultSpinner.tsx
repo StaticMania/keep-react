@@ -1,5 +1,5 @@
 "use client";
-import { Spinner } from "@/src/components";
+import { Spinner } from "~/src";
 
 const DefaultSpinner = () => {
   return <Spinner color="info" size="lg" />;

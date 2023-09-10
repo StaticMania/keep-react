@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { ArrowUp } from "phosphor-react";
 import classNames from "classnames";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepRateTheme {
   base?: string;
 }
 
-interface RateProps {
+export interface RateProps {
   children?: string;
 }
 

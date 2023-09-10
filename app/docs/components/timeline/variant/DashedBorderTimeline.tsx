@@ -1,5 +1,5 @@
 "use client";
-import { Button, Timeline } from "@/src/components";
+import { Button, Timeline } from "~/src";
 import { ArrowRight, CalendarBlank } from "phosphor-react";
 
 const DashedBorderTimeline = () => {

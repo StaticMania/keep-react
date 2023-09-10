@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/src/components";
+import { Button } from "~/src";
 import { ShoppingCart, Spinner } from "phosphor-react";
 
 const ShapeOfButton = () => {

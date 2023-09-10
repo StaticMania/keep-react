@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Card } from "@/src/components";
+import { Avatar, Card } from "~/src";
 import { FacebookLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
 
 const ProfileCard = () => {

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
 
-interface CardContainerProps {
+export interface CardContainerProps {
   children?: ReactNode;
   className?: string;
   tag?: keyof JSX.IntrinsicElements;

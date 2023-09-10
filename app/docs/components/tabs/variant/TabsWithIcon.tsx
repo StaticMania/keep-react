@@ -1,5 +1,5 @@
 "use client";
-import { Tabs } from "@/src/components";
+import { Tabs } from "~/src";
 import { Gear, GridFour, Phone, User, WarningCircle } from "phosphor-react";
 
 const TabsWithIcon = () => {

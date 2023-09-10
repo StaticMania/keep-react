@@ -1,4 +1,4 @@
-import { ComponentApiProps } from "@/types/types";
+import { ComponentApiProps } from "~/types/types";
 
 export const avatarApiData: ComponentApiProps[] = [
   {

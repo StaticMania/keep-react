@@ -1,5 +1,5 @@
 "use client";
-import { Button, Tooltip } from "@/src/components";
+import { Button, Tooltip } from "~/src";
 
 const DefaultTooltip = () => {
   return (

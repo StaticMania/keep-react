@@ -1,5 +1,5 @@
 "use client";
-import { Dropdown, TextInput } from "@/src/components";
+import { Dropdown, TextInput } from "~/src";
 import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
 
 const DropdownWithIconAndSearchBar = () => {

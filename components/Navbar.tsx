@@ -1,13 +1,12 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/src/components/Button";
-import { CaretDown, CaretUp, List, X } from "phosphor-react";
-import { gettingStartedRoutes, navbarRoutes, routes } from "@/routes/routes";
-import { Accordion } from "@/src/components/Accordion";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { Button, Accordion } from "~/src";
 import { useEffect, useState } from "react";
 import { DocSearch } from "@docsearch/react";
+import { usePathname } from "next/navigation";
+import { CaretDown, CaretUp, List, X } from "phosphor-react";
+import { gettingStartedRoutes, navbarRoutes, routes } from "~/routes/routes";
 import "@docsearch/css";
 
 const Navbar = () => {

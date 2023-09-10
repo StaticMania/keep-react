@@ -1,5 +1,5 @@
 "use client";
-import { Step } from "@/src/components";
+import { Step } from "~/src";
 
 const DashedBorderStep = () => {
   return (

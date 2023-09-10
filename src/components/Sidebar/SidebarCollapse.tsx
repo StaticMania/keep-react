@@ -7,11 +7,11 @@ import { useEffect, useId, useState } from "react";
 import { Tooltip } from "../Tooltip";
 import { useSidebarContext } from "./SidebarContext";
 import { SidebarItemContext } from "./SidebarItemContext";
-import { KeepBoolean } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { DeepPartial } from "@/src/helpers/deep-partial";
+import { KeepBoolean } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
+import { DeepPartial } from "../../helpers/deep-partial";
 import { KeepSidebarTheme } from ".";
-import { mergeDeep } from "@/src/helpers/mergeDeep";
+import { mergeDeep } from "../../helpers/mergeDeep";
 
 export interface KeepSidebarCollapseTheme {
   button: string;

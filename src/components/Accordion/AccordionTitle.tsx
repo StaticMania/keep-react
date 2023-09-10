@@ -2,10 +2,10 @@ import classNames from "classnames";
 import { MinusCircle, PlusCircle } from "phosphor-react";
 import type { ComponentProps, FC } from "react";
 import { useAccordionContext } from "./AccordionPanelContext";
-import { KeepBoolean, KeepHeadingLevel } from "@/src/Keep/KeepTheme";
-import { DeepPartial } from "@/src/helpers/deep-partial";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { mergeDeep } from "@/src/helpers/mergeDeep";
+import { KeepBoolean, KeepHeadingLevel } from "../../Keep/KeepTheme";
+import { DeepPartial } from "../../helpers/deep-partial";
+import { useTheme } from "../../Keep/ThemeContex";
+import { mergeDeep } from "../../helpers/mergeDeep";
 
 export interface keepAccordionTitleTheme {
   arrow: {

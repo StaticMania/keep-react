@@ -1,5 +1,5 @@
 "use client";
-import { CheckBox } from "@/src/components";
+import { CheckBox } from "~/src";
 
 const CheckboxWithLevel = () => {
   return (

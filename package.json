@@ -1,18 +1,43 @@
 {
-  "name": "keep-design-docs",
-  "version": "0.1.0",
-  "private": true,
+  "name": "keep-react",
+  "version": "1.0.0",
+  "description": "Official React components built for keep and Tailwind CSS",
+  "keywords": [
+    "design-system",
+    "keep-design-system",
+    "keep-react",
+    "react",
+    "tailwind",
+    "tailwindcss",
+    "tailwind-css"
+  ],
+  "homepage": "https://keep-design.vercel.app/docs/getting-started/Introduction",
+  "bugs": "https://github.com/StaticMania/keep-react/issues",
+  "files": [
+    "./lib/"
+  ],
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StaticMania/keep-react"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs",
+    "build:lib:cjs": "tsc -p tsconfig.lib.json",
+    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm"
   },
   "dependencies": {
     "@babel/core": "^7.22.9",
     "@docsearch/react": "^3.5.2",
+    "@floating-ui/react": "^0.25.4",
     "@headlessui/react": "^1.7.16",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
@@ -44,7 +69,6 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@floating-ui/react": "^0.25.3",
     "@storybook/addon-essentials": "7.4.0",
     "@storybook/addon-interactions": "7.4.0",
     "@storybook/addon-links": "7.4.0",
@@ -72,5 +96,10 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   }
 }

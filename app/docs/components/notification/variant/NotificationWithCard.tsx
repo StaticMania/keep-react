@@ -1,5 +1,5 @@
 "use client";
-import { Button, Notification } from "@/src/components";
+import { Button, Notification } from "~/src";
 
 const NotificationWithCard = () => {
   const onDismiss = () => {

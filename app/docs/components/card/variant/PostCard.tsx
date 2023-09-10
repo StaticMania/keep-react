@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Badge, Card } from "@/src/components";
+import { Badge, Card } from "~/src";
 import { CaretRight } from "phosphor-react";
 
 const PostCard = () => {

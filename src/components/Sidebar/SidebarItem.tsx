@@ -13,9 +13,9 @@ import { Badge } from "../Badge";
 import { Tooltip } from "../Tooltip";
 import { useSidebarContext } from "./SidebarContext";
 import { useSidebarItemContext } from "./SidebarItemContext";
-import { KeepColors } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { mergeDeep } from "@/src/helpers/mergeDeep";
+import { KeepColors } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
+import { mergeDeep } from "../../helpers/mergeDeep";
 
 export interface KeepSidebarItemTheme {
   active: string;

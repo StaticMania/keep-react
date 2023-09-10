@@ -5,8 +5,8 @@ import { excludeClassName } from "../../helpers/exclude";
 import { AvatarAdd } from "./AvatarAdd";
 import { AvatarGroup } from "./AvatarGroup";
 import { AvatarGroupCounter } from "./AvatarGroupCounter";
-import { KeepPositions, KeepShapes, KeepSizes } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { KeepPositions, KeepShapes, KeepSizes } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepAvatarTheme {
   base: string;

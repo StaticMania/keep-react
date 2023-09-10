@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Accordion } from ".";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 
 const meta: Meta<typeof Accordion> = {
   tags: ["autodocs"],

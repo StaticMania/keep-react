@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 import classNames from "classnames";
 
 export interface SidebarItemsProps

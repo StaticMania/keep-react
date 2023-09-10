@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Upload } from "@/src/components";
+import { Upload } from "~/src";
 
 const HorizontalDisabledUpload = () => {
   const [fileName, setFileName] = useState("");

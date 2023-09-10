@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Dropdown, TextInput } from "@/src/components";
+import { Avatar, Dropdown, TextInput } from "~/src";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithAvatarV2 = () => {

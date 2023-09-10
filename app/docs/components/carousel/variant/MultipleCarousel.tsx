@@ -1,5 +1,5 @@
 "use client";
-import { Carousel } from "@/src/components";
+import { Carousel } from "~/src";
 
 const MultipleCarousel = () => {
   return (

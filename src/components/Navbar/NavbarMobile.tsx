@@ -1,9 +1,9 @@
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 import classNames from "classnames";
 import { List, X } from "phosphor-react";
 import { FC, ReactNode, useState } from "react";
 
-interface NavbarMobileProps {
+export interface NavbarMobileProps {
   children: ReactNode;
 }
 

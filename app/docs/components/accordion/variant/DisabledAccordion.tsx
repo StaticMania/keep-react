@@ -1,5 +1,5 @@
 "use client";
-import { Accordion } from "@/src/components";
+import { Accordion } from "~/src";
 
 const DisabledAccordion = () => {
   return (

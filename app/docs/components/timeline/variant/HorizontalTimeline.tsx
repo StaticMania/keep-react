@@ -1,5 +1,5 @@
 "use client";
-import { Timeline } from "@/src/components";
+import { Timeline } from "~/src";
 import { CalendarBlank } from "phosphor-react";
 
 const HorizontalTimeline = () => {

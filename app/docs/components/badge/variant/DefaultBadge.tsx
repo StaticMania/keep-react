@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/src/components";
+import { Badge } from "~/src";
 
 const DefaultBadge = () => {
   return (

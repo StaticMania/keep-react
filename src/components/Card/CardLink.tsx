@@ -2,7 +2,7 @@ import classNames from "classnames";
 import type { ReactNode } from "react";
 import Link from "next/link";
 
-interface CardLinkProps {
+export interface CardLinkProps {
   children?: ReactNode;
   className?: string;
   href?: string;

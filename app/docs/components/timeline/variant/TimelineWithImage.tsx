@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Timeline } from "@/src/components";
+import { Timeline } from "~/src";
 
 const TimelineWithImage = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Badge, Button, Table } from "@/src/components";
+import { Avatar, Badge, Button, Table } from "~/src";
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline } from "phosphor-react";
 
 const TransactionsTable = () => {

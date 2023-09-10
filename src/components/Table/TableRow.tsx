@@ -3,7 +3,7 @@ import type { DeepPartial } from "../../helpers/deep-partial";
 
 import classNames from "classnames";
 import { useTableContext } from "./TableContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepTableRowTheme {
   base: string;

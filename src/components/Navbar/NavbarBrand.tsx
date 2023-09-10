@@ -2,7 +2,7 @@ import classNames from "classnames";
 import type { ComponentProps, ElementType, FC, PropsWithChildren } from "react";
 
 import { LinkProps } from "next/link";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface KeepNavbarBrandTheme {
   base: string;

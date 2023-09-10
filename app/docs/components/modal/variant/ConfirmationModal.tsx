@@ -1,8 +1,7 @@
 "use client";
-import { Button } from "@/src/components/Button";
-import { Modal } from "@/src/components/Modal";
+import { useState } from "react";
+import { Button, Modal } from "~/src";
 import { CloudArrowUp, Trash } from "phosphor-react";
-import React, { useState } from "react";
 
 const ConfirmationModal = () => {
   const [showInfoModal, setShowInfoModal] = useState(false);

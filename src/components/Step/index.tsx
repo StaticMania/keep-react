@@ -7,8 +7,8 @@ import { StepContext } from "./StepContext";
 import { StepItem } from "./StepItem";
 import { StepPoint } from "./StepPoint";
 import { StepTitle } from "./StepTitle";
-import { KeepColors, KeepSizes } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { KeepColors, KeepSizes } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type StepProps = PropsWithChildren<{
   className?: string;

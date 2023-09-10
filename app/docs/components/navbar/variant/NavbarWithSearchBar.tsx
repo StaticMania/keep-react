@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Navbar, Button, TextInput } from "@/src/components";
+import { Navbar, Button, TextInput } from "~/src";
 import {
   FacebookLogo,
   InstagramLogo,

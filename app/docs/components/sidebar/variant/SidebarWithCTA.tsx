@@ -1,5 +1,5 @@
 "use client";
-import { Sidebar, Badge } from "@/src/components";
+import { Sidebar, Badge } from "~/src";
 import {
   ChartBar,
   Chat,

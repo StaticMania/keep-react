@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { ReactNode } from "react";
 
-interface CardListProps {
+export interface CardListProps {
   children?: ReactNode;
   className?: string;
 }

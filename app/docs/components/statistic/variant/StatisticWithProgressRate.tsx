@@ -1,5 +1,5 @@
 "use client";
-import { Statistic } from "@/src/components";
+import { Statistic } from "~/src";
 
 const StatisticWithProgressRate = () => {
   return (

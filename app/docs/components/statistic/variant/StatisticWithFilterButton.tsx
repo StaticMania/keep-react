@@ -1,5 +1,5 @@
 "use clietn";
-import { Statistic } from "@/src/components";
+import { Statistic } from "~/src";
 
 const StatisticWithFilterButton = () => {
   return (

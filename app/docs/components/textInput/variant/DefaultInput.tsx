@@ -1,5 +1,5 @@
 "use client";
-import { TextInput } from "@/src/components";
+import { TextInput } from "~/src";
 
 const DefaultInput = () => {
   return (

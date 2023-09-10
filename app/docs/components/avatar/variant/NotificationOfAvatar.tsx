@@ -1,4 +1,4 @@
-import { Avatar } from "@/src/components";
+import { Avatar } from "~/src";
 
 const NotificationOfAvatar = () => {
   return (

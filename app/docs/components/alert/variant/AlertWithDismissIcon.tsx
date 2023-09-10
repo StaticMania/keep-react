@@ -1,5 +1,5 @@
 "use client";
-import { Alert } from "@/src/components";
+import { Alert } from "~/src";
 import { WarningCircle } from "phosphor-react";
 import Link from "next/link";
 

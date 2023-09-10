@@ -1,5 +1,5 @@
 "use client";
-import { Toast } from "@/src/components";
+import { Toast } from "~/src";
 import { Check, Warning, X } from "phosphor-react";
 
 const ColorsOfToast = () => {

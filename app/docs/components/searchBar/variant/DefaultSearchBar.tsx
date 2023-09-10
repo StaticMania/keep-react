@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { SearchBar, Dropdown } from "@/src/components";
+import { SearchBar, Dropdown } from "~/src";
 import { ArrowRight, MagnifyingGlass } from "phosphor-react";
 
 export interface Book {

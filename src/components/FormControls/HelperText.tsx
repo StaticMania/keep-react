@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
-import type { KeepColors } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import type { KeepColors } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepHelperTextTheme {
   base: string;

@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 import classNames from "classnames";
 import { useId } from "react";
 import { useSidebarContext } from "./SidebarContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { KeepBoolean } from "@/src/Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
+import { KeepBoolean } from "../../Keep/KeepTheme";
 
 export interface KeepSidebarLogoTheme {
   base: string;

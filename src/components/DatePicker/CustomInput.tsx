@@ -1,7 +1,7 @@
 import { Calendar } from "phosphor-react";
 import { forwardRef } from "react";
 
-interface CustomInputProps {
+export interface CustomInputProps {
   value?: string;
   onClick?: () => void;
   placeholder?: string;

@@ -3,8 +3,8 @@ import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { DeepPartial } from "../../helpers/deep-partial";
 
 import { useSidebarContext } from "./SidebarContext";
-import { KeepColors } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { KeepColors } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface KeepSidebarCTATheme {
   base: string;

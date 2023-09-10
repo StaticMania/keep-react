@@ -1,6 +1,6 @@
 "use client";
 import { EyeSlash, Lock } from "phosphor-react";
-import { Label, TextInput } from "@/src/components";
+import { Label, TextInput } from "~/src";
 
 const InputColorVariant = () => {
   return (
@@ -87,8 +87,8 @@ const InputColorVariant = () => {
 const InputColorVariantCode = `
 "use client";
 
-import { Label } from "@/src/components/FormControls/Label";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { Label } from "~/src/FormControls/Label";
+import { TextInput } from "~/src/FormControls/TextInput";
 import { EyeSlash, Lock } from "phosphor-react";
 
 const InputColorVariant = () => {

@@ -2,7 +2,7 @@ import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useStepContext } from "./StepContext";
 import { StepItemContext } from "./StepItemContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type StepItemProps = PropsWithChildren<
   ComponentProps<"div"> & {

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 import { useStatisticContext } from "./StatisticContext";
 
 export interface keepAmountTheme {
@@ -7,7 +7,7 @@ export interface keepAmountTheme {
   spacing: string;
 }
 
-interface AmountProps {
+export interface AmountProps {
   children: number;
 }
 

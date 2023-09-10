@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useAccordionContext } from "./AccordionPanelContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { DeepPartial } from "@/src/helpers/deep-partial";
-import { mergeDeep } from "@/src/helpers/mergeDeep";
+import { useTheme } from "../../Keep/ThemeContex";
+import { DeepPartial } from "../../helpers/deep-partial";
+import { mergeDeep } from "../../helpers/mergeDeep";
 
 export interface keepAccordionComponentTheme {
   base: string;

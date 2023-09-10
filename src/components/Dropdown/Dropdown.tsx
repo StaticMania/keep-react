@@ -17,18 +17,17 @@ import React, {
 } from "react";
 import type { ButtonProps } from "../Button";
 import { Button } from "../Button";
-import { Floating, FloatingProps, KeepFloatingTheme } from "../Floating";
+import { Floating, FloatingProps, keepFloatingTheme } from "../Floating";
 import type { keepDropdownDividerTheme } from "./DropdownDivider";
 import { DropdownDivider } from "./DropdownDivider";
 import type { keepDropdownHeaderTheme } from "./DropdownHeader";
 import { DropdownHeader } from "./DropdownHeader";
 import { DropdownItem, keepDropdownItemTheme } from "./DropdownItem";
-import { DeepPartial } from "@/src/helpers/deep-partial";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { uuid } from "@/src/helpers/uuid";
+import { DeepPartial } from "../../helpers/deep-partial";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepDropdownFloatingTheme
-  extends KeepFloatingTheme,
+  extends keepFloatingTheme,
     keepDropdownDividerTheme,
     keepDropdownHeaderTheme {
   item: keepDropdownItemTheme;
@@ -88,9 +87,6 @@ const DropdownComponent: FC<DropdownProps> = ({
     return icons[p] ?? <CaretDown size={18} />;
   }, [placement]);
 
-  const [closeRequestKey, setCloseRequestKey] = useState<string | undefined>(
-    undefined
-  );
   const [buttonWidth, setButtonWidth] = useState<number | undefined>(undefined);
 
   // Extends DropdownItem's onClick to trigger a close request to the Floating component
@@ -103,7 +99,7 @@ const DropdownComponent: FC<DropdownProps> = ({
           // @ts-ignore TODO: Rewrite Dropdown
           onClick: () => {
             node.props.onClick?.();
-            dismissOnClick && setCloseRequestKey(uuid());
+            dismissOnClick;
           },
         });
       if (node.props.children && typeof node.props.children === "object") {
@@ -157,7 +153,6 @@ const DropdownComponent: FC<DropdownProps> = ({
       trigger={trigger}
       theme={theme.floating}
       minWidth={buttonWidth}
-      closeRequestKey={closeRequestKey}
     >
       <TriggerWrapper setButtonWidth={setButtonWidth}>
         {label}

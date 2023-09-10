@@ -1,6 +1,6 @@
 "use client";
 import { CaretRight, Crown } from "phosphor-react";
-import { Dropdown, TextInput } from "@/src/components";
+import { Dropdown, TextInput } from "~/src";
 
 const DropdownWithTitleDesAndSearch = () => {
   return (
@@ -92,8 +92,8 @@ const DropdownWithTitleDesAndSearch = () => {
 const DropdownWithTitleDesAndSearchCode = `
 "use client";
 
-import { Dropdown } from "@/src/components/Dropdown";
-import { TextInput } from "@/src/components/FormControls/TextInput";
+import { Dropdown } from "~/src/Dropdown";
+import { TextInput } from "~/src/FormControls/TextInput";
 import { CaretRight, Crown } from "phosphor-react";
 
 const DropdownWithTitleDesAndSearch = () => {

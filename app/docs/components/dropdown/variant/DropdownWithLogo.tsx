@@ -1,5 +1,5 @@
 "use client";
-import { Dropdown } from "@/src/components";
+import { Dropdown } from "~/src";
 import {
   FacebookLogo,
   GoogleLogo,

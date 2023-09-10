@@ -31,7 +31,7 @@ import { tooltipTheme } from "../components/Tooltip/theme";
 import { treeTheme } from "../components/Tree/theme";
 import { uploadTheme } from "../components/Upload/theme";
 
-const defaultTheme = {
+export const theme = {
   alert: alertTheme,
   avatar: avatarTheme,
   accordion: accordionTheme,
@@ -66,5 +66,3 @@ const defaultTheme = {
   navbar: navbarTheme,
   pagination: paginationTheme,
 };
-
-export default defaultTheme;

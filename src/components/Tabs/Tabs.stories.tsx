@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Gear, GridFour, Phone, User, WarningCircle } from "phosphor-react";
 import { Tabs } from ".";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 
 const meta: Meta<typeof Tabs> = {
   component: Tabs,

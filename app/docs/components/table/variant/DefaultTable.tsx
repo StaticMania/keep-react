@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Avatar, Badge, Button, Table } from "@/src/components";
+import { Avatar, Badge, Button, Table } from "~/src";
 import { ArrowDown, Cube, DotsThreeOutline } from "phosphor-react";
 
 const DefaultTable = () => {

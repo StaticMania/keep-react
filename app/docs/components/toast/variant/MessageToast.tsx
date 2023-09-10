@@ -1,5 +1,5 @@
 "use client";
-import { Toast } from "@/src/components";
+import { Toast } from "~/src";
 import { TelegramLogo } from "phosphor-react";
 
 const MessageToast = () => {

@@ -1,5 +1,5 @@
 "use client";
-import { Empty } from "@/src/components";
+import { Empty } from "~/src";
 
 const NoDataFound = () => {
   return (

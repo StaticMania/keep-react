@@ -1,5 +1,5 @@
 "use client";
-import { Tabs } from "@/src/components";
+import { Tabs } from "~/src";
 
 const DefaultTabs = () => {
   return (

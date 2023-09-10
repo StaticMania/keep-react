@@ -11,7 +11,7 @@ import {
 import { Button } from "../Button";
 import { TextInput } from "../FormControls/TextInput";
 import { Navbar } from "./";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 import Image from "next/image";
 
 const meta: Meta<typeof Navbar> = {

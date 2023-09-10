@@ -1,5 +1,5 @@
 "use client";
-import { Notification, Button, Avatar } from "@/src/components";
+import { Notification, Button, Avatar } from "~/src";
 
 const NotificationWithAvatar = () => {
   const onDismiss = () => {

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Book, books } from "./DefaultSearchBar";
 import { ArrowRight, MapPinLine } from "phosphor-react";
-import { SearchBar, Dropdown, Button } from "@/src/components";
+import { SearchBar, Dropdown, Button } from "~/src";
 
 const SearchBarWithColorVariant = () => {
   const [data, setData] = useState<Book[]>([]);

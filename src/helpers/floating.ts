@@ -1,18 +1,15 @@
-import { arrow, autoPlacement, shift } from "@floating-ui/core";
-import type { Placement } from "@floating-ui/react-dom";
-import type { Middleware } from "@floating-ui/react";
-import { flip, offset } from "@floating-ui/react";
+import type { Middleware, Placement } from "@floating-ui/react";
+import { arrow, autoPlacement, flip, offset, shift } from "@floating-ui/react";
 import type { RefObject } from "react";
 
 /**
  * @see https://floating-ui.com/docs/middleware
  */
-
 export const getMiddleware = ({
   arrowRef,
   placement,
 }: {
-  arrowRef: RefObject<HTMLDivElement>;
+  arrowRef?: RefObject<HTMLDivElement>;
   placement: "auto" | Placement;
 }): Middleware[] => {
   const middleware = [];
@@ -21,7 +18,7 @@ export const getMiddleware = ({
   middleware.push(placement === "auto" ? autoPlacement() : flip());
   middleware.push(shift({ padding: 8 }));
 
-  if (arrowRef.current) {
+  if (arrowRef?.current) {
     middleware.push(arrow({ element: arrowRef.current }));
   }
 
@@ -46,13 +43,5 @@ export const getArrowPlacement = ({
     right: "left",
     bottom: "top",
     left: "right",
-    "top-start": "bottom-start",
-    "bottom-start": "top-start",
-    "right-start": "left-start",
-    "left-start": "right-start",
-    "top-end": "bottom-end",
-    "bottom-end": "top-end",
-    "right-end": "left-end",
-    "left-end": "right-end",
   }[placement.split("-")[0]] as Placement;
 };

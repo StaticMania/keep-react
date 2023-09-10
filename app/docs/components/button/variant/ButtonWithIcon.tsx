@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "@/src/components";
-import { Gear, SquaresFour, Cube } from "phosphor-react";
+import { Button } from "~/src";
+import { Gear, SquaresFour } from "phosphor-react";
 
 const ButtonWithIcon = () => {
   return (

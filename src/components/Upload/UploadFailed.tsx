@@ -3,7 +3,7 @@ import { ArrowClockwise, X } from "phosphor-react";
 import { FC } from "react";
 import { Progress } from "../Progress";
 import { useUploadContext } from "./UploadContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepUploadFailedTheme {
   base: string;

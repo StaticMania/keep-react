@@ -1,5 +1,5 @@
 "use client";
-import { Progress } from "@/src/components";
+import { Progress } from "~/src";
 
 const VariantOfProgress = () => {
   return (

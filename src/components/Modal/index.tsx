@@ -13,8 +13,8 @@ import {
   KeepPositions,
   KeepSizes,
   KeepStateColors,
-} from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+} from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepModalTheme {
   base: string;

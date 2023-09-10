@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Button, Table } from "@/src/components";
+import { Avatar, Button, Table } from "~/src";
 import { Cube, DotsThreeOutline } from "phosphor-react";
 
 const FilesUploadedTable = () => {

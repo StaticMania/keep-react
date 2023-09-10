@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Book, books } from "./DefaultSearchBar";
-import { SearchBar, Dropdown } from "@/src/components";
+import { SearchBar, Dropdown } from "~/src";
 import { ArrowRight, MagnifyingGlass } from "phosphor-react";
 
 const SearchBarWithIcon = () => {
@@ -44,9 +44,9 @@ const SearchBarWithIcon = () => {
 const SearchBarWithIconCode = `
 "use client";
 import { useState } from "react";
-import { SearchBar } from "@/src/components/SearchBar";
+import { SearchBar } from "~/src/SearchBar";
 import { ArrowRight, MagnifyingGlass } from "phosphor-react";
-import { Dropdown } from "@/src/components/Dropdown";
+import { Dropdown } from "~/src/Dropdown";
 
 const books = [
   { id: 1, name: "To Kill a Mockingbird" },

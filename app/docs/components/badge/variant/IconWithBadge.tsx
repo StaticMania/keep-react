@@ -1,5 +1,5 @@
 "use client";
-import { Badge } from "@/src/components";
+import { Badge } from "~/src";
 import { Crown, ShieldCheck } from "phosphor-react";
 
 const IconWithBadge = () => {

@@ -1,6 +1,6 @@
 "use client";
 import { CaretRight } from "phosphor-react";
-import { Dropdown, TextInput } from "@/src/components";
+import { Dropdown, TextInput } from "~/src";
 
 const DropdownWithTitleDescriptionV3 = () => {
   return (

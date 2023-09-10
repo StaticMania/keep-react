@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import classNames from "classnames";
 import type { PropsWithChildren } from "react";
 import type { AvatarSizes } from "./Avatar";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type AvatarAddProps = PropsWithChildren<{
   icon?: string;

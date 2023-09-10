@@ -1,5 +1,5 @@
 "use client";
-import { Breadcrumb } from "@/src/components";
+import { Breadcrumb } from "~/src";
 import { ArrowsLeftRight, House } from "phosphor-react";
 
 const BreadcrumbWithSeparatorIcon = () => {

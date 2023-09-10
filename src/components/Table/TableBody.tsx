@@ -1,8 +1,8 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import classNames from "classnames";
 import { keepTableCellTheme } from "./TableCell";
-import { DeepPartial } from "@/src/helpers/deep-partial";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { DeepPartial } from "../../helpers/deep-partial";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepTableBodyTheme {
   base: string;

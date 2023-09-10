@@ -1,5 +1,5 @@
 "use client";
-import { Progress } from "@/src/components";
+import { Progress } from "~/src";
 
 const DefaultProgress = () => {
   return <Progress progress={45} color="info" rounded={false} />;

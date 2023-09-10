@@ -1,5 +1,5 @@
 "use client";
-import { AreaChart } from "@/src/components";
+import { AreaChart } from "~/src";
 import { chartData } from "./DefaultAreaChart";
 
 const AreaChartWithGridGraphLine = () => {

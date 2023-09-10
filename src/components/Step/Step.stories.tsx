@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { DownloadSimple } from "phosphor-react";
 import { Step } from ".";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 
 const meta: Meta<typeof Step> = {
   component: Step,

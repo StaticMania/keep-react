@@ -18,8 +18,8 @@ import {
 } from "react";
 import type { TabItemProps } from "./TabItem";
 import { TabItem } from "./TabItem";
-import { KeepBoolean, KeepColors } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { KeepBoolean, KeepColors } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepTabTheme {
   base: string;

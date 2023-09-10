@@ -1,6 +1,6 @@
 "use client";
 import { Heart } from "phosphor-react";
-import { Avatar, Button, Card } from "@/src/components";
+import { Avatar, Button, Card } from "~/src";
 
 const ProfileCardWithCover = () => {
   return (

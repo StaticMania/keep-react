@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { NumberInput } from "@/src/components";
+import { NumberInput } from "~/src";
 
 const DefaultNumberInput = () => {
   const [value, setValue] = useState(100);

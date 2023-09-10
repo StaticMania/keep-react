@@ -5,8 +5,8 @@ import {
   KeepCheckboxShape,
   KeepSizes,
   KeepStateColors,
-} from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+} from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepCheckboxTheme {
   base: string;

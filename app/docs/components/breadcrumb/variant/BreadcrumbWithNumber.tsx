@@ -1,5 +1,5 @@
 "use client";
-import { Breadcrumb } from "@/src/components";
+import { Breadcrumb } from "~/src";
 import { CaretRight, House } from "phosphor-react";
 import React from "react";
 
@@ -57,7 +57,7 @@ const BreadcrumbWithNumber = () => {
 
 const BreadcrumbWithNumberCode = `
 "use client"
-import { Breadcrumb } from "@/src/components/Breadcrumb";
+import { Breadcrumb } from "~/src/Breadcrumb";
 import { CaretRight, House } from "phosphor-react";
 import React from "react";
 

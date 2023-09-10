@@ -1,5 +1,5 @@
 "use client";
-import { Step } from "@/src/components";
+import { Step } from "~/src";
 import { DownloadSimple } from "phosphor-react";
 
 const ColorsOfStep = () => {

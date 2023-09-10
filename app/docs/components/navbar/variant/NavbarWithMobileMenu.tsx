@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { List } from "phosphor-react";
-import { Navbar, Button } from "@/src/components";
+import { Navbar, Button } from "~/src";
 
 const NavbarWithMobileMenu = () => {
   return (

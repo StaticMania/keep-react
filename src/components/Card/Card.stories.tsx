@@ -17,7 +17,6 @@ import {
   SkipForward,
   SpeakerHigh,
   Users,
-  XCircle,
 } from "phosphor-react";
 
 import {
@@ -28,10 +27,10 @@ import {
   Progress,
   Rating,
   Avatar,
-} from "@/src/components";
+} from "~/src";
 
 import Image from "next/image";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 
 const meta: Meta<typeof Card> = {
   component: Card,

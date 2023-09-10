@@ -1,5 +1,5 @@
 "use client";
-import { Button, Toast } from "@/src/components";
+import { Button, Toast } from "~/src";
 import { ArrowsClockwise } from "phosphor-react";
 
 const InteractiveToast = () => {

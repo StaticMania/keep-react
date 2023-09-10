@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Rating } from ".";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 
 const meta: Meta<typeof Rating> = {
   component: Rating,

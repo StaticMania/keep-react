@@ -1,5 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
-import { DeepPartial } from "@/src/helpers/deep-partial";
+import { DeepPartial } from "../../helpers/deep-partial";
 
 export interface keepTableCaptionTheme {
   base: string;

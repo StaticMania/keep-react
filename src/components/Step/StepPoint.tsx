@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { useStepContext } from "./StepContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type StepPointProps = PropsWithChildren<
   ComponentProps<"div"> & {

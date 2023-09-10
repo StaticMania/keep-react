@@ -15,7 +15,7 @@ import {
 import { Table } from ".";
 import { Badge } from "../Badge";
 import { Button } from "../Button";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 import { Avatar } from "../Avatar/Avatar";
 
 const meta: Meta<typeof Table> = {

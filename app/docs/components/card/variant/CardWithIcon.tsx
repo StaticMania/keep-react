@@ -1,5 +1,5 @@
 "use client";
-import { Button, Card } from "@/src/components";
+import { Button, Card } from "~/src";
 import {
   ArchiveTray,
   CaretRight,

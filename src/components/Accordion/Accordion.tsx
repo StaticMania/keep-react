@@ -13,10 +13,10 @@ import type { AccordionPanelProps } from "./AccordionPanel";
 import { AccordionPanel } from "./AccordionPanel";
 import type { keepAccordionTitleTheme } from "./AccordionTitle";
 import { AccordionTitle } from "./AccordionTitle";
-import { DeepPartial } from "@/src/helpers/deep-partial";
-import { KeepBoolean } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { mergeDeep } from "@/src/helpers/mergeDeep";
+import { DeepPartial } from "../../helpers/deep-partial";
+import { KeepBoolean } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
+import { mergeDeep } from "../../helpers/mergeDeep";
 
 export interface keepAccordionTheme {
   root: keepAccordionRootTheme;

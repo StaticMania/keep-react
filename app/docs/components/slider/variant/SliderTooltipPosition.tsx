@@ -1,16 +1,18 @@
 "use client";
-import { Slider } from "@/src/components";
+import { Slider } from "~/src";
 
 const SliderTooltipPosition = () => {
   return (
-    <Slider
-      defaultValue={300}
-      max={1000}
-      min={100}
-      onChange={(value: number | number[]) => console.log(value)}
-      step={100}
-      tooltip="bottom"
-    />
+    <div className="p-4">
+      <Slider
+        defaultValue={300}
+        max={1000}
+        min={100}
+        onChange={(value: number | number[]) => console.log(value)}
+        step={100}
+        tooltip="bottom"
+      />
+    </div>
   );
 };
 

@@ -1,7 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
-import { Carousel } from "@/src/components";
+import { Carousel } from "~/src";
 import { ArrowLineLeft, ArrowLineRight } from "phosphor-react";
 
 const CarouselWithCustomControlIcon = () => {

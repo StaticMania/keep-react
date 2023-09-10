@@ -1,5 +1,5 @@
-import { KeepHeadingLevel } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { KeepHeadingLevel } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 

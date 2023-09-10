@@ -1,6 +1,6 @@
 "use client";
 import { EyeSlash, Lock } from "phosphor-react";
-import { Label, TextInput } from "@/src/components";
+import { Label, TextInput } from "~/src";
 
 const InputWithAddonAndIcon = () => {
   return (

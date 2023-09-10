@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Label, Radio } from "@/src/components";
+import { Label, Radio } from "~/src";
 
 const RadioCheckIcon = () => {
   const [selected, setSelected] = useState("");

@@ -1,4 +1,4 @@
-import { ComponentApiProps } from "@/types/types";
+import { ComponentApiProps } from "~/types/types";
 import { Space_Mono } from "next/font/google";
 import React, { FC } from "react";
 

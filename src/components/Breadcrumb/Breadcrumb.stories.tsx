@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { CaretLeft, CaretRight, House } from "phosphor-react";
 import { Breadcrumb } from ".";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import type { Meta, StoryObj } from "@storybook/react";
+import { removeFragment } from "../../helpers/mergeDeep";
+import { CaretLeft, CaretRight, House } from "phosphor-react";
 
 const meta: Meta<typeof Breadcrumb> = {
   component: Breadcrumb,

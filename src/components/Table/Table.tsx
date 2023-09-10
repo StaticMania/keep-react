@@ -1,4 +1,3 @@
-import "./Table.css";
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { keepTableBodyTheme } from "./TableBody";
@@ -13,8 +12,8 @@ import { TableContext } from "./TableContext";
 import { TableHead } from "./TableHead";
 import { TableHeadCell } from "./TableHeadCell";
 import { TableRow } from "./TableRow";
-import { DeepPartial } from "@/src/helpers/deep-partial";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { DeepPartial } from "../../helpers/deep-partial";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepTableTheme {
   root: keepTableRootTheme;

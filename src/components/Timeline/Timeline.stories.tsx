@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ArrowRight, CalendarBlank } from "phosphor-react";
 import { Timeline } from ".";
 import { Button } from "../Button";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 import Image from "next/image";
 
 const meta: Meta<typeof Timeline> = {

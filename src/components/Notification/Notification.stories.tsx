@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Cookie, DownloadSimple, FigmaLogo } from "phosphor-react";
+import { Cookie } from "phosphor-react";
 import { Notification } from ".";
 import { Button } from "../Button";
 import { Avatar } from "../Avatar/Avatar";

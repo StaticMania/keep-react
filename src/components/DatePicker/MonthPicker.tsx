@@ -1,10 +1,11 @@
 import { CaretLeft, CaretRight } from "phosphor-react";
-import React, { useState } from "react";
+import CustomInput from "./CustomInput";
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import CustomInput from "./CustomInput";
 
 import { useDatePickerContext } from "./DatePickerContext";
+
 export const MonthPicker: React.FC = () => {
   const { monthPicker } = useDatePickerContext();
   const [month, setMonth] = useState(new Date());

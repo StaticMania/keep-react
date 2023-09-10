@@ -2,7 +2,7 @@ import { FC } from "react";
 import classNames from "classnames";
 import { Progress } from "../Progress";
 import { Pause, X } from "phosphor-react";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 import { useUploadContext } from "./UploadContext";
 
 export interface UploadPendingTheme {

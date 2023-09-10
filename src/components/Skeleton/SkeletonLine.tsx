@@ -1,8 +1,8 @@
 import { FC } from "react";
 import classNames from "classnames";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
-interface SkeletonProps {
+export interface SkeletonProps {
   height?: string;
 }
 

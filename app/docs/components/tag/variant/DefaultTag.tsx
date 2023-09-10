@@ -1,5 +1,5 @@
 "use client";
-import { Tag } from "@/src/components";
+import { Tag } from "~/src";
 
 const DefaultTag = () => {
   return (

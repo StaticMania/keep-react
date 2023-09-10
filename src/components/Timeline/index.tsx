@@ -9,7 +9,7 @@ import { TimelineItem } from "./TimelineItem";
 import { TimelinePoint } from "./TimelinePoint";
 import { TimelineTime } from "./TimelineTime";
 import { TimelineTitle } from "./TimelineTitle";
-import { KeepBoolean } from "@/src/Keep/KeepTheme";
+import { KeepBoolean } from "../../Keep/KeepTheme";
 
 export interface keepStepperTheme {
   horizontal: {

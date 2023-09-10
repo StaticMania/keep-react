@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { FC } from "react";
 
 import { Avatar } from "../Avatar/Avatar";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 import { Radio } from "../FormControls/Radio";
 
 interface CheckboxGroupProps {

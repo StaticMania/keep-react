@@ -1,5 +1,5 @@
 "use client";
-import { CheckBox, Dropdown } from "@/src/components";
+import { CheckBox, Dropdown } from "~/src";
 
 const DropdownWithCheckbox = () => {
   return (

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Badge, Button, Table } from "@/src/components";
+import { Badge, Button, Table } from "~/src";
 import {
   CalendarBlank,
   Crown,

@@ -1,9 +1,9 @@
 "use client";
-import { Slider } from "@/src/components";
+import { Slider } from "~/src";
 
 const SliderWithMarks = () => {
   return (
-    <div className="p-5">
+    <div className="p-4">
       <Slider
         defaultValue={300}
         marks={{

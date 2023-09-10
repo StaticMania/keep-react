@@ -3,8 +3,8 @@ import { Minus, Plus } from "phosphor-react";
 import type { ComponentProps, ReactNode } from "react";
 import { forwardRef } from "react";
 import { excludeClassName } from "../../helpers/exclude";
-import type { KeepSizes } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import type { KeepSizes } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepNumberInputTheme {
   base: string;

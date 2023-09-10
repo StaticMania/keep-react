@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { CheckCircle, Info, WarningCircle, XCircle } from "phosphor-react";
 import { Alert } from ".";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 import Link from "next/link";
 
 const meta: Meta<typeof Alert> = {

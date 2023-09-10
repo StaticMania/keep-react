@@ -1,6 +1,6 @@
 "use client";
 import { ArrowRight } from "phosphor-react";
-import { Button, Timeline } from "@/src/components";
+import { Button, Timeline } from "~/src";
 
 const DefaultTimeline = () => {
   return (

@@ -2,7 +2,7 @@ import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import { useModalContext } from "./ModalContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type ModalBodyProps = PropsWithChildren<
   Omit<ComponentProps<"div">, "className">

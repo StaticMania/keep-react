@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
-import type { KeepStateColors } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import type { KeepStateColors } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepLavelTheme {
   base: string;

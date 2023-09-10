@@ -1,5 +1,5 @@
 "use client";
-import { AreaChart } from "@/src/components";
+import { AreaChart } from "~/src";
 export const chartData = [
   {
     name: "1",

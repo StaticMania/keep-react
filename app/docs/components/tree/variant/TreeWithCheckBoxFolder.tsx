@@ -1,6 +1,6 @@
 "use client";
 import { nodes } from "./DefaultTree";
-import { Tree } from "@/src/components";
+import { Tree } from "~/src";
 import { File, FolderNotchOpen } from "phosphor-react";
 
 const TreeWithCheckboxFolder = () => {

@@ -1,5 +1,5 @@
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { DeepPartial } from "@/src/helpers/deep-partial";
+import { useTheme } from "../../Keep/ThemeContex";
+import { DeepPartial } from "../../helpers/deep-partial";
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 

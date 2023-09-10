@@ -1,17 +1,19 @@
 "use client";
-import { Slider } from "@/src/components";
+import { Slider } from "~/src";
 
 const DefaultSlider = () => {
   return (
-    <Slider
-      range
-      min={100}
-      max={1000}
-      defaultValue={[100, 300]}
-      tooltip="top"
-      draggableTrack
-      onChange={(value: number | number[]) => console.log(value)}
-    />
+    <div className="p-4">
+      <Slider
+        range
+        min={100}
+        max={1000}
+        defaultValue={[100, 300]}
+        tooltip="top"
+        draggableTrack
+        onChange={(value: number | number[]) => console.log(value)}
+      />
+    </div>
   );
 };
 

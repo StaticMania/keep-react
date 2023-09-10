@@ -3,7 +3,7 @@ import { CaretDown } from "phosphor-react";
 import { FC } from "react";
 import { Button } from "../Button";
 import { useStatisticContext } from "./StatisticContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepTitleTheme {
   base: string;
@@ -13,7 +13,7 @@ export interface keepTitleTheme {
     icon: string;
   };
 }
-interface TitleProps {
+export interface TitleProps {
   children: string;
 }
 

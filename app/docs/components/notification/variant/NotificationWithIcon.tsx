@@ -1,7 +1,6 @@
 "use client";
 import { Cookie } from "phosphor-react";
-import { Button } from "@/src/components/Button";
-import { Notification } from "@/src/components/Notification";
+import { Notification, Button } from "~/src";
 
 const NotificationWithIcon = () => {
   const onDismiss = () => {

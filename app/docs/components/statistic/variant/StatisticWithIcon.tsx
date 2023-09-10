@@ -1,6 +1,6 @@
 "use client";
 import { Users } from "phosphor-react";
-import { Statistic } from "@/src/components";
+import { Statistic } from "~/src";
 
 const StatisticWithIcon = () => {
   return (

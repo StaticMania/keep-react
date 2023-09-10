@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Avatar, Modal, Button } from "@/src/components";
+import { Avatar, Modal, Button } from "~/src";
 import { CloudArrowUp, UserPlus } from "phosphor-react";
 
 const HistoryModal = () => {

@@ -1,7 +1,6 @@
 "use client";
-
-import { NumberInput } from "@/src/components/FormControls/NumberInput";
 import { useState } from "react";
+import { NumberInput } from "~/src";
 
 const SizesOfNumberInput = () => {
   const [value, setValue] = useState(100);

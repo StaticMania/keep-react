@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import { DatePicker } from "@/src/components";
+import { DatePicker } from "~/src";
 
 const DefaultDatePicker = () => {
-  const [date, setDate] = useState<Date | null>(null);
+  const [_, setDate] = useState<Date | null>(null);
   return (
     <DatePicker singleDatePicker={setDate}>
       <DatePicker.SingleDate />

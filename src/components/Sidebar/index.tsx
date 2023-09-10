@@ -13,9 +13,9 @@ import { SidebarItem } from "./SidebarItem";
 import { SidebarItemGroup } from "./SidebarItemGroup";
 import { SidebarItems } from "./SidebarItems";
 import { SidebarLogo } from "./SidebarLogo";
-import { KeepBoolean } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
-import { mergeDeep } from "@/src/helpers/mergeDeep";
+import { KeepBoolean } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
+import { mergeDeep } from "../../helpers/mergeDeep";
 
 export interface KeepSidebarTheme {
   root: {

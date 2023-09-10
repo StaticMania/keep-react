@@ -3,7 +3,7 @@
 import type { FC, ReactNode } from "react";
 import { createContext, useContext, useEffect, useState } from "react";
 import type { KeepTheme } from "./KeepTheme";
-import defaultTheme from "../theme/theme";
+import { theme as defaultTheme } from "../theme/theme";
 import { windowExists } from "../helpers/window-exists";
 
 export type Mode = string | undefined | "light" | "dark";

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { PropsWithChildren } from "react";
 import type { AvatarSizes } from "./Avatar";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type AvatarGroupdCounterProps = PropsWithChildren<{
   total?: number;

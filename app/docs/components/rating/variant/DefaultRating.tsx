@@ -1,5 +1,5 @@
 "use client";
-import { Rating } from "@/src/components";
+import { Rating } from "~/src";
 
 const DefaultRating = () => {
   return (

@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 import classNames from "classnames";
 import { X } from "phosphor-react";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";

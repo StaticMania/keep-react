@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Star, StarHalf } from "phosphor-react";
 import type { FC, ReactNode } from "react";
 import { useRatingContext } from "./RatingContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface RatingStarProps {
   filledType?: "regular" | "fill" | "bold" | "duotone" | "thin" | "light";

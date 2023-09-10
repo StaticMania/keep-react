@@ -15,7 +15,7 @@ import {
 } from "phosphor-react";
 import { Sidebar } from ".";
 import { Badge } from "../Badge";
-import { removeFragment } from "@/src/helpers/mergeDeep";
+import { removeFragment } from "../../helpers/mergeDeep";
 
 const meta: Meta<typeof Sidebar> = {
   component: Sidebar,

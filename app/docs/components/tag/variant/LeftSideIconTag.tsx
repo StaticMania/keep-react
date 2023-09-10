@@ -1,5 +1,5 @@
 "use client";
-import { Tag } from "@/src/components";
+import { Tag } from "~/src";
 import { CrownSimple } from "phosphor-react";
 
 const LeftSideIconTag = () => {

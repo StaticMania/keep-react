@@ -1,5 +1,5 @@
 "use client";
-import { CheckBox, TextInput, Dropdown } from "@/src/components";
+import { CheckBox, TextInput, Dropdown } from "~/src";
 import { CaretRight } from "phosphor-react";
 
 const DropdownWithCheckboxV3 = () => {

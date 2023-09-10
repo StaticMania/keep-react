@@ -1,5 +1,5 @@
 "use client";
-import { Empty } from "@/src/components/Empty";
+import { Empty } from "~/src";
 
 const NotFound = () => {
   return (

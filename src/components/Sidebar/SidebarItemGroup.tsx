@@ -2,7 +2,7 @@ import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 import classNames from "classnames";
 import { SidebarItemContext } from "./SidebarItemContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface SidebarItemGroupProps
   extends PropsWithChildren,

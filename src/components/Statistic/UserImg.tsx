@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Avatar } from "../Avatar/Avatar";
 
-interface UserImgProps {
+export interface UserImgProps {
   img: string;
 }
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart } from "@/src/components";
+import { BarChart } from "~/src";
 
 export const BarChartData = [
   {

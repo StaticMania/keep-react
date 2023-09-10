@@ -1,7 +1,7 @@
 import { X } from "phosphor-react";
 import type { ComponentProps, FC, ReactNode } from "react";
 import { useToastContext } from "./ToastContext";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 type ToastToggleProps = ComponentProps<"button"> & {
   xIcon?: ReactNode;

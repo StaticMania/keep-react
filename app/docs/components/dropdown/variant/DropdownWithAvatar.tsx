@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Dropdown } from "@/src/components";
+import { Avatar, Dropdown } from "~/src";
 
 const DropdownWithAvatar = () => {
   return (

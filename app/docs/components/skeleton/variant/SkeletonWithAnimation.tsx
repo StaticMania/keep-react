@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@/src/components";
+import { Skeleton } from "~/src";
 
 const SkeletonWithAnimation = () => {
   return (
@@ -36,7 +36,7 @@ const SkeletonWithAnimation = () => {
 
 const SkeletonWithAnimationCode = `
 "use client";
-import { Skeleton } from "@/src/components/Skeleton";
+import { Skeleton } from "~/src/Skeleton";
 
 const SkeletonWithAnimation = () => {
   return (

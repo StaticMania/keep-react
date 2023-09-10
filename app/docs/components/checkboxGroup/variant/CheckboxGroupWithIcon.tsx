@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { SquaresFour } from "phosphor-react";
-import { CheckboxGroup } from "@/src/components";
+import { CheckboxGroup } from "~/src";
 
 const CheckboxGroupWithIcon = () => {
   const [selected, setSelected] = useState("");

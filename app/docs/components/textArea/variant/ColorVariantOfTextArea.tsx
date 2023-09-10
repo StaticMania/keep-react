@@ -1,5 +1,5 @@
 "use client";
-import { Textarea } from "@/src/components";
+import { Textarea } from "~/src";
 
 const ColorVariantOfTextArea = () => {
   return (

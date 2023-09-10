@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/src/components";
+import { Button } from "~/src";
 
 const DefaultButton = () => {
   return (

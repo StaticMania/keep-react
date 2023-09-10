@@ -1,5 +1,5 @@
 "use client";
-import { Spinner } from "@/src/components";
+import { Spinner } from "~/src";
 
 const SpinnerSizes = () => {
   return (

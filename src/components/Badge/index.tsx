@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { excludeClassName } from "../../helpers/exclude";
-import { KeepColors, KeepSizes } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { KeepColors, KeepSizes } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepBadgeTheme {
   base: string;

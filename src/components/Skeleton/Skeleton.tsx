@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import { FC, ReactNode } from "react";
-import { SkeletonAvator } from "./SkeletonAvator";
+import { SkeletonAvatar } from "./SkeletonAvatar";
 import { SkeletonLine } from "./SkeletonLine";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepSkeletonTheme {
   base: string;
@@ -11,7 +11,7 @@ export interface keepSkeletonTheme {
   avatar: string;
 }
 
-interface keepSkeletonThemeProps {
+export interface keepSkeletonThemeProps {
   animation?: boolean;
   children?: ReactNode;
 }
@@ -30,9 +30,9 @@ const SkeletonComponent: FC<keepSkeletonThemeProps> = ({
 
 SkeletonComponent.displayName = "Skeleton";
 SkeletonLine.displayName = "Skeleton.Line";
-SkeletonAvator.displayName = "Skeleton.Avatar";
+SkeletonAvatar.displayName = "Skeleton.Avatar";
 
 export const Skeleton = Object.assign(SkeletonComponent, {
   Line: SkeletonLine,
-  Avatar: SkeletonAvator,
+  Avatar: SkeletonAvatar,
 });

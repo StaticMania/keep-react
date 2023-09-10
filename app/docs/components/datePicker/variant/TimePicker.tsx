@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import { DatePicker } from "@/src/components";
+import { DatePicker } from "~/src";
 
 const TimePicker = () => {
-  const [time, setTime] = useState<string | null | Date>();
+  const [_, setTime] = useState<string | null | Date>();
   return (
     <DatePicker timePicker={setTime}>
       <DatePicker.Time />

@@ -3,8 +3,8 @@ import type { ComponentProps, ReactNode } from "react";
 import { forwardRef } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import { HelperText } from "./HelperText";
-import type { KeepBoolean, KeepColors } from "@/src/Keep/KeepTheme";
-import { useTheme } from "@/src/Keep/ThemeContex";
+import type { KeepBoolean, KeepColors } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepTextAreaTheme {
   base: string;

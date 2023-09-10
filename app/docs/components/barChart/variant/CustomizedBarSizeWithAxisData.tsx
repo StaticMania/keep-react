@@ -1,5 +1,5 @@
 "use client";
-import { BarChart } from "@/src/components";
+import { BarChart } from "~/src";
 import { BarChartData } from "./DefaultBarChart";
 
 const CustomizedBarSizeWithAxisData = () => {
