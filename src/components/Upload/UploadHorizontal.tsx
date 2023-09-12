@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { FileArrowUp } from "phosphor-react";
 import { FC } from "react";
 import { Button } from "../Button";
@@ -37,40 +37,40 @@ export const UploadHorizontal: FC = () => {
   const theme = useTheme().theme.upload.uploadHorizontal;
 
   return (
-    <div className={classNames(theme.base)}>
+    <div className={twMerge(theme.base)}>
       <label
         htmlFor="horizontal_upload"
-        className={classNames(theme.label.base, disabled && theme.disabled)}
+        className={twMerge(theme.label.base, disabled && theme.disabled)}
       >
-        <div className={classNames(theme.label.root.base)}>
-          <div className={classNames(theme.label.root.iconBox.base)}>
-            <div className={classNames(theme.label.root.iconBox.icon)}>
+        <div className={twMerge(theme.label.root.base)}>
+          <div className={twMerge(theme.label.root.iconBox.base)}>
+            <div className={twMerge(theme.label.root.iconBox.icon)}>
               <FileArrowUp size={40} color="#5E718D" weight="thin" />
             </div>
             <div>
-              <p className={classNames(theme.label.root.iconBox.dragDrop)}>
+              <p className={twMerge(theme.label.root.iconBox.dragDrop)}>
                 Drag and Drop files here
               </p>
               {file ? (
-                <p className={classNames(theme.label.root.upload.fileName)}>
+                <p className={twMerge(theme.label.root.upload.fileName)}>
                   FileName : {file}
                 </p>
               ) : (
-                <p className={classNames(theme.label.root.iconBox.fileType)}>
+                <p className={twMerge(theme.label.root.iconBox.fileType)}>
                   Files supported: PDF, XSLS, JPEG, PNG, Scanner
                 </p>
               )}
             </div>
           </div>
 
-          <div className={classNames(theme.label.root.upload.base)}>
+          <div className={twMerge(theme.label.root.upload.base)}>
             {file && (
-              <p className={classNames(theme.label.root.upload.fileName)}>
+              <p className={twMerge(theme.label.root.upload.fileName)}>
                 FileName : {file}
               </p>
             )}
             {!file && (
-              <p className={classNames(theme.label.root.upload.fileName)}>
+              <p className={twMerge(theme.label.root.upload.fileName)}>
                 Maximum size: 5MB
               </p>
             )}
@@ -82,7 +82,7 @@ export const UploadHorizontal: FC = () => {
             <input
               id="horizontal_upload"
               type="file"
-              className={classNames(theme.label.root.upload.input)}
+              className={twMerge(theme.label.root.upload.input)}
               onChange={onFileChange}
               disabled={disabled}
             />

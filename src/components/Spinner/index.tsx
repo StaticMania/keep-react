@@ -1,6 +1,6 @@
 import type { ComponentProps, FC } from "react";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { useTheme } from "../../Keep/ThemeContex";
 import { KeepColors, KeepSizes } from "../../Keep/KeepTheme";
 
@@ -53,7 +53,7 @@ export const Spinner: FC<SpinnerProps> = ({
       <svg
         fill="none"
         viewBox="0 0 100 101"
-        className={classNames(
+        className={twMerge(
           theme.base,
           theme.color[color],
           theme.light[light ? "on" : "off"].base,

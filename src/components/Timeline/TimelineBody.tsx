@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 export type TimelineBodyProps = PropsWithChildren<
@@ -13,7 +13,7 @@ export const TimelineBody: FC<TimelineBodyProps> = ({
 }) => {
   return (
     <p
-      className={classNames(
+      className={twMerge(
         "!mb-4 text-xs md:text-lg font-normal text-slate-500",
         className
       )}

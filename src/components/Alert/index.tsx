@@ -1,6 +1,6 @@
 import type { KeepColors } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { X } from "phosphor-react";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 
@@ -67,7 +67,7 @@ export const Alert: FC<AlertProps> = ({
 
   return (
     <div
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.color[color],
         dismiss && theme.dismiss,
@@ -79,7 +79,7 @@ export const Alert: FC<AlertProps> = ({
       role="alert"
     >
       <div className={theme.wrapper}>
-        <div className={classNames(theme.infoButton.base)}>{Icon}</div>
+        <div className={twMerge(theme.infoButton.base)}>{Icon}</div>
         <div>
           {children}
           {additionalContent && <div>{additionalContent}</div>}
@@ -87,7 +87,7 @@ export const Alert: FC<AlertProps> = ({
         {onDismiss && typeof onDismiss === "function" && (
           <button
             aria-label="Dismiss"
-            className={classNames(
+            className={twMerge(
               theme.closeButton.base,
               theme.closeButton.color[color]
             )}

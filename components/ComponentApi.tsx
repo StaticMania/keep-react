@@ -1,6 +1,13 @@
-import { ComponentApiProps } from "~/types/types";
 import { Space_Mono } from "next/font/google";
 import React, { FC } from "react";
+
+interface ComponentApiProps {
+  id: number;
+  propsName: string;
+  propsDescription: string;
+  default?: string;
+  propsType: string | string[];
+}
 
 interface ComponentProps {
   data: ComponentApiProps[];

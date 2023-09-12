@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { useTheme } from "../../Keep/ThemeContex";
 import { KeepBoolean, KeepColors } from "../../Keep/KeepTheme";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
@@ -59,7 +59,7 @@ export const Tag: FC<TagProps> = ({
 
   return (
     <div
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.color[color],
         dismiss && theme.dismiss,
@@ -71,25 +71,23 @@ export const Tag: FC<TagProps> = ({
     >
       {leftIcon && (
         <span
-          className={classNames(theme.icon.left, theme.children.colors[color])}
+          className={twMerge(theme.icon.left, theme.children.colors[color])}
         >
           {leftIcon}
         </span>
       )}
 
-      <span className={classNames(theme.children.colors[color])}>
-        {children}
-      </span>
+      <span className={twMerge(theme.children.colors[color])}>{children}</span>
       {onDismiss && typeof onDismiss === "function" && (
         <>
           {leftIcon && (
             <span
-              className={classNames(theme.bar.base, theme.bar.color[color])}
+              className={twMerge(theme.bar.base, theme.bar.color[color])}
             ></span>
           )}
           <span
             onClick={(e) => (disabled ? e.stopPropagation() : onDismiss())}
-            className={classNames(
+            className={twMerge(
               !disabled && theme.disabled.off,
               !disabled && theme.children.colors[color]
             )}

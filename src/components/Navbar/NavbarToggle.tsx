@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { List, X } from "phosphor-react";
 import type { ComponentProps, FC, ReactNode } from "react";
 import { useNavbarContext } from "./NavbarContext";
@@ -29,7 +29,7 @@ export const NavbarToggle: FC<NavbarToggleProps> = ({
     <button
       data-testid="k-navbar-toggle"
       onClick={handleClick}
-      className={classNames(theme.base, className)}
+      className={twMerge(theme.base, className)}
       {...props}
     >
       <span className="sr-only">Open main menu</span>

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { X } from "phosphor-react";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
@@ -18,15 +18,10 @@ export const ModalHeader: FC<ModalHeaderProps> = ({
   const theirProps = excludeClassName(props);
 
   return (
-    <div
-      className={classNames(theme.base, {
-        [theme.popup]: popup,
-      })}
-      {...theirProps}
-    >
-      <div className={classNames(theme.iconSection)}>
+    <div className={twMerge(theme.base, popup && theme.popup)} {...theirProps}>
+      <div className={twMerge(theme.iconSection)}>
         <div
-          className={classNames(
+          className={twMerge(
             theme.headerIcon.base,
             theme.headerIcon.color[modalType as string]
           )}

@@ -1,6 +1,6 @@
 import { KeepSizes } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 export interface RatingAdvancedProps
@@ -24,13 +24,11 @@ export const RatingAdvanced: FC<RatingAdvancedProps> = ({
   const theme = useTheme().theme.rating.advanced;
 
   return (
-    <div className={classNames(theme.base, className)} {...props}>
+    <div className={twMerge(theme.base, className)} {...props}>
       <span className={theme.label}>{children}</span>
-      <div
-        className={classNames(theme.progress.base, theme.progress.size[size])}
-      >
+      <div className={twMerge(theme.progress.base, theme.progress.size[size])}>
         <div
-          className={classNames(theme.progress.fill, theme.progress.size[size])}
+          className={twMerge(theme.progress.fill, theme.progress.size[size])}
           data-testid="keep-rating-fill"
           style={{ width: `${percentFilled}%` }}
         />

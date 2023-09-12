@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import { AvatarAdd } from "./AvatarAdd";
@@ -141,7 +141,7 @@ const AvatarComponent: FC<AvatarProps> = ({
         {img ? (
           <img
             alt={alt}
-            className={classNames(
+            className={twMerge(
               shape === "roundSquare"
                 ? theme.shape.roundSquare[size]
                 : theme.shape[shape],
@@ -156,7 +156,7 @@ const AvatarComponent: FC<AvatarProps> = ({
           />
         ) : (
           <div
-            className={classNames(
+            className={twMerge(
               shape === "roundSquare"
                 ? theme.shape.roundSquare[size]
                 : theme.shape[shape],
@@ -193,7 +193,7 @@ const AvatarComponent: FC<AvatarProps> = ({
         {customStatusIcon ? (
           <img
             alt={alt}
-            className={classNames(
+            className={twMerge(
               theme.customStatusIcon[size],
               theme.statusPosition[shape][statusType][
                 size as keyof StatusPositions
@@ -204,7 +204,7 @@ const AvatarComponent: FC<AvatarProps> = ({
         ) : (
           status && (
             <span
-              className={classNames(
+              className={twMerge(
                 theme.status[status],
                 theme.statusType.type[statusType],
                 theme.statusType.size[statusType][size],

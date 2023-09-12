@@ -1,6 +1,6 @@
 import { useTheme } from "../../Keep/ThemeContex";
 import { DeepPartial } from "../../helpers/deep-partial";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 
 export interface keepDropdownItemTheme {
@@ -26,11 +26,7 @@ export const DropdownItem: FC<DropdownItemProps> = ({
   const theme = useTheme().theme.dropdown.floating.item;
 
   return (
-    <li
-      className={classNames(theme.base, className)}
-      onClick={onClick}
-      {...props}
-    >
+    <li className={twMerge(theme.base, className)} onClick={onClick} {...props}>
       {Icon && <span className={theme.icon}>{Icon}</span>}
       {children}
     </li>

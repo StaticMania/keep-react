@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ReactNode } from "react";
 import { FC } from "react";
 
@@ -100,7 +100,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
   const theme = useTheme().theme.checkboxGroup;
   return (
     <label
-      className={classNames(
+      className={twMerge(
         theme.label.base,
         checkboxPosition === "right" || icon || img
           ? theme.label.iconRight.on
@@ -110,7 +110,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
       )}
     >
       <div
-        className={classNames(
+        className={twMerge(
           checkboxPosition === "right" || icon || img ? theme.main.order : "",
           imgShape === "square" && theme.main.spacing
         )}
@@ -124,10 +124,10 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
           onOptionChange={onOptionChange}
         />
       </div>
-      <div className={classNames(theme.root.base)}>
+      <div className={twMerge(theme.root.base)}>
         {!img && typeof icon !== "undefined" && (
           <div
-            className={classNames(
+            className={twMerge(
               selected === value
                 ? theme.root.icon.selected.on
                 : theme.root.icon.selected.off,
@@ -139,7 +139,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
         )}
         {img && imgShape === "circle" && (
           <div
-            className={classNames(
+            className={twMerge(
               theme.root.circleImg.base,
               selected === value
                 ? theme.root.circleImg.selected.on
@@ -150,24 +150,24 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
           </div>
         )}
         {img && imgShape === "square" && (
-          <div className={classNames(theme.root.squareImg.base)}>
+          <div className={twMerge(theme.root.squareImg.base)}>
             <img
               src={img}
               alt="checkbox"
-              className={classNames(theme.root.squareImg.img)}
+              className={twMerge(theme.root.squareImg.img)}
             />
           </div>
         )}
 
         <div
-          className={classNames(
+          className={twMerge(
             imgShape === "square" && theme.textBox.spacing,
             checkboxPosition === "right" ? theme.textBox.order : ""
           )}
         >
           {title && (
             <p
-              className={classNames(
+              className={twMerge(
                 theme.textBox.title.base,
                 selected === value
                   ? theme.textBox.title.selected.on
@@ -180,7 +180,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
 
           {description && (
             <p
-              className={classNames(
+              className={twMerge(
                 theme.textBox.description.base,
                 selected === value
                   ? theme.textBox.description.selected.on

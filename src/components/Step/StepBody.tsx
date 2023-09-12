@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 export type StepBodyProps = PropsWithChildren<
@@ -14,7 +14,7 @@ export const StepBody: FC<StepBodyProps> = ({
 }) => {
   return (
     <p
-      className={classNames(
+      className={twMerge(
         "!mb-4 text-base font-normal text-slate-500",
         className
       )}

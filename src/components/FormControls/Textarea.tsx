@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, ReactNode } from "react";
 import { forwardRef } from "react";
 import { excludeClassName } from "../../helpers/exclude";
@@ -56,7 +56,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <textarea
           ref={ref}
           disabled={disabled}
-          className={classNames(
+          className={twMerge(
             theme.base,
             theme.colors[color],
             disabled && theme.disabled,

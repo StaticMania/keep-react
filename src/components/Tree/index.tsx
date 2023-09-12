@@ -1,5 +1,5 @@
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { CaretDown, CaretRight } from "phosphor-react";
 import { ReactNode, useState } from "react";
 
@@ -78,7 +78,7 @@ export const Tree: React.FC<Props> = ({
     return (
       <li
         key={node.id}
-        className={classNames(
+        className={twMerge(
           node.children
             ? theme.list.hasChild.on
             : showIcon && !showCheckbox
@@ -92,7 +92,7 @@ export const Tree: React.FC<Props> = ({
         )}
       >
         <span
-          className={classNames(theme.caretIcon.base)}
+          className={twMerge(theme.caretIcon.base)}
           onClick={() => toggleNode(node.id)}
         >
           {node.children &&
@@ -121,7 +121,7 @@ export const Tree: React.FC<Props> = ({
           {node.title}
           {node.children && (
             <span
-              className={classNames(
+              className={twMerge(
                 showItemsNumber
                   ? theme.showChildren.base
                   : theme.showChildren.off
@@ -133,7 +133,7 @@ export const Tree: React.FC<Props> = ({
         </span>
         {node.children && (
           <ul
-            className={classNames(
+            className={twMerge(
               isExpanded
                 ? theme.nestedOrderList.on.base
                 : theme.nestedOrderList.off,
@@ -147,5 +147,5 @@ export const Tree: React.FC<Props> = ({
     );
   };
 
-  return <ul className={classNames(theme.base)}>{nodes.map(renderNode)}</ul>;
+  return <ul className={twMerge(theme.base)}>{nodes.map(renderNode)}</ul>;
 };

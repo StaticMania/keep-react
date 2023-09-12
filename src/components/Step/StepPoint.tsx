@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { useStepContext } from "./StepContext";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -32,7 +32,7 @@ export const StepPoint: FC<StepPointProps> = ({
   return (
     <div
       data-testid="step-point"
-      className={classNames(
+      className={twMerge(
         theme.horizontal.point.base,
         withRing && ringType,
         withBg && theme.horizontal.point.withBg.on,

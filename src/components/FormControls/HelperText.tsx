@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import type { KeepColors } from "../../Keep/KeepTheme";
@@ -34,7 +34,7 @@ export const HelperText: FC<HelperTextProps> = ({
 
   return (
     <p
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.colors[color],
         disabled && theme.disabled

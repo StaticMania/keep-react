@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { Minus, Plus } from "phosphor-react";
 import type { ComponentProps, ReactNode } from "react";
 import { forwardRef } from "react";
@@ -72,7 +72,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
       <div className={theme.base}>
         <div className={theme.field.base}>
           <div
-            className={classNames(
+            className={twMerge(
               theme.field.icon.base,
               theme.field.icon.sizes[sizing],
               theme.field.icon.position.incrementIcon,
@@ -80,7 +80,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             )}
             onClick={() => setValue((prevVal: number): number => prevVal + 1)}
           >
-            <span className={classNames(theme.field.icon.incrementIcon)}>
+            <span className={twMerge(theme.field.icon.incrementIcon)}>
               <Plus
                 size={sizing === "sm" ? 14 : sizing === "lg" ? 18 : 16}
                 weight="bold"
@@ -89,7 +89,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             </span>
           </div>
           <input
-            className={classNames(
+            className={twMerge(
               theme.field.input.base,
               theme.field.input.sizes[sizing],
               disabled && theme.field.input.disabled,
@@ -105,7 +105,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             readOnly
           />
           <div
-            className={classNames(
+            className={twMerge(
               theme.field.icon.base,
               theme.field.icon.sizes[sizing],
               theme.field.icon.position.decrementIcon,
@@ -116,7 +116,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
               else setValue((prevVal: number): number => prevVal - 1);
             }}
           >
-            <span className={classNames(theme.field.icon.decrementIcon)}>
+            <span className={twMerge(theme.field.icon.decrementIcon)}>
               <Minus
                 size={sizing === "sm" ? 14 : sizing === "lg" ? 18 : 16}
                 weight="bold"

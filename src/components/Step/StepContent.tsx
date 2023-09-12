@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useStepItemContext } from "./StepItemContext";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -20,7 +20,7 @@ export const StepContent: FC<StepContentProps> = ({
   return (
     <div
       data-testid="step-content"
-      className={classNames(
+      className={twMerge(
         theme.horizontal.content,
         theme.horizontal.active[active ? "on" : "off"],
         className

@@ -1,6 +1,4 @@
-import { ComponentApiProps } from "~/types/types";
-
-export const alertApiData: ComponentApiProps[] = [
+export const alertApiData = [
   {
     id: 1,
     propsName: "color",

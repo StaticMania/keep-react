@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Button } from "../Button";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { FileArrowUp } from "phosphor-react";
 import { UploadFailed } from "./UploadFailed";
 import { UploadPending } from "./UploadPending";
@@ -31,39 +31,39 @@ export const InputField: FC = () => {
   const theme = useTheme().theme.upload.input;
 
   return (
-    <div className={classNames(theme.base)}>
+    <div className={twMerge(theme.base)}>
       <label
         htmlFor="upload"
-        className={classNames(theme.label.base, disabled && theme.disabled)}
+        className={twMerge(theme.label.base, disabled && theme.disabled)}
       >
-        <div className={classNames(theme.label.root)}>
-          <div className={classNames(theme.label.icon)}>
+        <div className={twMerge(theme.label.root)}>
+          <div className={twMerge(theme.label.icon)}>
             <FileArrowUp size={40} color="#5E718D" weight="thin" />
           </div>
-          <p className={classNames(theme.label.dragDrop)}>
+          <p className={twMerge(theme.label.dragDrop)}>
             Drag and Drop files here
           </p>
-          <p className={classNames(theme.label.fileType)}>
+          <p className={twMerge(theme.label.fileType)}>
             Files supported: PDF, XSLS, JPEG, PNG, Scanner
           </p>
-          <div className={classNames(theme.label.upload.base)}>
+          <div className={twMerge(theme.label.upload.base)}>
             <Button type="primary" disabled={disabled}>
               Choose File
             </Button>
             <input
               id="upload"
               type="file"
-              className={classNames(theme.label.upload.input)}
+              className={twMerge(theme.label.upload.input)}
               onChange={onFileChange}
               disabled={disabled}
             />
             {file && (
-              <p className={classNames(theme.label.upload.fileName)}>
+              <p className={twMerge(theme.label.upload.fileName)}>
                 FileName : {file}
               </p>
             )}
             {!file && (
-              <p className={classNames(theme.label.upload.fileName)}>
+              <p className={twMerge(theme.label.upload.fileName)}>
                 Maximum size: 5MB
               </p>
             )}

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, ReactNode } from "react";
 import { forwardRef } from "react";
 import { excludeClassName } from "../../helpers/exclude";
@@ -68,7 +68,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         <div className={theme.field.base}>
           {Icon && <div className={theme.field.icon.base}>{Icon}</div>}
           <select
-            className={classNames(
+            className={twMerge(
               theme.field.select.base,
               theme.field.select.colors[color],
               theme.field.select.withIcon[Icon ? "on" : "off"],

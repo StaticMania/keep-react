@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { KeepNavbarCollapseTheme } from "./NavbarCollapse";
 import type { KeepNavbarBrandTheme } from "./NavbarBrand";
@@ -60,7 +60,7 @@ const NavbarComponent: FC<NavbarComponentProps> = ({
   return (
     <NavbarContext.Provider value={{ isOpen, setIsOpen }}>
       <nav
-        className={classNames(
+        className={twMerge(
           theme.base,
           theme.bordered[border ? "on" : "off"],
           theme.rounded[rounded ? "on" : "off"],
@@ -69,7 +69,7 @@ const NavbarComponent: FC<NavbarComponentProps> = ({
         {...props}
       >
         <div
-          className={classNames(
+          className={twMerge(
             theme.inner.base,
             theme.inner.fluid[fluid ? "on" : "off"]
           )}

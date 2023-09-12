@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { PropsWithChildren } from "react";
 import type { AvatarSizes } from "./Avatar";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -17,7 +17,7 @@ export const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({
   const theme = useTheme().theme.avatar;
   return (
     <a
-      className={classNames(
+      className={twMerge(
         theme.size[size],
         theme.groupCounter.base,
         theme.statusType.fontSize.notification[size]

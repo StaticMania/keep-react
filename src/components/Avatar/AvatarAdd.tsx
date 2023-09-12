@@ -1,4 +1,5 @@
-import classNames from "classnames";
+/* eslint-disable @next/next/no-img-element */
+import { twMerge } from "tailwind-merge";
 import type { PropsWithChildren } from "react";
 import type { AvatarSizes } from "./Avatar";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -22,22 +23,18 @@ export const AvatarAdd: React.FC<AvatarAddProps> = ({
 
   return (
     <div
-      className={classNames(
-        theme.add.base,
-        theme.add.iconSize["xl"],
-        ringColor
-      )}
+      className={twMerge(theme.add.base, theme.add.iconSize["xl"], ringColor)}
       style={{ backgroundColor: bg }}
     >
       {icon ? (
         <img
           src={icon}
           alt="add_icon"
-          className={classNames(theme.add.iconSize[size])}
+          className={twMerge(theme.add.iconSize[size])}
         />
       ) : (
         <svg
-          className={classNames(theme.add.iconSize[size])}
+          className={twMerge(theme.add.iconSize[size])}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 28 28"

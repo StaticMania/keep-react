@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useStepContext } from "./StepContext";
 import { StepItemContext } from "./StepItemContext";
@@ -26,7 +26,7 @@ export const StepItem: FC<StepItemProps> = ({
     <StepItemContext.Provider value={{ active }}>
       <div
         data-testid="step-item"
-        className={classNames(
+        className={twMerge(
           theme.horizontal.item.base,
           theme.horizontal.active[active ? "on" : "off"],
           borderType && theme.horizontal.item.borderType[borderType],

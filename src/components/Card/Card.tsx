@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { CardContainer } from "./CardContainer";
 import { CardDescription } from "./CardDescription";
@@ -61,10 +61,9 @@ const CardComponent: FC<CardProps> = ({
 
   const Component = typeof href === "undefined" ? "div" : "a";
   const theirProps = props as object;
-
   return (
     <Component
-      className={classNames(
+      className={twMerge(
         theme.base,
         href && theme.href,
         theme.shadow[shadow ? "on" : "off"],
@@ -79,9 +78,8 @@ const CardComponent: FC<CardProps> = ({
       {imgSrc && (
         <img
           alt={imgAlt ?? ""}
-          className={classNames(
+          className={twMerge(
             theme.img.base,
-            theme.img.horizontal[horizontal ? "on" : "off"],
             horizontal && theme.img.horizontal.on.base,
             horizontal && theme.img.horizontal.on.size[imgSize],
             !horizontal && theme.img.horizontal.off.base,

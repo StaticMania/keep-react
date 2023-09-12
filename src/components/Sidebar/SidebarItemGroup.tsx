@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { SidebarItemContext } from "./SidebarItemContext";
 import { useTheme } from "../../Keep/ThemeContex";
 
@@ -19,7 +19,7 @@ export const SidebarItemGroup: FC<SidebarItemGroupProps> = ({
   return (
     <ul
       data-testid="keep-sidebar-item-group"
-      className={classNames(theme, className)}
+      className={twMerge(theme, className)}
       {...props}
     >
       <SidebarItemContext.Provider value={{ isInsideCollapse: false }}>

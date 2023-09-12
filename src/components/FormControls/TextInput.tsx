@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import React, { ComponentProps, forwardRef, ReactNode } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import { HelperText } from "./HelperText";
@@ -111,7 +111,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         <div className={theme.base}>
           {addon && addonPosition === "left" && (
             <span
-              className={classNames(
+              className={twMerge(
                 theme.addon.base,
                 theme.addon.separator.colors[color],
                 theme.addon.position[addonPosition],
@@ -128,7 +128,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           <div className={theme.field.base}>
             {Icon && iconPosition === "left" && (
               <div
-                className={classNames(
+                className={twMerge(
                   theme.field.icon.base,
                   theme.field.icon.position[iconPosition]
                 )}
@@ -137,7 +137,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               </div>
             )}
             <input
-              className={classNames(
+              className={twMerge(
                 theme.field.input.base,
                 theme.field.input.colors[color],
                 theme.field.input.sizes[sizing],
@@ -162,7 +162,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             />
             {Icon && iconPosition === "right" && (
               <div
-                className={classNames(
+                className={twMerge(
                   theme.field.icon.base,
                   theme.field.icon.position[iconPosition]
                 )}
@@ -173,7 +173,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           </div>
           {addon && addonPosition === "right" && (
             <span
-              className={classNames(
+              className={twMerge(
                 theme.addon.base,
                 theme.addon.separator.colors[color],
                 theme.addon.position[addonPosition],

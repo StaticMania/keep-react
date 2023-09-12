@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { FC, ReactNode } from "react";
 import { SkeletonAvatar } from "./SkeletonAvatar";
 import { SkeletonLine } from "./SkeletonLine";
@@ -22,7 +22,7 @@ const SkeletonComponent: FC<keepSkeletonThemeProps> = ({
 }) => {
   const theme = useTheme().theme.skeleton;
   return (
-    <div className={classNames(animation && theme.animation, theme.base)}>
+    <div className={twMerge(animation && theme.animation, theme.base)}>
       {children}
     </div>
   );

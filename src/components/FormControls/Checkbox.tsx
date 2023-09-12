@@ -1,6 +1,6 @@
 import { KeepSizes } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps } from "react";
 import { forwardRef } from "react";
 
@@ -38,12 +38,12 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       <>
         <input
           ref={ref}
-          className={classNames(theme.radioInput, className)}
+          className={twMerge(theme.radioInput, className)}
           type="checkbox"
           {...props}
         />
         <div
-          className={classNames(
+          className={twMerge(
             theme.base,
             theme.sizes[sizing],
             checkedIcon

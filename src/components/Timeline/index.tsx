@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { FC, PropsWithChildren } from "react";
 
 import { StepPointColor, StepPointSizes } from "../Step";
@@ -76,13 +76,11 @@ const TimelineComponent: FC<TimelineProps> = ({
     <TimelineContext.Provider value={{ horizontal, gradientPoint }}>
       <ol
         data-testid="timeline-component"
-        className={classNames(
-          {
-            "relative border-l border-slate-200": !horizontal,
-            "items-start border-t border-slate-200 sm:flex": horizontal,
-            "border-solid": timelineBarType === "solid",
-            "border-dashed": timelineBarType === "dashed",
-          },
+        className={twMerge(
+          !horizontal && "relative border-l border-slate-200",
+          horizontal && "items-start border-t border-slate-200 sm:flex",
+          timelineBarType === "solid" && "border-solid",
+          timelineBarType === "dashed" && "border-dashed",
           className
         )}
       >

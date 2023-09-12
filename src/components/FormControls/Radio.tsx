@@ -1,6 +1,6 @@
 import { KeepSizes } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps } from "react";
 import { forwardRef } from "react";
 
@@ -59,7 +59,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       <>
         <input
           ref={ref}
-          className={classNames(theme.radioInput, className)}
+          className={twMerge(theme.radioInput, className)}
           value={value}
           checked={selected === value}
           onChange={onOptionChange}
@@ -67,7 +67,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           {...props}
         />
         <div
-          className={classNames(
+          className={twMerge(
             theme.base,
             theme.sizes[sizing],
             checkedIcon

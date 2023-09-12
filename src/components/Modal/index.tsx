@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -115,7 +115,7 @@ const ModalComponent: FC<ModalProps> = ({
         <ModalContext.Provider value={{ popup, icon, modalType, onClose }}>
           <div
             aria-hidden={!show}
-            className={classNames(
+            className={twMerge(
               theme.base,
               theme.positions[position],
               show ? theme.show.on : theme.show.off
@@ -124,7 +124,7 @@ const ModalComponent: FC<ModalProps> = ({
             role="dialog"
             {...theirProps}
           >
-            <div className={classNames(theme.content.base, theme.sizes[size])}>
+            <div className={twMerge(theme.content.base, theme.sizes[size])}>
               <div className={theme.content.inner}>{children}</div>
             </div>
           </div>

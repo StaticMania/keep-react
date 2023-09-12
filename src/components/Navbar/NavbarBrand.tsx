@@ -1,7 +1,5 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, ElementType, FC, PropsWithChildren } from "react";
-
-import { LinkProps } from "next/link";
 import { useTheme } from "../../Keep/ThemeContex";
 
 export interface KeepNavbarBrandTheme {
@@ -9,8 +7,7 @@ export interface KeepNavbarBrandTheme {
 }
 
 export interface NavbarBrandProps
-  extends PropsWithChildren<ComponentProps<"a">>,
-    Partial<Pick<LinkProps, "href">> {
+  extends PropsWithChildren<ComponentProps<"a">> {
   as?: ElementType;
   href?: string;
 }
@@ -24,7 +21,7 @@ export const NavbarBrand: FC<NavbarBrandProps> = ({
   const theme = useTheme().theme.navbar.brand;
 
   return (
-    <Component className={classNames(theme.base, className)} {...props}>
+    <Component className={twMerge(theme.base, className)} {...props}>
       {children}
     </Component>
   );

@@ -1,5 +1,5 @@
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC } from "react";
 
 export interface keepDropdownDividerTheme {
@@ -12,5 +12,5 @@ export const DropdownDivider: FC<ComponentProps<"div">> = ({
 }) => {
   const theme = useTheme().theme.dropdown.floating.divider;
 
-  return <div className={classNames(theme, className)} {...props} />;
+  return <div className={twMerge(theme, className)} {...props} />;
 };

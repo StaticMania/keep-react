@@ -1,11 +1,15 @@
 "use client";
 import Link from "next/link";
 import { Accordion } from "~/src";
-import { Sections } from "~/types/types";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { CaretDown, CaretUp } from "phosphor-react";
 import { gettingStartedRoutes, routes } from "~/routes/routes";
+
+export interface Sections {
+  id: number;
+  idName: string;
+}
 
 const DocsLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();

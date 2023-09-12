@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { ComponentProps, forwardRef, ReactNode } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import type { PositionInButtonGroup } from "./ButtonGroup";
@@ -129,7 +129,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
     const Component = isLink ? "a" : "button";
     return (
       <Component
-        className={classNames(
+        className={twMerge(
           customClass,
           theme.base,
           disabled && theme.disabled,
@@ -154,7 +154,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         <span
           ref={ref}
-          className={classNames(
+          className={twMerge(
             theme.inner.base,
             !circle && theme.size[size],
             theme.inner.position[positionInGroup],

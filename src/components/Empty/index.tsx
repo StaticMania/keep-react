@@ -1,17 +1,6 @@
-import classNames from "classnames";
-import type { ComponentProps, FC, PropsWithChildren } from "react";
+import { twMerge } from "tailwind-merge";
+import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { Button } from "../Button";
-import {
-  EmptyData_1,
-  EmptyData_2,
-  EmptyData_3,
-  EmptyData_4,
-  Empty_Result_1,
-  Empty_Result_2,
-  Not_Found_Folder,
-  Not_Found_Here,
-  Something_Wrong_404,
-} from "../../data/Icon";
 import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepEmptyTheme {
@@ -26,48 +15,24 @@ export interface EmptyProps
   content?: string;
   redirectUrl?: string;
   buttonText?: string;
-  iconType?: IconsType;
+  image?: ReactNode;
 }
-
-export type IconsType =
-  | "empty_data_1"
-  | "empty_data_2"
-  | "empty_data_3"
-  | "empty_data_4"
-  | "not_found_folder"
-  | "not_found_here"
-  | "empty_result_1"
-  | "empty_result_2"
-  | "something_wrong_404";
-
-export const EmptyIconsType = {
-  empty_data_1: <EmptyData_1 />,
-  empty_data_2: <EmptyData_2 />,
-  empty_data_3: <EmptyData_3 />,
-  empty_data_4: <EmptyData_4 />,
-  not_found_folder: <Not_Found_Folder />,
-  not_found_here: <Not_Found_Here />,
-  empty_result_1: <Empty_Result_1 />,
-  empty_result_2: <Empty_Result_2 />,
-  something_wrong_404: <Something_Wrong_404 />,
-};
 
 export const Empty: FC<EmptyProps> = ({
   title,
   content,
   redirectUrl,
-  iconType = "empty_data_1",
+  image,
   buttonText = "Go to Home Page",
   className,
 }) => {
   const theme = useTheme().theme.empty;
 
   return (
-    <div className={classNames(theme.base, className)}>
-      {EmptyIconsType[iconType]}
-      <div className={theme.title}>{title}</div>
-      <div className={theme.content}>{content}</div>
-
+    <div className={twMerge(theme.base, className)}>
+      {image}
+      <h1 className={theme.title}>{title}</h1>
+      <p className={theme.content}>{content}</p>
       <Button href={redirectUrl} size="sm" type="outlinePrimary">
         {buttonText}
       </Button>

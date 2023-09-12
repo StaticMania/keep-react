@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type {
   ComponentProps,
   ElementType,
@@ -84,7 +84,7 @@ const Children: FC<PropsWithChildren<{ id: string }>> = ({ id, children }) => {
     <span
       data-testid="keep-sidebar-item-content"
       id={`keep-sidebar-item-${id}`}
-      className={classNames(theme.content.base)}
+      className={twMerge(theme.content.base)}
     >
       {children}
     </span>
@@ -117,7 +117,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
         <Component
           aria-labelledby={`keep-sidebar-item-${id}`}
           ref={ref}
-          className={classNames(
+          className={twMerge(
             theme.base,
             isActive && theme.active,
             !isCollapsed && isInsideCollapse && theme.collapsed?.insideCollapse,
@@ -129,7 +129,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
             <div
               aria-hidden
               data-testid="keep-sidebar-item-icon"
-              className={classNames(
+              className={twMerge(
                 theme.icon?.base,
                 isActive && theme.icon?.active
               )}

@@ -1,5 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { keepTableCellTheme } from "./TableCell";
 import { DeepPartial } from "../../helpers/deep-partial";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -27,7 +27,7 @@ export const TableBody: FC<TableBodyProps> = ({
   const theme = useTheme().theme.table.body;
 
   return (
-    <tbody className={classNames(theme.base, className)} {...props}>
+    <tbody className={twMerge(theme.base, className)} {...props}>
       {children}
     </tbody>
   );

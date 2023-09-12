@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import { useState } from "react";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { Switch } from "@headlessui/react";
 import { KeepSizes } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -80,7 +80,7 @@ const ToggleComponent: FC<ToggleProps> = ({
         id="test-switchId"
         checked={disabled ? disabled : enabled}
         onChange={setEnabled}
-        className={classNames(
+        className={twMerge(
           theme.base,
           theme.size[size],
           disabled && theme.disabled,
@@ -89,22 +89,21 @@ const ToggleComponent: FC<ToggleProps> = ({
       >
         <span className="sr-only">Enable notifications</span>
         <span
-          className={classNames(
+          className={twMerge(
             theme.circleBase,
             theme.enabledCircle[enabled ? "on" : "off"][size],
             withIcon && theme.withIconBase,
             withIcon && showWithIcon(enabled, size),
-            enabled ? theme.enabledCircle.on : theme.enabledCircle.off
+            enabled
+              ? theme.enabledCircle.on[size]
+              : theme.enabledCircle.off[size]
           )}
         />
       </Switch>
       {typeof label !== "undefined" ||
         (!label && (
           <label
-            className={classNames(
-              theme.label[size],
-              disabled && theme.disabled
-            )}
+            className={twMerge(theme.label[size], disabled && theme.disabled)}
           >
             {label}
           </label>

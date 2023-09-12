@@ -1,5 +1,5 @@
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { List, X } from "phosphor-react";
 import { FC, ReactNode, useState } from "react";
 
@@ -23,14 +23,14 @@ export const NavbarMobile: FC<NavbarMobileProps> = ({ children }) => {
   return (
     <>
       <div
-        className={classNames(
+        className={twMerge(
           theme.base,
           showNav ? theme.open.on : theme.open.off
         )}
       >
         {showNav ? (
           <button
-            className={classNames(theme.close)}
+            className={twMerge(theme.close)}
             onClick={() => setShowNav(!showNav)}
           >
             <X size="28" color="gray" />

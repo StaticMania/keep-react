@@ -1,7 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { keepTableHeadCellTheme } from "./TableHeadCell";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { useTableContext } from "./TableContext";
 import { useTheme } from "../../Keep/ThemeContex";
 import { DeepPartial } from "../../helpers/deep-partial";
@@ -26,7 +26,7 @@ export const TableHead: FC<TableHeadProps> = ({
   const { showCheckbox } = useTableContext();
 
   return (
-    <thead className={classNames(theme.head.base, className)} {...props}>
+    <thead className={twMerge(theme.head.base, className)} {...props}>
       <tr>
         {showCheckbox && (
           <td className="pl-4">

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { MinusCircle, PlusCircle } from "phosphor-react";
 import type { ComponentProps, FC } from "react";
 import { useAccordionContext } from "./AccordionPanelContext";
@@ -53,7 +53,7 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
 
   return (
     <button
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.flush[flush ? "on" : "off"],
         theme.open[isOpen ? "on" : "off"],

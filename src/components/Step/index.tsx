@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren } from "react";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { StepBody } from "./StepBody";
 import { StepContent } from "./StepContent";
 import { StepContext } from "./StepContext";
@@ -62,7 +62,7 @@ const StepComponent: FC<StepProps> = ({
       }}
     >
       <div
-        className={classNames(
+        className={twMerge(
           horizontal ? theme.horizontal.base : theme.vertical.base,
           className
         )}

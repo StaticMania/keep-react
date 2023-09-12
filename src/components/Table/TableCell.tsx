@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { useTableContext } from "./TableContext";
 import { DeepPartial } from "../../helpers/deep-partial";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -23,7 +23,7 @@ export const TableCell: FC<TableCellProps> = ({
   const { showBorder, showBorderPosition } = useTableContext();
   return (
     <td
-      className={classNames(
+      className={twMerge(
         theme.body.cell.base,
         className,
         showBorder &&

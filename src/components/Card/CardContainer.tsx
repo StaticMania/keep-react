@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ReactNode } from "react";
 
 export interface CardContainerProps {
@@ -13,5 +13,5 @@ export const CardContainer: React.FC<CardContainerProps> = ({
   tag = "div",
 }) => {
   const Tag = tag ? tag : "div";
-  return <Tag className={classNames(className)}>{children}</Tag>;
+  return <Tag className={twMerge(className)}>{children}</Tag>;
 };

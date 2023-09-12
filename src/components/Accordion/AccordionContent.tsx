@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useAccordionContext } from "./AccordionPanelContext";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -26,7 +26,7 @@ export const AccordionContent: FC<AccordionContentProps> = ({
   const theme = mergeDeep(oldTheme, customTheme);
   return (
     <div
-      className={classNames(theme.base, className)}
+      className={twMerge(theme.base, className)}
       data-testid="keep-accordion-content"
       hidden={!isOpen}
       {...props}

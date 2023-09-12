@@ -1,6 +1,6 @@
 import { KeepHeadingLevel } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 export type StepTitleProps = PropsWithChildren<
@@ -20,7 +20,7 @@ export const StepTitle: FC<StepTitleProps> = ({
   const theme = useTheme().theme.stepper;
 
   return (
-    <Tag className={classNames(theme.horizontal.title, className)} {...props}>
+    <Tag className={twMerge(theme.horizontal.title, className)} {...props}>
       {children}
     </Tag>
   );

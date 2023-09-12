@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { DropdownDivider } from "./DropdownDivider";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -16,7 +16,7 @@ export const DropdownHeader: FC<PropsWithChildren & ComponentProps<"div">> = ({
 
   return (
     <>
-      <div className={classNames(theme, className)} {...props}>
+      <div className={twMerge(theme, className)} {...props}>
         {children}
       </div>
       <DropdownDivider />

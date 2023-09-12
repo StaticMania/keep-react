@@ -30,9 +30,9 @@ export const emptyApiData = [
   },
   {
     id: 5,
-    propsName: "iconType",
-    propsType: "IconsType",
-    propsDescription: "Type of icon to be displayed in the empty component.",
-    default: "Variant",
+    propsName: "image",
+    propsType: "ReactNode",
+    propsDescription: "Image displayed in the empty component.",
+    default: "",
   },
 ];

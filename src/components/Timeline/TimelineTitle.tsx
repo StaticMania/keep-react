@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { KeepHeadingLevel } from "../../Keep/KeepTheme";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
@@ -18,7 +18,7 @@ export const TimelineTitle: FC<TimelineTitleProps> = ({
   const Tag = as;
   return (
     <Tag
-      className={classNames(
+      className={twMerge(
         "mb-6 text-sm md:text-3xl font-semibold text-slate-700",
         className
       )}

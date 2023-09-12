@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { TooltipSlider } from "./ToolTipSlider";
 import { excludeClassName } from "../../helpers/exclude";
+
 export interface MarkObj {
   [key: number]: string | number;
 }
@@ -55,7 +56,7 @@ export const Slider: FC<SliderProps> = ({
         draggableTrack={draggableTrack}
         defaultValue={defaultValue}
         tipProps={{ placement: tooltip }}
-        tipFormatter={(value) => `${value}`}
+        tipFormatter={(value: any) => `${value}`}
         onChange={onChange}
         marks={{ ...marks }}
         step={step}

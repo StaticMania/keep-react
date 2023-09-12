@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type {
   ComponentProps,
   ForwardedRef,
@@ -164,13 +164,13 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
     }));
 
     return (
-      <div className={classNames(theme.base, className)}>
+      <div className={twMerge(theme.base, className)}>
         <div
           aria-label="Tabs"
           role="tablist"
-          className={classNames(
+          className={twMerge(
             theme.tablist.base,
-            theme.tablist.styles[style],
+
             style !== "pills" && theme.tablist.borderPosition[borderPosition],
             className
           )}
@@ -182,18 +182,17 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
               type="button"
               aria-controls={`${id}-tabpanel-${index}`}
               aria-selected={index === activeTab}
-              className={classNames(
+              className={twMerge(
                 theme.tablist.tabitem.base,
-                { ...tabItemStyle },
-                {
-                  [tabItemStyle.active.on]: index === activeTab,
-                  [tabItemStyle.active.off]:
-                    index !== activeTab && !tab.disabled,
-                  [tabItemStyle.borderPosition.top]:
-                    borderPosition === "top" && index === activeTab,
-                  [tabItemStyle.borderPosition.bottom]:
-                    borderPosition === "bottom" && index === activeTab,
-                }
+                tabItemStyle.base,
+                index === activeTab && tabItemStyle.active.on,
+                index !== activeTab && !tab.disabled && tabItemStyle.active.off,
+                borderPosition === "top" &&
+                  index === activeTab &&
+                  tabItemStyle.borderPosition.top,
+                borderPosition === "bottom" &&
+                  index === activeTab &&
+                  tabItemStyle.borderPosition.bottom
               )}
               disabled={tab.disabled}
               id={`${id}-tab-${index}`}
@@ -218,7 +217,7 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
               )}
               {tab.notification && (
                 <span
-                  className={classNames(
+                  className={twMerge(
                     theme.tablist.tabitem.notification.base,
                     tab.notificationColor &&
                       theme.tablist.tabitem.notification.notificationColor[

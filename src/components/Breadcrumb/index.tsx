@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { BreadcrumbItem } from "./BreadcrumbItem";
 import { useTheme } from "../../Keep/ThemeContex";
 import { BreadcrumbContext } from "./BreadcrumbContext";
@@ -43,9 +43,7 @@ const BreadcrumbComponent: FC<BreadcrumbProps> = ({
     <BreadcrumbContext.Provider value={{ separatorIcon }}>
       <nav
         aria-label="Breadcrumb"
-        className={classNames(
-          breadCrumbWithBorder && theme.breadCrumbWithBorder
-        )}
+        className={twMerge(breadCrumbWithBorder && theme.breadCrumbWithBorder)}
         {...props}
       >
         <ol className={theme.list}>{children}</ol>

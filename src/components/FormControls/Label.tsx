@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import type { KeepStateColors } from "../../Keep/KeepTheme";
@@ -38,7 +38,7 @@ export const Label: FC<LabelProps> = ({
   return (
     <label
       htmlFor={htmlFor}
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.colors[color],
         disabled && theme.disabled

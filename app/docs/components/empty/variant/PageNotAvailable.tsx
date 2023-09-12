@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Empty } from "~/src";
 
 const PageNotAvailable = () => {
@@ -7,7 +8,14 @@ const PageNotAvailable = () => {
       title="This page isn't available right now"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
       redirectUrl="/"
-      iconType="empty_result_2"
+      image={
+        <Image
+          src="https://staticmania.cdn.prismic.io/staticmania/aa469681-b2d1-4384-a990-91906711a24d_Property+1%3DNight+sky_+Property+2%3DSm.svg"
+          height={234}
+          width={350}
+          alt="404"
+        />
+      }
     />
   );
 };
@@ -22,7 +30,14 @@ const PageNotAvailable = () => {
       title="This page isn't available right now"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
       redirectUrl="/"
-      iconType="empty_result_2"
+      image={
+        <Image
+          src="https://staticmania.cdn.prismic.io/staticmania/aa469681-b2d1-4384-a990-91906711a24d_Property+1%3DNight+sky_+Property+2%3DSm.svg"
+          height={234}
+          width={350}
+          alt="404"
+        />
+      }
     />
   );
 };

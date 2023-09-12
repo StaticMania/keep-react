@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useNavbarContext } from "./NavbarContext";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -26,7 +26,7 @@ export const NavbarCollapse: FC<NavbarCollapseProps> = ({
   return (
     <div
       data-testid="keep-navbar-collapse"
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.hidden[!isOpen ? "on" : "off"],
         className

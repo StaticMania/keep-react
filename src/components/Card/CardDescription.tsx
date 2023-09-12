@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ReactNode } from "react";
 
 export interface CardDescriptionProps {
@@ -12,7 +12,7 @@ export const CardDescription: React.FC<CardDescriptionProps> = ({
 }) => {
   return (
     <p
-      className={classNames(
+      className={twMerge(
         className
           ? className
           : "font-normal md:text-base text-xs text-slate-500"

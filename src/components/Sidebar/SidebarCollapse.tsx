@@ -1,7 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { SidebarItemProps } from "./SidebarItem";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { CaretDown } from "phosphor-react";
 import { useEffect, useId, useState } from "react";
 import { Tooltip } from "../Tooltip";
@@ -75,14 +75,14 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
         onClick={() => setOpen(!isOpen)}
         title={label}
         type="button"
-        className={classNames(theme.button, className)}
+        className={twMerge(theme.button, className)}
         {...props}
       >
         {Icon && (
           <div
             aria-hidden
             data-testid="keep-sidebar-collapse-icon"
-            className={classNames(
+            className={twMerge(
               theme.icon.base,
               theme.icon.open[isOpen ? "on" : "off"]
             )}

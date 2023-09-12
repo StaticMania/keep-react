@@ -1,7 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 
 export interface SidebarItemsProps
   extends PropsWithChildren,
@@ -16,7 +16,7 @@ export const SidebarItems: FC<SidebarItemsProps> = ({
 
   return (
     <div
-      className={classNames(theme, className)}
+      className={twMerge(theme, className)}
       data-testid="keep-sidebar-items"
       {...props}
     >

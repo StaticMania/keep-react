@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useTimelineContext } from "./TimelineContext";
 
@@ -17,8 +17,9 @@ export const TimelineItem: FC<TimelineItemProps> = ({
   return (
     <li
       data-testid="timeline-item"
-      className={classNames(
-        { "mb-10 ml-6": !horizontal, "relative mb-6 sm:mb-0": horizontal },
+      className={twMerge(
+        !horizontal && "mb-10 ml-6",
+        horizontal && "relative mb-6 sm:mb-0",
         className
       )}
       {...props}

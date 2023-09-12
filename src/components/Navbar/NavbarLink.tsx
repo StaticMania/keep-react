@@ -1,7 +1,6 @@
 import { KeepBoolean } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
-import { LinkProps } from "next/link";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, ElementType, FC, PropsWithChildren } from "react";
 
 export interface KeepNavbarLinkTheme {
@@ -11,8 +10,7 @@ export interface KeepNavbarLinkTheme {
 }
 
 export interface NavbarLinkProps
-  extends PropsWithChildren<ComponentProps<"a">>,
-    Partial<Pick<LinkProps, "href">> {
+  extends PropsWithChildren<ComponentProps<"a">> {
   active?: boolean;
   as?: ElementType;
   disabled?: boolean;
@@ -32,12 +30,10 @@ export const NavbarLink: FC<NavbarLinkProps> = ({
   return (
     <li>
       <Component
-        className={classNames(
+        className={twMerge(
           theme.base,
-          {
-            [theme.active.on]: active,
-            [theme.active.off]: !active && !disabled,
-          },
+          active && theme.active.on,
+          !active && !disabled && theme.active.off,
           theme.disabled[disabled ? "on" : "off"],
           className
         )}

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { CaretLeft, CaretRight } from "phosphor-react";
 import type {
   ComponentProps,
@@ -112,7 +112,7 @@ export const Carousel: FC<CarouselProps> = ({
     () =>
       Children.map(children as ReactElement[], (child: ReactElement) =>
         cloneElement(child, {
-          className: classNames(theme.item.base, child.props.className),
+          className: twMerge(theme.item.base, child.props.className),
         })
       ),
     [children, theme.item.base]
@@ -161,12 +161,12 @@ export const Carousel: FC<CarouselProps> = ({
 
   return (
     <div
-      className={classNames(theme.base, className)}
+      className={twMerge(theme.base, className)}
       data-testid="carousel"
       {...props}
     >
       <ScrollContainer
-        className={classNames(
+        className={twMerge(
           theme.scrollContainer.base,
           (isDeviceMobile || !isDragging) && theme.scrollContainer.snap
         )}
@@ -195,7 +195,7 @@ export const Carousel: FC<CarouselProps> = ({
             (_, index): JSX.Element => (
               <button
                 key={index}
-                className={classNames(
+                className={twMerge(
                   theme.indicators.base,
                   theme.indicators.type[indicatorsType],
                   index === activeItem &&

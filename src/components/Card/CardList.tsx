@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ReactNode } from "react";
 
 export interface CardListProps {
@@ -7,5 +7,5 @@ export interface CardListProps {
 }
 
 export const CardList: React.FC<CardListProps> = ({ children, className }) => {
-  return <li className={classNames(className)}>{children}</li>;
+  return <li className={twMerge(className)}>{children}</li>;
 };

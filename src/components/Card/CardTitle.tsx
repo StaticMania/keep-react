@@ -1,6 +1,5 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ReactNode } from "react";
-import React from "react";
 
 export interface CardTitleProps {
   children?: ReactNode;
@@ -13,7 +12,7 @@ export const CardTitle: React.FC<CardTitleProps> = ({
 }) => {
   return (
     <p
-      className={classNames(
+      className={twMerge(
         className
           ? className
           : "md:text-xl text-base font-bold tracking-tight text-slate-700"

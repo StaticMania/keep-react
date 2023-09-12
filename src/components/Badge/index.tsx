@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import { KeepColors, KeepSizes } from "../../Keep/KeepTheme";
@@ -95,7 +95,7 @@ export const Badge: FC<BadgeProps> = ({
 
   const Content = (): JSX.Element => (
     <span
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.badgeType[badgeType].colorType[colorType].color[color],
         theme.icon[Icon ? "on" : "off"],
@@ -106,11 +106,11 @@ export const Badge: FC<BadgeProps> = ({
     >
       {Icon && iconPosition === "left" && <span>{Icon}</span>}
       {dot && dotPosition === "left" && (
-        <div className={classNames(theme.dot, theme.dotPosition.left)}></div>
+        <div className={twMerge(theme.dot, theme.dotPosition.left)}></div>
       )}
       {children && <span>{children}</span>}
       {dot && dotPosition === "right" && (
-        <div className={classNames(theme.dot, theme.dotPosition.right)}></div>
+        <div className={twMerge(theme.dot, theme.dotPosition.right)}></div>
       )}
       {Icon && iconPosition === "right" && <span>{Icon}</span>}
     </span>

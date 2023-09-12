@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { useTheme } from "../../Keep/ThemeContex";
 import { useBreadcrumbContext } from "./BreadcrumbContext";
 import type { ComponentProps, PropsWithChildren, ReactNode } from "react";
@@ -27,7 +27,7 @@ export const BreadcrumbItem = forwardRef<
     const Component = isLink ? "a" : "span";
 
     return (
-      <li className={classNames(theme.base, className)} {...props}>
+      <li className={twMerge(theme.base, className)} {...props}>
         {separatorIcon && (
           <span
             className={theme.chevron}
@@ -43,7 +43,7 @@ export const BreadcrumbItem = forwardRef<
           href={href}
         >
           <div
-            className={classNames(
+            className={twMerge(
               theme.iconWrapper,
               disabled && theme.disabled,
               active && theme.activeItem[active]

@@ -1,5 +1,5 @@
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { Check, FilePdf, Trash } from "phosphor-react";
 import { FC } from "react";
 export interface UploadSuccessTheme {
@@ -24,26 +24,24 @@ export interface UploadSuccessTheme {
 export const UploadSuccess: FC = () => {
   const theme = useTheme().theme.upload.uploadSuccess;
   return (
-    <div className={classNames(theme.base)}>
-      <div className={classNames(theme.bgColor)}></div>
-      <div className={classNames(theme.root.base)}>
+    <div className={twMerge(theme.base)}>
+      <div className={twMerge(theme.bgColor)}></div>
+      <div className={twMerge(theme.root.base)}>
         <div>
-          <div className={classNames(theme.root.left.base)}>
+          <div className={twMerge(theme.root.left.base)}>
             <span>
               <FilePdf size={24} color="#0A9952" />
             </span>
-            <p className={classNames(theme.root.left.fileName)}>
-              File Name.pdf
-            </p>
+            <p className={twMerge(theme.root.left.fileName)}>File Name.pdf</p>
           </div>
-          <p className={classNames(theme.root.left.fileSize)}>Size: 515 Kb</p>
+          <p className={twMerge(theme.root.left.fileSize)}>Size: 515 Kb</p>
         </div>
-        <div className={classNames(theme.root.confirmBox.base)}>
-          <button className={classNames(theme.root.confirmBox.checked)}>
+        <div className={twMerge(theme.root.confirmBox.base)}>
+          <button className={twMerge(theme.root.confirmBox.checked)}>
             <Check size={20} color="#0A9952" />
           </button>
-          <div className={classNames(theme.root.confirmBox.divider)}></div>
-          <button className={classNames(theme.root.confirmBox.trash)}>
+          <div className={twMerge(theme.root.confirmBox.divider)}></div>
+          <button className={twMerge(theme.root.confirmBox.trash)}>
             <Trash size={20} color="#FF3838" />
           </button>
         </div>

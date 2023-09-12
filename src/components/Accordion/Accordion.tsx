@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type {
   ComponentProps,
   FC,
@@ -93,7 +93,7 @@ const AccordionComponent: FC<AccordionProps> = ({
 
   return (
     <div
-      className={classNames(
+      className={twMerge(
         theme.base,
         theme.flush[flush ? "on" : "off"],
         className

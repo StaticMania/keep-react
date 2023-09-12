@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { keepTableBodyTheme } from "./TableBody";
 import type { TableContextType } from "./TableContext";
@@ -48,7 +48,7 @@ const TableComponent: FC<TableProps> = ({
 }) => {
   const theme = useTheme().theme.table;
   return (
-    <div data-testid="table-element" className={classNames(theme.root.wrapper)}>
+    <div data-testid="table-element" className={twMerge(theme.root.wrapper)}>
       <TableContext.Provider
         value={{
           striped,
@@ -58,8 +58,8 @@ const TableComponent: FC<TableProps> = ({
           showBorderPosition,
         }}
       >
-        <div className={classNames(theme.root.shadow, className)}></div>
-        <table className={classNames(theme.root.base, className)} {...props}>
+        <div className={twMerge(theme.root.shadow, className)}></div>
+        <table className={twMerge(theme.root.base, className)} {...props}>
           {children}
         </table>
       </TableContext.Provider>

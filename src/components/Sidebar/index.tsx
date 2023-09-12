@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { DeepPartial } from "../../helpers/deep-partial";
 import type { KeepSidebarCollapseTheme } from "./SidebarCollapse";
@@ -52,7 +52,7 @@ const SidebarComponent: FC<SidebarProps> = ({
       <aside
         aria-label="Sidebar"
         hidden={isCollapsed && collapseBehavior === "hide"}
-        className={classNames(
+        className={twMerge(
           theme.root.base,
           theme.root.collapsed[isCollapsed ? "on" : "off"]
         )}

@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { useId } from "react";
 import { useSidebarContext } from "./SidebarContext";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -36,7 +37,7 @@ export const SidebarLogo: FC<SidebarLogoProps> = ({
     <a
       aria-labelledby={`keep-sidebar-logo-${id}`}
       href={href}
-      className={classNames(theme.base, className)}
+      className={twMerge(theme.base, className)}
       {...props}
     >
       <img alt={imgAlt} src={img} className={theme.img} />

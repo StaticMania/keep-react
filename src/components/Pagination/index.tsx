@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { ArrowLeft, ArrowRight } from "phosphor-react";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useState } from "react";
@@ -105,7 +105,7 @@ export const Pagination: FC<PaginationProps> = ({
   };
 
   return (
-    <div className={classNames(theme.base)}>
+    <div className={twMerge(theme.base)}>
       {layout === "table" && (
         <div className={theme.layout.table.base}>
           Showing <span className={theme.layout.table.span}>{firstPage}</span>{" "}
@@ -115,7 +115,7 @@ export const Pagination: FC<PaginationProps> = ({
         </div>
       )}
       <nav
-        className={classNames(
+        className={twMerge(
           theme.base,
           paginateWithBorder && theme.paginateWithBorder
         )}
@@ -124,7 +124,7 @@ export const Pagination: FC<PaginationProps> = ({
         <ul className={theme.pages.base}>
           <li>
             <button
-              className={classNames(
+              className={twMerge(
                 theme.pages.previous.base,
                 theme.pages.prevNextShape[prevNextShape],
                 iconWithText && theme.pages.previous.iconWithText,
@@ -152,13 +152,10 @@ export const Pagination: FC<PaginationProps> = ({
                     key={index}
                   >
                     <button
-                      className={classNames(
+                      className={twMerge(
                         theme.pages.selector.base,
                         theme.pages.selector.active[activeCurrentPageShape],
-                        {
-                          [theme.pages.selector.active.base]:
-                            currentPage === page,
-                        }
+                        currentPage === page && theme.pages.selector.active.base
                       )}
                       onClick={() => {
                         if (typeof page === "string")
@@ -174,7 +171,7 @@ export const Pagination: FC<PaginationProps> = ({
             )}
           <li>
             <button
-              className={classNames(
+              className={twMerge(
                 theme.pages.next.base,
                 theme.pages.prevNextShape[prevNextShape],
                 iconWithText && theme.pages.next.iconWithText,
@@ -196,15 +193,15 @@ export const Pagination: FC<PaginationProps> = ({
 
           {layout === "pagination" && showGoToPaginate && (
             <li
-              className={classNames(
+              className={twMerge(
                 theme.goTo.base,
                 paginateWithBorder && theme.goTo.withBorder
               )}
             >
               <span className="text-slate-200">/</span>
-              <span className={classNames(theme.goTo.title)}>Go to</span>
+              <span className={twMerge(theme.goTo.title)}>Go to</span>
               <input
-                className={classNames(
+                className={twMerge(
                   theme.goTo.input,
                   theme.goTo.goToShape[goToShape]
                 )}

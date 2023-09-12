@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { TableContext } from "./TableContext";
 import { DeepPartial } from "../../helpers/deep-partial";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -37,16 +37,16 @@ export const TableHeadCell: FC<TableHeadCellProps> = ({
   return (
     <TableContext.Provider value={{ icon, iconPosition }}>
       <th
-        className={classNames(theme.base, className, !icon && theme.icon.off)}
+        className={twMerge(theme.base, className, !icon && theme.icon.off)}
         {...props}
       >
-        <div className={classNames(theme.icon.base)}>
+        <div className={twMerge(theme.icon.base)}>
           {icon && iconPosition === "left" && (
-            <span className={classNames(theme.icon.on.left)}>{icon}</span>
+            <span className={twMerge(theme.icon.on.left)}>{icon}</span>
           )}
           {children}
           {icon && iconPosition === "right" && (
-            <span className={classNames(theme.icon.on.right)}>{icon}</span>
+            <span className={twMerge(theme.icon.on.right)}>{icon}</span>
           )}
         </div>
       </th>

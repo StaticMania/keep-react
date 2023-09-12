@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { useTheme } from "../../Keep/ThemeContex";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { X } from "phosphor-react";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 
@@ -48,7 +49,7 @@ export const Notification: FC<NotificationProps> = ({
 
   return (
     <div
-      className={classNames(
+      className={twMerge(
         theme.base,
         dismiss && theme.dismiss,
         theme.infoIcon[InfoIcon ? "on" : "off"],
@@ -59,20 +60,20 @@ export const Notification: FC<NotificationProps> = ({
     >
       <div className={theme.wrapper}>
         {!headerBannerSrc && InfoIcon && (
-          <div className={classNames(theme.infoIcon.base)}>{InfoIcon}</div>
+          <div className={twMerge(theme.infoIcon.base)}>{InfoIcon}</div>
         )}
         <div>
           {headerBannerSrc && (
-            <div className={classNames(theme.headerBanner.base)}>
+            <div className={twMerge(theme.headerBanner.base)}>
               <img
                 src={headerBannerSrc}
                 alt="header-banner"
-                className={classNames(theme.headerBanner.img)}
+                className={twMerge(theme.headerBanner.img)}
               />
 
               {onDismiss && typeof onDismiss === "function" && (
                 <div
-                  className={classNames(theme.headerBanner.closeIcon)}
+                  className={twMerge(theme.headerBanner.closeIcon)}
                   onClick={onDismiss}
                 >
                   <X size={20} color="#5E718D" />
@@ -80,7 +81,7 @@ export const Notification: FC<NotificationProps> = ({
               )}
             </div>
           )}
-          <div className={classNames(headerBannerSrc && theme.content)}>
+          <div className={twMerge(headerBannerSrc && theme.content)}>
             {children}
             {additionalContent && <div>{additionalContent}</div>}
           </div>
@@ -88,7 +89,7 @@ export const Notification: FC<NotificationProps> = ({
         {!headerBannerSrc && onDismiss && typeof onDismiss === "function" && (
           <button
             aria-label="Dismiss"
-            className={classNames(theme.closeButton.base)}
+            className={twMerge(theme.closeButton.base)}
             onClick={onDismiss}
             type="button"
           >

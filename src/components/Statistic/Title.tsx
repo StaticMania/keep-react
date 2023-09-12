@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { CaretDown } from "phosphor-react";
 import { FC } from "react";
 import { Button } from "../Button";
@@ -22,15 +22,13 @@ export const Title: FC<TitleProps> = ({ children }) => {
 
   const theme = useTheme().theme.statistic;
   return (
-    <div className={classNames(theme.title.base)}>
-      <p className={classNames(theme.title.title)}>{children}</p>
+    <div className={twMerge(theme.title.base)}>
+      <p className={twMerge(theme.title.title)}>{children}</p>
 
       {showFilter && (
         <Button size="xs" type="outlineGray">
-          <span className={classNames(theme.title.filter.text)}>
-            This Month
-          </span>
-          <span className={classNames(theme.title.filter.icon)}>
+          <span className={twMerge(theme.title.filter.text)}>This Month</span>
+          <span className={twMerge(theme.title.filter.icon)}>
             <CaretDown size={16} color="#5E718D" />
           </span>
         </Button>

@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { useTimelineContext } from "./TimelineContext";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
 
@@ -54,7 +54,7 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
   return (
     <div
       data-testid="timeline-point"
-      className={classNames({ "flex items-center": horizontal }, className)}
+      className={twMerge(horizontal && "flex items-center", className)}
       {...props}
     >
       {children}
@@ -66,13 +66,11 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
         </span>
       ) : (
         <div
-          className={classNames(
+          className={twMerge(
             "absolute -left-2 h-4 w-4 rounded-full border border-white",
-            {
-              [gradientColor[Math.floor(Math.random() * gradientColor.length)]]:
-                gradientPoint,
-              "bg-slate-200": !gradientPoint,
-            }
+            gradientPoint &&
+              gradientColor[Math.floor(Math.random() * gradientColor.length)],
+            !gradientPoint && "bg-slate-200"
           )}
         ></div>
       )}

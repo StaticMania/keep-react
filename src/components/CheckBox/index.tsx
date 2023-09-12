@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { ComponentProps, FC, ReactNode, useState } from "react";
 import { excludeClassName } from "../../helpers/exclude";
 import {
@@ -99,7 +99,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
             name={fieldName}
             {...theirProps}
             onChange={(e) => setIsChecked(e.target.checked)}
-            className={classNames(
+            className={twMerge(
               theme.base,
               theme.type[type],
               theme.size[size],
@@ -116,7 +116,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
             disabled={disabled}
             name={fieldName}
             {...theirProps}
-            className={classNames(
+            className={twMerge(
               theme.base,
               theme.type[type],
               theme.size[size],
@@ -129,7 +129,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
         {typeof label !== "undefined" && (
           <label
             htmlFor={id}
-            className={classNames(
+            className={twMerge(
               !disabled && theme.enabled,
               disabled && theme.disabled,
               theme.label[size],

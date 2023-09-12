@@ -2,7 +2,7 @@ import type { Duration } from "./ToastContext";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 
 import { useState } from "react";
-import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 import { ToastToggle } from "./ToastToggle";
 import { ToastContext } from "./ToastContext";
 import { useTheme } from "../../Keep/ThemeContex";
@@ -36,7 +36,6 @@ const ToastComponent: FC<ToastProps> = ({
 }) => {
   const [isClosed, setIsClosed] = useState(false);
   const [isRemoved, setIsRemoved] = useState(false);
-
   const theme = useTheme().theme.toast;
 
   return (
@@ -45,11 +44,11 @@ const ToastComponent: FC<ToastProps> = ({
     >
       <div
         data-testid="keep-toast"
-        className={classNames(
+        className={twMerge(
           theme.base,
           durationstyle[duration],
-          { [theme.closed]: isClosed },
-          { [theme.removed]: isRemoved },
+          isClosed && theme.closed,
+          isRemoved && theme.removed,
           className
         )}
         {...props}

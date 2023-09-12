@@ -1,6 +1,4 @@
-import { ComponentApiProps } from "~/types/types";
-
-export const avatarApiData: ComponentApiProps[] = [
+export const avatarApiData = [
   {
     id: 1,
     propsName: "alt",
