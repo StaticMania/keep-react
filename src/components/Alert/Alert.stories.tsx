@@ -56,11 +56,7 @@ export const DefaultAlert: Story = {
     withBorderAccent: false,
     withBorderAccentPosition: "left",
     dismiss: false,
-    children: (
-      <p className="md:text-lg text-base font-semibold text-blue-600">
-        Default message - make it short
-      </p>
-    ),
+    title: "Default message - make it short",
     icon: <Info size={24} color="#0F3CD9" />,
     additionalContent: removeFragment(
       <>
@@ -104,23 +100,7 @@ export const GrayAlert: Story = {
   args: {
     ...DefaultAlert.args,
     color: "gray",
-    additionalContent: removeFragment(
-      <>
-        <div className="mt-1 text-sm text-slate-500">
-          Default message - Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry
-          <Link href="/" className="ml-2 text-primary-500 underline">
-            Link style
-          </Link>
-        </div>
-      </>
-    ),
     icon: <Info size={24} color="gray" />,
-    children: (
-      <p className="md:text-lg text-base font-semibold text-slate-900">
-        Default message - make it short
-      </p>
-    ),
   },
 };
 export const ErrorAlert: Story = {
@@ -128,67 +108,19 @@ export const ErrorAlert: Story = {
     ...DefaultAlert.args,
     color: "error",
     icon: <XCircle size={24} color="#E92215" />,
-    children: (
-      <p className="md:text-lg text-base font-semibold text-error-500">
-        Default message - make it short
-      </p>
-    ),
-    additionalContent: removeFragment(
-      <>
-        <div className="mt-1 text-sm text-slate-500">
-          Default message - Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry
-          <Link href="/" className="ml-2 text-primary-500 underline">
-            Link style
-          </Link>
-        </div>
-      </>
-    ),
   },
 };
 export const SuccessAlert: Story = {
   args: {
     ...DefaultAlert.args,
     color: "success",
-    additionalContent: removeFragment(
-      <>
-        <div className="mt-1 text-sm text-slate-500">
-          Default message - Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry
-          <Link href="/" className="ml-2 text-primary-500 underline">
-            Link style
-          </Link>
-        </div>
-      </>
-    ),
     icon: <CheckCircle size={24} color="#0A9952" />,
-    children: (
-      <p className="md:text-lg text-base font-semibold text-green-600">
-        Default message - make it short
-      </p>
-    ),
   },
 };
 export const WarningAlert: Story = {
   args: {
     ...DefaultAlert.args,
     color: "warning",
-    additionalContent: removeFragment(
-      <>
-        <div className="mt-1 text-sm text-slate-500">
-          Default message - Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry
-          <Link href="/" className="ml-2 text-primary-500 underline">
-            Link style
-          </Link>
-        </div>
-      </>
-    ),
     icon: <WarningCircle size={24} color="#D8A800" />,
-    children: (
-      <p className="md:text-lg text-base font-semibold text-yellow-600">
-        Default message - make it short
-      </p>
-    ),
   },
 };

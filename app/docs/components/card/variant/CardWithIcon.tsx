@@ -70,11 +70,11 @@ const CardWithIcon = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button type="outlinePrimary" customClass="hidden md:block">
-            Check this
+          <Button type="outlinePrimary" customClass="!hidden md:!block">
+            Learn More
           </Button>
           <Button type="outlinePrimary" size="sm" customClass="md:hidden block">
-            Check this
+            Learn More
           </Button>
         </Card.Container>
       </Card>
@@ -154,7 +154,7 @@ const CardWithIcon = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button type="outlinePrimary" customClass="hidden md:block">
+          <Button type="outlinePrimary" customClass="!hidden md:!block">
             Check this
           </Button>
           <Button type="outlinePrimary" size="sm" customClass="md:hidden block">

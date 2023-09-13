@@ -46,4 +46,14 @@ export const alertTheme: keepAlertTheme = {
   },
   icon: "mr-3 inline h-5 w-5 flex-shrink-0",
   rounded: "rounded-md",
+  title: {
+    base: "md:text-lg text-base font-semibold",
+    color: {
+      info: "text-blue-600",
+      gray: "text-slate-900",
+      error: "text-error-600",
+      success: "text-success-600",
+      warning: "text-warning-600",
+    },
+  },
 };

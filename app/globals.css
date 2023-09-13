@@ -248,7 +248,6 @@ pre::-webkit-scrollbar-thumb {
   box-shadow: 0px 32px 64px -12px rgba(45, 54, 67, 0.14) !important;
   background-color: #fff !important;
   border: none !important;
-  z-index: 9999 !important;
 }
 
 .react-datepicker__month-container {

@@ -29,6 +29,10 @@ export interface keepAlertTheme {
   color: AlertColors;
   icon: string;
   rounded: string;
+  title: {
+    base: string;
+    color: AlertColors;
+  };
 }
 
 export interface AlertProps
@@ -40,6 +44,7 @@ export interface AlertProps
   onDismiss?: boolean | (() => void);
   rounded?: boolean;
   withBorder?: boolean;
+  title?: string;
   withBorderAccent?: boolean;
   withBorderAccentPosition?: "left" | "right" | "top" | "bottom";
   children?: ReactNode;
@@ -61,6 +66,7 @@ export const Alert: FC<AlertProps> = ({
   withBorder = false,
   withBorderAccent = false,
   withBorderAccentPosition = "left",
+  title,
   className,
 }) => {
   const theme = useTheme().theme.alert;
@@ -81,7 +87,12 @@ export const Alert: FC<AlertProps> = ({
       <div className={theme.wrapper}>
         <div className={twMerge(theme.infoButton.base)}>{Icon}</div>
         <div>
-          {children}
+          {typeof children !== "undefined" && children}
+          {title && (
+            <p className={twMerge(theme.title.base, theme.title.color[color])}>
+              {title}
+            </p>
+          )}
           {additionalContent && <div>{additionalContent}</div>}
         </div>
         {onDismiss && typeof onDismiss === "function" && (

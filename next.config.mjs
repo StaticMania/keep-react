@@ -9,11 +9,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/",
-        destination: "/docs/getting-started/Introduction",
-        permanent: true,
-      },
-      {
         source: "/home",
         destination: "https://keepdesign.io",
         permanent: true,
@@ -22,6 +17,11 @@ const nextConfig = {
         source: "/figma",
         destination:
           "https://www.figma.com/file/J2i6VhncmepyLt8OS7i0GQ/Keep-Design-System---Pro-Version?type=design&node-id=5608-101847&mode=design&t=JLGK6sLhkhrpVetM-0",
+        permanent: true,
+      },
+      {
+        source: "/",
+        destination: "/docs/getting-started/Introduction",
         permanent: true,
       },
       {
@@ -239,6 +239,42 @@ const nextConfig = {
         source: "/areaChart",
         destination: "/docs/components/areaChart",
         permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: "/home",
+        headers: [
+          { key: "Access-Control-Allow-Credentials", value: "true" },
+          { key: "Access-Control-Allow-Origin", value: "*" },
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+          },
+          {
+            key: "Access-Control-Allow-Headers",
+            value:
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+        ],
+      },
+      {
+        source: "/figma",
+        headers: [
+          { key: "Access-Control-Allow-Credentials", value: "true" },
+          { key: "Access-Control-Allow-Origin", value: "*" },
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+          },
+          {
+            key: "Access-Control-Allow-Headers",
+            value:
+              "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+          },
+        ],
       },
     ];
   },

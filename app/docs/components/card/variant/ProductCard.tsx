@@ -86,12 +86,7 @@ const ProductCard = () => {
             </Card.Title>
           </Card.Container>
           <Card.Container className="my-3 flex items-center justify-between">
-            <Button type="primary" customClass="md:block hidden">
-              Check Out
-            </Button>
-            <Button type="primary" size="xs" customClass="md:hidden block">
-              Check Out
-            </Button>
+            <Button type="primary">Check Out</Button>
             <Card.Title className="text-lg md:text-2xl font-semibold text-slate-700">
               $649,00
             </Card.Title>

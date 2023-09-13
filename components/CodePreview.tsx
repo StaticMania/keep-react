@@ -102,7 +102,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
           </div>
         ) : (
           <div className="md:p-5 px-2 py-3 mix-h-[420px] w-full flex items-center justify-center">
-            <div className="w-full h-full overflow-auto z-30">{children}</div>
+            <div className="w-full h-full overflow-auto z-[1]">{children}</div>
           </div>
         )}
       </div>

@@ -58,15 +58,7 @@ const PricingCard = () => {
           </Card.List>
         </Card.Container>
         <Card.Container>
-          <Button type="primary" width="full" customClass="md:block hidden">
-            Pro Access
-          </Button>
-          <Button
-            type="primary"
-            width="full"
-            size="xs"
-            customClass="md:hidden block"
-          >
+          <Button type="primary" width="full">
             Pro Access
           </Button>
         </Card.Container>

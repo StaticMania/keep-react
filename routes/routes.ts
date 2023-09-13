@@ -287,13 +287,13 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
   },
-  {
-    id: 39,
-    name: "Toast",
-    href: "/docs/components/toast",
-    tag: false,
-    deprecate: false,
-  },
+  // {
+  //   id: 39,
+  //   name: "Toast",
+  //   href: "/docs/components/toast",
+  //   tag: false,
+  //   deprecate: true,
+  // },
   {
     id: 40,
     name: "Tooltip",

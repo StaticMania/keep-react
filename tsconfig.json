@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -26,15 +25,9 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext"
+    "target": "ESNext",
+    "allowJs": true
   },
   "exclude": ["./build/", "./lib/", "./.next/"],
-  "include": [
-    ".next/types/**/*.ts",
-    "**/*.js",
-    "**/*.mdx",
-    "**/*.mjs",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "include": [".next/types/**/*.ts", "**/*.mdx", "**/*.ts", "**/*.tsx"]
 }

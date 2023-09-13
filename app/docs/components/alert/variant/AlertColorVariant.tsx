@@ -26,11 +26,8 @@ const AlertWithColorVariant = () => {
           </div>
         }
         icon={<Info size={24} color="#0F3CD9" />}
-      >
-        <p className="md:text-lg text-base font-semibold text-blue-600">
-          Default message - make it short
-        </p>
-      </Alert>
+        title="Default message - make it short"
+      ></Alert>
       <Alert
         color="gray"
         rounded={true}
@@ -47,12 +44,9 @@ const AlertWithColorVariant = () => {
             </Link>
           </div>
         }
+        title="Default message - make it short"
         icon={<Info size={24} color="gray" />}
-      >
-        <p className="md:text-lg text-base font-semibold text-slate-900">
-          Default message - make it short
-        </p>
-      </Alert>
+      ></Alert>
       <Alert
         color="success"
         rounded={true}
@@ -69,12 +63,9 @@ const AlertWithColorVariant = () => {
             </Link>
           </div>
         }
+        title="Default message - make it short"
         icon={<CheckCircle size={24} color="#0A9952" />}
-      >
-        <p className="md:text-lg text-base font-semibold text-green-600">
-          Default message - make it short
-        </p>
-      </Alert>
+      />
       <Alert
         color="warning"
         rounded={true}
@@ -92,11 +83,8 @@ const AlertWithColorVariant = () => {
           </div>
         }
         icon={<WarningCircle size={24} color="#D8A800" />}
-      >
-        <p className="md:text-lg text-base font-semibold text-yellow-600">
-          Default message - make it short
-        </p>
-      </Alert>
+        title="Default message - make it short"
+      />
       <Alert
         color="error"
         rounded={true}
@@ -114,11 +102,8 @@ const AlertWithColorVariant = () => {
           </div>
         }
         icon={<XCircle size={24} color="#E92215" />}
-      >
-        <p className="md:text-lg text-base font-semibold text-error-500">
-          Default message - make it short
-        </p>
-      </Alert>
+        title="Default message - make it short"
+      />
     </div>
   );
 };
@@ -150,11 +135,8 @@ const AlertWithColorVariant = () => {
         </div>
       }
       icon={<Info size={24} color="gray" />}
-    >
-      <p className="md:text-lg text-base font-semibold text-slate-900">
-        Default message - make it short
-      </p>
-    </Alert>
+      title="Default message - make it short"
+    />
   );
 };
 `;

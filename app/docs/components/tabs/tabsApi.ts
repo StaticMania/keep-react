@@ -2,7 +2,7 @@ export const tabsApiData = [
   {
     id: 1,
     propsName: "style",
-    propsType: ["default", "underline", "pills", "fullWidth"],
+    propsType: ["default", "underline", "pills"],
     propsDescription: "Specifies the style variant of the tabs.",
     default: "default",
   },

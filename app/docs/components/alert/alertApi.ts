@@ -36,6 +36,13 @@ export const alertApiData = [
     default: "false",
   },
   {
+    id: 9,
+    propsName: "title",
+    propsDescription: "Alert title to be displayed in the alert.",
+    propsType: "string",
+    default: "Default message...",
+  },
+  {
     id: 6,
     propsName: "withBorder",
     propsDescription: "Adds a border around the alert.",

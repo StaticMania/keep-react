@@ -48,7 +48,7 @@ export interface CardProps extends PropsWithChildren<ComponentProps<"div">> {
 const CardComponent: FC<CardProps> = ({
   children,
   className,
-  shadow = true,
+  shadow = false,
   border = true,
   horizontal,
   href,

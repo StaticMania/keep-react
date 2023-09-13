@@ -129,7 +129,9 @@ export const Floating: FC<FloatingProps> = ({
           ...props,
         })}
       >
-        <div className={theme.content}>{content}</div>
+        <div className={theme.content} id="keep-to">
+          {content}
+        </div>
         {arrow && (
           <div
             className={twMerge(

@@ -16,11 +16,8 @@ const DefaultAlert = () => {
         </div>
       }
       icon={<Info size={24} color="#0F3CD9" />}
-    >
-      <p className="md:text-lg text-base font-semibold text-blue-600">
-        Default message - make it short
-      </p>
-    </Alert>
+      title="Default message - make it short"
+    ></Alert>
   );
 };
 
@@ -43,13 +40,12 @@ const DefaultAlert = () => {
         </div>
       }
       icon={<Info size={24} color="#0F3CD9" />}
-    >
-      <p className="md:text-lg text-base font-semibold text-blue-600">
-        Default message - make it short
-      </p>
-    </Alert>
+      title="Default message - make it short"
+    ></Alert>
   );
 };
+
+export default DefaultAlert;
 `;
 
 export { DefaultAlert, DefaultAlertCode };
