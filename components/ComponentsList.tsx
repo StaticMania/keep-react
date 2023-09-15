@@ -200,7 +200,6 @@ export const ModalComponent = () => {
     </div>
   );
 };
-
 export const AvatarGroupComponent = () => {
   return (
     <Avatar.Group>

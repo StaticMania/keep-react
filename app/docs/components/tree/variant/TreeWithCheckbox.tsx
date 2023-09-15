@@ -17,7 +17,7 @@ const TreeWithCheckbox = () => {
 
 const TreeWithCheckboxCode = `
 "use client";
-import {Tree} from "keep-design";
+import {Tree} from "keep-react";
 const nodes = [
   {
     id: 1,

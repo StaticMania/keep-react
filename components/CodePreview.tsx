@@ -1,10 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Check, Copy } from "phosphor-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import useCopy from "~/hooks/useCopy";
 
 interface CodePreviewProps {
   children: React.ReactNode;
@@ -12,26 +14,11 @@ interface CodePreviewProps {
 }
 
 const CodePreview = ({ children, code }: CodePreviewProps) => {
-  const [copy, setCopy] = useState<Boolean>(false);
-
-  const handleCopyToClipboard = ({ text }: { text: string }) => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        setCopy(true);
-      })
-      .catch((error) => {
-        console.error(error);
-        setCopy(false);
-      });
-  };
-
-  if (copy) {
-    setTimeout(() => {
-      setCopy(false);
-    }, 3000);
-  }
+  const pathname = usePathname();
   const [active, setActive] = useState(0);
+  const { copy, copyToClipboard } = useCopy();
+  const githubUrl = "https://github.com/StaticMania/keep-react/tree/master/app";
+
   return (
     <div className="border border-slate-200 rounded-md my-10 shadow-sm overflow-hidden w-full">
       <div className="flex text-center flex-wrap -mb-px bg-white border-slate-200 border-b px-5">
@@ -59,7 +46,8 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
           <div className="relative">
             <div className="absolute md:top-5 -top-10 lg:right-10 right-3 flex items-center justify-between gap-3">
               <Link
-                href="/"
+                target="_blank"
+                href={githubUrl + pathname}
                 className="bg-slate-800 hover:bg-slate-700 transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
               >
                 <Image
@@ -71,7 +59,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
               </Link>
               <button
                 className="bg-slate-900 border-2 border-slate-800 hover:bg-slate-700 hover:border-transparent transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
-                onClick={() => handleCopyToClipboard({ text: code })}
+                onClick={() => copyToClipboard(code)}
               >
                 {copy ? (
                   <span className="flex text-xs items-center">

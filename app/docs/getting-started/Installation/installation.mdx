@@ -1,3 +1,41 @@
-## Installation
+import CopyCode from "~/components/CopyCode";
+import {
+  twConfig,
+  twCss,
+  CodeString,
+  twNpmInstall,
+  keepNpmInstall,
+} from "./Code/Code.tsx";
+
+## Table of Contents
 
 The Installation page provides clear and concise instructions for setting up and integrating a software package, library, or application into your system. It guides users through the steps required to successfully install and configure the software, ensuring a smooth and error-free setup process. This page typically includes details on prerequisites, installation methods, and any additional configuration that might be needed. The Installation page serves as a vital resource for users who are new to the software and need guidance on getting started quickly and effectively.
+
+## Vite React Application
+
+After creating a React application with Vite, follow these steps to
+install Tailwind CSS:
+
+`Step 1:` Install Tailwind CSS
+
+<CopyCode code={twNpmInstall} />
+
+`Step 2:` Install Keep React:
+
+<CopyCode code={keepNpmInstall} />
+
+`Step 3:` Go to the `tailwind.config.js` file and paste the
+following code:
+
+<CopyCode code={twConfig} />
+
+`Step 4:` Add Tailwind CSS to index.css File:
+
+<CopyCode code={twCss} />
+
+Congratulations! You have completed the installation. You can now import any component from `keep-react` and
+start using it in your project.
+
+<CopyCode code={CodeString} />
+
+## Next JS Application

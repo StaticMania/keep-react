@@ -331,11 +331,11 @@ export const routes: routerPath[] = [
 ];
 
 export const gettingStartedRoutes: routerPath[] = [
-  {
-    id: 1,
-    name: "Introduction",
-    href: "/docs/getting-started/Introduction",
-  },
+  // {
+  //   id: 1,
+  //   name: "Introduction",
+  //   href: "/docs/getting-started/Introduction",
+  // },
   {
     id: 2,
     name: "Installation",
