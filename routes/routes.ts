@@ -1,9 +1,22 @@
+import {
+  TreeComponent,
+  BarChartComponent,
+  CheckboxGroupComponent,
+  DatePickerComponent,
+  RadioSelectComponent,
+  ModalComponent,
+  SliderComponet,
+  TooltipComponent,
+  PaginationComponent,
+} from "~/components/ComponentsList";
+
 interface routerPath {
   id: number;
   name: string;
   href: string;
   tag?: boolean;
   deprecate?: boolean;
+  redirect?: boolean;
 }
 
 export const routes: routerPath[] = [
@@ -335,10 +348,72 @@ export const navbarRoutes: routerPath[] = [
     id: 1,
     href: "/home",
     name: "Home",
+    redirect: true,
   },
   {
     id: 2,
     href: "/figma",
     name: "Figma",
+    redirect: true,
+  },
+  {
+    id: 3,
+    href: "/installation",
+    name: "Documentation",
+    redirect: false,
+  },
+];
+
+export const ComponentList: {
+  id: number;
+  href: string;
+  component: () => JSX.Element;
+}[] = [
+  {
+    id: 1,
+    href: "/docs/components/pagination",
+    component: PaginationComponent,
+  },
+  {
+    id: 2,
+    href: "/docs/components/tree",
+    component: TreeComponent,
+  },
+  {
+    id: 3,
+    href: "/docs/components/modal",
+    component: ModalComponent,
+  },
+  {
+    id: 4,
+    href: "/docs/components/tooltip",
+    component: TooltipComponent,
+  },
+  {
+    id: 5,
+    href: "/docs/components/barChart",
+    component: BarChartComponent,
+  },
+  {
+    id: 6,
+    href: "/docs/components/checkboxGroup",
+    component: CheckboxGroupComponent,
+  },
+
+  {
+    id: 7,
+    href: "/docs/components/radio",
+    component: RadioSelectComponent,
+  },
+
+  {
+    id: 8,
+    href: "/docs/components/slider",
+    component: SliderComponet,
+  },
+  {
+    id: 9,
+    href: "/docs/components/datePicker",
+    component: DatePickerComponent,
   },
 ];

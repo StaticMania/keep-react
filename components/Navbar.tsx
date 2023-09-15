@@ -39,7 +39,7 @@ const Navbar = () => {
                 <Link
                   key={nav.id}
                   href={nav.href}
-                  target="_blank"
+                  target={nav.redirect ? "_blank" : "_self"}
                   className="text-sm font-normal leading-[22px] tracking-[-0.2px] text-slate-500 hover:text-slate-900 active:text-slate-900"
                 >
                   {nav.name}
@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="lg:flex items-center gap-3 hidden">
-            <div>
+            <div className={pathname === "/" ? "hidden" : ""}>
               <DocSearch
                 appId="Z0C31MASPO"
                 indexName="keep-design"
@@ -72,11 +72,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="lg:hidden flex items-center justify-between gap-4">
-            <DocSearch
-              appId="Z0C31MASPO"
-              indexName="keep-design"
-              apiKey="efc95879a56f785250b1da08b43e8c19"
-            />
+            <div className={pathname === "/" ? "hidden" : ""}>
+              <DocSearch
+                appId="Z0C31MASPO"
+                indexName="keep-design"
+                apiKey="efc95879a56f785250b1da08b43e8c19"
+              />
+            </div>
             <Link href="/">
               <Image
                 src="/images/icon/github.svg"

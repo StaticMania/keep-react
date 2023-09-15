@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const AlertWithDismissIcon = () => {
   const onDissMiss = () => {
-    console.log("Dissmiss icon clicked");
+    // Click Action
   };
   return (
     <Alert
@@ -36,7 +36,7 @@ import Link from "next/link";
 
 const AlertWithDismissIcon = () => {
   const onDissMiss = () => {
-    console.log("Dissmiss icon clicked");
+    // Click Action
   };
   return (
     <Alert

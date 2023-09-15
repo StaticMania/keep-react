@@ -6,7 +6,7 @@ const DefaultAccordion = () => {
     <Accordion showIcon>
       <Accordion.Panel>
         <Accordion.Title>
-          What is the purpose of the Keep Design System?
+          What is the of the Keep Design System?
         </Accordion.Title>
         <Accordion.Content>
           <p>

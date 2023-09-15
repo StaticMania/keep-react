@@ -57,8 +57,8 @@ export default meta;
 type Story = StoryObj<typeof DatePicker>;
 
 const DefaultDatePickerComponent = () => {
-  const [date, setDate] = useState<Date | null>(null);
-  console.log(date);
+  const [_, setDate] = useState<Date | null>(null);
+
   return (
     <div className="w-2/6">
       <DatePicker singleDatePicker={setDate}>
@@ -68,8 +68,7 @@ const DefaultDatePickerComponent = () => {
   );
 };
 const DatePickerWithTwoMonthComponent = () => {
-  const [date, setDate] = useState<Date | null>(null);
-  console.log(date);
+  const [_, setDate] = useState<Date | null>(null);
   return (
     <div className="w-2/6">
       <DatePicker showTwoMonth singleDatePicker={setDate}>
@@ -79,8 +78,7 @@ const DatePickerWithTwoMonthComponent = () => {
   );
 };
 const DateRangePickerComponent = () => {
-  const [rangeDate, setRangeDate] = useState<rangePicker>();
-  console.log(rangeDate);
+  const [_, setRangeDate] = useState<rangePicker>();
   return (
     <div className="w-2/6">
       <DatePicker rangeDate={setRangeDate}>
@@ -90,8 +88,7 @@ const DateRangePickerComponent = () => {
   );
 };
 const DateRangePickerWithTwoMonthComponent = () => {
-  const [rangeDate, setRangeDate] = useState<rangePicker>();
-  console.log(rangeDate);
+  const [_, setRangeDate] = useState<rangePicker>();
   return (
     <div className="w-2/6">
       <DatePicker showTwoMonth rangeDate={setRangeDate}>
@@ -101,8 +98,7 @@ const DateRangePickerWithTwoMonthComponent = () => {
   );
 };
 const MonthPickerComponent = () => {
-  const [monthPicker, setMonthPicker] = useState<Date | null | string>();
-  console.log({ monthPicker });
+  const [_, setMonthPicker] = useState<Date | null | string>();
   return (
     <div className="w-2/6">
       <DatePicker monthPicker={setMonthPicker}>
@@ -112,8 +108,8 @@ const MonthPickerComponent = () => {
   );
 };
 const YearPickerComponent = () => {
-  const [yearPicker, setYearPicker] = useState<number | Date | null>();
-  console.log({ yearPicker });
+  const [_, setYearPicker] = useState<number | Date | null>();
+
   return (
     <div className="w-2/6">
       <DatePicker yearPicker={setYearPicker}>
@@ -123,8 +119,7 @@ const YearPickerComponent = () => {
   );
 };
 const TimePickerComponent = () => {
-  const [time, setTime] = useState<string | null | Date>();
-  console.log({ time });
+  const [_, setTime] = useState<string | null | Date>();
   return (
     <div className="w-2/6">
       <DatePicker timePicker={setTime}>

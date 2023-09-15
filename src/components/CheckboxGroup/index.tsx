@@ -95,8 +95,6 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
   selected,
   onOptionChange,
 }) => {
-  console.log(select);
-
   const theme = useTheme().theme.checkboxGroup;
   return (
     <label

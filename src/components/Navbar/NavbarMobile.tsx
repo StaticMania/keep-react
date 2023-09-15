@@ -19,7 +19,6 @@ export interface keepMobileMenuTheme {
 export const NavbarMobile: FC<NavbarMobileProps> = ({ children }) => {
   const [showNav, setShowNav] = useState(false);
   const theme = useTheme().theme.navbar.mobileMenu;
-  console.log(showNav);
   return (
     <>
       <div

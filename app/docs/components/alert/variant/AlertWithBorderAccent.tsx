@@ -5,7 +5,7 @@ import { Info } from "phosphor-react";
 
 const AlertWithBorderAccent = () => {
   const onDissmiss = () => {
-    console.log("onDissmiss icon clicked");
+    // Click Action
   };
   return (
     <div className="flex flex-col gap-5">
@@ -105,7 +105,7 @@ import { Info } from "phosphor-react";
 
 const AlertWithBorderAccent = () => {
   const onDissmiss = () => {
-    console.log("onDissmiss icon clicked");
+    // Click Action
   };
   return (
     <Alert

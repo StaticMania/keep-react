@@ -20,11 +20,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/",
-        destination: "/docs/getting-started/Introduction",
-        permanent: true,
-      },
-      {
         source: "/introduction",
         destination: "/docs/getting-started/Introduction",
         permanent: true,
@@ -277,6 +272,15 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  images: {
+    domains: ["images.prismic.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.prismic.io",
+      },
+    ],
   },
 };
 

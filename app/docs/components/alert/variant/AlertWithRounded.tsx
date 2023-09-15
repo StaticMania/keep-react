@@ -5,7 +5,7 @@ import { Info } from "phosphor-react";
 
 const AlertWithRounded = () => {
   const onDissMiss = () => {
-    console.log("Dissmiss icon clicked");
+    // Click Action
   };
   return (
     <Alert
@@ -37,7 +37,7 @@ import { Info } from "phosphor-react";
 
 const AlertWithRounded = () => {
   const onDissMiss = () => {
-    console.log("Dissmiss icon clicked");
+    // Click Action
   };
   return (
     <Alert

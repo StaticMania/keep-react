@@ -10,7 +10,6 @@ import {
   Children,
   forwardRef,
   useEffect,
-  useId,
   useImperativeHandle,
   useMemo,
   useRef,
@@ -104,7 +103,6 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
   ) => {
     const theme = useTheme().theme.tabs;
 
-    const id = useId();
     const tabs = useMemo(
       () =>
         Children.map(
@@ -180,7 +178,7 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
             <button
               key={index}
               type="button"
-              aria-controls={`${id}-tabpanel-${index}`}
+              aria-controls={`${index + 1}-tabpanel-${index}`}
               aria-selected={index === activeTab}
               className={twMerge(
                 theme.tablist.tabitem.base,
@@ -195,7 +193,7 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
                   tabItemStyle.borderPosition.bottom
               )}
               disabled={tab.disabled}
-              id={`${id}-tab-${index}`}
+              id={`${index + 1}-tab-${index}`}
               onClick={() => handleClick({ target: index })}
               onKeyDown={(event) => handleKeyboard({ event, target: index })}
               ref={(element) =>
@@ -243,10 +241,10 @@ export const TabsComponent = forwardRef<TabsRef, TabsProps>(
           {tabs.map((tab, index) => (
             <div
               key={index}
-              aria-labelledby={`${id}-tab-${index}`}
+              aria-labelledby={`${index + 1}-tab-${index}`}
               className={theme.tabpanel}
               hidden={index !== activeTab}
-              id={`${id}-tabpanel-${index}`}
+              id={`${index + 1}-tabpanel-${index}`}
               role="tabpanel"
               tabIndex={0}
             >
