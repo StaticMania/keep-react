@@ -8,7 +8,7 @@ Keep React is a versatile collection of pre-designed UI components and styles ta
 - [Usage](#usage)
 - [Components](#components)
 - [Contributing](#contributing)
-- [Figma](#contributing)
+- [Figma](#figma)
 - [License](#license)
 
 ## Installation
@@ -82,7 +82,11 @@ npx tailwindcss init -p
 
 ```
 npm i keep-react
-//OR
+```
+
+Or with yarn
+
+```
 yarn add keep-react
 ```
 
@@ -99,7 +103,8 @@ module.exports = {
       ],
       presets: [require("keep-react/lib/cjs/theme/keep-preset.js")],
       theme: {},
-      plugins: [],};
+      plugins: [],
+};
 ```
 
 `Step 4:` Add Tailwind CSS to globals.css File:

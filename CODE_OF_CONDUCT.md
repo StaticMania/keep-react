@@ -39,7 +39,7 @@ If you are subject to or witness unacceptable behavior, or have any other concer
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/), version 2.1, available at [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html).
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/), version 2.1, available at [contributor](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html)[-covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html).
 
 ## Summary
 

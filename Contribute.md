@@ -40,9 +40,8 @@ Please note that Keep React has a [Code of Conduct](CODE_OF_CONDUCT.md) that we 
 
 Ready to contribute? Here's how to get started:
 
-- [Fork Keep React on GitHub](https://github.com/keep-react/keep-react/fork)
-- [Browse Open Issues](https://github.com/keep-react/keep-react/issues)
-- [Join the Discussions](https://github.com/keep-react/keep-react/discussions)
-- [Read the Documentation](https://react.keepdesign.io/docs/introduction)
+- [Fork Keep React on GitHub](https://github.com/StaticMania/keep-react/fork)
+- [Browse Open Issues](https://github.com/StaticMania/keep-react/issues)
+- [Read the Documentation](https://react.keepdesign.io/docs/getting-started/Introduction)
 
 We're excited to have you as part of the Keep React community! Thank you for your support and contributions.
