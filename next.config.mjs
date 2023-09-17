@@ -9,6 +9,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/github",
+        destination: "https://github.com/StaticMania/keep-react",
+        permanent: true,
+      },
+      {
         source: "/home",
         destination: "https://keepdesign.io",
         permanent: true,

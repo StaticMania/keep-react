@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { ArrowUpRight, CopySimple } from "phosphor-react";
+import useCopy from "~/hooks/useCopy";
 import { ComponentList } from "~/routes/routes";
+import { ArrowUpRight, Check, CopySimple } from "phosphor-react";
 import { AvatarGroupComponent } from "~/components/ComponentsList";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 }
 
 const Hero = () => {
+  const { copy, copyToClipboard } = useCopy();
   return (
     <div className="md:pt-24 pt-10 hero-area md:h-screen -mt-2">
       <div className="container">
@@ -32,13 +34,23 @@ const Hero = () => {
             <p className="text-sm leading-[22px] tracking-[-0.3px] text-slate-500 font-normal">
               npm install keep-react
             </p>
-            <button className="pl-2">
-              <CopySimple size={18} color="#8897AE" />
+            <button
+              className="pl-2"
+              onClick={() => copyToClipboard("npm install keep-react")}
+            >
+              {copy ? (
+                <Check size={18} color="#8897AE" />
+              ) : (
+                <CopySimple size={18} color="#8897AE" />
+              )}
             </button>
           </div>
-          <button className="text-sm px-4 py-2.5 transition-all duration-75 ease-in group  h-min w-fit capitalize justify-center text-center font-medium rounded-md text-white bg-slate-900 border border-slate-900 hover:bg-slate-800 active:bg-slate-900 focus:ring-4 focus:ring-slate-800">
+          <Link
+            href="/installation"
+            className="text-sm px-4 py-2.5 transition-all duration-75 ease-in group  h-min w-fit capitalize justify-center text-center font-medium rounded-md text-white bg-slate-900 border border-slate-900 hover:bg-slate-800 active:bg-slate-900 focus:ring-4 focus:ring-slate-800"
+          >
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
     </div>

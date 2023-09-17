@@ -4,8 +4,8 @@ import Installation from ".";
 
 export const metadata: Metadata = {
   description:
-    "The Installation page provides clear and concise instructions for setting up and integrating a software package, library, or application into your system. It guides users through the steps required to successfully install and configure the software, ensuring a smooth and error-free setup process.",
-  title: "Installation - Keep Design System",
+    "On this page, you will discover straightforward instructions for integrating the keep-react package into your application. These steps will guide you through the process of installing and configuring your application to work seamlessly with keep-react, ensuring a hassle-free setup without errors.",
+  title: "Installation - Keep React",
 };
 
 const page: NextPage = () => {

@@ -31,4 +31,26 @@ const twNpmInstall =
   "npm i autoprefixer postcss tailwindcss\nnpx tailwindcss init -p";
 
 const keepNpmInstall = "npm i keep-react \n//OR\nyarn add keep-react";
-export { twConfig, twCss, CodeString, twNpmInstall, keepNpmInstall };
+
+const twConfigForNextJs = `
+    module.exports = {
+      content: [
+        "node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+      ],
+      presets: [require("keep-react/lib/cjs/theme/keep-preset.js")],
+      theme: {},
+      plugins: [],
+    };
+
+`;
+export {
+  twConfig,
+  twCss,
+  CodeString,
+  twNpmInstall,
+  keepNpmInstall,
+  twConfigForNextJs,
+};

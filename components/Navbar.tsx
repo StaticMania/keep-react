@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Button, Accordion } from "~/src";
+import { Accordion } from "~/src";
 import { useEffect, useState } from "react";
 import { DocSearch } from "@docsearch/react";
 import { usePathname } from "next/navigation";
@@ -56,14 +56,18 @@ const Navbar = () => {
               />
             </div>
 
-            <Button size="md" href="/">
+            <Link
+              className="bg-primary-25 hover:bg-primary-50 p-3 rounded-md"
+              href="/github"
+              target="_blank"
+            >
               <Image
                 src="/images/icon/github.svg"
                 height={20}
                 width={20}
                 alt="github"
               />
-            </Button>
+            </Link>
             <Link
               href="/installation"
               className="text-sm px-4 py-2.5 transition-all duration-75 ease-in group  h-min w-fit capitalize justify-center text-center font-medium rounded-md text-white bg-slate-900 border border-slate-900 hover:bg-slate-800 active:bg-slate-900 focus:ring-4 focus:ring-slate-800"
@@ -79,7 +83,7 @@ const Navbar = () => {
                 apiKey="efc95879a56f785250b1da08b43e8c19"
               />
             </div>
-            <Link href="/">
+            <Link href="/github" target="_blank">
               <Image
                 src="/images/icon/github.svg"
                 height={24}
@@ -90,11 +94,11 @@ const Navbar = () => {
             <button onClick={() => setActive(!active)}>
               {active ? (
                 <span>
-                  <X size={24} color="#000000e6" />
+                  <X size={24} color="#000000" />
                 </span>
               ) : (
                 <span>
-                  <List size={24} color="#000000e6" />
+                  <List size={24} color="#000000" />
                 </span>
               )}
             </button>
