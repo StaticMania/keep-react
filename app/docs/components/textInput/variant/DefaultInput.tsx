@@ -3,7 +3,7 @@ import { TextInput } from "~/src";
 
 const DefaultInput = () => {
   return (
-    <TextInput id="#id-6i6sgw" placeholder="Default Input Field" color="gray" />
+    <TextInput id="#id-1" placeholder="Default Input Field" color="gray" />
   );
 };
 
@@ -13,7 +13,7 @@ import { TextInput } from "keep-react";
 
 const DefaultInput = () => {
   return (
-    <TextInput id="#id-6i6sgw" placeholder="Default Input Field" color="gray" />
+    <TextInput id="#id-1" placeholder="Default Input Field" color="gray" />
   );
 };
 

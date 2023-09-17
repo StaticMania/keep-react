@@ -23,7 +23,6 @@ const DefaultAccordion = () => {
 };
 
 const DefaultAccordionCode = `
-
 "use client";
 import { Accordion } from "keep-react";
 const DefaultAccordion = () => {

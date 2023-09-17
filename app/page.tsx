@@ -46,7 +46,7 @@ const Hero = () => {
             </button>
           </div>
           <Link
-            href="/installation"
+            href="/docs/getting-started/Introduction"
             className="text-sm px-4 py-2.5 transition-all duration-75 ease-in group  h-min w-fit capitalize justify-center text-center font-medium rounded-md text-white bg-slate-900 border border-slate-900 hover:bg-slate-800 active:bg-slate-900 focus:ring-4 focus:ring-slate-800"
           >
             Get Started
@@ -93,7 +93,7 @@ const ComponentUI = () => {
         </div>
         <div className="flex items-center justify-center">
           <Link
-            href="/docs/getting-started/Installation"
+            href="/docs/getting-started/Introduction"
             className="px-6 py-3 border border-slate-200 bg-slate-25 hover:bg-slate-900 hover:text-white text-slate-900 rounded-md flex items-center gap-2 text-sm md:text-base transition-all duration-300"
           >
             View All Component
@@ -121,13 +121,14 @@ const Community = () => {
             </p>
           </div>
           <div>
-            <Link
-              href="/docs/getting-started/Installation"
+            <a
+              href="https://github.com/StaticMania/keep-react"
+              target="_blank"
               className="px-6 py-3 text-sm md:text-base  bg-slate-900 hover:bg-slate-800 text-white rounded-md flex items-center gap-2"
             >
               See our repository
               <ArrowUpRight size={18} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

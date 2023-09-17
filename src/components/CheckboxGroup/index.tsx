@@ -90,7 +90,6 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
   img,
   imgShape = "circle",
   fieldName,
-  select = "single",
   value = "",
   selected,
   onOptionChange,

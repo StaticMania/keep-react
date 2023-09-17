@@ -8,7 +8,7 @@ const InputColorVariant = () => {
       <div>
         <Label value="Gray Color Input" />
         <TextInput
-          id="#id-yml3mm"
+          id="#id-1"
           placeholder="Gray Color Input"
           color="gray"
           withBg={true}
@@ -23,7 +23,7 @@ const InputColorVariant = () => {
       <div>
         <Label value="Info Color Input" color="info" />
         <TextInput
-          id="#id-yml3mm"
+          id="#id-2"
           placeholder="Info Color Input"
           color="info"
           sizing="md"
@@ -38,7 +38,7 @@ const InputColorVariant = () => {
       <div>
         <Label value="Error Color Input" color="error" />
         <TextInput
-          id="#id-d49v11"
+          id="#id-3"
           placeholder="Error Color Input"
           color="error"
           sizing="md"
@@ -53,7 +53,7 @@ const InputColorVariant = () => {
       <div>
         <Label value="Warning Color Input" color="warning" />
         <TextInput
-          id="#id-d49v11"
+          id="#id-4"
           placeholder="Warning Color Input"
           color="warning"
           sizing="md"
@@ -68,7 +68,7 @@ const InputColorVariant = () => {
       <div>
         <Label value="Success Color Input" color="success" />
         <TextInput
-          id="#id-d49v11"
+          id="#id-5"
           placeholder="Success Color Input"
           color="success"
           sizing="md"
@@ -86,7 +86,6 @@ const InputColorVariant = () => {
 
 const InputColorVariantCode = `
 "use client";
-
 import { Label } from "~/src/FormControls/Label";
 import { TextInput } from "~/src/FormControls/TextInput";
 import { EyeSlash, Lock } from "phosphor-react";
@@ -97,7 +96,7 @@ const InputColorVariant = () => {
       <div>
         <Label value="Gray Color Input" />
         <TextInput
-          id="#id-yml3mm"
+          id="#id-1"
           placeholder="Gray Color Input"
           color="gray"
           sizing="md"

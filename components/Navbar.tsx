@@ -56,9 +56,9 @@ const Navbar = () => {
               />
             </div>
 
-            <Link
+            <a
               className="bg-primary-25 hover:bg-primary-50 p-3 rounded-md"
-              href="/github"
+              href="https://github.com/StaticMania/keep-react"
               target="_blank"
             >
               <Image
@@ -67,9 +67,9 @@ const Navbar = () => {
                 width={20}
                 alt="github"
               />
-            </Link>
+            </a>
             <Link
-              href="/installation"
+              href="/docs/getting-started/Introduction"
               className="text-sm px-4 py-2.5 transition-all duration-75 ease-in group  h-min w-fit capitalize justify-center text-center font-medium rounded-md text-white bg-slate-900 border border-slate-900 hover:bg-slate-800 active:bg-slate-900 focus:ring-4 focus:ring-slate-800"
             >
               get started
@@ -83,14 +83,14 @@ const Navbar = () => {
                 apiKey="efc95879a56f785250b1da08b43e8c19"
               />
             </div>
-            <Link href="/github" target="_blank">
+            <a href="https://github.com/StaticMania/keep-react" target="_blank">
               <Image
                 src="/images/icon/github.svg"
                 height={24}
                 width={24}
                 alt="github"
               />
-            </Link>
+            </a>
             <button onClick={() => setActive(!active)}>
               {active ? (
                 <span>

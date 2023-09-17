@@ -1,6 +1,6 @@
 "use client";
 import type { FC } from "react";
-import IntroductionContent from "./Introduction.mdx";
+import IntroductionContent from "./introduction.mdx";
 
 const Introduction: FC = () => <IntroductionContent />;
 
