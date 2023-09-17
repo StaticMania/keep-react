@@ -6,7 +6,7 @@ const LevelAndHelperText = () => {
     <>
       <Label value="Label" />
       <TextInput
-        id="#id-ozg0w1"
+        id="#id-17"
         placeholder="Default Input Field"
         color="gray"
         helperText="Info that helps a user with this field."
@@ -24,7 +24,7 @@ const LevelAndHelperText = () => {
     <>
       <Label value="Label" />
       <TextInput
-        id="#id-ozg0w1"
+        id="#id-17"
         placeholder="Default Input Field"
         color="gray"
         helperText="Info that helps a user with this field."

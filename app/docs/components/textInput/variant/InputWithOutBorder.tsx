@@ -8,7 +8,7 @@ const InputWithOutBorder = () => {
       <div>
         <Label value="Gray Color Input" />
         <TextInput
-          id="#id-yml3mm"
+          id="#id-12"
           placeholder="Gray Color Input"
           color="gray"
           sizing="md"
@@ -24,7 +24,7 @@ const InputWithOutBorder = () => {
       <div>
         <Label value="Info Color Input" color="info" />
         <TextInput
-          id="#id-yml3mm"
+          id="#id-13"
           placeholder="Info Color Input"
           color="info"
           sizing="md"
@@ -40,7 +40,7 @@ const InputWithOutBorder = () => {
       <div>
         <Label value="Error Color Input" color="error" />
         <TextInput
-          id="#id-d49v11"
+          id="#id-14"
           placeholder="Error Color Input"
           color="error"
           sizing="md"
@@ -56,7 +56,7 @@ const InputWithOutBorder = () => {
       <div>
         <Label value="Warning Color Input" color="warning" />
         <TextInput
-          id="#id-d49v11"
+          id="#id-15"
           placeholder="Warning Color Input"
           color="warning"
           sizing="md"
@@ -72,7 +72,7 @@ const InputWithOutBorder = () => {
       <div>
         <Label value="Success Color Input" color="success" />
         <TextInput
-          id="#id-d49v11"
+          id="#id-16"
           placeholder="Success Color Input"
           color="success"
           sizing="md"

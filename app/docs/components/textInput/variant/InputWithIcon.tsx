@@ -7,7 +7,7 @@ const InputWithIcon = () => {
     <>
       <Label value="Label" />
       <TextInput
-        id="#id-v9grzf"
+        id="#id-11"
         placeholder="Default Input Field"
         color="gray"
         icon={<WarningCircle size={20} color="#5E718D" />}
@@ -26,7 +26,7 @@ const InputWithIcon = () => {
     <>
       <Label value="Label" />
       <TextInput
-        id="#id-v9grzf"
+        id="#id-11"
         placeholder="Default Input Field"
         color="gray"
         icon={<WarningCircle size={20} color="#5E718D" />}

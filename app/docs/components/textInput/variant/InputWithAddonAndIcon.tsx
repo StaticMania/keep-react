@@ -7,7 +7,7 @@ const InputWithAddonAndIcon = () => {
     <>
       <Label value="Password" />
       <TextInput
-        id="#id-yml3mm"
+        id="#id-10"
         placeholder="example@gmail.com"
         color="gray"
         sizing="md"
@@ -31,7 +31,7 @@ const InputWithAddonAndIcon = () => {
     <>
       <Label value="Password" />
       <TextInput
-        id="#id-yml3mm"
+        id="#id-10"
         placeholder="example@gmail.com"
         color="gray"
         sizing="md"

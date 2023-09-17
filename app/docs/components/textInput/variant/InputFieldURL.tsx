@@ -7,7 +7,7 @@ const InputFieldURL = () => {
     <>
       <Label value="Enter URL" color="error" />
       <TextInput
-        id="#id-cefnh3"
+        id="#id-7"
         placeholder="Enter your URL"
         color="error"
         sizing="md"
@@ -33,7 +33,7 @@ const InputFieldURL = () => {
     <>
       <Label value="Enter URL" color="error" />
       <TextInput
-        id="#id-cefnh3"
+        id="#id-7"
         placeholder="Enter your URL"
         color="error"
         sizing="md"

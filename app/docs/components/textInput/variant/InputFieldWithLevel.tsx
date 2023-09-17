@@ -5,11 +5,7 @@ const InputFieldWithLevel = () => {
   return (
     <>
       <Label value="Label" />
-      <TextInput
-        id="#id-592mq8"
-        placeholder="Default Input Field"
-        color="gray"
-      />
+      <TextInput id="#id-8" placeholder="Default Input Field" color="gray" />
     </>
   );
 };
@@ -24,7 +20,7 @@ const InputFieldWithLevel = () => {
     <>
       <Label value="Label" />
       <TextInput
-        id="#id-592mq8"
+        id="#id-8"
         placeholder="Default Input Field"
         color="gray"
       />

@@ -5,7 +5,7 @@ import { Envelope } from "phosphor-react";
 const InputWithAddon = () => {
   return (
     <TextInput
-      id="#id-fagdtg"
+      id="#id-9"
       placeholder="example@gmail.com"
       color="gray"
       sizing="md"
@@ -23,7 +23,7 @@ import { Envelope } from "phosphor-react";
 const InputWithAddon = () => {
   return (
     <TextInput
-      id="#id-fagdtg"
+      id="#id-9"
       placeholder="example@gmail.com"
       color="gray"
       sizing="md"
