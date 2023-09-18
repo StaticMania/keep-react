@@ -1,4 +1,4 @@
-# KEEP REACT (BETA)
+# KEEP REACT
 
 ![Keep React Logo](https://staticmania.cdn.prismic.io/staticmania/8ab09481-0fe9-4f3e-b795-e825c13e68fd_keepLogo.svg)
 

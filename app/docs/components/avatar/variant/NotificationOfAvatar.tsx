@@ -2,7 +2,7 @@ import { Avatar } from "~/src";
 
 const NotificationOfAvatar = () => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 pl-5">
       <Avatar
         shape="round"
         size="xl"

@@ -94,7 +94,6 @@ export interface StatusPositions {
 export interface KeepAvatarStatusPositions {
   dot: StatusPositions;
   notification: StatusPositions;
-  customStatusIcon: StatusPositions;
 }
 
 export interface KeepAvatarStatusFontSize {
@@ -113,7 +112,6 @@ export interface AvatarProps extends PropsWithChildren<ComponentProps<"div">> {
   statusType?: keyof KeepAvatarStatusType;
   statusPosition?: keyof KeepPositions;
   totalNotification?: number;
-  customStatusIcon?: string;
 }
 
 const AvatarComponent: FC<AvatarProps> = ({
@@ -129,7 +127,6 @@ const AvatarComponent: FC<AvatarProps> = ({
   statusType = "dot",
   statusPosition = "top-left",
   totalNotification = 99,
-  customStatusIcon,
   ...props
 }) => {
   const theirProps = excludeClassName(props);
@@ -190,34 +187,21 @@ const AvatarComponent: FC<AvatarProps> = ({
             </svg>
           </div>
         )}
-        {customStatusIcon ? (
-          <img
-            alt={alt}
+        {status && (
+          <span
             className={twMerge(
-              theme.customStatusIcon[size],
+              theme.status[status],
+              theme.statusType.type[statusType],
+              theme.statusType.size[statusType][size],
               theme.statusPosition[shape][statusType][
                 size as keyof StatusPositions
-              ][statusPosition]
+              ][statusPosition],
+              statusType === "notification" &&
+                theme.statusType.fontSize.notification[size]
             )}
-            src={customStatusIcon}
-          />
-        ) : (
-          status && (
-            <span
-              className={twMerge(
-                theme.status[status],
-                theme.statusType.type[statusType],
-                theme.statusType.size[statusType][size],
-                theme.statusPosition[shape][statusType][
-                  size as keyof StatusPositions
-                ][statusPosition],
-                statusType === "notification" &&
-                  theme.statusType.fontSize.notification[size]
-              )}
-            >
-              {statusType === "notification" && `${totalNotification}`}
-            </span>
-          )
+          >
+            {statusType === "notification" && `${totalNotification}`}
+          </span>
         )}
       </div>
       {children && <div className="text-center">{children}</div>}

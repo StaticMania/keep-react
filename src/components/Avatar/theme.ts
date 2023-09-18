@@ -156,44 +156,6 @@ export const avatarTheme: keepAvatarTheme = {
           "top-right": "-top-1 -right-3",
         },
       },
-      customStatusIcon: {
-        xs: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        sm: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        md: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        lg: {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-        xl: {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-        "2xl": {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-      },
     },
     round: {
       dot: {
@@ -272,44 +234,6 @@ export const avatarTheme: keepAvatarTheme = {
           "top-right": "top-2 -right-3",
         },
       },
-      customStatusIcon: {
-        xs: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        sm: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        md: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        lg: {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-        xl: {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-        "2xl": {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-      },
     },
     roundSquare: {
       dot: {
@@ -386,44 +310,6 @@ export const avatarTheme: keepAvatarTheme = {
           "bottom-right": "-bottom-0.5 -right-3",
           "top-left": "-top-0.5 -left-3",
           "top-right": "-top-0.5 -right-3",
-        },
-      },
-      customStatusIcon: {
-        xs: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        sm: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        md: {
-          "bottom-left": "-bottom-0.5 -left-3",
-          "bottom-right": "-bottom-0.5 -right-3",
-          "top-left": "-top-0.5 -left-3",
-          "top-right": "-top-0.5 -right-3",
-        },
-        lg: {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-        xl: {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
-        },
-        "2xl": {
-          "bottom-left": "-bottom-1 -left-3",
-          "bottom-right": "-bottom-1 -right-3",
-          "top-left": "-top-1 -left-3",
-          "top-right": "-top-1 -right-3",
         },
       },
     },

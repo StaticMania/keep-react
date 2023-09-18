@@ -3,7 +3,7 @@ import { Button } from "~/src";
 
 const DefaultButton = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <Button size="md">Default</Button>
       <Button size="md" type="primary">
         Primary

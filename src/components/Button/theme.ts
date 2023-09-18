@@ -83,11 +83,11 @@ export const buttonTheme: keepButtonTheme = {
     color: {
       error:
         "text-error-600 bg-white border border-dashed border-error-300 hover:bg-error-25 active:bg-error-25 focus:ring-4 focus:ring-error-50  disabled:text-error-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-error-100",
-      info: "text-slate-600 bg-white border border-dashed border-slate-300 hover:bg-slate-25 active:bg-slate-25 focus:ring-4 focus:ring-slate-50  disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-slate-100",
+      info: "text-slate-600 bg-white border border-dashed border-slate-300 hover:bg-slate-25 active:bg-slate-25 focus:ring-4 focus:ring-slate-50 disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-slate-100",
       success:
-        "text-success-600 bg-white border border-dashed border-success-300 hover:bg-success-25 active:bg-success-25 focus:ring-4 focus:ring-success-50  disabled:text-success-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-success-100",
+        "text-success-600 bg-white border border-dashed border-success-300 hover:bg-success-25 active:bg-success-25 focus:ring-4 focus:ring-success-50 disabled:text-success-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-success-100",
       warning:
-        "text-warning-600 bg-white border border-dashed border-warning-300 hover:bg-warning-25 active:bg-warning-25 focus:ring-4 focus:ring-warning-50  disabled:text-warning-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-warning-100",
+        "text-warning-600 bg-white border border-dashed border-warning-300 hover:bg-warning-25 active:bg-warning-25 focus:ring-4 focus:ring-warning-50 disabled:text-warning-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-warning-100",
     },
     transition: {
       off: "",
