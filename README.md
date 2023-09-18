@@ -1,6 +1,8 @@
 ![Keep React Logo](https://staticmania.cdn.prismic.io/staticmania/8ab09481-0fe9-4f3e-b795-e825c13e68fd_keepLogo.svg)
 
-Keep React is a versatile collection of pre-designed UI components and styles tailored for React applications. It simplifies the process of building modern and visually appealing user interfaces by providing a wide array of customizable components, such as buttons, cards, modals, and more. Based on Tailwind CSS, the Keep React seamlessly integrates with your React project, enabling you to create beautiful and responsive applications with ease.
+Keep React is an open-source component library built on Tailwind CSS and React.js. It provides a versatile set of pre-designed UI components that enable developers to streamline the creation of modern, responsive, and visually appealing web applications.
+
+![Keep React](https://images.prismic.io/staticmania/740a2fc6-2ae3-4d39-8fbb-555451b21738_mobile.png?auto=compress,format)
 
 ## Table of Contents
 
@@ -144,7 +146,7 @@ If you need access to Figma design files for the components, you can check out o
 
 [Get access to the Figma design files](https://keepdesign.io)
 
-## Copyright and license
+## License
 
 The Keep-React name and logos are trademarks of StaticMania.
 
