@@ -1,18 +1,17 @@
 "use client";
 import { useState } from "react";
-import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Check, Copy } from "phosphor-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import useCopy from "~/hooks/useCopy";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface CodePreviewProps {
   children: React.ReactNode;
   code: string;
 }
-
 const CodePreview = ({ children, code }: CodePreviewProps) => {
   const pathname = usePathname();
   const [active, setActive] = useState(0);
@@ -70,8 +69,9 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
                 )}
               </button>
             </div>
+
             <SyntaxHighlighter
-              language="jsx"
+              language="javascript"
               style={coldarkDark}
               customStyle={{
                 maxHeight: "420px",
