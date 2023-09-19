@@ -18,7 +18,7 @@ const Footer = () => {
                 width="113"
                 height="40"
                 src="/images/keepLogo.svg"
-                alt="keep Design System"
+                alt="Keep React"
               />
             </Link>
             <p className="text-base text-slate-700 font-normal leading-[22px] tracking-[-0.3px] mt-6 max-w-lg">

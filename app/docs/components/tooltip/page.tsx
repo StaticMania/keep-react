@@ -4,8 +4,8 @@ import TolltipDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "The Tooltips component in the Keep Design System allows you to provide additional information or context to users when they hover over or interact with specific elements. With customizable options for type, theme, and arrow placement, you can create versatile tooltips that fit your design needs.",
-  title: "Tooltip - Keep Design System",
+    "The Tooltips component in the Keep React allows you to provide additional information or context to users when they hover over or interact with specific elements. With customizable options for type, theme, and arrow placement, you can create versatile tooltips that fit your design needs.",
+  title: "Tooltip - Keep React",
 };
 
 const page: NextPage = () => {

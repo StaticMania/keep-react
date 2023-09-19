@@ -5,7 +5,7 @@ import RadioDocs from ".";
 export const metadata: Metadata = {
   description:
     "Radio Input Component is a user interface element used for selecting a single option from a set of mutually exclusive choices. It presents a list of options, and users can choose one option at a time by clicking on a radio button associated with each choice.",
-  title: "Radio - Keep Design System",
+  title: "Radio - Keep React",
 };
 
 const page: NextPage = () => {

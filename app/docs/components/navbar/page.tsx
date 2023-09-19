@@ -4,8 +4,8 @@ import NavbarDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "Navbar component in the Keep Design System allows you to display informative messages or alerts to users. With various styles and options for positioning, you can effectively communicate important updates or messages in a visually appealing manner.",
-  title: "Navbar - Keep Design System",
+    "Navbar component in the Keep React allows you to display informative messages or alerts to users. With various styles and options for positioning, you can effectively communicate important updates or messages in a visually appealing manner.",
+  title: "Navbar - Keep React",
 };
 
 const page: NextPage = () => {

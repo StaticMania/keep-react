@@ -5,7 +5,7 @@ import TreeDocs from ".";
 export const metadata: Metadata = {
   description:
     "A Tree component is a user interface element that visually represents hierarchical data structures, often resembling a branching tree. It's commonly used to display parent-child relationships or nested information in a way that's easy to navigate and understand.",
-  title: "Tree - Keep Design System",
+  title: "Tree - Keep React",
 };
 
 const page: NextPage = () => {

@@ -4,8 +4,8 @@ import StatisticDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "The Statistic component in the Keep Design System allows you to display statistical information in a visually appealing and informative manner. With customizable options for type, number format, and additional features, you can present data in a way that best suits your design requirements.",
-  title: "Statistic - Keep Design System",
+    "The Statistic component in the Keep React allows you to display statistical information in a visually appealing and informative manner. With customizable options for type, number format, and additional features, you can present data in a way that best suits your design requirements.",
+  title: "Statistic - Keep React",
 };
 
 const page: NextPage = () => {

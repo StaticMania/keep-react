@@ -4,8 +4,8 @@ import BreadcrumbDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "The Breadcrumbs component in the Keep Design System provides a navigation aid that allows users to understand their current location within a website or application. With customizable options for type, icon, divider, line, and style, you can create breadcrumbs that align with your design and enhance the navigation experience.",
-  title: "Breadcrumb - Keep Design System",
+    "The Breadcrumbs component in the Keep React provides a navigation aid that allows users to understand their current location within a website or application. With customizable options for type, icon, divider, line, and style, you can create breadcrumbs that align with your design and enhance the navigation experience.",
+  title: "Breadcrumb - Keep React",
 };
 
 const page: NextPage = () => {

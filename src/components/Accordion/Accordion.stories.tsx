@@ -134,7 +134,7 @@ export const AccordionWithCollapseAll: Story = {
         </Accordion.Panel>
         <Accordion.Panel>
           <Accordion.Title>
-            What are the differences between Keep Design System and Tailwind UI?
+            What are the differences between Keep React and Tailwind UI?
           </Accordion.Title>
           <Accordion.Content>
             <p className="mb-2 text-gray-500 dark:text-gray-400">

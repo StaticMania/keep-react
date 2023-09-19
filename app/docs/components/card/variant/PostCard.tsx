@@ -20,7 +20,7 @@ const PostCard = () => {
         <Card.Container className="absolute flex items-start py-3 px-5">
           <Card.Container>
             <Card.Title className="text-md md:text-xl font-medium text-white">
-              Keep design system
+              Keep React
             </Card.Title>
             <Card.Description className="text-xs md:text-sm font-normal text-white">
               Component design systems can help developers to be more productive
@@ -56,7 +56,7 @@ const PostCard = () => {
               </Badge>
             </Card.Container>
             <Card.Title className="text-sm md:text-xl font-medium text-slate-700">
-              Keep design system
+              Keep React
             </Card.Title>
             <Card.Description className="text-xs md:text-sm font-normal text-slate-500">
               Component design systems can help developers to be more productive
@@ -91,7 +91,7 @@ const PostCard = () => {
         <Card.Container className="absolute flex items-start py-3 px-5">
           <Card.Container>
             <Card.Title className="text-md md:text-xl font-medium text-white">
-              Keep design system
+              Keep React
             </Card.Title>
             <Card.Description className="text-xs md:text-sm font-normal text-white">
               Component design systems can help developers to be more productive
@@ -127,7 +127,7 @@ const PostCard = () => {
               </Badge>
             </Card.Container>
             <Card.Title className="text-sm md:text-xl font-medium text-slate-700">
-              Keep design system
+              Keep React
             </Card.Title>
             <Card.Description className="text-xs md:text-sm font-normal text-slate-500">
               Component design systems can help developers to be more productive

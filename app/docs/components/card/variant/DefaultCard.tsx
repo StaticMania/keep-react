@@ -5,7 +5,7 @@ import { CaretRight } from "phosphor-react";
 const DefaultCard = () => {
   return (
     <Card className="md:p-6 p-5 max-w-lg">
-      <Card.Title>Keep design system</Card.Title>
+      <Card.Title>Keep React</Card.Title>
       <Card.Description>
         Component design systems can help developers to be more productive by
         providing them with a ready-made set of components to use.
@@ -29,7 +29,7 @@ import { CaretRight } from "phosphor-react";
 const DefaultCard = () => {
   return (
     <Card className="md:p-6 p-5 max-w-lg">
-      <Card.Title>Keep design system</Card.Title>
+      <Card.Title>Keep React</Card.Title>
       <Card.Description>
         Component design systems can help developers to be more productive by
         providing them with a ready-made set of components to use.

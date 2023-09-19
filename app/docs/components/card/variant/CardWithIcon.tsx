@@ -17,7 +17,7 @@ const CardWithIcon = () => {
             <ArchiveTray size={28} color="#3D4A5C" />
           </Card.Container>
           <Card.Container className="flex flex-col gap-2">
-            <Card.Title>Keep design system</Card.Title>
+            <Card.Title>Keep React</Card.Title>
             <Card.Description>
               Component design systems can help developers to be more productive
               by providing them with a ready-made set of components to use.
@@ -40,7 +40,7 @@ const CardWithIcon = () => {
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">
-              <Card.Title>Keep design system</Card.Title>
+              <Card.Title>Keep React</Card.Title>
               <Card.Description>
                 Component design systems can help developers to be more
                 productive by providing them with a ready-made set of components
@@ -63,7 +63,7 @@ const CardWithIcon = () => {
           <PencilCircle size={80} color="#1B4DFF" />
         </Card.Container>
         <Card.Container className="text-center">
-          <Card.Title>Keep design system</Card.Title>
+          <Card.Title>Keep React</Card.Title>
           <Card.Description>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
@@ -101,7 +101,7 @@ const CardWithIcon = () => {
             <ArchiveTray size={28} color="#3D4A5C" />
           </Card.Container>
           <Card.Container className="flex flex-col gap-2">
-            <Card.Title>Keep design system</Card.Title>
+            <Card.Title>Keep React</Card.Title>
             <Card.Description>
               Component design systems can help developers to be more productive
               by providing them with a ready-made set of components to use.
@@ -124,7 +124,7 @@ const CardWithIcon = () => {
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">
-              <Card.Title>Keep design system</Card.Title>
+              <Card.Title>Keep React</Card.Title>
               <Card.Description>
                 Component design systems can help developers to be more
                 productive by providing them with a ready-made set of components
@@ -147,7 +147,7 @@ const CardWithIcon = () => {
           <PencilCircle size={80} color="#1B4DFF" />
         </Card.Container>
         <Card.Container className="text-center">
-          <Card.Title>Keep design system</Card.Title>
+          <Card.Title>Keep React</Card.Title>
           <Card.Description>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.

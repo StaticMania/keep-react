@@ -5,12 +5,10 @@ const DefaultAccordion = () => {
   return (
     <Accordion showIcon>
       <Accordion.Panel>
-        <Accordion.Title>
-          What is the of the Keep Design System?
-        </Accordion.Title>
+        <Accordion.Title>What is the of the Keep React?</Accordion.Title>
         <Accordion.Content>
           <p>
-            The Keep Design System is a collection of UI components, styles, and
+            The Keep React is a collection of UI components, styles, and
             guidelines that ensure consistency and a unified user experience
             across our products. It simplifies the design and development
             process by providing ready-to-use components that can be easily

@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Keep React - Streamline Your Design Workflow and Create Stunning UIs",
   description:
-    "Unlock the power of Keep Design System, a comprehensive UI library with 5000+ component variants and responsive-ready layouts. Streamline your design workflow, save time, and effortlessly create visually stunning user interfaces. Explore our pre-designed templates, comprehensive documentation, and lifetime updates. Upgrade your design game with Keep Design System today!",
+    "Unlock the power of Keep React, a comprehensive UI library with 5000+ component variants and responsive-ready layouts. Streamline your design workflow, save time, and effortlessly create visually stunning user interfaces. Explore our pre-designed templates, comprehensive documentation, and lifetime updates. Upgrade your design game with Keep React today!",
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ import SpinnerDocs from ".";
 export const metadata: Metadata = {
   description:
     "A Spinner Component is a visual user interface element commonly found in web and mobile applications. It is used to indicate ongoing processes or loading states, providing users with a visual cue that something is happening in the background.",
-  title: "Spinner - Keep Design System",
+  title: "Spinner - Keep React",
 };
 
 const page: NextPage = () => {

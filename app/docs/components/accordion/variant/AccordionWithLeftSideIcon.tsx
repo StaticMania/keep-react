@@ -6,11 +6,11 @@ const AccordionWithLeftSideIcon = () => {
     <Accordion collapseAll={true} iconPosition="left">
       <Accordion.Panel>
         <Accordion.Title>
-          What is the purpose of the Keep Design System?
+          What is the purpose of the Keep React?
         </Accordion.Title>
         <Accordion.Content>
           <p>
-            The Keep Design System is a collection of UI components, styles, and
+            The Keep React is a collection of UI components, styles, and
             guidelines that ensure consistency and a unified user experience
             across our products. It simplifies the design and development
             process by providing ready-to-use components that can be easily
@@ -24,11 +24,11 @@ const AccordionWithLeftSideIcon = () => {
         </Accordion.Title>
         <Accordion.Content>
           <p>
-            The Keep Design System offers a range of color variants for
-            components. To customize the color scheme, you can use the available
-            color options such as gray,info,error,warning and success. Simply
-            set the desired color variant as a prop when using the component,
-            and it will reflect the chosen color.
+            The Keep React offers a range of color variants for components. To
+            customize the color scheme, you can use the available color options
+            such as gray,info,error,warning and success. Simply set the desired
+            color variant as a prop when using the component, and it will
+            reflect the chosen color.
           </p>
         </Accordion.Content>
       </Accordion.Panel>
@@ -38,8 +38,8 @@ const AccordionWithLeftSideIcon = () => {
         </Accordion.Title>
         <Accordion.Content>
           <p>
-            Yes, the Notification component in the Keep Design System allows you
-            to include extra content alongside the primary message. The
+            Yes, the Notification component in the Keep React allows you to
+            include extra content alongside the primary message. The
             additionalContent prop can be used to display supplementary
             information, such as buttons, links, or icons, within the
             notification to provide users with more context and options.
@@ -59,11 +59,11 @@ const AccordionWithLeftSideIcon = () => {
     <Accordion collapseAll={true} iconPosition="left">
       <Accordion.Panel>
         <Accordion.Title>
-          What is the purpose of the Keep Design System?
+          What is the purpose of the Keep React?
         </Accordion.Title>
         <Accordion.Content>
           <p>
-            The Keep Design System is a collection of UI components, styles, and
+            The Keep React is a collection of UI components, styles, and
             guidelines that ensure consistency and a unified user experience
             across our products. It simplifies the design and development
             process by providing ready-to-use components that can be easily
@@ -77,7 +77,7 @@ const AccordionWithLeftSideIcon = () => {
         </Accordion.Title>
         <Accordion.Content>
           <p>
-            The Keep Design System offers a range of color variants for
+            The Keep React offers a range of color variants for
             components. To customize the color scheme, you can use the available
             color options such as gray,info,error,warning and success. Simply
             set the desired color variant as a prop when using the component,
@@ -91,7 +91,7 @@ const AccordionWithLeftSideIcon = () => {
         </Accordion.Title>
         <Accordion.Content>
           <p>
-            Yes, the Notification component in the Keep Design System allows you
+            Yes, the Notification component in the Keep React allows you
             to include extra content alongside the primary message. The
             additionalContent prop can be used to display supplementary
             information, such as buttons, links, or icons, within the

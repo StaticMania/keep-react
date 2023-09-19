@@ -126,7 +126,7 @@ export const DefaultCard: Story = {
     children: removeFragment(
       <>
         <h5 className="text-2xl font-bold tracking-tight text-slate-700">
-          Keep design system
+          Keep React
         </h5>
         <p className="font-normal text-slate-500">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -161,7 +161,7 @@ export const CardWithIcon: Story = {
           </div>
           <div className="flex flex-col gap-2">
             <h5 className="text-2xl font-bold tracking-tight text-slate-700">
-              Keep design system
+              Keep React
             </h5>
             <p className="font-normal text-slate-500">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -190,7 +190,7 @@ export const CardWithListIcon: Story = {
             </div>
             <div className="flex flex-col gap-2">
               <h5 className="text-2xl font-bold tracking-tight text-slate-700">
-                Keep design system
+                Keep React
               </h5>
               <p className="font-normal text-slate-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -217,7 +217,7 @@ export const CardWithImage: Story = {
     children: (
       <Card.Container className="flex items-start py-3 px-5">
         <Card.Container>
-          <Card.Title>Keep design system</Card.Title>
+          <Card.Title>Keep React</Card.Title>
           <Card.Description>
             Component design systems can help developers to be more productive
             by providing them with a ready-made set of components to use.
@@ -378,7 +378,7 @@ export const CardWithPostCard: Story = {
           <PencilCircle size={80} color="#1B4DFF" />
         </Card.Container>
         <Card.Container className="text-center">
-          <Card.Title>Keep design system</Card.Title>
+          <Card.Title>Keep React</Card.Title>
           <Card.Description className="text-sm font-normal text-slate-500">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
@@ -405,7 +405,7 @@ export const CardWithRating: Story = {
     children: removeFragment(
       <>
         <Card.Container className="px-6 pt-5 pb-2">
-          <Card.Title>Keep design system</Card.Title>
+          <Card.Title>Keep React</Card.Title>
           <Card.Description className="text-base font-normal text-slate-500">
             Component design systems can help developers to be more productive
             by providing them.
@@ -457,7 +457,7 @@ export const RecentPostsCard: Story = {
             </Badge>
           </Card.Container>
           <Card.Title className="text-xl font-medium text-slate-700">
-            Keep design system
+            Keep React
           </Card.Title>
           <Card.Description className="text-sm font-normal text-slate-500">
             Component design systems can help developers to be more productive

@@ -31,7 +31,7 @@ const Navbar = () => {
                 width="113"
                 height="40"
                 src="/images/keepLogo.svg"
-                alt="keep Design System"
+                alt="Keep React"
               />
             </Link>
             <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="lg:flex items-center gap-3 hidden">
-            <div className={pathname === "/" ? "hidden" : ""}>
+            <div>
               <DocSearch
                 appId="Z0C31MASPO"
                 indexName="keep-design"
@@ -76,7 +76,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="lg:hidden flex items-center justify-between gap-4">
-            <div className={pathname === "/" ? "hidden" : ""}>
+            <div>
               <DocSearch
                 appId="Z0C31MASPO"
                 indexName="keep-design"
