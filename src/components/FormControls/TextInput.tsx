@@ -16,6 +16,10 @@ export interface keepTextInputTheme {
       left: string;
       right: string;
     };
+    addonBorder: {
+      on: string;
+      off: string;
+    };
   };
   field: {
     base: string;
@@ -115,7 +119,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 theme.addon.base,
                 theme.addon.separator.colors[color],
                 theme.addon.position[addonPosition],
-                theme.field.input.withBorder[border ? "on" : "off"],
+                theme.addon.addonBorder[border ? "on" : "off"],
                 withBg
                   ? theme.field.input.withBg.on.colors[color]
                   : theme.field.input.withBg.off,
@@ -152,7 +156,9 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                   : theme.field.input.withAddon.off,
                 withBg
                   ? theme.field.input.withBg.on.colors[color]
-                  : theme.field.input.withBg.off
+                  : theme.field.input.withBg.off,
+
+                !border && "!rounded-ee-none !rounded-ss-none"
               )}
               {...theirProps}
               ref={ref}

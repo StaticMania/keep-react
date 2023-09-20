@@ -3,7 +3,7 @@ import { keepTableTheme } from "./Table";
 export const tableTheme: keepTableTheme = {
   root: {
     base: "w-full text-left text-sm text-gray-500 z-50",
-    shadow: "absolute bg-white w-full h-full top-0 left-0 -z-10",
+    shadow: "",
     wrapper: "relative",
   },
   body: {
@@ -36,6 +36,6 @@ export const tableTheme: keepTableTheme = {
     striped: "odd:bg-white even:bg-slate-25 even:border even:border-slate-100",
   },
   caption: {
-    base: "",
+    base: "bg-white",
   },
 };

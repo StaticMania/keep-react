@@ -8,7 +8,7 @@ export const accordionTheme: keepAccordionTheme = {
     },
   },
   content: {
-    base: "py-5 px-5 md:text-base text-sm text-slate-500 font-normal",
+    base: "py-5 px-5 md:text-base text-sm text-slate-500 font-normal transition-all duration-300",
   },
   title: {
     disabled: "cursor-not-allowed opacity-50",

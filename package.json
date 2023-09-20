@@ -33,13 +33,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
-    "build:css": "css-minify -f ./app/globals.css -o /lib/cjs/theme",
+    "build:css": "css-minify -f ./app/globals.css -o ./lib/cjs/theme",
     "build:lib:cjs": "tsc -p tsconfig.lib.json",
     "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm"
   },
   "dependencies": {
     "@floating-ui/react": "^0.25.3",
     "@headlessui/react": "^1.7.16",
+    "highlight.js": "^11.8.0",
     "phosphor-react": "^1.4.1",
     "rc-slider": "^10.2.1",
     "rc-tooltip": "^6.0.1",
@@ -47,6 +48,7 @@
     "react-datepicker": "^4.16.0",
     "react-dom": "18.2.0",
     "react-indiana-drag-scroll": "^2.2.0",
+    "react-syntax-highlighter": "^15.5.0",
     "recharts": "^2.8.0",
     "tailwind-merge": "1.14.0"
   },
@@ -83,7 +85,6 @@
     "postcss-loader": "^7.3.3",
     "prismjs": "^1.29.0",
     "prop-types": "^15.8.1",
-    "react-syntax-highlighter": "^15.5.0",
     "rehype-slug": "^6.0.0",
     "remark-toc": "^8.0.1",
     "storybook": "7.4.0",

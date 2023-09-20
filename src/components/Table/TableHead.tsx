@@ -1,6 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import type { keepTableHeadCellTheme } from "./TableHeadCell";
-
 import { twMerge } from "tailwind-merge";
 import { useTableContext } from "./TableContext";
 import { useTheme } from "../../Keep/ThemeContex";

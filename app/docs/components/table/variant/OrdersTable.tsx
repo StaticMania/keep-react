@@ -15,10 +15,7 @@ import {
 
 const OrdersTable = () => {
   return (
-    <div
-      id="tableScrollBar"
-      className=" w-full overflow-x-auto rounded-lg shadow-xl"
-    >
+    <div className="scale-95">
       <Table showCheckbox={true}>
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
@@ -408,11 +405,7 @@ import Image from "next/image";
 
 const OrdersTable = () => {
   return (
-    <div
-      id="tableScrollBar"
-      className=" w-full overflow-x-auto rounded-lg shadow-xl"
-    >
-      <Table showCheckbox={true}>
+    <Table showCheckbox={true}>
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
@@ -779,7 +772,6 @@ const OrdersTable = () => {
           </Table.Row>
         </Table.Body>
       </Table>
-    </div>
   );
 };
 

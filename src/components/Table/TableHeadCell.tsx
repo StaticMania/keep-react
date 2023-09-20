@@ -1,5 +1,4 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
-
 import { twMerge } from "tailwind-merge";
 import { TableContext } from "./TableContext";
 import { DeepPartial } from "../../helpers/deep-partial";

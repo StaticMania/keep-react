@@ -9,6 +9,7 @@ export type TableContextType = {
   iconPosition?: string;
   showBorder?: boolean;
   showBorderPosition?: "left" | "right";
+  checked?: boolean;
 };
 export const TableContext = createContext<TableContextType | undefined>(
   undefined

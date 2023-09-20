@@ -1,5 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { DeepPartial } from "../../helpers/deep-partial";
+import { useTheme } from "~/src/Keep/ThemeContex";
 
 export interface keepTableCaptionTheme {
   base: string;
@@ -16,5 +17,10 @@ export const TableCaption: FC<TableCaptionProps> = ({
   className,
   ...props
 }) => {
-  return <caption {...props}>{children}</caption>;
+  const theme = useTheme().theme.table.caption.base;
+  return (
+    <caption {...props} className={theme}>
+      {children}
+    </caption>
+  );
 };

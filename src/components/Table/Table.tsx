@@ -48,21 +48,26 @@ const TableComponent: FC<TableProps> = ({
 }) => {
   const theme = useTheme().theme.table;
   return (
-    <div data-testid="table-element" className={twMerge(theme.root.wrapper)}>
-      <TableContext.Provider
-        value={{
-          striped,
-          hoverable,
-          showCheckbox,
-          showBorder,
-          showBorderPosition,
-        }}
-      >
-        <div className={twMerge(theme.root.shadow, className)}></div>
-        <table className={twMerge(theme.root.base, className)} {...props}>
-          {children}
-        </table>
-      </TableContext.Provider>
+    <div
+      id="tableScrollBar"
+      className="w-full overflow-x-auto rounded-lg shadow-xl"
+    >
+      <div data-testid="table-element" className={twMerge(theme.root.wrapper)}>
+        <TableContext.Provider
+          value={{
+            striped,
+            hoverable,
+            showCheckbox,
+            showBorder,
+            showBorderPosition,
+          }}
+        >
+          <div className={twMerge(theme.root.shadow, className)}></div>
+          <table className={twMerge(theme.root.base, className)} {...props}>
+            {children}
+          </table>
+        </TableContext.Provider>
+      </div>
     </div>
   );
 };

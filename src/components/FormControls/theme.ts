@@ -137,8 +137,13 @@ export const formControlsTheme: keepFormControlTheme = {
         },
       },
       position: {
-        left: "border-r-0 rounded-l-md after:right-0",
-        right: "border-l-0 rounded-r-md after:left-0",
+        left: "border-r-0 after:right-0",
+        right: "border-l-0 after:left-0",
+      },
+
+      addonBorder: {
+        on: "border-l border-t border-b rounded-l",
+        off: "border-b",
       },
     },
     field: {
@@ -185,8 +190,9 @@ export const formControlsTheme: keepFormControlTheme = {
         },
         withBorder: {
           on: "border",
-          off: "border-b !rounded-none",
+          off: "border-b !rounded-r-0",
         },
+
         withIcon: {
           on: {
             left: "pl-10",

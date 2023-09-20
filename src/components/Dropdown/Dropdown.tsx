@@ -89,7 +89,6 @@ const DropdownComponent: FC<DropdownProps> = ({
 
   const [buttonWidth, setButtonWidth] = useState<number | undefined>(undefined);
 
-  // Extends DropdownItem's onClick to trigger a close request to the Floating component
   const attachCloseListener = useCallback(
     // @ts-ignore TODO: Rewrite Dropdown
     (node: ReactNode) => {

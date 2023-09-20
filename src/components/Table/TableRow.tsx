@@ -38,7 +38,7 @@ export const TableRow: FC<TableRowProps> = ({
             type="checkbox"
             id="member"
             name="vehicle1"
-            value=""
+            checked={false}
             className="flex h-4 w-4 items-center justify-center rounded border border-slate-300 bg-slate-25 outline-none checked:after:h-2.5 checked:after:w-2.5  checked:after:rounded-sm focus:ring-0 focus:ring-offset-0"
           />
         </th>

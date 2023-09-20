@@ -69,7 +69,6 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
                 )}
               </button>
             </div>
-
             <SyntaxHighlighter
               language="javascript"
               style={coldarkDark}
@@ -90,7 +89,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
           </div>
         ) : (
           <div className="md:p-6 px-2 py-3 w-full flex items-center justify-center">
-            <div className="w-full h-full overflow-auto z-[1]">{children}</div>
+            <div className="w-full h-full overflow-auto">{children}</div>
           </div>
         )}
       </div>
