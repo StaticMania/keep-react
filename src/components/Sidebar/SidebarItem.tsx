@@ -9,13 +9,13 @@ import type {
 import type { DeepPartial } from "../../helpers/deep-partial";
 
 import { forwardRef, useId } from "react";
-import { Badge } from "../Badge";
 import { Tooltip } from "../Tooltip";
 import { useSidebarContext } from "./SidebarContext";
 import { useSidebarItemContext } from "./SidebarItemContext";
 import { KeepColors } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
 import { mergeDeep } from "../../helpers/mergeDeep";
+import { Badge } from "../Badge";
 
 export interface KeepSidebarItemTheme {
   active: string;

@@ -17,6 +17,7 @@ const UploadSuccess = () => {
       file={fileName}
       showProgressBar={true}
       progressType="success"
+      id="upload_success"
     />
   );
 };
@@ -40,7 +41,8 @@ const UploadSuccess = () => {
       onFileChange={handleFileChange}
       file={fileName}
       showProgressBar={true}
-      progressType="success"
+      progressType="success"      
+      id="upload_success"
     />
   );
 };

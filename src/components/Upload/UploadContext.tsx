@@ -1,12 +1,16 @@
-import { createContext, useContext } from "react";
+import { ReactNode, createContext, useContext } from "react";
 
 export type UploadContext = {
+  id?: string;
   progress: number;
   uploadTime?: string;
   file?: string;
   disabled?: boolean;
   showProgressBar?: boolean;
   progressType?: "success" | "error" | "pending";
+  title?: string;
+  fileType?: string;
+  icon?: ReactNode;
   onFileChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 

@@ -17,6 +17,7 @@ interface routerPath {
   tag?: boolean;
   deprecate?: boolean;
   redirect?: boolean;
+  folderName?: string;
 }
 
 export const routes: routerPath[] = [
@@ -26,6 +27,7 @@ export const routes: routerPath[] = [
     href: "/docs/components/accordion",
     tag: false,
     deprecate: false,
+    folderName: "Accordion",
   },
   {
     id: 2,
@@ -33,6 +35,7 @@ export const routes: routerPath[] = [
     href: "/docs/components/alert",
     tag: false,
     deprecate: false,
+    folderName: "Alert",
   },
   {
     id: 3,
@@ -40,6 +43,7 @@ export const routes: routerPath[] = [
     href: "/docs/components/areaChart",
     tag: false,
     deprecate: false,
+    folderName: "Chart",
   },
   {
     id: 4,
@@ -47,6 +51,7 @@ export const routes: routerPath[] = [
     href: "/docs/components/avatar",
     tag: false,
     deprecate: false,
+    folderName: "Avatar",
   },
   {
     id: 5,
@@ -54,10 +59,12 @@ export const routes: routerPath[] = [
     href: "/docs/components/avatarGroup",
     tag: false,
     deprecate: false,
+    folderName: "Avatar",
   },
   {
     id: 6,
     name: "Badge",
+    folderName: "Badge",
     href: "/docs/components/badge",
     tag: false,
     deprecate: false,
@@ -65,6 +72,7 @@ export const routes: routerPath[] = [
   {
     id: 43,
     name: "Bar Chart",
+    folderName: "Chart",
     href: "/docs/components/barChart",
     tag: false,
     deprecate: false,
@@ -72,6 +80,7 @@ export const routes: routerPath[] = [
   {
     id: 7,
     name: "BreadCrumb",
+    folderName: "Breadcrumb",
     href: "/docs/components/breadcrumb",
     tag: false,
     deprecate: false,
@@ -79,6 +88,7 @@ export const routes: routerPath[] = [
   {
     id: 8,
     name: "Button",
+    folderName: "Button",
     href: "/docs/components/button",
     tag: false,
     deprecate: false,
@@ -86,6 +96,7 @@ export const routes: routerPath[] = [
   {
     id: 9,
     name: "Button Group",
+    folderName: "Button",
     href: "/docs/components/buttonGroup",
     tag: false,
     deprecate: false,
@@ -93,6 +104,7 @@ export const routes: routerPath[] = [
   {
     id: 10,
     name: "Card",
+    folderName: "Card",
     href: "/docs/components/card",
     tag: false,
     deprecate: false,
@@ -100,6 +112,7 @@ export const routes: routerPath[] = [
   {
     id: 11,
     name: "Carousel",
+    folderName: "Carousel",
     href: "/docs/components/carousel",
     tag: false,
     deprecate: false,
@@ -107,6 +120,7 @@ export const routes: routerPath[] = [
   {
     id: 12,
     name: "CheckBox",
+    folderName: "CheckBox",
     href: "/docs/components/checkbox",
     tag: false,
     deprecate: false,
@@ -114,6 +128,7 @@ export const routes: routerPath[] = [
   {
     id: 13,
     name: "CheckBox Group",
+    folderName: "CheckboxGroup",
     href: "/docs/components/checkboxGroup",
     tag: false,
     deprecate: false,
@@ -121,6 +136,7 @@ export const routes: routerPath[] = [
   {
     id: 14,
     name: "Date Picker",
+    folderName: "DatePicker",
     href: "/docs/components/datePicker",
     tag: false,
     deprecate: false,
@@ -128,6 +144,7 @@ export const routes: routerPath[] = [
   {
     id: 15,
     name: "Dropdown",
+    folderName: "Dropdown",
     href: "/docs/components/dropdown",
     tag: false,
     deprecate: false,
@@ -135,6 +152,7 @@ export const routes: routerPath[] = [
   {
     id: 16,
     name: "Empty",
+    folderName: "Empty",
     href: "/docs/components/empty",
     tag: false,
     deprecate: false,
@@ -142,6 +160,7 @@ export const routes: routerPath[] = [
   {
     id: 17,
     name: "Modal",
+    folderName: "Modal",
     href: "/docs/components/modal",
     tag: false,
     deprecate: false,
@@ -149,6 +168,7 @@ export const routes: routerPath[] = [
   {
     id: 18,
     name: "Navbar",
+    folderName: "Navbar",
     href: "/docs/components/navbar",
     tag: false,
     deprecate: false,
@@ -156,6 +176,7 @@ export const routes: routerPath[] = [
   {
     id: 19,
     name: "Notification",
+    folderName: "Notification",
     href: "/docs/components/notification",
     tag: false,
     deprecate: false,
@@ -163,6 +184,7 @@ export const routes: routerPath[] = [
   {
     id: 20,
     name: "Number Input",
+    folderName: "FormControls",
     href: "/docs/components/numberInput",
     tag: false,
     deprecate: false,
@@ -170,6 +192,7 @@ export const routes: routerPath[] = [
   {
     id: 21,
     name: "Play Button",
+    folderName: "PlayButton",
     href: "/docs/components/playButton",
     tag: false,
     deprecate: false,
@@ -177,6 +200,7 @@ export const routes: routerPath[] = [
   {
     id: 22,
     name: "Progress",
+    folderName: "Progress",
     href: "/docs/components/progress",
     tag: false,
     deprecate: false,
@@ -184,6 +208,7 @@ export const routes: routerPath[] = [
   {
     id: 44,
     name: "Pagination",
+    folderName: "Pagination",
     href: "/docs/components/pagination",
     tag: false,
     deprecate: false,
@@ -191,6 +216,7 @@ export const routes: routerPath[] = [
   {
     id: 23,
     name: "Radio",
+    folderName: "FormControls",
     href: "/docs/components/radio",
     tag: false,
     deprecate: false,
@@ -198,6 +224,7 @@ export const routes: routerPath[] = [
   {
     id: 24,
     name: "Rating",
+    folderName: "Rating",
     href: "/docs/components/rating",
     tag: false,
     deprecate: false,
@@ -205,6 +232,7 @@ export const routes: routerPath[] = [
   {
     id: 25,
     name: "Search Bar",
+    folderName: "SearchBar",
     href: "/docs/components/searchBar",
     tag: false,
     deprecate: false,
@@ -212,6 +240,7 @@ export const routes: routerPath[] = [
   {
     id: 26,
     name: "Sidebar",
+    folderName: "Sidebar",
     href: "/docs/components/sidebar",
     tag: false,
     deprecate: false,
@@ -219,6 +248,7 @@ export const routes: routerPath[] = [
   {
     id: 27,
     name: "Skeleton",
+    folderName: "Skeleton",
     href: "/docs/components/skeleton",
     tag: false,
     deprecate: false,
@@ -226,6 +256,7 @@ export const routes: routerPath[] = [
   {
     id: 28,
     name: "Slider",
+    folderName: "Slider",
     href: "/docs/components/slider",
     tag: false,
     deprecate: false,
@@ -233,6 +264,7 @@ export const routes: routerPath[] = [
   {
     id: 29,
     name: "Spinner",
+    folderName: "Spinner",
     href: "/docs/components/spinner",
     tag: false,
     deprecate: false,
@@ -240,6 +272,7 @@ export const routes: routerPath[] = [
   {
     id: 30,
     name: "Statistic",
+    folderName: "Statistic",
     href: "/docs/components/statistic",
     tag: false,
     deprecate: false,
@@ -247,6 +280,7 @@ export const routes: routerPath[] = [
   {
     id: 31,
     name: "Steps",
+    folderName: "Steps",
     href: "/docs/components/step",
     tag: false,
     deprecate: false,
@@ -254,6 +288,7 @@ export const routes: routerPath[] = [
   {
     id: 32,
     name: "Switch",
+    folderName: "FormControls",
     href: "/docs/components/switch",
     tag: false,
     deprecate: false,
@@ -261,6 +296,7 @@ export const routes: routerPath[] = [
   {
     id: 33,
     name: "Table",
+    folderName: "Table",
     href: "/docs/components/table",
     tag: false,
     deprecate: false,
@@ -268,6 +304,7 @@ export const routes: routerPath[] = [
   {
     id: 34,
     name: "Tabs",
+    folderName: "Tabs",
     href: "/docs/components/tabs",
     tag: false,
     deprecate: false,
@@ -275,6 +312,7 @@ export const routes: routerPath[] = [
   {
     id: 35,
     name: "Tag",
+    folderName: "Tag",
     href: "/docs/components/tag",
     tag: false,
     deprecate: false,
@@ -282,6 +320,7 @@ export const routes: routerPath[] = [
   {
     id: 36,
     name: "Text Area",
+    folderName: "FormControls",
     href: "/docs/components/textArea",
     tag: false,
     deprecate: false,
@@ -289,6 +328,7 @@ export const routes: routerPath[] = [
   {
     id: 37,
     name: "Text Input",
+    folderName: "FormControls",
     href: "/docs/components/textInput",
     tag: false,
     deprecate: false,
@@ -296,6 +336,7 @@ export const routes: routerPath[] = [
   {
     id: 38,
     name: "Timeline",
+    folderName: "Timeline",
     href: "/docs/components/timeline",
     tag: false,
     deprecate: false,
@@ -310,6 +351,7 @@ export const routes: routerPath[] = [
   {
     id: 40,
     name: "Tooltip",
+    folderName: "Tooltip",
     href: "/docs/components/tooltip",
     tag: false,
     deprecate: false,
@@ -317,6 +359,7 @@ export const routes: routerPath[] = [
   {
     id: 41,
     name: "Tree",
+    folderName: "Tree",
     href: "/docs/components/tree",
     tag: false,
     deprecate: false,
@@ -324,6 +367,7 @@ export const routes: routerPath[] = [
   {
     id: 42,
     name: "Upload",
+    folderName: "Upload",
     href: "/docs/components/upload",
     tag: false,
     deprecate: false,

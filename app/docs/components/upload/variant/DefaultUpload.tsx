@@ -11,7 +11,13 @@ const DefaultUpload = () => {
     }
   };
 
-  return <Upload onFileChange={handleFileChange} file={fileName} />;
+  return (
+    <Upload
+      id="default_upload"
+      onFileChange={handleFileChange}
+      file={fileName}
+    />
+  );
 };
 
 const DefaultUploadCode = `
@@ -29,7 +35,7 @@ const DefaultUpload = () => {
     }
   };
 
-  return <Upload onFileChange={handleFileChange} file={fileName} />;
+  return <Upload id="default_upload" onFileChange={handleFileChange} file={fileName} />;
 };
 
 export default DefaultUpload;

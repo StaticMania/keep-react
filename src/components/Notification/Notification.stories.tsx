@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Cookie } from "phosphor-react";
 import { Notification } from ".";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { Avatar } from "../Avatar/Avatar";
 
 const meta: Meta<typeof Notification> = {

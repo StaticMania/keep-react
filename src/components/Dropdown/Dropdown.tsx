@@ -15,8 +15,8 @@ import React, {
   useRef,
   useState,
 } from "react";
-import type { ButtonProps } from "../Button";
-import { Button } from "../Button";
+import type { ButtonProps } from "../Button/Button";
+import { Button } from "../Button/Button";
 import { Floating, FloatingProps, keepFloatingTheme } from "../Floating";
 import type { keepDropdownDividerTheme } from "./DropdownDivider";
 import { DropdownDivider } from "./DropdownDivider";

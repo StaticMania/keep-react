@@ -8,7 +8,7 @@ import {
   X,
 } from "phosphor-react";
 import { Toast } from ".";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { removeFragment } from "../../helpers/mergeDeep";
 
 const meta: Meta<typeof Toast> = {

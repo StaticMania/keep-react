@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { FC } from "react";
-import { Button, ButtonSizes } from "../Button";
+import { Button, ButtonSizes } from "../Button/Button";
 
 interface PlayButtonProps {
   title?: string;

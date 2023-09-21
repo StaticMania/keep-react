@@ -18,6 +18,7 @@ const HorizontalUploadSuccess = () => {
       horizontal={true}
       showProgressBar={true}
       progressType="success"
+      id="horizontal_upload_success"
     />
   );
 };
@@ -43,6 +44,7 @@ const HorizontalUploadSuccess = () => {
       horizontal={true}
       showProgressBar={true}
       progressType="success"
+      id="horizontal_upload_success"
     />
   );
 };

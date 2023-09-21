@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import { FileArrowUp } from "phosphor-react";
 import { FC } from "react";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { useUploadContext } from "./UploadContext";
 import { UploadFailed } from "./UploadFailed";
 import { UploadPending } from "./UploadPending";
@@ -31,15 +31,23 @@ export interface UploadHorizontalTheme {
 }
 
 export const UploadHorizontal: FC = () => {
-  const { disabled, showProgressBar, progressType, file, onFileChange } =
-    useUploadContext();
+  const {
+    disabled,
+    showProgressBar,
+    progressType,
+    file,
+    onFileChange,
+    title,
+    fileType,
+    id,
+  } = useUploadContext();
 
   const theme = useTheme().theme.upload.uploadHorizontal;
-
+  const extension = file?.split(".").pop();
   return (
     <div className={twMerge(theme.base)}>
       <label
-        htmlFor="horizontal_upload"
+        htmlFor={id}
         className={twMerge(theme.label.base, disabled && theme.disabled)}
       >
         <div className={twMerge(theme.label.root.base)}>
@@ -49,38 +57,32 @@ export const UploadHorizontal: FC = () => {
             </div>
             <div>
               <p className={twMerge(theme.label.root.iconBox.dragDrop)}>
-                Drag and Drop files here
+                {title ? title : "Drag and Drop files here"}
               </p>
+
               {file ? (
                 <p className={twMerge(theme.label.root.upload.fileName)}>
-                  FileName : {file}
+                  FileName :{file ? file.slice(0, 6) + "." + extension : null}
                 </p>
               ) : (
                 <p className={twMerge(theme.label.root.iconBox.fileType)}>
-                  Files supported: PDF, XSLS, JPEG, PNG, Scanner
+                  {fileType ? fileType : "Files : JPEG, PNG, GIF"}
                 </p>
               )}
             </div>
           </div>
 
           <div className={twMerge(theme.label.root.upload.base)}>
-            {file && (
-              <p className={twMerge(theme.label.root.upload.fileName)}>
-                FileName : {file}
-              </p>
-            )}
-            {!file && (
-              <p className={twMerge(theme.label.root.upload.fileName)}>
-                Maximum size: 5MB
-              </p>
-            )}
+            <p className={twMerge(theme.label.root.upload.fileName)}>
+              Maximum: 5MB
+            </p>
 
             <Button type="primary" disabled={disabled}>
               Choose File
             </Button>
 
             <input
-              id="horizontal_upload"
+              id={id}
               type="file"
               className={twMerge(theme.label.root.upload.input)}
               onChange={onFileChange}

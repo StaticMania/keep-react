@@ -28,6 +28,9 @@ interface UploadComponentProps {
   progress?: number;
   uploadTime?: string;
   onFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  title?: string;
+  fileType?: string;
+  id?: string;
 }
 const UploadComponent: FC<UploadComponentProps> = ({
   file,
@@ -38,6 +41,9 @@ const UploadComponent: FC<UploadComponentProps> = ({
   uploadTime = "",
   progressType,
   onFileChange,
+  title,
+  fileType,
+  id,
 }) => {
   let content = null;
 
@@ -57,6 +63,9 @@ const UploadComponent: FC<UploadComponentProps> = ({
         file,
         showProgressBar,
         progressType,
+        title,
+        fileType,
+        id,
       }}
     >
       {content}

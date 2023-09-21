@@ -3,7 +3,7 @@ import type {
   NameType,
   ValueType,
 } from "recharts/types/component/DefaultTooltipContent";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { Tooltip as TooltipCom } from "../Tooltip";
 
 export const CustomTooltip = ({

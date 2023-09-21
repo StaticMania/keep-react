@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { CloudArrowUp, Trash, UserPlus } from "phosphor-react";
 import { useState } from "react";
 import { Modal } from ".";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { Avatar } from "../Avatar/Avatar";
 
 const meta: Meta<typeof Modal> = {

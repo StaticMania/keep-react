@@ -1,4 +1,4 @@
-import { keepButtonTheme } from ".";
+import { keepButtonTheme } from "./Button";
 import { keepButtonGroupTheme } from "./ButtonGroup";
 
 export const buttonTheme: keepButtonTheme = {
@@ -157,7 +157,7 @@ export const buttonTheme: keepButtonTheme = {
   size: {
     xs: "text-sm px-3 py-2",
     sm: "text-sm px-4 py-2.5",
-    md: "text-base px-5 py-3 flex items-center justify-center",
+    md: "text-base px-5 py-3 flex items-center justify-center cursor-pointer",
     lg: "text-lg px-5 py-[14px]",
     xl: "text-lg px-[22px] py-4",
     "2xl": "text-xl px-6 py-[18px]",

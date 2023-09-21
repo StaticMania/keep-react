@@ -17,6 +17,7 @@ const HorizontalDisabledUpload = () => {
       file={fileName}
       horizontal={true}
       disabled={true}
+      id="horizontal_disabled_upload"
     />
   );
 };
@@ -41,6 +42,7 @@ const HorizontalDisabledUpload = () => {
       file={fileName}
       horizontal={true}
       disabled={true}
+      id="horizontal_disabled_upload"
     />
   );
 };

@@ -4,7 +4,7 @@ export * from "./Avatar/Avatar";
 export * from "./Avatar/AvatarGroup";
 export * from "./Badge";
 export * from "./Breadcrumb";
-export * from "./Button";
+export * from "./Button/Button";
 export * from "./Card";
 export * from "./Carousel";
 export * from "./Chart/AreaChart";

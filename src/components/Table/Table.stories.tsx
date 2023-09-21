@@ -14,7 +14,7 @@ import {
 } from "phosphor-react";
 import { Table } from ".";
 import { Badge } from "../Badge";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { removeFragment } from "../../helpers/mergeDeep";
 import { Avatar } from "../Avatar/Avatar";
 

@@ -19,6 +19,7 @@ const UploadPending = () => {
       progressType="pending"
       progress={39}
       uploadTime="1 minutes left"
+      id="upload_Pending"
     />
   );
 };
@@ -45,6 +46,7 @@ const UploadPending = () => {
       progressType="pending"
       progress={39}
       uploadTime="1 minutes left"
+      id="upload_Pending"
     />
   );
 };

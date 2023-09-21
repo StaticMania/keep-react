@@ -42,21 +42,21 @@ export const uploadTheme: keepUploadTheme = {
   },
   uploadHorizontal: {
     disabled: "cursor-not-allowed opacity-50 select-none",
-    base: "flex flex-col items-center justify-center gap-5 rounded-lg bg-slate-25 p-5 transition-all hover:bg-slate-50",
+    base: "flex flex-col items-center justify-center gap-5 rounded-lg bg-slate-25 p-5 transition-all hover:bg-slate-50 ",
     label: {
-      base: "w-full cursor-pointer items-center  justify-between space-y-5 rounded-lg border-2 border-dashed border-slate-300 p-4",
+      base: "relative w-full cursor-pointer items-center  justify-between space-y-5 rounded-lg border-2 border-dashed border-slate-300 p-4",
       root: {
         base: "flex items-center justify-between",
         iconBox: {
           base: "flex items-center gap-5",
           icon: "flex h-16 w-16 items-center justify-center rounded-full border border-slate-100 bg-white",
-          dragDrop: "text-xl font-semibold text-slate-500",
+          dragDrop: "text-base 2xl:text-xl font-semibold text-slate-500",
           fileType: "text-sm text-slate-400",
         },
         upload: {
           base: "relative hidden md:flex cursor-pointer items-center  md:gap-5",
-          input: "absolute top-0 left-0 scale-100 opacity-0",
-          fileName: "text-sm text-slate-400",
+          input: "absolute top-0 w-full left-0 scale-100 opacity-0",
+          fileName: "text-sm xl:block hidden text-slate-400",
         },
       },
     },

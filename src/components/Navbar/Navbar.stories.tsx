@@ -8,7 +8,7 @@ import {
   TwitterLogo,
   YoutubeLogo,
 } from "phosphor-react";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { TextInput } from "../FormControls/TextInput";
 import { Navbar } from "./";
 import { removeFragment } from "../../helpers/mergeDeep";

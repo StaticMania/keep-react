@@ -1,4 +1,4 @@
-import type { ButtonProps } from ".";
+import type { ButtonProps } from "./Button";
 import type {
   ComponentProps,
   FC,

@@ -19,6 +19,7 @@ const UploadFailed = () => {
       progressType="error"
       progress={36}
       uploadTime="2 days left"
+      id="upload_failed"
     />
   );
 };
@@ -45,6 +46,7 @@ const UploadFailed = () => {
       progressType="error"
       progress={36}
       uploadTime="2 days left"
+      id="upload_failed"
     />
   );
 };

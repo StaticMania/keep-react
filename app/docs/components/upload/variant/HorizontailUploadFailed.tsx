@@ -20,6 +20,7 @@ const HorizontalUploadFailed = () => {
       progressType="error"
       progress={45}
       uploadTime="21 minutes left"
+      id="horizontal_upload_failed"
     />
   );
 };
@@ -41,6 +42,7 @@ const HorizontalUploadFailed = () => {
   return (
     <Upload
         onFileChange={handleFileChange}
+        id="horizontal_upload_failed"
         file={fileName}
         horizontal={true}
         showProgressBar={true}

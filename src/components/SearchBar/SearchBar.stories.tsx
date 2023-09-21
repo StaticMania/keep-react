@@ -25,7 +25,7 @@ import {
 } from "phosphor-react";
 import { useState } from "react";
 import { SearchBar } from ".";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { Dropdown } from "../Dropdown";
 
 const meta: Meta<typeof SearchBar> = {

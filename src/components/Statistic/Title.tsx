@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import { CaretDown } from "phosphor-react";
 import { FC } from "react";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { useStatisticContext } from "./StatisticContext";
 import { useTheme } from "../../Keep/ThemeContex";
 

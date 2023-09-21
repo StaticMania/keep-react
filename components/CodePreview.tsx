@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Check, Copy } from "phosphor-react";
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import useCopy from "~/hooks/useCopy";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -11,28 +9,29 @@ import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 interface CodePreviewProps {
   children: React.ReactNode;
   code: string;
+  github?: string;
 }
-const CodePreview = ({ children, code }: CodePreviewProps) => {
-  const pathname = usePathname();
+const CodePreview = ({ children, code, github }: CodePreviewProps) => {
   const [active, setActive] = useState(0);
   const { copy, copyToClipboard } = useCopy();
-  const githubUrl = "https://github.com/StaticMania/keep-react/tree/master/app";
-
+  const githubUrl = `https://github.com/StaticMania/keep-react/tree/master/src/components/${github}`;
   return (
     <div className="border border-slate-200 rounded-md my-10 shadow-sm overflow-hidden w-full">
       <div className="flex text-center flex-wrap -mb-px bg-white border-slate-200 border-b px-5">
         <button
           type="button"
           onClick={() => setActive(0)}
-          className={`flex -mb-[0.7px] items-center justify-center px-5 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] first:ml-0 text-slate-400 border-b border-b-transparent  ${
+          className={`flex -mb-[0.7px] items-center justify-center px-5 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] first:ml-0 text-slate-400 border-b border-b-transparent ${
             active === 0 ? "text-slate-900 !border-b-slate-900" : ""
           }`}
+          id="preview-btn"
         >
           Preview
         </button>
         <button
+          id="code-btn"
           onClick={() => setActive(1)}
-          className={`flex items-center justify-center px-5 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] first:ml-0 text-slate-400 border-b border-b-transparent  ${
+          className={` flex items-center justify-center px-5 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] first:ml-0 text-slate-400 border-b border-b-transparent ${
             active === 1 ? "text-slate-900 !border-b-slate-900" : ""
           }`}
         >
@@ -44,10 +43,11 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
         {active ? (
           <div className="relative">
             <div className="absolute md:top-5 -top-10 lg:right-10 right-3 flex items-center justify-between gap-3">
-              <Link
+              <a
+                id="github-page-link"
                 target="_blank"
-                href={githubUrl + pathname}
-                className="bg-slate-800 hover:bg-slate-700 transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
+                href={githubUrl}
+                className=" bg-slate-800 hover:bg-slate-700 transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
               >
                 <Image
                   src="/images/icon/github-white.svg"
@@ -55,7 +55,7 @@ const CodePreview = ({ children, code }: CodePreviewProps) => {
                   width={20}
                   alt="github"
                 />
-              </Link>
+              </a>
               <button
                 className="bg-slate-900 border-2 border-slate-800 hover:bg-slate-700 hover:border-transparent transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
                 onClick={() => copyToClipboard(code)}

@@ -20,6 +20,7 @@ const HorizontalUploadPending = () => {
       progressType="pending"
       progress={39}
       uploadTime="1 minutes left"
+      id="horizontal_upload_pending"
     />
   );
 };
@@ -47,6 +48,7 @@ const HorizontalUploadPending = () => {
       progressType="pending"
       progress={39}
       uploadTime="1 minutes left"
+      id="horizontal_upload_pending"
     />
   );
 };
