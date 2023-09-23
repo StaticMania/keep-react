@@ -169,7 +169,7 @@ export const buttonGroupTheme: keepButtonGroupTheme = {
   position: {
     none: "",
     start: "rounded-r-none",
-    middle: "rounded-none border-l-0 border-r-0 pl-0",
+    middle: "rounded-none !border-l-0 !border-r-0 pl-0",
     end: "rounded-l-none pl-0",
   },
 };

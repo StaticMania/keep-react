@@ -3,7 +3,7 @@ import { Button } from "~/src";
 
 const ButtonGroupWithColor = () => {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="h-24 p-4">
       <Button.Group>
         <Button color="error">Error</Button>
         <Button color="info">Info</Button>
