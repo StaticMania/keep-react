@@ -4,6 +4,10 @@
 #mainContent > p {
   @apply font-normal text-sm md:text-base leading-6 tracking-[-0.3px] text-slate-700 mt-4;
 }
+
+#mainContent > p a {
+  @apply text-primary-600 underline;
+}
 #mainContent > ul li {
   @apply font-normal text-base text-slate-500 mb-3 mt-4;
 }
