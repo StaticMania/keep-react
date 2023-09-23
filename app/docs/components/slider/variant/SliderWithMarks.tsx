@@ -3,7 +3,7 @@ import { Slider } from "~/src";
 
 const SliderWithMarks = () => {
   return (
-    <div className="p-4">
+    <div className="h-12 w-5/6 mx-auto">
       <Slider
         defaultValue={300}
         marks={{

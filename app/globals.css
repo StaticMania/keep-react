@@ -901,7 +901,7 @@ pre::-webkit-scrollbar-thumb {
   border-style: solid;
 }
 .rc-slider-tooltip-placement-top .rc-slider-tooltip-arrow {
-  bottom: 4px;
+  bottom: 0px;
   left: 50%;
   margin-left: -4px;
   border-width: 4px 4px 0;
@@ -981,17 +981,17 @@ pre::-webkit-scrollbar-thumb {
 .rc-tooltip-placement-top,
 .rc-tooltip-placement-topLeft,
 .rc-tooltip-placement-topRight {
-  padding: 5px 0 9px 0;
+  padding: 5px 0 5px 0;
 }
 .rc-tooltip-placement-right,
 .rc-tooltip-placement-rightTop,
 .rc-tooltip-placement-rightBottom {
-  padding: 0 5px 0 9px;
+  padding: 0 0px 0 5px;
 }
 .rc-tooltip-placement-bottom,
 .rc-tooltip-placement-bottomLeft,
 .rc-tooltip-placement-bottomRight {
-  padding: 9px 0 5px 0;
+  padding: 5px 0 5px 0;
 }
 .rc-tooltip-placement-left,
 .rc-tooltip-placement-leftTop,
@@ -1010,6 +1010,7 @@ pre::-webkit-scrollbar-thumb {
 }
 .rc-tooltip-arrow {
   position: absolute;
+  bottom: 0;
   width: 0;
   height: 0;
   border-color: transparent;
@@ -1018,7 +1019,7 @@ pre::-webkit-scrollbar-thumb {
 .rc-tooltip-placement-top .rc-tooltip-arrow,
 .rc-tooltip-placement-topLeft .rc-tooltip-arrow,
 .rc-tooltip-placement-topRight .rc-tooltip-arrow {
-  bottom: 4px;
+  bottom: 0px;
   margin-left: -5px;
   border-width: 5px 5px 0;
   border-top-color: #373737;
