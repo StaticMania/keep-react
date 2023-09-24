@@ -201,9 +201,9 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(#1a2980 0%, #26d0ce 100%);
+  background-image: linear-gradient(45deg, #7028e4, #e5b2ca, #7028e4);
   background-size: 200%;
-  /* animation: textAnimate 5s linear infinite; */
+  animation: textAnimate 5s linear infinite;
 }
 
 @keyframes textAnimate {
@@ -214,6 +214,7 @@
     background-position: 200%;
   }
 }
+
 .home-page {
   background-image: url("https://staticmania.cdn.prismic.io/staticmania/248e8aae-351f-4cc8-8f1c-f44f9c292ac1_top-bg.svg");
   background-position: center top;
@@ -228,7 +229,7 @@
 @media (min-width: 768px) {
   .hero-area {
     background-image: url("https://images.prismic.io/staticmania/353398a0-1d71-4c13-82dd-6048e0cddb8f_hero-bg.png?auto=compress,format");
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
   }

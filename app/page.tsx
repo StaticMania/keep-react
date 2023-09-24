@@ -4,6 +4,7 @@ import useCopy from "~/hooks/useCopy";
 import { ComponentList } from "~/routes/routes";
 import { ArrowUpRight, Check, CopySimple } from "phosphor-react";
 import { AvatarGroupComponent } from "~/components/ComponentsList";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
     <div className="md:pt-24 pt-10 hero-area md:h-screen -mt-2">
       <div className="container">
         <div className="text-center px-5 md:px-0">
-          <h1 className="max-w-4xl mx-auto text-center md:text-[56px] text-3xl text-black/100 font-semibold md:leading-[66px] leading-9 tracking-[-1.75px] mb-3">
+          <h1 className="max-w-2xl mx-auto text-center md:text-[56px] text-3xl text-black/100 font-semibold md:leading-[66px] leading-9 tracking-[-1.75px] mb-3">
             Build modern website and web applications with{" "}
             <span className="hero-text">Keep React</span>
           </h1>
@@ -59,7 +60,15 @@ const Hero = () => {
 
 const ComponentUI = () => {
   return (
-    <div className="md:pt-20 pt-10 mb-24">
+    <div className="md:pt-5 pt-10 mb-24 relative">
+      <div className="absolute lg:-top-[631px] md:-top-[35rem] -top-[120px] w-full md:max-w-[1202px] mx-auto z-[-1] left-0 right-0">
+        <Image
+          src="https://staticmania.cdn.prismic.io/staticmania/60f7593e-eb13-48b7-8647-d7846dbdc16d_gradient-bg.svg"
+          alt="gradient"
+          height={1400}
+          width={1280}
+        />
+      </div>
       <div className="container">
         <div className="text-center mb-4 md:max-w-[500px] mx-auto px-5 md:px-0">
           <h2 className="text-2xl md:!leading-[44px] leading-8 font-semibold text-black tracking-[-1px] mb-2 md:text-8xl">
@@ -70,22 +79,19 @@ const ComponentUI = () => {
             and interactive elements built with React and Tailwind CSS
           </p>
         </div>
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-5 md:gap-0 my-14">
-          {ComponentList.map((item, index) => {
+        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-5 my-14">
+          {ComponentList.map((item) => {
             return (
               <div
                 key={item.id}
-                className={`group relative md:h-64 h-52 w-full mx-auto flex items-center justify-center cursor-pointer md:border-0 border border-slate-200 ${
-                  (index + 1) % 3 === 0 ? "md:border-r-0" : "md:border-r"
-                } ${index < 6 ? "md:border-b" : "md:border-b-0"}`}
+                className={`group backdrop-blur-sm bg-white/10 h-[244px] w-full rounded-2xl flex items-center justify-center border border-slate-200 md:border-slate-100 relative cursor-pointer`}
               >
                 {item.component()}
                 <Link
                   href={item.href}
-                  className="group-hover:translate-y-0 translate-y-full group-hover:mr-0 group-hover:visible transition-transform duration-500 absolute right-0 bottom-0 w-fit mx-auto px-5 py-3 bg-slate-900 text-white border-0 invisible flex hover:bg-slate-800 text-sm  items-center gap-1"
+                  className="absolute right-2 bottom-2 p-1 rounded-md translate-y-1 group-hover:translate-y-0 invisible group-hover:visible bg-slate-900 text-white duration-300 transition-all"
                 >
-                  Details
-                  <ArrowUpRight size={16} color="#fff" />
+                  <ArrowUpRight size={18} />
                 </Link>
               </div>
             );
