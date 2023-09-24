@@ -12,7 +12,7 @@ const PostCard = () => {
           <Image
             height={204}
             width={373}
-            src="/images/banner/blog.jpg"
+            src="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
             alt="blog"
             className="brightness-50"
           />
@@ -44,7 +44,7 @@ const PostCard = () => {
             <Image
               height={600}
               width={200}
-              src="/images/banner/blog2.jpg"
+              src="https://images.prismic.io/staticmania/b6fe0b6c-5c0d-46a1-8ac6-68fe59d418c8_blog2.jpg?auto=compress,format"
               alt="blog"
               className="rounded-xl"
             />
@@ -83,7 +83,7 @@ const PostCard = () => {
           <Image
             height={204}
             width={373}
-            src="/images/banner/blog.jpg"
+            src="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
             alt="blog"
             className="brightness-50"
           />
@@ -115,7 +115,7 @@ const PostCard = () => {
             <Image
               height={600}
               width={200}
-              src="/images/banner/blog2.jpg"
+              src="https://images.prismic.io/staticmania/b6fe0b6c-5c0d-46a1-8ac6-68fe59d418c8_blog2.jpg?auto=compress,format"
               alt="blog"
               className="rounded-xl"
             />

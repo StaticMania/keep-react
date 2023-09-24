@@ -90,12 +90,19 @@ const meta: Meta<typeof Carousel> = {
 export default meta;
 type Story = StoryObj<typeof Carousel>;
 
+const imgUrl = [
+  "d1bfb4f8-ee1d-44c6-be78-9662656e0210_slider-1.jpg?auto=compress,format",
+  "97813c41-9011-437b-a418-7b1afd1f939f_slider-4.jpg?auto=compress,format",
+  "107cb557-9589-4ffc-bbd7-543c6f4c2533_slider-3.jpg?auto=compress,format",
+  "b651e511-0c29-4b4c-85b6-a10919282f88_slider-2.jpg?auto=compress,format",
+];
+
 function renderImageMultipleTimes(): React.ReactElement[] {
   const images = [];
   for (let i = 0; i < 4; i++) {
     const item = (
       <Image
-        src={`/images/banner/slider-${i + 1}.jpg`}
+        src={`https://images.prismic.io/staticmania/${imgUrl[i]}`}
         alt={`slider-${i + 1}`}
         height={400}
         width={910}

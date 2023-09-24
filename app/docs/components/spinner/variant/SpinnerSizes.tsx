@@ -3,7 +3,7 @@ import { Spinner } from "~/src";
 
 const SpinnerSizes = () => {
   return (
-    <div className="flex w-full items-end gap-3">
+    <div className="flex my-3 items-end gap-3">
       <Spinner color="info" size="xs" />
       <Spinner color="info" size="sm" />
       <Spinner color="info" size="md" />
@@ -19,7 +19,7 @@ import { Spinner } from "keep-react";
 
 const SpinnerSizes = () => {
   return (
-    <div className="flex w-full items-end gap-3">
+    <div className="flex items-end gap-3">
       <Spinner color="info" size="xs" />
       <Spinner color="info" size="sm" />
       <Spinner color="info" size="md" />

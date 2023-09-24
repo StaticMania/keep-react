@@ -2,7 +2,11 @@
 import { Spinner } from "~/src";
 
 const DefaultSpinner = () => {
-  return <Spinner color="info" size="lg" />;
+  return (
+    <div className="h-16 p-4">
+      <Spinner color="info" size="lg" />
+    </div>
+  );
 };
 
 const DefaultSpinnerCode = `

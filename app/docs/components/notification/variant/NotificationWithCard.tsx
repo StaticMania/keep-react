@@ -10,7 +10,7 @@ const NotificationWithCard = () => {
       dismiss={false}
       className="max-w-sm"
       onDismiss={onDismiss}
-      headerBannerSrc="/images/banner/banner.png"
+      headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
       additionalContent={
         <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -52,7 +52,7 @@ const NotificationWithCard = () => {
       dismiss={false}
       className="max-w-sm"
       onDismiss={onDismiss}
-      headerBannerSrc="/images/banner/banner.png"
+      headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
       additionalContent={
         <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and

@@ -234,7 +234,8 @@ export const CardWithImage: Story = {
     ),
     className: "max-w-lg",
     horizontal: true,
-    imgSrc: "/images/banner/blog2.jpg",
+    imgSrc:
+      "https://images.prismic.io/staticmania/b6fe0b6c-5c0d-46a1-8ac6-68fe59d418c8_blog2.jpg?auto=compress,format",
   },
 
   decorators: DefaultCard.decorators,
@@ -273,7 +274,8 @@ export const CardWithAvatar: Story = {
 export const CardWithProfile: Story = {
   args: {
     className: "max-w-sm",
-    imgSrc: "/images/banner/blog.jpg",
+    imgSrc:
+      "https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format",
     children: removeFragment(
       <>
         <Card.Container className="flex items-center justify-between p-5">
@@ -309,7 +311,8 @@ export const CardWithProfile: Story = {
 };
 export const CardWithProfileDetails: Story = {
   args: {
-    imgSrc: "/images/banner/blog.jpg",
+    imgSrc:
+      "https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -400,7 +403,8 @@ export const CardWithPostCard: Story = {
 };
 export const CardWithRating: Story = {
   args: {
-    imgSrc: "/images/banner/blog.jpg",
+    imgSrc:
+      "https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -444,7 +448,7 @@ export const RecentPostsCard: Story = {
           <Image
             height={600}
             width={200}
-            src="/images/banner/blog2.jpg"
+            src="https://images.prismic.io/staticmania/b6fe0b6c-5c0d-46a1-8ac6-68fe59d418c8_blog2.jpg?auto=compress,format"
             alt="blog"
             className="rounded-xl"
           />
@@ -478,7 +482,8 @@ export const RecentPostsCard: Story = {
 export const EcommerceProductCard: Story = {
   args: {
     className: "max-w-xs overflow-hidden rounded-md",
-    imgSrc: "/images/banner/product-1.avif",
+    imgSrc:
+      "https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -522,7 +527,8 @@ export const EcommerceProductCard: Story = {
 export const ProductCard: Story = {
   args: {
     className: "max-w-xs overflow-hidden rounded-md",
-    imgSrc: "/images/banner/product-2.avif",
+    imgSrc:
+      "https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format",
     imgSize: "md",
     children: removeFragment(
       <>
@@ -575,7 +581,8 @@ export const ProductCard: Story = {
 export const PodcastCard: Story = {
   args: {
     className: "max-w-xs overflow-hidden rounded-md",
-    imgSrc: "/images/banner/product-3.avif",
+    imgSrc:
+      "https://images.prismic.io/staticmania/cb1a34d1-50a8-4b9c-b5e2-020d1c67e993_product-3.avif?auto=compress,format",
     imgSize: "md",
     children: (
       <Card.Container className="space-y-3 p-6">

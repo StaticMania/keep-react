@@ -12,7 +12,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value20"
@@ -22,7 +22,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value21"
@@ -32,7 +32,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value22"
@@ -42,7 +42,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value23"
@@ -68,7 +68,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value20"
@@ -78,7 +78,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value21"
@@ -88,7 +88,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value22"
@@ -98,7 +98,7 @@ const CheckboxGroupWithImage = () => {
       <CheckboxGroup
         title="Static Design System"
         description="The largest UI kit and design system for Figma & Static code in the world."
-        img="/images/banner/blog.jpg"
+        img="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
         imgShape="square"
         checkboxType="circle"
         value="value23"

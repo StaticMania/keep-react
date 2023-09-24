@@ -174,7 +174,7 @@ export const TimelineWithImage: Story = {
             <Image
               height={220}
               width={400}
-              src="/images/banner/timeline.png"
+              src="https://images.prismic.io/staticmania/3b419e42-6dde-4598-a7c1-33e585b922bd_timeline.png?auto=compress,format"
               alt="timeline"
               className="rounded-lg"
             />
@@ -194,7 +194,7 @@ export const TimelineWithImage: Story = {
             <Image
               height={213}
               width={340}
-              src="/images/banner/banner.png"
+              src="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
               alt="timeline"
               className="rounded-lg"
             />

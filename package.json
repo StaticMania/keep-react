@@ -29,7 +29,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "newApp": "rm -rf node_modules && yarn install",
+    "newApp": "rm -rf node_modules && rm -rf .next && yarn install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",

@@ -3,7 +3,7 @@ import { Spinner } from "~/src";
 
 const SpinnerColors = () => {
   return (
-    <div className="my-5 ml-5 flex w-full items-end gap-3">
+    <div className="my-5 flex gap-3">
       <Spinner color="failure" size="lg" />
       <Spinner color="gray" size="lg" />
       <Spinner color="info" size="lg" />
@@ -21,7 +21,7 @@ import { Spinner } from "keep-react";
 
 const SpinnerColors = () => {
   return (
-    <div className="my-5 ml-5 flex w-full items-end gap-3">
+    <div className="flex gap-3">
       <Spinner color="failure" size="lg" />
       <Spinner color="gray" size="lg" />
       <Spinner color="info" size="lg" />

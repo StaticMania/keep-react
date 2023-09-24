@@ -141,7 +141,8 @@ export const NotificationWithCard: Story = {
   args: {
     dismiss: false,
     className: "max-w-sm",
-    headerBannerSrc: "/images/banner/banner.png",
+    headerBannerSrc:
+      "https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format",
     additionalContent: (
       <div className="mt-2.5 text-base font-normal text-slate-500">
         Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -173,7 +174,8 @@ export const NotificationCardWithFullButton: Story = {
   args: {
     dismiss: false,
     className: "max-w-sm",
-    headerBannerSrc: "/images/banner/banner.png",
+    headerBannerSrc:
+      "https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format",
 
     additionalContent: (
       <div className="mt-2.5 text-base font-normal text-slate-500">

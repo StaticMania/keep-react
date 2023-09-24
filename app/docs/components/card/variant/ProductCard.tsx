@@ -21,7 +21,7 @@ const ProductCard = () => {
       {/* === PRODUCT CARD ONE === */}
       <Card
         className="max-w-xs overflow-hidden rounded-md"
-        imgSrc="/images/banner/product-1.avif"
+        imgSrc="https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format"
         imgSize="md"
       >
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
@@ -54,7 +54,7 @@ const ProductCard = () => {
       {/* === PRODUCT CARD TWO === */}
       <Card
         className="max-w-xs overflow-hidden rounded-md"
-        imgSrc="/images/banner/product-2.avif"
+        imgSrc="https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format"
         imgSize="md"
       >
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
@@ -96,7 +96,7 @@ const ProductCard = () => {
       {/* === PRODUCT CARD THREE === */}
       <Card
         className="max-w-xs overflow-hidden rounded-md"
-        imgSrc="/images/banner/product-4.avif"
+        imgSrc="https://images.prismic.io/staticmania/cb1a34d1-50a8-4b9c-b5e2-020d1c67e993_product-3.avif?auto=compress,format"
         imgSize="md"
       >
         <Card.Container className="space-y-3 p-6">
@@ -173,7 +173,7 @@ const ProductCard = () => {
       {/* === PRODUCT CARD ONE === */}
       <Card
         className="max-w-xs overflow-hidden rounded-md"
-        imgSrc="/images/banner/product-1.avif"
+        imgSrc="https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format"
         imgSize="md"
       >
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
@@ -206,7 +206,7 @@ const ProductCard = () => {
       {/* === PRODUCT CARD TWO === */}
       <Card
         className="max-w-xs overflow-hidden rounded-md"
-        imgSrc="/images/banner/product-2.avif"
+        imgSrc="https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format"
         imgSize="md"
       >
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
@@ -253,7 +253,7 @@ const ProductCard = () => {
       {/* === PRODUCT CARD THREE === */}
       <Card
         className="max-w-xs overflow-hidden rounded-md"
-        imgSrc="/images/banner/product-4.avif"
+        imgSrc="https://images.prismic.io/staticmania/cb1a34d1-50a8-4b9c-b5e2-020d1c67e993_product-3.avif?auto=compress,format"
         imgSize="md"
       >
         <Card.Container className="space-y-3 p-6">

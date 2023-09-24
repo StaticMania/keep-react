@@ -6,7 +6,10 @@ const ProfileCardWithCover = () => {
   return (
     <div className="flex flex-wrap gap-5 items-end ">
       {/* ===PROFILE CARD ONE=== */}
-      <Card className="max-w-sm" imgSrc="/images/banner/blog.jpg">
+      <Card
+        className="max-w-sm"
+        imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
+      >
         <Card.Container className="flex md:flex-row flex-col space-y-3 md:items-center items-start justify-between p-6">
           <Card.Container className="flex items-center">
             <Avatar size="lg" shape="round" img="/images/avatar/avatar-4.png" />
@@ -25,7 +28,11 @@ const ProfileCardWithCover = () => {
         </Card.Container>
       </Card>
       {/* ===PROFILE CARD TWO=== */}
-      <Card className="max-w-xs" imgSrc="/images/banner/blog.jpg" imgSize="md">
+      <Card
+        className="max-w-xs"
+        imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
+        imgSize="md"
+      >
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
@@ -48,7 +55,10 @@ const ProfileCardWithCover = () => {
         </Card.Container>
       </Card>
       {/* ===PROFILE CARD THREE=== */}
-      <Card imgSrc="/images/banner/blog.jpg" imgSize="md">
+      <Card
+        imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
+        imgSize="md"
+      >
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
@@ -95,7 +105,10 @@ const ProfileCardWithCover = () => {
         </Card.Container>
       </Card>
       {/* ===PROFILE CARD FOUR=== */}
-      <Card className="max-w-sm" imgSrc="/images/banner/blog.jpg">
+      <Card
+        className="max-w-sm"
+        imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format"
+      >
         <div className="flex items-center justify-between p-3 md:p-6">
           <div className="flex items-center">
             <Avatar size="lg" shape="round" img="/images/avatar/avatar-4.png" />
@@ -125,7 +138,7 @@ const ProfileCardWithCover = () => {
   return (
     <div className="flex flex-wrap gap-5 items-end ">
       {/* ===PROFILE CARD ONE=== */}
-      <Card className="max-w-sm" imgSrc="/images/banner/blog.jpg">
+      <Card className="max-w-sm" imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format">
         <Card.Container className="flex items-center justify-between p-6">
           <Card.Container className="flex items-center ">
             <Avatar size="lg" shape="round" img="/images/avatar/avatar-4.png" />
@@ -144,7 +157,7 @@ const ProfileCardWithCover = () => {
         </Card.Container>
       </Card>
       {/* ===PROFILE CARD TWO=== */}
-      <Card className="max-w-xs" imgSrc="/images/banner/blog.jpg" imgSize="md">
+      <Card className="max-w-xs" imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format" imgSize="md">
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
@@ -167,7 +180,7 @@ const ProfileCardWithCover = () => {
         </Card.Container>
       </Card>
       {/* ===PROFILE CARD THREE=== */}
-      <Card imgSrc="/images/banner/blog.jpg" imgSize="md">
+      <Card imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format" imgSize="md">
         <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
@@ -214,7 +227,7 @@ const ProfileCardWithCover = () => {
         </Card.Container>
       </Card>
       {/* ===PROFILE CARD FOUR=== */}
-      <Card className="max-w-sm" imgSrc="/images/banner/blog.jpg">
+      <Card className="max-w-sm" imgSrc="https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format">
         <div className="flex items-center justify-between p-3 md:p-6">
           <div className="flex items-center">
             <Avatar size="lg" shape="round" img="/images/avatar/avatar-4.png" />
