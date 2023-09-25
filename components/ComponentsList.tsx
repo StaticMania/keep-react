@@ -104,7 +104,7 @@ export const TooltipComponent = () => {
 };
 export const BarChartComponent = () => {
   return (
-    <div className="scale-75">
+    <div className="lg:scale-75 scale-50">
       <CustomizedBarSizeWithAxisData />
     </div>
   );
