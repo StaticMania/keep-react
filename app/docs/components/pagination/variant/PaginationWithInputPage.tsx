@@ -15,6 +15,7 @@ const PaginationWithInputPage = () => {
     />
   );
 };
+
 const PaginationWithInputPageCode = `
 "use client";
 import { Pagination } from "keep-react";
@@ -23,16 +24,17 @@ import React, { useState } from "react";
 const PaginationWithInputPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
-      <Pagination
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
-        totalPages={30}
-        iconWithOutText={true}
-        prevNextShape="none"
-        showGoToPaginate={true}
-      />
+    <Pagination
+      currentPage={currentPage}
+      onPageChange={setCurrentPage}
+      totalPages={30}
+      iconWithOutText={true}
+      prevNextShape="none"
+      showGoToPaginate={true}
+    />
   );
 };
+
 export default PaginationWithInputPage;
 `;
 export { PaginationWithInputPage, PaginationWithInputPageCode };

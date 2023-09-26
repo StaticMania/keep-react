@@ -9,9 +9,9 @@ const PaginationWithBorder = () => {
       currentPage={currentPage}
       onPageChange={setCurrentPage}
       totalPages={30}
-      iconWithText={true}
-      prevNextShape="roundSquare"
+      iconWithOutText={true}
       paginateWithBorder={true}
+      prevNextShape="circle"
     />
   );
 };
@@ -24,19 +24,18 @@ import { Pagination } from "keep-react";
 const PaginationWithBorder = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
-      <Pagination
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
-        totalPages={30}
-        iconWithOutText={true}
-        prevNextShape="none"
-        paginateWithBorder={true}
-      />
+    <Pagination
+      currentPage={currentPage}
+      onPageChange={setCurrentPage}
+      totalPages={30}
+      iconWithOutText={true}
+      paginateWithBorder={true}
+      prevNextShape="circle"
+    />
   );
 };
 
 export default PaginationWithBorder;
-
 `;
 
 export { PaginationWithBorder, PaginationWithBorderCode };

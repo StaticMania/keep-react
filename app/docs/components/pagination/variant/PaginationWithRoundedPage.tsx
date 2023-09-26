@@ -9,9 +9,9 @@ const PaginationWithRoundedPage = () => {
       currentPage={currentPage}
       onPageChange={setCurrentPage}
       totalPages={30}
-      iconWithOutText={true}
+      iconWithText={true}
+      prevNextShape="circle"
       activeCurrentPageShape="circle"
-      prevNextShape="none"
     />
   );
 };
@@ -24,14 +24,14 @@ import { Pagination } from "keep-react";
 const PaginationWithRoundedPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
-      <Pagination
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
-        totalPages={30}
-        activeCurrentPageShape="circle"
-        iconWithOutText={true}
-        prevNextShape="none"
-      />
+    <Pagination
+      currentPage={currentPage}
+      onPageChange={setCurrentPage}
+      totalPages={30}
+      iconWithText={true}
+      prevNextShape="circle"
+      activeCurrentPageShape="circle"
+    />
   );
 };
 
