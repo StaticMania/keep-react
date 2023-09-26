@@ -98,7 +98,7 @@ const DefaultBarChart = () => {
 
 const DefaultBarChartCode = `
 "use client";
-import {BarChart} from "keep-react";
+import { BarChart } from "keep-react";
 const BarChartData = [
   {
     name: "2",

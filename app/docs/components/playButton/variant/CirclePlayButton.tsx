@@ -15,7 +15,7 @@ const CirclePlayButton = () => {
 
 const CirclePlayButtonCode = `
 "use client";
-import {PlayButton} from "keep-react";
+import { PlayButton } from "keep-react";
 import { Play } from "phosphor-react";
 
 const CirclePlayButton = () => {

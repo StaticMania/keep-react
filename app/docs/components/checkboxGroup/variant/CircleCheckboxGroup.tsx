@@ -56,7 +56,7 @@ const CircleCheckboxGroup = () => {
 const CircleCheckboxGroupCode = `
 "use client";
 import { useState } from "react";
-import CheckboxGroup from "keep-react";
+import { CheckboxGroup } from "keep-react";
 
 const CircleCheckboxGroup = () => {
   const [selected, setSelected] = useState("");

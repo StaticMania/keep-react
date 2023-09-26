@@ -21,7 +21,7 @@ const CustomizedBarSize = () => {
 
 const CustomizedBarSizeCode = `
 "use client";
-import BarChart from "keep-react";
+import { BarChart } from "keep-react";
 const BarChartData = [
   {
     name: "2",

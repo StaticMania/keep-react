@@ -12,7 +12,7 @@ const TreeWithItemsNumber = () => {
 
 const TreeWithItemsNumberCode = `
 "use client";
-import {Tree} from "keep-react";
+import { Tree } from "keep-react";
 const nodes = [
   {
     id: 1,

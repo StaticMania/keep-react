@@ -48,7 +48,7 @@ const DefaultCheckboxGroup = () => {
 const DefaultCheckboxGroupCode = `
 "use client";
 import { useState } from "react";
-import CheckboxGroup from "keep-react";
+import { CheckboxGroup } from "keep-react";
 
 const DefaultCheckboxGroup = () => {
   const [selected, setSelected] = useState("");

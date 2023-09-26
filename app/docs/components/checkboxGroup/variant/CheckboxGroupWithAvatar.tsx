@@ -56,12 +56,12 @@ const CheckboxGroupWithAvatar = () => {
 const CheckboxGroupWithAvatarCode = `
 "use client";
 import { useState } from "react";
-import CheckboxGroup from "keep-react";
+import { CheckboxGroup } from "keep-react";
 
 const CheckboxGroupWithAvatar = () => {
   const [selected, setSelected] = useState("");
-  const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
+  const handleOptionChange = (event) => {
+    setSelected(event.target.value);
   };
   return (
     <form className="space-y-4 p-5">

@@ -8,7 +8,7 @@ const AreaChartWithTooltip = () => {
 
 const AreaChartWithTooltipCode = `
 "use client";
-import AreaChart from "keep-react";
+import { AreaChart } from "keep-react";
 const chartData = [
   {
     name: "1",
