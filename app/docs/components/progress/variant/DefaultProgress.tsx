@@ -2,7 +2,11 @@
 import { Progress } from "~/src";
 
 const DefaultProgress = () => {
-  return <Progress progress={45} color="info" rounded={false} />;
+  return (
+    <div className="w-5/6 p-4">
+      <Progress progress={45} color="info" rounded={false} />
+    </div>
+  );
 };
 
 const DefaultProgressCode = `

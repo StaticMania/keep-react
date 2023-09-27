@@ -3,7 +3,7 @@ import { Slider } from "~/src";
 
 const DefaultSlider = () => {
   return (
-    <div className="p-4">
+    <div className="w-5/6 p-4">
       <Slider
         range
         min={100}
@@ -30,7 +30,7 @@ const DefaultSlider = () => {
       defaultValue={[100, 300]}
       tooltip="top"
       draggableTrack
-      onChange={(value: number | number[]) => console.log(value)}
+      onChange={(value) => console.log(value)}
     />
   );
 };

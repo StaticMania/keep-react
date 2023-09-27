@@ -21,7 +21,7 @@ The slider component in the Keep React allows users to select a value within a s
 
 ## Default Slider
 
-The `DefaultSlider` component uses the "keep-design" library's `Slider` component. It's designed for selecting a range of values from 100 to 1000. The initial range is set at 100 to 300. The slider shows value `tooltips` at the `top`. Users can easily drag the range selection thanks to the `draggableTrack` feature. When values are changed, the `onChange` callback logs the new selection to the console.
+It's designed for selecting a range of values from 100 to 1000. The initial range is set at 100 to 300. The slider shows value `tooltips` at the `top`. Users can easily drag the range selection thanks to the `draggableTrack={true}` features.
 
 <CodePreview github="Slider" code={DefaultSliderCode}>
   <DefaultSlider />
@@ -51,7 +51,7 @@ Control the position of the tooltips in the slider by using the tooltip prop. Se
   <SliderTooltipPosition />
 </CodePreview>
 
-## Api
+## API Reference
 
 <ComponentApi data={sliderAPIData} />
 

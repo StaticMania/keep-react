@@ -4,7 +4,7 @@ import ProgressDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "The Progress Bar Component in the Keep React allows you to visually represent the progress or completion of a task or process. With customizable options for the type, label, and progress, you can create progress bars that align with your design and provide clear indications of progress.",
+    "The Progress Bar Component in the Keep React allows you to visually represent the progress or completion of a task or process.",
   title: "Progress Bar - Keep React",
 };
 

@@ -3,7 +3,7 @@ import { Slider } from "~/src";
 
 const SliderTooltipPosition = () => {
   return (
-    <div className="p-4">
+    <div className="w-5/6 p-4">
       <Slider
         defaultValue={300}
         max={1000}

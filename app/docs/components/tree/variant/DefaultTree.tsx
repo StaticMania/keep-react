@@ -47,7 +47,7 @@ export const nodes = [
   },
   {
     id: 123,
-    title: "Footer Component",
+    title: "Footer",
     children: [
       { id: 1231, title: "Footer Logo" },
       { id: 1232, title: "Quick Links" },
@@ -112,7 +112,7 @@ const nodes = [
   },
   {
     id: 123,
-    title: "Footer Component",
+    title: "Footer",
     children: [
       { id: 1231, title: "Footer Logo" },
       { id: 1232, title: "Quick Links" },

@@ -3,7 +3,7 @@ import { Slider } from "~/src";
 
 const SliderWithDots = () => {
   return (
-    <div className="p-4">
+    <div className="w-5/6 p-4">
       <Slider
         defaultValue={300}
         dots={true}
@@ -27,7 +27,7 @@ const SliderWithDots = () => {
       dots={true}
       max={1000}
       min={100}
-      onChange={(value: number | number[]) => console.log(value)}
+      onChange={(value) => console.log(value)}
       step={200}
     />
   );

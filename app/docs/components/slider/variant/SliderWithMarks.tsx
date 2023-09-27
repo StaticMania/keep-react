@@ -3,7 +3,7 @@ import { Slider } from "~/src";
 
 const SliderWithMarks = () => {
   return (
-    <div className="h-12 w-5/6 mx-auto">
+    <div className="h-16 p-4 w-5/6">
       <Slider
         defaultValue={300}
         marks={{
@@ -37,7 +37,7 @@ const SliderWithMarks = () => {
       }}
       max={1000}
       min={100}
-      onChange={(value: number | number[]) => console.log(value)}
+      onChange={(value) => console.log(value)}
       step={100}
     />
   );

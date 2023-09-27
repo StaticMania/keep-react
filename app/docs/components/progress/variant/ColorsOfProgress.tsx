@@ -3,7 +3,7 @@ import { Progress } from "~/src";
 
 const ColorsOfProgress = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 w-5/6 p-4">
       <div className="text-base font-medium text-primary-500">Blue</div>
       <Progress progress={45} color="info" rounded={false} />
       <Progress progress={45} color="info" rounded={true} />

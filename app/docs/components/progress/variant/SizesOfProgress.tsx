@@ -3,7 +3,7 @@ import { Progress } from "~/src";
 
 const SizesOfProgress = () => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 h-36 p-4 w-5/6">
       <Progress progress={20} color="info" rounded={true} size="sm" />
       <Progress progress={40} color="info" bordered={true} size="md" />
       <Progress progress={60} color="info" bordered={true} size="lg" />

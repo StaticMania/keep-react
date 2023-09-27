@@ -32,7 +32,7 @@ import { useTheme } from "~/src/Keep/ThemeContex";
 
 ## Table of Contents
 
-The Progress Bar Component in the Keep React allows you to visually represent the progress or completion of a task or process. With customizable options for the type, label, and progress, you can create progress bars that align with your design and provide clear indications of progress.
+The Progress Bar Component in the Keep React allows you to visually represent the progress or completion of a task or process.
 
 ## Default Progress
 
@@ -42,19 +42,15 @@ Default Progress allows you to visually represent the progress or completion of 
   <DefaultProgress />
 </CodePreview>
 
-## Variant Styles of Progress
+## Progress Style Variant
 
-The Progress component in our design system comes with two style options:
-
-Rounded Style: When rounded prop is set to true, the progress bar will have rounded edges, giving it a smooth and visually pleasing look.
-
-Bordered Style: By using the bordered prop with a value of true, a border will be added around the progress bar. This enhances its visibility and creates a clear visual contrast with the surrounding content.
+The Progress component in our design system comes with two style options: `rounded` and `bordered`
 
 <CodePreview github="Progress" code={VariantOfProgressCode}>
   <VariantOfProgress />
 </CodePreview>
 
-## Sizes of Progress
+## Progress Size Variant
 
 Progress component supports multiple sizes to fit your design needs. Here is available sizes options for the progress component in our design system `sm` `md` `lg` and `lg`.
 
@@ -62,7 +58,7 @@ Progress component supports multiple sizes to fit your design needs. Here is ava
   <SizesOfProgress />
 </CodePreview>
 
-## Colors of Progress
+## Progress Colors Variant
 
 The Progress component offers various color options to suit your design preferences.Here is available colors options for the progress component in our design system `info` `error` `success` `warning` `indigo` and `purple`.
 
@@ -70,7 +66,7 @@ The Progress component offers various color options to suit your design preferen
   <ColorsOfProgress />
 </CodePreview>
 
-## Progress Bar with Progress Number
+## Progress with Progress Number
 
 You can enhance the Progress component by adding a progress number that indicates the completion percentage of a task or process. This feature is particularly useful for providing users with a clear numeric representation of progress.
 
@@ -78,15 +74,17 @@ You can enhance the Progress component by adding a progress number that indicate
   <ProgressWithNumber />
 </CodePreview>
 
-## Progress Bar with Popup
+## Progress with Popup
 
-To provide users with additional context and information, the Progress component can be augmented with a popup that displays the progress percentage in a more detailed manner. This feature helps users gain a deeper understanding of the progress and fosters a more informed interaction with the task or process.
+The Progress component can be augmented with a popup that displays the progress percentage in a more detailed manner with `showPopupLabelProgress={true}` props.
 
 <CodePreview github="Progress" code={ProgressWithPopupCode}>
   <ProgressWithPopup />
 </CodePreview>
 
-## Api
+## API Reference
+
+Explore the available props for the Progress component:
 
 <ComponentApi data={progressDataApi} />
 

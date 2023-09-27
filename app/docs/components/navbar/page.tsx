@@ -4,7 +4,7 @@ import NavbarDocs from ".";
 
 export const metadata: Metadata = {
   description:
-    "Navbar component in the Keep React allows you to display informative messages or alerts to users. With various styles and options for positioning, you can effectively communicate important updates or messages in a visually appealing manner.",
+    "The Navbar component is a fundamental UI element used in web development to create a navigation bar at the top of a webpage. It provides a structured and organized way to display links, menus, and other navigation-related content to users.",
   title: "Navbar - Keep React",
 };
 

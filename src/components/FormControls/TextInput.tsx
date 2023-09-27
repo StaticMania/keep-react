@@ -158,7 +158,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                   ? theme.field.input.withBg.on.colors[color]
                   : theme.field.input.withBg.off,
 
-                !border && "!rounded-ee-none !rounded-ss-none"
+                !border && "!rounded-none"
               )}
               {...theirProps}
               ref={ref}

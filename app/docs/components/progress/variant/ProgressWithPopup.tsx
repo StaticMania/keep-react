@@ -3,21 +3,9 @@ import { Progress } from "~/src";
 
 const ProgressWithPopup = () => {
   return (
-    <div className="my-10 flex flex-col gap-20">
-      <Progress
-        progress={45}
-        color="info"
-        rounded={true}
-        showPopupLabelProgress={true}
-      />
+    <div className="w-5/6 py-16">
       <Progress
         progress={75}
-        color="info"
-        rounded={true}
-        showPopupLabelProgress={true}
-      />
-      <Progress
-        progress={100}
         color="info"
         rounded={true}
         showPopupLabelProgress={true}

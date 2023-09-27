@@ -3,7 +3,7 @@ import { Progress } from "~/src";
 
 const ProgressWithNumber = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 p-4 w-5/6">
       <Progress
         progress={45}
         color="info"
