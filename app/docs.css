@@ -81,7 +81,7 @@
 /* Search */
 
 .DocSearch .DocSearch-Modal {
-  @apply mx-auto mt-[1rem] max-h-[calc(100vh-2rem)] w-full max-w-[calc(100vw-3rem)] overflow-hidden rounded-lg lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
+  @apply fixed left-0 right-0 md:static mx-auto mt-4 max-h-[calc(100vh-5rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
 }
 
 .DocSearch.DocSearch-Button {
@@ -133,8 +133,8 @@
   @apply bg-white pb-1 text-gray-700;
 }
 
-.DocSearch .DocSearch-Container {
-  @apply bg-gray-900 bg-opacity-50;
+.DocSearch.DocSearch-Container {
+  @apply bg-gray-900 bg-opacity-50 min-h-screen left-0 fixed top-0 max-w-[100vw] z-[200];
 }
 
 .DocSearch .DocSearch-Modal {
