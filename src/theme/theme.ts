@@ -26,7 +26,6 @@ import { tableTheme } from "../components/Table/theme";
 import { tabTheme } from "../components/Tabs/theme";
 import { tagTheme } from "../components/Tag/theme";
 import { stepTheme } from "../components/Timeline/theme";
-import { toastTheme } from "../components/Toast/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
 import { treeTheme } from "../components/Tree/theme";
 import { uploadTheme } from "../components/Upload/theme";
@@ -47,7 +46,6 @@ export const theme = {
   modal: modalTheme,
   rating: ratingTheme,
   spinner: spinnerTheme,
-  toast: toastTheme,
   tabs: tabTheme,
   sidebar: sidebarTheme,
   switch: switchTheme,

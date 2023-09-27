@@ -341,15 +341,8 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
   },
-  // {
-  //   id: 39,
-  //   name: "Toast",
-  //   href: "/docs/components/toast",
-  //   tag: false,
-  //   deprecate: true,
-  // },
   {
-    id: 40,
+    id: 39,
     name: "Tooltip",
     folderName: "Tooltip",
     href: "/docs/components/tooltip",
@@ -357,7 +350,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 41,
+    id: 40,
     name: "Tree",
     folderName: "Tree",
     href: "/docs/components/tree",
@@ -365,7 +358,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 42,
+    id: 41,
     name: "Upload",
     folderName: "Upload",
     href: "/docs/components/upload",
