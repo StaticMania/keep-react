@@ -62,7 +62,7 @@ const CheckboxGroupWithIconCode = `
 "use client";
 import { useState } from "react";
 import { SquaresFour } from "phosphor-react";
-import CheckboxGroup from "keep-react";
+import { CheckboxGroup } from "keep-react";
 
 const CheckboxGroupWithIcon = () => {
   const [selected, setSelected] = useState("");

@@ -15,7 +15,7 @@ const AreaChartWithDoubleSeries = () => {
 
 const AreaChartWithDoubleSeriesCode = `
 "use client";
-import AreaChart from "keep-react";
+import { AreaChart } from "keep-react";
 const chartData = [
   {
     name: "1",

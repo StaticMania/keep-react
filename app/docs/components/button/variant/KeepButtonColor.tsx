@@ -1,9 +1,9 @@
 "use client";
 import { Button } from "~/src";
 
-const ColorsOfButton = () => {
+const KeepButtonColor = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <div className="flex flex-wrap items-center gap-2 h-20 p-4">
       <Button size="md" color="error">
         Error Button
       </Button>
@@ -20,31 +20,19 @@ const ColorsOfButton = () => {
   );
 };
 
-const ColorsOfButtonCode = `
+const KeepButtonColorCode = `
 "use client";
 import { Button } from "keep-design;
 
-const ColorsOfButton = () => {
+const KeepButtonColor = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
       <Button size="md" color="error">
         Error Button
       </Button>
-      <Button size="md" color="success">
-        Success Button
-      </Button>
-      <Button size="md" color="info">
-        Info Button
-      </Button>
-      <Button size="md" color="warning">
-        warning Button
-      </Button>
-    </div>
-  );
+   );
 };
 
-export default ColorsOfButton;
-
+export default KeepButtonColor;
 `;
 
-export { ColorsOfButton, ColorsOfButtonCode };
+export { KeepButtonColor, KeepButtonColorCode };

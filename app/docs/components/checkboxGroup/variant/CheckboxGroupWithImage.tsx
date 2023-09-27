@@ -55,13 +55,13 @@ const CheckboxGroupWithImage = () => {
 
 const CheckboxGroupWithImageCode = `
 "use client";
-import CheckboxGroup from "~/src/CheckboxGroup";
 import { useState } from "react";
+import { CheckboxGroup } from "keep-react";
 
 const CheckboxGroupWithImage = () => {
   const [selected, setSelected] = useState("");
-  const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
+  const handleOptionChange = (event) => {
+    setSelected(event.target.value);
   };
   return (
     <form className="space-y-4 p-5">
