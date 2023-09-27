@@ -3,6 +3,7 @@ import { createContext, useContext } from "react";
 export type TimelineContext = {
   horizontal?: boolean;
   gradientPoint?: boolean;
+  gradientColor?: string;
 };
 export const TimelineContext = createContext<TimelineContext | undefined>(
   undefined

@@ -49,7 +49,7 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
   icon: Icon,
   ...props
 }) => {
-  const { horizontal, gradientPoint } = useTimelineContext();
+  const { horizontal, gradientPoint, gradientColor } = useTimelineContext();
 
   return (
     <div
@@ -68,8 +68,7 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
         <div
           className={twMerge(
             "absolute -left-2 h-4 w-4 rounded-full border border-white",
-            gradientPoint &&
-              gradientColor[Math.floor(Math.random() * gradientColor.length)],
+            gradientPoint && gradientColor ? gradientColor : "bg-gradient-9",
             !gradientPoint && "bg-slate-200"
           )}
         ></div>

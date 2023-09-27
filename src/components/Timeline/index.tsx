@@ -62,6 +62,7 @@ export type TimelineProps = PropsWithChildren<{
   className?: string;
   horizontal?: boolean;
   gradientPoint?: boolean;
+  gradientColor?: string;
   timelineBarType?: "solid" | "dashed";
 }>;
 
@@ -70,10 +71,13 @@ const TimelineComponent: FC<TimelineProps> = ({
   horizontal,
   gradientPoint,
   timelineBarType = "solid",
+  gradientColor,
   className,
 }) => {
   return (
-    <TimelineContext.Provider value={{ horizontal, gradientPoint }}>
+    <TimelineContext.Provider
+      value={{ horizontal, gradientPoint, gradientColor }}
+    >
       <ol
         data-testid="timeline-component"
         className={twMerge(

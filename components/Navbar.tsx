@@ -51,8 +51,8 @@ const Navbar = () => {
             <div>
               <DocSearch
                 appId="RWG6G5ORTO"
-                apiKey="8ee72114c3c522238b217ec9ed211f3c"
                 indexName="KEEP-REACT-APP"
+                apiKey="8ee72114c3c522238b217ec9ed211f3c"
               />
             </div>
 
@@ -79,8 +79,8 @@ const Navbar = () => {
             <div>
               <DocSearch
                 appId="RWG6G5ORTO"
-                apiKey="8ee72114c3c522238b217ec9ed211f3c"
                 indexName="KEEP-REACT-APP"
+                apiKey="8ee72114c3c522238b217ec9ed211f3c"
               />
             </div>
             <a href="https://github.com/StaticMania/keep-react" target="_blank">
