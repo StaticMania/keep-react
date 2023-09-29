@@ -19,7 +19,7 @@ export default function Home() {
 const Hero = () => {
   const { copy, copyToClipboard } = useCopy();
   return (
-    <div className="md:pt-24 pt-10 hero-area md:h-screen -mt-2">
+    <div className="md:pt-24 pt-10 hero-area xl:h-screen -mt-2">
       <div className="container">
         <div className="text-center px-5 md:px-0">
           <h1 className="max-w-2xl mx-auto text-center md:text-[56px] text-3xl text-black/100 font-semibold md:leading-[66px] leading-9 tracking-[-1.75px] mb-3">
@@ -60,7 +60,7 @@ const Hero = () => {
 
 const ComponentUI = () => {
   return (
-    <div className="md:pt-5 pt-10 mb-24 relative">
+    <div className="pt-20 mb-24 relative">
       <div className="absolute lg:-top-[631px] md:-top-[35rem] -top-[120px] w-full md:max-w-[1202px] mx-auto z-[-1] left-0 right-0">
         <Image
           src="https://staticmania.cdn.prismic.io/staticmania/60f7593e-eb13-48b7-8647-d7846dbdc16d_gradient-bg.svg"

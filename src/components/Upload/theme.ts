@@ -56,7 +56,8 @@ export const uploadTheme: keepUploadTheme = {
         upload: {
           base: "relative hidden md:flex cursor-pointer items-center  md:gap-5",
           input: "absolute top-0 w-full left-0 scale-100 opacity-0",
-          fileName: "text-sm xl:block hidden text-slate-400",
+          fileName: "text-sm text-slate-400",
+          fileSize: "text-sm xl:block hidden text-slate-400",
         },
       },
     },

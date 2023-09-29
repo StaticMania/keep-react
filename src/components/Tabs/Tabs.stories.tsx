@@ -107,15 +107,3 @@ export const TabWithButton: Story = {
     style: "pills",
   },
 };
-export const TabWithUnderline: Story = {
-  args: {
-    ...DefaultTab.args,
-    style: "underline",
-  },
-};
-export const TabWithFullWidthButton: Story = {
-  args: {
-    ...DefaultTab.args,
-    style: "fullWidth",
-  },
-};

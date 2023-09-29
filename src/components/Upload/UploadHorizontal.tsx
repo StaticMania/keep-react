@@ -25,6 +25,7 @@ export interface UploadHorizontalTheme {
         base: string;
         input: string;
         fileName: string;
+        fileSize: string;
       };
     };
   };
@@ -62,7 +63,10 @@ export const UploadHorizontal: FC = () => {
 
               {file ? (
                 <p className={twMerge(theme.label.root.upload.fileName)}>
-                  FileName :{file ? file.slice(0, 6) + "." + extension : null}
+                  FileName :
+                  {file
+                    ? file.split(".")[0].slice(0, 5) + "." + extension
+                    : null}
                 </p>
               ) : (
                 <p className={twMerge(theme.label.root.iconBox.fileType)}>
@@ -73,7 +77,7 @@ export const UploadHorizontal: FC = () => {
           </div>
 
           <div className={twMerge(theme.label.root.upload.base)}>
-            <p className={twMerge(theme.label.root.upload.fileName)}>
+            <p className={twMerge(theme.label.root.upload.fileSize)}>
               Maximum: 5MB
             </p>
 

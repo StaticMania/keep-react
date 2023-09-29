@@ -17,12 +17,7 @@ export const books: Book[] = [
   { id: 10, name: "Brave New World" },
 ];
 
-import {
-  ArrowRight,
-  Faders,
-  MagnifyingGlass,
-  MapPinLine,
-} from "phosphor-react";
+import { ArrowRight, MagnifyingGlass, MapPinLine } from "phosphor-react";
 import { useState } from "react";
 import { SearchBar } from ".";
 import { Button } from "../Button/Button";
@@ -151,7 +146,8 @@ const DefaultSearch = () => {
     </SearchBar>
   );
 };
-const SearchBarWithBothSideIcon = () => {
+
+const SearchBarWithColorVariantCom = () => {
   const [data, setData] = useState<Book[]>([]);
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase();
@@ -165,138 +161,11 @@ const SearchBarWithBothSideIcon = () => {
       setData(results);
     }
   };
-
   return (
     <SearchBar
       placeholder="Search Anything"
-      addon={<MagnifyingGlass size={20} color="#5E718D" />}
-      addonPosition="left"
-      icon={<ArrowRight size={20} color="#1B4DFF" />}
-      iconPosition="right"
-      handleOnChange={handleOnChange}
-    >
-      <ul>
-        {data.map((book) => (
-          <Dropdown.Item key={book?.id}>
-            {book?.name}
-            <span className="ml-auto">
-              <ArrowRight size={20} color="#5E718D" />
-            </span>
-          </Dropdown.Item>
-        ))}
-      </ul>
-    </SearchBar>
-  );
-};
-const SearchBarWithRightRideTwoIcon = () => {
-  const [data, setData] = useState<Book[]>([]);
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
-
-    if (searchTerm === "") {
-      setData([]);
-    } else {
-      setData(results);
-    }
-  };
-
-  return (
-    <SearchBar
-      placeholder="Search Anything"
-      addon={
-        <Button type="primary">
-          <MagnifyingGlass size={20} />
-        </Button>
-      }
-      addonPosition="right"
-      icon={<Faders size={20} color="#5E718D" />}
-      iconPosition="right"
-      handleOnChange={handleOnChange}
-      size="lg"
-    >
-      <ul>
-        {data.map((book) => (
-          <Dropdown.Item key={book?.id}>
-            {book?.name}
-            <span className="ml-auto">
-              <ArrowRight size={20} color="#5E718D" />
-            </span>
-          </Dropdown.Item>
-        ))}
-      </ul>
-    </SearchBar>
-  );
-};
-const SearchBarWithRightSideIcon = () => {
-  const [data, setData] = useState<Book[]>([]);
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
-
-    if (searchTerm === "") {
-      setData([]);
-    } else {
-      setData(results);
-    }
-  };
-
-  return (
-    <SearchBar
-      placeholder="Search Anything"
-      addon={
-        <Button type="primary" size="sm">
-          Search
-        </Button>
-      }
-      addonPosition="right"
-      icon={
-        <Button type="text" size="sm">
-          <span className="mr-2">
-            <MapPinLine size={24} color="#5E718D" />
-          </span>
-          Location
-        </Button>
-      }
-      iconPosition="right"
-      handleOnChange={handleOnChange}
-      size="lg"
-    >
-      <ul>
-        {data.map((book) => (
-          <Dropdown.Item key={book?.id}>
-            {book?.name}
-            <span className="ml-auto">
-              <ArrowRight size={20} color="#5E718D" />
-            </span>
-          </Dropdown.Item>
-        ))}
-      </ul>
-    </SearchBar>
-  );
-};
-const SearchBarWithErrorColor = () => {
-  const [data, setData] = useState<Book[]>([]);
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
-
-    if (searchTerm === "") {
-      setData([]);
-    } else {
-      setData(results);
-    }
-  };
-
-  return (
-    <SearchBar
-      placeholder="Search Anything"
+      withBg
+      bordered={false}
       addon={
         <Button type="primary" color="error" size="sm">
           Search
@@ -318,6 +187,42 @@ const SearchBarWithErrorColor = () => {
     >
       <ul>
         {data.map((book) => (
+          <Dropdown.Item key={book?.id} style={{ backgroundColor: "#FFF5F4" }}>
+            {book?.name}
+            <span className="ml-auto">
+              <ArrowRight size={20} color="#ff0000" />
+            </span>
+          </Dropdown.Item>
+        ))}
+      </ul>
+    </SearchBar>
+  );
+};
+const SearchBarWithIconCom = () => {
+  const [data, setData] = useState<Book[]>([]);
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const searchTerm = e.target.value.toLowerCase();
+    const results = books.filter((book) =>
+      book.name.toLowerCase().includes(searchTerm)
+    );
+
+    if (searchTerm === "") {
+      setData([]);
+    } else {
+      setData(results);
+    }
+  };
+  return (
+    <SearchBar
+      placeholder="Search Anything"
+      addon={<MagnifyingGlass size={20} color="#5E718D" />}
+      addonPosition="left"
+      icon={<ArrowRight size={20} color="#5E718D" />}
+      iconPosition="right"
+      handleOnChange={handleOnChange}
+    >
+      <ul>
+        {data.map((book) => (
           <Dropdown.Item key={book?.id}>
             {book?.name}
             <span className="ml-auto">
@@ -329,6 +234,7 @@ const SearchBarWithErrorColor = () => {
     </SearchBar>
   );
 };
+
 const DisabledSearchBar = () => {
   return (
     <SearchBar
@@ -344,17 +250,11 @@ export const DefaultSearchBar: Story = {
   render: () => <DefaultSearch />,
 };
 
-export const SearchWithBothSideIcon: Story = {
-  render: () => <SearchBarWithBothSideIcon />,
+export const SearchBarWithColorVariant: Story = {
+  render: () => <SearchBarWithColorVariantCom />,
 };
-export const SearchBarWithRightSideTwoIcon: Story = {
-  render: () => <SearchBarWithRightRideTwoIcon />,
-};
-export const SearchWithRightSideIcon: Story = {
-  render: () => <SearchBarWithRightSideIcon />,
-};
-export const SearchBarWithError: Story = {
-  render: () => <SearchBarWithErrorColor />,
+export const SearchBarWithIcon: Story = {
+  render: () => <SearchBarWithIconCom />,
 };
 export const DisableSearchBar: Story = {
   render: () => <DisabledSearchBar />,

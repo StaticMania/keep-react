@@ -23,7 +23,7 @@ export const navbarTheme: KeepNavbarTheme = {
     base: "flex items-center",
   },
   collapse: {
-    base: "bg-white  lg:block lg:w-auto w-full lg:relative absolute container left-0 right-0 top-full lg:top-0",
+    base: "bg-white  lg:block lg:w-auto w-full lg:relative absolute left-0 right-0 top-full lg:top-0",
     list: "my-3.5 flex flex-col lg:my-0 lg:flex-row lg:space-x-8 lg:text-base lg:font-medium [&>*:last-child]:border-b-0",
     hidden: {
       on: "hidden",
