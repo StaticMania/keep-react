@@ -25,6 +25,7 @@ import { DropdownHeader } from "./DropdownHeader";
 import { DropdownItem, keepDropdownItemTheme } from "./DropdownItem";
 import { DeepPartial } from "../../helpers/deep-partial";
 import { useTheme } from "../../Keep/ThemeContex";
+import { uuid } from "~/src/helpers/uuid";
 
 export interface keepDropdownFloatingTheme
   extends keepFloatingTheme,
@@ -87,6 +88,9 @@ const DropdownComponent: FC<DropdownProps> = ({
     return icons[p] ?? <CaretDown size={18} />;
   }, [placement]);
 
+  const [closeRequestKey, setCloseRequestKey] = useState<string | undefined>(
+    undefined
+  );
   const [buttonWidth, setButtonWidth] = useState<number | undefined>(undefined);
 
   const attachCloseListener = useCallback(
@@ -98,7 +102,7 @@ const DropdownComponent: FC<DropdownProps> = ({
           // @ts-ignore TODO: Rewrite Dropdown
           onClick: () => {
             node.props.onClick?.();
-            dismissOnClick;
+            dismissOnClick && setCloseRequestKey(uuid());
           },
         });
       if (node.props.children && typeof node.props.children === "object") {
@@ -152,6 +156,7 @@ const DropdownComponent: FC<DropdownProps> = ({
       trigger={trigger}
       theme={theme.floating}
       minWidth={buttonWidth}
+      closeRequestKey={closeRequestKey}
     >
       <TriggerWrapper setButtonWidth={setButtonWidth}>
         {label}

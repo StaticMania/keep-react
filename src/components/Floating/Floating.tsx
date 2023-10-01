@@ -47,6 +47,7 @@ export interface FloatingProps
   theme: keepFloatingTheme;
   trigger?: "hover" | "click";
   minWidth?: number;
+  closeRequestKey?: string;
 }
 
 /**
@@ -63,6 +64,7 @@ export const Floating: FC<FloatingProps> = ({
   theme,
   trigger = "hover",
   minWidth,
+  closeRequestKey,
   ...props
 }) => {
   const arrowRef = useRef<HTMLDivElement>(null);
@@ -98,6 +100,10 @@ export const Floating: FC<FloatingProps> = ({
       return autoUpdate(refs.reference.current, refs.floating.current, update);
     }
   }, [open, refs.floating, refs.reference, update]);
+
+  useEffect(() => {
+    if (closeRequestKey !== undefined) setOpen(false);
+  }, [closeRequestKey]);
 
   return (
     <>
