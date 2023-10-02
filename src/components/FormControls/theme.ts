@@ -14,7 +14,7 @@ export const formControlsTheme: keepFormControlTheme = {
     },
   },
   label: {
-    base: "text-sm font-medium",
+    base: "text-sm font-medium cursor-pointer select-none",
     colors: {
       default: "text-slate-700",
       gray: "text-slate-700",
@@ -23,65 +23,29 @@ export const formControlsTheme: keepFormControlTheme = {
       warning: "text-yellow-500",
       success: "text-green-700",
     },
-    disabled: "opacity-50",
+    disabled: "opacity-50 cursor-not-allowed select-none",
   },
   radio: {
-    base: "bg-slate-25 border border-slate-300",
+    color: {
+      info: "peer-checked:border-primary-500 peer-checked:before:bg-primary-500 border-slate-200",
+      warning:
+        "peer-checked:border-warning-500 peer-checked:before:bg-warning-500 border-warning-500",
+      success:
+        "peer-checked:border-success-500 peer-checked:before:bg-success-600 border-success-500",
+      error:
+        "peer-checked:border-error-500 peer-checked:before:bg-error-500 border-error-500",
+    },
+    base: "border",
     radioType: {
-      square: "rounded",
-      circle: "rounded-full",
+      base: "flex items-center justify-center relative",
+      square: "rounded before:rounded-sm",
+      circle: "rounded-full before:rounded-full",
     },
-    withSquare: "relative peer-checked:radio-square-item",
     radioInput: "hidden peer",
     sizes: {
-      sm: "h-4 w-4",
-      md: "h-5 w-5",
-      lg: "h-6 w-6",
-    },
-    withCheckIcon: {
-      on: {
-        base: "relative peer-checked:radio-checked-item",
-        sizes: {
-          sm: "peer-checked:before:w-1 peer-checked:before:h-2  peer-checked:before:border-r-2 peer-checked:before:border-b-2 peer-checked:before:border-l-0 peer-checked:before:border-t-0",
-          md: "peer-checked:before:w-1 peer-checked:before:h-2  peer-checked:before:border-r-2 peer-checked:before:border-b-2 peer-checked:before:border-l-0 peer-checked:before:border-t-0",
-          lg: "peer-checked:before:w-1.5 peer-checked:before:h-2.5  peer-checked:before:border-r-2 peer-checked:before:border-b-2 peer-checked:before:border-l-0 peer-checked:before:border-t-0",
-        },
-      },
-      off: {
-        base: "relative peer-checked:radio-ringed-item",
-        sizes: {
-          sm: "peer-checked:before:h-2 peer-checked:before:w-2",
-          md: "peer-checked:before:h-2.5 peer-checked:before:w-2.5",
-          lg: "peer-checked:before:h-3 peer-checked:before:w-3",
-        },
-      },
-    },
-  },
-  checkbox: {
-    base: "bg-slate-25 border border-slate-300 rounded",
-    radioInput: "hidden peer",
-    sizes: {
-      sm: "h-4 w-4",
-      md: "h-5 w-5",
-      lg: "h-6 w-6",
-    },
-    withCheckIcon: {
-      on: {
-        base: "relative peer-checked:checkbox-checked-item",
-        sizes: {
-          sm: "peer-checked:before:w-1 peer-checked:before:h-2  peer-checked:before:border-r-2 peer-checked:before:border-b-2 peer-checked:before:border-l-0 peer-checked:before:border-t-0",
-          md: "peer-checked:before:w-1 peer-checked:before:h-2  peer-checked:before:border-r-2 peer-checked:before:border-b-2 peer-checked:before:border-l-0 peer-checked:before:border-t-0",
-          lg: "peer-checked:before:w-1.5 peer-checked:before:h-2.5  peer-checked:before:border-r-2 peer-checked:before:border-b-2 peer-checked:before:border-l-0 peer-checked:before:border-t-0",
-        },
-      },
-      off: {
-        base: "relative peer-checked:checkbox-ringed-item",
-        sizes: {
-          sm: "peer-checked:before:h-2 peer-checked:before:w-2 peer-checked:before:rounded-sm",
-          md: "peer-checked:before:h-2.5 peer-checked:before:w-2.5 peer-checked:before:rounded-sm",
-          lg: "peer-checked:before:h-3 peer-checked:before:w-3 peer-checked:before:rounded-sm",
-        },
-      },
+      sm: "h-4 w-4 before:absolute before:h-2 before:w-2",
+      md: "h-5 w-5 before:absolute before:h-2.5 before:w-2.5",
+      lg: "h-6 w-6 before:absolute before:h-3 before:w-3",
     },
   },
   numberInput: {
@@ -277,48 +241,6 @@ export const formControlsTheme: keepFormControlTheme = {
     withShadow: {
       on: "shadow-sm",
       off: "",
-    },
-  },
-  select: {
-    base: "flex",
-    addon:
-      "inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-200 px-3 text-sm text-gray-900",
-    field: {
-      base: "relative w-full",
-      icon: {
-        base: "pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3",
-        svg: "h-5 w-5 text-gray-500",
-      },
-      select: {
-        base: "block w-full border disabled:cursor-not-allowed disabled:opacity-50",
-        withIcon: {
-          on: "pl-10",
-          off: "",
-        },
-        withAddon: {
-          on: "rounded-r-lg",
-          off: "rounded-lg",
-        },
-        withShadow: {
-          on: "shadow-md",
-          off: "",
-        },
-        sizes: {
-          sm: "p-2 sm:text-xs",
-          md: "p-2.5 text-sm",
-          lg: "sm:text-md p-4",
-        },
-        colors: {
-          gray: "bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500",
-          info: "border-blue-500 bg-blue-50 text-blue-900 placeholder-blue-700 focus:border-blue-500 focus:ring-blue-500",
-          error:
-            "border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500",
-          warning:
-            "border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500",
-          success:
-            "border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500",
-        },
-      },
     },
   },
 };

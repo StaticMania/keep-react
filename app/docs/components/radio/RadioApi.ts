@@ -8,11 +8,10 @@ export const radioApiData = [
   },
   {
     id: 2,
-    propsName: "checkedIcon",
-    propsType: "boolean",
-    propsDescription:
-      "Indicates whether to show a checked icon when the radio input is selected.",
-    default: "false",
+    propsName: "color",
+    propsType: ["info", "success", "warning", "error"],
+    propsDescription: "Radio input color",
+    default: "info",
   },
   {
     id: 3,

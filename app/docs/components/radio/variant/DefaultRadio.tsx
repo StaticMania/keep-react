@@ -14,63 +14,51 @@ const DefaultRadio = () => {
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="united-state"
-          name="countries"
+          id="country-1"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="USA"
         />
-        <Label htmlFor="united-state">United States</Label>
+        <Label htmlFor="country-1">United States</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="germany"
-          name="countries"
+          id="country-2"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="Germany"
         />
-        <Label htmlFor="germany">Germany</Label>
+        <Label htmlFor="country-2">Germany</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="spain"
-          name="countries"
+          id="country-3"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="Spain"
         />
-        <Label htmlFor="spain">Spain</Label>
+        <Label htmlFor="country-3">Spain</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="uk"
-          name="countries"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="square"
-          value="United Kingdom"
-        />
-        <Label htmlFor="uk">United Kingdom</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="china"
-          name="countries"
+          id="country-4"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="China"
           disabled={true}
         />
-        <Label htmlFor="china" disabled={true}>
+        <Label htmlFor="country-4" disabled={true}>
           China (disabled)
         </Label>
       </div>
@@ -80,13 +68,13 @@ const DefaultRadio = () => {
 
 const DefaultRadioCode = `
 "use client";
-import  { useState } from "react";
+import { useState } from "react";
 import { Label,Radio } from "keep-react";
 
 const DefaultRadio = () => {
   const [selected, setSelected] = useState("");
-  const handleOptionChange = (e) => {
-    setSelected(e.target.value);
+  const handleOptionChange = (event) => {
+    setSelected(event.target.value);
   };
 
   return (
@@ -95,63 +83,51 @@ const DefaultRadio = () => {
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="united-state"
-          name="countries"
+          id="country-1"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="USA"
         />
-        <Label htmlFor="united-state">United States</Label>
+        <Label htmlFor="country-1">United States</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="germany"
-          name="countries"
+          id="country-2"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="Germany"
         />
-        <Label htmlFor="germany">Germany</Label>
+        <Label htmlFor="country-2">Germany</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="spain"
-          name="countries"
+          id="country-3"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="Spain"
         />
-        <Label htmlFor="spain">Spain</Label>
+        <Label htmlFor="country-3">Spain</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
           sizing="lg"
-          id="uk"
-          name="countries"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="square"
-          value="United Kingdom"
-        />
-        <Label htmlFor="uk">United Kingdom</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="china"
-          name="countries"
+          id="country-4"
+          name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
           radioShape="square"
           value="China"
           disabled={true}
         />
-        <Label htmlFor="china" disabled={true}>
+        <Label htmlFor="country-4" disabled={true}>
           China (disabled)
         </Label>
       </div>

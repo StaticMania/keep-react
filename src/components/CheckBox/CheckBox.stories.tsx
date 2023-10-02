@@ -54,22 +54,13 @@ const meta: Meta<typeof CheckBox> = {
         defaultValue: { summary: "info" },
       },
     },
-    type: {
-      control: "select",
-      options: ["circle", "round"],
-      description: "Checkbox avaiable types",
-      table: {
-        type: { summary: "circle | round" },
-        defaultValue: { summary: "round" },
-      },
-    },
     variant: {
       control: "select",
-      options: ["withCheck", "withoutCheck"],
+      options: ["square", "circle"],
       description: "Checkbox avaiable variant",
       table: {
-        type: { summary: "withCheck | withoutCheck" },
-        defaultValue: { summary: "withCheck" },
+        type: { summary: "square | circle" },
+        defaultValue: { summary: "square" },
       },
     },
   },
@@ -81,7 +72,6 @@ type Story = StoryObj<typeof CheckBox>;
 export const DefaultCheckbox: Story = {
   args: {
     label: "Checkbox",
-    checked: true,
     size: "md",
     labelColor: "info",
   },

@@ -1,9 +1,7 @@
-import type { keepCheckBoxTheme } from "./Checkbox";
 import type { keepHelperTextTheme } from "./HelperText";
 import type { keepLavelTheme } from "./Label";
 import type { keepNumberInputTheme } from "./NumberInput";
 import type { keepRadioTheme } from "./Radio";
-import type { keepSelectTheme } from "./Select";
 import type { keepTextAreaTheme } from "./Textarea";
 import type {
   keepTextInputTheme,
@@ -15,7 +13,6 @@ export interface keepFormControlTheme {
   helperText: keepHelperTextTheme;
   label: keepLavelTheme;
   radio: keepRadioTheme;
-  checkbox: keepCheckBoxTheme;
   numberInput: keepNumberInputTheme;
   textInput: keepTextInputTheme;
   fileInput: {
@@ -30,5 +27,4 @@ export interface keepFormControlTheme {
     };
   };
   textarea: keepTextAreaTheme;
-  select: keepSelectTheme;
 }

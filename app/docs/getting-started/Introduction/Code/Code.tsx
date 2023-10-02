@@ -13,7 +13,7 @@ const twConfig = `
   };
 `;
 const twCss = `
-  @import "keep-react/lib/cjs/theme/globals.min.css";
+  @import "keep-react/lib/cjs/theme/main.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

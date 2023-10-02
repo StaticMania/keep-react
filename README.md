@@ -62,7 +62,7 @@ export default {
 `Step 4:` Add Tailwind CSS to index.css File:
 
 ```
-@import "keep-react/lib/cjs/theme/globals.min.css";
+@import "keep-react/lib/cjs/theme/main.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -114,7 +114,7 @@ module.exports = {
 `Step 4:` Add Tailwind CSS to globals.css File:
 
 ```
-@import "keep-react/lib/cjs/theme/globals.min.css";
+@import "keep-react/lib/cjs/theme/main.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

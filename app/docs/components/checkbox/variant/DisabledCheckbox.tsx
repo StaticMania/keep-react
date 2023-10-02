@@ -1,49 +1,43 @@
 "use client";
 import { CheckBox } from "~/src";
 
-const DefaultCheckbox = () => {
-  const handleChecked = (value: boolean) => {
-    console.log(value);
-  };
+const DisabledCheckbox = () => {
   return (
     <div className="flex flex-row gap-3">
       <CheckBox
         size="md"
         variant="square"
-        label="Checkbox"
+        label="Disabled"
         id="two"
         name="countries"
         color="info"
-        handleChecked={handleChecked}
+        disabled={true}
       />
     </div>
   );
 };
 
-const DefaultCheckboxCode = `
+const DisabledCheckboxCode = `
 "use client";
 import { CheckBox } from "keep-react";
 
-const DefaultCheckbox = () => {
-  const handleChecked = (value) => {
-    console.log(value);
-  };
+const DisabledCheckbox = () => {
   return (
     <div className="flex flex-row gap-3">
       <CheckBox
         size="md"
         variant="square"
-        label="Checkbox"
+        label="Disabled"
         id="two"
         name="countries"
         color="info"
-        handleChecked={handleChecked}
+        disabled={true}
       />
     </div>
   );
 };
 
-export default DefaultCheckbox;
+export default DisabledCheckbox;
 `;
 
-export { DefaultCheckbox, DefaultCheckboxCode };
+export { DisabledCheckbox, DisabledCheckboxCode };

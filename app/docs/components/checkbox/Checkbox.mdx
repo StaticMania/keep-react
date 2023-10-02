@@ -3,11 +3,15 @@ import {
   DefaultCheckboxCode,
 } from "./variant/DefaultCheckbox";
 import {
-  CheckboxWithLevel,
-  CheckboxWithLevelCode,
-} from "./variant/CheckboxWithLevel";
-import { CheckBoxApiData } from "./CheckboxApi";
+  CheckboxVariant,
+  CheckboxVariantCode,
+} from "./variant/CheckboxVariant";
+import {
+  DisabledCheckbox,
+  DisabledCheckboxCode,
+} from "./variant/DisabledCheckbox";
 
+import { CheckBoxApiData } from "./CheckboxApi";
 import CodePreview from "~/components/CodePreview";
 import CssThemePreview from "~/components/CssThemePreview";
 import ComponentApi from "~/components/ComponentApi";
@@ -15,25 +19,35 @@ import { useTheme } from "~/src/Keep/ThemeContex";
 
 ## Table of Contents
 
-The Checkbox Component is a user interface element that allows users to toggle between two states, typically representing selection or deselection. It consists of a small box that can be checked (selected) or unchecked (deselected). Checkboxes are commonly used in forms, lists, and interactive interfaces to enable users to make multiple selections or indicate their preferences.
+The Checkbox component is a user interface element that allows users to toggle between two states: checked and unchecked. Checkboxes are commonly used in forms, lists, and interactive interfaces to enable users to make multiple selections or indicate their preferences.
 
 ## Default Checkbox
 
-The Default Checkbox is a basic user interface element that represents a standard checkbox control. It allows users to toggle between two states: checked and unchecked.
+The default checkbox is a square checkbox that can be checked or unchecked.
 
 <CodePreview github="CheckBox" code={DefaultCheckboxCode}>
   <DefaultCheckbox />
 </CodePreview>
 
-## Checkbox With Level
+## Checkbox Variant
 
-The Checkbox With Level component extends the standard checkbox functionality by introducing hierarchical levels. To add level in checkbox you need to add this props `level="Checkbox"`.
+The Checkbox component offers two variants: `square` and `circle`. You can use the `variant` prop to specify the desired variant.
 
-<CodePreview github="CheckBox" code={CheckboxWithLevelCode}>
-  <CheckboxWithLevel />
+<CodePreview github="CheckBox" code={CheckboxVariantCode}>
+  <CheckboxVariant />
+</CodePreview>
+
+## Disabled Checkbox
+
+You can disable the checkbox by setting the `disabled` prop to `true`.
+
+<CodePreview github="CheckBox" code={DisabledCheckboxCode}>
+  <DisabledCheckbox />
 </CodePreview>
 
 ## API Reference
+
+Here is a list of the props that you can pass to the Checkbox component:
 
 <ComponentApi data={CheckBoxApiData} />
 

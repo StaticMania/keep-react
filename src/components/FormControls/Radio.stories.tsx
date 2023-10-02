@@ -44,13 +44,6 @@ const meta: Meta<typeof Radio> = {
       },
       description: "Radio checked or not?",
     },
-    checkedIcon: {
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-      description: "Radio checked Icon show or not?",
-    },
   },
 };
 
@@ -59,7 +52,6 @@ type Story = StoryObj<typeof Radio>;
 
 export const DefaultRadio: Story = {
   args: {
-    checkedIcon: false,
     checked: true,
   },
 };

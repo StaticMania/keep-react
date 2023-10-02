@@ -286,12 +286,7 @@ export const DropdownWithSearchBar: Story = {
     children: removeFragment(
       <>
         <Dropdown.Item className="border-none">
-          <TextInput
-            id="#id-z3rxdy"
-            placeholder="Search"
-            color="gray"
-            sizing="md"
-          />
+          <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
         </Dropdown.Item>
         <Dropdown.Item>Dashboard</Dropdown.Item>
         <Dropdown.Item>Settings</Dropdown.Item>
@@ -307,12 +302,7 @@ export const DropdownWithSearchBarAndIcon: Story = {
     children: removeFragment(
       <>
         <Dropdown.Item className="border-none">
-          <TextInput
-            id="#id-z3rxdy"
-            placeholder="Search"
-            color="gray"
-            sizing="md"
-          />
+          <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
         </Dropdown.Item>
         <Dropdown.Item>
           Dashboard
@@ -398,7 +388,7 @@ export const DropdownWithTitleDescritionSearchBarAndIcon: Story = {
       <>
         <Dropdown.Item className="border-none ">
           <div className="w-full">
-            <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
+            <TextInput id="#id-8yj95h" placeholder="Search" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -452,7 +442,7 @@ export const DropdownWithCheckboxTitleDescriptionAndIcon: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
+            <TextInput id="#id-8yj95h" placeholder="Search" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item className="flex !items-start gap-2">
@@ -572,7 +562,7 @@ export const DropdownItemWithSearchBarAndIcon: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
+            <TextInput id="#id-8yj95h" placeholder="Search" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item icon={<SquaresFour size={20} color="#5E718D" />}>
@@ -598,7 +588,7 @@ export const DropdownItemWithBothSideIconAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
+            <TextInput id="#id-8yj95h" placeholder="Search" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item icon={<SquaresFour size={20} color="#5E718D" />}>
@@ -783,7 +773,7 @@ export const DropdownWithSearchBarTitleDescriptionAndIcon: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
+            <TextInput id="#id-8yj95h" placeholder="Search" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -857,7 +847,7 @@ export const DropdownWithTitleDescriptionIconAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
+            <TextInput id="#id-8yj95h" placeholder="Search" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -1025,12 +1015,7 @@ export const DropdownItemWithLogoSearchBarAndIcon: Story = {
     children: removeFragment(
       <>
         <Dropdown.Item className="border-none">
-          <TextInput
-            id="#id-z3rxdy"
-            placeholder="Search"
-            color="gray"
-            sizing="md"
-          />
+          <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
         </Dropdown.Item>
         <Dropdown.Item
           icon={<GoogleLogo size={20} color="#4285f4" weight="bold" />}
@@ -1067,12 +1052,7 @@ export const DropdownItemWithLogoAndSearchBar: Story = {
     children: removeFragment(
       <>
         <Dropdown.Item className="border-none">
-          <TextInput
-            id="#id-z3rxdy"
-            placeholder="Search"
-            color="gray"
-            sizing="md"
-          />
+          <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
         </Dropdown.Item>
         <Dropdown.Item
           icon={<GoogleLogo size={20} color="#4285f4" weight="bold" />}
@@ -1308,12 +1288,7 @@ export const DropdownWithTitleDescriptionLogoAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -1402,12 +1377,7 @@ export const DropdownWithTitleDescriptionLogoIconAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -1638,12 +1608,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
 
@@ -1720,12 +1685,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
 
@@ -2010,12 +1970,7 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -2094,12 +2049,7 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -2229,7 +2179,6 @@ export const DropdownWithCheckbox: Story = {
               id="#id1"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2241,7 +2190,6 @@ export const DropdownWithCheckbox: Story = {
               id="#id2"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2253,7 +2201,6 @@ export const DropdownWithCheckbox: Story = {
               id="#id3"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2265,7 +2212,6 @@ export const DropdownWithCheckbox: Story = {
               id="#id4"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2286,7 +2232,6 @@ export const DropdownWithCheckboxAndIcon: Story = {
               id="#id5"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2301,7 +2246,6 @@ export const DropdownWithCheckboxAndIcon: Story = {
               id="#id6"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2316,7 +2260,6 @@ export const DropdownWithCheckboxAndIcon: Story = {
               id="#id7"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2331,7 +2274,6 @@ export const DropdownWithCheckboxAndIcon: Story = {
               id="#id8"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2349,12 +2291,7 @@ export const DropdownWithCheckboxAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
@@ -2365,7 +2302,6 @@ export const DropdownWithCheckboxAndSearchBar: Story = {
               id="#id10"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2377,7 +2313,6 @@ export const DropdownWithCheckboxAndSearchBar: Story = {
               id="#id21212"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2389,7 +2324,6 @@ export const DropdownWithCheckboxAndSearchBar: Story = {
               id="#id13"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2401,7 +2335,6 @@ export const DropdownWithCheckboxAndSearchBar: Story = {
               id="#id41"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
         </Dropdown.Item>
@@ -2416,12 +2349,7 @@ export const DropdownWithCheckboxIconAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item className="gap-5">
@@ -2432,7 +2360,6 @@ export const DropdownWithCheckboxIconAndSearchBar: Story = {
               id="#id211"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2447,7 +2374,6 @@ export const DropdownWithCheckboxIconAndSearchBar: Story = {
               id="#i12d2"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2462,7 +2388,6 @@ export const DropdownWithCheckboxIconAndSearchBar: Story = {
               id="12#id3"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2477,7 +2402,6 @@ export const DropdownWithCheckboxIconAndSearchBar: Story = {
               id="1#1id4"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <span className="ml-auto">
@@ -2501,7 +2425,6 @@ export const DropdownWithCheckboxTitleDescription: Story = {
               id="#id101"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id101" className="cursor-pointer select-none">
@@ -2521,7 +2444,6 @@ export const DropdownWithCheckboxTitleDescription: Story = {
               id="#id102"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id102" className="cursor-pointer select-none">
@@ -2541,7 +2463,6 @@ export const DropdownWithCheckboxTitleDescription: Story = {
               id="#id103"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id103" className="cursor-pointer select-none">
@@ -2561,7 +2482,6 @@ export const DropdownWithCheckboxTitleDescription: Story = {
               id="#id104"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id104" className="cursor-pointer select-none">
@@ -2590,7 +2510,6 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
               id="#id1010"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id1010" className="cursor-pointer select-none">
@@ -2613,7 +2532,6 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
               id="#id1020"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id1020" className="cursor-pointer select-none">
@@ -2636,7 +2554,6 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
               id="#id1030"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id1030" className="cursor-pointer select-none">
@@ -2659,7 +2576,6 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
               id="#id1040"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id1040" className="cursor-pointer select-none">
@@ -2685,12 +2601,7 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item className="flex !items-start gap-2">
@@ -2701,7 +2612,6 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
               id="#id-z3rxdy1"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id-z3rxdy1" className="cursor-pointer select-none">
@@ -2721,7 +2631,6 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
               id="#id-z3rxdy12"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id-z3rxdy12" className="cursor-pointer select-none">
@@ -2741,7 +2650,6 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
               id="#id-z3rxdy123"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id-z3rxdy123" className="cursor-pointer select-none">
@@ -2761,7 +2669,6 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
               id="#id-z3rxdy1122"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label
@@ -2787,12 +2694,7 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
       <>
         <Dropdown.Item className="border-none">
           <div className="w-full">
-            <TextInput
-              id="#id-z3rxdy"
-              placeholder="Search"
-              color="gray"
-              sizing="md"
-            />
+            <TextInput id="#id-z3rxdy" placeholder="Search" sizing="md" />
           </div>
         </Dropdown.Item>
         <Dropdown.Item className="flex !items-start gap-2">
@@ -2803,7 +2705,6 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
               id="#id-z3rxdy312"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id-z3rxdy312" className="cursor-pointer select-none">
@@ -2826,7 +2727,6 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
               id="#id-z3rxdyee"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id-z3rxdyee" className="cursor-pointer select-none">
@@ -2849,7 +2749,6 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
               id="#id-z3rxdyxs"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id-z3rxdyxs" className="cursor-pointer select-none">
@@ -2872,7 +2771,6 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
               id="#id-z3rxdyfr"
               name="countries"
               value="USA"
-              color="gray"
             />
           </div>
           <label htmlFor="#id-z3rxdyfr" className="cursor-pointer select-none">

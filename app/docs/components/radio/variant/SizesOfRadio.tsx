@@ -8,45 +8,44 @@ const SizesOfRadio = () => {
     setSelected(e.target.value);
   };
   return (
-    <fieldset className="flex flex-col gap-3" id="radio">
-      <legend className="mb-3">Choose your favorite Framework</legend>
-      <div className="flex items-center gap-2">
-        <Radio
-          checkedIcon={true}
-          sizing="sm"
-          id="NextJs"
-          name="framework"
-          value="NextJs"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-        />
-        <Label htmlFor="NextJs">NextJs</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          checkedIcon={true}
-          sizing="md"
-          id="Nuxt Js"
-          name="framework"
-          value="Nuxt Js"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-        />
-        <Label htmlFor="Nuxt Js">Nuxt Js</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          checkedIcon={true}
-          sizing="lg"
-          id="remix"
-          name="framework"
-          value="Remix Js"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-        />
-        <Label htmlFor="remix">Remix Js</Label>
-      </div>
-    </fieldset>
+    <div className="p-5">
+      <fieldset className="flex flex-col gap-3" id="radio">
+        <legend className="mb-3">Choose your favorite Framework</legend>
+        <div className="flex items-center gap-2">
+          <Radio
+            sizing="sm"
+            id="NextJs"
+            name="framework"
+            value="NextJs"
+            selected={selected}
+            onOptionChange={handleOptionChange}
+          />
+          <Label htmlFor="NextJs">NextJs</Label>
+        </div>
+        <div className="flex items-center gap-2">
+          <Radio
+            sizing="md"
+            id="NuxtJs"
+            name="framework"
+            value="NuxtJs"
+            selected={selected}
+            onOptionChange={handleOptionChange}
+          />
+          <Label htmlFor="NuxtJs">Nuxt Js</Label>
+        </div>
+        <div className="flex items-center gap-2">
+          <Radio
+            sizing="lg"
+            id="remix"
+            name="framework"
+            value="RemixJs"
+            selected={selected}
+            onOptionChange={handleOptionChange}
+          />
+          <Label htmlFor="remix">Remix Js</Label>
+        </div>
+      </fieldset>
+    </div>
   );
 };
 
@@ -65,7 +64,6 @@ const SizesOfRadio = () => {
       <legend className="mb-3">Choose your favorite Framework</legend>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="sm"
           id="NextJs"
           name="framework"
@@ -77,27 +75,25 @@ const SizesOfRadio = () => {
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="md"
-          id="Nuxt Js"
+          id="NuxtJs"
           name="framework"
-          value="Nuxt Js"
+          value="NuxtJs"
           selected={selected}
           onOptionChange={handleOptionChange}
         />
-        <Label htmlFor="Nuxt Js">Nuxt Js</Label>
+        <Label htmlFor="NuxtJs">Nuxt Js</Label>
       </div>
       <div className="flex items-center gap-2">
         <Radio
-          checkedIcon={true}
           sizing="lg"
-          id="Remix Js"
+          id="RemixJs"
           name="framework"
-          value="Remix Js"
+          value="RemixJs"
           selected={selected}
           onOptionChange={handleOptionChange}
         />
-        <Label htmlFor="Remix Js">Remix Js</Label>
+        <Label htmlFor="RemixJs">Remix Js</Label>
       </div>
     </fieldset>
   );

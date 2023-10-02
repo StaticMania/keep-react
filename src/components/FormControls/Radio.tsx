@@ -1,4 +1,4 @@
-import { KeepSizes } from "../../Keep/KeepTheme";
+import { KeepSizes, KeepStateColors } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
 import { twMerge } from "tailwind-merge";
 import type { ComponentProps } from "react";
@@ -7,22 +7,13 @@ import { forwardRef } from "react";
 export interface keepRadioTheme {
   base: string;
   radioInput: string;
+  color: KeepStateColors;
   radioType: {
+    base: string;
     square: string;
     circle: string;
   };
   sizes: RadioInputSizes;
-  withCheckIcon: {
-    on: {
-      base: string;
-      sizes: RadioInputSizes;
-    };
-    off: {
-      base: string;
-      sizes: RadioInputSizes;
-    };
-  };
-  withSquare: string;
 }
 
 export interface RadioInputSizes extends Pick<KeepSizes, "sm" | "md" | "lg"> {
@@ -32,10 +23,10 @@ export interface RadioInputSizes extends Pick<KeepSizes, "sm" | "md" | "lg"> {
 export interface RadioProps
   extends Omit<ComponentProps<"input">, "type" | "ref"> {
   sizing?: keyof RadioInputSizes;
-  checkedIcon?: boolean;
   radioShape?: "circle" | "square";
   value?: string;
   selected?: string;
+  color?: keyof KeepStateColors;
   onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -43,10 +34,10 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
   (
     {
       className,
-      checkedIcon,
       sizing = "md",
       radioShape = "circle",
       value,
+      color = "info",
       onOptionChange,
       selected,
       ...props
@@ -70,14 +61,9 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           className={twMerge(
             theme.base,
             theme.sizes[sizing],
-            checkedIcon
-              ? theme.withCheckIcon.on.base
-              : theme.withCheckIcon.off.base,
-            checkedIcon
-              ? theme.withCheckIcon.on.sizes[sizing]
-              : theme.withCheckIcon.off.sizes[sizing],
-            radioShape === "square" && theme.withSquare,
-            radioShape && theme.radioType[radioShape]
+            theme.radioType[radioShape],
+            theme.color[color],
+            theme.radioType.base
           )}
         ></div>
       </>

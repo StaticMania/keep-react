@@ -1,7 +1,7 @@
 "use client";
 import { CheckBox } from "~/src";
 
-const DefaultCheckbox = () => {
+const CheckboxVariant = () => {
   const handleChecked = (value: boolean) => {
     console.log(value);
   };
@@ -10,8 +10,17 @@ const DefaultCheckbox = () => {
       <CheckBox
         size="md"
         variant="square"
-        label="Checkbox"
-        id="two"
+        label="Square"
+        id="square"
+        name="countries"
+        color="info"
+        handleChecked={handleChecked}
+      />
+      <CheckBox
+        size="md"
+        variant="circle"
+        label="Circle"
+        id="circle"
         name="countries"
         color="info"
         handleChecked={handleChecked}
@@ -20,21 +29,32 @@ const DefaultCheckbox = () => {
   );
 };
 
-const DefaultCheckboxCode = `
+const CheckboxVariantCode = `
 "use client";
 import { CheckBox } from "keep-react";
 
-const DefaultCheckbox = () => {
+const CheckboxVariant = () => {
+  
   const handleChecked = (value) => {
     console.log(value);
   };
+
   return (
     <div className="flex flex-row gap-3">
       <CheckBox
         size="md"
         variant="square"
-        label="Checkbox"
-        id="two"
+        label="Square"
+        id="square"
+        name="countries"
+        color="info"
+        handleChecked={handleChecked}
+      />
+      <CheckBox
+        size="md"
+        variant="circle"
+        label="Circle"
+        id="circle"
         name="countries"
         color="info"
         handleChecked={handleChecked}
@@ -43,7 +63,9 @@ const DefaultCheckbox = () => {
   );
 };
 
-export default DefaultCheckbox;
+
+export default CheckboxVariant;
+
 `;
 
-export { DefaultCheckbox, DefaultCheckboxCode };
+export { CheckboxVariant, CheckboxVariantCode };
