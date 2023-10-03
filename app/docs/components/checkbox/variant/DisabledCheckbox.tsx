@@ -3,7 +3,7 @@ import { CheckBox } from "~/src";
 
 const DisabledCheckbox = () => {
   return (
-    <div className="flex flex-row gap-3">
+    <div className="py-3">
       <CheckBox
         size="md"
         variant="square"
@@ -23,7 +23,6 @@ import { CheckBox } from "keep-react";
 
 const DisabledCheckbox = () => {
   return (
-    <div className="flex flex-row gap-3">
       <CheckBox
         size="md"
         variant="square"
@@ -33,7 +32,6 @@ const DisabledCheckbox = () => {
         color="info"
         disabled={true}
       />
-    </div>
   );
 };
 

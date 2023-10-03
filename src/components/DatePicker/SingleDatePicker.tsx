@@ -20,7 +20,7 @@ export const SingleDatePicker: React.FC = () => {
       className="rounded-md border border-slate-300 placeholder:text-sm"
       showPopperArrow={false}
       startDate={date}
-      dateFormat="dd/MMMM/yyyy"
+      dateFormat="dd/MM/yyyy"
     ></DatePicker>
   );
 };

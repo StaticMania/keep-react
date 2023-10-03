@@ -25,6 +25,12 @@ export interface keepNotificationTheme {
     closeIcon: string;
   };
   content: string;
+  position: {
+    "top-left": string;
+    "top-right": string;
+    "bottom-left": string;
+    "bottom-right": string;
+  };
 }
 
 export interface NotificationProps
@@ -34,6 +40,8 @@ export interface NotificationProps
   dismiss?: boolean;
   headerBannerSrc?: string;
   onDismiss?: boolean | (() => void);
+  showNotification?: boolean;
+  position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
 }
 
 export const Notification: FC<NotificationProps> = ({
@@ -44,6 +52,8 @@ export const Notification: FC<NotificationProps> = ({
   dismiss = false,
   headerBannerSrc,
   className,
+  position = "top-left",
+  showNotification = false,
 }) => {
   const theme = useTheme().theme.notification;
 
@@ -54,7 +64,9 @@ export const Notification: FC<NotificationProps> = ({
         dismiss && theme.dismiss,
         theme.infoIcon[InfoIcon ? "on" : "off"],
         theme.headerBanner[headerBannerSrc ? "on" : "off"],
-        className
+        className,
+        position && theme.position[position],
+        showNotification ? "block" : "hidden"
       )}
       role="notification"
     >

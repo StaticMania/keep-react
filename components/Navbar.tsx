@@ -50,9 +50,9 @@ const Navbar = () => {
           <div className="lg:flex items-center gap-3 hidden">
             <div>
               <DocSearch
-                appId="RWG6G5ORTO"
-                indexName="KEEP-REACT-APP"
-                apiKey="8ee72114c3c522238b217ec9ed211f3c"
+                appId="ZSNHNQSDVV"
+                indexName="keep-react"
+                apiKey="77050aa4ed04eb7634d428fb3b4faea2"
               />
             </div>
 
@@ -78,9 +78,9 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center justify-between gap-4">
             <div>
               <DocSearch
-                appId="RWG6G5ORTO"
-                indexName="KEEP-REACT-APP"
-                apiKey="8ee72114c3c522238b217ec9ed211f3c"
+                appId="ZSNHNQSDVV"
+                indexName="keep-react"
+                apiKey="77050aa4ed04eb7634d428fb3b4faea2"
               />
             </div>
             <a href="https://github.com/StaticMania/keep-react" target="_blank">

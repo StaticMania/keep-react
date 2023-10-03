@@ -15,6 +15,7 @@ import { modalTheme } from "../components/Modal/theme";
 import { navbarTheme } from "../components/Navbar/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { paginationTheme } from "../components/Pagination/theme";
+import { popoverTheme } from "../components/Popover/theme";
 import { progressTheme } from "../components/Progress/theme";
 import { ratingTheme } from "../components/Rating/theme";
 import { sidebarTheme } from "../components/Sidebar/theme";
@@ -41,6 +42,7 @@ export const theme = {
   card: cardTheme,
   carousel: carouselTheme,
   progress: progressTheme,
+  popover: popoverTheme,
   notification: notificationTheme,
   tooltip: tooltipTheme,
   modal: modalTheme,

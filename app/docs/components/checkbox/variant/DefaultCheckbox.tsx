@@ -6,7 +6,7 @@ const DefaultCheckbox = () => {
     console.log(value);
   };
   return (
-    <div className="flex flex-row gap-3">
+    <div className="py-3">
       <CheckBox
         size="md"
         variant="square"
@@ -29,7 +29,6 @@ const DefaultCheckbox = () => {
     console.log(value);
   };
   return (
-    <div className="flex flex-row gap-3">
       <CheckBox
         size="md"
         variant="square"
@@ -39,7 +38,6 @@ const DefaultCheckbox = () => {
         color="info"
         handleChecked={handleChecked}
       />
-    </div>
   );
 };
 

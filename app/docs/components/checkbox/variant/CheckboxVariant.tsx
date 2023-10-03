@@ -6,7 +6,7 @@ const CheckboxVariant = () => {
     console.log(value);
   };
   return (
-    <div className="flex flex-row gap-3">
+    <div className="flex flex-row gap-3 py-3">
       <CheckBox
         size="md"
         variant="square"

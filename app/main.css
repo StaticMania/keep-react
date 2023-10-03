@@ -279,6 +279,7 @@ input[type="number"] {
 
 .react-datepicker__month {
   margin: 0 !important;
+  padding: 0px 0px 14px 0px !important;
 }
 
 .react-datepicker__day-names {
@@ -306,10 +307,6 @@ input[type="number"] {
   justify-content: space-between !important;
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
-}
-
-.react-datepicker__week:last-child {
-  margin-bottom: 1rem !important;
 }
 
 .react-datepicker__day {
@@ -473,6 +470,7 @@ input[type="number"] {
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   align-items: center !important;
   justify-content: center !important;
+  padding: 0px 20px 14px 20px !important;
 }
 
 .react-datepicker__year .react-datepicker__year-text {

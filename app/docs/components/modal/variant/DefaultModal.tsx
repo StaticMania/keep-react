@@ -15,7 +15,7 @@ const DefaultModal = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <div className="flex flex-wrap items-end gap-2 py-3 px-2">
       <Button onClick={onClickOne}>Modal</Button>
       <Button onClick={onClickTwo}>Modal With Cross</Button>
       <Modal

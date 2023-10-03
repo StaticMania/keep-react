@@ -14,7 +14,7 @@ const ConfirmationModal = () => {
     setShowErrorModalX(!showErrorModalX);
   };
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <div className="flex flex-wrap items-end gap-2 py-3 px-2">
       <Button onClick={onClickInfoModal}>Info Modal</Button>
       <Button color="error" onClick={onClickErrorModal}>
         Error Modal

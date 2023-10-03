@@ -18,7 +18,7 @@ const HistoryModal = () => {
     // ONCHANGE EVENT
   };
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <div className="flex flex-wrap items-end gap-2 py-3 px-2">
       <Button onClick={onClickHistoryModal}>History Modal</Button>
       <Button onClick={onClickAccessModal}>Access Modal</Button>
       <Modal

@@ -17,6 +17,7 @@ import { keepModalTheme } from "../components/Modal";
 import { KeepNavbarTheme } from "../components/Navbar";
 import { keepNotificationTheme } from "../components/Notification";
 import { keepPaginationTheme } from "../components/Pagination";
+import { keepPopoverTheme } from "../components/Popover";
 import { keepProgressTheme } from "../components/Progress";
 import { keepRatingTheme } from "../components/Rating";
 import { KeepSidebarTheme } from "../components/Sidebar";
@@ -143,6 +144,7 @@ export interface KeepTheme {
   carousel: KeepCarouselTheme;
   dropdown: keepDropdownTheme;
   progress: keepProgressTheme;
+  popover: keepPopoverTheme;
   pagination: keepPaginationTheme;
   notification: keepNotificationTheme;
   tooltip: keepFloatingTheme;

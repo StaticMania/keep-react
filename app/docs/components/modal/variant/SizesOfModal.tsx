@@ -9,7 +9,7 @@ const SizesOfModal = () => {
     setShowModal(!showModal);
   };
   return (
-    <div>
+    <div className="py-3 px-2">
       <Button onClick={onClick}>Modal</Button>
       <Modal
         modalType="info"

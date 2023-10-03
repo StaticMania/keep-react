@@ -98,7 +98,7 @@ export const buttonTheme: keepButtonTheme = {
     color: {
       error:
         "text-error-600 bg-white border-0 hover:bg-error-25 hover:text-error-500 active:bg-error-25 active:text-error-500 focus:!ring-0 focus:!ring-offset-0 focus:text-error-500 disabled:text-error-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100",
-      info: "text-slate-600 bg-white border-0 hover:bg-primary-25 hover:text-primary-500 active:bg-primary-25 active:text-primary-500 focus:!ring-0 focus:!ring-offset-0 focus:text-primary-500 disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100",
+      info: "text-slate-600 bg-transparent border-0 hover:bg-primary-25 hover:text-primary-500 active:bg-primary-25 active:text-primary-500 focus:!ring-0 focus:!ring-offset-0 focus:text-primary-500 disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100",
       success:
         "text-success-600 bg-white border-0 hover:bg-success-25 hover:text-success-500 active:bg-success-25 active:text-success-500 focus:!ring-0 focus:!ring-offset-0 focus:text-success-500 disabled:text-success-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100",
       warning:
