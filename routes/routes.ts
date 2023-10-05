@@ -214,6 +214,14 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
+    id: 45,
+    name: "Popover",
+    folderName: "Popover",
+    href: "/docs/components/popover",
+    tag: false,
+    deprecate: false,
+  },
+  {
     id: 23,
     name: "Radio",
     folderName: "FormControls",

@@ -5,7 +5,10 @@ export const useMDXComponents: (components: MDXComponents) => MDXComponents = (
 ) => {
   return {
     h2: (props) => (
-      <h2 className="section-title group !mt-[50px]" {...props}>
+      <h2
+        className="section-title group before:invisible before:-mt-20 before:block before:h-28 before:content-[''] z-10"
+        {...props}
+      >
         {props.children}
         <a
           aria-label={`Link to this section: ${props.children}`}

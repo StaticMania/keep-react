@@ -1,53 +1,151 @@
+import {
+  useClick,
+  useDismiss,
+  useRole,
+  useInteractions,
+  useFloating,
+  autoUpdate,
+  offset,
+  flip,
+  shift,
+  useHover,
+  useTransitionStyles,
+  FloatingArrow,
+  arrow,
+  autoPlacement,
+  hide,
+} from "@floating-ui/react";
 import { XCircle } from "phosphor-react";
-import React, { FC } from "react";
-import { Button } from "../Button/Button";
+import { FC, useRef, useState } from "react";
+import { useTheme } from "../../../src/Keep/ThemeContex";
 import { twMerge } from "tailwind-merge";
-import { useTheme } from "~/src/Keep/ThemeContex";
-
-export interface keepPopoverTheme {
-  base: string;
-  header: {
-    base: string;
-    title: string;
-  };
-  body: {
-    base: string;
-  };
-  footer: {
-    base: string;
-    skip: string;
-  };
-}
 
 interface PopoverProps {
+  trigger?: "hover" | "click";
+  children: React.ReactNode;
+  additinalContent?: React.ReactNode;
   title?: string;
   description?: string;
-  children?: React.ReactNode;
+  icon?: React.ReactNode;
+  customClass?: string;
+  position?:
+    | "top"
+    | "top-end"
+    | "top-start"
+    | "bottom"
+    | "bottom-end"
+    | "bottom-start"
+    | "left"
+    | "left-end"
+    | "left-start"
+    | "right"
+    | "right-end"
+    | "right-start";
 }
 
-export const Popover: FC<PopoverProps> = ({ title, description, children }) => {
+export interface keepPopoverTheme {
+  target: string;
+  body: {
+    base: string;
+    title: string;
+    discription: string;
+  };
+}
+
+export const Popover: FC<PopoverProps> = ({
+  trigger = "click",
+  children,
+  title,
+  description,
+  icon,
+  additinalContent,
+  customClass,
+  position = "bottom-start",
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const arrowRef = useRef(null);
+  const { refs, floatingStyles, context } = useFloating({
+    open: isOpen,
+    onOpenChange: setIsOpen,
+    middleware: [
+      offset(10),
+      flip(),
+      shift(),
+      arrow({
+        element: arrowRef,
+      }),
+      autoPlacement({
+        crossAxis: true,
+        alignment: "start",
+        allowedPlacements: ["top", "right", "bottom", "left"],
+      }),
+      hide({
+        strategy: "escaped",
+      }),
+    ],
+    whileElementsMounted: autoUpdate,
+    placement: position,
+  });
+  const hover = useHover(context, {
+    enabled: trigger === "hover",
+  });
+  const click = useClick(context, {
+    enabled: trigger === "click",
+  });
+  const dismiss = useDismiss(context);
+  const role = useRole(context);
+  const { styles } = useTransitionStyles(context, {
+    duration: 300,
+  });
+
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    click,
+    dismiss,
+    role,
+    hover,
+  ]);
+
   const theme = useTheme().theme.popover;
+
   return (
-    <div role="Popover" className={twMerge(theme.base)}>
-      <div className={twMerge(theme.header.base)}>
-        {title ? <p className={twMerge(theme.header.title)}>{title}</p> : null}
-        <button>
-          <XCircle size={20} color="#5E718D" weight="bold" />
-        </button>
+    <>
+      <div
+        ref={refs.setReference}
+        {...getReferenceProps()}
+        className={theme.target}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {children}
       </div>
-
-      {description ? (
-        <p className={twMerge(theme.body.base)}>{description}</p>
-      ) : null}
-
-      {typeof children !== "undefined" && children}
-
-      <div className={twMerge(theme.footer.base)}>
-        <Button size="sm" type="outlinePrimary">
-          Checkout
-        </Button>
-        <button className={twMerge(theme.footer.skip)}>Skip Now</button>
-      </div>
-    </div>
+      {isOpen && (
+        <div
+          ref={refs.setFloating}
+          style={{ ...floatingStyles, ...styles }}
+          {...getFloatingProps()}
+          className={twMerge(theme.body.base, customClass)}
+        >
+          <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFf" />
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-[25px] right-6"
+          >
+            {typeof icon !== "undefined" ? (
+              icon
+            ) : (
+              <XCircle size={24} color="#5E718D" weight="light" />
+            )}
+          </button>
+          {title && (
+            <h2 role="keep-popover" className={theme.body.title}>
+              {title}
+            </h2>
+          )}
+          {description && (
+            <p className={theme.body.discription}>{description}</p>
+          )}
+          {typeof additinalContent !== "undefined" && additinalContent}
+        </div>
+      )}
+    </>
   );
 };

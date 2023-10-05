@@ -25,6 +25,7 @@ export * from "./Notification";
 export * from "./Pagination";
 export * from "./PlayButton";
 export * from "./Progress";
+export * from "./Popover";
 export * from "./Rating";
 export * from "./SearchBar";
 export * from "./Sidebar";

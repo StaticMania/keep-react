@@ -1,4 +1,4 @@
-#mainContent h2 {
+#mainContent > h2 {
   @apply font-semibold leading-6 tracking-[-0.3px] text-lg text-slate-900 pb-2 border-b border-b-slate-200;
 }
 #mainContent > p {
