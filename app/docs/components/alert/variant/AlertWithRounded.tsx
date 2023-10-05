@@ -1,16 +1,20 @@
 "use client";
-import { Alert } from "~/src";
 import Link from "next/link";
+import { Alert } from "~/src";
+import { useState } from "react";
 import { Info } from "phosphor-react";
 
 const AlertWithRounded = () => {
+  const [showAlert, setShowAlert] = useState(false);
   const onDissMiss = () => {
-    // Click Action
+    setShowAlert(!showAlert);
   };
   return (
     <Alert
+      dismiss={showAlert}
       onDismiss={onDissMiss}
       rounded={true}
+      withBorder={true}
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -31,18 +35,22 @@ const AlertWithRounded = () => {
 
 const AlertWithRoundedCode = `
 "use client";
-import { Alert } from "keep-react";
 import Link from "next/link";
+import { useState } from "react";
+import { Alert } from "keep-react";
 import { Info } from "phosphor-react";
 
 const AlertWithRounded = () => {
+  const [showAlert, setShowAlert] = useState(false);
   const onDissMiss = () => {
-    // Click Action
+    setShowAlert(!showAlert);
   };
   return (
     <Alert
+      dismiss={showAlert}
       onDismiss={onDissMiss}
       rounded={true}
+      withBorder={true}
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
@@ -60,6 +68,8 @@ const AlertWithRounded = () => {
     </Alert>
   );
 };
+
+export default AlertWithRounded;
 `;
 
 export { AlertWithRounded, AlertWithRoundedCode };

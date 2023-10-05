@@ -23,8 +23,8 @@ const DefaultAlert = () => {
 
 const DefaultAlertCode = `
 "use client";
-import { Alert } from "keep-react";
 import Link from "next/link";
+import { Alert } from "keep-react";
 import { Info } from "phosphor-react";
 
 const DefaultAlert = () => {
