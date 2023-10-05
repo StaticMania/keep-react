@@ -81,7 +81,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "eslint-plugin-storybook": "^0.6.13",
-    "next": "13.4.12",
+    "next": "13.5.4",
     "postcss": "8.4.27",
     "postcss-loader": "^7.3.3",
     "prismjs": "^1.29.0",
