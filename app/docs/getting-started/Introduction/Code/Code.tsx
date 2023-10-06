@@ -1,19 +1,11 @@
 const twConfig = `
-  export default {
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
-      "node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
-    ],
-    presets: [require("keep-react/lib/cjs/theme/keep-preset.js")],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  };
+export default {
+  content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("keep-react/src/keep-preset.js")],
+};
 `;
 const twCss = `
-  @import "keep-react/lib/cjs/theme/main.min.css";
+  @import "keep-react/src/main.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,21 +22,14 @@ export default App;
 const twNpmInstall =
   "npm i autoprefixer postcss tailwindcss\nnpx tailwindcss init -p";
 
-const keepNpmInstall = "npm i keep-react \n//OR\nyarn add keep-react";
+const keepNpmInstall = "npm i keep-react";
+const keepYarnInstall = "yarn add keep-react";
 
 const twConfigForNextJs = `
-    module.exports = {
-      content: [
-        "node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./app/**/*.{js,ts,jsx,tsx,mdx}",
-      ],
-      presets: [require("keep-react/lib/cjs/theme/keep-preset.js")],
-      theme: {},
-      plugins: [],
-    };
-
+module.exports = {
+    content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
+    presets: [require("keep-react/src/keep-preset.js")],
+};
 `;
 export {
   twConfig,
@@ -53,4 +38,5 @@ export {
   twNpmInstall,
   keepNpmInstall,
   twConfigForNextJs,
+  keepYarnInstall,
 };

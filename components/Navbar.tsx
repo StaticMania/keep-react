@@ -21,6 +21,12 @@ const Navbar = () => {
     setActive(false);
   }, [pathname]);
 
+  const algoliaSearch = {
+    appID: "7ZYE6TC9M4",
+    apiKey: "63f66a1cbf1334f81c0857f769301685",
+    indexName: "keep-react",
+  };
+
   return (
     <header className="bg-white fixed top-0 w-full border-b border-slate-100 z-50">
       <div className="2xl:container relative px-6">
@@ -50,9 +56,9 @@ const Navbar = () => {
           <div className="lg:flex items-center gap-3 hidden">
             <div>
               <DocSearch
-                appId="ZSNHNQSDVV"
-                indexName="keep-react"
-                apiKey="77050aa4ed04eb7634d428fb3b4faea2"
+                appId={algoliaSearch.appID}
+                indexName={algoliaSearch.indexName}
+                apiKey={algoliaSearch.apiKey}
               />
             </div>
 
@@ -78,9 +84,9 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center justify-between gap-4">
             <div>
               <DocSearch
-                appId="ZSNHNQSDVV"
-                indexName="keep-react"
-                apiKey="77050aa4ed04eb7634d428fb3b4faea2"
+                appId={algoliaSearch.appID}
+                indexName={algoliaSearch.indexName}
+                apiKey={algoliaSearch.apiKey}
               />
             </div>
             <a href="https://github.com/StaticMania/keep-react" target="_blank">

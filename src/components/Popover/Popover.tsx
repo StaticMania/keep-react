@@ -17,8 +17,8 @@ import {
 } from "@floating-ui/react";
 import { XCircle } from "phosphor-react";
 import { FC, useRef, useState } from "react";
-import { useTheme } from "../../../src/Keep/ThemeContex";
 import { twMerge } from "tailwind-merge";
+import { useTheme } from "../../Keep/ThemeContex";
 
 interface PopoverProps {
   trigger?: "hover" | "click";

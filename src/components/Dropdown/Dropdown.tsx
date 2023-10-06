@@ -25,7 +25,7 @@ import { DropdownHeader } from "./DropdownHeader";
 import { DropdownItem, keepDropdownItemTheme } from "./DropdownItem";
 import { DeepPartial } from "../../helpers/deep-partial";
 import { useTheme } from "../../Keep/ThemeContex";
-import { uuid } from "~/src/helpers/uuid";
+import { uuid } from "../../helpers/uuid";
 
 export interface keepDropdownFloatingTheme
   extends keepFloatingTheme,

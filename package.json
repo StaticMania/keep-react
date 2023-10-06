@@ -1,7 +1,7 @@
 {
   "name": "keep-react",
   "version": "0.0.3",
-  "description": "Official React components built for keep and Tailwind CSS",
+  "description": "Official React components built for React and Tailwind CSS",
   "license": "MIT",
   "keywords": [
     "design-system",
@@ -12,7 +12,7 @@
     "tailwindcss",
     "tailwind-css"
   ],
-  "homepage": "https://keep-design.vercel.app/docs/getting-started/Introduction",
+  "homepage": "https://react.keepdesign.io/",
   "bugs": "https://github.com/StaticMania/keep-react/issues",
   "files": [
     "./lib/"

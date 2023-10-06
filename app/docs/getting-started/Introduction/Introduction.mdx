@@ -1,4 +1,5 @@
 import CopyCode from "~/components/CopyCode";
+import Link from "next/link";
 import {
   twConfig,
   twCss,
@@ -6,6 +7,7 @@ import {
   twNpmInstall,
   keepNpmInstall,
   twConfigForNextJs,
+  keepYarnInstall,
 } from "./Code/Code.tsx";
 
 ## Table of Contents
@@ -23,8 +25,11 @@ install Tailwind CSS:
 
 <CopyCode code={keepNpmInstall} />
 
-`Step 3:` Go to the `tailwind.config.js` file and paste the
-following code:
+Or
+
+<CopyCode code={keepYarnInstall} />
+
+`Step 3:` Go to `tailwind.config.js` file and add the following two line code in `content` and `presets` array:
 
 <CopyCode code={twConfig} />
 
@@ -38,7 +43,7 @@ Congratulations! You have completed the installation. Now you can import any com
 
 ## Next JS Application
 
-You can easily integrate `keep-react` into your Next.js application. Starting from Next.js version 13.4, the app router automatically installs Tailwind CSS, eliminating the need for a separate Tailwind CSS installation. If you have already installed Tailwind CSS as part of the Next.js application setup, you can proceed with Step 2. Otherwise, start with Step 1.
+You can easily integrate `keep-react` into your Next.js application. If you have already installed Tailwind CSS as part of the Next.js application setup, you can proceed with `Step 2`. Otherwise, start with `Step 1`.
 
 After creating a Next JS application, follow these steps to
 install Tailwind CSS:
@@ -51,13 +56,18 @@ install Tailwind CSS:
 
 <CopyCode code={keepNpmInstall} />
 
-`Step 3:` Go to the `tailwind.config.js` file and paste the
-following code
+Or
+
+<CopyCode code={keepYarnInstall} />
+
+`Step 3:` Go to `tailwind.config.js` file and add the following two line code in `content` and `presets` array:
 
 <CopyCode code={twConfigForNextJs} />
 
-`Step 4:` Add Tailwind CSS to globals.css File:
+`Step 4:` Add Tailwind CSS to `globals.css` File:
 
 <CopyCode code={twCss} />
 
 Now you can import any component from `keep-react` and start using it in your NextJS project.
+
+<CopyCode code={CodeString} />
