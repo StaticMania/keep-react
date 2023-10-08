@@ -1,3 +1,4 @@
+"use client";
 import { Avatar } from "~/src";
 
 const StatusOfAvatar = () => {
@@ -36,12 +37,16 @@ const StatusOfAvatar = () => {
 };
 
 const StatusOfAvatarCode = `
+"use client";
 import { Avatar } from "keep-react";
+
 const StatusOfAvatar = () => {
   return (
       <Avatar shape="round" size="xl" status="online"  statusPosition="bottom-left"  img="/images/avatar/avatar-4.png" />
   );
 };
+
+export const StatusOfAvatar;
 `;
 
 export { StatusOfAvatar, StatusOfAvatarCode };

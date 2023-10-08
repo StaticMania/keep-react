@@ -1,3 +1,4 @@
+"use client";
 import { Avatar } from "~/src";
 
 const ShapeAvatar = () => {
@@ -11,12 +12,16 @@ const ShapeAvatar = () => {
 };
 
 const ShapeAvatarCode = `
+"use client";
 import { Avatar } from "keep-react";
+
 const ShapeAvatar = () => {
   return (
       <Avatar shape="round" />
   );
 };
+
+export default NotificationOfAvatar;
 `;
 
 export { ShapeAvatar, ShapeAvatarCode };

@@ -1,3 +1,4 @@
+"use client";
 import { Avatar } from "~/src";
 
 const SizesOfAvatar = () => {
@@ -14,12 +15,16 @@ const SizesOfAvatar = () => {
 };
 
 const SizesOfAvatarCode = `
+"use client";
 import { Avatar } from "keep-react";
+
 const SizesOfAvatar = () => {
   return (
       <Avatar shape="square" size="md" />
   );
 };
+
+export default SizesOfAvatar;
 `;
 
 export { SizesOfAvatar, SizesOfAvatarCode };

@@ -1,3 +1,4 @@
+"use client";
 import { Avatar } from "~/src";
 
 const NotificationOfAvatar = () => {
@@ -45,7 +46,9 @@ const NotificationOfAvatar = () => {
 };
 
 const NotificationOfAvatarCode = `
+"use client";
 import { Avatar } from "keep-react";
+
 const NotificationOfAvatar = () => {
   return (
       <Avatar 
@@ -59,6 +62,8 @@ const NotificationOfAvatar = () => {
       />
   );
 };
+
+export default NotificationOfAvatar;
 `;
 
 export { NotificationOfAvatar, NotificationOfAvatarCode };
