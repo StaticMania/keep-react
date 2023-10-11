@@ -21,9 +21,9 @@ const DefaultTabsCode = `
 "use client";
 import { Tabs } from "keep-react";
 
-const DefaultTabs = () => {
+const TabsComponent = () => {
   return (
-    <Tabs aria-label="Default tabs" style="pills">
+    <Tabs aria-label="Tabs" style="pills">
       <Tabs.Item active={true} title="Profile">
         Profile content
       </Tabs.Item>
@@ -37,7 +37,7 @@ const DefaultTabs = () => {
   );
 };
 
-export default DefaultTabs;
+export default TabsComponent;
 `;
 
 export { DefaultTabs, DefaultTabsCode };

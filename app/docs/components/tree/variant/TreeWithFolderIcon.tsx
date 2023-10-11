@@ -21,6 +21,7 @@ const TreeItemsWithFolderIcon = () => {
 const TreeItemsWithFolderIconCode = `
 "use client";
 import { Tree } from "keep-react";
+import { FolderNotchOpen, File } from "phosphor-react";
 const nodes = [
   {
     id: 1,
@@ -75,7 +76,7 @@ const nodes = [
   },
 ];
 
-const TreeItemsWithFolderIcon = () => {
+const TreeComponent = () => {
   return (
     <Tree
       showBorder={true}
@@ -88,7 +89,7 @@ const TreeItemsWithFolderIcon = () => {
   );
 };
 
-export default TreeItemsWithFolderIcon;
+export default TreeComponent;
 `;
 
 export { TreeItemsWithFolderIcon, TreeItemsWithFolderIconCode };

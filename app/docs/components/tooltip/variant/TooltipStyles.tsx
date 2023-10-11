@@ -34,7 +34,7 @@ const TooltipStylesCode = `
 "use client";
 import { Tooltip,Button } from "keep-react";
 
-const TooltipStyles = () => {
+const TooltipComponent = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
       <Tooltip
@@ -63,8 +63,7 @@ const TooltipStyles = () => {
   );
 };
 
-export default TooltipStyles;
-
+export default TooltipComponent;
 `;
 
 export { TooltipStyles, TooltipStylesCode };

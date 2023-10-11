@@ -23,7 +23,7 @@ const CommentLayoutCode = `
 "use client";
 import { Skeleton } from "keep-react";
 
-const CommentLayout = () => {
+const SkeletonComponent = () => {
   return (
     <div className="max-w-lg py-5">
       <Skeleton>
@@ -41,7 +41,7 @@ const CommentLayout = () => {
   );
 };
 
-export default CommentLayout;
+export default SkeletonComponent;
 `;
 
 export { CommentLayout, CommentLayoutCode };

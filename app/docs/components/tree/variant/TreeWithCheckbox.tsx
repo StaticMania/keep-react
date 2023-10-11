@@ -72,7 +72,7 @@ const nodes = [
   },
 ];
 
-const TreeWithCheckbox = () => {
+const TreeComponent = () => {
   return (
     <Tree
       showCheckbox={true}
@@ -83,7 +83,7 @@ const TreeWithCheckbox = () => {
   );
 };
 
-export default TreeWithCheckbox;
+export default TreeComponent;
 `;
 
 export { TreeWithCheckbox, TreeWithCheckboxCode };

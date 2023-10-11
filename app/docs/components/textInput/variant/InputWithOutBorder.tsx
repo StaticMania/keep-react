@@ -94,10 +94,9 @@ const InputWithOutBorderCode = `
 import { TextInput, Label } from "keep-react";
 import { EyeSlash, Lock } from "phosphor-react";
 
-const InputWithOutBorder = () => {
+const TextInputComponent = () => {
   return (
-    <div className="flex flex-col gap-5">
-      <div>
+      <>
         <Label value="Gray Color Input" />
         <TextInput
           id="#id-yml3mm"
@@ -111,12 +110,11 @@ const InputWithOutBorder = () => {
           icon={<EyeSlash size={20} color="#5E718D" />}
           iconPosition="right"
         />
-      </div>
-    </div>
-  );
+      </>
+    );
 };
 
-export default InputWithOutBorder;
+export default TextInputComponent;
 `;
 
 export { InputWithOutBorder, InputWithOutBorderCode };

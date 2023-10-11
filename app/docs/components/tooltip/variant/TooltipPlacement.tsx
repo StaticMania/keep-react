@@ -56,7 +56,7 @@ const TooltipPlacementCode = `
 "use client";
 import { Button,Tooltip } from "keep-react";
 
-const TooltipPlacement = () => {
+const TooltipComponent = () => {
   return (
     <div className="my-8 flex flex-wrap items-end gap-2">
       <Tooltip
@@ -107,8 +107,7 @@ const TooltipPlacement = () => {
   );
 };
 
-export default TooltipPlacement;
-
+export default TooltipComponent;
 `;
 
 export { TooltipPlacement, TooltipPlacementCode };

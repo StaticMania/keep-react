@@ -119,7 +119,7 @@ const ProductCard = () => {
           <Progress progress={45} color="info" rounded={true} />
           <Card.Container className="flex items-center justify-between">
             <Button type="text" circle={true}>
-              <Rows size={20} color="#5E718D" />
+              <Rows size={20} color="#5E718D" weight="bold" />
             </Button>
             <Card.Container className="flex items-center justify-between py-2">
               <Button type="text" circle={true}>
@@ -136,7 +136,7 @@ const ProductCard = () => {
               </Button>
             </Card.Container>
             <Button type="text" circle={true}>
-              <SpeakerHigh size={20} color="#5E718D" />
+              <SpeakerHigh size={20} color="#5E718D" weight="bold" />
             </Button>
           </Card.Container>
         </Card.Container>

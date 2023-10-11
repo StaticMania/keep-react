@@ -36,9 +36,9 @@ const SkeletonWithAnimation = () => {
 
 const SkeletonWithAnimationCode = `
 "use client";
-import { Skeleton } from "~/src/Skeleton";
+import { Skeleton } from "keep-react";
 
-const SkeletonWithAnimation = () => {
+const SkeletonComponent = () => {
   return (
     <div className="max-w-3xl py-5">
       <Skeleton animation={true}>
@@ -71,7 +71,6 @@ const SkeletonWithAnimation = () => {
   );
 };
 
-export default SkeletonWithAnimation;
-
+export default SkeletonComponent;
 `;
 export { SkeletonWithAnimation, SkeletonWithAnimationCode };

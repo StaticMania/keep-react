@@ -78,11 +78,12 @@ const BothSideIconTag = () => {
 };
 
 const BothSideIconTagCode = `
-import { useState } from "react";
+"use client";
 import { Tag } from "keep-react";
+import { useState } from "react";
 import { CrownSimple, X } from "phosphor-react";
 
-const BothSideIconTag = () => {
+const TagComponent = () => {
   const [dismiss, setDismiss] = useState(false);
 
   const onDismiss = () => {
@@ -157,8 +158,7 @@ const BothSideIconTag = () => {
   );
 };
 
-export default BothSideIconTag;
-
+export default TagComponent;
 `;
 
 export { BothSideIconTag, BothSideIconTagCode };

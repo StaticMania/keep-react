@@ -76,7 +76,7 @@ const nodes = [
   },
 ];
 
-const TreeWithCheckboxFolder = () => {
+const TreeComponent = () => {
   return (
     <Tree
       showBorder={true}
@@ -90,7 +90,7 @@ const TreeWithCheckboxFolder = () => {
   );
 };
 
-export default TreeWithCheckboxFolder;
+export default TreeComponent;
 `;
 
 export { TreeWithCheckboxFolder, TreeWithCheckboxFolderCode };

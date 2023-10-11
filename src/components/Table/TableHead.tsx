@@ -1,4 +1,4 @@
-import type { ComponentProps, FC, PropsWithChildren } from "react";
+import { type ComponentProps, type FC, type PropsWithChildren } from "react";
 import type { keepTableHeadCellTheme } from "./TableHeadCell";
 import { twMerge } from "tailwind-merge";
 import { useTableContext } from "./TableContext";
@@ -22,7 +22,7 @@ export const TableHead: FC<TableHeadProps> = ({
   ...props
 }) => {
   const theme = useTheme().theme.table;
-  const { showCheckbox } = useTableContext();
+  const { showCheckbox, checked, handleCheck } = useTableContext();
 
   return (
     <thead className={twMerge(theme.head.base, className)} {...props}>
@@ -30,6 +30,8 @@ export const TableHead: FC<TableHeadProps> = ({
         {showCheckbox && (
           <td className="pl-4">
             <input
+              checked={checked}
+              onChange={handleCheck}
               type="checkbox"
               id="member"
               name="vehicle1"

@@ -38,7 +38,7 @@ const PostSkeletonCode = `
 "use client";
 import { Skeleton } from "keep-react";
 
-const PostSkeleton = () => {
+const SkeletonComponent = () => {
   return (
     <div className="max-w-3xl py-5">
       <Skeleton>
@@ -71,7 +71,7 @@ const PostSkeleton = () => {
   );
 };
 
-export default PostSkeleton;
+export default SkeletonComponent;
 `;
 
 export { PostSkeleton, PostSkeletonCode };

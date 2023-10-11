@@ -11,14 +11,13 @@ const DefaultInputCode = `
 "use client";
 import { TextInput } from "keep-react";
 
-const DefaultInput = () => {
+const TextInputComponent = () => {
   return (
     <TextInput id="#id-6" placeholder="Default Input Field" color="gray" />
   );
 };
 
-export default DefaultInput;
-
+export default TextInputComponent;
 `;
 
 export { DefaultInputCode, DefaultInput };

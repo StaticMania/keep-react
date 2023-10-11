@@ -19,9 +19,9 @@ const BorderedTabsCode = `
 "use client";
 import { Tabs } from "keep-react";
 
-const BorderedTabs = () => {
+const TabsComponent = () => {
   return (
-    <Tabs aria-label="Default tabs" style="underline" borderPosition="bottom">
+    <Tabs aria-label="tabs" style="underline" borderPosition="bottom">
       <Tabs.Item title="Profile">Profile content</Tabs.Item>
       <Tabs.Item title="Dashboard">Dashboard content</Tabs.Item>
       <Tabs.Item title="Settings">Settings content</Tabs.Item>
@@ -33,7 +33,7 @@ const BorderedTabs = () => {
   );
 };
 
-export default BorderedTabs;
+export default TabsComponent;
 `;
 
 export { BorderedTabs, BorderedTabsCode };

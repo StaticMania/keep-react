@@ -20,7 +20,7 @@ const SkeletonLayoutCode = `
 "use client";
 import { Skeleton } from "keep-react";
 
-const SkeletonLayout = () => {
+const SkeletonComponent = () => {
   return (
     <div className="max-w-lg py-5">
       <Skeleton>
@@ -35,7 +35,7 @@ const SkeletonLayout = () => {
   );
 };
 
-export default SkeletonLayout;
+export default SkeletonComponent;
 `;
 
 export { SkeletonLayout, SkeletonLayoutCode };

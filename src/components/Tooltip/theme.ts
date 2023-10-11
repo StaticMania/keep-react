@@ -1,8 +1,8 @@
 import type { keepFloatingTheme } from "../Floating";
 
 export const tooltipTheme: keepFloatingTheme = {
-  target: "max-w-sm",
-  base: "absolute inline-block rounded-lg py-2 px-3  shadow-sm max-w-[300px]",
+  target: "w-fit",
+  base: "absolute inline-block rounded-lg py-2 px-3  shadow-sm max-w-[300px] z-50",
   animation: "transition-opacity",
   hidden: "invisible opacity-0",
   style: {

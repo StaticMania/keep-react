@@ -67,11 +67,11 @@ const nodes = [
   },
 ];
 
-const TreeItemsWithBorder = () => {
+const TreeComponent = () => {
   return <Tree showItemsNumber={true} showBorder={true} nodes={nodes} />;
 };
 
-export default TreeItemsWithBorder;
+export default TreeComponent;
 `;
 
 export { TreeItemsWithBorder, TreeItemsWithBorderCode };

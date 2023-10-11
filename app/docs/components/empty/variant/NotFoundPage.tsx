@@ -22,6 +22,7 @@ const NotFoundPage = () => {
 
 const NotFoundPageCode = `
 "use client";
+import Image from "next/image";
 import { Empty } from "keep-react";
 
 const NotFoundPage = () => {

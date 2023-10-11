@@ -22,11 +22,12 @@ import { sidebarTheme } from "../components/Sidebar/theme";
 import { skeletonTheme } from "../components/Skeleton/theme";
 import { spinnerTheme } from "../components/Spinner/theme";
 import { statisticsTheme } from "../components/Statistic/theme";
+import { steptheme } from "../components/Steps/theme";
 import { switchTheme } from "../components/Switch/theme";
 import { tableTheme } from "../components/Table/theme";
 import { tabTheme } from "../components/Tabs/theme";
 import { tagTheme } from "../components/Tag/theme";
-import { stepTheme } from "../components/Timeline/theme";
+import { timelineTheme } from "../components/Timeline/theme";
 import { tooltipTheme } from "../components/Tooltip/theme";
 import { treeTheme } from "../components/Tree/theme";
 import { uploadTheme } from "../components/Upload/theme";
@@ -54,7 +55,6 @@ export const theme = {
   skeleton: skeletonTheme,
   tag: tagTheme,
   table: tableTheme,
-  stepper: stepTheme,
   empty: emptyTheme,
   statistic: statisticsTheme,
   upload: uploadTheme,
@@ -65,4 +65,6 @@ export const theme = {
   tree: treeTheme,
   navbar: navbarTheme,
   pagination: paginationTheme,
+  step: steptheme,
+  timeline: timelineTheme,
 };

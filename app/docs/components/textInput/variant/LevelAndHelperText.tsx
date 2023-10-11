@@ -19,7 +19,7 @@ const LevelAndHelperTextCode = `
 "use client";
 import { Label ,TextInput} from "keep-react";
 
-const LevelAndHelperText = () => {
+const TextInputComponent = () => {
   return (
     <>
       <Label value="Label" />
@@ -33,7 +33,7 @@ const LevelAndHelperText = () => {
   );
 };
 
-export default LevelAndHelperText;
+export default TextInputComponent;
 
 `;
 

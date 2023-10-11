@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ChangeEvent, ReactNode } from "react";
 import { createContext, useContext } from "react";
 
 export type TableContextType = {
@@ -10,6 +10,7 @@ export type TableContextType = {
   showBorder?: boolean;
   showBorderPosition?: "left" | "right";
   checked?: boolean;
+  handleCheck?: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 export const TableContext = createContext<TableContextType | undefined>(
   undefined

@@ -23,6 +23,7 @@ const NoDataFound = () => {
 
 const NoDataFoundCode = `
 "use client";
+import Image from "next/image";
 import { Empty } from "keep-react";
 
 const NoDataFound = () => {

@@ -22,6 +22,7 @@ const EmptyFolder = () => {
 
 const EmptyFolderCode = `
 "use client";
+import Image from "next/image";
 import { Empty } from "keep-react";
 
 const EmptyFolder = () => {

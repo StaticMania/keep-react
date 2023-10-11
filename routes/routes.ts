@@ -289,7 +289,7 @@ export const routes: routerPath[] = [
     id: 31,
     name: "Steps",
     folderName: "Steps",
-    href: "/docs/components/step",
+    href: "/docs/components/steps",
     tag: false,
     deprecate: false,
   },

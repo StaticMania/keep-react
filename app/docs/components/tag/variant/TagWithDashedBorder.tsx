@@ -88,13 +88,12 @@ const TagWithDashedBorder = () => {
 
 const TagWithDashedBorderCode = `
 "use client";
+import { useState } from "react";
 import { Tag } from "keep-react";
 import { CrownSimple, X } from "phosphor-react";
-import React, { useState } from "react";
 
-const TagWithDashedBorder = () => {
+const TagComponent = () => {
   const [dismiss, setDismiss] = useState(false);
-
   const onDismiss = () => {
     setDismiss(!dismiss);
   };
@@ -175,8 +174,7 @@ const TagWithDashedBorder = () => {
   );
 };
 
-export default TagWithDashedBorder;
-
+export default TagComponent;
 `;
 
 export { TagWithDashedBorder, TagWithDashedBorderCode };

@@ -67,11 +67,11 @@ const nodes = [
   },
 ];
 
-const TreeWithItemsNumber = () => {
+const TreeComponent = () => {
   return <Tree showItemsNumber={true} nodes={nodes} />;
 };
 
-export default TreeWithItemsNumber;
+export default TreeComponent;
 `;
 
 export { TreeWithItemsNumber, TreeWithItemsNumberCode };

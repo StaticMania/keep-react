@@ -15,7 +15,7 @@ const DefaultSkeletonCode = `
 "use client";
 import { Skeleton } from "keep-react";
 
-const DefaultSkeleton = () => {
+const SkeletonComponent = () => {
   return (
     <div className="max-w-sm py-5">
       <Skeleton>
@@ -25,7 +25,7 @@ const DefaultSkeleton = () => {
   );
 };
 
-export default DefaultSkeleton;
+export default SkeletonComponent;
 `;
 
 export { DefaultSkeleton, DefaultSkeletonCode };

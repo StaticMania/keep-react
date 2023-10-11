@@ -22,6 +22,7 @@ const DefaultEmpty = () => {
 
 const DefaultEmptyCode = `
 "use client";
+import Image from "next/image";
 import { Empty } from "keep-react";
 
 const DefaultEmpty = () => {

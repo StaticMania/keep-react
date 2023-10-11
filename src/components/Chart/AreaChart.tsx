@@ -84,6 +84,7 @@ export const AreaChart: FC<AreaChartProps> = ({
             fillOpacity={0.6}
           />
         )}
+
         <Area
           type={chartType}
           dataKey={dataKey}

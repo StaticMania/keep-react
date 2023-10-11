@@ -88,7 +88,7 @@ export interface TabsProps
 export interface TabsRef {
   setActiveTab: (activeTab: number) => void;
 }
-export const TabsComponent = forwardRef<TabsRef, TabsProps>(
+const TabsComponent = forwardRef<TabsRef, TabsProps>(
   (
     {
       children,

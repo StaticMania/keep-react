@@ -22,6 +22,7 @@ const PageNotAvailable = () => {
 
 const PageNotAvailableCode = `
 "use client";
+import Image from "next/image";
 import { Empty } from "keep-react";
 
 const PageNotAvailable = () => {

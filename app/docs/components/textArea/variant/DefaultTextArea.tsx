@@ -18,7 +18,7 @@ const DefaultTextAreaCode = `
 "use client";
 import { Textarea } from "keep-react";
 
-const DefaultTextArea = () => {
+const TextAreaComponent = () => {
   return (
     <Textarea
       id="comment"
@@ -31,7 +31,7 @@ const DefaultTextArea = () => {
   );
 };
 
-export default DefaultTextArea;
+export default TextAreaComponent;
 `;
 
 export { DefaultTextArea, DefaultTextAreaCode };

@@ -20,7 +20,7 @@ const InputWithAddonCode = `
 import { TextInput } from "keep-react";
 import { Envelope } from "phosphor-react";
 
-const InputWithAddon = () => {
+const TextInputComponent = () => {
   return (
     <TextInput
       id="#id-9"
@@ -33,8 +33,7 @@ const InputWithAddon = () => {
   );
 };
 
-export default InputWithAddon;
-
+export default TextInputComponent;
 `;
 
 export { InputWithAddon, InputWithAddonCode };

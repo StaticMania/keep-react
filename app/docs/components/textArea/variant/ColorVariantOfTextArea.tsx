@@ -7,7 +7,7 @@ const ColorVariantOfTextArea = () => {
       id="comment"
       placeholder="Leave a comment..."
       withBg={true}
-      color="success"
+      color="info"
       border={true}
       rows={4}
     />
@@ -18,20 +18,20 @@ const ColorVariantOfTextAreaCode = `
 "use client";
 import { Textarea } from "keep-react";
 
-const ColorVariantOfTextArea = () => {
+const TextAreaComponent = () => {
   return (
     <Textarea
       id="comment"
       placeholder="Leave a comment..."
       withBg={true}
-      color="success"
+      color="info"
       border={true}
       rows={4}
     />
   );
 };
 
-export default ColorVariantOfTextArea;
+export default TextAreaComponent;
 `;
 
 export { ColorVariantOfTextArea, ColorVariantOfTextAreaCode };

@@ -44,9 +44,8 @@ const SearchBarWithIcon = () => {
 const SearchBarWithIconCode = `
 "use client";
 import { useState } from "react";
-import { SearchBar } from "~/src/SearchBar";
+import { SearchBar,Dropdown } from "keep-react";
 import { ArrowRight, MagnifyingGlass } from "phosphor-react";
-import { Dropdown } from "~/src/Dropdown";
 
 const books = [
   { id: 1, name: "To Kill a Mockingbird" },
@@ -61,7 +60,7 @@ const books = [
   { id: 10, name: "Brave New World" },
 ];
 
-const SearchBarWithIcon = () => {
+const SearchBarComponent = () => {
     
   const [data, setData] = useState([]);
   const handleOnChange = (event) => {
@@ -99,7 +98,7 @@ const SearchBarWithIcon = () => {
   );
 };
 
-export default SearchBarWithIcon;
+export default SearchBarComponent;
 `;
 
 export { SearchBarWithIcon, SearchBarWithIconCode };

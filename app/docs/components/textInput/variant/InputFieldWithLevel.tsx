@@ -12,10 +12,9 @@ const InputFieldWithLevel = () => {
 
 const InputFieldWithLevelCode = `
 "use client";
-
 import { Label,TextInput } from "keep-react";
 
-const InputFieldWithLevel = () => {
+const TextInputComponent = () => {
   return (
     <>
       <Label value="Label" />
@@ -28,7 +27,7 @@ const InputFieldWithLevel = () => {
   );
 };
 
-export default InputFieldWithLevel;
+export default TextInputComponent;
 `;
 
 export { InputFieldWithLevel, InputFieldWithLevelCode };

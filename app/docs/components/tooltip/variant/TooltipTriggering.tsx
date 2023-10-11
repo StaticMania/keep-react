@@ -34,7 +34,7 @@ const TooltipTriggeringCode = `
 "use client";
 import {Tooltip,Button } from "keep-react";
 
-const TooltipTriggering = () => {
+const TooltipComponent = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
       <Tooltip
@@ -63,8 +63,7 @@ const TooltipTriggering = () => {
   );
 };
 
-export default TooltipTriggering;
-
+export default TooltipComponent;
 `;
 
 export { TooltipTriggering, TooltipTriggeringCode };

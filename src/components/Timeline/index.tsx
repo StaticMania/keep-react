@@ -1,7 +1,5 @@
 import { twMerge } from "tailwind-merge";
 import type { FC, PropsWithChildren } from "react";
-
-import { StepPointColor, StepPointSizes } from "../Step";
 import { TimelineBody } from "./TimelineBody";
 import { TimelineContent } from "./TimelineContent";
 import { TimelineContext } from "./TimelineContext";
@@ -9,18 +7,28 @@ import { TimelineItem } from "./TimelineItem";
 import { TimelinePoint } from "./TimelinePoint";
 import { TimelineTime } from "./TimelineTime";
 import { TimelineTitle } from "./TimelineTitle";
-import { KeepBoolean } from "../../Keep/KeepTheme";
+import { KeepBoolean, KeepColors, KeepSizes } from "../../Keep/KeepTheme";
 
-export interface keepStepperTheme {
+export interface TimelinePointSizes
+  extends Pick<KeepSizes, "sm" | "md" | "lg" | "xl"> {
+  [key: string]: string;
+}
+
+export interface TimelinePointColor
+  extends Pick<KeepColors, "info" | "error" | "success" | "warning" | "gray"> {
+  [key: string]: string;
+}
+
+export interface keepTimelineTheme {
   horizontal: {
     base: string;
     item: {
       base: string;
-      size: StepPointSizes;
+      size: TimelinePointSizes;
       completed: {
         base: string;
-        on: StepPointColor;
-        off: StepPointColor;
+        on: TimelinePointColor;
+        off: TimelinePointColor;
       };
       borderType: {
         solid: string;
@@ -29,23 +37,23 @@ export interface keepStepperTheme {
     };
     point: {
       base: string;
-      size: StepPointSizes;
+      size: TimelinePointSizes;
       withBg: {
         on: string;
-        off: StepPointColor;
+        off: TimelinePointColor;
       };
       completed: {
-        on: StepPointColor;
-        off: StepPointColor;
+        on: TimelinePointColor;
+        off: TimelinePointColor;
       };
       withRing: {
         color: {
-          light: StepPointColor;
-          deep: StepPointColor;
+          light: TimelinePointColor;
+          deep: TimelinePointColor;
         };
       };
       withBorder: {
-        on: StepPointColor;
+        on: TimelinePointColor;
         off: string;
       };
     };

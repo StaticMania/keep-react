@@ -8,7 +8,7 @@ const TextAreaWithOutBorder = () => {
       placeholder="Leave a comment..."
       withBg={true}
       border={false}
-      color="success"
+      color="info"
       rows={4}
     />
   );
@@ -18,20 +18,20 @@ const TextAreaWithOutBorderCode = `
 "use client";
 import { Textarea } from "keep-react";
 
-const TextAreaWithOutBorder = () => {
+const TextAreaComponent = () => {
   return (
     <Textarea
       id="comment"
       placeholder="Leave a comment..."
       withBg={true}
       border={false}
-      color="success"
+      color="info"
       rows={4}
     />
   );
 };
 
-export default TextAreaWithOutBorder;
+export default TextAreaComponent;
 `;
 
 export { TextAreaWithOutBorder, TextAreaWithOutBorderCode };

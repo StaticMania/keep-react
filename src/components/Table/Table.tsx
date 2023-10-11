@@ -1,5 +1,11 @@
 import { twMerge } from "tailwind-merge";
-import type { ComponentProps, FC, PropsWithChildren } from "react";
+import {
+  useState,
+  type ComponentProps,
+  type FC,
+  type PropsWithChildren,
+  ChangeEvent,
+} from "react";
 import type { keepTableBodyTheme } from "./TableBody";
 import type { TableContextType } from "./TableContext";
 import type { keepTableHeadTheme } from "./TableHead";
@@ -35,6 +41,7 @@ export interface TableProps
   showCheckbox?: boolean;
   showBorder?: boolean;
   showBorderPosition?: "left" | "right";
+  checked?: boolean;
 }
 const TableComponent: FC<TableProps> = ({
   children,
@@ -44,9 +51,18 @@ const TableComponent: FC<TableProps> = ({
   showCheckbox = false,
   showBorder = false,
   showBorderPosition = "right",
+  checked,
+  handleCheck,
   ...props
 }) => {
   const theme = useTheme().theme.table;
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckbox = (event: ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(event.target.checked);
+  };
+
   return (
     <div
       id="tableScrollBar"
@@ -60,6 +76,8 @@ const TableComponent: FC<TableProps> = ({
             showCheckbox,
             showBorder,
             showBorderPosition,
+            checked: isChecked,
+            handleCheck: handleCheckbox,
           }}
         >
           <div className={twMerge(theme.root.shadow, className)}></div>

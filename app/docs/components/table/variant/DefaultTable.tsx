@@ -383,9 +383,7 @@ const DefaultTable = () => {
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle={true}>
-                <span>
-                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
+                <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
               </Button>
             </Table.Cell>
           </Table.Row>

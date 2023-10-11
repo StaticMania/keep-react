@@ -23,7 +23,7 @@ export const buttonTheme: keepButtonTheme = {
     color: {
       error:
         "text-error-500 bg-error-25 border border-transparent hover:bg-error-50 active:bg-error-50 focus:ring-4 focus:ring-error-50  disabled:bg-error-50 disabled:hover:bg-error-50",
-      info: "text-primary-500 bg-primary-25 border border-transparent hover:bg-primary-50 active:bg-primary-50 focus:ring-4 focus:ring-primary-50  disabled:bg-primary-50 disabled:hover:bg-primary-50",
+      info: "text-primary-500 bg-primary-25 border border-transparent hover:bg-primary-50 active:bg-primary-50 disabled:bg-primary-50 disabled:hover:bg-primary-50 focus:ring-4 focus:ring-primary-50",
       success:
         "text-success-500 bg-success-25 border border-transparent hover:bg-success-50 active:bg-success-50 focus:ring-4 focus:ring-success-50  disabled:bg-success-50 disabled:hover:bg-success-50",
       warning:
@@ -165,11 +165,11 @@ export const buttonTheme: keepButtonTheme = {
 };
 
 export const buttonGroupTheme: keepButtonGroupTheme = {
-  base: "inline-flex",
+  base: "flex gap-0",
   position: {
     none: "",
     start: "rounded-r-none",
-    middle: "rounded-none !border-l-0 !border-r-0 pl-0",
-    end: "rounded-l-none pl-0",
+    middle: "rounded-none !border-l-0 !border-r-0 pl-0 z-10",
+    end: "!rounded-l-none pl-0",
   },
 };

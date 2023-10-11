@@ -7,9 +7,9 @@ export const ratingTheme: keepRatingTheme = {
   },
   advanced: {
     base: "flex items-center",
-    label: "text-sm font-medium text-blue-600",
+    label: "text-sm font-medium text-blue-600 px-px",
     progress: {
-      base: "mx-4 w-2/4 rounded-full bg-primary-50",
+      base: "mx-4 w-3/4 rounded-full bg-primary-50",
       fill: " rounded-full bg-primary-500",
       label: "text-sm font-medium text-blue-600",
       size: {

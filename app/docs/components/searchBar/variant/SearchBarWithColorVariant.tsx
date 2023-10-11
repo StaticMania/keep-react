@@ -58,7 +58,6 @@ const SearchBarWithColorVariant = () => {
 
 const SearchBarWithColorVariantCode = `
 "use client";
-
 import { useState } from "react";
 import { SearchBar,Button,Dropdown } from "keep-react";
 import { ArrowRight, MapPinLine } from "phosphor-react";
@@ -76,7 +75,7 @@ const books = [
   { id: 10, name: "Brave New World" },
 ];
 
-const SearchBarWithColorVariant = () => {
+const SearchBarComponent = () => {
   const [data, setData] = useState([]);
   const handleOnChange = (event) => {
     const searchTerm = event.target.value.toLowerCase();
@@ -127,7 +126,7 @@ const SearchBarWithColorVariant = () => {
   );
 };
 
-export default SearchBarWithColorVariant;
+export default SearchBarComponent;
 `;
 
 export { SearchBarWithColorVariant, SearchBarWithColorVariantCode };

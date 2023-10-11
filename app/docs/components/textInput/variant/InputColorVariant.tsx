@@ -86,14 +86,12 @@ const InputColorVariant = () => {
 
 const InputColorVariantCode = `
 "use client";
-import { Label } from "~/src/FormControls/Label";
-import { TextInput } from "~/src/FormControls/TextInput";
+import { Label,TextInput } from "keep-react";
 import { EyeSlash, Lock } from "phosphor-react";
 
-const InputColorVariant = () => {
+const TextInputComponent = () => {
   return (
-    <div className="flex flex-col gap-5">
-      <div>
+      <>
         <Label value="Gray Color Input" />
         <TextInput
           id="#id-1"
@@ -108,12 +106,11 @@ const InputColorVariant = () => {
           icon={<EyeSlash size={20} color="#5E718D" />}
           iconPosition="right"
         />
-      </div>
-    </div>
+      </>
   );
 };
 
-export default InputColorVariant;
+export default TextInputComponent;
 `;
 
 export { InputColorVariant, InputColorVariantCode };

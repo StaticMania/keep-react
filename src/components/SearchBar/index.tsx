@@ -35,9 +35,9 @@ export const SearchBar: FC<SearchBarProps> = ({
   bordered,
 }) => {
   return (
-    <>
+    <div role="searchbox">
       <TextInput
-        id="#id-tckfti"
+        id="search-input"
         placeholder={placeholder}
         color={color}
         sizing={size}
@@ -51,6 +51,6 @@ export const SearchBar: FC<SearchBarProps> = ({
         border={bordered}
       />
       {children}
-    </>
+    </div>
   );
 };

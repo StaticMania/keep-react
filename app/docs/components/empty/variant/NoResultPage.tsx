@@ -22,6 +22,7 @@ const NoResultPage = () => {
 
 const NoResultPageCode = `
 "use client";
+import Image from "next/image";
 import { Empty } from "keep-react";
 
 const NoResultPage = () => {
@@ -43,7 +44,6 @@ const NoResultPage = () => {
 };
 
 export default NoResultPage;
-
 `;
 
 export { NoResultPage, NoResultPageCode };

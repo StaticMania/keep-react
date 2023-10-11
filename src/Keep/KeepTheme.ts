@@ -24,11 +24,12 @@ import { KeepSidebarTheme } from "../components/Sidebar";
 import { keepSkeletonTheme } from "../components/Skeleton";
 import { KeepSpinnerTheme } from "../components/Spinner";
 import { keepStatisticTheme } from "../components/Statistic";
+import { KeepStepTheme } from "../components/Steps";
 import { keepToggleTheme } from "../components/Switch";
 import { keepTableTheme } from "../components/Table";
 import { keepTabTheme } from "../components/Tabs";
 import { keepTagTheme } from "../components/Tag";
-import { keepStepperTheme } from "../components/Timeline";
+import { keepTimelineTheme } from "../components/Timeline";
 import { keepTreeTheme } from "../components/Tree";
 import { keepUploadTheme } from "../components/Upload";
 import { DeepPartial } from "../helpers/deep-partial";
@@ -157,7 +158,7 @@ export interface KeepTheme {
   skeleton: keepSkeletonTheme;
   tag: keepTagTheme;
   table: keepTableTheme;
-  stepper: keepStepperTheme;
+  timeline: keepTimelineTheme;
   empty: keepEmptyTheme;
   statistic: keepStatisticTheme;
   upload: keepUploadTheme;
@@ -166,4 +167,5 @@ export interface KeepTheme {
   checkboxGroup: keepCheckboxGroupTheme;
   tree: keepTreeTheme;
   navbar: KeepNavbarTheme;
+  step: KeepStepTheme;
 }

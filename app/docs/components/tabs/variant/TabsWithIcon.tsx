@@ -5,7 +5,7 @@ import { Gear, GridFour, Phone, User, WarningCircle } from "phosphor-react";
 const TabsWithIcon = () => {
   return (
     <Tabs
-      aria-label="Default tabs"
+      aria-label="Tabs"
       style="underline"
       borderPosition="bottom"
       iconPosition="left"
@@ -38,10 +38,10 @@ const TabsWithIconCode = `
 import { Tabs } from "keep-react";
 import { Gear, GridFour, Phone, User, WarningCircle } from "phosphor-react";
 
-const TabsWithIcon = () => {
+const TabsComponent = () => {
   return (
     <Tabs
-      aria-label="Default tabs"
+      aria-label="Tabs"
       style="underline"
       borderPosition="bottom"
       iconPosition="left"
@@ -69,7 +69,7 @@ const TabsWithIcon = () => {
   );
 };
 
-export default TabsWithIcon;
+export default TabsComponent;
 `;
 
 export { TabsWithIcon, TabsWithIconCode };
