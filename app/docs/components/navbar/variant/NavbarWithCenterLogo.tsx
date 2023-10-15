@@ -55,7 +55,7 @@ const NavbarWithCenterLogoCode = `
 import { Button,Navbar } from "keep-react";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
 
-const NavbarWithCenterLogo = () => {
+const NavbarComponent = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">

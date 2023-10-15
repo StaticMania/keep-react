@@ -12,14 +12,26 @@ const NavbarWithMobileMenu = () => {
         </Navbar.Brand>
         <Navbar.Collapse
           collapseType="sidebar"
-          className="fixed right-0 top-[73px] bg-white p-10 xl:!w-1/6 lg:!w-2/6 md:!w-1/2"
+          className="fixed right-0 top-0 bg-white p-10 xl:!w-1/6 lg:!w-2/6 md:!w-1/2"
         >
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="News" />
-            <Navbar.Link linkName="Resources" />
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
           </Navbar.Container>
         </Navbar.Collapse>
         <Navbar.Container className="flex gap-1">
@@ -45,14 +57,26 @@ const NavbarComponent = () => {
         </Navbar.Brand>
         <Navbar.Collapse
           collapseType="sidebar"
-          className="fixed right-0 top-[73px] bg-white p-10 !w-1/6"
+          className="fixed right-0 top-0 bg-white p-10 xl:!w-1/6 lg:!w-2/6 md:!w-1/2"
         >
-          <Navbar.Container tag="ul" className="flex flex-col gap-0">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="News" />
-            <Navbar.Link linkName="Resources" />
+          <Navbar.Container tag="ul" className="flex flex-col gap-5">
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
           </Navbar.Container>
         </Navbar.Collapse>
         <Navbar.Container className="flex gap-1">

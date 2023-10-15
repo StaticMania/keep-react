@@ -1,5 +1,5 @@
-import { List, X } from "phosphor-react";
 import { FC } from "react";
+import { List, X } from "phosphor-react";
 import { twMerge } from "tailwind-merge";
 import { useNavigationContext } from "./NavigationContext";
 

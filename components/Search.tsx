@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CaretRight, X, XCircle } from "phosphor-react";
+import { CaretRight, XCircle } from "phosphor-react";
 import React, {
   useState,
   useEffect,
@@ -34,6 +34,8 @@ interface SearchProps {
   showModal: boolean;
   setShowMainModal: Dispatch<SetStateAction<boolean>>;
 }
+
+const projectUrl: string = `https://react.keepdesign.io`;
 
 const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
   const [query, setQuery] = useState<string>("");
@@ -128,7 +130,7 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
         ? storedData?.map((item: result) => (
             <Link
               key={item.id}
-              href={`http://localhost:3000` + item.href}
+              href={projectUrl + item.href}
               className="p-3 rounded bg-slate-100 hover:bg-slate-900 hover:text-white transition-colors mb-1 text-sm font-medium text-slate-900 first:mt-1  flex items-center justify-between"
             >
               <span>{item.name}</span>

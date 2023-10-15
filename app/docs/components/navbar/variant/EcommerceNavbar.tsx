@@ -81,7 +81,6 @@ const NavbarComponent = () => {
         >
           <Navbar.Link linkName="Category" icon={<CaretDown size={20} />} />
           <Navbar.Link linkName="Best Sellers" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Others" icon={<CaretDown size={20} />} />
         </Navbar.Container>
         <Navbar.Brand>
           <Brand />

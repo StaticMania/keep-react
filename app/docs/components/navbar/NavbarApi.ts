@@ -1,12 +1,5 @@
 export const NavbarApiData = [
   {
-    id: 1,
-    propsName: "menuOpen",
-    propsType: "boolean",
-    propsDescription: "Controls whether the menu is open or closed.",
-    default: "false",
-  },
-  {
     id: 2,
     propsName: "fluid",
     propsType: "boolean",
@@ -29,5 +22,40 @@ export const NavbarApiData = [
     propsDescription:
       "Controls whether a border should be added to the navbar.",
     default: "false",
+  },
+  {
+    id: 5,
+    propsName: "collapseType",
+    propsType: ["sidebar", "fullWidth"],
+    propsDescription: "Responsive menu collapse effect",
+    default: "false",
+  },
+  {
+    id: 6,
+    propsName: "icon",
+    propsType: "string",
+    propsDescription: "Menu Link Icon",
+    default: "CaretRight",
+  },
+  {
+    id: 7,
+    propsName: "linkName",
+    propsType: "string",
+    propsDescription: "Menu Link name",
+    default: "home",
+  },
+  {
+    id: 8,
+    propsName: "iconAnimation",
+    propsType: "boolean",
+    propsDescription: "Menu Link Icon Animated or not",
+    default: "true",
+  },
+  {
+    id: 9,
+    propsName: "href",
+    propsType: "string",
+    propsDescription: "Menu Link href",
+    default: "/",
   },
 ];

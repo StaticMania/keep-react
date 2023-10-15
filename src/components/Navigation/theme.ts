@@ -33,11 +33,11 @@ export const navigationTheme: KeepNavigationTheme = {
     base: "h-6 w-px bg-slate-200 mx-8 lg:block hidden",
   },
   collapse: {
-    base: "transition-all duration-300 z-40",
+    base: "transition-all duration-300 z-50",
     menu: {
       open: "translate-x-0",
       close: "translate-x-full",
-      position: "lg:hidden fixed  right-0 top-[73px] bg-white w-full p-10",
+      position: "lg:hidden fixed  right-0 top-0 bg-white w-full p-10",
     },
     type: {
       sidebar: "w-1/2 md:w-1/3 h-full",

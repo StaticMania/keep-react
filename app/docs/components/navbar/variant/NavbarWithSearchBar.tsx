@@ -51,14 +51,26 @@ const NavbarWithSearchBar = () => {
         </Navbar.Container>
         <Navbar.Collapse
           collapseType="sidebar"
-          className="fixed right-0 top-[73px] bg-white p-10 lg:!w-2/6 xl:!w-1/6 md:!w-2/6 w-1/2"
+          className="fixed right-0 top-0 bg-white p-10 lg:!w-2/6 xl:!w-1/6 md:!w-2/6 w-1/2"
         >
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="News" />
-            <Navbar.Link linkName="Resources" />
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
           </Navbar.Container>
         </Navbar.Collapse>
       </Navbar.Container>
@@ -77,7 +89,7 @@ import {
   TwitterLogo,
 } from "phosphor-react";
 
-const NavbarWithSearchBar = () => {
+const NavbarComponent = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
@@ -119,14 +131,26 @@ const NavbarWithSearchBar = () => {
         </Navbar.Container>
         <Navbar.Collapse
           collapseType="sidebar"
-          className="fixed right-0 top-[73px] bg-white p-10 lg:!w-2/6 xl:!w-1/6 md:!w-2/6 w-1/2"
+          className="fixed right-0 top-0 bg-white p-10 lg:!w-2/6 xl:!w-1/6 md:!w-2/6 w-1/2"
         >
-          <Navbar.Container tag="ul" className="flex flex-col gap-0">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="News" />
-            <Navbar.Link linkName="Resources" />
+          <Navbar.Container tag="ul" className="flex flex-col gap-5">
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
           </Navbar.Container>
         </Navbar.Collapse>
       </Navbar.Container>

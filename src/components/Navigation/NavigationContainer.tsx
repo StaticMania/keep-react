@@ -1,5 +1,6 @@
-import { twMerge } from "tailwind-merge";
+import { FC } from "react";
 import type { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 export interface NavigationContainerProps {
   children?: ReactNode;
@@ -7,7 +8,7 @@ export interface NavigationContainerProps {
   tag?: keyof JSX.IntrinsicElements;
 }
 
-export const NavigationContainer: React.FC<NavigationContainerProps> = ({
+export const NavigationContainer: FC<NavigationContainerProps> = ({
   children,
   className,
   tag = "div",
