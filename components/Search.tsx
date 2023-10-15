@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CaretRight, XCircle } from "phosphor-react";
+import { CaretRight, MagnifyingGlass, XCircle } from "phosphor-react";
 import React, {
   useState,
   useEffect,
@@ -7,7 +7,7 @@ import React, {
   Dispatch,
   SetStateAction,
 } from "react";
-import { Modal, Skeleton } from "~/src";
+import { Modal, Skeleton, TextInput } from "~/src";
 import { getData, storeData } from "~/utils/Searching";
 import { twMerge } from "tailwind-merge";
 
@@ -48,8 +48,9 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
       setLoading(true);
       timeout = setTimeout(() => {
         performSearch(query);
-      }, 300);
+      }, 1000);
     } else {
+      setLoading(false);
       setResults([]);
     }
 
@@ -88,103 +89,109 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
 
   return (
     <Modal position="top-center" size="xl" show={showModal}>
-      <div className="flex items-center justify-between  border-b border-b-slate-50 pb-1">
-        <p className="text-slate-900 text-sm font-semibold">
-          Search at Keep React
-        </p>
-        <button
-          onClick={() => setShowMainModal(!showModal)}
-          className="text-slate-900 hover:text-slate-600"
-        >
-          <XCircle size={20} />
-        </button>
-      </div>
-      <form className="mt-2">
-        <div>
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search..."
-            type="text"
-            className="block border border-slate-100 w-full rounded py-2.5 px-4 focus:outline-none placeholder:text-sm placeholder:text-slate-500"
-          />
-        </div>
-      </form>
-
-      <p
-        className={twMerge(
-          "text-sm font-normal text-slate-500",
-          storedData?.length || results?.length ? "py-3" : "pt-2"
-        )}
-      >
-        {!query && !storedData.length ? (
-          <span>No recent searches</span>
-        ) : !query && storedData.length ? (
-          <span>Recent searches</span>
-        ) : (
-          <span>Documentation</span>
-        )}
-      </p>
-
-      {!query && storedData.length
-        ? storedData?.map((item: result) => (
-            <Link
-              key={item.id}
-              href={projectUrl + item.href}
-              className="p-3 rounded bg-slate-100 hover:bg-slate-900 hover:text-white transition-colors mb-1 text-sm font-medium text-slate-900 first:mt-1  flex items-center justify-between"
-            >
-              <span>{item.name}</span>
-              <span>
-                <CaretRight size={20} color="#ccc" />
-              </span>
-            </Link>
-          ))
-        : null}
-
-      {loading ? (
-        <div>
-          <Skeleton animation>
-            <Skeleton.Line height="h-12" />
-            <Skeleton.Line height="h-12" />
-            <Skeleton.Line height="h-12" />
-            <Skeleton.Line height="h-12" />
-          </Skeleton>
-        </div>
-      ) : query && results.length ? (
-        results?.slice(0, 1).map((item) => (
-          <div key={item.id}>
-            <Link
-              href={`http://localhost:3000` + item.href}
-              className="p-3 rounded hover:bg-slate-800 text-white transition-colors mb-1 text-sm font-medium bg-slate-900 first:mt-1 flex items-center justify-between"
-            >
-              <span>{item.name}</span>
-              <span>
-                <CaretRight size={20} color="#ccc" />
-              </span>
-            </Link>
-            <div className="flex flex-col gap-2">
-              {item?.sections?.slice(0, 5).map((sec) => (
-                <Link
-                  className="flex items-center justify-between p-3 text-sm font-normal bg-slate-100 hover:bg-slate-900 hover:text-white rounded"
-                  key={sec.id}
-                  href={`http://localhost:3000` + item.href + sec.id}
-                >
-                  <span>{sec.title}</span>
-                  <span>
-                    <CaretRight size={20} color="#ccc" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ))
-      ) : !loading && query && !results.length ? (
-        <div>
-          <p className="text-center text-sm font-medium text-slate-400">
-            No Result Found with "{query}" word
+      <div className="p-3">
+        <div className="flex items-center justify-between  border-b border-b-slate-50 pb-1">
+          <p className="text-slate-900 text-base font-semibold">
+            Search at Keep React
           </p>
+          <button
+            onClick={() => setShowMainModal(!showModal)}
+            className="text-slate-900 hover:text-slate-600"
+          >
+            <XCircle size={20} />
+          </button>
         </div>
-      ) : null}
+        <form className="mt-2">
+          <div>
+            <TextInput
+              id="#id-10"
+              placeholder="Search Component"
+              color="gray"
+              sizing="md"
+              type="text"
+              addon={<MagnifyingGlass size={20} color="#5E718D" />}
+              addonPosition="left"
+              value={query}
+              handleOnChange={(e) => setQuery(e.target.value)}
+            />
+          </div>
+        </form>
+
+        <p
+          className={twMerge(
+            "text-sm font-normal text-slate-500",
+            storedData?.length || results?.length ? "py-3" : "pt-2"
+          )}
+        >
+          {!query && !storedData.length ? (
+            <span>No recent searches</span>
+          ) : !query && storedData.length ? (
+            <span>Recent searches</span>
+          ) : (
+            <span>Documentation</span>
+          )}
+        </p>
+
+        {!query && storedData.length
+          ? storedData?.map((item: result) => (
+              <Link
+                key={item.id}
+                href={projectUrl + item.href}
+                className="p-3 rounded bg-slate-100 hover:bg-slate-900 hover:text-white transition-colors mb-1 text-sm font-medium text-slate-900 first:mt-1  flex items-center justify-between"
+              >
+                <span>{item.name}</span>
+                <span>
+                  <CaretRight size={20} color="#ccc" />
+                </span>
+              </Link>
+            ))
+          : null}
+
+        {loading ? (
+          <div>
+            <Skeleton animation>
+              <Skeleton.Line height="h-12" />
+              <Skeleton.Line height="h-12" />
+              <Skeleton.Line height="h-12" />
+              <Skeleton.Line height="h-12" />
+            </Skeleton>
+          </div>
+        ) : query && results.length ? (
+          results?.slice(0, 1).map((item) => (
+            <div key={item.id}>
+              <Link
+                href={`http://localhost:3000` + item.href}
+                className="p-3 rounded hover:bg-slate-800 text-white transition-colors mb-1 text-sm font-medium bg-slate-900 first:mt-1 flex items-center justify-between"
+              >
+                <span>{item.name}</span>
+                <span>
+                  <CaretRight size={20} color="#ccc" />
+                </span>
+              </Link>
+              <div className="flex flex-col gap-2">
+                {item?.sections?.slice(0, 5).map((sec) => (
+                  <Link
+                    className="flex items-center justify-between p-3 text-sm font-normal bg-slate-100 hover:bg-slate-900 hover:text-white rounded"
+                    key={sec.id}
+                    href={`http://localhost:3000` + item.href + sec.id}
+                  >
+                    <span>{sec.title}</span>
+                    <span>
+                      <CaretRight size={20} color="#ccc" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))
+        ) : !loading && query && !results.length ? (
+          <div>
+            <p className="text-center text-sm font-medium text-slate-400">
+              No Result Found with "{query}" word
+            </p>
+          </div>
+        ) : null}
+      </div>
     </Modal>
   );
 };
