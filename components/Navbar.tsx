@@ -1,17 +1,18 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Accordion } from "~/src";
+import { Accordion, Button } from "~/src";
 import { useEffect, useState } from "react";
-import { DocSearch } from "@docsearch/react";
 import { usePathname } from "next/navigation";
-import { CaretDown, CaretUp, List, X } from "phosphor-react";
+import { CaretDown, CaretUp, List, MagnifyingGlass, X } from "phosphor-react";
 import { gettingStartedRoutes, navbarRoutes, routes } from "~/routes/routes";
-import "@docsearch/css";
+import Search from "./Search";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [showModal, setShowMainModal] = useState(false);
   const pathname = usePathname();
+
   const IsActive = (str: string) => {
     const lastPart = pathname.toLocaleLowerCase().split("/").pop();
     return str.toLocaleLowerCase() === "/" + lastPart;
@@ -19,18 +20,17 @@ const Navbar = () => {
 
   useEffect(() => {
     setActive(false);
+    setShowMainModal(false);
   }, [pathname]);
 
-  const algoliaSearch = {
-    appID: "7ZYE6TC9M4",
-    apiKey: "63f66a1cbf1334f81c0857f769301685",
-    indexName: "keep-react",
+  const handleModal = () => {
+    setShowMainModal(!showModal);
   };
 
   return (
     <header className="bg-white fixed top-0 w-full border-b border-slate-100 z-50">
       <div className="2xl:container relative px-6">
-        <nav className="flex items-center justify-between py-4 ">
+        <nav className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-28">
             <Link href="/" className="flex">
               <Image
@@ -54,14 +54,17 @@ const Navbar = () => {
             </div>
           </div>
           <div className="lg:flex items-center gap-3 hidden">
-            <div>
-              <DocSearch
-                appId={algoliaSearch.appID}
-                indexName={algoliaSearch.indexName}
-                apiKey={algoliaSearch.apiKey}
+            <Button type="text" size="sm" onClick={handleModal}>
+              <span>
+                <MagnifyingGlass size={22} color="#999" />
+              </span>
+            </Button>
+            {showModal && (
+              <Search
+                setShowMainModal={setShowMainModal}
+                showModal={showModal}
               />
-            </div>
-
+            )}
             <a
               className="bg-primary-25 hover:bg-primary-50 p-3 rounded-md"
               href="https://github.com/StaticMania/keep-react"
@@ -82,13 +85,17 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="lg:hidden flex items-center justify-between gap-4">
-            <div>
-              <DocSearch
-                appId={algoliaSearch.appID}
-                indexName={algoliaSearch.indexName}
-                apiKey={algoliaSearch.apiKey}
+            <button onClick={handleModal}>
+              <span>
+                <MagnifyingGlass size={20} color="#999" />
+              </span>
+            </button>
+            {showModal && (
+              <Search
+                setShowMainModal={setShowMainModal}
+                showModal={showModal}
               />
-            </div>
+            )}
             <a href="https://github.com/StaticMania/keep-react" target="_blank">
               <Image
                 src="/images/icon/github.svg"

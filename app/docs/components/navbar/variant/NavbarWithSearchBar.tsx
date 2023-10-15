@@ -1,213 +1,164 @@
 "use client";
-import Image from "next/image";
-import { Navbar, Button, TextInput } from "~/src";
+import { Navbar, TextInput } from "~/src";
 import {
+  CaretDown,
   FacebookLogo,
   InstagramLogo,
-  List,
   MagnifyingGlass,
   TwitterLogo,
-  YoutubeLogo,
 } from "phosphor-react";
+import Brand from "./DefaultNavbar";
 
 const NavbarWithSearchBar = () => {
   return (
-    <div className="h-96 lg:h-20">
-      <Navbar rounded fluid={false}>
-        <Navbar.Brand href="/">
-          <Image
-            src="/images/keepLogo.svg"
-            width={113}
-            height={40}
-            alt="logo"
-            className="mr-3 h-6 pr-5 sm:h-9"
-          />
+    <Navbar fluid={true}>
+      <Navbar.Container className="flex items-center justify-between">
+        <Navbar.Brand>
+          <Brand />
         </Navbar.Brand>
 
-        <div className="hidden items-center lg:order-2 lg:flex">
-          <TextInput
-            id="username"
-            placeholder="Search anything"
-            color="gray"
-            sizing="md"
-            addon={<MagnifyingGlass size={20} color="#5E718D" />}
-            addonPosition="left"
-          />
-          <Button type="link" size="xs" color="#455468">
-            <span className="pr-2">
-              <FacebookLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-          <Button type="link" size="xs" color="#5E718D">
-            <span className="pr-2">
-              <InstagramLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-          <Button type="link" size="xs" color="#5E718D">
-            <span className="pr-2">
-              <TwitterLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-          <Button type="link" size="xs" color="#5E718D">
-            <span className="pr-2">
-              <YoutubeLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-
-          <Button type="link" size="xs" color="#455468">
-            <span className="pr-2">
-              <List size={20} color="#455468" />
-            </span>
-            Menu
-          </Button>
-        </div>
-
-        <Navbar.Toggle />
-
-        <Navbar.Collapse className="lg:hidden">
-          <div className="mx-auto w-5/6">
+        <Navbar.Container className="flex items-center gap-6">
+          <Navbar.Container
+            tag="ul"
+            className="lg:flex hidden items-center justify-between gap-4"
+          >
             <TextInput
-              id="username"
+              id="#id-10"
               placeholder="Search anything"
               color="gray"
-              sizing="md"
+              sizing="sm"
+              type="text"
               addon={<MagnifyingGlass size={20} color="#5E718D" />}
               addonPosition="left"
             />
-          </div>
-          <div className="flex items-center justify-center">
-            <Button type="link" size="xs" color="#455468">
-              <span className="pr-2">
-                <FacebookLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-            <Button type="link" size="xs" color="#5E718D">
-              <span className="pr-2">
-                <InstagramLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-            <Button type="link" size="xs" color="#5E718D">
-              <span className="pr-2">
-                <TwitterLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-            <Button type="link" size="xs" color="#5E718D">
-              <span className="pr-2">
-                <YoutubeLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-          </div>
+            <Navbar.Link
+              icon={<FacebookLogo size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<InstagramLogo size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<TwitterLogo size={20} color="#444" />}
+              iconAnimation={false}
+            />
+          </Navbar.Container>
+          <Navbar.Container className="flex gap-1">
+            <Navbar.Toggle className="block" />
+            Menu
+          </Navbar.Container>
+        </Navbar.Container>
+        <Navbar.Collapse
+          collapseType="sidebar"
+          className="fixed right-0 top-0 bg-white p-10 lg:!w-2/6 xl:!w-1/6 md:!w-2/6 w-1/2"
+        >
+          <Navbar.Container tag="ul" className="flex flex-col gap-5">
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
+          </Navbar.Container>
         </Navbar.Collapse>
-      </Navbar>
-    </div>
+      </Navbar.Container>
+    </Navbar>
   );
 };
 
 const NavbarWithSearchBarCode = `
 "use client";
-import { Navbar,TextInput,Button } from "keep-react";
+import { Navbar, TextInput } from "keep-react";
 import {
+  CaretDown,
   FacebookLogo,
   InstagramLogo,
-  List,
   MagnifyingGlass,
   TwitterLogo,
-  YoutubeLogo,
 } from "phosphor-react";
-import Image from "next/image";
 
-const NavbarWithSearchBar = () => {
+const NavbarComponent = () => {
   return (
-      <Navbar rounded fluid={false}>
-        <Navbar.Brand href="/">
-          <Image
-            src="/images/keepLogo.svg"
-            width={113}
-            height={40}
-            alt="logo"
-            className="mr-3 h-6 pr-5 sm:h-9"
-          />
+    <Navbar fluid={true}>
+      <Navbar.Container className="flex items-center justify-between">
+        <Navbar.Brand>
+          <Brand />
         </Navbar.Brand>
 
-        <div className="hidden items-center lg:order-2 lg:flex">
-          <TextInput
-            id="username"
-            placeholder="Search anything"
-            color="gray"
-            sizing="md"
-            addon={<MagnifyingGlass size={20} color="#5E718D" />}
-            addonPosition="left"
-          />
-          <Button type="link" size="xs" color="#455468">
-            <span className="pr-2">
-              <FacebookLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-          <Button type="link" size="xs" color="#5E718D">
-            <span className="pr-2">
-              <InstagramLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-          <Button type="link" size="xs" color="#5E718D">
-            <span className="pr-2">
-              <TwitterLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-          <Button type="link" size="xs" color="#5E718D">
-            <span className="pr-2">
-              <YoutubeLogo size={20} color="#5E718D" />
-            </span>
-          </Button>
-
-          <Button type="link" size="xs" color="#455468">
-            <span className="pr-2">
-              <List size={20} color="#455468" />
-            </span>
-            Menu
-          </Button>
-        </div>
-
-        <Navbar.Toggle />
-
-        <Navbar.Collapse className="lg:hidden">
-          <div className="mx-auto w-5/6">
+        <Navbar.Container className="flex items-center gap-6">
+          <Navbar.Container
+            tag="ul"
+            className="lg:flex hidden items-center justify-between gap-4"
+          >
             <TextInput
-              id="username"
+              id="#id-10"
               placeholder="Search anything"
               color="gray"
-              sizing="md"
+              sizing="sm"
+              type="text"
               addon={<MagnifyingGlass size={20} color="#5E718D" />}
               addonPosition="left"
             />
-          </div>
-          <div className="flex items-center justify-center">
-            <Button type="link" size="xs" color="#455468">
-              <span className="pr-2">
-                <FacebookLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-            <Button type="link" size="xs" color="#5E718D">
-              <span className="pr-2">
-                <InstagramLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-            <Button type="link" size="xs" color="#5E718D">
-              <span className="pr-2">
-                <TwitterLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-            <Button type="link" size="xs" color="#5E718D">
-              <span className="pr-2">
-                <YoutubeLogo size={20} color="#5E718D" />
-              </span>
-            </Button>
-          </div>
+            <Navbar.Link
+              icon={<FacebookLogo size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<InstagramLogo size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<TwitterLogo size={20} color="#444" />}
+              iconAnimation={false}
+            />
+          </Navbar.Container>
+          <Navbar.Container className="flex gap-1">
+            <Navbar.Toggle className="block" />
+            Menu
+          </Navbar.Container>
+        </Navbar.Container>
+        <Navbar.Collapse
+          collapseType="sidebar"
+          className="fixed right-0 top-0 bg-white p-10 lg:!w-2/6 xl:!w-1/6 md:!w-2/6 w-1/2"
+        >
+          <Navbar.Container tag="ul" className="flex flex-col gap-5">
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
+          </Navbar.Container>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar.Container>
+    </Navbar>
   );
 };
 
-export default NavbarWithSearchBar;
+export default NavbarComponent;
 `;
 
 export { NavbarWithSearchBar, NavbarWithSearchBarCode };

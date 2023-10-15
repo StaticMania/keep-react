@@ -1,76 +1,94 @@
 "use client";
-import Image from "next/image";
-import { List } from "phosphor-react";
-import { Navbar, Button } from "~/src";
+import { Navbar } from "~/src";
+import Brand from "./DefaultNavbar";
+import { CaretDown } from "phosphor-react";
 
 const NavbarWithMobileMenu = () => {
   return (
-    <div className="h-96 lg:h-20">
-      <Navbar fluid={true} rounded>
-        <Navbar.Brand href="/">
-          <Image
-            src="/images/keepLogo.svg"
-            width={113}
-            height={40}
-            alt="logo"
-            className="mr-3 h-6 pr-5 sm:h-9"
-          />
+    <Navbar fluid={true} className="!py-5">
+      <Navbar.Container className="flex items-center justify-between">
+        <Navbar.Brand>
+          <Brand />
         </Navbar.Brand>
-        <Navbar.Collapse className="lg:hidden">
-          <Navbar.Link href="/">Tutorial</Navbar.Link>
-          <Navbar.Link href="/">About</Navbar.Link>
-          <Navbar.Link href="/">Work</Navbar.Link>
-          <Navbar.Link href="/">Case Study</Navbar.Link>
-          <Navbar.Link href="/">Download</Navbar.Link>
+        <Navbar.Collapse
+          collapseType="sidebar"
+          className="fixed right-0 top-0 bg-white p-10 xl:!w-1/6 lg:!w-2/6 md:!w-1/2"
+        >
+          <Navbar.Container tag="ul" className="flex flex-col gap-5">
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
+          </Navbar.Container>
         </Navbar.Collapse>
-        <Navbar.Toggle />
-        <div className="hidden lg:block">
-          <Button type="text" size="xs" color="#455468">
-            <List size={24} weight="bold" color="#455468" />
-          </Button>
-        </div>
-      </Navbar>
-    </div>
+        <Navbar.Container className="flex gap-1">
+          <Navbar.Toggle className="block" />
+          Menu
+        </Navbar.Container>
+      </Navbar.Container>
+    </Navbar>
   );
 };
 
 const NavbarWithMobileMenuCode = `
 "use client";
-import { Navbar } from "keep-desing";
-import Image from "next/image";
+import { Navbar } from "keep-react";
+import { CaretDown } from "phosphor-react";
 
-const NavbarWithMobileMenu = () => {
+const NavbarComponent = () => {
   return (
-    <div className="h-72">
-      <Navbar fluid={true} rounded>
-        <Navbar.Brand href="/">
-          <Navbar.Brand href="/">
-            <Image
-              src="/images/keepLogo.svg"
-              width={113}
-              height={40}
-              alt="logo"
-              className="mr-3 h-6 pr-5 sm:h-9"
-            />
-          </Navbar.Brand>
+    <Navbar fluid={true} className="!py-5">
+      <Navbar.Container className="flex items-center justify-between">
+        <Navbar.Brand>
+          <Brand />
         </Navbar.Brand>
-
-        <div className="flex md:order-2">
-          <Navbar.Mobile>
-            <ul className="mt-5 flex flex-col items-center justify-center gap-5">
-              <Navbar.Link href="/">Home</Navbar.Link>
-              <Navbar.Link href="/">About</Navbar.Link>
-              <Navbar.Link href="/">Services</Navbar.Link>
-              <Navbar.Link href="/">Blog</Navbar.Link>
-            </ul>
-          </Navbar.Mobile>
-        </div>
-      </Navbar>
-    </div>
+        <Navbar.Collapse
+          collapseType="sidebar"
+          className="fixed right-0 top-0 bg-white p-10 xl:!w-1/6 lg:!w-2/6 md:!w-1/2"
+        >
+          <Navbar.Container tag="ul" className="flex flex-col gap-5">
+            <Navbar.Link
+              linkName="Home"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Projects"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link
+              linkName="Blogs"
+              icon={<CaretDown size={20} />}
+              className="!py-0"
+            />
+            <Navbar.Link linkName="News" className="!py-0" />
+            <Navbar.Link linkName="Resources" className="!py-0" />
+          </Navbar.Container>
+        </Navbar.Collapse>
+        <Navbar.Container className="flex gap-1">
+          <Navbar.Toggle className="block" />
+          Menu
+        </Navbar.Container>
+      </Navbar.Container>
+    </Navbar>
   );
 };
 
-export default NavbarWithMobileMenu;
+export default NavbarComponent;
 `;
 
 export { NavbarWithMobileMenu, NavbarWithMobileMenuCode };

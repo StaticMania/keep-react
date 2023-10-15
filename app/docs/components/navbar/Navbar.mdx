@@ -11,10 +11,12 @@ import {
   NavbarWithCenterLogo,
   NavbarWithCenterLogoCode,
 } from "./variant/NavbarWithCenterLogo";
+
 import {
-  NavbarWithSearchIcon,
-  NavbarWithSearchIconCode,
-} from "./variant/NavbarWithSearchIcon";
+  EcommerceNavbar,
+  EcommerceNavbarCode,
+} from "./variant/EcommerceNavbar";
+
 import { NavbarApiData } from "./NavbarApi";
 
 import CodePreview from "~/components/CodePreview";
@@ -32,14 +34,6 @@ It provides a sleek and modern default style that developers can use as a starti
 
 <CodePreview github="Navbar" code={DefaultNavbarCode}>
   <DefaultNavbar />
-</CodePreview>
-
-## Navbar With Search Icon
-
-It combines the standard features of a navigation bar with an integrated search icon, making it easy for users to initiate searches directly from the navigation area.
-
-<CodePreview github="Navbar" code={NavbarWithSearchIconCode}>
-  <NavbarWithSearchIcon />
 </CodePreview>
 
 ## Navbar With Center Logo
@@ -66,6 +60,14 @@ This component is designed to enhance user interactions by providing a convenien
   <NavbarWithSearchBar />
 </CodePreview>
 
+## Ecommerce Navbar
+
+This component is designed to enhance user interactions by providing a convenient search feature within the navigation bar.
+
+<CodePreview github="Navbar" code={EcommerceNavbarCode}>
+  <EcommerceNavbar />
+</CodePreview>
+
 ## API Reference
 
 Explore the available props for the navbar component
@@ -76,4 +78,4 @@ Explore the available props for the navbar component
 
 To learn more about how to customize the appearance of components, please see the Theme docs.
 
-<CssThemePreview code={useTheme().theme.navbar} />
+<CssThemePreview code={useTheme().theme.navigation} />
