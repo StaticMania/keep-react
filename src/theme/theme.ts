@@ -12,7 +12,7 @@ import { dropdownTheme } from "../components/Dropdown/theme";
 import { emptyTheme } from "../components/Empty/theme";
 import { formControlsTheme } from "../components/FormControls/theme";
 import { modalTheme } from "../components/Modal/theme";
-import { navbarTheme } from "../components/Navbar/theme";
+import { navigationTheme } from "../components/Navigation/theme";
 import { notificationTheme } from "../components/Notification/theme";
 import { paginationTheme } from "../components/Pagination/theme";
 import { popoverTheme } from "../components/Popover/theme";
@@ -63,7 +63,7 @@ export const theme = {
   checkboxGroup: checkboxGroupTheme,
   formControls: formControlsTheme,
   tree: treeTheme,
-  navbar: navbarTheme,
+  navigation: navigationTheme,
   pagination: paginationTheme,
   step: steptheme,
   timeline: timelineTheme,

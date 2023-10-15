@@ -20,7 +20,7 @@ export * from "./FormControls/TextInput";
 export * from "./FormControls/Textarea";
 export * from "./FormControls/Label";
 export * from "./Modal";
-export * from "./Navbar";
+export * from "./Navigation";
 export * from "./Notification";
 export * from "./Pagination";
 export * from "./PlayButton";

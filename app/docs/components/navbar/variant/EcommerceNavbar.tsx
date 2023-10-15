@@ -1,9 +1,15 @@
 "use client";
-import { Navbar, Button } from "~/src";
-import { CaretDown, MagnifyingGlass } from "phosphor-react";
+import {
+  CaretDown,
+  Heart,
+  MagnifyingGlass,
+  ShoppingCart,
+  User,
+} from "phosphor-react";
+import { Button, Navbar } from "~/src";
 import Brand from "./DefaultNavbar";
 
-const NavbarWithCenterLogo = () => {
+const EcommerceNavbar = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
@@ -11,9 +17,8 @@ const NavbarWithCenterLogo = () => {
           tag="ul"
           className="lg:flex hidden items-center justify-between gap-8"
         >
-          <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Category" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Best Sellers" icon={<CaretDown size={20} />} />
         </Navbar.Container>
         <Navbar.Brand>
           <Brand />
@@ -34,14 +39,25 @@ const NavbarWithCenterLogo = () => {
             tag="ul"
             className="lg:flex hidden items-center justify-between gap-5"
           >
-            <Navbar.Link linkName="News" />
-            <Navbar.Link linkName="Resources" />
+            <Navbar.Link
+              icon={<MagnifyingGlass size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<User size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<Heart size={20} color="#444" />}
+              iconAnimation={false}
+            />
           </Navbar.Container>
-          <Button size="sm" type="link">
+
+          <Button size="xs" type="outlineGray">
             <span>
-              <MagnifyingGlass size={20} color="#444" />
+              <ShoppingCart size={20} color="#444" />
             </span>
-            <span className="ml-2 text-slate-600">Search</span>
+            <span className="ml-1 text-slate-600">Cart $0.00</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>
@@ -50,12 +66,12 @@ const NavbarWithCenterLogo = () => {
   );
 };
 
-const NavbarWithCenterLogoCode = `
+const EcommerceNavbarCode = `
 "use client";
-import { Button,Navbar } from "keep-react";
-import { CaretDown, MagnifyingGlass } from "phosphor-react";
+import { CaretDown, Heart, MagnifyingGlass, ShoppingCart, User } from "phosphor-react";
+import { Button, Navbar } from "keep-react";
 
-const NavbarWithCenterLogo = () => {
+const NavbarComponent = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
@@ -63,9 +79,9 @@ const NavbarWithCenterLogo = () => {
           tag="ul"
           className="lg:flex hidden items-center justify-between gap-8"
         >
-          <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Category" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Best Sellers" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Others" icon={<CaretDown size={20} />} />
         </Navbar.Container>
         <Navbar.Brand>
           <Brand />
@@ -86,14 +102,25 @@ const NavbarWithCenterLogo = () => {
             tag="ul"
             className="lg:flex hidden items-center justify-between gap-5"
           >
-            <Navbar.Link linkName="News" />
-            <Navbar.Link linkName="Resources" />
+            <Navbar.Link
+              icon={<MagnifyingGlass size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<User size={20} color="#444" />}
+              iconAnimation={false}
+            />
+            <Navbar.Link
+              icon={<Heart size={20} color="#444" />}
+              iconAnimation={false}
+            />
           </Navbar.Container>
-          <Button size="sm" type="link">
+
+          <Button size="xs" type="outlineGray">
             <span>
-              <MagnifyingGlass size={20} color="#444" />
+              <ShoppingCart size={20} color="#444" />
             </span>
-            <span className="ml-2 text-slate-600">Search</span>
+            <span className="ml-1 text-slate-600">Cart $0.00</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>
@@ -105,4 +132,4 @@ const NavbarWithCenterLogo = () => {
 export default NavbarComponent;
 `;
 
-export { NavbarWithCenterLogo, NavbarWithCenterLogoCode };
+export { EcommerceNavbar, EcommerceNavbarCode };
