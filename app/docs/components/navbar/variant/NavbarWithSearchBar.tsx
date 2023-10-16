@@ -7,14 +7,19 @@ import {
   MagnifyingGlass,
   TwitterLogo,
 } from "phosphor-react";
-import Brand from "./DefaultNavbar";
+import Image from "next/image";
 
 const NavbarWithSearchBar = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
 
         <Navbar.Container className="flex items-center gap-6">
@@ -94,7 +99,12 @@ const NavbarComponent = () => {
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
 
         <Navbar.Container className="flex items-center gap-6">

@@ -1,20 +1,7 @@
 "use client";
-import Link from "next/link";
+import Image from "next/image";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
 import { Navbar, Button } from "~/src";
-
-const Brand = () => {
-  return (
-    <Link href="/" className="flex items-center gap-1">
-      <strong className="h-8 w-8 rounded-md bg-slate-900 text-white flex items-center justify-center font-bold text-lg">
-        K.
-      </strong>
-      <span className="text-2xl font-bold text-slate-900">React</span>
-    </Link>
-  );
-};
-
-export default Brand;
 
 const DefaultNavbar = () => {
   return (
@@ -22,7 +9,12 @@ const DefaultNavbar = () => {
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Container className="flex items-center">
           <Navbar.Brand>
-            <Brand />
+            <Image
+              src="/images/keepLogo.svg"
+              alt="keep"
+              width="100"
+              height="40"
+            />
           </Navbar.Brand>
           <Navbar.Divider></Navbar.Divider>
           <Navbar.Container
@@ -75,7 +67,12 @@ const NavbarComponent = () => {
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Container className="flex items-center">
           <Navbar.Brand>
-            <Brand />
+            <Image
+              src="/images/keepLogo.svg"
+              alt="keep"
+              width="100"
+              height="40"
+          />
           </Navbar.Brand>
           <Navbar.Divider></Navbar.Divider>
           <Navbar.Container

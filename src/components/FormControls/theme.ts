@@ -37,7 +37,7 @@ export const formControlsTheme: keepFormControlTheme = {
     },
     base: "border",
     radioType: {
-      base: "flex items-center justify-center relative",
+      base: "flex items-center justify-center relative duration-300 transition-all",
       square: "rounded before:rounded-sm",
       circle: "rounded-full before:rounded-full",
     },

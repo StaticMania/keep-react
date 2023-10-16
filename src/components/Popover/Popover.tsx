@@ -28,6 +28,8 @@ interface PopoverProps {
   description?: string;
   icon?: React.ReactNode;
   customClass?: string;
+  showDismissIcon?: boolean;
+  showArrow?: boolean;
   position?:
     | "top"
     | "top-end"
@@ -61,6 +63,8 @@ export const Popover: FC<PopoverProps> = ({
   additinalContent,
   customClass,
   position = "bottom-start",
+  showDismissIcon = true,
+  showArrow = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const arrowRef = useRef(null);
@@ -124,17 +128,21 @@ export const Popover: FC<PopoverProps> = ({
           {...getFloatingProps()}
           className={twMerge(theme.body.base, customClass)}
         >
-          <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFf" />
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-[25px] right-6"
-          >
-            {typeof icon !== "undefined" ? (
-              icon
-            ) : (
-              <XCircle size={24} color="#5E718D" weight="light" />
-            )}
-          </button>
+          {showArrow && (
+            <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFf" />
+          )}
+          {showDismissIcon && (
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-[25px] right-6"
+            >
+              {typeof icon !== "undefined" ? (
+                icon
+              ) : (
+                <XCircle size={24} color="#5E718D" weight="light" />
+              )}
+            </button>
+          )}
           {title && (
             <h2 role="keep-popover" className={theme.body.title}>
               {title}

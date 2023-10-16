@@ -64,10 +64,7 @@ const TableComponent: FC<TableProps> = ({
   };
 
   return (
-    <div
-      id="tableScrollBar"
-      className="w-full overflow-x-auto rounded-lg shadow-xl"
-    >
+    <div id="tableScrollBar" className="w-full overflow-x-auto rounded-lg">
       <div data-testid="table-element" className={twMerge(theme.root.wrapper)}>
         <TableContext.Provider
           value={{
