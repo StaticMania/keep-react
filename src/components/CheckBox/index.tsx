@@ -74,7 +74,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
           name={fieldName}
           onChange={handleOnChange}
           {...theirProps}
-          className={twMerge(theme.checkboxInput)}
+          className={twMerge(theme.checkboxInput, theme.size[size])}
         />
         <div
           className={twMerge(

@@ -37,11 +37,11 @@ export const formControlsTheme: keepFormControlTheme = {
     },
     base: "border",
     radioType: {
-      base: "flex items-center justify-center relative duration-300 transition-all",
+      base: "flex items-center justify-center relative duration-300 transition-all cursor-pointer pointer-events-none",
       square: "rounded before:rounded-sm",
       circle: "rounded-full before:rounded-full",
     },
-    radioInput: "hidden peer",
+    radioInput: "opacity-0 peer absolute cursor-pointer mx-auto",
     sizes: {
       sm: "h-4 w-4 before:absolute before:h-2 before:w-2",
       md: "h-5 w-5 before:absolute before:h-2.5 before:w-2.5",

@@ -50,7 +50,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       <>
         <input
           ref={ref}
-          className={twMerge(theme.radioInput, className)}
+          className={twMerge(theme.radioInput, className, theme.sizes[sizing])}
           value={value}
           checked={selected === value}
           onChange={onOptionChange}
