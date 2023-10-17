@@ -60,7 +60,7 @@ const AccordionWithCustomIconCode = `
 import { Accordion } from "keep-react";
 import { CaretDown, CaretUp } from "phosphor-react";
 
-const AccordionWithCustomIcon = () => {
+export const AccordionComponent = () => {
   return (
     <Accordion
       openIcon={<CaretUp />}
@@ -112,9 +112,6 @@ const AccordionWithCustomIcon = () => {
     </Accordion>
   );
 };
-
-
-export default AccordionWithCustomIcon;
 `;
 
 export { AccordionWithCustomIcon, AccordionWithCustomIconCode };

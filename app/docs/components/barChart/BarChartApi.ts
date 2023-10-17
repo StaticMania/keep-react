@@ -37,9 +37,9 @@ export const barChartAPIData = [
   {
     id: 6,
     propsName: "barRadius",
-    propsType: "number",
+    propsType: "Array",
     propsDescription: "Radius of the bar corners.",
-    default: "5",
+    default: "[4,4,0,0]",
   },
   {
     id: 7,

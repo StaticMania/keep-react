@@ -1,6 +1,5 @@
 import {
   useState,
-  type ChangeEvent,
   type ComponentProps,
   type FC,
   type PropsWithChildren,
@@ -10,6 +9,7 @@ import type { DeepPartial } from "../../helpers/deep-partial";
 import { twMerge } from "tailwind-merge";
 import { useTableContext } from "./TableContext";
 import { useTheme } from "../../Keep/ThemeContex";
+import { CheckBox } from "../CheckBox";
 
 export interface keepTableRowTheme {
   base: string;
@@ -27,8 +27,9 @@ export const TableRow: FC<TableRowProps> = ({
   const { hoverable, striped, showCheckbox, checked } = useTableContext();
   const theme = useTheme().theme.table.row;
   const [isChecked, setIsChecked] = useState(false);
-  const handleCheckbox = (event: ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(event.target.checked);
+
+  const handleCheckbox = (value: boolean) => {
+    setIsChecked(value);
   };
 
   return (
@@ -44,13 +45,14 @@ export const TableRow: FC<TableRowProps> = ({
     >
       {showCheckbox && (
         <th className="p-4">
-          <input
-            onChange={handleCheckbox}
+          <CheckBox
+            size="md"
+            variant="square"
+            id="two"
+            name="table"
+            color="info"
             checked={checked ? checked : isChecked}
-            type="checkbox"
-            id="member"
-            name="vehicle1"
-            className="flex h-4 w-4 items-center justify-center rounded border border-slate-300 bg-slate-25 outline-none checked:after:h-2.5 checked:after:w-2.5  checked:after:rounded-sm focus:ring-0 focus:ring-offset-0"
+            handleChecked={handleCheckbox}
           />
         </th>
       )}

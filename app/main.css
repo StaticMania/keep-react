@@ -667,6 +667,7 @@ input[type="number"] {
 }
 .rc-slider-dot-active {
   border-color: #94abff;
+  left: 5px !important;
 }
 .rc-slider-dot-reverse {
   margin-right: -4px;

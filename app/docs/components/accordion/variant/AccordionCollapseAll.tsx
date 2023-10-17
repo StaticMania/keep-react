@@ -54,7 +54,7 @@ const AccordionCollapseAllCode = `
 "use client"
 import { Accordion } from "keep-react";
 
-const AccordionCollapseAll = () => {
+export const AccordionComponent = () => {
   return (
     <Accordion collapseAll={true}>
       <Accordion.Panel>
@@ -102,8 +102,6 @@ const AccordionCollapseAll = () => {
     </Accordion>
   );
 };
-
-export default AccordionCollapseAll;
 `;
 
 export { AccordionCollapseAll, AccordionCollapseAllCode };

@@ -33,7 +33,7 @@ const DisabledAccordionCode = `
 "use client";
 import { Accordion } from "keep-react";
 
-const DisabledAccordion = () => {
+export const AccordionComponent = () => {
   return (
     <Accordion disabled={true} collapseAll={true}>
       <Accordion.Panel>
@@ -44,24 +44,11 @@ const DisabledAccordion = () => {
             built on top of Tailwind CSS including buttons, dropdowns, modals,
             navbars, and more.
           </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            Check out this guide to learn how to
-            <a
-              href="https://keep Design.com/docs/getting-started/introduction/"
-              className="text-blue-600 hover:underline dark:text-blue-500"
-            >
-              get started
-            </a>
-            and start developing websites even faster with components on top of
-            Tailwind CSS.
-          </p>
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
   );
 };
-
-export default DisabledAccordion;
 `;
 
 export { DisabledAccordion, DisabledAccordionCode };

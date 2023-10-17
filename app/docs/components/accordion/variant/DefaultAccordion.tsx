@@ -21,9 +21,14 @@ const DefaultAccordion = () => {
 };
 
 const DefaultAccordionCode = `
-<Accordion showIcon={true}>
-   <Accordion.Panel>
-      <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+"use client";
+import { Accordion } from "keep-react";
+
+export const AccordionComponent = () => {
+  return (
+    <Accordion showIcon>
+      <Accordion.Panel>
+        <Accordion.Title>What is the of the Keep React?</Accordion.Title>
         <Accordion.Content>
           <p>
             The Keep React is a collection of UI components, styles, and
@@ -33,8 +38,10 @@ const DefaultAccordionCode = `
             customized and integrated into various applications.
           </p>
         </Accordion.Content>
-   </Accordion.Panel>
-</Accordion>
+      </Accordion.Panel>
+    </Accordion>
+  );
+};
 `;
 
 export { DefaultAccordion, DefaultAccordionCode };

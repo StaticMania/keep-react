@@ -24,7 +24,7 @@ export interface CheckboxProps
     ComponentProps<"input">,
     "className" | "color" | "size" | "type"
   > {
-  label: ReactNode;
+  label?: ReactNode;
   disabled?: boolean;
   size?: keyof CheckboxSizes;
   color?: keyof KeepStateColors;
@@ -47,7 +47,7 @@ export interface CheckboxLabelColors
 const CheckboxComponent: FC<CheckboxProps> = ({
   color = "info",
   labelColor = "info",
-  label = "Checkbox",
+  label,
   size = "md",
   disabled = false,
   id = "",
@@ -60,7 +60,6 @@ const CheckboxComponent: FC<CheckboxProps> = ({
   const theme = useTheme().theme.checkbox;
 
   const handleOnChange = (e: { target: { checked: any } }) => {
-    console.log(e.target.checked);
     handleChecked && handleChecked(e.target.checked);
   };
 

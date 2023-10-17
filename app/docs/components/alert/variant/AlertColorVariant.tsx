@@ -40,7 +40,7 @@ import { useState } from "react";
 import { Alert } from "keep-react";
 import { CheckCircle } from "phosphor-react";
 
-const AlertWithColorVariant = () => {
+export const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
   const onDissMiss = () => {
     setShowAlert(!showAlert);
@@ -68,8 +68,6 @@ const AlertWithColorVariant = () => {
     />
   );
 };
-
-export default AlertWithColorVariant;
 `;
 
 export { AlertWithColorVariant, AlertWithColorVariantCode };

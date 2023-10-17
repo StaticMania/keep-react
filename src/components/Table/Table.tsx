@@ -4,7 +4,6 @@ import {
   type ComponentProps,
   type FC,
   type PropsWithChildren,
-  ChangeEvent,
 } from "react";
 import type { keepTableBodyTheme } from "./TableBody";
 import type { TableContextType } from "./TableContext";
@@ -52,15 +51,14 @@ const TableComponent: FC<TableProps> = ({
   showBorder = false,
   showBorderPosition = "right",
   checked,
-  handleCheck,
   ...props
 }) => {
   const theme = useTheme().theme.table;
 
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckbox = (event: ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(event.target.checked);
+  const handleCheckbox = (value: boolean) => {
+    setIsChecked(value);
   };
 
   return (
@@ -74,7 +72,7 @@ const TableComponent: FC<TableProps> = ({
             showBorder,
             showBorderPosition,
             checked: isChecked,
-            handleCheck: handleCheckbox,
+            handleCheckbox: handleCheckbox,
           }}
         >
           <div className={twMerge(theme.root.shadow, className)}></div>

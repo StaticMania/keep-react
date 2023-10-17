@@ -54,7 +54,7 @@ const AccordionAlwaysOpenCode = `
 "use client";
 import { Accordion } from "keep-react";
 
-const AccordionAlwaysOpen = () => {
+export const AccordionComponent = () => {
   return (
      <Accordion collapseAll={false} alwaysOpen={true}>
       <Accordion.Panel>
@@ -102,8 +102,6 @@ const AccordionAlwaysOpen = () => {
     </Accordion>
   );
 };
-
-export default AccordionAlwaysOpen;
 `;
 
 export { AccordionAlwaysOpen, AccordionAlwaysOpenCode };
