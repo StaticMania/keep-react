@@ -137,6 +137,7 @@ export const BarChart: FC<BarChartProps> = ({
           radius={barRadius}
           background={{
             fill: showBackGround ? secondaryBarBackGroundColor : "transparent",
+            radius: barRadius,
           }}
         />
       )}

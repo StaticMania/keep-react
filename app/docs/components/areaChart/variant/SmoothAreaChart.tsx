@@ -73,7 +73,7 @@ const chartData = [
   },
 ];
 
-const SmoothAreaChart = () => {
+export const AreaChartComponent = () => {
   return (
     <AreaChart
       chartData={chartData}
@@ -87,9 +87,6 @@ const SmoothAreaChart = () => {
     />
   );
 };
-
-export default SmoothAreaChart;
-
 `;
 
 export { SmoothAreaChart, SmoothAreaChartCode };
