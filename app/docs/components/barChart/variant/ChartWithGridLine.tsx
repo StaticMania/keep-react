@@ -9,7 +9,7 @@ const BarChartWithGridLine = () => {
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend={true}
       showBackGround={true}
       showXaxis={true}
@@ -112,7 +112,7 @@ const ChartWithGridLine = () => {
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend={true}
       showBackGround={true}
       showXaxis={true}

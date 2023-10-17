@@ -87,7 +87,7 @@ const DefaultBarChart = () => {
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       active={true}
       activeIndex={5}
       activeColor="#1B4DFF"
@@ -184,7 +184,7 @@ const DefaultBarChart = () => {
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       active={true}
       activeIndex={5}
       activeColor="#1B4DFF"

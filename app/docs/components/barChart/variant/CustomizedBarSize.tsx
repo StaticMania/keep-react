@@ -14,7 +14,7 @@ const CustomizedBarSize = () => {
       showBackGround={true}
       showLegend={true}
       showTooltip={true}
-      barRadius={5}
+      barRadius={[4, 4, 0, 0]}
     />
   );
 };
@@ -111,7 +111,7 @@ const CustomizedBarSize = () => {
       showBackGround={true}
       showLegend={true}
       showTooltip={true}
-      barRadius={5}
+      barRadius={[4, 4, 0, 0]}
     />
   );
 };

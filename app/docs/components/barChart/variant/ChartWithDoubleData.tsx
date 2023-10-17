@@ -11,7 +11,7 @@ const ChartWithDoubleData = () => {
       activeIndex={5}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend
       showBackGround
       showXaxis
@@ -112,7 +112,7 @@ const ChartWithDoubleData = () => {
       activeIndex={5}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend
       showBackGround
       showXaxis
