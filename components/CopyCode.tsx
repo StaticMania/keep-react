@@ -1,5 +1,5 @@
 "use client";
-import { Check, CopySimple } from "phosphor-react";
+import { Check, Clipboard } from "phosphor-react";
 import useCopy from "~/hooks/useCopy";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -40,7 +40,7 @@ const CopyCode = ({ code }: { code: string }) => {
         {copy ? (
           <Check size={20} weight="light" color="#fff" />
         ) : (
-          <CopySimple size={20} weight="light" color="#fff" />
+          <Clipboard size={20} weight="light" color="#fff" />
         )}
       </button>
     </div>

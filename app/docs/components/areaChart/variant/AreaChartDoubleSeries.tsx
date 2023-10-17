@@ -69,7 +69,7 @@ const chartData = [
   },
 ];
 
-const AreaChartWithDoubleSeries = () => {
+export const AreaChartComponent = () => {
   return (
     <AreaChart
       chartData={chartData}
@@ -79,10 +79,6 @@ const AreaChartWithDoubleSeries = () => {
     />
   );
 };
-
-export default AreaChartWithDoubleSeries;
-
-
 `;
 
 export { AreaChartWithDoubleSeries, AreaChartWithDoubleSeriesCode };

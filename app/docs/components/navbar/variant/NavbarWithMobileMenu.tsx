@@ -1,14 +1,19 @@
 "use client";
 import { Navbar } from "~/src";
-import Brand from "./DefaultNavbar";
 import { CaretDown } from "phosphor-react";
+import Image from "next/image";
 
 const NavbarWithMobileMenu = () => {
   return (
     <Navbar fluid={true} className="!py-5">
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
         <Navbar.Collapse
           collapseType="sidebar"
@@ -53,7 +58,12 @@ const NavbarComponent = () => {
     <Navbar fluid={true} className="!py-5">
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
         <Navbar.Collapse
           collapseType="sidebar"

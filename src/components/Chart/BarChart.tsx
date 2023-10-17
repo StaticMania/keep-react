@@ -19,7 +19,7 @@ interface BarChartProps {
   activeIndex?: number;
   barBackGroundColor?: string;
   barColor?: string;
-  barRadius?: number;
+  barRadius?: number | [number, number, number, number] | undefined;
   barSize?: number;
   chartData?: unknown[];
   dataKey: string;
@@ -65,6 +65,8 @@ export const BarChart: FC<BarChartProps> = ({
   secondaryDataKey,
 }) => {
   const [client, setClient] = useState(false);
+
+  console.log(barRadius);
   const RenderBarChart = (
     <BarChartCom id="testId" width={width} height={height} data={chartData}>
       {showGridLine && (
@@ -109,6 +111,7 @@ export const BarChart: FC<BarChartProps> = ({
         radius={barRadius}
         background={{
           fill: showBackGround ? barBackGroundColor : "transparent",
+          radius: barRadius,
         }}
       >
         {active &&
@@ -134,6 +137,7 @@ export const BarChart: FC<BarChartProps> = ({
           radius={barRadius}
           background={{
             fill: showBackGround ? secondaryBarBackGroundColor : "transparent",
+            radius: barRadius,
           }}
         />
       )}

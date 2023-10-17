@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.ReactCollapse--collapse {
+  transition: height 300ms;
+}
+
 @layer base {
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
@@ -663,6 +667,7 @@ input[type="number"] {
 }
 .rc-slider-dot-active {
   border-color: #94abff;
+  left: 5px !important;
 }
 .rc-slider-dot-reverse {
   margin-right: -4px;

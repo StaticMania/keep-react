@@ -23,11 +23,8 @@ const AlertWithDismissIcon = () => {
         </div>
       }
       icon={<WarningCircle size={24} color="#0F3CD9" />}
-    >
-      <p className="md:text-lg text-base font-semibold text-blue-600">
-        Default message - make it short
-      </p>
-    </Alert>
+      title="Default message - make it short"
+    />
   );
 };
 
@@ -38,7 +35,7 @@ import { useState } from "react";
 import { Alert } from "keep-react";
 import { WarningCircle } from "phosphor-react";
 
-const AlertWithDismissIcon = () => {
+export const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
   const onDissMiss = () => {
     setShowAlert(!showAlert);
@@ -57,15 +54,10 @@ const AlertWithDismissIcon = () => {
         </div>
       }
       icon={<WarningCircle size={24} color="#0F3CD9" />}
-    >
-      <p className="md:text-lg text-base font-semibold text-blue-600">
-        Default message - make it short
-      </p>
-    </Alert>
+      title="Default message - make it short"
+    />
   );
 };
-
-export default AlertWithDismissIcon;
 `;
 
 export { AlertWithDismissIcon, AlertWithDismissIconCode };

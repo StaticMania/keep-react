@@ -72,7 +72,7 @@ const chartData = [
   },
 ];
 
-const AreaChartWithGridGraphLine = () => {
+export const AreaChartComponent = () => {
   return (
     <AreaChart
       dataKey="price"
@@ -85,9 +85,6 @@ const AreaChartWithGridGraphLine = () => {
     />
   );
 };
-export default AreaChartWithGridGraphLine;
-
-
 `;
 
 export { AreaChartWithGridGraphLine, AreaChartWithGridGraphLineCode };

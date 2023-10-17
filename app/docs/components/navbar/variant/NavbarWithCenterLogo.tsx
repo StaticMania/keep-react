@@ -1,7 +1,7 @@
 "use client";
 import { Navbar, Button } from "~/src";
 import { CaretDown, MagnifyingGlass } from "phosphor-react";
-import Brand from "./DefaultNavbar";
+import Image from "next/image";
 
 const NavbarWithCenterLogo = () => {
   return (
@@ -16,7 +16,12 @@ const NavbarWithCenterLogo = () => {
           <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
         </Navbar.Container>
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
 
         <Navbar.Collapse collapseType="sidebar">
@@ -68,7 +73,12 @@ const NavbarComponent = () => {
           <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
         </Navbar.Container>
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
 
         <Navbar.Collapse collapseType="sidebar">

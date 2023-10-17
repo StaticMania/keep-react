@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import {
   CaretDown,
   Heart,
@@ -7,7 +8,6 @@ import {
   User,
 } from "phosphor-react";
 import { Button, Navbar } from "~/src";
-import Brand from "./DefaultNavbar";
 
 const EcommerceNavbar = () => {
   return (
@@ -21,7 +21,12 @@ const EcommerceNavbar = () => {
           <Navbar.Link linkName="Best Sellers" icon={<CaretDown size={20} />} />
         </Navbar.Container>
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
 
         <Navbar.Collapse collapseType="sidebar">
@@ -83,7 +88,12 @@ const NavbarComponent = () => {
           <Navbar.Link linkName="Best Sellers" icon={<CaretDown size={20} />} />
         </Navbar.Container>
         <Navbar.Brand>
-          <Brand />
+          <Image
+            src="/images/keepLogo.svg"
+            alt="keep"
+            width="100"
+            height="40"
+          />
         </Navbar.Brand>
 
         <Navbar.Collapse collapseType="sidebar">

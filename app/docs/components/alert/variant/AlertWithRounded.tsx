@@ -25,11 +25,8 @@ const AlertWithRounded = () => {
         </div>
       }
       icon={<Info size={24} color="#0F3CD9" />}
-    >
-      <p className="md:text-lg text-base font-semibold text-blue-600">
-        Default message - make it short
-      </p>
-    </Alert>
+      title="Default message - make it short"
+    />
   );
 };
 
@@ -40,7 +37,7 @@ import { useState } from "react";
 import { Alert } from "keep-react";
 import { Info } from "phosphor-react";
 
-const AlertWithRounded = () => {
+export const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
   const onDissMiss = () => {
     setShowAlert(!showAlert);
@@ -61,15 +58,10 @@ const AlertWithRounded = () => {
         </div>
       }
       icon={<Info size={24} color="#0F3CD9" />}
-    >
-      <p className="md:text-lg text-base font-semibold text-blue-600">
-        Default message - make it short
-      </p>
-    </Alert>
+      title="Default message - make it short"
+    />
   );
 };
-
-export default AlertWithRounded;
 `;
 
 export { AlertWithRounded, AlertWithRoundedCode };

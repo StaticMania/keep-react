@@ -1,6 +1,6 @@
 "use client";
-import { Avatar, Button, Table } from "~/src";
-import { Cube, DotsThreeOutline } from "phosphor-react";
+import { Avatar, Button, Popover, Table } from "~/src";
+import { Cube, DotsThreeOutline, Pencil, Trash } from "phosphor-react";
 
 const StripedTable = () => {
   return (
@@ -114,11 +114,35 @@ const StripedTable = () => {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -191,11 +215,35 @@ const StripedTable = () => {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -268,11 +316,35 @@ const StripedTable = () => {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -345,11 +417,35 @@ const StripedTable = () => {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -422,11 +518,35 @@ const StripedTable = () => {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
         </Table.Body>
@@ -437,10 +557,10 @@ const StripedTable = () => {
 
 const StripedTableCode = `
 "use client";
-import { Avatar,Button,Table } from "keep-react";
-import { Cube, DotsThreeOutline } from "phosphor-react";
+import { Avatar, Button, Popover, Table } from "keep-react";
+import { Cube, DotsThreeOutline, Pencil, Trash } from "phosphor-react";
 
-const StripedTable = () => {
+const TableComponent = () => {
   return (
     <Table showCheckbox={true} striped={true}>
       <Table.Caption>
@@ -541,11 +661,35 @@ const StripedTable = () => {
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
-            <Button type="outlineGray" size="xs" circle={true}>
-              <span>
-                <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-              </span>
-            </Button>
+            <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
+                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
+                </Button>
+              </Popover>
           </Table.Cell>
         </Table.Row>
         <Table.Row className="bg-white">
@@ -612,11 +756,35 @@ const StripedTable = () => {
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
-            <Button type="outlineGray" size="xs" circle={true}>
-              <span>
-                <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-              </span>
-            </Button>
+            <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
+                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
+                </Button>
+              </Popover>
           </Table.Cell>
         </Table.Row>
         <Table.Row className="bg-white">
@@ -683,11 +851,35 @@ const StripedTable = () => {
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
-            <Button type="outlineGray" size="xs" circle={true}>
-              <span>
-                <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-              </span>
-            </Button>
+            <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
+                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
+                </Button>
+              </Popover>
           </Table.Cell>
         </Table.Row>
         <Table.Row className="bg-white">
@@ -754,11 +946,35 @@ const StripedTable = () => {
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
-            <Button type="outlineGray" size="xs" circle={true}>
-              <span>
-                <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-              </span>
-            </Button>
+            <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
+                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
+                </Button>
+              </Popover>
           </Table.Cell>
         </Table.Row>
         <Table.Row className="bg-white">
@@ -825,11 +1041,35 @@ const StripedTable = () => {
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
-            <Button type="outlineGray" size="xs" circle={true}>
-              <span>
-                <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-              </span>
-            </Button>
+            <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
+                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
+                </Button>
+              </Popover>
           </Table.Cell>
         </Table.Row>
       </Table.Body>
@@ -837,8 +1077,7 @@ const StripedTable = () => {
   );
 };
 
-export default StripedTable;
-
+export default TableComponent;
 `;
 
 export { StripedTable, StripedTableCode };

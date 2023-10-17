@@ -21,18 +21,18 @@ const KeepButtonColor = () => {
 };
 
 const KeepButtonColorCode = `
-"use client";
-import { Button } from "keep-design;
-
-const KeepButtonColor = () => {
-  return (
-      <Button size="md" color="error">
+ <Button size="md" color="error">
         Error Button
       </Button>
-   );
-};
-
-export default KeepButtonColor;
+      <Button size="md" color="success">
+        Success Button
+      </Button>
+  <Button size="md" color="info">
+        Info Button
+ </Button>
+ <Button size="md" color="warning">
+        warning Button
+ </Button>
 `;
 
 export { KeepButtonColor, KeepButtonColorCode };

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Badge, Button, Table } from "~/src";
+import { Badge, Button, Popover, Table } from "~/src";
 import {
   CalendarBlank,
   Crown,
@@ -9,8 +9,10 @@ import {
   DotsNine,
   DotsThreeOutline,
   Flag,
+  Pencil,
   Spinner,
   Tag,
+  Trash,
 } from "phosphor-react";
 
 const OrdersTable = () => {
@@ -129,11 +131,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -178,11 +204,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -227,11 +277,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -276,11 +350,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -325,11 +423,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -374,11 +496,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
         </Table.Body>
@@ -389,7 +535,7 @@ const OrdersTable = () => {
 
 const OrdersTableCode = `
 "use client";
-import { Badge,Table,Button } from "keep-react";
+import { Badge, Button, Popover, Table } from "keep-react";
 import {
   CalendarBlank,
   Crown,
@@ -398,12 +544,14 @@ import {
   DotsNine,
   DotsThreeOutline,
   Flag,
+  Pencil,
   Spinner,
   Tag,
+  Trash,
 } from "phosphor-react";
 import Image from "next/image";
 
-const OrdersTable = () => {
+const TableComponent = () => {
   return (
     <Table showCheckbox={true}>
         <Table.Caption>
@@ -518,11 +666,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -567,11 +739,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -616,11 +812,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -665,11 +885,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -714,11 +958,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
           <Table.Row className="bg-white">
@@ -763,11 +1031,35 @@ const OrdersTable = () => {
               </p>
             </Table.Cell>
             <Table.Cell>
-              <Button type="outlineGray" size="xs" circle={true}>
-                <span>
+              <Popover
+                showDismissIcon={false}
+                showArrow={false}
+                customClass="w-48 p-2 border border-slate-100"
+                additinalContent={
+                  <ul className="flex flex-col gap-1">
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Delete</span>
+                        <span>
+                          <Trash />
+                        </span>
+                      </button>
+                    </li>
+                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                        <span>Edit</span>
+                        <span>
+                          <Pencil />
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                }
+              >
+                <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </span>
-              </Button>
+                </Button>
+              </Popover>
             </Table.Cell>
           </Table.Row>
         </Table.Body>
@@ -775,7 +1067,7 @@ const OrdersTable = () => {
   );
 };
 
-export default OrdersTable;
+export default TableComponent;
 `;
 
 export { OrdersTable, OrdersTableCode };

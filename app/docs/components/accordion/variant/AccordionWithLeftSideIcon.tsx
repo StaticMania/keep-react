@@ -54,7 +54,7 @@ const AccordionWithLeftSideIconCode = `
 "use client";
 import { Accordion } from "keep-react";
 
-const AccordionWithLeftSideIcon = () => {
+export const AccordionComponent = () => {
   return (
     <Accordion collapseAll={true} iconPosition="left">
       <Accordion.Panel>
@@ -102,8 +102,6 @@ const AccordionWithLeftSideIcon = () => {
     </Accordion>
   );
 };
-
-export default AccordionWithLeftSideIcon;
 `;
 
 export { AccordionWithLeftSideIcon, AccordionWithLeftSideIconCode };

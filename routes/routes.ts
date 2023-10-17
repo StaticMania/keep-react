@@ -23,20 +23,21 @@ interface routerPath {
 export const routes: routerPath[] = [
   {
     id: 1,
-    name: "Accordion",
-    href: "/docs/components/accordion",
-    tag: false,
-    deprecate: false,
-    folderName: "Accordion",
-  },
-  {
-    id: 2,
     name: "Alert",
     href: "/docs/components/alert",
     tag: false,
     deprecate: false,
     folderName: "Alert",
   },
+  {
+    id: 2,
+    name: "Accordion",
+    href: "/docs/components/accordion",
+    tag: false,
+    deprecate: false,
+    folderName: "Accordion",
+  },
+
   {
     id: 3,
     name: "Area Chart",
