@@ -36,15 +36,20 @@ const KeepButtonTypeCode = `
 "use client";
 import { Button } from "keep-react";
 
-const KeepButtonType = () => {
+export const ButtonComponent = () => {
   return (
-     <Button size="md" type="default">
-        Default
-      </Button>
+    <>
+      <Button size="md" type="default">Default</Button>
+      <Button size="md" type="primary">Primary</Button>
+      <Button size="md" type="outlinePrimary">Outline Primary</Button>
+      <Button size="md" type="outlineGray">Outline Gray</Button>
+      <Button size="md" type="dashed">Dashed Button</Button>
+      <Button size="md" type="linkPrimary">Link Primary</Button>
+      <Button size="md" type="linkGray">Link Gray</Button>
+      <Button size="md" type="text">Text Button</Button>
+    </>
   );
 };
-
-export default KeepButtonType;
 `;
 
 export { KeepButtonTypeCode, KeepButtonType };

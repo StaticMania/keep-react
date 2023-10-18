@@ -1,7 +1,7 @@
 import type { keepPopoverTheme } from ".";
 
 export const popoverTheme: keepPopoverTheme = {
-  target: "w-fit",
+  target: "w-fit z-50",
   body: {
     base: "bg-white py-[22px] px-[24px] max-w-sm rounded-md shadow-sm relative z-40",
     title:

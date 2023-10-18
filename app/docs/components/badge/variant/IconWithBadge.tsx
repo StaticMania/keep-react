@@ -31,7 +31,7 @@ const IconWithBadgeCode = `
 "use client";
 import { Badge } from "keep-react";
 
-const IconWithBadge = () => {
+export const BadgeComponent = () => {
   return (
      <div>
       <h2 className="text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900 mb-2">Left Side Icon With Badge</h2>
@@ -133,9 +133,6 @@ const IconWithBadge = () => {
     </div>
   );
 };
-
-export default IconWithBadge;
-
 `;
 
 export { IconWithBadge, IconWithBadgeCode };

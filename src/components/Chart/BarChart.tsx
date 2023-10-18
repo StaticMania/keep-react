@@ -17,18 +17,18 @@ interface BarChartProps {
   active?: boolean;
   activeColor?: string;
   activeIndex?: number;
-  barBackGroundColor?: string;
+  barBg?: string;
   barColor?: string;
-  barRadius?: number | [number, number, number, number] | undefined;
+  barRadius?: number | [number, number, number, number];
   barSize?: number;
   chartData?: unknown[];
   dataKey: string;
   height?: number;
   inActiveColor?: string;
-  secondaryBarBackGroundColor?: string;
+  secondaryBarBg?: string;
   secondaryBarColor?: string;
   secondaryDataKey?: string;
-  showBackGround?: boolean;
+  showBg?: boolean;
   showGridLine?: boolean;
   showLegend?: boolean;
   showTooltip?: boolean;
@@ -44,15 +44,15 @@ export const BarChart: FC<BarChartProps> = ({
   showTooltip = false,
   showXaxis = false,
   showYaxis = false,
-  showBackGround = false,
+  showBg = false,
   showLegend = false,
   active = false,
   activeColor,
   inActiveColor,
   barColor = "#1B4DFF",
-  barBackGroundColor = "#E8EDFF",
+  barBg = "#E8EDFF",
   secondaryBarColor = "#1DB469",
-  secondaryBarBackGroundColor = "#D7FFEB",
+  secondaryBarBg = "#D7FFEB",
   activeIndex = 4,
   XAxisDataKey,
   dataKey,
@@ -108,8 +108,8 @@ export const BarChart: FC<BarChartProps> = ({
         fill={barColor}
         radius={barRadius}
         background={{
-          fill: showBackGround ? barBackGroundColor : "transparent",
-          radius: [4, 4, 0, 0],
+          fill: showBg ? barBg : "transparent",
+          radius: 4,
         }}
       >
         {active &&
@@ -132,10 +132,10 @@ export const BarChart: FC<BarChartProps> = ({
           dataKey={secondaryDataKey}
           fill={secondaryBarColor}
           barSize={barSize}
-          radius={[4, 4, 0, 0]}
+          radius={barRadius}
           background={{
-            fill: showBackGround ? secondaryBarBackGroundColor : "transparent",
-            radius: [4, 4, 0, 0],
+            fill: showBg ? secondaryBarBg : "transparent",
+            radius: 4,
           }}
         />
       )}

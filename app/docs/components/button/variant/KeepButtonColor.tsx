@@ -21,18 +21,19 @@ const KeepButtonColor = () => {
 };
 
 const KeepButtonColorCode = `
- <Button size="md" color="error">
-        Error Button
-      </Button>
-      <Button size="md" color="success">
-        Success Button
-      </Button>
-  <Button size="md" color="info">
-        Info Button
- </Button>
- <Button size="md" color="warning">
-        warning Button
- </Button>
+"use client";
+import { Button } from "keep-react";
+
+export const ButtonComponent = () => {
+  return (
+    <>
+      <Button size="md" color="error">Error Button</Button>
+      <Button size="md" color="success">Success Button</Button>
+      <Button size="md" color="info">Info Button</Button>
+      <Button size="md" color="warning">Warning Button</Button>
+    </>
+  );
+};
 `;
 
 export { KeepButtonColor, KeepButtonColorCode };

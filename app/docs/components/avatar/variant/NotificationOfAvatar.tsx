@@ -5,7 +5,7 @@ const NotificationOfAvatar = () => {
   return (
     <div className="flex items-center gap-3 pl-5 h-20">
       <Avatar
-        shape="round"
+        shape="circle"
         size="xl"
         statusType="notification"
         status="online"
@@ -14,7 +14,7 @@ const NotificationOfAvatar = () => {
         img="/images/avatar/avatar-4.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="xl"
         status="offline"
         statusType="notification"
@@ -23,7 +23,7 @@ const NotificationOfAvatar = () => {
         img="/images/avatar/avatar-4.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="xl"
         status="busy"
         statusPosition="top-left"
@@ -32,7 +32,7 @@ const NotificationOfAvatar = () => {
         img="/images/avatar/avatar-4.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="xl"
         status="away"
         bordered
@@ -52,7 +52,7 @@ import { Avatar } from "keep-react";
 const NotificationOfAvatar = () => {
   return (
       <Avatar 
-        shape="round"
+        shape="circle"
         size="xl"
         statusType="notification"
         status="online"

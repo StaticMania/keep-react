@@ -1,7 +1,5 @@
 "use client";
-
 import { BarChart } from "~/src";
-
 export const BarChartData = [
   {
     name: "2",
@@ -177,7 +175,7 @@ const BarChartData = [
   },
 ];
 
-const DefaultBarChart = () => {
+export const BarComponent = () => {
   return (
     <BarChart
       height={250}
@@ -192,8 +190,6 @@ const DefaultBarChart = () => {
     />
   );
 };
-
-export default DefaultBarChart;
 `;
 
 export { DefaultBarChart, DefaultBarChartCode };

@@ -50,7 +50,7 @@ const StripedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -80,37 +80,37 @@ const StripedTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -151,7 +151,7 @@ const StripedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -181,37 +181,37 @@ const StripedTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -252,7 +252,7 @@ const StripedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -282,37 +282,37 @@ const StripedTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -353,7 +353,7 @@ const StripedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -383,37 +383,37 @@ const StripedTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -454,7 +454,7 @@ const StripedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -484,37 +484,37 @@ const StripedTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -602,7 +602,7 @@ const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="round" img="/images/icon/file.svg" size="md" />
+                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
                   <div>
                     <p className="-mb-0.5 text-base font-medium text-slate-600">
                       Static Next Plan.pdf
@@ -627,37 +627,37 @@ const TableComponent = () => {
           <Table.Cell>
             <Avatar.Group>
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-1.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-2.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-3.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-4.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-5.png"
               />
-              <Avatar shape="round" size="md" stacked={true} />
-              <Avatar shape="round" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
@@ -697,7 +697,7 @@ const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="round" img="/images/icon/file.svg" size="md" />
+                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
                   <div>
                     <p className="-mb-0.5 text-base font-medium text-slate-600">
                       Static Next Plan.pdf
@@ -722,37 +722,37 @@ const TableComponent = () => {
           <Table.Cell>
             <Avatar.Group>
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-1.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-2.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-3.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-4.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-5.png"
               />
-              <Avatar shape="round" size="md" stacked={true} />
-              <Avatar shape="round" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
@@ -792,7 +792,7 @@ const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="round" img="/images/icon/file.svg" size="md" />
+                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
                   <div>
                     <p className="-mb-0.5 text-base font-medium text-slate-600">
                       Static Next Plan.pdf
@@ -817,37 +817,37 @@ const TableComponent = () => {
           <Table.Cell>
             <Avatar.Group>
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-1.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-2.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-3.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-4.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-5.png"
               />
-              <Avatar shape="round" size="md" stacked={true} />
-              <Avatar shape="round" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
@@ -887,7 +887,7 @@ const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="round" img="/images/icon/file.svg" size="md" />
+                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
                   <div>
                     <p className="-mb-0.5 text-base font-medium text-slate-600">
                       Static Next Plan.pdf
@@ -912,37 +912,37 @@ const TableComponent = () => {
           <Table.Cell>
             <Avatar.Group>
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-1.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-2.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-3.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-4.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-5.png"
               />
-              <Avatar shape="round" size="md" stacked={true} />
-              <Avatar shape="round" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
@@ -982,7 +982,7 @@ const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="round" img="/images/icon/file.svg" size="md" />
+                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
                   <div>
                     <p className="-mb-0.5 text-base font-medium text-slate-600">
                       Static Next Plan.pdf
@@ -1007,37 +1007,37 @@ const TableComponent = () => {
           <Table.Cell>
             <Avatar.Group>
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-1.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-2.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-3.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-4.png"
               />
               <Avatar
-                shape="round"
+                shape="circle"
                 size="md"
                 stacked={true}
                 img="/images/avatar/avatar-5.png"
               />
-              <Avatar shape="round" size="md" stacked={true} />
-              <Avatar shape="round" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
+              <Avatar shape="circle" size="md" stacked={true} />
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>

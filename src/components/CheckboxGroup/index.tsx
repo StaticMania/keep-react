@@ -143,7 +143,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
                 : theme.root.circleImg.selected.off
             )}
           >
-            <Avatar img={img} shape="round" />
+            <Avatar img={img} shape="circle" />
           </div>
         )}
         {img && imgShape === "square" && (

@@ -30,22 +30,15 @@ export const avatarApiData = [
   {
     id: 5,
     propsName: "shape",
-    propsType: ["round", "roundSquare", "square"],
+    propsType: ["circle", "rounded", "square"],
     propsDescription: "Determines the shape of the avatar.",
-    default: "md",
+    default: "square",
   },
   {
     id: 6,
     propsName: "stacked",
     propsType: "boolean",
     propsDescription: "Specifies if avatars should be stacked together.",
-    default: "false",
-  },
-  {
-    id: 7,
-    propsName: "rounded",
-    propsType: "boolean",
-    propsDescription: "Determines if the avatar has rounded corners.",
     default: "false",
   },
   {

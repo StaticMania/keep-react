@@ -11,7 +11,7 @@ const BarChartWithGridLine = () => {
       chartData={BarChartData}
       barRadius={[4, 4, 0, 0]}
       showLegend={true}
-      showBackGround={true}
+      showBg={true}
       showXaxis={true}
       showGridLine={true}
       showYaxis={true}
@@ -105,7 +105,7 @@ const BarChartData = [
   },
 ];
 
-const ChartWithGridLine = () => {
+export const BarComponent = () => {
   return (
     <BarChart
       height={250}
@@ -114,7 +114,7 @@ const ChartWithGridLine = () => {
       chartData={BarChartData}
       barRadius={[4, 4, 0, 0]}
       showLegend={true}
-      showBackGround={true}
+      showBg={true}
       showXaxis={true}
       showYaxis={true}
       showTooltip={true}
@@ -126,8 +126,6 @@ const ChartWithGridLine = () => {
     />
   );
 };
-
-export default ChartWithGridLine;
 `;
 
 export { BarChartWithGridLine, BarChartWithAxisDataCode };

@@ -1481,19 +1481,31 @@ export const DropdownWithAvatar: Story = {
       <>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-1.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-1.png"
+              size="md"
+            />
             <p className="text-sm font-medium text-slate-700">Guy Hawkins</p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-2.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-2.png"
+              size="md"
+            />
             <p className="text-sm font-medium text-slate-700">James Mary</p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-3.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-3.png"
+              size="md"
+            />
             <p className="text-sm font-medium text-slate-700">
               Bellanca Sherringham
             </p>
@@ -1501,13 +1513,21 @@ export const DropdownWithAvatar: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-4.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-4.png"
+              size="md"
+            />
             <p className="text-sm font-medium text-slate-700">Carlin Tebb</p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-5.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-5.png"
+              size="md"
+            />
             <p className="text-sm font-medium text-slate-700">Mar Segrave</p>
           </div>
         </Dropdown.Item>
@@ -1524,7 +1544,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 size="md"
               />
@@ -1539,7 +1559,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-5.png"
                 size="md"
               />
@@ -1554,7 +1574,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-3.png"
                 size="md"
               />
@@ -1571,7 +1591,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-2.png"
                 size="md"
               />
@@ -1586,7 +1606,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-1.png"
                 size="md"
               />
@@ -1616,7 +1636,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 size="md"
               />
@@ -1628,7 +1648,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-5.png"
                 size="md"
               />
@@ -1640,7 +1660,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-3.png"
                 size="md"
               />
@@ -1654,7 +1674,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-2.png"
                 size="md"
               />
@@ -1666,7 +1686,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-1.png"
                 size="md"
               />
@@ -1693,7 +1713,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 size="md"
               />
@@ -1708,7 +1728,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-5.png"
                 size="md"
               />
@@ -1723,7 +1743,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-3.png"
                 size="md"
               />
@@ -1740,7 +1760,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-2.png"
                 size="md"
               />
@@ -1755,7 +1775,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-1.png"
                 size="md"
               />
@@ -1777,7 +1797,11 @@ export const DropdownWithAvatarAndName: Story = {
       <>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-1.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-1.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Guy Hawkins
@@ -1790,7 +1814,11 @@ export const DropdownWithAvatarAndName: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-2.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-2.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Bellanca Sherringham
@@ -1803,7 +1831,11 @@ export const DropdownWithAvatarAndName: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-3.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-3.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Carlin Tebb
@@ -1816,7 +1848,11 @@ export const DropdownWithAvatarAndName: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-4.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-4.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Lorena Gregg
@@ -1829,7 +1865,11 @@ export const DropdownWithAvatarAndName: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-5.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-5.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Geoffry Kingman
@@ -1853,7 +1893,7 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-2.png"
                 size="md"
               />
@@ -1875,7 +1915,7 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-1.png"
                 size="md"
               />
@@ -1897,7 +1937,7 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-3.png"
                 size="md"
               />
@@ -1919,7 +1959,7 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 size="md"
               />
@@ -1941,7 +1981,7 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-5.png"
                 size="md"
               />
@@ -1975,7 +2015,11 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-1.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-1.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Guy Hawkins
@@ -1988,7 +2032,11 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-2.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-2.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Bellanca Sherringham
@@ -2001,7 +2049,11 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-3.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-3.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Carlin Tebb
@@ -2014,7 +2066,11 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-4.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-4.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Lorena Gregg
@@ -2027,7 +2083,11 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
-            <Avatar shape="round" img="/images/avatar/avatar-5.png" size="md" />
+            <Avatar
+              shape="circle"
+              img="/images/avatar/avatar-5.png"
+              size="md"
+            />
             <div>
               <p className="-mb-1 text-sm font-medium text-slate-700">
                 Geoffry Kingman
@@ -2056,7 +2116,7 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-2.png"
                 size="md"
               />
@@ -2078,7 +2138,7 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-1.png"
                 size="md"
               />
@@ -2100,7 +2160,7 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-3.png"
                 size="md"
               />
@@ -2122,7 +2182,7 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 size="md"
               />
@@ -2144,7 +2204,7 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5 ">
             <div className="flex items-center gap-3">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-5.png"
                 size="md"
               />

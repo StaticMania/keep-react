@@ -150,7 +150,7 @@ export const DefaultTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-1.png"
                       size="md"
                     />
@@ -216,7 +216,7 @@ export const DefaultTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-2.png"
                       size="md"
                     />
@@ -284,7 +284,7 @@ export const DefaultTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-3.png"
                       size="md"
                     />
@@ -348,7 +348,7 @@ export const DefaultTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-4.png"
                       size="md"
                     />
@@ -414,7 +414,7 @@ export const DefaultTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-5.png"
                       size="md"
                     />
@@ -543,7 +543,7 @@ export const CashOutTransitionTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/paypal.png"
                       size="md"
                     />
@@ -597,7 +597,7 @@ export const CashOutTransitionTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/Visa.png"
                       size="md"
                     />
@@ -652,7 +652,7 @@ export const CashOutTransitionTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/stripe.png"
                       size="md"
                     />
@@ -706,7 +706,7 @@ export const CashOutTransitionTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/western.png"
                       size="md"
                     />
@@ -760,7 +760,7 @@ export const CashOutTransitionTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/mastercard.png"
                       size="md"
                     />
@@ -1208,7 +1208,7 @@ export const FileUploadedTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -1241,37 +1241,37 @@ export const FileUploadedTable: Story = {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1288,7 +1288,7 @@ export const FileUploadedTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -1321,37 +1321,37 @@ export const FileUploadedTable: Story = {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1368,7 +1368,7 @@ export const FileUploadedTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -1401,37 +1401,37 @@ export const FileUploadedTable: Story = {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1448,7 +1448,7 @@ export const FileUploadedTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -1481,37 +1481,37 @@ export const FileUploadedTable: Story = {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1528,7 +1528,7 @@ export const FileUploadedTable: Story = {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -1561,37 +1561,37 @@ export const FileUploadedTable: Story = {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>

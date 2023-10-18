@@ -18,7 +18,7 @@ const SizesOfBadgeCode = `
 "use client";
 import { Badge } from "keep-react";
 
-const SizesOfBadge = () => {
+export const BadgeComponent = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
       <Badge size="xs" colorType="light" color="info">
@@ -30,8 +30,6 @@ const SizesOfBadge = () => {
     </div>
   );
 };
-
-export default SizesOfBadge;
 `;
 
 export { SizesOfBadge, SizesOfBadgeCode };

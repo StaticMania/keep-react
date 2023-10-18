@@ -41,7 +41,11 @@ const NotificationWithAvatar = () => {
         }
         infoIcon={
           <div className="h-12 w-12">
-            <Avatar shape="round" size="md" img="/images/avatar/avatar-4.png" />
+            <Avatar
+              shape="circle"
+              size="md"
+              img="/images/avatar/avatar-4.png"
+            />
           </div>
         }
       >
@@ -99,7 +103,7 @@ const NotificationComponent = () => {
         }
         infoIcon={
           <div className="h-12 w-12">
-            <Avatar shape="round" size="md" img="/images/avatar/avatar-4.png" />
+            <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
           </div>
         }
       >

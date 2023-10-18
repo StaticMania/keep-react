@@ -73,7 +73,7 @@ const TransactionsTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/paypal.png"
                       size="md"
                     />
@@ -150,7 +150,7 @@ const TransactionsTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/Visa.png"
                       size="md"
                     />
@@ -227,7 +227,7 @@ const TransactionsTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/stripe.png"
                       size="md"
                     />
@@ -304,7 +304,7 @@ const TransactionsTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/western.png"
                       size="md"
                     />
@@ -381,7 +381,7 @@ const TransactionsTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/mastercard.png"
                       size="md"
                     />
@@ -533,7 +533,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/paypal.png"
                       size="md"
                     />
@@ -610,7 +610,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/Visa.png"
                       size="md"
                     />
@@ -687,7 +687,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/stripe.png"
                       size="md"
                     />
@@ -764,7 +764,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/western.png"
                       size="md"
                     />
@@ -841,7 +841,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/company/mastercard.png"
                       size="md"
                     />

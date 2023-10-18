@@ -6,5 +6,5 @@ export interface UserImgProps {
 }
 
 export const UserImg: FC<UserImgProps> = ({ img }) => {
-  return <Avatar size="lg" shape="round" img={img} />;
+  return <Avatar size="lg" shape="circle" img={img} />;
 };

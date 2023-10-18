@@ -75,7 +75,7 @@ const HistoryModal = () => {
             </p>
             <div className="md:mb-6 mb-4 flex items-center gap-2">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 statusPosition="bottom-right"
                 size="md"
@@ -124,7 +124,7 @@ import { useState } from "react";
 import { Avatar,Button,Modal } from "keep-react";
 import { CloudArrowUp, UserPlus } from "phosphor-react";
 
-const HistoryModal = () => {
+export const ModalComponent = () => {
   const [showHistoryModal, setShowHistoryModal] = useState(false);
   const [showAccessModal, setShowAccessModal] = useState(false);
 
@@ -196,7 +196,7 @@ const HistoryModal = () => {
             </p>
             <div className="md:mb-6 mb-4 flex items-center gap-2">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 statusPosition="bottom-right"
                 size="md"
@@ -238,9 +238,6 @@ const HistoryModal = () => {
     </div>
   );
 };
-
-export default HistoryModal;
-
 `;
 
 export { HistoryModal, HistoryModalCode };

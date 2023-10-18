@@ -27,7 +27,7 @@ const DefaultBadgeCode = `
 "use client";
 import { Badge } from "keep-react";
 
-const DefaultBadge = () => {
+export const BadgeComponent = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
       <Badge size="xs" colorType="light" color="info">
@@ -48,9 +48,6 @@ const DefaultBadge = () => {
     </div>
   );
 };
-
-export default DefaultBadge;
-
 `;
 
 export { DefaultBadge, DefaultBadgeCode };

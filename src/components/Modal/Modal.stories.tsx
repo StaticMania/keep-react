@@ -272,7 +272,7 @@ const HistoryModalComponent = () => {
 
             <div className="mb-6 flex items-center gap-2">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 statusPosition="bottom-right"
                 size="md"

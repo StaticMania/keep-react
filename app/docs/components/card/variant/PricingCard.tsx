@@ -69,11 +69,11 @@ const PricingCard = () => {
 
 const PricingCardCode = `
 "use client";
+import Image from "next/image";
 import { Button,Card } from "keep-react";
 import { CheckCircle } from "phosphor-react";
-import Image from "next/image";
 
-const PricingCard = () => {
+export const CardComponent = () => {
   return (
     <Card className="max-w-xs p-6">
       <Card.Container>
@@ -134,8 +134,6 @@ const PricingCard = () => {
     </Card>
   );
 };
-
-export default PricingCard;
 `;
 
 export { PricingCard, PricingCardCode };
