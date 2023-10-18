@@ -17,7 +17,7 @@ const StatisticWithProgressRateCode = `
 "use client";
 import { Statistic } from "keep-react";
 
-const StatisticWithProgressRate = () => {
+export const StatisticComponent = () => {
   return (
     <Statistic>
       <Statistic.Title>Memebers</Statistic.Title>
@@ -28,8 +28,6 @@ const StatisticWithProgressRate = () => {
     </Statistic>
   );
 };
-
-export default StatisticWithProgressRate;
 `;
 
 export { StatisticWithProgressRate, StatisticWithProgressRateCode };

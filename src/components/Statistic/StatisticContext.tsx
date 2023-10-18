@@ -5,6 +5,8 @@ export type StatisticContext = {
   showFilter?: boolean;
   iconBg?: "primary" | "success";
   children?: ReactNode;
+  filterLabel?: string;
+  filterData?: string[];
 };
 
 export const StatisticContext = createContext<StatisticContext | undefined>(

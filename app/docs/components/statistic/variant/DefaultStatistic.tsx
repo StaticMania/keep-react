@@ -14,16 +14,14 @@ const DefaultStatisticCode = `
 "use client";
 import { Statistic } from "keep-react";
 
-const DefaultStatistic = () => {
+export const StatisticComponent = () => {
   return (
     <Statistic>
       <Statistic.Title>Memebers</Statistic.Title>
       <Statistic.Amount>{7381237}</Statistic.Amount>
     </Statistic>
   );
-};
-
-export default DefaultStatistic;
+}
 `;
 
 export { DefaultStatistic, DefaultStatisticCode };

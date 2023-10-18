@@ -19,6 +19,8 @@ export interface StatisticProps {
   showFilter?: boolean;
   iconBg?: "primary" | "success";
   children?: ReactNode;
+  filterLabel?: string;
+  filterData?: string[];
 }
 
 const StatisticComponent: FC<StatisticProps> = ({
@@ -26,10 +28,14 @@ const StatisticComponent: FC<StatisticProps> = ({
   iconBg = "primary",
   children,
   showFilter,
+  filterLabel,
+  filterData,
 }) => {
   return (
     <div>
-      <StatisticContext.Provider value={{ showDollar, iconBg, showFilter }}>
+      <StatisticContext.Provider
+        value={{ showDollar, iconBg, showFilter, filterLabel, filterData }}
+      >
         {children}
       </StatisticContext.Provider>
     </div>

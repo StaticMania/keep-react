@@ -1,9 +1,8 @@
 import { twMerge } from "tailwind-merge";
-import { CaretDown } from "phosphor-react";
 import { FC } from "react";
-import { Button } from "../Button/Button";
 import { useStatisticContext } from "./StatisticContext";
 import { useTheme } from "../../Keep/ThemeContex";
+import { Dropdown } from "../Dropdown";
 
 export interface keepTitleTheme {
   base: string;
@@ -18,7 +17,7 @@ export interface TitleProps {
 }
 
 export const Title: FC<TitleProps> = ({ children }) => {
-  const { showFilter } = useStatisticContext();
+  const { showFilter, filterLabel, filterData } = useStatisticContext();
 
   const theme = useTheme().theme.statistic;
   return (
@@ -26,12 +25,16 @@ export const Title: FC<TitleProps> = ({ children }) => {
       <p className={twMerge(theme.title.title)}>{children}</p>
 
       {showFilter && (
-        <Button size="xs" type="outlineGray">
-          <span className={twMerge(theme.title.filter.text)}>This Month</span>
-          <span className={twMerge(theme.title.filter.icon)}>
-            <CaretDown size={16} color="#5E718D" />
-          </span>
-        </Button>
+        <Dropdown
+          label={filterLabel}
+          size="xs"
+          type="outlineGray"
+          dismissOnClick={true}
+        >
+          {filterData?.map((item) => (
+            <Dropdown.Item key={item}>{item}</Dropdown.Item>
+          ))}
+        </Dropdown>
       )}
     </div>
   );
