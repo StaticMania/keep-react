@@ -22,8 +22,8 @@ const DefaultUpload = () => {
 
 const DefaultUploadCode = `
 "use client";
-import { Upload } from "keep-react";
 import { useState } from "react";
+import { Upload } from "keep-react";
 
 const DefaultUpload = () => {
   const [fileName, setFileName] = useState("");

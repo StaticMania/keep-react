@@ -62,20 +62,22 @@ const NotificationWithAvatar = () => {
 
 const NotificationWithAvatarCode = `
 "use client";
+import { useState } from "react";
 import { Notification, Button, Avatar } from "keep-react";
 
-const NotificationComponent = () => {
+export const NotificationComponent = () => {
 
   const [showNotification, setShowNotification] = useState(false);
   const onDismiss = () => {
     setShowNotification(!showNotification);
   };
+
   const handleShowNotification = () => {
     setShowNotification(!showNotification);
   };
 
   return (
-    <div className="py-3 px-2">
+    <>
       <Button onClick={handleShowNotification}>Show Notification</Button>
       <Notification
         showNotification={showNotification}
@@ -103,7 +105,11 @@ const NotificationComponent = () => {
         }
         infoIcon={
           <div className="h-12 w-12">
-            <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+            <Avatar
+              shape="circle"
+              size="md"
+              img="/images/avatar/avatar-4.png"
+            />
           </div>
         }
       >
@@ -114,11 +120,9 @@ const NotificationComponent = () => {
           </span>
         </h3>
       </Notification>
-    </div>
+    </>
   );
 };
-
-export default NotificationComponent;
 `;
 
 export { NotificationWithAvatar, NotificationWithAvatarCode };

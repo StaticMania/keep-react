@@ -58,11 +58,12 @@ const NotificationWithIcon = () => {
 
 const NotificationWithIconCode = `
 "use client";
+import { useState } from "react";
 import { Cookie } from "phosphor-react";
 import { Notification, Button } from "keep-react";
 
-const NotificationComponent = () => {
-
+export const NotificationComponent = () => {
+  
   const [showNotification, setShowNotification] = useState(false);
   const onDismiss = () => {
     setShowNotification(!showNotification);
@@ -72,7 +73,7 @@ const NotificationComponent = () => {
   };
 
   return (
-    <div className="px-2 py-3">
+    <>
       <Button onClick={handleShowNotification}>Show Notification</Button>
       <Notification
         showNotification={showNotification}
@@ -111,11 +112,9 @@ const NotificationComponent = () => {
           Can we store cookies?
         </h3>
       </Notification>
-    </div>
+    </>
   );
-};
-
-export default NotificationComponent;
+}
 `;
 
 export { NotificationWithIcon, NotificationWithIconCode };

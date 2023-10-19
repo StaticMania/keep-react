@@ -56,9 +56,9 @@ const TooltipPlacementCode = `
 "use client";
 import { Button,Tooltip } from "keep-react";
 
-const TooltipComponent = () => {
+export const TooltipComponent = () => {
   return (
-    <div className="my-8 flex flex-wrap items-end gap-2">
+    <>
       <Tooltip
         content="Tooltips text here"
         trigger="hover"
@@ -103,11 +103,9 @@ const TooltipComponent = () => {
           Tooltip Right
         </Button>
       </Tooltip>
-    </div>
+    </>
   );
-};
-
-export default TooltipComponent;
+}
 `;
 
 export { TooltipPlacement, TooltipPlacementCode };

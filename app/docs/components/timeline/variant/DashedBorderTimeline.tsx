@@ -55,7 +55,7 @@ const DashedBorderTimelineCode = `
 import { Button,Timeline } from "keep-react";
 import { ArrowRight, CalendarBlank } from "phosphor-react";
 
-const DashedBorderTimeline = () => {
+export const TimelineComponent = () => {
   return (
     <Timeline timelineBarType="dashed">
       <Timeline.Item>
@@ -98,9 +98,7 @@ const DashedBorderTimeline = () => {
       </Timeline.Item>
     </Timeline>
   );
-};
-
-export default DashedBorderTimeline;
+}
 `;
 
 export { DashedBorderTimeline, DashedBorderTimelineCode };

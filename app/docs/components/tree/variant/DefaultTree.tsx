@@ -120,11 +120,9 @@ const nodes = [
   },
 ];
 
-const TreeComponent = () => {
+export const TreeComponent = () => {
   return <Tree nodes={nodes} />;
 };
-
-export default TreeComponent;
 `;
 
 export { DefaultTree, DefaultTreeCode };

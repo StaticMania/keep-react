@@ -12,12 +12,10 @@ const DefaultNumberInputCode = `
 import { useState } from "react";
 import { NumberInput } from "keep-react";
 
-const NumberInputComponent = () => {
+export const NumberInputComponent = () => {
   const [value, setValue] = useState(100);
-  return <NumberInput sizing="md" value={95} setValue={setValue} />
-};
-
-export default NumberInputComponent;
+   return <NumberInput sizing="md" value={value} setValue={setValue} />
+}
 `;
 
 export { DefaultNumberInput, DefaultNumberInputCode };

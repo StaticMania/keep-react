@@ -30,6 +30,9 @@ export const NavbarApiData = [
     propsDescription: "Responsive menu collapse effect",
     default: "false",
   },
+];
+
+export const NavLinksAPIData = [
   {
     id: 6,
     propsName: "icon",

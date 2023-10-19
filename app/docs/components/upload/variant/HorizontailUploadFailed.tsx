@@ -28,7 +28,7 @@ const HorizontalUploadFailed = () => {
 const HorizontalUploadFailedCode = `
 "use client";
 import { Upload } from "keep-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const HorizontalUploadFailed = () => {
   const [fileName, setFileName] = useState("");
