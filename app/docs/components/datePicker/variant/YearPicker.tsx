@@ -17,17 +17,14 @@ const YearPickerCode = `
 import { useState } from "react";
 import { DatePicker } from "keep-react";
 
-const YearPicker = () => {
+export const YearPickerComponent = () => {
   const [yearPicker, setYearPicker] = useState();
   return (
     <DatePicker yearPicker={setYearPicker}>
       <DatePicker.Year />
     </DatePicker>
   );
-};
-
-export default YearPicker;
-
+}
 `;
 
 export { YearPicker, YearPickerCode };

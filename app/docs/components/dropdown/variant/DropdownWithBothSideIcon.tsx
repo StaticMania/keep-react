@@ -43,7 +43,7 @@ const DropdownWithBothSideIconCode = `
 import { Dropdown } from "keep-react";
 import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
 
-const DropdownWithBothSideIcon = () => {
+export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
@@ -77,9 +77,7 @@ const DropdownWithBothSideIcon = () => {
       </Dropdown.Item>
     </Dropdown>
   );
-};
-
-export default DropdownWithBothSideIcon;
+}
 `;
 
 export { DropdownWithBothSideIcon, DropdownWithBothSideIconCode };

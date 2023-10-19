@@ -31,5 +31,4 @@ export const dropdownTheme: keepDropdownTheme = {
     target: "w-fit",
     title: "",
   },
-  inlineWrapper: "flex items-center relative",
 };

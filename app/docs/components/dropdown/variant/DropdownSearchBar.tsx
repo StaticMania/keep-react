@@ -48,10 +48,10 @@ const DropdownSearchBar = () => {
 
 const DropdownSearchBarCode = `
 "use client";
-import { Dropdown,TextInput } from "keep-react";
 import { CaretRight } from "phosphor-react";
+import { Dropdown,TextInput } from "keep-react";
 
-const DropdownSearchBar = () => {
+export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
@@ -93,9 +93,7 @@ const DropdownSearchBar = () => {
       </Dropdown.Item>
     </Dropdown>
   );
-};
-
-export default DropdownSearchBar;
+}
 `;
 
 export { DropdownSearchBar, DropdownSearchBarCode };

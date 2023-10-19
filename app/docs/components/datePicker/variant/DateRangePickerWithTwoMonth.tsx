@@ -17,16 +17,14 @@ const DateRangePickerWithTwoMonthCode = `
 import { useState } from "react";
 import { DatePicker } from "keep-react";
 
-const DateRangePickerWithTwoMonth = () => {
+export const DatePickerComponent = () => {
   const [rangeDate, setRangeDate] = useState(null);
   return (
     <DatePicker showTwoMonth={true} rangeDate={setRangeDate}>
       <DatePicker.Range />
     </DatePicker>
   );
-};
-
-export default DateRangePickerWithTwoMonth;
+}
 `;
 
 export { DateRangePickerWithTwoMonth, DateRangePickerWithTwoMonthCode };

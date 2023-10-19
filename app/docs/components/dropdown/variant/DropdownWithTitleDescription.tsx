@@ -55,10 +55,10 @@ const DropdownWithTitleDescription = () => {
 
 const DropdownWithTitleDescriptionCode = `
 "use client";
-import { Dropdown,TextInput } from "keep-react";
 import { CaretRight } from "phosphor-react";
+import { Dropdown,TextInput } from "keep-react";
 
-const DropdownWithTitleDescription = () => {
+export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
@@ -108,9 +108,7 @@ const DropdownWithTitleDescription = () => {
       </Dropdown.Item>
     </Dropdown>
   );
-};
-
-export default DropdownWithTitleDescription;
+}
 `;
 
 export { DropdownWithTitleDescription, DropdownWithTitleDescriptionCode };

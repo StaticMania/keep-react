@@ -43,7 +43,7 @@ const DropdownWithIconAndSearchBarCode = `
 import { Dropdown,TextInput } from "keep-react";
 import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
 
-const DropdownWithIconAndSearchBar = () => {
+export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
@@ -77,11 +77,7 @@ const DropdownWithIconAndSearchBar = () => {
       </Dropdown.Item>
     </Dropdown>
   );
-};
-
-export default DropdownWithIconAndSearchBar;
-
-
+}
 `;
 
 export { DropdownWithIconAndSearchBar, DropdownWithIconAndSearchBarCode };
