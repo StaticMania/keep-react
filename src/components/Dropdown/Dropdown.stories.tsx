@@ -94,13 +94,6 @@ const meta: Meta<typeof Dropdown> = {
         defaultValue: { summary: false },
       },
     },
-    inline: {
-      description: "Dropdown button show as a text or not?",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-    },
     theme: {
       description: "Dropdown theme",
       table: {
@@ -215,7 +208,6 @@ export const DefaultDropdown: Story = {
 export const DropdownItemLinkWithAngleIcon: Story = {
   args: {
     ...DefaultDropdown.args,
-    inline: true,
     children: removeFragment(
       <>
         <Dropdown.Item>

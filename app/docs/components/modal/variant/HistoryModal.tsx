@@ -13,10 +13,10 @@ const HistoryModal = () => {
   const onClickAccessModal = () => {
     setShowAccessModal(!showAccessModal);
   };
-
   const onChange = () => {
     // ONCHANGE EVENT
   };
+
   return (
     <div className="flex flex-wrap items-end gap-2 py-3 px-2">
       <Button onClick={onClickHistoryModal}>History Modal</Button>
@@ -139,7 +139,7 @@ export const ModalComponent = () => {
     // ONCHANGE EVENT
   };
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <>
       <Button onClick={onClickHistoryModal}>History Modal</Button>
       <Button onClick={onClickAccessModal}>Access Modal</Button>
       <Modal
@@ -235,9 +235,9 @@ export const ModalComponent = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
-};
+}
 `;
 
 export { HistoryModal, HistoryModalCode };

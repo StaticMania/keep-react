@@ -19,7 +19,7 @@ const ConfirmationModal = () => {
       <Button color="error" onClick={onClickErrorModal}>
         Error Modal
       </Button>
-      <Modal show={showInfoModal} popup={true} size="sm">
+      <Modal show={showInfoModal} size="sm">
         <Modal.Body>
           <div className="flex items-center md:items-start gap-2">
             <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
@@ -80,7 +80,7 @@ import  { useState } from "react";
 import { Button,Modal } from "keep-react";
 import { CloudArrowUp, Trash } from "phosphor-react";
 
-const ConfirmationModal = () => {
+export const ModalComponent = () => {
   const [showInfoModal, setShowInfoModal] = useState(false);
   const [showErrorModalX, setShowErrorModalX] = useState(false);
 
@@ -91,12 +91,12 @@ const ConfirmationModal = () => {
     setShowErrorModalX(!showErrorModalX);
   };
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <>
       <Button onClick={onClickInfoModal}>Info Modal</Button>
       <Button color="error" onClick={onClickErrorModal}>
         Error Modal
       </Button>
-      <Modal show={showInfoModal} popup={true} size="sm">
+      <Modal show={showInfoModal} size="sm">
         <Modal.Body>
           <div className="flex items-center md:items-start gap-2">
             <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
@@ -147,12 +147,9 @@ const ConfirmationModal = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
 };
-
-export default ConfirmationModal;
-
 `;
 
 export { ConfirmationModal, ConfirmationModalCode };

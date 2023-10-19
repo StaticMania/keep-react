@@ -45,13 +45,13 @@ import { useState } from "react";
 import { Button,Modal } from "keep-react";
 import { CloudArrowUp } from "phosphor-react";
 
-const ModalPosition = () => {
+export const ModalComponent = () => {
   const [showModal, setShowModal] = useState(false);
   const onClick = () => {
     setShowModal(!showModal);
   };
   return (
-    <div>
+    <>
       <Button onClick={onClick}>Modal</Button>
       <Modal
         modalType="info"
@@ -77,11 +77,9 @@ const ModalPosition = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
-};
-
-export default ModalPosition;
+}
 `;
 
 export { ModalPosition, ModalPositionCode };

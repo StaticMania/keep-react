@@ -12,11 +12,9 @@ export const modalTheme: keepModalTheme = {
   },
   body: {
     base: "pb-5",
-    popup: "pt-0",
   },
   header: {
     base: "rounded-t pb-2",
-    popup: "!p-2 !border-b-0",
     iconSection: "flex items-start  justify-between",
     title: "pt-2 text-lg md:text-3xl font-semibold text-slate-800",
     headerIcon: {
@@ -36,7 +34,6 @@ export const modalTheme: keepModalTheme = {
   },
   footer: {
     base: "flex items-center space-x-2",
-    popup: "",
   },
   sizes: {
     sm: "max-w-sm",
