@@ -10,7 +10,7 @@ import {
   DashedBorderStepCode,
 } from "./variant/DashedBorderStep";
 
-import { stepPropsAPI } from "./StepApi";
+import { stepPropsAPI, StepItemsAPI } from "./StepApi";
 import CodePreview from "~/components/CodePreview";
 import CssThemePreview from "~/components/CssThemePreview";
 import ComponentApi from "~/components/ComponentApi";
@@ -52,11 +52,17 @@ To change the border style between two steps and apply a dashed line, use the `b
   <StepWithDashedBorder />
 </CodePreview>
 
-## API Reference
+## Step API Reference
 
-Explore the available props for the Step component
+Explore the available props for the `<Step/>` component
 
 <ComponentApi data={stepPropsAPI} />
+
+## Step Item API Reference
+
+Explore the available props for the `<Step.Item/>` component
+
+<ComponentApi data={StepItemsAPI} />
 
 ## Theme
 

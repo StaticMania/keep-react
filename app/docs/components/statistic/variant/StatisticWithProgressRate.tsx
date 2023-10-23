@@ -27,7 +27,7 @@ export const StatisticComponent = () => {
       </div>
     </Statistic>
   );
-};
+}
 `;
 
 export { StatisticWithProgressRate, StatisticWithProgressRateCode };

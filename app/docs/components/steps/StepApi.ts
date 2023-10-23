@@ -1,6 +1,30 @@
 export const stepPropsAPI = [
   {
     id: 1,
+    propsName: "stepType",
+    propsType: ["point", "icon", "number"],
+    propsDescription: "Type of step item to display.",
+    default: "point",
+  },
+  {
+    id: 2,
+    propsName: "children",
+    propsType: "ReactNode",
+    propsDescription: "Optional children elements.",
+    default: "ReactNode",
+  },
+  {
+    id: 3,
+    propsName: "borderType",
+    propsType: ["solid", "dashed", "none"],
+    propsDescription: "Type of border for the step item.",
+    default: "solid",
+  },
+];
+
+export const StepItemsAPI = [
+  {
+    id: 1,
     propsName: "title",
     propsType: "string",
     propsDescription: "Title for the step item.",
@@ -40,26 +64,5 @@ export const stepPropsAPI = [
     propsType: "boolean",
     propsDescription: "Indicates if the step is active.",
     default: "false",
-  },
-  {
-    id: 7,
-    propsName: "stepType",
-    propsType: ["point", "icon", "number"],
-    propsDescription: "Type of step item to display.",
-    default: "point",
-  },
-  {
-    id: 8,
-    propsName: "children",
-    propsType: "ReactNode",
-    propsDescription: "Optional children elements.",
-    default: "ReactNode",
-  },
-  {
-    id: 9,
-    propsName: "borderType",
-    propsType: ["solid", "dashed", "none"],
-    propsDescription: "Type of border for the step item.",
-    default: "solid",
   },
 ];

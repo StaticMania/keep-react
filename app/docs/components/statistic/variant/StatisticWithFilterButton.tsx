@@ -1,4 +1,4 @@
-"use clietn";
+"use client";
 import { Statistic } from "~/src";
 
 const StatisticWithFilterButton = () => {
@@ -21,7 +21,7 @@ const StatisticWithFilterButton = () => {
 };
 
 const StatisticWithFilterButtonCode = `
-"use clietn";
+"use client";
 import { Statistic } from "keep-react";
 
 export const StatisticComponent = () => {
