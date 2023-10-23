@@ -37,7 +37,6 @@ export interface keepDropdownFloatingTheme
 export interface keepDropdownTheme {
   floating: keepDropdownFloatingTheme;
   content: string;
-  inlineWrapper: string;
   arrowIcon: string;
 }
 
@@ -48,7 +47,6 @@ export interface DropdownProps
   arrowIcon?: boolean;
   dismissOnClick?: boolean;
   floatingArrow?: boolean;
-  inline?: boolean;
   label: ReactNode;
   theme?: DeepPartial<keepDropdownTheme>;
 }
@@ -77,7 +75,6 @@ const DropdownComponent: FC<DropdownProps> = ({
     placement = "bottom-start",
     trigger = "click",
     label,
-    inline,
     floatingArrow = false,
     arrowIcon = true,
     ...buttonProps
@@ -135,11 +132,7 @@ const DropdownComponent: FC<DropdownProps> = ({
       if (ref.current) setButtonWidth?.(ref.current.clientWidth);
     }, [ref, setButtonWidth]);
 
-    return inline ? (
-      <button ref={ref} className={theme.inlineWrapper}>
-        {children}
-      </button>
-    ) : (
+    return (
       <Button {...buttonProps} ref={ref}>
         {children}
       </Button>

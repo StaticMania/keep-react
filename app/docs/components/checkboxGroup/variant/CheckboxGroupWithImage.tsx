@@ -58,7 +58,7 @@ const CheckboxGroupWithImageCode = `
 import { useState } from "react";
 import { CheckboxGroup } from "keep-react";
 
-const CheckboxGroupWithImage = () => {
+export const CheckboxGroupComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (event) => {
     setSelected(event.target.value);
@@ -107,11 +107,6 @@ const CheckboxGroupWithImage = () => {
       />
     </form>
   );
-};
-
-export default CheckboxGroupWithImage;
-
-
-`;
+}`;
 
 export { CheckboxGroupWithImage, CheckboxGroupWithImageCode };

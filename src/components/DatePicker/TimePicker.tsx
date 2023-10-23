@@ -31,8 +31,8 @@ export const TimePicker: FC = () => {
       showTimeSelect
       showPopperArrow={false}
       showTimeSelectOnly
-      timeIntervals={15}
-      timeCaption="Time"
+      timeIntervals={5}
+      timeCaption="Select Time"
       dateFormat="h:mm aa"
     />
   );

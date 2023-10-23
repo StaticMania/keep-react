@@ -68,7 +68,7 @@ import {
   Users,
 } from "phosphor-react";
 
-const SidebarWithContentSeparator = () => {
+export const SidebarComponent = () => {
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
       <Sidebar.ItemGroup>
@@ -103,9 +103,7 @@ const SidebarWithContentSeparator = () => {
       </Sidebar.ItemGroup>
     </Sidebar>
   );
-};
-
-export default SidSidebarWithContentSeparator;
+}
 `;
 
 export { SidebarWithContentSeparator, SidebarWithContentSeparatorCode };

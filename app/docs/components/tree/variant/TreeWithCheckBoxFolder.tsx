@@ -76,7 +76,7 @@ const nodes = [
   },
 ];
 
-const TreeComponent = () => {
+export const TreeComponent = () => {
   return (
     <Tree
       showBorder={true}
@@ -88,9 +88,7 @@ const TreeComponent = () => {
       nodes={nodes}
     />
   );
-};
-
-export default TreeComponent;
+}
 `;
 
 export { TreeWithCheckboxFolder, TreeWithCheckboxFolderCode };

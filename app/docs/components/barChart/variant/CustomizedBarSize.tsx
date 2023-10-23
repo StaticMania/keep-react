@@ -11,10 +11,10 @@ const CustomizedBarSize = () => {
       dataKey="price"
       chartData={BarChartData}
       barSize={20}
-      showBackGround={true}
+      showBg={true}
       showLegend={true}
       showTooltip={true}
-      barRadius={5}
+      barRadius={[4, 4, 0, 0]}
     />
   );
 };
@@ -100,7 +100,7 @@ const BarChartData = [
   },
 ];
 
-const CustomizedBarSize = () => {
+export const BarComponent = () => {
   return (
     <BarChart
       height={250}
@@ -108,16 +108,13 @@ const CustomizedBarSize = () => {
       dataKey="price"
       chartData={BarChartData}
       barSize={20}
-      showBackGround={true}
+      showBg={true}
       showLegend={true}
       showTooltip={true}
-      barRadius={5}
+      barRadius={[4, 4, 0, 0]}
     />
   );
-};
-
-export default CustomizedBarSize;
-
+}
 `;
 
 export { CustomizedBarSize, CustomizedBarSizeCode };

@@ -83,9 +83,8 @@ import { Tag } from "keep-react";
 import { useState } from "react";
 import { CrownSimple, X } from "phosphor-react";
 
-const TagComponent = () => {
+export const TagComponent = () => {
   const [dismiss, setDismiss] = useState(false);
-
   const onDismiss = () => {
     setDismiss(!dismiss);
   };
@@ -156,9 +155,7 @@ const TagComponent = () => {
       </Tag>
     </div>
   );
-};
-
-export default TagComponent;
+}
 `;
 
 export { BothSideIconTag, BothSideIconTagCode };

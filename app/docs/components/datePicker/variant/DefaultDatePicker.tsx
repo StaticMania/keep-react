@@ -16,16 +16,14 @@ const DefaultDatePickerCode = `
 import { useState } from "react";
 import { DatePicker } from "keep-react";
 
-const DefaultDatePicker = () => {
+export const DatePickerComponent = () => {
   const [date, setDate] = useState(null);
   return (
     <DatePicker singleDatePicker={setDate}>
       <DatePicker.SingleDate />
     </DatePicker>
   );
-};
-
-export default DefaultDatePicker;
+}
 `;
 
 export { DefaultDatePicker, DefaultDatePickerCode };

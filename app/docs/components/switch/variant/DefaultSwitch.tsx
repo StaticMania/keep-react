@@ -9,11 +9,9 @@ const DefaultSwitchCode = `
 "use client";
 import { Toggle } from "keep-react";
 
-const DefaultSwitch = () => {
+export const SwitchComponent = () => {
   return <Toggle bgColor="primary" size="md" />;
-};
-
-export default DefaultSwitch;
+}
 `;
 
 export { DefaultSwitch, DefaultSwitchCode };

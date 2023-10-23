@@ -16,16 +16,14 @@ const MonthPickerCode = `
 import { useState } from "react";
 import { DatePicker } from "keep-react";
 
-const MonthPicker = () => {
+export const MonthComponent = () => {
   const [monthPicker, setMonthPicker] = useState(null);
   return (
     <DatePicker monthPicker={setMonthPicker}>
       <DatePicker.Month />
     </DatePicker>
   );
-};
-
-export default MonthPicker;
+}
 `;
 
 export { MonthPicker, MonthPickerCode };

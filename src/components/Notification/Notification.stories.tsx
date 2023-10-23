@@ -110,7 +110,7 @@ export const NotificationWithAvatar: Story = {
     className: "max-w-[400px]",
     infoIcon: (
       <div className="h-10 w-10">
-        <Avatar shape="round" img="/images/avatar/avatar-4.png" />
+        <Avatar shape="circle" img="/images/avatar/avatar-4.png" />
       </div>
     ),
     additionalContent: (

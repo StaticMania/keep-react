@@ -13,14 +13,6 @@ const meta: Meta<typeof Modal> = {
       type: "function",
       description: "Function to be called when the modal is closed.",
     },
-    popup: {
-      control: "boolean",
-      description: "Optional boolean flag for rendering modal as a popup.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-    },
     root: {
       description: "Modal Inner Element",
     },
@@ -139,7 +131,7 @@ const ConfirmationModalComponent = () => {
         Error Modal
       </Button>
 
-      <Modal show={showModalConfirm} popup size="sm">
+      <Modal show={showModalConfirm} size="sm">
         <Modal.Body>
           <div className="flex items-start gap-2">
             <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
@@ -272,7 +264,7 @@ const HistoryModalComponent = () => {
 
             <div className="mb-6 flex items-center gap-2">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 statusPosition="bottom-right"
                 size="md"

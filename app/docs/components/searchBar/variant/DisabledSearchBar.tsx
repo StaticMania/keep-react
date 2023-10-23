@@ -18,7 +18,7 @@ const DisabledSearchBarCode = `
 import { SearchBar } from "keep-react";
 import { MagnifyingGlass } from "phosphor-react";
 
-const SearchBarComponent = () => {
+export const SearchBarComponent = () => {
   return (
     <SearchBar
       placeholder="Search Anything"
@@ -27,9 +27,7 @@ const SearchBarComponent = () => {
       disabled={true}
     />
   );
-};
-
-export default SearchBarComponent;
+}
 `;
 
 export { DisabledSearchBar, DisabledSearchBarCode };

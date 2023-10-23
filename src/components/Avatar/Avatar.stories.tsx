@@ -49,9 +49,6 @@ const meta: Meta<typeof Avatar> = {
     status: {
       description: "Reflects the user's availability status.",
     },
-    rounded: {
-      description: "Determines if the avatar has rounded corners.",
-    },
     stacked: {
       description: "Specifies if avatars should be stacked together.",
     },
@@ -81,7 +78,6 @@ export const DefaultAvatar: Story = {
     status: "online",
     statusType: "dot",
     statusPosition: "top-left",
-    rounded: false,
     img: "",
     totalNotification: 99,
     stacked: false,
@@ -93,7 +89,7 @@ export const DefaultAvatar: Story = {
 
 export const RoundedAvatar: Story = {
   args: {
-    shape: "round",
+    shape: "circle",
     size: "xl",
   },
 };

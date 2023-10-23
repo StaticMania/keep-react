@@ -33,14 +33,12 @@ const CheckboxVariantCode = `
 "use client";
 import { CheckBox } from "keep-react";
 
-const CheckboxVariant = () => {
-  
+export const CheckboxComponent = () => {  
   const handleChecked = (value) => {
     console.log(value);
   };
-
   return (
-    <div className="flex flex-row gap-3">
+    <>
       <CheckBox
         size="md"
         variant="square"
@@ -59,13 +57,9 @@ const CheckboxVariant = () => {
         color="info"
         handleChecked={handleChecked}
       />
-    </div>
+    </>
   );
-};
-
-
-export default CheckboxVariant;
-
+}
 `;
 
 export { CheckboxVariant, CheckboxVariantCode };

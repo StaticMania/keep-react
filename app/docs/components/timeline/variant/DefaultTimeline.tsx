@@ -54,7 +54,7 @@ const DefaultTimelineCode = `
 import { Button,Timeline } from "keep-react";
 import { ArrowRight } from "phosphor-react";
 
-const DefaultTimeline = () => {
+export const TimelineComponent = () => {
   return (
     <Timeline>
       <Timeline.Item>
@@ -97,11 +97,7 @@ const DefaultTimeline = () => {
       </Timeline.Item>
     </Timeline>
   );
-};
-
-export default DefaultTimeline;
-
-
+}
 `;
 
 export { DefaultTimeline, DefaultTimelineCode };

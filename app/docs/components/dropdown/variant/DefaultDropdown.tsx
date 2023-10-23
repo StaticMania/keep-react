@@ -21,7 +21,7 @@ const DefaultDropdownCode = `
 "use client";
 import { Dropdown } from "keep-react";
 
-const DefaultDropdown = () => {
+export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
@@ -35,9 +35,7 @@ const DefaultDropdown = () => {
       <Dropdown.Item>Sign out</Dropdown.Item>
     </Dropdown>
   );
-};
-
-export default DefaultDropdown;
+}
 `;
 
 export { DefaultDropdown, DefaultDropdownCode };

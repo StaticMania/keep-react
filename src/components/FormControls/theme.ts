@@ -53,7 +53,7 @@ export const formControlsTheme: keepFormControlTheme = {
     field: {
       base: "relative",
       icon: {
-        base: "absolute bg-slate-25 cursor-pointer border border-slate-200 rounded top-2/4 -translate-y-2/4",
+        base: "absolute bg-slate-50 cursor-pointer rounded-md top-2/4 -translate-y-2/4",
         incrementIcon: "h-full flex items-center justify-center",
         decrementIcon: "h-full flex items-center justify-center",
         disabled: "!cursor-not-allowed opacity-50",
@@ -64,12 +64,12 @@ export const formControlsTheme: keepFormControlTheme = {
         },
         position: {
           right: "",
-          incrementIcon: "left-2",
-          decrementIcon: "right-2 ",
+          incrementIcon: "right-2",
+          decrementIcon: "left-2 ",
         },
       },
       input: {
-        base: "block text-center border border-slate-300 rounded-md text-slate-600 focus:outline-none focus:ring-0 focus:border-slate-500",
+        base: "block text-center border border-slate-200 rounded-md text-slate-600 focus:outline-none focus:ring-0 focus:border-slate-500",
         disabled: "cursor-not-allowed opacity-50",
         sizes: {
           sm: "max-w-[110px] py-2 px-8 sm:text-xs",

@@ -253,7 +253,7 @@ export const CardWithAvatar: Story = {
         <Card.Container className="flex items-center">
           <Avatar
             size="lg"
-            shape="round"
+            shape="circle"
             img="https://randomuser.me/api/portraits/men/11.jpg"
           />
           <Card.Container className="ml-3">
@@ -282,7 +282,7 @@ export const CardWithProfile: Story = {
           <Card.Container className="flex items-center ">
             <Avatar
               size="lg"
-              shape="round"
+              shape="circle"
               img="https://randomuser.me/api/portraits/men/50.jpg"
             />
             <Card.Container className="ml-3">
@@ -323,7 +323,7 @@ export const CardWithProfileDetails: Story = {
           <Card.Container className="absolute top-32  rounded-full ring-4 ring-white ring-offset-0">
             <Avatar
               size="2xl"
-              shape="round"
+              shape="circle"
               img="https://randomuser.me/api/portraits/men/50.jpg"
             />
           </Card.Container>

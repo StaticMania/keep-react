@@ -38,13 +38,6 @@ const meta: Meta<typeof Spinner> = {
       },
       description: "Availabe Toast size",
     },
-    light: {
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-      description: "Toast show light mode or not?",
-    },
   },
 
   parameters: {

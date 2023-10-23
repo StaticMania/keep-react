@@ -28,37 +28,37 @@ export const DefaultAvatarGroup: Story = {
     children: removeFragment(
       <>
         <Avatar
-          shape="round"
+          shape="circle"
           size="md"
           stacked={true}
           img="https://randomuser.me/api/portraits/men/11.jpg"
         />
         <Avatar
-          shape="round"
+          shape="circle"
           size="md"
           stacked={true}
           img="https://randomuser.me/api/portraits/men/12.jpg"
         />
         <Avatar
-          shape="round"
+          shape="circle"
           size="md"
           stacked={true}
           img="https://randomuser.me/api/portraits/men/13.jpg"
         />
         <Avatar
-          shape="round"
+          shape="circle"
           size="md"
           stacked={true}
           img="https://randomuser.me/api/portraits/men/14.jpg"
         />
         <Avatar
-          shape="round"
+          shape="circle"
           size="md"
           stacked={true}
           img="https://randomuser.me/api/portraits/men/15.jpg"
         />
-        <Avatar shape="round" size="md" stacked={true} />
-        <Avatar shape="round" size="md" stacked={true} />
+        <Avatar shape="circle" size="md" stacked={true} />
+        <Avatar shape="circle" size="md" stacked={true} />
       </>
     ),
   },

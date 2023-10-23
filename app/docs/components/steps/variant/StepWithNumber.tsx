@@ -29,7 +29,7 @@ const StepWithNumberCode = `
 "use client";
 import { Steps } from "keep-react";
 
-const StepComponent = () => {
+export const StepComponent = () => {
   return (
     <Steps stepType="number">
       <Steps.Item
@@ -51,9 +51,7 @@ const StepComponent = () => {
       />
     </Steps>
   );
-};
-
-export default StepComponent;
+}
 `;
 
 export { StepWithNumber, StepWithNumberCode };

@@ -2,16 +2,15 @@ import type { keepAvatarTheme } from "./Avatar";
 
 export const avatarTheme: keepAvatarTheme = {
   base: "flex items-center space-x-4",
-  bordered: "border-0",
+  bordered: "border border-slate-200",
   img: {
     off: "relative overflow-hidden bg-primary-25",
     on: "relative overflow-hidden",
   },
-  rounded: "rounded-full",
   shape: {
     square: "border-0",
-    round: "rounded-full",
-    roundSquare: {
+    circle: "rounded-full",
+    rounded: {
       xs: "rounded-lg",
       sm: "rounded-xl",
       md: "rounded-xl",
@@ -157,7 +156,7 @@ export const avatarTheme: keepAvatarTheme = {
         },
       },
     },
-    round: {
+    circle: {
       dot: {
         xs: {
           "bottom-left": "-bottom-0.5 left-1",
@@ -235,7 +234,7 @@ export const avatarTheme: keepAvatarTheme = {
         },
       },
     },
-    roundSquare: {
+    rounded: {
       dot: {
         xs: {
           "bottom-left": "-bottom-px -left-0.5",

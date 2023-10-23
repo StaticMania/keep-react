@@ -67,7 +67,13 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
   ) => {
     const theme = useTheme().theme.formControls.numberInput;
     const theirProps = excludeClassName(props);
-
+    const handleScroll = (event: { deltaY: number }) => {
+      if (event.deltaY > 0) {
+        setValue && setValue(value - 1);
+      } else {
+        setValue && setValue(value + 1);
+      }
+    };
     return (
       <div className={theme.base}>
         <div className={theme.field.base}>
@@ -102,6 +108,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             type="number"
             value={value}
             disabled={disabled}
+            onWheel={handleScroll}
             readOnly
           />
           <div

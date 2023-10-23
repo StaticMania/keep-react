@@ -66,7 +66,7 @@ import {
   Users,
 } from "phosphor-react";
 
-const DefaultSidebar = () => {
+export const SidebarComponent = () => {
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
         <Sidebar.ItemGroup>
@@ -102,9 +102,7 @@ const DefaultSidebar = () => {
         </Sidebar.ItemGroup>
     </Sidebar>
   );
-};
-
-export default DefaultSidebar;
+}
 `;
 
 export { DefaultSidebar, DefaultSidebarCode };

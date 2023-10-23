@@ -28,11 +28,10 @@ const HorizontalUploadSuccessCode = `
 import { useState } from "react";
 import { Upload } from "keep-react";
 
-const HorizontalUploadSuccess = () => {
+export const UploadComponent = () => {
   const [fileName, setFileName] = useState("");
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files && event.target.files[0];
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
     }
@@ -44,12 +43,10 @@ const HorizontalUploadSuccess = () => {
       horizontal={true}
       showProgressBar={true}
       progressType="success"
-      id="horizontal_upload_success"
+      id="upload"
     />
   );
-};
-
-export default HorizontalUploadSuccess;
+}
 `;
 
 export { HorizontalUploadSuccess, HorizontalUploadSuccessCode };

@@ -58,7 +58,7 @@ const CircleCheckboxGroupCode = `
 import { useState } from "react";
 import { CheckboxGroup } from "keep-react";
 
-const CircleCheckboxGroup = () => {
+export const CheckboxGroupComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (event) => {
     setSelected(event.target.value);
@@ -107,9 +107,7 @@ const CircleCheckboxGroup = () => {
       />
     </form>
   );
-};
-
-export default CircleCheckboxGroup;
+}
 `;
 
 export { CircleCheckboxGroup, CircleCheckboxGroupCode };

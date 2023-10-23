@@ -6,7 +6,6 @@ import { CaretRight } from "phosphor-react";
 const PostCard = () => {
   return (
     <div className="flex flex-col gap-5">
-      {/* === CARD ONE === */}
       <Card className="relative max-w-xs overflow-hidden rounded-md">
         <Card.Container>
           <Image
@@ -20,11 +19,11 @@ const PostCard = () => {
         <Card.Container className="absolute flex items-start py-3 px-5">
           <Card.Container>
             <Card.Title className="text-md md:text-xl font-medium text-white">
-              Keep React
+              Keep Design System
             </Card.Title>
             <Card.Description className="text-xs md:text-sm font-normal text-white">
-              Component design systems can help developers to be more productive
-              by providing them with a ready-made set of components to use.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+              excepturi quam incidunt tempora?
             </Card.Description>
             <Card.Link
               className="mt-3 flex items-center gap-1 text-xs md:text-sm font-normal text-white"
@@ -37,8 +36,7 @@ const PostCard = () => {
           </Card.Container>
         </Card.Container>
       </Card>
-      {/* === CARD TWO === */}
-      <Card shadow={false} className="max-w-2xl border-none !bg-transparent">
+      <Card className="max-w-2xl border-none !bg-transparent">
         <Card.Container className="flex items-start border-none">
           <Card.Container>
             <Image
@@ -56,7 +54,7 @@ const PostCard = () => {
               </Badge>
             </Card.Container>
             <Card.Title className="text-sm md:text-xl font-medium text-slate-700">
-              Keep React
+              Keep Design System
             </Card.Title>
             <Card.Description className="text-xs md:text-sm font-normal text-slate-500">
               Component design systems can help developers to be more productive
@@ -71,13 +69,13 @@ const PostCard = () => {
 
 const PostCardCode = `
 "use client";
-import { Card } from "keep-react";
 import Image from "next/image";
+import { Badge, Card } from "keep-react";
+import { CaretRight } from "phosphor-react";
 
-const PostCard = () => {
+export const CardComponent = () => {
   return (
-    <div className="flex flex-col gap-5">
-      {/* === CARD ONE === */}
+    <>
       <Card className="relative max-w-xs overflow-hidden rounded-md">
         <Card.Container>
           <Image
@@ -108,8 +106,7 @@ const PostCard = () => {
           </Card.Container>
         </Card.Container>
       </Card>
-      {/* === CARD TWO === */}
-      <Card shadow={false} className="max-w-2xl border-none !bg-transparent">
+      <Card className="max-w-2xl border-none !bg-transparent">
         <Card.Container className="flex items-start border-none">
           <Card.Container>
             <Image
@@ -136,12 +133,9 @@ const PostCard = () => {
           </Card.Container>
         </Card.Container>
       </Card>
-    </div>
+    </>
   );
 };
-
-export default PostCard;
-
 `;
 
 export { PostCard, PostCardCode };

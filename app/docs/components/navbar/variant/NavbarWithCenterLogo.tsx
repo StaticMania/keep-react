@@ -1,6 +1,6 @@
 "use client";
 import { Navbar, Button } from "~/src";
-import { CaretDown, MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass } from "phosphor-react";
 import Image from "next/image";
 
 const NavbarWithCenterLogo = () => {
@@ -11,9 +11,9 @@ const NavbarWithCenterLogo = () => {
           tag="ul"
           className="lg:flex hidden items-center justify-between gap-8"
         >
-          <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Home" />
+          <Navbar.Link linkName="Projects" />
+          <Navbar.Link linkName="Blogs" />
         </Navbar.Container>
         <Navbar.Brand>
           <Image
@@ -26,9 +26,9 @@ const NavbarWithCenterLogo = () => {
 
         <Navbar.Collapse collapseType="sidebar">
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+            <Navbar.Link linkName="Home" />
+            <Navbar.Link linkName="Projects" />
+            <Navbar.Link linkName="Blogs" />
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
@@ -58,9 +58,9 @@ const NavbarWithCenterLogo = () => {
 const NavbarWithCenterLogoCode = `
 "use client";
 import { Button,Navbar } from "keep-react";
-import { CaretDown, MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlass } from "phosphor-react";
 
-const NavbarComponent = () => {
+export const NavbarComponent = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
@@ -68,9 +68,9 @@ const NavbarComponent = () => {
           tag="ul"
           className="lg:flex hidden items-center justify-between gap-8"
         >
-          <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Home" />
+          <Navbar.Link linkName="Projects" />
+          <Navbar.Link linkName="Blogs" />
         </Navbar.Container>
         <Navbar.Brand>
           <Image
@@ -83,9 +83,9 @@ const NavbarComponent = () => {
 
         <Navbar.Collapse collapseType="sidebar">
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+            <Navbar.Link linkName="Home" />
+            <Navbar.Link linkName="Projects" />
+            <Navbar.Link linkName="Blogs" />
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
@@ -110,9 +110,7 @@ const NavbarComponent = () => {
       </Navbar.Container>
     </Navbar>
   );
-};
-
-export default NavbarComponent;
+}
 `;
 
 export { NavbarWithCenterLogo, NavbarWithCenterLogoCode };

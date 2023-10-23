@@ -4,6 +4,7 @@ import { ProfileCard, ProfileCardCode } from "./variant/ProfileCard";
 import { PostCard, PostCardCode } from "./variant/PostCard";
 import { ProductCard, ProductCardCode } from "./variant/ProductCard";
 import { PricingCard, PricingCardCode } from "./variant/PricingCard";
+import { HorizontalCard, HorizontalCardCode } from "./variant/HorizontalCard";
 import { cardAPIData } from "./cardApi";
 import {
   ProfileCardWithCover,
@@ -65,6 +66,14 @@ It provides a structured layout that includes key details about each product, su
 
 <CodePreview github="Card" code={ProductCardCode}>
   <ProductCard />
+</CodePreview>
+
+## Horizontal Card
+
+To make a card in Horizontal view you need to set `horizontal` props as `true`.
+
+<CodePreview github="Card" code={HorizontalCardCode}>
+  <HorizontalCard />
 </CodePreview>
 
 ## Pricing Card

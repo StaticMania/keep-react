@@ -1,5 +1,5 @@
 "use client";
-import { Button, Card } from "~/src";
+import { Button, Card, Popover } from "~/src";
 import {
   ArchiveTray,
   CaretRight,
@@ -49,11 +49,20 @@ const CardWithIcon = () => {
             </Card.Container>
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
-            <DotsThreeVertical
-              size={24}
-              color="#5E718D"
-              className="flex cursor-pointer items-start"
-            />
+            <Popover
+              customClass="!w-[20rem]"
+              additinalContent={
+                <h2 className="text-lg leading-6 tracking-[-0.3px] font-medium text-slate-500">
+                  Keep Design System
+                </h2>
+              }
+            >
+              <DotsThreeVertical
+                size={24}
+                color="#5E718D"
+                className="flex cursor-pointer items-start"
+              />
+            </Popover>
           </Card.Container>
         </Card.Container>
       </Card>
@@ -83,7 +92,8 @@ const CardWithIcon = () => {
 };
 
 const CardWithIconCode = `
-import { Button,Card } from "keep-react";
+"use client";
+import { Button, Card, Popover } from "keep-react";
 import {
   ArchiveTray,
   CaretRight,
@@ -91,10 +101,9 @@ import {
   PencilCircle,
 } from "phosphor-react";
 
-const CardWithIcon = () => {
+export const CardComponent = () => {
   return (
-    <div className="flex flex-col gap-5">
-      {/* ===CARD ONE=== */}
+    <>
       <Card className="p-6 max-w-xl">
         <Card.Container className="flex items-start md:gap-5 gap-3.5">
           <Card.Container className="flex items-center justify-center rounded-full bg-slate-50 md:p-4 p-2.5">
@@ -116,7 +125,6 @@ const CardWithIcon = () => {
           </Card.Container>
         </Card.Container>
       </Card>
-      {/* ===CARD TWO=== */}
       <Card className="p-6 max-w-xl">
         <Card.Container className="flex gap-5">
           <Card.Container className="flex items-center gap-5">
@@ -133,16 +141,24 @@ const CardWithIcon = () => {
             </Card.Container>
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
-            <DotsThreeVertical
-              size={24}
-              color="#5E718D"
-              className="flex cursor-pointer items-start"
-            />
+            <Popover
+              customClass="!w-[20rem]"
+              additinalContent={
+                <h2 className="text-lg leading-6 tracking-[-0.3px] font-medium text-slate-500">
+                  Keep Design System
+                </h2>
+              }
+            >
+              <DotsThreeVertical
+                size={24}
+                color="#5E718D"
+                className="flex cursor-pointer items-start"
+              />
+            </Popover>
           </Card.Container>
         </Card.Container>
       </Card>
-      {/* ===CARD THREE=== */}
-      <Card className="md:p-6 p-5 max-w-[240px]">
+      <Card className="md:p-6 p-5 max-w-[280px]">
         <Card.Container className="flex items-center justify-center">
           <PencilCircle size={80} color="#1B4DFF" />
         </Card.Container>
@@ -155,18 +171,16 @@ const CardWithIcon = () => {
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
           <Button type="outlinePrimary" customClass="!hidden md:!block">
-            Check this
+            Learn More
           </Button>
           <Button type="outlinePrimary" size="sm" customClass="md:hidden block">
-            Check this
+            Learn More
           </Button>
         </Card.Container>
       </Card>
-    </div>
+    </>
   );
 };
-
-export default CardWithIcon;
 `;
 
 export { CardWithIcon, CardWithIconCode };

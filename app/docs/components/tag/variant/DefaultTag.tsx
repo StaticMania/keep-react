@@ -13,11 +13,9 @@ const DefaultTagCode = `
 "use client";
 import { Tag } from "keep-react";
 
-const TagComponent = () => {
+export const TagComponent = () => {
   return <Tag color="gray">Default Tag</Tag>;
-};
-
-export default TagComponent;
+}
 `;
 
 export { DefaultTag, DefaultTagCode };

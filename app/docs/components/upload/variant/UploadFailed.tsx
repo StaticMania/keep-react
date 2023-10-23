@@ -29,11 +29,10 @@ const UploadFailedCode = `
 import { Upload } from "keep-react";
 import { useState } from "react";
 
-const UploadFailed = () => {
+export const UploadComponent = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
     }
@@ -46,12 +45,10 @@ const UploadFailed = () => {
       progressType="error"
       progress={36}
       uploadTime="2 days left"
-      id="upload_failed"
+      id="upload"
     />
   );
-};
-
-export default UploadFailed;
+}
 `;
 
 export { UploadFailed, UploadFailedCode };

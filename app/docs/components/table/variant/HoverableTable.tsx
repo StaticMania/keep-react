@@ -50,7 +50,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -80,37 +80,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -151,7 +151,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -181,37 +181,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -252,7 +252,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -282,37 +282,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -353,7 +353,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -383,37 +383,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -454,7 +454,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -484,37 +484,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -560,7 +560,7 @@ const HoverableTableCode = `
 import { Avatar, Button, Table, Popover } from "keep-react";
 import { Cube, DotsThreeOutline, Trash, Pencil } from "phosphor-react";
 
-const HoverableTable = () => {
+export const TableComponent = () => {
   return (
     <div className="scale-95">
       <Table showCheckbox={true} hoverable={true}>
@@ -608,7 +608,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -638,37 +638,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -709,7 +709,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -739,37 +739,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -810,7 +810,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -840,37 +840,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -911,7 +911,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -941,37 +941,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1012,7 +1012,7 @@ const HoverableTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/icon/file.svg"
                       size="md"
                     />
@@ -1042,37 +1042,37 @@ const HoverableTable = () => {
             <Table.Cell>
               <Avatar.Group>
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-1.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-2.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-3.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-4.png"
                 />
                 <Avatar
-                  shape="round"
+                  shape="circle"
                   size="md"
                   stacked={true}
                   img="/images/avatar/avatar-5.png"
                 />
-                <Avatar shape="round" size="md" stacked={true} />
-                <Avatar shape="round" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1112,8 +1112,6 @@ const HoverableTable = () => {
     </div>
   );
 };
-
-export default TableComponent;
 `;
 
 export { HoverableTable, HoverableTableCode };

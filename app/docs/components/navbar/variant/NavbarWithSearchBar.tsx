@@ -94,7 +94,7 @@ import {
   TwitterLogo,
 } from "phosphor-react";
 
-const NavbarComponent = () => {
+export const NavbarComponent = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
@@ -166,9 +166,7 @@ const NavbarComponent = () => {
       </Navbar.Container>
     </Navbar>
   );
-};
-
-export default NavbarComponent;
+}
 `;
 
 export { NavbarWithSearchBar, NavbarWithSearchBarCode };

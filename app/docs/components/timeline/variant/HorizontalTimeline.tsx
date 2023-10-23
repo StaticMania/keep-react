@@ -50,7 +50,7 @@ const HorizontalTimelineCode = `
 import { Timeline } from "keep-react";
 import { CalendarBlank } from "phosphor-react";
 
-const HorizontalTimeline = () => {
+export const TimelineComponent = () => {
   return (
     <Timeline horizontal={true}>
       <Timeline.Item>
@@ -85,9 +85,7 @@ const HorizontalTimeline = () => {
       </Timeline.Item>
     </Timeline>
   );
-};
-
-export default HorizontalTimeline;
+}
 `;
 
 export { HorizontalTimeline, HorizontalTimelineCode };

@@ -3,7 +3,12 @@ import { Statistic } from "~/src";
 
 const StatisticWithAvatar = () => {
   return (
-    <Statistic showFilter={true} showDollar={true}>
+    <Statistic
+      showFilter={true}
+      showDollar={true}
+      filterLabel="This Month"
+      filterData={["January", "February", "March", "April"]}
+    >
       <div className="flex items-center gap-4">
         <Statistic.Img img="/images/avatar/avatar-4.png" />
         <div>
@@ -22,9 +27,14 @@ const StatisticWithAvatarCode = `
 "use client";
 import { Statistic } from "keep-react";
 
-const StatisticWithAvatar = () => {
+export const StatisticComponent = () => {
   return (
-    <Statistic showFilter={true} showDollar={true}>
+    <Statistic
+      showFilter={true}
+      showDollar={true}
+      filterLabel="This Month"
+      filterData={["January", "February", "March", "April"]}
+    >
       <div className="flex items-center gap-4">
         <Statistic.Img img="/images/avatar/avatar-4.png" />
         <div>
@@ -37,9 +47,7 @@ const StatisticWithAvatar = () => {
       </div>
     </Statistic>
   );
-};
-
-export default StatisticWithAvatar;
+}
 `;
 
 export { StatisticWithAvatar, StatisticWithAvatarCode };

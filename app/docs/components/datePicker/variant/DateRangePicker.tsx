@@ -17,15 +17,14 @@ const DateRangePickerCode = `
 import { useState } from "react";
 import { DatePicker} from "keep-react";
 
-const DateRangePicker = () => {
+export const DatePickerComponent = () => {
   const [rangeDate, setRangeDate] = useState(null);
   return (
     <DatePicker rangeDate={setRangeDate}>
       <DatePicker.Range />
     </DatePicker>
   );
-};
-export default DateRangePicker;
+}
 `;
 
 export { DateRangePicker, DateRangePickerCode };

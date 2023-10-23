@@ -27,11 +27,10 @@ const UploadSuccessCode = `
 import { useState } from "react";
 import { Upload } from "keep-react";
 
-const UploadSuccess = () => {
+export const UploadComponent = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
     }
@@ -42,12 +41,10 @@ const UploadSuccess = () => {
       file={fileName}
       showProgressBar={true}
       progressType="success"      
-      id="upload_success"
+      id="upload"
     />
   );
-};
-
-export default UploadSuccess;
+}
 `;
 
 export { UploadSuccess, UploadSuccessCode };

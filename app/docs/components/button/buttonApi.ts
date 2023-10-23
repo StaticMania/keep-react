@@ -70,7 +70,7 @@ export const buttonApiData = [
     propsName: "width",
     propsType: ["full", "half"],
     propsDescription: "Width of the button",
-    default: "half",
+    default: "None",
   },
   {
     id: 11,

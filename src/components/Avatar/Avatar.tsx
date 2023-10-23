@@ -5,7 +5,7 @@ import { excludeClassName } from "../../helpers/exclude";
 import { AvatarAdd } from "./AvatarAdd";
 import { AvatarGroup } from "./AvatarGroup";
 import { AvatarGroupCounter } from "./AvatarGroupCounter";
-import { KeepPositions, KeepShapes, KeepSizes } from "../../Keep/KeepTheme";
+import { KeepPositions, KeepSizes } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepAvatarTheme {
@@ -17,11 +17,10 @@ export interface keepAvatarTheme {
   };
   size: AvatarSizes;
   customStatusIcon: AvatarSizes;
-  rounded: string;
   shape: {
     square: string;
-    round: string;
-    roundSquare: AvatarSizes;
+    circle: string;
+    rounded: AvatarSizes;
   };
   stacked: string;
   status: {
@@ -37,8 +36,8 @@ export interface keepAvatarTheme {
   };
   statusPosition: {
     square: KeepAvatarStatusPositions;
-    round: KeepAvatarStatusPositions;
-    roundSquare: KeepAvatarStatusPositions;
+    circle: KeepAvatarStatusPositions;
+    rounded: KeepAvatarStatusPositions;
   };
   groupCounter: {
     base: string;
@@ -51,11 +50,6 @@ export interface keepAvatarTheme {
 
 export interface AvatarSizes
   extends Pick<KeepSizes, "xs" | "sm" | "md" | "lg" | "xl" | "2xl"> {
-  [key: string]: string;
-}
-
-export interface AvatarShape
-  extends Pick<KeepShapes, "square" | "round" | "roundSquare"> {
   [key: string]: string;
 }
 
@@ -105,9 +99,8 @@ export interface AvatarProps extends PropsWithChildren<ComponentProps<"div">> {
   bordered?: boolean;
   img?: string;
   size?: keyof AvatarSizes;
-  shape?: keyof KeepShapes;
+  shape?: "circle" | "rounded" | "square";
   stacked?: boolean;
-  rounded?: boolean;
   status?: "away" | "busy" | "offline" | "online";
   statusType?: keyof KeepAvatarStatusType;
   statusPosition?: keyof KeepPositions;
@@ -122,7 +115,6 @@ const AvatarComponent: FC<AvatarProps> = ({
   shape = "square",
   size = "md",
   stacked = false,
-  rounded = false,
   status,
   statusType = "dot",
   statusPosition = "top-left",
@@ -139,12 +131,11 @@ const AvatarComponent: FC<AvatarProps> = ({
           <img
             alt={alt}
             className={twMerge(
-              shape === "roundSquare"
-                ? theme.shape.roundSquare[size]
+              shape === "rounded"
+                ? theme.shape.rounded[size]
                 : theme.shape[shape],
               bordered && theme.bordered,
               stacked && theme.stacked,
-              rounded && theme.rounded,
               theme.img.on,
               theme.size[size]
             )}
@@ -154,12 +145,11 @@ const AvatarComponent: FC<AvatarProps> = ({
         ) : (
           <div
             className={twMerge(
-              shape === "roundSquare"
-                ? theme.shape.roundSquare[size]
+              shape === "rounded"
+                ? theme.shape.rounded[size]
                 : theme.shape[shape],
               bordered && theme.bordered,
               stacked && theme.stacked,
-              rounded && theme.rounded,
               theme.img.off,
               theme.size[size]
             )}

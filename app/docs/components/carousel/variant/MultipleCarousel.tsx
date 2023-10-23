@@ -62,7 +62,7 @@ const MultipleCarouselCode = `
 import Image from "next/image";
 import { Carousel } from "keep-react";
 
-const CarouselComponent = () => {
+export const CarouselComponent = () => {
   return (
     <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel
@@ -115,9 +115,7 @@ const CarouselComponent = () => {
       </Carousel>
     </div>
   );
-};
-
-export default CarouselComponent;
+}
 `;
 
 export { MultipleCarousel, MultipleCarouselCode };

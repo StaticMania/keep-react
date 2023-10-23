@@ -53,7 +53,7 @@ const NavbarWithMobileMenuCode = `
 import { Navbar } from "keep-react";
 import { CaretDown } from "phosphor-react";
 
-const NavbarComponent = () => {
+export const NavbarComponent = () => {
   return (
     <Navbar fluid={true} className="!py-5">
       <Navbar.Container className="flex items-center justify-between">
@@ -96,9 +96,7 @@ const NavbarComponent = () => {
       </Navbar.Container>
     </Navbar>
   );
-};
-
-export default NavbarComponent;
+}
 `;
 
 export { NavbarWithMobileMenu, NavbarWithMobileMenuCode };

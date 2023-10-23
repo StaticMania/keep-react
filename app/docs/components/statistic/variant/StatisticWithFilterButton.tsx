@@ -1,9 +1,14 @@
-"use clietn";
+"use client";
 import { Statistic } from "~/src";
 
 const StatisticWithFilterButton = () => {
   return (
-    <Statistic showFilter={true} showDollar={true}>
+    <Statistic
+      showFilter={true}
+      showDollar={true}
+      filterLabel="This Month"
+      filterData={["January", "February", "March", "April"]}
+    >
       <div>
         <Statistic.Title>Memebers</Statistic.Title>
       </div>
@@ -16,12 +21,17 @@ const StatisticWithFilterButton = () => {
 };
 
 const StatisticWithFilterButtonCode = `
-"use clietn";
+"use client";
 import { Statistic } from "keep-react";
 
-const StatisticWithFilterButton = () => {
+export const StatisticComponent = () => {
   return (
-    <Statistic showFilter={true} showDollar={true}>
+    <Statistic
+      showFilter={true}
+      showDollar={true}
+      filterLabel="This Month"
+      filterData={["January", "February", "March", "April"]}
+    >
       <div>
         <Statistic.Title>Memebers</Statistic.Title>
       </div>
@@ -31,9 +41,7 @@ const StatisticWithFilterButton = () => {
       </div>
     </Statistic>
   );
-};
-
-export default StatisticWithFilterButton;
+}
 `;
 
 export { StatisticWithFilterButton, StatisticWithFilterButtonCode };

@@ -22,7 +22,7 @@ export const barChartAPIData = [
   },
   {
     id: 4,
-    propsName: "barBackGroundColor",
+    propsName: "barBg",
     propsType: "string",
     propsDescription: "Background color of the bars.",
     default: "#E8EDFF",
@@ -51,7 +51,7 @@ export const barChartAPIData = [
   {
     id: 8,
     propsName: "chartData",
-    propsType: "unknown[]",
+    propsType: "Array",
     propsDescription: "Array of data for the chart.",
     default: "Array",
   },
@@ -78,7 +78,7 @@ export const barChartAPIData = [
   },
   {
     id: 12,
-    propsName: "secondaryBarBackGroundColor",
+    propsName: "secondaryBarBg",
     propsType: "string",
     propsDescription: "Background color of the secondary bars.",
     default: "#D7FFEB",
@@ -99,7 +99,7 @@ export const barChartAPIData = [
   },
   {
     id: 15,
-    propsName: "showBackGround",
+    propsName: "showBg",
     propsType: "boolean",
     propsDescription: "Determines if the chart background is visible.",
     default: "false",

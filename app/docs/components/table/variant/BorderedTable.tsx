@@ -65,7 +65,7 @@ const BorderedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-4.png"
                       size="md"
                     />
@@ -157,7 +157,7 @@ const BorderedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-2.png"
                       size="md"
                     />
@@ -249,7 +249,7 @@ const BorderedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-3.png"
                       size="md"
                     />
@@ -341,7 +341,7 @@ const BorderedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-4.png"
                       size="md"
                     />
@@ -433,7 +433,7 @@ const BorderedTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-5.png"
                       size="md"
                     />
@@ -537,7 +537,7 @@ import {
   Trash,
 } from "phosphor-react";
 
-const TableComponent = () => {
+export const TableComponent = () => {
   return (
       <Table
         showCheckbox={true}
@@ -592,7 +592,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-4.png"
                       size="md"
                     />
@@ -684,7 +684,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-2.png"
                       size="md"
                     />
@@ -776,7 +776,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-3.png"
                       size="md"
                     />
@@ -868,7 +868,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-4.png"
                       size="md"
                     />
@@ -960,7 +960,7 @@ const TableComponent = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <Avatar
-                      shape="round"
+                      shape="circle"
                       img="/images/avatar/avatar-5.png"
                       size="md"
                     />
@@ -1049,8 +1049,6 @@ const TableComponent = () => {
         </Table.Body>
       </Table>
   );
-};
-
-export default TableComponent;
+}
 `;
 export { BorderedTable, BorderedTableCode };

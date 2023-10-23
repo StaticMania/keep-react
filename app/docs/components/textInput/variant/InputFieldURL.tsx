@@ -27,7 +27,7 @@ const InputFieldURLCode = `
 import { Label,TextInput } from "keep-react";
 import { WarningCircle } from "phosphor-react";
 
-const TextInputComponent = () => {
+export const TextInputComponent = () => {
   return (
     <>
       <Label value="Enter URL" color="error" />
@@ -45,10 +45,7 @@ const TextInputComponent = () => {
       />
     </>
   );
-};
-
-export default TextInputComponent;
-
+}
 `;
 
 export { InputFieldURL, InputFieldURLCode };

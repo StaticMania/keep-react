@@ -26,7 +26,7 @@ const NoDataFoundCode = `
 import Image from "next/image";
 import { Empty } from "keep-react";
 
-const NoDataFound = () => {
+export const EmptyComponent = () => {
   return (
     <Empty
       title="No Data Found"
@@ -43,9 +43,7 @@ const NoDataFound = () => {
       buttonText="Go Back"
     />
   );
-};
-
-export default NoDataFound;
+}
 `;
 
 export { NoDataFound, NoDataFoundCode };

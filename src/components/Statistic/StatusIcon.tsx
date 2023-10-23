@@ -17,13 +17,11 @@ export interface StatusIconProps {
 
 export const StatusIcon: FC<StatusIconProps> = ({ icon }) => {
   const { iconBg } = useStatisticContext();
-
   const theme = useTheme().theme.statistic;
   return (
     <div
       className={twMerge(
         theme.icon.base,
-
         iconBg === "success" ? theme.icon.selected.on : theme.icon.selected.off
       )}
     >

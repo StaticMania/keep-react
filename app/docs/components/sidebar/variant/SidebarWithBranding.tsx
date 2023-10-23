@@ -66,7 +66,7 @@ import {
   Users,
 } from "phosphor-react";
 
-const SidebarWithBranding = () => {
+export const SidebarComponent = () => {
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
       <Sidebar.Logo href="" img="/images/company/logo.png" imgAlt="Keep logo" />
@@ -102,9 +102,7 @@ const SidebarWithBranding = () => {
       </Sidebar.Items>
     </Sidebar>
   );
-};
-
-export default SidebarWithBranding;
+}
 `;
 
 export { SidebarWithBranding, SidebarWithBrandingCode };

@@ -22,7 +22,7 @@ const SingleLinePopoverCode = `
 "use client";
 import { Button, Popover } from "keep-react";
 
-const SingleLinePopover = () => {
+export const PopoverComponent = () => {
   return (
     <Popover
       customClass="!w-[20rem]"
@@ -35,8 +35,6 @@ const SingleLinePopover = () => {
       <Button size="xs">Popover</Button>
     </Popover>
   );
-};
-
-export default SingleLinePopover;
+}
 `;
 export { SingleLinePopover, SingleLinePopoverCode };

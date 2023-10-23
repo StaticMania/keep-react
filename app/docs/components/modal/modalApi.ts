@@ -6,13 +6,7 @@ export const modalApiData = [
     propsDescription: "Function to be called when the modal is closed.",
     default: "()=>void",
   },
-  {
-    id: 2,
-    propsName: "popup",
-    propsType: "boolean",
-    propsDescription: "Optional boolean flag for rendering modal as a popup.",
-    default: "true",
-  },
+
   {
     id: 3,
     propsName: "show",

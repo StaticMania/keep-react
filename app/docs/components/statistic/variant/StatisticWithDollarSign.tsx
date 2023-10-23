@@ -17,7 +17,7 @@ const StatisticWithDollarSignCode = `
 "use client";
 import { Statistic } from "keep-react";
 
-const StatisticWithDollarSign = () => {
+export const StatisticComponent = () => {
   return (
     <Statistic showDollar={true}>
       <Statistic.Title>Memebers</Statistic.Title>
@@ -27,9 +27,7 @@ const StatisticWithDollarSign = () => {
       </div>
     </Statistic>
   );
-};
-
-export default StatisticWithDollarSign;
+}
 `;
 
 export { StatisticWithDollarSign, StatisticWithDollarSignCode };

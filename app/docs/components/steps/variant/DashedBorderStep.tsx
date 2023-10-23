@@ -31,7 +31,7 @@ const StepWithDashedBorderCode = `
 import { Step } from "keep-react";
 import { Club, DownloadSimple, Globe } from "phosphor-react";
 
-const StepComponent = () => {
+export const StepComponent = () => {
   return (
     <Steps stepType="icon" borderType="dashed">
       <Steps.Item
@@ -53,9 +53,7 @@ const StepComponent = () => {
       />
     </Steps>
   );
-};
-
-export default StepComponent;
+}
 `;
 
 export { StepWithDashedBorder, StepWithDashedBorderCode };

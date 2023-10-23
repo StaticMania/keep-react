@@ -19,9 +19,9 @@ const SpinnerColorsCode = `
 "use client";
 import { Spinner } from "keep-react";
 
-const SpinnerColors = () => {
+export const SpinnerComponent = () => {
   return (
-    <div className="flex gap-3">
+    <>
       <Spinner color="failure" size="lg" />
       <Spinner color="gray" size="lg" />
       <Spinner color="info" size="lg" />
@@ -29,11 +29,9 @@ const SpinnerColors = () => {
       <Spinner color="purple" size="lg" />
       <Spinner color="success" size="lg" />
       <Spinner color="warning" size="lg" />
-    </div>
+    </>
   );
-};
-
-export default SpinnerColors;
+}
 `;
 
 export { SpinnerColors, SpinnerColorsCode };

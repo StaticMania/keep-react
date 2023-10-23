@@ -9,11 +9,9 @@ const DefaultAvatarCode = `
 "use client";
 import { Avatar } from "keep-react";
 
-const DefaultAvatar = () => {
+export const AvatarComponent = () => {
   return <Avatar/>;
-};
-
-export default DefaultAvatar;
+}
 `;
 
 export { DefaultAvatar, DefaultAvatarCode };

@@ -21,7 +21,7 @@ const DefaultTooltipCode = `
 "use client";
 import { Button,Tooltip } from "keep-react";
 
-const TooltipComponent = () => {
+export const TooltipComponent = () => {
   return (
     <Tooltip
       content="Tooltips text here"
@@ -35,9 +35,7 @@ const TooltipComponent = () => {
       </Button>
     </Tooltip>
   );
-};
-
-export default TooltipComponent;
+}
 `;
 
 export { DefaultTooltip, DefaultTooltipCode };

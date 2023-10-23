@@ -21,7 +21,7 @@ const PaginationWithRoundedPageCode = `
 import { useState } from "react";
 import { Pagination } from "keep-react";
 
-const PaginationWithRoundedPage = () => {
+export const PaginationComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
     <Pagination
@@ -33,9 +33,7 @@ const PaginationWithRoundedPage = () => {
       activeCurrentPageShape="circle"
     />
   );
-};
-
-export default PaginationWithRoundedPage;
+}
 `;
 
 export { PaginationWithRoundedPage, PaginationWithRoundedPageCode };

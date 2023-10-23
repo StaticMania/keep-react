@@ -3,7 +3,6 @@ import { createContext, useContext } from "react";
 import type { ModalColors } from ".";
 
 type ModalContext = {
-  popup?: boolean;
   icon?: ReactNode;
   modalType?: keyof ModalColors;
   onClose?: () => void;

@@ -18,7 +18,7 @@ const CirclePlayButtonCode = `
 import { PlayButton } from "keep-react";
 import { Play } from "phosphor-react";
 
-const CirclePlayButton = () => {
+export const PlayButtonComponent = () => {
   return (
     <PlayButton
         type="primary"
@@ -27,9 +27,7 @@ const CirclePlayButton = () => {
         icon={<Play size="25" />}
     />
   );
-};
-
-export default CirclePlayButton;
+}
 `;
 
 export { CirclePlayButton, CirclePlayButtonCode };

@@ -1,7 +1,7 @@
 export const SpinnerApiData = [
   {
     id: 1,
-    propsName: "Color",
+    propsName: "color",
     propsType: [
       "failure",
       "gray",

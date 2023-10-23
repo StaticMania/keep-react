@@ -56,7 +56,7 @@ const BreadcrumbWithPageIconCode = `
 import { Breadcrumb } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
-const BreadcrumbWithPageIcon = () => {
+export const BreadcrumbComponent = () => {
   return (
     <div className="my-3 flex w-full flex-col gap-5">
       <Breadcrumb
@@ -103,8 +103,7 @@ const BreadcrumbWithPageIcon = () => {
       </Breadcrumb>
     </div>
   );
-};
-export default BreadcrumbWithPageIcon;
+}
 `;
 
 export { BreadcrumbWithPageIcon, BreadcrumbWithPageIconCode };

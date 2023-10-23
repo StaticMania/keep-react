@@ -2,7 +2,7 @@ import type { KeepCardTheme } from ".";
 
 export const cardTheme: KeepCardTheme = {
   base: "flex rounded-md bg-white ",
-  children: "flex h-full flex-col justify-center gap-4",
+  children: "flex h-full flex-col justify-center gap-3",
   shadow: {
     on: "drop-shadow-xl",
     off: "drop-shadow-none",

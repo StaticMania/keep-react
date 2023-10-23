@@ -76,7 +76,7 @@ import { useState } from "react";
 import { Modal,Button } from "keep-react";
 import { CloudArrowUp } from "phosphor-react";
 
-const DefaultModal = () => {
+export const ModalComponent = () => {
   const [showModal, setShowModal] = useState(false);
   const [showModalX, setShowModalX] = useState(false);
 
@@ -88,7 +88,7 @@ const DefaultModal = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <>
       <Button onClick={onClickOne}>Modal</Button>
       <Button onClick={onClickTwo}>Modal With Cross</Button>
       <Modal
@@ -139,11 +139,9 @@ const DefaultModal = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
-};
-
-export default DefaultModal;
+}
 `;
 
 export { DefaultModal, DefaultModalCode };

@@ -58,7 +58,7 @@ const CheckboxGroupWithAvatarCode = `
 import { useState } from "react";
 import { CheckboxGroup } from "keep-react";
 
-const CheckboxGroupWithAvatar = () => {
+export const CheckboxGroupComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (event) => {
     setSelected(event.target.value);
@@ -107,9 +107,7 @@ const CheckboxGroupWithAvatar = () => {
       />
     </form>
   );
-};
-
-export default CheckboxGroupWithAvatar;
+}
 `;
 
 export { CheckboxGroupWithAvatar, CheckboxGroupWithAvatarCode };

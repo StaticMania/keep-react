@@ -26,7 +26,7 @@ const OneParagraphPopoverCode = `
 "use client";
 import { Button, Popover } from "keep-react";
 
-const OneParagraphPopover = () => {
+export const PopoverComponent = () => {
   return (
     <Popover
       additinalContent={
@@ -43,9 +43,7 @@ const OneParagraphPopover = () => {
       <Button size="xs">Popover</Button>
     </Popover>
   );
-};
-
-export default OneParagraphPopover;
+}
 `;
 
 export { OneParagraphPopover, OneParagraphPopoverCode };

@@ -64,7 +64,7 @@ import { useState } from "react";
 import { SquaresFour } from "phosphor-react";
 import { CheckboxGroup } from "keep-react";
 
-const CheckboxGroupWithIcon = () => {
+export const CheckboxGroupComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (event) => {
     setSelected(event.target.value);
@@ -117,10 +117,7 @@ const CheckboxGroupWithIcon = () => {
       />
     </form>
   );
-};
-
-export default CheckboxGroupWithIcon;
-
+}
 `;
 
 export { CheckboxGroupWithIcon, CheckboxGroupWithIconCode };

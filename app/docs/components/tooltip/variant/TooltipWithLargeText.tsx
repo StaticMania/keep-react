@@ -36,9 +36,9 @@ const TooltipWithLargeTextCode = `
 "use client";
 import { Tooltip,Button } from "keep-react";
 
-const TooltipComponent = () => {
+export const TooltipComponent = () => {
   return (
-    <div className=" flex flex-wrap items-end gap-2">
+    <>
       <Tooltip
         title="Tooltip Title here"
         content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, alias."
@@ -63,11 +63,9 @@ const TooltipComponent = () => {
           Tooltip Content
         </Button>
       </Tooltip>
-    </div>
+    </>
   );
-};
-
-export default TooltipComponent;
+}
 `;
 
 export { TooltipWithLargeText, TooltipWithLargeTextCode };

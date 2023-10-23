@@ -6,6 +6,10 @@ import {
   SizesOfNumberInput,
   SizesOfNumberInputCode,
 } from "./variant/SizesOfNumberInput";
+import {
+  DisabledNumberInput,
+  DisabledNumberInputCode,
+} from "./variant/DisabledNumberInput";
 import { numberInputApiData } from "./NumberInputApi";
 
 import CodePreview from "~/components/CodePreview";
@@ -37,6 +41,15 @@ The NumberInput component in the Keep React offers three available sizes: `"sm"`
   code={SizesOfNumberInputCode}
 >
   <SizesOfNumberInput />
+</CodePreview>
+
+## Disabled Number Input
+
+<CodePreview
+  github="FormControls/NumberInput.tsx"
+  code={DisabledNumberInputCode}
+>
+  <DisabledNumberInput />
 </CodePreview>
 
 ## API Reference

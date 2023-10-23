@@ -8,11 +8,11 @@ const CustomizedBarSizeWithAxisData = () => {
       height={250}
       width={500}
       barSize={30}
-      barRadius={5}
       dataKey="price"
       secondaryDataKey="sell"
+      barRadius={[4, 4, 0, 0]}
       chartData={BarChartData.slice(0, 5)}
-      showBackGround={true}
+      showBg={true}
       showLegend={true}
       showTooltip={true}
       showXaxis={true}
@@ -53,7 +53,7 @@ const BarChartData = [
   
 ];
 
-const CustomizedBarSizeWithAxisData = () => {
+export const BarComponent = () => {
   return (
     <BarChart
       height={250}
@@ -63,15 +63,14 @@ const CustomizedBarSizeWithAxisData = () => {
       dataKey="price"
       secondaryDataKey="sell"
       chartData={BarChartData}
-      showBackGround={true}
+      showBg={true}
       showLegend={true}
       showTooltip={true}
       showXaxis={true}
       showYaxis={true}
     />
   );
-};
-export default CustomizedBarSizeWithAxisData;
+}
 `;
 
 export { CustomizedBarSizeWithAxisData, CustomizedBarSizeWithAxisDataCode };

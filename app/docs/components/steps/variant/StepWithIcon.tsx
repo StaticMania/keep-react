@@ -31,7 +31,7 @@ const StepWithIconCode = `
 import { Steps } from "keep-react";
 import { Club, DownloadSimple, Globe } from "phosphor-react";
 
-const StepComponent = () => {
+export const StepComponent = () => {
   return (
     <Steps stepType="point" borderType="dashed">
       <Steps.Item
@@ -54,9 +54,7 @@ const StepComponent = () => {
       />
     </Steps>
   );
-};
-
-export default StepComponent;
+}
 `;
 
 export { StepWithIcon, StepWithIconCode };

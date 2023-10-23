@@ -18,13 +18,18 @@ const SizesOfAvatarCode = `
 "use client";
 import { Avatar } from "keep-react";
 
-const SizesOfAvatar = () => {
+export const AvatarComponent = () => {
   return (
+    <>
+      <Avatar shape="square" size="xs" />
+      <Avatar shape="square" size="sm" />
       <Avatar shape="square" size="md" />
+      <Avatar shape="square" size="lg" />
+      <Avatar shape="square" size="xl" />
+      <Avatar shape="square" size="2xl" />
+    </>
   );
-};
-
-export default SizesOfAvatar;
+}
 `;
 
 export { SizesOfAvatar, SizesOfAvatarCode };

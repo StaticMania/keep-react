@@ -7,16 +7,6 @@ import { KeepColors, KeepSizes } from "../../Keep/KeepTheme";
 export interface KeepSpinnerTheme {
   base: string;
   color: SpinnerColors;
-  light: {
-    off: {
-      base: string;
-      color: SpinnerColors;
-    };
-    on: {
-      base: string;
-      color: SpinnerColors;
-    };
-  };
   size: SpinnerSizes;
 }
 
@@ -35,14 +25,12 @@ export interface SpinnerSizes
 
 export interface SpinnerProps extends Omit<ComponentProps<"span">, "color"> {
   color?: keyof SpinnerColors;
-  light?: boolean;
   size?: keyof SpinnerSizes;
 }
 
 export const Spinner: FC<SpinnerProps> = ({
   className,
   color = "info",
-  light,
   size = "md",
   ...props
 }) => {
@@ -56,8 +44,6 @@ export const Spinner: FC<SpinnerProps> = ({
         className={twMerge(
           theme.base,
           theme.color[color],
-          theme.light[light ? "on" : "off"].base,
-          theme.light[light ? "on" : "off"].color[color],
           theme.size[size],
           className
         )}

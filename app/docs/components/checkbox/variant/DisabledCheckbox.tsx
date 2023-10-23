@@ -21,7 +21,7 @@ const DisabledCheckboxCode = `
 "use client";
 import { CheckBox } from "keep-react";
 
-const DisabledCheckbox = () => {
+export const CheckboxComponent = () => { 
   return (
       <CheckBox
         size="md"
@@ -33,9 +33,7 @@ const DisabledCheckbox = () => {
         disabled={true}
       />
   );
-};
-
-export default DisabledCheckbox;
+}
 `;
 
 export { DisabledCheckbox, DisabledCheckboxCode };

@@ -19,7 +19,7 @@ const TriggerVariantPopoverCode = `
 "use client";
 import { Button, Popover } from "keep-react";
 
-const TriggerVariantPopover = () => {
+export const PopoverComponent = () => {
   return (
     <Popover
       trigger="hover"
@@ -29,9 +29,7 @@ const TriggerVariantPopover = () => {
       <Button size="xs">Popover</Button>
     </Popover>
   );
-};
-
-export default TriggerVariantPopover;
+}
 `;
 
 export { TriggerVariantPopover, TriggerVariantPopoverCode };

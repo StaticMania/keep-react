@@ -50,7 +50,7 @@ const DefaultCheckboxGroupCode = `
 import { useState } from "react";
 import { CheckboxGroup } from "keep-react";
 
-const DefaultCheckboxGroup = () => {
+export const CheckboxGroupComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (event) => {
     setSelected(event.target.value);
@@ -91,9 +91,7 @@ const DefaultCheckboxGroup = () => {
       />
     </form>
   );
-};
-
-export default DefaultCheckboxGroup;
+}
 `;
 
 export { DefaultCheckboxGroup, DefaultCheckboxGroupCode };

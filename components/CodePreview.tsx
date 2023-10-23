@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Check, Copy } from "phosphor-react";
+import { Check, Clipboard } from "phosphor-react";
 import Image from "next/image";
 import useCopy from "~/hooks/useCopy";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -65,7 +65,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
                     <Check size={20} color="white" />
                   </span>
                 ) : (
-                  <Copy size={20} color="white" />
+                  <Clipboard size={20} color="white" />
                 )}
               </button>
             </div>
@@ -78,6 +78,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
                 paddingLeft: "40px",
                 paddingBottom: "20px",
                 marginTop: "0px",
+                marginBottom: "0px",
                 background: "#1C222B",
                 fontSize: "14px",
                 lineHeight: "22px",

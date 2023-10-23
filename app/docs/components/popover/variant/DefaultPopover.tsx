@@ -28,7 +28,7 @@ const DefaultPopoverCode = `
 "use client";
 import { Button, Popover } from "keep-react";
 
-const DefaultPopover = () => {
+export const PopoverComponent = () => {
   return (
     <Popover
       title="Popover title here"
@@ -47,9 +47,7 @@ const DefaultPopover = () => {
       <Button size="xs">Popover</Button>
     </Popover>
   );
-};
-
-export default DefaultPopover;
+}
 `;
 
 export { DefaultPopover, DefaultPopoverCode };

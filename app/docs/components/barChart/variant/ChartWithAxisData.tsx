@@ -9,9 +9,9 @@ const ChartWithAxisData = () => {
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend={true}
-      showBackGround={true}
+      showBg={true}
       showXaxis={true}
       showYaxis={true}
       active={true}
@@ -104,16 +104,16 @@ const BarChartData = [
   },
 ];
 
-const ChartWithAxisData = () => {
+export const BarComponent = () => {
   return (
     <BarChart
       height={250}
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend={true}
-      showBackGround={true}
+      showBg={true}
       showXaxis={true}
       showYaxis={true}
       active={true}
@@ -123,8 +123,6 @@ const ChartWithAxisData = () => {
       showTooltip={true}
     />
   );
-};
-
-export default ChartWithAxisData;
+}
 `;
 export { ChartWithAxisData, ChartWithAxisDataCode };

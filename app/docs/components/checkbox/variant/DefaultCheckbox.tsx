@@ -24,7 +24,7 @@ const DefaultCheckboxCode = `
 "use client";
 import { CheckBox } from "keep-react";
 
-const DefaultCheckbox = () => {
+export const CheckboxComponent = () => { 
   const handleChecked = (value) => {
     console.log(value);
   };
@@ -39,9 +39,7 @@ const DefaultCheckbox = () => {
         handleChecked={handleChecked}
       />
   );
-};
-
-export default DefaultCheckbox;
+}
 `;
 
 export { DefaultCheckbox, DefaultCheckboxCode };

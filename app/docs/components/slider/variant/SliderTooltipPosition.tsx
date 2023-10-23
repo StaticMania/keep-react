@@ -19,7 +19,8 @@ const SliderTooltipPosition = () => {
 const SliderTooltipPositionCode = `
 "use client";
 import { Slider } from "keep-react";
-const SliderTooltipPosition = () => {
+
+export const SliderComponent = () => {
   return (
     <Slider
       defaultValue={300}
@@ -30,8 +31,7 @@ const SliderTooltipPosition = () => {
       tooltip="bottom"
     />
   );
-};
-export default SliderTooltipPosition;
+}
 `;
 
 export { SliderTooltipPosition, SliderTooltipPositionCode };

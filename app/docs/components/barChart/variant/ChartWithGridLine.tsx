@@ -9,9 +9,9 @@ const BarChartWithGridLine = () => {
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend={true}
-      showBackGround={true}
+      showBg={true}
       showXaxis={true}
       showGridLine={true}
       showYaxis={true}
@@ -105,16 +105,16 @@ const BarChartData = [
   },
 ];
 
-const ChartWithGridLine = () => {
+export const BarComponent = () => {
   return (
     <BarChart
       height={250}
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       showLegend={true}
-      showBackGround={true}
+      showBg={true}
       showXaxis={true}
       showYaxis={true}
       showTooltip={true}
@@ -125,9 +125,7 @@ const ChartWithGridLine = () => {
       showGridLine={true}
     />
   );
-};
-
-export default ChartWithGridLine;
+}
 `;
 
 export { BarChartWithGridLine, BarChartWithAxisDataCode };

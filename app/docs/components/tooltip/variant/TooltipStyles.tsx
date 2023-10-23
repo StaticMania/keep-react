@@ -34,9 +34,9 @@ const TooltipStylesCode = `
 "use client";
 import { Tooltip,Button } from "keep-react";
 
-const TooltipComponent = () => {
+export const TooltipComponent = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <>
       <Tooltip
         content="Tooltips text here"
         trigger="hover"
@@ -59,11 +59,9 @@ const TooltipComponent = () => {
           Dark Tooltip
         </Button>
       </Tooltip>
-    </div>
+    </>
   );
-};
-
-export default TooltipComponent;
+}
 `;
 
 export { TooltipStyles, TooltipStylesCode };

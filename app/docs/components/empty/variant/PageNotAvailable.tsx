@@ -25,7 +25,7 @@ const PageNotAvailableCode = `
 import Image from "next/image";
 import { Empty } from "keep-react";
 
-const PageNotAvailable = () => {
+export const EmptyComponent = () => {
   return (
     <Empty
       title="This page isn't available right now"
@@ -41,9 +41,7 @@ const PageNotAvailable = () => {
       }
     />
   );
-};
-
-export default PageNotAvailable;
+}
 `;
 
 export { PageNotAvailable, PageNotAvailableCode };

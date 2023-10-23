@@ -63,10 +63,10 @@ const TimelineWithImage = () => {
 
 const TimelineWithImageCode = `
 "use client";
-import { Timeline } from "keep-react";
 import Image from "next/image";
+import { Timeline } from "keep-react";
 
-const TimelineWithImage = () => {
+export const TimelineComponent = () => {
   return (
      <Timeline timelineBarType="dashed" gradientPoint={true}>
         <Timeline.Item>
@@ -121,8 +121,6 @@ const TimelineWithImage = () => {
         </Timeline.Item>
       </Timeline>
   );
-};
-
-export default TimelineWithImage;
+}
 `;
 export { TimelineWithImage, TimelineWithImageCode };

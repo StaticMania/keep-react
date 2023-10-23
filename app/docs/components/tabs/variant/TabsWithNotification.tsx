@@ -24,7 +24,7 @@ const TabsWithNotificationCode = `
 "use client";
 import { Tabs } from "keep-react";
 
-const TabsComponent = () => {
+export const TabsComponent = () => {
   return (
     <Tabs aria-label="Tabs" style="default">
       <Tabs.Item title="Inbox" notification={20}>
@@ -42,8 +42,6 @@ const TabsComponent = () => {
     </Tabs>
   );
 };
-
-export default TabsComponent;
 `;
 
 export { TabsWithNotification, TabsWithNotificationCode };

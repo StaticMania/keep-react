@@ -147,7 +147,7 @@ const meta: Meta<typeof BarChart> = {
         defaultValue: { summary: false },
       },
     },
-    showBackGround: {
+    showBg: {
       description: "Chart bar background color show or not?",
       table: {
         type: { summary: "boolean" },
@@ -196,13 +196,7 @@ const meta: Meta<typeof BarChart> = {
         defaultValue: { summary: 600 },
       },
     },
-    barBackGroundColor: {
-      description: "Chart bar background color",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "#E8EDFF" },
-      },
-    },
+
     activeColor: {
       description: "Chart bar active bar color",
       table: {
@@ -217,7 +211,7 @@ const meta: Meta<typeof BarChart> = {
         defaultValue: { summary: "" },
       },
     },
-    secondaryBarBackGroundColor: {
+    secondaryBarBg: {
       description: "Chart secondary background color",
       table: {
         type: { summary: "string" },
@@ -264,9 +258,8 @@ export const DefaultBarChart: Story = {
     showXaxis: false,
     showYaxis: false,
     showGridLine: false,
-    showBackGround: false,
-    barBackGroundColor: "",
-    secondaryBarBackGroundColor: "",
+    showBg: false,
+    secondaryBarBg: "",
     barColor: "#1B4DFF",
     secondaryBarColor: "#1DB469",
     showLegend: false,
@@ -378,7 +371,7 @@ export const CustomizedChartBarSize: Story = {
 export const CustomizedBarSizeAndBackgroundColorAndLegend: Story = {
   args: {
     ...CustomizedChartBarSize.args,
-    showBackGround: true,
+    showBg: true,
     showLegend: true,
   },
 };
@@ -433,7 +426,7 @@ export const DoubleSeriesWithLegendAndTooltip: Story = {
 export const DoubleSeriesWithBackgroundColor: Story = {
   args: {
     ...DoubleSeriesWithLegendAndTooltip.args,
-    showBackGround: true,
+    showBg: true,
   },
 };
 export const DoubleSeriesWithXYAxisData: Story = {

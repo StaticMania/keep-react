@@ -14,16 +14,14 @@ const RatingTypesCode = `
 "use client";
 import { Rating } from "keep-react";
 
-const RatingTypes = () => {
+export const RatingComponent = () => {
   return (
     <Rating size={30}>
       <Rating.Star starType="full" filledType="fill" />
       <Rating.Star starType="half" filledType="fill" />
     </Rating>
   );
-};
-
-export default RatingTypes;
+}
 `;
 
 export { RatingTypes, RatingTypesCode };

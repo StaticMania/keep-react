@@ -25,7 +25,7 @@ const SliderWithMarksCode = `
 "use client";
 import { Slider } from "keep-react";
 
-const SliderWithMarks = () => {
+export const SliderComponent = () => {
   return (
     <Slider
       defaultValue={300}
@@ -41,9 +41,7 @@ const SliderWithMarks = () => {
       step={100}
     />
   );
-};
-
-export default SliderWithMarks;
+}
 `;
 
 export { SliderWithMarks, SliderWithMarksCode };

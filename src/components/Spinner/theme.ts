@@ -11,32 +11,7 @@ export const spinnerTheme: KeepSpinnerTheme = {
     success: "fill-green-500",
     warning: "fill-yellow-400",
   },
-  light: {
-    off: {
-      base: "",
-      color: {
-        failure: "",
-        gray: "",
-        info: "",
-        pink: "",
-        purple: "",
-        success: "",
-        warning: "",
-      },
-    },
-    on: {
-      base: "",
-      color: {
-        failure: "",
-        gray: "",
-        info: "",
-        pink: "",
-        purple: "",
-        success: "",
-        warning: "",
-      },
-    },
-  },
+
   size: {
     xs: "w-3 h-3",
     sm: "w-4 h-4",

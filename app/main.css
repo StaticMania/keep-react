@@ -235,12 +235,12 @@ input[type="number"] {
 }
 
 .react-datepicker__navigation--previous {
-  top: 35px !important;
+  top: 32px !important;
   left: 24px !important;
 }
 
 .react-datepicker__navigation--next {
-  top: 35px !important;
+  top: 32px !important;
   right: 24px !important;
 }
 
@@ -329,14 +329,12 @@ input[type="number"] {
   color: #afbaca !important;
 }
 
-.react-datepicker__day--selected,
-.react-datepicker__day--today {
+.react-datepicker__day--selected {
   color: white !important;
   background-color: #1b4dff !important;
 }
 
-.react-datepicker__day--selected:hover,
-.react-datepicker__day--today:hover {
+.react-datepicker__day--selected:hover {
   background-color: #4a72ff !important;
 }
 
@@ -346,6 +344,14 @@ input[type="number"] {
 }
 .react-datepicker__day--keyboard-selected:hover {
   background-color: #4a72ff !important;
+}
+.react-datepicker__day--today {
+  color: white !important;
+  background-color: #94abff !important;
+}
+
+.react-datepicker__day--today:hover {
+  background-color: #6e8eff !important;
 }
 
 /* =====================DATE RANGE PICKER STYLE START====================== */
@@ -483,15 +489,25 @@ input[type="number"] {
   color: #2d3643 !important;
 }
 
-.react-datepicker__year .react-datepicker__year-text:hover {
+.react-datepicker__year-text.react-datepicker__year-text--keyboard-selected {
   background-color: #e8edff !important;
+  border-radius: 0.375rem !important;
+  color: #0f3cd9 !important;
 }
 
-.react-datepicker__year .react-datepicker__year-text--selected,
+.react-datepicker__year .react-datepicker__year-text--selected {
+  background-color: #1b4dff !important;
+  border-radius: 0.375rem !important;
+  color: #fff !important;
+}
 .react-datepicker__year .react-datepicker__year-text--today {
   background-color: #e8edff !important;
   border-radius: 0.375rem !important;
   color: #0f3cd9 !important;
+}
+
+.react-datepicker__year.react-datepicker__year-text:hover {
+  background-color: #4a72ff !important;
 }
 
 /* ================ YEAR PICKER END =========== */
@@ -532,7 +548,11 @@ input[type="number"] {
 }
 .react-datepicker__time-list-item.react-datepicker__time-list-item--selected {
   color: #fff !important;
-  background-color: #1b4dff !important;
+  background-color: #6e8eff !important;
+}
+
+.react-datepicker__time-list-item.react-datepicker__time-list-item--selected:hover {
+  background-color: #4a72ff !important;
 }
 
 .react-datepicker__time-container ::-webkit-scrollbar {

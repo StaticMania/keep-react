@@ -51,20 +51,20 @@ const DefaultNotification = () => {
 
 const DefaultNotificationCode = `
 "use client";
-import { Notification, Button } from "keep-react";
+import { useState } from "react";
+import { Button, Notification } from "keep-react";
 
-const NotificationComponent = () => {
-
+export const NotificationComponent = () => {
   const [showNotification, setShowNotification] = useState(false);
   const onDismiss = () => {
     setShowNotification(!showNotification);
   };
+
   const handleShowNotification = () => {
     setShowNotification(!showNotification);
   };
-
   return (
-    <div className="py-3 px-2">
+    <>
       <Button onClick={handleShowNotification}>Show Notification</Button>
       <Notification
         showNotification={showNotification}
@@ -97,11 +97,9 @@ const NotificationComponent = () => {
           Can we store cookies?
         </h3>
       </Notification>
-    </div>
+    </>
   );
-};
-
-export default NotificationComponent;
+}
 `;
 
 export { DefaultNotification, DefaultNotificationCode };

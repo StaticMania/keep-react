@@ -38,7 +38,7 @@ const TabsWithIconCode = `
 import { Tabs } from "keep-react";
 import { Gear, GridFour, Phone, User, WarningCircle } from "phosphor-react";
 
-const TabsComponent = () => {
+export const TabsComponent = () => {
   return (
     <Tabs
       aria-label="Tabs"
@@ -67,9 +67,7 @@ const TabsComponent = () => {
       </Tabs.Item>
     </Tabs>
   );
-};
-
-export default TabsComponent;
+}
 `;
 
 export { TabsWithIcon, TabsWithIconCode };

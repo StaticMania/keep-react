@@ -27,14 +27,13 @@ const HorizontalUploadFailed = () => {
 
 const HorizontalUploadFailedCode = `
 "use client";
+import { useState } from "react";
 import { Upload } from "keep-react";
-import React, { useState } from "react";
 
-const HorizontalUploadFailed = () => {
+export const UploadComponent = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
     }
@@ -42,7 +41,7 @@ const HorizontalUploadFailed = () => {
   return (
     <Upload
         onFileChange={handleFileChange}
-        id="horizontal_upload_failed"
+        id="upload"
         file={fileName}
         horizontal={true}
         showProgressBar={true}
@@ -51,9 +50,7 @@ const HorizontalUploadFailed = () => {
         uploadTime="21 minutes left"
     />
   );
-};
-
-export default HorizontalUploadFailed;
+}
 `;
 
 export { HorizontalUploadFailed, HorizontalUploadFailedCode };

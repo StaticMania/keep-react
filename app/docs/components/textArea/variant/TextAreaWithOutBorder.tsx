@@ -18,7 +18,7 @@ const TextAreaWithOutBorderCode = `
 "use client";
 import { Textarea } from "keep-react";
 
-const TextAreaComponent = () => {
+export const TextAreaComponent = () => {
   return (
     <Textarea
       id="comment"
@@ -29,9 +29,7 @@ const TextAreaComponent = () => {
       rows={4}
     />
   );
-};
-
-export default TextAreaComponent;
+}
 `;
 
 export { TextAreaWithOutBorder, TextAreaWithOutBorderCode };

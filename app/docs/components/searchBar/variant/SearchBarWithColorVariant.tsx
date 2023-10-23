@@ -75,7 +75,7 @@ const books = [
   { id: 10, name: "Brave New World" },
 ];
 
-const SearchBarComponent = () => {
+export const SearchBarComponent = () => {
   const [data, setData] = useState([]);
   const handleOnChange = (event) => {
     const searchTerm = event.target.value.toLowerCase();
@@ -124,9 +124,7 @@ const SearchBarComponent = () => {
       </ul>
     </SearchBar>
   );
-};
-
-export default SearchBarComponent;
+}
 `;
 
 export { SearchBarWithColorVariant, SearchBarWithColorVariantCode };

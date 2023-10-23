@@ -22,23 +22,18 @@ const KeepButtonShapeCode = `
 import { Button } from "keep-react";
 import { ShoppingCart } from "phosphor-react";
 
-const KeepButtonShape = () => {
+export const ButtonComponent = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
-      <Button size="md" type="primary" pill={true}>
-        Default
-      </Button>
+    <>
+      <Button size="md" type="primary" pill={true}>Default</Button>
       <Button size="md" type="primary" circle={true}>
         <span>
           <ShoppingCart size={24} />
         </span>
       </Button>
-    </div>
+    </>
   );
 };
-
-export default KeepButtonShape;
-
 `;
 
 export { KeepButtonShape, KeepButtonShapeCode };

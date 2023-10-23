@@ -13,11 +13,9 @@ const DefaultSpinnerCode = `
 "use client";
 import { Spinner } from "keep-react";
 
-const DefaultSpinner = () => {
+export const SpinnerComponent = () => {
   return <Spinner color="info" size="lg" />;
-};
-
-export default DefaultSpinner;
+}
 `;
 
 export { DefaultSpinner, DefaultSpinnerCode };

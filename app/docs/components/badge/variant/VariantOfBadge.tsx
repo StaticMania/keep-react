@@ -5,13 +5,13 @@ const VariantOfBadge = () => {
   return (
     <div className="flex flex-wrap items-end gap-2 my-3">
       <Badge size="sm" colorType="light" color="info">
-        Default
+        Badge
       </Badge>
       <Badge size="sm" colorType="strong" color="info">
-        Default
+        Badge
       </Badge>
       <Badge size="sm" colorType="strong" badgeType="text" color="info">
-        Badges
+        Badge
       </Badge>
     </div>
   );
@@ -21,22 +21,15 @@ const VariantOfBadgeCode = `
 "use client";
 import { Badge } from "keep-react";
 
-const VariantOfBadge = () => {
+export const BadgeComponent = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2 my-3">
-      <Badge size="sm" colorType="light" color="info">
-        Default
-      </Badge>
-      <Badge size="sm" colorType="strong" color="info">
-        Default
-      </Badge>
-      <Badge size="sm" colorType="strong" badgeType="text" color="info">
-        Badges
-      </Badge>
-    </div>
+    <>
+      <Badge size="sm" colorType="light" color="info">Badge</Badge>
+      <Badge size="sm" colorType="strong" color="info">Badge</Badge>
+      <Badge size="sm" colorType="strong" badgeType="text" color="info">Badge</Badge>
+    </>
   );
 };
-export default VariantOfBadge;
 `;
 
 export { VariantOfBadge, VariantOfBadgeCode };

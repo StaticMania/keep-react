@@ -25,11 +25,9 @@ export interface keepModalTheme {
   };
   body: {
     base: string;
-    popup: string;
   };
   header: {
     base: string;
-    popup: string;
     title: string;
     iconSection: string;
     headerIcon: {
@@ -44,7 +42,6 @@ export interface keepModalTheme {
   };
   footer: {
     base: string;
-    popup: string;
   };
   sizes: ModalSizes;
   positions: ModalPositions;
@@ -65,7 +62,6 @@ export interface ModalSizes extends Omit<KeepSizes, "xs"> {
 export interface ModalProps
   extends PropsWithChildren<Omit<ComponentProps<"div">, "className">> {
   onClose?: () => void;
-  popup?: boolean;
   root?: HTMLElement;
   show?: boolean;
   icon?: ReactNode;
@@ -78,7 +74,6 @@ const ModalComponent: FC<ModalProps> = ({
   children,
   show,
   root,
-  popup,
   icon,
   size = "sm",
   modalType = "info",
@@ -112,7 +107,7 @@ const ModalComponent: FC<ModalProps> = ({
 
   return container
     ? createPortal(
-        <ModalContext.Provider value={{ popup, icon, modalType, onClose }}>
+        <ModalContext.Provider value={{ icon, modalType, onClose }}>
           <div
             aria-hidden={!show}
             className={twMerge(

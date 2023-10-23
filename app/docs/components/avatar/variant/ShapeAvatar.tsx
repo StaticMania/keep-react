@@ -4,8 +4,8 @@ import { Avatar } from "~/src";
 const ShapeAvatar = () => {
   return (
     <div className="flex items-center gap-3">
-      <Avatar shape="round" />
-      <Avatar shape="roundSquare" />
+      <Avatar shape="circle" />
+      <Avatar shape="rounded" />
       <Avatar shape="square" />
     </div>
   );
@@ -15,13 +15,15 @@ const ShapeAvatarCode = `
 "use client";
 import { Avatar } from "keep-react";
 
-const ShapeAvatar = () => {
+export const AvatarComponent = () => {
   return (
-      <Avatar shape="round" />
+    <>
+      <Avatar shape="circle" />
+      <Avatar shape="rounded" />
+      <Avatar shape="square" />
+    </>
   );
-};
-
-export default NotificationOfAvatar;
+}
 `;
 
 export { ShapeAvatar, ShapeAvatarCode };

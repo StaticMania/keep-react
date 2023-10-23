@@ -21,7 +21,7 @@ const DefaultSliderCode = `
 "use client";
 import { Slider } from "keep-react";
 
-const DefaultSlider = () => {
+export const SliderComponent = () => {
   return (
     <Slider
       range
@@ -33,10 +33,7 @@ const DefaultSlider = () => {
       onChange={(value) => console.log(value)}
     />
   );
-};
-
-export default DefaultSlider;
-
+}
 `;
 
 export { DefaultSlider, DefaultSliderCode };

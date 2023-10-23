@@ -204,37 +204,37 @@ export const AvatarGroupComponent = () => {
   return (
     <Avatar.Group>
       <Avatar
-        shape="round"
+        shape="circle"
         size="md"
         stacked={true}
         img="/images/avatar/avatar-1.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="md"
         stacked={true}
         img="/images/avatar/avatar-2.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="md"
         stacked={true}
         img="/images/avatar/avatar-3.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="md"
         stacked={true}
         img="/images/avatar/avatar-4.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="md"
         stacked={true}
         img="/images/avatar/avatar-5.png"
       />
       <Avatar
-        shape="round"
+        shape="circle"
         size="md"
         stacked={true}
         img="https://randomuser.me/api/portraits/men/32.jpg"

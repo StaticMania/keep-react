@@ -54,9 +54,9 @@ const OnlyIconOfBadgeCode = `
 import { Badge } from "keep-react";
 import { Check, Checks, CloudCheck, XCircle } from "phosphor-react";
 
-const OnlyIconOfBadge = () => {
+export const BadgeComponent = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <>
       <Badge
         size="sm"
         colorType="strong"
@@ -97,12 +97,9 @@ const OnlyIconOfBadge = () => {
         icon={<CloudCheck size={20} weight="light" />}
         iconPosition="right"
       />
-    </div>
+    </>
   );
-};
-
-export default OnlyIconOfBadge;
-
+}
 `;
 
 export { OnlyIconOfBadge, OnlyIconOfBadgeCode };

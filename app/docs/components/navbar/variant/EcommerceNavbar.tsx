@@ -1,12 +1,6 @@
 "use client";
 import Image from "next/image";
-import {
-  CaretDown,
-  Heart,
-  MagnifyingGlass,
-  ShoppingCart,
-  User,
-} from "phosphor-react";
+import { Heart, MagnifyingGlass, ShoppingCart, User } from "phosphor-react";
 import { Button, Navbar } from "~/src";
 
 const EcommerceNavbar = () => {
@@ -17,8 +11,8 @@ const EcommerceNavbar = () => {
           tag="ul"
           className="lg:flex hidden items-center justify-between gap-8"
         >
-          <Navbar.Link linkName="Category" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Best Sellers" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Category" />
+          <Navbar.Link linkName="Best Sellers" />
         </Navbar.Container>
         <Navbar.Brand>
           <Image
@@ -31,9 +25,9 @@ const EcommerceNavbar = () => {
 
         <Navbar.Collapse collapseType="sidebar">
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+            <Navbar.Link linkName="Home" />
+            <Navbar.Link linkName="Projects" />
+            <Navbar.Link linkName="Blogs" />
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
@@ -73,10 +67,10 @@ const EcommerceNavbar = () => {
 
 const EcommerceNavbarCode = `
 "use client";
-import { CaretDown, Heart, MagnifyingGlass, ShoppingCart, User } from "phosphor-react";
 import { Button, Navbar } from "keep-react";
+import { Heart, MagnifyingGlass, ShoppingCart, User } from "phosphor-react";
 
-const NavbarComponent = () => {
+export const NavbarComponent = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
@@ -84,8 +78,8 @@ const NavbarComponent = () => {
           tag="ul"
           className="lg:flex hidden items-center justify-between gap-8"
         >
-          <Navbar.Link linkName="Category" icon={<CaretDown size={20} />} />
-          <Navbar.Link linkName="Best Sellers" icon={<CaretDown size={20} />} />
+          <Navbar.Link linkName="Category"/>
+          <Navbar.Link linkName="Best Sellers"/>
         </Navbar.Container>
         <Navbar.Brand>
           <Image
@@ -98,9 +92,9 @@ const NavbarComponent = () => {
 
         <Navbar.Collapse collapseType="sidebar">
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
-            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} />
-            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} />
+            <Navbar.Link linkName="Home"/>
+            <Navbar.Link linkName="Projects"/>
+            <Navbar.Link linkName="Blogs"/>
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
@@ -136,9 +130,7 @@ const NavbarComponent = () => {
       </Navbar.Container>
     </Navbar>
   );
-};
-
-export default NavbarComponent;
+}
 `;
 
 export { EcommerceNavbar, EcommerceNavbarCode };

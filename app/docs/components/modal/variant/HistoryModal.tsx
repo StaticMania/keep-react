@@ -13,10 +13,10 @@ const HistoryModal = () => {
   const onClickAccessModal = () => {
     setShowAccessModal(!showAccessModal);
   };
-
   const onChange = () => {
     // ONCHANGE EVENT
   };
+
   return (
     <div className="flex flex-wrap items-end gap-2 py-3 px-2">
       <Button onClick={onClickHistoryModal}>History Modal</Button>
@@ -75,7 +75,7 @@ const HistoryModal = () => {
             </p>
             <div className="md:mb-6 mb-4 flex items-center gap-2">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 statusPosition="bottom-right"
                 size="md"
@@ -124,7 +124,7 @@ import { useState } from "react";
 import { Avatar,Button,Modal } from "keep-react";
 import { CloudArrowUp, UserPlus } from "phosphor-react";
 
-const HistoryModal = () => {
+export const ModalComponent = () => {
   const [showHistoryModal, setShowHistoryModal] = useState(false);
   const [showAccessModal, setShowAccessModal] = useState(false);
 
@@ -139,7 +139,7 @@ const HistoryModal = () => {
     // ONCHANGE EVENT
   };
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <>
       <Button onClick={onClickHistoryModal}>History Modal</Button>
       <Button onClick={onClickAccessModal}>Access Modal</Button>
       <Modal
@@ -196,7 +196,7 @@ const HistoryModal = () => {
             </p>
             <div className="md:mb-6 mb-4 flex items-center gap-2">
               <Avatar
-                shape="round"
+                shape="circle"
                 img="/images/avatar/avatar-4.png"
                 statusPosition="bottom-right"
                 size="md"
@@ -235,12 +235,9 @@ const HistoryModal = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
-};
-
-export default HistoryModal;
-
+}
 `;
 
 export { HistoryModal, HistoryModalCode };

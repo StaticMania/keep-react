@@ -104,7 +104,7 @@ import {
   Users,
 } from "phosphor-react";
 
-const SidebarWithCTA = () => {
+export const SidebarComponent = () => {
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
       <Sidebar.Items>
@@ -176,9 +176,6 @@ const SidebarWithCTA = () => {
       </Sidebar.Items>
     </Sidebar>
   );
-};
-
-export default SidebarWithCTA;
-
+}
 `;
 export { SidebarWithCTA, SidebarWithCTACode };

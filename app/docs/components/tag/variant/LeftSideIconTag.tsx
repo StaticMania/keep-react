@@ -38,7 +38,7 @@ const LeftSideIconTagCode = `
 import { Tag } from "keep-react";
 import { CrownSimple } from "phosphor-react";
 
-const TagComponent = () => {
+export const TagComponent = () => {
   return (
     <div className="flex w-full flex-row flex-wrap gap-2">
       <Tag leftIcon={<CrownSimple size={20} />} color="gray">
@@ -67,9 +67,7 @@ const TagComponent = () => {
       </Tag>
     </div>
   );
-};
-
-export default TagComponent;
+}
 `;
 
 export { LeftSideIconTag, LeftSideIconTagCode };

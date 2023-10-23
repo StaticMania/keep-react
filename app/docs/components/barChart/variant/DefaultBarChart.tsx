@@ -1,7 +1,5 @@
 "use client";
-
 import { BarChart } from "~/src";
-
 export const BarChartData = [
   {
     name: "2",
@@ -87,7 +85,7 @@ const DefaultBarChart = () => {
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       active={true}
       activeIndex={5}
       activeColor="#1B4DFF"
@@ -177,23 +175,21 @@ const BarChartData = [
   },
 ];
 
-const DefaultBarChart = () => {
+export const BarComponent = () => {
   return (
     <BarChart
       height={250}
       width={500}
       dataKey="price"
       chartData={BarChartData}
-      barRadius={20}
+      barRadius={[4, 4, 0, 0]}
       active={true}
       activeIndex={5}
       activeColor="#1B4DFF"
       inActiveColor="#94ABFF"
     />
   );
-};
-
-export default DefaultBarChart;
+}
 `;
 
 export { DefaultBarChart, DefaultBarChartCode };
