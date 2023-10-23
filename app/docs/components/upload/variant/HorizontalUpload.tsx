@@ -22,22 +22,19 @@ const HorizontalUpload = () => {
 
 const HorizontalUploadCode = `
 "use client";
-import { Upload } from "keep-react";
 import { useState } from "react";
+import { Upload } from "keep-react";
 
-const HorizontalUpload = () => {
+export const UploadComponent = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
     }
   };
   return <Upload onFileChange={handleFileChange} file={fileName} horizontal={true} id="horizontal_upload"/>;
-};
-
-export default HorizontalUpload;
+}
 `;
 
 export { HorizontalUpload, HorizontalUploadCode };

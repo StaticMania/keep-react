@@ -4,7 +4,6 @@ import { Upload } from "~/src";
 
 const UploadPending = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files && event.target.files[0];
     if (file) {
@@ -29,11 +28,10 @@ const UploadPendingCode = `
 import { useState } from "react";
 import { Upload } from "keep-react";
 
-const UploadPending = () => {
+export const UploadComponent = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
     }
@@ -46,12 +44,10 @@ const UploadPending = () => {
       progressType="pending"
       progress={39}
       uploadTime="1 minutes left"
-      id="upload_Pending"
+      id="upload"
     />
   );
-};
-
-export default UploadPending;
+}
 `;
 
 export { UploadPending, UploadPendingCode };

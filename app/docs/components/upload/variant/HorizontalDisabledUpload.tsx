@@ -24,14 +24,13 @@ const HorizontalDisabledUpload = () => {
 
 const HorizontalDisabledUploadCode = `
 "use client";
+import { useState } from "react";
 import { Upload } from "keep-react";
-import React, { useState } from "react";
 
-const HorizontalDisabledUpload = () => {
+export const UploadComponent = () => {
   const [fileName, setFileName] = useState("");
-
   const handleFileChange = (event) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
     }
@@ -42,12 +41,10 @@ const HorizontalDisabledUpload = () => {
       file={fileName}
       horizontal={true}
       disabled={true}
-      id="horizontal_disabled_upload"
+      id="upload"
     />
   );
-};
-
-export default HorizontalDisabledUpload;
+}
 `;
 
 export { HorizontalDisabledUpload, HorizontalDisabledUploadCode };
