@@ -123,6 +123,6 @@ export const BarComponent = () => {
       showTooltip={true}
     />
   );
-};
+}
 `;
 export { ChartWithAxisData, ChartWithAxisDataCode };

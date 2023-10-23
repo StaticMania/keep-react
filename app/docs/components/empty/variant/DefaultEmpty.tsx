@@ -25,7 +25,7 @@ const DefaultEmptyCode = `
 import Image from "next/image";
 import { Empty } from "keep-react";
 
-const DefaultEmpty = () => {
+export const EmptyComponent = () => {
   return (
     <Empty
       title="Oops! You seem to be lost"
@@ -41,9 +41,7 @@ const DefaultEmpty = () => {
       }
     />
   );
-};
-
-export default DefaultEmpty;
+}
 `;
 
 export { DefaultEmpty, DefaultEmptyCode };

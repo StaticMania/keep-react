@@ -59,7 +59,7 @@ const BreadcrumbWithNumberCode = `
 import { Breadcrumb } from "keep-react";
 import { CaretRight, House } from "phosphor-react";
 
-const BreadcrumbWithNumber = () => {
+export const BreadcrumbComponent = () => {
   return (
     <div className="flex w-full flex-col gap-5">
       <Breadcrumb
@@ -109,9 +109,7 @@ const BreadcrumbWithNumber = () => {
       </Breadcrumb>
     </div>
   );
-};
-
-export default BreadcrumbWithNumber;
+}
 `;
 
 export { BreadcrumbWithNumber, BreadcrumbWithNumberCode };

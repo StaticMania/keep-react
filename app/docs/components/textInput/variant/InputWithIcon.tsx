@@ -21,7 +21,7 @@ const InputWithIconCode = `
 "use client";
 import { Label ,TextInput} from "keep-react";
 
-const TextInputComponent = () => {
+export const TextInputComponent = () => {
   return (
     <>
       <Label value="Label" />
@@ -34,9 +34,7 @@ const TextInputComponent = () => {
       />
     </>
   );
-};
-
-export default TextInputComponent;
+}
 `;
 
 export { InputWithIcon, InputWithIconCode };

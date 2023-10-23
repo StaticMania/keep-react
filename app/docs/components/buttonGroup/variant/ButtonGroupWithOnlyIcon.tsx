@@ -18,7 +18,7 @@ const ButtonGroupWithOnlyIcon = () => {
   );
 };
 
-const ButtonGroupWithIconCode = `
+const ButtonGroupWithOnlyIconCode = `
 "use client";
 import { Button } from "keep-react";
 import { ChatCircleDots, Cube, Gear } from "phosphor-react";
@@ -37,7 +37,7 @@ export const ButtonGroupComponent = () => {
       </Button>
     </Button.Group>
   );
-};
+}
 `;
 
-export { ButtonGroupWithOnlyIcon, ButtonGroupWithIconCode };
+export { ButtonGroupWithOnlyIcon, ButtonGroupWithOnlyIconCode };

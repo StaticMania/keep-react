@@ -14,13 +14,12 @@ const ImageOfAvatar = () => {
 const ImageOfAvatarCode = `
 "use client";
 import { Avatar } from "keep-react";
-const ImageOfAvatar = () => {
+
+export const AvatarComponent = () => {
   return (
       <Avatar shape="circle" size="xl"  img="/images/avatar/avatar-4.png" />
   );
-};
-
-export defaul ImageOfAvatar;
+}
 `;
 
 export { ImageOfAvatar, ImageOfAvatarCode };

@@ -121,7 +121,7 @@ export const BarComponent = () => {
       secondaryDataKey="sell"
     />
   );
-};
+}
 `;
 
 export { ChartWithDoubleData, ChartWithDoubleDataCode };

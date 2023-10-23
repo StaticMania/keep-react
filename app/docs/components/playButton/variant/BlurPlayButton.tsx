@@ -20,7 +20,7 @@ const BlurPlayButtonCode = `
 import { PlayButton } from "keep-react";
 import { Play } from "phosphor-react";
 
-const BlurPlayButton = () => {
+export const PlayButtonComponent = () => {
   return (
      <PlayButton
       title="Play Video"
@@ -31,9 +31,7 @@ const BlurPlayButton = () => {
       className="bg-black/40 backdrop-blur-sm"
     />
   );
-};
-
-export default BlurPlayButton;
+}
 `;
 
 export { BlurPlayButton, BlurPlayButtonCode };

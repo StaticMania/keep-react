@@ -20,7 +20,7 @@ const ColorsOfTagCode = `
 "use client";
 import { Tag } from "keep-react";
 
-const TagComponent = () => {
+export const TagComponent = () => {
   return (
     <div className="flex w-full flex-row gap-2">
       <Tag color="gray">Gray Tag</Tag>
@@ -33,9 +33,7 @@ const TagComponent = () => {
       <Tag disabled={true}>Disabled Tag</Tag>
     </div>
   );
-};
-
-export default TagComponent;
+}
 `;
 
 export { ColorsOfTag, ColorsOfTagCode };

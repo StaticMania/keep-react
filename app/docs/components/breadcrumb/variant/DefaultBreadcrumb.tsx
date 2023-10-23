@@ -47,7 +47,7 @@ const DefaultBreadcrumbCode = `
 import { Breadcrumb } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
-const DefaultBreadcrumb = () => {
+export const BreadcrumbComponent = () => {
   return (
     <div className="flex w-full flex-col gap-5">
       <Breadcrumb
@@ -85,9 +85,7 @@ const DefaultBreadcrumb = () => {
       </Breadcrumb>
     </div>
   );
-};
-
-export default DefaultBreadcrumb;
+}
 `;
 
 export { DefaultBreadcrumb, DefaultBreadcrumbCode };

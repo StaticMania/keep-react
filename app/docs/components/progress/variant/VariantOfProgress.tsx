@@ -15,7 +15,7 @@ const VariantOfProgressCode = `
 "use client";
 import { Progress } from "keep-react";
 
-const VariantOfProgress = () => {
+export const ProgressComponent = () => {
   return (
     <div className="flex flex-col gap-5">
       <Progress progress={45} color="info" rounded={false} />
@@ -23,10 +23,7 @@ const VariantOfProgress = () => {
       <Progress progress={45} color="info" bordered={true} />
     </div>
   );
-};
-
-export default VariantOfProgress;
-
+}
 `;
 
 export { VariantOfProgress, VariantOfProgressCode };

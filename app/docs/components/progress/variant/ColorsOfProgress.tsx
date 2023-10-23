@@ -36,7 +36,7 @@ const ColorsOfProgressCode = `
 "use client";
 import { Progress } from "keep-react";
 
-const ColorsOfProgress = () => {
+export const ProgressComponent = () => {
   return (
    <div className="flex flex-col gap-2">
       <div className="text-base font-medium text-primary-500">Blue</div>
@@ -65,10 +65,6 @@ const ColorsOfProgress = () => {
       <Progress progress={45} color="purple" bordered={true} />
     </div>
   );
-};
-
-export default ColorsOfProgress;
-
-`;
+}`;
 
 export { ColorsOfProgress, ColorsOfProgressCode };

@@ -13,11 +13,9 @@ const DefaultProgressCode = `
 "use client";
 import { Progress } from "keep-react";
 
-const DefaultProgress = () => {
+export const ProgressComponent = () => {
     return <Progress progress={45} color="info" rounded={false} />;
-};
-
-export default DefaultProgress;
+}
 `;
 
 export { DefaultProgress, DefaultProgressCode };

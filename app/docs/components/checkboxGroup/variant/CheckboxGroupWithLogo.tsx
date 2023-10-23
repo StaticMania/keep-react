@@ -57,7 +57,7 @@ const CheckboxGroupWithLogoCode = `
 import { useState } from "react";
 import { CheckboxGroup } from "keep-react";
 
-const CheckboxGroupWithLogo = () => {
+export const CheckboxGroupComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (event) => {
     setSelected(event.target.value);
@@ -106,9 +106,7 @@ const CheckboxGroupWithLogo = () => {
       />
     </form>
   );
-};
-
-export default CheckboxGroupWithLogo;
+}
 `;
 
 export { CheckboxGroupWithLogo, CheckboxGroupWithLogoCode };

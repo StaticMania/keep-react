@@ -14,10 +14,10 @@ const SecondaryPlayButton = () => {
 
 const SecondaryPlayButtonCode = `
 "use client";
-import { PlayButton } from "keep-react";
 import { Play } from "phosphor-react";
+import { PlayButton } from "keep-react";
 
-const SecondaryPlayButton = () => {
+export const PlayButtonComponent = () => {
   return (
     <PlayButton
     title="Play Video"
@@ -25,9 +25,7 @@ const SecondaryPlayButton = () => {
     icon={<Play size="24" />}
   />
   );
-};
-
-export default SecondaryPlayButton;
+}
 `;
 
 export { SecondaryPlayButton, SecondaryPlayButtonCode };

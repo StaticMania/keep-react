@@ -40,7 +40,7 @@ const CarouselWithIndicatorCode = `
 import Image from "next/image";
 import { Carousel } from "keep-react";
 
-const CarouselComponent = () => {
+export const CarouselComponent = () => {
   return (
     <div className="h-56 w-full sm:h-64 xl:h-80 2xl:h-96">
       <Carousel indicatorsType="ring" indicators={true}>
@@ -71,9 +71,7 @@ const CarouselComponent = () => {
       </Carousel>
     </div>
   );
-};
-
-export default CarouselComponent;
+}
 `;
 
 export { CarouselWithIndicator, CarouselWithIndicatorCode };

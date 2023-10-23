@@ -537,7 +537,7 @@ import {
   Trash,
 } from "phosphor-react";
 
-const TableComponent = () => {
+export const TableComponent = () => {
   return (
       <Table
         showCheckbox={true}
@@ -1049,8 +1049,6 @@ const TableComponent = () => {
         </Table.Body>
       </Table>
   );
-};
-
-export default TableComponent;
+}
 `;
 export { BorderedTable, BorderedTableCode };

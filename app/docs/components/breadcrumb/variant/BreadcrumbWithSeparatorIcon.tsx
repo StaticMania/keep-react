@@ -56,7 +56,7 @@ const BreadcrumbWithSeparatorIconCode = `
 import { Breadcrumb } from "keep-react";
 import { ArrowsLeftRight, House } from "phosphor-react";
 
-const BreadcrumbWithSeparatorIcon = () => {
+export const BreadcrumbComponent = () => {
   return (
     <div className="flex w-full flex-col gap-5">
       <Breadcrumb
@@ -103,7 +103,7 @@ const BreadcrumbWithSeparatorIcon = () => {
       </Breadcrumb>
     </div>
   );
-};
+}
 `;
 
 export { BreadcrumbWithSeparatorIcon, BreadcrumbWithSeparatorIconCode };

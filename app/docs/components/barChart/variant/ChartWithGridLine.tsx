@@ -125,7 +125,7 @@ export const BarComponent = () => {
       showGridLine={true}
     />
   );
-};
+}
 `;
 
 export { BarChartWithGridLine, BarChartWithAxisDataCode };

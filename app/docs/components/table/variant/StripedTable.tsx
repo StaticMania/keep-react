@@ -560,7 +560,7 @@ const StripedTableCode = `
 import { Avatar, Button, Popover, Table } from "keep-react";
 import { Cube, DotsThreeOutline, Pencil, Trash } from "phosphor-react";
 
-const TableComponent = () => {
+export const TableComponent = () => {
   return (
     <Table showCheckbox={true} striped={true}>
       <Table.Caption>
@@ -1075,9 +1075,7 @@ const TableComponent = () => {
       </Table.Body>
     </Table>
   );
-};
-
-export default TableComponent;
+}
 `;
 
 export { StripedTable, StripedTableCode };

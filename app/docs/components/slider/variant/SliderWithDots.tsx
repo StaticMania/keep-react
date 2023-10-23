@@ -20,7 +20,7 @@ const SliderWithDotsCode = `
 "use client";
 import { Slider } from "keep-react";
 
-const SliderWithDots = () => {
+export const SliderComponent = () => {
   return (
     <Slider
       defaultValue={300}
@@ -31,9 +31,7 @@ const SliderWithDots = () => {
       step={200}
     />
   );
-};
-
-export default SliderWithDots;
+}
 `;
 
 export { SliderWithDots, SliderWithDotsCode };

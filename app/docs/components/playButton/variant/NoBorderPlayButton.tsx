@@ -10,10 +10,10 @@ const NoBorderPlayButton = () => {
 
 const NoBorderPlayButtonCode = `
 "use client";
-import { PlayButton } from "keep-react";
 import { Play } from "phosphor-react";
+import { PlayButton } from "keep-react";
 
-const NoBorderPlayButton = () => {
+export const PlayButtonComponent = () => {
   return (
     <PlayButton
     title="Play Video"
@@ -21,9 +21,7 @@ const NoBorderPlayButton = () => {
     icon={<Play size="24" />}
   />
   );
-};
-
-export default NoBorderPlayButton;
+}
 `;
 
 export { NoBorderPlayButton, NoBorderPlayButtonCode };

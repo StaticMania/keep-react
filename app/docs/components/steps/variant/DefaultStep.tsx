@@ -26,7 +26,7 @@ const DefaultStepCode = `
 "use client";
 import { Steps } from "keep-react";
 
-const StepComponent = () => {
+export const StepComponent = () => {
   return (
     <Steps>
       <Steps.Item
@@ -45,8 +45,6 @@ const StepComponent = () => {
       />
     </Steps>
   );
-};
-
-export default StepComponent;
+}
 `;
 export { DefaultStep, DefaultStepCode };

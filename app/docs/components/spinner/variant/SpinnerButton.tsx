@@ -24,7 +24,7 @@ const SpinnerButtonCode = `
 "use client";
 import { Button,Spinner } from "keep-react";
 
-export const SpinnerButton = () => {
+export const SpinnerButtonComponent = () => {
   return (
     <>
       <Button type="primary" size="md">

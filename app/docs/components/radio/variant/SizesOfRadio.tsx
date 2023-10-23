@@ -54,7 +54,7 @@ const SizesOfRadioCode = `
 import { useState } from "react";
 import { Label, Radio } from "keep-react";
 
-const SizesOfRadio = () => {
+export const RadioComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (e) => {
     setSelected(e.target.value);
@@ -97,8 +97,6 @@ const SizesOfRadio = () => {
       </div>
     </fieldset>
   );
-};
-
-export default SizesOfRadio;
+}
 `;
 export { SizesOfRadio, SizesOfRadioCode };

@@ -30,7 +30,7 @@ const ProgressWithNumberCode = `
 "use client";
 import { Progress } from "keep-react";
 
-const ProgressWithNumber = () => {
+export const ProgressComponent = () => {
   return (
     <div className="flex flex-col gap-3">
       <Progress
@@ -53,10 +53,6 @@ const ProgressWithNumber = () => {
       />
     </div>
   );
-};
-
-export default ProgressWithNumber;
-
-`;
+}`;
 
 export { ProgressWithNumber, ProgressWithNumberCode };

@@ -17,7 +17,7 @@ const RatingWithProgressCode = `
 "use client";
 import { Rating } from "keep-react";
 
-const RatingWithProgress = () => {
+export const RatingComponent = () => {
   return (
     <div className="flex w-full flex-col gap-2">
       <Rating.Advanced percentFilled={70}>5 star</Rating.Advanced>
@@ -27,9 +27,7 @@ const RatingWithProgress = () => {
       <Rating.Advanced percentFilled={1}>1 star</Rating.Advanced>
     </div>
   );
-};
-
-export default RatingWithProgress;
+}
 `;
 
 export { RatingWithProgress, RatingWithProgressCode };

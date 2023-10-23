@@ -20,7 +20,7 @@ const DefaultPaginationCode = `
 import { Pagination } from "keep-react";
 import { useState } from "react";
 
-const DefaultPagination = () => {
+export const PaginationComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
     <Pagination
@@ -31,9 +31,7 @@ const DefaultPagination = () => {
       prevNextShape="roundSquare"
     />
   );
-};
-
-export default DefaultPagination;
+}
 `;
 
 export { DefaultPagination, DefaultPaginationCode };

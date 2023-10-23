@@ -23,7 +23,7 @@ const TextAreaWithHelperTextCode = `
 "use client";
 import { Textarea } from "keep-react";
 
-const TextAreaComponent = () => {
+export const TextAreaComponent = () => {
   return (
     <Textarea
       id="comment"
@@ -39,9 +39,7 @@ const TextAreaComponent = () => {
       }
     />
   );
-};
-
-export default TextAreaComponent;
+}
 `;
 
 export { TextAreaWithHelperText, TextAreaWithHelperTextCode };

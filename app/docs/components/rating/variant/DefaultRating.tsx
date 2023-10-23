@@ -17,7 +17,7 @@ const DefaultRatingCode = `
 "use client";
 import { Rating } from "keep-react";
 
-const DefaultRating = () => {
+export const RatingComponent = () => {
   return (
     <Rating size={30}>
       <Rating.Star filledType="fill" />
@@ -27,9 +27,7 @@ const DefaultRating = () => {
       <Rating.Star filledType="fill" />
     </Rating>
   );
-};
-
-export default DefaultRating;
+}
 `;
 
 export { DefaultRating, DefaultRatingCode };

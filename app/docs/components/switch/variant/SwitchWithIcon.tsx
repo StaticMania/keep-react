@@ -9,10 +9,8 @@ const SwitchWithIconCode = `
 "use client";
 import { Toggle } from "keep-react";
 
-const SwitchWithIcon = () => {
+export const SwitchComponent = () => {
   return <Toggle bgColor="primary" label="Toggle" size="md" withIcon={true} />;
-};
-
-export default SwitchWithIcon;
+}
 `;
 export { SwitchWithIcon, SwitchWithIconCode };

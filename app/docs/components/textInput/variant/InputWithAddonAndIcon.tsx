@@ -26,7 +26,7 @@ const InputWithAddonAndIconCode = `
 import { Label,TextInput } from "keep-react";
 import { EyeSlash, Lock } from "phosphor-react";
 
-const TextInputComponent = () => {
+export const TextInputComponent = () => {
   return (
     <>
       <Label value="Password" />
@@ -43,9 +43,7 @@ const TextInputComponent = () => {
       />
     </>
   );
-};
-
-export default TextInputComponent;
+}
 `;
 
 export { InputWithAddonAndIcon, InputWithAddonAndIconCode };

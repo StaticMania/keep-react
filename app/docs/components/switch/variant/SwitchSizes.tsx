@@ -16,7 +16,7 @@ const SwitchSizesCode = `
 import { useState } from "react";
 import { Toggle } from "keep-react";
 
-const SwitchSizes = () => {
+export const SwitchComponent = () => {
   return (
     <div className="flex gap-5">
       <Toggle bgColor="primary" label="Small" size="sm" />
@@ -24,10 +24,7 @@ const SwitchSizes = () => {
       <Toggle bgColor="primary" label="Large" size="lg" />
     </div>
   );
-};
-
-export default SwitchSizes;
-
+}
 `;
 
 export { SwitchSizes, SwitchSizesCode };

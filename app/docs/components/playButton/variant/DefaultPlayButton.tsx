@@ -10,16 +10,14 @@ const DefaultPlayButton = () => {
 
 const DefaultPlayButtonCode = `
 "use client";
-import { PlayButton } from "keep-react";
 import { Play } from "phosphor-react";
+import { PlayButton } from "keep-react";
 
-const DefaultPlayButton = () => {
+export const PlayButtonComponent = () => {
   return (
     <PlayButton title="Play Video" type="primary" icon={<Play size="24" />} />
   );
-};
-
-export default DefaultPlayButton;
+}
 `;
 
 export { DefaultPlayButton, DefaultPlayButtonCode };

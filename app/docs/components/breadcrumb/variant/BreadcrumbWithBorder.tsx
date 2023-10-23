@@ -50,7 +50,7 @@ const BreadcrumbWithBorderCode = `
 import { Breadcrumb } from "keep-react";
 import { CaretRight } from "phosphor-react";
 
-const BreadcrumbWithBorder = () => {
+export const BreadcrumbComponent = () => {
   return (
     <div className="flex w-full flex-col gap-5">
       <Breadcrumb
@@ -91,9 +91,7 @@ const BreadcrumbWithBorder = () => {
       </Breadcrumb>
     </div>
   );
-};
-
-export default BreadcrumbWithBorder;
+}
 `;
 
 export { BreadcrumbWithBorder, BreadcrumbWithBorderCode };

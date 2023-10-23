@@ -560,7 +560,7 @@ const HoverableTableCode = `
 import { Avatar, Button, Table, Popover } from "keep-react";
 import { Cube, DotsThreeOutline, Trash, Pencil } from "phosphor-react";
 
-const HoverableTable = () => {
+export const TableComponent = () => {
   return (
     <div className="scale-95">
       <Table showCheckbox={true} hoverable={true}>
@@ -1112,8 +1112,6 @@ const HoverableTable = () => {
     </div>
   );
 };
-
-export default TableComponent;
 `;
 
 export { HoverableTable, HoverableTableCode };

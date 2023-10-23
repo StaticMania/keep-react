@@ -11,13 +11,11 @@ const DisabledSwitchCode = `
 "use client";
 import { Toggle } from "keep-react";
 
-const DisabledSwitch = () => {
+export const SwitchComponent = () => {
   return (
     <Toggle bgColor="primary" label="Disabled" size="md" disabled={true} />
   );
-};
-
-export default DisabledSwitch;
+}
 `;
 
 export { DisabledSwitch, DisabledSwitchCode };

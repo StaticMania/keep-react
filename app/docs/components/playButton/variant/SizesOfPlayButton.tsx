@@ -47,10 +47,10 @@ const SizesPlayButton = () => {
 
 const SizesPlayButtonCode = `
 "use client";
-import { PlayButton } from "keep-react";
 import { Play } from "phosphor-react";
+import { PlayButton } from "keep-react";
 
-const SizesPlayButton = () => {
+export const PlayButtonComponent = () => {
   return (
     <div className="flex items-center gap-2">
       <PlayButton
@@ -91,9 +91,7 @@ const SizesPlayButton = () => {
       />
     </div>
   );
-};
-
-export default SizesPlayButton;
+}
 `;
 
 export { SizesPlayButton, SizesPlayButtonCode };

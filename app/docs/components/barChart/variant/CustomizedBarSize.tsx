@@ -114,7 +114,7 @@ export const BarComponent = () => {
       barRadius={[4, 4, 0, 0]}
     />
   );
-};
+}
 `;
 
 export { CustomizedBarSize, CustomizedBarSizeCode };

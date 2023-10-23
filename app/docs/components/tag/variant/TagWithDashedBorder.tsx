@@ -92,12 +92,11 @@ import { useState } from "react";
 import { Tag } from "keep-react";
 import { CrownSimple, X } from "phosphor-react";
 
-const TagComponent = () => {
+export const TagComponent = () => {
   const [dismiss, setDismiss] = useState(false);
   const onDismiss = () => {
     setDismiss(!dismiss);
   };
-
   return (
     <div className="flex w-full flex-row gap-2">
       <Tag
@@ -172,9 +171,7 @@ const TagComponent = () => {
       </Tag>
     </div>
   );
-};
-
-export default TagComponent;
+}
 `;
 
 export { TagWithDashedBorder, TagWithDashedBorderCode };

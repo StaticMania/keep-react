@@ -25,7 +25,7 @@ const EmptyFolderCode = `
 import Image from "next/image";
 import { Empty } from "keep-react";
 
-const EmptyFolder = () => {
+export const EmptyComponent = () => {
   return (
     <Empty
       title="This folder has gone missing"
@@ -41,9 +41,7 @@ const EmptyFolder = () => {
       }
     />
   );
-};
-
-export default EmptyFolder;
+}
 `;
 
 export { EmptyFolder, EmptyFolderCode };

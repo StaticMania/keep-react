@@ -18,7 +18,7 @@ const VariantOfRatingCode = `
 "use client";
 import { Rating } from "keep-react";
 
-const VariantOfRating = () => {
+export const RatingComponent = () => {
   return (
     <Rating size={30}>
     <Rating.Star filledType="fill" />
@@ -29,9 +29,7 @@ const VariantOfRating = () => {
     <Rating.Star filledType="thin" />
   </Rating>
   );
-};
-
-export default VariantOfRating;
+}
 `;
 
 export { VariantOfRating, VariantOfRatingCode };

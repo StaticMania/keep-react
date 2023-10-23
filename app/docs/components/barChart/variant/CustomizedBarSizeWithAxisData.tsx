@@ -70,7 +70,7 @@ export const BarComponent = () => {
       showYaxis={true}
     />
   );
-};
+}
 `;
 
 export { CustomizedBarSizeWithAxisData, CustomizedBarSizeWithAxisDataCode };

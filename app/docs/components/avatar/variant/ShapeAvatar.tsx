@@ -15,13 +15,15 @@ const ShapeAvatarCode = `
 "use client";
 import { Avatar } from "keep-react";
 
-const ShapeAvatar = () => {
+export const AvatarComponent = () => {
   return (
+    <>
+      <Avatar shape="circle" />
       <Avatar shape="rounded" />
+      <Avatar shape="square" />
+    </>
   );
-};
-
-export default NotificationOfAvatar;
+}
 `;
 
 export { ShapeAvatar, ShapeAvatarCode };

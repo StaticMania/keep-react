@@ -21,7 +21,7 @@ const PaginationWithInputPageCode = `
 import { Pagination } from "keep-react";
 import React, { useState } from "react";
 
-const PaginationWithInputPage = () => {
+export const PaginationComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
     <Pagination
@@ -33,8 +33,6 @@ const PaginationWithInputPage = () => {
       showGoToPaginate={true}
     />
   );
-};
-
-export default PaginationWithInputPage;
+}
 `;
 export { PaginationWithInputPage, PaginationWithInputPageCode };

@@ -25,7 +25,7 @@ const NoResultPageCode = `
 import Image from "next/image";
 import { Empty } from "keep-react";
 
-const NoResultPage = () => {
+export const EmptyComponent = () => {
   return (
     <Empty
       title="Sorry, no result found!"
@@ -41,9 +41,7 @@ const NoResultPage = () => {
       }
     />
   );
-};
-
-export default NoResultPage;
+}
 `;
 
 export { NoResultPage, NoResultPageCode };

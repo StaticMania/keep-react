@@ -76,7 +76,7 @@ const books = [
   { id: 10, name: "Brave New World" },
 ];
 
-const SearchBarComponent = () => {
+export const SearchBarComponent = () => {
     
   const [data, setData] = useState([]);
   const handleOnChange = (event) => {
@@ -112,9 +112,7 @@ const SearchBarComponent = () => {
       </ul>
     </SearchBar>
   );
-};
-
-export default SearchBarComponent;
+}
 `;
 
 export { DefaultSearchBar, DefaultSearchBarCode };

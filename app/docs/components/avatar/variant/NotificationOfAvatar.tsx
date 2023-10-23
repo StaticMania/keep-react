@@ -49,9 +49,10 @@ const NotificationOfAvatarCode = `
 "use client";
 import { Avatar } from "keep-react";
 
-const NotificationOfAvatar = () => {
+export const AvatarComponent = () => {
   return (
-      <Avatar 
+    <>
+      <Avatar
         shape="circle"
         size="xl"
         statusType="notification"
@@ -60,10 +61,37 @@ const NotificationOfAvatar = () => {
         totalNotification={99}
         img="/images/avatar/avatar-4.png"
       />
+      <Avatar
+        shape="circle"
+        size="xl"
+        status="offline"
+        statusType="notification"
+        statusPosition="bottom-right"
+        totalNotification={99}
+        img="/images/avatar/avatar-4.png"
+      />
+      <Avatar
+        shape="circle"
+        size="xl"
+        status="busy"
+        statusPosition="top-left"
+        statusType="notification"
+        totalNotification={99}
+        img="/images/avatar/avatar-4.png"
+      />
+      <Avatar
+        shape="circle"
+        size="xl"
+        status="away"
+        bordered
+        statusPosition="top-right"
+        statusType="notification"
+        totalNotification={99}
+        img="/images/avatar/avatar-4.png"
+      />
+    </>
   );
-};
-
-export default NotificationOfAvatar;
+}
 `;
 
 export { NotificationOfAvatar, NotificationOfAvatarCode };

@@ -189,7 +189,7 @@ export const BarComponent = () => {
       inActiveColor="#94ABFF"
     />
   );
-};
+}
 `;
 
 export { DefaultBarChart, DefaultBarChartCode };

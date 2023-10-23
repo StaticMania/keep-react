@@ -25,7 +25,7 @@ const NotFoundPageCode = `
 import Image from "next/image";
 import { Empty } from "keep-react";
 
-const NotFoundPage = () => {
+export const EmptyComponent = () => {
   return (
     <Empty
       title="404 Not Found"
@@ -41,9 +41,7 @@ const NotFoundPage = () => {
       }
     />
   );
-};
-
-export default NotFoundPage;
+}
 `;
 
 export { NotFoundPage, NotFoundPageCode };

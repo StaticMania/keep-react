@@ -21,7 +21,7 @@ const PaginationWithBorderCode = `
 import { useState } from "react";
 import { Pagination } from "keep-react";
 
-const PaginationWithBorder = () => {
+export const PaginationComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
     <Pagination
@@ -33,9 +33,7 @@ const PaginationWithBorder = () => {
       prevNextShape="circle"
     />
   );
-};
-
-export default PaginationWithBorder;
+}
 `;
 
 export { PaginationWithBorder, PaginationWithBorderCode };

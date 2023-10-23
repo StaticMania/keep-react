@@ -71,7 +71,7 @@ const DefaultRadioCode = `
 import { useState } from "react";
 import { Label,Radio } from "keep-react";
 
-const DefaultRadio = () => {
+export const RadioComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (event) => {
     setSelected(event.target.value);
@@ -133,10 +133,7 @@ const DefaultRadio = () => {
       </div>
     </fieldset>
   );
-};
-
-export default DefaultRadio;
-
+}
 `;
 
 export { DefaultRadio, DefaultRadioCode };
