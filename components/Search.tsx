@@ -160,7 +160,7 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
           results?.slice(0, 1).map((item) => (
             <div key={item.id}>
               <Link
-                href={`http://localhost:3000` + item.href}
+                href={projectUrl + item.href}
                 className="p-3 rounded hover:bg-slate-800 text-white transition-colors mb-1 text-sm font-medium bg-slate-900 first:mt-1 flex items-center justify-between"
               >
                 <span>{item.name}</span>
@@ -173,7 +173,7 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
                   <Link
                     className="flex items-center justify-between p-3 text-sm font-normal bg-slate-100 hover:bg-slate-900 hover:text-white rounded"
                     key={sec.id}
-                    href={`http://localhost:3000` + item.href + sec.id}
+                    href={projectUrl + item.href + sec.id}
                   >
                     <span>{sec.title}</span>
                     <span>

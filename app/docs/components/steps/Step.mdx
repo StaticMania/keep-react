@@ -2,6 +2,10 @@ import { DefaultStep, DefaultStepCode } from "./variant/DefaultStep";
 import { StepWithNumber, StepWithNumberCode } from "./variant/StepWithNumber";
 import { StepWithIcon, StepWithIconCode } from "./variant/StepWithIcon";
 import {
+  InterActiveStep,
+  InterActiveStepCode,
+} from "./variant/InterActiveStep";
+import {
   StepWithDashedBorder,
   StepWithDashedBorderCode,
 } from "./variant/DashedBorderStep";
@@ -50,6 +54,14 @@ To change the border style between two steps and apply a dashed line, use the `b
 
 <CodePreview github="Steps" code={StepWithDashedBorderCode}>
   <StepWithDashedBorder />
+</CodePreview>
+
+## Interactive Step
+
+To change the border style between two steps and apply a dashed line, use the `borderType="dashed"` prop.
+
+<CodePreview github="Steps" code={InterActiveStepCode}>
+  <InterActiveStep />
 </CodePreview>
 
 ## Step API Reference
