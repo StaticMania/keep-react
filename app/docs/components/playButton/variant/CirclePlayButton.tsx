@@ -4,12 +4,14 @@ import { PlayButton } from "~/src";
 
 const CirclePlayButton = () => {
   return (
-    <PlayButton
-      type="primary"
-      circle={true}
-      size="2xl"
-      icon={<Play size="25" />}
-    />
+    <div className="h-20 p-5 flex items-center justify-start">
+      <PlayButton
+        type="primary"
+        circle={true}
+        size="2xl"
+        icon={<Play size="25" />}
+      />
+    </div>
   );
 };
 

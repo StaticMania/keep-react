@@ -16,6 +16,16 @@ export interface EmptyProps
   redirectUrl?: string;
   buttonText?: string;
   image?: ReactNode;
+  redirectBtnSize?: "xs" | "sm" | "md" | "lg";
+  buttonType?:
+    | "primary"
+    | "dashed"
+    | "text"
+    | "linkPrimary"
+    | "linkGray"
+    | "outlineGray"
+    | "outlinePrimary"
+    | "default";
 }
 
 export const Empty: FC<EmptyProps> = ({
@@ -23,8 +33,10 @@ export const Empty: FC<EmptyProps> = ({
   content,
   redirectUrl,
   image,
-  buttonText = "Go to Home Page",
+  buttonText,
   className,
+  buttonType = "primary",
+  redirectBtnSize = "sm",
 }) => {
   const theme = useTheme().theme.empty;
 
@@ -33,9 +45,12 @@ export const Empty: FC<EmptyProps> = ({
       {image}
       <h1 className={theme.title}>{title}</h1>
       <p className={theme.content}>{content}</p>
-      <Button href={redirectUrl} size="sm" type="outlinePrimary">
-        {buttonText}
-      </Button>
+
+      {buttonText && (
+        <Button href={redirectUrl} size={redirectBtnSize} type={buttonType}>
+          {buttonText}
+        </Button>
+      )}
     </div>
   );
 };

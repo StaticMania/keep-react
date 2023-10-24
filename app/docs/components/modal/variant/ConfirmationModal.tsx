@@ -15,8 +15,10 @@ const ConfirmationModal = () => {
   };
   return (
     <div className="flex flex-wrap items-end gap-2 py-3 px-2">
-      <Button onClick={onClickInfoModal}>Info Modal</Button>
-      <Button color="error" onClick={onClickErrorModal}>
+      <Button type="primary" onClick={onClickInfoModal}>
+        Info Modal
+      </Button>
+      <Button type="primary" onClick={onClickErrorModal}>
         Error Modal
       </Button>
       <Modal show={showInfoModal} size="sm">
@@ -92,8 +94,8 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button onClick={onClickInfoModal}>Info Modal</Button>
-      <Button color="error" onClick={onClickErrorModal}>
+      <Button type='primary' onClick={onClickInfoModal}>Info Modal</Button>
+      <Button type='primary' onClick={onClickErrorModal}>
         Error Modal
       </Button>
       <Modal show={showInfoModal} size="sm">

@@ -8,7 +8,7 @@ const DisabledCheckbox = () => {
         size="md"
         variant="square"
         label="Disabled"
-        id="two"
+        id="disabled"
         name="countries"
         color="info"
         disabled={true}
@@ -27,7 +27,7 @@ export const CheckboxComponent = () => {
         size="md"
         variant="square"
         label="Disabled"
-        id="two"
+        id="disabled"
         name="countries"
         color="info"
         disabled={true}

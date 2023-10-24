@@ -7,6 +7,8 @@ const EmptyFolder = () => {
     <Empty
       title="This folder has gone missing"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       redirectUrl="/"
       image={
         <Image
@@ -30,6 +32,8 @@ export const EmptyComponent = () => {
     <Empty
       title="This folder has gone missing"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       redirectUrl="/"
       image={
         <Image

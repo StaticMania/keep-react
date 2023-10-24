@@ -4,14 +4,16 @@ import { PlayButton } from "~/src";
 
 const BlurPlayButton = () => {
   return (
-    <PlayButton
-      title="Play Video"
-      type="blur"
-      circle={true}
-      size="2xl"
-      icon={<Play size="24" />}
-      className="bg-black/40 backdrop-blur-sm"
-    />
+    <div className="h-20 p-5 flex items-center justify-start">
+      <PlayButton
+        title="Play Video"
+        type="blur"
+        circle={true}
+        size="2xl"
+        icon={<Play size="24" />}
+        className="bg-black/40 backdrop-blur-sm"
+      />
+    </div>
   );
 };
 

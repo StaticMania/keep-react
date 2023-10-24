@@ -8,6 +8,8 @@ const NoResultPage = () => {
       title="Sorry, no result found!"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
       redirectUrl="/"
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       image={
         <Image
           src="https://staticmania.cdn.prismic.io/staticmania/a8befbc0-90ae-4835-bf37-8cd1096f450f_Property+1%3DSearch_+Property+2%3DSm.svg"
@@ -30,6 +32,8 @@ export const EmptyComponent = () => {
     <Empty
       title="Sorry, no result found!"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       redirectUrl="/"
       image={
         <Image

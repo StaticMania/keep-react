@@ -4,7 +4,9 @@ import { PlayButton } from "~/src";
 
 const DefaultPlayButton = () => {
   return (
-    <PlayButton title="Play Video" type="primary" icon={<Play size="24" />} />
+    <div className="h-20 p-5 flex items-center justify-start">
+      <PlayButton title="Play Video" type="primary" icon={<Play size="24" />} />
+    </div>
   );
 };
 

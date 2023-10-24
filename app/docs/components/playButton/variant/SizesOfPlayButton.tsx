@@ -4,7 +4,7 @@ import { PlayButton } from "~/src";
 
 const SizesPlayButton = () => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="h-20 p-5 flex items-center gap-3">
       <PlayButton
         type="primary"
         circle={true}

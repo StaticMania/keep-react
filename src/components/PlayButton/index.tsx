@@ -9,6 +9,7 @@ interface PlayButtonProps {
   circle?: boolean;
   size?: keyof ButtonSizes;
   className?: string;
+  onClick?: () => void;
 }
 
 export const PlayButton: FC<PlayButtonProps> = ({
@@ -18,16 +19,29 @@ export const PlayButton: FC<PlayButtonProps> = ({
   circle = false,
   size = "md",
   className,
+  onClick,
 }) => {
   if (type === "blur") {
     return (
-      <Button type={type} circle={circle} size={size} customClass={className}>
+      <Button
+        onClick={onClick}
+        type={type}
+        circle={circle}
+        size={size}
+        customClass={className}
+      >
         <span className="text-white">{icon}</span>
       </Button>
     );
   }
   return (
-    <Button type={type} circle={circle} size={size} customClass={className}>
+    <Button
+      onClick={onClick}
+      type={type}
+      circle={circle}
+      size={size}
+      customClass={className}
+    >
       {typeof icon !== undefined && (
         <span className={title ? "pr-2" : ""}>{icon}</span>
       )}

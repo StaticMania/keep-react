@@ -10,7 +10,9 @@ const SizesOfModal = () => {
   };
   return (
     <div className="py-3 px-2">
-      <Button onClick={onClick}>Modal</Button>
+      <Button type="primary" onClick={onClick}>
+        Modal
+      </Button>
       <Modal
         modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
@@ -52,7 +54,7 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button onClick={onClick}>Modal</Button>
+      <Button type='primary' onClick={onClick}>Modal</Button>
       <Modal
         modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}

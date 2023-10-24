@@ -40,7 +40,6 @@
   "dependencies": {
     "@floating-ui/react": "^0.25.3",
     "@headlessui/react": "^1.7.16",
-    "highlight.js": "^11.8.0",
     "phosphor-react": "^1.4.1",
     "rc-slider": "^10.2.1",
     "rc-tooltip": "^6.0.1",

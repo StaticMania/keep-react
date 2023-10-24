@@ -79,10 +79,7 @@ const CardWithIcon = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button type="outlinePrimary" customClass="!hidden md:!block">
-            Learn More
-          </Button>
-          <Button type="outlinePrimary" size="sm" customClass="md:hidden block">
+          <Button type="primary" size="sm">
             Learn More
           </Button>
         </Card.Container>

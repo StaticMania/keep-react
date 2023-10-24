@@ -53,7 +53,7 @@ export const formControlsTheme: keepFormControlTheme = {
     field: {
       base: "relative",
       icon: {
-        base: "absolute bg-slate-50 cursor-pointer rounded-md top-2/4 -translate-y-2/4",
+        base: "absolute bg-slate-25 cursor-pointer rounded-md top-2/4 -translate-y-2/4",
         incrementIcon: "h-full flex items-center justify-center",
         decrementIcon: "h-full flex items-center justify-center",
         disabled: "!cursor-not-allowed opacity-50",

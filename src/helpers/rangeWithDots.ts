@@ -3,7 +3,6 @@ export const paginationGenerator = (
   totalPages: number
 ) => {
   const shownPages = 5;
-  console.log(totalPages);
   const result: Array<string | number> = [];
   if (totalPages <= 6) {
     for (let i = totalPages; i > 0; i--) {

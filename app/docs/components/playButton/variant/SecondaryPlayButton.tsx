@@ -4,11 +4,13 @@ import { PlayButton } from "~/src";
 
 const SecondaryPlayButton = () => {
   return (
-    <PlayButton
-      title="Play Video"
-      type="outlineGray"
-      icon={<Play size="24" />}
-    />
+    <div className="h-20 p-5 flex items-center justify-start">
+      <PlayButton
+        title="Play Video"
+        type="outlineGray"
+        icon={<Play size="24" />}
+      />
+    </div>
   );
 };
 

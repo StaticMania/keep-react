@@ -16,8 +16,12 @@ const DefaultModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 py-3 px-2">
-      <Button onClick={onClickOne}>Modal</Button>
-      <Button onClick={onClickTwo}>Modal With Cross</Button>
+      <Button onClick={onClickOne} type="primary">
+        Modal
+      </Button>
+      <Button onClick={onClickTwo} type="primary">
+        Modal With Cross
+      </Button>
       <Modal
         modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
@@ -89,8 +93,8 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <Button onClick={onClickOne}>Modal</Button>
-      <Button onClick={onClickTwo}>Modal With Cross</Button>
+      <Button onClick={onClickOne} type='primary' >Modal</Button>
+      <Button onClick={onClickTwo} type='primary' >Modal With Cross</Button>
       <Modal
         modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}

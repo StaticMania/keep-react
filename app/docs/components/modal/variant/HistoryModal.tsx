@@ -19,8 +19,12 @@ const HistoryModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 py-3 px-2">
-      <Button onClick={onClickHistoryModal}>History Modal</Button>
-      <Button onClick={onClickAccessModal}>Access Modal</Button>
+      <Button type="primary" onClick={onClickHistoryModal}>
+        History Modal
+      </Button>
+      <Button type="primary" onClick={onClickAccessModal}>
+        Access Modal
+      </Button>
       <Modal
         modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
@@ -140,8 +144,8 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button onClick={onClickHistoryModal}>History Modal</Button>
-      <Button onClick={onClickAccessModal}>Access Modal</Button>
+      <Button type='primary' onClick={onClickHistoryModal}>History Modal</Button>
+      <Button type='primary' onClick={onClickAccessModal}>Access Modal</Button>
       <Modal
         modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}

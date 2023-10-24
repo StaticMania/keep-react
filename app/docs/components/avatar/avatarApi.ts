@@ -17,7 +17,7 @@ export const avatarApiData = [
     id: 3,
     propsName: "img",
     propsType: "string",
-    propsDescription: "Path to the user's image to be displayed in the avatar.",
+    propsDescription: "Path to the user's image",
     default: "/avatar.png",
   },
   {
@@ -31,7 +31,7 @@ export const avatarApiData = [
     id: 5,
     propsName: "shape",
     propsType: ["circle", "rounded", "square"],
-    propsDescription: "Determines the shape of the avatar.",
+    propsDescription: "The shape of the avatar.",
     default: "square",
   },
   {
@@ -52,8 +52,7 @@ export const avatarApiData = [
     id: 9,
     propsName: "statusType",
     propsType: ["dot", "notification"],
-    propsDescription:
-      "Specifies the type of status. Possible values are: 'dot', 'notification'",
+    propsDescription: "Specifies the type of status",
     default: "None",
   },
   {
@@ -67,7 +66,7 @@ export const avatarApiData = [
     id: 11,
     propsName: "totalNotification",
     propsType: "number",
-    propsDescription: "The total number of notifications to be displayed.",
+    propsDescription: "Total number of notifications",
     default: "99",
   },
 ];

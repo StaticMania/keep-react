@@ -4,7 +4,9 @@ import { PlayButton } from "~/src";
 
 const NoBorderPlayButton = () => {
   return (
-    <PlayButton title="Play Video" type="text" icon={<Play size="24" />} />
+    <div className="h-20 p-5 flex items-center justify-start">
+      <PlayButton title="Play Video" type="text" icon={<Play size="24" />} />
+    </div>
   );
 };
 

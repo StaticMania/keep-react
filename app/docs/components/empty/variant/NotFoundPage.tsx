@@ -8,6 +8,8 @@ const NotFoundPage = () => {
       title="404 Not Found"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
       redirectUrl="/"
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       image={
         <Image
           src="https://staticmania.cdn.prismic.io/staticmania/ed90f683-c1df-4bad-afa4-65ce4c65287e_Property+1%3DSpaceship_+Property+2%3DMd.svg"
@@ -30,6 +32,8 @@ export const EmptyComponent = () => {
     <Empty
       title="404 Not Found"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       redirectUrl="/"
       image={
         <Image

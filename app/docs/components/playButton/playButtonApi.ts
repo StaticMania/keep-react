@@ -44,4 +44,11 @@ export const playButtonApiData = [
       "Additional CSS classes to apply to the play button for custom styling.",
     default: "None",
   },
+  {
+    id: 7,
+    propsName: "onClick",
+    propsType: "Function",
+    propsDescription: "On click event Handler",
+    default: "None",
+  },
 ];

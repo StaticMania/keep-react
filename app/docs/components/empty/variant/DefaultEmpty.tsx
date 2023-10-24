@@ -7,6 +7,8 @@ const DefaultEmpty = () => {
     <Empty
       title="Oops! You seem to be lost"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       redirectUrl="/"
       image={
         <Image
@@ -30,6 +32,8 @@ export const EmptyComponent = () => {
     <Empty
       title="Oops! You seem to be lost"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
+      buttonText="Go To Home Page"
+      redirectBtnSize="md"
       redirectUrl="/"
       image={
         <Image

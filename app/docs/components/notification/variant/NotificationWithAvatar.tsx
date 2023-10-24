@@ -14,7 +14,9 @@ const NotificationWithAvatar = () => {
 
   return (
     <div className="py-3 px-2">
-      <Button onClick={handleShowNotification}>Show Notification</Button>
+      <Button type="primary" onClick={handleShowNotification}>
+        Show Notification
+      </Button>
       <Notification
         showNotification={showNotification}
         dismiss={!showNotification}
@@ -78,7 +80,7 @@ export const NotificationComponent = () => {
 
   return (
     <>
-      <Button onClick={handleShowNotification}>Show Notification</Button>
+      <Button type="primary" onClick={handleShowNotification}>Show Notification</Button>
       <Notification
         showNotification={showNotification}
         dismiss={!showNotification}

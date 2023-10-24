@@ -347,7 +347,7 @@ input[type="number"] {
 }
 .react-datepicker__day--today {
   color: white !important;
-  background-color: #94abff !important;
+  background-color: #4a72ff !important;
 }
 
 .react-datepicker__day--today:hover {

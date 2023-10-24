@@ -14,7 +14,9 @@ const NotificationWithIcon = () => {
 
   return (
     <div className="px-2 py-3">
-      <Button onClick={handleShowNotification}>Show Notification</Button>
+      <Button type="primary" onClick={handleShowNotification}>
+        Show Notification
+      </Button>
       <Notification
         showNotification={showNotification}
         dismiss={!showNotification}
@@ -74,7 +76,7 @@ export const NotificationComponent = () => {
 
   return (
     <>
-      <Button onClick={handleShowNotification}>Show Notification</Button>
+      <Button type="primary" onClick={handleShowNotification}>Show Notification</Button>
       <Notification
         showNotification={showNotification}
         dismiss={!showNotification}

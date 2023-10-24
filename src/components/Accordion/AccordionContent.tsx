@@ -5,6 +5,7 @@ import { useTheme } from "../../Keep/ThemeContex";
 import { DeepPartial } from "../../helpers/deep-partial";
 import { mergeDeep } from "../../helpers/mergeDeep";
 import { Collapse } from "react-collapse";
+
 export interface keepAccordionComponentTheme {
   base: string;
 }

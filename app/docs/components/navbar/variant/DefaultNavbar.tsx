@@ -43,7 +43,7 @@ const DefaultNavbar = () => {
             </span>
             <span className="ml-2 text-slate-600">Search</span>
           </Button>
-          <Button size="sm" type="outlinePrimary">
+          <Button size="sm" type="primary">
             Contact
           </Button>
           <Navbar.Toggle />
@@ -99,7 +99,7 @@ export const NavbarComponent = () => {
             </span>
             <span className="ml-2 text-slate-600">Search</span>
           </Button>
-          <Button size="sm" type="outlinePrimary">
+          <Button size="sm" type="primary">
             Contact
           </Button>
           <Navbar.Toggle />
