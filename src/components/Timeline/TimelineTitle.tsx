@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import { KeepHeadingLevel } from "../../Keep/KeepTheme";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type TimelineTitleProps = PropsWithChildren<
   ComponentProps<KeepHeadingLevel> & {
@@ -9,6 +10,10 @@ export type TimelineTitleProps = PropsWithChildren<
   }
 >;
 
+export interface TimelineTitleStyle {
+  base: string;
+}
+
 export const TimelineTitle: FC<TimelineTitleProps> = ({
   children,
   className,
@@ -16,14 +21,9 @@ export const TimelineTitle: FC<TimelineTitleProps> = ({
   ...props
 }) => {
   const Tag = as;
+  const { title } = useTheme().theme.timeline;
   return (
-    <Tag
-      className={twMerge(
-        "mb-6 text-sm md:text-3xl font-semibold text-slate-700",
-        className
-      )}
-      {...props}
-    >
+    <Tag className={twMerge(title.base, className)} {...props}>
       {children}
     </Tag>
   );

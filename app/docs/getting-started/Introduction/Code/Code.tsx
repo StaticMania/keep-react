@@ -1,7 +1,8 @@
 const twConfig = `
+import keepPreset from "keep-react/src/keep-preset.js";
 export default {
   content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
-  presets: [require("keep-react/src/keep-preset.js")],
+  presets: [keepPreset],
 };
 `;
 const twCss = `

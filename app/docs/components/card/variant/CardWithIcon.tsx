@@ -35,8 +35,8 @@ const CardWithIcon = () => {
       {/* ===CARD TWO=== */}
       <Card className="p-6 max-w-xl">
         <Card.Container className="flex gap-5">
-          <Card.Container className="flex items-center gap-5">
-            <Card.Container className="flex items-center justify-center rounded-full bg-slate-50 md:p-4 p-2.5">
+          <Card.Container className="flex items-start gap-5">
+            <Card.Container className="flex items-center justify-start rounded-full bg-slate-50 md:p-4 p-2.5">
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">
@@ -124,8 +124,8 @@ export const CardComponent = () => {
       </Card>
       <Card className="p-6 max-w-xl">
         <Card.Container className="flex gap-5">
-          <Card.Container className="flex items-center gap-5">
-            <Card.Container className="flex items-center justify-center rounded-full bg-slate-50 md:p-4 p-2.5">
+          <Card.Container className="flex items-start gap-5">
+            <Card.Container className="flex items-center justify-start rounded-full bg-slate-50 md:p-4 p-2.5">
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">

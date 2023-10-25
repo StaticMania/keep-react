@@ -52,7 +52,7 @@ export const Notification: FC<NotificationProps> = ({
   dismiss = false,
   headerBannerSrc,
   className,
-  position = "top-left",
+  position = "top-right",
   showNotification = false,
 }) => {
   const theme = useTheme().theme.notification;

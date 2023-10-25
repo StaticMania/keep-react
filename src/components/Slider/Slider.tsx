@@ -15,9 +15,6 @@ export interface SliderProps {
   marks?: MarkObj;
   reverse?: boolean;
   disabled?: boolean;
-  pushable?: boolean | number;
-  allowCross?: boolean;
-  draggableTrack?: boolean;
   defaultValue: number | number[];
   onChange?: (value: number | number[]) => void;
   tooltip?: "top" | "bottom" | "none";
@@ -30,12 +27,9 @@ export const Slider: FC<SliderProps> = ({
   defaultValue,
   range,
   marks = {},
-  pushable,
   dots = false,
   disabled = false,
   reverse = false,
-  allowCross = false,
-  draggableTrack = false,
   tooltip = "none",
   onChange,
   ...props
@@ -50,10 +44,7 @@ export const Slider: FC<SliderProps> = ({
         max={max}
         dots={dots}
         reverse={reverse}
-        pushable={pushable}
         disabled={disabled}
-        allowCross={allowCross}
-        draggableTrack={draggableTrack}
         defaultValue={defaultValue}
         tipProps={{ placement: tooltip }}
         tipFormatter={(value: any) => `${value}`}

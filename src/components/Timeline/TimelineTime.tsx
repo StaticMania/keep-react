@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import type { ComponentProps, FC, PropsWithChildren } from "react";
 import { useTimelineContext } from "./TimelineContext";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type TimelineTimeProps = PropsWithChildren<
   ComponentProps<"time"> & {
@@ -8,18 +9,26 @@ export type TimelineTimeProps = PropsWithChildren<
   }
 >;
 
+export interface TimelineTimeStyle {
+  base: string;
+  horizontal: {
+    on: string;
+    off: string;
+  };
+}
+
 export const TimelineTime: FC<TimelineTimeProps> = ({
   children,
   className,
   ...props
 }) => {
   const { horizontal } = useTimelineContext();
-
+  const { time } = useTheme().theme.timeline;
   return (
     <time
       className={twMerge(
-        "block mb-2 text-sm font-normal leading-none text-slate-500",
-        horizontal && "mt-6",
+        time.base,
+        horizontal ? time.horizontal.on : time.horizontal.off,
         className
       )}
       {...props}

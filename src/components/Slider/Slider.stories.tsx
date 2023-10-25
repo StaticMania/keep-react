@@ -57,31 +57,7 @@ const meta: Meta<typeof Slider> = {
         defaultValue: { summary: false },
       },
     },
-    pushable: {
-      description:
-        "Allows pushing neighboring handles. Can be boolean or number.",
-      control: "boolean",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-    },
-    allowCross: {
-      description: "Allows the handles to cross each other on the slider",
-      control: "boolean",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-    },
-    draggableTrack: {
-      description: "Allows dragging the entire track to set values",
-      control: "boolean",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-    },
+
     defaultValue: {
       description: "Initial default value or values for the slider.",
       table: {

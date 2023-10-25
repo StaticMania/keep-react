@@ -23,12 +23,12 @@ import { Slider } from "keep-react";
 export const SliderComponent = () => {
   return (
     <Slider
-      defaultValue={300}
-      dots={true}
-      max={1000}
       min={100}
-      onChange={(value) => console.log(value)}
+      max={1000}
       step={200}
+      dots={true}
+      defaultValue={300}
+      onChange={(value) => console.log(value)}
     />
   );
 }

@@ -1,6 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import { useTimelineContext } from "./TimelineContext";
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from "react";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export type TimelnePointProps = PropsWithChildren<
   ComponentProps<"div"> & {
@@ -43,6 +44,24 @@ export const gradientColor: string[] = [
   "bg-gradient-31",
 ];
 
+export interface TimelinePointStyle {
+  root: {
+    horizontal: {
+      on: string;
+      off: string;
+    };
+    icon: {
+      on: {
+        base: string;
+        inner: string;
+      };
+      off: {
+        base: string;
+      };
+    };
+  };
+}
+
 export const TimelinePoint: FC<TimelnePointProps> = ({
   children,
   className,
@@ -50,24 +69,27 @@ export const TimelinePoint: FC<TimelnePointProps> = ({
   ...props
 }) => {
   const { horizontal, gradientPoint, gradientColor } = useTimelineContext();
-
+  const { point } = useTheme().theme.timeline;
   return (
     <div
       data-testid="timeline-point"
-      className={twMerge(horizontal && "flex items-center", className)}
+      className={twMerge(
+        horizontal ? point.root.horizontal.on : point.root.horizontal.off,
+        className
+      )}
       {...props}
     >
       {children}
       {Icon ? (
-        <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-500 ring-8 ring-white">
-          <span aria-hidden className="h-3 w-3 text-blue-500">
+        <span className={point.root.icon.on.base}>
+          <span aria-hidden className={point.root.icon.on.inner}>
             {Icon}
           </span>
         </span>
       ) : (
         <div
           className={twMerge(
-            "absolute -left-2 h-4 w-4 rounded-full border border-white",
+            point.root.icon.off.base,
             gradientPoint && gradientColor ? gradientColor : "bg-gradient-9",
             !gradientPoint && "bg-slate-200"
           )}

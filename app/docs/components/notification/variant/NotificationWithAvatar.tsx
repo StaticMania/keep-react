@@ -22,6 +22,7 @@ const NotificationWithAvatar = () => {
         dismiss={!showNotification}
         onDismiss={onDismiss}
         className="max-w-[400px]"
+        position="top-left"
         additionalContent={
           <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
@@ -86,6 +87,7 @@ export const NotificationComponent = () => {
         dismiss={!showNotification}
         onDismiss={onDismiss}
         className="max-w-[400px]"
+        position="top-left"
         additionalContent={
           <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
             Default message - Lorem Ipsum is simply dummy text of the printing

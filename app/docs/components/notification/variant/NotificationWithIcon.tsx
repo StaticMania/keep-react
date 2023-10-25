@@ -21,7 +21,7 @@ const NotificationWithIcon = () => {
         showNotification={showNotification}
         dismiss={!showNotification}
         onDismiss={onDismiss}
-        position="top-right"
+        position="bottom-left"
         className="max-w-[400px]"
         infoIcon={
           <Button type="default" circle={true} size="xs">
@@ -81,7 +81,7 @@ export const NotificationComponent = () => {
         showNotification={showNotification}
         dismiss={!showNotification}
         onDismiss={onDismiss}
-        position="top-right"
+        position="bottom-left"
         className="max-w-[400px]"
         infoIcon={
           <Button type="default" circle={true} size="xs">

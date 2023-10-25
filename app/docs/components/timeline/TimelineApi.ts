@@ -15,6 +15,13 @@ export const timelineApiData = [
     default: "false",
   },
   {
+    id: 2,
+    propsName: "gradientColor",
+    propsType: "string",
+    propsDescription: `Adds a gradient color with class "bg-gradient-{1-31}".`,
+    default: "bg-gradient-9",
+  },
+  {
     id: 3,
     propsName: "timelineBarType",
     propsType: ["solid", "dashed"],

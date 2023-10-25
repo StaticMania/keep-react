@@ -6,7 +6,7 @@ import {
   TabsWithNotification,
   TabsWithNotificationCode,
 } from "./variant/TabsWithNotification";
-import { tabsApiData } from "./tabsApi";
+import { tabsApiData, tabsItemApiData } from "./tabsApi";
 
 import CodePreview from "~/components/CodePreview";
 import CssThemePreview from "~/components/CssThemePreview";
@@ -49,11 +49,17 @@ Keep users informed by adding notifications to tabs. Utilize badges to indicate 
   <TabsWithNotification />
 </CodePreview>
 
-## API Reference
+## Tabs API Reference
 
-Explore the available props for the tabs component
+Explore the available props for the `<Tabs>` component
 
 <ComponentApi data={tabsApiData} />
+
+## Tabs Items API Reference
+
+Explore the available props for the `<Tabs.Item>` component
+
+<ComponentApi data={tabsItemApiData} />
 
 ## Theme
 

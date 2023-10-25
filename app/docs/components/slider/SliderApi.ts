@@ -16,7 +16,7 @@ export const sliderAPIData = [
   {
     id: 3,
     propsName: "step",
-    propsType: "number | null",
+    propsType: "number",
     propsDescription:
       "Step size for each increment on the slider. Can be null.",
     default: "number",
@@ -57,31 +57,9 @@ export const sliderAPIData = [
     propsDescription: "Determines if the slider is disabled.",
   },
   {
-    id: 9,
-    propsName: "pushable",
-    propsType: "boolean | number",
-    default: "true",
-    propsDescription:
-      "Allows pushing neighboring handles. Can be boolean or number.",
-  },
-  {
-    id: 10,
-    propsName: "allowCross",
-    propsType: "boolean",
-    default: "false",
-    propsDescription: "Allows the handles to cross each other on the slider.",
-  },
-  {
-    id: 11,
-    propsName: "draggableTrack",
-    propsType: "boolean",
-    default: "false",
-    propsDescription: "Allows dragging the entire track to set values.",
-  },
-  {
     id: 12,
     propsName: "defaultValue",
-    propsType: "number | number[]",
+    propsType: ["number", "number[]"],
     default: "0",
     propsDescription: "Initial default value or values for the slider.",
   },
@@ -100,3 +78,26 @@ export const sliderAPIData = [
     default: "top",
   },
 ];
+
+// {
+//     id: 9,
+//     propsName: "pushable",
+//     propsType: ["boolean", "number"],
+//     default: "true",
+//     propsDescription:
+//       "Allows pushing neighboring handles. Can be boolean or number.",
+//   },
+//   {
+//     id: 10,
+//     propsName: "allowCross",
+//     propsType: "boolean",
+//     default: "false",
+//     propsDescription: "Allows the handles to cross each other on the slider.",
+//   },
+//   {
+//     id: 11,
+//     propsName: "draggableTrack",
+//     propsType: "boolean",
+//     default: "false",
+//     propsDescription: "Allows dragging the entire track to set values.",
+//   },

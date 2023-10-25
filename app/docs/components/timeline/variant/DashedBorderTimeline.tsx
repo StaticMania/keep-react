@@ -7,7 +7,7 @@ const DashedBorderTimeline = () => {
     <div className="px-5 py-6">
       <Timeline timelineBarType="dashed">
         <Timeline.Item>
-          <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+          <Timeline.Point icon={<CalendarBlank size={12} />} />
           <Timeline.Content>
             <Timeline.Time>February 2023</Timeline.Time>
             <Timeline.Title>New Feature Launch</Timeline.Title>
@@ -22,7 +22,7 @@ const DashedBorderTimeline = () => {
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
-          <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+          <Timeline.Point icon={<CalendarBlank size={12} />} />
           <Timeline.Content>
             <Timeline.Time>March 2023</Timeline.Time>
             <Timeline.Title>User Interface Refinement</Timeline.Title>
@@ -33,7 +33,7 @@ const DashedBorderTimeline = () => {
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
-          <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+          <Timeline.Point icon={<CalendarBlank size={12} />} />
           <Timeline.Content>
             <Timeline.Time>April 2023</Timeline.Time>
             <Timeline.Title>Performance Optimization</Timeline.Title>
@@ -59,7 +59,7 @@ export const TimelineComponent = () => {
   return (
     <Timeline timelineBarType="dashed">
       <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+        <Timeline.Point icon={<CalendarBlank  size={12} />} />
         <Timeline.Content>
           <Timeline.Time>February 2023</Timeline.Time>
           <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
@@ -74,7 +74,7 @@ export const TimelineComponent = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+        <Timeline.Point icon={<CalendarBlank  size={12} />} />
         <Timeline.Content>
           <Timeline.Time>March 2023</Timeline.Time>
           <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
@@ -86,7 +86,7 @@ export const TimelineComponent = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank color="#ffffff" size={12} />} />
+        <Timeline.Point icon={<CalendarBlank  size={12} />} />
         <Timeline.Content>
           <Timeline.Time>April 2023</Timeline.Time>
           <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>

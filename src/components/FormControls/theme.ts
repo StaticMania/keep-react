@@ -72,8 +72,8 @@ export const formControlsTheme: keepFormControlTheme = {
         base: "block text-center border border-slate-200 rounded-md text-slate-600 focus:outline-none focus:ring-0 focus:border-slate-500",
         disabled: "cursor-not-allowed opacity-50",
         sizes: {
-          sm: "max-w-[110px] py-2 px-8 sm:text-xs",
-          md: "max-w-[114px] py-2.5 px-10 text-sm",
+          sm: "max-w-[120px] py-2 px-8 sm:text-xs",
+          md: "max-w-[134px] py-2.5 px-10 text-sm",
           lg: "max-w-[140px] py-3 px-12 sm:text-md",
         },
         withIcon: {

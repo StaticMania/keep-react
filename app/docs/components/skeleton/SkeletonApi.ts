@@ -13,4 +13,11 @@ export const SkeletonApiData = [
     propsDescription: "Skeleton Content",
     default: "Content",
   },
+  {
+    id: 3,
+    propsName: "height",
+    propsType: "string",
+    propsDescription: "Skeleton item height",
+    default: "h-4",
+  },
 ];

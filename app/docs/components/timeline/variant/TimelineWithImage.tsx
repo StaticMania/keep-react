@@ -5,7 +5,11 @@ import { Timeline } from "~/src";
 const TimelineWithImage = () => {
   return (
     <div className="py-6 px-5">
-      <Timeline timelineBarType="dashed" gradientPoint={true}>
+      <Timeline
+        timelineBarType="dashed"
+        gradientPoint={true}
+        gradientColor="bg-gradient-9"
+      >
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>

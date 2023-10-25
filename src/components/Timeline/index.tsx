@@ -1,13 +1,14 @@
 import { twMerge } from "tailwind-merge";
 import type { FC, PropsWithChildren } from "react";
-import { TimelineBody } from "./TimelineBody";
-import { TimelineContent } from "./TimelineContent";
+import { TimelineBody, TimelineBodyStyle } from "./TimelineBody";
+import { TimelineContent, TimelineContentStyle } from "./TimelineContent";
 import { TimelineContext } from "./TimelineContext";
-import { TimelineItem } from "./TimelineItem";
-import { TimelinePoint } from "./TimelinePoint";
-import { TimelineTime } from "./TimelineTime";
-import { TimelineTitle } from "./TimelineTitle";
-import { KeepBoolean, KeepColors, KeepSizes } from "../../Keep/KeepTheme";
+import { TimelineItem, TimelineItemStyle } from "./TimelineItem";
+import { TimelinePoint, TimelinePointStyle } from "./TimelinePoint";
+import { TimelineTime, TimelineTimeStyle } from "./TimelineTime";
+import { TimelineTitle, TimelineTitleStyle } from "./TimelineTitle";
+import { KeepColors, KeepSizes } from "../../Keep/KeepTheme";
+import { useTheme } from "../../Keep/ThemeContex";
 
 export interface TimelinePointSizes
   extends Pick<KeepSizes, "sm" | "md" | "lg" | "xl"> {
@@ -19,53 +20,6 @@ export interface TimelinePointColor
   [key: string]: string;
 }
 
-export interface keepTimelineTheme {
-  horizontal: {
-    base: string;
-    item: {
-      base: string;
-      size: TimelinePointSizes;
-      completed: {
-        base: string;
-        on: TimelinePointColor;
-        off: TimelinePointColor;
-      };
-      borderType: {
-        solid: string;
-        dashed: string;
-      };
-    };
-    point: {
-      base: string;
-      size: TimelinePointSizes;
-      withBg: {
-        on: string;
-        off: TimelinePointColor;
-      };
-      completed: {
-        on: TimelinePointColor;
-        off: TimelinePointColor;
-      };
-      withRing: {
-        color: {
-          light: TimelinePointColor;
-          deep: TimelinePointColor;
-        };
-      };
-      withBorder: {
-        on: TimelinePointColor;
-        off: string;
-      };
-    };
-    title: string;
-    content: string;
-    active: KeepBoolean;
-  };
-  vertical: {
-    base: string;
-  };
-}
-
 export type TimelineProps = PropsWithChildren<{
   className?: string;
   horizontal?: boolean;
@@ -73,6 +27,27 @@ export type TimelineProps = PropsWithChildren<{
   gradientColor?: string;
   timelineBarType?: "solid" | "dashed";
 }>;
+
+export interface keepTimelineTheme {
+  root: TimelineComponentStyle;
+  body: TimelineBodyStyle;
+  content: TimelineContentStyle;
+  item: TimelineItemStyle;
+  point: TimelinePointStyle;
+  time: TimelineTimeStyle;
+  title: TimelineTitleStyle;
+}
+
+interface TimelineComponentStyle {
+  horizontal: {
+    on: string;
+    off: string;
+  };
+  barType: {
+    solid: string;
+    dashed: string;
+  };
+}
 
 const TimelineComponent: FC<TimelineProps> = ({
   children,
@@ -82,6 +57,7 @@ const TimelineComponent: FC<TimelineProps> = ({
   gradientColor,
   className,
 }) => {
+  const { root } = useTheme().theme.timeline;
   return (
     <TimelineContext.Provider
       value={{ horizontal, gradientPoint, gradientColor }}
@@ -89,10 +65,10 @@ const TimelineComponent: FC<TimelineProps> = ({
       <ol
         data-testid="timeline-component"
         className={twMerge(
-          !horizontal && "relative border-l border-slate-200",
-          horizontal && "items-start border-t border-slate-200 sm:flex",
-          timelineBarType === "solid" && "border-solid",
-          timelineBarType === "dashed" && "border-dashed",
+          !horizontal && root.horizontal.off,
+          horizontal && root.horizontal.on,
+          timelineBarType === "solid" && root.barType.solid,
+          timelineBarType === "dashed" && root.barType.dashed,
           className
         )}
       >
