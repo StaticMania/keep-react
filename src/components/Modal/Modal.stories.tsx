@@ -43,10 +43,6 @@ const meta: Meta<typeof Modal> = {
         "7xl",
       ],
     },
-
-    modalType: {
-      description: "Modal avaiale type",
-    },
     position: {
       description: "Determines the position of the modal on the screen.",
       control: "select",
@@ -69,7 +65,6 @@ const DefaultModalComponent = () => {
         Modal With Cross
       </Button>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} weight="bold" color="#1B4DFF" />}
         size="md"
         show={showModal}
@@ -92,7 +87,6 @@ const DefaultModalComponent = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} weight="bold" color="#1B4DFF" />}
         size="md"
         show={showModalX}
@@ -164,7 +158,6 @@ const ConfirmationModalComponent = () => {
       </Modal>
 
       <Modal
-        modalType="error"
         icon={<Trash size={28} weight="bold" color="#E92215" />}
         size="md"
         show={showModalError}
@@ -209,7 +202,6 @@ const HistoryModalComponent = () => {
       </Button>
 
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} weight="bold" color="#1B4DFF" />}
         size="md"
         show={showModalHistory}
@@ -249,7 +241,6 @@ const HistoryModalComponent = () => {
       </Modal>
 
       <Modal
-        modalType="info"
         icon={<UserPlus size={28} weight="bold" color="#5E718D" />}
         size="lg"
         show={showModalAccess}

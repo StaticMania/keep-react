@@ -1,10 +1,8 @@
 import type { ReactNode } from "react";
 import { createContext, useContext } from "react";
-import type { ModalColors } from ".";
 
 type ModalContext = {
   icon?: ReactNode;
-  modalType?: keyof ModalColors;
   onClose?: () => void;
 };
 

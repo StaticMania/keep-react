@@ -13,21 +13,14 @@ export const ModalHeader: FC<ModalHeaderProps> = ({
   children,
   ...props
 }): JSX.Element => {
-  const { icon, modalType, onClose } = useModalContext();
+  const { icon, onClose } = useModalContext();
   const theme = useTheme().theme.modal.header;
   const theirProps = excludeClassName(props);
 
   return (
     <div className={twMerge(theme.base)} {...theirProps}>
       <div className={twMerge(theme.iconSection)}>
-        <div
-          className={twMerge(
-            theme.headerIcon.base,
-            theme.headerIcon.color[modalType as string]
-          )}
-        >
-          {icon}
-        </div>
+        <div className={twMerge(theme.headerIcon.base)}>{icon}</div>
         {onClose && (
           <button
             aria-label="Close"
@@ -35,7 +28,7 @@ export const ModalHeader: FC<ModalHeaderProps> = ({
             type="button"
             onClick={onClose}
           >
-            <X weight="bold" className={theme.close.icon} />
+            <X weight="light" className={theme.close.icon} />
           </button>
         )}
       </div>

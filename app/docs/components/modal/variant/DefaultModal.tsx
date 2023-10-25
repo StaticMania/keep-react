@@ -23,7 +23,6 @@ const DefaultModal = () => {
         Modal With Cross
       </Button>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showModal}
@@ -47,7 +46,6 @@ const DefaultModal = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showModalX}
@@ -96,7 +94,6 @@ export const ModalComponent = () => {
       <Button onClick={onClickOne} type='primary' >Modal</Button>
       <Button onClick={onClickTwo} type='primary' >Modal With Cross</Button>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showModal}
@@ -120,7 +117,6 @@ export const ModalComponent = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showModalX}

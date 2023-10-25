@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Avatar, Modal, Button } from "~/src";
+import { Avatar, Modal, Button, CheckBox } from "~/src";
 import { CloudArrowUp, UserPlus } from "phosphor-react";
 
 const HistoryModal = () => {
@@ -13,8 +13,9 @@ const HistoryModal = () => {
   const onClickAccessModal = () => {
     setShowAccessModal(!showAccessModal);
   };
-  const onChange = () => {
-    // ONCHANGE EVENT
+
+  const handleChecked = (value: any) => {
+    console.log(value);
   };
 
   return (
@@ -26,7 +27,6 @@ const HistoryModal = () => {
         Access Modal
       </Button>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showHistoryModal}
@@ -39,16 +39,16 @@ const HistoryModal = () => {
             </p>
           </div>
           <div className="mt-5 flex items-center">
-            <input
-              id="checked-checkbox"
-              type="checkbox"
-              value=""
-              defaultChecked={true}
-              onChange={onChange}
-              className="h-5 w-5 rounded border-slate-300 bg-slate-25"
+            <CheckBox
+              size="md"
+              variant="square"
+              id="two"
+              name="countries"
+              color="info"
+              handleChecked={handleChecked}
             />
             <label
-              htmlFor="checked-checkbox"
+              htmlFor="two"
               className="ml-2 text-base font-medium text-slate-500"
             >
               Save on this browser
@@ -65,7 +65,6 @@ const HistoryModal = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        modalType="info"
         icon={<UserPlus size={28} color="#5E718D" />}
         size="lg"
         show={showAccessModal}
@@ -93,19 +92,19 @@ const HistoryModal = () => {
             </div>
           </div>
           <div className="mt-5 flex items-center">
-            <input
-              id="checked-checkbox"
-              type="checkbox"
-              value=""
-              defaultChecked={true}
-              onChange={onChange}
-              className="h-5 w-5 rounded border-slate-300 bg-slate-25"
+            <CheckBox
+              size="md"
+              variant="square"
+              id="two"
+              name="countries"
+              color="info"
+              handleChecked={handleChecked}
             />
             <label
-              htmlFor="checked-checkbox"
-              className="ml-2 text-sm md:text-base font-medium text-slate-500"
+              htmlFor="two"
+              className="ml-2 text-base font-medium text-slate-500"
             >
-              Don’t ask again
+              Save on this browser
             </label>
           </div>
         </Modal.Body>
@@ -139,15 +138,15 @@ export const ModalComponent = () => {
     setShowAccessModal(!showAccessModal);
   };
 
-  const onChange = () => {
-    // ONCHANGE EVENT
+  const handleChecked = (value) => {
+    console.log(value)
   };
+
   return (
     <>
       <Button type='primary' onClick={onClickHistoryModal}>History Modal</Button>
       <Button type='primary' onClick={onClickAccessModal}>Access Modal</Button>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showHistoryModal}
@@ -160,16 +159,16 @@ export const ModalComponent = () => {
             </p>
           </div>
           <div className="mt-5 flex items-center">
-            <input
-              id="checked-checkbox"
-              type="checkbox"
-              value=""
-              defaultChecked={true}
-              onChange={onChange}
-              className="h-5 w-5 rounded border-slate-300 bg-slate-25"
+            <CheckBox
+              size="md"
+              variant="square"
+              id="11"
+              name="countries"
+              color="info"
+              handleChecked={handleChecked}
             />
             <label
-              htmlFor="checked-checkbox"
+              htmlFor="11"
               className="ml-2 text-base font-medium text-slate-500"
             >
               Save on this browser
@@ -186,7 +185,6 @@ export const ModalComponent = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        modalType="info"
         icon={<UserPlus size={28} color="#5E718D" />}
         size="lg"
         show={showAccessModal}
@@ -214,19 +212,19 @@ export const ModalComponent = () => {
             </div>
           </div>
           <div className="mt-5 flex items-center">
-            <input
-              id="checked-checkbox"
-              type="checkbox"
-              value=""
-              defaultChecked={true}
-              onChange={onChange}
-              className="h-5 w-5 rounded border-slate-300 bg-slate-25"
+            <CheckBox
+              size="md"
+              variant="square"
+              id="12"
+              name="countries"
+              color="info"
+              handleChecked={handleChecked}
             />
             <label
-              htmlFor="checked-checkbox"
-              className="ml-2 text-sm md:text-base font-medium text-slate-500"
+              htmlFor="12"
+              className="ml-2 text-base font-medium text-slate-500"
             >
-              Don’t ask again
+              Save on this browser
             </label>
           </div>
         </Modal.Body>

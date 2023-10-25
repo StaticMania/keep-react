@@ -49,7 +49,6 @@ const ConfirmationModal = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        modalType="error"
         icon={<Trash size={28} color="#E92215" />}
         size="md"
         show={showErrorModalX}
@@ -126,7 +125,6 @@ export const ModalComponent = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        modalType="error"
         icon={<Trash size={28} color="#E92215" />}
         size="md"
         show={showErrorModalX}

@@ -174,7 +174,6 @@ export const ModalComponent = () => {
     <div>
       <Button onClick={onClick}>Modal</Button>
       <Modal
-        modalType="info"
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
         show={showModal}

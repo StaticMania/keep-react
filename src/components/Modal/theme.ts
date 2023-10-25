@@ -18,14 +18,8 @@ export const modalTheme: keepModalTheme = {
     iconSection: "flex items-start  justify-between",
     title: "pt-2 text-lg md:text-3xl font-semibold text-slate-800",
     headerIcon: {
-      base: "w-10 h-10 flex items-center justify-center rounded-md",
+      base: "w-10 h-10 flex items-center justify-center rounded-md bg-primary-25",
       icon: "",
-      color: {
-        info: "bg-primary-25",
-        error: "bg-error-25",
-        warning: "bg-warning-25",
-        success: "bg-success-25",
-      },
     },
     close: {
       base: "ml-auto inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-slate-500",

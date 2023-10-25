@@ -8,12 +8,7 @@ import { ModalBody } from "./ModalBody";
 import { ModalContext } from "./ModalContext";
 import { ModalFooter } from "./ModalFooter";
 import { ModalHeader } from "./ModalHeader";
-import {
-  KeepBoolean,
-  KeepPositions,
-  KeepSizes,
-  KeepStateColors,
-} from "../../Keep/KeepTheme";
+import { KeepBoolean, KeepPositions, KeepSizes } from "../../Keep/KeepTheme";
 import { useTheme } from "../../Keep/ThemeContex";
 
 export interface keepModalTheme {
@@ -33,7 +28,6 @@ export interface keepModalTheme {
     headerIcon: {
       base: string;
       icon: string;
-      color: ModalColors;
     };
     close: {
       base: string;
@@ -51,10 +45,6 @@ export interface ModalPositions extends KeepPositions {
   [key: string]: string;
 }
 
-export interface ModalColors extends KeepStateColors {
-  [key: string]: string;
-}
-
 export interface ModalSizes extends Omit<KeepSizes, "xs"> {
   [key: string]: string;
 }
@@ -66,7 +56,6 @@ export interface ModalProps
   show?: boolean;
   icon?: ReactNode;
   size?: keyof ModalSizes;
-  modalType?: keyof ModalColors;
   position?: keyof ModalPositions;
 }
 
@@ -76,7 +65,6 @@ const ModalComponent: FC<ModalProps> = ({
   root,
   icon,
   size = "sm",
-  modalType = "info",
   position = "center",
   onClose,
   ...props
@@ -107,7 +95,7 @@ const ModalComponent: FC<ModalProps> = ({
 
   return container
     ? createPortal(
-        <ModalContext.Provider value={{ icon, modalType, onClose }}>
+        <ModalContext.Provider value={{ icon, onClose }}>
           <div
             aria-hidden={!show}
             className={twMerge(
