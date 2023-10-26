@@ -34,7 +34,7 @@ import { Crown, ShieldCheck } from "phosphor-react";
 
 export const BadgeComponent = () => {
   return (
-    <>
+    <div className="flex items-center gap-3">
       <Badge
         size="sm"
         colorType="strong"
@@ -53,7 +53,7 @@ export const BadgeComponent = () => {
       >
         Badges
       </Badge>
-    </>
+    </div>
   );
 }
 `;

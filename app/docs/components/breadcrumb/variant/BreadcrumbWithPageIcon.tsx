@@ -54,7 +54,7 @@ const BreadcrumbWithPageIcon = () => {
 const BreadcrumbWithPageIconCode = `
 "use client";
 import { Breadcrumb } from "keep-react";
-import { CaretRight } from "phosphor-react";
+import { CaretRight,House } from "phosphor-react";
 
 export const BreadcrumbComponent = () => {
   return (

@@ -3,7 +3,7 @@ import { Accordion } from "~/src";
 
 const DefaultAccordion = () => {
   return (
-    <Accordion showIcon>
+    <Accordion showIcon={true}>
       <Accordion.Panel>
         <Accordion.Title>What is the of the Keep React?</Accordion.Title>
         <Accordion.Content>
@@ -26,7 +26,7 @@ import { Accordion } from "keep-react";
 
 export const AccordionComponent = () => {
   return (
-    <Accordion showIcon>
+    <Accordion showIcon={true}>
       <Accordion.Panel>
         <Accordion.Title>What is the of the Keep React?</Accordion.Title>
         <Accordion.Content>

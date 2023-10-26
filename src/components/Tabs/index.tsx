@@ -196,9 +196,6 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
               id={`${index + 1}-tab-${index}`}
               onClick={() => handleClick({ target: index })}
               onKeyDown={(event) => handleKeyboard({ event, target: index })}
-              ref={(element) =>
-                (tabRefs.current[index] = element as HTMLButtonElement)
-              }
               role="tab"
               tabIndex={index === focusedTab ? 0 : -1}
             >

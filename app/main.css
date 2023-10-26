@@ -369,7 +369,8 @@ input[type="number"] {
   color: #2d3643 !important;
 }
 
-.react-datepicker__day--range-start.react-datepicker__day--today {
+.react-datepicker__day--range-start.react-datepicker__day--today,
+.react-datepicker__day--range-end.react-datepicker__day--today {
   color: #fff !important;
 }
 

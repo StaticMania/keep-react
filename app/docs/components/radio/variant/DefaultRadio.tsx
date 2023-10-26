@@ -18,7 +18,7 @@ const DefaultRadio = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="USA"
         />
         <Label htmlFor="country-1">United States</Label>
@@ -30,7 +30,7 @@ const DefaultRadio = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="Germany"
         />
         <Label htmlFor="country-2">Germany</Label>
@@ -42,7 +42,7 @@ const DefaultRadio = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="Spain"
         />
         <Label htmlFor="country-3">Spain</Label>
@@ -54,7 +54,7 @@ const DefaultRadio = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="China"
           disabled={true}
         />
@@ -87,7 +87,7 @@ export const RadioComponent = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="USA"
         />
         <Label htmlFor="country-1">United States</Label>
@@ -99,7 +99,7 @@ export const RadioComponent = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="Germany"
         />
         <Label htmlFor="country-2">Germany</Label>
@@ -111,7 +111,7 @@ export const RadioComponent = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="Spain"
         />
         <Label htmlFor="country-3">Spain</Label>
@@ -123,7 +123,7 @@ export const RadioComponent = () => {
           name="favorite-country"
           selected={selected}
           onOptionChange={handleOptionChange}
-          radioShape="square"
+          radioShape="circle"
           value="China"
           disabled={true}
         />

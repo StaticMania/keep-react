@@ -29,7 +29,7 @@ import { Badge } from "keep-react";
 
 export const BadgeComponent = () => {
   return (
-    <>
+    <div className="flex items-center gap-3">
       <Badge size="xs" colorType="light" color="info">
         Default
       </Badge>
@@ -45,7 +45,7 @@ export const BadgeComponent = () => {
       <Badge size="xs" colorType="light" color="warning">
         Warning Badges
       </Badge>
-    </>
+    </div>
   );
 };
 `;

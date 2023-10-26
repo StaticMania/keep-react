@@ -8,6 +8,7 @@ const AccordionWithCustomIcon = () => {
       openIcon={<CaretUp />}
       closeIcon={<CaretDown />}
       iconPosition="right"
+      flush={true}
     >
       <Accordion.Panel>
         <Accordion.Title>
@@ -66,6 +67,7 @@ export const AccordionComponent = () => {
       openIcon={<CaretUp />}
       closeIcon={<CaretDown />}
       iconPosition="right"
+      flush={true}
     >
       <Accordion.Panel>
         <Accordion.Title>

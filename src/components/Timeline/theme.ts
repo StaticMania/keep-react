@@ -16,7 +16,7 @@ export const timelineTheme: keepTimelineTheme = {
   },
   content: {
     horizontal: {
-      on: "mt-4 -ms-2 sm:pr-8",
+      on: "mt-6 -ms-2 sm:pr-8",
       off: "",
     },
   },
@@ -36,7 +36,7 @@ export const timelineTheme: keepTimelineTheme = {
       icon: {
         on: {
           base: "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 ring-4 ring-slate-100",
-          inner: "h-3 w-3 text-slate-900",
+          inner: "text-slate-900 flex items-center justify-center",
         },
         off: {
           base: "absolute -left-2 h-4 w-4 rounded-full border border-white",

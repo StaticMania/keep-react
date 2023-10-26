@@ -94,9 +94,10 @@ const AccordionComponent: FC<AccordionProps> = ({
   return (
     <div
       className={twMerge(
-        theme.base,
-        theme.flush[flush ? "on" : "off"],
-        className
+        !flush && theme.base,
+        className,
+        !flush && theme.flush.off,
+        flush && theme.flush.on
       )}
       data-testid="keep-accordion"
       {...props}

@@ -22,8 +22,12 @@ export const CustomTooltip = ({
             style="dark"
           >
             <Button size="xs" type="primary">
-              <span className="mr-2">Price: {payload[0].value}</span>
-              <span>Sell: {payload[1].value}</span>
+              <span className="mr-2">
+                {payload[0].name}: {payload[0].value}
+              </span>
+              <span>
+                {payload[1].name}: {payload[1].value}
+              </span>
             </Button>
           </TooltipCom>
         ) : (

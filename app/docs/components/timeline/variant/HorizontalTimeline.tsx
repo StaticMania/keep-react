@@ -7,7 +7,7 @@ const HorizontalTimeline = () => {
     <div className="px-5 py-6">
       <Timeline horizontal={true}>
         <Timeline.Item>
-          <Timeline.Point icon={<CalendarBlank size={12} />} />
+          <Timeline.Point icon={<CalendarBlank size={16} />} />
           <Timeline.Content>
             <Timeline.Title>New Years Day</Timeline.Title>
             <Timeline.Time>January 1st</Timeline.Time>
@@ -17,7 +17,7 @@ const HorizontalTimeline = () => {
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
-          <Timeline.Point icon={<CalendarBlank size={12} />} />
+          <Timeline.Point icon={<CalendarBlank size={16} />} />
           <Timeline.Content>
             <Timeline.Title>Birthday Bash</Timeline.Title>
             <Timeline.Time>May 15th</Timeline.Time>
@@ -28,7 +28,7 @@ const HorizontalTimeline = () => {
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
-          <Timeline.Point icon={<CalendarBlank size={12} />} />
+          <Timeline.Point icon={<CalendarBlank size={16} />} />
           <Timeline.Content>
             <Timeline.Title>Independence Day</Timeline.Title>
             <Timeline.Time>July 4th</Timeline.Time>
@@ -54,7 +54,7 @@ export const TimelineComponent = () => {
   return (
     <Timeline horizontal={true}>
       <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank size={12}  />} />
+        <Timeline.Point icon={<CalendarBlank size={16}  />} />
         <Timeline.Content>
           <Timeline.Title>Keep Library v1.0.0</Timeline.Title>
           <Timeline.Time>Released on December 2, 2021</Timeline.Time>
@@ -64,7 +64,7 @@ export const TimelineComponent = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank size={12}  />} />
+        <Timeline.Point icon={<CalendarBlank size={16}  />} />
         <Timeline.Content>
           <Timeline.Title>Keep Library v1.1.0</Timeline.Title>
           <Timeline.Time>Released on December 23, 2021</Timeline.Time>
@@ -74,7 +74,7 @@ export const TimelineComponent = () => {
         </Timeline.Content>
       </Timeline.Item>
       <Timeline.Item>
-        <Timeline.Point icon={<CalendarBlank size={12}  />} />
+        <Timeline.Point icon={<CalendarBlank size={16}  />} />
         <Timeline.Content>
           <Timeline.Title>Keep Library v1.3.0</Timeline.Title>
           <Timeline.Time>Released on January 5, 2022</Timeline.Time>

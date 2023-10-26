@@ -32,7 +32,7 @@ import { Badge } from "keep-react";
 
 export const BadgeComponent = () => {
   return (
-   <>
+   <div className="flex items-center gap-3">
       <Badge
         size="xs"
         dot={true}
@@ -51,7 +51,7 @@ export const BadgeComponent = () => {
       >
         Right Dot
       </Badge>
-    </>
+    </div>
   );
 };
 `;

@@ -21,18 +21,17 @@ const SearchBarWithColorVariant = () => {
   return (
     <SearchBar
       placeholder="Search Anything"
-      withBg
       bordered={false}
       addon={
-        <Button type="primary" color="error" size="sm">
+        <Button type="primary" color="info" size="xs">
           Search
         </Button>
       }
       addonPosition="right"
       icon={
-        <Button type="text" color="error" size="sm">
+        <Button type="text" color="info" size="xs">
           <span className="mr-2">
-            <MapPinLine size={24} color="#ff0000" />
+            <MapPinLine size={24} color="#5E718D" />
           </span>
           Location
         </Button>
@@ -40,14 +39,14 @@ const SearchBarWithColorVariant = () => {
       iconPosition="right"
       handleOnChange={handleOnChange}
       size="lg"
-      color="error"
+      color="info"
     >
       <ul>
         {data.map((book) => (
-          <Dropdown.Item key={book?.id} style={{ backgroundColor: "#FFF5F4" }}>
+          <Dropdown.Item key={book?.id}>
             {book?.name}
             <span className="ml-auto">
-              <ArrowRight size={20} color="#ff0000" />
+              <ArrowRight size={20} color="#5E718D" />
             </span>
           </Dropdown.Item>
         ))}

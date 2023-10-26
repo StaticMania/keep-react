@@ -28,7 +28,7 @@ const TabsWithNotificationCode = `
 "use client";
 import { Tabs } from "keep-react";
 
-const TabsComponent = () => {
+export const TabsComponent = () => {
   return (
     <Tabs aria-label="Keep Tabs" style="default">
       <Tabs.Item
