@@ -58,8 +58,9 @@ const SearchBarWithColorVariant = () => {
 const SearchBarWithColorVariantCode = `
 "use client";
 import { useState } from "react";
-import { SearchBar,Button,Dropdown } from "keep-react";
 import { ArrowRight, MapPinLine } from "phosphor-react";
+import { SearchBar, Dropdown, Button } from "keep-react";
+
 
 const books = [
   { id: 1, name: "To Kill a Mockingbird" },
@@ -74,13 +75,15 @@ const books = [
   { id: 10, name: "Brave New World" },
 ];
 
-export const SearchBarComponent = () => {
+const SearchBarComponent = () => {
   const [data, setData] = useState([]);
+
   const handleOnChange = (event) => {
     const searchTerm = event.target.value.toLowerCase();
     const results = books.filter((book) =>
       book.name.toLowerCase().includes(searchTerm)
     );
+
     if (searchTerm === "") {
       setData([]);
     } else {
@@ -90,18 +93,17 @@ export const SearchBarComponent = () => {
   return (
     <SearchBar
       placeholder="Search Anything"
-      withBg
       bordered={false}
       addon={
-        <Button type="primary" color="error" size="sm">
+        <Button type="primary" color="info" size="xs">
           Search
         </Button>
       }
       addonPosition="right"
       icon={
-        <Button type="text" color="error" size="sm">
+        <Button type="text" color="info" size="xs">
           <span className="mr-2">
-            <MapPinLine size={24} color="#ff0000" />
+            <MapPinLine size={24} color="#5E718D" />
           </span>
           Location
         </Button>
@@ -109,14 +111,14 @@ export const SearchBarComponent = () => {
       iconPosition="right"
       handleOnChange={handleOnChange}
       size="lg"
-      color="error"
+      color="info"
     >
       <ul>
         {data.map((book) => (
-          <Dropdown.Item key={book?.id} style={{ backgroundColor: "#FFF5F4" }}>
+          <Dropdown.Item key={book?.id}>
             {book?.name}
             <span className="ml-auto">
-              <ArrowRight size={20} color="#ff0000" />
+              <ArrowRight size={20} color="#5E718D" />
             </span>
           </Dropdown.Item>
         ))}

@@ -4,6 +4,9 @@ import { Tree } from "~/src";
 import { File, FolderNotchOpen } from "phosphor-react";
 
 const TreeWithCheckboxFolder = () => {
+  const handleChecked = (value: boolean) => {
+    console.log(value);
+  };
   return (
     <div className="py-5 overflow-x-auto">
       <Tree
@@ -14,6 +17,7 @@ const TreeWithCheckboxFolder = () => {
         ParentIcon={<FolderNotchOpen size={20} color="#3D4A5C" />}
         ChildIcon={<File size={20} color="#3D4A5C" />}
         nodes={nodes}
+        handleChecked={handleChecked}
       />
     </div>
   );

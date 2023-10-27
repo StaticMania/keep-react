@@ -2,6 +2,7 @@ import { useTheme } from "../../Keep/ThemeContex";
 import { twMerge } from "tailwind-merge";
 import { CaretDown, CaretRight } from "phosphor-react";
 import { ReactNode, useState } from "react";
+import { CheckBox } from "../CheckBox";
 
 interface Node {
   id: number;
@@ -16,7 +17,9 @@ interface Props {
   ParentIcon?: ReactNode;
   ChildIcon?: ReactNode;
   showCheckbox?: boolean;
+  handleChecked?: (value: boolean) => void;
 }
+
 export interface keepTreeTheme {
   base: string;
   list: {
@@ -53,6 +56,7 @@ export interface keepTreeTheme {
     off: string;
   };
 }
+
 export const Tree: React.FC<Props> = ({
   nodes,
   showIcon = false,
@@ -61,6 +65,7 @@ export const Tree: React.FC<Props> = ({
   ParentIcon,
   ChildIcon,
   showCheckbox = false,
+  handleChecked,
 }) => {
   const [expandedNodes, setExpandedNodes] = useState<{
     [key: number]: boolean;
@@ -112,9 +117,12 @@ export const Tree: React.FC<Props> = ({
             ChildIcon}
 
           {showCheckbox && (
-            <input
-              type="checkbox"
-              className="h-5 w-5 rounded border border-slate-200 shadow-transparent focus:outline-none focus:ring-0 focus:ring-transparent"
+            <CheckBox
+              size="md"
+              variant="square"
+              id="tree"
+              color="info"
+              handleChecked={handleChecked}
             />
           )}
 

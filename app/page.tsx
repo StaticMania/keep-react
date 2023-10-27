@@ -2,7 +2,7 @@
 import Link from "next/link";
 import useCopy from "~/hooks/useCopy";
 import { ComponentList } from "~/routes/routes";
-import { ArrowUpRight, Check, CopySimple } from "phosphor-react";
+import { ArrowUpRight, Check, Clipboard } from "phosphor-react";
 import { AvatarGroupComponent } from "~/components/ComponentsList";
 import Image from "next/image";
 
@@ -42,7 +42,7 @@ const Hero = () => {
               {copy ? (
                 <Check size={18} color="#8897AE" />
               ) : (
-                <CopySimple size={18} color="#8897AE" />
+                <Clipboard size={18} color="#8897AE" />
               )}
             </button>
           </div>
@@ -141,77 +141,3 @@ const Community = () => {
     </div>
   );
 };
-
-// const FaqArea = () => {
-//   return (
-//     <div className="container">
-//       <div className="flex justify-between gap-5">
-//         <div className="flex-1 flex items-center justify-center">
-//           <Image src="/images/faq.svg" alt="faq" height={400} width={600} />
-//         </div>
-//         <div className="flex-1 flex items-center">
-//           <div className="w-full">
-//             <Accordion collapseAll={true} className="bg-slate-900">
-//               <Accordion.Panel>
-//                 <Accordion.Title className="bg-slate-900 hover:bg-slate-900 text-white !text-lg">
-//                   How do I customize the color scheme of components?
-//                 </Accordion.Title>
-//                 <Accordion.Content className="bg-slate-900 text-white/100 !text-sm">
-//                   <p>
-//                     The Keep React offers a range of color variants for
-//                     components. To customize the color scheme, you can use the
-//                     available color options such as gray,info,error,warning and
-//                     success. Simply set the desired color variant as a prop when
-//                     using the component, and it will reflect the chosen color.
-//                   </p>
-//                 </Accordion.Content>
-//               </Accordion.Panel>
-//               <Accordion.Panel>
-//                 <Accordion.Title className="bg-slate-900 hover:bg-slate-900 text-white !text-lg">
-//                   How do I customize the color scheme of components?
-//                 </Accordion.Title>
-//                 <Accordion.Content className="bg-slate-900 text-white/100 !text-sm">
-//                   <p>
-//                     The Keep React offers a range of color variants for
-//                     components. To customize the color scheme, you can use the
-//                     available color options such as gray,info,error,warning and
-//                     success. Simply set the desired color variant as a prop when
-//                     using the component, and it will reflect the chosen color.
-//                   </p>
-//                 </Accordion.Content>
-//               </Accordion.Panel>
-//               <Accordion.Panel>
-//                 <Accordion.Title className="bg-slate-900 hover:bg-slate-900 text-white !text-lg">
-//                   How do I customize the color scheme of components?
-//                 </Accordion.Title>
-//                 <Accordion.Content className="bg-slate-900 text-white/100 !text-sm">
-//                   <p>
-//                     The Keep React offers a range of color variants for
-//                     components. To customize the color scheme, you can use the
-//                     available color options such as gray,info,error,warning and
-//                     success. Simply set the desired color variant as a prop when
-//                     using the component, and it will reflect the chosen color.
-//                   </p>
-//                 </Accordion.Content>
-//               </Accordion.Panel>
-//               <Accordion.Panel>
-//                 <Accordion.Title className="bg-slate-900 hover:bg-slate-900 text-white !text-lg">
-//                   How do I customize the color scheme of components?
-//                 </Accordion.Title>
-//                 <Accordion.Content className="bg-slate-900 text-white/100 !text-sm">
-//                   <p>
-//                     The Keep React offers a range of color variants for
-//                     components. To customize the color scheme, you can use the
-//                     available color options such as gray,info,error,warning and
-//                     success. Simply set the desired color variant as a prop when
-//                     using the component, and it will reflect the chosen color.
-//                   </p>
-//                 </Accordion.Content>
-//               </Accordion.Panel>
-//             </Accordion>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };

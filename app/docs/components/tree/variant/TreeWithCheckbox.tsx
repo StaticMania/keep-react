@@ -3,6 +3,9 @@ import { Tree } from "~/src";
 import { nodes } from "./DefaultTree";
 
 const TreeWithCheckbox = () => {
+  const handleChecked = (value: boolean) => {
+    console.log(value);
+  };
   return (
     <div className="py-5 overflow-x-auto">
       <Tree
@@ -10,6 +13,7 @@ const TreeWithCheckbox = () => {
         showItemsNumber={true}
         showBorder={true}
         nodes={nodes}
+        handleChecked={handleChecked}
       />
     </div>
   );
