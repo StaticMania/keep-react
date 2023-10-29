@@ -18,7 +18,7 @@ const HorizontalUploadPending = () => {
       horizontal={true}
       showProgressBar={true}
       progressType="pending"
-      progress={39}
+      progress={45}
       uploadTime="1 minutes left"
       id="horizontal_upload_pending"
     />
@@ -45,7 +45,7 @@ export const UploadComponent = () => {
       horizontal={true}
       showProgressBar={true}
       progressType="pending"
-      progress={39}
+      progress={45}
       uploadTime="1 minutes left"
       id="upload"
     />

@@ -16,7 +16,7 @@ const UploadPending = () => {
       file={fileName}
       showProgressBar
       progressType="pending"
-      progress={89}
+      progress={45}
       uploadTime="1 minutes left"
       id="upload_Pending"
     />

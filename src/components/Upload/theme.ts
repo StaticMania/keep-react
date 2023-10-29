@@ -19,9 +19,8 @@ export const uploadTheme: keepUploadTheme = {
     },
   },
   uploadFailed: {
-    base: "relative z-40 w-full rounded-lg border border-error-50 p-2.5 px-5",
-    bgColor:
-      "absolute top-0 left-0 z-[-1] h-full rounded-l-lg bg-error-100 p-5 overflow-hidden",
+    base: "relative z-40 w-full rounded-lg border border-error-50 p-2.5 px-5 bg-error-25",
+    bgColor: "absolute top-0 left-0 z-[-1] h-full bg-error-50 overflow-hidden",
     root: {
       base: "mb-2 flex items-center justify-between",
       status: "text-sm font-medium text-error-500",
@@ -38,6 +37,10 @@ export const uploadTheme: keepUploadTheme = {
         dismiss:
           "flex h-6 w-6 items-center justify-center rounded-full bg-error-50",
       },
+    },
+    progress: {
+      bgBar: "h-3.5 bg-error-50 w-full relative",
+      mainBar: "absolute left-0 h-full bg-error-500",
     },
   },
   uploadHorizontal: {
@@ -63,9 +66,8 @@ export const uploadTheme: keepUploadTheme = {
     },
   },
   uploadPending: {
-    base: "relative z-20 w-full rounded-lg border border-slate-200 p-2.5 px-5",
-    bgColor:
-      "absolute top-0 left-0 z-[-1] h-full rounded-l-lg bg-blue-50 p-5 overflow-hidden",
+    base: "relative z-20 w-full rounded-lg border border-slate-200 p-2.5 px-5 overflow-hidden",
+    bgColor: "absolute top-0 left-0 z-[-1] h-full bg-blue-50 overflow-hidden",
     root: {
       base: "mb-2 flex items-center justify-between",
       status: "text-sm font-medium text-slate-500",
@@ -82,6 +84,10 @@ export const uploadTheme: keepUploadTheme = {
         dismiss:
           "flex h-6 w-6 items-center justify-center rounded-full bg-error-50",
       },
+    },
+    progress: {
+      bgBar: "h-3.5 bg-primary-50 w-full relative",
+      mainBar: "absolute left-0 h-full bg-primary-500",
     },
   },
   uploadSuccess: {

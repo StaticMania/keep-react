@@ -1,9 +1,9 @@
 import { twMerge } from "tailwind-merge";
 import { ArrowClockwise, X } from "phosphor-react";
-import { FC } from "react";
-import { Progress } from "../Progress";
+import { FC, useEffect, useRef, useState } from "react";
 import { useUploadContext } from "./UploadContext";
 import { useTheme } from "../../Keep/ThemeContex";
+import { useProgress } from "./useProgress";
 
 export interface keepUploadFailedTheme {
   base: string;
@@ -23,16 +23,34 @@ export interface keepUploadFailedTheme {
       dismiss: string;
     };
   };
+  progress: {
+    bgBar: string;
+    mainBar: string;
+  };
 }
 
 export const UploadFailed: FC = () => {
   const theme = useTheme().theme.upload.uploadFailed;
   const { progress, uploadTime } = useUploadContext();
+  const [divWidth, setDivWidth] = useState(0);
+  const divRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (divRef.current) {
+      const width = divRef.current.getBoundingClientRect().width;
+      setDivWidth(width);
+    }
+  }, []);
+
+  const { divOneWidth, divTwoWidth } = useProgress({
+    width: divWidth,
+    progress: progress,
+  });
   return (
     <div className={twMerge(theme.base)}>
       <div
         className={twMerge(theme.bgColor)}
-        style={{ width: `${progress}%` }}
+        style={{ width: divOneWidth }}
       ></div>
       <div className={twMerge(theme.root.base)}>
         <div>
@@ -54,7 +72,12 @@ export const UploadFailed: FC = () => {
           </button>
         </div>
       </div>
-      <Progress color="error" progress={progress} rounded={false} />
+      <div ref={divRef} className={theme.progress.bgBar}>
+        <div
+          style={{ width: divTwoWidth }}
+          className={theme.progress.mainBar}
+        ></div>
+      </div>
     </div>
   );
 };

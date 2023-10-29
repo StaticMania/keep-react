@@ -17,7 +17,7 @@ const UploadFailed = () => {
       file={fileName}
       showProgressBar={true}
       progressType="error"
-      progress={36}
+      progress={45}
       uploadTime="2 days left"
       id="upload_failed"
     />
@@ -43,7 +43,7 @@ export const UploadComponent = () => {
       file={fileName}
       showProgressBar={true}
       progressType="error"
-      progress={36}
+      progress={45}
       uploadTime="2 days left"
       id="upload"
     />
