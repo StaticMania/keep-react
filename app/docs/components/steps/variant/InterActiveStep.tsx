@@ -30,7 +30,9 @@ const InterActiveStep = () => {
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
         />
       </Steps>
-      <div className="flex items-center justify-center mt-6">
+
+      <div className="h-44 border-2 border-dashed  border-slate-100 rounded-md my-5"></div>
+      <div className="flex items-center justify-end mt-6">
         <Button
           size="sm"
           type="primary"

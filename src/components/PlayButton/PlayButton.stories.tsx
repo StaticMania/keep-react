@@ -61,6 +61,7 @@ export const DefaultPlayButton: Story = {
     icon: <Play size="24" />,
   },
 };
+
 export const SecondaryPlayButton: Story = {
   args: {
     ...DefaultPlayButton.args,

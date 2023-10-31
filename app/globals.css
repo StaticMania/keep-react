@@ -27,21 +27,10 @@ body {
   }
 }
 
-.home-page {
-  background-image: url("https://staticmania.cdn.prismic.io/staticmania/248e8aae-351f-4cc8-8f1c-f44f9c292ac1_top-bg.svg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-@media (max-width: 768px) {
-  .home-page {
-    background-size: 300%;
-  }
-}
-@media (min-width: 1280px) {
-  .hero-area {
-    background-image: url("https://images.prismic.io/staticmania/353398a0-1d71-4c13-82dd-6048e0cddb8f_hero-bg.png?auto=compress,format");
-    background-position: center;
+@media (min-width: 1024px) {
+  .home {
+    background-image: url("https://staticmania.cdn.prismic.io/staticmania/248e8aae-351f-4cc8-8f1c-f44f9c292ac1_top-bg.svg");
+    background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
   }
