@@ -15,9 +15,12 @@
   "homepage": "https://react.keepdesign.io/",
   "bugs": "https://github.com/StaticMania/keep-react/issues",
   "files": [
-    "./lib/"
+    "./lib/",
+    "./src"
   ],
   "main": "./lib/cjs/index.js",
+  "style": "./src/main.min.css",
+  "preset": "./src/keep-preset.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "repository": {
