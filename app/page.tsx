@@ -156,8 +156,8 @@ const FAQ = () => {
           and interactive elements built with React and Tailwind CSS
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-5 mt-12">
-        <div className="col-span-1">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 mt-12">
+        <div className="lg:col-span-1 w-full">
           <Accordion collapseAll={true} flush>
             <Accordion.Panel>
               <Accordion.Title>
@@ -204,7 +204,7 @@ const FAQ = () => {
             </Accordion.Panel>
           </Accordion>
         </div>
-        <div className="col-span-1">
+        <div className="lg:col-span-1 w-full">
           <Accordion collapseAll={true} flush>
             <Accordion.Panel>
               <Accordion.Title>
