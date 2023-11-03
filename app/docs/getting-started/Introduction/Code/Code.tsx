@@ -11,13 +11,24 @@ const twCss = `
 @tailwind components;
 @tailwind utilities;
   `;
-const CodeString = `
+const reactCodeString = `
   import { Button } from "keep-react";
   const App=()=>{
     return (
       <Button size="md">Default</Button>
     )
   }
+export default App;
+  `;
+
+const nextCodeString = `
+"use client";
+import { Button } from "keep-react";
+const App=()=>{
+  return (
+    <Button size="md">Default</Button>
+  )
+};
 export default App;
   `;
 const twNpmInstall =
@@ -35,7 +46,8 @@ module.exports = {
 export {
   twConfig,
   twCss,
-  CodeString,
+  reactCodeString,
+  nextCodeString,
   twNpmInstall,
   keepNpmInstall,
   twConfigForNextJs,
