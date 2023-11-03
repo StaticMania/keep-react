@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { Button } from "../Button/Button";
 import { twMerge } from "tailwind-merge";
 import { FileArrowUp } from "phosphor-react";
@@ -37,10 +37,16 @@ export const InputField: FC = () => {
     title,
     icon,
     id,
+    uploadBtnType,
   } = useUploadContext();
 
   const theme = useTheme().theme.upload.input;
   const extension = file?.split(".").pop();
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleClick = () => {
+    inputRef.current?.click();
+  };
   return (
     <div className={twMerge(theme.base)}>
       <label
@@ -63,16 +69,23 @@ export const InputField: FC = () => {
             {fileType ? fileType : "Files: JPEG, PNG, GIF"}
           </p>
           <div className={twMerge(theme.label.upload.base)}>
-            <Button type="primary" disabled={disabled}>
+            <Button
+              type={uploadBtnType}
+              disabled={disabled}
+              customClass="!relative !cursor-pointer !z-40"
+              onClick={handleClick}
+            >
               Choose File
             </Button>
             <input
               id={id}
               type="file"
+              ref={inputRef}
               className={twMerge(theme.label.upload.input)}
               onChange={onFileChange}
               disabled={disabled}
             />
+
             {file && (
               <p className={twMerge(theme.label.upload.fileName)}>
                 FileName : {file ? file.slice(0, 6) + "..." + extension : null}

@@ -8,7 +8,6 @@ const DefaultCheckbox = () => {
   return (
     <div className="py-3">
       <CheckBox
-        size="md"
         variant="square"
         label="Checkbox"
         id="two"

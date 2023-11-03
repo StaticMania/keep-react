@@ -2,7 +2,7 @@ export const CheckBoxApiData = [
   {
     id: 1,
     propsName: "size",
-    propsType: ["xs", "sm", "md"],
+    propsType: ["sm", "md", "lg"],
     propsDescription: "Available size options for checkbox.",
     default: "md",
   },

@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext } from "react";
+import { ButtonTypes } from "../Button/Button";
 
 export type UploadContext = {
   id?: string;
@@ -12,6 +13,7 @@ export type UploadContext = {
   fileType?: string;
   icon?: ReactNode;
   onFileChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  uploadBtnType?: keyof ButtonTypes;
 };
 
 export const UploadContext = createContext<UploadContext | undefined>(

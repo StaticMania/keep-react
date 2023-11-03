@@ -3,13 +3,12 @@ import Link from "next/link";
 import useCopy from "~/hooks/useCopy";
 import { ComponentList } from "~/routes/routes";
 import { ArrowUpRight, Check, Clipboard } from "phosphor-react";
-import { AvatarGroupComponent } from "~/components/ComponentsList";
 import Image from "next/image";
 import { Accordion } from "~/src";
 
 export default function Home() {
   return (
-    <section className="home space-y-14 lg:space-y-32 first:pt-20 last:pb-20">
+    <section className="home space-y-20 lg:space-y-32 first:pt-20 last:pb-20 -mt-1">
       <Hero />
       <ComponentUI />
       <FAQ />
@@ -32,11 +31,12 @@ const ComponentUI = () => {
       <div className="container">
         <div className="text-center mb-4 md:max-w-[500px] mx-auto px-5 md:px-0">
           <h2 className="lg:!leading-[44px] leading-8 font-semibold text-black tracking-[-1px] mb-2 lg:text-8xl text-4xl">
-            Powerful and Versatile React UI Components
+            Design Excellence with Our React Component Library
           </h2>
           <p className="text-center leading-6 font-normal text-slate-600 text-sm md:text-base">
-            Explore the entire collection of over 100 open-source UI components
-            and interactive elements built with React and Tailwind CSS
+            Explore our library of 40+ open-source React UI components and
+            interactive elements, empowering you to create stunning web projects
+            effortlessly.
           </p>
         </div>
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-5 my-14">
@@ -76,8 +76,7 @@ const Community = () => {
     <div className="container">
       <div className="flex flex-col lg:flex-row lg:items-center items-start gap-5 lg:gap-0 justify-between bg-[url('https://staticmania.cdn.prismic.io/staticmania/59c3bc39-d8bc-4382-80e9-db3c7f10230d_community.svg')] bg-center bg-cover bg-no-repeat rounded-md lg:px-28 lg:py-12 md:py-10 md:px-8 p-8">
         <div>
-          <AvatarGroupComponent />
-          <h3 className="mt-4 text-white lg:text-8xl md:text-5xl text-4xl font-semibold leading-[50px] tracking-[-1px]">
+          <h3 className="text-white lg:text-8xl md:text-5xl text-4xl font-semibold leading-[50px] tracking-[-1px]">
             Join the community
           </h3>
           <p className="text-white font-normal text-sm md:text-base max-w-sm">
@@ -91,7 +90,7 @@ const Community = () => {
             target="_blank"
             className="px-6 py-3 text-sm md:text-base  bg-slate-900 hover:bg-slate-800 text-white rounded-md flex items-center gap-2"
           >
-            See our repository
+            See Github Repository
             <ArrowUpRight size={18} />
           </a>
         </div>
@@ -106,13 +105,14 @@ const Hero = () => {
     <div className="hero-area">
       <div className="text-center max-w-2xl mx-auto z-10 relative">
         <h1 className="lg:text-[56px] text-black/100 font-semibold lg:leading-[66px] leading-10 tracking-[-1.75px] mb-3 text-8xl">
-          Build modern website and web applications with{" "}
-          <span className="hero-text">Keep React</span>
+          Supercharge Your Web Development with
+          <span className="hero-text block">Keep React</span>
         </h1>
-        <p className="md:text-lg text-sm text-slate-600">
-          Create beautiful and consistence user interface with ease.
+        <p className="md:text-lg text-sm text-slate-600 max-w-lg mx-auto">
+          Unlocking the Power of Code to Transform Your Ideas into Stunning Web
+          Realities.
         </p>
-        <div className="flex items-center justify-center gap-5 mt-4">
+        <div className="flex items-center justify-center gap-5 mt-8">
           <div className="flex items-center justify-between gap-5 bg-white py-3 px-4 rounded-md divide-x-2 divide-slate-100">
             <p className="text-sm leading-[22px] tracking-[-0.3px] text-slate-500 font-normal">
               npm install keep-react
@@ -145,110 +145,90 @@ const Hero = () => {
 };
 
 const FAQ = () => {
+  const faqs = [
+    {
+      id: 1,
+      question: "What is Keep React?",
+      answer:
+        "Keep React is an open-source component library built on React and Tailwind CSS. It offers a collection of pre-designed UI components and styles that you can easily integrate into your web applications.",
+    },
+    {
+      id: 2,
+      question: "How can I use Keep React components?",
+      answer:
+        "To use Keep React components, you can install the library via npm or yarn, import the components you need in your React application, and start using them in your code.",
+    },
+    {
+      id: 3,
+      question: "Is Keep React compatible with other React projects?",
+      answer:
+        "Yes, Keep React is designed to be compatible with other React projects. You can seamlessly integrate its components into your existing React applications.",
+    },
+    {
+      id: 4,
+      question:
+        "What makes Keep React different from other component libraries?",
+      answer:
+        "Keep React combines the power of React with the flexibility and utility of Tailwind CSS. It provides a wide range of customizable components to help you build beautiful, responsive, and functional user interfaces.",
+    },
+    {
+      id: 5,
+      question: "Can I customize the styling of Keep React components?",
+      answer:
+        "Yes, Keep React components are highly customizable. You can use Tailwind CSS utility classes or even create your own styles to tailor the appearance of the components to your project's needs.",
+    },
+    {
+      id: 6,
+      question:
+        "Is Keep React suitable for both small and large-scale applications?",
+      answer:
+        "Absolutely! Keep React is designed to be versatile, making it suitable for a wide range of projects, from small personal websites to large-scale applications. Its components and styles are designed to scale to your needs.",
+    },
+  ];
+
   return (
     <div className="container">
       <div className="text-center mb-4 md:max-w-[500px] mx-auto px-5 md:px-0">
         <h2 className="lg:!leading-[44px] leading-8 font-semibold text-black tracking-[-1px] mb-2 lg:text-8xl text-4xl">
-          FAQ and Versatile React UI Components
+          Frequently Asked Questions
         </h2>
-        <p className="text-center leading-6 font-normal text-slate-600 text-sm md:text-base">
-          Explore the entire collection of over 100 open-source UI components
-          and interactive elements built with React and Tailwind CSS
-        </p>
       </div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 mt-12">
-        <div className="lg:col-span-1 w-full">
+
+      <div className="w-full mt-12 xl:hidden block">
+        <Accordion collapseAll={true} flush>
+          {faqs.map((faq) => (
+            <Accordion.Panel key={faq.id}>
+              <Accordion.Title>{faq.question}</Accordion.Title>
+              <Accordion.Content>
+                <p>{faq.answer}</p>
+              </Accordion.Content>
+            </Accordion.Panel>
+          ))}
+        </Accordion>
+      </div>
+      <div className="xl:grid xl:grid-cols-2 grid-cols-1 gap-5 mt-12 hidden">
+        <div className="xl:col-span-1 w-full">
           <Accordion collapseAll={true} flush>
-            <Accordion.Panel>
-              <Accordion.Title>
-                What is the purpose of the Keep React?
-              </Accordion.Title>
-              <Accordion.Content>
-                <p>
-                  The Keep React is a collection of UI components, styles, and
-                  guidelines that ensure consistency and a unified user
-                  experience across our products. It simplifies the design and
-                  development process by providing ready-to-use components that
-                  can be easily customized and integrated into various
-                  applications.
-                </p>
-              </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
-              <Accordion.Title>
-                How do I customize the color scheme of components?
-              </Accordion.Title>
-              <Accordion.Content>
-                <p>
-                  The Keep React offers a range of color variants for
-                  components. To customize the color scheme, you can use the
-                  available color options such as gray,info,error,warning and
-                  success. Simply set the desired color variant as a prop when
-                  using the component, and it will reflect the chosen color.
-                </p>
-              </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
-              <Accordion.Title>
-                Can I add additional content to notifications?
-              </Accordion.Title>
-              <Accordion.Content>
-                <p>
-                  Yes, the Notification component in the Keep React allows you
-                  to include extra content alongside the primary message. The
-                  additionalContent prop can be used to display supplementary
-                  information, such as buttons, links, or icons, within the
-                  notification to provide users with more context and options.
-                </p>
-              </Accordion.Content>
-            </Accordion.Panel>
+            {faqs.slice(0, 3).map((faq) => (
+              <Accordion.Panel key={faq.id}>
+                <Accordion.Title>{faq.question}</Accordion.Title>
+                <Accordion.Content>
+                  <p>{faq.answer}</p>
+                </Accordion.Content>
+              </Accordion.Panel>
+            ))}
           </Accordion>
         </div>
-        <div className="lg:col-span-1 w-full">
+        <div className="xl:col-span-1 w-full">
           <Accordion collapseAll={true} flush>
-            <Accordion.Panel>
-              <Accordion.Title>
-                What is the purpose of the Keep React?
-              </Accordion.Title>
-              <Accordion.Content>
-                <p>
-                  The Keep React is a collection of UI components, styles, and
-                  guidelines that ensure consistency and a unified user
-                  experience across our products. It simplifies the design and
-                  development process by providing ready-to-use components that
-                  can be easily customized and integrated into various
-                  applications.
-                </p>
-              </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
-              <Accordion.Title>
-                How do I customize the color scheme of components?
-              </Accordion.Title>
-              <Accordion.Content>
-                <p>
-                  The Keep React offers a range of color variants for
-                  components. To customize the color scheme, you can use the
-                  available color options such as gray,info,error,warning and
-                  success. Simply set the desired color variant as a prop when
-                  using the component, and it will reflect the chosen color.
-                </p>
-              </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
-              <Accordion.Title>
-                Can I add additional content to notifications?
-              </Accordion.Title>
-              <Accordion.Content>
-                <p>
-                  Yes, the Notification component in the Keep React allows you
-                  to include extra content alongside the primary message. The
-                  additionalContent prop can be used to display supplementary
-                  information, such as buttons, links, or icons, within the
-                  notification to provide users with more context and options.
-                </p>
-              </Accordion.Content>
-            </Accordion.Panel>
+            {faqs.slice(3, 6).map((faq) => (
+              <Accordion.Panel key={faq.id}>
+                <Accordion.Title>{faq.question}</Accordion.Title>
+                <Accordion.Content>
+                  <p>{faq.answer}</p>
+                </Accordion.Content>
+              </Accordion.Panel>
+            ))}
           </Accordion>
         </div>
       </div>

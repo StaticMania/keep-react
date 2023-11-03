@@ -13,7 +13,7 @@ export const uploadTheme: keepUploadTheme = {
 
       upload: {
         base: "relative mt-5 flex cursor-pointer flex-col items-center space-y-2",
-        input: "absolute top-0 left-0 scale-100 opacity-0",
+        input: "absolute top-0 left-0 cursor-pointer opacity-0 hidden",
         fileName: "text-xs md:text-sm text-slate-400 text-center",
       },
     },

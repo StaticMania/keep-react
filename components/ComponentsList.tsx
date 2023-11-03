@@ -6,7 +6,6 @@ import { DefaultDatePicker } from "~/app/docs/components/datePicker/variant/Defa
 import { DefaultRadio } from "~/app/docs/components/radio/variant/DefaultRadio";
 
 import {
-  Avatar,
   Button,
   CheckboxGroup,
   Modal,
@@ -197,47 +196,5 @@ export const ModalComponent = () => {
         </Modal.Footer>
       </Modal>
     </div>
-  );
-};
-export const AvatarGroupComponent = () => {
-  return (
-    <Avatar.Group>
-      <Avatar
-        shape="circle"
-        size="md"
-        stacked={true}
-        img="/images/avatar/avatar-1.png"
-      />
-      <Avatar
-        shape="circle"
-        size="md"
-        stacked={true}
-        img="/images/avatar/avatar-2.png"
-      />
-      <Avatar
-        shape="circle"
-        size="md"
-        stacked={true}
-        img="/images/avatar/avatar-3.png"
-      />
-      <Avatar
-        shape="circle"
-        size="md"
-        stacked={true}
-        img="/images/avatar/avatar-4.png"
-      />
-      <Avatar
-        shape="circle"
-        size="md"
-        stacked={true}
-        img="/images/avatar/avatar-5.png"
-      />
-      <Avatar
-        shape="circle"
-        size="md"
-        stacked={true}
-        img="https://randomuser.me/api/portraits/men/32.jpg"
-      />
-    </Avatar.Group>
   );
 };

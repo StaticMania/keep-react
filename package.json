@@ -35,7 +35,6 @@
     "newApp": "rm -rf node_modules && rm -rf .next && yarn install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build-static-webapp": "expo build:web",
     "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
     "build:css": "css-minify -f ./app/main.css -o ./lib/cjs/theme",
     "build:lib:cjs": "tsc -p tsconfig.lib.json",

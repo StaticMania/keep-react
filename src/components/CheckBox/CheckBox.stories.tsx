@@ -29,10 +29,10 @@ const meta: Meta<typeof CheckBox> = {
     },
     size: {
       control: "select",
-      options: ["xs", "sm", "md"],
+      options: ["sm", "md", "lg"],
       description: "Checkbox avaiable sizes",
       table: {
-        type: { summary: "xs | sm | md" },
+        type: { summary: "lg | sm | md" },
         defaultValue: { summary: "md" },
       },
     },
@@ -74,5 +74,6 @@ export const DefaultCheckbox: Story = {
     label: "Checkbox",
     size: "md",
     labelColor: "info",
+    id: "2",
   },
 };

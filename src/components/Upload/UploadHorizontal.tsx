@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { FileArrowUp } from "phosphor-react";
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { Button } from "../Button/Button";
 import { useUploadContext } from "./UploadContext";
 import { UploadFailed } from "./UploadFailed";
@@ -41,10 +41,16 @@ export const UploadHorizontal: FC = () => {
     title,
     fileType,
     id,
+    uploadBtnType,
   } = useUploadContext();
 
   const theme = useTheme().theme.upload.uploadHorizontal;
   const extension = file?.split(".").pop();
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleClick = () => {
+    inputRef.current?.click();
+  };
   return (
     <div className={twMerge(theme.base)}>
       <label
@@ -81,13 +87,18 @@ export const UploadHorizontal: FC = () => {
               Maximum: 5MB
             </p>
 
-            <Button type="primary" disabled={disabled}>
+            <Button
+              type={uploadBtnType}
+              disabled={disabled}
+              customClass="!relative !cursor-pointer !z-40"
+              onClick={handleClick}
+            >
               Choose File
             </Button>
-
             <input
               id={id}
               type="file"
+              ref={inputRef}
               className={twMerge(theme.label.root.upload.input)}
               onChange={onFileChange}
               disabled={disabled}

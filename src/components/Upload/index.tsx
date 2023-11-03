@@ -11,6 +11,7 @@ import { UploadHorizontal } from "./UploadHorizontal";
 import { UploadPending } from "./UploadPending";
 import { UploadSuccess } from "./UploadSuccess";
 import { UploadContext } from "./UploadContext";
+import { ButtonTypes } from "../Button/Button";
 
 export interface keepUploadTheme {
   input: keepInputFieldTheme;
@@ -31,6 +32,7 @@ interface UploadComponentProps {
   title?: string;
   fileType?: string;
   id?: string;
+  uploadBtnType?: keyof ButtonTypes;
 }
 const UploadComponent: FC<UploadComponentProps> = ({
   file,
@@ -44,6 +46,7 @@ const UploadComponent: FC<UploadComponentProps> = ({
   title,
   fileType,
   id,
+  uploadBtnType = "primary",
 }) => {
   let content = null;
 
@@ -66,6 +69,7 @@ const UploadComponent: FC<UploadComponentProps> = ({
         title,
         fileType,
         id,
+        uploadBtnType,
       }}
     >
       {content}
