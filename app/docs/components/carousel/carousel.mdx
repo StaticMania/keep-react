@@ -1,0 +1,96 @@
+import {
+  DefaultCarousel,
+  DefaultCarouselCode,
+} from "./variant/DefaultCarousel";
+import { StaticCarousel, StaticCarouselCode } from "./variant/StaticCarousel";
+import {
+  CarouselWithCustomControlIcon,
+  CarouselWithCustomControlIconCode,
+} from "./variant/CarouselWithCustomControlIcon";
+import {
+  CarousellWithTextControll,
+  CarousellWithTextControllCode,
+} from "./variant/CarousellWithTextControll";
+import {
+  CarouselWithIndicator,
+  CarouselWithIndicatorCode,
+} from "./variant/CarouselWithIndicator";
+import {
+  MultipleCarousel,
+  MultipleCarouselCode,
+} from "./variant/MultipleCarousel";
+
+import { carouselDataApi } from "./carouselApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+A Carousel component is a user interface element commonly found in web and mobile applications that allows you to display a series of images, content, or media items in a rotating manner. It is often used to showcase multiple items in a limited space, allowing users to view different items by sliding or swiping through them.
+
+## Default Carousel
+
+Default Carousel component allows you to display a series of images, content, or media items in a rotating manner. It is often used to showcase multiple items in a limited space, allowing users to view different items by sliding or swiping through them.
+
+<CodePreview github="Carousel" code={DefaultCarouselCode}>
+  <DefaultCarousel />
+</CodePreview>
+
+## Static Carousel
+
+A Static Carousel is a type of carousel component that displays a sequence of items without providing any indicators or navigation controls for users to manually switch between items. Instead, the items in a static carousel automatically transition or scroll to the next item at a predefined interval.
+
+<CodePreview github="Carousel" code={StaticCarouselCode}>
+  <StaticCarousel />
+</CodePreview>
+
+## Carousel With Text Controll
+
+A Carousel with Text Control is a carousel component that includes textual navigation controls, typically in the form of `Next` and `Previous` buttons.
+
+<CodePreview github="Carousel" code={CarousellWithTextControllCode}>
+  <CarousellWithTextControll />
+</CodePreview>
+
+## Carousel With Custom Controll Icon
+
+A Carousel with Custom Control Icons is a carousel component that provides navigation controls with customized icons for moving between items. By using `leftControl` and `rightControl` props, we can add custom controls.
+
+<CodePreview github="Carousel" code={CarouselWithCustomControlIconCode}>
+  <CarouselWithCustomControlIcon />
+</CodePreview>
+
+## Carousel With Indicator
+
+The IndicatorsType prop allows you to choose from different types of indicators. By using `indicatorsType` props as `dots`, `rings`, `bars`, `squares`, or `squareRing`, based on your design preferences.
+
+<CodePreview github="Carousel" code={CarouselWithIndicatorCode}>
+  <CarouselWithIndicator />
+</CodePreview>
+
+## Multiple Carousel
+
+A Multiple Carousel is a user interface component that allows you to display multiple carousels on a single page or screen.
+
+<CodePreview github="Carousel" code={MultipleCarouselCode}>
+  <MultipleCarousel />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the carousel component
+
+<ComponentApi data={carouselDataApi} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.carousel} />
+
+## Reference
+
+To learn more about the Carousel, please see the documentation of [Carousel](https://norserium.github.io/react-indiana-drag-scroll)

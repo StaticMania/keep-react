@@ -1,0 +1,77 @@
+import { DefaultEmpty, DefaultEmptyCode } from "./variant/DefaultEmpty";
+import { EmptyFolder, EmptyFolderCode } from "./variant/EmptyFolder";
+import { NoResultPage, NoResultPageCode } from "./variant/NoResultPage";
+import { NotFoundPage, NotFoundPageCode } from "./variant/NotFoundPage";
+import { NoDataFound, NoDataFoundCode } from "./variant/NoDataFound";
+import { emptyApiData } from "./EmptyApi";
+import {
+  PageNotAvailable,
+  PageNotAvailableCode,
+} from "./variant/PageNotAvailable";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Empty Component is a user interface element specifically designed to handle situations where a requested page or resource cannot be found. It is often displayed when a user navigates to a URL that doesn't correspond to any existing content within the application or website.
+
+## Default Empty
+
+Default Empty component shows a Image,title,description and redirect buttons.
+
+<CodePreview github="Empty" code={DefaultEmptyCode}>
+  <DefaultEmpty />
+</CodePreview>
+
+## Empty Folder
+
+Empty Folder component represents that there is not folder found in the application. You can change the image.
+
+<CodePreview github="Empty" code={EmptyFolderCode}>
+  <EmptyFolder />
+</CodePreview>
+
+## No Result Page
+
+No Result Page is a user interface element that is displayed when a search or query returns no matching results.
+
+<CodePreview github="Empty" code={NoResultPageCode}>
+  <NoResultPage />
+</CodePreview>
+
+## Page Not Available
+
+<CodePreview github="Empty" code={PageNotAvailableCode}>
+  <PageNotAvailable />
+</CodePreview>
+
+## Not Found Page
+
+Page Not Available message is typically shown to users when they try to access a web page or content that is currently unavailable or does not exist.
+
+<CodePreview github="Empty" code={NotFoundPageCode}>
+  <NotFoundPage />
+</CodePreview>
+
+## No Data Found
+
+The message No Data Found is commonly displayed to users when a search, query, or request for information yields no results.
+
+<CodePreview github="Empty" code={NoDataFoundCode}>
+  <NoDataFound />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the empty component
+
+<ComponentApi data={emptyApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.empty} />

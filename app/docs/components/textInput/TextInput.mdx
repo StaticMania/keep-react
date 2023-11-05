@@ -1,0 +1,121 @@
+import { DefaultInputCode, DefaultInput } from "./variant/DefaultInput";
+import { InputWithIcon, InputWithIconCode } from "./variant/InputWithIcon";
+import { InputWithAddon, InputWithAddonCode } from "./variant/InputWithAddon";
+import { InputFieldURL, InputFieldURLCode } from "./variant/InputFieldURL";
+import {
+  InputWithOutBorder,
+  InputWithOutBorderCode,
+} from "./variant/InputWithOutBorder";
+import {
+  InputColorVariant,
+  InputColorVariantCode,
+} from "./variant/InputColorVariant";
+import {
+  InputWithAddonAndIcon,
+  InputWithAddonAndIconCode,
+} from "./variant/InputWithAddonAndIcon";
+import {
+  LevelAndHelperText,
+  LevelAndHelperTextCode,
+} from "./variant/LevelAndHelperText";
+import {
+  InputFieldWithLevel,
+  InputFieldWithLevelCode,
+} from "./variant/InputFieldWithLevel";
+import { textInputApiData } from "./TextInputApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Text Input component is a fundamental user interface element used for capturing text-based user input. It provides a designated area where users can enter text, such as words, numbers, or symbols, into an application or website. Text inputs are versatile and can be used for various purposes, including search bars, login forms, comment sections, and more.
+
+## Default Text Input
+
+The Default Text Input is a standard user interface element used for capturing text input from users.
+
+<CodePreview github="FormControls/TextInput.tsx" code={DefaultInputCode}>
+  <DefaultInput />
+</CodePreview>
+
+## Input Field With Level
+
+The Input Field With Level component enhances the standard text input by introducing hierarchical levels. This feature is particularly useful when capturing text input within a structured context.
+
+<CodePreview github="FormControls/TextInput.tsx" code={InputFieldWithLevelCode}>
+  <InputFieldWithLevel />
+</CodePreview>
+
+## Input Field With Helpertext
+
+The Input Field With Helper Text component includes a standard text input enhanced with informative helper text.
+
+<CodePreview github="FormControls/TextInput.tsx" code={LevelAndHelperTextCode}>
+  <LevelAndHelperText />
+</CodePreview>
+
+## Input With Icon
+
+The Input Field With Icon component combines a standard text input with an accompanying icon.Icons can provide context, suggest input type, or offer additional information to users.
+
+<CodePreview github="FormControls/TextInput.tsx" code={InputWithIconCode}>
+  <InputWithIcon />
+</CodePreview>
+
+## Input With Addon
+
+The Input Field With Addon component pairs a standard text input with a functional addon element. This addon can be positioned on either the `left` or `right` side of the input field.
+
+<CodePreview github="FormControls/TextInput.tsx" code={InputWithAddonCode}>
+  <InputWithAddon />
+</CodePreview>
+
+## Input With Addon And Icon
+
+The Input With Addon and Icon component offers a comprehensive input experience by combining an icon and a functional addon element.
+
+<CodePreview
+  github="FormControls/TextInput.tsx"
+  code={InputWithAddonAndIconCode}
+>
+  <InputWithAddonAndIcon />
+</CodePreview>
+
+## Invalid Input Field URL
+
+The Input Field with URL component combines various elements to facilitate URL input. It includes a label to provide context, a text input field for entering the URL.
+
+<CodePreview github="FormControls/TextInput.tsx" code={InputFieldURLCode}>
+  <InputFieldURL />
+</CodePreview>
+
+## Input Field Color Variant
+
+The Input Field with Color Variant component offers a customizable input experience by incorporating color variations.Available color variants for the input field are : `gray` `info` `success` `error` and `warning`
+
+<CodePreview github="FormControls/TextInput.tsx" code={InputColorVariantCode}>
+  <InputColorVariant />
+</CodePreview>
+
+## Input Without Border
+
+The Borderless Input Field component offers a minimalist approach to text input by removing the standard border. To do that, you need to add a props called `border={false}`.
+
+<CodePreview github="FormControls/TextInput.tsx" code={InputWithOutBorderCode}>
+  <InputWithOutBorder />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the text input component
+
+<ComponentApi data={textInputApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.formControls.textInput} />

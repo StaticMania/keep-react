@@ -1,0 +1,93 @@
+import {
+  DefaultAccordion,
+  DefaultAccordionCode,
+} from "./variant/DefaultAccordion";
+import {
+  AccordionCollapseAll,
+  AccordionCollapseAllCode,
+} from "./variant/AccordionCollapseAll";
+import {
+  AccordionWithLeftSideIcon,
+  AccordionWithLeftSideIconCode,
+} from "./variant/AccordionWithLeftSideIcon";
+import {
+  AccordionAlwaysOpen,
+  AccordionAlwaysOpenCode,
+} from "./variant/AccordionAlwaysOpen";
+import {
+  DisabledAccordionCode,
+  DisabledAccordion,
+} from "./variant/DisabledAccordion";
+import {
+  AccordionWithCustomIcon,
+  AccordionWithCustomIconCode,
+} from "./variant/AccordionWithCustomIcon";
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+import { accordionApiData } from "./accordionApi";
+
+## Table of Contents
+
+The Accordion Component in the Keep React allows you to create collapsible sections of content, commonly known as accordions. Users can toggle the visibility of the content by clicking on the disclosure button. With customizable options for the theme, open state, type, and state, you can create accordion components that fit seamlessly into your design and provide an intuitive user experience.
+
+## Default Accordion
+
+The Default Accordion Component allows you to craft collapsible content sections. Users can reveal and hide the content by simply clicking on the disclosure button.
+
+<CodePreview github="" code={DefaultAccordionCode} github="Accordion">
+  <DefaultAccordion />
+</CodePreview>
+
+## Controlling Collapse Behavior
+
+The `collapseAll` property lets you control the initial state of accordion panels. When set to `true`, all panels are collapsed by default. Users can then expand individual panels as needed.
+
+<CodePreview github="Accordion" code={AccordionCollapseAllCode}>
+  <AccordionCollapseAll />
+</CodePreview>
+
+## Visual Context with Left-Side Icons
+
+Using the `iconPosition="left"` property in the AccordionPanel, you can position icons on the left side of the panel header. This allows you to offer context or indicate the content within the panel.
+
+<CodePreview github="Accordion" code={AccordionWithLeftSideIconCode}>
+  <AccordionWithLeftSideIcon />
+</CodePreview>
+
+## Customizing Icons
+
+If you prefer custom icons, you have the freedom to choose your preferred icons for the accordion's open and close states. Utilize the `openIcon` and `closeIcon` props for this purpose.
+
+<CodePreview github="Accordion" code={AccordionWithCustomIconCode}>
+  <AccordionWithCustomIcon />
+</CodePreview>
+
+## Panels That Stay Open
+
+With the `alwaysOpen={true}` property, you can configure all panels to remain expanded. This eliminates the need for users to manually toggle panels, ensuring all content is consistently visible.
+
+<CodePreview github="Accordion" code={AccordionAlwaysOpenCode}>
+  <AccordionAlwaysOpen />
+</CodePreview>
+
+## Disabled Accordions
+
+If you need to control which panels users can interact with, the `disabled` property on specific AccordionPanel components makes certain panels non-interactive.
+
+<CodePreview github="Accordion" code={DisabledAccordionCode}>
+  <DisabledAccordion />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the Accordion component
+
+<ComponentApi data={accordionApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.accordion} />

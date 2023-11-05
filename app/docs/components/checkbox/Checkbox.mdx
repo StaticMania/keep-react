@@ -1,0 +1,58 @@
+import {
+  DefaultCheckbox,
+  DefaultCheckboxCode,
+} from "./variant/DefaultCheckbox";
+import {
+  CheckboxVariant,
+  CheckboxVariantCode,
+} from "./variant/CheckboxVariant";
+import {
+  DisabledCheckbox,
+  DisabledCheckboxCode,
+} from "./variant/DisabledCheckbox";
+
+import { CheckBoxApiData } from "./CheckboxApi";
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Checkbox component is a user interface element that allows users to toggle between two states: checked and unchecked. Checkboxes are commonly used in forms, lists, and interactive interfaces to enable users to make multiple selections or indicate their preferences.
+
+## Default Checkbox
+
+The default checkbox is a square checkbox that can be checked or unchecked.
+
+<CodePreview github="CheckBox" code={DefaultCheckboxCode}>
+  <DefaultCheckbox />
+</CodePreview>
+
+## Checkbox Variant
+
+The Checkbox component offers two variants: `square` and `circle`. You can use the `variant` prop to specify the desired variant.
+
+<CodePreview github="CheckBox" code={CheckboxVariantCode}>
+  <CheckboxVariant />
+</CodePreview>
+
+## Disabled Checkbox
+
+You can disable the checkbox by setting the `disabled` prop to `true`.
+
+<CodePreview github="CheckBox" code={DisabledCheckboxCode}>
+  <DisabledCheckbox />
+</CodePreview>
+
+## API Reference
+
+Here is a list of the props that you can pass to the Checkbox component:
+
+<ComponentApi data={CheckBoxApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.checkbox} />

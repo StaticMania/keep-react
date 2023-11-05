@@ -1,0 +1,79 @@
+import {
+  DefaultTextArea,
+  DefaultTextAreaCode,
+} from "./variant/DefaultTextArea";
+import {
+  ColorVariantOfTextArea,
+  ColorVariantOfTextAreaCode,
+} from "./variant/ColorVariantOfTextArea";
+import {
+  TextAreaWithOutBorder,
+  TextAreaWithOutBorderCode,
+} from "./variant/TextAreaWithOutBorder";
+import {
+  TextAreaWithHelperText,
+  TextAreaWithHelperTextCode,
+} from "./variant/TextAreaWithHelperText";
+import { textareaApiData } from "./TextAreaApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Textarea Input Component is a user interface element used to collect and display multiline text input from users. It provides an expandable box where users can enter a larger amount of text, such as comments, descriptions, or messages.
+
+## Default TextArea
+
+The Default TextArea is a simple and versatile component that provides users with a larger text input area.
+
+<CodePreview github="FormControls/Textarea.tsx" code={DefaultTextAreaCode}>
+  <DefaultTextArea />
+</CodePreview>
+
+## Color variant Of Text Area
+
+The Text Area component in our design system offers different color variants to match your UI's visual style and provide additional context. You can choose from the following color options: `"gray"` `"info"` `"error"` `"warning"` and `"success"`.
+
+<CodePreview
+  github="FormControls/Textarea.tsx"
+  code={ColorVariantOfTextAreaCode}
+>
+  <ColorVariantOfTextArea />
+</CodePreview>
+
+## Text Area Without Border
+
+You can easily create a TextArea without a border by setting the `border` prop to `false`.
+
+<CodePreview
+  github="FormControls/Textarea.tsx"
+  code={TextAreaWithOutBorderCode}
+>
+  <TextAreaWithOutBorder />
+</CodePreview>
+
+## Text Area With Helper Text
+
+It will be displayed below the TextArea to provide additional guidance or context for the user. You can add a helperText using the `helperText` prop in the TextArea component.
+
+<CodePreview
+  github="FormControls/Textarea.tsx"
+  code={TextAreaWithHelperTextCode}
+>
+  <TextAreaWithHelperText />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the Text Area component
+
+<ComponentApi data={textareaApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.formControls.textarea} />

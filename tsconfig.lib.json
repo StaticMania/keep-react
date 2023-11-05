@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "CommonJS",
+    "outDir": "./lib/cjs"
+  },
+  "exclude": ["**/*.stories.tsx"],
+  "include": ["./src/"]
+}

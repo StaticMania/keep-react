@@ -1,0 +1,52 @@
+import {
+  DefaultButtonGroup,
+  DefaultButtonGroupCode,
+} from "./variant/DefaultButtonGroup";
+import {
+  ButtonGroupWithIcon,
+  ButtonGroupWithIconCode,
+} from "./variant/ButtonGroupWithIcon";
+
+import {
+  ButtonGroupWithOnlyIcon,
+  ButtonGroupWithOnlyIconCode,
+} from "./variant/ButtonGroupWithOnlyIcon";
+
+import { buttonApiData } from "../button/buttonApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Button Group component in the Keep React allows you to group multiple buttons together, creating a visually coherent and organized user interface. By using this component, you can ensure that related actions are grouped together, enhancing the user experience and promoting a clear user flow.
+
+## Default Button Group
+
+The Button Group component lets you group multiple buttons together, creating a visually cohesive and organized user interface. By using this component, you can ensure that related actions are grouped, enhancing the user experience and providing a clear user flow.
+
+<CodePreview github="Button/ButtonGroup.tsx" code={DefaultButtonGroupCode}>
+  <DefaultButtonGroup />
+</CodePreview>
+
+## Button Group with Icon
+
+The Button Group component with icons allows you to create a group of buttons, each accompanied by an icon. This arrangement visually represents different actions and enhances the user experience by providing clear and recognizable icons alongside the corresponding buttons.
+
+<CodePreview github="Button/ButtonGroup.tsx" code={ButtonGroupWithIconCode}>
+  <ButtonGroupWithIcon />
+</CodePreview>
+
+## Button Group with only icon
+
+The Button Group component with only icons allows you to create a compact and visually appealing group of buttons, each featuring an icon. This layout is particularly useful when you want to provide users with quick and easily recognizable actions without the need for text labels.
+
+<CodePreview github="Button/ButtonGroup.tsx" code={ButtonGroupWithOnlyIconCode}>
+  <ButtonGroupWithOnlyIcon />
+</CodePreview>
+
+## Reference
+
+To access the available props for button and customize their themes, please follow this documentation [Button](https://react.keepdesign.io/docs/components/button) .

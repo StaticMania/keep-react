@@ -1,0 +1,61 @@
+import { DefaultRating, DefaultRatingCode } from "./variant/DefaultRating";
+import { VariantOfRating, VariantOfRatingCode } from "./variant/RatingVariant";
+import { RatingTypes, RatingTypesCode } from "./variant/RatingTypes";
+import {
+  RatingWithProgress,
+  RatingWithProgressCode,
+} from "./variant/RatingWithProgress";
+import { RatingDataApi } from "./ratingApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Rating Component in the Keep React allows users to provide ratings for various items or content. It provides a visual representation of the rating using a set of stars or other symbols. With customizable options for the rating status, you can create rating components that accurately reflect user feedback.
+
+## Default Rating
+
+The "Default Rating" is a pre-configured or initial rating value within the context of a rating component. It represents the default score assigned to an item or content when a user hasn't provided a specific rating.
+
+<CodePreview github="Rating" code={DefaultRatingCode}>
+  <DefaultRating />
+</CodePreview>
+
+## Rating Variant
+
+Rating Variant refers to the different visual styles or appearances that can be applied to a rating component in order to match various design preferences or themes. Each variant alters the way the rating symbols.The variants you've mentioned, `fill` `regular` `duotone` `bold` `light` and `thin` likely correspond to different styles.
+
+<CodePreview github="Rating" code={VariantOfRatingCode}>
+  <VariantOfRating />
+</CodePreview>
+
+## Rating Types
+
+Rating Type refers to the specific behavior and appearance of individual rating symbols (such as stars) within a rating component. The two types you've mentioned, `starType` being `full` or `half` define how each rating symbol is displayed based on the level of rating assigned.
+
+<CodePreview github="Rating" code={RatingTypesCode}>
+  <RatingTypes />
+</CodePreview>
+
+## Rating With Progress
+
+The Rating component appears to be used to render each rating item. The `percentFilled` prop is utilized to indicate the percentage of the rating that should be filled. This creates a visually meaningful representation of each rating with varying levels of filled content, akin to a progress bar that indicates the level of the rating's completeness.
+
+<CodePreview github="Rating" code={RatingWithProgressCode}>
+  <RatingWithProgress />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the rating component
+
+<ComponentApi data={RatingDataApi} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.rating} />

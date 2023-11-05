@@ -1,0 +1,78 @@
+import { DefaultAvatar, DefaultAvatarCode } from "./variant/DefaultAvatar";
+import { ShapeAvatar, ShapeAvatarCode } from "./variant/ShapeAvatar";
+import { SizesOfAvatar, SizesOfAvatarCode } from "./variant/SizesOfAvatar";
+import { ImageOfAvatar, ImageOfAvatarCode } from "./variant/ImageOfAvatar";
+import { StatusOfAvatar, StatusOfAvatarCode } from "./variant/StatusOfAvatar";
+import {
+  NotificationOfAvatar,
+  NotificationOfAvatarCode,
+} from "./variant/NotificationOfAvatar";
+import { avatarApiData } from "./avatarApi";
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Avatar component in the Keep React allows you to display user avatars or profile images in a consistent and visually appealing manner. With customizable options for placeholders, shapes, status icons, and sizes, you can create versatile avatars to suit your design needs.
+
+## Default Avatar
+
+When you enable the placeholder option, a default avatar image appears when there's no user image available.
+
+<CodePreview github="Avatar/Avatar.tsx" code={DefaultAvatarCode}>
+  <DefaultAvatar />
+</CodePreview>
+
+## Avatar Shapes
+
+Choose from three different avatar shapes: round, round square, or square. Just use the `shape` prop with values: `"circle"`, `"rounded"`, or `"square"`.
+
+<CodePreview github="Avatar/Avatar.tsx" code={ShapeAvatarCode}>
+  <ShapeAvatar />
+</CodePreview>
+
+## Avatar Sizes
+
+There are various avatar sizes to fit your design. To change the size, use the `size` prop with values: `xs`, `sm`, `md`, `lg`, `xl`, or `2xl`.
+
+<CodePreview github="Avatar/Avatar.tsx" code={SizesOfAvatarCode}>
+  <SizesOfAvatar />
+</CodePreview>
+
+## Using User Images
+
+Instead of an icon, you can display a user's image. Use the `img` prop and provide the path to the user's image, whether it's a local or remote URL.
+
+<CodePreview github="Avatar/Avatar.tsx" code={ImageOfAvatarCode}>
+  <ImageOfAvatar />
+</CodePreview>
+
+## Avatar Status
+
+The avatar's status reflects the user's availability. You can show the user's status using the `status` prop with values: `online`, `offline`, `away`, or `busy`. You can also customize the status position with the `statusPosition` prop, which accepts values: `bottom-left`, `bottom-right`, `top-left`, or `top-right`.
+
+<CodePreview github="Avatar/Avatar.tsx" code={StatusOfAvatarCode}>
+  <StatusOfAvatar />
+</CodePreview>
+
+## Avatar Notifications
+
+You can use the avatar to indicate notifications for the user. Use the `status` prop with values: `"online"`, `"offline"`, `"away"`, or `"busy"` and set the `statusType` prop to `notification` to display notification indicators.
+
+<CodePreview github="Avatar/Avatar.tsx" code={NotificationOfAvatarCode}>
+  <NotificationOfAvatar />
+</CodePreview>
+
+## API Reference
+
+For detailed information about all the props and options, refer to the API section below.
+
+<ComponentApi data={avatarApiData} />
+
+## Theme Customization
+
+Explore how to customize the appearance of avatars and other components in our Theme documentation.
+
+<CssThemePreview code={useTheme().theme.avatar} />

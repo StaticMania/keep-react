@@ -1,0 +1,74 @@
+import { KeepButtonTypeCode, KeepButtonType } from "./variant/KeepButtonType";
+import {
+  KeepButtonColor,
+  KeepButtonColorCode,
+} from "./variant/KeepButtonColor";
+import { KeepButtonSize, KeepButtonSizeCode } from "./variant/KeepButtonSize";
+import {
+  KeepButtonShape,
+  KeepButtonShapeCode,
+} from "./variant/KeepButtonShape";
+import { KeepButtonIcon, KeepButtonIconCode } from "./variant/KeepButtonIcon";
+
+import { buttonApiData } from "./buttonApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Buttons component in the Keep React offers a variety of button types, sizes, and states to meet your design needs. With options for icons and destructiveness, you can create visually appealing and functional buttons for your product.
+
+## Button Types Variant
+
+There are lots of button types for the best fits design of your application. Available types : `default` `primary` `dashed` `text` `linkPrimary` `linkGray` `outlineGray` and `outlinePrimary`.
+
+<CodePreview github="Button" code={KeepButtonTypeCode}>
+  <KeepButtonType />
+</CodePreview>
+
+## Button Colors Variant
+
+Here are the available color variants for the Button component, each with its own unique color scheme: `error` `info` `success` and `warning`.
+
+<CodePreview github="Button" code={KeepButtonColorCode}>
+  <KeepButtonColor />
+</CodePreview>
+
+## Button Sizes Variant
+
+Here are the available size options for the Button component : `xs` `sm` `md` `lg` `xl` and `2xl`.
+
+<CodePreview github="Button" code={KeepButtonSizeCode}>
+  <KeepButtonSize />
+</CodePreview>
+
+## Button Shape Variant
+
+There are two available button shape variant: `pill` and `circle` props for added variety and style.
+
+<CodePreview github="Button" code={KeepButtonShapeCode}>
+  <KeepButtonShape />
+</CodePreview>
+
+## Button With Icon
+
+Our design system, you have the flexibility to position icons on either the `left` or `right` side of the button.
+
+<CodePreview github="Button" code={KeepButtonIconCode}>
+  <KeepButtonIcon />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the button component
+
+<ComponentApi data={buttonApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.button} />

@@ -1,0 +1,71 @@
+import { DefaultModal, DefaultModalCode } from "./variant/DefaultModal";
+import { HistoryModal, HistoryModalCode } from "./variant/HistoryModal";
+import { ModalPosition, ModalPositionCode } from "./variant/ModalPosition";
+import { SizesOfModal, SizesOfModalCode } from "./variant/SizesOfModal";
+import {
+  ConfirmationModal,
+  ConfirmationModalCode,
+} from "./variant/ConfirmationModal";
+import { modalApiData } from "./modalApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+A modal component is a user interface element commonly used in web and mobile applications to display focused content or interactions that temporarily overlay the main screen. Modal components typically appear as a small window or dialog box that appears on top of the existing content, effectively blocking interaction with the underlying interface until the modal is dismissed.
+
+## Default Modal
+
+Modal components typically appear as a small window or dialog box that appears on top of the existing content, effectively "blocking" interaction with the underlying interface until the modal is dismissed.
+
+<CodePreview github="Modal" code={DefaultModalCode}>
+  <DefaultModal />
+</CodePreview>
+
+## Confirmation Modal
+
+Modal help to maintain context and prevent users from navigating away or performing other actions while the modal is active. Modals can be closed by clicking an overlay area outside the modal, pressing an "X" or "Close" button, or completing a specific action within the modal content.
+
+<CodePreview github="Modal" code={ConfirmationModalCode}>
+  <ConfirmationModal />
+</CodePreview>
+
+## History Modal
+
+A "History Modal" seems to be a component or feature that captures and displays a user's historical interactions or actions within a web application. This type of modal could serve as a summary or log of a user's past activities, possibly including login details and other information saved on the browser.
+
+<CodePreview github="Modal" code={HistoryModalCode}>
+  <HistoryModal />
+</CodePreview>
+
+## All The Position of Modal
+
+These positioning options ensure that the modal is displayed in a way that best suits your layout and user experience. The available positions for the modal are: `bottom-left`, `bottom-right`, `bottom-center`, `top-left`, `top-center`, `top-right`, `center-left`, `center`, and `center-right`. You can select the appropriate position to align the modal with your design intentions and provide a comfortable viewing experience for your users.
+
+<CodePreview github="Modal" code={ModalPositionCode}>
+  <ModalPosition />
+</CodePreview>
+
+## All The Size of Modal
+
+These sizes offer flexibility when designing your modals, ensuring they align with your overall design while maintaining consistency across different parts of your application. Here is all available sizes for the modal:
+`sm` `md` `lg` `xl` `2xl` `3xl` `4xl` `5xl` `6xl ` and `7xl`
+
+<CodePreview github="Modal" code={SizesOfModalCode}>
+  <SizesOfModal />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the modal component
+
+<ComponentApi data={modalApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.modal} />

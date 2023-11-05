@@ -1,0 +1,211 @@
+#mainContent > h2 {
+  @apply font-semibold leading-6 tracking-[-0.3px] text-lg text-slate-900 pb-2 border-b border-b-slate-200;
+}
+#mainContent > p {
+  @apply font-normal text-sm md:text-base leading-6 tracking-[-0.3px] text-slate-700 mt-4;
+}
+
+#mainContent > p a {
+  @apply text-primary-600 underline;
+}
+#mainContent > ul li {
+  @apply font-normal text-base text-slate-500 mb-3 mt-4;
+}
+
+#mainContent code {
+  @apply bg-slate-50  py-1 px-2 rounded;
+}
+
+#mainContent pre > code {
+  @apply !pl-0;
+}
+#mainContent #cssCode {
+  @apply bg-transparent;
+}
+
+#mainContent #sectionLink {
+  @apply ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100;
+}
+
+#mainContent > #table-of-contents {
+  @apply hidden;
+}
+
+#mainContent > #table-of-contents + ul {
+  @apply hidden;
+}
+
+#visible-table-of-contents {
+  @apply list-none pl-0;
+}
+
+#visible-table-of-contents ul ul li a {
+  @apply pl-6;
+}
+
+#visible-table-of-contents ul ul ul li a {
+  @apply pl-9;
+}
+
+#visible-table-of-contents + ul {
+  @apply -ml-3 list-outside list-none pl-0;
+}
+
+#visible-table-of-contents ul ul {
+  @apply pt-3;
+}
+
+#visible-table-of-contents li {
+  @apply my-2 -ml-px pl-3 text-slate-500 border-l leading-7 tracking-[-0.2px] text-sm border-l-transparent hover:border-l-slate-900 hover:text-slate-900  active:text-slate-900;
+}
+
+#visible-table-of-contents li:has(.active-link) {
+  @apply text-slate-900 border-l-slate-900 hover:text-slate-900  active:text-slate-900 transition-colors duration-300;
+}
+
+#linkPage::-webkit-scrollbar {
+  width: 4px !important;
+}
+#linkPage::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+#linkPage::-webkit-scrollbar-thumb {
+  background-color: #e9eff6 !important;
+  border-radius: 10px;
+}
+
+.tabActive {
+  @apply !text-slate-900 border-b-slate-900;
+}
+
+/* Search */
+
+.DocSearch .DocSearch-Modal {
+  @apply fixed left-0 right-0 md:static mx-auto mt-4 max-h-[calc(100vh-5rem)] w-full max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl lg:mt-[4rem] lg:max-h-none lg:max-w-xl;
+}
+
+.DocSearch.DocSearch-Button {
+  @apply bg-transparent  h-0 m-0 p-0 hover:ring-0 lg:py-[3px] lg:hover:bg-primary-50 lg:h-11 lg:bg-primary-25 lg:px-3 lg:w-64 lg:rounded-md;
+}
+
+.DocSearch .DocSearch-Button-Placeholder {
+  @apply text-base font-normal text-slate-500;
+}
+
+.DocSearch .DocSearch-Search-Icon {
+  @apply lg:h-4 h-5 lg:w-4 w-5 text-transparent  md:mr-1 !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%236A7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
+}
+
+.dark .DocSearch .DocSearch-Search-Icon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="%239BA3AF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/></svg>');
+}
+
+.DocSearch .DocSearch-Button-Keys {
+  @apply hidden;
+}
+
+.DocSearch .DocSearch-Button-Key:first-child {
+  @apply mr-px text-base;
+}
+
+.DocSearch .DocSearch-Button-Key {
+  @apply m-0 w-auto bg-none pb-0 pt-1 text-xs font-normal text-slate-500 shadow-none;
+}
+
+.DocSearch.DocSearch-Button .DocSearch-Search-Icon {
+  @apply text-slate-500;
+}
+
+.DocSearch .DocSearch-Hit-icon {
+  @apply hidden;
+}
+
+.DocSearch .DocSearch-Hits mark {
+  @apply text-slate-600 decoration-cyan-600 decoration-2 underline-offset-2;
+}
+
+.DocSearch .DocSearch-Hit[aria-selected="true"] a {
+  @apply bg-cyan-700;
+}
+
+.DocSearch .DocSearch-Hit-source {
+  @apply bg-white pb-1 text-gray-700;
+}
+
+.DocSearch.DocSearch-Container {
+  @apply bg-gray-900 bg-opacity-50 min-h-screen left-0 fixed top-0 max-w-[100vw] z-[200];
+}
+
+.DocSearch .DocSearch-Modal {
+  @apply shadow-none;
+}
+
+.DocSearch .DocSearch-SearchBar {
+  @apply border-b border-slate-100 p-0;
+}
+
+.DocSearch .DocSearch-Form {
+  @apply shadow-none;
+}
+
+.DocSearch .DocSearch-Input {
+  @apply text-sm text-slate-500 shadow-none focus:shadow-none focus:outline-none focus:ring-0;
+}
+
+.DocSearch .DocSearch-LoadingIndicator svg,
+.DocSearch .DocSearch-MagnifierLabel svg {
+  @apply h-4 w-4;
+}
+
+.DocSearch .DocSearch-Commands {
+  @apply hidden;
+}
+
+.DocSearch .DocSearch-Footer {
+  @apply h-12 border-t border-slate-100 shadow-none;
+}
+
+.DocSearch .DocSearch-Dropdown {
+  @apply bg-white;
+}
+
+.DocSearch .DocSearch-Hit {
+  @apply pb-2 shadow-none;
+}
+
+.DocSearch .DocSearch-Hit a {
+  @apply rounded-md !bg-slate-100  shadow-none;
+}
+.DocSearch .DocSearch-Hit[aria-selected="true"] a {
+  @apply rounded-md !bg-slate-900  shadow-none;
+}
+.DocSearch .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-Select-Icon,
+.DocSearch .DocSearch-Hit-action-button {
+  @apply hidden;
+}
+
+.DocSearch .DocSearch-Hit .DocSearch-Hit-action:last-child {
+  @apply h-5 w-5;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11 9 3 3-3 3' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.DocSearch
+  .DocSearch-Hit[aria-selected="true"]
+  .DocSearch-Hit-action:last-child {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11 9 3 3-3 3' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.DocSearch .DocSearch-Screen-Icon,
+.DocSearch .DocSearch-NoResults-Prefill-List,
+.DocSearch .DocSearch-Cancel {
+  @apply hidden;
+}
+
+.DocSearch .DocSearch-Title {
+  @apply mb-1 text-lg font-normal text-slate-700;
+}
+
+.DocSearch .DocSearch-Reset {
+  @apply hover:text-black;
+}

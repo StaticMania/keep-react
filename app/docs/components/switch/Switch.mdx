@@ -1,0 +1,74 @@
+import { DefaultSwitch, DefaultSwitchCode } from "./variant/DefaultSwitch";
+import { SwitchSizes, SwitchSizesCode } from "./variant/SwitchSizes";
+import { DisabledSwitch, DisabledSwitchCode } from "./variant/DisabledSwitch";
+import {
+  SwitchWithBackground,
+  SwitchWithBackgroundCode,
+} from "./variant/SwitchWithBackground";
+import { SwitchWithIcon, SwitchWithIconCode } from "./variant/SwitchWithIcon";
+import { toggleApiData } from "./SwitchApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Toggle Switch component provides a user-friendly way to enable or disable a setting or feature. It presents a visual representation of two states, typically "on" and "off," allowing users to easily toggle between them. The Toggle Switch component is highly versatile and can be integrated into various user interfaces to enhance user interactions and control options.
+
+## Default switch
+
+The "Default Switch" component provides a visual representation of two states, typically "on" and "off," allowing users to effortlessly toggle between them.
+
+<CodePreview github="Switch" code={DefaultSwitchCode}>
+  <DefaultSwitch />
+</CodePreview>
+
+## Switch With Icon
+
+Enhance the visual appeal of the switch by adding icons. Simply enable the withIcon prop with withIcon={true}.
+
+<CodePreview github="Switch" code={SwitchWithIconCode}>
+  <SwitchWithIcon />
+</CodePreview>
+
+## Switch With Background
+
+Elevate the design by choosing between two background color variants: `bgColor="primary"` and `bgColor="slate"`.
+
+<CodePreview github="Switch" code={SwitchWithBackgroundCode}>
+  <SwitchWithBackground />
+</CodePreview>
+
+## Sizes of Switch
+
+Adapt the switch size to suit your design with three size variants: `sm`, `md`, and `lg`. Simply set the size prop to `"sm"`, `"md"`, or `"lg"`.
+
+<CodePreview github="Switch" code={SwitchSizesCode}>
+  <SwitchSizes />
+</CodePreview>
+
+## Disabled Switch
+
+Disable the switch component by utilizing the `disabled` prop with `disabled={true}`.
+
+<CodePreview github="Switch" code={DisabledSwitchCode}>
+  <DisabledSwitch />
+</CodePreview>
+
+## API Reference
+
+Refer to the API documentation for detailed information about the Toggle Switch component.
+
+<ComponentApi data={toggleApiData} />
+
+## Theme
+
+To achieve the desired appearance for your application, explore the Theme documentation to customize the look of the components.
+
+<CssThemePreview code={useTheme().theme.switch} />
+
+## Reference
+
+Our switch component is built using the `@headlessui/react` package. For more information , follow the documentation [@headlessui/react](https://headlessui.com).
