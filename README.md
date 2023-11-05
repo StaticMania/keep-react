@@ -1,10 +1,8 @@
 # KEEP REACT
 
-![Keep React Logo](https://staticmania.cdn.prismic.io/staticmania/8ab09481-0fe9-4f3e-b795-e825c13e68fd_keepLogo.svg)
-
 Keep React is an open-source component library built on Tailwind CSS and React.js. It provides a versatile set of pre-designed UI components that enable developers to streamline the creation of modern, responsive, and visually appealing web applications.
 
-![Keep React](https://images.prismic.io/staticmania/740a2fc6-2ae3-4d39-8fbb-555451b21738_mobile.png?auto=compress,format)
+![Keep React](https://images.prismic.io/staticmania/468819ab-dcc8-4393-85b2-b93913eee369_For+Github.png?auto=compress,format)
 
 ## Table of Contents
 
@@ -20,7 +18,7 @@ Keep React is an open-source component library built on Tailwind CSS and React.j
 ### Vite React Application
 
 After creating a React application with Vite, follow these steps to
-install Tailwind CSS:
+install Keep React:
 
 `Step 1:` Install Tailwind CSS
 
@@ -45,24 +43,17 @@ yarn add keep-react
 following code:
 
 ```
+import keepPreset from "keep-react/src/keep-preset.js";
 export default {
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
-      "node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
-    ],
-    presets: [require("keep-react/lib/cjs/theme/keep-preset.js")],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  }
+  content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
+  presets: [keepPreset],
+}
 ```
 
 `Step 4:` Add Tailwind CSS to index.css File:
 
 ```
-@import "keep-react/lib/cjs/theme/main.min.css";
+@import "keep-react/src/main.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -73,7 +64,7 @@ export default {
 You can easily integrate `keep-react` into your Next.js application. Starting from Next.js version 13.4, the app router automatically installs Tailwind CSS, eliminating the need for a separate Tailwind CSS installation. If you have already installed Tailwind CSS as part of the Next.js application setup, you can proceed with Step 2. Otherwise, start with Step 1.
 
 After creating a Next JS application, follow these steps to
-install Tailwind CSS:
+install Keep React:
 
 `Step 1:` Install Tailwind CSS
 
@@ -99,22 +90,15 @@ following code
 
 ```
 module.exports = {
-      content: [
-        "node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./app/**/*.{js,ts,jsx,tsx,mdx}",
-      ],
-      presets: [require("keep-react/lib/cjs/theme/keep-preset.js")],
-      theme: {},
-      plugins: [],
+    content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
+    presets: [require("keep-react/src/keep-preset.js")],
 };
 ```
 
 `Step 4:` Add Tailwind CSS to globals.css File:
 
 ```
-@import "keep-react/lib/cjs/theme/main.min.css";
+@import "keep-react/src/main.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -125,6 +109,7 @@ Congratulations! You have successfully installed the Keep React. Now you can imp
 ## usage
 
 ```
+'use client';
 import { Button } from "keep-react";
   const App = () => {
     return (

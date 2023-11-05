@@ -388,17 +388,11 @@ export const navbarRoutes: routerPath[] = [
   {
     id: 1,
     href: "https://keepdesign.io",
-    name: "Home",
-    redirect: true,
-  },
-  {
-    id: 2,
-    href: "https://www.figma.com/file/J2i6VhncmepyLt8OS7i0GQ/Keep-Design-System---Pro-Version?type=design&node-id=5608-101847&mode=design&t=JLGK6sLhkhrpVetM-0",
     name: "Figma",
     redirect: true,
   },
   {
-    id: 3,
+    id: 2,
     href: "/docs/getting-started/Introduction",
     name: "Documentation",
     redirect: false,

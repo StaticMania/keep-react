@@ -17,7 +17,7 @@ const SidebarWithBranding = () => {
       aria-label="Sidebar with multi-level dropdown example"
       className="max-w-xs"
     >
-      <Sidebar.Logo href="" img="/images/keepLogo.svg" imgAlt="Keep logo" />
+      <Sidebar.Logo href="" img="/images/keep.svg" imgAlt="Keep logo" />
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
@@ -69,7 +69,7 @@ import {
 export const SidebarComponent = () => {
   return (
     <Sidebar aria-label="Sidebar with multi-level dropdown example">
-      <Sidebar.Logo href="" img="/images/company/logo.png" imgAlt="Keep logo" />
+      <Sidebar.Logo href="" img="/images/keep.svg" imgAlt="Keep logo" />
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>

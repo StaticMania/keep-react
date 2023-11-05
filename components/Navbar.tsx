@@ -36,7 +36,7 @@ const Navbar = () => {
               <Image
                 width="113"
                 height="40"
-                src="/images/keepLogo.svg"
+                src="/images/keep.svg"
                 alt="Keep React"
               />
             </Link>

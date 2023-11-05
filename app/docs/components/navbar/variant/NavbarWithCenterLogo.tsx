@@ -16,12 +16,7 @@ const NavbarWithCenterLogo = () => {
           <Navbar.Link linkName="Blogs" />
         </Navbar.Container>
         <Navbar.Brand>
-          <Image
-            src="/images/keepLogo.svg"
-            alt="keep"
-            width="100"
-            height="40"
-          />
+          <Image src="/images/keep.svg" alt="keep" width="100" height="40" />
         </Navbar.Brand>
 
         <Navbar.Collapse collapseType="sidebar">
@@ -74,7 +69,7 @@ export const NavbarComponent = () => {
         </Navbar.Container>
         <Navbar.Brand>
           <Image
-            src="/images/keepLogo.svg"
+            src="/images/keep.svg"
             alt="keep"
             width="100"
             height="40"
