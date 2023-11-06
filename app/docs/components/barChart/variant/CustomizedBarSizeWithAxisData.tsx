@@ -59,7 +59,7 @@ export const BarComponent = () => {
       height={250}
       width={500}
       barSize={30}
-      barRadius={5}
+      barRadius={[4, 4, 0, 0]}
       dataKey="price"
       secondaryDataKey="sell"
       chartData={BarChartData}

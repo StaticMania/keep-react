@@ -90,7 +90,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
     <section className="2xl:container pt-12">
       <aside
         id="linkPage"
-        className="lg:block hidden fixed top-20 pt-8  z-20  left-0 lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] bg-white  overflow-y-auto h-screen border-r border-r-slate-100"
+        className="lg:block hidden fixed top-20 pt-8  z-20  left-0 lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] 4k:w-[calc(100%-78%)] bg-white  overflow-y-auto h-screen border-r border-r-slate-100"
       >
         <div className="pr-3 space-y-3 w-56 ml-auto">
           <Accordion
@@ -173,12 +173,12 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
           </Accordion>
         </div>
       </aside>
-      <main className="lg:pl-[calc(100vw-75vw)] lg:w-[calc(100vw-5vw)]  md:w-[calc(100vw-10vw)] mx-auto xl:pl-[calc(100vw-85vw)] xl:pr-[calc(100vw-95vw)] xl:w-[calc(100vw-25vw)] 2xl:pl-[calc(100vw-93vw)] 2xl:pr-[calc(100vw-98vw)] 2xl:w-[calc(100vw-40vw)]">
+      <main className="lg:pl-[calc(100vw-75vw)] lg:w-[calc(100vw-5vw)]  md:w-[calc(100vw-10vw)] mx-auto xl:pl-[calc(100vw-85vw)] xl:pr-[calc(100vw-95vw)] xl:w-[calc(100vw-25vw)] 2xl:pl-[calc(100vw-93vw)] 2xl:pr-[calc(100vw-98vw)] 2xl:w-[calc(100vw-40vw)] 4k:pl-[calc(100vw-100vw)] 4k:pr-[calc(100vw-95vw)] 4k:w-[calc(100vw-49vw)]">
         <div className="overflow-y-auto px-4 pb-10">{children}</div>
       </main>
       <aside
         id="linkPage"
-        className="xl:block hidden fixed z-20 top-16 bottom-0 lg:w-[calc(100vw-80vw)] xl:w-[calc(100vw-82vw)] 2xl:w-[calc(100vw-86vw)] right-[max(0px,calc(50%-51rem))] pt-12 overflow-y-auto h-[calc(100vh-3rem)]"
+        className="xl:block hidden fixed z-20 top-16 bottom-0 lg:w-[calc(100vw-80vw)] xl:w-[calc(100vw-82vw)] 2xl:w-[calc(100vw-86vw)] 4k:w-[calc(100vw-88vw)] right-[max(0px,calc(50%-51rem))] pt-12 overflow-y-auto h-[calc(100vh-3rem)]"
       >
         <div className="pl-5">
           <div className="flex flex-col justify-between overflow-y-auto">

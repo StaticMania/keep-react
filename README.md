@@ -125,7 +125,7 @@ The Keep React offers a wide range of components to build your user interfaces. 
 
 ## Contributing
 
-If you want to contribute to the Keep React, you can follow the [contributing guide](https://github.com/StaticMania/keep-react/blob/master/Contribute.md).
+If you want to contribute to the Keep React, you can follow the [contributing guide](https://github.com/StaticMania/keep-react/blob/main/Contribute.md).
 
 ## Figma
 
@@ -137,4 +137,4 @@ If you need access to Figma design files for the components, you can check out o
 
 The Keep-React name and logos are trademarks of StaticMania.
 
-[Read about the licensing terms](https://github.com/StaticMania/keep-react/blob/master/License)
+[Read about the licensing terms](https://github.com/StaticMania/keep-react/blob/main/License)

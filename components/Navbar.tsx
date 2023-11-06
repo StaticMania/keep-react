@@ -34,9 +34,9 @@ const Navbar = () => {
           <div className="flex items-center space-x-28">
             <Link href="/" className="flex">
               <Image
-                width="113"
-                height="40"
+                width={130}
                 src="/images/keep.svg"
+                height={53}
                 alt="Keep React"
               />
             </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
           <div className="lg:flex items-end gap-3 hidden">
             <button
               onClick={handleModal}
-              className="p-3 hover:bg-primary-50 bg-primary-25 rounded"
+              className="sm:p-3 hover:bg-primary-50 sm:bg-primary-25 rounded"
             >
               <span>
                 <MagnifyingGlass size={20} color="#455468" />
@@ -68,7 +68,7 @@ const Navbar = () => {
             <a
               href="https://github.com/StaticMania/keep-react"
               target="_blank"
-              className="p-3 hover:bg-primary-50 bg-primary-25 rounded"
+              className="sm:p-3 hover:bg-primary-50 sm:bg-primary-25 rounded"
             >
               <Image
                 src="/images/icon/github.svg"
@@ -80,7 +80,7 @@ const Navbar = () => {
             <a
               href="https://keep-storybook.vercel.app"
               target="_blank"
-              className="p-3 hover:bg-primary-50 bg-primary-25 rounded"
+              className="sm:p-3 hover:bg-primary-50 sm:bg-primary-25 rounded"
             >
               <svg
                 stroke="#FF4785"
@@ -105,7 +105,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center justify-between gap-3">
             <button
               onClick={handleModal}
-              className="p-2.5 hover:bg-primary-50 bg-primary-25 rounded"
+              className="sm:p-2.5 hover:bg-primary-50 sm:bg-primary-25 rounded"
             >
               <span>
                 <MagnifyingGlass size={20} color="#455468" />
@@ -115,7 +115,7 @@ const Navbar = () => {
             <a
               href="https://github.com/StaticMania/keep-react"
               target="_blank"
-              className="p-2.5 hover:bg-primary-50 bg-primary-25 rounded"
+              className="sm:p-2.5 hover:bg-primary-50 sm:bg-primary-25 rounded"
             >
               <Image
                 src="/images/icon/github.svg"
@@ -127,7 +127,7 @@ const Navbar = () => {
             <a
               href="https://keep-storybook.vercel.app"
               target="_blank"
-              className="p-2.5 hover:bg-primary-50 bg-primary-25 rounded"
+              className="sm:p-2.5 hover:bg-primary-50 sm:bg-primary-25 rounded"
             >
               <svg
                 stroke="#FF4785"

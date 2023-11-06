@@ -17,6 +17,13 @@ module.exports = {
         lg: "3rem",
         xl: "4rem",
         "2xl": "4rem",
+        "3xl": "5rem",
+      },
+    },
+
+    extend: {
+      screens: {
+        "4k": "1980px",
       },
     },
   },

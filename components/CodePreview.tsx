@@ -14,7 +14,7 @@ interface CodePreviewProps {
 const CodePreview = ({ children, code, github }: CodePreviewProps) => {
   const [active, setActive] = useState(0);
   const { copy, copyToClipboard } = useCopy();
-  const githubUrl = `https://github.com/StaticMania/keep-react/tree/master/src/components/${github}`;
+  const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/src/components/${github}`;
   return (
     <div className="border border-slate-200 rounded-md my-10 shadow-sm overflow-hidden w-full">
       <div className="flex text-center flex-wrap -mb-px bg-white border-slate-200 border-b px-5">
