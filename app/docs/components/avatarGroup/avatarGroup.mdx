@@ -1,0 +1,59 @@
+import {
+  DefaultAvatarGroupCode,
+  DefaultAvatarGroup,
+} from "./variant/DefaultAvatarGroup";
+import {
+  AvatarWithAddIcon,
+  AvatarWithAddIconCode,
+} from "./variant/AvatarWithAddIcon";
+import {
+  AvatarWithCounter,
+  AvatarWithCounterCode,
+} from "./variant/AvatarWithCounter";
+import {
+  AvatarWithPlusCounter,
+  AvatarWithPlusCounterCode,
+} from "./variant/AvatarWithAddCounter";
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+
+## Table of Contents
+
+The Keep React's Avatar component allows you to showcase user avatars or profile images consistently and aesthetically. With customizable choices for placeholders, shapes, status icons, and sizes, you can craft adaptable avatars to suit your design objectives.
+
+## Default Avatar Group
+
+The Avatar Group component simplifies the display of user avatars or profile images within a group.
+
+<CodePreview github="Avatar/AvatarGroup.tsx" code={DefaultAvatarGroupCode}>
+  <DefaultAvatarGroup />
+</CodePreview>
+
+## Avatar Group With Add Icon
+
+Improve user interactions with the Avatar Group by adding an icon for user addition. Showcase avatar images within the group, accompanied by a plus button icon, enabling users to add new members effortlessly.
+
+<CodePreview github="Avatar/AvatarGroup.tsx" code={AvatarWithAddIconCode}>
+  <AvatarWithAddIcon />
+</CodePreview>
+
+## Avatar Group With Counter
+
+The Avatar Group with Counter component exhibits a limited set of avatar images while representing the remaining users numerically with a label like `"+99"` or a similar indicator.
+
+<CodePreview github="Avatar/AvatarGroup.tsx" code={AvatarWithCounterCode}>
+  <AvatarWithCounter />
+</CodePreview>
+
+## Avatar Group With Plus Counter
+
+Enhance user engagement with the Avatar Group with Plus Counter feature. Display a concise collection of avatar images while indicating additional members with a numeric badge, such as `"+99"`.
+
+<CodePreview github="Avatar/AvatarGroup.tsx" code={AvatarWithPlusCounterCode}>
+  <AvatarWithPlusCounter />
+</CodePreview>
+
+## Reference
+
+To access the available props for avatars and customize their themes, please follow this documentation [Avatar](https://react.keepdesign.io/docs/components/avatar) .

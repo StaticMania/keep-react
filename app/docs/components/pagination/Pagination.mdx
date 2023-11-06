@@ -1,0 +1,71 @@
+import {
+  DefaultPagination,
+  DefaultPaginationCode,
+} from "./variant/DefaultPagination";
+import {
+  PaginationWithBorder,
+  PaginationWithBorderCode,
+} from "./variant/PaginationWithBorder";
+import {
+  PaginationWithInputPage,
+  PaginationWithInputPageCode,
+} from "./variant/PaginationWithInputPage";
+
+import {
+  PaginationWithRoundedPage,
+  PaginationWithRoundedPageCode,
+} from "./variant/PaginationWithRoundedPage";
+import { paginationApiData } from "./PaginationApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Pagination component provides a user-friendly way to navigate through large sets of content by breaking it down into manageable pages. It enhances user experience by allowing easy access to various sections of data or results, such as articles, search results, or product listings, through page numbers or next/previous controls.
+
+## Default Pagination
+
+There are two variants of next/previous buttons. You can change the variant with `prevNextShape` props, and available variants are: `"roundSquare"` and `"circle"`. Use the `iconWithOutText` prop to show only the icon in the button.
+
+<CodePreview github="Pagination" code={DefaultPaginationCode}>
+  <DefaultPagination />
+</CodePreview>
+
+## Pagination With Border
+
+Add borders to the pagination elements for a clear visual separation. To enable borders in the pagination elements, use the `paginateWithBorder={true}` prop.
+
+<CodePreview github="Pagination" code={PaginationWithBorderCode}>
+  <PaginationWithBorder />
+</CodePreview>
+
+## Pagination With Rounded Page
+
+This style uses rounded page numbers, providing a soft and friendly appearance. To achieve this circle active button, set the `activeCurrentPageShape="circle"` prop.
+
+<CodePreview github="Pagination" code={PaginationWithRoundedPageCode}>
+  <PaginationWithRoundedPage />
+</CodePreview>
+
+## Pagination With Input Page
+
+Allow users to input the page number they want to navigate to, enhancing the user experience. To enable this feature, use the `showGoToPaginate={true}` prop.
+
+<CodePreview github="Pagination" code={PaginationWithInputPageCode}>
+  <PaginationWithInputPage />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the Pagination component:
+
+<ComponentApi data={paginationApiData} />
+
+## Theme
+
+To customize the appearance of the Pagination component according to your design system, please refer to the Theme documentation:
+
+<CssThemePreview code={useTheme().theme.pagination} />

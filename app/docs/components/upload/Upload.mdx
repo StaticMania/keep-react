@@ -1,0 +1,127 @@
+import { DefaultUpload, DefaultUploadCode } from "./variant/DefaultUpload";
+import { UploadPending, UploadPendingCode } from "./variant/UploadPending";
+import { UploadFailed, UploadFailedCode } from "./variant/UploadFailed";
+import { UploadSuccess, UploadSuccessCode } from "./variant/UploadSuccess";
+import { UploadDisabled, UploadDisabledCode } from "./variant/UploadDisabled";
+import {
+  HorizontalDisabledUpload,
+  HorizontalDisabledUploadCode,
+} from "./variant/HorizontalDisabledUpload";
+import {
+  HorizontalUploadSuccess,
+  HorizontalUploadSuccessCode,
+} from "./variant/HorizontalUploadSuccess";
+import {
+  HorizontalUploadFailed,
+  HorizontalUploadFailedCode,
+} from "./variant/HorizontailUploadFailed";
+import {
+  HorizontalUploadPending,
+  HorizontalUploadPendingCode,
+} from "./variant/HorizontalUploadPending";
+import {
+  HorizontalUpload,
+  HorizontalUploadCode,
+} from "./variant/HorizontalUpload";
+import { uploadApiData } from "./UploadApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+Upload Component is a user interface element that enables users to upload files or media from their local device to a web application or platform. It provides a means to select files, preview them if applicable, and initiate the upload process. The component is essential for allowing users to share content, images, documents, and other files with the application or website.
+
+## Default Upload
+
+The Default Upload component enables users to choose and upload a file.The `onFileChange` callback is used to handle the file selection and update the selected file's name.
+
+<CodePreview github="Upload" code={DefaultUploadCode}>
+  <DefaultUpload />
+</CodePreview>
+
+## Upload Pending
+
+The `progressType` prop is set to `"pending"` to indicate that the progress is pending.
+
+<CodePreview github="Upload" code={UploadPendingCode}>
+  <UploadPending />
+</CodePreview>
+
+## Upload Failed
+
+The `progressType` prop is set to `"error"` to indicate that the progress is failed.
+
+<CodePreview github="Upload" code={UploadFailedCode}>
+  <UploadFailed />
+</CodePreview>
+
+## Upload Success
+
+The `progressType` prop is set to `"success"` to indicate that the progress is success.
+
+<CodePreview github="Upload" code={UploadSuccessCode}>
+  <UploadSuccess />
+</CodePreview>
+
+## Horizontal Upload
+
+The `horizontal` prop is set to `true`, allowing for a horizontal layout.
+
+<CodePreview github="Upload" code={HorizontalUploadCode}>
+  <HorizontalUpload />
+</CodePreview>
+
+## Horizontal Upload Pending
+
+The `progressType="pending"` and `horizontal={true}` props indicate that the horizontal upload progress is pending.
+
+<CodePreview github="Upload" code={HorizontalUploadPendingCode}>
+  <HorizontalUploadPending />
+</CodePreview>
+
+## Horizontal Upload Failed
+
+The `progressType="error"` and `horizontal={true}` props indicate that the horizontal upload progress is failed.
+
+<CodePreview github="Upload" code={HorizontalUploadFailedCode}>
+  <HorizontalUploadFailed />
+</CodePreview>
+
+## Horizontal Upload Success
+
+The `progressType="success"` and `horizontal={true}` props indicate that the horizontal upload progress is success.
+
+<CodePreview github="Upload" code={HorizontalUploadSuccessCode}>
+  <HorizontalUploadSuccess />
+</CodePreview>
+
+## Horizontal Disabled Upload
+
+The `horizontal={true}` and `disabled={true}` props indicate that the horizontal upload disabled.
+
+<CodePreview github="Upload" code={HorizontalDisabledUploadCode}>
+  <HorizontalDisabledUpload />
+</CodePreview>
+
+## Upload Disabled
+
+The `disabled={true}` prop indicate that the upload component is disabled.
+
+<CodePreview github="Upload" code={UploadDisabledCode}>
+  <UploadDisabled />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the upload component
+
+<ComponentApi data={uploadApiData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.upload} />

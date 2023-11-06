@@ -1,0 +1,95 @@
+import {
+  DefaultDatePicker,
+  DefaultDatePickerCode,
+} from "./variant/DefaultDatePicker";
+import {
+  DatePickerWithTwoMonth,
+  DatePickerWithTwoMonthCode,
+} from "./variant/DatePickerWithTwoMonth";
+import {
+  DateRangePicker,
+  DateRangePickerCode,
+} from "./variant/DateRangePicker";
+import {
+  DateRangePickerWithTwoMonth,
+  DateRangePickerWithTwoMonthCode,
+} from "./variant/DateRangePickerWithTwoMonth";
+import { MonthPicker, MonthPickerCode } from "./variant/MonthPicker";
+import { YearPicker, YearPickerCode } from "./variant/YearPicker";
+import { TimePicker, TimePickerCode } from "./variant/TimePicker";
+import { DatePickerApiData } from "./DatePickerApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Date Picker component offers an intuitive way for users to select dates from a calendar. With this component, users can easily navigate through months and years to pick specific dates. The Date Picker supports a range of customization options, allowing developers to control date formats, highlight specific dates, set minimum and maximum selectable dates, and more.
+
+## Default Date Picker
+
+The DefaultDatePicker component is a simple implementation of a date picker component. It display a single date selection interface. Users can choose a date, and the selected date is managed using state.
+
+<CodePreview github="DatePicker" code={DefaultDatePickerCode}>
+  <DefaultDatePicker />
+</CodePreview>
+
+## Date Range Picker
+
+A Date Range Picker is a user interface component that allows users to select a range of dates, typically represented by a start date and an end date.
+
+<CodePreview github="DatePicker" code={DateRangePickerCode}>
+  <DateRangePicker />
+</CodePreview>
+
+## DatePicker With Two Month
+
+The `DatePicker` component has been enhanced with an additional feature that allows users to view and select dates from two consecutive months simultaneously. This feature is enabled by setting the `showTwoMonth` prop to `true`.
+
+<CodePreview github="DatePicker" code={DatePickerWithTwoMonthCode}>
+  <DatePickerWithTwoMonth />
+</CodePreview>
+
+## Date Range Picker From Two Month
+
+The `DatePicker` component has been enhanced with an additional feature that allows users to view and select dates from two consecutive months simultaneously. This feature is enabled by setting the `showTwoMonth` prop to `true`.
+
+<CodePreview github="DatePicker" code={DateRangePickerWithTwoMonthCode}>
+  <DateRangePickerWithTwoMonth />
+</CodePreview>
+
+## Month Picker
+
+A Month Picker is a user interface component that allows users to select a specific month and year from a calendar-like interface.
+
+<CodePreview github="DatePicker" code={MonthPickerCode}>
+  <MonthPicker />
+</CodePreview>
+
+## Year Picker
+
+A Year Picker is a user interface component that allows users to select a specific year from a list or dropdown.
+
+<CodePreview github="DatePicker" code={YearPickerCode}>
+  <YearPicker />
+</CodePreview>
+
+## Time Picker
+
+A Time Picker is a user interface component that allows users to select a specific time, usually down to the hour and minute, from a set of available options.
+
+<CodePreview github="DatePicker" code={TimePickerCode}>
+  <TimePicker />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the date picker component
+
+<ComponentApi data={DatePickerApiData} />
+
+## Reference
+
+To learn more about the Date Picker, please see the documentation of [React Date Picker](https://reactdatepicker.com/)

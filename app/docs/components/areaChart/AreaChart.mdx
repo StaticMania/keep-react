@@ -1,0 +1,68 @@
+import {
+  DefaultAreaChart,
+  DefaultAreaChartCode,
+} from "./variant/DefaultAreaChart";
+import {
+  AreaChartWithDoubleSeries,
+  AreaChartWithDoubleSeriesCode,
+} from "./variant/AreaChartDoubleSeries";
+import {
+  AreaChartWithGridGraphLine,
+  AreaChartWithGridGraphLineCode,
+} from "./variant/ChartWithGridlineGraphline";
+import {
+  SmoothAreaChart,
+  SmoothAreaChartCode,
+} from "./variant/SmoothAreaChart";
+import { areaChartAPIData } from "./AreaChartApi";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+An Area Chart is a visual way to show data as a line that turns into a colored shape below it. This shape helps you understand how the data changes over time or categories. It's like coloring under a line graph to see where the data is bigger or smaller. People use Area Charts to see trends, compare things, and notice patterns in data. The colored area makes it clear which parts are higher or lower in value.
+
+## Default Area Chart
+
+The AreaChart component is used to render an area chart based on the `"price"` data. This creates a visual representation of how the `"price"` values change over the `"name"` categories.
+
+<CodePreview github="Chart/AreaChart.tsx" code={DefaultAreaChartCode}>
+  <DefaultAreaChart />
+</CodePreview>
+
+## Area Chart With Double Series
+
+The AreaChart component now uses both `"price"` and `"sell"` data for the two series. This creates a chart that shows how both `"price"` and `"sell"` values change over the `"name"` categories, providing insights into both series simultaneously.
+
+<CodePreview github="Chart/AreaChart.tsx" code={AreaChartWithDoubleSeriesCode}>
+  <AreaChartWithDoubleSeries />
+</CodePreview>
+
+## Area Chart With GridLine and GraphLine
+
+The `showGridLine`, `showXaxis`, and `showYaxis` props to the AreaChart component props enable grid lines and axis lines, making the chart more organized and easier to interpret.
+
+<CodePreview github="Chart/AreaChart.tsx" code={AreaChartWithGridGraphLineCode}>
+  <AreaChartWithGridGraphLine />
+</CodePreview>
+
+## Natural type Area Chart
+
+The `chartType` prop is set to `"natural"` for the AreaChart component. This chart type emphasizes smooth curves in the lines, giving the chart a more organic and visually appealing appearance.
+
+<CodePreview github="Chart/AreaChart.tsx" code={SmoothAreaChartCode}>
+  <SmoothAreaChart />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the Area Chart component
+
+<ComponentApi data={areaChartAPIData} />
+
+## Reference
+
+To learn more about the area chart, please see the documentation of [Recharts](https://recharts.org/en-US)

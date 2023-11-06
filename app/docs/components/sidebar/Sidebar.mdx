@@ -1,0 +1,68 @@
+import { DefaultSidebar, DefaultSidebarCode } from "./variant/DefaultSidebar";
+import {
+  SidebarWithContentSeparator,
+  SidebarWithContentSeparatorCode,
+} from "./variant/SidebarWithContentSeparator";
+import {
+  SidebarWithBranding,
+  SidebarWithBrandingCode,
+} from "./variant/SidebarWithBranding";
+import { SidebarWithCTA, SidebarWithCTACode } from "./variant/SidebarWithCTA";
+import {
+  SidebarWithDropdown,
+  SidebarWithDropdownCode,
+} from "./variant/SidebarWithDropdown";
+
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+A Sidebar Component is a user interface element commonly found in web and mobile applications. It provides a dedicated space at the side of the main content area to display navigation links, menu items, or other relevant information. The sidebar is often used to help users navigate between different sections of the application, access important features, or view contextual details.
+
+## Default Sidebar
+
+The Default Sidebar component offers a versatile multi-level navigation menu enriched with icons and labels, catering to a seamless navigation experience. It requires icons sourced from an icon library package and easy setup within the `<Sidebar.Items>` component with appropriate props.
+
+<CodePreview github="Sidebar" code={DefaultSidebarCode}>
+  <DefaultSidebar />
+</CodePreview>
+
+## Sidebar With Dropdown
+
+Craft dropdown menus within the sidebar using the `<Sidebar.Collapse>` component. This empowers you to provide sub-level navigation options for an organized user experience.
+
+<CodePreview github="Sidebar" code={SidebarWithDropdownCode}>
+  <SidebarWithDropdown />
+</CodePreview>
+
+## Sidebar With Logo Branding
+
+Infuse your brand identity by incorporating a brand logo into the sidebar using the `<Sidebar.Logo>` component. Customize the code snippet with your brand logo's URL.
+
+<CodePreview github="Sidebar" code={SidebarWithBrandingCode}>
+  <SidebarWithBranding />
+</CodePreview>
+
+## Sidebar With Content Separator
+
+Enhance content separation in the sidebar by employing separators. Divide your sidebar items into distinct groups using `<Sidebar.Group>` components.
+
+<CodePreview github="Sidebar" code={SidebarWithContentSeparatorCode}>
+  <SidebarWithContentSeparator />
+</CodePreview>
+
+## Sidebar With Call to Action
+
+Integrate compelling calls to action within the sidebar to engage users effectively. Utilize the `<Sidebar.CTA>` component for seamless incorporation.
+
+<CodePreview github="Sidebar" code={SidebarWithCTACode}>
+  <SidebarWithCTA />
+</CodePreview>
+
+## Theme Customization
+
+For further insights into customizing component appearances, delve into the Theme documentation. Effortlessly tailor the visual style of components to align with your application's aesthetic.
+
+<CssThemePreview code={useTheme().theme.sidebar} />

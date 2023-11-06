@@ -1,0 +1,85 @@
+import {
+  DefaultDropdown,
+  DefaultDropdownCode,
+} from "./variant/DefaultDropdown";
+
+import {
+  DropdownSearchBar,
+  DropdownSearchBarCode,
+} from "./variant/DropdownSearchBar";
+import {
+  DropdownWithBothSideIcon,
+  DropdownWithBothSideIconCode,
+} from "./variant/DropdownWithBothSideIcon";
+
+import {
+  DropdownWithIconAndSearchBar,
+  DropdownWithIconAndSearchBarCode,
+} from "./variant/DropdownWithIconAndSearchBar";
+
+import {
+  DropdownWithTitleDescription,
+  DropdownWithTitleDescriptionCode,
+} from "./variant/DropdownWithTitleDescription";
+
+import { dropdownAPIData } from "./DropdownApi";
+import CodePreview from "~/components/CodePreview";
+import CssThemePreview from "~/components/CssThemePreview";
+import ComponentApi from "~/components/ComponentApi";
+import { useTheme } from "~/src/Keep/ThemeContex";
+
+## Table of Contents
+
+The Dropdown Component is a versatile user interface element that provides users with a menu of selectable options. With a wide range of customization options, including labels, icons, search bars, checkboxes, and more, the Dropdown Component enhances user interaction by offering intuitive and flexible selection functionalities.
+
+## Default Dropdown
+
+The Default Dropdown represents some list items as a dropdown items with `<Dropdown.Item>` components and the `<Dropdown>` is a wrapper button where user can click to show the dropdown items. `dismissOnClick={true}` props means when the user select a dropdown item dropdown will be closed.
+
+<CodePreview github="Dropdown" code={DefaultDropdownCode}>
+  <DefaultDropdown />
+</CodePreview>
+
+## Dropdown With Search Bar
+
+The Dropdown with Search Bar component features a search bar that allows users to filter and select from a list of fruit options.
+
+<CodePreview github="Dropdown" code={DropdownSearchBarCode}>
+  <DropdownSearchBar />
+</CodePreview>
+
+## Dropdown With Icon
+
+The Dropdown with Both Side Icon component combines dropdown items with icons on both sides of the label.
+
+<CodePreview github="Dropdown" code={DropdownWithBothSideIconCode}>
+  <DropdownWithBothSideIcon />
+</CodePreview>
+
+## Dropdown With Icon And SearchBar
+
+The Dropdown with Both Side Icon component combines dropdown items with search bar `<TextInput>` component.
+
+<CodePreview github="Dropdown" code={DropdownWithIconAndSearchBarCode}>
+  <DropdownWithIconAndSearchBar />
+</CodePreview>
+
+## Dropdown With Title Description
+
+The dropdown with title description component represents the title and description in every dropdown items.
+
+<CodePreview github="Dropdown" code={DropdownWithTitleDescriptionCode}>
+  <DropdownWithTitleDescription />
+</CodePreview>
+
+## API Reference
+
+Here is a list of the props that you can pass to the dropdown component:
+
+<ComponentApi data={dropdownAPIData} />
+
+## Theme
+
+To learn more about how to customize the appearance of components, please see the Theme docs.
+
+<CssThemePreview code={useTheme().theme.dropdown} />
