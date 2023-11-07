@@ -1,6 +1,19 @@
+/**
+ * This file defines a TypeScript React component named `ComponentApi` that renders a table displaying the properties of given component.
+ *
+ * The `ComponentApi` component accepts a single prop: `data`. This prop is an array of objects, where each object represents a property of the component being documented.
+ *
+ * Each object in the `data` array should have the following properties as defined by the `ComponentApiProps` interface:
+ * - `id`: A unique identifier for the property.
+ * - `propsName`: The name of the property.
+ * - `propsDescription`: A description of what the property does.
+ * - `default`: The default value of the property, if any. This is an optional property.
+ * - `propsType`: The type of the property. This can be a string or an array of strings.
+ */
 import { Space_Mono } from "next/font/google";
 import React, { FC } from "react";
 
+// Define the interface for the properties of the component being documented
 interface ComponentApiProps {
   id: number;
   propsName: string;
@@ -9,15 +22,18 @@ interface ComponentApiProps {
   propsType: string | string[];
 }
 
+// Define the interface for the props of the `ComponentApi` component
 interface ComponentProps {
   data: ComponentApiProps[];
 }
 
+// Load the Space Mono font from Google Fonts
 const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400"] });
 
+// Define the `ComponentApi` component
 const ComponentApi: FC<ComponentProps> = ({ data }) => {
   return (
-    <div className={spaceMono.className + " w-full mx-auto overflow-auto "}>
+    <div className={spaceMono.className + " w-full mx-auto overflow-auto"}>
       <table className="table-auto mt-10 mb-6 md:w-full text-left whitespace-no-wrap lg:min-w-min min-w-max bg-white border border-slate-100 z-50">
         <thead>
           <tr>

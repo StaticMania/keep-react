@@ -7,6 +7,13 @@ interface DocsContentLayoutProps {
   children: React.ReactNode;
 }
 
+/**
+ * Renders a layout for the content of a documentation page.
+ * @param {string} title - The title of the documentation page.
+ * @param {string} description - The description of the documentation page.
+ * @param {ReactNode} children - The content of the documentation page.
+ * @returns {JSX.Element} - The rendered layout component.
+ */
 export const DocsContentLayout: FC<DocsContentLayoutProps> = function ({
   title,
   description,

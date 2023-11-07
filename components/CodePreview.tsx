@@ -1,3 +1,10 @@
+/**
+ * A component that displays a preview of some code and allows the user to switch between the preview and the code itself.
+ * @param children The content to display in the preview.
+ * @param code The code to display.
+ * @param github The path to the code on GitHub.
+ */
+
 "use client";
 import { useState } from "react";
 import { Check, Clipboard } from "phosphor-react";
@@ -6,18 +13,28 @@ import useCopy from "~/hooks/useCopy";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+// Define the props for the CodePreview component
 interface CodePreviewProps {
-  children: React.ReactNode;
-  code: string;
-  github?: string;
+  children: React.ReactNode; // The rendered output of the code
+  code: string; // The actual code to be displayed
+  github?: string; // Optional GitHub link for the code
 }
+
+// CodePreview component definition
 const CodePreview = ({ children, code, github }: CodePreviewProps) => {
+  // State for managing the active tab (0 for Preview, 1 for Code)
   const [active, setActive] = useState(0);
+  // Custom hook for handling copy to clipboard functionality
   const { copy, copyToClipboard } = useCopy();
+  // Construct the GitHub URL for the code
   const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/src/components/${github}`;
+
+  // Return the CodePreview component
   return (
     <div className="border border-slate-200 rounded-md my-10 shadow-sm overflow-hidden w-full">
       <div className="flex text-center flex-wrap -mb-px bg-white border-slate-200 border-b px-5">
+        {/* Button to switch to the Preview tab */}
+
         <button
           type="button"
           onClick={() => setActive(0)}
@@ -28,6 +45,9 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
         >
           Preview
         </button>
+
+        {/* Button to switch to the Code tab */}
+
         <button
           id="code-btn"
           onClick={() => setActive(1)}
@@ -43,6 +63,8 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
         {active ? (
           <div className="relative">
             <div className="absolute md:top-5 -top-10 lg:right-10 right-3 flex items-center justify-between gap-3">
+              {/* Link to the GitHub page for the code */}
+
               <a
                 id="github-page-link"
                 target="_blank"
@@ -56,6 +78,8 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
                   alt="github"
                 />
               </a>
+              {/* Button to copy the code to the clipboard */}
+
               <button
                 className="bg-slate-900 border-2 border-slate-800 hover:bg-slate-700 hover:border-transparent transition-all duration-300 md:h-9 md:w-9 h-8 w-8 flex items-center justify-center rounded-md"
                 onClick={() => copyToClipboard(code)}
@@ -69,6 +93,8 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
                 )}
               </button>
             </div>
+            {/* Syntax highlighter for displaying the code */}
+
             <SyntaxHighlighter
               language="javascript"
               style={coldarkDark}
@@ -89,6 +115,8 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
             </SyntaxHighlighter>
           </div>
         ) : (
+          // Display the rendered output of the code
+
           <div className="md:p-6 px-2 py-3 w-full flex items-center justify-center">
             <div className="w-full h-full overflow-auto">{children}</div>
           </div>

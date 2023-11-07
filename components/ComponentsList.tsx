@@ -1,3 +1,7 @@
+/**
+ * Renders a tree component with the given nodes.
+ * @returns The tree component.
+ */
 "use client";
 import { CloudArrowUp, File, FolderNotchOpen } from "phosphor-react";
 import { useState } from "react";
@@ -16,6 +20,11 @@ import {
 } from "~/src";
 
 export const TreeComponent = () => {
+  /**
+   * An array of nodes representing the components list.
+   * Each node has an `id`, a `title`, and an optional array of `children` nodes.
+   */
+
   const nodes = [
     {
       id: 1,
@@ -57,6 +66,11 @@ export const TreeComponent = () => {
     </div>
   );
 };
+
+/**
+ * A slider component that allows users to select a value within a range.
+ * @returns The SliderComponet JSX element.
+ */
 export const SliderComponet = () => {
   return (
     <div className="w-full scale-75">
@@ -71,6 +85,12 @@ export const SliderComponet = () => {
     </div>
   );
 };
+
+/**
+ * PaginationComponent is a component that renders a pagination component.
+ * @returns JSX.Element
+ */
+
 export const PaginationComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
@@ -85,6 +105,12 @@ export const PaginationComponent = () => {
     </div>
   );
 };
+
+/**
+ * TooltipComponent is a component that renders a tooltip component.
+ * @returns JSX.Element
+ */
+
 export const TooltipComponent = () => {
   return (
     <Tooltip
@@ -101,6 +127,12 @@ export const TooltipComponent = () => {
     </Tooltip>
   );
 };
+
+/**
+ * BarChartComponent is a component that renders a bar chart component.
+ * @returns JSX.Element
+ */
+
 export const BarChartComponent = () => {
   return (
     <div className="scale-75">
@@ -108,6 +140,10 @@ export const BarChartComponent = () => {
     </div>
   );
 };
+/**
+ * CheckboxGroupComponent is a component that renders a list of CheckboxGroup components.
+ * @returns JSX.Element
+ */
 export const CheckboxGroupComponent = () => {
   const [selected, setSelected] = useState("");
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -150,6 +186,12 @@ export const CheckboxGroupComponent = () => {
     </div>
   );
 };
+
+/**
+ * DatePickerComponent is a component that renders a DatePicker component.
+ * @returns JSX.Element
+ */
+
 export const DatePickerComponent = () => {
   return (
     <div className="scale-75">
@@ -157,6 +199,12 @@ export const DatePickerComponent = () => {
     </div>
   );
 };
+
+/**
+ * RadioSelectComponent is a component that renders a RadioSelect component.
+ * @returns JSX.Element
+ */
+
 export const RadioSelectComponent = () => {
   return (
     <div className="scale-75">
@@ -164,11 +212,18 @@ export const RadioSelectComponent = () => {
     </div>
   );
 };
+
+/**
+ * ModalComponent is a component that renders a modal component.
+ * @returns JSX.Element
+ */
+
 export const ModalComponent = () => {
   const [showModal, setShowModal] = useState(false);
   const onClick = () => {
     setShowModal(!showModal);
   };
+
   return (
     <div>
       <Button onClick={onClick}>Modal</Button>

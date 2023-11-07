@@ -1,6 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+
+/**
+ * A component that displays a loading spinner and message.
+ * @returns A React component that displays a loading spinner and message.
+ */
+
 const Loading = () => {
   return (
     <div className="flex flex-col items-center justify-center fixed h-full w-full bg-white top-0 left-0">

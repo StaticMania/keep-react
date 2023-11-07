@@ -1,5 +1,8 @@
 import type { keepAlertTheme } from ".";
 
+/**
+ * Theme object for the Alert component.
+ */
 export const alertTheme: keepAlertTheme = {
   base: "py-[18px] px-6 max-w-lg",
   dismiss: "hidden",

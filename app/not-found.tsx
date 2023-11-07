@@ -2,6 +2,11 @@
 import Image from "next/image";
 import { Empty } from "~/src";
 
+/**
+ * Renders a component to display a "Not Found" message with an image and a redirect button.
+ * @returns JSX.Element
+ */
+
 const NotFound = () => {
   return (
     <Empty

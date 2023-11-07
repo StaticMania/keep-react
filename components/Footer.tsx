@@ -1,3 +1,9 @@
+/**
+ * A footer component that displays links to resources and a notice of rights reserved.
+ * The footer is only displayed on the home page.
+ * The footer is hidden on all other pages.
+ */
+
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,6 +63,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {/*
+       * This section of the Footer component renders the copyright notice.
+       * It includes a paragraph element that displays the current year, a copyright symbol, and a statement of rights reserved by StaticMania.
+       * The year is dynamically generated using JavaScript's Date object.
+       * The name "StaticMania" is a hyperlink that opens the StaticMania website in a new tab when clicked.
+       */}
       <div className="text-center py-5 border-t border-t-slate-100">
         <p className="text-base font-normal text-slate-900">
           &copy;{new Date().getFullYear()} All Rights Reserved by{" "}

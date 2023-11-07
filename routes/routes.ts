@@ -1,3 +1,4 @@
+// Importing necessary components from the ComponentsList file
 import {
   TreeComponent,
   BarChartComponent,
@@ -10,15 +11,18 @@ import {
   PaginationComponent,
 } from "~/components/ComponentsList";
 
+// Defining an interface for the structure of each route
 interface routerPath {
-  id: number;
-  name: string;
-  href: string;
-  tag?: boolean;
-  deprecate?: boolean;
-  redirect?: boolean;
-  folderName?: string;
+  id: number; // Unique identifier for the route
+  name: string; // Name of the route
+  href: string; // URL path of the route
+  tag?: boolean; // Optional property to tag the route
+  deprecate?: boolean; // Optional property to mark the route as deprecated
+  redirect?: boolean; // Optional property to mark the route as a redirect
+  folderName?: string; // Optional property for the folder name of the route's component
 }
+
+// Exporting an array of routes, each adhering to the routerPath interface
 
 export const routes: routerPath[] = [
   {
@@ -376,6 +380,8 @@ export const routes: routerPath[] = [
   },
 ];
 
+// Exporting an array of routes for the Getting Started section
+
 export const gettingStartedRoutes: routerPath[] = [
   {
     id: 1,
@@ -383,6 +389,8 @@ export const gettingStartedRoutes: routerPath[] = [
     href: "/docs/getting-started/Introduction",
   },
 ];
+
+// Exporting an array of routes for the Navbar section
 
 export const navbarRoutes: routerPath[] = [
   {
@@ -398,6 +406,8 @@ export const navbarRoutes: routerPath[] = [
     redirect: false,
   },
 ];
+
+// Exporting an array of routes for the Components section
 
 export const ComponentList: {
   id: number;

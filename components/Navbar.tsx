@@ -1,3 +1,9 @@
+/**
+ * The Navbar component displays the navigation bar at the top of the page.
+ * It includes links to various pages, a search bar, and a dropdown menu for quick access to links.
+ *
+ * @returns The Navbar component.
+ */
 "use client";
 import Link from "next/link";
 import Image from "next/image";

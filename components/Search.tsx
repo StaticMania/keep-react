@@ -1,3 +1,11 @@
+/**
+ * A search component that allows users to search for components and documentation within the Keep React project.
+ *
+ * @param showModal - A boolean that determines whether or not the search modal is visible.
+ * @param setShowMainModal - A function that sets the visibility of the search modal.
+ *
+ * @returns A React component that renders a search modal with search functionality and recent search history.
+ */
 import Link from "next/link";
 import { CaretRight, MagnifyingGlass, XCircle } from "phosphor-react";
 import React, {
@@ -7,40 +15,42 @@ import React, {
   Dispatch,
   SetStateAction,
 } from "react";
+
 import { Modal, Skeleton, TextInput } from "~/src";
 import { getData, storeData } from "~/utils/Searching";
 import { twMerge } from "tailwind-merge";
 
 interface Result {
-  id: number;
-  name: string;
-  href: string;
-  sections: { title: string; id: string }[];
+  id: number; // The id of the result.
+  name: string; // The name of the result.
+  href: string; // The href of the result.
+  sections: { title: string; id: string }[]; // The sections of the result with title and id.
 }
 
 export interface result {
-  id: number;
-  name: string;
-  href: string;
+  id: number; // The id of the result.
+  name: string; // The name of the result.
+  href: string; // The href of the result.
   sections: [
+    // The sections of the result.
     {
-      title: string;
-      id: string;
+      title: string; // The title of the section.
+      id: string; // The id of the section.
     }
   ];
 }
 
 interface SearchProps {
-  showModal: boolean;
-  setShowMainModal: Dispatch<SetStateAction<boolean>>;
+  showModal: boolean; // A boolean that determines whether or not the search modal is visible.
+  setShowMainModal: Dispatch<SetStateAction<boolean>>; // A function that sets the visibility of the search modal.
 }
 
 const projectUrl: string = `https://react.keepdesign.io`;
 
 const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
-  const [query, setQuery] = useState<string>("");
-  const [results, setResults] = useState<Result[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [query, setQuery] = useState<string>(""); // The search query.
+  const [results, setResults] = useState<Result[]>([]); // The search results.
+  const [loading, setLoading] = useState<boolean>(false); // A boolean that determines whether or not the search results are loading.
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -56,6 +66,14 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
 
     return () => clearTimeout(timeout);
   }, [query]);
+
+  /**
+   * Perform search
+   * @description Perform search on the basis of query
+   * @param {string} query - Search query
+   * @returns {void}
+   * @param query
+   */
 
   const performSearch = async (query: string) => {
     try {
@@ -77,6 +95,12 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
     setLoading(false);
   };
 
+  /**
+   * Store data
+   * @description Store data in local storage
+   * @returns void
+   */
+
   if (results.length > 0 && !loading) {
     storeData({
       id: results[0].id,
@@ -84,6 +108,12 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
       href: results[0].href,
     });
   }
+
+  /**
+   * Get stored data
+   * @description Get stored data from local storage
+   * @returns An array of data items.
+   */
 
   const storedData = getData();
 
