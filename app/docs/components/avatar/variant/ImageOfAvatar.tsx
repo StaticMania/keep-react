@@ -1,5 +1,5 @@
-"use client";
-import { Avatar } from "~/src";
+'use client'
+import { Avatar } from '~/src'
 
 const ImageOfAvatar = () => {
   return (
@@ -8,8 +8,8 @@ const ImageOfAvatar = () => {
       <Avatar shape="rounded" size="xl" img="/images/avatar/avatar-4.png" />
       <Avatar shape="square" size="xl" img="/images/avatar/avatar-4.png" />
     </div>
-  );
-};
+  )
+}
 
 const ImageOfAvatarCode = `
 "use client";
@@ -20,6 +20,6 @@ export const AvatarComponent = () => {
       <Avatar shape="circle" size="xl"  img="/images/avatar/avatar-4.png" />
   );
 }
-`;
+`
 
-export { ImageOfAvatar, ImageOfAvatarCode };
+export { ImageOfAvatar, ImageOfAvatarCode }

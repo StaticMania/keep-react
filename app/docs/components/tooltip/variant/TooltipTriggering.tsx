@@ -1,34 +1,22 @@
-"use client";
-import { Button, Tooltip } from "~/src";
+'use client'
+import { Button, Tooltip } from '~/src'
 
 const TooltipTriggering = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
-      <Tooltip
-        content="Tooltips text here"
-        trigger="hover"
-        placement="top"
-        animation="duration-300"
-        style="dark"
-      >
+      <Tooltip content="Tooltips text here" trigger="hover" placement="top" animation="duration-300" style="dark">
         <Button size="sm" type="primary">
           Tooltip Hover
         </Button>
       </Tooltip>
-      <Tooltip
-        content="Tooltips text here"
-        trigger="click"
-        placement="bottom"
-        animation="duration-300"
-        style="dark"
-      >
+      <Tooltip content="Tooltips text here" trigger="click" placement="bottom" animation="duration-300" style="dark">
         <Button size="sm" type="primary">
           Tooltip Click
         </Button>
       </Tooltip>
     </div>
-  );
-};
+  )
+}
 
 const TooltipTriggeringCode = `
 "use client";
@@ -62,6 +50,6 @@ export const TooltipComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { TooltipTriggering, TooltipTriggeringCode };
+export { TooltipTriggering, TooltipTriggeringCode }

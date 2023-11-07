@@ -1,5 +1,5 @@
-"use client";
-import { Tag } from "~/src";
+'use client'
+import { Tag } from '~/src'
 
 const ColorsOfTag = () => {
   return (
@@ -13,8 +13,8 @@ const ColorsOfTag = () => {
       <Tag color="purple">Purple Tag</Tag>
       <Tag disabled={true}>Disabled Tag</Tag>
     </div>
-  );
-};
+  )
+}
 
 const ColorsOfTagCode = `
 "use client";
@@ -34,6 +34,6 @@ export const TagComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { ColorsOfTag, ColorsOfTagCode };
+export { ColorsOfTag, ColorsOfTagCode }

@@ -1,138 +1,135 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react'
 
 export interface Book {
-  id: number;
-  name: string;
+  id: number
+  name: string
 }
 export const books: Book[] = [
-  { id: 1, name: "To Kill a Mockingbird" },
-  { id: 2, name: "Pride and Prejudice" },
-  { id: 3, name: "1984" },
-  { id: 4, name: "The Great Gatsby" },
-  { id: 5, name: "Moby Dick" },
-  { id: 6, name: "The Catcher in the Rye" },
-  { id: 7, name: "Jane Eyre" },
-  { id: 8, name: "The Lord of the Rings" },
-  { id: 9, name: "To the Lighthouse" },
-  { id: 10, name: "Brave New World" },
-];
+  { id: 1, name: 'To Kill a Mockingbird' },
+  { id: 2, name: 'Pride and Prejudice' },
+  { id: 3, name: '1984' },
+  { id: 4, name: 'The Great Gatsby' },
+  { id: 5, name: 'Moby Dick' },
+  { id: 6, name: 'The Catcher in the Rye' },
+  { id: 7, name: 'Jane Eyre' },
+  { id: 8, name: 'The Lord of the Rings' },
+  { id: 9, name: 'To the Lighthouse' },
+  { id: 10, name: 'Brave New World' },
+]
 
-import { ArrowRight, MagnifyingGlass, MapPinLine } from "phosphor-react";
-import { useState } from "react";
-import { SearchBar } from ".";
-import { Button } from "../Button/Button";
-import { Dropdown } from "../Dropdown";
+import { ArrowRight, MagnifyingGlass, MapPinLine } from 'phosphor-react'
+import { useState } from 'react'
+import { SearchBar } from '.'
+import { Button } from '../Button/Button'
+import { Dropdown } from '../Dropdown'
 
 const meta: Meta<typeof SearchBar> = {
   component: SearchBar,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     color: {
-      control: "select",
-      options: ["gray", "info", "error", "warning", "success"],
+      control: 'select',
+      options: ['gray', 'info', 'error', 'warning', 'success'],
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "gray" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'gray' },
       },
-      description: "Specifies the color variant of the search input component.",
+      description: 'Specifies the color variant of the search input component.',
     },
     placeholder: {
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "Placeholder" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'Placeholder' },
       },
-      description: "Input Field Placeholder text",
+      description: 'Input Field Placeholder text',
     },
 
     addonPosition: {
-      description: "Addon Position",
-      control: "radio",
+      description: 'Addon Position',
+      control: 'radio',
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "left" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'left' },
       },
     },
     iconPosition: {
-      description: "Icon Position",
-      control: "radio",
+      description: 'Icon Position',
+      control: 'radio',
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "left" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'left' },
       },
     },
     size: {
-      description: "Avaiable size for searchbar",
-      control: "select",
-      options: ["sm", "md", "lg"],
+      description: 'Avaiable size for searchbar',
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "md" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'md' },
       },
     },
     disabled: {
-      control: "boolean",
-      description: "Disables interactions with the search input component",
+      control: 'boolean',
+      description: 'Disables interactions with the search input component',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
     bordered: {
-      control: "boolean",
-      description: "Displays a border around the search input component",
+      control: 'boolean',
+      description: 'Displays a border around the search input component',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
     withBg: {
-      control: "boolean",
-      description: "Applies a background style to the search input component.",
+      control: 'boolean',
+      description: 'Applies a background style to the search input component.',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
     icon: {
-      description: "Search Bar Icon",
+      description: 'Search Bar Icon',
       control: {
         disable: true,
       },
     },
     addon: {
-      description: "Search Bar Addon",
+      description: 'Search Bar Addon',
       control: {
         disable: true,
       },
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof SearchBar>;
+export default meta
+type Story = StoryObj<typeof SearchBar>
 
 const DefaultSearch = () => {
-  const [data, setData] = useState<Book[]>([]);
+  const [data, setData] = useState<Book[]>([])
   const handleOnChange2 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
+    const searchTerm = e.target.value.toLowerCase()
+    const results = books.filter((book) => book.name.toLowerCase().includes(searchTerm))
 
-    if (searchTerm === "") {
-      setData([]);
+    if (searchTerm === '') {
+      setData([])
     } else {
-      setData(results);
+      setData(results)
     }
-  };
+  }
 
   return (
     <SearchBar
       placeholder="Search Anything"
       addon={<MagnifyingGlass size={20} color="#5E718D" />}
       addonPosition="left"
-      handleOnChange={handleOnChange2}
-    >
+      handleOnChange={handleOnChange2}>
       <ul>
         {data.map((book) => (
           <Dropdown.Item key={book?.id}>
@@ -144,23 +141,21 @@ const DefaultSearch = () => {
         ))}
       </ul>
     </SearchBar>
-  );
-};
+  )
+}
 
 const SearchBarWithColorVariantCom = () => {
-  const [data, setData] = useState<Book[]>([]);
+  const [data, setData] = useState<Book[]>([])
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
+    const searchTerm = e.target.value.toLowerCase()
+    const results = books.filter((book) => book.name.toLowerCase().includes(searchTerm))
 
-    if (searchTerm === "") {
-      setData([]);
+    if (searchTerm === '') {
+      setData([])
     } else {
-      setData(results);
+      setData(results)
     }
-  };
+  }
   return (
     <SearchBar
       placeholder="Search Anything"
@@ -183,11 +178,10 @@ const SearchBarWithColorVariantCom = () => {
       iconPosition="right"
       handleOnChange={handleOnChange}
       size="lg"
-      color="error"
-    >
+      color="error">
       <ul>
         {data.map((book) => (
-          <Dropdown.Item key={book?.id} style={{ backgroundColor: "#FFF5F4" }}>
+          <Dropdown.Item key={book?.id} style={{ backgroundColor: '#FFF5F4' }}>
             {book?.name}
             <span className="ml-auto">
               <ArrowRight size={20} color="#ff0000" />
@@ -196,22 +190,20 @@ const SearchBarWithColorVariantCom = () => {
         ))}
       </ul>
     </SearchBar>
-  );
-};
+  )
+}
 const SearchBarWithIconCom = () => {
-  const [data, setData] = useState<Book[]>([]);
+  const [data, setData] = useState<Book[]>([])
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
+    const searchTerm = e.target.value.toLowerCase()
+    const results = books.filter((book) => book.name.toLowerCase().includes(searchTerm))
 
-    if (searchTerm === "") {
-      setData([]);
+    if (searchTerm === '') {
+      setData([])
     } else {
-      setData(results);
+      setData(results)
     }
-  };
+  }
   return (
     <SearchBar
       placeholder="Search Anything"
@@ -219,8 +211,7 @@ const SearchBarWithIconCom = () => {
       addonPosition="left"
       icon={<ArrowRight size={20} color="#5E718D" />}
       iconPosition="right"
-      handleOnChange={handleOnChange}
-    >
+      handleOnChange={handleOnChange}>
       <ul>
         {data.map((book) => (
           <Dropdown.Item key={book?.id}>
@@ -232,8 +223,8 @@ const SearchBarWithIconCom = () => {
         ))}
       </ul>
     </SearchBar>
-  );
-};
+  )
+}
 
 const DisabledSearchBar = () => {
   return (
@@ -241,21 +232,20 @@ const DisabledSearchBar = () => {
       placeholder="Search Anything"
       addon={<MagnifyingGlass size={20} color="#5E718D" />}
       addonPosition="left"
-      disabled
-    ></SearchBar>
-  );
-};
+      disabled></SearchBar>
+  )
+}
 
 export const DefaultSearchBar: Story = {
   render: () => <DefaultSearch />,
-};
+}
 
 export const SearchBarWithColorVariant: Story = {
   render: () => <SearchBarWithColorVariantCom />,
-};
+}
 export const SearchBarWithIcon: Story = {
   render: () => <SearchBarWithIconCom />,
-};
+}
 export const DisableSearchBar: Story = {
   render: () => <DisabledSearchBar />,
-};
+}

@@ -1,12 +1,12 @@
-"use client";
-import { useState } from "react";
-import { CheckboxGroup } from "~/src";
+'use client'
+import { useState } from 'react'
+import { CheckboxGroup } from '~/src'
 
 const CheckboxGroupWithAvatar = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
   return (
     <form className="space-y-4 p-5">
       <CheckboxGroup
@@ -50,8 +50,8 @@ const CheckboxGroupWithAvatar = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 
 const CheckboxGroupWithAvatarCode = `
 "use client";
@@ -108,6 +108,6 @@ export const CheckboxGroupComponent = () => {
     </form>
   );
 }
-`;
+`
 
-export { CheckboxGroupWithAvatar, CheckboxGroupWithAvatarCode };
+export { CheckboxGroupWithAvatar, CheckboxGroupWithAvatarCode }

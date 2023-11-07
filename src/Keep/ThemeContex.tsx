@@ -1,96 +1,87 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-"use client";
-import type { FC, ReactNode } from "react";
-import { createContext, useContext, useEffect, useState } from "react";
-import type { KeepTheme } from "./KeepTheme";
-import { theme as defaultTheme } from "../theme/theme";
-import { windowExists } from "../helpers/window-exists";
+'use client'
+import type { FC, ReactNode } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
+import type { KeepTheme } from './KeepTheme'
+import { theme as defaultTheme } from '../theme/theme'
+import { windowExists } from '../helpers/window-exists'
 
-export type Mode = string | undefined | "light" | "dark";
+export type Mode = string | undefined | 'light' | 'dark'
 
 interface ThemeContextProps {
-  theme: KeepTheme;
-  mode?: Mode;
-  toggleMode?: () => void | null;
+  theme: KeepTheme
+  mode?: Mode
+  toggleMode?: () => void | null
 }
 
 export const ThemeContext = createContext<ThemeContextProps>({
   theme: defaultTheme,
-});
+})
 
 interface ThemeProviderProps {
-  children: ReactNode;
-  value: ThemeContextProps;
+  children: ReactNode
+  value: ThemeContextProps
 }
 
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children, value }) => {
-  return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-  );
-};
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+}
 
 export function useTheme(): ThemeContextProps {
-  return useContext(ThemeContext);
+  return useContext(ThemeContext)
 }
 
 export const useThemeMode = (
-  usePreferences: boolean
-): [
-  Mode,
-  React.Dispatch<React.SetStateAction<Mode>> | undefined,
-  (() => void) | undefined
-] => {
-  if (!usePreferences) return [undefined, undefined, undefined];
+  usePreferences: boolean,
+): [Mode, React.Dispatch<React.SetStateAction<Mode>> | undefined, (() => void) | undefined] => {
+  if (!usePreferences) return [undefined, undefined, undefined]
 
-  const [mode, setMode] = useState<Mode>(undefined);
+  const [mode, setMode] = useState<Mode>(undefined)
 
-  const savePreference = (m: string) => localStorage.setItem("theme", m);
+  const savePreference = (m: string) => localStorage.setItem('theme', m)
 
   const toggleMode = () => {
     if (!mode) {
-      return;
+      return
     }
 
     if (windowExists()) {
-      document.documentElement.classList.toggle("dark");
+      document.documentElement.classList.toggle('dark')
     }
 
-    savePreference(mode);
-    setMode(mode == "dark" ? "light" : "dark");
-  };
+    savePreference(mode)
+    setMode(mode == 'dark' ? 'light' : 'dark')
+  }
 
   if (usePreferences) {
     useEffect(() => {
       const userPreference =
-        windowExists() &&
-        !!window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const userMode =
-        localStorage.getItem("theme") || (userPreference ? "dark" : "light");
+        windowExists() && !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const userMode = localStorage.getItem('theme') || (userPreference ? 'dark' : 'light')
 
       if (userMode) {
-        setMode(userMode);
+        setMode(userMode)
       }
-    }, []);
+    }, [])
 
     useEffect(() => {
       if (!mode) {
-        return;
+        return
       }
 
-      savePreference(mode);
+      savePreference(mode)
 
       if (!windowExists()) {
-        return;
+        return
       }
 
-      if (mode != "dark") {
-        document.documentElement.classList.remove("dark");
+      if (mode != 'dark') {
+        document.documentElement.classList.remove('dark')
       } else {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add('dark')
       }
-    }, [mode]);
+    }, [mode])
   }
 
-  return [mode, setMode, toggleMode];
-};
+  return [mode, setMode, toggleMode]
+}

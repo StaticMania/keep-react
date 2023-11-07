@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import { DatePicker } from "~/src";
-import { rangePicker } from "~/src/components/DatePicker/DatePickerContext";
+'use client'
+import { useState } from 'react'
+import { DatePicker } from '~/src'
+import { rangePicker } from '~/src/components/DatePicker/DatePickerContext'
 
 const DateRangePicker = () => {
-  const [_, setRangeDate] = useState<rangePicker>();
+  const [_, setRangeDate] = useState<rangePicker>()
   return (
     <DatePicker rangeDate={setRangeDate}>
       <DatePicker.Range />
     </DatePicker>
-  );
-};
+  )
+}
 
 const DateRangePickerCode = `
 "use client";
@@ -25,6 +25,6 @@ export const DatePickerComponent = () => {
     </DatePicker>
   );
 }
-`;
+`
 
-export { DateRangePicker, DateRangePickerCode };
+export { DateRangePicker, DateRangePickerCode }

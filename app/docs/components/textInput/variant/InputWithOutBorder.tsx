@@ -1,6 +1,6 @@
-"use client";
-import { EyeSlash, Lock } from "phosphor-react";
-import { TextInput, Label } from "~/src";
+'use client'
+import { EyeSlash, Lock } from 'phosphor-react'
+import { TextInput, Label } from '~/src'
 
 const InputWithOutBorder = () => {
   return (
@@ -86,8 +86,8 @@ const InputWithOutBorder = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
 const InputWithOutBorderCode = `
 "use client";
@@ -180,6 +180,6 @@ export const TextInputComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { InputWithOutBorder, InputWithOutBorderCode };
+export { InputWithOutBorder, InputWithOutBorderCode }

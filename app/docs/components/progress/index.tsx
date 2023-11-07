@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import ProgressDocsContent from "./progress.mdx";
+'use client'
+import type { FC } from 'react'
+import ProgressDocsContent from './progress.mdx'
 
-const ProgressDocs: FC = () => <ProgressDocsContent />;
+const ProgressDocs: FC = () => <ProgressDocsContent />
 
-export default ProgressDocs;
+export default ProgressDocs

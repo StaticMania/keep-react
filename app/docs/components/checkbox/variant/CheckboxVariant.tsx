@@ -1,10 +1,10 @@
-"use client";
-import { CheckBox } from "~/src";
+'use client'
+import { CheckBox } from '~/src'
 
 const CheckboxVariant = () => {
   const handleChecked = (value: boolean) => {
-    console.log(value);
-  };
+    console.log(value)
+  }
   return (
     <div className="flex flex-row gap-3 py-3">
       <CheckBox
@@ -26,8 +26,8 @@ const CheckboxVariant = () => {
         handleChecked={handleChecked}
       />
     </div>
-  );
-};
+  )
+}
 
 const CheckboxVariantCode = `
 "use client";
@@ -60,6 +60,6 @@ export const CheckboxComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { CheckboxVariant, CheckboxVariantCode };
+export { CheckboxVariant, CheckboxVariantCode }

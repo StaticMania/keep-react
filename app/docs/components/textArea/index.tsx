@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import TextAreaDocsContent from "./TextArea.mdx";
+'use client'
+import type { FC } from 'react'
+import TextAreaDocsContent from './TextArea.mdx'
 
-const TextAreaDocs: FC = () => <TextAreaDocsContent />;
+const TextAreaDocs: FC = () => <TextAreaDocsContent />
 
-export default TextAreaDocs;
+export default TextAreaDocs

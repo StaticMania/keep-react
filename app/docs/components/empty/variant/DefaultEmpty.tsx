@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Empty } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Empty } from '~/src'
 
 const DefaultEmpty = () => {
   return (
@@ -19,8 +19,8 @@ const DefaultEmpty = () => {
         />
       }
     />
-  );
-};
+  )
+}
 
 const DefaultEmptyCode = `
 "use client";
@@ -46,6 +46,6 @@ export const EmptyComponent = () => {
     />
   );
 }
-`;
+`
 
-export { DefaultEmpty, DefaultEmptyCode };
+export { DefaultEmpty, DefaultEmptyCode }

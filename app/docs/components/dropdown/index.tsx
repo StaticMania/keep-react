@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import DropdownDocsContent from "./Dropdown.mdx";
+'use client'
+import type { FC } from 'react'
+import DropdownDocsContent from './Dropdown.mdx'
 
-const DropdownDocs: FC = () => <DropdownDocsContent />;
+const DropdownDocs: FC = () => <DropdownDocsContent />
 
-export default DropdownDocs;
+export default DropdownDocs

@@ -1,5 +1,5 @@
-"use client";
-import { Sidebar } from "~/src";
+'use client'
+import { Sidebar } from '~/src'
 import {
   ChartBar,
   Chat,
@@ -10,14 +10,11 @@ import {
   SquaresFour,
   TreeStructure,
   Users,
-} from "phosphor-react";
+} from 'phosphor-react'
 
 const SidebarWithContentSeparator = () => {
   return (
-    <Sidebar
-      aria-label="Sidebar with multi-level dropdown example"
-      className="max-w-xs"
-    >
+    <Sidebar aria-label="Sidebar with multi-level dropdown example" className="max-w-xs">
       <Sidebar.ItemGroup>
         <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
           Dashboard
@@ -49,8 +46,8 @@ const SidebarWithContentSeparator = () => {
         </Sidebar.Item>
       </Sidebar.ItemGroup>
     </Sidebar>
-  );
-};
+  )
+}
 
 const SidebarWithContentSeparatorCode = `
 
@@ -104,6 +101,6 @@ export const SidebarComponent = () => {
     </Sidebar>
   );
 }
-`;
+`
 
-export { SidebarWithContentSeparator, SidebarWithContentSeparatorCode };
+export { SidebarWithContentSeparator, SidebarWithContentSeparatorCode }

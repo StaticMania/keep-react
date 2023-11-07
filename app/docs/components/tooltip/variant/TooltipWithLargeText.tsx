@@ -1,5 +1,5 @@
-"use client";
-import { Button, Tooltip } from "~/src";
+'use client'
+import { Button, Tooltip } from '~/src'
 
 const TooltipWithLargeText = () => {
   return (
@@ -10,8 +10,7 @@ const TooltipWithLargeText = () => {
         trigger="hover"
         placement="top"
         animation="duration-300"
-        style="dark"
-      >
+        style="dark">
         <Button size="sm" type="primary">
           Tooltip Content
         </Button>
@@ -22,15 +21,14 @@ const TooltipWithLargeText = () => {
         trigger="hover"
         placement="bottom"
         animation="duration-300"
-        style="light"
-      >
+        style="light">
         <Button size="sm" type="primary">
           Tooltip Content
         </Button>
       </Tooltip>
     </div>
-  );
-};
+  )
+}
 
 const TooltipWithLargeTextCode = `
 "use client";
@@ -66,6 +64,6 @@ export const TooltipComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { TooltipWithLargeText, TooltipWithLargeTextCode };
+export { TooltipWithLargeText, TooltipWithLargeTextCode }

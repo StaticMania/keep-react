@@ -1,10 +1,10 @@
-"use client";
-import { Button } from "~/src";
-import { ShoppingCart } from "phosphor-react";
+'use client'
+import { Button } from '~/src'
+import { ShoppingCart } from 'phosphor-react'
 
 const KeepButtonShape = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2 py-3 px-2">
+    <div className="flex flex-wrap items-end gap-2 px-2 py-3">
       <Button size="md" type="primary" pill={true}>
         Default
       </Button>
@@ -14,8 +14,8 @@ const KeepButtonShape = () => {
         </span>
       </Button>
     </div>
-  );
-};
+  )
+}
 
 const KeepButtonShapeCode = `
 "use client";
@@ -34,6 +34,6 @@ export const ButtonComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { KeepButtonShape, KeepButtonShapeCode };
+export { KeepButtonShape, KeepButtonShapeCode }

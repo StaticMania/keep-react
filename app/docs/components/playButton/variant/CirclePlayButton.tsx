@@ -1,19 +1,14 @@
-"use client";
-import { Play } from "phosphor-react";
-import { PlayButton } from "~/src";
+'use client'
+import { Play } from 'phosphor-react'
+import { PlayButton } from '~/src'
 
 const CirclePlayButton = () => {
   return (
-    <div className="h-20 p-5 flex items-center justify-start">
-      <PlayButton
-        type="primary"
-        circle={true}
-        size="2xl"
-        icon={<Play size="25" />}
-      />
+    <div className="flex h-20 items-center justify-start p-5">
+      <PlayButton type="primary" circle={true} size="2xl" icon={<Play size="25" />} />
     </div>
-  );
-};
+  )
+}
 
 const CirclePlayButtonCode = `
 "use client";
@@ -30,6 +25,6 @@ export const PlayButtonComponent = () => {
     />
   );
 }
-`;
+`
 
-export { CirclePlayButton, CirclePlayButtonCode };
+export { CirclePlayButton, CirclePlayButtonCode }

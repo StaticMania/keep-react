@@ -1,6 +1,6 @@
-"use client";
-import { TextInput } from "~/src";
-import { Envelope } from "phosphor-react";
+'use client'
+import { TextInput } from '~/src'
+import { Envelope } from 'phosphor-react'
 
 const InputWithAddon = () => {
   return (
@@ -12,8 +12,8 @@ const InputWithAddon = () => {
       addon={<Envelope size={20} color="#5E718D" />}
       addonPosition="left"
     />
-  );
-};
+  )
+}
 
 const InputWithAddonCode = `
 "use client";
@@ -32,6 +32,6 @@ export const TextInputComponent = () => {
     />
   );
 }
-`;
+`
 
-export { InputWithAddon, InputWithAddonCode };
+export { InputWithAddon, InputWithAddonCode }

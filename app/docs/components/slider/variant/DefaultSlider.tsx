@@ -1,5 +1,5 @@
-"use client";
-import { Slider } from "~/src";
+'use client'
+import { Slider } from '~/src'
 
 const DefaultSlider = () => {
   return (
@@ -13,8 +13,8 @@ const DefaultSlider = () => {
         onChange={(value: number | number[]) => console.log(value)}
       />
     </div>
-  );
-};
+  )
+}
 
 const DefaultSliderCode = `
 "use client";
@@ -32,6 +32,6 @@ export const SliderComponent = () => {
     />
   );
 }
-`;
+`
 
-export { DefaultSlider, DefaultSliderCode };
+export { DefaultSlider, DefaultSliderCode }

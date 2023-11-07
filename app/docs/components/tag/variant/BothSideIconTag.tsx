@@ -1,24 +1,16 @@
-"use client";
-import { useState } from "react";
-import { Tag } from "~/src";
-import { CrownSimple, X } from "phosphor-react";
+'use client'
+import { useState } from 'react'
+import { Tag } from '~/src'
+import { CrownSimple, X } from 'phosphor-react'
 
 const BothSideIconTag = () => {
-  const [dismiss, setDismiss] = useState<boolean[]>([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [dismiss, setDismiss] = useState<boolean[]>([false, false, false, false, false, false, false])
 
   const handleDismiss = (index: number) => {
-    const updatedDismissStates = [...dismiss];
-    updatedDismissStates[index] = true;
-    setDismiss(updatedDismissStates);
-  };
+    const updatedDismissStates = [...dismiss]
+    updatedDismissStates[index] = true
+    setDismiss(updatedDismissStates)
+  }
   return (
     <div className="flex w-full flex-row flex-wrap gap-2">
       <Tag
@@ -26,8 +18,7 @@ const BothSideIconTag = () => {
         dismiss={dismiss[1]}
         onDismiss={() => handleDismiss(1)}
         leftIcon={<CrownSimple size={20} />}
-        dismissIcon={<X size={20} />}
-      >
+        dismissIcon={<X size={20} />}>
         Tag
       </Tag>
       <Tag
@@ -35,8 +26,7 @@ const BothSideIconTag = () => {
         dismiss={dismiss[2]}
         onDismiss={() => handleDismiss(2)}
         leftIcon={<CrownSimple size={20} />}
-        dismissIcon={<X size={20} />}
-      >
+        dismissIcon={<X size={20} />}>
         Tag
       </Tag>
       <Tag
@@ -44,8 +34,7 @@ const BothSideIconTag = () => {
         dismiss={dismiss[3]}
         onDismiss={() => handleDismiss(3)}
         leftIcon={<CrownSimple size={20} />}
-        dismissIcon={<X size={20} />}
-      >
+        dismissIcon={<X size={20} />}>
         Tag
       </Tag>
       <Tag
@@ -53,8 +42,7 @@ const BothSideIconTag = () => {
         dismiss={dismiss[4]}
         onDismiss={() => handleDismiss(4)}
         leftIcon={<CrownSimple size={20} />}
-        dismissIcon={<X size={20} />}
-      >
+        dismissIcon={<X size={20} />}>
         Tag
       </Tag>
       <Tag
@@ -62,8 +50,7 @@ const BothSideIconTag = () => {
         dismiss={dismiss[5]}
         onDismiss={() => handleDismiss(5)}
         leftIcon={<CrownSimple size={20} />}
-        dismissIcon={<X size={20} />}
-      >
+        dismissIcon={<X size={20} />}>
         Tag
       </Tag>
       <Tag
@@ -71,8 +58,7 @@ const BothSideIconTag = () => {
         dismiss={dismiss[6]}
         onDismiss={() => handleDismiss(6)}
         leftIcon={<CrownSimple size={20} />}
-        dismissIcon={<X size={20} />}
-      >
+        dismissIcon={<X size={20} />}>
         Tag
       </Tag>
       <Tag
@@ -80,13 +66,12 @@ const BothSideIconTag = () => {
         dismiss={dismiss[0]}
         onDismiss={() => handleDismiss(0)}
         leftIcon={<CrownSimple size={20} />}
-        dismissIcon={<X size={20} />}
-      >
+        dismissIcon={<X size={20} />}>
         Tag
       </Tag>
     </div>
-  );
-};
+  )
+}
 
 const BothSideIconTagCode = `
 "use client";
@@ -167,6 +152,6 @@ export const TagComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { BothSideIconTag, BothSideIconTagCode };
+export { BothSideIconTag, BothSideIconTagCode }

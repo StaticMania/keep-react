@@ -1,5 +1,5 @@
-"use client";
-import { Skeleton } from "~/src";
+'use client'
+import { Skeleton } from '~/src'
 
 const SkeletonWithAnimation = () => {
   return (
@@ -31,8 +31,8 @@ const SkeletonWithAnimation = () => {
         </div>
       </Skeleton>
     </div>
-  );
-};
+  )
+}
 
 const SkeletonWithAnimationCode = `
 "use client";
@@ -70,5 +70,5 @@ export const SkeletonComponent = () => {
     </div>
   );
 }
-`;
-export { SkeletonWithAnimation, SkeletonWithAnimationCode };
+`
+export { SkeletonWithAnimation, SkeletonWithAnimationCode }

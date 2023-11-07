@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import EmptyDocsContent from "./Empty.mdx";
+'use client'
+import type { FC } from 'react'
+import EmptyDocsContent from './Empty.mdx'
 
-const EmptyDocs: FC = () => <EmptyDocsContent />;
+const EmptyDocs: FC = () => <EmptyDocsContent />
 
-export default EmptyDocs;
+export default EmptyDocs

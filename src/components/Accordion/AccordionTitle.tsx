@@ -1,36 +1,36 @@
-import { twMerge } from "tailwind-merge";
-import { MinusCircle, PlusCircle } from "phosphor-react";
-import type { ComponentProps, FC } from "react";
-import { useAccordionContext } from "./AccordionPanelContext";
-import { KeepBoolean, KeepHeadingLevel } from "../../Keep/KeepTheme";
-import { DeepPartial } from "../../helpers/deep-partial";
-import { useTheme } from "../../Keep/ThemeContex";
-import { mergeDeep } from "../../helpers/mergeDeep";
+import { MinusCircle, PlusCircle } from 'phosphor-react'
+import type { ComponentProps, FC } from 'react'
+import { twMerge } from 'tailwind-merge'
+import { DeepPartial } from '../../helpers/deep-partial'
+import { mergeDeep } from '../../helpers/mergeDeep'
+import { KeepBoolean, KeepHeadingLevel } from '../../Keep/KeepTheme'
+import { useTheme } from '../../Keep/ThemeContex'
+import { useAccordionContext } from './AccordionPanelContext'
 
 export interface keepAccordionTitleTheme {
   arrow: {
-    base: string;
-    open: KeepBoolean;
-  };
-  base: string;
-  flush: KeepBoolean;
-  heading: string;
-  open: KeepBoolean;
-  disabled: string;
+    base: string
+    open: KeepBoolean
+  }
+  base: string
+  flush: KeepBoolean
+  heading: string
+  open: KeepBoolean
+  disabled: string
   iconPosition: {
-    left: string;
-    right: string;
-  };
+    left: string
+    right: string
+  }
 }
 
-export interface AccordionTitleProps extends ComponentProps<"button"> {
-  arrowIcon?: FC<ComponentProps<"svg">>;
-  as?: KeepHeadingLevel;
-  theme?: DeepPartial<keepAccordionTitleTheme>;
+export interface AccordionTitleProps extends ComponentProps<'button'> {
+  arrowIcon?: FC<ComponentProps<'svg'>>
+  as?: KeepHeadingLevel
+  theme?: DeepPartial<keepAccordionTitleTheme>
 }
 
 export const AccordionTitle: FC<AccordionTitleProps> = ({
-  as: Heading = "h1",
+  as: Heading = 'h1',
   children,
   className,
   theme: customTheme = {},
@@ -45,55 +45,38 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
     disabled,
     closeIcon: CloseIcon,
     openIcon: OpenIcon,
-  } = useAccordionContext();
-  const onClick = () => typeof setOpen !== "undefined" && setOpen();
+  } = useAccordionContext()
+  const onClick = () => typeof setOpen !== 'undefined' && setOpen()
 
-  const oldTheme = useTheme().theme.accordion.title;
-  const theme = mergeDeep(oldTheme, customTheme);
+  const oldTheme = useTheme().theme.accordion.title
+  const theme = mergeDeep(oldTheme, customTheme)
 
   return (
     <button
       className={twMerge(
         theme.base,
-        theme.flush[flush ? "on" : "off"],
-        theme.open[isOpen ? "on" : "off"],
+        theme.flush[flush ? 'on' : 'off'],
+        theme.open[isOpen ? 'on' : 'off'],
         className,
         disabled && theme.disabled,
-        iconPosition === "right" && theme.iconPosition.right,
-        iconPosition === "left" && theme.iconPosition.left
+        iconPosition === 'right' && theme.iconPosition.right,
+        iconPosition === 'left' && theme.iconPosition.left,
       )}
       onClick={onClick}
       type="button"
       disabled={disabled}
-      {...props}
-    >
-      {iconPosition === "left" && !isOpen && CloseIcon && CloseIcon}
-      {iconPosition === "left" && isOpen && OpenIcon && OpenIcon}
-      {(iconPosition === "left" || !iconPosition) &&
-        !isOpen &&
-        !CloseIcon &&
-        !OpenIcon &&
-        showIcon && <PlusCircle />}
-      {(iconPosition === "left" || !iconPosition) &&
-        isOpen &&
-        !CloseIcon &&
-        !OpenIcon &&
-        showIcon && <MinusCircle />}
+      {...props}>
+      {iconPosition === 'left' && !isOpen && CloseIcon && CloseIcon}
+      {iconPosition === 'left' && isOpen && OpenIcon && OpenIcon}
+      {(iconPosition === 'left' || !iconPosition) && !isOpen && !CloseIcon && !OpenIcon && showIcon && <PlusCircle />}
+      {(iconPosition === 'left' || !iconPosition) && isOpen && !CloseIcon && !OpenIcon && showIcon && <MinusCircle />}
       <Heading className={theme.heading} data-testid="keep-accordion-heading">
         {children}
       </Heading>
-      {iconPosition === "right" && !isOpen && CloseIcon && CloseIcon}
-      {iconPosition === "right" && isOpen && OpenIcon && OpenIcon}
-      {(iconPosition === "right" || !iconPosition) &&
-        !isOpen &&
-        !CloseIcon &&
-        !OpenIcon &&
-        showIcon && <PlusCircle />}
-      {(iconPosition === "right" || !iconPosition) &&
-        isOpen &&
-        !CloseIcon &&
-        !OpenIcon &&
-        showIcon && <MinusCircle />}
+      {iconPosition === 'right' && !isOpen && CloseIcon && CloseIcon}
+      {iconPosition === 'right' && isOpen && OpenIcon && OpenIcon}
+      {(iconPosition === 'right' || !iconPosition) && !isOpen && !CloseIcon && !OpenIcon && showIcon && <PlusCircle />}
+      {(iconPosition === 'right' || !iconPosition) && isOpen && !CloseIcon && !OpenIcon && showIcon && <MinusCircle />}
     </button>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-"use client";
-import { Textarea } from "~/src";
+'use client'
+import { Textarea } from '~/src'
 
 const TextAreaWithHelperText = () => {
   return (
@@ -10,14 +10,10 @@ const TextAreaWithHelperText = () => {
       border={false}
       color="info"
       rows={4}
-      helperText={
-        <span className="font-medium text-slate-500">
-          Info that helps a user with this field!
-        </span>
-      }
+      helperText={<span className="font-medium text-slate-500">Info that helps a user with this field!</span>}
     />
-  );
-};
+  )
+}
 
 const TextAreaWithHelperTextCode = `
 "use client";
@@ -40,6 +36,6 @@ export const TextAreaComponent = () => {
     />
   );
 }
-`;
+`
 
-export { TextAreaWithHelperText, TextAreaWithHelperTextCode };
+export { TextAreaWithHelperText, TextAreaWithHelperTextCode }

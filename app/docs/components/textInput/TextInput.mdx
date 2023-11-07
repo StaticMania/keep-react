@@ -1,33 +1,18 @@
-import { DefaultInputCode, DefaultInput } from "./variant/DefaultInput";
-import { InputWithIcon, InputWithIconCode } from "./variant/InputWithIcon";
-import { InputWithAddon, InputWithAddonCode } from "./variant/InputWithAddon";
-import { InputFieldURL, InputFieldURLCode } from "./variant/InputFieldURL";
-import {
-  InputWithOutBorder,
-  InputWithOutBorderCode,
-} from "./variant/InputWithOutBorder";
-import {
-  InputColorVariant,
-  InputColorVariantCode,
-} from "./variant/InputColorVariant";
-import {
-  InputWithAddonAndIcon,
-  InputWithAddonAndIconCode,
-} from "./variant/InputWithAddonAndIcon";
-import {
-  LevelAndHelperText,
-  LevelAndHelperTextCode,
-} from "./variant/LevelAndHelperText";
-import {
-  InputFieldWithLevel,
-  InputFieldWithLevelCode,
-} from "./variant/InputFieldWithLevel";
-import { textInputApiData } from "./TextInputApi";
+import { DefaultInputCode, DefaultInput } from './variant/DefaultInput'
+import { InputWithIcon, InputWithIconCode } from './variant/InputWithIcon'
+import { InputWithAddon, InputWithAddonCode } from './variant/InputWithAddon'
+import { InputFieldURL, InputFieldURLCode } from './variant/InputFieldURL'
+import { InputWithOutBorder, InputWithOutBorderCode } from './variant/InputWithOutBorder'
+import { InputColorVariant, InputColorVariantCode } from './variant/InputColorVariant'
+import { InputWithAddonAndIcon, InputWithAddonAndIconCode } from './variant/InputWithAddonAndIcon'
+import { LevelAndHelperText, LevelAndHelperTextCode } from './variant/LevelAndHelperText'
+import { InputFieldWithLevel, InputFieldWithLevelCode } from './variant/InputFieldWithLevel'
+import { textInputApiData } from './TextInputApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+import { useTheme } from '~/src/Keep/ThemeContex'
 
 ## Table of Contents
 
@@ -77,10 +62,7 @@ The Input Field With Addon component pairs a standard text input with a function
 
 The Input With Addon and Icon component offers a comprehensive input experience by combining an icon and a functional addon element.
 
-<CodePreview
-  github="FormControls/TextInput.tsx"
-  code={InputWithAddonAndIconCode}
->
+<CodePreview github="FormControls/TextInput.tsx" code={InputWithAddonAndIconCode}>
   <InputWithAddonAndIcon />
 </CodePreview>
 

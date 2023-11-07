@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from '@storybook/react'
 import {
   ChartBar,
   Chat,
@@ -12,44 +12,44 @@ import {
   TreeStructure,
   UserPlus,
   Users,
-} from "phosphor-react";
-import { Sidebar } from ".";
-import { Badge } from "../Badge";
-import { removeFragment } from "../../helpers/mergeDeep";
+} from 'phosphor-react'
+import { Sidebar } from '.'
+import { Badge } from '../Badge'
+import { removeFragment } from '../../helpers/mergeDeep'
 
 const meta: Meta<typeof Sidebar> = {
   component: Sidebar,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    componentSubtitle: "",
+    componentSubtitle: '',
   },
 
   argTypes: {
     children: {
       control: { disable: true },
-      description: "Children is sidebar item",
+      description: 'Children is sidebar item',
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
     },
     theme: {
       control: { disable: true },
-      description: "Sidebar Theme",
+      description: 'Sidebar Theme',
       table: {
-        type: { summary: "Object" },
+        type: { summary: 'Object' },
       },
     },
     collapseBehavior: {
-      description: "Sidebar show or not?",
+      description: 'Sidebar show or not?',
       table: {
-        type: { summary: "collapse | hide" },
-        defaultValue: { summary: "collapse" },
+        type: { summary: 'collapse | hide' },
+        defaultValue: { summary: 'collapse' },
       },
     },
     collapsed: {
-      description: "Sidebar collapse or not?",
+      description: 'Sidebar collapse or not?',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
@@ -60,13 +60,13 @@ const meta: Meta<typeof Sidebar> = {
         <div className="max-w-xs shadow-lg">
           <Story />
         </div>
-      );
+      )
     },
   ],
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Sidebar>;
+export default meta
+type Story = StoryObj<typeof Sidebar>
 
 export const DefaultSidebar: Story = {
   args: {
@@ -75,15 +75,8 @@ export const DefaultSidebar: Story = {
         <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
           Dashboard
         </Sidebar.Item>
-        <Sidebar.Item icon={<ShoppingCart size={24} />}>
-          E-commerce
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={<LockSimple size={24} />}
-          label="pro"
-          labelColor="gray"
-        >
+        <Sidebar.Item icon={<ShoppingCart size={24} />}>E-commerce</Sidebar.Item>
+        <Sidebar.Item href="#" icon={<LockSimple size={24} />} label="pro" labelColor="gray">
           Components
         </Sidebar.Item>
         <Sidebar.Item href="#" icon={<Chat size={24} />} label="3">
@@ -104,7 +97,7 @@ export const DefaultSidebar: Story = {
       </Sidebar.ItemGroup>
     ),
   },
-};
+}
 export const SidebarWithDropdown: Story = {
   args: {
     children: (
@@ -113,10 +106,7 @@ export const SidebarWithDropdown: Story = {
           <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
             Dashboard
           </Sidebar.Item>
-          <Sidebar.Collapse
-            icon={<ShoppingCart size={24} />}
-            label="E-commerce"
-          >
+          <Sidebar.Collapse icon={<ShoppingCart size={24} />} label="E-commerce">
             <Sidebar.Item href="#" icon={<Handbag size={24} />}>
               Products
             </Sidebar.Item>
@@ -140,7 +130,7 @@ export const SidebarWithDropdown: Story = {
       </Sidebar.Items>
     ),
   },
-};
+}
 export const SidebarWithLogoBranding: Story = {
   args: {
     children: removeFragment(
@@ -151,10 +141,7 @@ export const SidebarWithLogoBranding: Story = {
             <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
               Dashboard
             </Sidebar.Item>
-            <Sidebar.Collapse
-              icon={<ShoppingCart size={24} />}
-              label="E-commerce"
-            >
+            <Sidebar.Collapse icon={<ShoppingCart size={24} />} label="E-commerce">
               <Sidebar.Item href="#" icon={<Handbag size={24} />}>
                 Products
               </Sidebar.Item>
@@ -176,10 +163,10 @@ export const SidebarWithLogoBranding: Story = {
             </Sidebar.Item>
           </Sidebar.ItemGroup>
         </Sidebar.Items>
-      </>
+      </>,
     ),
   },
-};
+}
 export const SidebarWithContentSeparator: Story = {
   args: {
     children: (
@@ -188,10 +175,7 @@ export const SidebarWithContentSeparator: Story = {
           <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
             Dashboard
           </Sidebar.Item>
-          <Sidebar.Collapse
-            icon={<ShoppingCart size={24} />}
-            label="E-commerce"
-          >
+          <Sidebar.Collapse icon={<ShoppingCart size={24} />} label="E-commerce">
             <Sidebar.Item href="#" icon={<Handbag size={24} />}>
               Products
             </Sidebar.Item>
@@ -220,7 +204,7 @@ export const SidebarWithContentSeparator: Story = {
       </Sidebar.Items>
     ),
   },
-};
+}
 export const SidebarWithCTA: Story = {
   args: {
     children: (
@@ -229,10 +213,7 @@ export const SidebarWithCTA: Story = {
           <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
             Dashboard
           </Sidebar.Item>
-          <Sidebar.Collapse
-            icon={<ShoppingCart size={24} />}
-            label="E-commerce"
-          >
+          <Sidebar.Collapse icon={<ShoppingCart size={24} />} label="E-commerce">
             <Sidebar.Item href="#" icon={<Handbag size={24} />}>
               Products
             </Sidebar.Item>
@@ -262,15 +243,13 @@ export const SidebarWithCTA: Story = {
             <button
               aria-label="Close"
               className="-m-1.5 ml-auto inline-flex h-6 w-6 rounded-lg bg-blue-50 p-1 text-blue-900 hover:bg-blue-200 focus:ring-2 focus:ring-blue-400 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800"
-              type="button"
-            >
+              type="button">
               <svg
                 aria-hidden={true}
                 className="h-4 w-4"
                 fill="currentColor"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   fillRule="evenodd"
                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -280,17 +259,16 @@ export const SidebarWithCTA: Story = {
             </button>
           </div>
           <p className="mb-3 text-sm text-blue-900 dark:text-blue-400">
-            Preview the new keep design dashboard navigation! You can turn the
-            new navigation off for a limited time in your profile.
+            Preview the new keep design dashboard navigation! You can turn the new navigation off for a limited time in
+            your profile.
           </p>
           <a
             className="text-sm text-blue-900 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-            href="#"
-          >
+            href="#">
             Turn new navigation off
           </a>
         </Sidebar.CTA>
       </Sidebar.Items>
     ),
   },
-};
+}

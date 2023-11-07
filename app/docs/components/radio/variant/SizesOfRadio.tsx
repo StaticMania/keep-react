@@ -1,12 +1,12 @@
-"use client";
-import { useState } from "react";
-import { Label, Radio } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Label, Radio } from '~/src'
 
 const SizesOfRadio = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
   return (
     <div className="p-5">
       <fieldset className="flex flex-col gap-3" id="radio">
@@ -46,8 +46,8 @@ const SizesOfRadio = () => {
         </div>
       </fieldset>
     </div>
-  );
-};
+  )
+}
 
 const SizesOfRadioCode = `
 "use client";
@@ -98,5 +98,5 @@ export const RadioComponent = () => {
     </fieldset>
   );
 }
-`;
-export { SizesOfRadio, SizesOfRadioCode };
+`
+export { SizesOfRadio, SizesOfRadioCode }

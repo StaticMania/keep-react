@@ -1,46 +1,46 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { useState } from "react";
-import { DatePicker } from ".";
-import { rangePicker } from "./DatePickerContext";
+import type { Meta, StoryObj } from '@storybook/react'
+import { useState } from 'react'
+import { DatePicker } from '.'
+import { rangePicker } from './DatePickerContext'
 
 const meta: Meta<typeof DatePicker> = {
   component: DatePicker,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     showTwoMonth: {
-      description: "Two month calendar show or not?",
+      description: 'Two month calendar show or not?',
       control: {
-        type: "radio",
+        type: 'radio',
       },
     },
     rangeDate: {
-      description: "Date picker range date function",
+      description: 'Date picker range date function',
       table: {
-        type: { summary: "SetState" },
+        type: { summary: 'SetState' },
       },
     },
     singleDatePicker: {
-      description: "Date picker single date function",
+      description: 'Date picker single date function',
       table: {
-        type: { summary: "SetState" },
+        type: { summary: 'SetState' },
       },
     },
     monthPicker: {
-      description: "Month picker function",
+      description: 'Month picker function',
       table: {
-        type: { summary: "SetState" },
+        type: { summary: 'SetState' },
       },
     },
     yearPicker: {
-      description: "Year picker function",
+      description: 'Year picker function',
       table: {
-        type: { summary: "SetState" },
+        type: { summary: 'SetState' },
       },
     },
     timePicker: {
-      description: "Time picker function",
+      description: 'Time picker function',
       table: {
-        type: { summary: "SetState" },
+        type: { summary: 'SetState' },
       },
     },
   },
@@ -51,13 +51,13 @@ const meta: Meta<typeof DatePicker> = {
       </div>
     ),
   ],
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof DatePicker>;
+export default meta
+type Story = StoryObj<typeof DatePicker>
 
 const DefaultDatePickerComponent = () => {
-  const [_, setDate] = useState<Date | null>(null);
+  const [_, setDate] = useState<Date | null>(null)
 
   return (
     <div className="w-2/6">
@@ -65,50 +65,50 @@ const DefaultDatePickerComponent = () => {
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
-  );
-};
+  )
+}
 const DatePickerWithTwoMonthComponent = () => {
-  const [_, setDate] = useState<Date | null>(null);
+  const [_, setDate] = useState<Date | null>(null)
   return (
     <div className="w-2/6">
       <DatePicker showTwoMonth singleDatePicker={setDate}>
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
-  );
-};
+  )
+}
 const DateRangePickerComponent = () => {
-  const [_, setRangeDate] = useState<rangePicker>();
+  const [_, setRangeDate] = useState<rangePicker>()
   return (
     <div className="w-2/6">
       <DatePicker rangeDate={setRangeDate}>
         <DatePicker.Range />
       </DatePicker>
     </div>
-  );
-};
+  )
+}
 const DateRangePickerWithTwoMonthComponent = () => {
-  const [_, setRangeDate] = useState<rangePicker>();
+  const [_, setRangeDate] = useState<rangePicker>()
   return (
     <div className="w-2/6">
       <DatePicker showTwoMonth rangeDate={setRangeDate}>
         <DatePicker.Range />
       </DatePicker>
     </div>
-  );
-};
+  )
+}
 const MonthPickerComponent = () => {
-  const [_, setMonthPicker] = useState<Date | null | string>();
+  const [_, setMonthPicker] = useState<Date | null | string>()
   return (
     <div className="w-2/6">
       <DatePicker monthPicker={setMonthPicker}>
         <DatePicker.Month />
       </DatePicker>
     </div>
-  );
-};
+  )
+}
 const YearPickerComponent = () => {
-  const [_, setYearPicker] = useState<number | Date | null>();
+  const [_, setYearPicker] = useState<number | Date | null>()
 
   return (
     <div className="w-2/6">
@@ -116,37 +116,37 @@ const YearPickerComponent = () => {
         <DatePicker.Year />
       </DatePicker>
     </div>
-  );
-};
+  )
+}
 const TimePickerComponent = () => {
-  const [_, setTime] = useState<string | null | Date>();
+  const [_, setTime] = useState<string | null | Date>()
   return (
     <div className="w-2/6">
       <DatePicker timePicker={setTime}>
         <DatePicker.Time />
       </DatePicker>
     </div>
-  );
-};
+  )
+}
 
 export const DefaultDatePicker: Story = {
   render: () => <DefaultDatePickerComponent />,
-};
+}
 export const DatePickerWithTwoMonth: Story = {
   render: () => <DatePickerWithTwoMonthComponent />,
-};
+}
 export const DateRangePicker: Story = {
   render: () => <DateRangePickerComponent />,
-};
+}
 export const DateRangePickerWithTwoMonth: Story = {
   render: () => <DateRangePickerWithTwoMonthComponent />,
-};
+}
 export const MonthPicker: Story = {
   render: () => <MonthPickerComponent />,
-};
+}
 export const YearPicker: Story = {
   render: () => <YearPickerComponent />,
-};
+}
 export const TimePicker: Story = {
   render: () => <TimePickerComponent />,
-};
+}

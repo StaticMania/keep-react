@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import NumberInputDocsContent from "./NumberInput.mdx";
+'use client'
+import type { FC } from 'react'
+import NumberInputDocsContent from './NumberInput.mdx'
 
-const NumberInputDocs: FC = () => <NumberInputDocsContent />;
+const NumberInputDocs: FC = () => <NumberInputDocsContent />
 
-export default NumberInputDocs;
+export default NumberInputDocs

@@ -1,6 +1,6 @@
-"use client";
-import { EyeSlash, Lock } from "phosphor-react";
-import { Label, TextInput } from "~/src";
+'use client'
+import { EyeSlash, Lock } from 'phosphor-react'
+import { Label, TextInput } from '~/src'
 
 const InputWithAddonAndIcon = () => {
   return (
@@ -18,8 +18,8 @@ const InputWithAddonAndIcon = () => {
         iconPosition="right"
       />
     </>
-  );
-};
+  )
+}
 
 const InputWithAddonAndIconCode = `
 "use client";
@@ -44,6 +44,6 @@ export const TextInputComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { InputWithAddonAndIcon, InputWithAddonAndIconCode };
+export { InputWithAddonAndIcon, InputWithAddonAndIconCode }

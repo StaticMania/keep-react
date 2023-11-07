@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
-import { Carousel } from "~/src";
-import { ArrowLineLeft, ArrowLineRight } from "phosphor-react";
+'use client'
+import Image from 'next/image'
+import { Carousel } from '~/src'
+import { ArrowLineLeft, ArrowLineRight } from 'phosphor-react'
 
 const CarouselWithCustomControlIcon = () => {
   return (
@@ -17,8 +17,7 @@ const CarouselWithCustomControlIcon = () => {
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-2 group-focus:ring-white sm:h-10 sm:w-10">
             <ArrowLineRight size={20} weight="bold" color="white" />
           </span>
-        }
-      >
+        }>
         <Image
           src="https://images.prismic.io/staticmania/ecd45179-4b86-4a34-b245-0078e022db5a_1.png?auto=compress,format"
           alt="slider-1"
@@ -45,8 +44,8 @@ const CarouselWithCustomControlIcon = () => {
         />
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
 const CarouselWithCustomControlIconCode = `
 "use client";
@@ -98,6 +97,6 @@ export const CarouselComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { CarouselWithCustomControlIcon, CarouselWithCustomControlIconCode };
+export { CarouselWithCustomControlIcon, CarouselWithCustomControlIconCode }

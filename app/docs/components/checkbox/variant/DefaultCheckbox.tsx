@@ -1,10 +1,10 @@
-"use client";
-import { CheckBox } from "~/src";
+'use client'
+import { CheckBox } from '~/src'
 
 const DefaultCheckbox = () => {
   const handleChecked = (value: boolean) => {
-    console.log(value);
-  };
+    console.log(value)
+  }
   return (
     <div className="py-3">
       <CheckBox
@@ -16,8 +16,8 @@ const DefaultCheckbox = () => {
         handleChecked={handleChecked}
       />
     </div>
-  );
-};
+  )
+}
 
 const DefaultCheckboxCode = `
 "use client";
@@ -39,6 +39,6 @@ export const CheckboxComponent = () => {
       />
   );
 }
-`;
+`
 
-export { DefaultCheckbox, DefaultCheckboxCode };
+export { DefaultCheckbox, DefaultCheckboxCode }

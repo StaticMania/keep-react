@@ -1,79 +1,71 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { CrownSimple, X } from "phosphor-react";
-import { Tag } from ".";
+import type { Meta, StoryObj } from '@storybook/react'
+import { CrownSimple, X } from 'phosphor-react'
+import { Tag } from '.'
 
 const meta: Meta<typeof Tag> = {
   component: Tag,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     color: {
-      control: "select",
-      options: [
-        "error",
-        "gray",
-        "info",
-        "success",
-        "warning",
-        "teal",
-        "purple",
-      ],
+      control: 'select',
+      options: ['error', 'gray', 'info', 'success', 'warning', 'teal', 'purple'],
       table: {
         type: {
-          summary: "error | gray | info | success | warning | teal | purple",
+          summary: 'error | gray | info | success | warning | teal | purple',
         },
-        defaultValue: { summary: "gray" },
+        defaultValue: { summary: 'gray' },
       },
-      description: "Availabe Tag colors",
+      description: 'Availabe Tag colors',
     },
     borderType: {
       table: {
-        type: { summary: "solid | dashed" },
-        defaultValue: { summary: "solid" },
+        type: { summary: 'solid | dashed' },
+        defaultValue: { summary: 'solid' },
       },
-      description: "Availabe Tag border type",
+      description: 'Availabe Tag border type',
     },
     dismiss: {
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
-      description: "Tag show or not?",
+      description: 'Tag show or not?',
     },
     children: {
       control: {
         disable: true,
       },
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
-      description: "Tag Text with JSX",
+      description: 'Tag Text with JSX',
     },
     leftIcon: {
       control: {
         disable: true,
       },
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
-      description: "Tag Left side icon",
+      description: 'Tag Left side icon',
     },
     dismissIcon: {
       control: {
         disable: true,
       },
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
-      description: "Tag dismiss icon",
+      description: 'Tag dismiss icon',
     },
     onDismiss: {
       control: {
         disable: true,
       },
       table: {
-        type: { summary: "Function" },
+        type: { summary: 'Function' },
       },
-      description: "Tag Handler",
+      description: 'Tag Handler',
     },
   },
   decorators: [
@@ -83,94 +75,94 @@ const meta: Meta<typeof Tag> = {
       </div>
     ),
   ],
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Tag>;
+export default meta
+type Story = StoryObj<typeof Tag>
 
 export const DefaultTag: Story = {
   args: {
-    color: "gray",
+    color: 'gray',
     disabled: false,
-    borderType: "solid",
+    borderType: 'solid',
     dismiss: false,
     leftIcon: null,
     dismissIcon: null,
-    children: "Default Tag",
+    children: 'Default Tag',
   },
-};
+}
 
 export const ErrorTag: Story = {
   args: {
     ...DefaultTag.args,
-    color: "error",
-    children: "Error Tag",
+    color: 'error',
+    children: 'Error Tag',
   },
-};
+}
 export const InfoTag: Story = {
   args: {
     ...DefaultTag.args,
-    color: "info",
-    children: "Info Tag",
+    color: 'info',
+    children: 'Info Tag',
   },
-};
+}
 export const WarningTag: Story = {
   args: {
     ...DefaultTag.args,
-    color: "warning",
-    children: "Warning Tag",
+    color: 'warning',
+    children: 'Warning Tag',
   },
-};
+}
 export const SuccessTag: Story = {
   args: {
     ...DefaultTag.args,
-    color: "success",
-    children: "Success Tag",
+    color: 'success',
+    children: 'Success Tag',
   },
-};
+}
 export const TealTag: Story = {
   args: {
     ...DefaultTag.args,
-    color: "teal",
-    children: "Teal Tag",
+    color: 'teal',
+    children: 'Teal Tag',
   },
-};
+}
 export const PurpleTag: Story = {
   args: {
     ...DefaultTag.args,
-    color: "purple",
-    children: "Purple Tag",
+    color: 'purple',
+    children: 'Purple Tag',
   },
-};
+}
 export const DashedTag: Story = {
   args: {
     ...DefaultTag.args,
-    color: "gray",
-    borderType: "dashed",
-    children: "Dashed Border",
+    color: 'gray',
+    borderType: 'dashed',
+    children: 'Dashed Border',
   },
-};
+}
 export const TagWithLeftSideIcon: Story = {
   args: {
     ...DefaultTag.args,
-    color: "gray",
+    color: 'gray',
     leftIcon: <CrownSimple size={20} color="#5E718D" />,
   },
-};
+}
 export const TagWithBothSideIcon: Story = {
   args: {
     ...DefaultTag.args,
-    color: "gray",
+    color: 'gray',
     leftIcon: <CrownSimple size={20} color="#5E718D" />,
     dismissIcon: <X color="#5E718D" size={20} />,
   },
-};
+}
 export const TagWithDashedBorder: Story = {
   args: {
     ...DefaultTag.args,
-    color: "gray",
+    color: 'gray',
     leftIcon: <CrownSimple size={20} color="#5E718D" />,
     dismissIcon: <X size={20} color="#5E718D" />,
-    borderType: "dashed",
+    borderType: 'dashed',
   },
-};
+}

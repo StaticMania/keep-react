@@ -1,6 +1,6 @@
-"use client";
-import { BarChart } from "~/src";
-import { BarChartData } from "./DefaultBarChart";
+'use client'
+import { BarChart } from '~/src'
+import { BarChartData } from './DefaultBarChart'
 
 const CustomizedBarSizeWithAxisData = () => {
   return (
@@ -18,8 +18,8 @@ const CustomizedBarSizeWithAxisData = () => {
       showXaxis={true}
       showYaxis={true}
     />
-  );
-};
+  )
+}
 
 const CustomizedBarSizeWithAxisDataCode = `
 "use client";
@@ -71,6 +71,6 @@ export const BarComponent = () => {
     />
   );
 }
-`;
+`
 
-export { CustomizedBarSizeWithAxisData, CustomizedBarSizeWithAxisDataCode };
+export { CustomizedBarSizeWithAxisData, CustomizedBarSizeWithAxisDataCode }

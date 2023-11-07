@@ -1,22 +1,12 @@
-"use client";
-import { CaretRight } from "phosphor-react";
-import { Dropdown, TextInput } from "~/src";
+'use client'
+import { CaretRight } from 'phosphor-react'
+import { Dropdown, TextInput } from '~/src'
 
 const DropdownSearchBar = () => {
   return (
-    <Dropdown
-      label="Dropdown button"
-      type="primary"
-      size="sm"
-      dismissOnClick={true}
-    >
-      <div className="px-5 pt-3 pb-2">
-        <TextInput
-          id="#id-z3rxdy"
-          placeholder="Search"
-          color="gray"
-          sizing="md"
-        />
+    <Dropdown label="Dropdown button" type="primary" size="sm" dismissOnClick={true}>
+      <div className="px-5 pb-2 pt-3">
+        <TextInput id="#id-z3rxdy" placeholder="Search" color="gray" sizing="md" />
       </div>
       <Dropdown.Item>
         Dashboard
@@ -43,8 +33,8 @@ const DropdownSearchBar = () => {
         </span>
       </Dropdown.Item>
     </Dropdown>
-  );
-};
+  )
+}
 
 const DropdownSearchBarCode = `
 "use client";
@@ -94,6 +84,6 @@ export const DropdownComponent = () => {
     </Dropdown>
   );
 }
-`;
+`
 
-export { DropdownSearchBar, DropdownSearchBarCode };
+export { DropdownSearchBar, DropdownSearchBarCode }

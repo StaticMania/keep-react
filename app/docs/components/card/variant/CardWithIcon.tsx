@@ -1,50 +1,40 @@
-"use client";
-import { Button, Card, Popover } from "~/src";
-import {
-  ArchiveTray,
-  CaretRight,
-  DotsThreeVertical,
-  PencilCircle,
-} from "phosphor-react";
+'use client'
+import { Button, Card, Popover } from '~/src'
+import { ArchiveTray, CaretRight, DotsThreeVertical, PencilCircle } from 'phosphor-react'
 
 const CardWithIcon = () => {
   return (
     <div className="flex flex-col gap-5">
       {/* ===CARD ONE=== */}
-      <Card className="p-6 max-w-xl">
-        <Card.Container className="flex items-start md:gap-5 gap-3.5">
-          <Card.Container className="flex items-center justify-center rounded-full bg-slate-50 md:p-4 p-2.5">
+      <Card className="max-w-xl p-6">
+        <Card.Container className="flex items-start gap-3.5 md:gap-5">
+          <Card.Container className="flex items-center justify-center rounded-full bg-slate-50 p-2.5 md:p-4">
             <ArchiveTray size={28} color="#3D4A5C" />
           </Card.Container>
           <Card.Container className="flex flex-col gap-2">
             <Card.Title>Keep React</Card.Title>
             <Card.Description>
-              Component design systems can help developers to be more productive
-              by providing them with a ready-made set of components to use.
+              Component design systems can help developers to be more productive by providing them with a ready-made set
+              of components to use.
             </Card.Description>
-            <Card.Link
-              href="/"
-              icon={<CaretRight size={16} color="#1B4DFF" />}
-              iconPosition="left"
-            >
+            <Card.Link href="/" icon={<CaretRight size={16} color="#1B4DFF" />} iconPosition="left">
               Learn More
             </Card.Link>
           </Card.Container>
         </Card.Container>
       </Card>
       {/* ===CARD TWO=== */}
-      <Card className="p-6 max-w-xl">
+      <Card className="max-w-xl p-6">
         <Card.Container className="flex gap-5">
           <Card.Container className="flex items-start gap-5">
-            <Card.Container className="flex items-center justify-start rounded-full bg-slate-50 md:p-4 p-2.5">
+            <Card.Container className="flex items-center justify-start rounded-full bg-slate-50 p-2.5 md:p-4">
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">
               <Card.Title>Keep React</Card.Title>
               <Card.Description>
-                Component design systems can help developers to be more
-                productive by providing them with a ready-made set of components
-                to use.
+                Component design systems can help developers to be more productive by providing them with a ready-made
+                set of components to use.
               </Card.Description>
             </Card.Container>
           </Card.Container>
@@ -52,30 +42,22 @@ const CardWithIcon = () => {
             <Popover
               customClass="!w-[20rem]"
               additinalContent={
-                <h2 className="text-lg leading-6 tracking-[-0.3px] font-medium text-slate-500">
-                  Keep Design System
-                </h2>
-              }
-            >
-              <DotsThreeVertical
-                size={24}
-                color="#5E718D"
-                className="flex cursor-pointer items-start"
-              />
+                <h2 className="text-lg font-medium leading-6 tracking-[-0.3px] text-slate-500">Keep Design System</h2>
+              }>
+              <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
             </Popover>
           </Card.Container>
         </Card.Container>
       </Card>
       {/* ===CARD THREE=== */}
-      <Card className="md:p-6 p-5 max-w-[280px]">
+      <Card className="max-w-[280px] p-5 md:p-6">
         <Card.Container className="flex items-center justify-center">
           <PencilCircle size={80} color="#1B4DFF" />
         </Card.Container>
         <Card.Container className="text-center">
           <Card.Title>Keep React</Card.Title>
           <Card.Description>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
@@ -85,8 +67,8 @@ const CardWithIcon = () => {
         </Card.Container>
       </Card>
     </div>
-  );
-};
+  )
+}
 
 const CardWithIconCode = `
 "use client";
@@ -178,6 +160,6 @@ export const CardComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { CardWithIcon, CardWithIconCode };
+export { CardWithIcon, CardWithIconCode }

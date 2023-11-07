@@ -1,78 +1,76 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { SquaresFour } from "phosphor-react";
-import { useState } from "react";
-import { CheckboxGroup } from ".";
+import type { Meta, StoryObj } from '@storybook/react'
+import { SquaresFour } from 'phosphor-react'
+import { useState } from 'react'
+import { CheckboxGroup } from '.'
 
 const meta: Meta<typeof CheckboxGroup> = {
   component: CheckboxGroup,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     checkboxType: {
-      description: "Specifies the type of checkbox style: square or circular.",
-      control: "select",
-      options: ["circle", "square"],
+      description: 'Specifies the type of checkbox style: square or circular.',
+      control: 'select',
+      options: ['circle', 'square'],
       table: {
-        defaultValue: { summary: "square" },
+        defaultValue: { summary: 'square' },
       },
     },
     checkboxPosition: {
-      description:
-        "Specifies the position of the checkbox relative to the label.",
-      control: "select",
-      options: ["left", "right"],
+      description: 'Specifies the position of the checkbox relative to the label.',
+      control: 'select',
+      options: ['left', 'right'],
       table: {
-        defaultValue: { summary: "left" },
+        defaultValue: { summary: 'left' },
       },
     },
     title: {
-      description: "Main title or label for the checkbox group.",
+      description: 'Main title or label for the checkbox group.',
 
       table: {
-        control: "",
-        defaultValue: { summary: "Static Design.." },
+        control: '',
+        defaultValue: { summary: 'Static Design..' },
       },
     },
     description: {
-      description:
-        "Additional description or information about the checkbox group.",
+      description: 'Additional description or information about the checkbox group.',
     },
 
     icon: {
-      description: "Optional icon displayed alongside the checkbox group.",
+      description: 'Optional icon displayed alongside the checkbox group.',
     },
     img: {
-      description: "URL of an image displayed alongside the checkbox group.",
+      description: 'URL of an image displayed alongside the checkbox group.',
     },
     value: {
-      description: "Value of the currently selected checkbox.",
+      description: 'Value of the currently selected checkbox.',
     },
     selected: {
-      description: "Selected checkbox.",
+      description: 'Selected checkbox.',
     },
     fieldName: {
-      description: "Field Name",
+      description: 'Field Name',
     },
     imgShape: {
-      control: "select",
-      options: ["square", "circle"],
-      description: "Specifies the shape of the image: square or circular.",
+      control: 'select',
+      options: ['square', 'circle'],
+      description: 'Specifies the shape of the image: square or circular.',
     },
     select: {
-      control: "select",
-      options: ["multiple", "single"],
-      description: "Value of the pre-selected checkbox, if any.",
+      control: 'select',
+      options: ['multiple', 'single'],
+      description: 'Value of the pre-selected checkbox, if any.',
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof CheckboxGroup>;
+export default meta
+type Story = StoryObj<typeof CheckboxGroup>
 
 const DefaultCheckboxGroupCom = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
 
   return (
     <form className="space-y-4 p-5">
@@ -109,13 +107,13 @@ const DefaultCheckboxGroupCom = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 const CheckboxGroupWithCircleCheckboxCom = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
 
   return (
     <form className="space-y-4 p-5">
@@ -160,13 +158,13 @@ const CheckboxGroupWithCircleCheckboxCom = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 const CheckboxGroupWithIconCom = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
 
   return (
     <form className="space-y-4 p-5">
@@ -215,13 +213,13 @@ const CheckboxGroupWithIconCom = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 const CheckboxGroupWithLogoCom = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
 
   return (
     <form className="space-y-4 p-5">
@@ -266,13 +264,13 @@ const CheckboxGroupWithLogoCom = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 const CheckboxGroupWithAvatarCom = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
 
   return (
     <form className="space-y-4 p-5">
@@ -317,13 +315,13 @@ const CheckboxGroupWithAvatarCom = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 const CheckboxGroupWithImageCom = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
 
   return (
     <form className="space-y-4 p-5">
@@ -368,24 +366,24 @@ const CheckboxGroupWithImageCom = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 
 export const DefaultCheckboxGroup: Story = {
   render: () => <DefaultCheckboxGroupCom />,
-};
+}
 export const CheckboxGroupWithCircleCheckbox: Story = {
   render: () => <CheckboxGroupWithCircleCheckboxCom />,
-};
+}
 export const CheckboxGroupWithIcon: Story = {
   render: () => <CheckboxGroupWithIconCom />,
-};
+}
 export const CheckboxGroupWithLogo: Story = {
   render: () => <CheckboxGroupWithLogoCom />,
-};
+}
 export const CheckboxGroupWithAvatar: Story = {
   render: () => <CheckboxGroupWithAvatarCom />,
-};
+}
 export const CheckboxGroupWithImage: Story = {
   render: () => <CheckboxGroupWithImageCom />,
-};
+}

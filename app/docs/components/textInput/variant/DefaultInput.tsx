@@ -1,11 +1,9 @@
-"use client";
-import { TextInput } from "~/src";
+'use client'
+import { TextInput } from '~/src'
 
 const DefaultInput = () => {
-  return (
-    <TextInput id="#id-6" placeholder="Default Input Field" color="gray" />
-  );
-};
+  return <TextInput id="#id-6" placeholder="Default Input Field" color="gray" />
+}
 
 const DefaultInputCode = `
 "use client";
@@ -16,6 +14,6 @@ export const TextInputComponent = () => {
     <TextInput id="input" placeholder="Default Input Field" color="gray" />
   );
 }
-`;
+`
 
-export { DefaultInputCode, DefaultInput };
+export { DefaultInputCode, DefaultInput }

@@ -1,5 +1,5 @@
-"use client";
-import { Badge, PlayButton, Card, Button, Progress } from "~/src";
+'use client'
+import { Badge, PlayButton, Card, Button, Progress } from '~/src'
 import {
   ArrowsOutSimple,
   Bed,
@@ -13,18 +13,17 @@ import {
   SkipForward,
   SpeakerHigh,
   Users,
-} from "phosphor-react";
+} from 'phosphor-react'
 
 const ProductCard = () => {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-5 items-center">
-      <div className="md:col-span-1 flex flex-col gap-5">
+    <div className="grid grid-cols-1 items-center gap-5 md:grid-cols-2">
+      <div className="flex flex-col gap-5 md:col-span-1">
         <Card
           className="max-w-xs overflow-hidden rounded-md"
           imgSrc="https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format"
-          imgSize="md"
-        >
-          <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+          imgSize="md">
+          <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
             <Heart size={20} weight="bold" color="white" />
           </Card.Container>
           <Card.Container className="p-6">
@@ -37,8 +36,7 @@ const ProductCard = () => {
             <Card.Container className="my-3">
               <Card.Title>Men Nike Shoe</Card.Title>
               <Card.Description>
-                This can save time and effort, and it can also help to reduce
-                the risk of errors.
+                This can save time and effort, and it can also help to reduce the risk of errors.
               </Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-start gap-5">
@@ -54,24 +52,15 @@ const ProductCard = () => {
         <Card
           className="max-w-xs overflow-hidden rounded-md"
           imgSrc="https://images.prismic.io/staticmania/cb1a34d1-50a8-4b9c-b5e2-020d1c67e993_product-3.avif?auto=compress,format"
-          imgSize="md"
-        >
+          imgSize="md">
           <Card.Container className="space-y-3 p-6">
             <Card.Container>
-              <Card.Title className="text-md md:text-xl font-semibold text-slate-700">
-                Keep design podcast
-              </Card.Title>
-              <Card.Description className="text-sm font-medium text-slate-500">
-                By Static Mania
-              </Card.Description>
+              <Card.Title className="text-md font-semibold text-slate-700 md:text-xl">Keep design podcast</Card.Title>
+              <Card.Description className="text-sm font-medium text-slate-500">By Static Mania</Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-between">
-              <Card.Title className="text-xs font-medium text-slate-500">
-                4:05
-              </Card.Title>
-              <Card.Title className="text-xs font-medium text-slate-500">
-                10:05
-              </Card.Title>
+              <Card.Title className="text-xs font-medium text-slate-500">4:05</Card.Title>
+              <Card.Title className="text-xs font-medium text-slate-500">10:05</Card.Title>
             </Card.Container>
             <Progress progress={45} color="info" rounded={true} />
             <Card.Container className="flex items-center justify-between">
@@ -82,12 +71,7 @@ const ProductCard = () => {
                 <Button type="text" circle={true}>
                   <SkipBack size={24} color="#5E718D" weight="bold" />
                 </Button>
-                <PlayButton
-                  type="primary"
-                  circle={true}
-                  size="lg"
-                  icon={<Play size="21" />}
-                />
+                <PlayButton type="primary" circle={true} size="lg" icon={<Play size="21" />} />
                 <Button type="text" circle={true}>
                   <SkipForward size={24} color="#5E718D" weight="bold" />
                 </Button>
@@ -103,13 +87,12 @@ const ProductCard = () => {
         <Card
           className="max-w-xs overflow-hidden rounded-md"
           imgSrc="https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format"
-          imgSize="md"
-        >
-          <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+          imgSize="md">
+          <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
             <Heart size={20} weight="bold" color="white" />
           </Card.Container>
           <Card.Container className="space-y-4 p-6">
-            <Card.Title className="flex items-center gap-2 text-sm md:text-base font-medium text-slate-500">
+            <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500 md:text-base">
               <MapPinLine size={20} color="#5E718D" />
               <span>Garden Street,Ring Road</span>
             </Card.Title>
@@ -135,16 +118,14 @@ const ProductCard = () => {
             </Card.Container>
             <Card.Container className="my-3 flex items-center justify-between">
               <Button type="primary">Check Out</Button>
-              <Card.Title className="text-lg md:text-2xl font-semibold text-slate-700">
-                $649,00
-              </Card.Title>
+              <Card.Title className="text-lg font-semibold text-slate-700 md:text-2xl">$649,00</Card.Title>
             </Card.Container>
           </Card.Container>
         </Card>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const ProductCardCode = `
 "use client";
@@ -301,6 +282,6 @@ export const CardComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { ProductCard, ProductCardCode };
+export { ProductCard, ProductCardCode }

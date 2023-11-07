@@ -1,9 +1,9 @@
-"use client";
-import { Progress } from "~/src";
+'use client'
+import { Progress } from '~/src'
 
 const ColorsOfProgress = () => {
   return (
-    <div className="flex flex-col gap-2 w-5/6 p-4">
+    <div className="flex w-5/6 flex-col gap-2 p-4">
       <div className="text-base font-medium text-primary-500">Blue</div>
       <Progress progress={45} color="info" rounded={false} />
       <Progress progress={45} color="info" rounded={true} />
@@ -29,8 +29,8 @@ const ColorsOfProgress = () => {
       <Progress progress={45} color="purple" rounded={true} />
       <Progress progress={45} color="purple" bordered={true} />
     </div>
-  );
-};
+  )
+}
 
 const ColorsOfProgressCode = `
 "use client";
@@ -65,6 +65,6 @@ export const ProgressComponent = () => {
       <Progress progress={45} color="purple" bordered={true} />
     </div>
   );
-}`;
+}`
 
-export { ColorsOfProgress, ColorsOfProgressCode };
+export { ColorsOfProgress, ColorsOfProgressCode }

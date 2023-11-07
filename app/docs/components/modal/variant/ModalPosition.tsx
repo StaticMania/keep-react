@@ -1,24 +1,19 @@
-"use client";
-import { useState } from "react";
-import { Button, Modal } from "~/src";
-import { CloudArrowUp } from "phosphor-react";
+'use client'
+import { useState } from 'react'
+import { Button, Modal } from '~/src'
+import { CloudArrowUp } from 'phosphor-react'
 
 const ModalPosition = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
   const onClick = () => {
-    setShowModal(!showModal);
-  };
+    setShowModal(!showModal)
+  }
   return (
-    <div className="py-3 px-2">
+    <div className="px-2 py-3">
       <Button type="primary" onClick={onClick}>
         Modal
       </Button>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModal}
-        position="top-center"
-      >
+      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="top-center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
@@ -37,8 +32,8 @@ const ModalPosition = () => {
         </Modal.Footer>
       </Modal>
     </div>
-  );
-};
+  )
+}
 
 const ModalPositionCode = `
 "use client";
@@ -80,6 +75,6 @@ export const ModalComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { ModalPosition, ModalPositionCode };
+export { ModalPosition, ModalPositionCode }

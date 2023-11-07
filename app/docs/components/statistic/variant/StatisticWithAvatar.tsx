@@ -1,5 +1,5 @@
-"use client";
-import { Statistic } from "~/src";
+'use client'
+import { Statistic } from '~/src'
 
 const StatisticWithAvatar = () => {
   return (
@@ -7,8 +7,7 @@ const StatisticWithAvatar = () => {
       showFilter={true}
       showDollar={true}
       filterLabel="This Month"
-      filterData={["January", "February", "March", "April"]}
-    >
+      filterData={['January', 'February', 'March', 'April']}>
       <div className="flex items-center gap-4">
         <Statistic.Img img="/images/avatar/avatar-4.png" />
         <div>
@@ -20,8 +19,8 @@ const StatisticWithAvatar = () => {
         </div>
       </div>
     </Statistic>
-  );
-};
+  )
+}
 
 const StatisticWithAvatarCode = `
 "use client";
@@ -48,6 +47,6 @@ export const StatisticComponent = () => {
     </Statistic>
   );
 }
-`;
+`
 
-export { StatisticWithAvatar, StatisticWithAvatarCode };
+export { StatisticWithAvatar, StatisticWithAvatarCode }
