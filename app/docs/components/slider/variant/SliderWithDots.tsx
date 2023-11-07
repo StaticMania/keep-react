@@ -1,5 +1,5 @@
-"use client";
-import { Slider } from "~/src";
+'use client'
+import { Slider } from '~/src'
 
 const SliderWithDots = () => {
   return (
@@ -13,8 +13,8 @@ const SliderWithDots = () => {
         step={200}
       />
     </div>
-  );
-};
+  )
+}
 
 const SliderWithDotsCode = `
 "use client";
@@ -32,6 +32,6 @@ export const SliderComponent = () => {
     />
   );
 }
-`;
+`
 
-export { SliderWithDots, SliderWithDotsCode };
+export { SliderWithDots, SliderWithDotsCode }

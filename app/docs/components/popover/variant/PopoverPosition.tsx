@@ -1,5 +1,5 @@
-"use client";
-import { Button, Popover } from "~/src";
+'use client'
+import { Button, Popover } from '~/src'
 
 const PopoverPosition = () => {
   return (
@@ -7,13 +7,12 @@ const PopoverPosition = () => {
       <Popover
         position="right-end"
         title="Popover title here"
-        description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
-      >
+        description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour">
         <Button size="xs">Popover</Button>
       </Popover>
     </div>
-  );
-};
+  )
+}
 
 const PopoverPositionCode = `
 "use client";
@@ -30,6 +29,6 @@ export const PopoverComponent = () => {
     </Popover>
   );
 }
-`;
+`
 
-export { PopoverPosition, PopoverPositionCode };
+export { PopoverPosition, PopoverPositionCode }

@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import AvatarGroupDocsContent from "./avatarGroup.mdx";
+'use client'
+import type { FC } from 'react'
+import AvatarGroupDocsContent from './avatarGroup.mdx'
 
-const AvatarGroupDocs: FC = () => <AvatarGroupDocsContent />;
+const AvatarGroupDocs: FC = () => <AvatarGroupDocsContent />
 
-export default AvatarGroupDocs;
+export default AvatarGroupDocs

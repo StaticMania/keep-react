@@ -1,6 +1,6 @@
-"use client";
-import { Users } from "phosphor-react";
-import { Statistic } from "~/src";
+'use client'
+import { Users } from 'phosphor-react'
+import { Statistic } from '~/src'
 
 const StatisticWithIcon = () => {
   return (
@@ -9,8 +9,7 @@ const StatisticWithIcon = () => {
       showDollar={true}
       iconBg="primary"
       filterLabel="This Month"
-      filterData={["January", "February", "March", "April"]}
-    >
+      filterData={['January', 'February', 'March', 'April']}>
       <div className="flex items-center gap-4">
         <Statistic.Icon icon={<Users size={32} color="#fff" />} />
         <div>
@@ -22,8 +21,8 @@ const StatisticWithIcon = () => {
         </div>
       </div>
     </Statistic>
-  );
-};
+  )
+}
 
 const StatisticWithIconCode = `
 "use client";
@@ -52,6 +51,6 @@ export const StatisticComponent = () => {
     </Statistic>
   );
 }
-`;
+`
 
-export { StatisticWithIcon, StatisticWithIconCode };
+export { StatisticWithIcon, StatisticWithIconCode }

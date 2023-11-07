@@ -1,42 +1,29 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
-    <footer
-      className={`bg-white shadow-sm ${pathname === "/" ? "" : "hidden"}`}
-    >
+    <footer className={`bg-white shadow-sm ${pathname === '/' ? '' : 'hidden'}`}>
       <div className="container py-10">
-        <div className="flex flex-col md:flex-row md:gap-0 md:items-center items-start gap-8 justify-between">
+        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center md:gap-0">
           <div>
             <Link href="/" className="flex">
-              <Image
-                width="113"
-                height="40"
-                src="/images/keep.svg"
-                alt="Keep React"
-              />
+              <Image width="113" height="40" src="/images/keep.svg" alt="Keep React" />
             </Link>
-            <p className="text-base text-slate-700 font-normal leading-[22px] tracking-[-0.3px] mt-6 max-w-lg">
-              Keep React is an open-source component library built on Tailwind
-              CSS and React.js. It provides a versatile set of pre-designed UI
-              components to build modern web applications.
+            <p className="mt-6 max-w-lg text-base font-normal leading-[22px] tracking-[-0.3px] text-slate-700">
+              Keep React is an open-source component library built on Tailwind CSS and React.js. It provides a versatile
+              set of pre-designed UI components to build modern web applications.
             </p>
           </div>
           <div>
-            <h4 className="text-base font-medium text-slate-900 mb-3 uppercase">
-              RESOURCES
-            </h4>
-            <ul className="text-base font-normal text-slate-700 flex flex-col gap-3">
+            <h4 className="mb-3 text-base font-medium uppercase text-slate-900">RESOURCES</h4>
+            <ul className="flex flex-col gap-3 text-base font-normal text-slate-700">
               <li>
-                <a
-                  href="https://github.com/StaticMania/keep-react"
-                  target="_blank"
-                >
+                <a href="https://github.com/StaticMania/keep-react" target="_blank">
                   GitHub
                 </a>
               </li>
@@ -48,8 +35,7 @@ const Footer = () => {
               <li>
                 <a
                   href="https://www.figma.com/file/J2i6VhncmepyLt8OS7i0GQ/Keep-Design-System---Pro-Version---Preview?type=design&node-id=2411-87283&mode=design&t=sYkDt6aaEl1EGXgV-0"
-                  target="_blank"
-                >
+                  target="_blank">
                   Figma
                 </a>
               </li>
@@ -57,21 +43,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center py-5 border-t border-t-slate-100">
+      <div className="border-t border-t-slate-100 py-5 text-center">
         <p className="text-base font-normal text-slate-900">
-          &copy;{new Date().getFullYear()} All Rights Reserved by{" "}
-          <a
-            href="https://staticmania.com/"
-            target="_blank"
-            className="font-medium"
-          >
+          &copy;{new Date().getFullYear()} All Rights Reserved by{' '}
+          <a href="https://staticmania.com/" target="_blank" className="font-medium">
             StaticMania
           </a>
           .
         </p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

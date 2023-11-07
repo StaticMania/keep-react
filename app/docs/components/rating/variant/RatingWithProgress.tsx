@@ -1,5 +1,5 @@
-"use client";
-import { Rating } from "~/src";
+'use client'
+import { Rating } from '~/src'
 
 const RatingWithProgress = () => {
   return (
@@ -10,8 +10,8 @@ const RatingWithProgress = () => {
       <Rating.Advanced percentFilled={40}>2 Star</Rating.Advanced>
       <Rating.Advanced percentFilled={10}>1 Star</Rating.Advanced>
     </div>
-  );
-};
+  )
+}
 
 const RatingWithProgressCode = `
 "use client";
@@ -28,6 +28,6 @@ export const RatingComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { RatingWithProgress, RatingWithProgressCode };
+export { RatingWithProgress, RatingWithProgressCode }

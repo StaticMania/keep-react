@@ -1,21 +1,16 @@
-"use client";
-import { Dropdown } from "~/src";
+'use client'
+import { Dropdown } from '~/src'
 
 const DefaultDropdown = () => {
   return (
-    <Dropdown
-      label="Dropdown button"
-      size="sm"
-      type="primary"
-      dismissOnClick={true}
-    >
+    <Dropdown label="Dropdown button" size="sm" type="primary" dismissOnClick={true}>
       <Dropdown.Item>Dashboard</Dropdown.Item>
       <Dropdown.Item>Settings</Dropdown.Item>
       <Dropdown.Item>Earnings</Dropdown.Item>
       <Dropdown.Item>Sign out</Dropdown.Item>
     </Dropdown>
-  );
-};
+  )
+}
 
 const DefaultDropdownCode = `
 "use client";
@@ -36,6 +31,6 @@ export const DropdownComponent = () => {
     </Dropdown>
   );
 }
-`;
+`
 
-export { DefaultDropdown, DefaultDropdownCode };
+export { DefaultDropdown, DefaultDropdownCode }

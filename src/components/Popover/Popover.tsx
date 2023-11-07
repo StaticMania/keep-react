@@ -14,60 +14,60 @@ import {
   arrow,
   autoPlacement,
   hide,
-} from "@floating-ui/react";
-import { XCircle } from "phosphor-react";
-import { FC, useRef, useState } from "react";
-import { twMerge } from "tailwind-merge";
-import { useTheme } from "../../Keep/ThemeContex";
+} from '@floating-ui/react'
+import { XCircle } from 'phosphor-react'
+import { FC, useRef, useState } from 'react'
+import { twMerge } from 'tailwind-merge'
+import { useTheme } from '../../Keep/ThemeContex'
 
 interface PopoverProps {
-  trigger?: "hover" | "click";
-  children: React.ReactNode;
-  additinalContent?: React.ReactNode;
-  title?: string;
-  description?: string;
-  icon?: React.ReactNode;
-  customClass?: string;
-  showDismissIcon?: boolean;
-  showArrow?: boolean;
+  trigger?: 'hover' | 'click'
+  children: React.ReactNode
+  additinalContent?: React.ReactNode
+  title?: string
+  description?: string
+  icon?: React.ReactNode
+  customClass?: string
+  showDismissIcon?: boolean
+  showArrow?: boolean
   position?:
-    | "top"
-    | "top-end"
-    | "top-start"
-    | "bottom"
-    | "bottom-end"
-    | "bottom-start"
-    | "left"
-    | "left-end"
-    | "left-start"
-    | "right"
-    | "right-end"
-    | "right-start";
+    | 'top'
+    | 'top-end'
+    | 'top-start'
+    | 'bottom'
+    | 'bottom-end'
+    | 'bottom-start'
+    | 'left'
+    | 'left-end'
+    | 'left-start'
+    | 'right'
+    | 'right-end'
+    | 'right-start'
 }
 
 export interface keepPopoverTheme {
-  target: string;
+  target: string
   body: {
-    base: string;
-    title: string;
-    discription: string;
-  };
+    base: string
+    title: string
+    discription: string
+  }
 }
 
 export const Popover: FC<PopoverProps> = ({
-  trigger = "click",
+  trigger = 'click',
   children,
   title,
   description,
   icon,
   additinalContent,
   customClass,
-  position = "bottom-start",
+  position = 'bottom-start',
   showDismissIcon = true,
   showArrow = true,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const arrowRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const arrowRef = useRef(null)
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -80,45 +80,35 @@ export const Popover: FC<PopoverProps> = ({
       }),
       autoPlacement({
         crossAxis: true,
-        alignment: "start",
-        allowedPlacements: ["top", "right", "bottom", "left"],
+        alignment: 'start',
+        allowedPlacements: ['top', 'right', 'bottom', 'left'],
       }),
       hide({
-        strategy: "escaped",
+        strategy: 'escaped',
       }),
     ],
     whileElementsMounted: autoUpdate,
     placement: position,
-  });
+  })
   const hover = useHover(context, {
-    enabled: trigger === "hover",
-  });
+    enabled: trigger === 'hover',
+  })
   const click = useClick(context, {
-    enabled: trigger === "click",
-  });
-  const dismiss = useDismiss(context);
-  const role = useRole(context);
+    enabled: trigger === 'click',
+  })
+  const dismiss = useDismiss(context)
+  const role = useRole(context)
   const { styles } = useTransitionStyles(context, {
     duration: 300,
-  });
+  })
 
-  const { getReferenceProps, getFloatingProps } = useInteractions([
-    click,
-    dismiss,
-    role,
-    hover,
-  ]);
+  const { getReferenceProps, getFloatingProps } = useInteractions([click, dismiss, role, hover])
 
-  const theme = useTheme().theme.popover;
+  const theme = useTheme().theme.popover
 
   return (
     <>
-      <div
-        ref={refs.setReference}
-        {...getReferenceProps()}
-        className={theme.target}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <div ref={refs.setReference} {...getReferenceProps()} className={theme.target} onClick={() => setIsOpen(!isOpen)}>
         {children}
       </div>
       {isOpen && (
@@ -126,21 +116,11 @@ export const Popover: FC<PopoverProps> = ({
           ref={refs.setFloating}
           style={{ ...floatingStyles, ...styles }}
           {...getFloatingProps()}
-          className={twMerge(theme.body.base, customClass)}
-        >
-          {showArrow && (
-            <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFf" />
-          )}
+          className={twMerge(theme.body.base, customClass)}>
+          {showArrow && <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFf" />}
           {showDismissIcon && (
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-[25px] right-6"
-            >
-              {typeof icon !== "undefined" ? (
-                icon
-              ) : (
-                <XCircle size={24} color="#5E718D" weight="light" />
-              )}
+            <button onClick={() => setIsOpen(false)} className="absolute right-6 top-[25px]">
+              {typeof icon !== 'undefined' ? icon : <XCircle size={24} color="#5E718D" weight="light" />}
             </button>
           )}
           {title && (
@@ -148,12 +128,10 @@ export const Popover: FC<PopoverProps> = ({
               {title}
             </h2>
           )}
-          {description && (
-            <p className={theme.body.discription}>{description}</p>
-          )}
-          {typeof additinalContent !== "undefined" && additinalContent}
+          {description && <p className={theme.body.discription}>{description}</p>}
+          {typeof additinalContent !== 'undefined' && additinalContent}
         </div>
       )}
     </>
-  );
-};
+  )
+}

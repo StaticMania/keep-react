@@ -1,5 +1,5 @@
-"use client";
-import { Statistic } from "~/src";
+'use client'
+import { Statistic } from '~/src'
 
 const DefaultStatistic = () => {
   return (
@@ -7,8 +7,8 @@ const DefaultStatistic = () => {
       <Statistic.Title>Memebers</Statistic.Title>
       <Statistic.Amount>{7381237}</Statistic.Amount>
     </Statistic>
-  );
-};
+  )
+}
 
 const DefaultStatisticCode = `
 "use client";
@@ -22,6 +22,6 @@ export const StatisticComponent = () => {
     </Statistic>
   );
 }
-`;
+`
 
-export { DefaultStatistic, DefaultStatisticCode };
+export { DefaultStatistic, DefaultStatisticCode }

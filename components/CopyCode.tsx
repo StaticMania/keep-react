@@ -1,30 +1,29 @@
-"use client";
-import { Check, Clipboard } from "phosphor-react";
-import useCopy from "~/hooks/useCopy";
-import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { useEffect, useState } from "react";
-import { Skeleton } from "~/src";
+'use client'
+import { Check, Clipboard } from 'phosphor-react'
+import { useEffect, useState } from 'react'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import useCopy from '~/hooks/useCopy'
+import { Skeleton } from '~/src'
 
 const CopyCode = ({ code }: { code: string }) => {
-  const { copy, copyToClipboard } = useCopy();
+  const { copy, copyToClipboard } = useCopy()
 
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true)
+  }, [])
   return (
-    <div className="my-5 relative">
+    <div className="relative my-5">
       {isClient ? (
         <SyntaxHighlighter
           language="javascript"
           style={coldarkDark}
           customStyle={{
-            borderRadius: "8px",
-            backgroundColor: "#1C222B",
-          }}
-        >
+            borderRadius: '8px',
+            backgroundColor: '#1C222B',
+          }}>
           {code.trim()}
         </SyntaxHighlighter>
       ) : (
@@ -33,18 +32,11 @@ const CopyCode = ({ code }: { code: string }) => {
         </Skeleton>
       )}
 
-      <button
-        onClick={() => copyToClipboard(code)}
-        className="absolute top-5 right-5 cursor-pointer"
-      >
-        {copy ? (
-          <Check size={20} weight="light" color="#fff" />
-        ) : (
-          <Clipboard size={20} weight="light" color="#fff" />
-        )}
+      <button onClick={() => copyToClipboard(code)} className="absolute right-5 top-5 cursor-pointer">
+        {copy ? <Check size={20} weight="light" color="#fff" /> : <Clipboard size={20} weight="light" color="#fff" />}
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default CopyCode;
+export default CopyCode

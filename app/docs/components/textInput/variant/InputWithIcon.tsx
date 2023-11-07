@@ -1,6 +1,6 @@
-"use client";
-import { WarningCircle } from "phosphor-react";
-import { Label, TextInput } from "~/src";
+'use client'
+import { WarningCircle } from 'phosphor-react'
+import { Label, TextInput } from '~/src'
 
 const InputWithIcon = () => {
   return (
@@ -14,8 +14,8 @@ const InputWithIcon = () => {
         helperText="Info that helps a user with this field."
       />
     </>
-  );
-};
+  )
+}
 
 const InputWithIconCode = `
 "use client";
@@ -35,6 +35,6 @@ export const TextInputComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { InputWithIcon, InputWithIconCode };
+export { InputWithIcon, InputWithIconCode }

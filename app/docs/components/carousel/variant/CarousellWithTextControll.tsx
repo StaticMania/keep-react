@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Carousel } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Carousel } from '~/src'
 
 const CarousellWithTextControll = () => {
   return (
@@ -32,8 +32,8 @@ const CarousellWithTextControll = () => {
         />
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
 const CarousellWithTextControllCode = `
 "use client";
@@ -72,6 +72,6 @@ export const CarouselComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { CarousellWithTextControll, CarousellWithTextControllCode };
+export { CarousellWithTextControll, CarousellWithTextControllCode }

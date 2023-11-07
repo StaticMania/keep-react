@@ -1,6 +1,6 @@
-"use client";
-import { Label, TextInput } from "~/src";
-import { WarningCircle } from "phosphor-react";
+'use client'
+import { Label, TextInput } from '~/src'
+import { WarningCircle } from 'phosphor-react'
 
 const InputFieldURL = () => {
   return (
@@ -19,8 +19,8 @@ const InputFieldURL = () => {
         iconPosition="right"
       />
     </>
-  );
-};
+  )
+}
 
 const InputFieldURLCode = `
 "use client";
@@ -46,6 +46,6 @@ export const TextInputComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { InputFieldURL, InputFieldURLCode };
+export { InputFieldURL, InputFieldURLCode }

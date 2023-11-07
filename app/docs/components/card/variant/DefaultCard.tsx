@@ -1,25 +1,21 @@
-"use client";
-import { Card } from "~/src";
-import { CaretRight } from "phosphor-react";
+'use client'
+import { Card } from '~/src'
+import { CaretRight } from 'phosphor-react'
 
 const DefaultCard = () => {
   return (
-    <Card className="md:p-6 p-5 max-w-lg">
+    <Card className="max-w-lg p-5 md:p-6">
       <Card.Title>Keep design system</Card.Title>
       <Card.Description>
-        Component design systems can help developers to be more productive by
-        providing them with a ready-made set of components to use.
+        Component design systems can help developers to be more productive by providing them with a ready-made set of
+        components to use.
       </Card.Description>
-      <Card.Link
-        href="/"
-        icon={<CaretRight size={16} color="#1B4DFF" />}
-        iconPosition="left"
-      >
+      <Card.Link href="/" icon={<CaretRight size={16} color="#1B4DFF" />} iconPosition="left">
         Learn More
       </Card.Link>
     </Card>
-  );
-};
+  )
+}
 
 const DefaultCardCode = `
 "use client";
@@ -44,6 +40,6 @@ export const CardComponent = () => {
     </Card>
   );
 };
-`;
+`
 
-export { DefaultCard, DefaultCardCode };
+export { DefaultCard, DefaultCardCode }

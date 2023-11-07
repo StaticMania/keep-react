@@ -1,28 +1,28 @@
-import { useTheme } from "../../Keep/ThemeContex";
-import { twMerge } from "tailwind-merge";
-import { Check, FilePdf, Trash } from "phosphor-react";
-import { FC } from "react";
+import { useTheme } from '../../Keep/ThemeContex'
+import { twMerge } from 'tailwind-merge'
+import { Check, FilePdf, Trash } from 'phosphor-react'
+import { FC } from 'react'
 export interface UploadSuccessTheme {
-  base: string;
-  bgColor: string;
+  base: string
+  bgColor: string
   root: {
-    base: string;
+    base: string
     left: {
-      base: string;
-      fileName: string;
-      fileSize: string;
-    };
+      base: string
+      fileName: string
+      fileSize: string
+    }
     confirmBox: {
-      base: string;
-      checked: string;
-      divider: string;
-      trash: string;
-    };
-  };
+      base: string
+      checked: string
+      divider: string
+      trash: string
+    }
+  }
 }
 
 export const UploadSuccess: FC = () => {
-  const theme = useTheme().theme.upload.uploadSuccess;
+  const theme = useTheme().theme.upload.uploadSuccess
   return (
     <div className={twMerge(theme.base)}>
       <div className={twMerge(theme.bgColor)}></div>
@@ -47,5 +47,5 @@ export const UploadSuccess: FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

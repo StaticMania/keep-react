@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
-import { Carousel } from ".";
-import Image from "next/image";
+import type { Meta, StoryObj } from '@storybook/react'
+import React from 'react'
+import { Carousel } from '.'
+import Image from 'next/image'
 
 const meta: Meta<typeof Carousel> = {
   component: Carousel,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <div className="h-56 w-full  sm:h-64 xl:h-80 2xl:h-96">
@@ -16,89 +16,89 @@ const meta: Meta<typeof Carousel> = {
   argTypes: {
     children: {
       control: { disable: true },
-      description: "Children is carousel Image item",
+      description: 'Children is carousel Image item',
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
     },
     indicators: {
-      description: "Carousel indicators show or not?",
-      control: "boolean",
+      description: 'Carousel indicators show or not?',
+      control: 'boolean',
       table: {
-        type: { summary: "Boolean" },
+        type: { summary: 'Boolean' },
         defaultValue: { summary: true },
       },
     },
     showControls: {
-      description: "Carousel Control button show or not?",
-      control: "boolean",
+      description: 'Carousel Control button show or not?',
+      control: 'boolean',
       table: {
-        type: { summary: "Boolean" },
+        type: { summary: 'Boolean' },
         defaultValue: { summary: true },
       },
     },
     leftControl: {
       control: { disable: true },
-      description: "Carousel Left Control Icon",
+      description: 'Carousel Left Control Icon',
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
     },
     rightControl: {
       control: { disable: true },
-      description: "Carousel Right Control Icon",
+      description: 'Carousel Right Control Icon',
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
     },
     slide: {
-      description: "Carousel auto slide?",
-      control: "boolean",
+      description: 'Carousel auto slide?',
+      control: 'boolean',
       table: {
-        type: { summary: "Boolean" },
+        type: { summary: 'Boolean' },
         defaultValue: { summary: true },
       },
     },
     slideInterval: {
-      description: "Carousel Interval Time",
+      description: 'Carousel Interval Time',
       table: {
-        type: { summary: "number" },
+        type: { summary: 'number' },
         defaultValue: { summary: 5000 },
       },
     },
     indicatorsType: {
-      description: "Carousel indocator Type",
-      control: "select",
-      options: ["dot", "ring", "bar", "square", "squareRing"],
+      description: 'Carousel indocator Type',
+      control: 'select',
+      options: ['dot', 'ring', 'bar', 'square', 'squareRing'],
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "dot" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'dot' },
       },
     },
     indicatorsTypeColors: {
-      description: "Carousel indocator color Type",
-      control: "select",
-      options: ["white", "slate"],
+      description: 'Carousel indocator color Type',
+      control: 'select',
+      options: ['white', 'slate'],
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "white" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'white' },
       },
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Carousel>;
+export default meta
+type Story = StoryObj<typeof Carousel>
 
 const imgUrl = [
-  "d1bfb4f8-ee1d-44c6-be78-9662656e0210_slider-1.jpg?auto=compress,format",
-  "97813c41-9011-437b-a418-7b1afd1f939f_slider-4.jpg?auto=compress,format",
-  "107cb557-9589-4ffc-bbd7-543c6f4c2533_slider-3.jpg?auto=compress,format",
-  "b651e511-0c29-4b4c-85b6-a10919282f88_slider-2.jpg?auto=compress,format",
-];
+  'd1bfb4f8-ee1d-44c6-be78-9662656e0210_slider-1.jpg?auto=compress,format',
+  '97813c41-9011-437b-a418-7b1afd1f939f_slider-4.jpg?auto=compress,format',
+  '107cb557-9589-4ffc-bbd7-543c6f4c2533_slider-3.jpg?auto=compress,format',
+  'b651e511-0c29-4b4c-85b6-a10919282f88_slider-2.jpg?auto=compress,format',
+]
 
 function renderImageMultipleTimes(): React.ReactElement[] {
-  const images = [];
+  const images = []
   for (let i = 0; i < 4; i++) {
     const item = (
       <Image
@@ -107,23 +107,19 @@ function renderImageMultipleTimes(): React.ReactElement[] {
         height={400}
         width={910}
       />
-    );
-    images.push(item);
+    )
+    images.push(item)
   }
-  return images;
+  return images
 }
 
 function renderSlideMultipleTimes(): React.ReactElement[] {
-  const slides = [];
+  const slides = []
   for (let i = 0; i < 5; i++) {
-    const item = (
-      <div className="flex h-full items-center justify-center bg-slate-400">
-        Slide {i + 1}
-      </div>
-    );
-    slides.push(item);
+    const item = <div className="flex h-full items-center justify-center bg-slate-400">Slide {i + 1}</div>
+    slides.push(item)
   }
-  return slides;
+  return slides
 }
 
 export const DefaultCarousel: Story = {
@@ -131,53 +127,53 @@ export const DefaultCarousel: Story = {
     slideInterval: 5000,
     showControls: true,
     indicators: true,
-    indicatorsType: "dot",
+    indicatorsType: 'dot',
     slide: true,
-    indicatorsTypeColors: "white",
+    indicatorsTypeColors: 'white',
     children: renderImageMultipleTimes(),
   },
-};
+}
 
 export const StaticCarousel: Story = {
   args: {
     ...DefaultCarousel.args,
     slide: false,
   },
-};
+}
 export const CarouselWithRingIndicator: Story = {
   args: {
     ...DefaultCarousel.args,
     slide: true,
-    indicatorsType: "ring",
+    indicatorsType: 'ring',
   },
-};
+}
 export const CarouselWithBarIndicator: Story = {
   args: {
     ...CarouselWithRingIndicator.args,
-    indicatorsType: "bar",
+    indicatorsType: 'bar',
   },
-};
+}
 export const CarouselWithSquareIndicator: Story = {
   args: {
     ...CarouselWithRingIndicator.args,
-    indicatorsType: "square",
+    indicatorsType: 'square',
   },
-};
+}
 export const CarouselWithSquareRingIndicator: Story = {
   args: {
     ...CarouselWithRingIndicator.args,
-    indicatorsType: "squareRing",
+    indicatorsType: 'squareRing',
   },
-};
+}
 
 export const CarouselWithoutIndicator: Story = {
   args: {
     ...CarouselWithRingIndicator.args,
     indicators: false,
   },
-};
+}
 export const CarouselWithSlide: Story = {
   args: {
     children: renderSlideMultipleTimes(),
   },
-};
+}

@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import CardDocsContent from "./card.mdx";
+'use client'
+import type { FC } from 'react'
+import CardDocsContent from './card.mdx'
 
-const CardDocs: FC = () => <CardDocsContent />;
+const CardDocs: FC = () => <CardDocsContent />
 
-export default CardDocs;
+export default CardDocs

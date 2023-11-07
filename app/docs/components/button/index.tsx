@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import ButtonDocsContent from "./button.mdx";
+'use client'
+import type { FC } from 'react'
+import ButtonDocsContent from './button.mdx'
 
-const ButtonDocs: FC = () => <ButtonDocsContent />;
+const ButtonDocs: FC = () => <ButtonDocsContent />
 
-export default ButtonDocs;
+export default ButtonDocs

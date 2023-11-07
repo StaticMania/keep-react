@@ -1,5 +1,5 @@
-"use client";
-import { Statistic } from "~/src";
+'use client'
+import { Statistic } from '~/src'
 
 const StatisticWithProgressRate = () => {
   return (
@@ -10,8 +10,8 @@ const StatisticWithProgressRate = () => {
         <Statistic.Rate>1.5</Statistic.Rate>
       </div>
     </Statistic>
-  );
-};
+  )
+}
 
 const StatisticWithProgressRateCode = `
 "use client";
@@ -28,6 +28,6 @@ export const StatisticComponent = () => {
     </Statistic>
   );
 }
-`;
+`
 
-export { StatisticWithProgressRate, StatisticWithProgressRateCode };
+export { StatisticWithProgressRate, StatisticWithProgressRateCode }

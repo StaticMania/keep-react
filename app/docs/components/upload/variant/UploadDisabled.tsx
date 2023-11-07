@@ -1,25 +1,18 @@
-"use client";
-import { useState } from "react";
-import { Upload } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Upload } from '~/src'
 
 const UploadDisabled = () => {
-  const [fileName, setFileName] = useState("");
+  const [fileName, setFileName] = useState('')
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files && event.target.files[0]
     if (file) {
-      setFileName(file.name);
+      setFileName(file.name)
     }
-  };
-  return (
-    <Upload
-      onFileChange={handleFileChange}
-      file={fileName}
-      disabled={true}
-      id="disabled_upload"
-    />
-  );
-};
+  }
+  return <Upload onFileChange={handleFileChange} file={fileName} disabled={true} id="disabled_upload" />
+}
 
 const UploadDisabledCode = `
 "use client";
@@ -36,6 +29,6 @@ export const UploadComponent = () => {
   };
   return <Upload onFileChange={handleFileChange} file={fileName} disabled={true} id="upload"/>;
 }
-`;
+`
 
-export { UploadDisabled, UploadDisabledCode };
+export { UploadDisabled, UploadDisabledCode }

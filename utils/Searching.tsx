@@ -1,34 +1,34 @@
 interface DataItem {
-  id: number;
-  name: string;
-  href: string;
+  id: number
+  name: string
+  href: string
 }
 
 export const storeData = (item: DataItem) => {
-  const storedDataStr = localStorage.getItem("searchData");
-  let storedData: DataItem[] = [];
+  const storedDataStr = localStorage.getItem('searchData')
+  let storedData: DataItem[] = []
 
   if (storedDataStr) {
-    storedData = JSON.parse(storedDataStr);
+    storedData = JSON.parse(storedDataStr)
 
-    const itemExists = storedData.some((dataItem) => dataItem.id === item.id);
+    const itemExists = storedData.some((dataItem) => dataItem.id === item.id)
     if (itemExists) {
-      return;
+      return
     }
 
     if (storedData.length >= 4) {
-      storedData.shift();
+      storedData.shift()
     }
   }
 
-  storedData.push(item);
-  localStorage.setItem("searchData", JSON.stringify(storedData));
-};
+  storedData.push(item)
+  localStorage.setItem('searchData', JSON.stringify(storedData))
+}
 
 export const getData = () => {
-  const storedData = localStorage.getItem("searchData");
+  const storedData = localStorage.getItem('searchData')
   if (storedData) {
-    return JSON.parse(storedData);
+    return JSON.parse(storedData)
   }
-  return [];
-};
+  return []
+}

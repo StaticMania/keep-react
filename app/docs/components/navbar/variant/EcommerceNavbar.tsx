@@ -1,16 +1,13 @@
-"use client";
-import Image from "next/image";
-import { Heart, MagnifyingGlass, ShoppingCart, User } from "phosphor-react";
-import { Button, Navbar } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Heart, MagnifyingGlass, ShoppingCart, User } from 'phosphor-react'
+import { Button, Navbar } from '~/src'
 
 const EcommerceNavbar = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
-        <Navbar.Container
-          tag="ul"
-          className="lg:flex hidden items-center justify-between gap-8"
-        >
+        <Navbar.Container tag="ul" className="hidden items-center justify-between gap-8 lg:flex">
           <Navbar.Link linkName="Category" />
           <Navbar.Link linkName="Best Sellers" />
         </Navbar.Container>
@@ -29,22 +26,10 @@ const EcommerceNavbar = () => {
         </Navbar.Collapse>
 
         <Navbar.Container className="flex items-center gap-3">
-          <Navbar.Container
-            tag="ul"
-            className="lg:flex hidden items-center justify-between gap-5"
-          >
-            <Navbar.Link
-              icon={<MagnifyingGlass size={20} color="#444" />}
-              iconAnimation={false}
-            />
-            <Navbar.Link
-              icon={<User size={20} color="#444" />}
-              iconAnimation={false}
-            />
-            <Navbar.Link
-              icon={<Heart size={20} color="#444" />}
-              iconAnimation={false}
-            />
+          <Navbar.Container tag="ul" className="hidden items-center justify-between gap-5 lg:flex">
+            <Navbar.Link icon={<MagnifyingGlass size={20} color="#444" />} iconAnimation={false} />
+            <Navbar.Link icon={<User size={20} color="#444" />} iconAnimation={false} />
+            <Navbar.Link icon={<Heart size={20} color="#444" />} iconAnimation={false} />
           </Navbar.Container>
 
           <Button size="xs" type="outlineGray">
@@ -57,8 +42,8 @@ const EcommerceNavbar = () => {
         </Navbar.Container>
       </Navbar.Container>
     </Navbar>
-  );
-};
+  )
+}
 
 const EcommerceNavbarCode = `
 "use client";
@@ -126,6 +111,6 @@ export const NavbarComponent = () => {
     </Navbar>
   );
 }
-`;
+`
 
-export { EcommerceNavbar, EcommerceNavbarCode };
+export { EcommerceNavbar, EcommerceNavbarCode }

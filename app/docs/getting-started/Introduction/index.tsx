@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import IntroductionContent from "./Introduction.mdx";
+'use client'
+import type { FC } from 'react'
+import IntroductionContent from './Introduction.mdx'
 
-const Introduction: FC = () => <IntroductionContent />;
+const Introduction: FC = () => <IntroductionContent />
 
-export default Introduction;
+export default Introduction

@@ -1,5 +1,5 @@
-"use client";
-import { Badge } from "~/src";
+'use client'
+import { Badge } from '~/src'
 
 const SizesOfBadge = () => {
   return (
@@ -11,8 +11,8 @@ const SizesOfBadge = () => {
         Small Badge
       </Badge>
     </div>
-  );
-};
+  )
+}
 
 const SizesOfBadgeCode = `
 "use client";
@@ -26,6 +26,6 @@ export const BadgeComponent = () => {
     </div>
   );
 };
-`;
+`
 
-export { SizesOfBadge, SizesOfBadgeCode };
+export { SizesOfBadge, SizesOfBadgeCode }

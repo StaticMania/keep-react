@@ -1,14 +1,11 @@
-"use client";
-import { Breadcrumb } from "~/src";
-import { CaretRight } from "phosphor-react";
+'use client'
+import { Breadcrumb } from '~/src'
+import { CaretRight } from 'phosphor-react'
 
 const DefaultBreadcrumb = () => {
   return (
     <div className="flex w-full flex-col gap-5">
-      <Breadcrumb
-        aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+      <Breadcrumb aria-label="Default breadcrumb example" separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
         <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
@@ -16,10 +13,7 @@ const DefaultBreadcrumb = () => {
           Product
         </Breadcrumb.Item>
       </Breadcrumb>
-      <Breadcrumb
-        aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+      <Breadcrumb aria-label="Default breadcrumb example" separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
         <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
@@ -27,10 +21,7 @@ const DefaultBreadcrumb = () => {
           Product
         </Breadcrumb.Item>
       </Breadcrumb>
-      <Breadcrumb
-        aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+      <Breadcrumb aria-label="Default breadcrumb example" separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
         <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
@@ -39,8 +30,8 @@ const DefaultBreadcrumb = () => {
         </Breadcrumb.Item>
       </Breadcrumb>
     </div>
-  );
-};
+  )
+}
 
 const DefaultBreadcrumbCode = `
 "use client";
@@ -86,6 +77,6 @@ export const BreadcrumbComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { DefaultBreadcrumb, DefaultBreadcrumbCode };
+export { DefaultBreadcrumb, DefaultBreadcrumbCode }

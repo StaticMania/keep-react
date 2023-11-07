@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Empty } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Empty } from '~/src'
 
 const NotFoundPage = () => {
   return (
@@ -19,8 +19,8 @@ const NotFoundPage = () => {
         />
       }
     />
-  );
-};
+  )
+}
 
 const NotFoundPageCode = `
 "use client";
@@ -46,6 +46,6 @@ export const EmptyComponent = () => {
     />
   );
 }
-`;
+`
 
-export { NotFoundPage, NotFoundPageCode };
+export { NotFoundPage, NotFoundPageCode }

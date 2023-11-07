@@ -1,16 +1,16 @@
-"use client";
-import { Slider } from "~/src";
+'use client'
+import { Slider } from '~/src'
 
 const SliderWithMarks = () => {
   return (
-    <div className="h-16 p-4 w-5/6">
+    <div className="h-16 w-5/6 p-4">
       <Slider
         defaultValue={300}
         marks={{
-          "200": "200",
-          "500": "500",
-          "800": "800",
-          "1000": 1000,
+          '200': '200',
+          '500': '500',
+          '800': '800',
+          '1000': 1000,
         }}
         max={1000}
         min={100}
@@ -18,8 +18,8 @@ const SliderWithMarks = () => {
         step={100}
       />
     </div>
-  );
-};
+  )
+}
 
 const SliderWithMarksCode = `
 "use client";
@@ -42,6 +42,6 @@ export const SliderComponent = () => {
     />
   );
 }
-`;
+`
 
-export { SliderWithMarks, SliderWithMarksCode };
+export { SliderWithMarks, SliderWithMarksCode }

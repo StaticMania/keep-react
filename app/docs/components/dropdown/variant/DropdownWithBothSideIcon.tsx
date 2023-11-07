@@ -1,15 +1,10 @@
-"use client";
-import { Dropdown } from "~/src";
-import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
+'use client'
+import { Dropdown } from '~/src'
+import { CaretRight, Gear, Money, SignOut, SquaresFour } from 'phosphor-react'
 
 const DropdownWithBothSideIcon = () => {
   return (
-    <Dropdown
-      label="Dropdown button"
-      type="primary"
-      size="sm"
-      dismissOnClick={true}
-    >
+    <Dropdown label="Dropdown button" type="primary" size="sm" dismissOnClick={true}>
       <Dropdown.Item icon={<SquaresFour size={20} color="#5E718D" />}>
         Dashboard
         <span className="ml-auto">
@@ -35,8 +30,8 @@ const DropdownWithBothSideIcon = () => {
         </span>
       </Dropdown.Item>
     </Dropdown>
-  );
-};
+  )
+}
 
 const DropdownWithBothSideIconCode = `
 "use client";
@@ -78,6 +73,6 @@ export const DropdownComponent = () => {
     </Dropdown>
   );
 }
-`;
+`
 
-export { DropdownWithBothSideIcon, DropdownWithBothSideIconCode };
+export { DropdownWithBothSideIcon, DropdownWithBothSideIconCode }

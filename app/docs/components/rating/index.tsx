@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import RatingDocsContent from "./rating.mdx";
+'use client'
+import type { FC } from 'react'
+import RatingDocsContent from './rating.mdx'
 
-const RatingDocs: FC = () => <RatingDocsContent />;
+const RatingDocs: FC = () => <RatingDocsContent />
 
-export default RatingDocs;
+export default RatingDocs

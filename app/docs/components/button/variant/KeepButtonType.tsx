@@ -1,9 +1,9 @@
-"use client";
-import { Button } from "~/src";
+'use client'
+import { Button } from '~/src'
 
 const KeepButtonType = () => {
   return (
-    <div className="flex flex-wrap items-center gap-2 h-32 p-4">
+    <div className="flex h-32 flex-wrap items-center gap-2 p-4">
       <Button size="md" type="default">
         Default
       </Button>
@@ -29,8 +29,8 @@ const KeepButtonType = () => {
         Text Button
       </Button>
     </div>
-  );
-};
+  )
+}
 
 const KeepButtonTypeCode = `
 "use client";
@@ -50,6 +50,6 @@ export const ButtonComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { KeepButtonTypeCode, KeepButtonType };
+export { KeepButtonTypeCode, KeepButtonType }

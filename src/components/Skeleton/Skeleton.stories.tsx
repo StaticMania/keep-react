@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Skeleton } from "./Skeleton";
-import { removeFragment } from "../../helpers/mergeDeep";
+import { Meta, StoryObj } from '@storybook/react'
+import { Skeleton } from './Skeleton'
+import { removeFragment } from '../../helpers/mergeDeep'
 
 const meta: Meta<typeof Skeleton> = {
   component: Skeleton,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {},
   decorators: [
     (Story) => (
@@ -15,21 +15,21 @@ const meta: Meta<typeof Skeleton> = {
   ],
   argTypes: {
     animation: {
-      description: "Skeletion animation show or not?",
+      description: 'Skeletion animation show or not?',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: true },
       },
     },
     children: {
-      description: "Skeletion element",
+      description: 'Skeletion element',
       control: { type: null },
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Skeleton>;
+export default meta
+type Story = StoryObj<typeof Skeleton>
 
 export const DefaultSkeleton: Story = {
   args: {
@@ -40,10 +40,10 @@ export const DefaultSkeleton: Story = {
             <Skeleton.Line height="h-5" />
           </Skeleton>
         </div>
-      </>
+      </>,
     ),
   },
-};
+}
 export const SkeletonLayout: Story = {
   args: {
     children: removeFragment(
@@ -58,10 +58,10 @@ export const SkeletonLayout: Story = {
             <Skeleton.Line height="h-5" />
           </Skeleton>
         </div>
-      </>
+      </>,
     ),
   },
-};
+}
 export const CommentLayout: Story = {
   args: {
     children: removeFragment(
@@ -79,10 +79,10 @@ export const CommentLayout: Story = {
             </div>
           </Skeleton>
         </div>
-      </>
+      </>,
     ),
   },
-};
+}
 export const PostSkeleton: Story = {
   args: {
     children: removeFragment(
@@ -115,10 +115,10 @@ export const PostSkeleton: Story = {
             </div>
           </Skeleton>
         </div>
-      </>
+      </>,
     ),
   },
-};
+}
 export const ParagraphSkeleton: Story = {
   args: {
     children: removeFragment(
@@ -139,10 +139,10 @@ export const ParagraphSkeleton: Story = {
             </div>
           </Skeleton>
         </div>
-      </>
+      </>,
     ),
   },
-};
+}
 export const SkeletonWithAnimation: Story = {
   args: {
     animation: true,
@@ -176,7 +176,7 @@ export const SkeletonWithAnimation: Story = {
             </div>
           </Skeleton>
         </div>
-      </>
+      </>,
     ),
   },
-};
+}

@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import BreadcrumbDocsContent from "./breadcrumb.mdx";
+'use client'
+import type { FC } from 'react'
+import BreadcrumbDocsContent from './breadcrumb.mdx'
 
-const BreadcrumbDocs: FC = () => <BreadcrumbDocsContent />;
+const BreadcrumbDocs: FC = () => <BreadcrumbDocsContent />
 
-export default BreadcrumbDocs;
+export default BreadcrumbDocs

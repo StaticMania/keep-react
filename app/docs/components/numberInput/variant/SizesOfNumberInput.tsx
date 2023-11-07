@@ -1,17 +1,17 @@
-"use client";
-import { useState } from "react";
-import { NumberInput } from "~/src";
+'use client'
+import { useState } from 'react'
+import { NumberInput } from '~/src'
 
 const SizesOfNumberInput = () => {
-  const [value, setValue] = useState(100);
+  const [value, setValue] = useState(100)
   return (
     <div className="flex flex-col gap-5">
       <NumberInput sizing="sm" value={value} setValue={setValue} />
       <NumberInput sizing="md" value={value} setValue={setValue} />
       <NumberInput sizing="lg" value={value} setValue={setValue} />
     </div>
-  );
-};
+  )
+}
 
 const SizesOfNumberInputCode = `
 "use client";
@@ -28,6 +28,6 @@ export const NumberInputComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { SizesOfNumberInput, SizesOfNumberInputCode };
+export { SizesOfNumberInput, SizesOfNumberInputCode }

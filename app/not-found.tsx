@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Empty } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Empty } from '~/src'
 
 const NotFound = () => {
   return (
@@ -17,7 +17,7 @@ const NotFound = () => {
         />
       }
     />
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

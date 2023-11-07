@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import SliderDocsContent from "./Slider.mdx";
+'use client'
+import type { FC } from 'react'
+import SliderDocsContent from './Slider.mdx'
 
-const SliderDocs: FC = () => <SliderDocsContent />;
+const SliderDocs: FC = () => <SliderDocsContent />
 
-export default SliderDocs;
+export default SliderDocs

@@ -1,18 +1,14 @@
-import { twMerge } from "tailwind-merge";
-import type { ComponentProps, FC, PropsWithChildren } from "react";
-import { DropdownDivider } from "./DropdownDivider";
-import { useTheme } from "../../Keep/ThemeContex";
+import { twMerge } from 'tailwind-merge'
+import type { ComponentProps, FC, PropsWithChildren } from 'react'
+import { DropdownDivider } from './DropdownDivider'
+import { useTheme } from '../../Keep/ThemeContex'
 
 export interface keepDropdownHeaderTheme {
-  header: string;
+  header: string
 }
 
-export const DropdownHeader: FC<PropsWithChildren & ComponentProps<"div">> = ({
-  children,
-  className,
-  ...props
-}) => {
-  const theme = useTheme().theme.dropdown.floating.header;
+export const DropdownHeader: FC<PropsWithChildren & ComponentProps<'div'>> = ({ children, className, ...props }) => {
+  const theme = useTheme().theme.dropdown.floating.header
 
   return (
     <>
@@ -21,5 +17,5 @@ export const DropdownHeader: FC<PropsWithChildren & ComponentProps<"div">> = ({
       </div>
       <DropdownDivider />
     </>
-  );
-};
+  )
+}

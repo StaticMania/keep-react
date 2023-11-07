@@ -1,1 +1,1 @@
-export * from "./Floating";
+export * from './Floating'

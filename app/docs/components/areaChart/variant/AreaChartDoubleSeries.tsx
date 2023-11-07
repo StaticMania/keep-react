@@ -1,17 +1,10 @@
-"use client";
-import { AreaChart } from "~/src";
-import { chartData } from "./DefaultAreaChart";
+'use client'
+import { AreaChart } from '~/src'
+import { chartData } from './DefaultAreaChart'
 
 const AreaChartWithDoubleSeries = () => {
-  return (
-    <AreaChart
-      chartData={chartData}
-      dataKey="price"
-      secondaryDataKey="sell"
-      showTooltip={true}
-    />
-  );
-};
+  return <AreaChart chartData={chartData} dataKey="price" secondaryDataKey="sell" showTooltip={true} />
+}
 
 const AreaChartWithDoubleSeriesCode = `
 "use client";
@@ -79,6 +72,6 @@ export const AreaChartComponent = () => {
     />
   );
 };
-`;
+`
 
-export { AreaChartWithDoubleSeries, AreaChartWithDoubleSeriesCode };
+export { AreaChartWithDoubleSeries, AreaChartWithDoubleSeriesCode }

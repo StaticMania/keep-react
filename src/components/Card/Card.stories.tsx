@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react'
 import {
   ArchiveTray,
   ArrowsOutSimple,
@@ -17,97 +17,89 @@ import {
   SkipForward,
   SpeakerHigh,
   Users,
-} from "phosphor-react";
+} from 'phosphor-react'
 
-import {
-  Card,
-  Badge,
-  Button,
-  PlayButton,
-  Progress,
-  Rating,
-  Avatar,
-} from "~/src";
+import { Card, Badge, Button, PlayButton, Progress, Rating, Avatar } from '~/src'
 
-import Image from "next/image";
-import { removeFragment } from "../../helpers/mergeDeep";
+import Image from 'next/image'
+import { removeFragment } from '../../helpers/mergeDeep'
 
 const meta: Meta<typeof Card> = {
   component: Card,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     children: {
       control: {
         disable: true,
       },
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
-      description: "It is the content of card",
+      description: 'It is the content of card',
     },
     className: {
-      description: "Card Custom Class Name",
+      description: 'Card Custom Class Name',
       table: {
-        type: { summary: "text" },
-        defaultValue: { summary: "p-6" },
+        type: { summary: 'text' },
+        defaultValue: { summary: 'p-6' },
       },
     },
     border: {
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: true },
       },
-      description: "Card Border show or not?",
+      description: 'Card Border show or not?',
     },
     shadow: {
-      control: "boolean",
+      control: 'boolean',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: true },
       },
-      description: "Toggle the border for the card",
+      description: 'Toggle the border for the card',
     },
     horizontal: {
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
-      description: "Card direction is horizontal or not?",
+      description: 'Card direction is horizontal or not?',
     },
     href: {
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
       },
-      description: "Card Link address, Like: www.example.com",
+      description: 'Card Link address, Like: www.example.com',
     },
     imgAlt: {
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
       },
-      description: "Card image alt text",
+      description: 'Card image alt text',
     },
     imgSrc: {
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
       },
-      description: "Card image source",
+      description: 'Card image source',
     },
     imgSize: {
-      control: "select",
-      options: ["sm", "md", "lg"],
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "md" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'md' },
       },
-      description: "Card Image avaiable size",
+      description: 'Card Image avaiable size',
     },
   },
   parameters: {
     componentSubtitle:
-      "The Card component is a common UI element used to group related content together in a visually appealing way. It typically consists of a container with a header, body, and footer section, which can contain a variety of content such as text, images, and buttons.",
+      'The Card component is a common UI element used to group related content together in a visually appealing way. It typically consists of a container with a header, body, and footer section, which can contain a variety of content such as text, images, and buttons.',
   },
   decorators: [
     (Story) => (
@@ -116,30 +108,27 @@ const meta: Meta<typeof Card> = {
       </div>
     ),
   ],
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Card>;
+export default meta
+type Story = StoryObj<typeof Card>
 
 export const DefaultCard: Story = {
   args: {
     children: removeFragment(
       <>
-        <h5 className="text-2xl font-bold tracking-tight text-slate-700">
-          Keep React
-        </h5>
+        <h5 className="text-2xl font-bold tracking-tight text-slate-700">Keep React</h5>
         <p className="font-normal text-slate-500">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s, when an unknown printer took.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
+          standard dummy text ever since the 1500s, when an unknown printer took.
         </p>
         <a href="/" className="flex items-center gap-1 text-primary-600">
           <span>Learn More</span>
           <CaretRight size={16} color="#1B4DFF" />
         </a>
-      </>
+      </>,
     ),
-    className: "p-6",
+    className: 'p-6',
   },
 
   decorators: [
@@ -149,10 +138,10 @@ export const DefaultCard: Story = {
       </div>
     ),
   ],
-};
+}
 export const CardWithIcon: Story = {
   args: {
-    className: "p-6",
+    className: 'p-6',
     children: removeFragment(
       <>
         <div className="flex items-start gap-5">
@@ -160,13 +149,10 @@ export const CardWithIcon: Story = {
             <ArchiveTray size={28} color="#3D4A5C" />
           </div>
           <div className="flex flex-col gap-2">
-            <h5 className="text-2xl font-bold tracking-tight text-slate-700">
-              Keep React
-            </h5>
+            <h5 className="text-2xl font-bold tracking-tight text-slate-700">Keep React</h5>
             <p className="font-normal text-slate-500">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the standard dummy text ever since
-              the 1500s, when an unknown printer took.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              standard dummy text ever since the 1500s, when an unknown printer took.
             </p>
             <a href="/" className="flex items-center gap-1 text-primary-600">
               <span>Learn More</span>
@@ -174,13 +160,13 @@ export const CardWithIcon: Story = {
             </a>
           </div>
         </div>
-      </>
+      </>,
     ),
   },
-};
+}
 export const CardWithListIcon: Story = {
   args: {
-    className: "p-6",
+    className: 'p-6',
     children: removeFragment(
       <>
         <div className="flex gap-5">
@@ -189,116 +175,85 @@ export const CardWithListIcon: Story = {
               <ArchiveTray size={28} color="#3D4A5C" />
             </div>
             <div className="flex flex-col gap-2">
-              <h5 className="text-2xl font-bold tracking-tight text-slate-700">
-                Keep React
-              </h5>
+              <h5 className="text-2xl font-bold tracking-tight text-slate-700">Keep React</h5>
               <p className="font-normal text-slate-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                standard dummy text ever since the 1500s, when an unknown printer took.
               </p>
             </div>
           </div>
           <button className="flex items-start">
-            <DotsThreeVertical
-              size={28}
-              color="#5E718D"
-              className="flex items-start"
-            />
+            <DotsThreeVertical size={28} color="#5E718D" className="flex items-start" />
           </button>
         </div>
-      </>
+      </>,
     ),
   },
   decorators: DefaultCard.decorators,
-};
+}
 export const CardWithImage: Story = {
   args: {
     children: (
-      <Card.Container className="flex items-start py-3 px-5">
+      <Card.Container className="flex items-start px-5 py-3">
         <Card.Container>
           <Card.Title>Keep React</Card.Title>
           <Card.Description>
-            Component design systems can help developers to be more productive
-            by providing them with a ready-made set of components to use.
+            Component design systems can help developers to be more productive by providing them with a ready-made set
+            of components to use.
           </Card.Description>
         </Card.Container>
         <Card.Container className="flex items-start">
-          <DotsThreeVertical
-            size={28}
-            color="#5E718D"
-            className="flex cursor-pointer items-start"
-          />
+          <DotsThreeVertical size={28} color="#5E718D" className="flex cursor-pointer items-start" />
         </Card.Container>
       </Card.Container>
     ),
-    className: "max-w-lg",
+    className: 'max-w-lg',
     horizontal: true,
-    imgSrc:
-      "https://images.prismic.io/staticmania/b6fe0b6c-5c0d-46a1-8ac6-68fe59d418c8_blog2.jpg?auto=compress,format",
+    imgSrc: 'https://images.prismic.io/staticmania/b6fe0b6c-5c0d-46a1-8ac6-68fe59d418c8_blog2.jpg?auto=compress,format',
   },
 
   decorators: DefaultCard.decorators,
-};
+}
 export const CardWithAvatar: Story = {
   args: {
     children: removeFragment(
       <>
         <Card.Description>
-          Component design systems can help developers to be more productive by
-          providing them with a ready-made set of components to use. This can
-          save time and effort, and it can also help to reduce the risk of
-          errors.
+          Component design systems can help developers to be more productive by providing them with a ready-made set of
+          components to use. This can save time and effort, and it can also help to reduce the risk of errors.
         </Card.Description>
         <Card.Container className="flex items-center">
-          <Avatar
-            size="lg"
-            shape="circle"
-            img="https://randomuser.me/api/portraits/men/11.jpg"
-          />
+          <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/11.jpg" />
           <Card.Container className="ml-3">
-            <Card.Title className="text-base font-semibold text-slate-800">
-              Md Ariful Islam
-            </Card.Title>
-            <Card.Title className="text-xs font-medium text-slate-400">
-              Product Designer
-            </Card.Title>
+            <Card.Title className="text-base font-semibold text-slate-800">Md Ariful Islam</Card.Title>
+            <Card.Title className="text-xs font-medium text-slate-400">Product Designer</Card.Title>
           </Card.Container>
         </Card.Container>
-      </>
+      </>,
     ),
-    className: "max-w-lg p-6",
+    className: 'max-w-lg p-6',
   },
   decorators: DefaultCard.decorators,
-};
+}
 export const CardWithProfile: Story = {
   args: {
-    className: "max-w-sm",
-    imgSrc:
-      "https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format",
+    className: 'max-w-sm',
+    imgSrc: 'https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format',
     children: removeFragment(
       <>
         <Card.Container className="flex items-center justify-between p-5">
           <Card.Container className="flex items-center ">
-            <Avatar
-              size="lg"
-              shape="circle"
-              img="https://randomuser.me/api/portraits/men/50.jpg"
-            />
+            <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/50.jpg" />
             <Card.Container className="ml-3">
-              <Card.Title className="text-base font-semibold text-slate-800">
-                Khairul Islam
-              </Card.Title>
-              <Card.Title className="text-xs font-medium text-slate-400">
-                UI/UX Designer
-              </Card.Title>
+              <Card.Title className="text-base font-semibold text-slate-800">Khairul Islam</Card.Title>
+              <Card.Title className="text-xs font-medium text-slate-400">UI/UX Designer</Card.Title>
             </Card.Container>
           </Card.Container>
           <Button size="sm" type="outlineGray">
             View Profile
           </Button>
         </Card.Container>
-      </>
+      </>,
     ),
   },
   decorators: [
@@ -308,60 +263,41 @@ export const CardWithProfile: Story = {
       </div>
     ),
   ],
-};
+}
 export const CardWithProfileDetails: Story = {
   args: {
-    imgSrc:
-      "https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format",
-    imgSize: "md",
+    imgSrc: 'https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format',
+    imgSize: 'md',
     children: removeFragment(
       <>
-        <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+        <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="flex flex-col items-center justify-center">
           <Card.Container className="absolute top-32  rounded-full ring-4 ring-white ring-offset-0">
-            <Avatar
-              size="2xl"
-              shape="circle"
-              img="https://randomuser.me/api/portraits/men/50.jpg"
-            />
+            <Avatar size="2xl" shape="circle" img="https://randomuser.me/api/portraits/men/50.jpg" />
           </Card.Container>
-          <Card.Container className="mt-10 mb-3 text-center">
-            <Card.Title className="text-base font-semibold text-slate-800">
-              Khairul Islam
-            </Card.Title>
-            <Card.Title className="text-xs font-medium text-slate-400">
-              UI/UX Designer
-            </Card.Title>
+          <Card.Container className="mb-3 mt-10 text-center">
+            <Card.Title className="text-base font-semibold text-slate-800">Khairul Islam</Card.Title>
+            <Card.Title className="text-xs font-medium text-slate-400">UI/UX Designer</Card.Title>
           </Card.Container>
 
-          <Card.Container className="flex w-full justify-between border-t border-t-slate-50 py-3 px-5">
+          <Card.Container className="flex w-full justify-between border-t border-t-slate-50 px-5 py-3">
             <Card.Container className="text-center">
               <Card.Title className="text-sm text-slate-400">Post</Card.Title>
-              <Card.Title className="text-3xl font-semibold text-slate-800">
-                254
-              </Card.Title>
+              <Card.Title className="text-3xl font-semibold text-slate-800">254</Card.Title>
             </Card.Container>
             <Card.Container className="text-center">
-              <Card.Title className="text-sm text-slate-400">
-                Followers
-              </Card.Title>
-              <Card.Title className="text-3xl font-semibold text-slate-800">
-                12,45M
-              </Card.Title>
+              <Card.Title className="text-sm text-slate-400">Followers</Card.Title>
+              <Card.Title className="text-3xl font-semibold text-slate-800">12,45M</Card.Title>
             </Card.Container>
             <Card.Container className="text-center">
-              <Card.Title className="text-sm text-slate-400">
-                Following
-              </Card.Title>
-              <Card.Title className="text-3xl font-semibold text-slate-800">
-                58
-              </Card.Title>
+              <Card.Title className="text-sm text-slate-400">Following</Card.Title>
+              <Card.Title className="text-3xl font-semibold text-slate-800">58</Card.Title>
             </Card.Container>
           </Card.Container>
         </Card.Container>
-      </>
+      </>,
     ),
   },
   decorators: [
@@ -371,10 +307,10 @@ export const CardWithProfileDetails: Story = {
       </div>
     ),
   ],
-};
+}
 export const CardWithPostCard: Story = {
   args: {
-    className: "max-w-[280px] p-6",
+    className: 'max-w-[280px] p-6',
     children: removeFragment(
       <>
         <Card.Container className="flex items-center justify-center">
@@ -383,14 +319,13 @@ export const CardWithPostCard: Story = {
         <Card.Container className="text-center">
           <Card.Title>Keep React</Card.Title>
           <Card.Description className="text-sm font-normal text-slate-500">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
           <Button type="outlinePrimary">Check this</Button>
         </Card.Container>
-      </>
+      </>,
     ),
   },
   decorators: [
@@ -400,25 +335,21 @@ export const CardWithPostCard: Story = {
       </div>
     ),
   ],
-};
+}
 export const CardWithRating: Story = {
   args: {
-    imgSrc:
-      "https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format",
-    imgSize: "md",
+    imgSrc: 'https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format',
+    imgSize: 'md',
     children: removeFragment(
       <>
-        <Card.Container className="px-6 pt-5 pb-2">
+        <Card.Container className="px-6 pb-2 pt-5">
           <Card.Title>Keep React</Card.Title>
           <Card.Description className="text-base font-normal text-slate-500">
-            Component design systems can help developers to be more productive
-            by providing them.
+            Component design systems can help developers to be more productive by providing them.
           </Card.Description>
         </Card.Container>
         <Card.Container className="border-t border-t-slate-50 p-6">
-          <Card.Title className="text-sm font-medium text-slate-700">
-            From 850+ reviews
-          </Card.Title>
+          <Card.Title className="text-sm font-medium text-slate-700">From 850+ reviews</Card.Title>
           <Rating size={24}>
             <Rating.Star filledType="fill" />
             <Rating.Star filledType="fill" />
@@ -427,7 +358,7 @@ export const CardWithRating: Story = {
             <Rating.Star filledType="fill" starType="half" />
           </Rating>
         </Card.Container>
-      </>
+      </>,
     ),
   },
   decorators: [
@@ -437,11 +368,11 @@ export const CardWithRating: Story = {
       </div>
     ),
   ],
-};
+}
 export const RecentPostsCard: Story = {
   args: {
     shadow: false,
-    className: "max-w-2xl border-none",
+    className: 'max-w-2xl border-none',
     children: (
       <Card.Container className="flex items-start border-none">
         <Card.Container>
@@ -460,12 +391,10 @@ export const RecentPostsCard: Story = {
               Tips & Advice
             </Badge>
           </Card.Container>
-          <Card.Title className="text-xl font-medium text-slate-700">
-            Keep React
-          </Card.Title>
+          <Card.Title className="text-xl font-medium text-slate-700">Keep React</Card.Title>
           <Card.Description className="text-sm font-normal text-slate-500">
-            Component design systems can help developers to be more productive
-            by providing them with a ready-made set of components to use.
+            Component design systems can help developers to be more productive by providing them with a ready-made set
+            of components to use.
           </Card.Description>
         </Card.Container>
       </Card.Container>
@@ -478,16 +407,16 @@ export const RecentPostsCard: Story = {
       </div>
     ),
   ],
-};
+}
 export const EcommerceProductCard: Story = {
   args: {
-    className: "max-w-xs overflow-hidden rounded-md",
+    className: 'max-w-xs overflow-hidden rounded-md',
     imgSrc:
-      "https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format",
-    imgSize: "md",
+      'https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format',
+    imgSize: 'md',
     children: removeFragment(
       <>
-        <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+        <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="p-6">
@@ -500,8 +429,7 @@ export const EcommerceProductCard: Story = {
           <Card.Container className="my-3">
             <Card.Title>NIKE FREE SHOE</Card.Title>
             <Card.Description>
-              This can save time and effort, and it can also help to reduce the
-              risk of errors.
+              This can save time and effort, and it can also help to reduce the risk of errors.
             </Card.Description>
           </Card.Container>
           <Card.Container className="flex items-center justify-start gap-5">
@@ -513,7 +441,7 @@ export const EcommerceProductCard: Story = {
             </Button>
           </Card.Container>
         </Card.Container>
-      </>
+      </>,
     ),
   },
   decorators: [
@@ -523,16 +451,16 @@ export const EcommerceProductCard: Story = {
       </div>
     ),
   ],
-};
+}
 export const ProductCard: Story = {
   args: {
-    className: "max-w-xs overflow-hidden rounded-md",
+    className: 'max-w-xs overflow-hidden rounded-md',
     imgSrc:
-      "https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format",
-    imgSize: "md",
+      'https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format',
+    imgSize: 'md',
     children: removeFragment(
       <>
-        <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+        <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="space-y-4 p-6">
@@ -562,12 +490,10 @@ export const ProductCard: Story = {
           </Card.Container>
           <Card.Container className="my-3 flex items-center justify-between">
             <Button type="primary">Check Out</Button>
-            <Card.Title className="text-2xl font-semibold text-slate-700">
-              $649,00
-            </Card.Title>
+            <Card.Title className="text-2xl font-semibold text-slate-700">$649,00</Card.Title>
           </Card.Container>
         </Card.Container>
-      </>
+      </>,
     ),
   },
   decorators: [
@@ -577,30 +503,22 @@ export const ProductCard: Story = {
       </div>
     ),
   ],
-};
+}
 export const PodcastCard: Story = {
   args: {
-    className: "max-w-xs overflow-hidden rounded-md",
+    className: 'max-w-xs overflow-hidden rounded-md',
     imgSrc:
-      "https://images.prismic.io/staticmania/cb1a34d1-50a8-4b9c-b5e2-020d1c67e993_product-3.avif?auto=compress,format",
-    imgSize: "md",
+      'https://images.prismic.io/staticmania/cb1a34d1-50a8-4b9c-b5e2-020d1c67e993_product-3.avif?auto=compress,format',
+    imgSize: 'md',
     children: (
       <Card.Container className="space-y-3 p-6">
         <Card.Container>
-          <Card.Title className="text-xl font-semibold text-slate-700">
-            Keep design podcast
-          </Card.Title>
-          <Card.Description className="text-sm font-medium text-slate-500">
-            By Static Mania
-          </Card.Description>
+          <Card.Title className="text-xl font-semibold text-slate-700">Keep design podcast</Card.Title>
+          <Card.Description className="text-sm font-medium text-slate-500">By Static Mania</Card.Description>
         </Card.Container>
         <Card.Container className="flex items-center justify-between">
-          <Card.Title className="text-xs font-medium text-slate-500">
-            4:05
-          </Card.Title>
-          <Card.Title className="text-xs font-medium text-slate-500">
-            10:05
-          </Card.Title>
+          <Card.Title className="text-xs font-medium text-slate-500">4:05</Card.Title>
+          <Card.Title className="text-xs font-medium text-slate-500">10:05</Card.Title>
         </Card.Container>
         <Progress progress={45} color="info" rounded={true} />
         <Card.Container className="flex items-center justify-between">
@@ -611,12 +529,7 @@ export const PodcastCard: Story = {
             <Button type="text" circle>
               <SkipBack size={24} color="#5E718D" weight="bold" />
             </Button>
-            <PlayButton
-              type="primary"
-              circle={true}
-              size="lg"
-              icon={<Play size="21" />}
-            />
+            <PlayButton type="primary" circle={true} size="lg" icon={<Play size="21" />} />
             <Button type="text" circle>
               <SkipForward size={24} color="#5E718D" weight="bold" />
             </Button>
@@ -635,72 +548,48 @@ export const PodcastCard: Story = {
       </div>
     ),
   ],
-};
+}
 export const PricingCard: Story = {
   args: {
-    className: "max-w-xs p-6",
+    className: 'max-w-xs p-6',
     children: (
       <Card.Container>
-        <Card.Container className="md:h-[60px] h-[48px] w-[48px] md:w-[60px] bg-primary-25 flex items-center justify-center rounded-full">
-          <Image
-            src="/images/icon/pricing.png"
-            height={24}
-            width={24}
-            alt="card"
-          />
+        <Card.Container className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-primary-25 md:h-[60px] md:w-[60px]">
+          <Image src="/images/icon/pricing.png" height={24} width={24} alt="card" />
         </Card.Container>
         <Card.Container>
-          <Card.Title className="text-base md:text-xl font-medium text-primary-500">
-            Business
+          <Card.Title className="text-base font-medium text-primary-500 md:text-xl">Business</Card.Title>
+          <Card.Title className="my-3 flex items-center">
+            <span className="text-5xl font-bold text-slate-800 md:text-9xl">$79</span>
+            <span className="ml-1 text-base font-medium text-slate-400">/ mth</span>
           </Card.Title>
-          <Card.Title className="flex items-center my-3">
-            <span className="text-5xl md:text-9xl font-bold text-slate-800">
-              $79
-            </span>
-            <span className="ml-1 text-base font-medium text-slate-400">
-              / mth
-            </span>
-          </Card.Title>
-          <Card.Description className="text-sm md:text-base text-slate-700">
+          <Card.Description className="text-sm text-slate-700 md:text-base">
             Until recently, the prevailing view assumed.
           </Card.Description>
         </Card.Container>
         <Card.Container tag="ul" className="my-4 space-y-5">
           <Card.List className="flex items-center gap-1.5">
             <CheckCircle size={24} color="#1B4DFF" />
-            <span className="text-sm md:text-base text-slate-700">
-              One Month Free Access
-            </span>
+            <span className="text-sm text-slate-700 md:text-base">One Month Free Access</span>
           </Card.List>
           <Card.List className="flex items-center gap-1.5">
             <CheckCircle size={24} color="#1B4DFF" />
-            <span className="text-sm md:text-base text-slate-700">
-              All The Component Access
-            </span>
+            <span className="text-sm text-slate-700 md:text-base">All The Component Access</span>
           </Card.List>
           <Card.List className="flex items-center gap-1.5">
             <CheckCircle size={24} color="#1B4DFF" />
-            <span className="text-sm md:text-base text-slate-700">
-              Access Html Component
-            </span>
+            <span className="text-sm text-slate-700 md:text-base">Access Html Component</span>
           </Card.List>
           <Card.List className="flex items-center gap-1.5">
             <CheckCircle size={24} color="#1B4DFF" />
-            <span className="text-sm md:text-base text-slate-700">
-              Access React Component
-            </span>
+            <span className="text-sm text-slate-700 md:text-base">Access React Component</span>
           </Card.List>
         </Card.Container>
         <Card.Container>
           <Button type="primary" width="full" customClass="md:block hidden">
             Pro Access
           </Button>
-          <Button
-            type="primary"
-            width="full"
-            size="xs"
-            customClass="md:hidden block"
-          >
+          <Button type="primary" width="full" size="xs" customClass="md:hidden block">
             Pro Access
           </Button>
         </Card.Container>
@@ -714,4 +603,4 @@ export const PricingCard: Story = {
       </div>
     ),
   ],
-};
+}

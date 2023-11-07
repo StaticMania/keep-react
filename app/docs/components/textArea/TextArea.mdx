@@ -1,25 +1,13 @@
-import {
-  DefaultTextArea,
-  DefaultTextAreaCode,
-} from "./variant/DefaultTextArea";
-import {
-  ColorVariantOfTextArea,
-  ColorVariantOfTextAreaCode,
-} from "./variant/ColorVariantOfTextArea";
-import {
-  TextAreaWithOutBorder,
-  TextAreaWithOutBorderCode,
-} from "./variant/TextAreaWithOutBorder";
-import {
-  TextAreaWithHelperText,
-  TextAreaWithHelperTextCode,
-} from "./variant/TextAreaWithHelperText";
-import { textareaApiData } from "./TextAreaApi";
+import { DefaultTextArea, DefaultTextAreaCode } from './variant/DefaultTextArea'
+import { ColorVariantOfTextArea, ColorVariantOfTextAreaCode } from './variant/ColorVariantOfTextArea'
+import { TextAreaWithOutBorder, TextAreaWithOutBorderCode } from './variant/TextAreaWithOutBorder'
+import { TextAreaWithHelperText, TextAreaWithHelperTextCode } from './variant/TextAreaWithHelperText'
+import { textareaApiData } from './TextAreaApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+import { useTheme } from '~/src/Keep/ThemeContex'
 
 ## Table of Contents
 
@@ -37,10 +25,7 @@ The Default TextArea is a simple and versatile component that provides users wit
 
 The Text Area component in our design system offers different color variants to match your UI's visual style and provide additional context. You can choose from the following color options: `"gray"` `"info"` `"error"` `"warning"` and `"success"`.
 
-<CodePreview
-  github="FormControls/Textarea.tsx"
-  code={ColorVariantOfTextAreaCode}
->
+<CodePreview github="FormControls/Textarea.tsx" code={ColorVariantOfTextAreaCode}>
   <ColorVariantOfTextArea />
 </CodePreview>
 
@@ -48,10 +33,7 @@ The Text Area component in our design system offers different color variants to 
 
 You can easily create a TextArea without a border by setting the `border` prop to `false`.
 
-<CodePreview
-  github="FormControls/Textarea.tsx"
-  code={TextAreaWithOutBorderCode}
->
+<CodePreview github="FormControls/Textarea.tsx" code={TextAreaWithOutBorderCode}>
   <TextAreaWithOutBorder />
 </CodePreview>
 
@@ -59,10 +41,7 @@ You can easily create a TextArea without a border by setting the `border` prop t
 
 It will be displayed below the TextArea to provide additional guidance or context for the user. You can add a helperText using the `helperText` prop in the TextArea component.
 
-<CodePreview
-  github="FormControls/Textarea.tsx"
-  code={TextAreaWithHelperTextCode}
->
+<CodePreview github="FormControls/Textarea.tsx" code={TextAreaWithHelperTextCode}>
   <TextAreaWithHelperText />
 </CodePreview>
 
