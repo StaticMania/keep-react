@@ -55,7 +55,7 @@ export const TreeComponent = () => {
         ChildIcon={<File size={20} color="#3D4A5C" />}
       />
     </div>
-///  );
+  );
 };
 
 /**
