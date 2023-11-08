@@ -1,16 +1,11 @@
-"use client";
-import { Dropdown, TextInput } from "~/src";
-import { CaretRight, Gear, Money, SignOut, SquaresFour } from "phosphor-react";
+'use client'
+import { Dropdown, TextInput } from '~/src'
+import { CaretRight, Gear, Money, SignOut, SquaresFour } from 'phosphor-react'
 
 const DropdownWithIconAndSearchBar = () => {
   return (
-    <Dropdown
-      label="Dropdown button"
-      type="primary"
-      size="sm"
-      dismissOnClick={true}
-    >
-      <div className="px-5 pt-3 pb-2">
+    <Dropdown label="Dropdown button" type="primary" size="sm" dismissOnClick={true}>
+      <div className="px-5 pb-2 pt-3">
         <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
       </div>
       <Dropdown.Item icon={<SquaresFour size={20} color="#5E718D" />}>
@@ -31,12 +26,10 @@ const DropdownWithIconAndSearchBar = () => {
           <CaretRight size={20} color="#5E718D" />
         </span>
       </Dropdown.Item>
-      <Dropdown.Item icon={<SignOut size={20} color="#5E718D" />}>
-        Sign out
-      </Dropdown.Item>
+      <Dropdown.Item icon={<SignOut size={20} color="#5E718D" />}>Sign out</Dropdown.Item>
     </Dropdown>
-  );
-};
+  )
+}
 
 const DropdownWithIconAndSearchBarCode = `
 "use client";
@@ -78,6 +71,6 @@ export const DropdownComponent = () => {
     </Dropdown>
   );
 }
-`;
+`
 
-export { DropdownWithIconAndSearchBar, DropdownWithIconAndSearchBarCode };
+export { DropdownWithIconAndSearchBar, DropdownWithIconAndSearchBarCode }

@@ -1,6 +1,6 @@
-"use client";
-import { Carousel } from "~/src";
-import Image from "next/image";
+'use client'
+import { Carousel } from '~/src'
+import Image from 'next/image'
 
 const CarouselWithIndicator = () => {
   return (
@@ -32,8 +32,8 @@ const CarouselWithIndicator = () => {
         />
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
 const CarouselWithIndicatorCode = `
 "use client";
@@ -72,6 +72,6 @@ export const CarouselComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { CarouselWithIndicator, CarouselWithIndicatorCode };
+export { CarouselWithIndicator, CarouselWithIndicatorCode }

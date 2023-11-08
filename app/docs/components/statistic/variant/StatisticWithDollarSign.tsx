@@ -1,5 +1,5 @@
-"use client";
-import { Statistic } from "~/src";
+'use client'
+import { Statistic } from '~/src'
 
 const StatisticWithDollarSign = () => {
   return (
@@ -10,8 +10,8 @@ const StatisticWithDollarSign = () => {
         <Statistic.Rate>1.5</Statistic.Rate>
       </div>
     </Statistic>
-  );
-};
+  )
+}
 
 const StatisticWithDollarSignCode = `
 "use client";
@@ -28,6 +28,6 @@ export const StatisticComponent = () => {
     </Statistic>
   );
 }
-`;
+`
 
-export { StatisticWithDollarSign, StatisticWithDollarSignCode };
+export { StatisticWithDollarSign, StatisticWithDollarSignCode }

@@ -1,0 +1,4 @@
+*.md
+.gitignore
+build/
+coverage/

@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import { Upload } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Upload } from '~/src'
 
 const UploadSuccess = () => {
-  const [fileName, setFileName] = useState("");
+  const [fileName, setFileName] = useState('')
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files && event.target.files[0]
     if (file) {
-      setFileName(file.name);
+      setFileName(file.name)
     }
-  };
+  }
   return (
     <Upload
       onFileChange={handleFileChange}
@@ -19,8 +19,8 @@ const UploadSuccess = () => {
       progressType="success"
       id="upload_success"
     />
-  );
-};
+  )
+}
 
 const UploadSuccessCode = `
 "use client";
@@ -45,6 +45,6 @@ export const UploadComponent = () => {
     />
   );
 }
-`;
+`
 
-export { UploadSuccess, UploadSuccessCode };
+export { UploadSuccess, UploadSuccessCode }

@@ -1,9 +1,9 @@
-"use client";
-import { Button } from "~/src";
+'use client'
+import { Button } from '~/src'
 
 const KeepButtonColor = () => {
   return (
-    <div className="flex flex-wrap items-center gap-2 h-20 p-4">
+    <div className="flex h-20 flex-wrap items-center gap-2 p-4">
       <Button size="md" color="error">
         Error Button
       </Button>
@@ -17,8 +17,8 @@ const KeepButtonColor = () => {
         warning Button
       </Button>
     </div>
-  );
-};
+  )
+}
 
 const KeepButtonColorCode = `
 "use client";
@@ -34,6 +34,6 @@ export const ButtonComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { KeepButtonColor, KeepButtonColorCode };
+export { KeepButtonColor, KeepButtonColorCode }

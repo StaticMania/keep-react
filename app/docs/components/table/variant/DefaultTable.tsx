@@ -1,13 +1,7 @@
-"use client";
-import Image from "next/image";
-import { Avatar, Badge, Button, Popover, Table } from "~/src";
-import {
-  ArrowDown,
-  Cube,
-  DotsThreeOutline,
-  Pencil,
-  Trash,
-} from "phosphor-react";
+'use client'
+import Image from 'next/image'
+import { Avatar, Badge, Button, Popover, Table } from '~/src'
+import { ArrowDown, Cube, DotsThreeOutline, Pencil, Trash } from 'phosphor-react'
 
 const DefaultTable = () => {
   return (
@@ -16,9 +10,7 @@ const DefaultTable = () => {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-2xl font-semibold text-slate-600">
-                Team member
-              </p>
+              <p className="text-2xl font-semibold text-slate-600">Team member</p>
               <Badge size="xs" colorType="light" color="gray">
                 100 Member
               </Badge>
@@ -45,9 +37,7 @@ const DefaultTable = () => {
           </Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
           <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
-          <Table.HeadCell className="min-w-[240px]">
-            Email Address
-          </Table.HeadCell>
+          <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
           <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
           <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
           <Table.HeadCell className="min-w-[100px]" />
@@ -58,15 +48,9 @@ const DefaultTable = () => {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-4.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Ralph Edwards
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Ralph Edwards</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -98,12 +82,7 @@ const DefaultTable = () => {
             <Table.Cell>
               <div className="flex items-center gap-3">
                 <div>
-                  <Image
-                    src="/images/icon/Series.png"
-                    width={72}
-                    height={36}
-                    alt="line"
-                  />
+                  <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
                 </div>
                 <div className="flex items-center gap-1">
                   <span>
@@ -120,16 +99,16 @@ const DefaultTable = () => {
                 customClass="w-48 p-2 border border-slate-100"
                 additinalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -137,8 +116,7 @@ const DefaultTable = () => {
                       </button>
                     </li>
                   </ul>
-                }
-              >
+                }>
                 <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
@@ -150,15 +128,9 @@ const DefaultTable = () => {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-2.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Wade Warren
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Wade Warren</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -190,12 +162,7 @@ const DefaultTable = () => {
             <Table.Cell>
               <div className="flex items-center gap-3">
                 <div>
-                  <Image
-                    src="/images/icon/Series.png"
-                    width={72}
-                    height={36}
-                    alt="line"
-                  />
+                  <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
                 </div>
                 <div className="flex items-center gap-1">
                   <span>
@@ -212,16 +179,16 @@ const DefaultTable = () => {
                 customClass="w-48 p-2 border border-slate-100"
                 additinalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -229,8 +196,7 @@ const DefaultTable = () => {
                       </button>
                     </li>
                   </ul>
-                }
-              >
+                }>
                 <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
@@ -242,15 +208,9 @@ const DefaultTable = () => {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-3.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Eleanor Pena
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Eleanor Pena</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -282,12 +242,7 @@ const DefaultTable = () => {
             <Table.Cell>
               <div className="flex items-center gap-3">
                 <div>
-                  <Image
-                    src="/images/icon/Series.png"
-                    width={72}
-                    height={36}
-                    alt="line"
-                  />
+                  <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
                 </div>
                 <div className="flex items-center gap-1">
                   <span>
@@ -304,16 +259,16 @@ const DefaultTable = () => {
                 customClass="w-48 p-2 border border-slate-100"
                 additinalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -321,8 +276,7 @@ const DefaultTable = () => {
                       </button>
                     </li>
                   </ul>
-                }
-              >
+                }>
                 <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
@@ -334,15 +288,9 @@ const DefaultTable = () => {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-4.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Jerome Bell
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Jerome Bell</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -374,12 +322,7 @@ const DefaultTable = () => {
             <Table.Cell>
               <div className="flex items-center gap-3">
                 <div>
-                  <Image
-                    src="/images/icon/Series.png"
-                    width={72}
-                    height={36}
-                    alt="line"
-                  />
+                  <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
                 </div>
                 <div className="flex items-center gap-1">
                   <span>
@@ -396,16 +339,16 @@ const DefaultTable = () => {
                 customClass="w-48 p-2 border border-slate-100"
                 additinalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -413,8 +356,7 @@ const DefaultTable = () => {
                       </button>
                     </li>
                   </ul>
-                }
-              >
+                }>
                 <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
@@ -426,15 +368,9 @@ const DefaultTable = () => {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-5.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Macky Scheman
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Macky Scheman</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -466,12 +402,7 @@ const DefaultTable = () => {
             <Table.Cell>
               <div className="flex items-center gap-3">
                 <div>
-                  <Image
-                    src="/images/icon/Series.png"
-                    width={72}
-                    height={36}
-                    alt="line"
-                  />
+                  <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
                 </div>
                 <div className="flex items-center gap-1">
                   <span>
@@ -488,16 +419,16 @@ const DefaultTable = () => {
                 customClass="w-48 p-2 border border-slate-100"
                 additinalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="rounded px-2 py-1 hover:bg-slate-100">
+                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -505,8 +436,7 @@ const DefaultTable = () => {
                       </button>
                     </li>
                   </ul>
-                }
-              >
+                }>
                 <Button type="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
@@ -516,8 +446,8 @@ const DefaultTable = () => {
         </Table.Body>
       </Table>
     </div>
-  );
-};
+  )
+}
 
 const DefaultTableCode = `
 "use client";
@@ -1038,5 +968,5 @@ export const TableComponent = () => {
       </Table>
   );
 }
-`;
-export { DefaultTable, DefaultTableCode };
+`
+export { DefaultTable, DefaultTableCode }

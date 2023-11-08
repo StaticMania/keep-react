@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 /**
  * A custom hook that provides a function to copy text to clipboard and a boolean state indicating whether the copy was successful or not.
@@ -15,8 +15,8 @@ const useCopy = () => {
    */
   if (copy) {
     setTimeout(() => {
-      setCopy(false);
-    }, 3000);
+      setCopy(false)
+    }, 3000)
   }
 
   /**
@@ -27,7 +27,7 @@ const useCopy = () => {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        setCopy(true);
+        setCopy(true)
       })
       .catch((error) => {
         console.error(error);
@@ -38,7 +38,7 @@ const useCopy = () => {
   return {
     copy,
     copyToClipboard,
-  };
-};
+  }
+}
 
-export default useCopy;
+export default useCopy

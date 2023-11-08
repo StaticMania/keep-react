@@ -2,9 +2,9 @@
  * Interface for a data item.
  */
 interface DataItem {
-  id: number;
-  name: string;
-  href: string;
+  id: number
+  name: string
+  href: string
 }
 
 /**
@@ -20,21 +20,22 @@ export const storeData = (item: DataItem): void => {
   let storedData: DataItem[] = [];
 
   if (storedDataStr) {
-    storedData = JSON.parse(storedDataStr);
+    storedData = JSON.parse(storedDataStr)
 
     /**
      * Check if the item already exists in the stored data.
      */
     const itemExists = storedData.some((dataItem) => dataItem.id === item.id);
+
     if (itemExists) {
-      return;
+      return
     }
 
     /**
      * If the stored data has reached the maximum limit, remove the oldest item.
      */
     if (storedData.length >= 4) {
-      storedData.shift();
+      storedData.shift()
     }
   }
 
@@ -49,9 +50,9 @@ export const storeData = (item: DataItem): void => {
  * @returns An array of data items.
  */
 export const getData = () => {
-  const storedData = localStorage.getItem("searchData");
+  const storedData = localStorage.getItem('searchData')
   if (storedData) {
-    return JSON.parse(storedData);
+    return JSON.parse(storedData)
   }
-  return [];
-};
+  return []
+}

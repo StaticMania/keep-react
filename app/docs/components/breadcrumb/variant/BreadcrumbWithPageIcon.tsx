@@ -1,6 +1,6 @@
-"use client";
-import { Breadcrumb } from "~/src";
-import { CaretRight, House } from "phosphor-react";
+'use client'
+import { Breadcrumb } from '~/src'
+import { CaretRight, House } from 'phosphor-react'
 
 const BreadcrumbWithPageIcon = () => {
   return (
@@ -8,8 +8,7 @@ const BreadcrumbWithPageIcon = () => {
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+        separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#" icon={<House size={24} color="#AFBACA" />}>
           Products
         </Breadcrumb.Item>
@@ -22,8 +21,7 @@ const BreadcrumbWithPageIcon = () => {
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+        separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#" icon={<House size={24} color="#AFBACA" />}>
           Products
         </Breadcrumb.Item>
@@ -36,8 +34,7 @@ const BreadcrumbWithPageIcon = () => {
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+        separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#" icon={<House size={24} color="#AFBACA" />}>
           Products
         </Breadcrumb.Item>
@@ -48,8 +45,8 @@ const BreadcrumbWithPageIcon = () => {
         </Breadcrumb.Item>
       </Breadcrumb>
     </div>
-  );
-};
+  )
+}
 
 const BreadcrumbWithPageIconCode = `
 "use client";
@@ -104,6 +101,6 @@ export const BreadcrumbComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { BreadcrumbWithPageIcon, BreadcrumbWithPageIconCode };
+export { BreadcrumbWithPageIcon, BreadcrumbWithPageIconCode }

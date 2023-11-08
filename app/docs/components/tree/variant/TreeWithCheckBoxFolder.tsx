@@ -1,14 +1,14 @@
-"use client";
-import { nodes } from "./DefaultTree";
-import { Tree } from "~/src";
-import { File, FolderNotchOpen } from "phosphor-react";
+'use client'
+import { nodes } from './DefaultTree'
+import { Tree } from '~/src'
+import { File, FolderNotchOpen } from 'phosphor-react'
 
 const TreeWithCheckboxFolder = () => {
   const handleChecked = (value: boolean) => {
-    console.log(value);
-  };
+    console.log(value)
+  }
   return (
-    <div className="py-5 overflow-x-auto">
+    <div className="overflow-x-auto py-5">
       <Tree
         showBorder={true}
         showItemsNumber={true}
@@ -20,8 +20,8 @@ const TreeWithCheckboxFolder = () => {
         handleChecked={handleChecked}
       />
     </div>
-  );
-};
+  )
+}
 
 const TreeWithCheckboxFolderCode = `
 "use client";
@@ -93,6 +93,6 @@ export const TreeComponent = () => {
     />
   );
 }
-`;
+`
 
-export { TreeWithCheckboxFolder, TreeWithCheckboxFolderCode };
+export { TreeWithCheckboxFolder, TreeWithCheckboxFolderCode }

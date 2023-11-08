@@ -1,6 +1,6 @@
-"use client";
-import { SearchBar } from "~/src";
-import { MagnifyingGlass } from "phosphor-react";
+'use client'
+import { SearchBar } from '~/src'
+import { MagnifyingGlass } from 'phosphor-react'
 
 const DisabledSearchBar = () => {
   return (
@@ -10,8 +10,8 @@ const DisabledSearchBar = () => {
       addonPosition="left"
       disabled={true}
     />
-  );
-};
+  )
+}
 
 const DisabledSearchBarCode = `
 "use client";
@@ -28,6 +28,6 @@ export const SearchBarComponent = () => {
     />
   );
 }
-`;
+`
 
-export { DisabledSearchBar, DisabledSearchBarCode };
+export { DisabledSearchBar, DisabledSearchBarCode }

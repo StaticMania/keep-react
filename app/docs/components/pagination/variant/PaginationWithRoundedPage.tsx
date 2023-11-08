@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import { Pagination } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Pagination } from '~/src'
 
 const PaginationWithRoundedPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1)
   return (
     <Pagination
       currentPage={currentPage}
@@ -13,8 +13,8 @@ const PaginationWithRoundedPage = () => {
       prevNextShape="circle"
       activeCurrentPageShape="circle"
     />
-  );
-};
+  )
+}
 
 const PaginationWithRoundedPageCode = `
 "use client";
@@ -34,6 +34,6 @@ export const PaginationComponent = () => {
     />
   );
 }
-`;
+`
 
-export { PaginationWithRoundedPage, PaginationWithRoundedPageCode };
+export { PaginationWithRoundedPage, PaginationWithRoundedPageCode }

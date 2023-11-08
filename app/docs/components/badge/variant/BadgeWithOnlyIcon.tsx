@@ -1,6 +1,6 @@
-"use client";
-import { Badge } from "~/src";
-import { Check, Checks, CloudCheck, XCircle } from "phosphor-react";
+'use client'
+import { Badge } from '~/src'
+import { Check, Checks, CloudCheck, XCircle } from 'phosphor-react'
 
 const OnlyIconOfBadge = () => {
   return (
@@ -46,8 +46,8 @@ const OnlyIconOfBadge = () => {
         iconPosition="right"
       />
     </div>
-  );
-};
+  )
+}
 
 const OnlyIconOfBadgeCode = `
 "use client";
@@ -100,6 +100,6 @@ export const BadgeComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { OnlyIconOfBadge, OnlyIconOfBadgeCode };
+export { OnlyIconOfBadge, OnlyIconOfBadgeCode }

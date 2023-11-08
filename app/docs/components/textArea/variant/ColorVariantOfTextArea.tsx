@@ -1,18 +1,9 @@
-"use client";
-import { Textarea } from "~/src";
+'use client'
+import { Textarea } from '~/src'
 
 const ColorVariantOfTextArea = () => {
-  return (
-    <Textarea
-      id="comment"
-      placeholder="Leave a comment..."
-      withBg={true}
-      color="info"
-      border={true}
-      rows={4}
-    />
-  );
-};
+  return <Textarea id="comment" placeholder="Leave a comment..." withBg={true} color="info" border={true} rows={4} />
+}
 
 const ColorVariantOfTextAreaCode = `
 "use client";
@@ -30,6 +21,6 @@ export const TextAreaComponent = () => {
     />
   );
 }
-`;
+`
 
-export { ColorVariantOfTextArea, ColorVariantOfTextAreaCode };
+export { ColorVariantOfTextArea, ColorVariantOfTextAreaCode }

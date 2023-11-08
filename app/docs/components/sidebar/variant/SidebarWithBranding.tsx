@@ -1,32 +1,17 @@
-"use client";
-import { Sidebar } from "~/src";
-import {
-  Chat,
-  Handbag,
-  ShoppingBagOpen,
-  ShoppingCart,
-  SignIn,
-  SquaresFour,
-  UserPlus,
-  Users,
-} from "phosphor-react";
+'use client'
+import { Sidebar } from '~/src'
+import { Chat, Handbag, ShoppingBagOpen, ShoppingCart, SignIn, SquaresFour, UserPlus, Users } from 'phosphor-react'
 
 const SidebarWithBranding = () => {
   return (
-    <Sidebar
-      aria-label="Sidebar with multi-level dropdown example"
-      className="max-w-xs"
-    >
+    <Sidebar aria-label="Sidebar with multi-level dropdown example" className="max-w-xs">
       <Sidebar.Logo href="" img="/images/keep.svg" imgAlt="Keep logo" />
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
             Dashboard
           </Sidebar.Item>
-          <Sidebar.Collapse
-            icon={<ShoppingCart size={24} />}
-            label="E-commerce"
-          >
+          <Sidebar.Collapse icon={<ShoppingCart size={24} />} label="E-commerce">
             <Sidebar.Item href="#" icon={<Handbag size={24} />}>
               Products
             </Sidebar.Item>
@@ -49,8 +34,8 @@ const SidebarWithBranding = () => {
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>
-  );
-};
+  )
+}
 
 const SidebarWithBrandingCode = `
 "use client";
@@ -103,6 +88,6 @@ export const SidebarComponent = () => {
     </Sidebar>
   );
 }
-`;
+`
 
-export { SidebarWithBranding, SidebarWithBrandingCode };
+export { SidebarWithBranding, SidebarWithBrandingCode }

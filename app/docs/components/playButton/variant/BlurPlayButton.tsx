@@ -1,10 +1,10 @@
-"use client";
-import { Play } from "phosphor-react";
-import { PlayButton } from "~/src";
+'use client'
+import { Play } from 'phosphor-react'
+import { PlayButton } from '~/src'
 
 const BlurPlayButton = () => {
   return (
-    <div className="h-20 p-5 flex items-center justify-start">
+    <div className="flex h-20 items-center justify-start p-5">
       <PlayButton
         title="Play Video"
         type="blur"
@@ -14,8 +14,8 @@ const BlurPlayButton = () => {
         className="bg-black/40 backdrop-blur-sm"
       />
     </div>
-  );
-};
+  )
+}
 
 const BlurPlayButtonCode = `
 "use client";
@@ -34,6 +34,6 @@ export const PlayButtonComponent = () => {
     />
   );
 }
-`;
+`
 
-export { BlurPlayButton, BlurPlayButtonCode };
+export { BlurPlayButton, BlurPlayButtonCode }

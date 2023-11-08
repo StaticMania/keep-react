@@ -1,33 +1,18 @@
-import {
-  DefaultBarChart,
-  DefaultBarChartCode,
-} from "./variant/DefaultBarChart";
-import {
-  ChartWithAxisData,
-  ChartWithAxisDataCode,
-} from "./variant/ChartWithAxisData";
-import {
-  BarChartWithGridLine,
-  BarChartWithAxisDataCode,
-} from "./variant/ChartWithGridLine";
-import {
-  ChartWithDoubleData,
-  ChartWithDoubleDataCode,
-} from "./variant/ChartWithDoubleData";
-import {
-  CustomizedBarSize,
-  CustomizedBarSizeCode,
-} from "./variant/CustomizedBarSize";
+import { DefaultBarChart, DefaultBarChartCode } from './variant/DefaultBarChart'
+import { ChartWithAxisData, ChartWithAxisDataCode } from './variant/ChartWithAxisData'
+import { BarChartWithGridLine, BarChartWithAxisDataCode } from './variant/ChartWithGridLine'
+import { ChartWithDoubleData, ChartWithDoubleDataCode } from './variant/ChartWithDoubleData'
+import { CustomizedBarSize, CustomizedBarSizeCode } from './variant/CustomizedBarSize'
 import {
   CustomizedBarSizeWithAxisData,
   CustomizedBarSizeWithAxisDataCode,
-} from "./variant/CustomizedBarSizeWithAxisData";
-import { barChartAPIData } from "./BarChartApi";
+} from './variant/CustomizedBarSizeWithAxisData'
+import { barChartAPIData } from './BarChartApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+import { useTheme } from '~/src/Keep/ThemeContex'
 
 ## Table of Contents
 
@@ -77,10 +62,7 @@ Learn to customize the size of individual bars in your chart for better visual i
 
 Combine customized bar size with specified axis data for a tailored chart appearance.
 
-<CodePreview
-  github="Chart/BarChart.tsx"
-  code={CustomizedBarSizeWithAxisDataCode}
->
+<CodePreview github="Chart/BarChart.tsx" code={CustomizedBarSizeWithAxisDataCode}>
   <CustomizedBarSizeWithAxisData />
 </CodePreview>
 

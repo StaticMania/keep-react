@@ -8,16 +8,7 @@ import { useState } from "react";
 import { CustomizedBarSizeWithAxisData } from "~/app/docs/components/barChart/variant/CustomizedBarSizeWithAxisData";
 import { DefaultDatePicker } from "~/app/docs/components/datePicker/variant/DefaultDatePicker";
 import { DefaultRadio } from "~/app/docs/components/radio/variant/DefaultRadio";
-
-import {
-  Button,
-  CheckboxGroup,
-  Modal,
-  Pagination,
-  Slider,
-  Tooltip,
-  Tree,
-} from "~/src";
+import { Button, CheckboxGroup, Modal, Pagination, Slider, Tooltip, Tree } from '~/src'
 
 export const TreeComponent = () => {
   /**
@@ -28,23 +19,23 @@ export const TreeComponent = () => {
   const nodes = [
     {
       id: 1,
-      title: "Home Page",
+      title: 'Home Page',
       children: [
         {
           id: 2,
-          title: "Hero Section",
+          title: 'Hero Section',
           children: [
             {
               id: 2.1,
-              title: "Hero Image",
+              title: 'Hero Image',
               children: [
                 {
                   id: 2.2,
-                  title: "Hero Text",
+                  title: 'Hero Text',
                 },
                 {
                   id: 2.3,
-                  title: "Hero Title",
+                  title: 'Hero Title',
                 },
               ],
             },
@@ -52,7 +43,7 @@ export const TreeComponent = () => {
         },
       ],
     },
-  ];
+  ]
   return (
     <div className="scale-90">
       <Tree
@@ -64,7 +55,7 @@ export const TreeComponent = () => {
         ChildIcon={<File size={20} color="#3D4A5C" />}
       />
     </div>
-  );
+///  );
 };
 
 /**
@@ -92,7 +83,7 @@ export const SliderComponet = () => {
  */
 
 export const PaginationComponent = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1)
   return (
     <div className="scale-75">
       <Pagination
@@ -119,8 +110,7 @@ export const TooltipComponent = () => {
       trigger="hover"
       placement="top"
       animation="duration-300"
-      style="dark"
-    >
+      style="dark">
       <Button size="sm" type="primary">
         Tooltip Content
       </Button>
@@ -144,11 +134,12 @@ export const BarChartComponent = () => {
  * CheckboxGroupComponent is a component that renders a list of CheckboxGroup components.
  * @returns JSX.Element
  */
+  
 export const CheckboxGroupComponent = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
   return (
     <div className="scale-50">
       <form className="space-y-4 p-5">
@@ -219,7 +210,7 @@ export const RadioSelectComponent = () => {
  */
 
 export const ModalComponent = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
   const onClick = () => {
     setShowModal(!showModal);
   };
@@ -227,12 +218,7 @@ export const ModalComponent = () => {
   return (
     <div>
       <Button onClick={onClick}>Modal</Button>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModal}
-        position="center"
-      >
+      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
@@ -251,5 +237,5 @@ export const ModalComponent = () => {
         </Modal.Footer>
       </Modal>
     </div>
-  );
-};
+  )
+}

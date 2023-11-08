@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import { DatePicker } from "~/src";
+'use client'
+import { useState } from 'react'
+import { DatePicker } from '~/src'
 
 const DatePickerWithTwoMonth = () => {
-  const [_, setDate] = useState<Date | null>(null);
+  const [_, setDate] = useState<Date | null>(null)
 
   return (
     <DatePicker showTwoMonth={true} singleDatePicker={setDate}>
       <DatePicker.SingleDate />
     </DatePicker>
-  );
-};
+  )
+}
 
 const DatePickerWithTwoMonthCode = `
 "use client";
@@ -25,6 +25,6 @@ export const DatePickerComponent = () => {
     </DatePicker>
   );
 }
-`;
+`
 
-export { DatePickerWithTwoMonth, DatePickerWithTwoMonthCode };
+export { DatePickerWithTwoMonth, DatePickerWithTwoMonthCode }

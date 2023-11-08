@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { BarChart } from "~/src";
-import { BarChartData } from "./DefaultBarChart";
+import { BarChart } from '~/src'
+import { BarChartData } from './DefaultBarChart'
 
 const CustomizedBarSize = () => {
   return (
@@ -16,8 +16,8 @@ const CustomizedBarSize = () => {
       showTooltip={true}
       barRadius={[4, 4, 0, 0]}
     />
-  );
-};
+  )
+}
 
 const CustomizedBarSizeCode = `
 "use client";
@@ -115,6 +115,6 @@ export const BarComponent = () => {
     />
   );
 }
-`;
+`
 
-export { CustomizedBarSize, CustomizedBarSizeCode };
+export { CustomizedBarSize, CustomizedBarSizeCode }

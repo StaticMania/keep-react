@@ -1,5 +1,5 @@
-"use client";
-import { Tabs } from "~/src";
+'use client'
+import { Tabs } from '~/src'
 
 const DefaultTabs = () => {
   return (
@@ -14,8 +14,8 @@ const DefaultTabs = () => {
         Disabled content
       </Tabs.Item>
     </Tabs>
-  );
-};
+  )
+}
 
 const DefaultTabsCode = `
 "use client";
@@ -36,6 +36,6 @@ export const TabsComponent = () => {
     </Tabs>
   );
 }
-`;
+`
 
-export { DefaultTabs, DefaultTabsCode };
+export { DefaultTabs, DefaultTabsCode }

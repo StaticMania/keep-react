@@ -1,6 +1,6 @@
-"use client";
-import { Steps } from "~/src";
-import { Club, DownloadSimple, Globe } from "phosphor-react";
+'use client'
+import { Steps } from '~/src'
+import { Club, DownloadSimple, Globe } from 'phosphor-react'
 
 const StepWithIcon = () => {
   return (
@@ -23,8 +23,8 @@ const StepWithIcon = () => {
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       />
     </Steps>
-  );
-};
+  )
+}
 
 const StepWithIconCode = `
 "use client";
@@ -55,6 +55,6 @@ export const StepComponent = () => {
     </Steps>
   );
 }
-`;
+`
 
-export { StepWithIcon, StepWithIconCode };
+export { StepWithIcon, StepWithIconCode }

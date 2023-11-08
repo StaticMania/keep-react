@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import TooltipDocsContent from "./tooltip.mdx";
+'use client'
+import type { FC } from 'react'
+import TooltipDocsContent from './tooltip.mdx'
 
-const TooltipDocs: FC = () => <TooltipDocsContent />;
+const TooltipDocs: FC = () => <TooltipDocsContent />
 
-export default TooltipDocs;
+export default TooltipDocs

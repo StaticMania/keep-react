@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import PopoverDocsContent from "./popover.mdx";
+'use client'
+import type { FC } from 'react'
+import PopoverDocsContent from './popover.mdx'
 
-const PopoverDocs: FC = () => <PopoverDocsContent />;
+const PopoverDocs: FC = () => <PopoverDocsContent />
 
-export default PopoverDocs;
+export default PopoverDocs

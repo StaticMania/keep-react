@@ -1,18 +1,13 @@
-"use client";
-import { Progress } from "~/src";
+'use client'
+import { Progress } from '~/src'
 
 const ProgressWithPopup = () => {
   return (
     <div className="w-5/6 py-16">
-      <Progress
-        progress={75}
-        color="info"
-        rounded={true}
-        showPopupLabelProgress={true}
-      />
+      <Progress progress={75} color="info" rounded={true} showPopupLabelProgress={true} />
     </div>
-  );
-};
+  )
+}
 
 const ProgressWithPopupCode = `
 "use client";
@@ -28,6 +23,6 @@ export const ProgressComponent = () => {
     />
   );
 };
-`;
+`
 
-export { ProgressWithPopup, ProgressWithPopupCode };
+export { ProgressWithPopup, ProgressWithPopupCode }

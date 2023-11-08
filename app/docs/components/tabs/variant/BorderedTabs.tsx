@@ -1,5 +1,5 @@
-"use client";
-import { Tabs } from "~/src";
+'use client'
+import { Tabs } from '~/src'
 
 const BorderedTabs = () => {
   return (
@@ -12,8 +12,8 @@ const BorderedTabs = () => {
         Disabled content
       </Tabs.Item>
     </Tabs>
-  );
-};
+  )
+}
 
 const BorderedTabsCode = `
 "use client";
@@ -32,6 +32,6 @@ export const TabsComponent = () => {
     </Tabs>
   );
 }
-`;
+`
 
-export { BorderedTabs, BorderedTabsCode };
+export { BorderedTabs, BorderedTabsCode }

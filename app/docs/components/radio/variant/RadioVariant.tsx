@@ -1,12 +1,12 @@
-"use client";
-import { useState } from "react";
-import { Label, Radio } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Label, Radio } from '~/src'
 
 const RadioVariant = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
 
   return (
     <fieldset className="flex flex-col gap-3">
@@ -64,8 +64,8 @@ const RadioVariant = () => {
         </Label>
       </div>
     </fieldset>
-  );
-};
+  )
+}
 
 const RadioVariantCode = `
 "use client";
@@ -136,6 +136,6 @@ export const RadioComponent = () => {
     </fieldset>
   );
 }
-`;
+`
 
-export { RadioVariant, RadioVariantCode };
+export { RadioVariant, RadioVariantCode }

@@ -45,7 +45,7 @@ interface SearchProps {
   setShowMainModal: Dispatch<SetStateAction<boolean>>; // A function that sets the visibility of the search modal.
 }
 
-const projectUrl: string = `https://react.keepdesign.io`;
+const projectUrl: string = `https://react.keepdesign.io`
 
 const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
   const [query, setQuery] = useState<string>(""); // The search query.
@@ -53,19 +53,19 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
   const [loading, setLoading] = useState<boolean>(false); // A boolean that determines whether or not the search results are loading.
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: NodeJS.Timeout
     if (query) {
-      setLoading(true);
+      setLoading(true)
       timeout = setTimeout(() => {
-        performSearch(query);
-      }, 1000);
+        performSearch(query)
+      }, 1000)
     } else {
-      setLoading(false);
-      setResults([]);
+      setLoading(false)
+      setResults([])
     }
 
-    return () => clearTimeout(timeout);
-  }, [query]);
+    return () => clearTimeout(timeout)
+  }, [query])
 
   /**
    * Perform search
@@ -77,23 +77,21 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
 
   const performSearch = async (query: string) => {
     try {
-      const res = await fetch("/data/search.json");
-      const data = await res.json();
+      const res = await fetch('/data/search.json')
+      const data = await res.json()
       const result = data.filter((com: Result) => {
-        const queryStr = query.toLowerCase();
+        const queryStr = query.toLowerCase()
         return (
           com.name.toLowerCase().includes(queryStr) ||
-          com.sections.some((section) =>
-            section.title.toLowerCase().includes(queryStr)
-          )
-        );
-      });
-      setResults(result);
+          com.sections.some((section) => section.title.toLowerCase().includes(queryStr))
+        )
+      })
+      setResults(result)
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-    setLoading(false);
-  };
+    setLoading(false)
+  }
 
   /**
    * Store data
@@ -106,7 +104,7 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
       id: results[0].id,
       name: results[0].name,
       href: results[0].href,
-    });
+    })
   }
 
   /**
@@ -121,13 +119,8 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
     <Modal position="top-center" size="xl" show={showModal}>
       <div className="p-3">
         <div className="flex items-center justify-between  border-b border-b-slate-50 pb-1">
-          <p className="text-slate-900 text-base font-semibold">
-            Search at Keep React
-          </p>
-          <button
-            onClick={() => setShowMainModal(!showModal)}
-            className="text-slate-900 hover:text-slate-600"
-          >
+          <p className="text-base font-semibold text-slate-900">Search at Keep React</p>
+          <button onClick={() => setShowMainModal(!showModal)} className="text-slate-900 hover:text-slate-600">
             <XCircle size={20} />
           </button>
         </div>
@@ -149,10 +142,9 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
 
         <p
           className={twMerge(
-            "text-sm font-normal text-slate-500",
-            storedData?.length || results?.length ? "py-3" : "pt-2"
-          )}
-        >
+            'text-sm font-normal text-slate-500',
+            storedData?.length || results?.length ? 'py-3' : 'pt-2',
+          )}>
           {!query && !storedData.length ? (
             <span>No recent searches</span>
           ) : !query && storedData.length ? (
@@ -167,8 +159,7 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
               <Link
                 key={item.id}
                 href={projectUrl + item.href}
-                className="p-3 rounded bg-slate-100 hover:bg-slate-900 hover:text-white transition-colors mb-1 text-sm font-medium text-slate-900 first:mt-1  flex items-center justify-between"
-              >
+                className="mb-1 flex items-center justify-between rounded bg-slate-100 p-3 text-sm font-medium text-slate-900 transition-colors  first:mt-1 hover:bg-slate-900 hover:text-white">
                 <span>{item.name}</span>
                 <span>
                   <CaretRight size={20} color="#ccc" />
@@ -191,8 +182,7 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
             <div key={item.id}>
               <Link
                 href={projectUrl + item.href}
-                className="p-3 rounded hover:bg-slate-800 text-white transition-colors mb-1 text-sm font-medium bg-slate-900 first:mt-1 flex items-center justify-between"
-              >
+                className="mb-1 flex items-center justify-between rounded bg-slate-900 p-3 text-sm font-medium text-white transition-colors first:mt-1 hover:bg-slate-800">
                 <span>{item.name}</span>
                 <span>
                   <CaretRight size={20} color="#ccc" />
@@ -201,10 +191,9 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
               <div className="flex flex-col gap-2">
                 {item?.sections?.slice(0, 5).map((sec) => (
                   <Link
-                    className="flex items-center justify-between p-3 text-sm font-normal bg-slate-100 hover:bg-slate-900 hover:text-white rounded"
+                    className="flex items-center justify-between rounded bg-slate-100 p-3 text-sm font-normal hover:bg-slate-900 hover:text-white"
                     key={sec.id}
-                    href={projectUrl + item.href + sec.id}
-                  >
+                    href={projectUrl + item.href + sec.id}>
                     <span>{sec.title}</span>
                     <span>
                       <CaretRight size={20} color="#ccc" />
@@ -216,14 +205,12 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
           ))
         ) : !loading && query && !results.length ? (
           <div>
-            <p className="text-center text-sm font-medium text-slate-400">
-              No Result Found with "{query}" word
-            </p>
+            <p className="text-center text-sm font-medium text-slate-400">No Result Found with "{query}" word</p>
           </div>
         ) : null}
       </div>
     </Modal>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

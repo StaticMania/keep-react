@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Empty } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Empty } from '~/src'
 
 const NoDataFound = () => {
   return (
@@ -19,8 +19,8 @@ const NoDataFound = () => {
         />
       }
     />
-  );
-};
+  )
+}
 
 const NoDataFoundCode = `
 "use client";
@@ -47,6 +47,6 @@ export const EmptyComponent = () => {
     />
   );
 }
-`;
+`
 
-export { NoDataFound, NoDataFoundCode };
+export { NoDataFound, NoDataFoundCode }

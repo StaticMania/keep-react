@@ -1,6 +1,6 @@
-"use client";
-import { BarChart } from "~/src";
-import { BarChartData } from "./DefaultBarChart";
+'use client'
+import { BarChart } from '~/src'
+import { BarChartData } from './DefaultBarChart'
 
 const ChartWithDoubleData = () => {
   return (
@@ -19,8 +19,8 @@ const ChartWithDoubleData = () => {
       showTooltip
       secondaryDataKey="sell"
     />
-  );
-};
+  )
+}
 
 const ChartWithDoubleDataCode = `
 "use client";
@@ -122,6 +122,6 @@ export const BarComponent = () => {
     />
   );
 }
-`;
+`
 
-export { ChartWithDoubleData, ChartWithDoubleDataCode };
+export { ChartWithDoubleData, ChartWithDoubleDataCode }

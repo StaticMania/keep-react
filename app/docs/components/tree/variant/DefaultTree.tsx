@@ -1,38 +1,38 @@
-"use client";
-import { Tree } from "~/src";
+'use client'
+import { Tree } from '~/src'
 
 export const nodes = [
   {
     id: 1,
-    title: "Home Page",
+    title: 'Home Page',
     children: [
       {
         id: 2,
-        title: "Hero Section",
+        title: 'Hero Section',
         children: [
           {
             id: 2.1,
-            title: "Hero Image",
+            title: 'Hero Image',
             children: [
               {
                 id: 2.2,
-                title: "Hero",
+                title: 'Hero',
                 children: [
-                  { id: 2.3, title: "Heading" },
-                  { id: 2.4, title: "Sub Heading" },
-                  { id: 2.5, title: "Description" },
+                  { id: 2.3, title: 'Heading' },
+                  { id: 2.4, title: 'Sub Heading' },
+                  { id: 2.5, title: 'Description' },
                 ],
               },
             ],
           },
           {
             id: 2.6,
-            title: "Contact",
+            title: 'Contact',
             children: [
               {
                 id: 2.7,
-                title: "Social Media",
-                children: [{ id: 2.8, title: "Facebook" }],
+                title: 'Social Media',
+                children: [{ id: 2.8, title: 'Facebook' }],
               },
             ],
           },
@@ -40,28 +40,28 @@ export const nodes = [
       },
       {
         id: 4.3,
-        title: "Blog",
-        children: [{ id: 412, title: "Category" }],
+        title: 'Blog',
+        children: [{ id: 412, title: 'Category' }],
       },
     ],
   },
   {
     id: 123,
-    title: "Footer",
+    title: 'Footer',
     children: [
-      { id: 1231, title: "Footer Logo" },
-      { id: 1232, title: "Quick Links" },
+      { id: 1231, title: 'Footer Logo' },
+      { id: 1232, title: 'Quick Links' },
     ],
   },
-];
+]
 
 const DefaultTree = () => {
   return (
-    <div className="py-5 overflow-x-auto">
+    <div className="overflow-x-auto py-5">
       <Tree nodes={nodes} />
     </div>
-  );
-};
+  )
+}
 
 const DefaultTreeCode = `
 "use client";
@@ -123,6 +123,6 @@ const nodes = [
 export const TreeComponent = () => {
   return <Tree nodes={nodes} />;
 };
-`;
+`
 
-export { DefaultTree, DefaultTreeCode };
+export { DefaultTree, DefaultTreeCode }

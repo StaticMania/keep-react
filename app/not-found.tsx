@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Empty } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Empty } from '~/src'
 
 /**
  * Renders a component to display a "Not Found" message with an image and a redirect button.
@@ -22,7 +22,7 @@ const NotFound = () => {
         />
       }
     />
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

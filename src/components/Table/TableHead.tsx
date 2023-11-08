@@ -1,29 +1,23 @@
-import { type ComponentProps, type FC, type PropsWithChildren } from "react";
-import type { keepTableHeadCellTheme } from "./TableHeadCell";
-import { twMerge } from "tailwind-merge";
-import { useTableContext } from "./TableContext";
-import { useTheme } from "../../Keep/ThemeContex";
-import { DeepPartial } from "../../helpers/deep-partial";
-import { CheckBox } from "../CheckBox";
+import { type ComponentProps, type FC, type PropsWithChildren } from 'react'
+import type { keepTableHeadCellTheme } from './TableHeadCell'
+import { twMerge } from 'tailwind-merge'
+import { useTableContext } from './TableContext'
+import { useTheme } from '../../Keep/ThemeContex'
+import { DeepPartial } from '../../helpers/deep-partial'
+import { CheckBox } from '../CheckBox'
 
 export interface keepTableHeadTheme {
-  base: string;
-  cell: keepTableHeadCellTheme;
+  base: string
+  cell: keepTableHeadCellTheme
 }
 
-export interface TableHeadProps
-  extends PropsWithChildren,
-    ComponentProps<"thead"> {
-  theme?: DeepPartial<keepTableHeadTheme>;
+export interface TableHeadProps extends PropsWithChildren, ComponentProps<'thead'> {
+  theme?: DeepPartial<keepTableHeadTheme>
 }
 
-export const TableHead: FC<TableHeadProps> = ({
-  children,
-  className,
-  ...props
-}) => {
-  const theme = useTheme().theme.table;
-  const { showCheckbox, checked, handleCheckbox } = useTableContext();
+export const TableHead: FC<TableHeadProps> = ({ children, className, ...props }) => {
+  const theme = useTheme().theme.table
+  const { showCheckbox, checked, handleCheckbox } = useTableContext()
 
   return (
     <thead className={twMerge(theme.head.base, className)} {...props}>
@@ -44,5 +38,5 @@ export const TableHead: FC<TableHeadProps> = ({
         {children}
       </tr>
     </thead>
-  );
-};
+  )
+}

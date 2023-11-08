@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import NotificationDocsContent from "./notification.mdx";
+'use client'
+import type { FC } from 'react'
+import NotificationDocsContent from './notification.mdx'
 
-const NotificationDocs: FC = () => <NotificationDocsContent />;
+const NotificationDocs: FC = () => <NotificationDocsContent />
 
-export default NotificationDocs;
+export default NotificationDocs

@@ -15,16 +15,16 @@ import React, { FC } from "react";
 
 // Define the interface for the properties of the component being documented
 interface ComponentApiProps {
-  id: number;
-  propsName: string;
-  propsDescription: string;
-  default?: string;
-  propsType: string | string[];
+  id: number
+  propsName: string
+  propsDescription: string
+  default?: string
+  propsType: string | string[]
 }
 
 // Define the interface for the props of the `ComponentApi` component
 interface ComponentProps {
-  data: ComponentApiProps[];
+  data: ComponentApiProps[]
 }
 
 // Load the Space Mono font from Google Fonts
@@ -37,16 +37,16 @@ const ComponentApi: FC<ComponentProps> = ({ data }) => {
       <table className="table-auto mt-10 mb-6 md:w-full text-left whitespace-no-wrap lg:min-w-min min-w-max bg-white border border-slate-100 z-50">
         <thead>
           <tr>
-            <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50 rounded-tl rounded-bl">
+            <th className="rounded-bl rounded-tl bg-slate-50 px-4 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900">
               Property
             </th>
-            <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50">
+            <th className="bg-slate-50 px-4 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900">
               Description
             </th>
-            <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50 rounded-tr rounded-br">
+            <th className="rounded-br rounded-tr bg-slate-50 px-4 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900">
               Type
             </th>
-            <th className="px-4 py-3 font-medium text-slate-900 text-sm leading-[22px] tracking-[-0.2px] bg-slate-50 rounded-tr rounded-br">
+            <th className="rounded-br rounded-tr bg-slate-50 px-4 py-3 text-sm font-medium leading-[22px] tracking-[-0.2px] text-slate-900">
               Default
             </th>
           </tr>
@@ -55,34 +55,31 @@ const ComponentApi: FC<ComponentProps> = ({ data }) => {
           {data?.map((item) => {
             return (
               <tr key={item.id}>
-                <td className="border-t border-slate-100 px-4 py-3 text-sm text-black !font-medium leading-[22px] tracking-[-0.3px]">
+                <td className="border-t border-slate-100 px-4 py-3 text-sm !font-medium leading-[22px] tracking-[-0.3px] text-black">
                   {item.propsName}
                 </td>
-                <td className="border-t border-slate-100 px-4 py-3 text-sm text-slate-500 leading-[22px] tracking-[-0.3px]">
+                <td className="border-t border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px] text-slate-500">
                   {item.propsDescription}
                 </td>
-                <td className="border-t text-pink-400 border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px]">
-                  {typeof item.propsType === "string"
+                <td className="border-t border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px] text-pink-400">
+                  {typeof item.propsType === 'string'
                     ? item.propsType
                     : item.propsType.map((prop) => (
-                        <pre
-                          key={prop}
-                          className="px-2 py-0.5 rounded bg-slate-100 inline-block m-0.5 "
-                        >
+                        <pre key={prop} className="m-0.5 inline-block rounded bg-slate-100 px-2 py-0.5 ">
                           {prop}
                         </pre>
                       ))}
                 </td>
-                <td className="border-t text-slate-500 border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px]">
-                  {item.default ? item.default : "None"}
+                <td className="border-t border-slate-100 px-4 py-3 text-sm leading-[22px] tracking-[-0.3px] text-slate-500">
+                  {item.default ? item.default : 'None'}
                 </td>
               </tr>
-            );
+            )
           })}
         </tbody>
       </table>
     </div>
-  );
-};
+  )
+}
 
-export default ComponentApi;
+export default ComponentApi

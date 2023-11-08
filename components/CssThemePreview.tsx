@@ -11,6 +11,7 @@ SyntaxHighlighter.registerLanguage("tsx", tsx);
  * @param {string} props.code - The CSS theme code to display.
  * @returns {JSX.Element} - The rendered component.
  */
+
 const CssThemePreview = ({ code }: { code: string }) => {
   return (
     <div className="mt-5">
@@ -18,21 +19,20 @@ const CssThemePreview = ({ code }: { code: string }) => {
         language="jsx"
         style={coldarkDark}
         customStyle={{
-          maxHeight: "420px",
-          borderRadius: "6px",
-          paddingLeft: "40px",
-          paddingBottom: "20px",
-          marginTop: "0px",
-          background: "#1C222B",
-          fontSize: "14px",
-          lineHeight: "28px",
-          letterSpacing: "-0.2px",
-        }}
-      >
+          maxHeight: '420px',
+          borderRadius: '6px',
+          paddingLeft: '40px',
+          paddingBottom: '20px',
+          marginTop: '0px',
+          background: '#1C222B',
+          fontSize: '14px',
+          lineHeight: '28px',
+          letterSpacing: '-0.2px',
+        }}>
         {JSON.stringify(code, null, 2)}
       </SyntaxHighlighter>
     </div>
-  );
-};
+  )
+}
 
-export default CssThemePreview;
+export default CssThemePreview

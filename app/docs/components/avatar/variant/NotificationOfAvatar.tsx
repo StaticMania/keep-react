@@ -1,9 +1,9 @@
-"use client";
-import { Avatar } from "~/src";
+'use client'
+import { Avatar } from '~/src'
 
 const NotificationOfAvatar = () => {
   return (
-    <div className="flex items-center gap-3 pl-5 h-20">
+    <div className="flex h-20 items-center gap-3 pl-5">
       <Avatar
         shape="circle"
         size="xl"
@@ -42,8 +42,8 @@ const NotificationOfAvatar = () => {
         img="/images/avatar/avatar-4.png"
       />
     </div>
-  );
-};
+  )
+}
 
 const NotificationOfAvatarCode = `
 "use client";
@@ -92,6 +92,6 @@ export const AvatarComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { NotificationOfAvatar, NotificationOfAvatarCode };
+export { NotificationOfAvatar, NotificationOfAvatarCode }

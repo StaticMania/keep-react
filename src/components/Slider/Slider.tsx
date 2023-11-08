@@ -1,30 +1,30 @@
-import type { FC } from "react";
-import { TooltipSlider } from "./ToolTipSlider";
-import { excludeClassName } from "../../helpers/exclude";
+import type { FC } from 'react'
+import { TooltipSlider } from './ToolTipSlider'
+import { excludeClassName } from '../../helpers/exclude'
 
 /**
  * An object representing the marks on the slider track.
  * The keys are the positions of the marks on the track, and the values are the labels for the marks.
  */
 export interface MarkObj {
-  [key: number]: string | number;
+  [key: number]: string | number
 }
 
 /**
  * Props for the Slider component.
  */
 export interface SliderProps {
-  min: number;
-  max: number;
-  step?: number | null;
-  range?: boolean;
-  dots?: boolean;
-  marks?: MarkObj;
-  reverse?: boolean;
-  disabled?: boolean;
-  defaultValue: number | number[];
-  onChange?: (value: number | number[]) => void;
-  tooltip?: "top" | "bottom" | "none";
+  min: number
+  max: number
+  step?: number | null
+  range?: boolean
+  dots?: boolean
+  marks?: MarkObj
+  reverse?: boolean
+  disabled?: boolean
+  defaultValue: number | number[]
+  onChange?: (value: number | number[]) => void
+  tooltip?: 'top' | 'bottom' | 'none'
 }
 
 /**
@@ -52,11 +52,11 @@ export const Slider: FC<SliderProps> = ({
   dots = false,
   disabled = false,
   reverse = false,
-  tooltip = "none",
+  tooltip = 'none',
   onChange,
   ...props
 }) => {
-  const theirProps = excludeClassName(props);
+  const theirProps = excludeClassName(props)
 
   return (
     <div>
@@ -76,5 +76,5 @@ export const Slider: FC<SliderProps> = ({
         {...theirProps}
       />
     </div>
-  );
-};
+  )
+}

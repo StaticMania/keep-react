@@ -1,14 +1,14 @@
-"use client";
-import { Play } from "phosphor-react";
-import { PlayButton } from "~/src";
+'use client'
+import { Play } from 'phosphor-react'
+import { PlayButton } from '~/src'
 
 const NoBorderPlayButton = () => {
   return (
-    <div className="h-20 p-5 flex items-center justify-start">
+    <div className="flex h-20 items-center justify-start p-5">
       <PlayButton title="Play Video" type="text" icon={<Play size="24" />} />
     </div>
-  );
-};
+  )
+}
 
 const NoBorderPlayButtonCode = `
 "use client";
@@ -24,6 +24,6 @@ export const PlayButtonComponent = () => {
   />
   );
 }
-`;
+`
 
-export { NoBorderPlayButton, NoBorderPlayButtonCode };
+export { NoBorderPlayButton, NoBorderPlayButtonCode }

@@ -1,24 +1,18 @@
-"use client";
-import { useState } from "react";
-import { Upload } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Upload } from '~/src'
 
 const DefaultUpload = () => {
-  const [fileName, setFileName] = useState("");
+  const [fileName, setFileName] = useState('')
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files && event.target.files[0]
     if (file) {
-      setFileName(file.name);
+      setFileName(file.name)
     }
-  };
+  }
 
-  return (
-    <Upload
-      id="default_upload"
-      onFileChange={handleFileChange}
-      file={fileName}
-    />
-  );
-};
+  return <Upload id="default_upload" onFileChange={handleFileChange} file={fileName} />
+}
 
 const DefaultUploadCode = `
 "use client";
@@ -35,6 +29,6 @@ export const UploadComponent = () => {
   };
   return <Upload id="upload" onFileChange={handleFileChange} file={fileName} />;
 }
-`;
+`
 
-export { DefaultUpload, DefaultUploadCode };
+export { DefaultUpload, DefaultUploadCode }

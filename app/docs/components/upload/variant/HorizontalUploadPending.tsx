@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import { Upload } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Upload } from '~/src'
 
 const HorizontalUploadPending = () => {
-  const [fileName, setFileName] = useState("");
+  const [fileName, setFileName] = useState('')
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files && event.target.files[0]
     if (file) {
-      setFileName(file.name);
+      setFileName(file.name)
     }
-  };
+  }
   return (
     <Upload
       onFileChange={handleFileChange}
@@ -22,8 +22,8 @@ const HorizontalUploadPending = () => {
       uploadTime="1 minutes left"
       id="horizontal_upload_pending"
     />
-  );
-};
+  )
+}
 
 const HorizontalUploadPendingCode = `
 "use client";
@@ -51,6 +51,6 @@ export const UploadComponent = () => {
     />
   );
 }
-`;
+`
 
-export { HorizontalUploadPending, HorizontalUploadPendingCode };
+export { HorizontalUploadPending, HorizontalUploadPendingCode }

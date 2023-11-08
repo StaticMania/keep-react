@@ -1,6 +1,6 @@
-"use client";
-import { AreaChart } from "~/src";
-import { chartData } from "./DefaultAreaChart";
+'use client'
+import { AreaChart } from '~/src'
+import { chartData } from './DefaultAreaChart'
 
 const SmoothAreaChart = () => {
   return (
@@ -14,8 +14,8 @@ const SmoothAreaChart = () => {
       showYaxis={true}
       showGridLine={true}
     />
-  );
-};
+  )
+}
 
 const SmoothAreaChartCode = `
 "use client";
@@ -87,6 +87,6 @@ export const AreaChartComponent = () => {
     />
   );
 };
-`;
+`
 
-export { SmoothAreaChart, SmoothAreaChartCode };
+export { SmoothAreaChart, SmoothAreaChartCode }

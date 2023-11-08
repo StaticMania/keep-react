@@ -1,5 +1,5 @@
-"use client";
-import { Skeleton } from "~/src";
+'use client'
+import { Skeleton } from '~/src'
 
 const SkeletonLayout = () => {
   return (
@@ -13,8 +13,8 @@ const SkeletonLayout = () => {
         <Skeleton.Line height="h-5" />
       </Skeleton>
     </div>
-  );
-};
+  )
+}
 
 const SkeletonLayoutCode = `
 "use client";
@@ -34,6 +34,6 @@ export const SkeletonComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { SkeletonLayout, SkeletonLayoutCode };
+export { SkeletonLayout, SkeletonLayoutCode }

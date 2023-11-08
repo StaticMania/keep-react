@@ -1,6 +1,6 @@
-"use client";
-import { Breadcrumb } from "~/src";
-import { CaretRight } from "phosphor-react";
+'use client'
+import { Breadcrumb } from '~/src'
+import { CaretRight } from 'phosphor-react'
 
 const BreadcrumbWithBorder = () => {
   return (
@@ -8,8 +8,7 @@ const BreadcrumbWithBorder = () => {
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+        separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
         <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
@@ -20,8 +19,7 @@ const BreadcrumbWithBorder = () => {
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+        separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
         <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
@@ -32,8 +30,7 @@ const BreadcrumbWithBorder = () => {
       <Breadcrumb
         breadCrumbWithBorder={true}
         aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
+        separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
         <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
         <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
         <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
@@ -42,8 +39,8 @@ const BreadcrumbWithBorder = () => {
         </Breadcrumb.Item>
       </Breadcrumb>
     </div>
-  );
-};
+  )
+}
 
 const BreadcrumbWithBorderCode = `
 "use client";
@@ -92,6 +89,6 @@ export const BreadcrumbComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { BreadcrumbWithBorder, BreadcrumbWithBorderCode };
+export { BreadcrumbWithBorder, BreadcrumbWithBorderCode }
