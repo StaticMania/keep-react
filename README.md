@@ -22,27 +22,27 @@ install Keep React:
 
 `Step 1:` Install Tailwind CSS
 
-```
+```console
 npm i autoprefixer postcss tailwindcss
 npx tailwindcss init -p
 ```
 
 `Step 2:` Install Keep React:
 
-```
+```console
 npm i keep-react
 ```
 
 Or with Yarn
 
-```
+```console
 yarn add keep-react
 ```
 
 `Step 3:` Go to the `tailwind.config.js` file and paste the
 following code:
 
-```
+```jsx
 import keepPreset from "keep-react/src/keep-preset.js";
 export default {
   content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
@@ -52,7 +52,7 @@ export default {
 
 `Step 4:` Add Tailwind CSS to index.css File:
 
-```
+```css
 @import "keep-react/src/main.min.css";
 @tailwind base;
 @tailwind components;
@@ -68,27 +68,27 @@ install Keep React:
 
 `Step 1:` Install Tailwind CSS
 
-```
+```console
 npm i autoprefixer postcss tailwindcss
 npx tailwindcss init -p
 ```
 
 `Step 2:` Install Keep React
 
-```
+```console
 npm i keep-react
 ```
 
 Or with yarn
 
-```
+```console
 yarn add keep-react
 ```
 
 `Step 3:` Go to the `tailwind.config.js` file and paste the
 following code
 
-```
+```js
 module.exports = {
     content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
     presets: [require("keep-react/src/keep-preset.js")],
@@ -97,7 +97,7 @@ module.exports = {
 
 `Step 4:` Add Tailwind CSS to globals.css File:
 
-```
+```css
 @import "keep-react/src/main.min.css";
 @tailwind base;
 @tailwind components;
@@ -108,7 +108,7 @@ Congratulations! You have successfully installed the Keep React. Now you can imp
 
 ## usage
 
-```
+```jsx
 'use client';
 import { Button } from "keep-react";
   const App = () => {
