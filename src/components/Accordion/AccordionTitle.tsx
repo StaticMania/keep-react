@@ -7,25 +7,76 @@ import { KeepBoolean, KeepHeadingLevel } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContex'
 import { useAccordionContext } from './AccordionPanelContext'
 
+/**
+ * Interface representing the theme object for the KeepAccordionTitle component.
+ */
+
 export interface keepAccordionTitleTheme {
+  /**
+   * The theme object for the arrow icon.
+   */
   arrow: {
+    /**
+     * The base color of the arrow icon.
+     */
     base: string
+    /**
+     * The color of the arrow icon when the Accordion is open.
+     */
     open: KeepBoolean
   }
+  /**
+   * The base color of the component.
+   */
   base: string
+  /**
+   * The theme object for the flush state of the component.
+   */
   flush: KeepBoolean
+  /**
+   * The theme object for the heading.
+   */
   heading: string
+  /**
+   * The color of the component when the Accordion is open.
+   */
   open: KeepBoolean
+  /**
+   * The color of the component when the Accordion is disabled.
+   */
   disabled: string
+  /**
+   * The theme object for the icon position.
+   * @property {string} left - The icon position is on the left.
+   * @property {string} right - The icon position is on the right.
+   */
   iconPosition: {
     left: string
     right: string
   }
 }
 
+/**
+ * Props for the AccordionTitle component.
+ * 
+ * @interface AccordionTitleProps
+ * @extends {ComponentProps<'button'>}
+ */
+
 export interface AccordionTitleProps extends ComponentProps<'button'> {
+  /**
+   *  The icon to display when the accordion panel is closed.
+   */
   arrowIcon?: FC<ComponentProps<'svg'>>
+  /**
+   * The heading level to use for the AccordionTitle.
+   * @type {KeepHeadingLevel}
+   * @default 'h1'
+   */
   as?: KeepHeadingLevel
+  /**
+   * The theme for the AccordionTitle component.
+   */
   theme?: DeepPartial<keepAccordionTitleTheme>
 }
 
@@ -46,6 +97,10 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
     closeIcon: CloseIcon,
     openIcon: OpenIcon,
   } = useAccordionContext()
+  /**
+   * Handles the click event for the AccordionTitle.
+   * If the Accordion is not disabled, it toggles the open/closed state of the Accordion item.
+   */
   const onClick = () => typeof setOpen !== 'undefined' && setOpen()
 
   const oldTheme = useTheme().theme.accordion.title
