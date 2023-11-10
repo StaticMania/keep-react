@@ -8,7 +8,6 @@ import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
 import { alertApiData } from './alertApi'
-import { useTheme } from '~/src/Keep/ThemeContex'
 
 ## Table of Contents
 
@@ -59,9 +58,3 @@ Colors can convey the nature of alerts. While the default color is `info`, you c
 Explore the available props for the Alert component
 
 <ComponentApi data={alertApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.alert} />
