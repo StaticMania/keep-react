@@ -3,7 +3,7 @@ export const accordionApiData = [
     id: 1,
     propsName: 'alwaysOpen',
     propsType: 'boolean',
-    propsDescription: 'Keep all panels always open.',
+    propsDescription: 'Keep first panels always open.',
     default: 'false',
   },
   {
@@ -17,7 +17,7 @@ export const accordionApiData = [
     id: 4,
     propsName: 'collapseAll',
     propsType: 'boolean',
-    propsDescription: 'Collapse all panels by default.',
+    propsDescription: 'Collapse panels by default.',
     default: 'false',
   },
 

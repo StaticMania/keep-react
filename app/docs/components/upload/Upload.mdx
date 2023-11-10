@@ -13,7 +13,7 @@ import { uploadApiData } from './UploadApi'
 import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
-import { useTheme } from '~/src/Keep/ThemeContex'
+
 
 ## Table of Contents
 
@@ -104,9 +104,3 @@ The `disabled={true}` prop indicate that the upload component is disabled.
 Explore the available props for the upload component
 
 <ComponentApi data={uploadApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.upload} />

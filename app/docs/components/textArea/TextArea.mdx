@@ -7,7 +7,7 @@ import { textareaApiData } from './TextAreaApi'
 import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
-import { useTheme } from '~/src/Keep/ThemeContex'
+
 
 ## Table of Contents
 
@@ -50,9 +50,3 @@ It will be displayed below the TextArea to provide additional guidance or contex
 Explore the available props for the Text Area component
 
 <ComponentApi data={textareaApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.formControls.textarea} />
