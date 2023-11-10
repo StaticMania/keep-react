@@ -7,7 +7,7 @@ import { RatingDataApi } from './ratingApi'
 import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
-import { useTheme } from '~/src/Keep/ThemeContex'
+
 
 ## Table of Contents
 
@@ -50,9 +50,3 @@ The Rating component appears to be used to render each rating item. The `percent
 Explore the available props for the rating component
 
 <ComponentApi data={RatingDataApi} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.rating} />
