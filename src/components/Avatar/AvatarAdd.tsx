@@ -1,3 +1,13 @@
+/**
+ * @packageDocumentation
+ * @module Avatar
+ * 
+ * @remarks
+ * The `AvatarAdd` component is used to display an avatar with an icon that indicates that the user can add another user to the group.
+ * 
+ * @see https://react.keepdesign.io/docs/components/avatargroup#avatar-group-with-add-icon 
+ */
+
 /* eslint-disable @next/next/no-img-element */
 import { twMerge } from 'tailwind-merge'
 import type { PropsWithChildren } from 'react'
@@ -5,10 +15,25 @@ import type { AvatarSizes } from './Avatar'
 import { useTheme } from '../../Keep/ThemeContex'
 
 export type AvatarAddProps = PropsWithChildren<{
+  /**
+   * The icon to display in the avatar.
+   */
   icon?: string
+  /**
+   * The size of the avatar.
+   */
   size?: keyof AvatarSizes
+  /**
+   * The background color of the avatar.
+   */
   bg?: string
+  /**
+   * The color of the icon in the avatar.
+   */
   iconColor?: string
+  /**
+   * The color of the ring around the avatar.
+   */
   ringColor?: string
 }>
 

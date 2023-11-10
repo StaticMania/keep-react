@@ -1,3 +1,14 @@
+/**
+ * Storybook for Avatar
+ * @packageDocumentation
+ * @module Avatar
+ * 
+ * @remarks
+ * The `Avatar` component is used to display an image that represents a user.
+ * 
+ * @see https://react.keepdesign.io/docs/components/avatar
+ */
+
 import type { Meta, StoryObj } from '@storybook/react'
 import { Avatar } from './Avatar'
 
@@ -70,6 +81,21 @@ const meta: Meta<typeof Avatar> = {
 export default meta
 type Story = StoryObj<typeof Avatar>
 
+/**
+ * Default Avatar
+ * size - Specifies the size of the avatar.
+ * shape - Determines the shape of the avatar.
+ * statusType - Specifies the type of status. Possible values are: 'dot', 'notification'
+ * statusPosition - Specifies the position of the status indicator.
+ * status - Reflects the user's availability status.
+ * totalNotification - The total number of notifications to be displayed.
+ * img - Path to the user's image to be displayed in the avatar.
+ * alt - Alternative text for the avatar image.
+ * children - It define text about the avatar
+ * bordered - Determines if the avatar has a border.
+ * stacked - Specifies if avatars should be stacked together.
+ */
+
 export const DefaultAvatar: Story = {
   args: {
     size: 'xl',
@@ -86,12 +112,25 @@ export const DefaultAvatar: Story = {
   },
 }
 
+/**
+ * Rounded Avatar
+ * shape - Determines the shape of the avatar.
+ * size - Specifies the size of the avatar.
+ */
+
 export const RoundedAvatar: Story = {
   args: {
     shape: 'circle',
     size: 'xl',
   },
 }
+
+/**
+ * Square Avatar
+ * statusType - Specifies the type of status. Possible values are: 'dot', 'notification'
+ * statusPosition - Specifies the position of the status indicator.
+ * status - Reflects the user's availability status.
+ */
 
 export const AvatarWithDot: Story = {
   args: {
@@ -102,6 +141,12 @@ export const AvatarWithDot: Story = {
   },
 }
 
+/**
+ * Avatar with image
+ * alt - Alternative text for the avatar image.
+ * img - Path to the user's image to be displayed in the avatar.
+ */
+
 export const AvatarWithImg: Story = {
   args: {
     ...RoundedAvatar.args,
@@ -109,6 +154,16 @@ export const AvatarWithImg: Story = {
     img: 'https://randomuser.me/api/portraits/women/11.jpg',
   },
 }
+
+/**
+ * Avatar with notification
+ * alt - Alternative text for the avatar image.
+ * img - Path to the user's image to be displayed in the avatar.
+ * statusType - Specifies the type of status. Possible values are: 'dot', 'notification'
+ * statusPosition - Specifies the position of the status indicator.
+ * status - Reflects the user's availability status.
+ * totalNotification - The total number of notifications to be displayed.
+ */
 
 export const AvatarWithNotification: Story = {
   args: {

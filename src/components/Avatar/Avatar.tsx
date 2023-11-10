@@ -1,3 +1,10 @@
+/**
+ * Renders an avatar component with optional image, shape, size, and status.
+ * @param {AvatarProps} props - The props object containing optional alt text, bordered, children, img, shape, size, stacked, status, statusType, statusPosition, and totalNotification.
+ * @returns {JSX.Element} - The rendered Avatar component.
+ * @see https://react.keepdesign.io/docs/components/avatar
+ */
+
 /* eslint-disable @next/next/no-img-element */
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -8,69 +15,118 @@ import { AvatarAdd } from './AvatarAdd'
 import { AvatarGroup } from './AvatarGroup'
 import { AvatarGroupCounter } from './AvatarGroupCounter'
 
+/**
+ * Interface for defining the theme of the Keep Avatar component.
+ */
 export interface keepAvatarTheme {
+  /** The base color of the avatar. */
   base: string
+  /** The color of the border around the avatar. */
   bordered: string
+  /** The URLs for the off and on states of the avatar image. */
   img: {
     off: string
     on: string
   }
+  /** The size of the avatar. */
   size: AvatarSizes
+  /** The size of the custom status icon. */
   customStatusIcon: AvatarSizes
+  /** The shape of the avatar. */
   shape: {
     square: string
     circle: string
     rounded: AvatarSizes
   }
+  /** The style for stacked avatars. */
   stacked: string
+  /** The colors for different status types. */
   status: {
     away: string
     busy: string
     offline: string
     online: string
   }
+  /** The type, size, and font size of the avatar status. */
   statusType: {
     type: AvatarStatusType
     size: KeepAvatarStatusTypeSize
     fontSize: KeepAvatarStatusFontSize
   }
+  /** The position of the avatar status for different avatar shapes. */
   statusPosition: {
     square: KeepAvatarStatusPositions
     circle: KeepAvatarStatusPositions
     rounded: KeepAvatarStatusPositions
   }
+  /** The base color for the group counter. */
   groupCounter: {
     base: string
   }
+  /** The base color and icon size for the add avatar button. */
   add: {
     base: string
     iconSize: AvatarSizes
   }
 }
 
+/**
+ * Defines the sizes for the Avatar component.
+ * @remarks
+ * The Avatar component can be rendered in different sizes depending on the use case.
+ * These sizes are defined by the `AvatarSize` enum.
+ */
 export interface AvatarSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'> {
   [key: string]: string
 }
 
+/**
+ * Represents the status of an avatar, including a dot and notification.
+ * Additional properties can be added using string keys.
+ *
+ * @remarks
+ * This component is used to display the status of an avatar, such as online or offline status.
+ * It includes a dot and notification to indicate the status, and can be customized with additional properties.
+ */
 export interface AvatarStatusType extends Pick<KeepAvatarStatusType, 'dot' | 'notification'> {
   [key: string]: string
 }
 
+/**
+ * Interface for defining the position of the status icon in an avatar component.
+ * The position can be one of the following: 
+ * @type {('bottom-left' | 'bottom-right' | 'top-left' | 'top-right')}
+ * Additional custom positions can also be defined using a string key and a string value.
+ */
 export interface AvatarStatusPositions
   extends Pick<KeepPositions, 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right'> {
   [key: string]: string
 }
 
+/**
+ * Represents the status of a Keep avatar, including a dot and notification.
+ */
 export interface KeepAvatarStatusType {
   dot: string
   notification: string
 }
 
+/**
+ * Defines the size of the dot and notification avatars for a KeepAvatarStatusType.
+ */
 export interface KeepAvatarStatusTypeSize {
-  dot: AvatarSizes
-  notification: AvatarSizes
+  dot: AvatarSizes // The size of the dot avatar.
+  notification: AvatarSizes // The size of the notification avatar.
 }
 
+/**
+ * Defines the positions of the status indicator for different sizes of the Avatar component.
+ * 
+ * @remarks
+ * The `StatusPositions` interface is used to specify the position of the status indicator for each size of the Avatar component.
+ * 
+ * @public
+ */
 export interface StatusPositions {
   xs: AvatarStatusPositions
   sm: AvatarStatusPositions
@@ -80,25 +136,90 @@ export interface StatusPositions {
   '2xl': AvatarStatusPositions
 }
 
+/**
+ * Interface for defining the positions of the status indicators on the KeepAvatar component.
+ * @remarks
+ * The `KeepAvatarStatusPositions` interface is used to specify the position of the status indicator for each size of the Avatar component.
+ *  
+ * @public
+ */
 export interface KeepAvatarStatusPositions {
   dot: StatusPositions
   notification: StatusPositions
 }
 
+/**
+ * Defines the font size of the notification avatar for a KeepAvatarStatusType.
+ */
 export interface KeepAvatarStatusFontSize {
   notification: AvatarSizes
 }
 
+/**
+ * Props for the Avatar component
+ * @interface AvatarProps
+ * @extends {PropsWithChildren<ComponentProps<'div'>>}
+ */
 export interface AvatarProps extends PropsWithChildren<ComponentProps<'div'>> {
+  /**
+   * Alternative text for the avatar image
+   * @type {string}
+   * @memberof AvatarProps
+   */
   alt?: string
+  /**
+   * Whether to show a border around the avatar
+   * @type {boolean}
+   * @memberof AvatarProps
+   */
   bordered?: boolean
+  /**
+   * URL of the image to display as the avatar
+   * @type {string}
+   * @memberof AvatarProps
+   */
   img?: string
+  /**
+   * Size of the avatar
+   * @type {keyof AvatarSizes}
+   * @memberof AvatarProps
+   */
   size?: keyof AvatarSizes
+  /**
+   * Shape of the avatar
+   * @type {('circle' | 'rounded' | 'square')}
+   * @memberof AvatarProps
+   */
   shape?: 'circle' | 'rounded' | 'square'
+  /**
+   * Whether to stack the avatar on top of other avatars
+   * @type {boolean}
+   * @memberof AvatarProps
+   */
   stacked?: boolean
+  /**
+   * Status of the user associated with the avatar
+   * @type {('away' | 'busy' | 'offline' | 'online')}
+   * @memberof AvatarProps
+   */
   status?: 'away' | 'busy' | 'offline' | 'online'
+  /**
+   * Type of status icon to display
+   * @type {keyof KeepAvatarStatusType}
+   * @memberof AvatarProps
+   */
   statusType?: keyof KeepAvatarStatusType
+  /**
+   * Position of the status icon
+   * @type {keyof KeepPositions}
+   * @memberof AvatarProps
+   */
   statusPosition?: keyof KeepPositions
+  /**
+   * Number of notifications to display on the avatar
+   * @type {number}
+   * @memberof AvatarProps
+   */
   totalNotification?: number
 }
 

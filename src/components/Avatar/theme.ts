@@ -1,12 +1,29 @@
 import type { keepAvatarTheme } from './Avatar'
 
+/**
+ * Theme object for the Avatar component.
+ */
 export const avatarTheme: keepAvatarTheme = {
+  /**
+   * Base styles for the Avatar component.
+   */
   base: 'flex items-center space-x-4',
+  /**
+   * Styles for the Avatar component when it's bordered.
+   */
   bordered: 'border border-slate-200',
+  /**
+   * img - Styles for the img element.
+   * @type {{ off, on}}
+   */
   img: {
     off: 'relative overflow-hidden bg-primary-25',
     on: 'relative overflow-hidden',
   },
+  /**
+   * shape - Styles for the shape of the Avatar component.
+   * @type {{ square, circle, rounded }}
+   */
   shape: {
     square: 'border-0',
     circle: 'rounded-full',
@@ -19,6 +36,10 @@ export const avatarTheme: keepAvatarTheme = {
       '2xl': 'rounded-3xl',
     },
   },
+  /**
+   * size - Styles for the size of the Avatar component.
+   * @type {{ xs, sm, md, lg, xl, '2xl' }}
+   */
   size: {
     xs: 'w-6 h-6',
     sm: 'w-8 h-8',
@@ -27,6 +48,10 @@ export const avatarTheme: keepAvatarTheme = {
     xl: 'w-16 h-16',
     '2xl': 'w-24 h-24',
   },
+  /**
+   * customStatusIcon - Styles for the custom status icon.
+   * @type {{ xs, sm, md, lg, xl, '2xl' }}
+   */
   customStatusIcon: {
     xs: 'absolute w-[12px] h-[12px]',
     sm: 'absolute w-[14px] h-[14px]',
@@ -35,13 +60,24 @@ export const avatarTheme: keepAvatarTheme = {
     xl: 'absolute w-[20px] h-[20px]',
     '2xl': 'absolute w-[22px] h-[22px]',
   },
+  /**
+   * stacked - Styles for the stacked Avatar component.
+   */
   stacked: 'ring-2 ring-white',
+  /**
+   * status - Styles for the status of the Avatar component.
+   * @type {{ busy, away, online, offline }}
+   */
   status: {
     busy: 'bg-red-400',
     away: 'bg-yellow-400',
     online: 'bg-green-300',
     offline: 'bg-dark-100',
   },
+  /**
+   * status type - Styles for the status type of the Avatar component.
+   * @type {{ dot, notification }}
+   */
   statusType: {
     type: {
       dot: 'absolute rounded-full border-[1.5px] border-white',
@@ -76,6 +112,10 @@ export const avatarTheme: keepAvatarTheme = {
       },
     },
   },
+  /**
+   * status position - Styles for the status position of the Avatar component.
+   * @type {{ square : { dot, notification }, circle : { dot, notification }, rounded : { dot, notification } }}
+   */
   statusPosition: {
     square: {
       dot: {
@@ -312,6 +352,10 @@ export const avatarTheme: keepAvatarTheme = {
       },
     },
   },
+  /**
+   * groupCounter - Styles for the group counter of the Avatar component.
+   * @type {{ base, add: { base, iconSize: { xs, sm, md, lg, xl, '2xl' } } }}
+   */
   groupCounter: {
     base: 'relative flex items-center justify-center rounded-full bg-gray-50 font-medium text-dark-400 ring-2 ring-white',
   },
