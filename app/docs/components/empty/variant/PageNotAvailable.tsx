@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Empty } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Empty } from '~/src'
 
 const PageNotAvailable = () => {
   return (
@@ -19,8 +19,8 @@ const PageNotAvailable = () => {
         />
       }
     />
-  );
-};
+  )
+}
 
 const PageNotAvailableCode = `
 "use client";
@@ -46,6 +46,6 @@ export const EmptyComponent = () => {
     />
   );
 }
-`;
+`
 
-export { PageNotAvailable, PageNotAvailableCode };
+export { PageNotAvailable, PageNotAvailableCode }

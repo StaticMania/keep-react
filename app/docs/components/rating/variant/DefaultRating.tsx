@@ -1,5 +1,5 @@
-"use client";
-import { Rating } from "~/src";
+'use client'
+import { Rating } from '~/src'
 
 const DefaultRating = () => {
   return (
@@ -10,8 +10,8 @@ const DefaultRating = () => {
       <Rating.Star filledType="fill" />
       <Rating.Star filledType="fill" />
     </Rating>
-  );
-};
+  )
+}
 
 const DefaultRatingCode = `
 "use client";
@@ -28,6 +28,6 @@ export const RatingComponent = () => {
     </Rating>
   );
 }
-`;
+`
 
-export { DefaultRating, DefaultRatingCode };
+export { DefaultRating, DefaultRatingCode }

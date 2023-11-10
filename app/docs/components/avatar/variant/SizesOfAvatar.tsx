@@ -1,5 +1,5 @@
-"use client";
-import { Avatar } from "~/src";
+'use client'
+import { Avatar } from '~/src'
 
 const SizesOfAvatar = () => {
   return (
@@ -11,8 +11,8 @@ const SizesOfAvatar = () => {
       <Avatar shape="square" size="xl" />
       <Avatar shape="square" size="2xl" />
     </div>
-  );
-};
+  )
+}
 
 const SizesOfAvatarCode = `
 "use client";
@@ -30,6 +30,6 @@ export const AvatarComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { SizesOfAvatar, SizesOfAvatarCode };
+export { SizesOfAvatar, SizesOfAvatarCode }

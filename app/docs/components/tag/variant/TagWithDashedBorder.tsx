@@ -1,24 +1,16 @@
-"use client";
-import { useState } from "react";
-import { Tag } from "~/src";
-import { CrownSimple, X } from "phosphor-react";
+'use client'
+import { useState } from 'react'
+import { Tag } from '~/src'
+import { CrownSimple, X } from 'phosphor-react'
 
 const TagWithDashedBorder = () => {
-  const [dismiss, setDismiss] = useState<boolean[]>([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [dismiss, setDismiss] = useState<boolean[]>([false, false, false, false, false, false, false])
 
   const handleDismiss = (index: number) => {
-    const updatedDismissStates = [...dismiss];
-    updatedDismissStates[index] = true;
-    setDismiss(updatedDismissStates);
-  };
+    const updatedDismissStates = [...dismiss]
+    updatedDismissStates[index] = true
+    setDismiss(updatedDismissStates)
+  }
 
   return (
     <div className="flex w-full flex-row flex-wrap gap-2">
@@ -28,8 +20,7 @@ const TagWithDashedBorder = () => {
         onDismiss={() => handleDismiss(0)}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
-      >
+        borderType="dashed">
         Tag
       </Tag>
       <Tag
@@ -38,8 +29,7 @@ const TagWithDashedBorder = () => {
         onDismiss={() => handleDismiss(1)}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
-      >
+        borderType="dashed">
         Tag
       </Tag>
       <Tag
@@ -48,8 +38,7 @@ const TagWithDashedBorder = () => {
         onDismiss={() => handleDismiss(2)}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
-      >
+        borderType="dashed">
         Tag
       </Tag>
 
@@ -59,8 +48,7 @@ const TagWithDashedBorder = () => {
         onDismiss={() => handleDismiss(3)}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
-      >
+        borderType="dashed">
         Tag
       </Tag>
       <Tag
@@ -69,8 +57,7 @@ const TagWithDashedBorder = () => {
         onDismiss={() => handleDismiss(4)}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
-      >
+        borderType="dashed">
         Tag
       </Tag>
       <Tag
@@ -79,8 +66,7 @@ const TagWithDashedBorder = () => {
         onDismiss={() => handleDismiss(5)}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
-      >
+        borderType="dashed">
         Tag
       </Tag>
       <Tag
@@ -89,13 +75,12 @@ const TagWithDashedBorder = () => {
         onDismiss={() => handleDismiss(6)}
         leftIcon={<CrownSimple size={20} />}
         dismissIcon={<X size={20} />}
-        borderType="dashed"
-      >
+        borderType="dashed">
         Tag
       </Tag>
     </div>
-  );
-};
+  )
+}
 
 const TagWithDashedBorderCode = `
 "use client";
@@ -183,6 +168,6 @@ export const TagComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { TagWithDashedBorder, TagWithDashedBorderCode };
+export { TagWithDashedBorder, TagWithDashedBorderCode }

@@ -1,4 +1,4 @@
-import type { keepProgressTheme } from '.';
+import type { keepProgressTheme } from '.'
 export const progressTheme: keepProgressTheme = {
   base: 'flex items-center',
   label: 'mb-1 flex justify-between text-slate-500 font-medium',
@@ -59,4 +59,4 @@ export const progressTheme: keepProgressTheme = {
     lg: 'h-4',
     xl: 'h-6',
   },
-};
+}

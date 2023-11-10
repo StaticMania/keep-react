@@ -1,24 +1,13 @@
-import { twMerge } from "tailwind-merge";
-import type { ReactNode } from "react";
+import { twMerge } from 'tailwind-merge'
+import type { ReactNode } from 'react'
 
 export interface CardDescriptionProps {
-  children?: ReactNode;
-  className?: string;
+  children?: ReactNode
+  className?: string
 }
 
-export const CardDescription: React.FC<CardDescriptionProps> = ({
-  children,
-  className,
-}) => {
+export const CardDescription: React.FC<CardDescriptionProps> = ({ children, className }) => {
   return (
-    <p
-      className={twMerge(
-        className
-          ? className
-          : "font-normal md:text-base text-xs text-slate-500"
-      )}
-    >
-      {children}
-    </p>
-  );
-};
+    <p className={twMerge(className ? className : 'text-xs font-normal text-slate-500 md:text-base')}>{children}</p>
+  )
+}

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react'
 import {
   ArrowDown,
   ArrowsDownUp,
@@ -11,90 +11,90 @@ import {
   Flag,
   Spinner,
   Tag,
-} from "phosphor-react";
-import { Table } from ".";
-import { Badge } from "../Badge";
-import { Button } from "../Button/Button";
-import { removeFragment } from "../../helpers/mergeDeep";
-import { Avatar } from "../Avatar/Avatar";
+} from 'phosphor-react'
+import { Table } from '.'
+import { Badge } from '../Badge'
+import { Button } from '../Button/Button'
+import { removeFragment } from '../../helpers/mergeDeep'
+import { Avatar } from '../Avatar/Avatar'
 
 const meta: Meta<typeof Table> = {
   component: Table,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     children: {
       control: { disable: true },
-      description: "Children is table content",
+      description: 'Children is table content',
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
     },
 
     showCheckbox: {
-      description: "Table checkbox show Or Not?",
+      description: 'Table checkbox show Or Not?',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: true },
       },
     },
     striped: {
-      description: "Table Striped Or Not?",
+      description: 'Table Striped Or Not?',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
     hoverable: {
-      description: "Table hoverable Or Not?",
+      description: 'Table hoverable Or Not?',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
     showBorder: {
-      description: "Table border show Or Not?",
+      description: 'Table border show Or Not?',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
     icon: {
       control: { disable: true },
-      description: "Table header icon",
+      description: 'Table header icon',
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
     },
     theme: {
       control: { disable: true },
-      description: "Table Theme",
+      description: 'Table Theme',
       table: {
-        type: { summary: "ReactNode" },
+        type: { summary: 'ReactNode' },
       },
     },
     iconPosition: {
-      control: "radio",
-      options: ["left", "right"],
-      description: "Avaiable Icon Postion",
+      control: 'radio',
+      options: ['left', 'right'],
+      description: 'Avaiable Icon Postion',
       table: {
-        type: { summary: "left | right" },
-        defaultValue: { summart: "right" },
+        type: { summary: 'left | right' },
+        defaultValue: { summart: 'right' },
       },
     },
     showBorderPosition: {
-      control: "radio",
-      options: ["left", "right"],
-      description: "Avaiable border Postion",
+      control: 'radio',
+      options: ['left', 'right'],
+      description: 'Avaiable border Postion',
       table: {
-        type: { summary: "left | right" },
-        defaultValue: { summart: "right" },
+        type: { summary: 'left | right' },
+        defaultValue: { summart: 'right' },
       },
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Table>;
+export default meta
+type Story = StoryObj<typeof Table>
 
 export const DefaultTable: Story = {
   args: {
@@ -107,9 +107,7 @@ export const DefaultTable: Story = {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-2xl font-semibold text-slate-600">
-                Team member
-              </p>
+              <p className="text-2xl font-semibold text-slate-600">Team member</p>
               <Badge size="xs" colorType="light" color="gray">
                 100 Member
               </Badge>
@@ -136,9 +134,7 @@ export const DefaultTable: Story = {
           </Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
           <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
-          <Table.HeadCell className="min-w-[240px]">
-            Email Address
-          </Table.HeadCell>
+          <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
           <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
           <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
           <Table.HeadCell className="min-w-[100px]"></Table.HeadCell>
@@ -149,16 +145,10 @@ export const DefaultTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-1.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Ralph Edwards
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Ralph Edwards</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -215,16 +205,10 @@ export const DefaultTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-2.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Wade Warren
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Wade Warren</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -283,15 +267,9 @@ export const DefaultTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-3.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Eleanor Pena
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Eleanor Pena</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -347,16 +325,10 @@ export const DefaultTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-4.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Jerome Bell
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Jerome Bell</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -413,16 +385,10 @@ export const DefaultTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/avatar/avatar-5.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Macky Scheman
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Macky Scheman</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -475,10 +441,10 @@ export const DefaultTable: Story = {
             </Table.Cell>
           </Table.Row>
         </Table.Body>
-      </>
+      </>,
     ),
   },
-};
+}
 export const CashOutTransitionTable: Story = {
   args: {
     children: removeFragment(
@@ -486,9 +452,7 @@ export const CashOutTransitionTable: Story = {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-2xl font-semibold text-slate-600">
-                Cash Out Transactions
-              </p>
+              <p className="text-2xl font-semibold text-slate-600">Cash Out Transactions</p>
             </div>
             <div className="flex items-center gap-5">
               <Button type="outlineGray" size="sm">
@@ -510,28 +474,16 @@ export const CashOutTransitionTable: Story = {
           <Table.HeadCell className="min-w-[290px]">
             <p className="text-xs font-medium text-slate-400">Type</p>
           </Table.HeadCell>
-          <Table.HeadCell
-            className="min-w-[183px]"
-            icon={<ArrowsDownUp size={14} color="#8897AE" />}
-          >
+          <Table.HeadCell className="min-w-[183px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
             Date
           </Table.HeadCell>
-          <Table.HeadCell
-            className="min-w-[160px]"
-            icon={<ArrowsDownUp size={14} color="#8897AE" />}
-          >
+          <Table.HeadCell className="min-w-[160px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
             Amount
           </Table.HeadCell>
-          <Table.HeadCell
-            className="min-w-[150px]"
-            icon={<ArrowsDownUp size={14} color="#8897AE" />}
-          >
+          <Table.HeadCell className="min-w-[150px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
             Status
           </Table.HeadCell>
-          <Table.HeadCell
-            className="min-w-[183px]"
-            icon={<ArrowsDownUp size={14} color="#8897AE" />}
-          >
+          <Table.HeadCell className="min-w-[183px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
             Received Date
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[100px]"></Table.HeadCell>
@@ -542,19 +494,11 @@ export const CashOutTransitionTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/company/paypal.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/company/paypal.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Paypal
-                      </p>
-                      <span className="text-xs font-normal text-slate-500">
-                        Withdraw
-                      </span>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Paypal</p>
+                      <span className="text-xs font-normal text-slate-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -569,12 +513,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -596,19 +535,11 @@ export const CashOutTransitionTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/company/Visa.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/company/Visa.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Visa
-                      </p>
-                      <span className="text-xs font-normal text-slate-500">
-                        Withdraw
-                      </span>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Visa</p>
+                      <span className="text-xs font-normal text-slate-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -624,12 +555,7 @@ export const CashOutTransitionTable: Story = {
 
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -651,19 +577,11 @@ export const CashOutTransitionTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/company/stripe.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/company/stripe.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Stripe
-                      </p>
-                      <span className="text-xs font-normal text-slate-500">
-                        Withdraw
-                      </span>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Stripe</p>
+                      <span className="text-xs font-normal text-slate-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -678,12 +596,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -705,19 +618,11 @@ export const CashOutTransitionTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/company/western.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/company/western.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Western Union
-                      </p>
-                      <span className="text-xs font-normal text-slate-500">
-                        Withdraw
-                      </span>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Western Union</p>
+                      <span className="text-xs font-normal text-slate-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -732,12 +637,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -759,19 +659,11 @@ export const CashOutTransitionTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/company/mastercard.png"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/company/mastercard.png" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Mastercard
-                      </p>
-                      <span className="text-xs font-normal text-slate-500">
-                        Withdraw
-                      </span>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Mastercard</p>
+                      <span className="text-xs font-normal text-slate-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -786,12 +678,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -809,11 +696,11 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
           </Table.Row>
         </Table.Body>
-      </>
+      </>,
     ),
     showCheckbox: true,
   },
-};
+}
 export const OrdersTable: Story = {
   args: {
     showCheckbox: true,
@@ -847,44 +734,26 @@ export const OrdersTable: Story = {
           <Table.HeadCell
             className="min-w-[165px]"
             icon={<CalendarBlank size={14} color="#8897AE" />}
-            iconPosition="left"
-          >
+            iconPosition="left">
             Date
           </Table.HeadCell>
-          <Table.HeadCell
-            className="min-w-[124px]"
-            icon={<Flag size={14} color="#8897AE" />}
-            iconPosition="left"
-          >
+          <Table.HeadCell className="min-w-[124px]" icon={<Flag size={14} color="#8897AE" />} iconPosition="left">
             Country
           </Table.HeadCell>
 
-          <Table.HeadCell
-            className="min-w-[152px]"
-            icon={<Spinner size={14} color="#8897AE" />}
-            iconPosition="left"
-          >
+          <Table.HeadCell className="min-w-[152px]" icon={<Spinner size={14} color="#8897AE" />} iconPosition="left">
             State
           </Table.HeadCell>
-          <Table.HeadCell
-            className="min-w-[114px]"
-            icon={<DotsNine size={14} color="#8897AE" />}
-            iconPosition="left"
-          >
+          <Table.HeadCell className="min-w-[114px]" icon={<DotsNine size={14} color="#8897AE" />} iconPosition="left">
             Quant.
           </Table.HeadCell>
           <Table.HeadCell
             className="min-w-[138px]"
             icon={<CurrencyDollar size={14} color="#8897AE" />}
-            iconPosition="left"
-          >
+            iconPosition="left">
             Total Price
           </Table.HeadCell>
-          <Table.HeadCell
-            className="min-w-[150px]"
-            icon={<Tag size={14} color="#8897AE" />}
-            iconPosition="left"
-          >
+          <Table.HeadCell className="min-w-[150px]" icon={<Tag size={14} color="#8897AE" />} iconPosition="left">
             Location
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[100px]"></Table.HeadCell>
@@ -892,9 +761,7 @@ export const OrdersTable: Story = {
         <Table.Body className="divide-y divide-gray-25">
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
-                DL - 19266755
-              </p>
+              <p className="text-base font-medium text-slate-500">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
@@ -905,12 +772,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -922,9 +784,7 @@ export const OrdersTable: Story = {
               <p className="text-sm font-medium text-slate-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
-                285 Great North Road, Grey Lynn.
-              </p>
+              <p className="text-sm font-medium text-slate-500">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -936,9 +796,7 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
-                DL - 34233451
-              </p>
+              <p className="text-base font-medium text-slate-500">DL - 34233451</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-sm font-medium text-slate-500">Jan 23, 2022</p>
@@ -949,12 +807,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -966,9 +819,7 @@ export const OrdersTable: Story = {
               <p className="text-sm font-medium text-slate-500">$13,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
-                19 Great North Road, Grey Lynn
-              </p>
+              <p className="text-sm font-medium text-slate-500">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -980,9 +831,7 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
-                DL - 19266567
-              </p>
+              <p className="text-base font-medium text-slate-500">DL - 19266567</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-sm font-medium text-slate-500">Jan 31, 2022</p>
@@ -993,12 +842,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="gray"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="gray" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Pending
                 </Badge>
               </div>
@@ -1010,9 +854,7 @@ export const OrdersTable: Story = {
               <p className="text-sm font-medium text-slate-500">$24,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
-                19 Great North Road, Grey Lynn
-              </p>
+              <p className="text-sm font-medium text-slate-500">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -1024,9 +866,7 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
-                DL - 19266755
-              </p>
+              <p className="text-base font-medium text-slate-500">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
@@ -1037,12 +877,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -1054,9 +889,7 @@ export const OrdersTable: Story = {
               <p className="text-sm font-medium text-slate-500">$82,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
-                686 Great South Road, Manukau
-              </p>
+              <p className="text-sm font-medium text-slate-500">686 Great South Road, Manukau</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -1068,9 +901,7 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
-                DL - 19264155
-              </p>
+              <p className="text-base font-medium text-slate-500">DL - 19264155</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-sm font-medium text-slate-500">Jan 07, 2022</p>
@@ -1081,12 +912,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="gray"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="gray" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Pending
                 </Badge>
               </div>
@@ -1098,9 +924,7 @@ export const OrdersTable: Story = {
               <p className="text-sm font-medium text-slate-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
-                20 Poland Road, Wairau Valley
-              </p>
+              <p className="text-sm font-medium text-slate-500">20 Poland Road, Wairau Valley</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -1112,9 +936,7 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
-                DL - 19266755
-              </p>
+              <p className="text-base font-medium text-slate-500">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
@@ -1125,12 +947,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge
-                  colorType="light"
-                  color="success"
-                  icon={<Crown size={18} weight="light" />}
-                  iconPosition="left"
-                >
+                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -1142,9 +959,7 @@ export const OrdersTable: Story = {
               <p className="text-sm font-medium text-slate-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
-                285 Great North Road, Grey Lynn.
-              </p>
+              <p className="text-sm font-medium text-slate-500">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -1155,10 +970,10 @@ export const OrdersTable: Story = {
             </Table.Cell>
           </Table.Row>
         </Table.Body>
-      </>
+      </>,
     ),
   },
-};
+}
 export const FileUploadedTable: Story = {
   args: {
     showCheckbox: true,
@@ -1167,9 +982,7 @@ export const FileUploadedTable: Story = {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-2xl font-semibold text-slate-600">
-                Files uploaded
-              </p>
+              <p className="text-2xl font-semibold text-slate-600">Files uploaded</p>
             </div>
             <div className="flex items-center gap-5">
               <Button type="outlineGray" size="sm">
@@ -1192,12 +1005,8 @@ export const FileUploadedTable: Story = {
             <p className="text-xs font-medium text-slate-400">File no.</p>
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[160px]">File size</Table.HeadCell>
-          <Table.HeadCell className="min-w-[171px]">
-            Date uploaded
-          </Table.HeadCell>
-          <Table.HeadCell className="min-w-[170px]">
-            Last uploaded
-          </Table.HeadCell>
+          <Table.HeadCell className="min-w-[171px]">Date uploaded</Table.HeadCell>
+          <Table.HeadCell className="min-w-[170px]">Last uploaded</Table.HeadCell>
           <Table.HeadCell className="min-w-[300px]">Team</Table.HeadCell>
           <Table.HeadCell className="min-w-[100px]"></Table.HeadCell>
         </Table.Head>
@@ -1207,19 +1016,11 @@ export const FileUploadedTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/icon/file.svg"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Static Next Plan.pdf
-                      </p>
-                      <p className="text-xs font-normal text-slate-500">
-                        200 KB
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Static Next Plan.pdf</p>
+                      <p className="text-xs font-normal text-slate-500">200 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1240,36 +1041,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-1.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-2.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-3.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-4.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-5.png"
-                />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
                 <Avatar shape="circle" size="md" stacked={true} />
                 <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
@@ -1287,19 +1063,11 @@ export const FileUploadedTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/icon/file.svg"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Static Next Plan.pdf
-                      </p>
-                      <p className="text-xs font-normal text-slate-500">
-                        700 KB
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Static Next Plan.pdf</p>
+                      <p className="text-xs font-normal text-slate-500">700 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1320,36 +1088,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-1.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-2.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-3.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-4.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-5.png"
-                />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
                 <Avatar shape="circle" size="md" stacked={true} />
                 <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
@@ -1367,19 +1110,11 @@ export const FileUploadedTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/icon/file.svg"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Static Next Plan.pdf
-                      </p>
-                      <p className="text-xs font-normal text-slate-500">
-                        500 KB
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Static Next Plan.pdf</p>
+                      <p className="text-xs font-normal text-slate-500">500 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1400,36 +1135,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-1.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-2.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-3.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-4.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-5.png"
-                />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
                 <Avatar shape="circle" size="md" stacked={true} />
                 <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
@@ -1447,19 +1157,11 @@ export const FileUploadedTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/icon/file.svg"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Static Next Plan.pdf
-                      </p>
-                      <p className="text-xs font-normal text-slate-500">
-                        900 KB
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Static Next Plan.pdf</p>
+                      <p className="text-xs font-normal text-slate-500">900 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1480,36 +1182,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-1.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-2.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-3.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-4.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-5.png"
-                />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
                 <Avatar shape="circle" size="md" stacked={true} />
                 <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
@@ -1527,19 +1204,11 @@ export const FileUploadedTable: Story = {
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <Avatar
-                      shape="circle"
-                      img="/images/icon/file.svg"
-                      size="md"
-                    />
+                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="-mb-0.5 text-base font-medium text-slate-600">
-                        Static Next Plan.pdf
-                      </p>
-                      <p className="text-xs font-normal text-slate-500">
-                        200 KB
-                      </p>
+                      <p className="-mb-0.5 text-base font-medium text-slate-600">Static Next Plan.pdf</p>
+                      <p className="text-xs font-normal text-slate-500">200 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1560,36 +1229,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-1.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-2.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-3.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-4.png"
-                />
-                <Avatar
-                  shape="circle"
-                  size="md"
-                  stacked={true}
-                  img="/images/avatar/avatar-5.png"
-                />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
                 <Avatar shape="circle" size="md" stacked={true} />
                 <Avatar shape="circle" size="md" stacked={true} />
               </Avatar.Group>
@@ -1603,28 +1247,28 @@ export const FileUploadedTable: Story = {
             </Table.Cell>
           </Table.Row>
         </Table.Body>
-      </>
+      </>,
     ),
   },
-};
+}
 export const StripedTable: Story = {
   args: {
     ...DefaultTable.args,
     striped: true,
   },
-};
+}
 export const HoverableTable: Story = {
   args: {
     ...DefaultTable.args,
     hoverable: true,
   },
-};
+}
 export const BorderedTable: Story = {
   args: {
     ...DefaultTable.args,
     hoverable: true,
     showBorder: true,
-    showBorderPosition: "right",
+    showBorderPosition: 'right',
     striped: true,
   },
-};
+}

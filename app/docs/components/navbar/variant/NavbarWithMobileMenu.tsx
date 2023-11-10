@@ -1,7 +1,7 @@
-"use client";
-import { Navbar } from "~/src";
-import { CaretDown } from "phosphor-react";
-import Image from "next/image";
+'use client'
+import { Navbar } from '~/src'
+import { CaretDown } from 'phosphor-react'
+import Image from 'next/image'
 
 const NavbarWithMobileMenu = () => {
   return (
@@ -12,24 +12,11 @@ const NavbarWithMobileMenu = () => {
         </Navbar.Brand>
         <Navbar.Collapse
           collapseType="sidebar"
-          className="fixed right-0 top-0 bg-white p-10 xl:!w-1/6 lg:!w-2/6 md:!w-1/2"
-        >
+          className="fixed right-0 top-0 bg-white p-10 md:!w-1/2 lg:!w-2/6 xl:!w-1/6">
           <Navbar.Container tag="ul" className="flex flex-col gap-5">
-            <Navbar.Link
-              linkName="Home"
-              icon={<CaretDown size={20} />}
-              className="!py-0"
-            />
-            <Navbar.Link
-              linkName="Projects"
-              icon={<CaretDown size={20} />}
-              className="!py-0"
-            />
-            <Navbar.Link
-              linkName="Blogs"
-              icon={<CaretDown size={20} />}
-              className="!py-0"
-            />
+            <Navbar.Link linkName="Home" icon={<CaretDown size={20} />} className="!py-0" />
+            <Navbar.Link linkName="Projects" icon={<CaretDown size={20} />} className="!py-0" />
+            <Navbar.Link linkName="Blogs" icon={<CaretDown size={20} />} className="!py-0" />
             <Navbar.Link linkName="News" className="!py-0" />
             <Navbar.Link linkName="Resources" className="!py-0" />
           </Navbar.Container>
@@ -40,8 +27,8 @@ const NavbarWithMobileMenu = () => {
         </Navbar.Container>
       </Navbar.Container>
     </Navbar>
-  );
-};
+  )
+}
 
 const NavbarWithMobileMenuCode = `
 "use client";
@@ -92,6 +79,6 @@ export const NavbarComponent = () => {
     </Navbar>
   );
 }
-`;
+`
 
-export { NavbarWithMobileMenu, NavbarWithMobileMenuCode };
+export { NavbarWithMobileMenu, NavbarWithMobileMenuCode }

@@ -1,23 +1,17 @@
-"use client";
-import { Tree } from "~/src";
-import { nodes } from "./DefaultTree";
+'use client'
+import { Tree } from '~/src'
+import { nodes } from './DefaultTree'
 
 const TreeWithCheckbox = () => {
   const handleChecked = (value: boolean) => {
-    console.log(value);
-  };
+    console.log(value)
+  }
   return (
-    <div className="py-5 overflow-x-auto">
-      <Tree
-        showCheckbox={true}
-        showItemsNumber={true}
-        showBorder={true}
-        nodes={nodes}
-        handleChecked={handleChecked}
-      />
+    <div className="overflow-x-auto py-5">
+      <Tree showCheckbox={true} showItemsNumber={true} showBorder={true} nodes={nodes} handleChecked={handleChecked} />
     </div>
-  );
-};
+  )
+}
 
 const TreeWithCheckboxCode = `
 "use client";
@@ -86,6 +80,6 @@ export const TreeComponent = () => {
     />
   );
 }
-`;
+`
 
-export { TreeWithCheckbox, TreeWithCheckboxCode };
+export { TreeWithCheckbox, TreeWithCheckboxCode }

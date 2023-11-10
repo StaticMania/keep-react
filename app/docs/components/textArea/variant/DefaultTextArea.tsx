@@ -1,18 +1,9 @@
-"use client";
-import { Textarea } from "~/src";
+'use client'
+import { Textarea } from '~/src'
 
 const DefaultTextArea = () => {
-  return (
-    <Textarea
-      id="comment"
-      placeholder="Leave a comment..."
-      withBg={true}
-      color="gray"
-      border={true}
-      rows={4}
-    />
-  );
-};
+  return <Textarea id="comment" placeholder="Leave a comment..." withBg={true} color="gray" border={true} rows={4} />
+}
 
 const DefaultTextAreaCode = `
 "use client";
@@ -30,6 +21,6 @@ export const TextAreaComponent = () => {
     />
   );
 }
-`;
+`
 
-export { DefaultTextArea, DefaultTextAreaCode };
+export { DefaultTextArea, DefaultTextAreaCode }

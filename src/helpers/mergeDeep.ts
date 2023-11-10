@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 /**
  * Check if provided parameter is plain object
@@ -6,23 +6,21 @@ import React from "react";
  * @returns boolean
  */
 function isObject(item: unknown): item is Record<string, unknown> {
-  return (
-    item !== null && typeof item === "object" && item.constructor === Object
-  );
+  return item !== null && typeof item === 'object' && item.constructor === Object
 }
 
 function cloneDeep<T>(source: T) {
   if (!isObject(source)) {
-    return source;
+    return source
   }
 
-  const output = { ...source };
+  const output = { ...source }
 
   Object.keys(source).forEach((key) => {
-    (output as Record<string, unknown>)[key] = cloneDeep(source[key]);
-  });
+    ;(output as Record<string, unknown>)[key] = cloneDeep(source[key])
+  })
 
-  return output;
+  return output
 }
 
 /**
@@ -32,41 +30,32 @@ function cloneDeep<T>(source: T) {
  * @return A new merged and deep copied object.
  */
 
-export const mergeDeep = <T extends object, S extends object>(
-  target: T,
-  source: S
-): T & S => {
+export const mergeDeep = <T extends object, S extends object>(target: T, source: S): T & S => {
   if (isObject(source) && Object.keys(source).length === 0) {
-    return cloneDeep({ ...target, ...source });
+    return cloneDeep({ ...target, ...source })
   }
 
-  const output = { ...target, ...source };
+  const output = { ...target, ...source }
 
   if (isObject(source) && isObject(target)) {
     Object.keys(source).forEach((key) => {
       if (isObject(source[key]) && key in target && isObject(target[key])) {
-        (output as Record<string, unknown>)[key] = mergeDeep(
-          target[key] as object,
-          source[key] as object
-        );
+        ;(output as Record<string, unknown>)[key] = mergeDeep(target[key] as object, source[key] as object)
       } else {
-        (output as Record<string, unknown>)[key] = isObject(source[key])
-          ? cloneDeep(source[key])
-          : source[key];
+        ;(output as Record<string, unknown>)[key] = isObject(source[key]) ? cloneDeep(source[key]) : source[key]
       }
-    });
+    })
   }
 
-  return output;
-};
+  return output
+}
 
 export function removeFragment(element: JSX.Element) {
-  return element.props.children;
+  return element.props.children
 }
 
 export const mergeChildren = (...components: React.ReactNode[]) =>
   React.Children.toArray(components).reduce<React.ReactNode[]>(
-    (merged, child) =>
-      Array.isArray(child) ? merged.concat(child) : merged.concat([child]),
-    []
-  );
+    (merged, child) => (Array.isArray(child) ? merged.concat(child) : merged.concat([child])),
+    [],
+  )

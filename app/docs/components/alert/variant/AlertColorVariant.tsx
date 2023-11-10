@@ -1,14 +1,14 @@
-"use client";
-import Link from "next/link";
-import { Alert } from "~/src";
-import { useState } from "react";
-import { CheckCircle, Info, WarningCircle, XCircle } from "phosphor-react";
+'use client'
+import Link from 'next/link'
+import { Alert } from '~/src'
+import { useState } from 'react'
+import { CheckCircle, Info, WarningCircle, XCircle } from 'phosphor-react'
 
 const AlertWithColorVariant = () => {
-  const [showAlert, setShowAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(false)
   const onDissmiss = () => {
-    setShowAlert(!showAlert);
-  };
+    setShowAlert(!showAlert)
+  }
   return (
     <div className="space-y-5">
       <Alert
@@ -20,16 +20,14 @@ const AlertWithColorVariant = () => {
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
             </Link>
           </div>
         }
         icon={<Info size={24} color="#0F3CD9" />}
-        title="Default message - make it short"
-      ></Alert>
+        title="Default message - make it short"></Alert>
       <Alert
         color="gray"
         rounded={true}
@@ -39,16 +37,14 @@ const AlertWithColorVariant = () => {
         onDismiss={onDissmiss}
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
             </Link>
           </div>
         }
         title="Default message - make it short"
-        icon={<Info size={24} color="gray" />}
-      ></Alert>
+        icon={<Info size={24} color="gray" />}></Alert>
       <Alert
         color="success"
         rounded={true}
@@ -58,8 +54,7 @@ const AlertWithColorVariant = () => {
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
             </Link>
@@ -77,8 +72,7 @@ const AlertWithColorVariant = () => {
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
             </Link>
@@ -96,8 +90,7 @@ const AlertWithColorVariant = () => {
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
             </Link>
@@ -107,8 +100,8 @@ const AlertWithColorVariant = () => {
         title="Default message - make it short"
       />
     </div>
-  );
-};
+  )
+}
 
 const AlertWithColorVariantCode = `
 "use client";
@@ -222,6 +215,6 @@ export const AlertComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { AlertWithColorVariant, AlertWithColorVariantCode };
+export { AlertWithColorVariant, AlertWithColorVariantCode }

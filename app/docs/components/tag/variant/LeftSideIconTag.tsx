@@ -1,6 +1,6 @@
-"use client";
-import { Tag } from "~/src";
-import { CrownSimple } from "phosphor-react";
+'use client'
+import { Tag } from '~/src'
+import { CrownSimple } from 'phosphor-react'
 
 const LeftSideIconTag = () => {
   return (
@@ -30,8 +30,8 @@ const LeftSideIconTag = () => {
         Tag
       </Tag>
     </div>
-  );
-};
+  )
+}
 
 const LeftSideIconTagCode = `
 "use client";
@@ -68,6 +68,6 @@ export const TagComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { LeftSideIconTag, LeftSideIconTagCode };
+export { LeftSideIconTag, LeftSideIconTagCode }

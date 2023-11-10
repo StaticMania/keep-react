@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import NavbarDocsContent from "./Navbar.mdx";
+'use client'
+import type { FC } from 'react'
+import NavbarDocsContent from './Navbar.mdx'
 
-const NavbarDocs: FC = () => <NavbarDocsContent />;
+const NavbarDocs: FC = () => <NavbarDocsContent />
 
-export default NavbarDocs;
+export default NavbarDocs

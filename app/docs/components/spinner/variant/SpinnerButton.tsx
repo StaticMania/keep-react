@@ -1,5 +1,5 @@
-"use client";
-import { Button, Spinner } from "~/src";
+'use client'
+import { Button, Spinner } from '~/src'
 
 const SpinnerButton = () => {
   return (
@@ -17,8 +17,8 @@ const SpinnerButton = () => {
         Loading...
       </Button>
     </div>
-  );
-};
+  )
+}
 
 const SpinnerButtonCode = `
 "use client";
@@ -42,6 +42,6 @@ export const SpinnerButtonComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { SpinnerButton, SpinnerButtonCode };
+export { SpinnerButton, SpinnerButtonCode }

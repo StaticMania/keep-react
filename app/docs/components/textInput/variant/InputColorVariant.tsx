@@ -1,6 +1,6 @@
-"use client";
-import { EyeSlash, Lock } from "phosphor-react";
-import { Label, TextInput } from "~/src";
+'use client'
+import { EyeSlash, Lock } from 'phosphor-react'
+import { Label, TextInput } from '~/src'
 
 const InputColorVariant = () => {
   return (
@@ -81,8 +81,8 @@ const InputColorVariant = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
 const InputColorVariantCode = `
 "use client";
@@ -170,6 +170,6 @@ export const TextInputComponent = () => {
     </div>
   );
 };
-`;
+`
 
-export { InputColorVariant, InputColorVariantCode };
+export { InputColorVariant, InputColorVariantCode }

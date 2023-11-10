@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 export interface NavBrandProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode
 }
 
 export const NavigationBrand: FC<NavBrandProps> = ({ children }) => {
-  return <div>{children}</div>;
-};
+  return <div>{children}</div>
+}

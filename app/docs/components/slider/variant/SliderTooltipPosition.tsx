@@ -1,5 +1,5 @@
-"use client";
-import { Slider } from "~/src";
+'use client'
+import { Slider } from '~/src'
 
 const SliderTooltipPosition = () => {
   return (
@@ -13,8 +13,8 @@ const SliderTooltipPosition = () => {
         tooltip="bottom"
       />
     </div>
-  );
-};
+  )
+}
 
 const SliderTooltipPositionCode = `
 "use client";
@@ -32,6 +32,6 @@ export const SliderComponent = () => {
     />
   );
 }
-`;
+`
 
-export { SliderTooltipPosition, SliderTooltipPositionCode };
+export { SliderTooltipPosition, SliderTooltipPositionCode }

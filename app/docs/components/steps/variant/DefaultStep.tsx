@@ -1,5 +1,5 @@
-"use client";
-import { Steps } from "~/src";
+'use client'
+import { Steps } from '~/src'
 
 const DefaultStep = () => {
   return (
@@ -19,8 +19,8 @@ const DefaultStep = () => {
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       />
     </Steps>
-  );
-};
+  )
+}
 
 const DefaultStepCode = `
 "use client";
@@ -46,5 +46,5 @@ export const StepComponent = () => {
     </Steps>
   );
 }
-`;
-export { DefaultStep, DefaultStepCode };
+`
+export { DefaultStep, DefaultStepCode }

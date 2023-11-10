@@ -1,5 +1,5 @@
-"use client";
-import { Statistic } from "~/src";
+'use client'
+import { Statistic } from '~/src'
 
 const StatisticWithFilterButton = () => {
   return (
@@ -7,8 +7,7 @@ const StatisticWithFilterButton = () => {
       showFilter={true}
       showDollar={true}
       filterLabel="This Month"
-      filterData={["January", "February", "March", "April"]}
-    >
+      filterData={['January', 'February', 'March', 'April']}>
       <div>
         <Statistic.Title>Memebers</Statistic.Title>
       </div>
@@ -17,8 +16,8 @@ const StatisticWithFilterButton = () => {
         <Statistic.Rate>1.5</Statistic.Rate>
       </div>
     </Statistic>
-  );
-};
+  )
+}
 
 const StatisticWithFilterButtonCode = `
 "use client";
@@ -42,6 +41,6 @@ export const StatisticComponent = () => {
     </Statistic>
   );
 }
-`;
+`
 
-export { StatisticWithFilterButton, StatisticWithFilterButtonCode };
+export { StatisticWithFilterButton, StatisticWithFilterButtonCode }

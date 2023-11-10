@@ -1,5 +1,5 @@
-"use client";
-import { Tabs } from "~/src";
+'use client'
+import { Tabs } from '~/src'
 
 const TabsWithNotification = () => {
   return (
@@ -10,19 +10,15 @@ const TabsWithNotification = () => {
       <Tabs.Item title="Cart" notification={12} notificationColor="info">
         Cart content
       </Tabs.Item>
-      <Tabs.Item
-        title="Notification"
-        notification={99}
-        notificationColor="info"
-      >
+      <Tabs.Item title="Notification" notification={99} notificationColor="info">
         Notification
       </Tabs.Item>
       <Tabs.Item title="Message" notification="new" notificationColor="info">
         Message content
       </Tabs.Item>
     </Tabs>
-  );
-};
+  )
+}
 
 const TabsWithNotificationCode = `
 "use client";
@@ -60,6 +56,6 @@ export const TabsComponent = () => {
     </Tabs>
   );
 }
-`;
+`
 
-export { TabsWithNotification, TabsWithNotificationCode };
+export { TabsWithNotification, TabsWithNotificationCode }

@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import { Upload } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Upload } from '~/src'
 
 const UploadFailed = () => {
-  const [fileName, setFileName] = useState("");
+  const [fileName, setFileName] = useState('')
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files && event.target.files[0];
+    const file = event.target.files && event.target.files[0]
     if (file) {
-      setFileName(file.name);
+      setFileName(file.name)
     }
-  };
+  }
   return (
     <Upload
       onFileChange={handleFileChange}
@@ -21,8 +21,8 @@ const UploadFailed = () => {
       uploadTime="2 days left"
       id="upload_failed"
     />
-  );
-};
+  )
+}
 
 const UploadFailedCode = `
 "use client";
@@ -49,6 +49,6 @@ export const UploadComponent = () => {
     />
   );
 }
-`;
+`
 
-export { UploadFailed, UploadFailedCode };
+export { UploadFailed, UploadFailedCode }

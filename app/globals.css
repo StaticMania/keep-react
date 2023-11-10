@@ -1,21 +1,21 @@
-@import "./main.css";
+@import './main.css';
 
 html {
   @apply scroll-smooth;
 }
 
 body {
-  font-family: var(--font-inter), sans-serif;
   background-color: #f9fafb;
+  font-family: var(--font-inter), sans-serif;
 }
 
 .hero-text {
+  animation: textAnimate 5s linear infinite;
+  background-image: linear-gradient(45deg, #7028e4, #e5b2ca, #7028e4);
+  background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(45deg, #7028e4, #e5b2ca, #7028e4);
-  background-size: 200%;
-  animation: textAnimate 5s linear infinite;
 }
 
 @keyframes textAnimate {
@@ -29,10 +29,10 @@ body {
 
 @media (min-width: 1024px) {
   .home {
-    background-image: url("https://staticmania.cdn.prismic.io/staticmania/248e8aae-351f-4cc8-8f1c-f44f9c292ac1_top-bg.svg");
+    background-image: url('https://staticmania.cdn.prismic.io/staticmania/248e8aae-351f-4cc8-8f1c-f44f9c292ac1_top-bg.svg');
     background-position: center top;
-    background-repeat: no-repeat;
     background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -40,12 +40,12 @@ body {
   width: 4px;
 }
 #sidebar ::-webkit-scrollbar-track {
-  background-color: #f9fafb;
   border-radius: 10px;
+  background-color: #f9fafb;
 }
 #sidebar ::-webkit-scrollbar-thumb {
-  background-color: #d7dfe9;
   border-radius: 10px;
+  background-color: #d7dfe9;
 }
 
 main::-webkit-scrollbar {
@@ -59,8 +59,8 @@ main::-webkit-scrollbar-thumb {
 }
 
 pre::-webkit-scrollbar {
-  height: 8px !important;
   width: 5px;
+  height: 8px !important;
 }
 pre::-webkit-scrollbar-track {
   background-color: #d7dfe9 !important;

@@ -1,6 +1,6 @@
-"use client";
-import { Button, Timeline } from "~/src";
-import { ArrowRight, CalendarBlank } from "phosphor-react";
+'use client'
+import { Button, Timeline } from '~/src'
+import { ArrowRight, CalendarBlank } from 'phosphor-react'
 
 const DashedBorderTimeline = () => {
   return (
@@ -12,8 +12,7 @@ const DashedBorderTimeline = () => {
             <Timeline.Time>February 2023</Timeline.Time>
             <Timeline.Title>New Feature Launch</Timeline.Title>
             <Timeline.Body>
-              Introducing a set of exciting new features that enhance user
-              experience and functionality.
+              Introducing a set of exciting new features that enhance user experience and functionality.
             </Timeline.Body>
             <Button type="primary" size="sm">
               Explore Features
@@ -27,8 +26,7 @@ const DashedBorderTimeline = () => {
             <Timeline.Time>March 2023</Timeline.Time>
             <Timeline.Title>User Interface Refinement</Timeline.Title>
             <Timeline.Body>
-              Embarking on a user interface refinement phase to improve
-              aesthetics and usability.
+              Embarking on a user interface refinement phase to improve aesthetics and usability.
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Item>
@@ -38,17 +36,16 @@ const DashedBorderTimeline = () => {
             <Timeline.Time>April 2023</Timeline.Time>
             <Timeline.Title>Performance Optimization</Timeline.Title>
             <Timeline.Body>
-              Focusing on performance optimization to ensure a seamless and
-              efficient user experience.
+              Focusing on performance optimization to ensure a seamless and efficient user experience.
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Item>
       </Timeline>
     </div>
-  );
-};
+  )
+}
 
-export default DashedBorderTimeline;
+export default DashedBorderTimeline
 
 const DashedBorderTimelineCode = `
 "use client";
@@ -99,6 +96,6 @@ export const TimelineComponent = () => {
     </Timeline>
   );
 }
-`;
+`
 
-export { DashedBorderTimeline, DashedBorderTimelineCode };
+export { DashedBorderTimeline, DashedBorderTimelineCode }

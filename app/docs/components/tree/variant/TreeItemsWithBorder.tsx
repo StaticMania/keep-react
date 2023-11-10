@@ -1,14 +1,14 @@
-"use client";
-import { Tree } from "~/src";
-import { nodes } from "./DefaultTree";
+'use client'
+import { Tree } from '~/src'
+import { nodes } from './DefaultTree'
 
 const TreeItemsWithBorder = () => {
   return (
-    <div className="py-5 overflow-x-auto">
+    <div className="overflow-x-auto py-5">
       <Tree showItemsNumber={true} showBorder={true} nodes={nodes} />
     </div>
-  );
-};
+  )
+}
 
 const TreeItemsWithBorderCode = `
 "use client";
@@ -70,6 +70,6 @@ const nodes = [
 export const TreeComponent = () => {
   return <Tree showItemsNumber={true} showBorder={true} nodes={nodes} />;
 }
-`;
+`
 
-export { TreeItemsWithBorder, TreeItemsWithBorderCode };
+export { TreeItemsWithBorder, TreeItemsWithBorderCode }

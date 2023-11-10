@@ -1,5 +1,5 @@
-"use client";
-import { Button, Popover } from "~/src";
+'use client'
+import { Button, Popover } from '~/src'
 
 const TriggerVariantPopover = () => {
   return (
@@ -7,13 +7,12 @@ const TriggerVariantPopover = () => {
       <Popover
         trigger="hover"
         title="Popover title here"
-        description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
-      >
+        description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour">
         <Button size="xs">Popover</Button>
       </Popover>
     </div>
-  );
-};
+  )
+}
 
 const TriggerVariantPopoverCode = `
 "use client";
@@ -30,6 +29,6 @@ export const PopoverComponent = () => {
     </Popover>
   );
 }
-`;
+`
 
-export { TriggerVariantPopover, TriggerVariantPopoverCode };
+export { TriggerVariantPopover, TriggerVariantPopoverCode }

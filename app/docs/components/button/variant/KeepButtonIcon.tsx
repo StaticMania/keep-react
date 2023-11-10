@@ -1,10 +1,10 @@
-"use client";
-import { Button } from "~/src";
-import { Gear, SquaresFour } from "phosphor-react";
+'use client'
+import { Button } from '~/src'
+import { Gear, SquaresFour } from 'phosphor-react'
 
 const KeepButtonIcon = () => {
   return (
-    <div className="flex flex-wrap items-center gap-2 h-24 p-4">
+    <div className="flex h-24 flex-wrap items-center gap-2 p-4">
       <Button notificationLabel="100" type="primary" size="md">
         Messages
       </Button>
@@ -21,8 +21,8 @@ const KeepButtonIcon = () => {
         </span>
       </Button>
     </div>
-  );
-};
+  )
+}
 
 const KeepButtonIconCode = `
 "use client";
@@ -48,6 +48,6 @@ export const ButtonComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { KeepButtonIcon, KeepButtonIconCode };
+export { KeepButtonIcon, KeepButtonIconCode }

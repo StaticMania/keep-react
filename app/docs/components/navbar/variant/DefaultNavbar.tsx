@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
-import { MagnifyingGlass } from "phosphor-react";
-import { Navbar, Button } from "~/src";
+'use client'
+import Image from 'next/image'
+import { MagnifyingGlass } from 'phosphor-react'
+import { Navbar, Button } from '~/src'
 
 const DefaultNavbar = () => {
   return (
@@ -12,10 +12,7 @@ const DefaultNavbar = () => {
             <Image src="/images/keep.svg" alt="keep" width="100" height="40" />
           </Navbar.Brand>
           <Navbar.Divider></Navbar.Divider>
-          <Navbar.Container
-            tag="ul"
-            className="lg:flex hidden items-center justify-between gap-8"
-          >
+          <Navbar.Container tag="ul" className="hidden items-center justify-between gap-8 lg:flex">
             <Navbar.Link linkName="Home" />
             <Navbar.Link linkName="Projects" />
             <Navbar.Link linkName="About" />
@@ -45,8 +42,8 @@ const DefaultNavbar = () => {
         </Navbar.Container>
       </Navbar.Container>
     </Navbar>
-  );
-};
+  )
+}
 
 const DefaultNavbarCode = `
 "use client";
@@ -103,6 +100,6 @@ export const NavbarComponent = () => {
     </Navbar>
   );
 }
-`;
+`
 
-export { DefaultNavbar, DefaultNavbarCode };
+export { DefaultNavbar, DefaultNavbarCode }

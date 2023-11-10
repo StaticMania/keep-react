@@ -1,9 +1,9 @@
-"use client";
-import { Avatar } from "~/src";
+'use client'
+import { Avatar } from '~/src'
 
 const DefaultAvatar = () => {
-  return <Avatar />;
-};
+  return <Avatar />
+}
 
 const DefaultAvatarCode = `
 "use client";
@@ -12,6 +12,6 @@ import { Avatar } from "keep-react";
 export const AvatarComponent = () => {
   return <Avatar/>;
 }
-`;
+`
 
-export { DefaultAvatar, DefaultAvatarCode };
+export { DefaultAvatar, DefaultAvatarCode }

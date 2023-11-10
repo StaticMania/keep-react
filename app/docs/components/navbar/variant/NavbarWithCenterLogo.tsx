@@ -1,16 +1,13 @@
-"use client";
-import { Navbar, Button } from "~/src";
-import { MagnifyingGlass } from "phosphor-react";
-import Image from "next/image";
+'use client'
+import { Navbar, Button } from '~/src'
+import { MagnifyingGlass } from 'phosphor-react'
+import Image from 'next/image'
 
 const NavbarWithCenterLogo = () => {
   return (
     <Navbar fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
-        <Navbar.Container
-          tag="ul"
-          className="lg:flex hidden items-center justify-between gap-8"
-        >
+        <Navbar.Container tag="ul" className="hidden items-center justify-between gap-8 lg:flex">
           <Navbar.Link linkName="Home" />
           <Navbar.Link linkName="Projects" />
           <Navbar.Link linkName="Blogs" />
@@ -30,10 +27,7 @@ const NavbarWithCenterLogo = () => {
         </Navbar.Collapse>
 
         <Navbar.Container className="flex items-center gap-3">
-          <Navbar.Container
-            tag="ul"
-            className="lg:flex hidden items-center justify-between gap-5"
-          >
+          <Navbar.Container tag="ul" className="hidden items-center justify-between gap-5 lg:flex">
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
@@ -47,8 +41,8 @@ const NavbarWithCenterLogo = () => {
         </Navbar.Container>
       </Navbar.Container>
     </Navbar>
-  );
-};
+  )
+}
 
 const NavbarWithCenterLogoCode = `
 "use client";
@@ -106,6 +100,6 @@ export const NavbarComponent = () => {
     </Navbar>
   );
 }
-`;
+`
 
-export { NavbarWithCenterLogo, NavbarWithCenterLogoCode };
+export { NavbarWithCenterLogo, NavbarWithCenterLogoCode }

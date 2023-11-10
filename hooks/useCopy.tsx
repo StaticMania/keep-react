@@ -1,27 +1,27 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 const useCopy = () => {
-  const [copy, setCopy] = useState<Boolean>(false);
+  const [copy, setCopy] = useState<Boolean>(false)
   if (copy) {
     setTimeout(() => {
-      setCopy(false);
-    }, 3000);
+      setCopy(false)
+    }, 3000)
   }
   const copyToClipboard = (text: string) => {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        setCopy(true);
+        setCopy(true)
       })
       .catch((error) => {
-        console.error(error);
-        setCopy(false);
-      });
-  };
+        console.error(error)
+        setCopy(false)
+      })
+  }
   return {
     copy,
     copyToClipboard,
-  };
-};
+  }
+}
 
-export default useCopy;
+export default useCopy

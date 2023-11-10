@@ -1,20 +1,20 @@
-"use client";
-import { useState } from "react";
-import { Button, Modal } from "~/src";
-import { CloudArrowUp, Trash } from "phosphor-react";
+'use client'
+import { useState } from 'react'
+import { Button, Modal } from '~/src'
+import { CloudArrowUp, Trash } from 'phosphor-react'
 
 const ConfirmationModal = () => {
-  const [showInfoModal, setShowInfoModal] = useState(false);
-  const [showErrorModalX, setShowErrorModalX] = useState(false);
+  const [showInfoModal, setShowInfoModal] = useState(false)
+  const [showErrorModalX, setShowErrorModalX] = useState(false)
 
   const onClickInfoModal = () => {
-    setShowInfoModal(!showInfoModal);
-  };
+    setShowInfoModal(!showInfoModal)
+  }
   const onClickErrorModal = () => {
-    setShowErrorModalX(!showErrorModalX);
-  };
+    setShowErrorModalX(!showErrorModalX)
+  }
   return (
-    <div className="flex flex-wrap items-end gap-2 py-3 px-2">
+    <div className="flex flex-wrap items-end gap-2 px-2 py-3">
       <Button type="primary" onClick={onClickInfoModal}>
         Info Modal
       </Button>
@@ -23,13 +23,11 @@ const ConfirmationModal = () => {
       </Button>
       <Modal show={showInfoModal} size="sm">
         <Modal.Body>
-          <div className="flex items-center md:items-start gap-2">
+          <div className="flex items-center gap-2 md:items-start">
             <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-base md:text-xl font-semibold text-slate-900">
-              Do you want to upload this file?
-            </h3>
+            <h3 className="text-base font-semibold text-slate-900 md:text-xl">Do you want to upload this file?</h3>
           </div>
         </Modal.Body>
         <Modal.Footer>
@@ -37,23 +35,13 @@ const ConfirmationModal = () => {
             <Button type="outlineGray" size="sm" onClick={onClickInfoModal}>
               Cancel
             </Button>
-            <Button
-              type="primary"
-              color="info"
-              size="sm"
-              onClick={onClickInfoModal}
-            >
+            <Button type="primary" color="info" size="sm" onClick={onClickInfoModal}>
               Confirm
             </Button>
           </div>
         </Modal.Footer>
       </Modal>
-      <Modal
-        icon={<Trash size={28} color="#E92215" />}
-        size="md"
-        show={showErrorModalX}
-        onClose={onClickErrorModal}
-      >
+      <Modal icon={<Trash size={28} color="#E92215" />} size="md" show={showErrorModalX} onClose={onClickErrorModal}>
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
@@ -72,8 +60,8 @@ const ConfirmationModal = () => {
         </Modal.Footer>
       </Modal>
     </div>
-  );
-};
+  )
+}
 
 const ConfirmationModalCode = `
 "use client";
@@ -150,6 +138,6 @@ export const ModalComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { ConfirmationModal, ConfirmationModalCode };
+export { ConfirmationModal, ConfirmationModalCode }

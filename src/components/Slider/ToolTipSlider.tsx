@@ -1,89 +1,77 @@
-import type { SliderProps } from "rc-slider";
-import Slider from "rc-slider";
-import Tooltip from "rc-tooltip";
-import raf from "rc-util/lib/raf";
-import * as React from "react";
+import type { SliderProps } from 'rc-slider'
+import Slider from 'rc-slider'
+import Tooltip from 'rc-tooltip'
+import raf from 'rc-util/lib/raf'
+import * as React from 'react'
 
 const HandleTooltip = (props: {
-  value: number;
-  children: React.ReactElement;
-  visible: boolean;
-  tipFormatter?: (value: number) => React.ReactNode;
+  value: number
+  children: React.ReactElement
+  visible: boolean
+  tipFormatter?: (value: number) => React.ReactNode
 }) => {
-  const {
-    value,
-    children,
-    visible,
-    tipFormatter = (val) => `${val} %`,
-    ...restProps
-  } = props;
+  const { value, children, visible, tipFormatter = (val) => `${val} %`, ...restProps } = props
 
-  const tooltipRef = React.useRef<any>();
-  const rafRef = React.useRef<number | null>(null);
+  const tooltipRef = React.useRef<any>()
+  const rafRef = React.useRef<number | null>(null)
 
   function cancelKeepAlign() {
-    raf.cancel(rafRef.current!);
+    raf.cancel(rafRef.current!)
   }
 
   function keepAlign() {
     rafRef.current = raf(() => {
-      tooltipRef?.current?.forceAlign();
-    });
+      tooltipRef?.current?.forceAlign()
+    })
   }
 
   React.useEffect(() => {
     if (visible) {
-      keepAlign();
+      keepAlign()
     } else {
-      cancelKeepAlign();
+      cancelKeepAlign()
     }
 
-    return cancelKeepAlign;
-  }, [value, visible]);
+    return cancelKeepAlign
+  }, [value, visible])
 
   return (
     <Tooltip
       placement="top"
       overlay={tipFormatter(value)}
-      overlayInnerStyle={{ minHeight: "auto" }}
+      overlayInnerStyle={{ minHeight: 'auto' }}
       ref={tooltipRef}
       showArrow
       visible={visible}
-      {...restProps}
-    >
+      {...restProps}>
       {children}
     </Tooltip>
-  );
-};
+  )
+}
 
-export const handleRender: SliderProps["handleRender"] = (node, props) => {
+export const handleRender: SliderProps['handleRender'] = (node, props) => {
   return (
     <HandleTooltip value={props.value} visible={props.dragging}>
       {node}
     </HandleTooltip>
-  );
-};
+  )
+}
 
 export const TooltipSlider = ({
   tipFormatter,
   tipProps,
   ...props
 }: SliderProps & {
-  tipFormatter?: (value: number) => React.ReactNode;
-  tipProps: any;
+  tipFormatter?: (value: number) => React.ReactNode
+  tipProps: any
 }) => {
-  const tipHandleRender: SliderProps["handleRender"] = (node, handleProps) => {
+  const tipHandleRender: SliderProps['handleRender'] = (node, handleProps) => {
     return (
-      <HandleTooltip
-        value={handleProps.value}
-        visible={handleProps.dragging}
-        tipFormatter={tipFormatter}
-        {...tipProps}
-      >
+      <HandleTooltip value={handleProps.value} visible={handleProps.dragging} tipFormatter={tipFormatter} {...tipProps}>
         {node}
       </HandleTooltip>
-    );
-  };
+    )
+  }
 
-  return <Slider {...props} handleRender={tipHandleRender} />;
-};
+  return <Slider {...props} handleRender={tipHandleRender} />
+}

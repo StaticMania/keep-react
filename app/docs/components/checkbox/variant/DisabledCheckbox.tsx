@@ -1,5 +1,5 @@
-"use client";
-import { CheckBox } from "~/src";
+'use client'
+import { CheckBox } from '~/src'
 
 const DisabledCheckbox = () => {
   return (
@@ -14,8 +14,8 @@ const DisabledCheckbox = () => {
         disabled={true}
       />
     </div>
-  );
-};
+  )
+}
 
 const DisabledCheckboxCode = `
 "use client";
@@ -34,6 +34,6 @@ export const CheckboxComponent = () => {
       />
   );
 }
-`;
+`
 
-export { DisabledCheckbox, DisabledCheckboxCode };
+export { DisabledCheckbox, DisabledCheckboxCode }

@@ -1,10 +1,10 @@
-"use client";
-import { Button, Steps } from "~/src";
-import { useState } from "react";
-import { Club, DownloadSimple, Globe } from "phosphor-react";
+'use client'
+import { Button, Steps } from '~/src'
+import { useState } from 'react'
+import { Club, DownloadSimple, Globe } from 'phosphor-react'
 
 const InterActiveStep = () => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(0)
   return (
     <div className="my-20">
       <Steps stepType="icon">
@@ -31,20 +31,15 @@ const InterActiveStep = () => {
         />
       </Steps>
 
-      <div className="h-44 border-2 border-dashed  border-slate-100 rounded-md my-5"></div>
-      <div className="flex items-center justify-end mt-6">
-        <Button
-          size="sm"
-          type="primary"
-          disabled={step === 3}
-          onClick={() => setStep((prev) => prev + 1)}
-        >
-          {step === 3 ? "Completed" : "Next Step"}
+      <div className="my-5 h-44 rounded-md  border-2 border-dashed border-slate-100"></div>
+      <div className="mt-6 flex items-center justify-end">
+        <Button size="sm" type="primary" disabled={step === 3} onClick={() => setStep((prev) => prev + 1)}>
+          {step === 3 ? 'Completed' : 'Next Step'}
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const InterActiveStepCode = `
 "use client";
@@ -92,6 +87,6 @@ export const StepComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { InterActiveStep, InterActiveStepCode };
+export { InterActiveStep, InterActiveStepCode }

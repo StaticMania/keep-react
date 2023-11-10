@@ -1,18 +1,14 @@
-"use client";
-import { Play } from "phosphor-react";
-import { PlayButton } from "~/src";
+'use client'
+import { Play } from 'phosphor-react'
+import { PlayButton } from '~/src'
 
 const SecondaryPlayButton = () => {
   return (
-    <div className="h-20 p-5 flex items-center justify-start">
-      <PlayButton
-        title="Play Video"
-        type="outlineGray"
-        icon={<Play size="24" />}
-      />
+    <div className="flex h-20 items-center justify-start p-5">
+      <PlayButton title="Play Video" type="outlineGray" icon={<Play size="24" />} />
     </div>
-  );
-};
+  )
+}
 
 const SecondaryPlayButtonCode = `
 "use client";
@@ -28,6 +24,6 @@ export const PlayButtonComponent = () => {
   />
   );
 }
-`;
+`
 
-export { SecondaryPlayButton, SecondaryPlayButtonCode };
+export { SecondaryPlayButton, SecondaryPlayButtonCode }

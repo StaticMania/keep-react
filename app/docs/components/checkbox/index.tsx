@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import CheckboxDocsContent from "./Checkbox.mdx";
+'use client'
+import type { FC } from 'react'
+import CheckboxDocsContent from './Checkbox.mdx'
 
-const CheckboxDocs: FC = () => <CheckboxDocsContent />;
+const CheckboxDocs: FC = () => <CheckboxDocsContent />
 
-export default CheckboxDocs;
+export default CheckboxDocs

@@ -1,16 +1,16 @@
-import type { FC, PropsWithChildren } from 'react';
-import { useState } from 'react';
-import type { AccordionProps } from './Accordion';
-import { AccordionPanelContext } from './AccordionPanelContext';
+import type { FC, PropsWithChildren } from 'react'
+import { useState } from 'react'
+import type { AccordionProps } from './Accordion'
+import { AccordionPanelContext } from './AccordionPanelContext'
 
 export interface AccordionPanelProps extends PropsWithChildren<AccordionProps> {
-  isOpen?: boolean;
-  setOpen?: () => void;
+  isOpen?: boolean
+  setOpen?: () => void
 }
 
 export const AccordionPanel: FC<AccordionPanelProps> = ({ children, ...props }) => {
-  const { alwaysOpen } = props;
-  const [isOpen, setOpen] = useState(props.isOpen);
+  const { alwaysOpen } = props
+  const [isOpen, setOpen] = useState(props.isOpen)
 
   const provider = alwaysOpen
     ? {
@@ -18,7 +18,7 @@ export const AccordionPanel: FC<AccordionPanelProps> = ({ children, ...props }) 
         isOpen,
         setOpen: () => setOpen(!isOpen),
       }
-    : props;
+    : props
 
-  return <AccordionPanelContext.Provider value={provider}>{children}</AccordionPanelContext.Provider>;
-};
+  return <AccordionPanelContext.Provider value={provider}>{children}</AccordionPanelContext.Provider>
+}
