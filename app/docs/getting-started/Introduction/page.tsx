@@ -4,7 +4,7 @@ import Introduction from '.'
 
 export const metadata: Metadata = {
   description:
-    'On this page, you will discover straightforward instructions for integrating the keep-react package into your application. These steps will guide you through the process of installing and configuring your application to work seamlessly with keep-react, ensuring a hassle-free setup without errors.',
+    'Keep React is an open-source component library built on top of React and Tailwind CSS. It offers a collection of pre-designed UI components and styles that you can easily integrate into your web applications. Install Keep React in your React application or NextJs Application following step bellow.',
   title: 'Introduction - Keep React',
 }
 
