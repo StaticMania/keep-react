@@ -1,3 +1,9 @@
+/**
+ * Returns an array of numbers within the specified range.
+ * @param start - The starting number of the range.
+ * @param end - The ending number of the range.
+ * @returns An array of numbers within the specified range.
+ */
 export const renge = (start: number, end: number): number[] => {
   if (start >= end) {
     return []
