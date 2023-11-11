@@ -14,3 +14,4 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 vercel.json
+package-lock.json

@@ -8,7 +8,7 @@ import { paginationApiData } from './PaginationApi'
 import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
-import { useTheme } from '~/src/Keep/ThemeContex'
+
 
 ## Table of Contents
 
@@ -51,9 +51,3 @@ Allow users to input the page number they want to navigate to, enhancing the use
 Explore the available props for the Pagination component:
 
 <ComponentApi data={paginationApiData} />
-
-## Theme
-
-To customize the appearance of the Pagination component according to your design system, please refer to the Theme documentation:
-
-<CssThemePreview code={useTheme().theme.pagination} />

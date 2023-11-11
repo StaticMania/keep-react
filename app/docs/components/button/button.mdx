@@ -3,13 +3,10 @@ import { KeepButtonColor, KeepButtonColorCode } from './variant/KeepButtonColor'
 import { KeepButtonSize, KeepButtonSizeCode } from './variant/KeepButtonSize'
 import { KeepButtonShape, KeepButtonShapeCode } from './variant/KeepButtonShape'
 import { KeepButtonIcon, KeepButtonIconCode } from './variant/KeepButtonIcon'
-
 import { buttonApiData } from './buttonApi'
-
 import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
-import { useTheme } from '~/src/Keep/ThemeContex'
 
 ## Table of Contents
 
@@ -60,9 +57,3 @@ Our design system, you have the flexibility to position icons on either the `lef
 Explore the available props for the button component
 
 <ComponentApi data={buttonApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.button} />

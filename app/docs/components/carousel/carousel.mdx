@@ -13,7 +13,6 @@ import { carouselDataApi } from './carouselApi'
 import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
-import { useTheme } from '~/src/Keep/ThemeContex'
 
 ## Table of Contents
 
@@ -23,7 +22,7 @@ A Carousel component is a user interface element commonly found in web and mobil
 
 Default Carousel component allows you to display a series of images, content, or media items in a rotating manner. It is often used to showcase multiple items in a limited space, allowing users to view different items by sliding or swiping through them.
 
-<CodePreview github="Carousel" code={DefaultCarouselCode}>
+<CodePreview github='Carousel' code={DefaultCarouselCode}>
   <DefaultCarousel />
 </CodePreview>
 
@@ -31,23 +30,23 @@ Default Carousel component allows you to display a series of images, content, or
 
 A Static Carousel is a type of carousel component that displays a sequence of items without providing any indicators or navigation controls for users to manually switch between items. Instead, the items in a static carousel automatically transition or scroll to the next item at a predefined interval.
 
-<CodePreview github="Carousel" code={StaticCarouselCode}>
+<CodePreview github='Carousel' code={StaticCarouselCode}>
   <StaticCarousel />
 </CodePreview>
 
-## Carousel With Text Controll
+## Carousel With Text Control
 
 A Carousel with Text Control is a carousel component that includes textual navigation controls, typically in the form of `Next` and `Previous` buttons.
 
-<CodePreview github="Carousel" code={CarousellWithTextControllCode}>
-  <CarousellWithTextControll />
+<CodePreview github='Carousel' code={CarouselWithTextControlCode}>
+  <CarouselWithTextControl />
 </CodePreview>
 
-## Carousel With Custom Controll Icon
+## Carousel With Custom Control Icon
 
 A Carousel with Custom Control Icons is a carousel component that provides navigation controls with customized icons for moving between items. By using `leftControl` and `rightControl` props, we can add custom controls.
 
-<CodePreview github="Carousel" code={CarouselWithCustomControlIconCode}>
+<CodePreview github='Carousel' code={CarouselWithCustomControlIconCode}>
   <CarouselWithCustomControlIcon />
 </CodePreview>
 
@@ -55,7 +54,7 @@ A Carousel with Custom Control Icons is a carousel component that provides navig
 
 The IndicatorsType prop allows you to choose from different types of indicators. By using `indicatorsType` props as `dots`, `rings`, `bars`, `squares`, or `squareRing`, based on your design preferences.
 
-<CodePreview github="Carousel" code={CarouselWithIndicatorCode}>
+<CodePreview github='Carousel' code={CarouselWithIndicatorCode}>
   <CarouselWithIndicator />
 </CodePreview>
 
@@ -63,7 +62,7 @@ The IndicatorsType prop allows you to choose from different types of indicators.
 
 A Multiple Carousel is a user interface component that allows you to display multiple carousels on a single page or screen.
 
-<CodePreview github="Carousel" code={MultipleCarouselCode}>
+<CodePreview github='Carousel' code={MultipleCarouselCode}>
   <MultipleCarousel />
 </CodePreview>
 
@@ -72,12 +71,6 @@ A Multiple Carousel is a user interface component that allows you to display mul
 Explore the available props for the carousel component
 
 <ComponentApi data={carouselDataApi} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.carousel} />
 
 ## Reference
 
