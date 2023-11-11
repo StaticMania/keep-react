@@ -31,7 +31,6 @@ const CopyCode = ({ code }: { code: string }) => {
           <Skeleton.Line height="h-[60px]" />
         </Skeleton>
       )}
-
       <button onClick={() => copyToClipboard(code)} className="absolute right-5 top-5 cursor-pointer">
         {copy ? <Check size={20} weight="light" color="#fff" /> : <Clipboard size={20} weight="light" color="#fff" />}
       </button>
