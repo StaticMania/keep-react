@@ -1,7 +1,11 @@
 const twConfig = `
 import keepPreset from "keep-react/src/keep-preset.js";
 export default {
-  content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/keep-react/**/*.{js,jsx,ts,tsx}"
+  ]
   presets: [keepPreset],
 };
 `
@@ -38,10 +42,32 @@ const keepYarnInstall = 'yarn add keep-react'
 
 const twConfigForNextJs = `
 module.exports = {
-    content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
-    presets: [require("keep-react/src/keep-preset.js")],
+  content: [
+    // ... (existing content)
+    "./node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
+  ],
+  presets: [require("keep-react/src/keep-preset.js")],
 };
 `
+const viteReact = `
+npm create vite@latest my-project -- --template react
+cd my-project
+`
+
+const nextJsInstall = `npx create-next-app@latest`
+
+const NextJsQnA = () => {
+  return (
+    <div className="my-5">
+      <ul className="bg-slate-50 py-3 px-4 text-slate-700 text-sm rounded-md -space-y-0">
+        <li>Would you like to use Tailwind CSS? Yes</li>
+      </ul>
+    </div>
+  )
+}
+
+
+
 export {
   twConfig,
   twCss,
@@ -50,5 +76,5 @@ export {
   twNpmInstall,
   keepNpmInstall,
   twConfigForNextJs,
-  keepYarnInstall,
+  keepYarnInstall,viteReact,nextJsInstall,NextJsQnA
 }
