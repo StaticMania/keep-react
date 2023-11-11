@@ -1,7 +1,18 @@
 import { keepBadgeTheme } from '.'
 
 export const badgeTheme: keepBadgeTheme = {
+  /**
+   * @description Badge base class
+   * @type {string}
+   */
   base: 'flex h-fit items-center justify-center gap-1 font-medium rounded-md cursor-pointer',
+  /**
+   * Badge Type
+   * @type {object}
+   * @property {object} default - Badge default type
+   * @property {object} outline - Badge outline type
+   * @property {object} text - Badge text type
+   */
   badgeType: {
     default: {
       colorType: {
@@ -70,7 +81,21 @@ export const badgeTheme: keepBadgeTheme = {
       },
     },
   },
+  /**
+   * @description Badge href class
+   * @type {string}
+   * @default group
+   */
   href: 'group',
+  /**
+   * @description Badge Icon class
+   * @type {object}
+   * @property {string} off - Badge Icon off class
+   * @property {string} on - Badge Icon on class
+   * @property {object} size - Badge Icon size class
+   * @property {string} size.xs - Badge Icon size xs
+   * @property {string} size.sm - Badge Icon size sm
+   */
   icon: {
     off: '',
     on: '',
@@ -79,8 +104,27 @@ export const badgeTheme: keepBadgeTheme = {
       sm: 'w-3.5 h-3.5 text-sm',
     },
   },
+  /**
+   * @description Badge dot class
+   * @type {string}
+   * @default h-2 w-2 rounded-full bg-current
+   */
   dot: 'h-2 w-2 rounded-full bg-current',
+  /**
+   * @description Badge dot position class
+   * @type {object}
+   * @property {string} left - Badge dot position left
+   * @property {string} right - Badge dot position right
+   * @default left
+   */
   dotPosition: { left: 'pr-2', right: 'pl-2' },
+  /**
+   * @description Badge size class
+   * @type {object}
+   * @property {string} xs - Badge size xs
+   * @property {string} sm - Badge size sm
+   * @default xs
+   */
   size: {
     xs: 'py-[3px] px-2 text-xs',
     sm: 'py-[5px] px-2 text-sm',
