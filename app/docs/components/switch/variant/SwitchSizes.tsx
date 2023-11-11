@@ -1,5 +1,5 @@
-"use client";
-import { Toggle } from "~/src";
+'use client'
+import { Toggle } from '~/src'
 
 const SwitchSizes = () => {
   return (
@@ -8,8 +8,8 @@ const SwitchSizes = () => {
       <Toggle bgColor="primary" label="Medium" size="md" />
       <Toggle bgColor="primary" label="Large" size="lg" />
     </div>
-  );
-};
+  )
+}
 
 const SwitchSizesCode = `
 "use client";
@@ -25,6 +25,6 @@ export const SwitchComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { SwitchSizes, SwitchSizesCode };
+export { SwitchSizes, SwitchSizesCode }

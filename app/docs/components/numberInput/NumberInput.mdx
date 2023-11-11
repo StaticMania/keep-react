@@ -1,21 +1,12 @@
-import {
-  DefaultNumberInput,
-  DefaultNumberInputCode,
-} from "./variant/DefaultNumberInput";
-import {
-  SizesOfNumberInput,
-  SizesOfNumberInputCode,
-} from "./variant/SizesOfNumberInput";
-import {
-  DisabledNumberInput,
-  DisabledNumberInputCode,
-} from "./variant/DisabledNumberInput";
-import { numberInputApiData } from "./NumberInputApi";
+import { DefaultNumberInput, DefaultNumberInputCode } from './variant/DefaultNumberInput'
+import { SizesOfNumberInput, SizesOfNumberInputCode } from './variant/SizesOfNumberInput'
+import { DisabledNumberInput, DisabledNumberInputCode } from './variant/DisabledNumberInput'
+import { numberInputApiData } from './NumberInputApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -25,10 +16,7 @@ Number Input Component is a user interface element designed for collecting numer
 
 Default Number Input a simple numeric input field with two buttons for incrementing and decrementing the value.
 
-<CodePreview
-  github="FormControls/NumberInput.tsx"
-  code={DefaultNumberInputCode}
->
+<CodePreview github="FormControls/NumberInput.tsx" code={DefaultNumberInputCode}>
   <DefaultNumberInput />
 </CodePreview>
 
@@ -36,19 +24,13 @@ Default Number Input a simple numeric input field with two buttons for increment
 
 The NumberInput component in the Keep React offers three available sizes: `"sm"` `"md"` and `"lg"`.
 
-<CodePreview
-  github="FormControls/NumberInput.tsx"
-  code={SizesOfNumberInputCode}
->
+<CodePreview github="FormControls/NumberInput.tsx" code={SizesOfNumberInputCode}>
   <SizesOfNumberInput />
 </CodePreview>
 
 ## Disabled Number Input
 
-<CodePreview
-  github="FormControls/NumberInput.tsx"
-  code={DisabledNumberInputCode}
->
+<CodePreview github="FormControls/NumberInput.tsx" code={DisabledNumberInputCode}>
   <DisabledNumberInput />
 </CodePreview>
 
@@ -58,8 +40,3 @@ Explore the available props for the number input component
 
 <ComponentApi data={numberInputApiData} />
 
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.formControls.numberInput} />

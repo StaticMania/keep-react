@@ -1,21 +1,11 @@
-import {
-  DefaultCheckbox,
-  DefaultCheckboxCode,
-} from "./variant/DefaultCheckbox";
-import {
-  CheckboxVariant,
-  CheckboxVariantCode,
-} from "./variant/CheckboxVariant";
-import {
-  DisabledCheckbox,
-  DisabledCheckboxCode,
-} from "./variant/DisabledCheckbox";
+import { DefaultCheckbox, DefaultCheckboxCode } from './variant/DefaultCheckbox'
+import { CheckboxVariant, CheckboxVariantCode } from './variant/CheckboxVariant'
+import { DisabledCheckbox, DisabledCheckboxCode } from './variant/DisabledCheckbox'
 
-import { CheckBoxApiData } from "./CheckboxApi";
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import { CheckBoxApiData } from './CheckboxApi'
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
 
 ## Table of Contents
 
@@ -51,8 +41,4 @@ Here is a list of the props that you can pass to the Checkbox component:
 
 <ComponentApi data={CheckBoxApiData} />
 
-## Theme
 
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.checkbox} />

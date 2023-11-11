@@ -1,9 +1,9 @@
-"use client";
-import { Badge } from "~/src";
+'use client'
+import { Badge } from '~/src'
 
 const VariantOfBadge = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2 my-3">
+    <div className="my-3 flex flex-wrap items-end gap-2">
       <Badge size="sm" colorType="light" color="info">
         Badge
       </Badge>
@@ -14,8 +14,8 @@ const VariantOfBadge = () => {
         Badge
       </Badge>
     </div>
-  );
-};
+  )
+}
 
 const VariantOfBadgeCode = `
 "use client";
@@ -30,6 +30,6 @@ export const BadgeComponent = () => {
     </div>
   );
 };
-`;
+`
 
-export { VariantOfBadge, VariantOfBadgeCode };
+export { VariantOfBadge, VariantOfBadgeCode }

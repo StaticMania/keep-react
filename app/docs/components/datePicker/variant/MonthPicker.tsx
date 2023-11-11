@@ -1,15 +1,15 @@
-"use client";
-import { useState } from "react";
-import { DatePicker } from "~/src";
+'use client'
+import { useState } from 'react'
+import { DatePicker } from '~/src'
 
 const MonthPicker = () => {
-  const [_, setMonthPicker] = useState<Date | null | string>();
+  const [_, setMonthPicker] = useState<Date | null | string>()
   return (
     <DatePicker monthPicker={setMonthPicker}>
       <DatePicker.Month />
     </DatePicker>
-  );
-};
+  )
+}
 
 const MonthPickerCode = `
 "use client";
@@ -24,6 +24,6 @@ export const MonthComponent = () => {
     </DatePicker>
   );
 }
-`;
+`
 
-export { MonthPicker, MonthPickerCode };
+export { MonthPicker, MonthPickerCode }

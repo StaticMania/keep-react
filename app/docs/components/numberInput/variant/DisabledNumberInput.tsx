@@ -1,18 +1,11 @@
-"use client";
-import { useState } from "react";
-import { NumberInput } from "~/src";
+'use client'
+import { useState } from 'react'
+import { NumberInput } from '~/src'
 
 const DisabledNumberInput = () => {
-  const [value, setValue] = useState(100);
-  return (
-    <NumberInput
-      sizing="md"
-      value={value}
-      setValue={setValue}
-      disabled={true}
-    />
-  );
-};
+  const [value, setValue] = useState(100)
+  return <NumberInput sizing="md" value={value} setValue={setValue} disabled={true} />
+}
 
 const DisabledNumberInputCode = `
 "use client";
@@ -30,6 +23,6 @@ export const NumberInputComponent = () => {
     />
   );
 }
-`;
+`
 
-export { DisabledNumberInput, DisabledNumberInputCode };
+export { DisabledNumberInput, DisabledNumberInputCode }

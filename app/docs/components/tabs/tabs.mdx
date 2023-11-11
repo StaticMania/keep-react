@@ -1,17 +1,14 @@
-import { DefaultTabs, DefaultTabsCode } from "./variant/DefaultTabs";
-import { BorderedTabs, BorderedTabsCode } from "./variant/BorderedTabs";
-import { TabsWithIcon, TabsWithIconCode } from "./variant/TabsWithIcon";
+import { DefaultTabs, DefaultTabsCode } from './variant/DefaultTabs'
+import { BorderedTabs, BorderedTabsCode } from './variant/BorderedTabs'
+import { TabsWithIcon, TabsWithIconCode } from './variant/TabsWithIcon'
 
-import {
-  TabsWithNotification,
-  TabsWithNotificationCode,
-} from "./variant/TabsWithNotification";
-import { tabsApiData, tabsItemApiData } from "./tabsApi";
+import { TabsWithNotification, TabsWithNotificationCode } from './variant/TabsWithNotification'
+import { tabsApiData, tabsItemApiData } from './tabsApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -60,9 +57,3 @@ Explore the available props for the `<Tabs>` component
 Explore the available props for the `<Tabs.Item>` component
 
 <ComponentApi data={tabsItemApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.tabs} />

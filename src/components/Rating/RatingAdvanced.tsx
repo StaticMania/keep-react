@@ -1,27 +1,25 @@
-import { KeepSizes } from "../../Keep/KeepTheme";
-import { useTheme } from "../../Keep/ThemeContex";
-import { twMerge } from "tailwind-merge";
-import type { ComponentProps, FC, PropsWithChildren } from "react";
+import { KeepSizes } from '../../Keep/KeepTheme'
+import { useTheme } from '../../Keep/ThemeContex'
+import { twMerge } from 'tailwind-merge'
+import type { ComponentProps, FC, PropsWithChildren } from 'react'
 
-export interface RatingAdvancedProps
-  extends PropsWithChildren<ComponentProps<"div">> {
-  percentFilled?: number;
-  size?: keyof RatingAdvancedSizes;
+export interface RatingAdvancedProps extends PropsWithChildren<ComponentProps<'div'>> {
+  percentFilled?: number
+  size?: keyof RatingAdvancedSizes
 }
 
-export interface RatingAdvancedSizes
-  extends Pick<KeepSizes, "sm" | "md" | "lg"> {
-  [key: string]: string;
+export interface RatingAdvancedSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
+  [key: string]: string
 }
 
 export const RatingAdvanced: FC<RatingAdvancedProps> = ({
   percentFilled = 0,
-  size = "sm",
+  size = 'sm',
   children,
   className,
   ...props
 }) => {
-  const theme = useTheme().theme.rating.advanced;
+  const theme = useTheme().theme.rating.advanced
 
   return (
     <div className={twMerge(theme.base, className)} {...props}>
@@ -35,5 +33,5 @@ export const RatingAdvanced: FC<RatingAdvancedProps> = ({
       </div>
       <span className={theme.progress.label}>{`${percentFilled}%`}</span>
     </div>
-  );
-};
+  )
+}

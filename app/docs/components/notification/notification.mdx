@@ -1,26 +1,14 @@
-import {
-  DefaultNotification,
-  DefaultNotificationCode,
-} from "./variant/DefaultNotification";
-import {
-  NotificationWithIcon,
-  NotificationWithIconCode,
-} from "./variant/NotificationWithIcon";
-import {
-  NotificationWithAvatar,
-  NotificationWithAvatarCode,
-} from "./variant/NotificationWithAvatar";
-import {
-  NotificationWithCard,
-  NotificationWithCardCode,
-} from "./variant/NotificationWithCard";
+import { DefaultNotification, DefaultNotificationCode } from './variant/DefaultNotification'
+import { NotificationWithIcon, NotificationWithIconCode } from './variant/NotificationWithIcon'
+import { NotificationWithAvatar, NotificationWithAvatarCode } from './variant/NotificationWithAvatar'
+import { NotificationWithCard, NotificationWithCardCode } from './variant/NotificationWithCard'
 
-import { notificationApi } from "./notificationApi";
+import { notificationApi } from './notificationApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -63,9 +51,3 @@ The Notification component in the Keep React can be enhanced with a card layout,
 Explore the available props for the notification component
 
 <ComponentApi data={notificationApi} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.notification} />

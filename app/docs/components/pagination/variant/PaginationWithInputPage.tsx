@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import { Pagination } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Pagination } from '~/src'
 
 const PaginationWithInputPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1)
   return (
     <Pagination
       currentPage={currentPage}
@@ -13,8 +13,8 @@ const PaginationWithInputPage = () => {
       prevNextShape="none"
       showGoToPaginate={true}
     />
-  );
-};
+  )
+}
 
 const PaginationWithInputPageCode = `
 "use client";
@@ -34,5 +34,5 @@ export const PaginationComponent = () => {
     />
   );
 }
-`;
-export { PaginationWithInputPage, PaginationWithInputPageCode };
+`
+export { PaginationWithInputPage, PaginationWithInputPageCode }

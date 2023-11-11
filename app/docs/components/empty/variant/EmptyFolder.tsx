@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Empty } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Empty } from '~/src'
 
 const EmptyFolder = () => {
   return (
@@ -19,8 +19,8 @@ const EmptyFolder = () => {
         />
       }
     />
-  );
-};
+  )
+}
 
 const EmptyFolderCode = `
 "use client";
@@ -46,6 +46,6 @@ export const EmptyComponent = () => {
     />
   );
 }
-`;
+`
 
-export { EmptyFolder, EmptyFolderCode };
+export { EmptyFolder, EmptyFolderCode }

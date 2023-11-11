@@ -1,31 +1,26 @@
-import { twMerge } from "tailwind-merge";
-import { FC, ReactNode } from "react";
-import { useStatisticContext } from "./StatisticContext";
-import { useTheme } from "../../Keep/ThemeContex";
+import { twMerge } from 'tailwind-merge'
+import { FC, ReactNode } from 'react'
+import { useStatisticContext } from './StatisticContext'
+import { useTheme } from '../../Keep/ThemeContex'
 
 export interface keepIconTheme {
-  base: string;
+  base: string
   selected: {
-    on: string;
-    off: string;
-  };
+    on: string
+    off: string
+  }
 }
 
 export interface StatusIconProps {
-  icon: ReactNode;
+  icon: ReactNode
 }
 
 export const StatusIcon: FC<StatusIconProps> = ({ icon }) => {
-  const { iconBg } = useStatisticContext();
-  const theme = useTheme().theme.statistic;
+  const { iconBg } = useStatisticContext()
+  const theme = useTheme().theme.statistic
   return (
-    <div
-      className={twMerge(
-        theme.icon.base,
-        iconBg === "success" ? theme.icon.selected.on : theme.icon.selected.off
-      )}
-    >
+    <div className={twMerge(theme.icon.base, iconBg === 'success' ? theme.icon.selected.on : theme.icon.selected.off)}>
       {icon}
     </div>
-  );
-};
+  )
+}

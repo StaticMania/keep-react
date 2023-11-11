@@ -1,30 +1,15 @@
-"use client";
-import { Progress } from "~/src";
+'use client'
+import { Progress } from '~/src'
 
 const ProgressWithNumber = () => {
   return (
-    <div className="flex flex-col gap-3 p-4 w-5/6">
-      <Progress
-        progress={45}
-        color="info"
-        rounded={true}
-        labelProgress={true}
-      />
-      <Progress
-        progress={75}
-        color="info"
-        rounded={true}
-        labelProgress={true}
-      />
-      <Progress
-        progress={100}
-        color="info"
-        rounded={true}
-        labelProgress={true}
-      />
+    <div className="flex w-5/6 flex-col gap-3 p-4">
+      <Progress progress={45} color="info" rounded={true} labelProgress={true} />
+      <Progress progress={75} color="info" rounded={true} labelProgress={true} />
+      <Progress progress={100} color="info" rounded={true} labelProgress={true} />
     </div>
-  );
-};
+  )
+}
 
 const ProgressWithNumberCode = `
 "use client";
@@ -53,6 +38,6 @@ export const ProgressComponent = () => {
       />
     </div>
   );
-}`;
+}`
 
-export { ProgressWithNumber, ProgressWithNumberCode };
+export { ProgressWithNumber, ProgressWithNumberCode }

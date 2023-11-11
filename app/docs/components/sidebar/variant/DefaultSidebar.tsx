@@ -1,35 +1,16 @@
-"use client";
-import { Sidebar } from "~/src";
-import {
-  Chat,
-  LockSimple,
-  ShoppingBagOpen,
-  ShoppingCart,
-  SignIn,
-  SquaresFour,
-  UserPlus,
-  Users,
-} from "phosphor-react";
+'use client'
+import { Sidebar } from '~/src'
+import { Chat, LockSimple, ShoppingBagOpen, ShoppingCart, SignIn, SquaresFour, UserPlus, Users } from 'phosphor-react'
 
 const DefaultSidebar = () => {
   return (
-    <Sidebar
-      aria-label="Sidebar with multi-level dropdown example"
-      className="max-w-xs"
-    >
+    <Sidebar aria-label="Sidebar with multi-level dropdown example" className="max-w-xs">
       <Sidebar.ItemGroup>
         <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
           Dashboard
         </Sidebar.Item>
-        <Sidebar.Item icon={<ShoppingCart size={24} />}>
-          E-commerce
-        </Sidebar.Item>
-        <Sidebar.Item
-          href="#"
-          icon={<LockSimple size={24} />}
-          label="pro"
-          labelColor="gray"
-        >
+        <Sidebar.Item icon={<ShoppingCart size={24} />}>E-commerce</Sidebar.Item>
+        <Sidebar.Item href="#" icon={<LockSimple size={24} />} label="pro" labelColor="gray">
           Components
         </Sidebar.Item>
         <Sidebar.Item href="#" icon={<Chat size={24} />} label="3">
@@ -49,8 +30,8 @@ const DefaultSidebar = () => {
         </Sidebar.Item>
       </Sidebar.ItemGroup>
     </Sidebar>
-  );
-};
+  )
+}
 
 const DefaultSidebarCode = `
 "use client";
@@ -103,6 +84,6 @@ export const SidebarComponent = () => {
     </Sidebar>
   );
 }
-`;
+`
 
-export { DefaultSidebar, DefaultSidebarCode };
+export { DefaultSidebar, DefaultSidebarCode }

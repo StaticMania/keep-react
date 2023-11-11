@@ -1,26 +1,14 @@
-import { DefaultPopover, DefaultPopoverCode } from "./variant/DefaultPopover";
-import {
-  TriggerVariantPopover,
-  TriggerVariantPopoverCode,
-} from "./variant/TriggerVariant";
-import {
-  PopoverPosition,
-  PopoverPositionCode,
-} from "./variant/PopoverPosition";
-import {
-  SingleLinePopover,
-  SingleLinePopoverCode,
-} from "./variant/SingleLinePopover";
-import {
-  OneParagraphPopover,
-  OneParagraphPopoverCode,
-} from "./variant/OneParagraphPopover";
+import { DefaultPopover, DefaultPopoverCode } from './variant/DefaultPopover'
+import { TriggerVariantPopover, TriggerVariantPopoverCode } from './variant/TriggerVariant'
+import { PopoverPosition, PopoverPositionCode } from './variant/PopoverPosition'
+import { SingleLinePopover, SingleLinePopoverCode } from './variant/SingleLinePopover'
+import { OneParagraphPopover, OneParagraphPopoverCode } from './variant/OneParagraphPopover'
 
-import { popoverAPI } from "./popoverApi";
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import { popoverAPI } from './popoverApi'
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -71,12 +59,6 @@ The Popover Position component demonstrates various popover positions relative t
 Explore the available props for the Popover component
 
 <ComponentApi data={popoverAPI} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.popover} />
 
 ## Reference
 

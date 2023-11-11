@@ -1,20 +1,15 @@
-import { DefaultCard, DefaultCardCode } from "./variant/DefaultCard";
-import { CardWithIcon, CardWithIconCode } from "./variant/CardWithIcon";
-import { ProfileCard, ProfileCardCode } from "./variant/ProfileCard";
-import { PostCard, PostCardCode } from "./variant/PostCard";
-import { ProductCard, ProductCardCode } from "./variant/ProductCard";
-import { PricingCard, PricingCardCode } from "./variant/PricingCard";
-import { HorizontalCard, HorizontalCardCode } from "./variant/HorizontalCard";
-import { cardAPIData } from "./cardApi";
-import {
-  ProfileCardWithCover,
-  ProfileCardWithCoverCode,
-} from "./variant/ProfileCardWithCover";
-
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import { DefaultCard, DefaultCardCode } from './variant/DefaultCard'
+import { CardWithIcon, CardWithIconCode } from './variant/CardWithIcon'
+import { ProfileCard, ProfileCardCode } from './variant/ProfileCard'
+import { PostCard, PostCardCode } from './variant/PostCard'
+import { ProductCard, ProductCardCode } from './variant/ProductCard'
+import { PricingCard, PricingCardCode } from './variant/PricingCard'
+import { HorizontalCard, HorizontalCardCode } from './variant/HorizontalCard'
+import { cardAPIData } from './cardApi'
+import { ProfileCardWithCover, ProfileCardWithCoverCode } from './variant/ProfileCardWithCover'
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
 
 ## Table of Contents
 
@@ -90,8 +85,3 @@ Explore the available props for the card component
 
 <ComponentApi data={cardAPIData} />
 
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.card} />

@@ -1,5 +1,5 @@
-"use client";
-import { Label, TextInput } from "~/src";
+'use client'
+import { Label, TextInput } from '~/src'
 
 const InputFieldWithLevel = () => {
   return (
@@ -7,8 +7,8 @@ const InputFieldWithLevel = () => {
       <Label value="Label" />
       <TextInput id="#id-8" placeholder="Default Input Field" color="gray" />
     </>
-  );
-};
+  )
+}
 
 const InputFieldWithLevelCode = `
 "use client";
@@ -26,6 +26,6 @@ export const TextInputComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { InputFieldWithLevel, InputFieldWithLevelCode };
+export { InputFieldWithLevel, InputFieldWithLevelCode }

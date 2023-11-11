@@ -1,17 +1,14 @@
-import { DefaultSwitch, DefaultSwitchCode } from "./variant/DefaultSwitch";
-import { SwitchSizes, SwitchSizesCode } from "./variant/SwitchSizes";
-import { DisabledSwitch, DisabledSwitchCode } from "./variant/DisabledSwitch";
-import {
-  SwitchWithBackground,
-  SwitchWithBackgroundCode,
-} from "./variant/SwitchWithBackground";
-import { SwitchWithIcon, SwitchWithIconCode } from "./variant/SwitchWithIcon";
-import { toggleApiData } from "./SwitchApi";
+import { DefaultSwitch, DefaultSwitchCode } from './variant/DefaultSwitch'
+import { SwitchSizes, SwitchSizesCode } from './variant/SwitchSizes'
+import { DisabledSwitch, DisabledSwitchCode } from './variant/DisabledSwitch'
+import { SwitchWithBackground, SwitchWithBackgroundCode } from './variant/SwitchWithBackground'
+import { SwitchWithIcon, SwitchWithIconCode } from './variant/SwitchWithIcon'
+import { toggleApiData } from './SwitchApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -62,12 +59,6 @@ Disable the switch component by utilizing the `disabled` prop with `disabled={tr
 Refer to the API documentation for detailed information about the Toggle Switch component.
 
 <ComponentApi data={toggleApiData} />
-
-## Theme
-
-To achieve the desired appearance for your application, explore the Theme documentation to customize the look of the components.
-
-<CssThemePreview code={useTheme().theme.switch} />
 
 ## Reference
 

@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
-import { Badge, Card } from "~/src";
-import { CaretRight } from "phosphor-react";
+'use client'
+import Image from 'next/image'
+import { Badge, Card } from '~/src'
+import { CaretRight } from 'phosphor-react'
 
 const PostCard = () => {
   return (
@@ -16,21 +16,17 @@ const PostCard = () => {
             className="brightness-50"
           />
         </Card.Container>
-        <Card.Container className="absolute flex items-start py-3 px-5">
+        <Card.Container className="absolute flex items-start px-5 py-3">
           <Card.Container>
-            <Card.Title className="text-md md:text-xl font-medium text-white">
-              Keep Design System
-            </Card.Title>
-            <Card.Description className="text-xs md:text-sm font-normal text-white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-              excepturi quam incidunt tempora?
+            <Card.Title className="text-md font-medium text-white md:text-xl">Keep Design System</Card.Title>
+            <Card.Description className="text-xs font-normal text-white md:text-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo excepturi quam incidunt tempora?
             </Card.Description>
             <Card.Link
-              className="mt-3 flex items-center gap-1 text-xs md:text-sm font-normal text-white"
+              className="mt-3 flex items-center gap-1 text-xs font-normal text-white md:text-sm"
               href="/"
               icon={<CaretRight size={16} color="#fff" />}
-              iconPosition="left"
-            >
+              iconPosition="left">
               Read More
             </Card.Link>
           </Card.Container>
@@ -47,25 +43,23 @@ const PostCard = () => {
               className="rounded-xl"
             />
           </Card.Container>
-          <Card.Container className="md:px-6 px-3">
+          <Card.Container className="px-3 md:px-6">
             <Card.Container className="inline-block">
               <Badge colorType="light" color="info" size="xs">
                 Tips & Advice
               </Badge>
             </Card.Container>
-            <Card.Title className="text-sm md:text-xl font-medium text-slate-700">
-              Keep Design System
-            </Card.Title>
-            <Card.Description className="text-xs md:text-sm font-normal text-slate-500">
-              Component design systems can help developers to be more productive
-              by providing them with a ready-made set of components to use.
+            <Card.Title className="text-sm font-medium text-slate-700 md:text-xl">Keep Design System</Card.Title>
+            <Card.Description className="text-xs font-normal text-slate-500 md:text-sm">
+              Component design systems can help developers to be more productive by providing them with a ready-made set
+              of components to use.
             </Card.Description>
           </Card.Container>
         </Card.Container>
       </Card>
     </div>
-  );
-};
+  )
+}
 
 const PostCardCode = `
 "use client";
@@ -136,6 +130,6 @@ export const CardComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { PostCard, PostCardCode };
+export { PostCard, PostCardCode }

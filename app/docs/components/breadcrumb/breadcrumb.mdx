@@ -1,32 +1,16 @@
-import {
-  DefaultBreadcrumb,
-  DefaultBreadcrumbCode,
-} from "./variant/DefaultBreadcrumb";
-import {
-  BreadcrumbWithBorder,
-  BreadcrumbWithBorderCode,
-} from "./variant/BreadcrumbWithBorder";
-import {
-  BreadcrumbWithPageIcon,
-  BreadcrumbWithPageIconCode,
-} from "./variant/BreadcrumbWithPageIcon";
+import { DefaultBreadcrumb, DefaultBreadcrumbCode } from './variant/DefaultBreadcrumb'
+import { BreadcrumbWithBorder, BreadcrumbWithBorderCode } from './variant/BreadcrumbWithBorder'
+import { BreadcrumbWithPageIcon, BreadcrumbWithPageIconCode } from './variant/BreadcrumbWithPageIcon'
 
-import {
-  BreadcrumbWithSeparatorIcon,
-  BreadcrumbWithSeparatorIconCode,
-} from "./variant/BreadcrumbWithSeparatorIcon";
+import { BreadcrumbWithSeparatorIcon, BreadcrumbWithSeparatorIconCode } from './variant/BreadcrumbWithSeparatorIcon'
 
-import {
-  BreadcrumbWithNumber,
-  BreadcrumbWithNumberCode,
-} from "./variant/BreadcrumbWithNumber";
+import { BreadcrumbWithNumber, BreadcrumbWithNumberCode } from './variant/BreadcrumbWithNumber'
 
-import { breadcrumbApiData, breadcrumbItemApiData } from "./breadcrumbApi";
+import { breadcrumbApiData, breadcrumbItemApiData } from './breadcrumbApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
 
 ## Table of Contents
 
@@ -84,8 +68,3 @@ Explore the available props for the `<Breadcrumb.Item>` component
 
 <ComponentApi data={breadcrumbItemApiData} />
 
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.breadcrumb} />

@@ -1,11 +1,11 @@
-"use client";
-import { Tree } from "~/src";
-import { nodes } from "./DefaultTree";
-import { File, FolderNotchOpen } from "phosphor-react";
+'use client'
+import { Tree } from '~/src'
+import { nodes } from './DefaultTree'
+import { File, FolderNotchOpen } from 'phosphor-react'
 
 const TreeItemsWithFolderIcon = () => {
   return (
-    <div className="py-5 overflow-x-auto">
+    <div className="overflow-x-auto py-5">
       <Tree
         showBorder={true}
         showItemsNumber={true}
@@ -15,8 +15,8 @@ const TreeItemsWithFolderIcon = () => {
         nodes={nodes}
       />
     </div>
-  );
-};
+  )
+}
 
 const TreeItemsWithFolderIconCode = `
 "use client";
@@ -88,6 +88,6 @@ export const TreeComponent = () => {
     />
   );
 }
-`;
+`
 
-export { TreeItemsWithFolderIcon, TreeItemsWithFolderIconCode };
+export { TreeItemsWithFolderIcon, TreeItemsWithFolderIconCode }

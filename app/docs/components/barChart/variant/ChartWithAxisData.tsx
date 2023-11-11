@@ -1,6 +1,6 @@
-"use client";
-import { BarChart } from "~/src";
-import { BarChartData } from "./DefaultBarChart";
+'use client'
+import { BarChart } from '~/src'
+import { BarChartData } from './DefaultBarChart'
 
 const ChartWithAxisData = () => {
   return (
@@ -20,8 +20,8 @@ const ChartWithAxisData = () => {
       inActiveColor="#94ABFF"
       showTooltip={true}
     />
-  );
-};
+  )
+}
 
 const ChartWithAxisDataCode = `
 "use client";
@@ -124,5 +124,5 @@ export const BarComponent = () => {
     />
   );
 }
-`;
-export { ChartWithAxisData, ChartWithAxisDataCode };
+`
+export { ChartWithAxisData, ChartWithAxisDataCode }

@@ -1,24 +1,19 @@
-"use client";
-import Image from "next/image";
-import { Timeline } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Timeline } from '~/src'
 
 const TimelineWithImage = () => {
   return (
-    <div className="py-6 px-5">
-      <Timeline
-        timelineBarType="dashed"
-        gradientPoint={true}
-        gradientColor="bg-gradient-9"
-      >
+    <div className="px-5 py-6">
+      <Timeline timelineBarType="dashed" gradientPoint={true} gradientColor="bg-gradient-9">
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>
             <Timeline.Time>February 2023</Timeline.Time>
             <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
             <Timeline.Body>
-              Get access to over 20+ pages including a dashboard layout, charts,
-              kanban board, calendar, and pre-order E-commerce & Marketing
-              pages.
+              Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
+              E-commerce & Marketing pages.
             </Timeline.Body>
 
             <Image
@@ -35,9 +30,8 @@ const TimelineWithImage = () => {
             <Timeline.Time>March 2023</Timeline.Time>
             <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
             <Timeline.Body>
-              All of the pages and components are first designed in Figma and we
-              keep a parity between the two versions even as we update the
-              project.
+              All of the pages and components are first designed in Figma and we keep a parity between the two versions
+              even as we update the project.
             </Timeline.Body>
 
             <Image
@@ -55,15 +49,14 @@ const TimelineWithImage = () => {
             <Timeline.Time>April 2023</Timeline.Time>
             <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
             <Timeline.Body>
-              Get started with dozens of web components and interactive elements
-              built on top of Tailwind CSS.
+              Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Item>
       </Timeline>
     </div>
-  );
-};
+  )
+}
 
 const TimelineWithImageCode = `
 "use client";
@@ -126,5 +119,5 @@ export const TimelineComponent = () => {
       </Timeline>
   );
 }
-`;
-export { TimelineWithImage, TimelineWithImageCode };
+`
+export { TimelineWithImage, TimelineWithImageCode }

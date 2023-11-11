@@ -1,12 +1,12 @@
-import { DefaultRadio, DefaultRadioCode } from "./variant/DefaultRadio";
-import { SizesOfRadio, SizesOfRadioCode } from "./variant/SizesOfRadio";
-import { RadioVariant, RadioVariantCode } from "./variant/RadioVariant";
-import { radioApiData } from "./RadioApi";
+import { DefaultRadio, DefaultRadioCode } from './variant/DefaultRadio'
+import { SizesOfRadio, SizesOfRadioCode } from './variant/SizesOfRadio'
+import { RadioVariant, RadioVariantCode } from './variant/RadioVariant'
+import { radioApiData } from './RadioApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -41,9 +41,3 @@ The Sizes of Radio component offers different size options for radio inputs to s
 Explore the available props for the radio component
 
 <ComponentApi data={radioApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.formControls.radio} />

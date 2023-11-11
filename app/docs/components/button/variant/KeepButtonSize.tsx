@@ -1,5 +1,5 @@
-"use client";
-import { Button } from "~/src";
+'use client'
+import { Button } from '~/src'
 
 const KeepButtonSize = () => {
   return (
@@ -23,8 +23,8 @@ const KeepButtonSize = () => {
         Button of 2xl
       </Button>
     </div>
-  );
-};
+  )
+}
 
 const KeepButtonSizeCode = `
 "use client";
@@ -42,6 +42,6 @@ export const ButtonComponent = () => {
     </>
   );
 };
-`;
+`
 
-export { KeepButtonSize, KeepButtonSizeCode };
+export { KeepButtonSize, KeepButtonSizeCode }

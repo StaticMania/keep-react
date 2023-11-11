@@ -1,5 +1,5 @@
-"use client";
-import { Skeleton } from "~/src";
+'use client'
+import { Skeleton } from '~/src'
 
 const PostSkeleton = () => {
   return (
@@ -31,8 +31,8 @@ const PostSkeleton = () => {
         </div>
       </Skeleton>
     </div>
-  );
-};
+  )
+}
 
 const PostSkeletonCode = `
 "use client";
@@ -70,6 +70,6 @@ export const SkeletonComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { PostSkeleton, PostSkeletonCode };
+export { PostSkeleton, PostSkeletonCode }

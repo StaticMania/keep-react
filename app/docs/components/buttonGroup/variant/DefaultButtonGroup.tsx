@@ -1,5 +1,5 @@
-"use client";
-import { Button } from "~/src";
+'use client'
+import { Button } from '~/src'
 
 const DefaultButtonGroup = () => {
   return (
@@ -16,8 +16,8 @@ const DefaultButtonGroup = () => {
         </Button>
       </Button.Group>
     </div>
-  );
-};
+  )
+}
 
 const DefaultButtonGroupCode = `
 "use client";
@@ -32,6 +32,6 @@ export const ButtonGroupComponent = () => {
     </Button.Group>
   );
 };
-`;
+`
 
-export { DefaultButtonGroup, DefaultButtonGroupCode };
+export { DefaultButtonGroup, DefaultButtonGroupCode }

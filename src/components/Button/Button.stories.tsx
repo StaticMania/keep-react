@@ -1,170 +1,161 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from "./Button";
+import { Button } from './Button'
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     type: {
-      description: "Avaiable button type",
+      description: 'Avaiable button type',
       control: {
-        type: "select",
+        type: 'select',
       },
-      options: [
-        "primary",
-        "dashed",
-        "text",
-        "linkPrimary",
-        "linkGray",
-        "outlineGray",
-        "outlinePrimary",
-        "default",
-      ],
+      options: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "primary" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'primary' },
       },
     },
     size: {
-      description: "Avaiable button size",
+      description: 'Avaiable button size',
       control: {
-        type: "select",
+        type: 'select',
       },
-      options: ["xs", "sm", "md", "lg", "xl", "2xl"],
+      options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "sm" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'sm' },
       },
     },
     children: {
-      description: "Button text",
+      description: 'Button text',
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "Default Button" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'Default Button' },
       },
     },
     circle: {
-      description: "Button circle or not",
+      description: 'Button circle or not',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
 
     width: {
-      description: "Button width full or half?",
+      description: 'Button width full or half?',
       table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "full" },
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'full' },
       },
-      control: { type: "radio" },
+      control: { type: 'radio' },
     },
     href: {
-      description: "Href to navigate",
+      description: 'Href to navigate',
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "/" },
+        type: { summary: 'string' },
+        defaultValue: { summary: '/' },
       },
     },
     notificationLabel: {
-      description: "Button notification label text",
+      description: 'Button notification label text',
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
       },
     },
     pill: {
-      description: "Button pill or not",
+      description: 'Button pill or not',
       table: {
-        type: { summary: "boolean" },
+        type: { summary: 'boolean' },
         defaultValue: { summary: false },
       },
     },
     positionInGroup: {
-      description: "Button position in button group",
+      description: 'Button position in button group',
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "start" },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'start' },
       },
-      control: { type: "select" },
+      control: { type: 'select' },
     },
 
     customClass: {
-      description: "Custom class Name",
+      description: 'Custom class Name',
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
       },
     },
     color: {
-      description: "Button avaiable color",
+      description: 'Button avaiable color',
       table: {
-        type: { summary: "String" },
-        defaultValue: { summary: "info" },
+        type: { summary: 'String' },
+        defaultValue: { summary: 'info' },
       },
-      control: { type: "select" },
-      options: ["error", "info", "success", "warning"],
+      control: { type: 'select' },
+      options: ['error', 'info', 'success', 'warning'],
     },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof Button>;
+export default meta
+type Story = StoryObj<typeof Button>
 
 export const DefaultButton: Story = {
   args: {
-    type: "default",
-    size: "md",
-    children: "Default Button",
+    type: 'default',
+    size: 'md',
+    children: 'Default Button',
   },
-};
+}
 export const PrimaryButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: "primary",
-    children: "Primary Button",
+    type: 'primary',
+    children: 'Primary Button',
   },
-};
+}
 export const DashedButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: "dashed",
-    children: "Dashed Button",
+    type: 'dashed',
+    children: 'Dashed Button',
   },
-};
+}
 export const OutlinePrimaryButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: "outlinePrimary",
-    children: "Outline Primary Button",
+    type: 'outlinePrimary',
+    children: 'Outline Primary Button',
   },
-};
+}
 export const OutlineGrayButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: "outlineGray",
-    children: "Outline Gray Button",
+    type: 'outlineGray',
+    children: 'Outline Gray Button',
   },
-};
+}
 export const TextButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: "text",
-    children: "Text Button",
+    type: 'text',
+    children: 'Text Button',
   },
-};
+}
 export const LinkPrimaryButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: "linkPrimary",
-    children: "Link Primary Button",
+    type: 'linkPrimary',
+    children: 'Link Primary Button',
   },
-};
+}
 export const LinkGrayButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: "linkGray",
-    children: "Link Gray Button",
+    type: 'linkGray',
+    children: 'Link Gray Button',
   },
-};
+}

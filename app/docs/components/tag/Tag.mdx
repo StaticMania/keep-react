@@ -1,23 +1,14 @@
-import { DefaultTag, DefaultTagCode } from "./variant/DefaultTag";
-import {
-  BothSideIconTag,
-  BothSideIconTagCode,
-} from "./variant/BothSideIconTag";
-import { ColorsOfTag, ColorsOfTagCode } from "./variant/ColorsOfTag";
-import {
-  LeftSideIconTag,
-  LeftSideIconTagCode,
-} from "./variant/LeftSideIconTag";
-import {
-  TagWithDashedBorder,
-  TagWithDashedBorderCode,
-} from "./variant/TagWithDashedBorder";
-import { tagApiData } from "./TagApi";
+import { DefaultTag, DefaultTagCode } from './variant/DefaultTag'
+import { BothSideIconTag, BothSideIconTagCode } from './variant/BothSideIconTag'
+import { ColorsOfTag, ColorsOfTagCode } from './variant/ColorsOfTag'
+import { LeftSideIconTag, LeftSideIconTagCode } from './variant/LeftSideIconTag'
+import { TagWithDashedBorder, TagWithDashedBorderCode } from './variant/TagWithDashedBorder'
+import { tagApiData } from './TagApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -68,9 +59,3 @@ The "Tag With Dashed Border" example demonstrates two types of border styles for
 For a comprehensive overview of the Tag component's properties, refer to the API documentation.
 
 <ComponentApi data={tagApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.tag} />

@@ -1,25 +1,13 @@
-import {
-  DefaultSearchBar,
-  DefaultSearchBarCode,
-} from "./variant/DefaultSearchBar";
-import {
-  SearchBarWithIcon,
-  SearchBarWithIconCode,
-} from "./variant/SearchBarWithIcon";
-import {
-  SearchBarWithColorVariant,
-  SearchBarWithColorVariantCode,
-} from "./variant/SearchBarWithColorVariant";
-import {
-  DisabledSearchBar,
-  DisabledSearchBarCode,
-} from "./variant/DisabledSearchBar";
-import { searchBarApiData } from "./SearchBarApi";
+import { DefaultSearchBar, DefaultSearchBarCode } from './variant/DefaultSearchBar'
+import { SearchBarWithIcon, SearchBarWithIconCode } from './variant/SearchBarWithIcon'
+import { SearchBarWithColorVariant, SearchBarWithColorVariantCode } from './variant/SearchBarWithColorVariant'
+import { DisabledSearchBar, DisabledSearchBarCode } from './variant/DisabledSearchBar'
+import { searchBarApiData } from './SearchBarApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -62,9 +50,3 @@ The Search Bar component can be disabled using the `disabled` prop. When you set
 Explore the available props for the search bar component
 
 <ComponentApi data={searchBarApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.formControls.textInput} />

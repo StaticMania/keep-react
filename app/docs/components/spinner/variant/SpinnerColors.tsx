@@ -1,5 +1,5 @@
-"use client";
-import { Spinner } from "~/src";
+'use client'
+import { Spinner } from '~/src'
 
 const SpinnerColors = () => {
   return (
@@ -12,8 +12,8 @@ const SpinnerColors = () => {
       <Spinner color="success" size="lg" />
       <Spinner color="warning" size="lg" />
     </div>
-  );
-};
+  )
+}
 
 const SpinnerColorsCode = `
 "use client";
@@ -32,6 +32,6 @@ export const SpinnerComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { SpinnerColors, SpinnerColorsCode };
+export { SpinnerColors, SpinnerColorsCode }

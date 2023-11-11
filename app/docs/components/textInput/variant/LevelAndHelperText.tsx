@@ -1,5 +1,5 @@
-"use client";
-import { Label, TextInput } from "~/src";
+'use client'
+import { Label, TextInput } from '~/src'
 
 const LevelAndHelperText = () => {
   return (
@@ -12,8 +12,8 @@ const LevelAndHelperText = () => {
         helperText="Info that helps a user with this field."
       />
     </>
-  );
-};
+  )
+}
 
 const LevelAndHelperTextCode = `
 "use client";
@@ -32,6 +32,6 @@ export const TextInputComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { LevelAndHelperText, LevelAndHelperTextCode };
+export { LevelAndHelperText, LevelAndHelperTextCode }

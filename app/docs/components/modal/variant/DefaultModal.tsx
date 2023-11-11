@@ -1,37 +1,32 @@
-"use client";
-import { useState } from "react";
-import { CloudArrowUp } from "phosphor-react";
-import { Button, Modal } from "~/src";
+'use client'
+import { useState } from 'react'
+import { CloudArrowUp } from 'phosphor-react'
+import { Button, Modal } from '~/src'
 
 const DefaultModal = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [showModalX, setShowModalX] = useState(false);
+  const [showModal, setShowModal] = useState(false)
+  const [showModalX, setShowModalX] = useState(false)
 
   const onClickOne = () => {
-    setShowModal(!showModal);
-  };
+    setShowModal(!showModal)
+  }
   const onClickTwo = () => {
-    setShowModalX(!showModalX);
-  };
+    setShowModalX(!showModalX)
+  }
 
   return (
-    <div className="flex flex-wrap items-end gap-2 py-3 px-2">
+    <div className="flex flex-wrap items-end gap-2 px-2 py-3">
       <Button onClick={onClickOne} type="primary">
         Modal
       </Button>
       <Button onClick={onClickTwo} type="primary">
         Modal With Cross
       </Button>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModal}
-        position="center"
-      >
+      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-sm md:text-base leading-relaxed text-slate-500">
+            <p className="text-sm leading-relaxed text-slate-500 md:text-base">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -45,16 +40,11 @@ const DefaultModal = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModalX}
-        onClose={onClickTwo}
-      >
+      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModalX} onClose={onClickTwo}>
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-sm md:text-base leading-relaxed text-slate-500">
+            <p className="text-sm leading-relaxed text-slate-500 md:text-base">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -69,8 +59,8 @@ const DefaultModal = () => {
         </Modal.Footer>
       </Modal>
     </div>
-  );
-};
+  )
+}
 
 const DefaultModalCode = `
 "use client";
@@ -142,6 +132,6 @@ export const ModalComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { DefaultModal, DefaultModalCode };
+export { DefaultModal, DefaultModalCode }

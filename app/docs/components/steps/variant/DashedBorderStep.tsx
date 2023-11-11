@@ -1,6 +1,6 @@
-"use client";
-import { Steps } from "~/src";
-import { Club, DownloadSimple, Globe } from "phosphor-react";
+'use client'
+import { Steps } from '~/src'
+import { Club, DownloadSimple, Globe } from 'phosphor-react'
 
 const StepWithDashedBorder = () => {
   return (
@@ -23,8 +23,8 @@ const StepWithDashedBorder = () => {
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       />
     </Steps>
-  );
-};
+  )
+}
 
 const StepWithDashedBorderCode = `
 "use client";
@@ -54,6 +54,6 @@ export const StepComponent = () => {
     </Steps>
   );
 }
-`;
+`
 
-export { StepWithDashedBorder, StepWithDashedBorderCode };
+export { StepWithDashedBorder, StepWithDashedBorderCode }

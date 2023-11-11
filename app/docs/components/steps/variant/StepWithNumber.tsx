@@ -1,5 +1,5 @@
-"use client";
-import { Steps } from "~/src";
+'use client'
+import { Steps } from '~/src'
 
 const StepWithNumber = () => {
   return (
@@ -22,8 +22,8 @@ const StepWithNumber = () => {
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       />
     </Steps>
-  );
-};
+  )
+}
 
 const StepWithNumberCode = `
 "use client";
@@ -52,6 +52,6 @@ export const StepComponent = () => {
     </Steps>
   );
 }
-`;
+`
 
-export { StepWithNumber, StepWithNumberCode };
+export { StepWithNumber, StepWithNumberCode }

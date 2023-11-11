@@ -1,6 +1,6 @@
-"use client"
-import Image from "next/image"
-import { Carousel } from "~/src"
+'use client'
+import { Carousel } from '~/src'
+import Image from 'next/image'
 
 const CarouselWithTextControl = () => {
   return (

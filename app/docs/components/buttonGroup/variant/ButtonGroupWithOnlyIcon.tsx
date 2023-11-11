@@ -1,6 +1,6 @@
-"use client";
-import { Button } from "~/src";
-import { ChatCircleDots, Cube, Gear } from "phosphor-react";
+'use client'
+import { Button } from '~/src'
+import { ChatCircleDots, Cube, Gear } from 'phosphor-react'
 
 const ButtonGroupWithOnlyIcon = () => {
   return (
@@ -15,8 +15,8 @@ const ButtonGroupWithOnlyIcon = () => {
         <ChatCircleDots size={24} />
       </Button>
     </Button.Group>
-  );
-};
+  )
+}
 
 const ButtonGroupWithOnlyIconCode = `
 "use client";
@@ -38,6 +38,6 @@ export const ButtonGroupComponent = () => {
     </Button.Group>
   );
 }
-`;
+`
 
-export { ButtonGroupWithOnlyIcon, ButtonGroupWithOnlyIconCode };
+export { ButtonGroupWithOnlyIcon, ButtonGroupWithOnlyIconCode }

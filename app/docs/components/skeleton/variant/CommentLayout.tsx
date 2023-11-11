@@ -1,5 +1,5 @@
-"use client";
-import { Skeleton } from "~/src";
+'use client'
+import { Skeleton } from '~/src'
 
 const CommentLayout = () => {
   return (
@@ -16,8 +16,8 @@ const CommentLayout = () => {
         </div>
       </Skeleton>
     </div>
-  );
-};
+  )
+}
 
 const CommentLayoutCode = `
 "use client";
@@ -40,6 +40,6 @@ export const SkeletonComponent = () => {
     </div>
   );
 }
-`;
+`
 
-export { CommentLayout, CommentLayoutCode };
+export { CommentLayout, CommentLayoutCode }

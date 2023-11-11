@@ -1,22 +1,16 @@
-import { DefaultTable, DefaultTableCode } from "./variant/DefaultTable";
-import { OrdersTable, OrdersTableCode } from "./variant/OrdersTable";
-import { StripedTable, StripedTableCode } from "./variant/StripedTable";
-import { BorderedTable, BorderedTableCode } from "./variant/BorderedTable";
-import { HoverableTableCode, HoverableTable } from "./variant/HoverableTable";
-import {
-  FilesUploadedTable,
-  FilesUploadedTableCode,
-} from "./variant/FilesUploadedTable";
-import {
-  TransactionsTable,
-  TransactionsTableCode,
-} from "./variant/TransactionsTable";
-import { tableApiData } from "./TableApi";
+import { DefaultTable, DefaultTableCode } from './variant/DefaultTable'
+import { OrdersTable, OrdersTableCode } from './variant/OrdersTable'
+import { StripedTable, StripedTableCode } from './variant/StripedTable'
+import { BorderedTable, BorderedTableCode } from './variant/BorderedTable'
+import { HoverableTableCode, HoverableTable } from './variant/HoverableTable'
+import { FilesUploadedTable, FilesUploadedTableCode } from './variant/FilesUploadedTable'
+import { TransactionsTable, TransactionsTableCode } from './variant/TransactionsTable'
+import { tableApiData } from './TableApi'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+
 
 ## Table of Contents
 
@@ -83,9 +77,3 @@ A Bordered Table is a type of Table Component in which each cell and row is outl
 Explore the available props for the table component
 
 <ComponentApi data={tableApiData} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.table} />

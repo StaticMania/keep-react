@@ -1,21 +1,12 @@
-import { DefaultSidebar, DefaultSidebarCode } from "./variant/DefaultSidebar";
-import {
-  SidebarWithContentSeparator,
-  SidebarWithContentSeparatorCode,
-} from "./variant/SidebarWithContentSeparator";
-import {
-  SidebarWithBranding,
-  SidebarWithBrandingCode,
-} from "./variant/SidebarWithBranding";
-import { SidebarWithCTA, SidebarWithCTACode } from "./variant/SidebarWithCTA";
-import {
-  SidebarWithDropdown,
-  SidebarWithDropdownCode,
-} from "./variant/SidebarWithDropdown";
+import { DefaultSidebar, DefaultSidebarCode } from './variant/DefaultSidebar'
+import { SidebarWithContentSeparator, SidebarWithContentSeparatorCode } from './variant/SidebarWithContentSeparator'
+import { SidebarWithBranding, SidebarWithBrandingCode } from './variant/SidebarWithBranding'
+import { SidebarWithCTA, SidebarWithCTACode } from './variant/SidebarWithCTA'
+import { SidebarWithDropdown, SidebarWithDropdownCode } from './variant/SidebarWithDropdown'
 
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+
 
 ## Table of Contents
 
@@ -60,9 +51,3 @@ Integrate compelling calls to action within the sidebar to engage users effectiv
 <CodePreview github="Sidebar" code={SidebarWithCTACode}>
   <SidebarWithCTA />
 </CodePreview>
-
-## Theme Customization
-
-For further insights into customizing component appearances, delve into the Theme documentation. Effortlessly tailor the visual style of components to align with your application's aesthetic.
-
-<CssThemePreview code={useTheme().theme.sidebar} />

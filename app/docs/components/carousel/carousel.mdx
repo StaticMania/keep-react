@@ -1,28 +1,18 @@
-import { DefaultCarousel, DefaultCarouselCode } from "./variant/DefaultCarousel"
-import { StaticCarousel, StaticCarouselCode } from "./variant/StaticCarousel"
+import { DefaultCarousel, DefaultCarouselCode } from './variant/DefaultCarousel'
+import { StaticCarousel, StaticCarouselCode } from './variant/StaticCarousel'
 import {
   CarouselWithCustomControlIcon,
   CarouselWithCustomControlIconCode,
-} from "./variant/CarouselWithCustomControlIcon"
-import {
-  CarouselWithTextControl,
-  CarouselWithTextControlCode,
-} from "./variant/CarouselWithTextControl"
-import {
-  CarouselWithIndicator,
-  CarouselWithIndicatorCode,
-} from "./variant/CarouselWithIndicator"
-import {
-  MultipleCarousel,
-  MultipleCarouselCode,
-} from "./variant/MultipleCarousel"
+} from './variant/CarouselWithCustomControlIcon'
+import { CarousellWithTextControll, CarousellWithTextControllCode } from './variant/CarousellWithTextControll'
+import { CarouselWithIndicator, CarouselWithIndicatorCode } from './variant/CarouselWithIndicator'
+import { MultipleCarousel, MultipleCarouselCode } from './variant/MultipleCarousel'
 
-import { carouselDataApi } from "./carouselApi"
+import { carouselDataApi } from './carouselApi'
 
-import CodePreview from "~/components/CodePreview"
-import CssThemePreview from "~/components/CssThemePreview"
-import ComponentApi from "~/components/ComponentApi"
-import { useTheme } from "~/src/Keep/ThemeContex"
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
 
 ## Table of Contents
 
@@ -81,12 +71,6 @@ A Multiple Carousel is a user interface component that allows you to display mul
 Explore the available props for the carousel component
 
 <ComponentApi data={carouselDataApi} />
-
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.carousel} />
 
 ## Reference
 

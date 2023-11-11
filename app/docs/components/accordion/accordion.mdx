@@ -1,32 +1,13 @@
-import {
-  DefaultAccordion,
-  DefaultAccordionCode,
-} from "./variant/DefaultAccordion";
-import {
-  AccordionCollapseAll,
-  AccordionCollapseAllCode,
-} from "./variant/AccordionCollapseAll";
-import {
-  AccordionWithLeftSideIcon,
-  AccordionWithLeftSideIconCode,
-} from "./variant/AccordionWithLeftSideIcon";
-import {
-  AccordionAlwaysOpen,
-  AccordionAlwaysOpenCode,
-} from "./variant/AccordionAlwaysOpen";
-import {
-  DisabledAccordionCode,
-  DisabledAccordion,
-} from "./variant/DisabledAccordion";
-import {
-  AccordionWithCustomIcon,
-  AccordionWithCustomIconCode,
-} from "./variant/AccordionWithCustomIcon";
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
-import { accordionApiData } from "./accordionApi";
+import { DefaultAccordion, DefaultAccordionCode } from './variant/DefaultAccordion'
+import { AccordionCollapseAll, AccordionCollapseAllCode } from './variant/AccordionCollapseAll'
+import { AccordionWithLeftSideIcon, AccordionWithLeftSideIconCode } from './variant/AccordionWithLeftSideIcon'
+import { AccordionAlwaysOpen, AccordionAlwaysOpenCode } from './variant/AccordionAlwaysOpen'
+import { DisabledAccordionCode, DisabledAccordion } from './variant/DisabledAccordion'
+import { AccordionWithCustomIcon, AccordionWithCustomIconCode } from './variant/AccordionWithCustomIcon'
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
+import { accordionApiData } from './accordionApi'
 
 ## Table of Contents
 
@@ -36,7 +17,7 @@ The Accordion Component in the Keep React allows you to create collapsible secti
 
 The Default Accordion Component allows you to craft collapsible content sections. Users can reveal and hide the content by simply clicking on the disclosure button.
 
-<CodePreview github="" code={DefaultAccordionCode} github="Accordion">
+<CodePreview github="Accordion" code={DefaultAccordionCode} github="Accordion">
   <DefaultAccordion />
 </CodePreview>
 
@@ -86,8 +67,4 @@ Explore the available props for the Accordion component
 
 <ComponentApi data={accordionApiData} />
 
-## Theme
 
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.accordion} />

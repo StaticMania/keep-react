@@ -1,13 +1,13 @@
-"use client";
-import { useState } from "react";
-import { SquaresFour } from "phosphor-react";
-import { CheckboxGroup } from "~/src";
+'use client'
+import { useState } from 'react'
+import { SquaresFour } from 'phosphor-react'
+import { CheckboxGroup } from '~/src'
 
 const CheckboxGroupWithIcon = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('')
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value);
-  };
+    setSelected(e.target.value)
+  }
   return (
     <form className="space-y-4 p-5">
       <CheckboxGroup
@@ -55,8 +55,8 @@ const CheckboxGroupWithIcon = () => {
         onOptionChange={handleOptionChange}
       />
     </form>
-  );
-};
+  )
+}
 
 const CheckboxGroupWithIconCode = `
 "use client";
@@ -118,6 +118,6 @@ export const CheckboxGroupComponent = () => {
     </form>
   );
 }
-`;
+`
 
-export { CheckboxGroupWithIcon, CheckboxGroupWithIconCode };
+export { CheckboxGroupWithIcon, CheckboxGroupWithIconCode }

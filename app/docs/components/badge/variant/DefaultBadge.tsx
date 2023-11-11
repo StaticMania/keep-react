@@ -1,5 +1,5 @@
-"use client";
-import { Badge } from "~/src";
+'use client'
+import { Badge } from '~/src'
 
 const DefaultBadge = () => {
   return (
@@ -20,8 +20,8 @@ const DefaultBadge = () => {
         Warning Badges
       </Badge>
     </div>
-  );
-};
+  )
+}
 
 const DefaultBadgeCode = `
 "use client";
@@ -48,6 +48,6 @@ export const BadgeComponent = () => {
     </div>
   );
 };
-`;
+`
 
-export { DefaultBadge, DefaultBadgeCode };
+export { DefaultBadge, DefaultBadgeCode }

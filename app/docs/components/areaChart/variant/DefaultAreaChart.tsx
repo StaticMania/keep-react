@@ -1,61 +1,61 @@
-"use client";
-import { AreaChart } from "~/src";
+'use client'
+import { AreaChart } from '~/src'
 export const chartData = [
   {
-    name: "1",
+    name: '1',
     price: 0,
     sell: 0,
   },
   {
-    name: "2",
+    name: '2',
     price: 300,
     sell: 200,
   },
   {
-    name: "3",
+    name: '3',
     price: 170,
     sell: 120,
   },
   {
-    name: "4",
+    name: '4',
     price: 190,
     sell: 130,
   },
   {
-    name: "5",
+    name: '5',
     price: 220,
     sell: 120,
   },
   {
-    name: "6",
+    name: '6',
     price: 400,
     sell: 213,
   },
   {
-    name: "7",
+    name: '7',
     price: 420,
     sell: 325,
   },
   {
-    name: "8",
+    name: '8',
     price: 450,
     sell: 250,
   },
   {
-    name: "9",
+    name: '9',
     price: 400,
     sell: 300,
   },
   {
-    name: "10",
+    name: '10',
     price: 500,
     sell: 400,
   },
-];
+]
 
 const DefaultAreaChart = () => {
-  return <AreaChart chartData={chartData} dataKey="price" />;
-};
+  return <AreaChart chartData={chartData} dataKey="price" />
+}
 
 const DefaultAreaChartCode = `
 "use client";
@@ -116,6 +116,6 @@ const chartData = [
 export const AreaChartComponent = () => {
   return <AreaChart chartData={chartData} dataKey="price" />;
 };
-`;
+`
 
-export { DefaultAreaChart, DefaultAreaChartCode };
+export { DefaultAreaChart, DefaultAreaChartCode }

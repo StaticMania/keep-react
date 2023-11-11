@@ -1,19 +1,13 @@
-import { DefaultBadge, DefaultBadgeCode } from "./variant/DefaultBadge";
-import { SizesOfBadge, SizesOfBadgeCode } from "./variant/SizesOfBadge";
-import { VariantOfBadge, VariantOfBadgeCode } from "./variant/VariantOfBadge";
-import { IconWithBadge, IconWithBadgeCode } from "./variant/IconWithBadge";
-import { BadgeWithDot, BadgeWithDotCode } from "./variant/BadgeWithDot";
-import {
-  OnlyIconOfBadge,
-  OnlyIconOfBadgeCode,
-} from "./variant/BadgeWithOnlyIcon";
-
-import { badgeApiData } from "./badgeApi";
-
-import CodePreview from "~/components/CodePreview";
-import CssThemePreview from "~/components/CssThemePreview";
-import ComponentApi from "~/components/ComponentApi";
-import { useTheme } from "~/src/Keep/ThemeContex";
+import { DefaultBadge, DefaultBadgeCode } from './variant/DefaultBadge'
+import { SizesOfBadge, SizesOfBadgeCode } from './variant/SizesOfBadge'
+import { VariantOfBadge, VariantOfBadgeCode } from './variant/VariantOfBadge'
+import { IconWithBadge, IconWithBadgeCode } from './variant/IconWithBadge'
+import { BadgeWithDot, BadgeWithDotCode } from './variant/BadgeWithDot'
+import { OnlyIconOfBadge, OnlyIconOfBadgeCode } from './variant/BadgeWithOnlyIcon'
+import { badgeApiData } from './badgeApi'
+import CodePreview from '~/components/CodePreview'
+import CssThemePreview from '~/components/CssThemePreview'
+import ComponentApi from '~/components/ComponentApi'
 
 ## Table of Contents
 
@@ -73,8 +67,3 @@ Explore the available props for the Badge component
 
 <ComponentApi data={badgeApiData} />
 
-## Theme
-
-To learn more about how to customize the appearance of components, please see the Theme docs.
-
-<CssThemePreview code={useTheme().theme.badge} />

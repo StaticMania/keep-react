@@ -1,7 +1,7 @@
-"use client";
-import type { FC } from "react";
-import SearchBarDocsContent from "./SearchBar.mdx";
+'use client'
+import type { FC } from 'react'
+import SearchBarDocsContent from './SearchBar.mdx'
 
-const SearchBarDocs: FC = () => <SearchBarDocsContent />;
+const SearchBarDocs: FC = () => <SearchBarDocsContent />
 
-export default SearchBarDocs;
+export default SearchBarDocs

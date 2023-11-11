@@ -1,23 +1,21 @@
-"use client";
-import { useState } from "react";
-import { Book, books } from "./DefaultSearchBar";
-import { ArrowRight, MapPinLine } from "phosphor-react";
-import { SearchBar, Dropdown, Button } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Book, books } from './DefaultSearchBar'
+import { ArrowRight, MapPinLine } from 'phosphor-react'
+import { SearchBar, Dropdown, Button } from '~/src'
 
 const SearchBarWithColorVariant = () => {
-  const [data, setData] = useState<Book[]>([]);
+  const [data, setData] = useState<Book[]>([])
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
+    const searchTerm = e.target.value.toLowerCase()
+    const results = books.filter((book) => book.name.toLowerCase().includes(searchTerm))
 
-    if (searchTerm === "") {
-      setData([]);
+    if (searchTerm === '') {
+      setData([])
     } else {
-      setData(results);
+      setData(results)
     }
-  };
+  }
   return (
     <SearchBar
       placeholder="Search Anything"
@@ -39,8 +37,7 @@ const SearchBarWithColorVariant = () => {
       iconPosition="right"
       handleOnChange={handleOnChange}
       size="lg"
-      color="info"
-    >
+      color="info">
       <ul>
         {data.map((book) => (
           <Dropdown.Item key={book?.id}>
@@ -52,8 +49,8 @@ const SearchBarWithColorVariant = () => {
         ))}
       </ul>
     </SearchBar>
-  );
-};
+  )
+}
 
 const SearchBarWithColorVariantCode = `
 "use client";
@@ -126,6 +123,6 @@ const SearchBarComponent = () => {
     </SearchBar>
   );
 }
-`;
+`
 
-export { SearchBarWithColorVariant, SearchBarWithColorVariantCode };
+export { SearchBarWithColorVariant, SearchBarWithColorVariantCode }

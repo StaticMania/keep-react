@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import { Carousel } from "~/src";
+'use client'
+import Image from 'next/image'
+import { Carousel } from '~/src'
 
 const DefaultCarousel = () => {
   return (
@@ -32,8 +32,8 @@ const DefaultCarousel = () => {
         />
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
 const DefaultCarouselCode = `
 "use client";
@@ -72,5 +72,5 @@ export const CarouselComponent = () => {
     </div>
   );
 }
-`;
-export { DefaultCarousel, DefaultCarouselCode };
+`
+export { DefaultCarousel, DefaultCarouselCode }

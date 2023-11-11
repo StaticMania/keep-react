@@ -1,41 +1,38 @@
-import type { ComponentProps, FC, PropsWithChildren } from "react";
-import type { SidebarItemProps } from "./SidebarItem";
+import type { ComponentProps, FC, PropsWithChildren } from 'react'
+import type { SidebarItemProps } from './SidebarItem'
 
-import { twMerge } from "tailwind-merge";
-import { CaretDown } from "phosphor-react";
-import { useEffect, useId, useState } from "react";
-import { Tooltip } from "../Tooltip";
-import { useSidebarContext } from "./SidebarContext";
-import { SidebarItemContext } from "./SidebarItemContext";
-import { KeepBoolean } from "../../Keep/KeepTheme";
-import { useTheme } from "../../Keep/ThemeContex";
-import { DeepPartial } from "../../helpers/deep-partial";
-import { KeepSidebarTheme } from ".";
-import { mergeDeep } from "../../helpers/mergeDeep";
+import { twMerge } from 'tailwind-merge'
+import { CaretDown } from 'phosphor-react'
+import { useEffect, useId, useState } from 'react'
+import { Tooltip } from '../Tooltip'
+import { useSidebarContext } from './SidebarContext'
+import { SidebarItemContext } from './SidebarItemContext'
+import { KeepBoolean } from '../../Keep/KeepTheme'
+import { useTheme } from '../../Keep/ThemeContex'
+import { DeepPartial } from '../../helpers/deep-partial'
+import { KeepSidebarTheme } from '.'
+import { mergeDeep } from '../../helpers/mergeDeep'
 
 export interface KeepSidebarCollapseTheme {
-  button: string;
+  button: string
   icon: {
-    base: string;
-    open: KeepBoolean;
-  };
+    base: string
+    open: KeepBoolean
+  }
   label: {
-    base: string;
-    icon: string;
-  };
-  list: string;
+    base: string
+    icon: string
+  }
+  list: string
 }
 
 export interface SidebarCollapseProps
   extends PropsWithChildren,
-    Pick<
-      SidebarItemProps,
-      "active" | "as" | "href" | "icon" | "label" | "labelColor"
-    >,
-    ComponentProps<"button"> {
-  onClick?: ComponentProps<"button">["onClick"];
-  open?: boolean;
-  theme?: DeepPartial<KeepSidebarTheme>;
+    Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
+    ComponentProps<'button'> {
+  onClick?: ComponentProps<'button'>['onClick']
+  open?: boolean
+  theme?: DeepPartial<KeepSidebarTheme>
 }
 
 export const SidebarCollapse: FC<SidebarCollapseProps> = ({
@@ -47,14 +44,14 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
   theme: customTheme = {},
   ...props
 }) => {
-  const id = useId();
-  const { isCollapsed } = useSidebarContext();
-  const [isOpen, setOpen] = useState(open);
+  const id = useId()
+  const { isCollapsed } = useSidebarContext()
+  const [isOpen, setOpen] = useState(open)
 
-  const oldTheme = useTheme().theme.sidebar.collapse;
-  const theme = mergeDeep(oldTheme, customTheme);
+  const oldTheme = useTheme().theme.sidebar.collapse
+  const theme = mergeDeep(oldTheme, customTheme)
 
-  useEffect(() => setOpen(open), [open]);
+  useEffect(() => setOpen(open), [open])
 
   const Wrapper: FC<PropsWithChildren> = ({ children }) => (
     <li>
@@ -66,7 +63,7 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
         children
       )}
     </li>
-  );
+  )
 
   return (
     <Wrapper>
@@ -76,17 +73,12 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
         title={label}
         type="button"
         className={twMerge(theme.button, className)}
-        {...props}
-      >
+        {...props}>
         {Icon && (
           <div
             aria-hidden
             data-testid="keep-sidebar-collapse-icon"
-            className={twMerge(
-              theme.icon.base,
-              theme.icon.open[isOpen ? "on" : "off"]
-            )}
-          >
+            className={twMerge(theme.icon.base, theme.icon.open[isOpen ? 'on' : 'off'])}>
             {Icon}
           </div>
         )}
@@ -94,10 +86,7 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
           <span className="sr-only">{label}</span>
         ) : (
           <>
-            <span
-              data-testid="keep-sidebar-collapse-label"
-              className={theme.label.base}
-            >
+            <span data-testid="keep-sidebar-collapse-label" className={theme.label.base}>
               {label}
             </span>
             {/* <HiChevronDown aria-hidden className={theme.label.icon} /> */}
@@ -105,16 +94,10 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
           </>
         )}
       </button>
-      <ul
-        aria-labelledby={`keep-sidebar-collapse-${id}`}
-        hidden={!isOpen}
-        className={theme.list}
-      >
-        <SidebarItemContext.Provider value={{ isInsideCollapse: true }}>
-          {children}
-        </SidebarItemContext.Provider>
+      <ul aria-labelledby={`keep-sidebar-collapse-${id}`} hidden={!isOpen} className={theme.list}>
+        <SidebarItemContext.Provider value={{ isInsideCollapse: true }}>{children}</SidebarItemContext.Provider>
       </ul>
     </Wrapper>
-  );
-};
-SidebarCollapse.displayName = "Sidebar.Collapse";
+  )
+}
+SidebarCollapse.displayName = 'Sidebar.Collapse'

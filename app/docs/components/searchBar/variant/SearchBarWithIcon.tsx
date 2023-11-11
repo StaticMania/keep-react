@@ -1,23 +1,21 @@
-"use client";
-import { useState } from "react";
-import { Book, books } from "./DefaultSearchBar";
-import { SearchBar, Dropdown } from "~/src";
-import { ArrowRight, MagnifyingGlass } from "phosphor-react";
+'use client'
+import { useState } from 'react'
+import { Book, books } from './DefaultSearchBar'
+import { SearchBar, Dropdown } from '~/src'
+import { ArrowRight, MagnifyingGlass } from 'phosphor-react'
 
 const SearchBarWithIcon = () => {
-  const [data, setData] = useState<Book[]>([]);
+  const [data, setData] = useState<Book[]>([])
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const results = books.filter((book) =>
-      book.name.toLowerCase().includes(searchTerm)
-    );
+    const searchTerm = e.target.value.toLowerCase()
+    const results = books.filter((book) => book.name.toLowerCase().includes(searchTerm))
 
-    if (searchTerm === "") {
-      setData([]);
+    if (searchTerm === '') {
+      setData([])
     } else {
-      setData(results);
+      setData(results)
     }
-  };
+  }
   return (
     <SearchBar
       placeholder="Search Anything"
@@ -25,8 +23,7 @@ const SearchBarWithIcon = () => {
       addonPosition="left"
       icon={<ArrowRight size={20} color="#5E718D" />}
       iconPosition="right"
-      handleOnChange={handleOnChange}
-    >
+      handleOnChange={handleOnChange}>
       <ul>
         {data.map((book) => (
           <Dropdown.Item key={book?.id}>
@@ -38,8 +35,8 @@ const SearchBarWithIcon = () => {
         ))}
       </ul>
     </SearchBar>
-  );
-};
+  )
+}
 
 const SearchBarWithIconCode = `
 "use client";
@@ -97,6 +94,6 @@ export const SearchBarComponent = () => {
     </SearchBar>
   );
 }
-`;
+`
 
-export { SearchBarWithIcon, SearchBarWithIconCode };
+export { SearchBarWithIcon, SearchBarWithIconCode }

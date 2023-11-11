@@ -1,16 +1,16 @@
-"use client";
-import { useState } from "react";
-import { Cookie } from "phosphor-react";
-import { Notification, Button } from "~/src";
+'use client'
+import { useState } from 'react'
+import { Cookie } from 'phosphor-react'
+import { Notification, Button } from '~/src'
 
 const NotificationWithIcon = () => {
-  const [showNotification, setShowNotification] = useState(false);
+  const [showNotification, setShowNotification] = useState(false)
   const onDismiss = () => {
-    setShowNotification(!showNotification);
-  };
+    setShowNotification(!showNotification)
+  }
   const handleShowNotification = () => {
-    setShowNotification(!showNotification);
-  };
+    setShowNotification(!showNotification)
+  }
 
   return (
     <div className="px-2 py-3">
@@ -31,32 +31,23 @@ const NotificationWithIcon = () => {
           </Button>
         }
         additionalContent={
-          <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry.
+          <div className="mt-2.5 text-sm font-normal text-slate-500 md:text-base">
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info">
                 Accept
               </Button>
-              <Button
-                size="xs"
-                type="outlineGray"
-                color="info"
-                customClass="ml-3"
-              >
+              <Button size="xs" type="outlineGray" color="info" customClass="ml-3">
                 Review
               </Button>
             </div>
           </div>
-        }
-      >
-        <h3 className="text-base md:text-xl font-medium text-slate-700">
-          Can we store cookies?
-        </h3>
+        }>
+        <h3 className="text-base font-medium text-slate-700 md:text-xl">Can we store cookies?</h3>
       </Notification>
     </div>
-  );
-};
+  )
+}
 
 const NotificationWithIconCode = `
 "use client";
@@ -117,6 +108,6 @@ export const NotificationComponent = () => {
     </>
   );
 }
-`;
+`
 
-export { NotificationWithIcon, NotificationWithIconCode };
+export { NotificationWithIcon, NotificationWithIconCode }

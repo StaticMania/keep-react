@@ -1,6 +1,6 @@
-"use client";
-import { AreaChart } from "~/src";
-import { chartData } from "./DefaultAreaChart";
+'use client'
+import { AreaChart } from '~/src'
+import { chartData } from './DefaultAreaChart'
 
 const AreaChartWithGridGraphLine = () => {
   return (
@@ -13,8 +13,8 @@ const AreaChartWithGridGraphLine = () => {
       showYaxis={true}
       chartData={chartData}
     />
-  );
-};
+  )
+}
 
 const AreaChartWithGridGraphLineCode = `
 "use client";
@@ -85,6 +85,6 @@ export const AreaChartComponent = () => {
     />
   );
 };
-`;
+`
 
-export { AreaChartWithGridGraphLine, AreaChartWithGridGraphLineCode };
+export { AreaChartWithGridGraphLine, AreaChartWithGridGraphLineCode }
