@@ -39,6 +39,8 @@ const twNpmInstall = 'npm i autoprefixer postcss tailwindcss\nnpx tailwindcss in
 
 const keepNpmInstall = 'npm i keep-react'
 const keepYarnInstall = 'yarn add keep-react'
+const keepPnpmInstall = 'pnpm add keep-react'
+
 
 const twConfigForNextJs = `
 module.exports = {
@@ -76,5 +78,5 @@ export {
   twNpmInstall,
   keepNpmInstall,
   twConfigForNextJs,
-  keepYarnInstall,viteReact,nextJsInstall,NextJsQnA
+  keepYarnInstall,viteReact,nextJsInstall,NextJsQnA,keepPnpmInstall
 }
