@@ -4,7 +4,7 @@ import { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, 
 import type { TabItemProps } from './TabItem'
 import { TabItem } from './TabItem'
 import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepTabTheme {
   base: string

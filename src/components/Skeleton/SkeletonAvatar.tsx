@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export const SkeletonAvatar: FC = () => {
   const theme = useTheme().theme.skeleton

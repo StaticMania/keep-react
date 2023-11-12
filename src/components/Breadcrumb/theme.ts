@@ -1,6 +1,6 @@
 import { keepBreadCrumbTheme } from '.'
 
-export const breadcrumbtheme: keepBreadCrumbTheme = {
+export const breadcrumbTheme: keepBreadCrumbTheme = {
   breadCrumbWithBorder: 'border-slate-100 p-[9px] border-t border-b',
   item: {
     base: 'group flex items-center',

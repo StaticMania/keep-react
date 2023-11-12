@@ -3,7 +3,7 @@ import React, { ComponentProps, forwardRef, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { HelperText } from './HelperText'
 import type { KeepBoolean, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepTextInputTheme {
   base: string

@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import { ComponentProps, FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepCheckboxTheme {
   base: string

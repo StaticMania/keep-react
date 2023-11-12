@@ -6,7 +6,7 @@ import { UploadFailed } from './UploadFailed'
 import { UploadPending } from './UploadPending'
 import { UploadSuccess } from './UploadSuccess'
 import { useUploadContext } from './UploadContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepInputFieldTheme {
   base: string

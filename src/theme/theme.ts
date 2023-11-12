@@ -2,7 +2,7 @@ import { accordionTheme } from '../components/Accordion/theme'
 import { alertTheme } from '../components/Alert/theme'
 import { avatarTheme } from '../components/Avatar/theme'
 import { badgeTheme } from '../components/Badge/theme'
-import { breadcrumbtheme } from '../components/Breadcrumb/theme'
+import { breadcrumbTheme } from '../components/Breadcrumb/theme'
 import { buttonGroupTheme, buttonTheme } from '../components/Button/theme'
 import { cardTheme } from '../components/Card/theme'
 import { carouselTheme } from '../components/Carousel/theme'
@@ -22,7 +22,7 @@ import { sidebarTheme } from '../components/Sidebar/theme'
 import { skeletonTheme } from '../components/Skeleton/theme'
 import { spinnerTheme } from '../components/Spinner/theme'
 import { statisticsTheme } from '../components/Statistic/theme'
-import { steptheme } from '../components/Steps/theme'
+import { stepTheme } from '../components/Steps/theme'
 import { switchTheme } from '../components/Switch/theme'
 import { tableTheme } from '../components/Table/theme'
 import { tabTheme } from '../components/Tabs/theme'
@@ -39,7 +39,7 @@ export const theme = {
   button: buttonTheme,
   buttonGroup: buttonGroupTheme,
   badge: badgeTheme,
-  breadcrumb: breadcrumbtheme,
+  breadcrumb: breadcrumbTheme,
   card: cardTheme,
   carousel: carouselTheme,
   progress: progressTheme,
@@ -65,6 +65,6 @@ export const theme = {
   tree: treeTheme,
   navigation: navigationTheme,
   pagination: paginationTheme,
-  step: steptheme,
+  step: stepTheme,
   timeline: timelineTheme,
 }

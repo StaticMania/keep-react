@@ -5,7 +5,7 @@ import ScrollContainer from 'react-indiana-drag-scroll'
 import { twMerge } from 'tailwind-merge'
 import { windowExists } from '../../helpers/window-exists'
 import { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface KeepCarouselTheme {
   base: string

@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { KeepBoolean, KeepHeadingLevel } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { useAccordionContext } from './AccordionPanelContext'
 
 export interface keepAccordionTitleTheme {

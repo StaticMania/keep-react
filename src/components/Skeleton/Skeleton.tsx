@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import { FC, ReactNode } from 'react'
 import { SkeletonAvatar } from './SkeletonAvatar'
 import { SkeletonLine } from './SkeletonLine'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepSkeletonTheme {
   base: string

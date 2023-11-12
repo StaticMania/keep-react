@@ -49,7 +49,7 @@ export const TreeComponent = () => {
     </div>
   )
 }
-export const SliderComponet = () => {
+export const SliderComponent = () => {
   return (
     <div className="w-full scale-75">
       <Slider

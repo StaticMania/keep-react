@@ -7,7 +7,7 @@ import { CardLink } from './CardLink'
 import { CardList } from './CardList'
 import { CardTitle } from './CardTitle'
 import { KeepBoolean, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface KeepCardTheme {
   base: string

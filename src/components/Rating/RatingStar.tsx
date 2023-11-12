@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import { Star, StarHalf } from 'phosphor-react'
 import type { FC, ReactNode } from 'react'
 import { useRatingContext } from './RatingContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface RatingStarProps {
   filledType?: 'regular' | 'fill' | 'bold' | 'duotone' | 'thin' | 'light'

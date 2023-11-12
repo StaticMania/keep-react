@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { useBreadcrumbContext } from './BreadcrumbContext'
 import type { ComponentProps, PropsWithChildren, ReactNode } from 'react'
 
