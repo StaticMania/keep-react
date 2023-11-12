@@ -4,7 +4,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useId } from 'react'
 import { useSidebarContext } from './SidebarContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { KeepBoolean } from '../../Keep/KeepTheme'
 
 export interface KeepSidebarLogoTheme {

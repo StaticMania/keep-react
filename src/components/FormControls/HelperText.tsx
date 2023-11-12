@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import type { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepHelperTextTheme {
   base: string

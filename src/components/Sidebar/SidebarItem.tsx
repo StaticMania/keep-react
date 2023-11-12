@@ -7,7 +7,7 @@ import { Tooltip } from '../Tooltip'
 import { useSidebarContext } from './SidebarContext'
 import { useSidebarItemContext } from './SidebarItemContext'
 import { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { Badge } from '../Badge'
 

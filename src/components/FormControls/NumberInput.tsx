@@ -4,7 +4,7 @@ import type { ComponentProps, ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import type { KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepNumberInputTheme {
   base: string

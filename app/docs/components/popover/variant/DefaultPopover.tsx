@@ -7,7 +7,7 @@ const DefaultPopover = () => {
       <Popover
         title="Popover title here"
         description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
-        additinalContent={
+        additionalContent={
           <div className="mt-3 flex items-center gap-3">
             <Button type="outlinePrimary" size="xs">
               Checkout
@@ -30,7 +30,7 @@ export const PopoverComponent = () => {
     <Popover
       title="Popover title here"
       description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
-      additinalContent={
+      additionalContent={
         <div className="flex items-center gap-3 mt-3">
           <Button type="outlinePrimary" size="xs">
             Checkout

@@ -2,7 +2,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { keepTableCellTheme } from './TableCell'
 import { DeepPartial } from '../../helpers/deep-partial'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepTableBodyTheme {
   base: string

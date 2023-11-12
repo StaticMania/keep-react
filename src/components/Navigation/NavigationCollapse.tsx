@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useNavigationContext } from './NavigationContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { CaretLeft } from 'phosphor-react'
 
 export interface CollapseProps {

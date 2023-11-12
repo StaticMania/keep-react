@@ -12,7 +12,7 @@
 import { twMerge } from 'tailwind-merge'
 import type { PropsWithChildren } from 'react'
 import type { AvatarSizes } from './Avatar'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export type AvatarAddProps = PropsWithChildren<{
   /**

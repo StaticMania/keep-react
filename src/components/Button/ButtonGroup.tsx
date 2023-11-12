@@ -1,7 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
 import { Children, cloneElement, useMemo } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import type { ButtonProps } from './Button'
 
 export interface keepButtonGroupTheme {

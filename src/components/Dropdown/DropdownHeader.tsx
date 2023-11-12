@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { DropdownDivider } from './DropdownDivider'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepDropdownHeaderTheme {
   header: string

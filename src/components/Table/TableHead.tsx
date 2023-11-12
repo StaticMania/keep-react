@@ -2,7 +2,7 @@ import { type ComponentProps, type FC, type PropsWithChildren } from 'react'
 import type { keepTableHeadCellTheme } from './TableHeadCell'
 import { twMerge } from 'tailwind-merge'
 import { useTableContext } from './TableContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { CheckBox } from '../CheckBox'
 

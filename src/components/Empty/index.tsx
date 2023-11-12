@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { Button } from '../Button/Button'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepEmptyTheme {
   base: string

@@ -41,7 +41,7 @@ const CardWithIcon = () => {
           <Card.Container className="hidden items-start md:flex">
             <Popover
               customClass="!w-[20rem]"
-              additinalContent={
+              additionalContent={
                 <h2 className="text-lg font-medium leading-6 tracking-[-0.3px] text-slate-500">Keep Design System</h2>
               }>
               <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
@@ -122,7 +122,7 @@ export const CardComponent = () => {
           <Card.Container className="hidden items-start md:flex">
             <Popover
               customClass="!w-[20rem]"
-              additinalContent={
+              additionalContent={
                 <h2 className="text-lg leading-6 tracking-[-0.3px] font-medium text-slate-500">
                   Keep Design System
                 </h2>

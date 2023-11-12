@@ -1,4 +1,4 @@
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { twMerge } from 'tailwind-merge'
 import { Check, FilePdf, Trash } from 'phosphor-react'
 import { FC } from 'react'

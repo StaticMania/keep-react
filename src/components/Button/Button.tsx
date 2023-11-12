@@ -2,7 +2,7 @@ import { ComponentProps, forwardRef, ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepBoolean, KeepButtonType, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import type { PositionInButtonGroup } from './ButtonGroup'
 import { ButtonGroup } from './ButtonGroup'
 

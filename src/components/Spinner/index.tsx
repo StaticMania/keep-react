@@ -1,7 +1,7 @@
 import type { ComponentProps, FC } from 'react'
 
 import { twMerge } from 'tailwind-merge'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 
 export interface KeepSpinnerTheme {

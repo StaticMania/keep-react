@@ -83,7 +83,7 @@ export const CardComponent = () => {
         <Card.Container className="flex items-center justify-between">
           <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
             <ArrowsOutSimple size={20} color="#5E718D" />
-            <span>1,032 sqft</span>
+            <span>1,032 Sqrt</span>
           </Card.Title>
           <Card.Title className="flex items-center gap-1 text-sm font-medium text-slate-500">
             <Users size={20} color="#5E718D" />

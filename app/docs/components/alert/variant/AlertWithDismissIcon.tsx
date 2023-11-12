@@ -6,12 +6,12 @@ import { WarningCircle } from 'phosphor-react'
 
 const AlertWithDismissIcon = () => {
   const [showAlert, setShowAlert] = useState(false)
-  const onDissMiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert)
   }
   return (
     <Alert
-      onDismiss={onDissMiss}
+      onDismiss={onDismiss}
       dismiss={showAlert}
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">
@@ -36,12 +36,12 @@ import { WarningCircle } from "phosphor-react";
 
 export const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
-  const onDissMiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert);
   };
   return (
     <Alert
-      onDismiss={onDissMiss}
+      onDismiss={onDismiss}
       dismiss={showAlert}
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">

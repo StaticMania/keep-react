@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { useState } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { paginationGenerator } from '../../helpers/rangeWithDots'
 
 export interface keepPaginationTheme {

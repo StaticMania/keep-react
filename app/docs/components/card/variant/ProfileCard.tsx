@@ -33,7 +33,7 @@ const ProfileCard = () => {
           <Card.Title className="text-sm font-semibold text-slate-800 md:text-base">Khairul Islam Ridoy</Card.Title>
           <Card.Title className="text-xs font-normal text-slate-400 md:font-medium">UI/UX Designer</Card.Title>
         </Card.Container>
-        <Card.Container className="circleed mx-auto flex max-w-[220px] items-center justify-center divide-x divide-slate-200 rounded-md border border-slate-200 p-1 md:p-2">
+        <Card.Container className="circled mx-auto flex max-w-[220px] items-center justify-center divide-x divide-slate-200 rounded-md border border-slate-200 p-1 md:p-2">
           <Card.Link
             className="flex items-center justify-center px-3 py-1"
             icon={<LinkedinLogo size={24} color="#0072b1" weight="fill" />}
@@ -103,7 +103,7 @@ export const CardComponent = () => {
             UI/UX Designer
           </Card.Title>
         </Card.Container>
-        <Card.Container className="mx-auto flex max-w-[220px] rounded-md items-center justify-center divide-x divide-slate-200 circleed border border-slate-200 p-1 md:p-2">
+        <Card.Container className="mx-auto flex max-w-[220px] rounded-md items-center justify-center divide-x divide-slate-200 circled border border-slate-200 p-1 md:p-2">
           <Card.Link
             className="flex items-center justify-center py-1 px-3"
             icon={<LinkedinLogo size={24} color="#0072b1" weight="fill" />}

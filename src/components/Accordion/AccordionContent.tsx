@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { useAccordionContext } from './AccordionPanelContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { Collapse } from 'react-collapse'

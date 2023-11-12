@@ -12,7 +12,7 @@
 import { twMerge } from 'tailwind-merge'
 import type { PropsWithChildren } from 'react'
 import type { AvatarSizes } from './Avatar'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 /**
  * @param total - The total number of users represented by the counter.

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { ArrowUp } from 'phosphor-react'
 import { twMerge } from 'tailwind-merge'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepRateTheme {
   base?: string

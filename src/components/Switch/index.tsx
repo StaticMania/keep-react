@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { Switch } from '@headlessui/react'
 import { KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { excludeClassName } from '../../helpers/exclude'
 
 export interface keepToggleTheme {

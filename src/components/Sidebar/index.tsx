@@ -14,7 +14,7 @@ import { SidebarItemGroup } from './SidebarItemGroup'
 import { SidebarItems } from './SidebarItems'
 import { SidebarLogo } from './SidebarLogo'
 import { KeepBoolean } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { mergeDeep } from '../../helpers/mergeDeep'
 
 export interface KeepSidebarTheme {

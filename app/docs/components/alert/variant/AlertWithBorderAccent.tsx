@@ -6,7 +6,7 @@ import { Info } from 'phosphor-react'
 
 const AlertWithBorderAccent = () => {
   const [showAlert, setShowAlert] = useState(false)
-  const onDissMiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert)
   }
   return (
@@ -15,7 +15,7 @@ const AlertWithBorderAccent = () => {
       withBorder={true}
       withBorderAccent
       dismiss={showAlert}
-      onDismiss={onDissMiss}
+      onDismiss={onDismiss}
       withBorderAccentPosition="left"
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">
@@ -40,7 +40,7 @@ import { Info } from "phosphor-react";
 
 export const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
-  const onDissMiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert);
   };
   return (
@@ -49,7 +49,7 @@ export const AlertComponent = () => {
       withBorder={true}
       withBorderAccent
       dismiss={showAlert}
-      onDismiss={onDissMiss}
+      onDismiss={onDismiss}
       withBorderAccentPosition="left"
       additionalContent={
         <div className="mt-1 text-sm text-slate-500">
