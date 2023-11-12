@@ -13,6 +13,20 @@ export const breadcrumbApiData = [
     propsDescription: 'Add a border around the breadcrumb container.',
     default: 'false',
   },
+  {
+    id: 3,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the breadcrumb.',
+    default: 'None',
+  },
+  {
+    id: 4,
+    propsName: 'listStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the breadcrumb list wrapper.',
+    default: 'None',
+  },
 ]
 
 export const breadcrumbItemApiData = [
@@ -43,5 +57,12 @@ export const breadcrumbItemApiData = [
     propsType: 'boolean',
     propsDescription: 'Disables the breadcrumb, making it uncheckable.',
     default: 'false',
+  },
+  {
+    id: 5,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the breadcrumb item wrapper.',
+    default: 'None',
   },
 ]

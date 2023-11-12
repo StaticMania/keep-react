@@ -1,8 +1,8 @@
-import { twMerge } from 'tailwind-merge'
 import { BreadcrumbItem } from './BreadcrumbItem'
 import { useTheme } from '../../Keep/ThemeContext'
 import { BreadcrumbContext } from './BreadcrumbContext'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 
 export interface keepBreadCrumbTheme {
   breadCrumbWithBorder: string
@@ -28,20 +28,26 @@ export interface keepBreadCrumbTheme {
 export interface BreadcrumbProps extends PropsWithChildren<ComponentProps<'nav'>> {
   separatorIcon?: ReactNode
   breadCrumbWithBorder?: boolean
+  className?: string
+  listStyle?: string
 }
 
 const BreadcrumbComponent: FC<BreadcrumbProps> = ({
   children,
   separatorIcon,
   breadCrumbWithBorder = false,
+  className,
+  listStyle,
   ...props
 }) => {
   const theme = useTheme().theme.breadcrumb
-
   return (
     <BreadcrumbContext.Provider value={{ separatorIcon }}>
-      <nav aria-label="Breadcrumb" className={twMerge(breadCrumbWithBorder && theme.breadCrumbWithBorder)} {...props}>
-        <ol className={theme.list}>{children}</ol>
+      <nav
+        aria-label="Breadcrumb"
+        className={cn(breadCrumbWithBorder && theme.breadCrumbWithBorder, className)}
+        {...props}>
+        <ol className={cn(theme.list, listStyle)}>{children}</ol>
       </nav>
     </BreadcrumbContext.Provider>
   )
