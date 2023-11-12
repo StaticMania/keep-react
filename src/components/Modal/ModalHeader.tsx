@@ -3,7 +3,7 @@ import { X } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { useModalContext } from './ModalContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export type ModalHeaderProps = PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>>
 

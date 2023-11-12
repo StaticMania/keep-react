@@ -1,6 +1,6 @@
 import { KeepStepTheme } from './Steps'
 
-export const steptheme: KeepStepTheme = {
+export const stepTheme: KeepStepTheme = {
   base: 'flex items-center relative',
   main: {
     completed: {

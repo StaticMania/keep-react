@@ -6,13 +6,13 @@ import { Info } from 'phosphor-react'
 
 const AlertWithRounded = () => {
   const [showAlert, setShowAlert] = useState(false)
-  const onDissMiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert)
   }
   return (
     <Alert
       dismiss={showAlert}
-      onDismiss={onDissMiss}
+      onDismiss={onDismiss}
       rounded={true}
       withBorder={true}
       additionalContent={
@@ -38,13 +38,13 @@ import { Info } from "phosphor-react";
 
 export const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
-  const onDissMiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert);
   };
   return (
     <Alert
       dismiss={showAlert}
-      onDismiss={onDissMiss}
+      onDismiss={onDismiss}
       rounded={true}
       withBorder={true}
       additionalContent={

@@ -12,7 +12,7 @@ const Loading = () => {
         width="400"
       />
       <div className="mt-8 flex items-center gap-3">
-        <div className="h-6 w-6 animate-spin rounded border-2 border-dashed border-slate-900"></div>
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-dashed border-slate-900"></div>
         <h1 className="animate-pulse text-xl font-normal text-slate-900">Please Wait</h1>
       </div>
     </div>

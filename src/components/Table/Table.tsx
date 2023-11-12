@@ -13,7 +13,7 @@ import { TableHead } from './TableHead'
 import { TableHeadCell } from './TableHeadCell'
 import { TableRow } from './TableRow'
 import { DeepPartial } from '../../helpers/deep-partial'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepTableTheme {
   root: keepTableRootTheme

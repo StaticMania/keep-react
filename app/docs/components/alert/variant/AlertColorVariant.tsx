@@ -6,7 +6,7 @@ import { CheckCircle, Info, WarningCircle, XCircle } from 'phosphor-react'
 
 const AlertWithColorVariant = () => {
   const [showAlert, setShowAlert] = useState(false)
-  const onDissmiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert)
   }
   return (
@@ -16,7 +16,7 @@ const AlertWithColorVariant = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
@@ -34,7 +34,7 @@ const AlertWithColorVariant = () => {
         withBorder={true}
         withBorderAccent
         withBorderAccentPosition="left"
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
@@ -50,7 +50,7 @@ const AlertWithColorVariant = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
@@ -68,7 +68,7 @@ const AlertWithColorVariant = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
@@ -86,7 +86,7 @@ const AlertWithColorVariant = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
@@ -112,7 +112,7 @@ import { CheckCircle, Info, WarningCircle, XCircle } from "phosphor-react";
 
 export const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
-  const onDissmiss = () => {
+  const onDismiss = () => {
     setShowAlert(!showAlert);
   };
   return (
@@ -122,7 +122,7 @@ export const AlertComponent = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
@@ -142,7 +142,7 @@ export const AlertComponent = () => {
         withBorder={true}
         withBorderAccent
         withBorderAccentPosition="left"
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
@@ -160,7 +160,7 @@ export const AlertComponent = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
@@ -179,7 +179,7 @@ export const AlertComponent = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">
@@ -198,7 +198,7 @@ export const AlertComponent = () => {
         rounded={true}
         withBorder={true}
         withBorderAccent
-        onDismiss={onDissmiss}
+        onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
           <div className="mt-1 text-sm text-slate-500">

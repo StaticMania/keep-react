@@ -83,7 +83,7 @@ const TransactionsTable = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="rounded px-2 py-1 hover:bg-slate-100">
                       <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
@@ -146,7 +146,7 @@ const TransactionsTable = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="rounded px-2 py-1 hover:bg-slate-100">
                       <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
@@ -209,7 +209,7 @@ const TransactionsTable = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="rounded px-2 py-1 hover:bg-slate-100">
                       <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
@@ -272,7 +272,7 @@ const TransactionsTable = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="rounded px-2 py-1 hover:bg-slate-100">
                       <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
@@ -335,7 +335,7 @@ const TransactionsTable = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="rounded px-2 py-1 hover:bg-slate-100">
                       <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
@@ -486,7 +486,7 @@ export const TableComponent = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-slate-100 py-1 px-2 rounded">
                       <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
@@ -563,7 +563,7 @@ export const TableComponent = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-slate-100 py-1 px-2 rounded">
                       <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
@@ -640,7 +640,7 @@ export const TableComponent = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-slate-100 py-1 px-2 rounded">
                       <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
@@ -717,7 +717,7 @@ export const TableComponent = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-slate-100 py-1 px-2 rounded">
                       <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
@@ -794,7 +794,7 @@ export const TableComponent = () => {
                 showDismissIcon={false}
                 showArrow={false}
                 customClass="w-48 p-2 border border-slate-100"
-                additinalContent={
+                additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-slate-100 py-1 px-2 rounded">
                       <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">

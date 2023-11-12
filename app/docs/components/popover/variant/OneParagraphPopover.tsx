@@ -5,7 +5,7 @@ const OneParagraphPopover = () => {
   return (
     <div className="px-2 py-3">
       <Popover
-        additinalContent={
+        additionalContent={
           <>
             <h2 className="text-base font-medium text-slate-500">
               There are many variations of passages of Lorem Ipsum available.
@@ -28,7 +28,7 @@ import { Button, Popover } from "keep-react";
 export const PopoverComponent = () => {
   return (
     <Popover
-      additinalContent={
+      additionalContent={
         <>
           <h2 className="text-base font-medium text-slate-500">
             There are many variations of passages of Lorem Ipsum available.

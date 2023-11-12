@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import { FC } from 'react'
 import { useStatisticContext } from './StatisticContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { Dropdown } from '../Dropdown'
 
 export interface keepTitleTheme {

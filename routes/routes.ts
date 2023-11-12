@@ -5,7 +5,7 @@ import {
   DatePickerComponent,
   RadioSelectComponent,
   ModalComponent,
-  SliderComponet,
+  SliderComponent,
   TooltipComponent,
   PaginationComponent,
 } from '~/components/ComponentsList'
@@ -444,7 +444,7 @@ export const ComponentList: {
   {
     id: 8,
     href: '/docs/components/slider',
-    component: SliderComponet,
+    component: SliderComponent,
   },
   {
     id: 9,

@@ -6,7 +6,7 @@ import { useUploadContext } from './UploadContext'
 import { UploadFailed } from './UploadFailed'
 import { UploadPending } from './UploadPending'
 import { UploadSuccess } from './UploadSuccess'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface UploadHorizontalTheme {
   base: string

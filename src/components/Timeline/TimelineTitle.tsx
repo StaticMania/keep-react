@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import { KeepHeadingLevel } from '../../Keep/KeepTheme'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export type TimelineTitleProps = PropsWithChildren<
   ComponentProps<KeepHeadingLevel> & {

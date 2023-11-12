@@ -17,7 +17,7 @@ const StatisticWithIcon = () => {
             <Statistic.Amount>{7381237}</Statistic.Amount>
             <Statistic.Rate>3.5</Statistic.Rate>
           </div>
-          <Statistic.Title>Memebers</Statistic.Title>
+          <Statistic.Title>Members</Statistic.Title>
         </div>
       </div>
     </Statistic>
@@ -45,7 +45,7 @@ export const StatisticComponent = () => {
             <Statistic.Amount>{7381237}</Statistic.Amount>
             <Statistic.Rate>3.5</Statistic.Rate>
           </div>
-          <Statistic.Title>Memebers</Statistic.Title>
+          <Statistic.Title>Members</Statistic.Title>
         </div>
       </div>
     </Statistic>

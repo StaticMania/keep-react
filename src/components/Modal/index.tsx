@@ -9,7 +9,7 @@ import { ModalContext } from './ModalContext'
 import { ModalFooter } from './ModalFooter'
 import { ModalHeader } from './ModalHeader'
 import { KeepBoolean, KeepPositions, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepModalTheme {
   base: string

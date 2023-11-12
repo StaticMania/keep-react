@@ -1,5 +1,5 @@
 import { KeepBoolean, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 

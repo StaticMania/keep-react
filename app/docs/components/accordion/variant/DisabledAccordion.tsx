@@ -9,7 +9,7 @@ const DisabledAccordion = () => {
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
             keep Design is an open-source library of interactive components built on top of Tailwind CSS including
-            buttons, dropdowns, modals, navbars, and more.
+            buttons, dropdowns, modals, navbar, and more.
           </p>
           <p className="text-gray-500 dark:text-gray-400">
             Check out this guide to learn how to
@@ -39,7 +39,7 @@ export const AccordionComponent = () => {
           <p className="mb-2 text-gray-500 dark:text-gray-400">
             keep Design is an open-source library of interactive components
             built on top of Tailwind CSS including buttons, dropdowns, modals,
-            navbars, and more.
+            navbar, and more.
           </p>
         </Accordion.Content>
       </Accordion.Panel>
