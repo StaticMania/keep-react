@@ -5,7 +5,7 @@ import { useTheme } from '../../Keep/ThemeContex'
 
 export type AvatarGroupdCounterProps = PropsWithChildren<{
   total?: number
-  href: string
+  href?: string
   size?: keyof AvatarSizes
 }>
 
