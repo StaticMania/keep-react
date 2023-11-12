@@ -1,5 +1,5 @@
-import CopyCode from "~/components/CopyCode";
-import Link from "next/link";
+import CopyCode from '~/components/CopyCode'
+import Link from 'next/link'
 import {
   twConfig,
   twCss,
@@ -9,8 +9,11 @@ import {
   keepNpmInstall,
   keepPnpmInstall,
   twConfigForNextJs,
-  keepYarnInstall,viteReact,nextJsInstall,NextJsQnA
-} from "./Code/Code.tsx";
+  keepYarnInstall,
+  viteReact,
+  nextJsInstall,
+  NextJsQnA,
+} from './Code/Code.tsx'
 
 ## Table of Contents
 
@@ -24,8 +27,6 @@ Setting Up Keep React in Vite React Application
 
 Replace `my-project` with your preferred project name.
 
-
-
 `Step 2:` Install Tailwind CSS
 
 <CopyCode code={twNpmInstall} />
@@ -33,6 +34,7 @@ Replace `my-project` with your preferred project name.
 `Step 3:` Install Keep React library
 
 Install with Npm
+
 <CopyCode code={keepNpmInstall} />
 
 Install with Yarn
@@ -67,15 +69,21 @@ You can easily integrate `keep-react` library into your Next.js application.
 
 Ensure that you select `tailwindcss` as a dependency for your application during the setup.
 
-<NextJsQnA/>
+<NextJsQnA />
 
 `Step 2:` Install Keep React
 
+Install with Npm
+
 <CopyCode code={keepNpmInstall} />
 
-Or
+Install with Yarn
 
 <CopyCode code={keepYarnInstall} />
+
+Install with Pnpm
+
+<CopyCode code={keepPnpmInstall} />
 
 `Step 3:` Update `tailwind.config.js` for Next.js
 
