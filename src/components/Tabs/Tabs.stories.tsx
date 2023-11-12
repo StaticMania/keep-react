@@ -16,7 +16,7 @@ const meta: Meta<typeof Tabs> = {
     },
     style: {
       control: 'select',
-      description: 'Avaiable tab style',
+      description: 'Available tab style',
       options: ['default', 'underline', 'pills', 'fullWidth'],
       table: {
         type: { summary: 'default | underline | pills | fullWidth' },
@@ -25,7 +25,7 @@ const meta: Meta<typeof Tabs> = {
     },
     iconPosition: {
       control: 'select',
-      description: 'Avaiable tab icon position',
+      description: 'Available tab icon position',
       options: ['right', 'left'],
       table: {
         type: { summary: 'right | left' },
@@ -34,7 +34,7 @@ const meta: Meta<typeof Tabs> = {
     },
     borderPosition: {
       control: 'select',
-      description: 'Avaiable tab border position',
+      description: 'Available tab border position',
       options: ['top', 'bottom'],
       table: {
         type: { summary: 'top | bottom' },
