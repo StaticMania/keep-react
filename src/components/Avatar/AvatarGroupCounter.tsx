@@ -22,7 +22,7 @@ import { useTheme } from '../../Keep/ThemeContext'
 
 export type AvatarGroupdCounterProps = PropsWithChildren<{
   total?: number
-  href: string
+  href?: string
   size?: keyof AvatarSizes
 }>
 
