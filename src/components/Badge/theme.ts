@@ -1,7 +1,7 @@
 import { keepBadgeTheme } from '.'
 
 export const badgeTheme: keepBadgeTheme = {
-  base: 'flex h-fit items-center justify-center gap-1 font-medium rounded-md cursor-pointer',
+  base: 'flex h-fit w-fit items-center justify-center gap-1 font-medium rounded-md cursor-pointer',
   badgeType: {
     default: {
       colorType: {

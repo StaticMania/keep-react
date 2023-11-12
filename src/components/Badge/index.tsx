@@ -1,8 +1,8 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepBadgeTheme {
   base: string
@@ -62,6 +62,8 @@ export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'
   children?: ReactNode
   dot?: boolean
   dotPosition?: 'left' | 'right'
+  dotStyle?: string
+  iconStyle?: string
 }
 
 export interface BadgeColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
@@ -83,6 +85,9 @@ export const Badge: FC<BadgeProps> = ({
   size = 'xs',
   dot = false,
   dotPosition = 'left',
+  className,
+  dotStyle,
+  iconStyle,
   ...props
 }): JSX.Element => {
   const theirProps = excludeClassName(props)
@@ -91,19 +96,20 @@ export const Badge: FC<BadgeProps> = ({
 
   const Content = (): JSX.Element => (
     <span
-      className={twMerge(
+      className={cn(
         theme.base,
         theme.badgeType[badgeType].colorType[colorType].color[color],
         theme.icon[Icon ? 'on' : 'off'],
         theme.size[size],
+        className,
       )}
       data-testid="keep-badge"
       {...theirProps}>
-      {Icon && iconPosition === 'left' && <span>{Icon}</span>}
-      {dot && dotPosition === 'left' && <div className={twMerge(theme.dot, theme.dotPosition.left)}></div>}
+      {Icon && iconPosition === 'left' && <span className={cn(iconStyle)}>{Icon}</span>}
+      {dot && dotPosition === 'left' && <div className={cn(theme.dot, theme.dotPosition.left, dotStyle)}></div>}
       {children && <span>{children}</span>}
-      {dot && dotPosition === 'right' && <div className={twMerge(theme.dot, theme.dotPosition.right)}></div>}
-      {Icon && iconPosition === 'right' && <span>{Icon}</span>}
+      {dot && dotPosition === 'right' && <div className={cn(theme.dot, theme.dotPosition.right, dotStyle)}></div>}
+      {Icon && iconPosition === 'right' && <span className={cn(iconStyle)}>{Icon}</span>}
     </span>
   )
 
