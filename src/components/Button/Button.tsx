@@ -1,10 +1,10 @@
 import { ComponentProps, forwardRef, ReactNode } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepBoolean, KeepButtonType, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import type { PositionInButtonGroup } from './ButtonGroup'
 import { ButtonGroup } from './ButtonGroup'
+import { cn } from '../../helpers/cn'
 
 export interface keepButtonTheme {
   base: string
@@ -63,13 +63,14 @@ export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' 
   color?: keyof ButtonColors
   type?: keyof ButtonTypes
   notificationLabel?: string
+  notificationLabelStyle?: string
   pill?: boolean
   circle?: boolean
   positionInGroup?: keyof PositionInButtonGroup
   children?: ReactNode
   size?: keyof ButtonSizes
   width?: 'full' | 'half'
-  customClass?: string
+  className?: string
   onClick?: () => void
 }
 
@@ -103,7 +104,8 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
       positionInGroup = 'none',
       size = 'md',
       width,
-      customClass,
+      className,
+      notificationLabelStyle,
       ...props
     },
     ref,
@@ -114,8 +116,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
     const Component = isLink ? 'a' : 'button'
     return (
       <Component
-        className={twMerge(
-          customClass,
+        className={cn(
           theme.base,
           disabled && theme.disabled,
           width && theme.width[width],
@@ -130,6 +131,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
           type === 'text' && theme.text.color[color],
           type === 'linkPrimary' && theme.linkPrimary.color[color],
           type === 'linkGray' && theme.linkGray.color[color],
+          className,
         )}
         disabled={disabled}
         href={href}
@@ -138,7 +140,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
         {...theirProps}>
         <span
           ref={ref}
-          className={twMerge(
+          className={cn(
             theme.inner.base,
             !circle && theme.size[size],
             theme.inner.position[positionInGroup],
@@ -154,7 +156,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
           <>
             {typeof children !== 'undefined' && children}
             {typeof notificationLabel !== 'undefined' && (
-              <span className={theme.notificationLabel} data-testid="keep-button-label">
+              <span className={cn(theme.notificationLabel, notificationLabelStyle)} data-testid="keep-button-label">
                 {notificationLabel}
               </span>
             )}

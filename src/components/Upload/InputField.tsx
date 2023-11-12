@@ -51,7 +51,7 @@ export const InputField: FC = () => {
             <Button
               type={uploadBtnType}
               disabled={disabled}
-              customClass="!relative !cursor-pointer !z-40"
+              className="!relative !z-40 !cursor-pointer"
               onClick={handleClick}>
               Choose File
             </Button>

@@ -65,13 +65,20 @@ export const buttonApiData = [
   },
   {
     id: 11,
-    propsName: 'customClass',
+    propsName: 'className',
     propsType: 'string',
     propsDescription: 'Custom CSS class to be added to the button.',
     default: 'None',
   },
   {
     id: 12,
+    propsName: 'notificationLabelStyle',
+    propsType: 'string',
+    propsDescription: 'notification Label Style',
+    default: 'None',
+  },
+  {
+    id: 13,
     propsName: 'onClick',
     propsType: '() => void',
     propsDescription: 'Function to be called when the button is clicked.',
