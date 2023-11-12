@@ -6,12 +6,16 @@ Keep React is an open-source component library built on Tailwind CSS and React.j
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Components](#components)
-- [Contributing](#contributing)
-- [Figma](#figma)
-- [License](#license)
+- [KEEP REACT](#keep-react)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+    - [Vite React Application](#vite-react-application)
+    - [Next JS Application](#next-js-application)
+  - [usage](#usage)
+  - [Components](#components)
+  - [Contributing](#contributing)
+  - [Figma](#figma)
+  - [License](#license)
 
 ## Installation
 
@@ -37,6 +41,12 @@ Or with Yarn
 
 ```console
 yarn add keep-react
+```
+
+Or with Pnpm
+
+```console
+pnpm add keep-react
 ```
 
 `Step 3:` Go to the `tailwind.config.js` file and paste the
@@ -83,6 +93,12 @@ Or with yarn
 
 ```console
 yarn add keep-react
+```
+
+Or with Pnpm
+
+```console
+pnpm add keep-react
 ```
 
 `Step 3:` Go to the `tailwind.config.js` file and paste the
