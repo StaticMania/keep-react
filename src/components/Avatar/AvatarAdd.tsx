@@ -10,6 +10,7 @@ export type AvatarAddProps = PropsWithChildren<{
   bg?: string
   iconColor?: string
   ringColor?: string
+  className?: string
 }>
 
 export const AvatarAdd: React.FC<AvatarAddProps> = ({
@@ -18,11 +19,14 @@ export const AvatarAdd: React.FC<AvatarAddProps> = ({
   bg = '#F0F3F7',
   iconColor = '#5E718D',
   ringColor = 'ring-white',
+  className,
 }) => {
   const theme = useTheme().theme.avatar
 
   return (
-    <div className={twMerge(theme.add.base, theme.add.iconSize['xl'], ringColor)} style={{ backgroundColor: bg }}>
+    <div
+      className={twMerge(theme.add.base, theme.add.iconSize['xl'], ringColor, className)}
+      style={{ backgroundColor: bg }}>
       {icon ? (
         <img src={icon} alt="add_icon" className={twMerge(theme.add.iconSize[size])} />
       ) : (
