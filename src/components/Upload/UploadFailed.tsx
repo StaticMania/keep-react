@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import { ArrowClockwise, X } from 'phosphor-react'
 import { FC, useEffect, useRef, useState } from 'react'
 import { useUploadContext } from './UploadContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { useProgress } from './useProgress'
 
 export interface keepUploadFailedTheme {

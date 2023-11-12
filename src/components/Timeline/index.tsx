@@ -8,7 +8,7 @@ import { TimelinePoint, TimelinePointStyle } from './TimelinePoint'
 import { TimelineTime, TimelineTimeStyle } from './TimelineTime'
 import { TimelineTitle, TimelineTitleStyle } from './TimelineTitle'
 import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface TimelinePointSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg' | 'xl'> {
   [key: string]: string

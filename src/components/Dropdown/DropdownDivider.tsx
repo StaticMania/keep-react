@@ -1,4 +1,4 @@
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC } from 'react'
 

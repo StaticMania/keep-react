@@ -9,7 +9,7 @@ const StatisticWithFilterButton = () => {
       filterLabel="This Month"
       filterData={['January', 'February', 'March', 'April']}>
       <div>
-        <Statistic.Title>Memebers</Statistic.Title>
+        <Statistic.Title>Members</Statistic.Title>
       </div>
       <div className="flex items-center gap-2">
         <Statistic.Amount>{7381237}</Statistic.Amount>
@@ -32,7 +32,7 @@ export const StatisticComponent = () => {
       filterData={["January", "February", "March", "April"]}
     >
       <div>
-        <Statistic.Title>Memebers</Statistic.Title>
+        <Statistic.Title>Members</Statistic.Title>
       </div>
       <div className="flex items-center gap-2">
         <Statistic.Amount>{7381237}</Statistic.Amount>

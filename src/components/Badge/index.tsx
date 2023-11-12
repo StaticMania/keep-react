@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepBadgeTheme {
   base: string

@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useStepContext } from './StepContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface StepItemProps {
   title?: string

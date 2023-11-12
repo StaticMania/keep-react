@@ -2,7 +2,7 @@ import type { Placement } from '@floating-ui/core'
 import type { FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { Floating } from '../Floating'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface TooltipProps {
   title?: string

@@ -4,7 +4,7 @@ import type { DeepPartial } from '../../helpers/deep-partial'
 
 import { useSidebarContext } from './SidebarContext'
 import { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface KeepSidebarCTATheme {
   base: string

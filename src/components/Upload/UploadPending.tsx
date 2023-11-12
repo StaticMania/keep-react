@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { Pause, X } from 'phosphor-react'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { useUploadContext } from './UploadContext'
 import { useProgress } from './useProgress'
 

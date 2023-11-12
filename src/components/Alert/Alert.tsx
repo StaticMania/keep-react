@@ -2,7 +2,7 @@ import { X } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 import type { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepAlertTheme {
   base: string

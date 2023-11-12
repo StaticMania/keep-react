@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { twMerge } from 'tailwind-merge'
 import { X } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
