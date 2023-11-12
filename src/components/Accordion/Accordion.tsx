@@ -1,6 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, useMemo, useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { KeepBoolean } from '../../Keep/KeepTheme'
@@ -11,6 +10,7 @@ import type { AccordionPanelProps } from './AccordionPanel'
 import { AccordionPanel } from './AccordionPanel'
 import type { keepAccordionTitleTheme } from './AccordionTitle'
 import { AccordionTitle } from './AccordionTitle'
+import { cn } from '../../helpers/cn'
 
 export interface keepAccordionTheme {
   root: keepAccordionRootTheme
@@ -74,7 +74,7 @@ const AccordionComponent: FC<AccordionProps> = ({
 
   return (
     <div
-      className={twMerge(!flush && theme.base, className, !flush && theme.flush.off, flush && theme.flush.on)}
+      className={cn(!flush && theme.base, !flush && theme.flush.off, flush && theme.flush.on, className)}
       data-testid="keep-accordion"
       {...props}>
       {panels}

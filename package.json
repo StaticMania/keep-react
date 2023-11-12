@@ -1,6 +1,6 @@
 {
   "name": "keep-react",
-  "version": "0.0.3",
+  "version": "1.0.1",
   "description": "Official React components built for React and Tailwind CSS",
   "license": "MIT",
   "keywords": [
@@ -43,6 +43,7 @@
   "dependencies": {
     "@floating-ui/react": "^0.25.3",
     "@headlessui/react": "^1.7.16",
+    "clsx": "^2.0.0",
     "phosphor-react": "^1.4.1",
     "rc-slider": "^10.2.1",
     "rc-tooltip": "^6.0.1",

@@ -62,4 +62,25 @@ export const alertApiData = [
     propsType: ['left', 'right', 'top', 'bottom'],
     default: 'left',
   },
+  {
+    id: 10,
+    propsName: 'className',
+    propsDescription: 'Injects the class name',
+    propsType: 'string',
+    default: 'None',
+  },
+  {
+    id: 11,
+    propsName: 'titleStyle',
+    propsDescription: 'Injects the class name in title',
+    propsType: 'string',
+    default: 'None',
+  },
+  {
+    id: 12,
+    propsName: 'iconStyle',
+    propsDescription: 'Injects the class name in icon',
+    propsType: 'string',
+    default: 'None',
+  },
 ]
