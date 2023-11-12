@@ -3,7 +3,7 @@ import { useTimelineContext } from './TimelineContext'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useTheme } from '../../Keep/ThemeContext'
 
-export type TimelnePointProps = PropsWithChildren<
+export type TimelinePointProps = PropsWithChildren<
   ComponentProps<'div'> & {
     icon?: ReactNode
     className?: string
@@ -62,7 +62,7 @@ export interface TimelinePointStyle {
   }
 }
 
-export const TimelinePoint: FC<TimelnePointProps> = ({ children, className, icon: Icon, ...props }) => {
+export const TimelinePoint: FC<TimelinePointProps> = ({ children, className, icon: Icon, ...props }) => {
   const { horizontal, gradientPoint, gradientColor } = useTimelineContext()
   const { point } = useTheme().theme.timeline
   return (
