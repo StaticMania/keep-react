@@ -11,7 +11,7 @@ const AvatarWithCounter = () => {
       <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
       <Avatar shape="circle" size="md" stacked={true} />
       <Avatar shape="circle" size="md" stacked={true} />
-      <Avatar.Counter size="md" total={99} href="/" />
+      <Avatar.Counter size="md" total={99} />
     </Avatar.Group>
   )
 }
