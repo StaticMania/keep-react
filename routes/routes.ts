@@ -1,5 +1,4 @@
 import {
-  TreeComponent,
   BarChartComponent,
   CheckboxGroupComponent,
   DatePickerComponent,
@@ -8,6 +7,7 @@ import {
   SliderComponent,
   TooltipComponent,
   PaginationComponent,
+  TabsComponent,
 } from '~/components/ComponentsList'
 
 interface routerPath {
@@ -393,6 +393,12 @@ export const navbarRoutes: routerPath[] = [
   },
   {
     id: 2,
+    href: 'https://discord.com/invite/xsNDwPks',
+    name: 'Discord',
+    redirect: true,
+  },
+  {
+    id: 3,
     href: '/docs/getting-started/Introduction',
     name: 'Documentation',
     redirect: false,
@@ -411,8 +417,8 @@ export const ComponentList: {
   },
   {
     id: 2,
-    href: '/docs/components/tree',
-    component: TreeComponent,
+    href: '/docs/components/tabs',
+    component: TabsComponent,
   },
   {
     id: 3,
