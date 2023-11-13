@@ -48,4 +48,18 @@ export const CheckBoxApiData = [
     propsDescription: 'Checkbox Input Field Name',
     default: 'checkbox',
   },
+  {
+    id: 8,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the checkbox.',
+    default: 'None',
+  },
+  {
+    id: 9,
+    propsName: 'labelStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the label.',
+    default: 'None',
+  },
 ]

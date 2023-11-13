@@ -3,6 +3,7 @@ import { ComponentProps, FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepCheckboxTheme {
   base: string
@@ -29,6 +30,8 @@ export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'className'
   fieldName?: string
   isChecked?: boolean
   handleChecked?: (value: boolean) => void
+  className?: string
+  labelStyle?: string
 }
 
 export interface CheckboxSizes extends Pick<KeepSizes, 'sm' | 'lg' | 'md'> {
@@ -49,6 +52,8 @@ const CheckboxComponent: FC<CheckboxProps> = ({
   variant = 'square',
   handleChecked,
   fieldName,
+  className,
+  labelStyle,
   ...props
 }) => {
   const theirProps = excludeClassName(props)
@@ -60,7 +65,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
 
   return (
     <div data-testid="checkbox-element">
-      <div className="flex items-center gap-2">
+      <div className={cn(typeof label !== 'undefined' ? 'flex items-center gap-2' : '')}>
         <input
           type="checkbox"
           id={id}
@@ -78,6 +83,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
             theme.variant[variant],
             !disabled && theme.enabled,
             disabled && theme.disabled,
+            className,
           )}></div>
 
         {typeof label !== 'undefined' && (
@@ -88,6 +94,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
               disabled && theme.disabled,
               theme.label[size],
               theme.labelColor[labelColor ? labelColor : color],
+              labelStyle,
             )}>
             {label}
           </label>
