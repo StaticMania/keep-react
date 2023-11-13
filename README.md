@@ -89,7 +89,7 @@ npx tailwindcss init -p
 npm i keep-react
 ```
 
-Or with yarn
+Or with Yarn
 
 ```console
 yarn add keep-react

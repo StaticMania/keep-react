@@ -38,9 +38,8 @@ export default App;
 const twNpmInstall = 'npm i autoprefixer postcss tailwindcss\nnpx tailwindcss init -p'
 
 const keepNpmInstall = 'npm i keep-react'
-const keepYarnInstall = 'yarn add keep-react'
 const keepPnpmInstall = 'pnpm add keep-react'
-
+const keepYarnInstall = 'yarn add keep-react'
 
 const twConfigForNextJs = `
 module.exports = {
@@ -61,14 +60,12 @@ const nextJsInstall = `npx create-next-app@latest`
 const NextJsQnA = () => {
   return (
     <div className="my-5">
-      <ul className="bg-slate-50 py-3 px-4 text-slate-700 text-sm rounded-md -space-y-0">
+      <ul className="-space-y-0 rounded-md bg-slate-50 px-4 py-3 text-sm text-slate-700">
         <li>Would you like to use Tailwind CSS? Yes</li>
       </ul>
     </div>
   )
 }
-
-
 
 export {
   twConfig,
@@ -78,5 +75,9 @@ export {
   twNpmInstall,
   keepNpmInstall,
   twConfigForNextJs,
-  keepYarnInstall,viteReact,nextJsInstall,NextJsQnA,keepPnpmInstall
+  keepYarnInstall,
+  viteReact,
+  nextJsInstall,
+  NextJsQnA,
+  keepPnpmInstall,
 }
