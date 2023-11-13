@@ -5,9 +5,11 @@ import { DatePicker } from '~/src'
 const TimePicker = () => {
   const [_, setTime] = useState<string | null | Date>()
   return (
-    <DatePicker timePicker={setTime}>
-      <DatePicker.Time />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker timePicker={setTime}>
+        <DatePicker.Time />
+      </DatePicker>
+    </div>
   )
 }
 

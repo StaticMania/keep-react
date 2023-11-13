@@ -18,10 +18,10 @@ const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(
           value={value}
           readOnly
           onClick={onClick}
-          className="relative w-full rounded-md border border-slate-300 p-3 focus-within:border-slate-500 focus:outline-none focus-visible:!border-slate-500"
+          className="relative w-full rounded-md border border-slate-200 px-4 py-2.5 placeholder:text-base placeholder:font-normal focus:outline-none"
         />
         <span className="pointer-events-none absolute right-3 top-3 border-l border-l-slate-200 pl-1">
-          <Calendar size={28} color="#5E718D" />
+          <Calendar size={24} color="#5E718D" />
         </span>
       </>
     )

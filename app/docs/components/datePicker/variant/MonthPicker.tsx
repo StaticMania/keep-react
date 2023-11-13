@@ -5,9 +5,11 @@ import { DatePicker } from '~/src'
 const MonthPicker = () => {
   const [_, setMonthPicker] = useState<Date | null | string>()
   return (
-    <DatePicker monthPicker={setMonthPicker}>
-      <DatePicker.Month />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker monthPicker={setMonthPicker}>
+        <DatePicker.Month />
+      </DatePicker>
+    </div>
   )
 }
 

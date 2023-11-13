@@ -5,9 +5,11 @@ import { DatePicker } from '~/src'
 const DefaultDatePicker = () => {
   const [_, setDate] = useState<Date | null>(null)
   return (
-    <DatePicker singleDatePicker={setDate}>
-      <DatePicker.SingleDate />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker singleDatePicker={setDate}>
+        <DatePicker.SingleDate />
+      </DatePicker>
+    </div>
   )
 }
 

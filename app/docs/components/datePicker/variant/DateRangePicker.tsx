@@ -6,9 +6,11 @@ import { rangePicker } from '~/src/components/DatePicker/DatePickerContext'
 const DateRangePicker = () => {
   const [_, setRangeDate] = useState<rangePicker>()
   return (
-    <DatePicker rangeDate={setRangeDate}>
-      <DatePicker.Range />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker rangeDate={setRangeDate}>
+        <DatePicker.Range />
+      </DatePicker>
+    </div>
   )
 }
 

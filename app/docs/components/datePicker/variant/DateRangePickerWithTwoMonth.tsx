@@ -6,9 +6,11 @@ import { rangePicker } from '~/src/components/DatePicker/DatePickerContext'
 const DateRangePickerWithTwoMonth = () => {
   const [_, setRangeDate] = useState<rangePicker>()
   return (
-    <DatePicker showTwoMonth={true} rangeDate={setRangeDate}>
-      <DatePicker.Range />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker showTwoMonth={true} rangeDate={setRangeDate}>
+        <DatePicker.Range />
+      </DatePicker>
+    </div>
   )
 }
 
