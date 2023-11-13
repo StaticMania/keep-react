@@ -2,10 +2,10 @@ import { CaretLeft, CaretRight } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ScrollContainer from 'react-indiana-drag-scroll'
-import { twMerge } from 'tailwind-merge'
 import { windowExists } from '../../helpers/window-exists'
 import { KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface KeepCarouselTheme {
   base: string
@@ -69,6 +69,7 @@ export interface CarouselProps extends PropsWithChildren<ComponentProps<'div'>> 
   slideInterval?: number
   indicatorsType?: IndicatorsType
   indicatorsTypeColors?: keyof IndicatorsTypeColors
+  className?: string
 }
 
 export const Carousel: FC<CarouselProps> = ({
@@ -95,7 +96,7 @@ export const Carousel: FC<CarouselProps> = ({
     () =>
       Children.map(children as ReactElement[], (child: ReactElement) =>
         cloneElement(child, {
-          className: twMerge(theme.item.base, child.props.className),
+          className: cn(theme.item.base, child.props.className),
         }),
       ),
     [children, theme.item.base],
@@ -130,9 +131,9 @@ export const Carousel: FC<CarouselProps> = ({
   const handleDragging = (dragging: boolean) => () => setIsDragging(dragging)
 
   return (
-    <div className={twMerge(theme.base, className)} data-testid="carousel" {...props}>
+    <div className={cn(theme.base, className)} data-testid="carousel" {...props}>
       <ScrollContainer
-        className={twMerge(theme.scrollContainer.base, (isDeviceMobile || !isDragging) && theme.scrollContainer.snap)}
+        className={cn(theme.scrollContainer.base, (isDeviceMobile || !isDragging) && theme.scrollContainer.snap)}
         draggingClassName="cursor-grab"
         innerRef={carouselContainer}
         onEndScroll={handleDragging(false)}
@@ -156,7 +157,7 @@ export const Carousel: FC<CarouselProps> = ({
             (_, index): JSX.Element => (
               <button
                 key={index}
-                className={twMerge(
+                className={cn(
                   theme.indicators.base,
                   theme.indicators.type[indicatorsType],
                   index === activeItem && theme.indicators.active.on.type[indicatorsType],
@@ -170,7 +171,6 @@ export const Carousel: FC<CarouselProps> = ({
           )}
         </div>
       )}
-
       {items && showControls && (
         <>
           <div className={theme.leftControl}>
