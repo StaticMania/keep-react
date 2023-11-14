@@ -18,12 +18,12 @@ import {
 import { XCircle } from 'phosphor-react'
 import { FC, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 interface PopoverProps {
   trigger?: 'hover' | 'click'
   children: React.ReactNode
-  additinalContent?: React.ReactNode
+  additionalContent?: React.ReactNode
   title?: string
   description?: string
   icon?: React.ReactNode
@@ -50,7 +50,7 @@ export interface keepPopoverTheme {
   body: {
     base: string
     title: string
-    discription: string
+    description: string
   }
 }
 
@@ -60,7 +60,7 @@ export const Popover: FC<PopoverProps> = ({
   title,
   description,
   icon,
-  additinalContent,
+  additionalContent: additionalContent,
   customClass,
   position = 'bottom-start',
   showDismissIcon = true,
@@ -128,8 +128,8 @@ export const Popover: FC<PopoverProps> = ({
               {title}
             </h2>
           )}
-          {description && <p className={theme.body.discription}>{description}</p>}
-          {typeof additinalContent !== 'undefined' && additinalContent}
+          {description && <p className={theme.body.description}>{description}</p>}
+          {typeof additionalContent !== 'undefined' && additionalContent}
         </div>
       )}
     </>

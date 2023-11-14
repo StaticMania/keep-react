@@ -1,15 +1,15 @@
 import { twMerge } from 'tailwind-merge'
 import type { PropsWithChildren } from 'react'
 import type { AvatarSizes } from './Avatar'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
-export type AvatarGroupdCounterProps = PropsWithChildren<{
+export type AvatarGroupCounterProps = PropsWithChildren<{
   total?: number
-  href: string
+  href?: string
   size?: keyof AvatarSizes
 }>
 
-export const AvatarGroupCounter: React.FC<AvatarGroupdCounterProps> = ({ total, href, size = 'md' }) => {
+export const AvatarGroupCounter: React.FC<AvatarGroupCounterProps> = ({ total, href, size = 'md' }) => {
   const theme = useTheme().theme.avatar
   return (
     <a

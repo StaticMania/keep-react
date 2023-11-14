@@ -4,7 +4,7 @@ import { forwardRef } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { HelperText } from './HelperText'
 import type { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepTextAreaTheme {
   base: string

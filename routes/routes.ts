@@ -1,13 +1,13 @@
 import {
-  TreeComponent,
   BarChartComponent,
   CheckboxGroupComponent,
   DatePickerComponent,
   RadioSelectComponent,
   ModalComponent,
-  SliderComponet,
+  SliderComponent,
   TooltipComponent,
   PaginationComponent,
+  TabsComponent,
 } from '~/components/ComponentsList'
 
 interface routerPath {
@@ -411,8 +411,8 @@ export const ComponentList: {
   },
   {
     id: 2,
-    href: '/docs/components/tree',
-    component: TreeComponent,
+    href: '/docs/components/tabs',
+    component: TabsComponent,
   },
   {
     id: 3,
@@ -444,7 +444,7 @@ export const ComponentList: {
   {
     id: 8,
     href: '/docs/components/slider',
-    component: SliderComponet,
+    component: SliderComponent,
   },
   {
     id: 9,

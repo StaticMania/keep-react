@@ -3,7 +3,7 @@ import type { DeepPartial } from '../../helpers/deep-partial'
 
 import { twMerge } from 'tailwind-merge'
 import { useTableContext } from './TableContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { CheckBox } from '../CheckBox'
 
 export interface keepTableRowTheme {

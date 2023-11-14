@@ -1,55 +1,13 @@
 'use client'
-import { CloudArrowUp, File, FolderNotchOpen } from 'phosphor-react'
+import { CloudArrowUp, GridFour, Phone, User } from 'phosphor-react'
 import { useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '~/app/docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultDatePicker } from '~/app/docs/components/datePicker/variant/DefaultDatePicker'
 import { DefaultRadio } from '~/app/docs/components/radio/variant/DefaultRadio'
 
-import { Button, CheckboxGroup, Modal, Pagination, Slider, Tooltip, Tree } from '~/src'
+import { Button, CheckboxGroup, Modal, Pagination, Slider, Tooltip, Tabs } from '~/src'
 
-export const TreeComponent = () => {
-  const nodes = [
-    {
-      id: 1,
-      title: 'Home Page',
-      children: [
-        {
-          id: 2,
-          title: 'Hero Section',
-          children: [
-            {
-              id: 2.1,
-              title: 'Hero Image',
-              children: [
-                {
-                  id: 2.2,
-                  title: 'Hero Text',
-                },
-                {
-                  id: 2.3,
-                  title: 'Hero Title',
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ]
-  return (
-    <div className="scale-90">
-      <Tree
-        nodes={nodes}
-        showBorder
-        showItemsNumber
-        showIcon
-        ParentIcon={<FolderNotchOpen size={20} color="#3D4A5C" />}
-        ChildIcon={<File size={20} color="#3D4A5C" />}
-      />
-    </div>
-  )
-}
-export const SliderComponet = () => {
+export const SliderComponent = () => {
   return (
     <div className="w-full scale-75">
       <Slider
@@ -94,7 +52,7 @@ export const TooltipComponent = () => {
 }
 export const BarChartComponent = () => {
   return (
-    <div className="scale-75">
+    <div className="scale-50 md:scale-75">
       <CustomizedBarSizeWithAxisData />
     </div>
   )
@@ -181,6 +139,23 @@ export const ModalComponent = () => {
           </Button>
         </Modal.Footer>
       </Modal>
+    </div>
+  )
+}
+export const TabsComponent = () => {
+  return (
+    <div className="scale-75 md:scale-95">
+      <Tabs aria-label="Tabs" style="underline" borderPosition="bottom" iconPosition="left">
+        <Tabs.Item title="Profile" icon={<User size={20} />}>
+          Profile content
+        </Tabs.Item>
+        <Tabs.Item title="Dashboard" icon={<GridFour size={20} />}>
+          Dashboard content
+        </Tabs.Item>
+        <Tabs.Item title="Contacts" icon={<Phone size={20} />}>
+          Contacts content
+        </Tabs.Item>
+      </Tabs>
     </div>
   )
 }

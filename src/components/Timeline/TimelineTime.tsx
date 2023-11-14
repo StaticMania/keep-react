@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { useTimelineContext } from './TimelineContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export type TimelineTimeProps = PropsWithChildren<
   ComponentProps<'time'> & {

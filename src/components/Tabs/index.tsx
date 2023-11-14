@@ -4,18 +4,18 @@ import { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, 
 import type { TabItemProps } from './TabItem'
 import { TabItem } from './TabItem'
 import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepTabTheme {
   base: string
-  tablist: {
+  tabList: {
     base: string
     styles: TabStyles
     borderPosition: {
       top: string
       bottom: string
     }
-    tabitem: {
+    tabItem: {
       base: string
       styles: TabStyleItem<TabStyles>
       icon: {
@@ -32,7 +32,7 @@ export interface keepTabTheme {
       }
     }
   }
-  tabpanel: string
+  tabPanel: string
 }
 export interface TabStyles {
   default: string
@@ -131,7 +131,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
       }
     }
 
-    const tabItemStyle = theme.tablist.tabitem.styles[style]
+    const tabItemStyle = theme.tabList.tabItem.styles[style]
 
     useEffect(() => {
       tabRefs.current[focusedTab]?.focus()
@@ -147,9 +147,9 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
           aria-label="Tabs"
           role="tablist"
           className={twMerge(
-            theme.tablist.base,
+            theme.tabList.base,
 
-            style !== 'pills' && theme.tablist.borderPosition[borderPosition],
+            style !== 'pills' && theme.tabList.borderPosition[borderPosition],
             className,
           )}
           {...rest}>
@@ -160,7 +160,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
               aria-controls={`${index + 1}-tabpanel-${index}`}
               aria-selected={index === activeTab}
               className={twMerge(
-                theme.tablist.tabitem.base,
+                theme.tabList.tabItem.base,
                 tabItemStyle.base,
                 index === activeTab && tabItemStyle.active.on,
                 index !== activeTab && !tab.disabled && tabItemStyle.active.off,
@@ -174,21 +174,21 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
               role="tab"
               tabIndex={index === focusedTab ? 0 : -1}>
               {tab.icon && iconPosition === 'left' && (
-                <span className={theme.tablist.tabitem.icon.left}>{tab.icon}</span>
+                <span className={theme.tabList.tabItem.icon.left}>{tab.icon}</span>
               )}
               {tab.title}
               {tab.icon && iconPosition === 'right' && (
-                <span className={theme.tablist.tabitem.icon.right}>{tab.icon}</span>
+                <span className={theme.tabList.tabItem.icon.right}>{tab.icon}</span>
               )}
               {tab.notification && (
                 <span
                   className={twMerge(
-                    theme.tablist.tabitem.notification.base,
+                    theme.tabList.tabItem.notification.base,
                     tab.notificationColor &&
-                      theme.tablist.tabitem.notification.notificationColor[tab.notificationColor],
-                    !tab.notificationColor && theme.tablist.tabitem.notification.notificationColor['info'],
-                    typeof tab.notification === 'string' && theme.tablist.tabitem.notification.type.text,
-                    typeof tab.notification === 'number' && theme.tablist.tabitem.notification.type.number,
+                      theme.tabList.tabItem.notification.notificationColor[tab.notificationColor],
+                    !tab.notificationColor && theme.tabList.tabItem.notification.notificationColor['info'],
+                    typeof tab.notification === 'string' && theme.tabList.tabItem.notification.type.text,
+                    typeof tab.notification === 'number' && theme.tabList.tabItem.notification.type.number,
                   )}>
                   {tab.notification}
                 </span>
@@ -201,7 +201,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
             <div
               key={index}
               aria-labelledby={`${index + 1}-tab-${index}`}
-              className={theme.tabpanel}
+              className={theme.tabPanel}
               hidden={index !== activeTab}
               id={`${index + 1}-tabpanel-${index}`}
               role="tabpanel"

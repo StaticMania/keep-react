@@ -79,5 +79,6 @@ export {
   viteReact,
   nextJsInstall,
   NextJsQnA,
-  keepPnpmInstall,
+  keepPnpmInstall,viteReact,nextJsInstall,NextJsQnA
+
 }

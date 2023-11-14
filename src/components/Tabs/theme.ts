@@ -1,7 +1,7 @@
 import type { keepTabTheme } from '.'
 export const tabTheme: keepTabTheme = {
   base: 'flex flex-col gap-2',
-  tablist: {
+  tabList: {
     base: 'flex text-center',
     styles: {
       default: 'flex-wrap  border-slate-200',
@@ -13,7 +13,7 @@ export const tabTheme: keepTabTheme = {
       top: 'border-t',
       bottom: 'border-b',
     },
-    tabitem: {
+    tabItem: {
       base: 'flex items-center justify-center px-3.5 py-2.5 text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-slate-400',
       styles: {
         default: {
@@ -81,5 +81,5 @@ export const tabTheme: keepTabTheme = {
       },
     },
   },
-  tabpanel: 'p-4',
+  tabPanel: 'p-4',
 }

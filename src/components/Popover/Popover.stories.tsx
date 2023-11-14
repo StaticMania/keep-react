@@ -37,7 +37,7 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: 'Loream...' },
       },
     },
-    additinalContent: {
+    additionalContent: {
       description: 'Popover additional content',
       control: { type: null },
       table: {
@@ -100,7 +100,7 @@ export const DefaultPopover: Story = {
     title: 'Popover title here',
     description:
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    additinalContent: (
+    additionalContent: (
       <div className="mt-3 flex items-center gap-3">
         <Button type="outlinePrimary" size="xs">
           Checkout
@@ -114,7 +114,7 @@ export const DefaultPopover: Story = {
 export const OneParagraphPopover: Story = {
   args: {
     showDismissIcon: false,
-    additinalContent: (
+    additionalContent: (
       <>
         <h2 className="text-base font-medium text-slate-500">
           There are many variations of passages of Lorem Ipsum available.
@@ -128,7 +128,7 @@ export const OneParagraphPopover: Story = {
 export const SingleLinePopover: Story = {
   args: {
     customClass: '!w-[20rem]',
-    additinalContent: (
+    additionalContent: (
       <h2 className="text-lg font-medium leading-6 tracking-[-0.3px] text-slate-500">Single line message</h2>
     ),
     children: <Button size="xs">Popover</Button>,

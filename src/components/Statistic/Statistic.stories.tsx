@@ -52,7 +52,7 @@ export const DefaultStatistic: Story = {
   args: {
     children: removeFragment(
       <>
-        <Statistic.Title>Memebers</Statistic.Title>
+        <Statistic.Title>Members</Statistic.Title>
         <Statistic.Amount>{1212122}</Statistic.Amount>
       </>,
     ),
@@ -62,7 +62,7 @@ export const StatisticWithProgressRate: Story = {
   args: {
     children: removeFragment(
       <>
-        <Statistic.Title>Memebers</Statistic.Title>
+        <Statistic.Title>Members</Statistic.Title>
         <div className="flex items-center gap-2">
           <Statistic.Amount>{1212122}</Statistic.Amount>
           <Statistic.Rate>1.5</Statistic.Rate>
@@ -83,7 +83,7 @@ export const StatisticWithFilterButton: Story = {
     children: removeFragment(
       <>
         <div>
-          <Statistic.Title>Memebers</Statistic.Title>
+          <Statistic.Title>Members</Statistic.Title>
         </div>
         <div className="flex items-center gap-2">
           <Statistic.Amount>{1212122}</Statistic.Amount>
@@ -106,7 +106,7 @@ export const StatisticWithAvatarImage: Story = {
               <Statistic.Amount>{1212122}</Statistic.Amount>
               <Statistic.Rate>1.5</Statistic.Rate>
             </div>
-            <Statistic.Title>Memebers</Statistic.Title>
+            <Statistic.Title>Members</Statistic.Title>
           </div>
         </div>
       </>,
@@ -126,7 +126,7 @@ export const StatisticWithIcon: Story = {
               <Statistic.Amount>{1212122}</Statistic.Amount>
               <Statistic.Rate>1.5</Statistic.Rate>
             </div>
-            <Statistic.Title>Memebers</Statistic.Title>
+            <Statistic.Title>Members</Statistic.Title>
           </div>
         </div>
       </>,
@@ -153,7 +153,7 @@ export const StatisticWithUsersIcon: Story = {
               <Statistic.Amount>{1212122}</Statistic.Amount>
               <Statistic.Rate>3.5</Statistic.Rate>
             </div>
-            <Statistic.Title>Memebers</Statistic.Title>
+            <Statistic.Title>Members</Statistic.Title>
           </div>
         </div>
       </>,

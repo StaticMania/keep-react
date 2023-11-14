@@ -41,7 +41,7 @@ export const breadcrumbItemApiData = [
     id: 4,
     propsName: 'disabled',
     propsType: 'boolean',
-    propsDescription: 'Disables the breadcrumb, making it unclickable.',
+    propsDescription: 'Disables the breadcrumb, making it uncheckable.',
     default: 'false',
   },
 ]

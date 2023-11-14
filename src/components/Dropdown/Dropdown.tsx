@@ -3,7 +3,7 @@ import type { Dispatch, FC, PropsWithChildren, ReactElement, ReactNode, SetState
 import React, { Children, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { uuid } from '../../helpers/uuid'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import type { ButtonProps } from '../Button/Button'
 import { Button } from '../Button/Button'
 import { Floating, FloatingProps, keepFloatingTheme } from '../Floating'

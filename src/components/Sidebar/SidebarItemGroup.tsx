@@ -2,7 +2,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react'
 
 import { twMerge } from 'tailwind-merge'
 import { SidebarItemContext } from './SidebarItemContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface SidebarItemGroupProps extends PropsWithChildren, ComponentProps<'ul'> {}
 

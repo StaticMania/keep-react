@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { Pause, X } from 'phosphor-react'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 import { useUploadContext } from './UploadContext'
 import { useProgress } from './useProgress'
 
@@ -52,7 +52,7 @@ export const UploadPending: FC = () => {
       <div className={twMerge(theme.bgColor)} style={{ width: divOneWidth }}></div>
       <div className={twMerge(theme.root.base)}>
         <div>
-          <p className={twMerge(theme.root.status)}>Uploadin...</p>
+          <p className={twMerge(theme.root.status)}>Uploading...</p>
           <div className={twMerge(theme.root.statusBox.base)}>
             <p className={twMerge(theme.root.statusBox.count)}>{progress}%</p>
             <div className={twMerge(theme.root.statusBox.dot)}></div>

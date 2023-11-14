@@ -15,7 +15,7 @@ export const popoverAPI = [
   },
   {
     id: 3,
-    propsName: 'additinalContent',
+    propsName: 'additionalContent',
     propsType: ['ReactNode'],
     propsDescription: 'Additional content to be displayed within the popover.',
     default: 'None',

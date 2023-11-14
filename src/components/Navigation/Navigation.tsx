@@ -7,7 +7,7 @@ import { NavLinkTheme, NavigationLink } from './NavigationLink'
 import { NavigationToggle } from './NavigationToggle'
 import { NavigationContext } from './NavigationContext'
 import { CollapseTheme, NavigationCollapse } from './NavigationCollapse'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface NavigationProps {
   children?: React.ReactNode

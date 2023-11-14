@@ -77,26 +77,3 @@ export const sliderAPIData = [
     default: 'top',
   },
 ]
-
-// {
-//     id: 9,
-//     propsName: "pushable",
-//     propsType: ["boolean", "number"],
-//     default: "true",
-//     propsDescription:
-//       "Allows pushing neighboring handles. Can be boolean or number.",
-//   },
-//   {
-//     id: 10,
-//     propsName: "allowCross",
-//     propsType: "boolean",
-//     default: "false",
-//     propsDescription: "Allows the handles to cross each other on the slider.",
-//   },
-//   {
-//     id: 11,
-//     propsName: "draggableTrack",
-//     propsType: "boolean",
-//     default: "false",
-//     propsDescription: "Allows dragging the entire track to set values.",
-//   },

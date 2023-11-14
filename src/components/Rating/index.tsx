@@ -3,7 +3,7 @@ import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { RatingAdvanced, RatingAdvancedSizes } from './RatingAdvanced'
 import { RatingContext } from './RatingContext'
 import { RatingStar } from './RatingStar'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepRatingTheme {
   base: string

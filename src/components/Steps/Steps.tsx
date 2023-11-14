@@ -2,7 +2,7 @@
 import { FC } from 'react'
 import { StepItem } from './StepItem'
 import { StepContext } from './StepContext'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface StepsProps {
   stepType?: 'point' | 'icon' | 'number'

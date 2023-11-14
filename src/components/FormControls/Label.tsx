@@ -2,9 +2,9 @@ import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import type { KeepStateColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContex'
+import { useTheme } from '../../Keep/ThemeContext'
 
-export interface keepLavelTheme {
+export interface keepLabelTheme {
   base: string
   colors: LabelColors
   disabled: string
