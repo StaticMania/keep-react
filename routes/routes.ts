@@ -393,12 +393,6 @@ export const navbarRoutes: routerPath[] = [
   },
   {
     id: 2,
-    href: 'https://discord.com/invite/xsNDwPks',
-    name: 'Discord',
-    redirect: true,
-  },
-  {
-    id: 3,
     href: '/docs/getting-started/Introduction',
     name: 'Documentation',
     redirect: false,
