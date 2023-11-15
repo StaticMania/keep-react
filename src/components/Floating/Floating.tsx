@@ -121,6 +121,7 @@ export const Floating: FC<FloatingProps> = ({
             top: y ?? ' ',
             left: x ?? ' ',
             minWidth,
+            zIndex: 0
           },
           ...props,
         })}>
