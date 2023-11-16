@@ -6,32 +6,32 @@ const DropdownWithTitleDescription = () => {
     <Dropdown label="Dropdown button" type="primary" size="sm" dismissOnClick={true}>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">Dropdown Title</p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
+          <p className="text-metal-500 max-w-xs text-body-5 font-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </Dropdown.Item>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">Dropdown Title</p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
+          <p className="text-metal-500 max-w-xs text-body-5 font-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </Dropdown.Item>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">Dropdown Title</p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
+          <p className="text-metal-500 max-w-xs text-body-5 font-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </Dropdown.Item>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">Dropdown Title</p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
+          <p className="text-metal-500 max-w-xs text-body-5 font-normal">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
@@ -55,40 +55,40 @@ export const DropdownComponent = () => {
     >
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">
+          <p className="text-body-4 font-semibold text-metal-700">
             Dropdown Title
           </p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="max-w-xs text-body-5 font-normal text-metal-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </Dropdown.Item>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">
+          <p className="text-body-4 font-semibold text-metal-700">
             Dropdown Title
           </p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="max-w-xs text-body-5 font-normal text-metal-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </Dropdown.Item>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">
+          <p className="text-body-4 font-semibold text-metal-700">
             Dropdown Title
           </p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="max-w-xs text-body-5 font-normal text-metal-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
       </Dropdown.Item>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
-          <p className="text-base font-semibold text-slate-700">
+          <p className="text-body-4 font-semibold text-metal-700">
             Dropdown Title
           </p>
-          <p className="max-w-xs text-sm font-normal text-slate-500">
+          <p className="max-w-xs text-body-5 font-normal text-metal-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>

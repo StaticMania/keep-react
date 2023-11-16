@@ -2,7 +2,7 @@ import type { keepAvatarTheme } from './Avatar'
 
 export const avatarTheme: keepAvatarTheme = {
   base: 'flex items-center space-x-4',
-  bordered: 'border border-slate-200',
+  bordered: 'border border-metal-600',
   img: {
     off: 'relative overflow-hidden bg-primary-25',
     on: 'relative overflow-hidden',
@@ -40,7 +40,7 @@ export const avatarTheme: keepAvatarTheme = {
     busy: 'bg-red-400',
     away: 'bg-yellow-400',
     online: 'bg-green-300',
-    offline: 'bg-dark-100',
+    offline: 'bg-metal-500',
   },
   statusType: {
     type: {
@@ -50,11 +50,11 @@ export const avatarTheme: keepAvatarTheme = {
     fontSize: {
       notification: {
         xs: 'text-[8px] leading-[9px]',
-        sm: 'text-xs',
-        md: 'text-xs',
-        lg: 'text-xs',
-        xl: 'text-sm',
-        '2xl': 'text-base',
+        sm: 'text-body-6',
+        md: 'text-body-6',
+        lg: 'text-body-6',
+        xl: 'text-body-5',
+        '2xl': 'text-body-4',
       },
     },
     size: {
@@ -313,7 +313,7 @@ export const avatarTheme: keepAvatarTheme = {
     },
   },
   groupCounter: {
-    base: 'relative flex items-center justify-center rounded-full bg-gray-50 font-medium text-dark-400 ring-2 ring-white',
+    base: 'relative flex items-center justify-center rounded-full bg-gray-50 font-medium text-metal-400 ring-2 ring-white',
   },
   add: {
     base: 'relative flex items-center justify-center rounded-full ring-2 !ml-3',

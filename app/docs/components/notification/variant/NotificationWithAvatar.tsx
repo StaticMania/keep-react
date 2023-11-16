@@ -24,7 +24,7 @@ const NotificationWithAvatar = () => {
         className="max-w-[400px]"
         position="top-left"
         additionalContent={
-          <div className="mt-2.5 text-sm font-normal text-slate-500 md:text-base">
+          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info">
@@ -41,9 +41,9 @@ const NotificationWithAvatar = () => {
             <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
           </div>
         }>
-        <h3 className="text-base font-medium text-slate-700 md:text-xl">
+        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">
           Rono Pixel
-          <span className="pl-2 text-xs font-medium text-slate-400 md:text-sm">Product Designer</span>
+          <span className="text-metal-400 pl-2 text-body-6 font-medium md:text-body-5">Product Designer</span>
         </h3>
       </Notification>
     </div>
@@ -76,7 +76,7 @@ export const NotificationComponent = () => {
         className="max-w-[400px]"
         position="top-left"
         additionalContent={
-          <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
+          <div className="mt-2.5 text-body-5 md:text-body-4 font-normal text-metal-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry.
             <div className="mt-6 flex">
@@ -104,9 +104,9 @@ export const NotificationComponent = () => {
           </div>
         }
       >
-        <h3 className="text-base md:text-xl font-medium text-slate-700">
+        <h3 className="text-body-4 md:text-body-2 font-medium text-metal-700">
           Rono Pixel
-          <span className="pl-2 text-xs md:text-sm font-medium text-slate-400">
+          <span className="pl-2 text-body-6 md:text-body-5 font-medium text-metal-400">
             Product Designer
           </span>
         </h3>

@@ -35,7 +35,6 @@ const NotificationOfAvatar = () => {
         shape="circle"
         size="xl"
         status="away"
-        bordered
         statusPosition="top-right"
         statusType="notification"
         totalNotification={99}

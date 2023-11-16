@@ -1,10 +1,10 @@
 import type { keepProgressTheme } from '.'
 export const progressTheme: keepProgressTheme = {
   base: 'flex items-center',
-  label: 'mb-1 flex justify-between text-slate-500 font-medium',
+  label: 'mb-1 flex justify-between text-metal-500 font-medium',
   progressBar: {
     base: 'w-full',
-    bar: 'relative flex items-center justify-center text-center font-medium leading-none text-blue-100',
+    bar: 'relative flex items-center justify-center text-center font-medium leading-none text-primary-100',
     rounded: {
       on: 'rounded-full',
       off: 'rounded-none',

@@ -32,6 +32,7 @@ export interface KeepCardTheme {
       }
     }
   }
+  description: string
 }
 export interface CardBgImageSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string

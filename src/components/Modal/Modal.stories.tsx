@@ -55,7 +55,7 @@ const DefaultModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -77,7 +77,7 @@ const DefaultModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -108,10 +108,10 @@ const ConfirmationModalComponent = () => {
       <Modal show={showModalConfirm} size="sm">
         <Modal.Body>
           <div className="flex items-start gap-2">
-            <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
+            <div className="mt-2 rounded bg-primary-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-xl font-semibold text-[#2D3643]">Do you want to upload this file?</h3>
+            <h3 className="text-body-2 font-semibold text-[#2D3643]">Do you want to upload this file?</h3>
           </div>
         </Modal.Body>
         <Modal.Footer>
@@ -134,7 +134,7 @@ const ConfirmationModalComponent = () => {
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -165,7 +165,7 @@ const HistoryModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -176,9 +176,9 @@ const HistoryModalComponent = () => {
               value=""
               defaultChecked={isChecked}
               onChange={(e) => setIsChecked(e.target.checked)}
-              className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-500 "
+              className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-500 "
             />
-            <label htmlFor="checked-checkbox" className="ml-2 text-sm font-medium text-[#5E718D] ">
+            <label htmlFor="checked-checkbox" className="ml-2 text-body-5 font-medium text-[#5E718D] ">
               Save on this browser
             </label>
           </div>
@@ -197,7 +197,7 @@ const HistoryModalComponent = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica.
             </p>
 
@@ -205,8 +205,8 @@ const HistoryModalComponent = () => {
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" statusPosition="bottom-right" size="md" />
 
               <div>
-                <p className="text-sm font-semibold text-gray-500">Albert Flores</p>
-                <p className="text-xs text-gray-500">keep@designsystem.com</p>
+                <p className="text-body-5 font-semibold text-gray-500">Albert Flores</p>
+                <p className="text-body-6 text-gray-500">keep@designsystem.com</p>
               </div>
             </div>
           </div>
@@ -217,9 +217,9 @@ const HistoryModalComponent = () => {
               value=""
               defaultChecked={!isChecked}
               onChange={(e) => setIsChecked(e.target.checked)}
-              className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-500 "
+              className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-500 "
             />
-            <label htmlFor="checked-checkbox" className="ml-2 text-sm font-medium text-[#5E718D] ">
+            <label htmlFor="checked-checkbox" className="ml-2 text-body-5 font-medium text-[#5E718D] ">
               Don’t ask again
             </label>
           </div>

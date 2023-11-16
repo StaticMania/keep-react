@@ -22,7 +22,7 @@ const OrdersTable = () => {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-2xl font-semibold text-slate-600">Orders</p>
+              <p className="text-metal-600 text-body-1 font-semibold">Orders</p>
             </div>
             <div className="flex items-center gap-5">
               <Button type="outlineGray" size="sm">
@@ -42,7 +42,7 @@ const OrdersTable = () => {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[302px]">
-            <p className="text-xs font-medium text-slate-400">Order no.</p>
+            <p className="text-metal-400 text-body-6 font-medium">Order no.</p>
           </Table.HeadCell>
           <Table.HeadCell
             className="min-w-[165px]"
@@ -70,14 +70,14 @@ const OrdersTable = () => {
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[100px]" />
         </Table.Head>
-        <Table.Body className="divide-y divide-gray-25">
+        <Table.Body className="divide-gray-25 divide-y">
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">DL - 19266755</p>
+              <p className="text-metal-500 text-body-4 font-medium">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
-              <p className="text-xs font-normal text-slate-500">3:45 pm</p>
+              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
+              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image src="/images/icon/country-0.svg" alt="country" height="18" width="24" />
@@ -90,31 +90,31 @@ const OrdersTable = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">3</p>
+              <p className="text-metal-500 text-body-5 font-medium">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$21,000</p>
+              <p className="text-metal-500 text-body-5 font-medium">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">285 Great North Road, Grey Lynn.</p>
+              <p className="text-metal-500 text-body-5 font-medium">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -131,11 +131,11 @@ const OrdersTable = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">DL - 34233451</p>
+              <p className="text-metal-500 text-body-4 font-medium">DL - 34233451</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 23, 2022</p>
-              <p className="text-xs font-normal text-slate-500">4:45 pm</p>
+              <p className="text-metal-500 text-body-5 font-medium">Jan 23, 2022</p>
+              <p className="text-metal-500 text-body-6 font-normal">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image src="/images/icon/country-1.svg" alt="country" height="18" width="24" />
@@ -148,31 +148,31 @@ const OrdersTable = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">6</p>
+              <p className="text-metal-500 text-body-5 font-medium">6</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$13,000</p>
+              <p className="text-metal-500 text-body-5 font-medium">$13,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">19 Great North Road, Grey Lynn</p>
+              <p className="text-metal-500 text-body-5 font-medium">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -189,11 +189,11 @@ const OrdersTable = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">DL - 19266567</p>
+              <p className="text-metal-500 text-body-4 font-medium">DL - 19266567</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 31, 2022</p>
-              <p className="text-xs font-normal text-slate-500">5:45 pm</p>
+              <p className="text-metal-500 text-body-5 font-medium">Jan 31, 2022</p>
+              <p className="text-metal-500 text-body-6 font-normal">5:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image src="/images/icon/country-2.svg" alt="country" height="18" width="24" />
@@ -206,31 +206,31 @@ const OrdersTable = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">8</p>
+              <p className="text-metal-500 text-body-5 font-medium">8</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$24,000</p>
+              <p className="text-metal-500 text-body-5 font-medium">$24,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">19 Great North Road, Grey Lynn</p>
+              <p className="text-metal-500 text-body-5 font-medium">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -247,11 +247,11 @@ const OrdersTable = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">DL - 19266755</p>
+              <p className="text-metal-500 text-body-4 font-medium">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
-              <p className="text-xs font-normal text-slate-500">3:45 pm</p>
+              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
+              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image src="/images/icon/country-5.svg" alt="country" height="18" width="24" />
@@ -264,31 +264,31 @@ const OrdersTable = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">9</p>
+              <p className="text-metal-500 text-body-5 font-medium">9</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$82,000</p>
+              <p className="text-metal-500 text-body-5 font-medium">$82,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">686 Great South Road, Manukau</p>
+              <p className="text-metal-500 text-body-5 font-medium">686 Great South Road, Manukau</p>
             </Table.Cell>
             <Table.Cell>
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -305,11 +305,11 @@ const OrdersTable = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">DL - 19264155</p>
+              <p className="text-metal-500 text-body-4 font-medium">DL - 19264155</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 07, 2022</p>
-              <p className="text-xs font-normal text-slate-500">02:45 pm</p>
+              <p className="text-metal-500 text-body-5 font-medium">Jan 07, 2022</p>
+              <p className="text-metal-500 text-body-6 font-normal">02:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image src="/images/icon/country-4.svg" alt="country" height="18" width="24" />
@@ -322,31 +322,31 @@ const OrdersTable = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">3</p>
+              <p className="text-metal-500 text-body-5 font-medium">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$21,000</p>
+              <p className="text-metal-500 text-body-5 font-medium">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">20 Poland Road, Wairau Valley</p>
+              <p className="text-metal-500 text-body-5 font-medium">20 Poland Road, Wairau Valley</p>
             </Table.Cell>
             <Table.Cell>
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -363,11 +363,11 @@ const OrdersTable = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">DL - 19266755</p>
+              <p className="text-metal-500 text-body-4 font-medium">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
-              <p className="text-xs font-normal text-slate-500">3:45 pm</p>
+              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
+              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image src="/images/icon/country-5.svg" alt="country" height="18" width="24" />
@@ -380,31 +380,31 @@ const OrdersTable = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">3</p>
+              <p className="text-metal-500 text-body-5 font-medium">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$21,000</p>
+              <p className="text-metal-500 text-body-5 font-medium">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">285 Great North Road, Grey Lynn.</p>
+              <p className="text-metal-500 text-body-5 font-medium">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="rounded px-2 py-1 hover:bg-slate-100">
-                      <button className="flex w-full items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 rounded px-2 py-1">
+                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -449,7 +449,7 @@ export const TableComponent = () => {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-2xl font-semibold text-slate-600">Orders</p>
+              <p className="text-body-1 font-semibold text-metal-600">Orders</p>
             </div>
             <div className="flex items-center gap-5">
               <Button type="outlineGray" size="sm">
@@ -469,7 +469,7 @@ export const TableComponent = () => {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[302px]">
-            <p className="text-xs font-medium text-slate-400">Order no.</p>
+            <p className="text-body-6 font-medium text-metal-400">Order no.</p>
           </Table.HeadCell>
           <Table.HeadCell
             className="min-w-[165px]"
@@ -518,13 +518,13 @@ export const TableComponent = () => {
         <Table.Body className="divide-y divide-gray-25">
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
+              <p className="text-body-4 font-medium text-metal-500">
                 DL - 19266755
               </p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
-              <p className="text-xs font-normal text-slate-500">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image
@@ -547,13 +547,13 @@ export const TableComponent = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">3</p>
+              <p className="text-body-5 font-medium text-metal-500">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$21,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-body-5 font-medium text-metal-500">
                 285 Great North Road, Grey Lynn.
               </p>
             </Table.Cell>
@@ -561,19 +561,19 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -591,13 +591,13 @@ export const TableComponent = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
+              <p className="text-body-4 font-medium text-metal-500">
                 DL - 34233451
               </p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 23, 2022</p>
-              <p className="text-xs font-normal text-slate-500">4:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 23, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image
@@ -620,13 +620,13 @@ export const TableComponent = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">6</p>
+              <p className="text-body-5 font-medium text-metal-500">6</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$13,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$13,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-body-5 font-medium text-metal-500">
                 19 Great North Road, Grey Lynn
               </p>
             </Table.Cell>
@@ -634,19 +634,19 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -664,13 +664,13 @@ export const TableComponent = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
+              <p className="text-body-4 font-medium text-metal-500">
                 DL - 19266567
               </p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 31, 2022</p>
-              <p className="text-xs font-normal text-slate-500">5:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 31, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">5:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image
@@ -693,13 +693,13 @@ export const TableComponent = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">8</p>
+              <p className="text-body-5 font-medium text-metal-500">8</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$24,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$24,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-body-5 font-medium text-metal-500">
                 19 Great North Road, Grey Lynn
               </p>
             </Table.Cell>
@@ -707,19 +707,19 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -737,13 +737,13 @@ export const TableComponent = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
+              <p className="text-body-4 font-medium text-metal-500">
                 DL - 19266755
               </p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
-              <p className="text-xs font-normal text-slate-500">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image
@@ -766,13 +766,13 @@ export const TableComponent = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">9</p>
+              <p className="text-body-5 font-medium text-metal-500">9</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$82,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$82,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-body-5 font-medium text-metal-500">
                 686 Great South Road, Manukau
               </p>
             </Table.Cell>
@@ -780,19 +780,19 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -810,13 +810,13 @@ export const TableComponent = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
+              <p className="text-body-4 font-medium text-metal-500">
                 DL - 19264155
               </p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 07, 2022</p>
-              <p className="text-xs font-normal text-slate-500">02:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 07, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">02:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image
@@ -839,13 +839,13 @@ export const TableComponent = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">3</p>
+              <p className="text-body-5 font-medium text-metal-500">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$21,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-body-5 font-medium text-metal-500">
                 20 Poland Road, Wairau Valley
               </p>
             </Table.Cell>
@@ -853,19 +853,19 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -883,13 +883,13 @@ export const TableComponent = () => {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-base font-medium text-slate-500">
+              <p className="text-body-4 font-medium text-metal-500">
                 DL - 19266755
               </p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">Jan 19, 2022</p>
-              <p className="text-xs font-normal text-slate-500">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Image
@@ -912,13 +912,13 @@ export const TableComponent = () => {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">3</p>
+              <p className="text-body-5 font-medium text-metal-500">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">$21,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-body-5 font-medium text-metal-500">
                 285 Great North Road, Grey Lynn.
               </p>
             </Table.Cell>
@@ -926,19 +926,19 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-slate-100"
+                customClass="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-slate-100 py-1 px-2 rounded">
-                      <button className="w-full flex items-center justify-between text-base font-normal text-slate-600">
+                    <li className="hover:bg-metal-100 py-1 px-2 rounded">
+                      <button className="w-full flex items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />

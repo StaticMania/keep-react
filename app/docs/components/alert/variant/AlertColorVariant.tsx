@@ -19,7 +19,7 @@ const AlertWithColorVariant = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="text-metal-500 mt-1 text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
@@ -36,7 +36,7 @@ const AlertWithColorVariant = () => {
         withBorderAccentPosition="left"
         onDismiss={onDismiss}
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="text-metal-500 mt-1 text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
@@ -53,7 +53,7 @@ const AlertWithColorVariant = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="text-metal-500 mt-1 text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
@@ -71,7 +71,7 @@ const AlertWithColorVariant = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="text-metal-500 mt-1 text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
@@ -89,7 +89,7 @@ const AlertWithColorVariant = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="text-metal-500 mt-1 text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
               Link style
@@ -125,7 +125,7 @@ export const AlertComponent = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="mt-1 text-body-4 text-metal-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
@@ -144,7 +144,7 @@ export const AlertComponent = () => {
         withBorderAccentPosition="left"
         onDismiss={onDismiss}
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="mt-1 text-body-4 text-metal-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
@@ -163,7 +163,7 @@ export const AlertComponent = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="mt-1 text-body-4 text-metal-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
@@ -182,7 +182,7 @@ export const AlertComponent = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="mt-1 text-body-4 text-metal-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">
@@ -201,7 +201,7 @@ export const AlertComponent = () => {
         onDismiss={onDismiss}
         withBorderAccentPosition="left"
         additionalContent={
-          <div className="mt-1 text-sm text-slate-500">
+          <div className="mt-1 text-body-4 text-metal-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry
             <Link href="/" className="ml-2 text-primary-500 underline">

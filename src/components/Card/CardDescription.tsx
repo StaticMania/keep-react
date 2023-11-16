@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
+import { useTheme } from '~/src/Keep/ThemeContext'
 
 export interface CardDescriptionProps {
   children?: ReactNode
@@ -7,5 +8,10 @@ export interface CardDescriptionProps {
 }
 
 export const CardDescription: React.FC<CardDescriptionProps> = ({ children, className }) => {
-  return <p className={cn('text-xs font-normal text-slate-500 md:text-base', className)}>{children}</p>
+  const theme = useTheme().theme.card.description
+  return (
+    <p className={cn(theme ,className)}>
+      {children}
+    </p>
+  )
 }

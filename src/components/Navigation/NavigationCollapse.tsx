@@ -35,7 +35,7 @@ export const NavigationCollapse: FC<CollapseProps> = ({ children, className, col
         collapseType === 'sidebar' ? collapse.type.sidebar : collapse.type.fullWidth,
       )}>
       <div className="mb-4">
-        <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-px text-sm text-slate-400">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-metal-400 flex items-center gap-px text-body-5">
           <CaretLeft size="16" />
           Go Back
         </button>

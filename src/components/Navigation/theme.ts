@@ -8,7 +8,7 @@ export const navigationTheme: KeepNavigationTheme = {
       off: 'rounded-none',
     },
     bordered: {
-      on: 'border border-slate-100',
+      on: 'border border-metal-100',
       off: 'border-none',
     },
     container: {
@@ -22,14 +22,14 @@ export const navigationTheme: KeepNavigationTheme = {
       on: 'flex items-center justify-between gap-1 group',
       off: '',
     },
-    linkText: 'text-base font-normal text-slate-600 hover:text-slate-800 transition-colors duration-300',
+    linkText: 'text-body-4 font-normal text-metal-600 hover:text-metal-800 transition-colors duration-300',
     iconAnimation: {
       on: 'group-hover:rotate-180 transition-all duration-300',
       off: '',
     },
   },
   divider: {
-    base: 'h-6 w-px bg-slate-200 mx-8 lg:block hidden',
+    base: 'h-6 w-px bg-metal-200 mx-8 lg:block hidden',
   },
   collapse: {
     base: 'transition-all duration-300 z-50',
