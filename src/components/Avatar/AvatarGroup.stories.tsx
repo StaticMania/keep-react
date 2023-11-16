@@ -45,7 +45,7 @@ export const AvatarWithAddIcon: Story = {
         icon="/images/icon/plus.png"
         bg="#444D61"
         size="md"
-        ringColor="ring-slate-200"
+        ringColor="ring-metal-200"
         iconColor="text-white"
       />,
     ),

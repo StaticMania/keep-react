@@ -23,7 +23,7 @@ const ProductCard = () => {
           className="max-w-xs overflow-hidden rounded-md"
           imgSrc="https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format"
           imgSize="md">
-          <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+          <Card.Container className="bg-metal-50/50 absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full">
             <Heart size={20} weight="bold" color="white" />
           </Card.Container>
           <Card.Container className="p-6">
@@ -55,12 +55,12 @@ const ProductCard = () => {
           imgSize="md">
           <Card.Container className="space-y-3 p-6">
             <Card.Container>
-              <Card.Title className="text-md font-semibold text-slate-700 md:text-xl">Keep design podcast</Card.Title>
-              <Card.Description className="text-sm font-medium text-slate-500">By Static Mania</Card.Description>
+              <Card.Title className=" text-metal-700 font-semibold md:text-body-2">Keep design podcast</Card.Title>
+              <Card.Description className="text-metal-500 text-body-5 font-medium">By Static Mania</Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-between">
-              <Card.Title className="text-xs font-medium text-slate-500">4:05</Card.Title>
-              <Card.Title className="text-xs font-medium text-slate-500">10:05</Card.Title>
+              <Card.Title className="text-metal-500 text-body-6 font-medium">4:05</Card.Title>
+              <Card.Title className="text-metal-500 text-body-6 font-medium">10:05</Card.Title>
             </Card.Container>
             <Progress progress={45} color="info" rounded={true} />
             <Card.Container className="flex items-center justify-between">
@@ -88,37 +88,37 @@ const ProductCard = () => {
           className="max-w-xs overflow-hidden rounded-md"
           imgSrc="https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format"
           imgSize="md">
-          <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+          <Card.Container className="bg-metal-50/50 absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full">
             <Heart size={20} weight="bold" color="white" />
           </Card.Container>
           <Card.Container className="space-y-4 p-6">
-            <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500 md:text-base">
+            <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium md:text-body-4">
               <MapPinLine size={20} color="#5E718D" />
               <span>Garden Street,Ring Road</span>
             </Card.Title>
             <Card.Container className="flex items-center justify-between">
-              <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+              <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium">
                 <Bed size={20} color="#5E718D" />
                 <span>3 Bed Room</span>
               </Card.Title>
-              <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+              <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium">
                 <Shower size={20} color="#5E718D" />
                 <span>1 Bath</span>
               </Card.Title>
             </Card.Container>
             <Card.Container className="flex items-center justify-between">
-              <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+              <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium">
                 <ArrowsOutSimple size={20} color="#5E718D" />
                 <span>1,032 sqft</span>
               </Card.Title>
-              <Card.Title className="flex items-center gap-1 text-sm font-medium text-slate-500">
+              <Card.Title className="text-metal-500 flex items-center gap-1 text-body-5 font-medium">
                 <Users size={20} color="#5E718D" />
                 <span>Family</span>
               </Card.Title>
             </Card.Container>
             <Card.Container className="my-3 flex items-center justify-between">
               <Button type="primary">Check Out</Button>
-              <Card.Title className="text-lg font-semibold text-slate-700 md:text-2xl">$649,00</Card.Title>
+              <Card.Title className="text-metal-700 text-body-3 font-semibold md:text-body-1">$649,00</Card.Title>
             </Card.Container>
           </Card.Container>
         </Card>
@@ -157,7 +157,7 @@ export const CardComponent = () => {
         imgSrc="https://images.prismic.io/staticmania/45ce2799-f29b-462f-a795-5d3d5d10c9ad_product-1.avif?auto=compress,format"
         imgSize="md"
       >
-        <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+        <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-metal-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="p-6">
@@ -190,30 +190,30 @@ export const CardComponent = () => {
         imgSrc="https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format"
         imgSize="md"
       >
-        <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-50/50">
+        <Card.Container className="absolute top-3.5 right-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-metal-50/50">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="space-y-4 p-6">
-          <Card.Title className="flex items-center gap-2 text-sm md:text-base font-medium text-slate-500">
+          <Card.Title className="flex items-center gap-2 text-body-5 md:text-body-4 font-medium text-metal-500">
             <MapPinLine size={20} color="#5E718D" />
             <span>Garden Street,Ring Road</span>
           </Card.Title>
           <Card.Container className="flex items-center justify-between">
-            <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+            <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
               <Bed size={20} color="#5E718D" />
               <span>3 Bed Room</span>
             </Card.Title>
-            <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+            <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
               <Shower size={20} color="#5E718D" />
               <span>1 Bath</span>
             </Card.Title>
           </Card.Container>
           <Card.Container className="flex items-center justify-between">
-            <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+            <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
               <ArrowsOutSimple size={20} color="#5E718D" />
               <span>1,032 Sqrt</span>
             </Card.Title>
-            <Card.Title className="flex items-center gap-1 text-sm font-medium text-slate-500">
+            <Card.Title className="flex items-center gap-1 text-body-5 font-medium text-metal-500">
               <Users size={20} color="#5E718D" />
               <span>Family</span>
             </Card.Title>
@@ -225,7 +225,7 @@ export const CardComponent = () => {
             <Button type="primary" size="xs" customClass="md:hidden block">
               Check Out
             </Button>
-            <Card.Title className="text-lg md:text-2xl font-semibold text-slate-700">
+            <Card.Title className="text-body-3 md:text-body-1 font-semibold text-metal-700">
               $649,00
             </Card.Title>
           </Card.Container>
@@ -239,18 +239,18 @@ export const CardComponent = () => {
       >
         <Card.Container className="space-y-3 p-6">
           <Card.Container>
-            <Card.Title className="text-md md:text-xl font-semibold text-slate-700">
+            <Card.Title className=" md:text-body-2 font-semibold text-metal-700">
               Keep design podcast
             </Card.Title>
-            <Card.Description className="text-sm font-medium text-slate-500">
+            <Card.Description className="text-body-5 font-medium text-metal-500">
               By Static Mania
             </Card.Description>
           </Card.Container>
           <Card.Container className="flex items-center justify-between">
-            <Card.Title className="text-xs font-medium text-slate-500">
+            <Card.Title className="text-body-6 font-medium text-metal-500">
               4:05
             </Card.Title>
-            <Card.Title className="text-xs font-medium text-slate-500">
+            <Card.Title className="text-body-6 font-medium text-metal-500">
               10:05
             </Card.Title>
           </Card.Container>

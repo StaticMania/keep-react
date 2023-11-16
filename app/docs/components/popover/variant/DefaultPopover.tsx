@@ -12,7 +12,9 @@ const DefaultPopover = () => {
             <Button type="outlinePrimary" size="xs">
               Checkout
             </Button>
-            <button className="text-sm font-medium text-primary-400 underline underline-offset-[3px]">Skip Now</button>
+            <button className="text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">
+              Skip Now
+            </button>
           </div>
         }>
         <Button size="xs">Popover</Button>
@@ -35,7 +37,7 @@ export const PopoverComponent = () => {
           <Button type="outlinePrimary" size="xs">
             Checkout
           </Button>
-          <button className="text-sm font-medium underline text-primary-400 underline-offset-[3px]">
+          <button className="text-body-5 font-medium underline text-primary-400 underline-offset-[3px]">
             Skip Now
           </button>
         </div>

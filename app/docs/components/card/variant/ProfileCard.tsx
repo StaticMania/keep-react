@@ -14,8 +14,8 @@ const ProfileCard = () => {
         <Card.Container className="flex items-center">
           <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/11.jpg" />
           <Card.Container className="ml-3">
-            <Card.Title className="text-sm font-semibold text-slate-800 md:text-base">Md Ariful Islam</Card.Title>
-            <Card.Title className="text-xs font-normal  text-slate-400 md:font-medium">Product Designer</Card.Title>
+            <Card.Title className="text-metal-800 text-body-5 font-semibold md:text-body-4">Md Ariful Islam</Card.Title>
+            <Card.Title className="text-metal-400 text-body-6  font-normal md:font-medium">Product Designer</Card.Title>
           </Card.Container>
         </Card.Container>
       </Card>
@@ -30,10 +30,12 @@ const ProfileCard = () => {
           />
         </Card.Container>
         <Card.Container className="text-center">
-          <Card.Title className="text-sm font-semibold text-slate-800 md:text-base">Khairul Islam Ridoy</Card.Title>
-          <Card.Title className="text-xs font-normal text-slate-400 md:font-medium">UI/UX Designer</Card.Title>
+          <Card.Title className="text-metal-800 text-body-5 font-semibold md:text-body-4">
+            Khairul Islam Ridoy
+          </Card.Title>
+          <Card.Title className="text-metal-400 text-body-6 font-normal md:font-medium">UI/UX Designer</Card.Title>
         </Card.Container>
-        <Card.Container className="circled mx-auto flex max-w-[220px] items-center justify-center divide-x divide-slate-200 rounded-md border border-slate-200 p-1 md:p-2">
+        <Card.Container className="circled divide-metal-200 border-metal-200 mx-auto flex max-w-[220px] items-center justify-center divide-x rounded-md border p-1 md:p-2">
           <Card.Link
             className="flex items-center justify-center px-3 py-1"
             icon={<LinkedinLogo size={24} color="#0072b1" weight="fill" />}
@@ -77,10 +79,10 @@ export const CardComponent = () => {
             img="https://randomuser.me/api/portraits/men/11.jpg"
           />
           <Card.Container className="ml-3">
-            <Card.Title className="md:text-base text-sm font-semibold text-slate-800">
+            <Card.Title className="md:text-body-4 text-body-5 font-semibold text-metal-800">
               Md Ariful Islam
             </Card.Title>
-            <Card.Title className="text-xs md:font-medium  font-normal text-slate-400">
+            <Card.Title className="text-body-6 md:font-medium  font-normal text-metal-400">
               Product Designer
             </Card.Title>
           </Card.Container>
@@ -96,14 +98,14 @@ export const CardComponent = () => {
           />
         </Card.Container>
         <Card.Container className="text-center">
-          <Card.Title className="text-sm md:text-base font-semibold text-slate-800">
+          <Card.Title className="text-body-5 md:text-body-4 font-semibold text-metal-800">
             Khairul Islam Ridoy
           </Card.Title>
-          <Card.Title className="text-xs font-normal md:font-medium text-slate-400">
+          <Card.Title className="text-body-6 font-normal md:font-medium text-metal-400">
             UI/UX Designer
           </Card.Title>
         </Card.Container>
-        <Card.Container className="mx-auto flex max-w-[220px] rounded-md items-center justify-center divide-x divide-slate-200 circled border border-slate-200 p-1 md:p-2">
+        <Card.Container className="mx-auto flex max-w-[220px] rounded-md items-center justify-center divide-x divide-metal-200 circled border border-metal-200 p-1 md:p-2">
           <Card.Link
             className="flex items-center justify-center py-1 px-3"
             icon={<LinkedinLogo size={24} color="#0072b1" weight="fill" />}

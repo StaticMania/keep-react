@@ -83,7 +83,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
     <section className="pt-12 2xl:container">
       <aside
         id="linkPage"
-        className="fixed left-0 top-20 z-20 hidden  h-screen  overflow-y-auto border-r border-r-slate-100 bg-white pt-8  lg:block lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] 4k:w-[calc(100%-78%)]">
+        className="border-r-metal-100 fixed left-0 top-20 z-20  hidden  h-screen overflow-y-auto border-r bg-white pt-8  lg:block lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] 4k:w-[calc(100%-78%)]">
         <div className="ml-auto w-56 space-y-3 pr-3">
           <Accordion
             flush
@@ -94,21 +94,21 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
             <Accordion.Panel>
               <Accordion.Title
                 theme={{
-                  base: 'flex w-full items-center text-left font-semibold text-sm leading-[22px] tracking-[-0.2px] text-black/100 hover:text-black',
+                  base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
                 }}>
                 Getting Started
               </Accordion.Title>
               <Accordion.Content
                 theme={{
-                  base: 'text-slate-500 font-normal',
+                  base: 'text-metal-500 font-normal',
                 }}>
-                <ul className="-ml-px mt-3 space-y-2 border-l border-l-slate-100">
+                <ul className="border-l-metal-100 -ml-px mt-3 space-y-2 border-l">
                   {gettingStartedRoutes.map((route) => (
                     <li key={route.id}>
                       <Link
-                        className={`-ml-px border-l border-l-transparent pl-3 text-sm  leading-[28px] tracking-[-0.2px] text-slate-500 hover:-ml-px hover:border-l hover:border-slate-500 hover:text-slate-900 ${
+                        className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
                           IsActive(route.href)
-                            ? 'border-l !border-slate-900 text-slate-900 transition-all duration-150'
+                            ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
                             : ''
                         }`}
                         href={route.href}>
@@ -129,7 +129,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
             <Accordion.Panel>
               <Accordion.Title
                 theme={{
-                  base: 'flex w-full items-center text-left font-semibold text-sm leading-[22px] tracking-[-0.2px] text-black/100 hover:text-black',
+                  base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
                 }}>
                 Components
               </Accordion.Title>
@@ -137,13 +137,13 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
                 theme={{
                   base: '',
                 }}>
-                <ul className="mt-3 space-y-2 border-l border-l-slate-100 pb-24">
+                <ul className="border-l-metal-100 mt-3 space-y-2 border-l pb-24">
                   {routes.map((route) => (
                     <li key={route.id}>
                       <Link
-                        className={`-ml-px border-l border-l-transparent pl-3 text-sm  leading-[28px] tracking-[-0.2px] text-slate-500 hover:-ml-px hover:border-l hover:border-slate-500 hover:text-slate-900 ${
+                        className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
                           IsActive(route.href)
-                            ? 'border-l !border-slate-900 text-slate-900 transition-all duration-150'
+                            ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
                             : ''
                         }`}
                         href={route.href}>
@@ -165,15 +165,13 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
         className="fixed bottom-0 right-[max(0px,calc(50%-51rem))] top-16 z-20 hidden h-[calc(100vh-3rem)] overflow-y-auto pt-12 lg:w-[calc(100vw-80vw)] xl:block xl:w-[calc(100vw-82vw)] 2xl:w-[calc(100vw-86vw)] 4k:w-[calc(100vw-88vw)]">
         <div className="pl-5">
           <div className="flex flex-col justify-between overflow-y-auto">
-            <h4 className="mb-2 text-sm font-semibold uppercase leading-[22px] tracking-[-0.2px] text-black/100">
-              On this page
-            </h4>
+            <h4 className="mb-2 text-body-5 font-semibold uppercase text-black/100">On this page</h4>
             <nav id="visible-table-of-contents">
               <ul
                 dangerouslySetInnerHTML={{
                   __html: innerHtml ? innerHtml : '',
                 }}
-                className="border-l border-l-slate-100"
+                className="border-l-metal-100 border-l"
               />
             </nav>
           </div>

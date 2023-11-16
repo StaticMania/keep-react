@@ -14,7 +14,7 @@ export const CardLink: React.FC<CardLinkProps> = ({ children, className, href = 
     <a
       href={href}
       className={twMerge(
-        className ? className : 'flex items-center gap-1 text-xs font-medium text-primary-500 md:text-base',
+        className ? className : 'md:text-body-4 text-body-6 flex items-center gap-1 font-medium text-primary-500',
       )}>
       {icon && iconPosition === 'right' && icon}
       <span>{children}</span>

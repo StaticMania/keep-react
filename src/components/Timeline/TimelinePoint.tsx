@@ -82,7 +82,7 @@ export const TimelinePoint: FC<TimelinePointProps> = ({ children, className, ico
           className={twMerge(
             point.root.icon.off.base,
             gradientPoint && gradientColor ? gradientColor : 'bg-gradient-9',
-            !gradientPoint && 'bg-slate-200',
+            !gradientPoint && 'bg-metal-200',
           )}></div>
       )}
     </div>

@@ -2,23 +2,23 @@ import { keepFormControlTheme } from './formControls'
 
 export const formControlsTheme: keepFormControlTheme = {
   helperText: {
-    base: 'mt-2 text-sm',
+    base: 'mt-2 text-body-5',
     disabled: 'cursor-not-allowed opacity-50',
     colors: {
-      default: 'text-slate-500',
-      gray: 'text-slate-500',
-      info: 'text-blue-700',
+      default: 'text-metal-500',
+      gray: 'text-metal-500',
+      info: 'text-primary-700',
       success: 'text-green-600',
       error: 'text-red-600',
       warning: 'text-yellow-500',
     },
   },
   label: {
-    base: 'text-sm font-medium cursor-pointer select-none',
+    base: 'text-body-5 font-medium cursor-pointer select-none',
     colors: {
-      default: 'text-slate-700',
-      gray: 'text-slate-700',
-      info: 'text-blue-500',
+      default: 'text-metal-700',
+      gray: 'text-metal-700',
+      info: 'text-primary-500',
       error: 'text-red-600',
       warning: 'text-yellow-500',
       success: 'text-green-700',
@@ -27,7 +27,7 @@ export const formControlsTheme: keepFormControlTheme = {
   },
   radio: {
     color: {
-      info: 'peer-checked:border-primary-500 peer-checked:before:bg-primary-500 border-slate-200',
+      info: 'peer-checked:border-primary-500 peer-checked:before:bg-primary-500 border-metal-200',
       warning: 'peer-checked:border-warning-500 peer-checked:before:bg-warning-500 border-warning-500',
       success: 'peer-checked:border-success-500 peer-checked:before:bg-success-600 border-success-500',
       error: 'peer-checked:border-error-500 peer-checked:before:bg-error-500 border-error-500',
@@ -50,7 +50,7 @@ export const formControlsTheme: keepFormControlTheme = {
     field: {
       base: 'relative',
       icon: {
-        base: 'absolute bg-slate-25 cursor-pointer rounded-md top-2/4 -translate-y-2/4',
+        base: 'absolute bg-metal-25 cursor-pointer rounded-md top-2/4 -translate-y-2/4',
         incrementIcon: 'h-full flex items-center justify-center',
         decrementIcon: 'h-full flex items-center justify-center',
         disabled: '!cursor-not-allowed opacity-50',
@@ -66,12 +66,12 @@ export const formControlsTheme: keepFormControlTheme = {
         },
       },
       input: {
-        base: 'block text-center border border-slate-200 rounded-md text-slate-600 focus:outline-none focus:ring-0 focus:border-slate-500',
+        base: 'block text-center border border-metal-200 rounded-md text-metal-600 focus:outline-none focus:ring-0 focus:border-metal-500',
         disabled: 'cursor-not-allowed opacity-50',
         sizes: {
-          sm: 'max-w-[120px] py-2 px-8 sm:text-xs',
-          md: 'max-w-[134px] py-2.5 px-10 text-sm',
-          lg: 'max-w-[140px] py-3 px-12 sm:text-md',
+          sm: 'max-w-[120px] py-2 px-8 sm:text-body-6',
+          md: 'max-w-[134px] py-2.5 px-10 text-body-5',
+          lg: 'max-w-[140px] py-3 px-12 sm:',
         },
         withIcon: {
           on: {
@@ -86,11 +86,11 @@ export const formControlsTheme: keepFormControlTheme = {
   textInput: {
     base: 'flex',
     addon: {
-      base: 'relative inline-flex items-center px-3 text-sm after:content[""] after:absolute after:h-2/4 after:w-px after:top-2/4 after:-translate-y-2/4',
+      base: 'relative inline-flex items-center px-3 text-body-5 after:content[""] after:absolute after:h-2/4 after:w-px after:top-2/4 after:-translate-y-2/4',
       separator: {
         colors: {
-          default: 'text-slate-800 border-slate-300 after:bg-slate-200',
-          gray: 'text-slate-800 border-slate-300 after:bg-slate-200',
+          default: 'text-metal-800 border-metal-300 after:bg-metal-200',
+          gray: 'text-metal-800 border-metal-300 after:bg-metal-200',
           info: 'text-primary-500 border-primary-300 after:bg-primary-200',
           error: 'text-error-600 border-error-200 after:bg-error-200',
           warning: 'text-warning-500 border-warning-200 after:bg-warning-200',
@@ -120,13 +120,13 @@ export const formControlsTheme: keepFormControlTheme = {
         base: 'block w-full focus:outline-none focus:ring-0',
         disabled: 'cursor-not-allowed opacity-50',
         sizes: {
-          sm: 'p-2 sm:text-xs',
-          md: 'p-2.5 text-sm',
-          lg: 'sm:text-md p-4',
+          sm: 'p-2 sm:text-body-6',
+          md: 'p-2.5 text-body-5',
+          lg: 'sm: p-4',
         },
         colors: {
-          default: 'text-slate-800 border-slate-300 caret-slate-800',
-          gray: 'text-slate-800 border-slate-300 caret-slate-800',
+          default: 'text-metal-800 border-metal-300 caret-metal-800',
+          gray: 'text-metal-800 border-metal-300 caret-metal-800',
           info: 'text-primary-500 border-primary-300 caret-primary-600',
           error: 'text-error-600 border-error-200 caret-error-500',
           warning: 'text-warning-500 border-warning-200 caret-warning-500',
@@ -135,15 +135,15 @@ export const formControlsTheme: keepFormControlTheme = {
         withBg: {
           on: {
             colors: {
-              default: 'bg-white placeholder:text-slate-400 focus:placeholder:text-slate-300',
-              gray: 'bg-slate-25 placeholder:text-slate-400 focus:placeholder:text-slate-300',
-              info: 'bg-blue-25 placeholder:text-primary-400 focus:placeholder:text-primary-300',
+              default: 'bg-white placeholder:text-metal-400 focus:placeholder:text-metal-300',
+              gray: 'bg-metal-25 placeholder:text-metal-400 focus:placeholder:text-metal-300',
+              info: 'bg-primary-25 placeholder:text-primary-400 focus:placeholder:text-primary-300',
               error: 'bg-error-25 placeholder:text-error-400 focus:placeholder:text-error-300',
               warning: 'bg-warning-25 placeholder:text-warning-400 focus:placeholder:text-warning-300',
               success: 'bg-success-25 placeholder:text-success-400 focus:placeholder:text-success-300',
             },
           },
-          off: 'bg-white placeholder:text-slate-400 focus:placeholder:text-slate-300',
+          off: 'bg-white placeholder:text-metal-400 focus:placeholder:text-metal-300',
         },
         withBorder: {
           on: 'border',
@@ -165,7 +165,7 @@ export const formControlsTheme: keepFormControlTheme = {
           off: 'rounded-md',
         },
         withShadow: {
-          on: 'shadow-sm',
+          on: 'shadow-small',
           off: '',
         },
       },
@@ -178,13 +178,13 @@ export const formControlsTheme: keepFormControlTheme = {
       input: {
         base: 'rounded-lg block w-full border disabled:cursor-not-allowed disabled:opacity-50',
         sizes: {
-          sm: 'sm:text-xs',
-          md: 'text-sm',
-          lg: 'sm:text-md',
+          sm: 'sm:text-body-6',
+          md: 'text-body-5',
+          lg: 'sm:',
         },
         colors: {
           gray: 'bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500',
-          info: 'border-blue-500 bg-blue-50 text-blue-900 placeholder-blue-700 focus:border-blue-500 focus:ring-blue-500',
+          info: 'border-blue-500 bg-primary-50 text-primary-900 placeholder-blue-700 focus:border-blue-500 focus:ring-blue-500',
           error: 'border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500',
           warning:
             'border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500',
@@ -198,8 +198,8 @@ export const formControlsTheme: keepFormControlTheme = {
     base: 'appearance-none form-textarea block w-full border-0 focus:outline-none focus:ring-0 p-3',
     disabled: 'disabled:cursor-not-allowed disabled:opacity-50',
     colors: {
-      default: 'text-slate-800 border-slate-300 focus:border-slate-500 caret-slate-800',
-      gray: 'text-slate-800 border-slate-300 focus:border-slate-500 caret-slate-800',
+      default: 'text-metal-800 border-metal-300 focus:border-metal-500 caret-metal-800',
+      gray: 'text-metal-800 border-metal-300 focus:border-metal-500 caret-metal-800',
       info: 'text-primary-500 border-primary-300 focus:border-info-300 caret-primary-600',
       error: 'text-error-600 border-error-200 focus:border-error-300 caret-error-500',
       warning: 'text-warning-500 border-warning-200 focus:border-warning-300 caret-warning-500',
@@ -208,22 +208,22 @@ export const formControlsTheme: keepFormControlTheme = {
     withBg: {
       on: {
         colors: {
-          default: 'bg-white placeholder:text-slate-400 focus:placeholder:text-slate-300',
-          gray: 'bg-slate-25 placeholder:text-slate-400 focus:placeholder:text-slate-300',
-          info: 'bg-blue-25 placeholder:text-primary-400 focus:placeholder:text-primary-300',
+          default: 'bg-white placeholder:text-metal-400 focus:placeholder:text-metal-300',
+          gray: 'bg-metal-25 placeholder:text-metal-400 focus:placeholder:text-metal-300',
+          info: 'bg-primary-25 placeholder:text-primary-400 focus:placeholder:text-primary-300',
           error: 'bg-error-25 placeholder:text-error-400 focus:placeholder:text-error-300',
           warning: 'bg-warning-25 placeholder:text-warning-400 focus:placeholder:text-warning-300',
           success: 'bg-success-25 placeholder:text-success-400 focus:placeholder:text-success-300',
         },
       },
-      off: 'bg-white placeholder:text-slate-400 focus:placeholder:text-slate-300',
+      off: 'bg-white placeholder:text-metal-400 focus:placeholder:text-metal-300',
     },
     withBorder: {
       on: '!border rounded-md',
       off: '!border-b rounded-none',
     },
     withShadow: {
-      on: 'shadow-sm',
+      on: 'shadow-small',
       off: '',
     },
   },

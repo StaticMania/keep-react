@@ -173,7 +173,7 @@ export const Pagination: FC<PaginationProps> = ({
 
           {layout === 'pagination' && showGoToPaginate && (
             <li className={twMerge(theme.goTo.base, paginateWithBorder && theme.goTo.withBorder)}>
-              <span className="text-slate-200">/</span>
+              <span className="text-metal-200">/</span>
               <span className={twMerge(theme.goTo.title)}>Go to</span>
               <input
                 className={twMerge(theme.goTo.input, theme.goTo.goToShape[goToShape])}

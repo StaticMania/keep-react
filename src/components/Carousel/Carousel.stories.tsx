@@ -116,7 +116,7 @@ function renderImageMultipleTimes(): React.ReactElement[] {
 function renderSlideMultipleTimes(): React.ReactElement[] {
   const slides = []
   for (let i = 0; i < 5; i++) {
-    const item = <div className="flex h-full items-center justify-center bg-slate-400">Slide {i + 1}</div>
+    const item = <div className="bg-metal-400 flex h-full items-center justify-center">Slide {i + 1}</div>
     slides.push(item)
   }
   return slides

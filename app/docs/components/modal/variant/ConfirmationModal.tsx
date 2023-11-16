@@ -24,10 +24,12 @@ const ConfirmationModal = () => {
       <Modal show={showInfoModal} size="sm">
         <Modal.Body>
           <div className="flex items-center gap-2 md:items-start">
-            <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
+            <div className="mt-2 rounded bg-primary-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-base font-semibold text-slate-900 md:text-xl">Do you want to upload this file?</h3>
+            <h3 className="text-metal-900 text-body-4 font-semibold md:text-body-2">
+              Do you want to upload this file?
+            </h3>
           </div>
         </Modal.Body>
         <Modal.Footer>
@@ -45,7 +47,7 @@ const ConfirmationModal = () => {
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -88,10 +90,10 @@ export const ModalComponent = () => {
       <Modal show={showInfoModal} size="sm">
         <Modal.Body>
           <div className="flex items-center md:items-start gap-2">
-            <div className="mt-2 rounded bg-blue-50  p-2  text-gray-400   ">
+            <div className="mt-2 rounded bg-primary-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-base md:text-xl font-semibold text-slate-900">
+            <h3 className="text-body-4 md:text-body-2 font-semibold text-metal-900">
               Do you want to upload this file?
             </h3>
           </div>
@@ -121,7 +123,7 @@ export const ModalComponent = () => {
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>

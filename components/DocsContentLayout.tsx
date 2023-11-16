@@ -11,10 +11,10 @@ export const DocsContentLayout: FC<DocsContentLayoutProps> = function ({ title, 
   return (
     <div>
       <div className="mb-[50px]">
-        <h1 className="mb-2 inline-block w-full text-2xl font-semibold leading-10 tracking-[-0.5px] text-slate-900 md:text-[26px]">
+        <h1 className="text-metal-900 mb-2 inline-block w-full text-body-1 font-semibold leading-10 tracking-[-0.5px] md:text-[26px]">
           {title}
         </h1>
-        <p className="text-sm leading-6 tracking-[-0.3px] text-slate-700 md:text-base">{description}</p>
+        <p className="text-metal-700 text-body-5 leading-6 tracking-[-0.3px] md:text-body-4">{description}</p>
       </div>
       <div id="mainContent">{children}</div>
     </div>

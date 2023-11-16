@@ -1,9 +1,9 @@
 import { keepTreeTheme } from '.'
 
 export const treeTheme: keepTreeTheme = {
-  base: 'list-none space-y-2  text-xs md:text-base font-medium text-slate-700',
+  base: 'list-none space-y-2  text-body-6 md:text-body-4 font-medium text-metal-700',
   list: {
-    base: 'text-xs md:text-base font-medium text-slate-700 select-none',
+    base: 'text-body-6 md:text-body-4 font-medium text-metal-700 select-none',
     hasChild: {
       on: 'relative space-y-2',
       off: {
@@ -20,7 +20,7 @@ export const treeTheme: keepTreeTheme = {
   },
 
   showChildren: {
-    base: 'text-xs md:text-base font-medium text-slate-400 select-none',
+    base: 'text-body-6 md:text-body-4 font-medium text-metal-400 select-none',
     on: '',
     off: 'hidden',
   },
@@ -29,7 +29,7 @@ export const treeTheme: keepTreeTheme = {
     on: {
       base: 'ml-2.5 block space-y-2 px-10 py-4',
       border: {
-        on: 'border-l border-l-slate-200',
+        on: 'border-l border-l-metal-200',
         off: 'border-none',
       },
     },

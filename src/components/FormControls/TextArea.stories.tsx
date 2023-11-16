@@ -110,6 +110,6 @@ export const SuccessTextarea: Story = {
 export const TextareaWithHelperText: Story = {
   args: {
     ...InfoTextarea.args,
-    helperText: <span className="font-medium text-slate-500">Info that helps a user with this field!</span>,
+    helperText: <span className="text-metal-500 font-medium">Info that helps a user with this field!</span>,
   },
 }
