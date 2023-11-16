@@ -15,7 +15,7 @@ const DisabledAccordion = () => {
             Check out this guide to learn how to
             <a
               href="https://keep Design.com/docs/getting-started/introduction/"
-              className="text-blue-600 hover:underline dark:text-blue-500">
+              className="text-primary-600 hover:underline dark:text-primary-500">
               get started
             </a>
             and start developing websites even faster with components on top of Tailwind CSS.

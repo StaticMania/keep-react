@@ -18,7 +18,7 @@ export const buttonTheme: keepButtonTheme = {
     },
   },
   notificationLabel:
-    'ml-2 inline-flex px-2.5 py-0.5 items-center justify-center rounded-full bg-primary-400 text-xs font-medium text-white',
+    'ml-2 inline-flex px-2.5 py-0.5 items-center justify-center rounded-full bg-primary-400 text-body-6 font-medium text-white',
   default: {
     color: {
       error:
@@ -53,7 +53,7 @@ export const buttonTheme: keepButtonTheme = {
     color: {
       error:
         'text-error-600 bg-white border border-error-200 hover:bg-error-25 active:bg-error-25 focus:ring-4 focus:ring-error-50  disabled:text-error-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
-      info: 'text-slate-600 bg-white border border-slate-200 hover:bg-slate-200/90 active:bg-slate-25 focus:ring-4 focus:ring-slate-50  disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
+      info: 'text-metal-600 bg-white border border-metal-200 hover:bg-metal-200/90 active:bg-metal-25 focus:ring-4 focus:ring-metal-50  disabled:text-metal-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
       success:
         'text-success-600 bg-white border border-success-200 hover:bg-success-25 active:bg-success-25 focus:ring-4 focus:ring-success-50  disabled:text-success-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
       warning:
@@ -83,7 +83,7 @@ export const buttonTheme: keepButtonTheme = {
     color: {
       error:
         'text-error-600 bg-white border border-dashed border-error-300 hover:bg-error-25 active:bg-error-25 focus:ring-4 focus:ring-error-50  disabled:text-error-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-error-100',
-      info: 'text-slate-600 bg-white border border-dashed border-slate-300 hover:bg-slate-25 active:bg-slate-25 focus:ring-4 focus:ring-slate-50 disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-slate-100',
+      info: 'text-metal-600 bg-white border border-dashed border-metal-300 hover:bg-metal-25 active:bg-metal-25 focus:ring-4 focus:ring-metal-50 disabled:text-metal-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-metal-100',
       success:
         'text-success-600 bg-white border border-dashed border-success-300 hover:bg-success-25 active:bg-success-25 focus:ring-4 focus:ring-success-50 disabled:text-success-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100 disabled:border-success-100',
       warning:
@@ -98,7 +98,7 @@ export const buttonTheme: keepButtonTheme = {
     color: {
       error:
         'text-error-600 bg-white border-0 hover:bg-error-25 hover:text-error-500 active:bg-error-25 active:text-error-500 focus:!ring-0 focus:!ring-offset-0 focus:text-error-500 disabled:text-error-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
-      info: 'text-slate-600 bg-transparent border-0 hover:bg-primary-25 hover:text-primary-500 active:bg-primary-25 active:text-primary-500 focus:!ring-0 focus:!ring-offset-0 focus:text-primary-500 disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
+      info: 'text-metal-600 bg-transparent border-0 hover:bg-primary-25 hover:text-primary-500 active:bg-primary-25 active:text-primary-500 focus:!ring-0 focus:!ring-offset-0 focus:text-primary-500 disabled:text-metal-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
       success:
         'text-success-600 bg-white border-0 hover:bg-success-25 hover:text-success-500 active:bg-success-25 active:text-success-500 focus:!ring-0 focus:!ring-offset-0 focus:text-success-500 disabled:text-success-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
       warning:
@@ -128,7 +128,7 @@ export const buttonTheme: keepButtonTheme = {
     color: {
       error:
         'text-error-600 bg-white border-0 hover:bg-white hover:text-error-700 active:bg-white active:text-error-700 focus:!ring-0 focus:!ring-offset-0 focus:text-error-900 disabled:text-error-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
-      info: 'text-slate-600 bg-white border-0 hover:bg-white hover:text-slate-700 active:bg-white active:text-slate-700 focus:!ring-0 focus:!ring-offset-0 focus:text-slate-900 disabled:text-slate-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
+      info: 'text-metal-600 bg-white border-0 hover:bg-white hover:text-metal-700 active:bg-white active:text-metal-700 focus:!ring-0 focus:!ring-offset-0 focus:text-metal-900 disabled:text-metal-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
       success:
         'text-success-600 bg-white border-0 hover:bg-white hover:text-success-700 active:bg-white active:text-success-700 focus:!ring-0 focus:!ring-offset-0 focus:text-success-900 disabled:text-success-200 disabled:bg-white disabled:hover:bg-white disabled:opacity-100',
       warning:
@@ -146,21 +146,21 @@ export const buttonTheme: keepButtonTheme = {
   circle: {
     off: 'p-0',
     size: {
-      xs: 'text-sm p-2 rounded-full',
-      sm: 'text-sm p-2.5 rounded-full',
-      md: 'text-base p-3 rounded-full',
-      lg: 'text-lg p-3.5 rounded-full',
-      xl: 'text-lg p-4 rounded-full',
-      '2xl': 'text-xl p-5 rounded-full',
+      xs: 'text-body-5 p-2 rounded-full',
+      sm: 'text-body-5 p-2.5 rounded-full',
+      md: 'text-body-4 p-3 rounded-full',
+      lg: 'text-body-3 p-3.5 rounded-full',
+      xl: 'text-body-3 p-4 rounded-full',
+      '2xl': 'text-body-2 p-5 rounded-full',
     },
   },
   size: {
-    xs: 'text-sm px-3 py-2',
-    sm: 'text-sm px-4 py-2.5',
-    md: 'text-base px-5 py-3 flex items-center justify-center cursor-pointer',
-    lg: 'text-lg px-5 py-[14px]',
-    xl: 'text-lg px-[22px] py-4',
-    '2xl': 'text-xl px-6 py-[18px]',
+    xs: 'text-body-5 px-3 py-2',
+    sm: 'text-body-5 px-4 py-2.5',
+    md: 'text-body-4 px-5 py-3 flex items-center justify-center cursor-pointer',
+    lg: 'text-body-3 px-5 py-[14px]',
+    xl: 'text-body-3 px-[22px] py-4',
+    '2xl': 'text-body-2 px-6 py-[18px]',
   },
 }
 

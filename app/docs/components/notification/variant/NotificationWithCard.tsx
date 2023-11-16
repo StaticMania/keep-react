@@ -24,7 +24,7 @@ const NotificationWithCard = () => {
         className="max-w-sm"
         headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
         additionalContent={
-          <div className="mt-2.5 text-sm font-normal text-slate-500 md:text-base">
+          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info" width="half">
@@ -36,7 +36,7 @@ const NotificationWithCard = () => {
             </div>
           </div>
         }>
-        <h3 className="text-base font-medium text-slate-700 md:text-xl">Welcome Keep Design</h3>
+        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Welcome Keep Design</h3>
       </Notification>
     </div>
   )
@@ -68,7 +68,7 @@ export const NotificationComponent = () => {
         className="max-w-sm"
         headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
         additionalContent={
-          <div className="mt-2.5 text-sm md:text-base font-normal text-slate-500">
+          <div className="mt-2.5 text-body-5 md:text-body-4 font-normal text-metal-500">
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry.
             <div className="mt-6 flex">
@@ -88,7 +88,7 @@ export const NotificationComponent = () => {
           </div>
         }
       >
-        <h3 className="text-base md:text-xl font-medium text-slate-700">
+        <h3 className="text-body-4 md:text-body-2 font-medium text-metal-700">
           Welcome Keep Design
         </h3>
       </Notification>

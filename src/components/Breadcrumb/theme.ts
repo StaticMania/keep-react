@@ -1,17 +1,17 @@
 import { keepBreadCrumbTheme } from '.'
 
 export const breadcrumbTheme: keepBreadCrumbTheme = {
-  breadCrumbWithBorder: 'border-slate-100 p-[9px] border-t border-b',
+  breadCrumbWithBorder: 'border-metal-100 p-[9px] border-t border-b',
   item: {
     base: 'group flex items-center',
     chevron: 'mx-1 group-first:hidden md:mx-2',
     href: {
-      off: 'flex items-center text-base font-normal text-slate-500',
-      on: 'group flex items-center text-base font-normal text-slate-500 hover:text-primary-400',
+      off: 'flex items-center text-body-4 font-normal text-metal-500',
+      on: 'group flex items-center text-body-4 font-normal text-metal-500 hover:text-primary-400',
     },
     icon: 'mr-2',
     iconWrapper: 'relative flex items-center',
-    disabled: 'text-slate-200',
+    disabled: 'text-metal-200',
     activeItem: {
       base: 'text-primary-400',
       border: 'px-2 py-1 bg-primary-25 border border-primary-100 text-primary-400 rounded-md',

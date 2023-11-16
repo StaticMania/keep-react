@@ -8,7 +8,8 @@ export interface CardTitleProps {
 
 export const CardTitle: React.FC<CardTitleProps> = ({ children, className }) => {
   return (
-    <p className={twMerge(className ? className : 'text-base font-bold tracking-tight text-slate-700 md:text-xl')}>
+    <p
+      className={twMerge(className ? className : 'text-metal-700 text-body-4 font-bold tracking-tight md:text-body-2')}>
       {children}
     </p>
   )

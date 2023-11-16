@@ -8,7 +8,7 @@ const CardWithIcon = () => {
       {/* ===CARD ONE=== */}
       <Card className="max-w-xl p-6">
         <Card.Container className="flex items-start gap-3.5 md:gap-5">
-          <Card.Container className="flex items-center justify-center rounded-full bg-slate-50 p-2.5 md:p-4">
+          <Card.Container className="bg-metal-50 flex items-center justify-center rounded-full p-2.5 md:p-4">
             <ArchiveTray size={28} color="#3D4A5C" />
           </Card.Container>
           <Card.Container className="flex flex-col gap-2">
@@ -27,7 +27,7 @@ const CardWithIcon = () => {
       <Card className="max-w-xl p-6">
         <Card.Container className="flex gap-5">
           <Card.Container className="flex items-start gap-5">
-            <Card.Container className="flex items-center justify-start rounded-full bg-slate-50 p-2.5 md:p-4">
+            <Card.Container className="bg-metal-50 flex items-center justify-start rounded-full p-2.5 md:p-4">
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">
@@ -42,7 +42,9 @@ const CardWithIcon = () => {
             <Popover
               customClass="!w-[20rem]"
               additionalContent={
-                <h2 className="text-lg font-medium leading-6 tracking-[-0.3px] text-slate-500">Keep Design System</h2>
+                <h2 className="text-metal-500 text-body-3 font-medium leading-6 tracking-[-0.3px]">
+                  Keep Design System
+                </h2>
               }>
               <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
             </Popover>
@@ -85,7 +87,7 @@ export const CardComponent = () => {
     <>
       <Card className="p-6 max-w-xl">
         <Card.Container className="flex items-start md:gap-5 gap-3.5">
-          <Card.Container className="flex items-center justify-center rounded-full bg-slate-50 md:p-4 p-2.5">
+          <Card.Container className="flex items-center justify-center rounded-full bg-metal-50 md:p-4 p-2.5">
             <ArchiveTray size={28} color="#3D4A5C" />
           </Card.Container>
           <Card.Container className="flex flex-col gap-2">
@@ -107,7 +109,7 @@ export const CardComponent = () => {
       <Card className="p-6 max-w-xl">
         <Card.Container className="flex gap-5">
           <Card.Container className="flex items-start gap-5">
-            <Card.Container className="flex items-center justify-start rounded-full bg-slate-50 md:p-4 p-2.5">
+            <Card.Container className="flex items-center justify-start rounded-full bg-metal-50 md:p-4 p-2.5">
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">
@@ -123,7 +125,7 @@ export const CardComponent = () => {
             <Popover
               customClass="!w-[20rem]"
               additionalContent={
-                <h2 className="text-lg leading-6 tracking-[-0.3px] font-medium text-slate-500">
+                <h2 className="text-body-3 leading-6 tracking-[-0.3px] font-medium text-metal-500">
                   Keep Design System
                 </h2>
               }

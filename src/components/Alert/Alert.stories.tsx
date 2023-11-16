@@ -131,9 +131,9 @@ export const DefaultAlert: Story = {
     icon: <Info size={24} color="#0F3CD9" />,
     additionalContent: removeFragment(
       <>
-        <div className="mt-1 text-sm text-slate-500">
+        <div className="text-metal-500 mt-1 text-body-5">
           Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-          <Link href="/" className="ml-2 text-blue-600 underline">
+          <Link href="/" className="ml-2 text-primary-600 underline">
             Link style
           </Link>
         </div>

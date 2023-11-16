@@ -8,7 +8,7 @@ export const carouselTheme: KeepCarouselTheme = {
         base: '',
         color: {
           white: 'bg-white/50 hover:bg-white',
-          slate: 'bg-slate-200 hover:bg-slate-600',
+          slate: 'bg-metal-200 hover:bg-metal-600',
         },
       },
       on: {
@@ -22,7 +22,7 @@ export const carouselTheme: KeepCarouselTheme = {
         },
         color: {
           white: 'bg-white outline-white',
-          slate: 'bg-slate-600 outline-slate-600',
+          slate: 'bg-metal-600 outline-metal-600',
         },
       },
     },

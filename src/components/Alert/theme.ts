@@ -28,13 +28,7 @@ export const alertTheme: keepAlertTheme = {
        * Styles for the border when it's an error.
        */
       error: 'border border-error-100',
-      /**
-       * Styles for the border when it's gray.
-       */
-      gray: 'border border-slate-200',
-      /**
-       * Styles for the border when it's an info.
-       */
+      gray: 'border border-metal-200',
       info: 'border border-primary-100',
       /**
        * Styles for the border when it's a success.
@@ -96,17 +90,8 @@ export const alertTheme: keepAlertTheme = {
      * Styles for the close button color.
      */
     color: {
-      /**
-       * Styles for the close button color when it's an info.
-       */
-      info: 'bg-primary-25 text-blue-500 hover:bg-blue-100 focus:ring-blue-400',
-      /**
-       * Styles for the close button color when it's gray.
-       */
-      gray: 'bg-slate-50 text-slate-600 hover:bg-slate-200 focus:ring-slate-200',
-      /**
-       * Styles for the close button color when it's an error.
-       */
+      info: 'bg-primary-25 text-primary-500 hover:bg-primary-100 focus:ring-blue-400',
+      gray: 'bg-metal-50 text-metal-600 hover:bg-metal-200 focus:ring-metal-200',
       error: 'bg-error-25 !text-error-500 hover:bg-error-50 hover:text-white focus:ring-red-400',
       /**
        * Styles for the close button color when it's a success.
@@ -126,13 +111,7 @@ export const alertTheme: keepAlertTheme = {
      * Color styles for the Alert component when it's an info.
      */
     info: 'bg-primary-25 border-primary-100',
-    /**
-     * Color styles for the Alert component when it's gray.
-     */
-    gray: 'bg-slate-50 border-slate-200',
-    /**
-     * Color styles for the Alert component when it's an error.
-     */
+    gray: 'bg-metal-50 border-metal-200',
     error: 'bg-error-25 border-error-100',
     /**
      * Color styles for the Alert component when it's a success.
@@ -155,25 +134,10 @@ export const alertTheme: keepAlertTheme = {
    * Title styles for the Alert component.
    */
   title: {
-    /**
-     * Base styles for the title of the Alert component.
-     */
-    base: 'md:text-lg text-base font-semibold',
-    /**
-     * Color styles for the title of the Alert component.
-     */
+    base: 'md:text-body-3 text-body-4 font-semibold',
     color: {
-      /**
-       * Color styles for the title of the Alert component when it's an info.
-       */
-      info: 'text-blue-600',
-      /**
-       * Color styles for the title of the Alert component when it's gray.
-       */
-      gray: 'text-slate-900',
-      /**
-       * Color styles for the title of the Alert component when it's an error.
-       */
+      info: 'text-primary-600',
+      gray: 'text-metal-900',
       error: 'text-error-600',
       /**
        * Color styles for the title of the Alert component when it's a success.

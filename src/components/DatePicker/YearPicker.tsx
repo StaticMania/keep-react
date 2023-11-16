@@ -36,7 +36,7 @@ export const YearPicker: React.FC = () => {
                 <CaretLeft size={18} color="#5E718D" weight="thin" />
               </span>
             </button>
-            <p className="text-base font-semibold text-slate-800">{year}</p>
+            <p className="text-metal-800 text-body-4 font-semibold">{year}</p>
             <button aria-label="Next Month" className={customHeaderCount === 1 ? 'hidden' : ''} onClick={increaseYear}>
               <CaretRight size={18} color="#5E718D" weight="thin" />
             </button>

@@ -36,7 +36,7 @@ const EcommerceNavbar = () => {
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>
-            <span className="ml-1 text-slate-600">Cart $0.00</span>
+            <span className="text-metal-600 ml-1">Cart $0.00</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>
@@ -103,7 +103,7 @@ export const NavbarComponent = () => {
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>
-            <span className="ml-1 text-slate-600">Cart $0.00</span>
+            <span className="ml-1 text-metal-600">Cart $0.00</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>

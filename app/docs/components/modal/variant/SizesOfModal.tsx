@@ -17,7 +17,7 @@ const SizesOfModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -58,7 +58,7 @@ export const ModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>

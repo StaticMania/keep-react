@@ -7,7 +7,7 @@ const SingleLinePopover = () => {
       <Popover
         customClass="!w-[20rem]"
         additionalContent={
-          <h2 className="text-lg font-medium leading-6 tracking-[-0.3px] text-slate-500">Single line message</h2>
+          <h2 className="text-metal-500 text-body-3 font-medium leading-6 tracking-[-0.3px]">Single line message</h2>
         }>
         <Button size="xs">Popover</Button>
       </Popover>
@@ -24,7 +24,7 @@ export const PopoverComponent = () => {
     <Popover
       customClass="!w-[20rem]"
       additionalContent={
-        <h2 className="text-lg leading-6 tracking-[-0.3px] font-medium text-slate-500">
+        <h2 className="text-body-3 leading-6 tracking-[-0.3px] font-medium text-metal-500">
           Single line message
         </h2>
       }
