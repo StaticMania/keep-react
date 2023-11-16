@@ -31,7 +31,7 @@ const InterActiveStep = () => {
         />
       </Steps>
 
-      <div className="my-5 h-44 rounded-md  border-2 border-dashed border-slate-100"></div>
+      <div className="border-metal-100 my-5 h-44  rounded-md border-2 border-dashed"></div>
       <div className="mt-6 flex items-center justify-end">
         <Button size="sm" type="primary" disabled={step === 3} onClick={() => setStep((prev) => prev + 1)}>
           {step === 3 ? 'Completed' : 'Next Step'}

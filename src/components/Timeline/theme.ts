@@ -3,8 +3,8 @@ import { keepTimelineTheme } from '.'
 export const timelineTheme: keepTimelineTheme = {
   root: {
     horizontal: {
-      on: 'items-start border-t border-slate-200 sm:flex',
-      off: 'relative border-l border-slate-200',
+      on: 'items-start border-t border-metal-200 sm:flex',
+      off: 'relative border-l border-metal-200',
     },
     barType: {
       solid: 'border-solid',
@@ -12,7 +12,7 @@ export const timelineTheme: keepTimelineTheme = {
     },
   },
   body: {
-    base: '!mb-4 text-xs md:text-lg font-normal text-slate-500',
+    base: '!mb-4 text-body-6 md:text-body-3 font-normal text-metal-500',
   },
   content: {
     horizontal: {
@@ -35,8 +35,8 @@ export const timelineTheme: keepTimelineTheme = {
       },
       icon: {
         on: {
-          base: 'absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 ring-4 ring-slate-100',
-          inner: 'text-slate-900 flex items-center justify-center',
+          base: 'absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-metal-100 ring-4 ring-metal-100',
+          inner: 'text-metal-900 flex items-center justify-center',
         },
         off: {
           base: 'absolute -left-2 h-4 w-4 rounded-full border border-white',
@@ -45,13 +45,13 @@ export const timelineTheme: keepTimelineTheme = {
     },
   },
   time: {
-    base: 'block mb-2 text-sm font-normal leading-none text-slate-500',
+    base: 'block mb-2 text-body-5 font-normal leading-none text-metal-500',
     horizontal: {
       on: 'mt-6',
       off: '',
     },
   },
   title: {
-    base: 'mb-6 text-sm md:text-3xl font-semibold text-slate-700',
+    base: 'mb-6 text-body-5 md:text-description-4 font-semibold text-metal-700',
   },
 }

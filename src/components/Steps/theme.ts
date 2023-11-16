@@ -5,7 +5,7 @@ export const stepTheme: KeepStepTheme = {
   main: {
     completed: {
       on: 'before:border-t-primary-500',
-      off: 'before:border-t-slate-100',
+      off: 'before:border-t-metal-100',
     },
     borderType: {
       solid: 'before:border-t-2',
@@ -30,7 +30,7 @@ export const stepTheme: KeepStepTheme = {
         off: 'bg-primary-50 text-primary-200',
       },
       number: {
-        base: 'text-lg font-bold',
+        base: 'text-body-3 font-bold',
         on: 'bg-primary-500 text-white',
         off: 'bg-primary-50 text-primary-100',
         active: 'border-2 border-primary-500 text-primary-500',
@@ -40,14 +40,14 @@ export const stepTheme: KeepStepTheme = {
   stepText: {
     base: 'flex items-center justify-center flex-col text-center max-w-xs mt-[22px] gap-[14px]',
     title: {
-      base: 'text-base font-semibold',
+      base: 'text-body-4 font-semibold',
       active: 'text-primary-500',
-      inActive: 'text-slate-900',
+      inActive: 'text-metal-900',
     },
     description: {
-      base: 'text-base font-normal ',
+      base: 'text-body-4 font-normal ',
       active: 'text-primary-500',
-      inActive: 'text-slate-500',
+      inActive: 'text-metal-500',
     },
   },
 }

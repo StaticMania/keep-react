@@ -8,7 +8,7 @@ import { Accordion } from '~/src'
 
 export default function Home() {
   return (
-    <section className="home -mt-1 space-y-20 first:pt-20 last:pb-20 lg:space-y-32">
+    <section className="home -mt-1 space-y-20  first:pt-14 last:pb-20 md:first:pt-20 lg:space-y-32">
       <Hero />
       <ComponentUI />
       <FAQ />
@@ -16,7 +16,39 @@ export default function Home() {
     </section>
   )
 }
+const Hero = () => {
+  const { copy, copyToClipboard } = useCopy()
+  return (
+    <div className="hero-area">
+      <div className="relative z-10 mx-auto max-w-2xl text-center">
+        <h1 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1.75px] text-black/100 md:text-heading-5 lg:text-[56px] lg:leading-[66px]">
+          Supercharge Your Web Development with
+          <span className="hero-text block">Keep React</span>
+        </h1>
+        <p className="text-metal-600 mx-auto max-w-xs text-body-5 md:max-w-lg md:text-body-3">
+          Unlocking the Power of Code to Transform Your Ideas into Stunning Web Realities.
+        </p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-5 md:flex-row">
+          <div className="divide-metal-100 flex items-center justify-between gap-5 divide-x-2 rounded-md bg-white px-4 py-3">
+            <p className="text-metal-500 text-body-5 font-normal">npm install keep-react</p>
+            <button className="pl-2" onClick={() => copyToClipboard('npm install keep-react')}>
+              {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
+            </button>
+          </div>
+          <Link
+            href="/docs/getting-started/Introduction"
+            className="border-metal-900 bg-metal-900 hover:bg-metal-800 focus:ring-metal-800 active:bg-metal-900 group h-min  w-fit justify-center rounded-md border px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in focus:ring-4">
+            Get Started
+          </Link>
+        </div>
+      </div>
 
+      <div className="relative -z-0 -mt-20 hidden items-center justify-center lg:flex">
+        <Image src="/images/hero.png" alt="hero" height={720} width={1400} />
+      </div>
+    </div>
+  )
+}
 const ComponentUI = () => {
   return (
     <div className="relative">
@@ -30,10 +62,10 @@ const ComponentUI = () => {
       </div>
       <div className="container">
         <div className="mx-auto mb-4 px-5 text-center md:max-w-[500px] md:px-0">
-          <h2 className="mb-2 text-4xl font-semibold leading-8 tracking-[-1px] text-black lg:text-8xl lg:!leading-[44px]">
+          <h2 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1px] text-black lg:text-heading-5 lg:!leading-[44px]">
             Design Excellence with Our React Component Library
           </h2>
-          <p className="text-center text-sm font-normal leading-6 text-slate-600 md:text-base">
+          <p className="text-metal-600 text-center text-body-5 font-normal leading-6 md:text-body-4">
             Explore our library of 40+ open-source React UI components and interactive elements, empowering you to
             create stunning web projects effortlessly.
           </p>
@@ -43,11 +75,11 @@ const ComponentUI = () => {
             return (
               <div
                 key={item.id}
-                className={`group relative flex h-[244px] w-full cursor-pointer items-center justify-center rounded-2xl border border-slate-200 bg-white/10 backdrop-blur-sm md:border-slate-100`}>
+                className={`border-metal-200 md:border-metal-100 group relative flex h-[244px] w-full cursor-pointer items-center justify-center rounded-2xl border bg-white`}>
                 {item.component()}
                 <Link
                   href={item.href}
-                  className="invisible absolute bottom-2 right-2 translate-y-1 rounded-md bg-slate-900 p-1 text-white transition-all duration-300 group-hover:visible group-hover:translate-y-0">
+                  className="bg-metal-900 invisible absolute bottom-2 right-2 translate-y-1 rounded-md p-1 text-white transition-all duration-300 group-hover:visible group-hover:translate-y-0">
                   <ArrowUpRight size={18} />
                 </Link>
               </div>
@@ -57,7 +89,7 @@ const ComponentUI = () => {
         <div className="flex items-center justify-center">
           <Link
             href="/docs/getting-started/Introduction"
-            className="flex items-center gap-2 rounded-md border border-slate-200 bg-slate-25 px-6 py-3 text-sm text-slate-900 transition-all duration-300 hover:bg-slate-900 hover:text-white md:text-base">
+            className="bg-metal-25 border-metal-200 text-metal-900 hover:bg-metal-900 flex items-center gap-2 rounded-md border px-4 py-2.5 text-body-5 transition-all duration-300 hover:text-white md:px-6 md:py-3 md:text-body-4">
             View All Component
             <ArrowUpRight size={18} />
           </Link>
@@ -66,16 +98,15 @@ const ComponentUI = () => {
     </div>
   )
 }
-
 const Community = () => {
   return (
     <div className="container">
       <div className="flex flex-col items-start justify-between gap-5 rounded-md bg-[url('https://staticmania.cdn.prismic.io/staticmania/59c3bc39-d8bc-4382-80e9-db3c7f10230d_community.svg')] bg-cover bg-center bg-no-repeat p-8 md:px-8 md:py-10 lg:flex-row lg:items-center lg:gap-0 lg:px-28 lg:py-12">
         <div>
-          <h3 className="text-4xl font-semibold leading-[50px] tracking-[-1px] text-white md:text-5xl lg:text-8xl">
+          <h3 className="text-description-3 font-semibold leading-[50px] tracking-[-1px] text-white md:text-description-2 lg:text-heading-5">
             Join the community
           </h3>
-          <p className="max-w-sm text-sm font-normal text-white md:text-base">
+          <p className="max-w-sm text-body-5 font-normal text-white md:text-body-4">
             Become a member of a community of developers by supporting Keep React
           </p>
         </div>
@@ -83,7 +114,7 @@ const Community = () => {
           <a
             href="https://github.com/StaticMania/keep-react"
             target="_blank"
-            className="flex items-center gap-2 rounded-md  bg-slate-900 px-6 py-3 text-sm text-white hover:bg-slate-800 md:text-base">
+            className="bg-metal-900 hover:bg-metal-800 flex items-center  gap-2 rounded-md px-4 py-2.5 text-body-5 text-white md:px-6 md:py-3 md:text-body-4">
             See Github Repository
             <ArrowUpRight size={18} />
           </a>
@@ -92,43 +123,6 @@ const Community = () => {
     </div>
   )
 }
-
-const Hero = () => {
-  const { copy, copyToClipboard } = useCopy()
-  return (
-    <div className="hero-area">
-      <div className="relative z-10 mx-auto max-w-2xl text-center">
-        <h1 className="mb-3 text-8xl font-semibold leading-10 tracking-[-1.75px] text-black/100 lg:text-[56px] lg:leading-[66px]">
-          Supercharge Your Web Development with
-          <span className="hero-text block">Keep React</span>
-        </h1>
-        <p className="mx-auto max-w-lg text-sm text-slate-600 md:text-lg">
-          Unlocking the Power of Code to Transform Your Ideas into Stunning Web Realities.
-        </p>
-        <div className="mt-8 flex items-center justify-center gap-5">
-          <div className="flex items-center justify-between gap-5 divide-x-2 divide-slate-100 rounded-md bg-white px-4 py-3">
-            <p className="text-sm font-normal leading-[22px] tracking-[-0.3px] text-slate-500">
-              npm install keep-react
-            </p>
-            <button className="pl-2" onClick={() => copyToClipboard('npm install keep-react')}>
-              {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
-            </button>
-          </div>
-          <Link
-            href="/docs/getting-started/Introduction"
-            className="group h-min w-fit justify-center rounded-md border border-slate-900  bg-slate-900 px-4 py-2.5 text-center text-sm font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-slate-800 focus:ring-4 focus:ring-slate-800 active:bg-slate-900">
-            Get Started
-          </Link>
-        </div>
-      </div>
-
-      <div className="relative -z-0 -mt-20 hidden items-center justify-center lg:flex">
-        <Image src="/images/hero.png" alt="hero" height={720} width={1400} />
-      </div>
-    </div>
-  )
-}
-
 const FAQ = () => {
   const faqs = [
     {
@@ -172,7 +166,7 @@ const FAQ = () => {
   return (
     <div className="container">
       <div className="mx-auto mb-4 px-5 text-center md:max-w-[500px] md:px-0">
-        <h2 className="mb-2 text-4xl font-semibold leading-8 tracking-[-1px] text-black lg:text-8xl lg:!leading-[44px]">
+        <h2 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1px] text-black lg:text-heading-5 lg:!leading-[44px]">
           Frequently Asked Questions
         </h2>
       </div>
@@ -181,7 +175,12 @@ const FAQ = () => {
         <Accordion collapseAll={true} flush>
           {faqs.map((faq) => (
             <Accordion.Panel key={faq.id}>
-              <Accordion.Title>{faq.question}</Accordion.Title>
+              <Accordion.Title
+                theme={{
+                  heading: 'sm:w-full w-[260px]',
+                }}>
+                {faq.question}
+              </Accordion.Title>
               <Accordion.Content>
                 <p>{faq.answer}</p>
               </Accordion.Content>

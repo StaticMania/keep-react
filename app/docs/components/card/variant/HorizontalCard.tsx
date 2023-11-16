@@ -10,32 +10,32 @@ const HorizontalCard = () => {
       imgSize="md"
       horizontal={true}>
       <Card.Container className="space-y-4 p-6">
-        <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500 md:text-base">
+        <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium md:text-body-4">
           <MapPinLine size={20} color="#5E718D" />
           <span>Garden Street,Ring Road</span>
         </Card.Title>
         <Card.Container className="flex items-center justify-between">
-          <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+          <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium">
             <Bed size={20} color="#5E718D" />
             <span>3 Bed Room</span>
           </Card.Title>
-          <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+          <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium">
             <Shower size={20} color="#5E718D" />
             <span>1 Bath</span>
           </Card.Title>
         </Card.Container>
         <Card.Container className="flex items-center justify-between">
-          <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+          <Card.Title className="text-metal-500 flex items-center gap-2 text-body-5 font-medium">
             <ArrowsOutSimple size={20} color="#5E718D" />
             <span>1,032 sqft</span>
           </Card.Title>
-          <Card.Title className="flex items-center gap-1 text-sm font-medium text-slate-500">
+          <Card.Title className="text-metal-500 flex items-center gap-1 text-body-5 font-medium">
             <Users size={20} color="#5E718D" />
             <span>Family</span>
           </Card.Title>
         </Card.Container>
         <Card.Container className="my-3 flex items-center justify-between">
-          <Card.Title className="text-lg font-medium text-slate-500">$649,00</Card.Title>
+          <Card.Title className="text-metal-500 text-body-3 font-medium">$649,00</Card.Title>
           <Button type="primary" size="sm">
             Check Out
           </Button>
@@ -66,32 +66,32 @@ export const CardComponent = () => {
       horizontal={true}
     >
       <Card.Container className="space-y-4 p-6">
-        <Card.Title className="flex items-center gap-2 text-sm md:text-base font-medium text-slate-500">
+        <Card.Title className="flex items-center gap-2 text-body-5 md:text-body-4 font-medium text-metal-500">
           <MapPinLine size={20} color="#5E718D" />
           <span>Garden Street,Ring Road</span>
         </Card.Title>
         <Card.Container className="flex items-center justify-between">
-          <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+          <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
             <Bed size={20} color="#5E718D" />
             <span>3 Bed Room</span>
           </Card.Title>
-          <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+          <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
             <Shower size={20} color="#5E718D" />
             <span>1 Bath</span>
           </Card.Title>
         </Card.Container>
         <Card.Container className="flex items-center justify-between">
-          <Card.Title className="flex items-center gap-2 text-sm font-medium text-slate-500">
+          <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
             <ArrowsOutSimple size={20} color="#5E718D" />
             <span>1,032 Sqrt</span>
           </Card.Title>
-          <Card.Title className="flex items-center gap-1 text-sm font-medium text-slate-500">
+          <Card.Title className="flex items-center gap-1 text-body-5 font-medium text-metal-500">
             <Users size={20} color="#5E718D" />
             <span>Family</span>
           </Card.Title>
         </Card.Container>
         <Card.Container className="my-3 flex items-center justify-between">
-          <Card.Title className="text-lg font-medium text-slate-500">
+          <Card.Title className="text-body-3 font-medium text-metal-500">
             $649,00
           </Card.Title>
           <Button type="primary" size="sm">

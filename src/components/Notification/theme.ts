@@ -1,7 +1,7 @@
 import type { keepNotificationTheme } from '.'
 
 export const notificationTheme: keepNotificationTheme = {
-  base: 'rounded-md shadow-lg px-4 border border-slate-50 z-50 bg-white transition-all duration-300 fixed',
+  base: 'rounded-md shadow-large px-4 border border-metal-50 z-50 bg-white transition-all duration-300 fixed',
   dismiss: 'hidden',
   wrapper: 'flex items-start gap-2 relative',
   infoIcon: {

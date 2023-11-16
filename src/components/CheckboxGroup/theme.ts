@@ -9,7 +9,7 @@ export const checkboxGroupTheme: keepCheckboxGroupTheme = {
     },
     selected: {
       on: 'border-primary-200 bg-primary-25',
-      off: 'border-slate-200',
+      off: 'border-metal-200',
     },
     spacing: 'p-5',
   },
@@ -24,14 +24,14 @@ export const checkboxGroupTheme: keepCheckboxGroupTheme = {
       base: 'flex h-10 w-10 items-center justify-center rounded-full',
       selected: {
         on: 'bg-primary-50 text-primary-500',
-        off: 'bg-slate-200 text-slate-500',
+        off: 'bg-metal-200 text-metal-500',
       },
     },
     circleImg: {
       base: 'flex h-10 w-10 items-center justify-center rounded-full',
       selected: {
         on: 'bg-primary-50',
-        off: 'bg-slate-200',
+        off: 'bg-metal-200',
       },
     },
     squareImg: {
@@ -43,17 +43,17 @@ export const checkboxGroupTheme: keepCheckboxGroupTheme = {
     spacing: 'py-3.5 px-5',
     order: 'order-2',
     title: {
-      base: 'text-base md:text-lg font-normal md:font-medium leading-5',
+      base: 'text-body-4 md:text-body-3 font-normal md:font-medium leading-5',
       selected: {
         on: 'text-primary-500',
-        off: 'text-slate-700',
+        off: 'text-metal-700',
       },
     },
     description: {
-      base: 'mt-1 text-xs md:text-base font-normal',
+      base: 'mt-1 text-body-6 md:text-body-4 font-normal',
       selected: {
         on: 'text-primary-400',
-        off: 'text-slate-400',
+        off: 'text-metal-400',
       },
     },
   },

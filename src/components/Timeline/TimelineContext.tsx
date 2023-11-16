@@ -10,7 +10,7 @@ export function useTimelineContext(): TimelineContext {
   const context = useContext(TimelineContext)
 
   if (!context) {
-    throw new Error('useTimelineContext should be used within the TimelineContext providor!')
+    throw new Error('useTimelineContext should be used within the TimelineContext provider!')
   }
 
   return context
