@@ -28,7 +28,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-slate-100 bg-white">
+    <header className="border-metal-100 fixed top-0 z-50 w-full border-b bg-white">
       <div className="relative px-6 2xl:container">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-28">
@@ -42,7 +42,7 @@ const Navbar = () => {
                   key={nav.id}
                   href={nav.href}
                   target={nav.redirect ? '_blank' : '_self'}
-                  className="text-sm font-normal leading-[22px] tracking-[-0.2px] text-slate-500 hover:text-slate-900 active:text-slate-900">
+                  className="text-metal-500 hover:text-metal-900 active:text-metal-900 text-body-5 font-normal">
                   {nav.name}
                 </Link>
               ))}
@@ -85,7 +85,7 @@ const Navbar = () => {
             </a>
             <Link
               href="/docs/getting-started/Introduction"
-              className="group h-min w-fit justify-center rounded-md border border-slate-900  bg-slate-900 px-4 py-2.5 text-center text-sm font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-slate-800 focus:ring-4 focus:ring-slate-800 active:bg-slate-900">
+              className="border-metal-900 bg-metal-900 hover:bg-metal-800 focus:ring-metal-800 active:bg-metal-900 group h-min  w-fit justify-center rounded-md border px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in focus:ring-4">
               get started
             </Link>
           </div>
@@ -135,7 +135,7 @@ const Navbar = () => {
           </div>
           <div
             id="linkPage"
-            className={`fixed right-0 top-[73px] h-screen w-72 overflow-y-auto border-l border-l-slate-100 bg-white pl-8 transition-all duration-300 lg:hidden ${
+            className={`border-l-metal-100 fixed right-0 top-[73px] h-screen w-72 overflow-y-auto border-l bg-white pl-8 transition-all duration-300 lg:hidden ${
               active ? 'translate-x-0' : 'translate-x-full'
             }`}>
             <div className="mt-5 space-y-3 pr-4">
@@ -148,21 +148,21 @@ const Navbar = () => {
                 <Accordion.Panel>
                   <Accordion.Title
                     theme={{
-                      base: 'flex w-full items-center text-left font-semibold text-sm leading-[22px] tracking-[-0.2px] text-black/100 hover:text-black',
+                      base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
                     }}>
                     Quick Link
                   </Accordion.Title>
                   <Accordion.Content
                     theme={{
-                      base: 'text-slate-500 font-normal',
+                      base: 'text-metal-500 font-normal',
                     }}>
-                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-slate-100">
+                    <ul className="border-l-metal-100 -ml-px mt-3 space-y-2 border-l">
                       {navbarRoutes.map((route) => (
                         <li key={route.id}>
                           <Link
-                            className={`-ml-px border-l border-l-transparent pl-3 text-sm  leading-[28px] tracking-[-0.2px] text-slate-500 hover:-ml-px hover:border-l hover:border-slate-500 hover:text-slate-900 ${
+                            className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
                               IsActive(route.href)
-                                ? 'border-l !border-slate-900 text-slate-900 transition-all duration-150'
+                                ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
                                 : ''
                             }`}
                             href={route.href}>
@@ -183,21 +183,21 @@ const Navbar = () => {
                 <Accordion.Panel>
                   <Accordion.Title
                     theme={{
-                      base: 'flex w-full items-center text-left font-semibold text-sm leading-[22px] tracking-[-0.2px] text-black/100 hover:text-black',
+                      base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
                     }}>
                     Getting Started
                   </Accordion.Title>
                   <Accordion.Content
                     theme={{
-                      base: 'text-slate-500 font-normal',
+                      base: 'text-metal-500 font-normal',
                     }}>
-                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-slate-100">
+                    <ul className="border-l-metal-100 -ml-px mt-3 space-y-2 border-l">
                       {gettingStartedRoutes.map((route) => (
                         <li key={route.id}>
                           <Link
-                            className={`-ml-px border-l border-l-transparent pl-3 text-sm  leading-[28px] tracking-[-0.2px] text-slate-500 hover:-ml-px hover:border-l hover:border-slate-500 hover:text-slate-900 ${
+                            className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
                               IsActive(route.href)
-                                ? 'border-l !border-slate-900 text-slate-900 transition-all duration-150'
+                                ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
                                 : ''
                             }`}
                             href={route.href}>
@@ -219,7 +219,7 @@ const Navbar = () => {
                 <Accordion.Panel>
                   <Accordion.Title
                     theme={{
-                      base: 'flex w-full items-center text-left font-semibold text-sm leading-[22px] tracking-[-0.2px] text-black/100 hover:text-black',
+                      base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
                     }}>
                     Components
                   </Accordion.Title>
@@ -227,13 +227,13 @@ const Navbar = () => {
                     theme={{
                       base: '',
                     }}>
-                    <ul className="mt-3 space-y-2 border-l border-l-slate-100 pb-24">
+                    <ul className="border-l-metal-100 mt-3 space-y-2 border-l pb-24">
                       {routes.map((route) => (
                         <li key={route.id}>
                           <Link
-                            className={`-ml-px border-l border-l-transparent pl-3 text-sm  leading-[28px] tracking-[-0.2px] text-slate-500 hover:-ml-px hover:border-l hover:border-slate-500 hover:text-slate-900 ${
+                            className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
                               IsActive(route.href)
-                                ? 'border-l !border-slate-900 text-slate-900 transition-all duration-150'
+                                ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
                                 : ''
                             }`}
                             href={route.href}>

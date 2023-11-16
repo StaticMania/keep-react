@@ -10,7 +10,7 @@ const TextAreaWithHelperText = () => {
       border={false}
       color="info"
       rows={4}
-      helperText={<span className="font-medium text-slate-500">Info that helps a user with this field!</span>}
+      helperText={<span className="text-metal-500 font-medium">Info that helps a user with this field!</span>}
     />
   )
 }
@@ -29,7 +29,7 @@ export const TextAreaComponent = () => {
       color="info"
       rows={4}
       helperText={
-        <span className="font-medium text-slate-500">
+        <span className="font-medium text-metal-500">
           Info that helps a user with this field!
         </span>
       }

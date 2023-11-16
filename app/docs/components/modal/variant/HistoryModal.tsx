@@ -30,13 +30,13 @@ const HistoryModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-metal-500 text-body-4 leading-relaxed">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
           <div className="mt-5 flex items-center">
             <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
-            <label htmlFor="two" className="ml-2 text-base font-medium text-slate-500">
+            <label htmlFor="two" className="text-metal-500 ml-2 text-body-4 font-medium">
               Save on this browser
             </label>
           </div>
@@ -54,20 +54,20 @@ const HistoryModal = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-sm leading-relaxed text-slate-500 md:text-base">
+            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica.
             </p>
             <div className="mb-4 flex items-center gap-2 md:mb-6">
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" statusPosition="bottom-right" size="md" />
               <div>
-                <p className="text-sm font-semibold text-gray-500">Albert Flores</p>
-                <p className="text-xs text-gray-500">keep@designsystem.com</p>
+                <p className="text-body-5 font-semibold text-gray-500">Albert Flores</p>
+                <p className="text-body-6 text-gray-500">keep@designsystem.com</p>
               </div>
             </div>
           </div>
           <div className="mt-5 flex items-center">
             <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
-            <label htmlFor="two" className="ml-2 text-base font-medium text-slate-500">
+            <label htmlFor="two" className="text-metal-500 ml-2 text-body-4 font-medium">
               Save on this browser
             </label>
           </div>
@@ -118,7 +118,7 @@ export const ModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-base leading-relaxed text-slate-500">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -133,7 +133,7 @@ export const ModalComponent = () => {
             />
             <label
               htmlFor="11"
-              className="ml-2 text-base font-medium text-slate-500"
+              className="ml-2 text-body-4 font-medium text-metal-500"
             >
               Save on this browser
             </label>
@@ -156,7 +156,7 @@ export const ModalComponent = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-sm md:text-base leading-relaxed text-slate-500">
+            <p className="text-body-5 md:text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classica.
             </p>
@@ -168,10 +168,10 @@ export const ModalComponent = () => {
                 size="md"
               />
               <div>
-                <p className="text-sm font-semibold text-gray-500">
+                <p className="text-body-5 font-semibold text-gray-500">
                   Albert Flores
                 </p>
-                <p className="text-xs text-gray-500">keep@designsystem.com</p>
+                <p className="text-body-6 text-gray-500">keep@designsystem.com</p>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@ export const ModalComponent = () => {
             />
             <label
               htmlFor="12"
-              className="ml-2 text-base font-medium text-slate-500"
+              className="ml-2 text-body-4 font-medium text-metal-500"
             >
               Save on this browser
             </label>

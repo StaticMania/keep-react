@@ -2,14 +2,14 @@ import type { keepStatisticTheme } from '.'
 
 export const statisticsTheme: keepStatisticTheme = {
   rate: {
-    base: 'flex items-center gap-1 text-sm font-medium text-primary-500',
+    base: 'flex items-center gap-1 text-body-5 font-medium text-primary-500',
   },
   title: {
     base: 'flex items-center gap-3',
-    title: 'text-sm md:text-base font-normal text-slate-400 first-letter:uppercase',
+    title: 'text-body-5 md:text-body-4 font-normal text-metal-400 first-letter:uppercase',
     filter: {
-      text: 'pr-1.5 text-xs text-slate-500',
-      icon: 'border-l-2 border-slate-200 pl-1.5',
+      text: 'pr-1.5 text-body-6 text-metal-500',
+      icon: 'border-l-2 border-metal-200 pl-1.5',
     },
   },
   icon: {
@@ -20,7 +20,7 @@ export const statisticsTheme: keepStatisticTheme = {
     },
   },
   amount: {
-    base: 'text-base md:text-2xl font-semibold text-slate-700',
+    base: 'text-body-4 md:text-body-1 font-semibold text-metal-700',
     spacing: 'mr-1',
   },
 }

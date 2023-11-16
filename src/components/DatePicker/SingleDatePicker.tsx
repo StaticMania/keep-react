@@ -17,7 +17,7 @@ export const SingleDatePicker: React.FC = () => {
       selected={date}
       onChange={handleChange}
       customInput={<CustomInput />}
-      className="rounded-md border border-slate-300 placeholder:text-sm"
+      className="border-metal-300 rounded-md border placeholder:text-body-5"
       showPopperArrow={false}
       startDate={date}
       dateFormat="dd/MM/yyyy"></DatePicker>

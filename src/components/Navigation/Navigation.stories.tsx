@@ -80,7 +80,7 @@ export const DefaultNavbar: Story = {
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
-            <span className="ml-2 text-slate-600">Search</span>
+            <span className="text-metal-600 ml-2">Search</span>
           </Button>
           <Button size="sm" type="primary">
             Contact
@@ -124,7 +124,7 @@ export const NavbarWithCenterLogo: Story = {
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
-            <span className="ml-2 text-slate-600">Search</span>
+            <span className="text-metal-600 ml-2">Search</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>
@@ -166,7 +166,7 @@ export const NavbarEcommerceMenu: Story = {
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>
-            <span className="ml-1 text-slate-600">Cart $0.00</span>
+            <span className="text-metal-600 ml-1">Cart $0.00</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>

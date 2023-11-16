@@ -4,18 +4,18 @@ export const cardTheme: KeepCardTheme = {
   base: 'flex rounded-md bg-white ',
   children: 'flex h-full flex-col justify-center gap-3',
   shadow: {
-    on: 'drop-shadow-xl',
+    on: 'drop-shadow-xLarge',
     off: 'drop-shadow-none',
   },
   border: {
-    on: 'border border-slate-50',
+    on: 'border border-metal-50',
     off: 'border-none',
   },
   horizontal: {
     off: 'flex-col',
     on: 'flex-col md:max-w-xl md:flex-row',
   },
-  href: 'hover:bg-slate-200',
+  href: 'hover:bg-metal-200',
   img: {
     base: 'relative',
     horizontal: {
@@ -37,4 +37,5 @@ export const cardTheme: KeepCardTheme = {
       },
     },
   },
+  description:'text-metal-500 text-body-6 font-normal md:text-body-4'
 }

@@ -27,7 +27,7 @@ const DefaultNotificationComponent = () => {
         className="max-w-sm"
         additionalContent={
           <div className="mt-2.5">
-            <p className="text-sm font-normal text-slate-500 md:text-base">
+            <p className="text-metal-500 text-body-5 font-normal md:text-body-4">
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
             <div className="mt-6 flex">
@@ -40,7 +40,7 @@ const DefaultNotificationComponent = () => {
             </div>
           </div>
         }>
-        <h3 className="text-base font-medium text-slate-700 md:text-xl">Can we store cookies?</h3>
+        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Can we store cookies?</h3>
       </Notification>
     </div>
   )
@@ -67,7 +67,7 @@ const NotificationWithAvatarComponent = () => {
         className="max-w-[400px]"
         position="top-left"
         additionalContent={
-          <div className="mt-2.5 text-sm font-normal text-slate-500 md:text-base">
+          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info">
@@ -84,9 +84,9 @@ const NotificationWithAvatarComponent = () => {
             <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
           </div>
         }>
-        <h3 className="text-base font-medium text-slate-700 md:text-xl">
+        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">
           Rono Pixel
-          <span className="pl-2 text-xs font-medium text-slate-400 md:text-sm">Product Designer</span>
+          <span className="text-metal-400 pl-2 text-body-6 font-medium md:text-body-5">Product Designer</span>
         </h3>
       </Notification>
     </div>
@@ -113,7 +113,7 @@ const NotificationWithCardComponent = () => {
         className="max-w-sm"
         headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
         additionalContent={
-          <div className="mt-2.5 text-sm font-normal text-slate-500 md:text-base">
+          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info" width="half">
@@ -125,7 +125,7 @@ const NotificationWithCardComponent = () => {
             </div>
           </div>
         }>
-        <h3 className="text-base font-medium text-slate-700 md:text-xl">Welcome Keep Design</h3>
+        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Welcome Keep Design</h3>
       </Notification>
     </div>
   )
@@ -158,7 +158,7 @@ const NotificationWithIconComponent = () => {
           </Button>
         }
         additionalContent={
-          <div className="mt-2.5 text-sm font-normal text-slate-500 md:text-base">
+          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info">
@@ -170,7 +170,7 @@ const NotificationWithIconComponent = () => {
             </div>
           </div>
         }>
-        <h3 className="text-base font-medium text-slate-700 md:text-xl">Can we store cookies?</h3>
+        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Can we store cookies?</h3>
       </Notification>
     </div>
   )

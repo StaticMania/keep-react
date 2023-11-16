@@ -16,9 +16,9 @@ const AlertWithRounded = () => {
       rounded={true}
       withBorder={true}
       additionalContent={
-        <div className="mt-1 text-sm text-slate-500">
+        <div className="text-metal-500 mt-1 text-body-4">
           Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-          <Link href="/" className="ml-2 text-blue-600 underline">
+          <Link href="/" className="ml-2 text-primary-600 underline">
             Link style
           </Link>
         </div>
@@ -48,10 +48,10 @@ export const AlertComponent = () => {
       rounded={true}
       withBorder={true}
       additionalContent={
-        <div className="mt-1 text-sm text-slate-500">
+        <div className="mt-1 text-body-4 text-metal-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and
           typesetting industry
-          <Link href="/" className="ml-2 text-blue-600 underline">
+          <Link href="/" className="ml-2 text-primary-600 underline">
             Link style
           </Link>
         </div>

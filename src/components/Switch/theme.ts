@@ -2,13 +2,13 @@ import type { keepToggleTheme } from '.'
 export const switchTheme: keepToggleTheme = {
   base: 'relative inline-flex items-center rounded-full',
   circleBase:
-    'relative pointer-events-none inline-block transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out',
+    'relative pointer-events-none inline-block transform rounded-full bg-white shadow-large ring-0 transition duration-200 ease-in-out',
   enabledBg: {
     on: {
       primary: 'bg-primary-500',
-      slate: 'bg-slate-800',
+      slate: 'bg-metal-800',
     },
-    off: 'bg-slate-200',
+    off: 'bg-metal-200',
   },
   enabledCircle: {
     on: {
@@ -29,9 +29,9 @@ export const switchTheme: keepToggleTheme = {
     lg: 'h-7 w-[50px]',
   },
   label: {
-    sm: 'ml-2 text-sm text-slate-800 font-medium',
-    md: 'ml-2 text-base text-slate-800 font-medium',
-    lg: 'ml-2 text-lg text-slate-800 font-medium',
+    sm: 'ml-2 text-body-5 text-metal-800 font-medium',
+    md: 'ml-2 text-body-4 text-metal-800 font-medium',
+    lg: 'ml-2 text-body-3 text-metal-800 font-medium',
   },
   withIconBase:
     "after:content-[''] after:absolute after:-translate-x-2/4 after:top-2/4 after:left-2/4 after:-translate-y-2/4",

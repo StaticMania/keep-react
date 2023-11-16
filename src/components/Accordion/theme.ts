@@ -1,14 +1,14 @@
 import type { keepAccordionTheme } from './Accordion'
 export const accordionTheme: keepAccordionTheme = {
   root: {
-    base: 'bg-slate-50',
+    base: 'bg-metal-50',
     flush: {
-      off: 'border-b-2 border-b-slate-200',
+      off: 'border-b-2 border-b-metal-200',
       on: 'border-b',
     },
   },
   content: {
-    base: 'pb-5 px-5 md:text-base text-sm text-slate-500 font-normal transition-all duration-300',
+    base: 'pb-5 px-5 md:text-body-4 text-body-5 text-metal-500 font-normal transition-all duration-300',
   },
   title: {
     disabled: 'cursor-not-allowed opacity-50',
@@ -19,19 +19,19 @@ export const accordionTheme: keepAccordionTheme = {
         on: 'rotate-180',
       },
     },
-    base: 'flex w-full items-center py-5 px-5 text-left font-medium md:text-xl text-md text-slate-800 hover:bg-slate-100',
+    base: 'flex w-full items-center py-5 px-5 text-left font-medium md:text-body-2  text-metal-800 hover:bg-metal-100',
     iconPosition: {
       left: 'gap-5',
       right: 'justify-between',
     },
     flush: {
-      off: 'hover:bg-slate-50',
+      off: 'hover:bg-metal-50',
       on: '!bg-transparent',
     },
     heading: '',
     open: {
-      off: 'bg-slate-25',
-      on: 'bg-slate-50',
+      off: 'bg-metal-25',
+      on: 'bg-metal-50',
     },
   },
 }

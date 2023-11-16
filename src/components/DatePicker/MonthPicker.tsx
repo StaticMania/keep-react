@@ -34,7 +34,7 @@ export const MonthPicker: React.FC = () => {
               <CaretLeft size={18} color="#5E718D" weight="thin" />
             </span>
           </button>
-          <p className="text-base font-semibold text-slate-800">
+          <p className="text-metal-800 text-body-4 font-semibold">
             {monthDate.toLocaleString('en-US', {
               month: 'long',
               year: 'numeric',

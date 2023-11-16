@@ -105,7 +105,7 @@ export const DefaultPopover: Story = {
         <Button type="outlinePrimary" size="xs">
           Checkout
         </Button>
-        <button className="text-sm font-medium text-primary-400 underline underline-offset-[3px]">Skip Now</button>
+        <button className="text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">Skip Now</button>
       </div>
     ),
     children: <Button size="xs">Popover</Button>,
@@ -116,10 +116,12 @@ export const OneParagraphPopover: Story = {
     showDismissIcon: false,
     additionalContent: (
       <>
-        <h2 className="text-base font-medium text-slate-500">
+        <h2 className="text-metal-500 text-body-4 font-medium">
           There are many variations of passages of Lorem Ipsum available.
         </h2>
-        <button className="mt-3 text-sm font-medium text-primary-400 underline underline-offset-[3px]">Skip Now</button>
+        <button className="mt-3 text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">
+          Skip Now
+        </button>
       </>
     ),
     children: <Button size="xs">Popover</Button>,
@@ -129,7 +131,7 @@ export const SingleLinePopover: Story = {
   args: {
     customClass: '!w-[20rem]',
     additionalContent: (
-      <h2 className="text-lg font-medium leading-6 tracking-[-0.3px] text-slate-500">Single line message</h2>
+      <h2 className="text-metal-500 text-body-3 font-medium leading-6 tracking-[-0.3px]">Single line message</h2>
     ),
     children: <Button size="xs">Popover</Button>,
   },
