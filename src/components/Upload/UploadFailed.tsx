@@ -1,9 +1,9 @@
-import { twMerge } from 'tailwind-merge'
 import { ArrowClockwise, X } from 'phosphor-react'
 import { FC, useEffect, useRef, useState } from 'react'
 import { useUploadContext } from './UploadContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { useProgress } from './useProgress'
+import { cn } from '../../helpers/cn'
 
 export interface keepUploadFailedTheme {
   base: string
@@ -47,22 +47,22 @@ export const UploadFailed: FC = () => {
     progress: progress,
   })
   return (
-    <div className={twMerge(theme.base)}>
-      <div className={twMerge(theme.bgColor)} style={{ width: divOneWidth }}></div>
-      <div className={twMerge(theme.root.base)}>
+    <div className={cn(theme.base)}>
+      <div className={cn(theme.bgColor)} style={{ width: divOneWidth }}></div>
+      <div className={cn(theme.root.base)}>
         <div>
-          <p className={twMerge(theme.root.status)}>Something error</p>
-          <div className={twMerge(theme.root.statusBox.base)}>
-            <p className={twMerge(theme.root.statusBox.count)}>{progress}%</p>
-            <div className={twMerge(theme.root.statusBox.dot)}></div>
-            <p className={twMerge(theme.root.statusBox.time)}>{uploadTime ? uploadTime : '10 Second Left'}</p>
+          <p className={cn(theme.root.status)}>Something error</p>
+          <div className={cn(theme.root.statusBox.base)}>
+            <p className={cn(theme.root.statusBox.count)}>{progress}%</p>
+            <div className={cn(theme.root.statusBox.dot)}></div>
+            <p className={cn(theme.root.statusBox.time)}>{uploadTime ? uploadTime : '10 Second Left'}</p>
           </div>
         </div>
-        <div className={twMerge(theme.root.confirmBox.base)}>
-          <button className={twMerge(theme.root.confirmBox.restart)}>
+        <div className={cn(theme.root.confirmBox.base)}>
+          <button className={cn(theme.root.confirmBox.restart)}>
             <ArrowClockwise size={14} color="#FF3838" />
           </button>
-          <button className={twMerge(theme.root.confirmBox.dismiss)}>
+          <button className={cn(theme.root.confirmBox.dismiss)}>
             <X size={14} color="#FF3838" />
           </button>
         </div>

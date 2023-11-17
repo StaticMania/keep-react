@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge'
 import type { ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 
 export interface CardListProps {
   children?: ReactNode
@@ -7,5 +7,5 @@ export interface CardListProps {
 }
 
 export const CardList: React.FC<CardListProps> = ({ children, className }) => {
-  return <li className={twMerge(className)}>{children}</li>
+  return <li className={cn(className)}>{children}</li>
 }

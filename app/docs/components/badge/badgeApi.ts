@@ -49,6 +49,20 @@ export const badgeApiData = [
     default: 'None',
   },
   {
+    id: 12,
+    propsName: 'dotStyle',
+    propsType: 'string',
+    propsDescription: 'Custom style to be added to the badge.',
+    default: 'None',
+  },
+  {
+    id: 13,
+    propsName: 'iconStyle',
+    propsType: 'string',
+    propsDescription: 'Custom style to be added to the badge icon.',
+    default: 'None',
+  },
+  {
     id: 8,
     propsName: 'size',
     propsType: ['xs', 'sm'],

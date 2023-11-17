@@ -65,4 +65,25 @@ export const StepItemsAPI = [
     propsDescription: 'Indicates if the step is active.',
     default: 'false',
   },
+  {
+    id: 7,
+    propsName: 'titleStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the step title.',
+    default: 'None',
+  },
+  {
+    id: 8,
+    propsName: 'descriptionStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the step description.',
+    default: 'None',
+  },
+  {
+    id: 9,
+    propsName: 'stepStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the step type.',
+    default: 'None',
+  },
 ]

@@ -1,7 +1,7 @@
-import { twMerge } from 'tailwind-merge'
 import { useTimelineContext } from './TimelineContext'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export type TimelinePointProps = PropsWithChildren<
   ComponentProps<'div'> & {
@@ -68,7 +68,7 @@ export const TimelinePoint: FC<TimelinePointProps> = ({ children, className, ico
   return (
     <div
       data-testid="timeline-point"
-      className={twMerge(horizontal ? point.root.horizontal.on : point.root.horizontal.off, className)}
+      className={cn(horizontal ? point.root.horizontal.on : point.root.horizontal.off, className)}
       {...props}>
       {children}
       {Icon ? (
@@ -79,7 +79,7 @@ export const TimelinePoint: FC<TimelinePointProps> = ({ children, className, ico
         </span>
       ) : (
         <div
-          className={twMerge(
+          className={cn(
             point.root.icon.off.base,
             gradientPoint && gradientColor ? gradientColor : 'bg-gradient-9',
             !gradientPoint && 'bg-metal-200',

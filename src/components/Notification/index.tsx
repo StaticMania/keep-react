@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useTheme } from '../../Keep/ThemeContext'
-import { twMerge } from 'tailwind-merge'
 import { X } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 
 export interface keepNotificationTheme {
   base: string
@@ -58,37 +58,37 @@ export const Notification: FC<NotificationProps> = ({
 
   return (
     <div
-      className={twMerge(
+      className={cn(
         theme.base,
         dismiss && theme.dismiss,
         theme.infoIcon[InfoIcon ? 'on' : 'off'],
         theme.headerBanner[headerBannerSrc ? 'on' : 'off'],
-        className,
         position && theme.position[position],
         showNotification ? 'block' : 'hidden',
+        className,
       )}
       role="notification">
       <div className={theme.wrapper}>
-        {!headerBannerSrc && InfoIcon && <div className={twMerge(theme.infoIcon.base)}>{InfoIcon}</div>}
+        {!headerBannerSrc && InfoIcon && <div className={cn(theme.infoIcon.base)}>{InfoIcon}</div>}
         <div>
           {headerBannerSrc && (
-            <div className={twMerge(theme.headerBanner.base)}>
-              <img src={headerBannerSrc} alt="header-banner" className={twMerge(theme.headerBanner.img)} />
+            <div className={cn(theme.headerBanner.base)}>
+              <img src={headerBannerSrc} alt="header-banner" className={cn(theme.headerBanner.img)} />
 
               {onDismiss && typeof onDismiss === 'function' && (
-                <div className={twMerge(theme.headerBanner.closeIcon)} onClick={onDismiss}>
+                <div className={cn(theme.headerBanner.closeIcon)} onClick={onDismiss}>
                   <X size={20} color="#5E718D" />
                 </div>
               )}
             </div>
           )}
-          <div className={twMerge(headerBannerSrc && theme.content)}>
+          <div className={cn(headerBannerSrc && theme.content)}>
             {children}
             {additionalContent && <div>{additionalContent}</div>}
           </div>
         </div>
         {!headerBannerSrc && onDismiss && typeof onDismiss === 'function' && (
-          <button aria-label="Dismiss" className={twMerge(theme.closeButton.base)} onClick={onDismiss} type="button">
+          <button aria-label="Dismiss" className={cn(theme.closeButton.base)} onClick={onDismiss} type="button">
             <X size={24} color="#5E718D" />
           </button>
         )}

@@ -4,7 +4,7 @@ import { Carousel } from '~/src'
 
 const MultipleCarousel = () => {
   return (
-    <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96">
+    <div className="grid grid-cols-2 gap-4">
       <Carousel showControls={false} indicatorsType="ring" indicatorsTypeColors="slate">
         <Image
           src="https://images.prismic.io/staticmania/dbc3da5c-53e4-409a-bc60-24b5f19014d3_4.png?auto=compress,format"
@@ -56,7 +56,7 @@ import { Carousel } from "keep-react";
 
 export const CarouselComponent = () => {
   return (
-    <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96">
+    <div className="grid grid-cols-2 gap-4">
       <Carousel
         showControls={false}
         indicatorsType="ring"

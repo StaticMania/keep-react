@@ -1,8 +1,8 @@
 import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps } from 'react'
 import { forwardRef } from 'react'
+import { cn } from '../../helpers/cn'
 
 export interface keepRadioTheme {
   base: string
@@ -27,6 +27,7 @@ export interface RadioProps extends Omit<ComponentProps<'input'>, 'type' | 'ref'
   selected?: string
   color?: keyof KeepStateColors
   onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  className?: string
 }
 
 export const Radio = forwardRef<HTMLInputElement, RadioProps>(
@@ -40,7 +41,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       <>
         <input
           ref={ref}
-          className={twMerge(theme.radioInput, className, theme.sizes[sizing])}
+          className={cn(theme.radioInput, theme.sizes[sizing])}
           value={value}
           checked={selected === value}
           onChange={onOptionChange}
@@ -48,12 +49,13 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           {...props}
         />
         <div
-          className={twMerge(
+          className={cn(
             theme.base,
             theme.sizes[sizing],
             theme.radioType[radioShape],
             theme.color[color],
             theme.radioType.base,
+            className,
           )}></div>
       </>
     )

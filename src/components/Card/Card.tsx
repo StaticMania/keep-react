@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { CardContainer } from './CardContainer'
 import { CardDescription } from './CardDescription'
@@ -8,6 +7,7 @@ import { CardList } from './CardList'
 import { CardTitle } from './CardTitle'
 import { KeepBoolean, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface KeepCardTheme {
   base: string
@@ -45,6 +45,7 @@ export interface CardProps extends PropsWithChildren<ComponentProps<'div'>> {
   imgAlt?: string
   imgSrc?: string
   imgSize?: keyof CardBgImageSizes
+  imgStyle?: string
 }
 const CardComponent: FC<CardProps> = ({
   children,
@@ -56,6 +57,7 @@ const CardComponent: FC<CardProps> = ({
   imgAlt,
   imgSrc,
   imgSize = 'lg',
+  imgStyle,
   ...props
 }): JSX.Element => {
   const theme = useTheme().theme.card
@@ -64,7 +66,7 @@ const CardComponent: FC<CardProps> = ({
   const theirProps = props as object
   return (
     <Component
-      className={twMerge(
+      className={cn(
         theme.base,
         href && theme.href,
         theme.shadow[shadow ? 'on' : 'off'],
@@ -78,12 +80,13 @@ const CardComponent: FC<CardProps> = ({
       {imgSrc && (
         <img
           alt={imgAlt ?? ''}
-          className={twMerge(
+          className={cn(
             theme.img.base,
             horizontal && theme.img.horizontal.on.base,
             horizontal && theme.img.horizontal.on.size[imgSize],
             !horizontal && theme.img.horizontal.off.base,
             !horizontal && theme.img.horizontal.off.size[imgSize],
+            imgStyle,
           )}
           src={imgSrc}
         />

@@ -1,10 +1,10 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { HelperText } from './HelperText'
 import type { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepTextAreaTheme {
   base: string
@@ -31,10 +31,11 @@ export interface TextareaProps extends Omit<ComponentProps<'textarea'>, 'classNa
   border?: boolean
   disabled?: boolean
   color?: keyof TextareaColors
+  className?: string
 }
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ shadow, helperText, withBg, border = true, disabled = false, color = 'default', ...props }, ref) => {
+  ({ shadow, helperText, withBg, border = true, disabled = false, color = 'default', className, ...props }, ref) => {
     const theme = useTheme().theme.formControls.textarea
     const theirProps = excludeClassName(props)
 
@@ -43,13 +44,14 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <textarea
           ref={ref}
           disabled={disabled}
-          className={twMerge(
+          className={cn(
             theme.base,
             theme.colors[color],
             disabled && theme.disabled,
             theme.withShadow[shadow ? 'on' : 'off'],
             theme.withBorder[border ? 'on' : 'off'],
             withBg ? theme.withBg.on.colors[color] : theme.withBg.off,
+            className,
           )}
           {...theirProps}
         />

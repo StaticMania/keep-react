@@ -1,5 +1,4 @@
 import { FC, useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { NavigationBrand } from './NavigationBrand'
 import { NavigationContainer } from './NavigationContainer'
 import { DividerTheme, NavigationDivider } from './NavigationDivider'
@@ -8,6 +7,7 @@ import { NavigationToggle } from './NavigationToggle'
 import { NavigationContext } from './NavigationContext'
 import { CollapseTheme, NavigationCollapse } from './NavigationCollapse'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface NavigationProps {
   children?: React.ReactNode
@@ -51,11 +51,11 @@ const NavigationComponent: FC<NavigationProps> = ({ fluid, bordered, rounded, ch
   return (
     <NavigationContext.Provider value={{ isOpen, setIsOpen }}>
       <header
-        className={twMerge(
+        className={cn(
           root.base,
-          className,
           rounded ? root.rounded.on : root.rounded.off,
           bordered ? root.bordered.on : root.bordered.off,
+          className,
         )}>
         <div className={fluid ? root.container.on : root.container.off}>{children}</div>
       </header>

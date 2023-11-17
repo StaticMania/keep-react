@@ -27,7 +27,6 @@ export const DateRangePicker: React.FC = () => {
           })
       }}
       customInput={<CustomInput />}
-      className="border-metal-300 rounded-md border placeholder:text-body-5"
     />
   )
 }

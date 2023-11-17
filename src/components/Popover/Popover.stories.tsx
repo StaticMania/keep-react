@@ -23,7 +23,7 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: 'Popover...' },
       },
     },
-    customClass: {
+    className: {
       description: 'Popover custom className',
       table: {
         type: { summary: 'string' },
@@ -116,7 +116,7 @@ export const OneParagraphPopover: Story = {
     showDismissIcon: false,
     additionalContent: (
       <>
-        <h2 className="text-metal-500 text-body-4 font-medium">
+        <h2 className="text-body-4 font-medium text-metal-500">
           There are many variations of passages of Lorem Ipsum available.
         </h2>
         <button className="mt-3 text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">
@@ -129,9 +129,9 @@ export const OneParagraphPopover: Story = {
 }
 export const SingleLinePopover: Story = {
   args: {
-    customClass: '!w-[20rem]',
+    className: '!w-[20rem]',
     additionalContent: (
-      <h2 className="text-metal-500 text-body-3 font-medium leading-6 tracking-[-0.3px]">Single line message</h2>
+      <h2 className="text-body-3 font-medium leading-6 tracking-[-0.3px] text-metal-500">Single line message</h2>
     ),
     children: <Button size="xs">Popover</Button>,
   },

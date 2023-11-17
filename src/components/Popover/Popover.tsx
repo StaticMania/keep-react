@@ -17,8 +17,8 @@ import {
 } from '@floating-ui/react'
 import { XCircle } from 'phosphor-react'
 import { FC, useRef, useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 interface PopoverProps {
   trigger?: 'hover' | 'click'
@@ -27,7 +27,7 @@ interface PopoverProps {
   title?: string
   description?: string
   icon?: React.ReactNode
-  customClass?: string
+  className?: string
   showDismissIcon?: boolean
   showArrow?: boolean
   position?:
@@ -61,7 +61,7 @@ export const Popover: FC<PopoverProps> = ({
   description,
   icon,
   additionalContent: additionalContent,
-  customClass,
+  className,
   position = 'bottom-start',
   showDismissIcon = true,
   showArrow = true,
@@ -116,7 +116,7 @@ export const Popover: FC<PopoverProps> = ({
           ref={refs.setFloating}
           style={{ ...floatingStyles, ...styles }}
           {...getFloatingProps()}
-          className={twMerge(theme.body.base, customClass)}>
+          className={cn(theme.body.base, className)}>
           {showArrow && <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFf" />}
           {showDismissIcon && (
             <button onClick={() => setIsOpen(false)} className="absolute right-6 top-[25px]">

@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { useNavigationContext } from './NavigationContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { CaretLeft } from 'phosphor-react'
+import { cn } from '../../helpers/cn'
 
 export interface CollapseProps {
   children?: React.ReactNode
@@ -28,14 +28,15 @@ export const NavigationCollapse: FC<CollapseProps> = ({ children, className, col
   const { collapse } = useTheme().theme.navigation
   return (
     <div
-      className={twMerge(
+      className={cn(
         collapse.base,
         isOpen ? collapse.menu.open : collapse.menu.close,
-        className ? className : collapse.menu.position,
+        collapse.menu.position,
         collapseType === 'sidebar' ? collapse.type.sidebar : collapse.type.fullWidth,
+        className,
       )}>
       <div className="mb-4">
-        <button onClick={() => setIsOpen(!isOpen)} className="text-metal-400 flex items-center gap-px text-body-5">
+        <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-px text-body-5 text-metal-400">
           <CaretLeft size="16" />
           Go Back
         </button>

@@ -14,6 +14,7 @@ interface SearchBarProps {
   disabled?: boolean
   bordered?: boolean
   withBg?: boolean
+  className?: string
 }
 
 export const SearchBar: FC<SearchBarProps> = ({
@@ -29,6 +30,7 @@ export const SearchBar: FC<SearchBarProps> = ({
   disabled,
   withBg,
   bordered,
+  className,
 }) => {
   return (
     <div role="searchbox">
@@ -45,6 +47,7 @@ export const SearchBar: FC<SearchBarProps> = ({
         handleOnChange={handleOnChange}
         disabled={disabled}
         border={bordered}
+        className={className}
       />
       {children}
     </div>

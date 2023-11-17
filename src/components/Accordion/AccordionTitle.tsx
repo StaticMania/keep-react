@@ -1,11 +1,11 @@
 import { MinusCircle, PlusCircle } from 'phosphor-react'
 import type { ComponentProps, FC } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { KeepBoolean, KeepHeadingLevel } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { useAccordionContext } from './AccordionPanelContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepAccordionTitleTheme {
   arrow: {
@@ -27,6 +27,7 @@ export interface AccordionTitleProps extends ComponentProps<'button'> {
   arrowIcon?: FC<ComponentProps<'svg'>>
   as?: KeepHeadingLevel
   theme?: DeepPartial<keepAccordionTitleTheme>
+  className?: string
 }
 
 export const AccordionTitle: FC<AccordionTitleProps> = ({
@@ -53,14 +54,14 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
 
   return (
     <button
-      className={twMerge(
+      className={cn(
         theme.base,
         theme.flush[flush ? 'on' : 'off'],
         theme.open[isOpen ? 'on' : 'off'],
-        className,
         disabled && theme.disabled,
         iconPosition === 'right' && theme.iconPosition.right,
         iconPosition === 'left' && theme.iconPosition.left,
+        className,
       )}
       onClick={onClick}
       type="button"

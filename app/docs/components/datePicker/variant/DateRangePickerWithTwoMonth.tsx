@@ -6,9 +6,11 @@ import { rangePicker } from '~/src/components/DatePicker/DatePickerContext'
 const DateRangePickerWithTwoMonth = () => {
   const [_, setRangeDate] = useState<rangePicker>()
   return (
-    <DatePicker showTwoMonth={true} rangeDate={setRangeDate}>
-      <DatePicker.Range />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker showTwoMonth={true} rangeDate={setRangeDate} placeholder="Start - Finish">
+        <DatePicker.Range />
+      </DatePicker>
+    </div>
   )
 }
 
@@ -20,7 +22,7 @@ import { DatePicker } from "keep-react";
 export const DatePickerComponent = () => {
   const [rangeDate, setRangeDate] = useState(null);
   return (
-    <DatePicker showTwoMonth={true} rangeDate={setRangeDate}>
+    <DatePicker showTwoMonth={true} rangeDate={setRangeDate} placeholder="Start - Finish">
       <DatePicker.Range />
     </DatePicker>
   );

@@ -1,10 +1,9 @@
 import { useState, type ComponentProps, type FC, type PropsWithChildren } from 'react'
 import type { DeepPartial } from '../../helpers/deep-partial'
-
-import { twMerge } from 'tailwind-merge'
 import { useTableContext } from './TableContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { CheckBox } from '../CheckBox'
+import { cn } from '../../helpers/cn'
 
 export interface keepTableRowTheme {
   base: string
@@ -26,7 +25,7 @@ export const TableRow: FC<TableRowProps> = ({ children, className, ...props }) =
   return (
     <tr
       data-testid="table-row-element"
-      className={twMerge(theme.base, striped && theme.striped, hoverable && theme.hovered, className)}
+      className={cn(theme.base, striped && theme.striped, hoverable && theme.hovered, className)}
       {...props}>
       {showCheckbox && (
         <th className="p-4">

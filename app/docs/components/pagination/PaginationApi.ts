@@ -28,13 +28,6 @@ export const paginationApiData = [
     default: '"roundSquare"',
   },
   {
-    id: 5,
-    propsName: 'layout',
-    propsType: ['navigation', 'pagination', 'table'],
-    propsDescription: 'Layout style.',
-    default: 'pagination',
-  },
-  {
     id: 6,
     propsName: 'onPageChange',
     propsType: 'function',
@@ -75,5 +68,26 @@ export const paginationApiData = [
     propsType: 'number',
     propsDescription: 'Total number of pages.',
     default: '30',
+  },
+  {
+    id: 12,
+    propsName: 'nextBtnStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the next button.',
+    default: 'None',
+  },
+  {
+    id: 13,
+    propsName: 'previousBtnStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the previous button.',
+    default: 'None',
+  },
+  {
+    id: 14,
+    propsName: 'pageStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the page button.',
+    default: 'None',
   },
 ]

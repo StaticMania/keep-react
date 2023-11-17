@@ -1,10 +1,8 @@
-import { twMerge } from 'tailwind-merge'
 import { useState, type ComponentProps, type FC, type PropsWithChildren } from 'react'
 import type { keepTableBodyTheme } from './TableBody'
 import type { TableContextType } from './TableContext'
 import type { keepTableHeadTheme } from './TableHead'
 import type { keepTableRowTheme } from './TableRow'
-
 import { TableBody } from './TableBody'
 import { keepTableCaptionTheme, TableCaption } from './TableCaption'
 import { TableCell } from './TableCell'
@@ -14,6 +12,7 @@ import { TableHeadCell } from './TableHeadCell'
 import { TableRow } from './TableRow'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepTableTheme {
   root: keepTableRootTheme
@@ -33,6 +32,7 @@ export interface TableProps extends PropsWithChildren, ComponentProps<'table'>, 
   showBorder?: boolean
   showBorderPosition?: 'left' | 'right'
   checked?: boolean
+  className?: string
 }
 const TableComponent: FC<TableProps> = ({
   children,
@@ -55,7 +55,7 @@ const TableComponent: FC<TableProps> = ({
 
   return (
     <div id="tableScrollBar" className="w-full overflow-x-auto rounded-lg">
-      <div data-testid="table-element" className={twMerge(theme.root.wrapper)}>
+      <div data-testid="table-element" className={cn(theme.root.wrapper)}>
         <TableContext.Provider
           value={{
             striped,
@@ -66,8 +66,7 @@ const TableComponent: FC<TableProps> = ({
             checked: isChecked,
             handleCheckbox: handleCheckbox,
           }}>
-          <div className={twMerge(theme.root.shadow, className)}></div>
-          <table className={twMerge(theme.root.base, className)} {...props}>
+          <table className={cn(theme.root.base, className)} {...props}>
             {children}
           </table>
         </TableContext.Provider>

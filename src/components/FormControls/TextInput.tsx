@@ -1,9 +1,9 @@
-import { twMerge } from 'tailwind-merge'
 import React, { ComponentProps, forwardRef, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { HelperText } from './HelperText'
 import type { KeepBoolean, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepTextInputTheme {
   base: string
@@ -83,6 +83,9 @@ export interface TextInputProps extends Omit<ComponentProps<'input'>, 'ref' | 'c
   color?: keyof TextInputColors
   value?: string
   handleOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  className?: string
+  addonStyle?: string
+  iconStyle?: string
 }
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
@@ -101,6 +104,8 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       iconPosition = 'right',
       value,
       handleOnChange,
+      addonStyle,
+      iconStyle,
       ...props
     },
     ref,
@@ -113,23 +118,26 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         <div className={theme.base}>
           {addon && addonPosition === 'left' && (
             <span
-              className={twMerge(
+              className={cn(
                 theme.addon.base,
                 theme.addon.separator.colors[color],
                 theme.addon.position[addonPosition],
                 theme.addon.addonBorder[border ? 'on' : 'off'],
                 withBg ? theme.field.input.withBg.on.colors[color] : theme.field.input.withBg.off,
                 disabled && theme.field.input.disabled,
+                addonStyle,
               )}>
               {addon}
             </span>
           )}
           <div className={theme.field.base}>
             {Icon && iconPosition === 'left' && (
-              <div className={twMerge(theme.field.icon.base, theme.field.icon.position[iconPosition])}>{Icon}</div>
+              <div className={cn(theme.field.icon.base, theme.field.icon.position[iconPosition], iconStyle)}>
+                {Icon}
+              </div>
             )}
             <input
-              className={twMerge(
+              className={cn(
                 theme.field.input.base,
                 theme.field.input.colors[color],
                 theme.field.input.sizes[sizing],
@@ -139,7 +147,6 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 Icon ? theme.field.input.withIcon.on[iconPosition] : theme.field.input.withIcon.off,
                 addon ? theme.field.input.withAddon.on[addonPosition] : theme.field.input.withAddon.off,
                 withBg ? theme.field.input.withBg.on.colors[color] : theme.field.input.withBg.off,
-
                 !border && '!rounded-none',
               )}
               {...theirProps}
@@ -149,17 +156,20 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               onChange={handleOnChange}
             />
             {Icon && iconPosition === 'right' && (
-              <div className={twMerge(theme.field.icon.base, theme.field.icon.position[iconPosition])}>{Icon}</div>
+              <div className={cn(theme.field.icon.base, theme.field.icon.position[iconPosition], iconStyle)}>
+                {Icon}
+              </div>
             )}
           </div>
           {addon && addonPosition === 'right' && (
             <span
-              className={twMerge(
+              className={cn(
                 theme.addon.base,
                 theme.addon.separator.colors[color],
                 theme.addon.position[addonPosition],
                 theme.field.input.withBorder[border ? 'on' : 'off'],
                 withBg ? theme.field.input.withBg.on.colors[color] : theme.field.input.withBg.off,
+                addonStyle,
               )}>
               {addon}
             </span>

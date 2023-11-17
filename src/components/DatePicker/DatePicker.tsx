@@ -15,6 +15,10 @@ export interface DatePickerProps {
   yearPicker?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
   monthPicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
   timePicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+  className?: string
+  iconStyle?: string
+  placeholder?: string
+  icon?: ReactNode
 }
 
 const DatePickerComponent: FC<DatePickerProps> = ({
@@ -25,6 +29,10 @@ const DatePickerComponent: FC<DatePickerProps> = ({
   monthPicker,
   singleDatePicker,
   timePicker,
+  className,
+  icon,
+  iconStyle,
+  placeholder,
 }) => {
   return (
     <DatePickerContext.Provider
@@ -36,6 +44,10 @@ const DatePickerComponent: FC<DatePickerProps> = ({
         monthPicker,
         singleDatePicker,
         timePicker,
+        className,
+        icon,
+        iconStyle,
+        placeholder,
       }}>
       {children}
     </DatePickerContext.Provider>

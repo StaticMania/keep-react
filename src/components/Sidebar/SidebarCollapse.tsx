@@ -1,7 +1,5 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import type { SidebarItemProps } from './SidebarItem'
-
-import { twMerge } from 'tailwind-merge'
 import { CaretDown } from 'phosphor-react'
 import { useEffect, useId, useState } from 'react'
 import { Tooltip } from '../Tooltip'
@@ -12,6 +10,7 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { KeepSidebarTheme } from '.'
 import { mergeDeep } from '../../helpers/mergeDeep'
+import { cn } from '../../helpers/cn'
 
 export interface KeepSidebarCollapseTheme {
   button: string
@@ -72,13 +71,13 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
         onClick={() => setOpen(!isOpen)}
         title={label}
         type="button"
-        className={twMerge(theme.button, className)}
+        className={cn(theme.button, className)}
         {...props}>
         {Icon && (
           <div
             aria-hidden
             data-testid="keep-sidebar-collapse-icon"
-            className={twMerge(theme.icon.base, theme.icon.open[isOpen ? 'on' : 'off'])}>
+            className={cn(theme.icon.base, theme.icon.open[isOpen ? 'on' : 'off'])}>
             {Icon}
           </div>
         )}
@@ -89,7 +88,6 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
             <span data-testid="keep-sidebar-collapse-label" className={theme.label.base}>
               {label}
             </span>
-            {/* <HiChevronDown aria-hidden className={theme.label.icon} /> */}
             <CaretDown size={24} weight="bold" />
           </>
         )}

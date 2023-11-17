@@ -1,14 +1,15 @@
 import { forwardRef } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { useTheme } from '../../Keep/ThemeContext'
 import { useBreadcrumbContext } from './BreadcrumbContext'
 import type { ComponentProps, PropsWithChildren, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 
 export interface BreadcrumbItemProps extends PropsWithChildren<Omit<ComponentProps<'li'>, 'ref'>> {
   href?: string
   icon?: ReactNode
   active?: 'border' | 'bar' | 'base'
   disabled?: boolean
+  className?: string
 }
 
 export const BreadcrumbItem = forwardRef<HTMLAnchorElement | HTMLSpanElement, BreadcrumbItemProps>(
@@ -20,7 +21,7 @@ export const BreadcrumbItem = forwardRef<HTMLAnchorElement | HTMLSpanElement, Br
     const Component = isLink ? 'a' : 'span'
 
     return (
-      <li className={twMerge(theme.base, className)} {...props}>
+      <li className={cn(theme.base, className)} {...props}>
         {separatorIcon && (
           <span className={theme.chevron} data-testid="keep-breadcrumb-separator">
             {separatorIcon}
@@ -31,7 +32,7 @@ export const BreadcrumbItem = forwardRef<HTMLAnchorElement | HTMLSpanElement, Br
           className={theme.href[isLink ? 'on' : 'off']}
           data-testid="keep-breadcrumb-item"
           href={href}>
-          <div className={twMerge(theme.iconWrapper, disabled && theme.disabled, active && theme.activeItem[active])}>
+          <div className={cn(theme.iconWrapper, disabled && theme.disabled, active && theme.activeItem[active])}>
             {Icon && <span className={theme.icon}>{Icon}</span>}
             {children}
           </div>

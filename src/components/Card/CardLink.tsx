@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge'
 import type { ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 
 export interface CardLinkProps {
   children?: ReactNode
@@ -13,9 +13,7 @@ export const CardLink: React.FC<CardLinkProps> = ({ children, className, href = 
   return (
     <a
       href={href}
-      className={twMerge(
-        className ? className : 'md:text-body-4 text-body-6 flex items-center gap-1 font-medium text-primary-500',
-      )}>
+      className={cn('flex items-center gap-1 text-body-6 font-medium text-primary-500 md:text-body-4', className)}>
       {icon && iconPosition === 'right' && icon}
       <span>{children}</span>
       {icon && iconPosition === 'left' && icon}

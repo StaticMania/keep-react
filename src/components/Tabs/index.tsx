@@ -1,10 +1,10 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, ForwardedRef, KeyboardEvent, PropsWithChildren, ReactElement } from 'react'
 import { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
 import type { TabItemProps } from './TabItem'
 import { TabItem } from './TabItem'
 import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepTabTheme {
   base: string
@@ -142,11 +142,11 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
     }))
 
     return (
-      <div className={twMerge(theme.base, className)}>
+      <div className={cn(theme.base, className)}>
         <div
           aria-label="Tabs"
           role="tablist"
-          className={twMerge(
+          className={cn(
             theme.tabList.base,
 
             style !== 'pills' && theme.tabList.borderPosition[borderPosition],
@@ -159,7 +159,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
               type="button"
               aria-controls={`${index + 1}-tabpanel-${index}`}
               aria-selected={index === activeTab}
-              className={twMerge(
+              className={cn(
                 theme.tabList.tabItem.base,
                 tabItemStyle.base,
                 index === activeTab && tabItemStyle.active.on,
@@ -182,7 +182,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
               )}
               {tab.notification && (
                 <span
-                  className={twMerge(
+                  className={cn(
                     theme.tabList.tabItem.notification.base,
                     tab.notificationColor &&
                       theme.tabList.tabItem.notification.notificationColor[tab.notificationColor],
