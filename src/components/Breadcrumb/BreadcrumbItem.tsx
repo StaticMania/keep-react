@@ -4,10 +4,25 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { useBreadcrumbContext } from './BreadcrumbContext'
 import type { ComponentProps, PropsWithChildren, ReactNode } from 'react'
 
+/**
+ * Props for a single item in a breadcrumb component.
+ */
 export interface BreadcrumbItemProps extends PropsWithChildren<Omit<ComponentProps<'li'>, 'ref'>> {
+  /**
+   * The URL to link to.
+   */
   href?: string
+  /**
+   * An icon to display next to the item text.
+   */
   icon?: ReactNode
+  /**
+   * The style of the active item.
+   */
   active?: 'border' | 'bar' | 'base'
+  /**
+   * Whether the item is disabled.
+   */
   disabled?: boolean
 }
 

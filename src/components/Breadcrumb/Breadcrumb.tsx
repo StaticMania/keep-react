@@ -1,13 +1,12 @@
-/**
- * 
- */
-
 import { twMerge } from 'tailwind-merge'
 import { BreadcrumbItem } from './BreadcrumbItem'
 import { useTheme } from '../../Keep/ThemeContext'
 import { BreadcrumbContext } from './BreadcrumbContext'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 
+/**
+ * Defines the interface for the theme object used in the Breadcrumb component.
+ */
 export interface keepBreadCrumbTheme {
   breadCrumbWithBorder: string
   item: {
@@ -29,6 +28,11 @@ export interface keepBreadCrumbTheme {
   list: string
 }
 
+/**
+ * Props for the Breadcrumb component.
+ * @param {ReactNode} separatorIcon - The icon to use as a separator between breadcrumb items.
+ * @param {boolean} breadCrumbWithBorder - Whether to display a border around the breadcrumb component.
+ */
 export interface BreadcrumbProps extends PropsWithChildren<ComponentProps<'nav'>> {
   separatorIcon?: ReactNode
   breadCrumbWithBorder?: boolean

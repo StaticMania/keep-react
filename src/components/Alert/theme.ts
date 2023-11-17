@@ -28,7 +28,13 @@ export const alertTheme: keepAlertTheme = {
        * Styles for the border when it's an error.
        */
       error: 'border border-error-100',
+      /**
+       * Styles for the border when it's a gray.
+       */
       gray: 'border border-metal-200',
+      /**
+       * Styles for the border when it's an info.
+       */
       info: 'border border-primary-100',
       /**
        * Styles for the border when it's a success.
@@ -90,8 +96,17 @@ export const alertTheme: keepAlertTheme = {
      * Styles for the close button color.
      */
     color: {
+      /**
+       * Styles for the close button color when it's an info.
+       */
       info: 'bg-primary-25 text-primary-500 hover:bg-primary-100 focus:ring-blue-400',
+      /**
+       * Styles for the close button color when it's a gray.
+       */
       gray: 'bg-metal-50 text-metal-600 hover:bg-metal-200 focus:ring-metal-200',
+      /**
+       * Styles for the close button color when it's an error.
+       */
       error: 'bg-error-25 !text-error-500 hover:bg-error-50 hover:text-white focus:ring-red-400',
       /**
        * Styles for the close button color when it's a success.
@@ -111,7 +126,13 @@ export const alertTheme: keepAlertTheme = {
      * Color styles for the Alert component when it's an info.
      */
     info: 'bg-primary-25 border-primary-100',
+    /**
+     * Color styles for the Alert component when it's a gray.
+     */
     gray: 'bg-metal-50 border-metal-200',
+    /**
+     * Color styles for the Alert component when it's an error.
+     */
     error: 'bg-error-25 border-error-100',
     /**
      * Color styles for the Alert component when it's a success.
@@ -136,8 +157,17 @@ export const alertTheme: keepAlertTheme = {
   title: {
     base: 'md:text-body-3 text-body-4 font-semibold',
     color: {
+      /**
+       * Color styles for the title of the Alert component when it's an info.
+       */
       info: 'text-primary-600',
+      /**
+       * Color styles for the title of the Alert component when it's a gray.
+       */
       gray: 'text-metal-900',
+      /**
+       * Color styles for the title of the Alert component when it's an error.
+       */
       error: 'text-error-600',
       /**
        * Color styles for the title of the Alert component when it's a success.

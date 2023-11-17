@@ -1,5 +1,8 @@
 import { keepUploadTheme } from '.'
 
+/**
+ * Represents the theme configuration for the upload component.
+ */
 export const uploadTheme: keepUploadTheme = {
   input: {
     disabled: 'cursor-not-allowed opacity-50 select-none',

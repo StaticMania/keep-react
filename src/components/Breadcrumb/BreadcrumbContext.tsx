@@ -7,6 +7,11 @@ type BreadcrumbContext = {
 
 export const BreadcrumbContext = createContext<BreadcrumbContext | undefined>(undefined)
 
+/**
+ * Returns the BreadcrumbContext object from the nearest BreadcrumbContext provider.
+ * @returns {BreadcrumbContext} The BreadcrumbContext object.
+ * @throws {Error} Throws an error if used outside of a BreadcrumbContext provider.
+ */
 export function useBreadcrumbContext(): BreadcrumbContext {
   const context = useContext(BreadcrumbContext)
 

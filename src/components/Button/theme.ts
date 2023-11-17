@@ -1,6 +1,9 @@
 import { keepButtonTheme } from './Button'
 import { keepButtonGroupTheme } from './ButtonGroup'
 
+/**
+ * This module exports the theme object for the Button component.
+ */
 export const buttonTheme: keepButtonTheme = {
   base: 'group rounded-md flex h-min w-fit items-center justify-center text-center font-medium',
   disabled: 'cursor-not-allowed opacity-50',

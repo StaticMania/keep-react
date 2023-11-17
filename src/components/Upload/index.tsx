@@ -13,13 +13,34 @@ import { UploadSuccess } from './UploadSuccess'
 import { UploadContext } from './UploadContext'
 import { ButtonTypes } from '../Button/Button'
 
+/**
+ * Represents the theme configuration for the keepUpload component.
+ */
 export interface keepUploadTheme {
+  /**
+   * Represents the theme configuration for the input field component.
+   */
   input: keepInputFieldTheme
+  /**
+   * Represents the theme configuration for the upload failed component.
+   */
   uploadFailed: keepUploadFailedTheme
+  /**
+   * Represents the theme configuration for the upload horizontal component.
+   */
   uploadHorizontal: UploadHorizontalTheme
+  /**
+   * Represents the theme configuration for the upload pending component.
+   */
   uploadPending: UploadPendingTheme
+  /**
+   * Represents the theme configuration for the upload success component.
+   */
   uploadSuccess: UploadSuccessTheme
 }
+/**
+ * Props for the UploadComponent.
+ */
 interface UploadComponentProps {
   file?: string
   horizontal?: boolean

@@ -3,19 +3,46 @@ import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { Button } from '../Button/Button'
 import { useTheme } from '../../Keep/ThemeContext'
 
+/**
+ * Interface representing the theme for the Empty component.
+ */
 export interface keepEmptyTheme {
   base: string
   title: string
   content: string
 }
 
+/**
+ * Props for the Empty component.
+ */
 export interface EmptyProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'title'>> {
+  /**
+   * The title of the empty component.
+   */
   title?: string
+  /**
+   * The content of the empty component.
+   */
   content?: string
+  /**
+   * The URL to redirect to when the button is clicked.
+   */
   redirectUrl?: string
+  /**
+   * The text to display on the button.
+   */
   buttonText?: string
+  /**
+   * The image to display in the empty component.
+   */
   image?: ReactNode
+  /**
+   * The size of the redirect button.
+   */
   redirectBtnSize?: 'xs' | 'sm' | 'md' | 'lg'
+  /**
+   * The type of the button.
+   */
   buttonType?: 'primary' | 'dashed' | 'text' | 'linkPrimary' | 'linkGray' | 'outlineGray' | 'outlinePrimary' | 'default'
 }
 

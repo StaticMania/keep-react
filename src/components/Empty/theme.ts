@@ -1,5 +1,8 @@
 import type { keepEmptyTheme } from '.'
 
+/**
+ * Represents the theme configuration for the Empty component.
+ */
 export const emptyTheme: keepEmptyTheme = {
   base: 'w-full py-10 flex flex-col items-center justify-center',
   title: 'text-body-3 md:text-description-4 text-metal-700 font-medium mt-5',

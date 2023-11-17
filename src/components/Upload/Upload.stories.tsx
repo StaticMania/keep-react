@@ -1,6 +1,21 @@
 import { Upload } from '.'
 import type { Meta, StoryObj } from '@storybook/react'
 
+/**
+ * Meta information for the Upload component.
+ *
+ * @component Upload
+ * @tags autodocs
+ * @argTypes
+ * - `horizontal`: Upload type horizontal or not?
+ * - `showProgressBar`: Progress bar show or not?
+ * - `progressType`: Available Progress type
+ * - `progress`: Upload Progress number
+ * - `uploadTime`: Upload required time
+ * - `disabled`: Upload disabled or not?
+ * - `file`: Selected file name
+ * - `onFileChange`: Selected file function
+ */
 const meta: Meta<typeof Upload> = {
   component: Upload,
   tags: ['autodocs'],
@@ -67,6 +82,9 @@ const meta: Meta<typeof Upload> = {
 export default meta
 type Story = StoryObj<typeof Upload>
 
+/**
+ * DefaultUpload story configuration.
+ */
 export const DefaultUpload: Story = {
   args: {
     horizontal: false,
@@ -77,6 +95,12 @@ export const DefaultUpload: Story = {
     disabled: false,
   },
 }
+/**
+ * Represents the UploadPending story.
+ * @typedef {Object} UploadPending
+ * showProgressBar - Determines whether to show the progress bar.
+ * progressType - "success" or "error" or "pending"
+ */
 export const UploadPending: Story = {
   args: {
     showProgressBar: true,
@@ -84,6 +108,12 @@ export const UploadPending: Story = {
     progress: 45,
   },
 }
+/**
+ * Represents the story for a failed upload.
+ * @typedef {Object} UploadFailed
+ * showProgressBar - Determines whether to show the progress bar.
+ * progressType - "success" or "error" or "pending"
+ */
 export const UploadFailed: Story = {
   args: {
     showProgressBar: true,
@@ -91,13 +121,26 @@ export const UploadFailed: Story = {
     progress: 55,
   },
 }
+/**
+ * Represents the UploadSuccess story.
+ * @typedef {Object} UploadSuccess
+ * showProgressBar - Determines whether to show the progress bar.
+ * progressType - "success" or "error" or "pending"
+ */
 export const UploadSuccess: Story = {
   args: {
     showProgressBar: true,
     progressType: 'success',
   },
 }
+/**
+ * Story for horizontal upload.
+ */
 export const HorizontalUpload: Story = { args: { horizontal: true } }
+/**
+ * Represents a story for a horizontal upload with pending progress.
+ * @type {Story}
+ */
 export const HorizontalUploadPending: Story = {
   args: {
     ...HorizontalUpload.args,
@@ -106,6 +149,9 @@ export const HorizontalUploadPending: Story = {
     progress: 45,
   },
 }
+/**
+ * Represents a story for a horizontal upload with failed progress.
+ */
 export const HorizontalUploadFailed: Story = {
   args: {
     ...HorizontalUpload.args,
@@ -114,6 +160,9 @@ export const HorizontalUploadFailed: Story = {
     progress: 55,
   },
 }
+/**
+ * Represents a story for a horizontal upload with success progress.
+ */
 export const HorizontalUploadSuccess: Story = {
   args: {
     ...HorizontalUpload.args,
@@ -121,7 +170,13 @@ export const HorizontalUploadSuccess: Story = {
     progressType: 'success',
   },
 }
+/**
+ * Story for a disabled upload component.
+ */
 export const UploadDisabled: Story = { args: { disabled: true } }
+/**
+ * Represents a story for a horizontal upload component with disabled state.
+ */
 export const HorizontalUploadDisabled: Story = {
   args: { disabled: true, horizontal: true },
 }

@@ -6,55 +6,173 @@ import { useTheme } from '../../Keep/ThemeContext'
 import type { PositionInButtonGroup } from './ButtonGroup'
 import { ButtonGroup } from './ButtonGroup'
 
+/**
+ * Interface representing the theme configuration for the Keep button.
+ */
 export interface keepButtonTheme {
+  /**
+   * The base color of the button.
+   */
   base: string
+  /**
+   * The disabled state color of the button.
+   */
   disabled: string
+  /**
+   * The width options for the button.
+   */
   width: {
+    /**
+     * The half-width size of the button.
+     */
     half: string
+    /**
+     * The full-width size of the button.
+     */
     full: string
   }
+  /**
+   * The inner configuration of the button.
+   */
   inner: {
+    /**
+     * The base style of the inner content of the button.
+     */
     base: string
+    /**
+     * The position of the inner content in a button group.
+     */
     position: PositionInButtonGroup
   }
+  /**
+   * The label color for notification buttons.
+   */
   notificationLabel: string
+  /**
+   * The default button style configuration.
+   */
   default: {
+    /**
+     * The color of the default button.
+     */
     color: ButtonColors
+    /**
+     * The transition configuration for the default button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The primary button style configuration.
+   */
   primary: {
+    /**
+     * The color of the primary button.
+     */
     color: ButtonColors
+    /**
+     * The transition configuration for the primary button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The outline gray button style configuration.
+   */
   outlineGray: {
+    /**
+     * The color of the outline gray button.
+     */
     color: ButtonColors
+    /**
+     * The transition configuration for the outline gray button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The outline primary button style configuration.
+   */
   outlinePrimary: {
+    /**
+     * The color of the outline primary button.
+     */
     color: ButtonColors
+
+    /**
+     * The transition configuration for the outline primary button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The dashed button style configuration.
+   */
   dashed: {
+    /**
+     * The color of the dashed button.
+     */
     color: ButtonColors
+    /**
+     * The transition configuration for the dashed button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The text button style configuration.
+   */
   text: {
+    /**
+     * The color of the text button.
+     */
     color: ButtonColors
+    /**
+     * The transition configuration for the text button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The primary link button style configuration.
+   */
   linkPrimary: {
+    /**
+     * The color of the primary link button.
+     */
     color: ButtonColors
+    /**
+     * The transition configuration for the primary link button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The gray link button style configuration.
+   */
   linkGray: {
+    /**
+     * The color of the gray link button.
+     */
     color: ButtonColors
+    /**
+     * The transition configuration for the gray link button.
+     */
     transition: KeepBoolean
   }
+  /**
+   * The boolean value indicating whether the button has a pill shape.
+   */
   pill: KeepBoolean
+  /**
+   * The configuration for the circle-shaped button.
+   */
   circle: {
+    /**
+     * The off state color of the circle button.
+     */
     off: string
+    /**
+     * The size options for the circle button.
+     */
     size: ButtonSizes
   }
+  /**
+   * The size options for the button.
+   */
   size: ButtonSizes
 }
 
@@ -73,6 +191,20 @@ export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' 
   onClick?: () => void
 }
 
+/**
+ * Represents the types of buttons available.
+ * Extends the `KeepButtonType` interface and adds additional button types.
+ * @interface ButtonTypes
+ * @extends KeepButtonType
+ * @default 'default' - The default button type.
+ * @default 'primary' - The primary button type.
+ * @default 'outlineGray' - The outline gray button type.
+ * @default 'outlinePrimary' - The outline primary button type.
+ * @default 'dashed' - The dashed button type.
+ * @default 'text' - The text button type.
+ * @default 'linkPrimary' - The link primary button type.
+ * @default 'linkGray' - The link gray button type.
+ */
 export interface ButtonTypes
   extends Pick<
     KeepButtonType,
@@ -81,13 +213,39 @@ export interface ButtonTypes
   [key: string]: string
 }
 
+/**
+ * Interface for defining button colors.
+ * Extends the `KeepColors` interface and adds additional color properties.
+ */
 export interface ButtonColors extends Pick<KeepColors, 'error' | 'info' | 'success' | 'warning'> {
   [key: string]: string
 }
+/**
+ * Interface for defining button sizes.
+ * @interface ButtonSizes
+ * @extends KeepSizes
+ * extra small | small | medium | large | extra large | 2 extra large
+ */
 export interface ButtonSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'> {
   [key: string]: string
 }
 
+/**
+ * A customizable button component that can be used in React applications.
+ * @param children The content to be displayed inside the button.
+ * @param onClick The function to be called when the button is clicked.
+ * @param color The color of the button. Defaults to 'info'.
+ * @param disabled Whether the button is disabled. Defaults to false.
+ * @param type The type of the button. Defaults to 'default'.
+ * @param href The URL to link to if the button is a link.
+ * @param notificationLabel The label to display on the button for notifications.
+ * @param pill Whether the button should be pill-shaped. Defaults to false.
+ * @param circle Whether the button should be circular. Defaults to false.
+ * @param positionInGroup The position of the button in a group. Defaults to 'none'.
+ * @param size The size of the button. Defaults to 'md'.
+ * @param width The width of the button.
+ * @param customClass Custom CSS classes to apply to the button.
+ */
 const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {

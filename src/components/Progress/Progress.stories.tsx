@@ -1,3 +1,10 @@
+/**
+ * Metadata for the Progress component.
+ *
+ * @component
+ * @tags autodocs
+ * @componentSubtitle The Progress component is a visual indicator that shows the progress of a task. It displays a horizontal bar that fills up based on the completion percentage.
+ */
 import { Meta, StoryObj } from '@storybook/react'
 import { Progress } from '.'
 

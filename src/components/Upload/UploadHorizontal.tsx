@@ -8,19 +8,32 @@ import { UploadPending } from './UploadPending'
 import { UploadSuccess } from './UploadSuccess'
 import { useTheme } from '../../Keep/ThemeContext'
 
+/**
+ * Represents the theme for the UploadHorizontal component.
+ */
 export interface UploadHorizontalTheme {
+  /** The base color for the upload horizontal component. */
   base: string
+  /** The disabled color for the upload horizontal component. */
   disabled: string
+  /** The root configuration for the upload horizontal component. */
   label: {
+    /** The base color for the upload horizontal component. */
     base: string
+    /** The root configuration for the upload horizontal component. */
     root: {
+      /**
+       * The base color for the upload horizontal component.
+       */
       base: string
+      /** The status configuration for the upload horizontal component. */
       iconBox: {
         base: string
         icon: string
         dragDrop: string
         fileType: string
       }
+      /** The confirm box configuration for the upload horizontal component. */
       upload: {
         base: string
         input: string

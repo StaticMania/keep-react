@@ -37,7 +37,7 @@ import { DeepPartial } from '../helpers/deep-partial'
 /**
  * An object that defines the shapes of the KeepCheckbox component.
  * The KeepCheckbox component supports two shapes: circle and round.
- * 
+ *
  * @interface KeepCheckboxShape
  */
 
@@ -55,7 +55,7 @@ export interface KeepCheckboxShape {
 /**
  * An object that defines the shapes of the Keep component.
  * The Keep component supports three shapes: square, round, and circle.
- * 
+ *
  * @interface KeepShapes
  */
 
@@ -81,8 +81,8 @@ export interface KeepShapes {
  */
 
 export interface KeepPositions {
-  /** 
-   * The position at the bottom-left corner of the screen. 
+  /**
+   * The position at the bottom-left corner of the screen.
    */
   'bottom-left': string
   /**
@@ -121,9 +121,9 @@ export interface KeepPositions {
 
 /**
  * Defines the sizes available for Keep components.
- * 
- * @interface KeepSizes 
- * 
+ *
+ * @interface KeepSizes
+ *
  * @type {{ xs, sm, md, lg, xl, '2xl', '3xl', '4xl', '5xl', '6xl', '7xl'}}
  */
 export interface KeepSizes {
@@ -142,9 +142,9 @@ export interface KeepSizes {
 
 /**
  * Defines the types of buttons available in the Keep app.
- * 
+ *
  * @interface KeepButtonType
- * 
+ *
  * The following button types are available:
  * - primary: A primary button.
  * - outlineGray: A gray outline button.
@@ -171,9 +171,9 @@ export interface KeepButtonType {
  * with the following values:
  * - off: The boolean value is false.
  * - on: The boolean value is true.
- * 
+ *
  * @interface KeepBoolean
- * 
+ *
  * @type {{ off: string, on: string }}
  */
 
@@ -186,9 +186,9 @@ export interface KeepBoolean {
  * Interface for defining the colors used in the KeepState component.
  * @remarks
  * These colors are used to represent different states of the component, such as info, error, success, and warning.
- * 
+ *
  * @public
- * 
+ *
  * @type {{ [key: string]: string }}
  */
 export interface KeepStateColors {
@@ -205,16 +205,16 @@ export interface KeepStateColors {
  * This interface extends the `KeepStateColors` interface and defines additional color properties.
  *
  * @public
- * 
+ *
  * @type {{ [key: string]; blue; cyan; dark; gray; green; indigo; light; lime; pink; purple; red; teal; yellow }}
- * 
+ *
  * @extends KeepStateColors
- * 
+ *
  * @example
- * 
+ *
  * ```tsx
  * import { KeepColors } from '..'
- * 
+ *
  * const colors: KeepColors = {
  *  info: '#1e90ff',
  *  error: '#ff0000',
@@ -273,7 +273,7 @@ export interface KeepGradientColors extends Omit<KeepStateColors, 'warning'> {
 /**
  * Defines a set of gradient duo-tone colors used in the Keep app.
  * Each color is represented as a string in the format "#RRGGBB".
- * 
+ *
  * @remarks
  * The following color pairs are available:
  * - cyanToBlue: A gradient from cyan to blue.
@@ -296,11 +296,11 @@ export interface KeepGradientDuoToneColors {
 
 /**
  * Defines the interface for heading levels used in the Keep app.
- * 
+ *
  * @interface KeepHeadingLevel
- * 
+ *
  * @type {{ h1, h2, h3, h4, h5, h6 }}
- * 
+ *
  * @remarks
  * The following heading levels are available:
  * - h1: Heading level 1.
@@ -309,12 +309,12 @@ export interface KeepGradientDuoToneColors {
  * - h4: Heading level 4.
  * - h5: Heading level 5.
  * - h6: Heading level 6.
- * 
+ *
  * @example
- * 
+ *
  * ```tsx
  * import { KeepHeadingLevel } from '..'
- * 
+ *
  * const headingLevel: KeepHeadingLevel = 'h1'
  * ```
  */
