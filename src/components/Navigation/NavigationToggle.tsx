@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { List, X } from 'phosphor-react'
-import { twMerge } from 'tailwind-merge'
 import { useNavigationContext } from './NavigationContext'
+import { cn } from '../../helpers/cn'
 
 export interface NavigationToggleProps {
   openIcon?: React.ReactNode
@@ -16,7 +16,7 @@ export const NavigationToggle: FC<NavigationToggleProps> = ({
 }) => {
   const { isOpen, setIsOpen } = useNavigationContext()
   return (
-    <button className={twMerge(className ? className : 'block lg:hidden')} onClick={() => setIsOpen(!isOpen)}>
+    <button className={cn('block lg:hidden', className)} onClick={() => setIsOpen(!isOpen)}>
       {isOpen ? closeIcon : openIcon}
     </button>
   )

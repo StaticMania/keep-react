@@ -1,8 +1,8 @@
 import { useTheme } from '../../Keep/ThemeContext'
-import { twMerge } from 'tailwind-merge'
 import { CaretDown, CaretRight } from 'phosphor-react'
 import { ReactNode, useState } from 'react'
 import { CheckBox } from '../CheckBox'
+import { cn } from '../../helpers/cn'
 
 interface Node {
   id: number
@@ -18,6 +18,8 @@ interface Props {
   ChildIcon?: ReactNode
   showCheckbox?: boolean
   handleChecked?: (value: boolean) => void
+  className?: string
+  itemStyle?: string
 }
 
 export interface keepTreeTheme {
@@ -66,6 +68,8 @@ export const Tree: React.FC<Props> = ({
   ChildIcon,
   showCheckbox = false,
   handleChecked,
+  className,
+  itemStyle,
 }) => {
   const [expandedNodes, setExpandedNodes] = useState<{
     [key: number]: boolean
@@ -83,7 +87,7 @@ export const Tree: React.FC<Props> = ({
     return (
       <li
         key={node.id}
-        className={twMerge(
+        className={cn(
           node.children
             ? theme.list.hasChild.on
             : showIcon && !showCheckbox
@@ -94,8 +98,9 @@ export const Tree: React.FC<Props> = ({
             ? theme.list.hasChild.off.hasIcon.on
             : theme.list.hasChild.off.hasIcon.off,
           theme.list.base,
+          itemStyle,
         )}>
-        <span className={twMerge(theme.caretIcon.base)} onClick={() => toggleNode(node.id)}>
+        <span className={cn(theme.caretIcon.base)} onClick={() => toggleNode(node.id)}>
           {node.children &&
             !showIcon &&
             (isExpanded ? (
@@ -110,14 +115,14 @@ export const Tree: React.FC<Props> = ({
 
           {node.title}
           {node.children && (
-            <span className={twMerge(showItemsNumber ? theme.showChildren.base : theme.showChildren.off)}>
+            <span className={cn(showItemsNumber ? theme.showChildren.base : theme.showChildren.off)}>
               ({node.children.length})
             </span>
           )}
         </span>
         {node.children && (
           <ul
-            className={twMerge(
+            className={cn(
               isExpanded ? theme.nestedOrderList.on.base : theme.nestedOrderList.off,
               isExpanded && showBorder && theme.nestedOrderList.on.border.on,
             )}>
@@ -128,5 +133,5 @@ export const Tree: React.FC<Props> = ({
     )
   }
 
-  return <ul className={twMerge(theme.base)}>{nodes.map(renderNode)}</ul>
+  return <ul className={cn(theme.base, className)}>{nodes.map(renderNode)}</ul>
 }

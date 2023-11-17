@@ -1,9 +1,9 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { RatingAdvanced, RatingAdvancedSizes } from './RatingAdvanced'
 import { RatingContext } from './RatingContext'
 import { RatingStar } from './RatingStar'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepRatingTheme {
   base: string
@@ -31,7 +31,7 @@ const RatingComponent: FC<RatingProps> = ({ children, size, className, ...props 
 
   return (
     <RatingContext.Provider value={{ size }}>
-      <div className={twMerge(theme.base, className)} {...props}>
+      <div className={cn(theme.base, className)} {...props}>
         {children}
       </div>
     </RatingContext.Provider>

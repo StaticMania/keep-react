@@ -3,9 +3,9 @@ import { Rate, type keepRateTheme } from './Rate'
 import { Title, type keepTitleTheme } from './Title'
 import { StatusIcon, type keepIconTheme } from './StatusIcon'
 import { Amount, type keepAmountTheme } from './Amout'
-
 import { UserImg } from './UserImg'
 import { StatisticContext } from './StatisticContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepStatisticTheme {
   rate: keepRateTheme
@@ -21,6 +21,7 @@ export interface StatisticProps {
   children?: ReactNode
   filterLabel?: string
   filterData?: string[]
+  className?: string
 }
 
 const StatisticComponent: FC<StatisticProps> = ({
@@ -30,9 +31,10 @@ const StatisticComponent: FC<StatisticProps> = ({
   showFilter,
   filterLabel,
   filterData,
+  className,
 }) => {
   return (
-    <div>
+    <div className={cn(className)}>
       <StatisticContext.Provider value={{ showDollar, iconBg, showFilter, filterLabel, filterData }}>
         {children}
       </StatisticContext.Provider>

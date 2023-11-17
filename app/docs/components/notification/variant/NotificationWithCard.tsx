@@ -24,19 +24,19 @@ const NotificationWithCard = () => {
         className="max-w-sm"
         headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
         additionalContent={
-          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
+          <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info" width="half">
                 Download
               </Button>
-              <Button size="xs" type="outlineGray" color="info" customClass="ml-3" width="half">
+              <Button size="xs" type="outlineGray" color="info" className="ml-3" width="half">
                 View Figma
               </Button>
             </div>
           </div>
         }>
-        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Welcome Keep Design</h3>
+        <h3 className="text-body-4 font-medium text-metal-700 md:text-body-2">Welcome Keep Design</h3>
       </Notification>
     </div>
   )
@@ -79,7 +79,7 @@ export const NotificationComponent = () => {
                 size="xs"
                 type="outlineGray"
                 color="info"
-                customClass="ml-3"
+                className="ml-3"
                 width="half"
               >
                 View Figma

@@ -24,13 +24,13 @@ const NotificationWithAvatar = () => {
         className="max-w-[400px]"
         position="top-left"
         additionalContent={
-          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
+          <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
               <Button size="xs" type="primary" color="info">
                 Accept
               </Button>
-              <Button size="xs" type="outlineGray" color="info" customClass="ml-3">
+              <Button size="xs" type="outlineGray" color="info" className="ml-3">
                 View Profile
               </Button>
             </div>
@@ -41,9 +41,9 @@ const NotificationWithAvatar = () => {
             <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
           </div>
         }>
-        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">
+        <h3 className="text-body-4 font-medium text-metal-700 md:text-body-2">
           Rono Pixel
-          <span className="text-metal-400 pl-2 text-body-6 font-medium md:text-body-5">Product Designer</span>
+          <span className="pl-2 text-body-6 font-medium text-metal-400 md:text-body-5">Product Designer</span>
         </h3>
       </Notification>
     </div>
@@ -87,7 +87,7 @@ export const NotificationComponent = () => {
                 size="xs"
                 type="outlineGray"
                 color="info"
-                customClass="ml-3"
+                className="ml-3"
               >
                 View Profile
               </Button>

@@ -1,4 +1,3 @@
-import { twMerge } from 'tailwind-merge'
 import { ComponentProps, FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
@@ -73,10 +72,10 @@ const CheckboxComponent: FC<CheckboxProps> = ({
           name={fieldName}
           onChange={handleOnChange}
           {...theirProps}
-          className={twMerge(theme.checkboxInput, theme.size[size])}
+          className={cn(theme.checkboxInput, theme.size[size])}
         />
         <div
-          className={twMerge(
+          className={cn(
             theme.base,
             theme.color[color],
             theme.size[size],
@@ -89,7 +88,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
         {typeof label !== 'undefined' && (
           <label
             htmlFor={id}
-            className={twMerge(
+            className={cn(
               !disabled && theme.enabled,
               disabled && theme.disabled,
               theme.label[size],

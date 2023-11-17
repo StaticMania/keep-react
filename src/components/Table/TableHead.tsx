@@ -1,10 +1,10 @@
 import { type ComponentProps, type FC, type PropsWithChildren } from 'react'
 import type { keepTableHeadCellTheme } from './TableHeadCell'
-import { twMerge } from 'tailwind-merge'
 import { useTableContext } from './TableContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { CheckBox } from '../CheckBox'
+import { cn } from '../../helpers/cn'
 
 export interface keepTableHeadTheme {
   base: string
@@ -20,7 +20,7 @@ export const TableHead: FC<TableHeadProps> = ({ children, className, ...props })
   const { showCheckbox, checked, handleCheckbox } = useTableContext()
 
   return (
-    <thead className={twMerge(theme.head.base, className)} {...props}>
+    <thead className={cn(theme.head.base, className)} {...props}>
       <tr>
         {showCheckbox && (
           <td className="pl-4">

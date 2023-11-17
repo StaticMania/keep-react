@@ -14,6 +14,8 @@ export type UploadContext = {
   icon?: ReactNode
   onFileChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   uploadBtnType?: keyof ButtonTypes
+  className?: string
+  labelStyle?: string
 }
 
 export const UploadContext = createContext<UploadContext | undefined>(undefined)

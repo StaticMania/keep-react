@@ -10,7 +10,7 @@ const DefaultTable = () => {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-metal-600 text-body-1 font-semibold">Team member</p>
+              <p className="text-body-1 font-semibold text-metal-600">Team member</p>
               <Badge size="xs" colorType="light" color="gray">
                 100 Member
               </Badge>
@@ -33,7 +33,7 @@ const DefaultTable = () => {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[290px]">
-            <p className="text-metal-400 text-body-6 font-medium">Type</p>
+            <p className="text-body-6 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
           <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
@@ -50,7 +50,7 @@ const DefaultTable = () => {
                   <div className="flex items-center gap-2">
                     <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Ralph Edwards</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Ralph Edwards</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -96,19 +96,19 @@ const DefaultTable = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 border border-metal-100 p-2"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -130,7 +130,7 @@ const DefaultTable = () => {
                   <div className="flex items-center gap-2">
                     <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Wade Warren</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Wade Warren</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -176,19 +176,19 @@ const DefaultTable = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 border border-metal-100 p-2"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -210,7 +210,7 @@ const DefaultTable = () => {
                   <div className="flex items-center gap-2">
                     <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Eleanor Pena</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Eleanor Pena</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -256,19 +256,19 @@ const DefaultTable = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 border border-metal-100 p-2"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -290,7 +290,7 @@ const DefaultTable = () => {
                   <div className="flex items-center gap-2">
                     <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Jerome Bell</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Jerome Bell</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -336,19 +336,19 @@ const DefaultTable = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 border border-metal-100 p-2"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -370,7 +370,7 @@ const DefaultTable = () => {
                   <div className="flex items-center gap-2">
                     <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Macky Scheman</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Macky Scheman</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -416,19 +416,19 @@ const DefaultTable = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 border border-metal-100 p-2"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Delete</span>
                         <span>
                           <Trash />
                         </span>
                       </button>
                     </li>
-                    <li className="hover:bg-metal-100 rounded px-2 py-1">
-                      <button className="text-metal-600 flex w-full items-center justify-between text-body-4 font-normal">
+                    <li className="rounded px-2 py-1 hover:bg-metal-100">
+                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
                         <span>Edit</span>
                         <span>
                           <Pencil />
@@ -568,7 +568,7 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-metal-100 py-1 px-2 rounded">
@@ -660,7 +660,7 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-metal-100 py-1 px-2 rounded">
@@ -752,7 +752,7 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-metal-100 py-1 px-2 rounded">
@@ -844,7 +844,7 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-metal-100 py-1 px-2 rounded">
@@ -936,7 +936,7 @@ export const TableComponent = () => {
               <Popover
                 showDismissIcon={false}
                 showArrow={false}
-                customClass="w-48 p-2 border border-metal-100"
+                className="w-48 p-2 border border-metal-100"
                 additionalContent={
                   <ul className="flex flex-col gap-1">
                     <li className="hover:bg-metal-100 py-1 px-2 rounded">

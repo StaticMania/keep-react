@@ -3,7 +3,6 @@ import CustomInput from './CustomInput'
 import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-
 import { useDatePickerContext } from './DatePickerContext'
 
 export const MonthPicker: React.FC = () => {
@@ -34,7 +33,7 @@ export const MonthPicker: React.FC = () => {
               <CaretLeft size={18} color="#5E718D" weight="thin" />
             </span>
           </button>
-          <p className="text-metal-800 text-body-4 font-semibold">
+          <p className="text-body-4 font-semibold text-metal-800">
             {monthDate.toLocaleString('en-US', {
               month: 'long',
               year: 'numeric',

@@ -13,4 +13,11 @@ export const DatePickerApiData = [
     propsDescription: 'Show the two month picker component',
     default: 'false',
   },
+  {
+    id: 3,
+    propsName: 'iconStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the date picker icon.',
+    default: 'None',
+  },
 ]

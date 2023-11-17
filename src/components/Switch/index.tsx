@@ -1,10 +1,10 @@
 import type { FC, ReactNode } from 'react'
 import { useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { Switch } from '@headlessui/react'
 import { KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { excludeClassName } from '../../helpers/exclude'
+import { cn } from '../../helpers/cn'
 
 export interface keepToggleTheme {
   base: string
@@ -32,6 +32,9 @@ export interface ToggleProps {
   disabled?: boolean
   size?: keyof ToggleSizes
   bgColor?: 'primary' | 'slate'
+  className?: string
+  circleStyle?: string
+  labelStyle?: string
 }
 
 export interface ToggleSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
@@ -44,7 +47,9 @@ const ToggleComponent: FC<ToggleProps> = ({
   disabled = false,
   withIcon = false,
   size = 'sm',
-
+  className,
+  circleStyle,
+  labelStyle,
   ...props
 }) => {
   const [enabled, setEnabled] = useState(false)
@@ -75,25 +80,27 @@ const ToggleComponent: FC<ToggleProps> = ({
         id="test-switchId"
         checked={disabled ? disabled : enabled}
         onChange={setEnabled}
-        className={twMerge(
+        className={cn(
           theme.base,
           theme.size[size],
           disabled && theme.disabled,
           enabled ? theme.enabledBg.on[bgColor] : theme.enabledBg.off,
+          className,
         )}>
         <span className="sr-only">Enable notifications</span>
         <span
-          className={twMerge(
+          className={cn(
             theme.circleBase,
             theme.enabledCircle[enabled ? 'on' : 'off'][size],
             withIcon && theme.withIconBase,
             withIcon && showWithIcon(enabled, size),
             enabled ? theme.enabledCircle.on[size] : theme.enabledCircle.off[size],
+            circleStyle,
           )}
         />
       </Switch>
       {typeof label !== 'undefined' ||
-        (!label && <label className={twMerge(theme.label[size], disabled && theme.disabled)}>{label}</label>)}
+        (!label && <label className={cn(theme.label[size], disabled && theme.disabled, labelStyle)}>{label}</label>)}
     </div>
   )
 }
