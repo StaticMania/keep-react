@@ -5,7 +5,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "node_modules/keep-react/**/*.{js,jsx,ts,tsx}"
-  ]
+  ],
   presets: [keepPreset],
 };
 `
@@ -60,7 +60,7 @@ const nextJsInstall = `npx create-next-app@latest`
 const NextJsQnA = () => {
   return (
     <div className="my-5">
-      <ul className="bg-metal-50 text-metal-700 -space-y-0 rounded-md px-4 py-3 text-body-5">
+      <ul className="bg-metal-50 text-metal-700 text-body-5 -space-y-0 rounded-md px-4 py-3">
         <li>Would you like to use Tailwind CSS? Yes</li>
       </ul>
     </div>
