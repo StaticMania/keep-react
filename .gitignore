@@ -5,6 +5,7 @@ coverage
 cypress/screenshots
 cypress/videos
 lib
+lib-untouched
 node_modules
 storybook-static
 .DS_Store

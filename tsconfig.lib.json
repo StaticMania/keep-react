@@ -3,7 +3,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "module": "CommonJS",
-    "outDir": "./lib/cjs"
+    "outDir": "./lib-untouched/cjs"
   },
   "exclude": ["**/*.stories.tsx"],
   "include": ["./src/"]
