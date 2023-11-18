@@ -45,14 +45,7 @@ const meta: Meta<typeof Pagination> = {
         defaultValue: { summary: false },
       },
     },
-    layout: {
-      control: 'select',
-      description: 'Layout style',
-      options: ['navigation', 'pagination', 'table'],
-      table: {
-        defaultValue: { summary: 'pagination' },
-      },
-    },
+
     prevNextShape: {
       control: 'select',
       description: 'Shape of the previous and next buttonsShape of the previous and next buttons',

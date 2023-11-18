@@ -606,10 +606,10 @@ export const PricingCard: Story = {
           </Card.List>
         </Card.Container>
         <Card.Container>
-          <Button type="primary" width="full" customClass="md:block hidden">
+          <Button type="primary" width="full" className="hidden md:block">
             Pro Access
           </Button>
-          <Button type="primary" width="full" size="xs" customClass="md:hidden block">
+          <Button type="primary" width="full" size="xs" className="block md:hidden">
             Pro Access
           </Button>
         </Card.Container>

@@ -1,8 +1,8 @@
-import { twMerge } from 'tailwind-merge'
 import { FC, ReactNode } from 'react'
 import { SkeletonAvatar } from './SkeletonAvatar'
 import { SkeletonLine } from './SkeletonLine'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepSkeletonTheme {
   base: string
@@ -14,11 +14,12 @@ export interface keepSkeletonTheme {
 export interface keepSkeletonThemeProps {
   animation?: boolean
   children?: ReactNode
+  className?: string
 }
 
-const SkeletonComponent: FC<keepSkeletonThemeProps> = ({ animation = false, children }) => {
+const SkeletonComponent: FC<keepSkeletonThemeProps> = ({ animation = false, className, children }) => {
   const theme = useTheme().theme.skeleton
-  return <div className={twMerge(animation && theme.animation, theme.base)}>{children}</div>
+  return <div className={cn(animation && theme.animation, theme.base, className)}>{children}</div>
 }
 
 SkeletonComponent.displayName = 'Skeleton'

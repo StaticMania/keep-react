@@ -2,9 +2,9 @@ import type { Placement } from '@floating-ui/core'
 import { autoUpdate, useFocus } from '@floating-ui/react'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { getArrowPlacement } from '../../helpers/floating'
 import { useBaseFLoating, useFloatingInteractions } from '../../helpers/use-Floating'
+import { cn } from '../../helpers/cn'
 
 export interface keepFloatingTheme {
   arrow: keepFloatingArrowTheme
@@ -109,7 +109,7 @@ export const Floating: FC<FloatingProps> = ({
         ref={refs.setFloating}
         data-testid="keep-tooltip"
         {...getFloatingProps({
-          className: twMerge(
+          className: cn(
             theme.base,
             animation && `${theme.animation} ${animation}`,
             !open && theme.hidden,
@@ -127,7 +127,7 @@ export const Floating: FC<FloatingProps> = ({
         <div className={theme.content}>{content}</div>
         {arrow && (
           <div
-            className={twMerge(
+            className={cn(
               theme.arrow.base,
               style === 'dark' && theme.arrow.style.dark,
               style === 'light' && theme.arrow.style.light,

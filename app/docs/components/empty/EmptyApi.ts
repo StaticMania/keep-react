@@ -43,6 +43,20 @@ export const emptyApiData = [
   },
   {
     id: 7,
+    propsName: 'titleStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the title.',
+    default: 'None',
+  },
+  {
+    id: 8,
+    propsName: 'contentStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the content.',
+    default: 'None',
+  },
+  {
+    id: 9,
     propsName: 'buttonType',
     propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
     propsDescription: 'Redirect Button type',

@@ -5,9 +5,11 @@ import { DatePicker } from '~/src'
 const MonthPicker = () => {
   const [_, setMonthPicker] = useState<Date | null | string>()
   return (
-    <DatePicker monthPicker={setMonthPicker}>
-      <DatePicker.Month />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker monthPicker={setMonthPicker} placeholder="Select Month">
+        <DatePicker.Month />
+      </DatePicker>
+    </div>
   )
 }
 
@@ -19,7 +21,7 @@ import { DatePicker } from "keep-react";
 export const MonthComponent = () => {
   const [monthPicker, setMonthPicker] = useState(null);
   return (
-    <DatePicker monthPicker={setMonthPicker}>
+    <DatePicker monthPicker={setMonthPicker} placeholder="Select Month">
       <DatePicker.Month />
     </DatePicker>
   );

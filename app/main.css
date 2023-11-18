@@ -169,6 +169,10 @@ input[type='number'] {
   font-family: inherit !important;
 }
 
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
 .react-datepicker__month-container {
   margin: 1.5rem 1.5rem 0rem 1.5rem !important;
 }

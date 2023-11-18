@@ -1,8 +1,8 @@
-import { twMerge } from 'tailwind-merge'
 import { Star, StarHalf } from 'phosphor-react'
 import type { FC, ReactNode } from 'react'
 import { useRatingContext } from './RatingContext'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface RatingStarProps {
   filledType?: 'regular' | 'fill' | 'bold' | 'duotone' | 'thin' | 'light'
@@ -30,7 +30,7 @@ export const RatingStar: FC<RatingStarProps> = ({
     )
 
   return (
-    <span className={twMerge(theme.base, className)} data-testid="keep-rating-star">
+    <span className={cn(theme.base, className)} data-testid="keep-rating-star">
       {Icon}
     </span>
   )

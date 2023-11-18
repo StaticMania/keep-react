@@ -98,7 +98,7 @@ const meta: Meta<typeof Button> = {
       control: { type: 'select' },
     },
 
-    customClass: {
+    className: {
       description: 'Custom class Name',
       table: {
         type: { summary: 'string' },

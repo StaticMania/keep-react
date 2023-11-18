@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-
-import { twMerge } from 'tailwind-merge'
 import { useId } from 'react'
 import { useSidebarContext } from './SidebarContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { KeepBoolean } from '../../Keep/KeepTheme'
+import { cn } from '../../helpers/cn'
 
 export interface KeepSidebarLogoTheme {
   base: string
@@ -25,7 +24,7 @@ export const SidebarLogo: FC<SidebarLogoProps> = ({ children, className, href, i
   const theme = useTheme().theme.sidebar.logo
 
   return (
-    <a aria-labelledby={`keep-sidebar-logo-${id}`} href={href} className={twMerge(theme.base, className)} {...props}>
+    <a aria-labelledby={`keep-sidebar-logo-${id}`} href={href} className={cn(theme.base, className)} {...props}>
       <img alt={imgAlt} src={img} className={theme.img} />
       <span className={theme.collapsed[isCollapsed ? 'on' : 'off']} id={`keep-sidebar-logo-${id}`}>
         {children}

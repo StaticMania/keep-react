@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { CardContainer } from './CardContainer'
 import { CardDescription } from './CardDescription'
@@ -8,6 +7,7 @@ import { CardList } from './CardList'
 import { CardTitle } from './CardTitle'
 import { KeepBoolean, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 /**
  * Interface for defining the theme of a KeepCard component.
@@ -77,6 +77,7 @@ export interface CardProps extends PropsWithChildren<ComponentProps<'div'>> {
   imgAlt?: string // alt text for image
   imgSrc?: string // image source
   imgSize?: keyof CardBgImageSizes // size of image
+  imgStyle?: string // style of image
 }
 const CardComponent: FC<CardProps> = ({
   children,
@@ -88,6 +89,7 @@ const CardComponent: FC<CardProps> = ({
   imgAlt,
   imgSrc,
   imgSize = 'lg',
+  imgStyle,
   ...props
 }): JSX.Element => {
   const theme = useTheme().theme.card
@@ -96,12 +98,7 @@ const CardComponent: FC<CardProps> = ({
   const theirProps = props as object
   return (
     <Component
-      /**
-       * Merges multiple tailwind classes into a single string.
-       * @param classes - An array of tailwind classes to be merged.
-       * @returns A string of merged tailwind classes.
-       */
-      className={twMerge(
+      className={cn(
         theme.base,
         href && theme.href,
         theme.shadow[shadow ? 'on' : 'off'],
@@ -115,12 +112,13 @@ const CardComponent: FC<CardProps> = ({
       {imgSrc && (
         <img
           alt={imgAlt ?? ''}
-          className={twMerge(
+          className={cn(
             theme.img.base,
             horizontal && theme.img.horizontal.on.base,
             horizontal && theme.img.horizontal.on.size[imgSize],
             !horizontal && theme.img.horizontal.off.base,
             !horizontal && theme.img.horizontal.off.size[imgSize],
+            imgStyle,
           )}
           src={imgSrc}
         />

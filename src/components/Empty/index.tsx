@@ -1,7 +1,7 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { Button } from '../Button/Button'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 /**
  * Interface representing the theme for the Empty component.
@@ -37,6 +37,14 @@ export interface EmptyProps extends PropsWithChildren<Omit<ComponentProps<'div'>
    */
   image?: ReactNode
   /**
+   * The style of the title.
+   */
+  titleStyle?: string
+  /**
+   * The style of the content.
+   */
+  contentStyle?: string
+  /**
    * The size of the redirect button.
    */
   redirectBtnSize?: 'xs' | 'sm' | 'md' | 'lg'
@@ -55,14 +63,16 @@ export const Empty: FC<EmptyProps> = ({
   className,
   buttonType = 'primary',
   redirectBtnSize = 'sm',
+  titleStyle,
+  contentStyle,
 }) => {
   const theme = useTheme().theme.empty
 
   return (
-    <div className={twMerge(theme.base, className)}>
+    <div className={cn(theme.base, className)}>
       {image}
-      <h1 className={theme.title}>{title}</h1>
-      <p className={theme.content}>{content}</p>
+      <h1 className={cn(theme.title, titleStyle)}>{title}</h1>
+      <p className={cn(theme.content, contentStyle)}>{content}</p>
 
       {buttonText && (
         <Button href={redirectUrl} size={redirectBtnSize} type={buttonType}>

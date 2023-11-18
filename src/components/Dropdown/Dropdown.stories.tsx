@@ -163,7 +163,7 @@ const meta: Meta<typeof Dropdown> = {
       control: { type: null },
     },
 
-    customClass: {
+    className: {
       description: 'Custom class Name',
       table: {
         type: { summary: 'string' },
@@ -322,32 +322,32 @@ export const DropdownWithTitleAndDescription: Story = {
       <>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
@@ -368,32 +368,32 @@ export const DropdownWithTitleDescritionSearchBarAndIcon: Story = {
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
@@ -414,8 +414,8 @@ export const DropdownWithCheckboxTitleDescriptionAndIcon: Story = {
         </Dropdown.Item>
         <Dropdown.Item className="flex !items-start gap-2">
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
@@ -425,8 +425,8 @@ export const DropdownWithCheckboxTitleDescriptionAndIcon: Story = {
         </Dropdown.Item>
         <Dropdown.Item className="flex !items-start gap-2">
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
@@ -436,8 +436,8 @@ export const DropdownWithCheckboxTitleDescriptionAndIcon: Story = {
         </Dropdown.Item>
         <Dropdown.Item className="flex !items-start gap-2">
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
@@ -447,8 +447,8 @@ export const DropdownWithCheckboxTitleDescriptionAndIcon: Story = {
         </Dropdown.Item>
         <Dropdown.Item className="flex !items-start gap-2">
           <div className="flex flex-col items-start gap-1">
-            <p className="text-metal-700 text-body-4 font-semibold">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
@@ -568,8 +568,8 @@ export const DropdownWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -581,8 +581,8 @@ export const DropdownWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -594,8 +594,8 @@ export const DropdownWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -607,8 +607,8 @@ export const DropdownWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -629,8 +629,8 @@ export const DropdownItemWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -645,8 +645,8 @@ export const DropdownItemWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -661,8 +661,8 @@ export const DropdownItemWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -677,8 +677,8 @@ export const DropdownItemWithTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -707,8 +707,8 @@ export const DropdownWithSearchBarTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -720,8 +720,8 @@ export const DropdownWithSearchBarTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -733,8 +733,8 @@ export const DropdownWithSearchBarTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -746,8 +746,8 @@ export const DropdownWithSearchBarTitleDescriptionAndIcon: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -773,8 +773,8 @@ export const DropdownWithTitleDescriptionIconAndSearchBar: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -789,8 +789,8 @@ export const DropdownWithTitleDescriptionIconAndSearchBar: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -805,8 +805,8 @@ export const DropdownWithTitleDescriptionIconAndSearchBar: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -821,8 +821,8 @@ export const DropdownWithTitleDescriptionIconAndSearchBar: Story = {
               <Crown size={28} color="#5E718D" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 -mb-0.5 text-body-4 font-semibold">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="-mb-0.5 text-body-4 font-semibold text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -958,8 +958,8 @@ export const DropdownWithTitleDescriptionAndLogo: Story = {
               <GoogleLogo size={24} color="#4285f4" weight="bold" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -971,8 +971,8 @@ export const DropdownWithTitleDescriptionAndLogo: Story = {
               <FacebookLogo size={24} color="#3b5998" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -984,8 +984,8 @@ export const DropdownWithTitleDescriptionAndLogo: Story = {
               <TwitterLogo size={24} color="#00acee" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -997,8 +997,8 @@ export const DropdownWithTitleDescriptionAndLogo: Story = {
               <YoutubeLogo size={24} color="#c4302b" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1010,8 +1010,8 @@ export const DropdownWithTitleDescriptionAndLogo: Story = {
               <LinkedinLogo size={24} color="#0072b1" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1032,8 +1032,8 @@ export const DropdownWithTitleDescriptionLogoAndIcon: Story = {
               <GoogleLogo size={24} color="#4285f4" weight="bold" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1048,8 +1048,8 @@ export const DropdownWithTitleDescriptionLogoAndIcon: Story = {
               <FacebookLogo size={24} color="#3b5998" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1064,8 +1064,8 @@ export const DropdownWithTitleDescriptionLogoAndIcon: Story = {
               <TwitterLogo size={24} color="#00acee" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1080,8 +1080,8 @@ export const DropdownWithTitleDescriptionLogoAndIcon: Story = {
               <YoutubeLogo size={24} color="#c4302b" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1096,8 +1096,8 @@ export const DropdownWithTitleDescriptionLogoAndIcon: Story = {
               <LinkedinLogo size={24} color="#0072b1" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1126,8 +1126,8 @@ export const DropdownWithTitleDescriptionLogoAndSearchBar: Story = {
               <GoogleLogo size={24} color="#4285f4" weight="bold" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1139,8 +1139,8 @@ export const DropdownWithTitleDescriptionLogoAndSearchBar: Story = {
               <FacebookLogo size={24} color="#3b5998" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1152,8 +1152,8 @@ export const DropdownWithTitleDescriptionLogoAndSearchBar: Story = {
               <TwitterLogo size={24} color="#00acee" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1165,8 +1165,8 @@ export const DropdownWithTitleDescriptionLogoAndSearchBar: Story = {
               <YoutubeLogo size={24} color="#c4302b" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1178,8 +1178,8 @@ export const DropdownWithTitleDescriptionLogoAndSearchBar: Story = {
               <LinkedinLogo size={24} color="#0072b1" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1205,8 +1205,8 @@ export const DropdownWithTitleDescriptionLogoIconAndSearchBar: Story = {
               <GoogleLogo size={24} color="#4285f4" weight="bold" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1221,8 +1221,8 @@ export const DropdownWithTitleDescriptionLogoIconAndSearchBar: Story = {
               <FacebookLogo size={24} color="#3b5998" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1237,8 +1237,8 @@ export const DropdownWithTitleDescriptionLogoIconAndSearchBar: Story = {
               <TwitterLogo size={24} color="#00acee" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1253,8 +1253,8 @@ export const DropdownWithTitleDescriptionLogoIconAndSearchBar: Story = {
               <YoutubeLogo size={24} color="#c4302b" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1269,8 +1269,8 @@ export const DropdownWithTitleDescriptionLogoIconAndSearchBar: Story = {
               <LinkedinLogo size={24} color="#0072b1" weight="fill" />
             </span>
             <div className="flex flex-col gap-1">
-              <p className="text-metal-700 relative top-1 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-              <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+              <p className="relative top-1 mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+              <p className="max-w-xs text-body-5 font-normal text-metal-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -1291,31 +1291,31 @@ export const DropdownWithAvatar: Story = {
         <Dropdown.Item>
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
-            <p className="text-metal-700 text-body-5 font-medium">Guy Hawkins</p>
+            <p className="text-body-5 font-medium text-metal-700">Guy Hawkins</p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
-            <p className="text-metal-700 text-body-5 font-medium">James Mary</p>
+            <p className="text-body-5 font-medium text-metal-700">James Mary</p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
-            <p className="text-metal-700 text-body-5 font-medium">Bellanca Sherringham</p>
+            <p className="text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
-            <p className="text-metal-700 text-body-5 font-medium">Carlin Tebb</p>
+            <p className="text-body-5 font-medium text-metal-700">Carlin Tebb</p>
           </div>
         </Dropdown.Item>
         <Dropdown.Item>
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
-            <p className="text-metal-700 text-body-5 font-medium">Mar Segrave</p>
+            <p className="text-body-5 font-medium text-metal-700">Mar Segrave</p>
           </div>
         </Dropdown.Item>
       </>,
@@ -1331,7 +1331,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Guy Hawkins</p>
+              <p className="text-body-5 font-medium text-metal-700">Guy Hawkins</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1342,7 +1342,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">James Mary</p>
+              <p className="text-body-5 font-medium text-metal-700">James Mary</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1353,7 +1353,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Bellanca Sherringham</p>
+              <p className="text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1364,7 +1364,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Carlin Tebb</p>
+              <p className="text-body-5 font-medium text-metal-700">Carlin Tebb</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1375,7 +1375,7 @@ export const DropdownWithAvatarAndIcon: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Mar Segrave</p>
+              <p className="text-body-5 font-medium text-metal-700">Mar Segrave</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1401,7 +1401,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Guy Hawkins</p>
+              <p className="text-body-5 font-medium text-metal-700">Guy Hawkins</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1409,7 +1409,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">James Mary</p>
+              <p className="text-body-5 font-medium text-metal-700">James Mary</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1417,7 +1417,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Bellanca Sherringham</p>
+              <p className="text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1425,7 +1425,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Carlin Tebb</p>
+              <p className="text-body-5 font-medium text-metal-700">Carlin Tebb</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1433,7 +1433,7 @@ export const DropdownWithAvatarAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Mar Segrave</p>
+              <p className="text-body-5 font-medium text-metal-700">Mar Segrave</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1456,7 +1456,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Guy Hawkins</p>
+              <p className="text-body-5 font-medium text-metal-700">Guy Hawkins</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1467,7 +1467,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">James Mary</p>
+              <p className="text-body-5 font-medium text-metal-700">James Mary</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1478,7 +1478,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Bellanca Sherringham</p>
+              <p className="text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1489,7 +1489,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Carlin Tebb</p>
+              <p className="text-body-5 font-medium text-metal-700">Carlin Tebb</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1500,7 +1500,7 @@ export const DropdownWithAvatarIconAndSearchBar: Story = {
           <div className="flex w-full items-center justify-between gap-5">
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
-              <p className="text-metal-700 text-body-5 font-medium">Mar Segrave</p>
+              <p className="text-body-5 font-medium text-metal-700">Mar Segrave</p>
             </div>
             <span>
               <CaretRight size={18} color="#5E718D" />
@@ -1520,8 +1520,8 @@ export const DropdownWithAvatarAndName: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Guy Hawkins</p>
-              <p className="text-metal-500 text-body-6 font-normal">Product Designer</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Guy Hawkins</p>
+              <p className="text-body-6 font-normal text-metal-500">Product Designer</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1529,8 +1529,8 @@ export const DropdownWithAvatarAndName: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Bellanca Sherringham</p>
-              <p className="text-metal-500 text-body-6 font-normal">VP Accounting</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
+              <p className="text-body-6 font-normal text-metal-500">VP Accounting</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1538,8 +1538,8 @@ export const DropdownWithAvatarAndName: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Carlin Tebb</p>
-              <p className="text-metal-500 text-body-6 font-normal">Clinical Specialist</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Carlin Tebb</p>
+              <p className="text-body-6 font-normal text-metal-500">Clinical Specialist</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1547,8 +1547,8 @@ export const DropdownWithAvatarAndName: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Lorena Gregg</p>
-              <p className="text-metal-500 text-body-6 font-normal">Research Nurse</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Lorena Gregg</p>
+              <p className="text-body-6 font-normal text-metal-500">Research Nurse</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1556,8 +1556,8 @@ export const DropdownWithAvatarAndName: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Geoffry Kingman</p>
-              <p className="text-metal-500 text-body-6 font-normal">Speech Pathologist</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Geoffry Kingman</p>
+              <p className="text-body-6 font-normal text-metal-500">Speech Pathologist</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1575,8 +1575,8 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Guy Hawkins</p>
-                <p className="text-metal-500 text-body-6 font-normal">Product Designer</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Guy Hawkins</p>
+                <p className="text-body-6 font-normal text-metal-500">Product Designer</p>
               </div>
             </div>
             <span>
@@ -1589,8 +1589,8 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Bellanca Sherringham</p>
-                <p className="text-metal-500 text-body-6 font-normal">VP Accounting</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
+                <p className="text-body-6 font-normal text-metal-500">VP Accounting</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1603,8 +1603,8 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Carlin Tebb</p>
-                <p className="text-metal-500 text-body-6 font-normal">Clinical Specialist</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Carlin Tebb</p>
+                <p className="text-body-6 font-normal text-metal-500">Clinical Specialist</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1617,8 +1617,8 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Lorena Gregg</p>
-                <p className="text-metal-500 text-body-6 font-normal">Research Nurse</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Lorena Gregg</p>
+                <p className="text-body-6 font-normal text-metal-500">Research Nurse</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1631,8 +1631,8 @@ export const DropdownWithAvatarNameTitleAndIcon: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Geoffry Kingman</p>
-                <p className="text-metal-500 text-body-6 font-normal">Speech Pathologist</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Geoffry Kingman</p>
+                <p className="text-body-6 font-normal text-metal-500">Speech Pathologist</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1658,8 +1658,8 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Guy Hawkins</p>
-              <p className="text-metal-500 text-body-6 font-normal">Product Designer</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Guy Hawkins</p>
+              <p className="text-body-6 font-normal text-metal-500">Product Designer</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1667,8 +1667,8 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Bellanca Sherringham</p>
-              <p className="text-metal-500 text-body-6 font-normal">VP Accounting</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
+              <p className="text-body-6 font-normal text-metal-500">VP Accounting</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1676,8 +1676,8 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Carlin Tebb</p>
-              <p className="text-metal-500 text-body-6 font-normal">Clinical Specialist</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Carlin Tebb</p>
+              <p className="text-body-6 font-normal text-metal-500">Clinical Specialist</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1685,8 +1685,8 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Lorena Gregg</p>
-              <p className="text-metal-500 text-body-6 font-normal">Research Nurse</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Lorena Gregg</p>
+              <p className="text-body-6 font-normal text-metal-500">Research Nurse</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1694,8 +1694,8 @@ export const DropdownWithAvatarNameAndSearchBar: Story = {
           <div className="flex items-center gap-3">
             <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
             <div>
-              <p className="text-metal-700 -mb-1 text-body-5 font-medium">Geoffry Kingman</p>
-              <p className="text-metal-500 text-body-6 font-normal">Speech Pathologist</p>
+              <p className="-mb-1 text-body-5 font-medium text-metal-700">Geoffry Kingman</p>
+              <p className="text-body-6 font-normal text-metal-500">Speech Pathologist</p>
             </div>
           </div>
         </Dropdown.Item>
@@ -1718,8 +1718,8 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Guy Hawkins</p>
-                <p className="text-metal-500 text-body-6 font-normal">Product Designer</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Guy Hawkins</p>
+                <p className="text-body-6 font-normal text-metal-500">Product Designer</p>
               </div>
             </div>
             <span>
@@ -1732,8 +1732,8 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Bellanca Sherringham</p>
-                <p className="text-metal-500 text-body-6 font-normal">VP Accounting</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Bellanca Sherringham</p>
+                <p className="text-body-6 font-normal text-metal-500">VP Accounting</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1746,8 +1746,8 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Carlin Tebb</p>
-                <p className="text-metal-500 text-body-6 font-normal">Clinical Specialist</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Carlin Tebb</p>
+                <p className="text-body-6 font-normal text-metal-500">Clinical Specialist</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1760,8 +1760,8 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Lorena Gregg</p>
-                <p className="text-metal-500 text-body-6 font-normal">Research Nurse</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Lorena Gregg</p>
+                <p className="text-body-6 font-normal text-metal-500">Research Nurse</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1774,8 +1774,8 @@ export const DropdownWithAvatarNameTitleIconAndSearchBar: Story = {
             <div className="flex items-center gap-3">
               <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
               <div>
-                <p className="text-metal-700 -mb-1 text-body-5 font-medium">Geoffry Kingman</p>
-                <p className="text-metal-500 text-body-6 font-normal">Speech Pathologist</p>
+                <p className="-mb-1 text-body-5 font-medium text-metal-700">Geoffry Kingman</p>
+                <p className="text-body-6 font-normal text-metal-500">Speech Pathologist</p>
               </div>
             </div>
             <div className="justify-self-end">
@@ -1947,8 +1947,8 @@ export const DropdownWithCheckboxTitleDescription: Story = {
             <CheckBox size="sm" label="" id="#id101" name="countries" value="USA" />
           </div>
           <label htmlFor="#id101" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -1958,8 +1958,8 @@ export const DropdownWithCheckboxTitleDescription: Story = {
             <CheckBox size="sm" label="" id="#id102" name="countries" value="USA" />
           </div>
           <label htmlFor="#id102" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -1969,8 +1969,8 @@ export const DropdownWithCheckboxTitleDescription: Story = {
             <CheckBox size="sm" label="" id="#id103" name="countries" value="USA" />
           </div>
           <label htmlFor="#id103" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -1980,8 +1980,8 @@ export const DropdownWithCheckboxTitleDescription: Story = {
             <CheckBox size="sm" label="" id="#id104" name="countries" value="USA" />
           </div>
           <label htmlFor="#id104" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2000,8 +2000,8 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
             <CheckBox size="sm" label="" id="#id1010" name="countries" value="USA" />
           </div>
           <label htmlFor="#id1010" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2014,8 +2014,8 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
             <CheckBox size="sm" label="" id="#id1020" name="countries" value="USA" />
           </div>
           <label htmlFor="#id1020" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2028,8 +2028,8 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
             <CheckBox size="sm" label="" id="#id1030" name="countries" value="USA" />
           </div>
           <label htmlFor="#id1030" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2042,8 +2042,8 @@ export const DropdownItemWithCheckboxTitleDescriptionAndIcon: Story = {
             <CheckBox size="sm" label="" id="#id1040" name="countries" value="USA" />
           </div>
           <label htmlFor="#id1040" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2070,8 +2070,8 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdy1" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdy1" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2081,8 +2081,8 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdy12" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdy12" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2092,8 +2092,8 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdy123" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdy123" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2103,8 +2103,8 @@ export const DropdownWithCheckboxTitleDescriptionAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdy1122" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdy1122" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2128,8 +2128,8 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdy312" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdy312" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2142,8 +2142,8 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdyee" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdyee" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2156,8 +2156,8 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdyxs" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdyxs" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>
@@ -2170,8 +2170,8 @@ export const DropdownWithCheckboxTitleDescriptionIconAndSearchBar: Story = {
             <CheckBox size="sm" label="" id="#id-z3rxdyfr" name="countries" value="USA" />
           </div>
           <label htmlFor="#id-z3rxdyfr" className="cursor-pointer select-none">
-            <p className="text-metal-700 mb-2 text-body-4 font-semibold leading-3">Dropdown Title</p>
-            <p className="text-metal-500 max-w-xs text-body-5 font-normal">
+            <p className="mb-2 text-body-4 font-semibold leading-3 text-metal-700">Dropdown Title</p>
+            <p className="max-w-xs text-body-5 font-normal text-metal-500">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
           </label>

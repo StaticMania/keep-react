@@ -1,7 +1,7 @@
 import { KeepBoolean, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
+import { cn } from '../../helpers/cn'
 
 /**
  * Represents the theme configuration for the KeepProgress component.
@@ -110,7 +110,7 @@ export const Progress: FC<ProgressProps> = ({
         )}
         <div className={theme.base}>
           <div
-            className={twMerge(
+            className={cn(
               theme.size[size],
               theme.progressBar.base,
               theme.progressBar.progressBaseColor[color],
@@ -120,7 +120,7 @@ export const Progress: FC<ProgressProps> = ({
               className,
             )}>
             <div
-              className={twMerge(
+              className={cn(
                 theme.size[size],
                 theme.progressBar.bar,
                 theme.progressBar.progressPercentageColor[color],
@@ -130,7 +130,7 @@ export const Progress: FC<ProgressProps> = ({
               {label && labelPosition === 'inside' && label}
               {showPopupLabelProgress && (
                 <span
-                  className={twMerge(
+                  className={cn(
                     theme.progressBar.popupLabelProgress,
                     theme.progressBar.progressBaseColor[color],
                     theme.progressBar.progressPercentage.color[color],
@@ -142,7 +142,7 @@ export const Progress: FC<ProgressProps> = ({
           </div>
           {labelProgress && (
             <span
-              className={twMerge(
+              className={cn(
                 theme.progressBar.progressPercentage.base,
                 theme.progressBar.progressPercentage.color[color],
               )}>

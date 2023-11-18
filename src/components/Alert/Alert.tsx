@@ -1,8 +1,8 @@
 import { X } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
-import { twMerge } from 'tailwind-merge'
 import type { KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 /**
  * Represents the theme object for the KeepAlert component.
@@ -107,7 +107,13 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
    * The icon of the Alert component.
    * @type {ReactNode}
    */
-  icon?: ReactNode 
+  icon?: ReactNode
+  /**
+   * The icon style of the Alert component.
+   * @type {string}
+   * @default false
+   */
+  iconStyle?: string
   /**
    * Whether to enable the dismiss icon for the Alert component.
    * @type {boolean}
@@ -138,6 +144,12 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
    */
   title?: string
   /**
+   * The title style of the Alert component.
+   * @type {string}
+   * @default false
+   */
+  titleStyle?: string
+  /**
    * Whether to add a border accent to the Alert component.
    * @type {boolean}
    * @default false
@@ -157,6 +169,7 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
    * @type {ReactNode}
    */
   children?: ReactNode
+  className?: string
 }
 
 /**
@@ -179,12 +192,14 @@ export const Alert: FC<AlertProps> = ({
   withBorderAccentPosition = 'left',
   title,
   className,
+  iconStyle,
+  titleStyle,
 }) => {
   const theme = useTheme().theme.alert
 
   return (
     <div
-      className={twMerge(
+      className={cn(
         theme.base,
         theme.color[color],
         dismiss && theme.dismiss,
@@ -195,16 +210,16 @@ export const Alert: FC<AlertProps> = ({
       )}
       role="alert">
       <div className={theme.wrapper}>
-        <div className={twMerge(theme.infoButton.base)}>{Icon}</div>
+        <div className={cn(theme.infoButton.base)}>{Icon}</div>
         <div>
           {typeof children !== 'undefined' && children}
-          {title && <p className={twMerge(theme.title.base, theme.title.color[color])}>{title}</p>}
+          {title && <p className={cn(theme.title.base, theme.title.color[color], titleStyle)}>{title}</p>}
           {additionalContent && <div>{additionalContent}</div>}
         </div>
         {onDismiss && typeof onDismiss === 'function' && (
           <button
             aria-label="Dismiss"
-            className={twMerge(theme.closeButton.base, theme.closeButton.color[color])}
+            className={cn(theme.closeButton.base, theme.closeButton.color[color], iconStyle)}
             onClick={onDismiss}
             type="button">
             <X size={20} />

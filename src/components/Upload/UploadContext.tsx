@@ -53,6 +53,8 @@ export type UploadContext = {
    * The type of upload button.
    */
   uploadBtnType?: keyof ButtonTypes
+  className?: string
+  labelStyle?: string
 }
 
 export const UploadContext = createContext<UploadContext | undefined>(undefined)

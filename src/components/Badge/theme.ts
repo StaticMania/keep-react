@@ -5,7 +5,7 @@ export const badgeTheme: keepBadgeTheme = {
    * @description Badge base class
    * @type {string}
    */
-  base: 'flex h-fit items-center justify-center gap-1 font-medium rounded-md cursor-pointer',
+  base: 'flex h-fit w-fit items-center justify-center gap-1 font-medium rounded-md cursor-pointer',
   /**
    * Badge Type
    * @type {object}

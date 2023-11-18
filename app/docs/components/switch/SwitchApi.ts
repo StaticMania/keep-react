@@ -41,4 +41,18 @@ export const toggleApiData = [
     propsDescription: 'onChange is called when the toggle enabled',
     default: '()=> void',
   },
+  {
+    id: 7,
+    propsName: 'circleStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the switch circle.',
+    default: 'None',
+  },
+  {
+    id: 8,
+    propsName: 'labelStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the switch label.',
+    default: 'None',
+  },
 ]

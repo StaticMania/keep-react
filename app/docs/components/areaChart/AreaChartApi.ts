@@ -69,4 +69,32 @@ export const areaChartAPIData = [
     propsDescription: 'Array of data points used to populate the chart.',
     default: 'Array',
   },
+  {
+    id: 11,
+    propsName: 'chartColor',
+    propsType: 'string',
+    propsDescription: 'Color for the main chart.',
+    default: '#1B4DFF',
+  },
+  {
+    id: 12,
+    propsName: 'secondaryChartColor',
+    propsType: 'string',
+    propsDescription: 'Color for the secondary chart',
+    default: '#1B4DFF',
+  },
+  {
+    id: 13,
+    propsName: 'areaStoke',
+    propsType: 'string',
+    propsDescription: 'Color for the area stroke of the chart.',
+    default: '#1B4DFF',
+  },
+  {
+    id: 14,
+    propsName: 'secondaryAreaStoke',
+    propsType: 'string',
+    propsDescription: 'Color for the secondary area stroke',
+    default: '#94ABFF',
+  },
 ]

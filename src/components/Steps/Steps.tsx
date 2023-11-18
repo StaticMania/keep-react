@@ -3,11 +3,13 @@ import { FC } from 'react'
 import { StepItem } from './StepItem'
 import { StepContext } from './StepContext'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface StepsProps {
   stepType?: 'point' | 'icon' | 'number'
   children?: React.ReactNode
   borderType?: 'solid' | 'dashed' | 'none'
+  className?: string
 }
 
 export interface KeepStepTheme {
@@ -57,10 +59,10 @@ export interface KeepStepTheme {
   }
 }
 
-const StepsComponent: FC<StepsProps> = ({ children, stepType = 'point', borderType = 'solid' }) => {
+const StepsComponent: FC<StepsProps> = ({ children, className, stepType = 'point', borderType = 'solid' }) => {
   const theme = useTheme().theme.step
   return (
-    <div className={theme.base}>
+    <div className={cn(theme.base, className)}>
       <StepContext.Provider
         value={{
           stepType,

@@ -1,7 +1,5 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react'
 import type { DeepPartial } from '../../helpers/deep-partial'
-
 import { forwardRef, useId } from 'react'
 import { Tooltip } from '../Tooltip'
 import { useSidebarContext } from './SidebarContext'
@@ -10,6 +8,7 @@ import { KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { Badge } from '../Badge'
+import { cn } from '../../helpers/cn'
 
 export interface KeepSidebarItemTheme {
   active: string
@@ -71,10 +70,7 @@ const Children: FC<PropsWithChildren<{ id: string }>> = ({ id, children }) => {
   const theme = useTheme().theme.sidebar.item
 
   return (
-    <span
-      data-testid="keep-sidebar-item-content"
-      id={`keep-sidebar-item-${id}`}
-      className={twMerge(theme.content.base)}>
+    <span data-testid="keep-sidebar-item-content" id={`keep-sidebar-item-${id}`} className={cn(theme.content.base)}>
       {children}
     </span>
   )
@@ -106,7 +102,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
         <Component
           aria-labelledby={`keep-sidebar-item-${id}`}
           ref={ref}
-          className={twMerge(
+          className={cn(
             theme.base,
             isActive && theme.active,
             !isCollapsed && isInsideCollapse && theme.collapsed?.insideCollapse,
@@ -117,7 +113,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
             <div
               aria-hidden
               data-testid="keep-sidebar-item-icon"
-              className={twMerge(theme.icon?.base, isActive && theme.icon?.active)}>
+              className={cn(theme.icon?.base, isActive && theme.icon?.active)}>
               {Icon}
             </div>
           )}

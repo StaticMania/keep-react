@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface DividerProps {
   className?: string
@@ -12,5 +12,5 @@ export interface DividerTheme {
 
 export const NavigationDivider: FC<DividerProps> = ({ className }) => {
   const { divider } = useTheme().theme.navigation
-  return <div className={twMerge(className ? className : divider.base)}></div>
+  return <div className={cn(divider.base, className)}></div>
 }

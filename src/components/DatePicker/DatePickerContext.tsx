@@ -14,6 +14,10 @@ export type DatePickerContextType = {
   yearPicker?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
   monthPicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
   timePicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+  className?: string
+  iconStyle?: string
+  icon?: ReactNode
+  placeholder?: string
 }
 
 export const DatePickerContext = createContext<DatePickerContextType | undefined>(undefined)

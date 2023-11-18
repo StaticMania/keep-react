@@ -54,6 +54,8 @@ interface UploadComponentProps {
   fileType?: string
   id?: string
   uploadBtnType?: keyof ButtonTypes
+  className?: string
+  labelStyle?: string
 }
 const UploadComponent: FC<UploadComponentProps> = ({
   file,
@@ -68,6 +70,8 @@ const UploadComponent: FC<UploadComponentProps> = ({
   fileType,
   id,
   uploadBtnType = 'primary',
+  className,
+  labelStyle,
 }) => {
   let content = null
 
@@ -91,6 +95,8 @@ const UploadComponent: FC<UploadComponentProps> = ({
         fileType,
         id,
         uploadBtnType,
+        className,
+        labelStyle,
       }}>
       {content}
     </UploadContext.Provider>

@@ -1,7 +1,7 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { useTimelineContext } from './TimelineContext'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export type TimelineItemProps = PropsWithChildren<
   ComponentProps<'li'> & {
@@ -22,7 +22,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({ children, className, ...pr
   return (
     <li
       data-testid="timeline-item"
-      className={twMerge(horizontal ? item.horizontal.on : item.horizontal.off, className)}
+      className={cn(horizontal ? item.horizontal.on : item.horizontal.off, className)}
       {...props}>
       {children}
     </li>

@@ -69,4 +69,25 @@ export const checkboxGroupApiData = [
     propsDescription: 'Callback function when a checkbox option is changed.',
     default: 'function',
   },
+  {
+    id: 13,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the checkbox group container.',
+    default: 'None',
+  },
+  {
+    id: 14,
+    propsName: 'titleClassName',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the checkbox title.',
+    default: 'None',
+  },
+  {
+    id: 15,
+    propsName: 'descriptionClassName',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the checkbox description.',
+    default: 'None',
+  },
 ]

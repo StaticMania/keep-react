@@ -1,9 +1,9 @@
 import { FC, useEffect, useRef, useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { Pause, X } from 'phosphor-react'
 import { useTheme } from '../../Keep/ThemeContext'
 import { useUploadContext } from './UploadContext'
 import { useProgress } from './useProgress'
+import { cn } from '../../helpers/cn'
 
 /**
  * Represents the theme for the UploadPending component.
@@ -78,22 +78,22 @@ export const UploadPending: FC = () => {
   })
 
   return (
-    <div className={twMerge(theme.base)}>
-      <div className={twMerge(theme.bgColor)} style={{ width: divOneWidth }}></div>
-      <div className={twMerge(theme.root.base)}>
+    <div className={cn(theme.base)}>
+      <div className={cn(theme.bgColor)} style={{ width: divOneWidth }}></div>
+      <div className={cn(theme.root.base)}>
         <div>
-          <p className={twMerge(theme.root.status)}>Uploading...</p>
-          <div className={twMerge(theme.root.statusBox.base)}>
-            <p className={twMerge(theme.root.statusBox.count)}>{progress}%</p>
-            <div className={twMerge(theme.root.statusBox.dot)}></div>
-            <p className={twMerge(theme.root.statusBox.time)}>{uploadTime ? uploadTime : '10 Second Left'}</p>
+          <p className={cn(theme.root.status)}>Uploading...</p>
+          <div className={cn(theme.root.statusBox.base)}>
+            <p className={cn(theme.root.statusBox.count)}>{progress}%</p>
+            <div className={cn(theme.root.statusBox.dot)}></div>
+            <p className={cn(theme.root.statusBox.time)}>{uploadTime ? uploadTime : '10 Second Left'}</p>
           </div>
         </div>
-        <div className={twMerge(theme.root.confirmBox.base)}>
-          <button className={twMerge(theme.root.confirmBox.pause)}>
+        <div className={cn(theme.root.confirmBox.base)}>
+          <button className={cn(theme.root.confirmBox.pause)}>
             <Pause size={14} color="#5E718D" />
           </button>
-          <button className={twMerge(theme.root.confirmBox.dismiss)}>
+          <button className={cn(theme.root.confirmBox.dismiss)}>
             <X size={14} color="#FF3838" />
           </button>
         </div>

@@ -84,6 +84,20 @@ export const textInputApiData = [
     default: 'None',
   },
   {
+    id: 14,
+    propsName: 'addonStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class for style addon',
+    default: 'None',
+  },
+  {
+    id: 15,
+    propsName: 'iconStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class for style icon',
+    default: 'None',
+  },
+  {
     id: 13,
     propsName: 'handleOnChange',
     propsType: '(e: ChangeEvent) => void',

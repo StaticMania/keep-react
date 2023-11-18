@@ -48,4 +48,11 @@ export const cardAPIData = [
     propsDescription: "Size of the card's background image.",
     default: 'lg',
   },
+  {
+    id: 8,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the card.',
+    default: 'None',
+  },
 ]

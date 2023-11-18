@@ -8,7 +8,7 @@ const CardWithIcon = () => {
       {/* ===CARD ONE=== */}
       <Card className="max-w-xl p-6">
         <Card.Container className="flex items-start gap-3.5 md:gap-5">
-          <Card.Container className="bg-metal-50 flex items-center justify-center rounded-full p-2.5 md:p-4">
+          <Card.Container className="flex items-center justify-center rounded-full bg-metal-50 p-2.5 md:p-4">
             <ArchiveTray size={28} color="#3D4A5C" />
           </Card.Container>
           <Card.Container className="flex flex-col gap-2">
@@ -27,7 +27,7 @@ const CardWithIcon = () => {
       <Card className="max-w-xl p-6">
         <Card.Container className="flex gap-5">
           <Card.Container className="flex items-start gap-5">
-            <Card.Container className="bg-metal-50 flex items-center justify-start rounded-full p-2.5 md:p-4">
+            <Card.Container className="flex items-center justify-start rounded-full bg-metal-50 p-2.5 md:p-4">
               <ArchiveTray size={28} color="#3D4A5C" />
             </Card.Container>
             <Card.Container className="flex flex-col gap-2">
@@ -40,9 +40,9 @@ const CardWithIcon = () => {
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
             <Popover
-              customClass="!w-[20rem]"
+              className="!w-[20rem]"
               additionalContent={
-                <h2 className="text-metal-500 text-body-3 font-medium leading-6 tracking-[-0.3px]">
+                <h2 className="text-body-3 font-medium leading-6 tracking-[-0.3px] text-metal-500">
                   Keep Design System
                 </h2>
               }>
@@ -123,7 +123,7 @@ export const CardComponent = () => {
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
             <Popover
-              customClass="!w-[20rem]"
+              className="!w-[20rem]"
               additionalContent={
                 <h2 className="text-body-3 leading-6 tracking-[-0.3px] font-medium text-metal-500">
                   Keep Design System
@@ -151,10 +151,10 @@ export const CardComponent = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button type="outlinePrimary" customClass="!hidden md:!block">
+          <Button type="outlinePrimary" className="!hidden md:!block">
             Learn More
           </Button>
-          <Button type="outlinePrimary" size="sm" customClass="md:hidden block">
+          <Button type="outlinePrimary" size="sm" className="md:hidden block">
             Learn More
           </Button>
         </Card.Container>

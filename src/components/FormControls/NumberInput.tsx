@@ -1,10 +1,10 @@
-import { twMerge } from 'tailwind-merge'
 import { Minus, Plus } from 'phosphor-react'
 import type { ComponentProps, ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import type { KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepNumberInputTheme {
   base: string
@@ -56,29 +56,31 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
     const theme = useTheme().theme.formControls.numberInput
     const theirProps = excludeClassName(props)
     const handleScroll = (event: { deltaY: number }) => {
-      if (event.deltaY > 0) {
-        setValue && setValue(value - 1)
-      } else {
-        setValue && setValue(value + 1)
+      if (!disabled) {
+        if (event.deltaY > 0) {
+          setValue && setValue(value - 1)
+        } else {
+          setValue && setValue(value + 1)
+        }
       }
     }
     return (
       <div className={theme.base}>
         <div className={theme.field.base}>
           <div
-            className={twMerge(
+            className={cn(
               theme.field.icon.base,
               theme.field.icon.sizes[sizing],
               theme.field.icon.position.incrementIcon,
               disabled && theme.field.icon.disabled,
             )}
             onClick={() => setValue((prevVal: number): number => prevVal + 1)}>
-            <span className={twMerge(theme.field.icon.incrementIcon)}>
+            <span className={cn(theme.field.icon.incrementIcon)}>
               <Plus size={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16} weight="bold" color="#5E718D" />
             </span>
           </div>
           <input
-            className={twMerge(
+            className={cn(
               theme.field.input.base,
               theme.field.input.sizes[sizing],
               disabled && theme.field.input.disabled,
@@ -93,7 +95,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             readOnly
           />
           <div
-            className={twMerge(
+            className={cn(
               theme.field.icon.base,
               theme.field.icon.sizes[sizing],
               theme.field.icon.position.decrementIcon,
@@ -103,7 +105,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
               if (disabled) e.stopPropagation()
               else setValue((prevVal: number): number => prevVal - 1)
             }}>
-            <span className={twMerge(theme.field.icon.decrementIcon)}>
+            <span className={cn(theme.field.icon.decrementIcon)}>
               <Minus size={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16} weight="bold" color="#5E718D" />
             </span>
           </div>

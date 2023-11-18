@@ -1,7 +1,6 @@
 import { keepPaginationTheme } from '.'
 
 export const paginationTheme: keepPaginationTheme = {
-  base: '',
   paginateWithBorder: 'p-2 border border-metal-200 rounded-md',
   layout: {
     table: {

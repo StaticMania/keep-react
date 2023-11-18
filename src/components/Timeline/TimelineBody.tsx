@@ -1,6 +1,6 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export type TimelineBodyProps = PropsWithChildren<
   ComponentProps<'p'> & {
@@ -14,7 +14,7 @@ export interface TimelineBodyStyle {
 export const TimelineBody: FC<TimelineBodyProps> = ({ children, className, ...props }) => {
   const { body } = useTheme().theme.timeline
   return (
-    <p className={twMerge(body.base, className)} {...props}>
+    <p className={cn(body.base, className)} {...props}>
       {children}
     </p>
   )

@@ -3,6 +3,7 @@ import { Children, cloneElement, useMemo } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { useTheme } from '../../Keep/ThemeContext'
 import type { ButtonProps } from './Button'
+import { cn } from '../../helpers/cn'
 
 /**
  * Interface for defining the theme of a button group.
@@ -29,15 +30,15 @@ export interface PositionInButtonGroup {
   middle: string
   end: string
 }
-
 /**
  * Renders a group of buttons.
  * @param {ButtonGroupProps} props - The props for the component.
  * @param {ReactNode} props.children - The child elements to render.
  * @param {boolean} props.pill - Whether the buttons should be pill-shaped.
+ * @param {string} props.className - Additional class name(s) for the component.
  * @returns {JSX.Element} - The rendered component.
  */
-export const ButtonGroup: FC<ButtonGroupProps> = ({ children, pill, ...props }): JSX.Element => {
+export const ButtonGroup: FC<ButtonGroupProps> = ({ children, pill, className, ...props }): JSX.Element => {
   const theirProps = excludeClassName(props)
 
   const items = useMemo(
@@ -54,7 +55,7 @@ export const ButtonGroup: FC<ButtonGroupProps> = ({ children, pill, ...props }):
   const theme = useTheme().theme.buttonGroup
 
   return (
-    <div className={theme.base} role="group" {...theirProps}>
+    <div className={cn(theme.base, className)} role="group" {...theirProps}>
       {items}
     </div>
   )

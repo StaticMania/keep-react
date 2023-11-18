@@ -55,4 +55,11 @@ export const carouselDataApi = [
     propsDescription: 'Color variant for the indicators based on the selected type.',
     default: 'white',
   },
+  {
+    id: 9,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'Custom class to be added to the carousel.',
+    default: 'None',
+  },
 ]
