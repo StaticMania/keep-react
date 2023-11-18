@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Official React components built for React and Tailwind CSS",
   "license": "MIT",
+  "type": "module",
   "keywords": [
     "design-system",
     "keep-design-system",
