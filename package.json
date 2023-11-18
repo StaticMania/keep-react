@@ -38,7 +38,7 @@
     "build-storybook": "storybook build",
     "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
     "build:css": "css-minify -f ./app/main.css -o ./lib/cjs/theme",
-    "build:lib:cjs": "tsc -p tsconfig.lib.json",
+    "build:lib:cjs": "tsc -p tsconfig.lib.json --declaration",
     "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm"
   },
   "dependencies": {
