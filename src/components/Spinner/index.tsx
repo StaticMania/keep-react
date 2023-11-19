@@ -3,26 +3,54 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Represents the theme configuration for the KeepSpinner component.
+ */
 export interface KeepSpinnerTheme {
   base: string
   color: SpinnerColors
   size: SpinnerSizes
 }
 
+/**
+ * Interface for defining spinner colors.
+ * Extends the `KeepColors` interface to include specific color properties.
+ */
 export interface SpinnerColors
   extends Pick<KeepColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
   [key: string]: string
 }
 
+/**
+ * Interface for defining spinner sizes.
+ * Extends the `KeepSizes` interface and adds additional key-value pairs.
+ */
 export interface SpinnerSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
   [key: string]: string
 }
 
+/**
+ * Props for the Spinner component.
+ */
 export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
+  /**
+   * The color of the spinner.
+   */
   color?: keyof SpinnerColors
+  /**
+   * The size of the spinner.
+   */
   size?: keyof SpinnerSizes
 }
 
+/**
+ * Spinner component.
+ * @param className - Additional CSS class name for the spinner.
+ * @param color - Color of the spinner. Default is 'info'.
+ * @param size - Size of the spinner. Default is 'md'.
+ * @param props - Additional props for the spinner.
+ * @returns The Spinner component.
+ */
 export const Spinner: FC<SpinnerProps> = ({ className, color = 'info', size = 'md', ...props }) => {
   const theme = useTheme().theme.spinner
 

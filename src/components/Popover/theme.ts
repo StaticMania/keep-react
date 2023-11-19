@@ -1,5 +1,10 @@
 import type { keepPopoverTheme } from '.'
 
+/**
+ * The theme configuration for the popover component.
+ * target - The class name for the popover target.
+ * body - The class name for the popover body.
+ */
 export const popoverTheme: keepPopoverTheme = {
   target: 'w-fit z-50',
   body: {

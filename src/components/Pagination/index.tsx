@@ -6,14 +6,29 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { paginationGenerator } from '../../helpers/rangeWithDots'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Interface representing the theme configuration for the Pagination component.
+ */
+/**
+ * Interface representing the theme for the keepPagination component.
+ */
 export interface keepPaginationTheme {
+  /**
+   * CSS class for the pagination container with border.
+   */
   paginateWithBorder: string
+  /**
+   * Layout styles for the pagination component.
+   */
   layout: {
     table: {
       base: string
       span: string
     }
   }
+  /**
+   * Styles for the pagination pages.
+   */
   pages: {
     base: string
     previous: {
@@ -45,6 +60,9 @@ export interface keepPaginationTheme {
       roundSquare: string
     }
   }
+  /**
+   * Styles for the "Go To" section of the pagination component.
+   */
   goTo: {
     base: string
     title: string
@@ -60,20 +78,82 @@ export interface keepPaginationTheme {
 }
 
 export type PaginationProps = PropsWithChildren<Pagination>
+/**
+ * Pagination component props.
+ */
 interface Pagination extends Omit<ComponentProps<'nav'>, 'className'> {
+  /**
+   * The current page number.
+   */
   currentPage: number
+
+  /**
+   * The shape of the previous/next buttons.
+   * Possible values: 'circle', 'round', 'roundSquare', 'none'.
+   */
   prevNextShape?: 'circle' | 'round' | 'roundSquare' | 'none'
+
+  /**
+   * The shape of the go-to page button.
+   * Possible values: 'circle', 'round', 'roundSquare', 'none'.
+   */
   goToShape?: 'circle' | 'round' | 'roundSquare' | 'none'
+
+  /**
+   * The shape of the active current page indicator.
+   * Possible values: 'circle', 'roundSquare'.
+   */
   activeCurrentPageShape?: 'circle' | 'roundSquare'
+
+  /**
+   * Callback function triggered when the page is changed.
+   * @param page - The new page number.
+   */
   onPageChange: (page: number) => void
+
+  /**
+   * Determines whether to display icons with text.
+   */
   iconWithText?: boolean
+
+  /**
+   * Determines whether to display icons without text.
+   */
   iconWithOutText?: boolean
+
+  /**
+   * Determines whether to paginate with borders.
+   */
   paginateWithBorder?: boolean
+
+  /**
+   * Determines whether to show the go-to page button.
+   */
   showGoToPaginate?: boolean
+
+  /**
+   * The total number of pages.
+   */
   totalPages: number
+
+  /**
+   * The style for the next button.
+   */
   nextBtnStyle?: string
+
+  /**
+   * The style for the previous button.
+   */
   previousBtnStyle?: string
+
+  /**
+   * The style for the page.
+   */
   pageStyle?: string
+
+  /**
+   * The additional class name for the component.
+   */
   className?: string
 }
 

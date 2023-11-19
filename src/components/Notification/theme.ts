@@ -1,5 +1,17 @@
 import type { keepNotificationTheme } from '.'
 
+/**
+ * Represents the theme configuration for the notification component.
+ * @type {keepNotificationTheme}
+ * - `base` {string} - The base class for the notification component.
+ * - `dismiss` {string} - The dismiss class for the notification component.
+ * - `wrapper` {string} - The wrapper class for the notification component.
+ * - `infoIcon` {object} - The infoIcon configuration for the notification component.
+ * - `closeButton` {object} - The closeButton configuration for the notification component.
+ * - `headerBanner` {object} - The headerBanner configuration for the notification component.
+ * - `content` {string} - The content class for the notification component.
+ * - `position` {object} - The position configuration for the notification component.
+ */
 export const notificationTheme: keepNotificationTheme = {
   base: 'rounded-md shadow-large px-4 border border-metal-50 z-50 bg-white transition-all duration-300 fixed',
   dismiss: 'hidden',

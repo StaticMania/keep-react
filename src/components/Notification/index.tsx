@@ -4,42 +4,143 @@ import { X } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Interface representing the theme for the KeepNotification component.
+ */
 export interface keepNotificationTheme {
+  /**
+   * The base color of the notification.
+   */
   base: string
+  /**
+   * The color of the dismiss button.
+   */
   dismiss: string
+  /**
+   * The wrapper color of the notification.
+   */
   wrapper: string
+  /**
+   * The theme for the info icon.
+   */
   infoIcon: {
+    /**
+     * The base color of the info icon.
+     */
     base: string
+    /**
+     * The color of the info icon when it is turned on.
+     */
     on: string
+    /**
+     * The color of the info icon when it is turned off.
+     */
     off: string
   }
+  /**
+   * The theme for the close button.
+   */
   closeButton: {
+    /**
+     * The base color of the close button.
+     */
     base: string
+    /**
+     * The icon color of the close button.
+     */
     icon: string
   }
+  /**
+   * The theme for the header banner.
+   */
   headerBanner: {
+    /**
+     * The base color of the header banner.
+     */
     base: string
+    /**
+     * The image of the header banner.
+     */
     img: string
+    /**
+     * The color of the header banner when it is turned on.
+     */
     on: string
+    /**
+     * The color of the header banner when it is turned off.
+     */
     off: string
+    /**
+     * The color of the close icon in the header banner.
+     */
     closeIcon: string
   }
+  /**
+   * The color of the content in the notification.
+   */
   content: string
+  /**
+   * The position of the notification.
+   */
   position: {
+    /**
+     * The position of the notification at the top left corner.
+     */
     'top-left': string
+    /**
+     * The position of the notification at the top right corner.
+     */
     'top-right': string
+    /**
+     * The position of the notification at the bottom left corner.
+     */
     'bottom-left': string
+    /**
+     * The position of the notification at the bottom right corner.
+     */
     'bottom-right': string
   }
 }
 
+/**
+ * @props Props for the Notification component.
+ */
+
 export interface NotificationProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+  /**
+   * Additional content to be displayed within the notification.
+   */
   additionalContent?: ReactNode
+
+  /**
+   * Icon to be displayed for informational purposes.
+   */
   infoIcon?: ReactNode
+
+  /**
+   * Determines whether the notification can be dismissed.
+   */
   dismiss?: boolean
+
+  /**
+   * Source URL for the header banner image.
+   */
   headerBannerSrc?: string
+
+  /**
+   * Callback function to be executed when the notification is dismissed.
+   * If set to `true`, a default dismiss behavior will be applied.
+   */
   onDismiss?: boolean | (() => void)
+
+  /**
+   * Determines whether the notification should be shown.
+   */
   showNotification?: boolean
+
+  /**
+   * Position of the notification on the screen.
+   */
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 
