@@ -3,9 +3,9 @@
 //
 // ==== THE PURPOSE OF THIS SCRIPT ====
 // Automatically add `.cjs` extenstion to commonjs files and `.d.cts` extenstion
-// to commonjs declaration files. It removes `lib` dir. It then fills `lib` by
-// copying and appropriately renaming files from `lib-untouched`. It keeps the
-// extensions of esm files intact.
+// to commonjs declaration files. It removes `lib` dir. It then creates and fills
+// `lib` by copying and appropriately renaming files from `lib-untouched`. It
+// keeps the extensions of esm files intact.
 //
 // Since tsc can't yet ouput files these extenstions(https://github.com/microsoft/TypeScript/issues/49462),
 // this is just a way to do it.
@@ -24,7 +24,7 @@ const listDir = (dir, fileList = []) => {
     if (fs.statSync(path.join(dir, file)).isDirectory()) {
       fileList = listDir(path.join(dir, file), fileList)
     } else {
-      const pattern = /\.js$|\.d.ts$/
+      const pattern = /\.(js|d\.ts|css)$/
       if (pattern.test(file)) {
         let name = file.replace(pattern, (ext) => {
           if (dir.startsWith('lib-untouched/cjs')) {
