@@ -16,14 +16,29 @@
   "homepage": "https://react.keepdesign.io/",
   "bugs": "https://github.com/StaticMania/keep-react/issues",
   "files": [
-    "./lib/",
-    "./src"
+    "./lib/"
   ],
-  "main": "./lib/cjs/index.js",
-  "style": "./src/main.min.css",
-  "preset": "./src/keep-preset.js",
+  "main": "./lib/cjs/index.cjs",
   "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "types": "./lib/cjs/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./lib/cjs/index.d.cts",
+        "default": "./lib/cjs/index.cjs"
+      }
+    },
+    "./src/keep-preset.js": {
+      "default": "./lib/cjs/theme/keep-preset.cjs"
+    },
+    "./src/main.min.css": {
+      "default": "./lib/cjs/theme/main.min.css"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/StaticMania/keep-react"
