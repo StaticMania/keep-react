@@ -27,7 +27,7 @@ const listDir = (dir, fileList = []) => {
       const pattern = /\.(js|d\.ts|css)$/
       if (pattern.test(file)) {
         let name = file.replace(pattern, (ext) => {
-          if (dir.startsWith('lib-untouched/cjs')) {
+          if (dir.startsWith(`lib-untouched${path.sep}cjs`)) {
             if (ext === '.js') return '.cjs'
             if (ext === '.d.ts') return '.d.cts'
           }
@@ -49,7 +49,7 @@ const listDir = (dir, fileList = []) => {
 let foundFiles = listDir('lib-untouched')
 fs.rmSync('lib', { force: true, recursive: true })
 foundFiles.forEach((f) => {
-  const dir = f.newSrc.slice(0, f.newSrc.lastIndexOf('/'))
+  const dir = f.newSrc.slice(0, f.newSrc.lastIndexOf(path.sep))
   fs.mkdirSync(dir, { recursive: true })
   fs.copyFileSync(f.oldSrc, f.newSrc)
 })
