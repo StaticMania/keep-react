@@ -9,16 +9,59 @@ interface Node {
   title: string
   children?: Node[]
 }
+/**
+ * Props for the Tree component.
+ */
 interface Props {
+  /**
+   * An array of nodes to be rendered in the tree.
+   */
   nodes: Node[]
+
+  /**
+   * Determines whether to show icons for parent and child nodes.
+   */
   showIcon?: boolean
+
+  /**
+   * Determines whether to show the number of items for each node.
+   */
   showItemsNumber?: boolean
+
+  /**
+   * Determines whether to show a border around the tree component.
+   */
   showBorder?: boolean
+
+  /**
+   * The icon to be displayed for parent nodes.
+   */
   ParentIcon?: ReactNode
+
+  /**
+   * The icon to be displayed for child nodes.
+   */
   ChildIcon?: ReactNode
+
+  /**
+   * Determines whether to show checkboxes for each node.
+   */
   showCheckbox?: boolean
+
+  /**
+   * A callback function to handle the checked state of the checkboxes.
+   * @param value - The checked state value.
+   */
   handleChecked?: (value: boolean) => void
+
+  /**
+   * The CSS class name for the tree component.
+   */
   className?: string
+
+  /**
+   * The CSS style for each tree item.
+   */
   itemStyle?: string
 }
 
@@ -91,12 +134,12 @@ export const Tree: React.FC<Props> = ({
           node.children
             ? theme.list.hasChild.on
             : showIcon && !showCheckbox
-            ? theme.list.hasChild.off.hasIcon.on
-            : !showIcon && showCheckbox
-            ? theme.list.hasChild.off.hasIcon.on
-            : showIcon && showCheckbox
-            ? theme.list.hasChild.off.hasIcon.on
-            : theme.list.hasChild.off.hasIcon.off,
+              ? theme.list.hasChild.off.hasIcon.on
+              : !showIcon && showCheckbox
+                ? theme.list.hasChild.off.hasIcon.on
+                : showIcon && showCheckbox
+                  ? theme.list.hasChild.off.hasIcon.on
+                  : theme.list.hasChild.off.hasIcon.off,
           theme.list.base,
           itemStyle,
         )}>

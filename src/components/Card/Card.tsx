@@ -9,56 +9,32 @@ import { KeepBoolean, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface for defining the theme of a KeepCard component.
- */
 export interface KeepCardTheme {
-  /** The base color of the card. */
   base: string
-  /** The color of the card's children. */
   children: string
-  /** Whether or not the card has a shadow. */
   shadow: KeepBoolean
-  /** Whether or not the card has a border. */
   border: KeepBoolean
-  /** Object containing the horizontal layout options for the card. */
   horizontal: {
-    /** The horizontal layout when off. */
     off: string
-    /** The horizontal layout when on. */
     on: string
   }
-  /** The href for the card. */
   href: string
-  /** Object containing the image options for the card. */
   img: {
-    /** The base image for the card. */
     base: string
-    /** Object containing the horizontal layout options for the card's background image when off. */
     horizontal: {
-      /** The base image for the card's background image when off. */
       off: {
-        /** The base image for the card's background image when off. */
         base: string
-        /** The size of the card's background image when off. */
         size: CardBgImageSizes
       }
-      /** Object containing the horizontal layout options for the card's background image when on. */
       on: {
-        /** The base image for the card's background image when on. */
         base: string
-        /** The size of the card's background image when on. */
         size: CardBgImageSizes
       }
     }
   }
-  /** The description for the card. */
   description: string
 }
-/**
- * Defines an interface for the background image sizes of a card.
- * @interface CardBgImageSizes
- */
+
 export interface CardBgImageSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string
 }
@@ -70,15 +46,47 @@ export interface CardBgImageSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
  */
 
 export interface CardProps extends PropsWithChildren<ComponentProps<'div'>> {
-  shadow?: boolean // shadow around card
-  border?: boolean // border around card
-  horizontal?: boolean // display card horizontally
-  href?: string // link to when card is clicked
-  imgAlt?: string // alt text for image
-  imgSrc?: string // image source
-  imgSize?: keyof CardBgImageSizes // size of image
-  imgStyle?: string // style of image
+  /**
+   * Determines whether the card has a shadow.
+   */
+  shadow?: boolean
+
+  /**
+   * Determines whether the card has a border.
+   */
+  border?: boolean
+
+  /**
+   * Determines whether the card is displayed horizontally.
+   */
+  horizontal?: boolean
+
+  /**
+   * The URL for the card's hyperlink.
+   */
+  href?: string
+
+  /**
+   * The alternate text for the card's image.
+   */
+  imgAlt?: string
+
+  /**
+   * The source URL for the card's image.
+   */
+  imgSrc?: string
+
+  /**
+   * The size of the card's background image.
+   */
+  imgSize?: keyof CardBgImageSizes
+
+  /**
+   * The custom CSS style for the card's image.
+   */
+  imgStyle?: string
 }
+
 const CardComponent: FC<CardProps> = ({
   children,
   className,

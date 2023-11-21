@@ -4,35 +4,12 @@ import type { KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
-/**
- * Represents the theme object for the KeepAlert component.
- * @interface keepAlertTheme
- */
-
 export interface keepAlertTheme {
-  /**
-   * The base theme object for the KeepAlert component.
-   */
   base: string
-  /**
-   * The dismiss theme object for the KeepAlert component.
-   */
   dismiss: string
-  /**
-   * The border theme object for the KeepAlert component.
-   * @property off - The border color of the alert.
-   * @property on - The border color of the alert.
-   */
   border: {
     off: string
     on: AlertColors
-    /**
-     * The border accent theme object for the KeepAlert component.
-     * @property top - The top border accent color.
-     * @property bottom - The bottom border accent color.
-     * @property left - The left border accent color.
-     * @property right - The right border accent color.
-     */
     borderAccent: {
       top: string
       bottom: string
@@ -40,45 +17,18 @@ export interface keepAlertTheme {
       right: string
     }
   }
-  /**
-   * The wrapper theme object for the KeepAlert component.
-   */
   wrapper: string
-  /**
-   * The info button theme object for the KeepAlert component.
-   * @property base - The base color of the info button.
-   */
   infoButton: {
     base: string
   }
-  /**
-   * The close button theme object for the KeepAlert component.
-   * @property base - The base color of the close button.
-   * @property icon - The icon of the close button.
-   * @property color - The color of the close button.
-   */
   closeButton: {
     base: string
     icon: string
     color: AlertColors
   }
-  /**
-   * The color theme object for the KeepAlert component.
-   */
   color: AlertColors
-  /**
-   * The icon theme object for the KeepAlert component.
-   */
   icon: string
-  /**
-   * The rounded theme object for the KeepAlert component.
-   */
   rounded: string
-  /**
-   * The title theme object for the KeepAlert component.
-   * @property base - The base color of the alert title.
-   * @property color - The color of the alert title.
-   */
   title: {
     base: string
     color: AlertColors
@@ -172,9 +122,6 @@ export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>
   className?: string
 }
 
-/**
- * Defines an interface for Alert colors, extending the `KeepColors` interface with additional color keys.
- */
 export interface AlertColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
   [key: string]: string
 }

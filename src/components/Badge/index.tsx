@@ -4,34 +4,10 @@ import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface for defining the theme of a Keep badge
- */
 export interface keepBadgeTheme {
-  /**
-   * A string representing the base of the badge
-   */
   base: string
-  /**
-   * A string representing the href of the badge
-   */
   href: string
-  /**
-   * An object representing the badge type
-   */
   badgeType: {
-    /**
-     * An object representing the color type of the badge
-     * @type {object} 
-     * 
-     * default - An object representing the default color type of the badge
-     * outline - An object representing the outline color type of the badge
-     * text - An object representing the text color type of the badge
-     *  
-     * light - An object representing the light color type of the badge
-     * strong - An object representing the strong color type of the badge
-     * 
-     */
     default: {
       colorType: {
         light: {
@@ -63,112 +39,82 @@ export interface keepBadgeTheme {
       }
     }
   }
-  /**
-   * An object representing the icon of the badge
-   */
   icon: {
     off: string
     on: string
     size: BadgeSizes
   }
-  /**
-   * An object representing the size of the badge
-   */
   size: BadgeSizes
-  /**
-   * A string representing the dot of the badge
-   */
   dot: string
-
-  /**
-   * An object representing the position of the dot of the badge
-   */
-  dotPosition: { 
-    /**
-     * A string representing the left position of the dot
-     */
-    left: string 
-    /**
-     * A string representing the right position of the dot
-     */
-    right: string 
+  dotPosition: {
+    left: string
+    right: string
   }
 }
 
-// Define an interface 'BadgeProps' that extends 'PropsWithChildren' with the properties of a 'span' HTML element, excluding 'className' and 'color'
+/**
+ * Props for the Badge component.
+ */
 export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>> {
   /**
-   *  Define an optional property 'color' that can be a key of 'BadgeColors'
+   * The color of the badge.
    */
   color?: keyof BadgeColors
   /**
-   *  Define an optional property 'colorType' that can be either 'light' or 'strong'
+   * The type of color for the badge.
    */
   colorType?: 'light' | 'strong'
   /**
-   *  Define an optional property 'badgeType' that can be either 'default', 'outline', or 'text'
+   * The type of badge.
    */
   badgeType?: 'default' | 'outline' | 'text'
   /**
-   *  Define an optional property 'href' of type string
+   * The URL to navigate to when the badge is clicked.
    */
   href?: string
+
   /**
-   *  Define an optional property 'icon' of type 'ReactNode'
+   * The icon to display within the badge.
    */
   icon?: ReactNode
   /**
-   *  Define an optional property 'iconPosition' that can be either 'left' or 'right'
+   * The position of the icon within the badge.
    */
   iconPosition?: 'left' | 'right'
   /**
-   *  Define an optional property 'className' of type string
+   * Additional CSS class name for the badge.
    */
   className?: string
   /**
-   *  Define an optional property 'size' that can be a key of 'BadgeSizes'
+   * The size of the badge.
    */
   size?: keyof BadgeSizes
   /**
-   *  Define an optional property 'children' of type 'ReactNode'
+   * The content of the badge.
    */
   children?: ReactNode
   /**
-   *  Define an optional property 'dot' of type boolean
+   * Whether to display a dot on the badge.
    */
   dot?: boolean
   /**
-   *  Define an optional property 'dotPosition' that can be either 'left' or 'right'
+   * The position of the dot within the badge.
    */
   dotPosition?: 'left' | 'right'
+  /**
+   * Custom CSS style for the dot.
+   */
   dotStyle?: string
+  /**
+   * Custom CSS style for the icon.
+   */
   iconStyle?: string
 }
-
-/**
- * Interface for defining custom badge colors.
- * @interface BadgeColors
- * 
- * error - A string representing the error color of the badge
- * gray - A string representing the gray color of the badge
- * info - A string representing the info color of the badge
- * success - A string representing the success color of the badge
- * warning - A string representing the warning color of the badge
- * [key: string] - A string representing the custom color of the badge
- */
 
 export interface BadgeColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
   [key: string]: string
 }
 
-/**
- * Interface for defining custom badge sizes.
- * @interface BadgeSizes
- * 
- * xs - A string representing the extra small size of the badge
- * sm - A string representing the small size of the badge
- * [key: string] - A string representing the custom size of the badge
- */
 export interface BadgeSizes extends Pick<KeepSizes, 'xs' | 'sm'> {
   [key: string]: string
 }

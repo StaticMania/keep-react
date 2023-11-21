@@ -2,10 +2,18 @@ import type { ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 
 /**
- * Props for the CardTitle component
+ * Props for the CardTitle component.
+ * @interface CardTitleProps
  */
 export interface CardTitleProps {
+  /**
+   * The content to be rendered inside the CardTitle component.
+   */
   children?: ReactNode
+
+  /**
+   * Additional class name(s) for custom styling.
+   */
   className?: string
 }
 

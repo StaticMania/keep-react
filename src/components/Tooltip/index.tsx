@@ -4,14 +4,42 @@ import { excludeClassName } from '../../helpers/exclude'
 import { Floating } from '../Floating'
 import { useTheme } from '../../Keep/ThemeContext'
 
+/**
+ * Props for the Tooltip component.
+ * @interface TooltipProps
+ */
 export interface TooltipProps {
+  /**
+   * The title of the tooltip.
+   */
   title?: string
+  /**
+   * children of the tooltip.
+   */
   children?: ReactNode
+  /**
+   * The content of the tooltip.
+   */
   content: ReactNode
+  /**
+   * The placement of the tooltip.
+   */
   placement?: 'auto' | Placement
+  /**
+   * The trigger event for the tooltip.
+   */
   trigger?: 'hover' | 'click'
+  /**
+   * The style of the tooltip.
+   */
   style?: 'dark' | 'light' | 'auto'
+  /**
+   * The animation duration of the tooltip.
+   */
   animation?: false | `duration-${number}`
+  /**
+   * Whether to show the arrow of the tooltip.
+   */
   arrow?: boolean
 }
 

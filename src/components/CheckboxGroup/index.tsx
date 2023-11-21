@@ -2,28 +2,9 @@
 import { cn } from '../../helpers/cn'
 import type { ReactNode } from 'react'
 import { FC } from 'react'
-
 import { Avatar } from '../Avatar/Avatar'
 import { useTheme } from '../../Keep/ThemeContext'
 import { Radio } from '../FormControls/Radio'
-
-interface CheckboxGroupProps {
-  checkboxType?: 'square' | 'circle'
-  checkboxPosition?: 'left' | 'right'
-  title: string
-  description?: string
-  icon?: ReactNode
-  img?: string
-  imgShape?: 'square' | 'circle'
-  fieldName?: string
-  select?: 'single' | 'multiple'
-  value?: string
-  selected?: string
-  onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  className?: string
-  titleClassName?: string
-  descriptionClassName?: string
-}
 
 export interface keepCheckboxGroupTheme {
   label: {
@@ -82,6 +63,84 @@ export interface keepCheckboxGroupTheme {
       }
     }
   }
+}
+
+/**
+ * Props for the CheckboxGroup component.
+ * @interface CheckboxGroupProps
+ */
+
+interface CheckboxGroupProps {
+  /**
+   * The type of the CheckboxGroup.
+   */
+  checkboxType?: 'square' | 'circle'
+  /**
+   * The position of the CheckboxGroup.
+   */
+  checkboxPosition?: 'left' | 'right'
+  /**
+   * The title for the CheckboxGroup.
+   */
+  title: string
+  /**
+   * The description for the CheckboxGroup.
+   */
+  description?: string
+  /**
+   * The icon for the CheckboxGroup.
+   */
+  icon?: ReactNode
+
+  /**
+   * The image for the CheckboxGroup.
+   */
+  img?: string
+
+  /**
+   * The shape of the image for the CheckboxGroup.
+   */
+  imgShape?: 'square' | 'circle'
+
+  /**
+   * The name of the field for the CheckboxGroup.
+   */
+  fieldName?: string
+
+  /**
+   * The selection mode for the CheckboxGroup.
+   */
+  select?: 'single' | 'multiple'
+
+  /**
+   * The value of the CheckboxGroup.
+   */
+  value?: string
+
+  /**
+   * The selected value of the CheckboxGroup.
+   */
+  selected?: string
+
+  /**
+   * The event handler for option change in the CheckboxGroup.
+   */
+  onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+  /**
+   * The CSS class name for the CheckboxGroup.
+   */
+  className?: string
+
+  /**
+   * The CSS class name for the title of the CheckboxGroup.
+   */
+  titleClassName?: string
+
+  /**
+   * The CSS class name for the description of the CheckboxGroup.
+   */
+  descriptionClassName?: string
 }
 
 export const CheckboxGroup: FC<CheckboxGroupProps> = ({

@@ -2,28 +2,69 @@ import type { FC } from 'react'
 import { TooltipSlider } from './ToolTipSlider'
 import { excludeClassName } from '../../helpers/exclude'
 
-/**
- * Represents an object that maps numbers to strings or numbers.
- * @interface MarkObj
- * @property {string | number} key - The key for the mark.
- * @property {string | number} value - The value for the mark.
- */
 export interface MarkObj {
   [key: number]: string | number
 }
 
+/**
+ * Represents the props for the Slider component.
+ * @interface SliderProps
+ */
 export interface SliderProps {
-  min: number // minimum value of the slider
-  max: number // maximum value of the slider
-  step?: number | null // step size for the slider
-  range?: boolean // whether the slider is a range slider or not
-  dots?: boolean // whether to display dots on the slider or not
-  marks?: MarkObj // marks to display on the slider
-  reverse?: boolean // whether the slider is reversed or not
-  disabled?: boolean // whether the slider is disabled or not
-  defaultValue: number | number[] // default value of the slider
-  onChange?: (value: number | number[]) => void // callback function to be called when the slider value changes
-  tooltip?: 'top' | 'bottom' | 'none' // tooltip placement for the slider
+  /**
+   * The minimum value of the slider.
+   */
+  min: number
+
+  /**
+   * The maximum value of the slider.
+   */
+  max: number
+
+  /**
+   * The step value for the slider. Optional.
+   */
+  step?: number | null
+
+  /**
+   * Indicates whether the slider is a range slider. Optional.
+   */
+  range?: boolean
+
+  /**
+   * Indicates whether to display dots on the slider. Optional.
+   */
+  dots?: boolean
+
+  /**
+   * The marks to display on the slider. Optional.
+   */
+  marks?: MarkObj
+
+  /**
+   * Indicates whether the slider should be reversed. Optional.
+   */
+  reverse?: boolean
+
+  /**
+   * Indicates whether the slider is disabled. Optional.
+   */
+  disabled?: boolean
+
+  /**
+   * The default value of the slider.
+   */
+  defaultValue: number | number[]
+
+  /**
+   * The callback function to be called when the value of the slider changes.
+   */
+  onChange?: (value: number | number[]) => void
+
+  /**
+   * The position of the tooltip. Can be 'top', 'bottom', or 'none'. Optional.
+   */
+  tooltip?: 'top' | 'bottom' | 'none'
 }
 
 export const Slider: FC<SliderProps> = ({

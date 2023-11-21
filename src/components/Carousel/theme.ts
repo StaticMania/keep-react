@@ -1,8 +1,5 @@
 import { KeepCarouselTheme } from '.'
 
-/**
- * Represents the theme configuration for the Carousel component.
- */
 export const carouselTheme: KeepCarouselTheme = {
   base: 'relative h-full w-full h-56 w-full sm:h-64 xl:h-80 2xl:h-96',
   indicators: {

@@ -13,50 +13,90 @@ import { UploadSuccess } from './UploadSuccess'
 import { UploadContext } from './UploadContext'
 import { ButtonTypes } from '../Button/Button'
 
-/**
- * Represents the theme configuration for the keepUpload component.
- */
 export interface keepUploadTheme {
-  /**
-   * Represents the theme configuration for the input field component.
-   */
   input: keepInputFieldTheme
-  /**
-   * Represents the theme configuration for the upload failed component.
-   */
   uploadFailed: keepUploadFailedTheme
-  /**
-   * Represents the theme configuration for the upload horizontal component.
-   */
   uploadHorizontal: UploadHorizontalTheme
-  /**
-   * Represents the theme configuration for the upload pending component.
-   */
   uploadPending: UploadPendingTheme
-  /**
-   * Represents the theme configuration for the upload success component.
-   */
   uploadSuccess: UploadSuccessTheme
 }
+
 /**
  * Props for the UploadComponent.
+ * @interface UploadComponentProps
  */
 interface UploadComponentProps {
+  /**
+   * The selected file.
+   */
   file?: string
+
+  /**
+   * Determines if the component should be displayed horizontally.
+   */
   horizontal?: boolean
+
+  /**
+   * Determines if the component is disabled.
+   */
   disabled?: boolean
+
+  /**
+   * Determines if the progress bar should be shown.
+   */
   showProgressBar?: boolean
+
+  /**
+   * The type of progress (success, error, pending).
+   */
   progressType?: 'success' | 'error' | 'pending'
+
+  /**
+   * The progress value (0-100).
+   */
   progress?: number
+
+  /**
+   * The time of upload.
+   */
   uploadTime?: string
+
+  /**
+   * Event handler for file change.
+   */
   onFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+  /**
+   * The title of the component.
+   */
   title?: string
+
+  /**
+   * The type of file.
+   */
   fileType?: string
+
+  /**
+   * The ID of the component.
+   */
   id?: string
+
+  /**
+   * The type of upload button.
+   */
   uploadBtnType?: keyof ButtonTypes
+
+  /**
+   * Additional CSS class name for styling purposes.
+   */
   className?: string
+
+  /**
+   * Additional CSS style for the label.
+   */
   labelStyle?: string
 }
+
 const UploadComponent: FC<UploadComponentProps> = ({
   file,
   horizontal = false,

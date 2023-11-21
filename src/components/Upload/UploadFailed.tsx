@@ -5,33 +5,24 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { useProgress } from './useProgress'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface representing the theme for the keepUploadFailed component.
- */
 export interface keepUploadFailedTheme {
-  /** The base color for the upload failed component. */
   base: string
-  /** The background color for the upload failed component. */
   bgColor: string
-  /** The root configuration for the upload failed component. */
   root: {
     base: string
     status: string
-    /** The status box configuration for the upload failed component. */
     statusBox: {
       base: string
       count: string
       dot: string
       time: string
     }
-    /** The confirm box configuration for the upload failed component. */
     confirmBox: {
       base: string
       restart: string
       dismiss: string
     }
   }
-  /** The progress configuration for the upload failed component. */
   progress: {
     bgBar: string
     mainBar: string

@@ -49,12 +49,40 @@ export interface ModalSizes extends Omit<KeepSizes, 'xs'> {
   [key: string]: string
 }
 
+/**
+ * Props for the Modal component.
+ * @interface ModalProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>>}
+ */
 export interface ModalProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
+  /**
+   * Callback function to be called when the modal is closed.
+   */
   onClose?: () => void
+
+  /**
+   * The root element where the modal should be rendered.
+   */
   root?: HTMLElement
+
+  /**
+   * Determines whether the modal should be shown or hidden.
+   */
   show?: boolean
+
+  /**
+   * The icon to be displayed in the modal.
+   */
   icon?: ReactNode
+
+  /**
+   * The size of the modal.
+   */
   size?: keyof ModalSizes
+
+  /**
+   * The position of the modal.
+   */
   position?: keyof ModalPositions
 }
 

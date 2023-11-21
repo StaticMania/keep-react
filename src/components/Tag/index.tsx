@@ -25,14 +25,51 @@ export interface keepTagTheme {
   }
 }
 
+/**
+ * Props for the Tag component.
+ * @interface TagProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>>}
+ */
 export interface TagProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+  /**
+   * The left icon element to be displayed in the tag.
+   */
   leftIcon?: ReactNode
+
+  /**
+   * The dismiss icon element to be displayed in the tag.
+   */
   dismissIcon?: ReactNode
+
+  /**
+   * Determines whether the tag can be dismissed.
+   */
   dismiss?: boolean
+
+  /**
+   * Determines whether the tag is disabled.
+   */
   disabled?: boolean
+
+  /**
+   * The color of the tag. Can be one of the predefined TagColors.
+   */
   color?: keyof TagColors
+
+  /**
+   * The type of border for the tag. Can be 'solid' or 'dashed'.
+   */
   borderType?: 'solid' | 'dashed'
+
+  /**
+   * Callback function to be called when the tag is dismissed.
+   * If set to `true`, the tag will be dismissed automatically.
+   */
   onDismiss?: boolean | (() => void)
+
+  /**
+   * Additional CSS class name for the tag.
+   */
   className?: string
 }
 

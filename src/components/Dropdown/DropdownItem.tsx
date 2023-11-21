@@ -8,9 +8,23 @@ export interface keepDropdownItemTheme {
   icon: string
 }
 
+/**
+ * Props for the DropdownItem component.
+ * @interface DropdownItemProps
+ * @extends {PropsWithChildren<ComponentProps<'li'>>}
+ */
 export interface DropdownItemProps extends PropsWithChildren, ComponentProps<'li'> {
+  /**
+   * The icon to display in the dropdown item.
+   */
   icon?: ReactNode
+  /**
+   * The callback function to be called when the dropdown item is clicked.
+   */
   onClick?: () => void
+  /**
+   * The theme for the dropdown item.
+   */
   theme?: DeepPartial<keepDropdownItemTheme>
 }
 

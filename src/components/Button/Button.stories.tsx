@@ -2,23 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './Button'
 
-/**
- * Meta information for the Button component.
- * @component Button
- * @tags autodocs
- * @argTypes
- * - `type`: Available button type
- * - `size`: Available button size
- * - `children`: Button text
- * - `circle`: Button circle or not
- * - `width`: Button width full or half?
- * - `href`: Href to navigate
- * - `notificationLabel`: Button notification label text
- * - `pill`: Button pill or not
- * - `positionInGroup`: Button position in button group
- * - `customClass`: Custom class Name
- * - `color`: Button available color
- */
 const meta: Meta<typeof Button> = {
   component: Button,
   tags: ['autodocs'],

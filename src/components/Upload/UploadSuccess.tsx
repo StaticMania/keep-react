@@ -3,25 +3,16 @@ import { Check, FilePdf, Trash } from 'phosphor-react'
 import { FC } from 'react'
 import { cn } from '../../helpers/cn'
 
-/**
- * Represents the theme for the UploadSuccess component.
- */
 export interface UploadSuccessTheme {
-  /** The base color for the upload success component. */
   base: string
-  /** The background color for the upload success component. */
   bgColor: string
-  /** The root configuration for the upload success component. */
   root: {
-    /** The base style for the upload success component. */
     base: string
-    /** The left configuration for the upload success component. */
     left: {
       base: string
       fileName: string
       fileSize: string
     }
-    /** The confirm box configuration for the upload success component. */
     confirmBox: {
       base: string
       checked: string

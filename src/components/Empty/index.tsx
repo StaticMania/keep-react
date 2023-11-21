@@ -3,9 +3,6 @@ import { Button } from '../Button/Button'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface representing the theme for the Empty component.
- */
 export interface keepEmptyTheme {
   base: string
   title: string
@@ -14,6 +11,8 @@ export interface keepEmptyTheme {
 
 /**
  * Props for the Empty component.
+ * @interface EmptyProps
+ * @extends {PropsWithChildren<ComponentProps<'div'>>}
  */
 export interface EmptyProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'title'>> {
   /**

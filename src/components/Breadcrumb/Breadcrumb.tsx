@@ -4,9 +4,6 @@ import { BreadcrumbContext } from './BreadcrumbContext'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 
-/**
- * Defines the interface for the theme object used in the Breadcrumb component.
- */
 export interface keepBreadCrumbTheme {
   breadCrumbWithBorder: string
   item: {
@@ -30,13 +27,28 @@ export interface keepBreadCrumbTheme {
 
 /**
  * Props for the Breadcrumb component.
- * @param {ReactNode} separatorIcon - The icon to use as a separator between breadcrumb items.
- * @param {boolean} breadCrumbWithBorder - Whether to display a border around the breadcrumb component.
+ * @interface BreadcrumbProps
+ * @extends {PropsWithChildren<ComponentProps<'nav'>>}
  */
 export interface BreadcrumbProps extends PropsWithChildren<ComponentProps<'nav'>> {
+  /**
+   * The separator icon to be displayed between breadcrumb items.
+   */
   separatorIcon?: ReactNode
+
+  /**
+   * Determines whether the breadcrumb should have a border.
+   */
   breadCrumbWithBorder?: boolean
+
+  /**
+   * Additional CSS class name for the breadcrumb component.
+   */
   className?: string
+
+  /**
+   * The style for the breadcrumb list.
+   */
   listStyle?: string
 }
 

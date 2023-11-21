@@ -5,51 +5,24 @@ import { useUploadContext } from './UploadContext'
 import { useProgress } from './useProgress'
 import { cn } from '../../helpers/cn'
 
-/**
- * Represents the theme for the UploadPending component.
- */
 export interface UploadPendingTheme {
-  /**
-   * The base color for the upload pending component.
-   */
   base: string
-  /**
-   * The background color for the upload pending component.
-   */
   bgColor: string
-  /**
-   * The root configuration for the upload pending component.
-   */
   root: {
-    /**
-     * The base color for the upload pending component.
-     */
     base: string
-    /**
-     * The status configuration for the upload pending component.
-     */
     status: string
-    /**
-     * The status box configuration for the upload pending component.
-     */
     statusBox: {
       base: string
       count: string
       dot: string
       time: string
     }
-    /**
-     * The confirm box configuration for the upload pending component.
-     */
     confirmBox: {
       base: string
       pause: string
       dismiss: string
     }
   }
-  /**
-   * The progress configuration for the upload pending component.
-   */
   progress: {
     bgBar: string
     mainBar: string
@@ -64,9 +37,6 @@ export const UploadPending: FC = () => {
 
   useEffect(() => {
     if (divRef.current) {
-      /**
-       * The width of the element obtained from the ref.
-       */
       const width = divRef.current.getBoundingClientRect().width
       setDivWidth(width)
     }

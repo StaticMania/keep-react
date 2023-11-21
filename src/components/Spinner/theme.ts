@@ -1,8 +1,5 @@
 import type { KeepSpinnerTheme } from '.'
 
-/**
- * Represents the theme configuration for the spinner component.
- */
 export const spinnerTheme: KeepSpinnerTheme = {
   base: 'inline animate-spin text-gray-200',
   color: {

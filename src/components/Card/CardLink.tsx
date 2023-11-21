@@ -2,13 +2,33 @@ import type { ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 
 /**
- * Props for the CardLink component
+ * Props for the CardLink component.
+ * @interface CardLinkProps
  */
 export interface CardLinkProps {
+  /**
+   * The content of the CardLink.
+   */
   children?: ReactNode
+
+  /**
+   * Additional class name for the CardLink.
+   */
   className?: string
+
+  /**
+   * The URL to navigate to when the CardLink is clicked.
+   */
   href?: string
+
+  /**
+   * The icon to display within the CardLink.
+   */
   icon?: ReactNode
+
+  /**
+   * The position of the icon within the CardLink.
+   */
   iconPosition?: 'left' | 'right'
 }
 

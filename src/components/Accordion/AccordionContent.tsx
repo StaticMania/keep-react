@@ -6,37 +6,21 @@ import { mergeDeep } from '../../helpers/mergeDeep'
 import { Collapse } from 'react-collapse'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface representing the theme object for the KeepAccordion component.
- * @interface
- * @property {string} base - The base color of the component.
- */
 export interface keepAccordionComponentTheme {
   base: string
 }
 
 /**
  * Props for the AccordionContent component.
- * 
+ *
  * @interface AccordionContentProps
  * @extends {PropsWithChildren<ComponentProps<'div'>>}
  */
 
 export interface AccordionContentProps extends PropsWithChildren<ComponentProps<'div'>> {
-  /**
-   * The theme for the AccordionContent component.
-   * 
-   * @type {DeepPartial<keepAccordionComponentTheme>}
-   */
   theme?: DeepPartial<keepAccordionComponentTheme>
 }
 
-/**
- * The AccordionContent component.
- * 
- * @param {AccordionContentProps} props - The props for the component.
- * @returns {ReactElement}
- */
 export const AccordionContent: FC<AccordionContentProps> = ({
   children,
   className,

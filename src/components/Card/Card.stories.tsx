@@ -24,26 +24,6 @@ import { Card, Badge, Button, PlayButton, Progress, Rating, Avatar } from '~/src
 import Image from 'next/image'
 import { removeFragment } from '../../helpers/mergeDeep'
 
-/**
- * Meta information for the Card component.
- *
- * @component
- * @tags autodocs
- *
- * @property {ReactNode} children - The content of the card.
- * @property {string} className - Custom class name for the card.
- * @property {boolean} border - Whether to show the card border or not.
- * @property {boolean} shadow - Whether to show the card shadow or not.
- * @property {boolean} horizontal - Whether the card direction is horizontal or not.
- * @property {string} href - The link address for the card.
- * @property {string} imgAlt - The alt text for the card image.
- * @property {string} imgSrc - The source for the card image.
- * @property {('sm' | 'md' | 'lg')} imgSize - The available size for the card image.
- *
- * @property {string} componentSubtitle - The Card component is a common UI element used to group related content together in a visually appealing way. It typically consists of a container with a header, body, and footer section, which can contain a variety of content such as text, images, and buttons.
- *
- * @property {Function} decorators - A function that wraps the story component with additional components to provide context for the story.
- */
 const meta: Meta<typeof Card> = {
   component: Card,
   tags: ['autodocs'],

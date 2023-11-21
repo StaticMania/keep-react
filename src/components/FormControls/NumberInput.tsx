@@ -41,13 +41,40 @@ export interface NumberInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string
 }
 
+/**
+ * Props for the NumberInput component.
+ * @interface NumberInputProps
+ * @extends {Omit<ComponentProps<'input'>, 'ref' | 'color' | 'className'>}
+ */
 export interface NumberInputProps extends Omit<ComponentProps<'input'>, 'ref' | 'color' | 'className'> {
+  /**
+   * The value of the input.
+   */
   value: number
+  /**
+   * The size of the input.
+   */
   sizing?: keyof NumberInputSizes
+  /**
+   * Specifies whether the input is disabled.
+   */
   disabled?: boolean
+  /**
+   * The helper text of the input.
+   */
   helperText?: ReactNode
+  /**
+   * The label of the input.
+   */
   icon?: ReactNode
+  /**
+   * The position of the icon.
+   */
   iconPosition?: 'right'
+  /**
+   * Callback function to handle input value changes.
+   * @param value - The new value of the input.
+   */
   setValue: React.Dispatch<React.SetStateAction<number>>
 }
 

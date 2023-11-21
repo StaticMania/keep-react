@@ -1,17 +1,22 @@
 import type { ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the CardList component.
+ * @interface CardListProps
+ */
 export interface CardListProps {
+  /**
+   * The children of the CardList component.
+   */
   children?: ReactNode
+
+  /**
+   * Additional class name for the CardList component.
+   */
   className?: string
 }
 
-/**
- * Renders a list item for a card.
- * @param children - The content of the list item.
- * @param className - The CSS class name(s) to apply to the list item.
- * @returns A React component representing a list item for a card.
- */
 export const CardList: React.FC<CardListProps> = ({ children, className }) => {
   return <li className={cn(className)}>{children}</li>
 }

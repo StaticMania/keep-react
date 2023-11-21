@@ -2,48 +2,22 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Accordion } from '.'
 import { removeFragment } from '../../helpers/mergeDeep'
 
-/**
- * Meta information for the Accordion component.
- */
 const meta: Meta<typeof Accordion> = {
-  /**
-   * The tags associated with the Accordion component.
-   */
   tags: ['autodocs'],
-
-  /**
-   * The Accordion component.
-   */
   component: Accordion,
-
-  /**
-   * The arguments for the Accordion component.
-   */
   argTypes: {
-    /**
-     * The content of the Accordion.
-     */
     children: {
       description: 'Accordion content',
       control: { type: null },
     },
-    /**
-     * The icon to use when the Accordion is open.
-     */
     openIcon: {
       description: 'Accordion content Open Icon',
       control: { type: null },
     },
-    /**
-     * The icon to use when the Accordion is closed.
-     */
     closeIcon: {
       description: 'Accordion content Close Icon',
       control: { type: null },
     },
-    /**
-     * The position of the icon in the Accordion.
-     */
     iconPosition: {
       description: 'Accordion icon position',
       control: { type: 'radio' },
@@ -55,9 +29,6 @@ const meta: Meta<typeof Accordion> = {
         },
       },
     },
-    /**
-     * Whether the Accordion should always be open or not.
-     */
     alwaysOpen: {
       description: 'Accordion content always show or not',
       table: {
@@ -67,9 +38,6 @@ const meta: Meta<typeof Accordion> = {
         },
       },
     },
-    /**
-     * Whether the Accordion should be flush or not.
-     */
     flush: {
       description: 'Accordion flush show or not',
       table: {
@@ -79,9 +47,6 @@ const meta: Meta<typeof Accordion> = {
         },
       },
     },
-    /**
-     * Whether all Accordion items should be collapsed or not.
-     */
     collapseAll: {
       description: 'Accordion item collapseAll or not',
       table: {
@@ -91,9 +56,6 @@ const meta: Meta<typeof Accordion> = {
         },
       },
     },
-    /**
-     * Whether the Accordion item should be disabled or not.
-     */
     disabled: {
       description: 'Accordion item disabled or not',
       table: {
@@ -103,9 +65,6 @@ const meta: Meta<typeof Accordion> = {
         },
       },
     },
-    /**
-     * The theme of the Accordion.
-     */
     theme: {
       description: 'Accordion theme',
       control: { type: null },
@@ -117,12 +76,6 @@ const meta: Meta<typeof Accordion> = {
 }
 export default meta
 type Story = StoryObj<typeof Accordion>
-
-/**
- * Default Accordion.
- * @param args The arguments for the Accordion.
- * @returns The Accordion.
- */
 
 export const DefaultAccordion: Story = {
   args: {
@@ -141,12 +94,6 @@ export const DefaultAccordion: Story = {
     ),
   },
 }
-
-/**
- * Accordion with multiple items, collapse all and flush.
- * @param args The arguments for the Accordion.
- * @returns The Accordion.
- */
 
 export const AccordionWithCollapseAll: Story = {
   args: {
@@ -218,24 +165,12 @@ export const AccordionWithCollapseAll: Story = {
   },
 }
 
-/**
- * Accordion with left side icon.
- * iconPosition: 'left'
- */
-
 export const AccordionWithLeftSideIcon: Story = {
   args: {
     iconPosition: 'left',
     ...AccordionWithCollapseAll.args,
   },
 }
-
-/**
- * Open Accordion.
- * alwaysOpen: true,
- * collapseAll: false,
- * disabled: false,
- */
 
 export const OpenAccordion: Story = {
   args: {
@@ -244,11 +179,6 @@ export const OpenAccordion: Story = {
     collapseAll: false,
   },
 }
-
-/**
- * Disabled Accordion.
- * disabled: true,
- */
 
 export const DisabledAccordion: Story = {
   args: {

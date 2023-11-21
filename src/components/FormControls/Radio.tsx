@@ -20,13 +20,45 @@ export interface RadioInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string
 }
 
+/**
+ * Props for the Radio component.
+ * @interface RadioProps
+ * @extends {Omit<ComponentProps<'input'>, 'type' | 'ref'>}
+ */
 export interface RadioProps extends Omit<ComponentProps<'input'>, 'type' | 'ref'> {
+  /**
+   * The sizing of the radio input.
+   */
   sizing?: keyof RadioInputSizes
+
+  /**
+   * The shape of the radio input.
+   */
   radioShape?: 'circle' | 'square'
+
+  /**
+   * The value of the radio input.
+   */
   value?: string
+
+  /**
+   * The selected value of the radio input.
+   */
   selected?: string
+
+  /**
+   * The color of the radio input.
+   */
   color?: keyof KeepStateColors
+
+  /**
+   * Event handler for when the radio option changes.
+   */
   onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+  /**
+   * Additional class name for the radio component.
+   */
   className?: string
 }
 

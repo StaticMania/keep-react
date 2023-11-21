@@ -7,17 +7,65 @@ import { SingleDatePicker } from './SingleDatePicker'
 import { TimePicker } from './TimePicker'
 import { YearPicker } from './YearPicker'
 
+/**
+ * Props for the DatePicker component.
+ * @interface DatePickerProps
+ */
 export interface DatePickerProps {
+  /**
+   * Determines whether to show two months in the date picker.
+   */
   showTwoMonth?: boolean
+
+  /**
+   * Callback function for handling range date selection.
+   * @param value - The selected range date value.
+   */
   rangeDate?: (value: rangePicker | ((prevValue: rangePicker | undefined) => rangePicker)) => void
+
+  /**
+   * The content to be rendered inside the DatePicker component.
+   */
   children: ReactNode
+
+  /**
+   * State setter for single date selection.
+   */
   singleDatePicker?: React.Dispatch<React.SetStateAction<Date | null>>
+
+  /**
+   * State setter for year selection.
+   */
   yearPicker?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
+
+  /**
+   * State setter for month selection.
+   */
   monthPicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+
+  /**
+   * State setter for time selection.
+   */
   timePicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+
+  /**
+   * The CSS class name for the DatePicker component.
+   */
   className?: string
+
+  /**
+   * The CSS style for the icon element.
+   */
   iconStyle?: string
+
+  /**
+   * The placeholder text for the DatePicker component.
+   */
   placeholder?: string
+
+  /**
+   * The icon element to be rendered inside the DatePicker component.
+   */
   icon?: ReactNode
 }
 

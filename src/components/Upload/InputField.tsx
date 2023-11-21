@@ -8,42 +8,25 @@ import { useUploadContext } from './UploadContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface representing the theme for the keepInputField component.
- */
 export interface keepInputFieldTheme {
-  base: string // The base color for the input field
-  disabled: string // The color for the disabled state of the input field
+  base: string
+  disabled: string
   label: {
-    base: string // The base color for the label
-    root: string // The color for the root element of the label
-    icon: string // The color for the icon in the label
-    dragDrop: string // The color for the drag and drop area in the label
-    fileType: string // The color for the file type in the label
+    base: string
+    root: string
+    icon: string
+    dragDrop: string
+    fileType: string
 
     upload: {
-      base: string // The base color for the upload section
-      input: string // The color for the input element in the upload section
-      fileName: string // The color for the file name in the upload section
+      base: string
+      input: string
+      fileName: string
     }
   }
 }
 
 export const InputField: FC = () => {
-  /**
-   * Represents an input field component used for file uploads.
-   *
-   * @remarks
-   * This component is used to handle file uploads and provides various properties and methods for customization.
-   *
-   * @example
-   * ```tsx
-   * const { disabled, onFileChange, file, showProgressBar, progressType, fileType, title, icon, id, uploadBtnType } =
-   *   useUploadContext()
-   * ```
-   *
-   * @beta
-   */
   const {
     disabled,
     onFileChange,

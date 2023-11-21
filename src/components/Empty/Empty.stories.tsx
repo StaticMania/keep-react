@@ -3,10 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Empty } from './'
 import Image from 'next/image'
 
-/**
- * Meta information for the Empty component.
- *
- */
 const meta: Meta<typeof Empty> = {
   tags: ['autodocs'],
   component: Empty,
@@ -73,9 +69,6 @@ const meta: Meta<typeof Empty> = {
 export default meta
 type Story = StoryObj<typeof Empty>
 
-/**
- * Default Empty Page story.
- */
 export const DefaultEmptyPage: Story = {
   args: {
     title: 'Oops! You seem to be lost',
@@ -95,10 +88,6 @@ export const DefaultEmptyPage: Story = {
   },
 }
 
-/**
- * Empty Folder story.
- */
-
 export const EmptyFolder: Story = {
   args: {
     title: 'This folder has gone missing',
@@ -115,10 +104,6 @@ export const EmptyFolder: Story = {
     ),
   },
 }
-
-/**
- * No Data Found story.
- */
 
 export const NoDataFound: Story = {
   args: {
@@ -138,10 +123,6 @@ export const NoDataFound: Story = {
   },
 }
 
-/**
- * No Result Found story.
- */
-
 export const NoResultPage: Story = {
   args: {
     title: 'Sorry, no result found!',
@@ -158,10 +139,6 @@ export const NoResultPage: Story = {
     ),
   },
 }
-
-/**
- * Not Found Page story.
- */
 
 export const NotFoundPage: Story = {
   args: {
@@ -180,9 +157,6 @@ export const NotFoundPage: Story = {
   },
 }
 
-/**
- * Page Not Available story.
- */
 export const PageNotAvailable: Story = {
   args: {
     title: "This page isn't available right now",

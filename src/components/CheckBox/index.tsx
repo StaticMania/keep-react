@@ -19,17 +19,66 @@ export interface keepCheckboxTheme {
   color: KeepStateColors
 }
 
+/**
+ * Checkbox component props.
+ * @interface CheckboxProps
+ * @extends {Omit<ComponentProps<'input'>, 'className' | 'color' | 'size' | 'type'>}
+ */
 export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'className' | 'color' | 'size' | 'type'> {
+  /**
+   * The label to display next to the checkbox.
+   */
   label?: ReactNode
+
+  /**
+   * Determines if the checkbox is disabled.
+   */
   disabled?: boolean
+
+  /**
+   * The size of the checkbox.
+   */
   size?: keyof CheckboxSizes
+
+  /**
+   * The color of the checkbox.
+   */
   color?: keyof KeepStateColors
+
+  /**
+   * The color of the label.
+   */
   labelColor?: keyof CheckboxLabelColors
+
+  /**
+   * The variant of the checkbox (square or circle).
+   */
   variant?: 'square' | 'circle'
+
+  /**
+   * The name of the field associated with the checkbox.
+   */
   fieldName?: string
+
+  /**
+   * Determines if the checkbox is checked.
+   */
   isChecked?: boolean
+
+  /**
+   * Callback function to handle checkbox checked state changes.
+   * @param value - The new checked state value.
+   */
   handleChecked?: (value: boolean) => void
+
+  /**
+   * Additional class name for the checkbox component.
+   */
   className?: string
+
+  /**
+   * Additional inline style for the label.
+   */
   labelStyle?: string
 }
 

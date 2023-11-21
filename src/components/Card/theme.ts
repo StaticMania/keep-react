@@ -1,8 +1,5 @@
 import type { KeepCardTheme } from '.'
 
-/**
- * Defines the theme object for the KeepCard component.
- */
 export const cardTheme: KeepCardTheme = {
   base: 'flex rounded-md bg-white ',
   children: 'flex h-full flex-col justify-center gap-3',

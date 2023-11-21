@@ -15,11 +15,31 @@ export interface LabelColors extends KeepStateColors {
   default: string
 }
 
+/**
+ * Props for the Label component.
+ * @interface LabelProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'label'>, 'className' | 'color'>>}
+ */
 export interface LabelProps extends PropsWithChildren<Omit<ComponentProps<'label'>, 'className' | 'color'>> {
+  /**
+   * The color of the label.
+   */
   color?: keyof LabelColors
+  /**
+   * The value of the label.
+   */
   value?: string
+  /**
+   * Specifies whether the label is disabled or not.
+   */
   disabled?: boolean
+  /**
+   * The ID of the form element that the label is associated with.
+   */
   htmlFor?: string
+  /**
+   * Additional CSS class for the label.
+   */
   className?: string
 }
 

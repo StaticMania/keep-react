@@ -3,6 +3,7 @@ import { TextInput, TextInputColors, TextInputSizes } from '../FormControls/Text
 
 /**
  * Props for the SearchBar component.
+ * @interface SearchBarProps
  */
 interface SearchBarProps {
   /**

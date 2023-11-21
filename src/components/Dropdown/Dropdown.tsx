@@ -26,17 +26,42 @@ export interface keepDropdownTheme {
   arrowIcon: string
 }
 
+/**
+ * Props for the Dropdown component.
+ */
 export interface DropdownProps
   extends PropsWithChildren,
     Pick<FloatingProps, 'placement' | 'trigger'>,
     Omit<ButtonProps, 'theme'> {
+  /**
+   * Determines whether to show the arrow icon.
+   */
   arrowIcon?: boolean
+
+  /**
+   * Determines whether the dropdown should be dismissed when clicked.
+   */
   dismissOnClick?: boolean
+
+  /**
+   * Determines whether to show a floating arrow.
+   */
   floatingArrow?: boolean
+
+  /**
+   * The label for the dropdown.
+   */
   label: ReactNode
+
+  /**
+   * The theme for the dropdown.
+   */
   theme?: DeepPartial<keepDropdownTheme>
 }
 
+/**
+ * Props for the TriggerWrapper component.
+ */
 export interface TriggerWrapperProps extends ButtonProps {
   setButtonWidth?: Dispatch<SetStateAction<number | undefined>>
 }
@@ -70,6 +95,14 @@ const DropdownComponent: FC<DropdownProps> = ({ children, dismissOnClick = true,
   const [closeRequestKey, setCloseRequestKey] = useState<string | undefined>(undefined)
   const [buttonWidth, setButtonWidth] = useState<number | undefined>(undefined)
 
+  /**
+   * Attaches a close listener to the provided React node.
+   * If the node is a DropdownItem, it clones the node and adds an onClick handler
+   * that triggers the original onClick function and updates the close request key.
+   * If the node has children, it recursively attaches the close listener to each child.
+   * @param node - The React node to attach the close listener to.
+   * @returns The updated React node with the close listener attached.
+   */
   const attachCloseListener = useCallback(
     // @ts-ignore TODO: Rewrite Dropdown
     (node: ReactNode) => {

@@ -1,23 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-/**
- * Represents a book.
- */
 export interface Book {
   id: number
   name: string
 }
-/**
- * Array of books.
- * @typedef {Object} Book
- * @property {number} id - The ID of the book.
- * @property {string} name - The name of the book.
- */
-
-/**
- * Array of books.
- * @type {Book[]}
- */
 export const books: Book[] = [
   { id: 1, name: 'To Kill a Mockingbird' },
   { id: 2, name: 'Pride and Prejudice' },
@@ -37,16 +23,10 @@ import { SearchBar } from '.'
 import { Button } from '../Button/Button'
 import { Dropdown } from '../Dropdown'
 
-/**
- * Meta information for the SearchBar component.
- */
 const meta: Meta<typeof SearchBar> = {
   component: SearchBar,
   tags: ['autodocs'],
   argTypes: {
-    /**
-     * Specifies the color variant of the search input component.
-     */
     color: {
       control: 'select',
       options: ['gray', 'info', 'error', 'warning', 'success'],
@@ -56,9 +36,6 @@ const meta: Meta<typeof SearchBar> = {
       },
       description: 'Specifies the color variant of the search input component.',
     },
-    /**
-     * Input Field Placeholder text.
-     */
     placeholder: {
       table: {
         type: { summary: 'string' },
@@ -67,9 +44,6 @@ const meta: Meta<typeof SearchBar> = {
       description: 'Input Field Placeholder text',
     },
 
-    /**
-     * Addon Position.
-     */
     addonPosition: {
       description: 'Addon Position',
       control: 'radio',
@@ -78,9 +52,6 @@ const meta: Meta<typeof SearchBar> = {
         defaultValue: { summary: 'left' },
       },
     },
-    /**
-     * Icon Position.
-     */
     iconPosition: {
       description: 'Icon Position',
       control: 'radio',
@@ -89,9 +60,6 @@ const meta: Meta<typeof SearchBar> = {
         defaultValue: { summary: 'left' },
       },
     },
-    /**
-     * Available size for searchbar.
-     */
     size: {
       description: 'Avaiable size for searchbar',
       control: 'select',
@@ -101,9 +69,6 @@ const meta: Meta<typeof SearchBar> = {
         defaultValue: { summary: 'md' },
       },
     },
-    /**
-     * Disables interactions with the search input component.
-     */
     disabled: {
       control: 'boolean',
       description: 'Disables interactions with the search input component',
@@ -112,9 +77,6 @@ const meta: Meta<typeof SearchBar> = {
         defaultValue: { summary: false },
       },
     },
-    /**
-     * Displays a border around the search input component.
-     */
     bordered: {
       control: 'boolean',
       description: 'Displays a border around the search input component',
@@ -123,9 +85,6 @@ const meta: Meta<typeof SearchBar> = {
         defaultValue: { summary: false },
       },
     },
-    /**
-     * Applies a background style to the search input component.
-     */
     withBg: {
       control: 'boolean',
       description: 'Applies a background style to the search input component.',
@@ -134,18 +93,12 @@ const meta: Meta<typeof SearchBar> = {
         defaultValue: { summary: false },
       },
     },
-    /**
-     * Search Bar Icon.
-     */
     icon: {
       description: 'Search Bar Icon',
       control: {
         disable: true,
       },
     },
-    /**
-     * Search Bar Addon.
-     */
     addon: {
       description: 'Search Bar Addon',
       control: {
@@ -158,10 +111,6 @@ const meta: Meta<typeof SearchBar> = {
 export default meta
 type Story = StoryObj<typeof SearchBar>
 
-/**
- * Renders a default search bar component.
- * @returns The JSX element representing the default search bar.
- */
 const DefaultSearch = () => {
   const [data, setData] = useState<Book[]>([])
   const handleOnChange2 = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -195,9 +144,6 @@ const DefaultSearch = () => {
   )
 }
 
-/**
- * Renders a SearchBar component with color variant.
- */
 const SearchBarWithColorVariantCom = () => {
   const [data, setData] = useState<Book[]>([])
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -246,9 +192,6 @@ const SearchBarWithColorVariantCom = () => {
     </SearchBar>
   )
 }
-/**
- * Renders a SearchBar component with an icon and displays a list of books based on the search term.
- */
 const SearchBarWithIconCom = () => {
   const [data, setData] = useState<Book[]>([])
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -283,11 +226,6 @@ const SearchBarWithIconCom = () => {
   )
 }
 
-/**
- * Renders a disabled search bar component.
- *
- * @returns The disabled search bar component.
- */
 const DisabledSearchBar = () => {
   return (
     <SearchBar
@@ -298,28 +236,16 @@ const DisabledSearchBar = () => {
   )
 }
 
-/**
- * DefaultSearchBar story.
- */
 export const DefaultSearchBar: Story = {
   render: () => <DefaultSearch />,
 }
 
-/**
- * Story configuration for SearchBarWithColorVariant.
- */
 export const SearchBarWithColorVariant: Story = {
   render: () => <SearchBarWithColorVariantCom />,
 }
-/**
- * Renders a SearchBar component with an icon.
- */
 export const SearchBarWithIcon: Story = {
   render: () => <SearchBarWithIconCom />,
 }
-/**
- * Story for rendering a disabled search bar.
- */
 export const DisableSearchBar: Story = {
   render: () => <DisabledSearchBar />,
 }

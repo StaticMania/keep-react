@@ -12,27 +12,12 @@ import type { keepAccordionTitleTheme } from './AccordionTitle'
 import { AccordionTitle } from './AccordionTitle'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface for defining the theme of the KeepAccordion component.
- */
 export interface keepAccordionTheme {
-  /**
-   * The root theme object for the KeepAccordion component.
-   */
   root: keepAccordionRootTheme
-  /**
-   * The theme object for the KeepAccordionContent component.
-   */
   content: keepAccordionComponentTheme
-  /**
-   * The theme object for the KeepAccordionTitle component.
-   */
   title: keepAccordionTitleTheme
 }
 
-/**
- * Defines the theme of the root element of the Accordion component.
- */
 export interface keepAccordionRootTheme {
   base: string
   flush: KeepBoolean
@@ -113,21 +98,6 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
   disabled?: boolean
 }
 
-/**
- * Accordion component that displays collapsible panels.
- * @param alwaysOpen Whether to allow multiple panels to be open at the same time.
- * @param showIcon Whether to show an icon next to the panel title.
- * @param openIcon Icon to display when the panel is open.
- * @param closeIcon Icon to display when the panel is closed.
- * @param children The panels to display.
- * @param flush Whether to remove the margin and padding of the accordion.
- * @param collapseAll Whether to collapse all panels by default.
- * @param className Additional CSS class name(s) to apply.
- * @param iconPosition The position of the icon relative to the panel title.
- * @param disabled Whether the accordion is disabled.
- * @param customTheme Custom theme to apply.
- * @param props Additional HTML attributes to apply to the root element.
- */
 const AccordionComponent: FC<AccordionProps> = ({
   alwaysOpen = false,
   showIcon = true,

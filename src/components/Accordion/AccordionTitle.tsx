@@ -7,49 +7,16 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { useAccordionContext } from './AccordionPanelContext'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface representing the theme object for the KeepAccordionTitle component.
- */
-
 export interface keepAccordionTitleTheme {
-  /**
-   * The theme object for the arrow icon.
-   */
   arrow: {
-    /**
-     * The base color of the arrow icon.
-     */
     base: string
-    /**
-     * The color of the arrow icon when the Accordion is open.
-     */
     open: KeepBoolean
   }
-  /**
-   * The base color of the component.
-   */
   base: string
-  /**
-   * The theme object for the flush state of the component.
-   */
   flush: KeepBoolean
-  /**
-   * The theme object for the heading.
-   */
   heading: string
-  /**
-   * The color of the component when the Accordion is open.
-   */
   open: KeepBoolean
-  /**
-   * The color of the component when the Accordion is disabled.
-   */
   disabled: string
-  /**
-   * The theme object for the icon position.
-   * @property {string} left - The icon position is on the left.
-   * @property {string} right - The icon position is on the right.
-   */
   iconPosition: {
     left: string
     right: string
@@ -58,7 +25,6 @@ export interface keepAccordionTitleTheme {
 
 /**
  * Props for the AccordionTitle component.
- * 
  * @interface AccordionTitleProps
  * @extends {ComponentProps<'button'>}
  */
@@ -78,6 +44,10 @@ export interface AccordionTitleProps extends ComponentProps<'button'> {
    * The theme for the AccordionTitle component.
    */
   theme?: DeepPartial<keepAccordionTitleTheme>
+  /**
+   * className to apply to the AccordionTitle.
+   * @type {string}
+   */
   className?: string
 }
 

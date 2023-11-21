@@ -7,19 +7,7 @@ import { removeFragment } from '../../helpers/mergeDeep'
 const meta: Meta<typeof Alert> = {
   component: Alert,
   tags: ['autodocs'],
-  /**
-   * The arguments for the Alert component.
-   * @type {Object}
-   */
   argTypes: {
-    /**
-     * The background color of the Alert component.
-     * @type {string}
-     * @default gray
-     * @control color 
-     * @description What background color to use like
-     * @options error | gray | info | success | warning
-     */
     color: {
       control: 'select',
       options: ['error', 'gray', 'info', 'success', 'warning'],
@@ -29,38 +17,10 @@ const meta: Meta<typeof Alert> = {
       },
       description: 'What background color to use like',
     },
-    /**
-     * Whether to add rounded corners to the Alert component.
-     * @type {boolean}
-     * @default false
-     */
     rounded: { description: 'Adds rounded corners to the alert.' },
-    /**
-     * Whether to enable the dismiss icon for the Alert component.
-     * @type {boolean}
-     * @default false
-     */
     dismiss: { description: 'Enables or disables the dismiss icon.' },
-    /**
-     * Whether to add a border around the Alert component.
-     * @type {boolean}
-     * @default false
-     */
     withBorder: { description: 'Adds a border around the alert.' },
-    /**
-     * Whether to add a border accent to the Alert component.
-     * @type {boolean}
-     * @default false
-     */
     withBorderAccent: { description: 'Adds a border accent to the alert.' },
-    /**
-     * The position of the border accent for the Alert component.
-     * @type {string}
-     * @default left
-     * @control select
-     * @description What is the border accent position color to use like
-     * @options left | right | top | bottom
-     */
     withBorderAccentPosition: {
       control: 'select',
       options: ['left', 'right', 'top', 'bottom'],
@@ -70,32 +30,15 @@ const meta: Meta<typeof Alert> = {
         defaultValue: { summary: 'left' },
       },
     },
-    /**
-     * The children of the Alert component.
-     * @type {ReactNode}
-     * @default null
-     */
     children: {
       control: { disable: true },
     },
-    /**
-     * The icon of the Alert component.
-     */
     icon: {
       control: { disable: true },
     },
-    /**
-     * The additional content of the Alert component.
-     */
     additionalContent: {
       control: { disable: true },
     },
-    /**
-     * The onDismiss function of the Alert component.
-     * @type {function}
-     * @default null
-     * @control disable
-     */
     onDismiss: {
       control: { disable: true },
     },
@@ -104,20 +47,6 @@ const meta: Meta<typeof Alert> = {
 
 export default meta
 type Story = StoryObj<typeof Alert>
-
-/**
- * Default Alert
- * The default Alert component.
- * color: info
- * rounded: No rounded corners
- * withBorder: No border
- * withBorderAccent: No border accent
- * withBorderAccentPosition: left
- * dismiss: No dismiss icon
- * title: Default message - make it short
- * icon: <Info size={24} color="#0F3CD9" />
- * additionalContent: Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
- */
 
 export const DefaultAlert: Story = {
   args: {
@@ -131,7 +60,7 @@ export const DefaultAlert: Story = {
     icon: <Info size={24} color="#0F3CD9" />,
     additionalContent: removeFragment(
       <>
-        <div className="text-metal-500 mt-1 text-body-5">
+        <div className="mt-1 text-body-5 text-metal-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
           <Link href="/" className="ml-2 text-primary-600 underline">
             Link style
@@ -141,22 +70,12 @@ export const DefaultAlert: Story = {
     ),
   },
 }
-
-/**
- * Rounded Alert
- * Add rounded corners to the alert.
- */
 export const RoundedAlert: Story = {
   args: {
     ...DefaultAlert.args,
     rounded: true,
   },
 }
-/**
- * Alert with border
- * Add a border around the alert.
- * Add rounded corners to the alert.
- */
 export const AlertWithBorder: Story = {
   args: {
     ...DefaultAlert.args,
@@ -165,10 +84,6 @@ export const AlertWithBorder: Story = {
   },
 }
 
-/**
- * Alert with border accent
- * Add a border accent to the alert.
- */
 export const AlertWithAccentBorder: Story = {
   args: {
     ...DefaultAlert.args,
@@ -176,22 +91,12 @@ export const AlertWithAccentBorder: Story = {
   },
 }
 
-/**
- * Alert with border accent right
- * Add a border accent to the alert.
- */
-
 export const InfoAlert: Story = {
   args: {
     ...DefaultAlert.args,
   },
 }
-/**
- * Gray Alert
- * The Gray Alert component.
- * color: gray
- * @default args
- */
+
 export const GrayAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -199,13 +104,6 @@ export const GrayAlert: Story = {
     icon: <Info size={24} color="gray" />,
   },
 }
-
-/**
- * Error Alert
- * The Error Alert component.
- * color: error
- * @default args
- */
 
 export const ErrorAlert: Story = {
   args: {
@@ -215,13 +113,6 @@ export const ErrorAlert: Story = {
   },
 }
 
-/**
- * Success Alert
- * The Success Alert component.
- * color: success
- * @default args
- */
-
 export const SuccessAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -229,13 +120,6 @@ export const SuccessAlert: Story = {
     icon: <CheckCircle size={24} color="#0A9952" />,
   },
 }
-
-/**
- * Warning Alert
- * The Warning Alert component.
- * color: warning
- * @default args
- */
 
 export const WarningAlert: Story = {
   args: {

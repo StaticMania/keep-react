@@ -4,29 +4,124 @@ import { Bar, BarChart as BarChartCom, CartesianGrid, Cell, Legend, Tooltip, XAx
 import CustomLegend from './CustomLegend'
 import { CustomTooltip } from './CustomTooltip'
 
+/**
+ * Props for the BarChart component.
+ * @interface BarChartProps
+ */
 interface BarChartProps {
+  /**
+   * Determines if the bar is active.
+   */
   active?: boolean
+
+  /**
+   * The color of the active bar.
+   */
   activeColor?: string
+
+  /**
+   * The index of the active bar.
+   */
   activeIndex?: number
+
+  /**
+   * The background color of the bar.
+   */
   barBg?: string
+
+  /**
+   * The color of the bar.
+   */
   barColor?: string
+
+  /**
+   * The radius of the bar's border.
+   */
   barRadius?: number | [number, number, number, number]
+
+  /**
+   * The size of the bar.
+   */
   barSize?: number
+
+  /**
+   * The data for the chart.
+   */
   chartData?: unknown[]
+
+  /**
+   * The key for accessing the data in the chartData array.
+   */
   dataKey: string
+
+  /**
+   * The height of the chart.
+   */
   height?: number
+
+  /**
+   * The color of the inactive bar.
+   */
   inActiveColor?: string
+
+  /**
+   * The background color of the secondary bar.
+   */
   secondaryBarBg?: string
+
+  /**
+   * The color of the secondary bar.
+   */
   secondaryBarColor?: string
+
+  /**
+   * The key for accessing the secondary data in the chartData array.
+   */
   secondaryDataKey?: string
+
+  /**
+   * Determines if the background is shown.
+   */
   showBg?: boolean
+
+  /**
+   * Determines if the grid lines are shown.
+   */
   showGridLine?: boolean
+
+  /**
+   * Determines if the legend is shown.
+   */
   showLegend?: boolean
+
+  /**
+   * Determines if the tooltip is shown.
+   */
   showTooltip?: boolean
+
+  /**
+   * Determines if the X-axis is shown.
+   */
   showXaxis?: boolean
+
+  /**
+   * Determines if the Y-axis is shown.
+   */
   showYaxis?: boolean
+
+  /**
+   * The width of the chart.
+   */
   width?: number
+
+  /**
+   * The key for accessing the data on the X-axis.
+   */
   XAxisDataKey?: string
+
+  /**
+   * The key for accessing the data on the Y-axis.
+   */
   YAxisDataKey?: string
 }
 

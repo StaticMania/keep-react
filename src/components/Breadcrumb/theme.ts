@@ -1,8 +1,5 @@
 import { keepBreadCrumbTheme } from '.'
 
-/**
- * Defines the theme for the breadcrumb component.
- */
 export const breadcrumbTheme: keepBreadCrumbTheme = {
   breadCrumbWithBorder: 'border-metal-100 p-[9px] border-t border-b',
   item: {

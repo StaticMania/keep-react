@@ -6,112 +6,37 @@ import { getArrowPlacement } from '../../helpers/floating'
 import { useBaseFLoating, useFloatingInteractions } from '../../helpers/use-Floating'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface representing the theme for the Floating component.
- */
-/**
- * Interface representing the theme for the floating component.
- */
 export interface keepFloatingTheme {
-  /**
-   * The theme for the arrow in the floating component.
-   */
   arrow: keepFloatingArrowTheme
-
-  /**
-   * The animation style for the floating component.
-   */
   animation: string
-
-  /**
-   * The base style for the floating component.
-   */
   base: string
-
-  /**
-   * The content style for the floating component.
-   */
   content: string
-
-  /**
-   * The hidden style for the floating component.
-   */
   hidden: string
-
-  /**
-   * The style object for the floating component.
-   */
   style: {
-    /**
-     * The auto style for the floating component.
-     */
     auto: string
-
-    /**
-     * The dark style for the floating component.
-     */
     dark: string
-
-    /**
-     * The light style for the floating component.
-     */
     light: string
   }
-
-  /**
-   * The target style for the floating component.
-   */
   target: string
-
-  /**
-   * The title style for the floating component.
-   */
   title: string
 }
 
-/**
- * Interface representing the theme for the keepFloatingArrow component.
- */
 export interface keepFloatingArrowTheme {
-  /**
-   * The base theme for the arrow.
-   */
   base: string
-
-  /**
-   * The placement of the arrow.
-   */
   placement: string
-
-  /**
-   * The styles for different color schemes.
-   */
   style: {
-    /**
-     * The dark color scheme.
-     */
     dark: string
-
-    /**
-     * The light color scheme.
-     */
     light: string
-
-    /**
-     * The automatic color scheme.
-     */
     auto: string
   }
 }
 
-/**
- * Represents the style options for the Floating component.
- * The style can be either 'dark', 'light', or 'auto'.
- */
 export type FloatingStyle = 'dark' | 'light' | 'auto'
 
 /**
  * Props for the Floating component.
+ * @interface FloatingProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'content' | 'style'>>}
  */
 export interface FloatingProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'content' | 'style'> {
   /**
@@ -159,6 +84,7 @@ export interface FloatingProps extends PropsWithChildren, Omit<ComponentProps<'d
  * Floating component that displays a tooltip or popover.
  * @see https://floating-ui.com/docs/react-dom-interactions
  */
+
 export const Floating: FC<FloatingProps> = ({
   animation = 'duration-300',
   arrow = true,

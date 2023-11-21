@@ -1,15 +1,3 @@
-/**
- * Storybook for AvatarGroup
- * @packageDocumentation
- * @module Avatar
- * 
- * @remarks
- * The `AvatarGroup` component is used to display a group of avatars.
- * 
- * @see https://react.keepdesign.io/docs/components/avatargroup
- */
-
-
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { AvatarGroup } from './AvatarGroup'
@@ -34,10 +22,6 @@ const meta: Meta<typeof AvatarGroup> = {
 export default meta
 type Story = StoryObj<typeof AvatarGroup>
 
-/**
- * Default AvatarGroup
- */
-
 export const DefaultAvatarGroup: Story = {
   args: {
     children: removeFragment(
@@ -54,10 +38,6 @@ export const DefaultAvatarGroup: Story = {
   },
 }
 
-/**
- * AvatarGroup with Add Icon
- */
-
 export const AvatarWithAddIcon: Story = {
   args: {
     children: mergeChildren(
@@ -73,18 +53,12 @@ export const AvatarWithAddIcon: Story = {
   },
 }
 
-/**
- * AvatarGroup with Counter
- */
-
 export const AvatarWithNotification: Story = {
   args: {
     children: mergeChildren(DefaultAvatarGroup?.args?.children, <Avatar.Counter size="md" total={99} href="/" />),
   },
 }
-/**
- * AvatarGroup with Counter and Add Icon
- */
+
 export const AvatarWithNotificationAndAddIcon: Story = {
   args: {
     children: mergeChildren(

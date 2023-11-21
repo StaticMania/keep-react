@@ -5,9 +5,6 @@ import { useTheme } from '../../Keep/ThemeContext'
 import type { ButtonProps } from './Button'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface for defining the theme of a button group.
- */
 export interface keepButtonGroupTheme {
   base: string
   position: PositionInButtonGroup

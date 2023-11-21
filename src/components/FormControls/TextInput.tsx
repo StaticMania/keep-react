@@ -69,22 +69,75 @@ export interface TextInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
   [key: string]: string
 }
 
+/**
+ * Props for the TextInput component.
+ * @interface TextInputProps
+ * @extends {Omit<ComponentProps<'input'>, 'ref' | 'color' | 'className'>}
+ */
 export interface TextInputProps extends Omit<ComponentProps<'input'>, 'ref' | 'color' | 'className'> {
+  /**
+   * The sizing option for the TextInput.
+   */
   sizing?: keyof TextInputSizes
+  /**
+   * Determines whether the TextInput has a background color.
+   */
   withBg?: boolean
+  /**
+   * Determines whether the TextInput has a border.
+   */
   border?: boolean
+  /**
+   * Determines whether the TextInput has a shadow.
+   */
   shadow?: boolean
+  /**
+   * Determines whether the TextInput is disabled.
+   */
   disabled?: boolean
+  /**
+   * The helper text to display below the TextInput.
+   */
   helperText?: ReactNode
+  /**
+   * The addon content to display alongside the TextInput.
+   */
   addon?: ReactNode
+  /**
+   * The position of the addon content relative to the TextInput.
+   */
   addonPosition?: 'left' | 'right'
+  /**
+   * The icon to display alongside the TextInput.
+   */
   icon?: ReactNode
+  /**
+   * The position of the icon relative to the TextInput.
+   */
   iconPosition?: 'left' | 'right'
+  /**
+   * The color variant for the TextInput.
+   */
   color?: keyof TextInputColors
+  /**
+   * The value of the TextInput.
+   */
   value?: string
+  /**
+   * The event handler for the onChange event of the TextInput.
+   */
   handleOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  /**
+   * The CSS class name for the TextInput.
+   */
   className?: string
+  /**
+   * The CSS style for the addon content.
+   */
   addonStyle?: string
+  /**
+   * The CSS style for the icon.
+   */
   iconStyle?: string
 }
 

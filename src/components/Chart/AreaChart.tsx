@@ -2,25 +2,102 @@ import { FC } from 'react'
 import { Area, AreaChart as AreaChartCom, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { CustomTooltip } from './CustomTooltip'
 
+/**
+ * Props for the AreaChart component.
+ */
 interface AreaChartProps {
+  /**
+   * Determines whether to show the tooltip.
+   */
   showTooltip?: boolean
+
+  /**
+   * Determines whether to show the grid lines.
+   */
   showGridLine?: boolean
+
+  /**
+   * The type of chart to display. Can be either 'natural' or 'linear'.
+   */
   chartType?: 'natural' | 'linear'
+
+  /**
+   * Determines whether to show the X-axis.
+   */
   showXaxis?: boolean
+
+  /**
+   * Determines whether to show the Y-axis.
+   */
   showYaxis?: boolean
+
+  /**
+   * The key for the main data in the chart.
+   */
   dataKey: string
+
+  /**
+   * The key for the secondary data in the chart.
+   */
   secondaryDataKey?: string
+
+  /**
+   * The key for the X-axis data.
+   */
   XAxisDataKey?: string
+
+  /**
+   * The key for the Y-axis data.
+   */
   YAxisDataKey?: string
+
+  /**
+   * The chart data.
+   */
   chartData?: unknown[]
+
+  /**
+   * The color of the main chart.
+   */
   chartColor?: string
+
+  /**
+   * The color of the secondary chart.
+   */
   secondaryChartColor?: string
+
+  /**
+   * The stroke color of the main area.
+   */
   areaStoke?: string
+
+  /**
+   * The stroke color of the secondary area.
+   */
   secondaryAreaStoke?: string
+
+  /**
+   * The opacity values for different parts of the chart.
+   */
   opacity?: {
+    /**
+     * The start opacity for the top area.
+     */
     topStartOpacity?: number
+
+    /**
+     * The end opacity for the top area.
+     */
     topEndOpacity?: number
+
+    /**
+     * The start opacity for the secondary area.
+     */
     secondaryStartOpacity?: number
+
+    /**
+     * The end opacity for the secondary area.
+     */
     secondaryEndOpacity?: number
   }
 }

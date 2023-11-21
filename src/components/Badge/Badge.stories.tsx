@@ -2,9 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Crown } from 'phosphor-react'
 import { Badge } from '.'
 
-/**
- * Meta information for the Badge component.
- */
 const meta: Meta<typeof Badge> = {
   component: Badge,
   tags: ['autodocs'],
@@ -22,18 +19,6 @@ const meta: Meta<typeof Badge> = {
       </div>
     ),
   ],
-  /**
-   * The arguments for the Badge component.
-   * 
-   * @property {object} argTypes - The arguments for the Badge component.
-   * size - Size variant of the badge.
-   * iconPosition - Position of the icon inside the badge.
-   * color - Available Badge color.
-   * colorType - Color type of the badge.
-   * badgeType - Type of the badge ('default', 'outline', or 'text').
-   * href - URL to navigate when the badge is clicked.
-   * icon - Icon element to be displayed inside the badge.
-   */
   argTypes: {
     size: {
       description: 'Size variant of the badge.',
@@ -109,16 +94,6 @@ const meta: Meta<typeof Badge> = {
 export default meta
 type Story = StoryObj<typeof Badge>
 
-/**
- * Default Badge story.
- * 
- * size - xs
- * colorType - light
- * color - info
- * children - Default Badge
- * icon - null
- */
-
 export const DefaultBadge: Story = {
   args: {
     size: 'xs',
@@ -128,12 +103,6 @@ export const DefaultBadge: Story = {
     icon: null,
   },
 }
-
-/**
- * Badge with left icon.
- * 
- * iconPosition - left  (default)
- */
 
 export const BadgeWithLeftIcon: Story = {
   args: {
@@ -146,12 +115,6 @@ export const BadgeWithLeftIcon: Story = {
   },
 }
 
-/**
- * Badge with right icon.
- * 
- * iconPosition - right
- * size - sm
- */
 export const BadgeWithRightIcon: Story = {
   args: {
     ...BadgeWithLeftIcon.args,

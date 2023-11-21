@@ -5,6 +5,8 @@ import { AccordionPanelContext } from './AccordionPanelContext'
 
 /**
  * Props for the AccordionPanel component.
+ * @interface AccordionPanelProps
+ * @extends {PropsWithChildren<AccordionProps>}
  */
 export interface AccordionPanelProps extends PropsWithChildren<AccordionProps> {
   /**
@@ -17,14 +19,6 @@ export interface AccordionPanelProps extends PropsWithChildren<AccordionProps> {
   setOpen?: () => void
 }
 
-/**
- * Renders a panel for an accordion component.
- * @param {AccordionPanelProps} props - The props for the AccordionPanel component.
- * @param {ReactNode} props.children - The content to be displayed inside the AccordionPanel.
- * @param {boolean} props.alwaysOpen - Whether the AccordionPanel should always be open.
- * @param {boolean} props.isOpen - Whether the AccordionPanel is currently open.
- * @returns {JSX.Element} - The AccordionPanel component.
- */
 export const AccordionPanel: FC<AccordionPanelProps> = ({ children, ...props }) => {
   const { alwaysOpen } = props
   const [isOpen, setOpen] = useState(props.isOpen)

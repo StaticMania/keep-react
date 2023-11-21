@@ -1,29 +1,30 @@
-/**
- * @packageDocumentation
- * @module Avatar
- *
- * @remarks
- * The `AvatarGroupCounter` component is used to display a counter for the number of users represented by an `AvatarGroup` component.
- *
- * The Avatar Group Counter component displays a limited set of avatar images while representing the remaining users numerically with a label like "+99" or a similar indicator.
- *
- * @see https://react.keepdesign.io/docs/components/avatargroup#avatar-group-with-counter
- */
 import type { PropsWithChildren } from 'react'
 import type { AvatarSizes } from './Avatar'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
 /**
- * @param total - The total number of users represented by the counter.
- * @param href - The URL to link to when the counter is clicked.
- * @param size - The size of the Avatar Group Counter component. Default is 'md'.
+ * Props for the AvatarGroupCounter component.
  */
-
 export type AvatarGroupCounterProps = PropsWithChildren<{
+  /**
+   * The total number to be displayed.
+   */
   total?: number
+
+  /**
+   * The URL to navigate to when the component is clicked.
+   */
   href?: string
+
+  /**
+   * The size of the avatar.
+   */
   size?: keyof AvatarSizes
+
+  /**
+   * Additional CSS class names for the component.
+   */
   className?: string
 }>
 
