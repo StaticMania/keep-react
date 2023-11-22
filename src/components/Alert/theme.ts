@@ -1,56 +1,50 @@
-import type { keepAlertTheme } from '.'
+import { keepAlertTheme } from './Alert'
 
 export const alertTheme: keepAlertTheme = {
-  base: 'py-[18px] px-6 max-w-lg',
+  base: 'relative max-w-lg py-[18px] pl-5 pr-6',
   dismiss: 'hidden',
-  border: {
-    off: 'border-0',
-    on: {
-      error: 'border border-error-100',
-      gray: 'border border-metal-200',
-      info: 'border border-primary-100',
-      success: 'border border-success-200',
-      warning: 'border border-warning-100',
-    },
-    borderAccent: {
-      top: 'border-t-[6px]',
-      bottom: 'border-b-[6px]',
-      left: 'border-l-[6px]',
-      right: 'border-r-[6px]',
-    },
-  },
-  wrapper: 'flex',
-  infoButton: {
-    base: 'pr-3.5',
-  },
-  closeButton: {
-    base: '-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg p-1.5 focus:ring-2',
-    icon: 'w-5 h-5',
-    color: {
-      info: 'bg-primary-25 text-primary-500 hover:bg-primary-100 focus:ring-blue-400',
-      gray: 'bg-metal-50 text-metal-600 hover:bg-metal-200 focus:ring-metal-200',
-      error: 'bg-error-25 !text-error-500 hover:bg-error-50 hover:text-white focus:ring-red-400',
-      success: 'bg-success-50 text-green-500 hover:bg-green-100 focus:ring-green-400',
-      warning: 'bg-warning-25 text-yellow-500 hover:bg-yellow-100 focus:ring-yellow-400',
-    },
-  },
+  container: 'flex gap-[14px]',
   color: {
-    info: 'bg-primary-25 border-primary-100',
-    gray: 'bg-metal-50 border-metal-200',
-    error: 'bg-error-25 border-error-100',
-    success: 'bg-success-50 border-success-200',
-    warning: 'bg-warning-25 border-warning-200',
+    primary: 'bg-primary-50',
+    success: 'bg-success-50',
+    warning: 'bg-warning-50',
+    error: 'bg-error-50',
+    metal: 'bg-metal-50',
   },
-  icon: 'mr-3 inline h-5 w-5 flex-shrink-0',
   rounded: 'rounded-md',
-  title: {
-    base: 'md:text-body-3 text-body-4 font-semibold',
+  border: 'border',
+  borderColor: {
+    primary: 'border-primary-100',
+    success: 'border-success-100',
+    warning: 'border-warning-100',
+    error: 'border-error-100',
+    metal: 'border-metal-200',
+  },
+  disMissButton: {
+    base: 'absolute right-4 top-4 p-1 rounded-lg',
     color: {
-      info: 'text-primary-600',
-      gray: 'text-metal-900',
-      error: 'text-error-600',
+      primary: 'text-primary-600 hover:bg-primary-200 focus:ring-2 focus:ring-primary-300',
+      success: 'text-success-600 hover:bg-success-200 focus:ring-2 focus:ring-success-300',
+      warning: 'text-warning-600 hover:bg-warning-200 focus:ring-2 focus:ring-warning-300',
+      error: 'text-error-600 hover:bg-error-200 focus:ring-2 focus:ring-error-300',
+      metal: 'text-metal-600 hover:bg-metal-200 focus:ring-2 focus:ring-metal-300',
+    },
+  },
+  borderAccent: {
+    left: 'border-l-[6px]',
+    right: 'border-r-[6px]',
+    top: 'border-t-[6px]',
+    bottom: 'border-b-[6px]',
+  },
+  title: {
+    base: 'mb-3 !text-body-3 font-semibold',
+    color: {
+      primary: 'text-primary-600',
       success: 'text-success-600',
       warning: 'text-warning-600',
+      error: 'text-error-600',
+      metal: 'text-metal-600',
     },
   },
+  description: 'md:text-body-4 font-normal text-metal-500',
 }

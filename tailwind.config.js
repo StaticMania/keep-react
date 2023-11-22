@@ -7,7 +7,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  presets: [require('./src/theme/keep-preset.ts')],
   theme: {
     container: {
       center: true,
@@ -26,8 +25,8 @@ module.exports = {
       }, 
       
     },
-
-    
+      
   },
+  presets: [require('./src/theme/keep-preset.ts')],
   plugins: [],
 }

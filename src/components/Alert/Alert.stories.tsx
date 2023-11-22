@@ -10,10 +10,10 @@ const meta: Meta<typeof Alert> = {
   argTypes: {
     color: {
       control: 'select',
-      options: ['error', 'gray', 'info', 'success', 'warning'],
+      options: ['primary', 'success', 'warning', 'error', 'metal'],
       table: {
-        type: { summary: 'error | gray | info | success | warning' },
-        defaultValue: { summary: 'gray' },
+        type: { summary: 'primary | success | warning | error | metal' },
+        defaultValue: { summary: 'primary' },
       },
       description: 'What background color to use like',
     },
@@ -36,9 +36,6 @@ const meta: Meta<typeof Alert> = {
     icon: {
       control: { disable: true },
     },
-    additionalContent: {
-      control: { disable: true },
-    },
     onDismiss: {
       control: { disable: true },
     },
@@ -50,7 +47,7 @@ type Story = StoryObj<typeof Alert>
 
 export const DefaultAlert: Story = {
   args: {
-    color: 'info',
+    color: 'primary',
     rounded: false,
     withBorder: false,
     withBorderAccent: false,
@@ -58,14 +55,22 @@ export const DefaultAlert: Story = {
     dismiss: false,
     title: 'Default message - make it short',
     icon: <Info size={24} color="#0F3CD9" />,
-    additionalContent: removeFragment(
+    children: removeFragment(
       <>
-        <div className="text-metal-500 mt-1 text-body-5">
-          Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-          <Link href="/" className="ml-2 text-primary-600 underline">
-            Link style
-          </Link>
-        </div>
+        <Alert.Container>
+          <Alert.Icon>
+            <Info size={24} color="#0F3CD9" />
+          </Alert.Icon>
+          <Alert.Body>
+            <Alert.Title>Default message - make it short</Alert.Title>
+            <Alert.Description>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
+              <Link href="/alert" className="ml-1 inline-block text-body-4 text-primary-600 underline">
+                Link style
+              </Link>
+            </Alert.Description>
+          </Alert.Body>
+        </Alert.Container>
       </>,
     ),
   },
@@ -98,7 +103,7 @@ export const InfoAlert: Story = {
 export const GrayAlert: Story = {
   args: {
     ...DefaultAlert.args,
-    color: 'gray',
+    color: 'metal',
     icon: <Info size={24} color="gray" />,
   },
 }
