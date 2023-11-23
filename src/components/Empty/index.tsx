@@ -42,7 +42,7 @@ export const Empty: FC<EmptyProps> = ({
       <p className={cn(theme.content, contentStyle)}>{content}</p>
 
       {buttonText && (
-        <Button href={redirectUrl} size={redirectBtnSize} type={buttonType}>
+        <Button href={redirectUrl} size={redirectBtnSize} buttonType={buttonType}>
           {buttonText}
         </Button>
       )}

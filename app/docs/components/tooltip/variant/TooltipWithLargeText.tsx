@@ -11,7 +11,7 @@ const TooltipWithLargeText = () => {
         placement="top"
         animation="duration-300"
         style="dark">
-        <Button size="sm" type="primary">
+        <Button size="sm" buttonType="primary">
           Tooltip Content
         </Button>
       </Tooltip>
@@ -22,7 +22,7 @@ const TooltipWithLargeText = () => {
         placement="bottom"
         animation="duration-300"
         style="light">
-        <Button size="sm" type="primary">
+        <Button size="sm" buttonType="primary">
           Tooltip Content
         </Button>
       </Tooltip>
@@ -45,7 +45,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" buttonType="primary">
           Tooltip Content
         </Button>
       </Tooltip>
@@ -57,7 +57,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="light"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" buttonType="primary">
           Tooltip Content
         </Button>
       </Tooltip>

@@ -17,7 +17,7 @@ const DefaultNotificationComponent = () => {
   }
   return (
     <div className="px-2 py-3">
-      <Button onClick={handleShowNotification} type="primary">
+      <Button onClick={handleShowNotification} buttonType="primary">
         Show Notification
       </Button>
       <Notification
@@ -31,10 +31,10 @@ const DefaultNotificationComponent = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
             <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
+              <Button size="xs" buttonType="primary" color="info">
                 Accept
               </Button>
-              <Button size="xs" type="outlineGray" color="info" className="ml-3">
+              <Button size="xs" buttonType="outlineGray" color="info" className="ml-3">
                 Review
               </Button>
             </div>
@@ -57,7 +57,7 @@ const NotificationWithAvatarComponent = () => {
 
   return (
     <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
+      <Button buttonType="primary" onClick={handleShowNotification}>
         Show Notification
       </Button>
       <Notification
@@ -70,10 +70,10 @@ const NotificationWithAvatarComponent = () => {
           <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
+              <Button size="xs" buttonType="primary" color="info">
                 Accept
               </Button>
-              <Button size="xs" type="outlineGray" color="info" className="ml-3">
+              <Button size="xs" buttonType="outlineGray" color="info" className="ml-3">
                 View Profile
               </Button>
             </div>
@@ -103,7 +103,7 @@ const NotificationWithCardComponent = () => {
   }
   return (
     <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
+      <Button buttonType="primary" onClick={handleShowNotification}>
         Show Notification
       </Button>
       <Notification
@@ -116,10 +116,10 @@ const NotificationWithCardComponent = () => {
           <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info" width="half">
+              <Button size="xs" buttonType="primary" color="info" width="half">
                 Download
               </Button>
-              <Button size="xs" type="outlineGray" color="info" className="ml-3" width="half">
+              <Button size="xs" buttonType="outlineGray" color="info" className="ml-3" width="half">
                 View Figma
               </Button>
             </div>
@@ -141,7 +141,7 @@ const NotificationWithIconComponent = () => {
 
   return (
     <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
+      <Button buttonType="primary" onClick={handleShowNotification}>
         Show Notification
       </Button>
       <Notification
@@ -151,7 +151,7 @@ const NotificationWithIconComponent = () => {
         position="bottom-left"
         className="max-w-[400px]"
         infoIcon={
-          <Button type="default" circle={true} size="xs">
+          <Button buttonType="default" circle={true} size="xs">
             <span>
               <Cookie size={24} weight="bold" color="#3D4A5C" />
             </span>
@@ -161,10 +161,10 @@ const NotificationWithIconComponent = () => {
           <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
+              <Button size="xs" buttonType="primary" color="info">
                 Accept
               </Button>
-              <Button size="xs" type="outlineGray" color="info" className="ml-3">
+              <Button size="xs" buttonType="outlineGray" color="info" className="ml-3">
                 Review
               </Button>
             </div>

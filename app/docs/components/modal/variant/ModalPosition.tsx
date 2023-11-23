@@ -10,23 +10,23 @@ const ModalPosition = () => {
   }
   return (
     <div className="px-2 py-3">
-      <Button type="primary" onClick={onClick}>
+      <Button buttonType="primary" onClick={onClick}>
         Modal
       </Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="top-center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClick}>
+          <Button buttonType="outlineGray" onClick={onClick}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClick}>
+          <Button buttonType="primary" onClick={onClick}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -48,7 +48,7 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button type='primary' onClick={onClick}>Modal</Button>
+      <Button buttonType='primary' onClick={onClick}>Modal</Button>
       <Modal
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
@@ -64,10 +64,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClick}>
+          <Button buttonType="outlineGray" onClick={onClick}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClick}>
+          <Button buttonType="primary" onClick={onClick}>
             Confirm
           </Button>
         </Modal.Footer>

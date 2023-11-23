@@ -9,7 +9,7 @@ const DefaultPopover = () => {
         description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
         additionalContent={
           <div className="mt-3 flex items-center gap-3">
-            <Button type="outlinePrimary" size="xs">
+            <Button buttonType="outlinePrimary" size="xs">
               Checkout
             </Button>
             <button className="text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">
@@ -34,7 +34,7 @@ export const PopoverComponent = () => {
       description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
       additionalContent={
         <div className="flex items-center gap-3 mt-3">
-          <Button type="outlinePrimary" size="xs">
+          <Button buttonType="outlinePrimary" size="xs">
             Checkout
           </Button>
           <button className="text-body-5 font-medium underline text-primary-400 underline-offset-[3px]">

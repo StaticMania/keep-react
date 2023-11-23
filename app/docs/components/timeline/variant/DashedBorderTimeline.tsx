@@ -14,7 +14,7 @@ const DashedBorderTimeline = () => {
             <Timeline.Body>
               Introducing a set of exciting new features that enhance user experience and functionality.
             </Timeline.Body>
-            <Button type="primary" size="sm">
+            <Button buttonType="primary" size="sm">
               Explore Features
               <ArrowRight className="ml-2 h-3 w-3" />
             </Button>
@@ -64,7 +64,7 @@ export const TimelineComponent = () => {
             Get access to over 20+ pages including a dashboard layout, charts,
             kanban board, calendar, and pre-order E-commerce & Marketing pages.
           </Timeline.Body>
-          <Button type="primary" size="sm">
+          <Button buttonType="primary" size="sm">
             Learn More
             <ArrowRight className="ml-2 h-3 w-3" />
           </Button>

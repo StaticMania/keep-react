@@ -5,7 +5,8 @@ import { cn } from '../../helpers/cn'
 
 interface PlayButtonProps {
   title?: string
-  type?: 'primary' | 'text' | 'outlineGray' | 'blur'
+  type?: 'button' | 'submit' | 'reset'
+  buttonType?: 'primary' | 'text' | 'outlineGray' | 'blur'
   icon?: ReactNode
   circle?: boolean
   size?: keyof ButtonSizes
@@ -16,7 +17,8 @@ interface PlayButtonProps {
 
 export const PlayButton: FC<PlayButtonProps> = ({
   title,
-  type = 'primary',
+  type = 'button',
+  buttonType = 'primary',
   icon,
   circle = false,
   size = 'md',
@@ -24,15 +26,15 @@ export const PlayButton: FC<PlayButtonProps> = ({
   titleStyle,
   onClick,
 }) => {
-  if (type === 'blur') {
+  if (buttonType === 'blur') {
     return (
-      <Button onClick={onClick} type={type} circle={circle} size={size} className={className}>
+      <Button onClick={onClick} type={type} buttonType={buttonType} circle={circle} size={size} className={className}>
         <span className="text-white">{icon}</span>
       </Button>
     )
   }
   return (
-    <Button onClick={onClick} type={type} circle={circle} size={size} className={className}>
+    <Button onClick={onClick} type={type} buttonType={buttonType} circle={circle} size={size} className={className}>
       {typeof icon !== undefined && <span className={cn(title ? 'pr-2' : '', titleStyle)}>{icon}</span>}
       {title}
     </Button>

@@ -63,7 +63,7 @@ const CardWithIcon = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button type="primary" size="sm">
+          <Button buttonType="primary" size="sm">
             Learn More
           </Button>
         </Card.Container>
@@ -151,10 +151,10 @@ export const CardComponent = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button type="outlinePrimary" className="!hidden md:!block">
+          <Button buttonType="outlinePrimary" className="!hidden md:!block">
             Learn More
           </Button>
-          <Button type="outlinePrimary" size="sm" className="md:hidden block">
+          <Button buttonType="outlinePrimary" size="sm" className="md:hidden block">
             Learn More
           </Button>
         </Card.Container>

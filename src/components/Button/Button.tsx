@@ -58,11 +58,11 @@ export interface keepButtonTheme {
   size: ButtonSizes
 }
 
-
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color' | 'type'> {
   href?: string
   color?: keyof ButtonColors
-  type?: keyof ButtonTypes
+  type?: 'button' | 'submit' | 'reset'
+  buttonType?: keyof ButtonTypes
   notificationLabel?: string
   notificationLabelStyle?: string
   pill?: boolean
@@ -97,7 +97,8 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
       onClick,
       color = 'info',
       disabled = false,
-      type = 'default',
+      type = 'button',
+      buttonType = 'default',
       href,
       notificationLabel,
       pill = false,
@@ -124,19 +125,19 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
           groupTheme.position[positionInGroup],
           !circle && theme.pill[pill ? 'on' : 'off'],
           circle && theme.circle.size[size],
-          type === 'default' && theme.default.color[color],
-          type === 'primary' && theme.primary.color[color],
-          type === 'outlineGray' && theme.outlineGray.color[color],
-          type === 'outlinePrimary' && theme.outlinePrimary.color[color],
-          type === 'dashed' && theme.dashed.color[color],
-          type === 'text' && theme.text.color[color],
-          type === 'linkPrimary' && theme.linkPrimary.color[color],
-          type === 'linkGray' && theme.linkGray.color[color],
+          buttonType === 'default' && theme.default.color[color],
+          buttonType === 'primary' && theme.primary.color[color],
+          buttonType === 'outlineGray' && theme.outlineGray.color[color],
+          buttonType === 'outlinePrimary' && theme.outlinePrimary.color[color],
+          buttonType === 'dashed' && theme.dashed.color[color],
+          buttonType === 'text' && theme.text.color[color],
+          buttonType === 'linkPrimary' && theme.linkPrimary.color[color],
+          buttonType === 'linkGray' && theme.linkGray.color[color],
           className,
         )}
         disabled={disabled}
         href={href}
-        type={isLink ? undefined : 'button'}
+        type={isLink ? undefined : type}
         onClick={onClick}
         {...theirProps}>
         <span
@@ -145,14 +146,14 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
             theme.inner.base,
             !circle && theme.size[size],
             theme.inner.position[positionInGroup],
-            theme.default.transition[type === 'default' ? 'on' : 'off'],
-            theme.primary.transition[type === 'primary' ? 'on' : 'off'],
-            theme.outlineGray.transition[type === 'outlineGray' ? 'on' : 'off'],
-            theme.outlinePrimary.transition[type === 'outlinePrimary' ? 'on' : 'off'],
-            theme.dashed.transition[type === 'dashed' ? 'on' : 'off'],
-            theme.text.transition[type === 'text' ? 'on' : 'off'],
-            theme.linkPrimary.transition[type === 'linkPrimary' ? 'on' : 'off'],
-            theme.linkGray.transition[type === 'linkGray' ? 'on' : 'off'],
+            theme.default.transition[buttonType === 'default' ? 'on' : 'off'],
+            theme.primary.transition[buttonType === 'primary' ? 'on' : 'off'],
+            theme.outlineGray.transition[buttonType === 'outlineGray' ? 'on' : 'off'],
+            theme.outlinePrimary.transition[buttonType === 'outlinePrimary' ? 'on' : 'off'],
+            theme.dashed.transition[buttonType === 'dashed' ? 'on' : 'off'],
+            theme.text.transition[buttonType === 'text' ? 'on' : 'off'],
+            theme.linkPrimary.transition[buttonType === 'linkPrimary' ? 'on' : 'off'],
+            theme.linkGray.transition[buttonType === 'linkGray' ? 'on' : 'off'],
           )}>
           <>
             {typeof children !== 'undefined' && children}

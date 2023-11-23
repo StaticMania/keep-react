@@ -5,7 +5,7 @@ import { PlayButton } from '~/src'
 const DefaultPlayButton = () => {
   return (
     <div className="flex h-20 items-center justify-start p-5">
-      <PlayButton title="Play Video" type="primary" icon={<Play size="24" />} />
+      <PlayButton title="Play Video" buttonType="primary" icon={<Play size="24" />} />
     </div>
   )
 }
@@ -17,7 +17,7 @@ import { PlayButton } from "keep-react";
 
 export const PlayButtonComponent = () => {
   return (
-    <PlayButton title="Play Video" type="primary" icon={<Play size="24" />} />
+    <PlayButton title="Play Video" buttonType="primary" icon={<Play size="24" />} />
   );
 }
 `

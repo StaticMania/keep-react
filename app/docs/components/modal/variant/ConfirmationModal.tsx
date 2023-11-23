@@ -15,10 +15,10 @@ const ConfirmationModal = () => {
   }
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button type="primary" onClick={onClickInfoModal}>
+      <Button buttonType="primary" onClick={onClickInfoModal}>
         Info Modal
       </Button>
-      <Button type="primary" onClick={onClickErrorModal}>
+      <Button buttonType="primary" onClick={onClickErrorModal}>
         Error Modal
       </Button>
       <Modal show={showInfoModal} size="sm">
@@ -27,17 +27,17 @@ const ConfirmationModal = () => {
             <div className="mt-2 rounded bg-primary-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-metal-900 text-body-4 font-semibold md:text-body-2">
+            <h3 className="text-body-4 font-semibold text-metal-900 md:text-body-2">
               Do you want to upload this file?
             </h3>
           </div>
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button type="outlineGray" size="sm" onClick={onClickInfoModal}>
+            <Button buttonType="outlineGray" size="sm" onClick={onClickInfoModal}>
               Cancel
             </Button>
-            <Button type="primary" color="info" size="sm" onClick={onClickInfoModal}>
+            <Button buttonType="primary" color="info" size="sm" onClick={onClickInfoModal}>
               Confirm
             </Button>
           </div>
@@ -47,16 +47,16 @@ const ConfirmationModal = () => {
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickErrorModal}>
+          <Button buttonType="outlineGray" onClick={onClickErrorModal}>
             Cancel
           </Button>
-          <Button type="primary" color="error" onClick={onClickErrorModal}>
+          <Button buttonType="primary" color="error" onClick={onClickErrorModal}>
             Delete
           </Button>
         </Modal.Footer>
@@ -83,8 +83,8 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button type='primary' onClick={onClickInfoModal}>Info Modal</Button>
-      <Button type='primary' onClick={onClickErrorModal}>
+      <Button buttonType='primary' onClick={onClickInfoModal}>Info Modal</Button>
+      <Button buttonType='primary' onClick={onClickErrorModal}>
         Error Modal
       </Button>
       <Modal show={showInfoModal} size="sm">
@@ -100,11 +100,11 @@ export const ModalComponent = () => {
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button type="outlineGray" size="sm" onClick={onClickInfoModal}>
+            <Button buttonType="outlineGray" size="sm" onClick={onClickInfoModal}>
               Cancel
             </Button>
             <Button
-              type="primary"
+              buttonType="primary"
               color="info"
               size="sm"
               onClick={onClickInfoModal}
@@ -129,10 +129,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickErrorModal}>
+          <Button buttonType="outlineGray" onClick={onClickErrorModal}>
             Cancel
           </Button>
-          <Button type="primary" color="error" onClick={onClickErrorModal}>
+          <Button buttonType="primary" color="error" onClick={onClickErrorModal}>
             Delete
           </Button>
         </Modal.Footer>

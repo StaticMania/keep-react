@@ -40,7 +40,7 @@ const ProductCard = () => {
               </Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-start gap-5">
-              <Button size="sm" type="outlineGray">
+              <Button size="sm" buttonType="outlineGray">
                 <span className="pr-2">
                   <ShoppingCart size={24} />
                 </span>
@@ -64,19 +64,19 @@ const ProductCard = () => {
             </Card.Container>
             <Progress progress={45} color="info" rounded={true} />
             <Card.Container className="flex items-center justify-between">
-              <Button type="text" circle={true}>
+              <Button buttonType="text" circle={true}>
                 <Rows size={20} color="#5E718D" weight="bold" />
               </Button>
               <Card.Container className="flex items-center justify-between py-2">
-                <Button type="text" circle={true}>
+                <Button buttonType="text" circle={true}>
                   <SkipBack size={24} color="#5E718D" weight="bold" />
                 </Button>
-                <PlayButton type="primary" circle={true} size="lg" icon={<Play size="21" />} />
-                <Button type="text" circle={true}>
+                <PlayButton buttonType="primary" circle={true} size="lg" icon={<Play size="21" />} />
+                <Button buttonType="text" circle={true}>
                   <SkipForward size={24} color="#5E718D" weight="bold" />
                 </Button>
               </Card.Container>
-              <Button type="text" circle={true}>
+              <Button buttonType="text" circle={true}>
                 <SpeakerHigh size={20} color="#5E718D" weight="bold" />
               </Button>
             </Card.Container>
@@ -117,7 +117,7 @@ const ProductCard = () => {
               </Card.Title>
             </Card.Container>
             <Card.Container className="my-3 flex items-center justify-between">
-              <Button type="primary" size="sm">
+              <Button buttonType="primary" size="sm">
                 Check Out
               </Button>
               <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
@@ -176,7 +176,7 @@ export const CardComponent = () => {
               </Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-start gap-5">
-              <Button size="sm" type="outlineGray">
+              <Button size="sm" buttonType="outlineGray">
                 <span className="pr-2">
                   <ShoppingCart size={24} />
                 </span>
@@ -202,19 +202,19 @@ export const CardComponent = () => {
             </Card.Container>
             <Progress progress={45} color="info" rounded={true} />
             <Card.Container className="flex items-center justify-between">
-              <Button type="text" circle={true}>
+              <Button buttonType="text" circle={true}>
                 <Rows size={20} color="#5E718D" weight="bold" />
               </Button>
               <Card.Container className="flex items-center justify-between py-2">
-                <Button type="text" circle={true}>
+                <Button buttonType="text" circle={true}>
                   <SkipBack size={24} color="#5E718D" weight="bold" />
                 </Button>
-                <PlayButton type="primary" circle={true} size="lg" icon={<Play size="21" />} />
-                <Button type="text" circle={true}>
+                <PlayButton buttonType="primary" circle={true} size="lg" icon={<Play size="21" />} />
+                <Button buttonType="text" circle={true}>
                   <SkipForward size={24} color="#5E718D" weight="bold" />
                 </Button>
               </Card.Container>
-              <Button type="text" circle={true}>
+              <Button buttonType="text" circle={true}>
                 <SpeakerHigh size={20} color="#5E718D" weight="bold" />
               </Button>
             </Card.Container>
@@ -256,7 +256,7 @@ export const CardComponent = () => {
               </Card.Title>
             </Card.Container>
             <Card.Container className="my-3 flex items-center justify-between">
-              <Button type="primary" size="sm">
+              <Button buttonType="primary" size="sm">
                 Check Out
               </Button>
               <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>

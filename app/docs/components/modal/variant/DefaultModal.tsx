@@ -16,26 +16,26 @@ const DefaultModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button onClick={onClickOne} type="primary">
+      <Button onClick={onClickOne} buttonType="primary">
         Modal
       </Button>
-      <Button onClick={onClickTwo} type="primary">
+      <Button onClick={onClickTwo} buttonType="primary">
         Modal With Cross
       </Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickOne}>
+          <Button buttonType="outlineGray" onClick={onClickOne}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickOne}>
+          <Button buttonType="primary" onClick={onClickOne}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -44,16 +44,16 @@ const DefaultModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickTwo}>
+          <Button buttonType="outlineGray" onClick={onClickTwo}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickTwo}>
+          <Button buttonType="primary" onClick={onClickTwo}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -81,8 +81,8 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <Button onClick={onClickOne} type='primary' >Modal</Button>
-      <Button onClick={onClickTwo} type='primary' >Modal With Cross</Button>
+      <Button onClick={onClickOne} buttonType='primary' >Modal</Button>
+      <Button onClick={onClickTwo} buttonType='primary' >Modal With Cross</Button>
       <Modal
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
@@ -98,10 +98,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickOne}>
+          <Button buttonType="outlineGray" onClick={onClickOne}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickOne}>
+          <Button buttonType="primary" onClick={onClickOne}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -121,10 +121,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickTwo}>
+          <Button buttonType="outlineGray" onClick={onClickTwo}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickTwo}>
+          <Button buttonType="primary" onClick={onClickTwo}>
             Confirm
           </Button>
         </Modal.Footer>

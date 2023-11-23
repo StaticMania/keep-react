@@ -13,7 +13,7 @@ const NotificationWithCard = () => {
   }
   return (
     <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
+      <Button buttonType="primary" onClick={handleShowNotification}>
         Show Notification
       </Button>
       <Notification
@@ -27,10 +27,10 @@ const NotificationWithCard = () => {
           <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info" width="half">
+              <Button size="xs" buttonType="primary" color="info" width="half">
                 Download
               </Button>
-              <Button size="xs" type="outlineGray" color="info" className="ml-3" width="half">
+              <Button size="xs" buttonType="outlineGray" color="info" className="ml-3" width="half">
                 View Figma
               </Button>
             </div>
@@ -59,7 +59,7 @@ export const NotificationComponent = () => {
   };
   return (
     <>
-      <Button type="primary" onClick={handleShowNotification}>Show Notification</Button>
+      <Button buttonType="primary" onClick={handleShowNotification}>Show Notification</Button>
       <Notification
         showNotification={showNotification}
         dismiss={!showNotification}
@@ -72,12 +72,12 @@ export const NotificationComponent = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing
             and typesetting industry.
             <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info" width="half">
+              <Button size="xs" buttonType="primary" color="info" width="half">
                 Download
               </Button>
               <Button
                 size="xs"
-                type="outlineGray"
+                buttonType="outlineGray"
                 color="info"
                 className="ml-3"
                 width="half"
