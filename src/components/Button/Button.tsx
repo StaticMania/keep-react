@@ -58,6 +58,7 @@ export interface keepButtonTheme {
   size: ButtonSizes
 }
 
+
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color' | 'type'> {
   href?: string
   color?: keyof ButtonColors
