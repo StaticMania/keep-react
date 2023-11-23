@@ -61,7 +61,7 @@ export const InputField: FC = () => {
           <p className={cn(theme.label.fileType)}>{fileType ? fileType : 'Files: JPEG, PNG, GIF'}</p>
           <div className={cn(theme.label.upload.base)}>
             <Button
-              type={uploadBtnType}
+              buttonType={uploadBtnType}
               disabled={disabled}
               className="!relative !z-40 !cursor-pointer"
               onClick={handleClick}>

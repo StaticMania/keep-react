@@ -9,7 +9,7 @@ const meta: Meta<typeof PlayButton> = {
     title: {
       description: 'Button text',
       table: {
-        type: { summary: 'string' },
+        buttonType: { summary: 'string' },
         defaultValue: { summary: 'Play Video' },
       },
     },
@@ -21,7 +21,7 @@ const meta: Meta<typeof PlayButton> = {
       control: 'select',
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
     },
-    type: {
+    buttonType: {
       description: 'Avaiale button type',
       table: {
         defaultValue: { summary: 'primary' },
@@ -31,7 +31,7 @@ const meta: Meta<typeof PlayButton> = {
     },
     icon: {
       description: 'Play icon',
-      control: { type: null },
+      control: { buttonType: null },
     },
     circle: {
       description: 'Play button circle or not?',
@@ -56,7 +56,7 @@ type Story = StoryObj<typeof PlayButton>
 export const DefaultPlayButton: Story = {
   args: {
     title: 'Play Video',
-    type: 'primary',
+    buttonType: 'primary',
     size: 'md',
     icon: <Play size="24" />,
   },
@@ -65,19 +65,19 @@ export const DefaultPlayButton: Story = {
 export const SecondaryPlayButton: Story = {
   args: {
     ...DefaultPlayButton.args,
-    type: 'outlineGray',
+    buttonType: 'outlineGray',
   },
 }
 export const NoBorderPlayButton: Story = {
   args: {
     ...DefaultPlayButton.args,
-    type: 'text',
+    buttonType: 'text',
   },
 }
 export const CirclePlayButton: Story = {
   args: {
     size: 'xl',
-    type: 'primary',
+    buttonType: 'primary',
     circle: true,
     icon: <Play size="24" />,
   },
@@ -85,7 +85,7 @@ export const CirclePlayButton: Story = {
 export const CirclePlayButtonWithGradient: Story = {
   args: {
     ...CirclePlayButton.args,
-    type: 'blur',
+    buttonType: 'blur',
     className: 'bg-gradient-to-r from-primary-500',
   },
 }

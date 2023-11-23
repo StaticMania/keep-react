@@ -184,7 +184,7 @@ export const DefaultDropdown: Story = {
   args: {
     label: 'Dropdown button',
     size: 'sm',
-    type: 'primary',
+    buttonType: 'primary',
     dismissOnClick: true,
     children: removeFragment(
       <>
