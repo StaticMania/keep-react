@@ -4,7 +4,7 @@ import { Button } from '~/src'
 const KeepButtonType = () => {
   return (
     <div className="flex h-32 flex-wrap items-center gap-2 p-4">
-      <Button clickAnimation size="md" type="default">
+      <Button size="md" type="default">
         Default
       </Button>
       <Button size="md" type="primary">

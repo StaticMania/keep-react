@@ -9,7 +9,6 @@ import { cn } from '../../helpers/cn'
 export interface keepButtonTheme {
   base: string
   disabled: string
-  clickAnimation: string
   width: {
     half: string
     full: string
@@ -72,7 +71,6 @@ export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' 
   size?: keyof ButtonSizes
   width?: 'full' | 'half'
   className?: string
-  clickAnimation?: boolean,
   onClick?: () => void
 }
 
@@ -105,7 +103,6 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
       circle = false,
       positionInGroup = 'none',
       size = 'md',
-      clickAnimation,
       width,
       className,
       notificationLabelStyle,
@@ -126,7 +123,6 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
           groupTheme.position[positionInGroup],
           !circle && theme.pill[pill ? 'on' : 'off'],
           circle && theme.circle.size[size],
-          clickAnimation && theme.clickAnimation,
           type === 'default' && theme.default.color[color],
           type === 'primary' && theme.primary.color[color],
           type === 'outlineGray' && theme.outlineGray.color[color],
