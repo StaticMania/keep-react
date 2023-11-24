@@ -24,7 +24,7 @@ export const Title: FC<TitleProps> = ({ children, className }) => {
     <div className={cn(theme.title.base)}>
       <p className={cn(theme.title.title, className)}>{children}</p>
       {showFilter && (
-        <Dropdown label={filterLabel} size="xs" type="outlineGray" dismissOnClick={true}>
+        <Dropdown label={filterLabel} size="xs" variant="outlineGray" dismissOnClick={true}>
           {filterData?.map((item) => <Dropdown.Item key={item}>{item}</Dropdown.Item>)}
         </Dropdown>
       )}

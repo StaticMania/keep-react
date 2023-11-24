@@ -44,7 +44,7 @@ export const TooltipComponent = () => {
       placement="top"
       animation="duration-300"
       style="dark">
-      <Button size="sm" type="primary">
+      <Button size="sm" variant="primary">
         Tooltip Content
       </Button>
     </Tooltip>
@@ -125,16 +125,16 @@ export const ModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClick}>
+          <Button variant="outlineGray" onClick={onClick}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClick}>
+          <Button variant="primary" onClick={onClick}>
             Confirm
           </Button>
         </Modal.Footer>

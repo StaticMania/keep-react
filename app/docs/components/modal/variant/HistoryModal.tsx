@@ -20,32 +20,32 @@ const HistoryModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button type="primary" onClick={onClickHistoryModal}>
+      <Button variant="primary" onClick={onClickHistoryModal}>
         History Modal
       </Button>
-      <Button type="primary" onClick={onClickAccessModal}>
+      <Button variant="primary" onClick={onClickAccessModal}>
         Access Modal
       </Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showHistoryModal}>
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
           <div className="mt-5 flex items-center">
             <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
-            <label htmlFor="two" className="text-metal-500 ml-2 text-body-4 font-medium">
+            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
               Save on this browser
             </label>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outlineGray" width="half" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button type="primary" width="half" onClick={onClickHistoryModal}>
+          <Button variant="primary" width="half" onClick={onClickHistoryModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -54,7 +54,7 @@ const HistoryModal = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica.
             </p>
             <div className="mb-4 flex items-center gap-2 md:mb-6">
@@ -67,16 +67,16 @@ const HistoryModal = () => {
           </div>
           <div className="mt-5 flex items-center">
             <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
-            <label htmlFor="two" className="text-metal-500 ml-2 text-body-4 font-medium">
+            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
               Save on this browser
             </label>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickAccessModal}>
+          <Button variant="outlineGray" onClick={onClickAccessModal}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickAccessModal}>
+          <Button variant="primary" onClick={onClickAccessModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -108,8 +108,8 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <Button type='primary' onClick={onClickHistoryModal}>History Modal</Button>
-      <Button type='primary' onClick={onClickAccessModal}>Access Modal</Button>
+      <Button variant='primary' onClick={onClickHistoryModal}>History Modal</Button>
+      <Button variant='primary' onClick={onClickAccessModal}>Access Modal</Button>
       <Modal
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
@@ -140,10 +140,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outlineGray" width="half" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button type="primary" width="half" onClick={onClickHistoryModal}>
+          <Button variant="primary" width="half" onClick={onClickHistoryModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -193,10 +193,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickAccessModal}>
+          <Button variant="outlineGray" onClick={onClickAccessModal}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickAccessModal}>
+          <Button variant="primary" onClick={onClickAccessModal}>
             Confirm
           </Button>
         </Modal.Footer>

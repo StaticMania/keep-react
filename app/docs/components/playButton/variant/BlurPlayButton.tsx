@@ -7,7 +7,7 @@ const BlurPlayButton = () => {
     <div className="flex h-20 items-center justify-start p-5">
       <PlayButton
         title="Play Video"
-        type="blur"
+        variant="blur"
         circle={true}
         size="2xl"
         icon={<Play size="24" />}
@@ -26,7 +26,7 @@ export const PlayButtonComponent = () => {
   return (
      <PlayButton
       title="Play Video"
-      type="blur"
+      variant="blur"
       circle={true}
       size="2xl"
       icon={<Play size="24" />}

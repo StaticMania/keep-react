@@ -5,7 +5,7 @@ import { PlayButton } from '~/src'
 const SecondaryPlayButton = () => {
   return (
     <div className="flex h-20 items-center justify-start p-5">
-      <PlayButton title="Play Video" type="outlineGray" icon={<Play size="24" />} />
+      <PlayButton title="Play Video" variant="outlineGray" icon={<Play size="24" />} />
     </div>
   )
 }
@@ -19,7 +19,7 @@ export const PlayButtonComponent = () => {
   return (
     <PlayButton
     title="Play Video"
-    type="outlineGray"
+    variant="outlineGray"
     icon={<Play size="24" />}
   />
   );

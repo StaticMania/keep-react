@@ -29,13 +29,13 @@ const DefaultNavbar = () => {
         </Navbar.Container>
 
         <Navbar.Container className="flex gap-2">
-          <Button size="sm" type="link">
+          <Button size="sm" variant="link">
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
-            <span className="text-metal-600 ml-2">Search</span>
+            <span className="ml-2 text-metal-600">Search</span>
           </Button>
-          <Button size="sm" type="primary">
+          <Button size="sm" variant="primary">
             Contact
           </Button>
           <Navbar.Toggle />
@@ -85,13 +85,13 @@ export const NavbarComponent = () => {
         </Navbar.Container>
 
         <Navbar.Container className="flex gap-2">
-          <Button size="sm" type="link">
+          <Button size="sm" variant="link">
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
             <span className="ml-2 text-metal-600">Search</span>
           </Button>
-          <Button size="sm" type="primary">
+          <Button size="sm" variant="primary">
             Contact
           </Button>
           <Navbar.Toggle />

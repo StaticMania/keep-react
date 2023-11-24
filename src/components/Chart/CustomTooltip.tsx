@@ -9,7 +9,7 @@ export const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameT
       <>
         {payload.length > 1 ? (
           <TooltipCom content={``} trigger="hover" placement="top" animation="duration-300" style="dark">
-            <Button size="xs" type="primary">
+            <Button size="xs" variant="primary">
               <span className="mr-2">
                 {payload[0].name}: {payload[0].value}
               </span>
@@ -20,7 +20,7 @@ export const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameT
           </TooltipCom>
         ) : (
           <TooltipCom content={``} trigger="hover" placement="top" animation="duration-300" style="dark">
-            <Button size="xs" type="primary">
+            <Button size="xs" variant="primary">
               {payload[0].value}
             </Button>
           </TooltipCom>

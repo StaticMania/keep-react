@@ -18,7 +18,7 @@ export interface EmptyProps extends PropsWithChildren<Omit<ComponentProps<'div'>
   titleStyle?: string
   contentStyle?: string
   redirectBtnSize?: 'xs' | 'sm' | 'md' | 'lg'
-  buttonType?: 'primary' | 'dashed' | 'text' | 'linkPrimary' | 'linkGray' | 'outlineGray' | 'outlinePrimary' | 'default'
+  variant?: 'primary' | 'dashed' | 'text' | 'linkPrimary' | 'linkGray' | 'outlineGray' | 'outlinePrimary' | 'default'
 }
 
 export const Empty: FC<EmptyProps> = ({
@@ -28,7 +28,7 @@ export const Empty: FC<EmptyProps> = ({
   image,
   buttonText,
   className,
-  buttonType = 'primary',
+  variant = 'primary',
   redirectBtnSize = 'sm',
   titleStyle,
   contentStyle,
@@ -42,7 +42,7 @@ export const Empty: FC<EmptyProps> = ({
       <p className={cn(theme.content, contentStyle)}>{content}</p>
 
       {buttonText && (
-        <Button href={redirectUrl} size={redirectBtnSize} type={buttonType}>
+        <Button href={redirectUrl} size={redirectBtnSize} variant={variant}>
           {buttonText}
         </Button>
       )}
