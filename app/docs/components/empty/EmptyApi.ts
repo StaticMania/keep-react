@@ -57,7 +57,7 @@ export const emptyApiData = [
   },
   {
     id: 9,
-    propsName: 'buttonType',
+    propsName: 'variant',
     propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
     propsDescription: 'Redirect Button type',
     default: 'primary',

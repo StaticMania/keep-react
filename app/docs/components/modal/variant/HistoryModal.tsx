@@ -20,10 +20,10 @@ const HistoryModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button buttonType="primary" onClick={onClickHistoryModal}>
+      <Button variant="primary" onClick={onClickHistoryModal}>
         History Modal
       </Button>
-      <Button buttonType="primary" onClick={onClickAccessModal}>
+      <Button variant="primary" onClick={onClickAccessModal}>
         Access Modal
       </Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showHistoryModal}>
@@ -42,10 +42,10 @@ const HistoryModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button buttonType="outlineGray" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outlineGray" width="half" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button buttonType="primary" width="half" onClick={onClickHistoryModal}>
+          <Button variant="primary" width="half" onClick={onClickHistoryModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -73,10 +73,10 @@ const HistoryModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button buttonType="outlineGray" onClick={onClickAccessModal}>
+          <Button variant="outlineGray" onClick={onClickAccessModal}>
             Cancel
           </Button>
-          <Button buttonType="primary" onClick={onClickAccessModal}>
+          <Button variant="primary" onClick={onClickAccessModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -108,8 +108,8 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <Button buttonType='primary' onClick={onClickHistoryModal}>History Modal</Button>
-      <Button buttonType='primary' onClick={onClickAccessModal}>Access Modal</Button>
+      <Button variant='primary' onClick={onClickHistoryModal}>History Modal</Button>
+      <Button variant='primary' onClick={onClickAccessModal}>Access Modal</Button>
       <Modal
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
@@ -140,10 +140,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button buttonType="outlineGray" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outlineGray" width="half" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button buttonType="primary" width="half" onClick={onClickHistoryModal}>
+          <Button variant="primary" width="half" onClick={onClickHistoryModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -193,10 +193,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button buttonType="outlineGray" onClick={onClickAccessModal}>
+          <Button variant="outlineGray" onClick={onClickAccessModal}>
             Cancel
           </Button>
-          <Button buttonType="primary" onClick={onClickAccessModal}>
+          <Button variant="primary" onClick={onClickAccessModal}>
             Confirm
           </Button>
         </Modal.Footer>

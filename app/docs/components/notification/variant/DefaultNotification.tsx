@@ -13,7 +13,7 @@ const DefaultNotification = () => {
   }
   return (
     <div className="px-2 py-3">
-      <Button onClick={handleShowNotification} buttonType="primary">
+      <Button onClick={handleShowNotification} variant="primary">
         Show Notification
       </Button>
       <Notification
@@ -27,10 +27,10 @@ const DefaultNotification = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
             <div className="mt-6 flex">
-              <Button size="xs" buttonType="primary" color="info">
+              <Button size="xs" variant="primary" color="info">
                 Accept
               </Button>
-              <Button size="xs" buttonType="outlineGray" color="info" className="ml-3">
+              <Button size="xs" variant="outlineGray" color="info" className="ml-3">
                 Review
               </Button>
             </div>
@@ -58,7 +58,7 @@ export const NotificationComponent = () => {
   };
   return (
     <>
-      <Button onClick={handleShowNotification} buttonType="primary">Show Notification</Button>
+      <Button onClick={handleShowNotification} variant="primary">Show Notification</Button>
       <Notification
         showNotification={showNotification}
         dismiss={!showNotification}
@@ -71,12 +71,12 @@ export const NotificationComponent = () => {
               and typesetting industry.
             </p>
             <div className="mt-6 flex">
-              <Button size="xs" buttonType="primary" color="info">
+              <Button size="xs" variant="primary" color="info">
                 Accept
               </Button>
               <Button
                 size="xs"
-                buttonType="outlineGray"
+                variant="outlineGray"
                 color="info"
                 className="ml-3"
               >

@@ -4,7 +4,7 @@ import { Dropdown, TextInput } from '~/src'
 
 const DropdownSearchBar = () => {
   return (
-    <Dropdown label="Dropdown button" buttonType="primary" size="sm" dismissOnClick={true}>
+    <Dropdown label="Dropdown button" variant="primary" size="sm" dismissOnClick={true}>
       <div className="px-5 pb-2 pt-3">
         <TextInput id="#id-z3rxdy" placeholder="Search" color="gray" sizing="md" />
       </div>
@@ -45,7 +45,7 @@ export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
-      buttonType="primary"
+      variant="primary"
       size="sm"
       dismissOnClick={true}
     >

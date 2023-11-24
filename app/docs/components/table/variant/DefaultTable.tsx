@@ -16,13 +16,13 @@ const DefaultTable = () => {
               </Badge>
             </div>
             <div className="flex items-center gap-5">
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
                 New member
               </Button>
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -117,7 +117,7 @@ const DefaultTable = () => {
                     </li>
                   </ul>
                 }>
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -197,7 +197,7 @@ const DefaultTable = () => {
                     </li>
                   </ul>
                 }>
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -277,7 +277,7 @@ const DefaultTable = () => {
                     </li>
                   </ul>
                 }>
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -357,7 +357,7 @@ const DefaultTable = () => {
                     </li>
                   </ul>
                 }>
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -437,7 +437,7 @@ const DefaultTable = () => {
                     </li>
                   </ul>
                 }>
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -475,13 +475,13 @@ export const TableComponent = () => {
               </Badge>
             </div>
             <div className="flex items-center gap-5">
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
                 New member
               </Button>
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -590,7 +590,7 @@ export const TableComponent = () => {
                   </ul>
                 }
               >
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -682,7 +682,7 @@ export const TableComponent = () => {
                   </ul>
                 }
               >
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -774,7 +774,7 @@ export const TableComponent = () => {
                   </ul>
                 }
               >
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -866,7 +866,7 @@ export const TableComponent = () => {
                   </ul>
                 }
               >
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>
@@ -958,7 +958,7 @@ export const TableComponent = () => {
                   </ul>
                 }
               >
-                <Button buttonType="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover>

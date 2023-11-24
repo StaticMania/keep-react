@@ -6,19 +6,19 @@ const ButtonGroupWithIcon = () => {
   return (
     <div className="h-20 p-4">
       <Button.Group>
-        <Button buttonType="primary" positionInGroup="start">
+        <Button variant="primary" positionInGroup="start">
           <span className="pr-2">
             <Cube size={24} />
           </span>
           Profile
         </Button>
-        <Button buttonType="primary" positionInGroup="middle">
+        <Button variant="primary" positionInGroup="middle">
           <span className="pr-2">
             <Gear size={24} />
           </span>
           Settings
         </Button>
-        <Button buttonType="primary" positionInGroup="end">
+        <Button variant="primary" positionInGroup="end">
           <span className="pr-2">
             <ChatCircleDots size={24} />
           </span>
@@ -37,19 +37,19 @@ import { ChatCircleDots, Cube, Gear } from "phosphor-react";
 export const ButtonGroupComponent = () => {
   return (
     <Button.Group>
-      <Button buttonType="primary" positionInGroup="start">
+      <Button variant="primary" positionInGroup="start">
         <span className="pr-2">
           <Cube size={24} />
         </span>
         Profile
       </Button>
-      <Button buttonType="primary" positionInGroup="middle">
+      <Button variant="primary" positionInGroup="middle">
         <span className="pr-2">
           <Gear size={24} />
         </span>
         Settings
       </Button>
-      <Button buttonType="primary" positionInGroup="end">
+      <Button variant="primary" positionInGroup="end">
         <span className="pr-2">
           <ChatCircleDots size={24} />
         </span>

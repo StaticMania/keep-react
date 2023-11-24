@@ -4,28 +4,28 @@ import { Button } from '~/src'
 const KeepButtonType = () => {
   return (
     <div className="flex h-32 flex-wrap items-center gap-2 p-4">
-      <Button size="md" buttonType="default">
+      <Button size="md" variant="default">
         Default
       </Button>
-      <Button size="md" buttonType="primary">
+      <Button size="md" variant="primary">
         Primary
       </Button>
-      <Button size="md" buttonType="outlinePrimary">
+      <Button size="md" variant="outlinePrimary">
         Outline Primary
       </Button>
-      <Button size="md" buttonType="outlineGray">
+      <Button size="md" variant="outlineGray">
         Outline Gray
       </Button>
-      <Button size="md" buttonType="dashed">
+      <Button size="md" variant="dashed">
         Dashed Button
       </Button>
-      <Button size="md" buttonType="linkPrimary">
+      <Button size="md" variant="linkPrimary">
         Link Primary
       </Button>
-      <Button size="md" buttonType="linkGray">
+      <Button size="md" variant="linkGray">
         Link Gray
       </Button>
-      <Button size="md" buttonType="text">
+      <Button size="md" variant="text">
         Text Button
       </Button>
     </div>
@@ -39,14 +39,14 @@ import { Button } from "keep-react";
 export const ButtonComponent = () => {
   return (
     <>
-      <Button size="md" buttonType="default">Default</Button>
-      <Button size="md" buttonType="primary">Primary</Button>
-      <Button size="md" buttonType="outlinePrimary">Outline Primary</Button>
-      <Button size="md" buttonType="outlineGray">Outline Gray</Button>
-      <Button size="md" buttonType="dashed">Dashed Button</Button>
-      <Button size="md" buttonType="linkPrimary">Link Primary</Button>
-      <Button size="md" buttonType="linkGray">Link Gray</Button>
-      <Button size="md" buttonType="text">Text Button</Button>
+      <Button size="md" variant="default">Default</Button>
+      <Button size="md" variant="primary">Primary</Button>
+      <Button size="md" variant="outlinePrimary">Outline Primary</Button>
+      <Button size="md" variant="outlineGray">Outline Gray</Button>
+      <Button size="md" variant="dashed">Dashed Button</Button>
+      <Button size="md" variant="linkPrimary">Link Primary</Button>
+      <Button size="md" variant="linkGray">Link Gray</Button>
+      <Button size="md" variant="text">Text Button</Button>
     </>
   );
 };

@@ -102,7 +102,7 @@ export const DefaultPopover: Story = {
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
     additionalContent: (
       <div className="mt-3 flex items-center gap-3">
-        <Button buttonType="outlinePrimary" size="xs">
+        <Button variant="outlinePrimary" size="xs">
           Checkout
         </Button>
         <button className="text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">Skip Now</button>

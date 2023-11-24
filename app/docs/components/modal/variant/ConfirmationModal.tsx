@@ -15,10 +15,10 @@ const ConfirmationModal = () => {
   }
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button buttonType="primary" onClick={onClickInfoModal}>
+      <Button variant="primary" onClick={onClickInfoModal}>
         Info Modal
       </Button>
-      <Button buttonType="primary" onClick={onClickErrorModal}>
+      <Button variant="primary" onClick={onClickErrorModal}>
         Error Modal
       </Button>
       <Modal show={showInfoModal} size="sm">
@@ -34,10 +34,10 @@ const ConfirmationModal = () => {
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button buttonType="outlineGray" size="sm" onClick={onClickInfoModal}>
+            <Button variant="outlineGray" size="sm" onClick={onClickInfoModal}>
               Cancel
             </Button>
-            <Button buttonType="primary" color="info" size="sm" onClick={onClickInfoModal}>
+            <Button variant="primary" color="info" size="sm" onClick={onClickInfoModal}>
               Confirm
             </Button>
           </div>
@@ -53,10 +53,10 @@ const ConfirmationModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button buttonType="outlineGray" onClick={onClickErrorModal}>
+          <Button variant="outlineGray" onClick={onClickErrorModal}>
             Cancel
           </Button>
-          <Button buttonType="primary" color="error" onClick={onClickErrorModal}>
+          <Button variant="primary" color="error" onClick={onClickErrorModal}>
             Delete
           </Button>
         </Modal.Footer>
@@ -83,8 +83,8 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button buttonType='primary' onClick={onClickInfoModal}>Info Modal</Button>
-      <Button buttonType='primary' onClick={onClickErrorModal}>
+      <Button variant='primary' onClick={onClickInfoModal}>Info Modal</Button>
+      <Button variant='primary' onClick={onClickErrorModal}>
         Error Modal
       </Button>
       <Modal show={showInfoModal} size="sm">
@@ -100,11 +100,11 @@ export const ModalComponent = () => {
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button buttonType="outlineGray" size="sm" onClick={onClickInfoModal}>
+            <Button variant="outlineGray" size="sm" onClick={onClickInfoModal}>
               Cancel
             </Button>
             <Button
-              buttonType="primary"
+              variant="primary"
               color="info"
               size="sm"
               onClick={onClickInfoModal}
@@ -129,10 +129,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button buttonType="outlineGray" onClick={onClickErrorModal}>
+          <Button variant="outlineGray" onClick={onClickErrorModal}>
             Cancel
           </Button>
-          <Button buttonType="primary" color="error" onClick={onClickErrorModal}>
+          <Button variant="primary" color="error" onClick={onClickErrorModal}>
             Delete
           </Button>
         </Modal.Footer>

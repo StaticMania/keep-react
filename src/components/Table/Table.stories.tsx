@@ -113,13 +113,13 @@ export const DefaultTable: Story = {
               </Badge>
             </div>
             <div className="flex items-center gap-5">
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
                 New member
               </Button>
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -193,7 +193,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -254,7 +254,7 @@ export const DefaultTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="">
-                <Button buttonType="outlineGray" size="xs" circle>
+                <Button variant="outlineGray" size="xs" circle>
                   <span>
                     <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                   </span>
@@ -313,7 +313,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -373,7 +373,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -433,7 +433,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -455,13 +455,13 @@ export const CashOutTransitionTable: Story = {
               <p className="text-body-1 font-semibold text-metal-600">Cash Out Transactions</p>
             </div>
             <div className="flex items-center gap-5">
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
                 New member
               </Button>
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -523,7 +523,7 @@ export const CashOutTransitionTable: Story = {
               <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -565,7 +565,7 @@ export const CashOutTransitionTable: Story = {
               <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -606,7 +606,7 @@ export const CashOutTransitionTable: Story = {
               <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -647,7 +647,7 @@ export const CashOutTransitionTable: Story = {
               <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -688,7 +688,7 @@ export const CashOutTransitionTable: Story = {
               <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -712,13 +712,13 @@ export const OrdersTable: Story = {
               <p className="text-body-1 font-semibold text-metal-600">Orders</p>
             </div>
             <div className="flex items-center gap-5">
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
                 Filter
               </Button>
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -787,7 +787,7 @@ export const OrdersTable: Story = {
               <p className="text-body-5 font-medium text-metal-500">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -822,7 +822,7 @@ export const OrdersTable: Story = {
               <p className="text-body-5 font-medium text-metal-500">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -857,7 +857,7 @@ export const OrdersTable: Story = {
               <p className="text-body-5 font-medium text-metal-500">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -892,7 +892,7 @@ export const OrdersTable: Story = {
               <p className="text-body-5 font-medium text-metal-500">686 Great South Road, Manukau</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -927,7 +927,7 @@ export const OrdersTable: Story = {
               <p className="text-body-5 font-medium text-metal-500">20 Poland Road, Wairau Valley</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -962,7 +962,7 @@ export const OrdersTable: Story = {
               <p className="text-body-5 font-medium text-metal-500">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -985,13 +985,13 @@ export const FileUploadedTable: Story = {
               <p className="text-body-1 font-semibold text-metal-600">Files uploaded</p>
             </div>
             <div className="flex items-center gap-5">
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
                 Filter
               </Button>
-              <Button buttonType="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -1051,7 +1051,7 @@ export const FileUploadedTable: Story = {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -1098,7 +1098,7 @@ export const FileUploadedTable: Story = {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -1145,7 +1145,7 @@ export const FileUploadedTable: Story = {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -1192,7 +1192,7 @@ export const FileUploadedTable: Story = {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>
@@ -1239,7 +1239,7 @@ export const FileUploadedTable: Story = {
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
-              <Button buttonType="outlineGray" size="xs" circle>
+              <Button variant="outlineGray" size="xs" circle>
                 <span>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </span>

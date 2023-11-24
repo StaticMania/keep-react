@@ -31,7 +31,7 @@ const NavbarWithCenterLogo = () => {
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
-          <Button size="sm" buttonType="link">
+          <Button size="sm" variant="link">
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
@@ -88,7 +88,7 @@ export const NavbarComponent = () => {
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
-          <Button size="sm" buttonType="link">
+          <Button size="sm" variant="link">
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>

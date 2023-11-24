@@ -15,7 +15,7 @@ export const buttonApiData = [
   },
   {
     id: 3,
-    propsName: 'buttonType',
+    propsName: 'variant',
     propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
     propsDescription: 'Style type of the button.',
     default: 'default',

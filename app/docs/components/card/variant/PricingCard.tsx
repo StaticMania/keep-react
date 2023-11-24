@@ -39,7 +39,7 @@ const PricingCard = () => {
           </Card.List>
         </Card.Container>
         <Card.Container>
-          <Button buttonType="primary" width="full">
+          <Button variant="primary" width="full">
             Pro Access
           </Button>
         </Card.Container>
@@ -107,7 +107,7 @@ export const CardComponent = () => {
           </Card.List>
         </Card.Container>
         <Card.Container>
-          <Button buttonType="primary" width="full">
+          <Button variant="primary" width="full">
             Pro Access
           </Button>
         </Card.Container>

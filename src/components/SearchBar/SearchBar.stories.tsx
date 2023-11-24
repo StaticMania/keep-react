@@ -162,13 +162,13 @@ const SearchBarWithColorVariantCom = () => {
       withBg
       bordered={false}
       addon={
-        <Button buttonType="primary" color="error" size="sm">
+        <Button variant="primary" color="error" size="sm">
           Search
         </Button>
       }
       addonPosition="right"
       icon={
-        <Button buttonType="text" color="error" size="sm">
+        <Button variant="text" color="error" size="sm">
           <span className="mr-2">
             <MapPinLine size={24} color="#ff0000" />
           </span>

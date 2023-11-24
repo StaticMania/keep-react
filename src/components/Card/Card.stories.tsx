@@ -249,7 +249,7 @@ export const CardWithProfile: Story = {
               <Card.Title className="text-body-6 font-medium text-metal-400">UI/UX Designer</Card.Title>
             </Card.Container>
           </Card.Container>
-          <Button size="sm" buttonType="outlineGray">
+          <Button size="sm" variant="outlineGray">
             View Profile
           </Button>
         </Card.Container>
@@ -323,7 +323,7 @@ export const CardWithPostCard: Story = {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button buttonType="outlinePrimary">Check this</Button>
+          <Button variant="outlinePrimary">Check this</Button>
         </Card.Container>
       </>,
     ),
@@ -433,7 +433,7 @@ export const EcommerceProductCard: Story = {
             </Card.Description>
           </Card.Container>
           <Card.Container className="flex items-center justify-start gap-5">
-            <Button size="sm" buttonType="outlineGray">
+            <Button size="sm" variant="outlineGray">
               <span className="pr-2">
                 <ShoppingCart size={24} />
               </span>
@@ -489,7 +489,7 @@ export const ProductCard: Story = {
             </Card.Title>
           </Card.Container>
           <Card.Container className="my-3 flex items-center justify-between">
-            <Button buttonType="primary">Check Out</Button>
+            <Button variant="primary">Check Out</Button>
             <Card.Title className="text-body-1 font-semibold text-metal-700">$649,00</Card.Title>
           </Card.Container>
         </Card.Container>
@@ -522,19 +522,19 @@ export const PodcastCard: Story = {
         </Card.Container>
         <Progress progress={45} color="info" rounded={true} />
         <Card.Container className="flex items-center justify-between">
-          <Button buttonType="text" circle>
+          <Button variant="text" circle>
             <Rows size={20} color="#5E718D" />
           </Button>
           <Card.Container className="flex items-center justify-between py-2">
-            <Button buttonType="text" circle>
+            <Button variant="text" circle>
               <SkipBack size={24} color="#5E718D" weight="bold" />
             </Button>
-            <PlayButton buttonType="primary" circle={true} size="lg" icon={<Play size="21" />} />
-            <Button buttonType="text" circle>
+            <PlayButton variant="primary" circle={true} size="lg" icon={<Play size="21" />} />
+            <Button variant="text" circle>
               <SkipForward size={24} color="#5E718D" weight="bold" />
             </Button>
           </Card.Container>
-          <Button buttonType="text" circle>
+          <Button variant="text" circle>
             <SpeakerHigh size={20} color="#5E718D" />
           </Button>
         </Card.Container>
@@ -586,10 +586,10 @@ export const PricingCard: Story = {
           </Card.List>
         </Card.Container>
         <Card.Container>
-          <Button buttonType="primary" width="full" className="hidden md:block">
+          <Button variant="primary" width="full" className="hidden md:block">
             Pro Access
           </Button>
-          <Button buttonType="primary" width="full" size="xs" className="block md:hidden">
+          <Button variant="primary" width="full" size="xs" className="block md:hidden">
             Pro Access
           </Button>
         </Card.Container>

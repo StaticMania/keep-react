@@ -5,13 +5,13 @@ import { ChatCircleDots, Cube, Gear } from 'phosphor-react'
 const ButtonGroupWithOnlyIcon = () => {
   return (
     <Button.Group>
-      <Button buttonType="primary" positionInGroup="start">
+      <Button variant="primary" positionInGroup="start">
         <Cube size={24} />
       </Button>
-      <Button buttonType="primary" positionInGroup="middle">
+      <Button variant="primary" positionInGroup="middle">
         <Gear size={24} />
       </Button>
-      <Button buttonType="primary" positionInGroup="end">
+      <Button variant="primary" positionInGroup="end">
         <ChatCircleDots size={24} />
       </Button>
     </Button.Group>
@@ -26,13 +26,13 @@ import { ChatCircleDots, Cube, Gear } from "phosphor-react";
 export const ButtonGroupComponent = () => {
   return (
     <Button.Group>
-      <Button buttonType="primary" positionInGroup="start">
+      <Button variant="primary" positionInGroup="start">
         <Cube size={24} />
       </Button>
-      <Button buttonType="primary" positionInGroup="middle">
+      <Button variant="primary" positionInGroup="middle">
         <Gear size={24} />
       </Button>
-      <Button buttonType="primary" positionInGroup="end">
+      <Button variant="primary" positionInGroup="end">
         <ChatCircleDots size={24} />
       </Button>
     </Button.Group>

@@ -32,7 +32,7 @@ const EcommerceNavbar = () => {
             <Navbar.Link icon={<Heart size={20} color="#444" />} iconAnimation={false} />
           </Navbar.Container>
 
-          <Button size="xs" buttonType="outlineGray">
+          <Button size="xs" variant="outlineGray">
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>
@@ -99,7 +99,7 @@ export const NavbarComponent = () => {
             />
           </Navbar.Container>
 
-          <Button size="xs" buttonType="outlineGray">
+          <Button size="xs" variant="outlineGray">
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>

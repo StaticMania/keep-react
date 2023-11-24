@@ -4,22 +4,22 @@ import { Button } from '~/src'
 const KeepButtonSize = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
-      <Button size="xs" buttonType="primary">
+      <Button size="xs" variant="primary">
         Extra Small
       </Button>
-      <Button size="sm" buttonType="primary">
+      <Button size="sm" variant="primary">
         Small Button
       </Button>
-      <Button size="md" buttonType="primary">
+      <Button size="md" variant="primary">
         Medium Button
       </Button>
-      <Button size="lg" buttonType="primary">
+      <Button size="lg" variant="primary">
         Large Button
       </Button>
-      <Button size="xl" buttonType="primary">
+      <Button size="xl" variant="primary">
         Extra Large
       </Button>
-      <Button size="2xl" buttonType="primary">
+      <Button size="2xl" variant="primary">
         Button of 2xl
       </Button>
     </div>
@@ -33,12 +33,12 @@ import { Button } from "keep-react;
 export const ButtonComponent = () => {
   return (
     <>
-      <Button size="xs" buttonType="primary">Extra Small</Button>
-      <Button size="sm" buttonType="primary">Small Button</Button>
-      <Button size="md" buttonType="primary">Medium Button</Button>
-      <Button size="lg" buttonType="primary">Large Button</Button>
-      <Button size="xl" buttonType="primary">Extra Large</Button>
-      <Button size="2xl" buttonType="primary">Button of 2xl</Button>
+      <Button size="xs" variant="primary">Extra Small</Button>
+      <Button size="sm" variant="primary">Small Button</Button>
+      <Button size="md" variant="primary">Medium Button</Button>
+      <Button size="lg" variant="primary">Large Button</Button>
+      <Button size="xl" variant="primary">Extra Large</Button>
+      <Button size="2xl" variant="primary">Button of 2xl</Button>
     </>
   );
 };

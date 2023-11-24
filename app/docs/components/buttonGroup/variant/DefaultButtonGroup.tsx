@@ -5,13 +5,13 @@ const DefaultButtonGroup = () => {
   return (
     <div className="h-20 p-4">
       <Button.Group>
-        <Button buttonType="primary" positionInGroup="start">
+        <Button variant="primary" positionInGroup="start">
           Profile
         </Button>
-        <Button buttonType="primary" positionInGroup="middle">
+        <Button variant="primary" positionInGroup="middle">
           Settings
         </Button>
-        <Button buttonType="primary" positionInGroup="end">
+        <Button variant="primary" positionInGroup="end">
           Messages
         </Button>
       </Button.Group>
@@ -26,9 +26,9 @@ import { Button } from "keep-react";
 export const ButtonGroupComponent = () => {
   return (
     <Button.Group>
-      <Button buttonType="primary" positionInGroup="start">Profile</Button>
-      <Button buttonType="primary" positionInGroup="middle">Settings</Button>
-      <Button buttonType="primary" positionInGroup="end">Messages</Button>
+      <Button variant="primary" positionInGroup="start">Profile</Button>
+      <Button variant="primary" positionInGroup="middle">Settings</Button>
+      <Button variant="primary" positionInGroup="end">Messages</Button>
     </Button.Group>
   );
 };

@@ -113,7 +113,7 @@ export const DefaultTooltip: Story = {
     animation: 'duration-300',
     style: 'dark',
     children: (
-      <Button size="sm" buttonType="primary">
+      <Button size="sm" variant="primary">
         Tooltip
       </Button>
     ),
