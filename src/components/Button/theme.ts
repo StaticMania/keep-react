@@ -2,7 +2,7 @@ import { keepButtonTheme } from './Button'
 import { keepButtonGroupTheme } from './ButtonGroup'
 
 export const buttonTheme: keepButtonTheme = {
-  base: 'group rounded-md flex h-min w-fit items-center justify-center text-center font-medium',
+  base: 'group rounded-md flex h-min w-fit items-center justify-center text-center font-medium active:focus:scale-95 duration-150',
   disabled: 'cursor-not-allowed opacity-50',
   width: {
     half: '!w-1/2',
