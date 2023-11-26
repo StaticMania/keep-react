@@ -6,29 +6,14 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { paginationGenerator } from '../../helpers/rangeWithDots'
 import { cn } from '../../helpers/cn'
 
-/**
- * Interface representing the theme configuration for the Pagination component.
- */
-/**
- * Interface representing the theme for the keepPagination component.
- */
 export interface keepPaginationTheme {
-  /**
-   * CSS class for the pagination container with border.
-   */
   paginateWithBorder: string
-  /**
-   * Layout styles for the pagination component.
-   */
   layout: {
     table: {
       base: string
       span: string
     }
   }
-  /**
-   * Styles for the pagination pages.
-   */
   pages: {
     base: string
     previous: {
@@ -60,9 +45,6 @@ export interface keepPaginationTheme {
       roundSquare: string
     }
   }
-  /**
-   * Styles for the "Go To" section of the pagination component.
-   */
   goTo: {
     base: string
     title: string
@@ -78,8 +60,11 @@ export interface keepPaginationTheme {
 }
 
 export type PaginationProps = PropsWithChildren<Pagination>
+
 /**
  * Pagination component props.
+ * @interface Pagination
+ * @extends Omit<ComponentProps<'nav'>, 'className'>
  */
 interface Pagination extends Omit<ComponentProps<'nav'>, 'className'> {
   /**

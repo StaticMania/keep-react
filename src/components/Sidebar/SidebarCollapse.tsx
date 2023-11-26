@@ -25,12 +25,31 @@ export interface KeepSidebarCollapseTheme {
   list: string
 }
 
+/**
+ * Props for the SidebarCollapse component.
+ * @interface SidebarCollapseProps
+ * @extends {PropsWithChildren}
+ * @extends {Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>}
+ * @extends {ComponentProps<'button'>}
+ *
+ */
 export interface SidebarCollapseProps
   extends PropsWithChildren,
     Pick<SidebarItemProps, 'active' | 'as' | 'href' | 'icon' | 'label' | 'labelColor'>,
     ComponentProps<'button'> {
+  /**
+   * Event handler for the button click event.
+   */
   onClick?: ComponentProps<'button'>['onClick']
+
+  /**
+   * Determines whether the sidebar is open or collapsed.
+   */
   open?: boolean
+
+  /**
+   * Custom theme for the sidebar.
+   */
   theme?: DeepPartial<KeepSidebarTheme>
 }
 

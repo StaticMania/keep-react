@@ -67,51 +67,71 @@ export interface IndicatorsTypeColors extends Pick<KeepColors, 'white' | 'slate'
 export interface CarouselProps extends PropsWithChildren<ComponentProps<'div'>> {
   /**
    * Determines whether to show indicators for the carousel slides.
+   * @type {boolean}
+   * @default false
    */
   indicators?: boolean
 
   /**
    * Determines whether to show controls for navigating the carousel.
+   * @type {boolean}
+   * @default false
    */
   showControls?: boolean
 
   /**
    * The custom component to be used as the left control for the carousel.
+   * @type {ReactNode}
+   * @default "<DefaultLeftControl />"
    */
   leftControl?: ReactNode
 
   /**
    * The custom component to be used as the right control for the carousel.
+   * @type {ReactNode}
+   * @default "<DefaultRightControl />"
    */
   rightControl?: ReactNode
 
   /**
    * The children elements to be rendered as carousel slides.
+   * @type {ReactNode}
+   * @default ''
    */
   children?: ReactNode
 
   /**
    * Determines whether the carousel should slide automatically.
+   * @type {boolean}
+   * @default true
    */
   slide?: boolean
 
   /**
    * The interval (in milliseconds) between each slide transition.
+   * @type {number}
+   * @default 3000 (3 seconds)
    */
   slideInterval?: number
 
   /**
    * The type of indicators to be displayed for the carousel slides.
+   * @type {IndicatorsType}
+   * @default 'dot'
    */
   indicatorsType?: IndicatorsType
 
   /**
    * The color scheme for the indicators.
+   * @type {keyof IndicatorsTypeColors}
+   * @default 'white'
    */
   indicatorsTypeColors?: keyof IndicatorsTypeColors
 
   /**
    * Additional CSS class name(s) for the carousel component.
+   * @type {string}
+   * @default ''
    */
   className?: string
 }

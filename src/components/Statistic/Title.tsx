@@ -12,8 +12,23 @@ export interface keepTitleTheme {
     icon: string
   }
 }
+
+/**
+ * Props for the Title component.
+ * @interface TitleProps
+ */
 export interface TitleProps {
+  /**
+   * The content of the title.
+   * @type {string}
+   * @default ''
+   */
   children: string
+  /**
+   * Additional class name for the title.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
 

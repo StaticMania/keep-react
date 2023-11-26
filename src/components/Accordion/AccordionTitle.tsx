@@ -31,19 +31,26 @@ export interface keepAccordionTitleTheme {
 
 export interface AccordionTitleProps extends ComponentProps<'button'> {
   /**
-   *  The icon to display when the accordion panel is closed.
+   * The icon to display when the accordion panel is closed.
+   * @type {ReactNode}
+   * @default "<PlusCircle />"
    */
   arrowIcon?: FC<ComponentProps<'svg'>>
+
   /**
    * The heading level to use for the AccordionTitle.
    * @type {KeepHeadingLevel}
    * @default 'h1'
    */
   as?: KeepHeadingLevel
+
   /**
    * The theme for the AccordionTitle component.
+   * @type {DeepPartial<keepAccordionTitleTheme>}
+   * @default {}
    */
   theme?: DeepPartial<keepAccordionTitleTheme>
+
   /**
    * className to apply to the AccordionTitle.
    * @type {string}

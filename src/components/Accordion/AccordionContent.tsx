@@ -18,6 +18,11 @@ export interface keepAccordionComponentTheme {
  */
 
 export interface AccordionContentProps extends PropsWithChildren<ComponentProps<'div'>> {
+  /**
+   * Optional theme configuration for the AccordionContent component.
+   * @type {DeepPartial<keepAccordionComponentTheme>}
+   * @default {}
+   */
   theme?: DeepPartial<keepAccordionComponentTheme>
 }
 

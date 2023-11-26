@@ -8,11 +8,15 @@ import { cn } from '../../helpers/cn'
 export interface CardTitleProps {
   /**
    * The content to be rendered inside the CardTitle component.
+   * @type {ReactNode}
+   * @default ''
    */
   children?: ReactNode
 
   /**
    * Additional class name(s) for custom styling.
+   * @type {string}
+   * @default ''
    */
   className?: string
 }

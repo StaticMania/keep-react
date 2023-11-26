@@ -54,59 +54,97 @@ export interface keepBadgeTheme {
 
 /**
  * Props for the Badge component.
+ * @interface BadgeProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>>}
  */
 export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>> {
   /**
    * The color of the badge.
+   * @type {keyof BadgeColors}
+   * @default 'info'
    */
   color?: keyof BadgeColors
+
   /**
    * The type of color for the badge.
+   * @type {'light' | 'strong'}
+   * @default 'strong'
    */
   colorType?: 'light' | 'strong'
+
   /**
    * The type of badge.
+   * @type {'default' | 'outline' | 'text'}
+   * @default 'default'
    */
   badgeType?: 'default' | 'outline' | 'text'
+
   /**
    * The URL to navigate to when the badge is clicked.
+   * @type {string}
+   * @default ''
    */
   href?: string
 
   /**
    * The icon to display within the badge.
+   * @type {ReactNode}
+   * @default ''
    */
   icon?: ReactNode
+
   /**
    * The position of the icon within the badge.
+   * @type {'left' | 'right'}
+   * @default 'left'
    */
   iconPosition?: 'left' | 'right'
+
   /**
    * Additional CSS class name for the badge.
+   * @type {string}
+   * @default ''
    */
   className?: string
+
   /**
    * The size of the badge.
+   * @type {keyof BadgeSizes}
+   * @default 'xs'
    */
   size?: keyof BadgeSizes
+
   /**
    * The content of the badge.
+   * @type {ReactNode}
    */
   children?: ReactNode
+
   /**
    * Whether to display a dot on the badge.
+   * @type {boolean}
+   * @default false
    */
   dot?: boolean
+
   /**
    * The position of the dot within the badge.
+   * @type {'left' | 'right'}
+   * @default 'left'
    */
   dotPosition?: 'left' | 'right'
+
   /**
    * Custom CSS style for the dot.
+   * @type {string}
+   * @default ''
    */
   dotStyle?: string
+
   /**
    * Custom CSS style for the icon.
+   * @type {string}
+   * @default ''
    */
   iconStyle?: string
 }

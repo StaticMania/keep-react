@@ -74,8 +74,8 @@ export interface KeepAvatarStatusType {
 }
 
 export interface KeepAvatarStatusTypeSize {
-  dot: AvatarSizes // The size of the dot avatar.
-  notification: AvatarSizes // The size of the notification avatar.
+  dot: AvatarSizes
+  notification: AvatarSizes
 }
 
 export interface StatusPositions {
@@ -104,65 +104,81 @@ export interface KeepAvatarStatusFontSize {
 export interface AvatarProps extends PropsWithChildren<ComponentProps<'div'>> {
   /**
    * Alternative text for the avatar image
-   * @type {string}
-   * @memberof AvatarProps
+   * @type string
+   * @default ''
    */
   alt?: string
+
   /**
    * Whether to show a border around the avatar
-   * @type {boolean}
-   * @memberof AvatarProps
+   * @type boolean
+   * @default false
    */
   bordered?: boolean
+
   /**
    * URL of the image to display as the avatar
-   * @type {string}
-   * @memberof AvatarProps
+   * @type string
    */
   img?: string
+
   /**
    * Size of the avatar
-   * @type {keyof AvatarSizes}
-   * @memberof AvatarProps
+   * @type keyof AvatarSizes
+   * @default 'md'
    */
   size?: keyof AvatarSizes
+
   /**
    * Shape of the avatar
-   * @type {('circle' | 'rounded' | 'square')}
-   * @memberof AvatarProps
+   * @type ('circle' | 'rounded' | 'square')
+   * @default 'square'
    */
   shape?: 'circle' | 'rounded' | 'square'
+
   /**
    * Whether to stack the avatar on top of other avatars
-   * @type {boolean}
-   * @memberof AvatarProps
+   * @type boolean
+   * @default false
    */
   stacked?: boolean
+
   /**
    * Status of the user associated with the avatar
-   * @type {('away' | 'busy' | 'offline' | 'online')}
-   * @memberof AvatarProps
+   * @type ('away' | 'busy' | 'offline' | 'online')
    */
   status?: 'away' | 'busy' | 'offline' | 'online'
+
   /**
    * Type of status icon to display
-   * @type {keyof KeepAvatarStatusType}
-   * @memberof AvatarProps
+   * @type keyof KeepAvatarStatusType
+   * @default 'dot'
    */
   statusType?: keyof KeepAvatarStatusType
+
   /**
    * Position of the status icon
-   * @type {keyof KeepPositions}
-   * @memberof AvatarProps
+   * @type keyof KeepPositions
+   * @default 'top-left'
    */
   statusPosition?: keyof KeepPositions
+
   /**
    * Number of notifications to display on the avatar
-   * @type {number}
-   * @memberof AvatarProps
+   * @type number
    */
   totalNotification?: number
+
+  /**
+   * className to apply to the Avatar.
+   * @type string
+   */
   className?: string
+
+  /**
+   * style to apply to the Avatar status.
+   * @type string
+   */
   statusStyle?: string
 }
 

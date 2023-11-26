@@ -5,25 +5,34 @@ import { cn } from '../../helpers/cn'
 
 /**
  * Props for the AvatarGroupCounter component.
+ * @type {AvatarGroupCounterProps}
  */
 export type AvatarGroupCounterProps = PropsWithChildren<{
   /**
    * The total number to be displayed.
+   * @type {number}
+   * @default 0
    */
   total?: number
 
   /**
    * The URL to navigate to when the component is clicked.
+   * @type {string}
+   * @default ''
    */
   href?: string
 
   /**
    * The size of the avatar.
+   * @type {keyof AvatarSizes}
+   * @default 'md'
    */
   size?: keyof AvatarSizes
 
   /**
    * Additional CSS class names for the component.
+   * @type {string}
+   * @default ''
    */
   className?: string
 }>

@@ -73,72 +73,106 @@ export interface keepCheckboxGroupTheme {
 interface CheckboxGroupProps {
   /**
    * The type of the CheckboxGroup.
+   * @type {'square' | 'circle'}
+   * @default 'square'
    */
   checkboxType?: 'square' | 'circle'
+
   /**
    * The position of the CheckboxGroup.
+   * @type {'left' | 'right'}
+   * @default 'left'
    */
   checkboxPosition?: 'left' | 'right'
+
   /**
    * The title for the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   title: string
+
   /**
    * The description for the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   description?: string
+
   /**
    * The icon for the CheckboxGroup.
+   * @type {ReactNode}
+   * @default ''
    */
   icon?: ReactNode
 
   /**
    * The image for the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   img?: string
 
   /**
    * The shape of the image for the CheckboxGroup.
+   * @type {'square' | 'circle'}
+   * @default 'circle'
    */
   imgShape?: 'square' | 'circle'
 
   /**
    * The name of the field for the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   fieldName?: string
 
   /**
    * The selection mode for the CheckboxGroup.
+   * @type {'single' | 'multiple'}
+   * @default 'single'
    */
   select?: 'single' | 'multiple'
 
   /**
    * The value of the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   value?: string
 
   /**
    * The selected value of the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   selected?: string
 
   /**
    * The event handler for option change in the CheckboxGroup.
+   * @type {(e: React.ChangeEvent<HTMLInputElement>) => void}
+   * @default () => {}
    */
   onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 
   /**
    * The CSS class name for the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   className?: string
 
   /**
    * The CSS class name for the title of the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   titleClassName?: string
 
   /**
    * The CSS class name for the description of the CheckboxGroup.
+   * @type {string}
+   * @default ''
    */
   descriptionClassName?: string
 }

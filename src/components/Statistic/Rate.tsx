@@ -7,8 +7,21 @@ export interface keepRateTheme {
   base?: string
 }
 
+/**
+ * Props for the Rate component.
+ * @interface RateProps
+ */
 export interface RateProps {
+  /**
+   * The content of the Rate component.
+   * @type {string}
+   * @default ''
+   */
   children?: string
+  /**
+   * Additional class name for the Rate component.
+   * @type {string}
+   */
   className?: string
 }
 

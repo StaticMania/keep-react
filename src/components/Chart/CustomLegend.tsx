@@ -5,6 +5,10 @@ import type { Payload } from 'recharts/types/component/DefaultLegendContent'
  * @interface propsType
  */
 interface propsType {
+  /**
+   * The payload for the legend.
+   * @type {Payload[]}
+   */
   payload: Payload[]
 }
 

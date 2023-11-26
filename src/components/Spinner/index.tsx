@@ -26,11 +26,15 @@ export interface SpinnerSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' 
 export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
   /**
    * The color of the spinner.
+   * @type {keyof SpinnerColors}
+   * @default 'info'
    */
   color?: keyof SpinnerColors
 
   /**
    * The size of the spinner.
+   * @type {keyof SpinnerSizes}
+   * @default 'md'
    */
   size?: keyof SpinnerSizes
 }

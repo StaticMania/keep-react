@@ -14,57 +14,79 @@ import { YearPicker } from './YearPicker'
 export interface DatePickerProps {
   /**
    * Determines whether to show two months in the date picker.
+   * @type {boolean}
+   * @default false
    */
   showTwoMonth?: boolean
 
   /**
    * Callback function for handling range date selection.
    * @param value - The selected range date value.
+   * @type {(value: rangePicker | ((prevValue: rangePicker | undefined) => rangePicker)) => void}
+   * @default undefined
    */
   rangeDate?: (value: rangePicker | ((prevValue: rangePicker | undefined) => rangePicker)) => void
 
   /**
    * The content to be rendered inside the DatePicker component.
+   * @type {ReactNode}
+   * @default null
    */
   children: ReactNode
 
   /**
    * State setter for single date selection.
+   * @type {React.Dispatch<React.SetStateAction<Date | null>>}
+   * @default null
    */
   singleDatePicker?: React.Dispatch<React.SetStateAction<Date | null>>
 
   /**
    * State setter for year selection.
+   * @type {React.Dispatch<React.SetStateAction<number | Date | null | undefined>>}
+   * @default null
    */
   yearPicker?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
 
   /**
    * State setter for month selection.
+   * @type {React.Dispatch<React.SetStateAction<string | Date | null | undefined>>}
+   * @default null
    */
   monthPicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
 
   /**
    * State setter for time selection.
+   * @type {React.Dispatch<React.SetStateAction<string | Date | null | undefined>>}
+   * @default null
    */
   timePicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
 
   /**
    * The CSS class name for the DatePicker component.
+   * @type {string}
+   * @default ''
    */
   className?: string
 
   /**
    * The CSS style for the icon element.
+   * @type {string}
+   * @default ''
    */
   iconStyle?: string
 
   /**
    * The placeholder text for the DatePicker component.
+   * @type {string}
+   * @default ''
    */
   placeholder?: string
 
   /**
    * The icon element to be rendered inside the DatePicker component.
+   * @type {ReactNode}
+   * @default null
    */
   icon?: ReactNode
 }

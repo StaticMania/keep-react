@@ -3,9 +3,6 @@ import { useTheme } from '../../Keep/ThemeContext'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { cn } from '../../helpers/cn'
 
-/**
- * Represents the theme configuration for the KeepProgress component.
- */
 export interface keepProgressTheme {
   base: string
   label: string
@@ -33,6 +30,8 @@ export interface keepProgressTheme {
 
 /**
  * Props for the Progress component.
+ * @interface ProgressProps
+ * @extends PropsWithChildren<ComponentProps<'div'>>
  */
 export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> {
   /**
@@ -69,9 +68,6 @@ export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> 
   progress: number
 }
 
-/**
- * Interface for defining the colors used in the Progress component.
- */
 export interface ProgressColor
   extends Pick<KeepColors, 'info' | 'error' | 'success' | 'warning' | 'indigo' | 'purple'> {
   [key: string]: string

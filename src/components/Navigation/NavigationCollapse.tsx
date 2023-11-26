@@ -4,9 +4,24 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { CaretLeft } from 'phosphor-react'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the Collapse component.
+ * @interface CollapseProps
+ */
 export interface CollapseProps {
+  /**
+   * The content to be rendered inside the Collapse component.
+   */
   children?: React.ReactNode
+
+  /**
+   * Additional class name for styling the Collapse component.
+   */
   className?: string
+
+  /**
+   * The type of collapse, either 'sidebar' or 'fullWidth'.
+   */
   collapseType?: 'sidebar' | 'fullWidth'
 }
 

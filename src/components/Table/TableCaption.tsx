@@ -7,7 +7,17 @@ export interface keepTableCaptionTheme {
   base: string
 }
 
+/**
+ * Props for the TableCaption component.
+ * @interface TableCaptionProps
+ * @extends {PropsWithChildren}
+ * @extends {ComponentProps<'caption'>}
+ */
 export interface TableCaptionProps extends PropsWithChildren, ComponentProps<'caption'> {
+  /**
+   * Optional theme for the TableCaption component.
+   * @type {DeepPartial<keepTableCaptionTheme>}
+   */
   theme?: DeepPartial<keepTableCaptionTheme>
 }
 

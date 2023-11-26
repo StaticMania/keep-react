@@ -11,8 +11,20 @@ export interface KeepSidebarCTATheme {
   color: KeepSidebarCTAColors
 }
 
+/**
+ * Props for the SidebarCTA component.
+ * @interface SidebarCTAProps
+ * @extends {PropsWithChildren}
+ */
 export interface SidebarCTAProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'color'> {
+  /**
+   * The color of the SidebarCTA component.
+   */
   color?: keyof KeepSidebarCTAColors
+
+  /**
+   * The theme configuration for the SidebarCTA component.
+   */
   theme?: DeepPartial<KeepSidebarCTATheme>
 }
 

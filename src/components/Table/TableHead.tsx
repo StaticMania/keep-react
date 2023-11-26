@@ -11,7 +11,17 @@ export interface keepTableHeadTheme {
   cell: keepTableHeadCellTheme
 }
 
+/**
+ * Props for the TableHead component.
+ * @interface TableHeadProps
+ * @extends {PropsWithChildren}
+ * @extends {ComponentProps<'thead'>}
+ */
 export interface TableHeadProps extends PropsWithChildren, ComponentProps<'thead'> {
+  /**
+   * Optional theme for the TableHead component.
+   * @type {DeepPartial<keepTableHeadTheme>}
+   */
   theme?: DeepPartial<keepTableHeadTheme>
 }
 

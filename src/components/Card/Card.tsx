@@ -48,41 +48,56 @@ export interface CardBgImageSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
 export interface CardProps extends PropsWithChildren<ComponentProps<'div'>> {
   /**
    * Determines whether the card has a shadow.
+   * @type {boolean}
+   * @default false
    */
   shadow?: boolean
 
   /**
    * Determines whether the card has a border.
+   * @type {boolean}
+   * @default true
    */
   border?: boolean
 
   /**
    * Determines whether the card is displayed horizontally.
+   * @type {boolean}
+   * @default false
    */
   horizontal?: boolean
 
   /**
    * The URL for the card's hyperlink.
+   * @type {string}
    */
   href?: string
 
   /**
    * The alternate text for the card's image.
+   * @type {string}
+   * @default ''
    */
   imgAlt?: string
 
   /**
    * The source URL for the card's image.
+   * @type {string}
+   * @default ''
    */
   imgSrc?: string
 
   /**
    * The size of the card's background image.
+   * @type {keyof CardBgImageSizes}
+   * @default 'lg'
    */
   imgSize?: keyof CardBgImageSizes
 
   /**
    * The custom CSS style for the card's image.
+   * @type {string}
+   * @default ''
    */
   imgStyle?: string
 }

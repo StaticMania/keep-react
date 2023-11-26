@@ -1,7 +1,5 @@
 import type { keepProgressTheme } from '.'
-/**
- * Represents the theme configuration for the Progress component.
- */
+
 export const progressTheme: keepProgressTheme = {
   base: 'flex items-center',
   label: 'mb-1 flex justify-between text-metal-500 font-medium',

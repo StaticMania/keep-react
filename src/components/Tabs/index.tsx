@@ -57,6 +57,7 @@ export type TabItemStatus = 'active' | 'notActive'
 
 /**
  * Represents the event object for tab events.
+ * @interface TabEventProps
  */
 interface TabEventProps {
   target: number
@@ -77,14 +78,20 @@ export interface TabNotificationColors extends Pick<KeepColors, 'error' | 'gray'
 export interface TabsProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'style' | 'ref'>> {
   /**
    * The style of the tabs.
+   * @type {keyof TabStyles}
+   * @default 'default'
    */
   style?: keyof TabStyles
   /**
    * The position of the icon relative to the tab label.
+   * @type {'left' | 'right'}
+   * @default 'left'
    */
   iconPosition?: 'left' | 'right'
   /**
    * The position of the tab border.
+   * @type {'top' | 'bottom'}
+   * @default 'bottom'
    */
   borderPosition?: 'top' | 'bottom'
   /**

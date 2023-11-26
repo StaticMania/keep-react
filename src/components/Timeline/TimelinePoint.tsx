@@ -3,9 +3,24 @@ import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the TimelinePoint component.
+ * @type TimelinePointProps
+ * @extends {PropsWithChildren<ComponentProps<'div'>>}
+ */
 export type TimelinePointProps = PropsWithChildren<
   ComponentProps<'div'> & {
+    /**
+     * The icon to be displayed in the TimelinePoint.
+     * @type {ReactNode}
+     * @default ''
+     */
     icon?: ReactNode
+    /**
+     * Additional class name for the TimelinePoint.
+     * @type {string}
+     * @default ''
+     */
     className?: string
   }
 >

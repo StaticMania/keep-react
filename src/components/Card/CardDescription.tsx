@@ -9,11 +9,15 @@ import { useTheme } from '../../Keep/ThemeContext'
 export interface CardDescriptionProps {
   /**
    * The content of the CardDescription component.
+   * @type {ReactNode}
+   * @default ''
    */
   children?: ReactNode
 
   /**
    * Additional CSS class name for styling.
+   * @type {string}
+   * @default ''
    */
   className?: string
 }

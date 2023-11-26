@@ -1,7 +1,15 @@
 import { FC } from 'react'
 import { Avatar } from '../Avatar/Avatar'
 
+/**
+ * Props for the UserImg component.
+ * @interface UserImgProps
+ */
 export interface UserImgProps {
+  /**
+   * The URL for the user's image.
+   * @type {string}
+   */
   img: string
 }
 

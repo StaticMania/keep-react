@@ -3,14 +3,18 @@ import { cn } from '../../helpers/cn'
 
 /**
  * Props for the AvatarGroup component.
+ * @type {AvatarGroupProps}
  */
 export type AvatarGroupProps = PropsWithChildren<{
   /**
    * The children of the AvatarGroup component.
+   * @type {ReactNode}
    */
   children: ReactNode
   /**
    * The optional class name for the AvatarGroup component.
+   * @type {string}
+   * @default ''
    */
   className?: string
 }>

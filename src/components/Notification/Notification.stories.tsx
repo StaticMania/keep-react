@@ -6,10 +6,6 @@ import { Button } from '../Button/Button'
 import { useState } from 'react'
 import { Avatar } from '../Avatar/Avatar'
 
-/**
- * Renders the default notification component.
- * @returns {JSX.Element} The rendered default notification component.
- */
 const DefaultNotificationComponent = () => {
   const [showNotification, setShowNotification] = useState(false)
   const onDismiss = () => {
@@ -49,9 +45,6 @@ const DefaultNotificationComponent = () => {
     </div>
   )
 }
-/**
- * Renders a component that displays a notification with an avatar.
- */
 const NotificationWithAvatarComponent = () => {
   const [showNotification, setShowNotification] = useState(false)
   const onDismiss = () => {
@@ -99,9 +92,6 @@ const NotificationWithAvatarComponent = () => {
     </div>
   )
 }
-/**
- * Renders a component that displays a notification with a card.
- */
 const NotificationWithCardComponent = () => {
   const [showNotification, setShowNotification] = useState(false)
   const onDismiss = () => {
@@ -140,9 +130,7 @@ const NotificationWithCardComponent = () => {
     </div>
   )
 }
-/**
- * Renders a component that displays a notification with an icon.
- */
+
 const NotificationWithIconComponent = () => {
   const [showNotification, setShowNotification] = useState(false)
   const onDismiss = () => {
@@ -193,9 +181,6 @@ const meta: Meta<typeof Notification> = {
   component: Notification,
   tags: ['autodocs'],
   argTypes: {
-    /**
-     * Determines whether the notification can be dismissed by the user
-     */
     headerBannerSrc: {
       description: 'Source URL for an image to be used as the header banner of the notification',
       table: {
@@ -203,9 +188,6 @@ const meta: Meta<typeof Notification> = {
         defaultValue: { summary: '' },
       },
     },
-    /**
-     * children of the notification component
-     */
     children: {
       description: 'Notification content',
       control: { type: null },
@@ -213,9 +195,6 @@ const meta: Meta<typeof Notification> = {
         type: { summary: 'ReactNode' },
       },
     },
-    /**
-     * position of the notification component
-     */
     position: {
       description: 'Notification Position',
       control: { type: 'select' },
@@ -225,23 +204,14 @@ const meta: Meta<typeof Notification> = {
         defaultValue: { summary: 'top-right' },
       },
     },
-    /**
-     * infoIcon of the notification component
-     */
     infoIcon: {
       description: 'Icon to be displayed in the notification as an informational indicator',
       control: { type: null },
     },
-    /**
-     * additionalContent of the notification component
-     */
     additionalContent: {
       description: 'Additional content to be displayed within the notification.',
       control: { type: null },
     },
-    /**
-     * dismiss of the notification component
-     */
     onDismiss: {
       description: 'Determines whether the notification can be dismissed by the user',
       table: {
@@ -250,15 +220,9 @@ const meta: Meta<typeof Notification> = {
       },
     },
   },
-  /**
-   * The parameters for the Notification component.
-   */
   parameters: {
     componentSubtitle: 'Displays an image that represents a user or organization',
   },
-  /**
-   * The decorators for the Notification component.
-   */
   decorators: [
     (Story) => (
       <div className="h-64">
@@ -271,27 +235,18 @@ const meta: Meta<typeof Notification> = {
 export default meta
 type Story = StoryObj<typeof Notification>
 
-/**
- * DefaultNotification component story.
- */
 export const DefaultNotification: Story = {
   render: () => <DefaultNotificationComponent />,
 }
-/**
- * Renders a notification with an icon.
- */
+
 export const NotificationWithIcon: Story = {
   render: () => <NotificationWithIconComponent />,
 }
-/**
- * Renders a notification with an avatar.
- */
+
 export const NotificationWithAvatar: Story = {
   render: () => <NotificationWithAvatarComponent />,
 }
-/**
- * Renders a notification with a card component.
- */
+
 export const NotificationWithCard: Story = {
   render: () => <NotificationWithCardComponent />,
 }

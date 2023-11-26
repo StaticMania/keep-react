@@ -1,13 +1,5 @@
 import { keepPaginationTheme } from '.'
 
-/**
- * Represents the theme configuration for pagination.
- * @type {keepPaginationTheme}
- * - `paginateWithBorder` {string} - The border class for the pagination component.
- * - `layout` {object} - The layout configuration for the pagination component.
- * - `pages` {object} - The pages configuration for the pagination component.
- * - `goTo` {object} - The goTo configuration for the pagination component.
- */
 export const paginationTheme: keepPaginationTheme = {
   paginateWithBorder: 'p-2 border border-metal-200 rounded-md',
   layout: {

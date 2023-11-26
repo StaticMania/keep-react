@@ -34,6 +34,7 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
    * Determines whether the accordion should always be open.
    *
    * @type {boolean}
+   * @default false
    */
   alwaysOpen?: boolean
 
@@ -41,6 +42,7 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
    * Determines whether to show the open/close icon for each accordion panel.
    *
    * @type {boolean}
+   * @default true
    */
   showIcon?: boolean
 
@@ -48,6 +50,7 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
    * The icon to display when the accordion panel is open.
    *
    * @type {ReactNode}
+   * @default <ChevronUpIcon />
    */
   openIcon?: ReactNode
 
@@ -55,6 +58,7 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
    * The icon to display when the accordion panel is closed.
    *
    * @type {ReactNode}
+   * @default <ChevronDownIcon />
    */
   closeIcon?: ReactNode
 
@@ -62,24 +66,28 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
    * The accordion panels to display.
    *
    * @type {(ReactElement<AccordionPanelProps> | ReactElement<AccordionPanelProps>[])}
+   * @default []
    */
   children: ReactElement<AccordionPanelProps> | ReactElement<AccordionPanelProps>[]
   /**
    * Determines whether the accordion should be flush.
    *
    * @type {boolean}
+   * @default false
    */
   flush?: boolean
   /**
    * Determines whether the accordion should be collapsed by default.
    *
    * @type {boolean}
+   * @default false
    */
   collapseAll?: boolean
   /**
    * Additional CSS class name(s) to apply.
    *
    * @type {string}
+   * @default ''
    */
 
   theme?: DeepPartial<keepAccordionTheme>
@@ -87,6 +95,7 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
    * The position of the icon relative to the panel title.
    *
    * @type {string}
+   * @default 'right'
    */
 
   iconPosition?: string
@@ -94,6 +103,7 @@ export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>>
    * Determines whether the accordion is disabled.
    *
    * @type {boolean}
+   * @default false
    */
   disabled?: boolean
 }

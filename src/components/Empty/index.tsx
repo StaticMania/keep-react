@@ -17,38 +17,64 @@ export interface keepEmptyTheme {
 export interface EmptyProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'title'>> {
   /**
    * The title of the empty component.
+   * @type {string}
+   * @default ''
    */
   title?: string
+
   /**
    * The content of the empty component.
+   * @type {string}
+   * @default ''
    */
   content?: string
+
   /**
    * The URL to redirect to when the button is clicked.
+   * @type {string}
+   * @default ''
    */
   redirectUrl?: string
+
   /**
    * The text to display on the button.
+   * @type {string}
+   * @default ''
    */
   buttonText?: string
+
   /**
    * The image to display in the empty component.
+   * @type {ReactNode}
+   * @default ''
    */
   image?: ReactNode
+
   /**
    * The style of the title.
+   * @type {string}
+   * @default ''
    */
   titleStyle?: string
+
   /**
    * The style of the content.
+   * @type {string}
+   * @default ''
    */
   contentStyle?: string
+
   /**
    * The size of the redirect button.
+   * @type {'xs' | 'sm' | 'md' | 'lg'}
+   * @default 'sm'
    */
   redirectBtnSize?: 'xs' | 'sm' | 'md' | 'lg'
+
   /**
    * The type of the button.
+   * @type {'primary' | 'dashed' | 'text' | 'linkPrimary' | 'linkGray' | 'outlineGray' | 'outlinePrimary' | 'default'}
+   * @default 'primary'
    */
   buttonType?: 'primary' | 'dashed' | 'text' | 'linkPrimary' | 'linkGray' | 'outlineGray' | 'outlinePrimary' | 'default'
 }

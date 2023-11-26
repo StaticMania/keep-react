@@ -22,18 +22,29 @@ export interface HelperColors extends Pick<KeepColors, 'gray' | 'info' | 'error'
 export interface HelperTextProps extends PropsWithChildren<Omit<ComponentProps<'p'>, 'color' | 'className'>> {
   /**
    * The color of the helper text.
+   * @type {keyof HelperColors}
+   * @default 'gray'
    */
   color?: keyof HelperColors
+
   /**
    * The value of the helper text.
+   * @type {string}
+   * @default ''
    */
   value?: string
+
   /**
    * Specifies whether the helper text is disabled.
+   * @type {boolean}
+   * @default false
    */
   disabled?: boolean
+
   /**
    * The CSS class name for the helper text.
+   * @type {string}
+   * @default ''
    */
   className?: string
 }

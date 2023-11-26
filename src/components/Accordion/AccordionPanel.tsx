@@ -10,11 +10,15 @@ import { AccordionPanelContext } from './AccordionPanelContext'
  */
 export interface AccordionPanelProps extends PropsWithChildren<AccordionProps> {
   /**
-   * isOpen - Whether the AccordionPanel is currently open.
+   * isOpen - Determines whether the accordion panel should always be open.
+   * @type {boolean}
+   * @default false
    */
   isOpen?: boolean
   /**
    * setOpen - A function to set the open state of the AccordionPanel.
+   * @type {() => void}
+   * @default undefined
    */
   setOpen?: () => void
 }

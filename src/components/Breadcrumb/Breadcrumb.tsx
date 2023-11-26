@@ -33,21 +33,28 @@ export interface keepBreadCrumbTheme {
 export interface BreadcrumbProps extends PropsWithChildren<ComponentProps<'nav'>> {
   /**
    * The separator icon to be displayed between breadcrumb items.
+   * @type {ReactNode}
    */
   separatorIcon?: ReactNode
 
   /**
    * Determines whether the breadcrumb should have a border.
+   * @type {boolean}
+   * @default false
    */
   breadCrumbWithBorder?: boolean
 
   /**
    * Additional CSS class name for the breadcrumb component.
+   * @type {string}
+   * @default ''
    */
   className?: string
 
   /**
    * The style for the breadcrumb list.
+   * @type {string}
+   * @default ''
    */
   listStyle?: string
 }

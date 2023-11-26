@@ -2,18 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Popover } from '.'
 import { Button } from '../Button/Button'
 
-/**
- * Meta information for the Popover component.
- */
 const meta: Meta<typeof Popover> = {
   component: Popover,
   tags: ['autodocs'],
   decorators: [
-    /**
-     * Decorator to wrap the Popover component in a container with fixed height.
-     * @param Story - The story component.
-     * @returns The decorated story component.
-     */
     (Story) => (
       <div
         style={{
@@ -24,9 +16,6 @@ const meta: Meta<typeof Popover> = {
     ),
   ],
   argTypes: {
-    /**
-     * Popover title.
-     */
     title: {
       description: 'Popover title',
       table: {
@@ -34,9 +23,6 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: 'Popover...' },
       },
     },
-    /**
-     * Popover custom className.
-     */
     className: {
       description: 'Popover custom className',
       table: {
@@ -44,9 +30,6 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: '' },
       },
     },
-    /**
-     * Popover description.
-     */
     description: {
       description: 'Popover description',
       table: {
@@ -54,9 +37,6 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: 'Loream...' },
       },
     },
-    /**
-     * Popover additional content.
-     */
     additionalContent: {
       description: 'Popover additional content',
       control: { type: null },
@@ -64,9 +44,6 @@ const meta: Meta<typeof Popover> = {
         type: { summary: 'ReactNode' },
       },
     },
-    /**
-     * Popover Action Component.
-     */
     children: {
       description: 'Popover Action Component',
       control: { type: null },
@@ -74,9 +51,6 @@ const meta: Meta<typeof Popover> = {
         type: { summary: 'ReactNode' },
       },
     },
-    /**
-     * Popover custom Icon.
-     */
     icon: {
       description: 'Popover custom Icon',
       control: { type: null },
@@ -84,9 +58,6 @@ const meta: Meta<typeof Popover> = {
         type: { summary: 'ReactNode' },
       },
     },
-    /**
-     * Popover arrow show or not?
-     */
     showArrow: {
       description: 'Popover arrow show or not?',
       table: {
@@ -94,9 +65,6 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: true },
       },
     },
-    /**
-     * Popover dismiss icon show or not?
-     */
     showDismissIcon: {
       description: 'Popover dismiss icon show or not?',
       table: {
@@ -104,9 +72,6 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: false },
       },
     },
-    /**
-     * Available Trigger type.
-     */
     trigger: {
       description: 'Available Trigger type',
       control: { type: 'radio' },
@@ -116,9 +81,6 @@ const meta: Meta<typeof Popover> = {
         defaultValue: { summary: 'click' },
       },
     },
-    /**
-     * Available Popover Position.
-     */
     position: {
       description: 'Available Popover Position',
       control: { type: 'select' },
@@ -133,15 +95,6 @@ const meta: Meta<typeof Popover> = {
 export default meta
 type Story = StoryObj<typeof Popover>
 
-/**
- * DefaultPopover story configuration.
- * @typedef {Object} DefaultPopover
- * @property {Object} args - The arguments for the DefaultPopover story.
- * @property {string} args.title - The title of the popover.
- * @property {string} args.description - The description of the popover.
- * @property {React.ReactNode} args.additionalContent - Additional content to be displayed in the popover.
- * @property {React.ReactNode} args.children - The children of the popover.
- */
 export const DefaultPopover: Story = {
   args: {
     title: 'Popover title here',
@@ -158,9 +111,6 @@ export const DefaultPopover: Story = {
     children: <Button size="xs">Popover</Button>,
   },
 }
-/**
- * Represents a story for a popover with one paragraph of additional content.
- */
 export const OneParagraphPopover: Story = {
   args: {
     showDismissIcon: false,
@@ -177,9 +127,6 @@ export const OneParagraphPopover: Story = {
     children: <Button size="xs">Popover</Button>,
   },
 }
-/**
- * Represents a single line popover story.
- */
 export const SingleLinePopover: Story = {
   args: {
     className: '!w-[20rem]',
@@ -189,15 +136,6 @@ export const SingleLinePopover: Story = {
     children: <Button size="xs">Popover</Button>,
   },
 }
-
-/**
- * Represents a story for a popover with trigger variant.
- *
- * @remarks
- * This story configures the trigger, title, description, and children for the popover.
- *
- * @public
- */
 export const TriggerVariantPopover: Story = {
   args: {
     trigger: 'hover',
@@ -208,15 +146,6 @@ export const TriggerVariantPopover: Story = {
   },
 }
 
-/**
- * Represents the PopoverPosition story.
- * @typedef {Story} PopoverPosition
- * @property {string} position - The position of the popover.
- * @property {string} trigger - The trigger event for the popover.
- * @property {string} title - The title of the popover.
- * @property {string} description - The description of the popover.
- * @property {ReactNode} children - The content of the popover.
- */
 export const PopoverPosition: Story = {
   args: {
     position: 'right-end',

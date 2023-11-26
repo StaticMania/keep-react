@@ -1,7 +1,15 @@
 import type { ReactNode } from 'react'
 import { createContext, useContext } from 'react'
 
+/**
+ * Represents the context for the Breadcrumb component.
+ * @interface BreadcrumbContext
+ */
 type BreadcrumbContext = {
+  /**
+   * The separator icon to be displayed between breadcrumb items.
+   * @type {ReactNode}
+   */
   separatorIcon?: ReactNode
 }
 
