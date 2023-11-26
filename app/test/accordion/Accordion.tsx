@@ -1,19 +1,28 @@
 'use client'
 import React, { ComponentProps, FC, PropsWithChildren, ReactElement, useState } from 'react'
-import { Title } from './Title'
-import { Content } from './Content'
-import { Panel, PanelProps } from './Panel'
+import { Title, keepAccordionTitleTheme } from './Title'
+import { Content, keepAccordionContentTheme } from './Content'
+import { Panel, PanelProps, keepAccordionPanelTheme } from './Panel'
 import { cn } from '~/src/helpers/cn'
-import { Icon } from './Icon'
-import { Container } from './Container'
+import { Icon, keepAccordionIconTheme } from './Icon'
+import { Container, keepAccordionContainerTheme } from './Container'
 
 export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>> {
   children?: ReactElement<PanelProps> | ReactElement<PanelProps>[]
   className?: string
-  activePanel?: number
+  flush?: boolean
+  openFirstPanel?: boolean
 }
 
-export const AccordionComponent: FC<AccordionProps> = ({ children, className }) => {
+export interface keepAccordionTheme {
+  container: keepAccordionContainerTheme
+  content: keepAccordionContentTheme
+  icon: keepAccordionIconTheme
+  panel: keepAccordionPanelTheme
+  title: keepAccordionTitleTheme
+}
+
+export const AccordionComponent: FC<AccordionProps> = ({ children, className, flush, openFirstPanel }) => {
   const [isOpen, setIsOpen] = useState(0)
 
   const modifiedChildren = React.Children.map(children, (child, index) => {
@@ -22,6 +31,8 @@ export const AccordionComponent: FC<AccordionProps> = ({ children, className }) 
         state: {
           isOpen: isOpen === index ? -1 : 0,
           setIsOpen: () => setIsOpen(isOpen === index ? -1 : index),
+          flush,
+          openFirstPanel,
         },
       })
     }

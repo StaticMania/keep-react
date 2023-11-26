@@ -9,14 +9,21 @@ export interface PanelProps {
   [key: string]: any
 }
 
+export interface keepAccordionPanelTheme {
+  base: string
+  panelBg: string
+}
+
 export const Panel: FC<PanelProps> = ({ children, className, ...props }) => {
-  const { isOpen, setIsOpen } = props.state
+  const { isOpen, setIsOpen, flush, openFirstPanel } = props.state
   return (
     <div
-      className={cn('group bg-metal-50 transition-colors duration-200', className)}
+      className={cn('group transition-colors duration-200', !flush && 'bg-metal-50', className)}
       {...props}
       onClick={() => setIsOpen(!isOpen)}>
-      <AccordionContext.Provider value={{ isOpen, setIsOpen }}>{children}</AccordionContext.Provider>
+      <AccordionContext.Provider value={{ isOpen, setIsOpen, flush, openFirstPanel }}>
+        {children}
+      </AccordionContext.Provider>
     </div>
   )
 }

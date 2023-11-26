@@ -1,7 +1,7 @@
 'use client'
-
 import { FC, ReactNode } from 'react'
-import { cn } from '~/src/helpers/cn'
+import { cn } from '../../helpers/cn'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface TitleProps {
   children?: ReactNode
@@ -12,5 +12,6 @@ export interface keepAccordionTitleTheme {
 }
 
 export const Title: FC<TitleProps> = ({ children, className }) => {
-  return <div className={cn('', className)}>{children}</div>
+  const { title } = useTheme().theme.accordion
+  return <div className={cn(title.base, className)}>{children}</div>
 }

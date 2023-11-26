@@ -1,7 +1,8 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { cn } from '~/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
+import { useTheme } from '~/src/Keep/ThemeContext'
 
 export interface IconProps {
   children?: ReactNode
@@ -18,5 +19,6 @@ export interface keepAccordionIconTheme {
 
 export const Icon: FC<IconProps> = ({ children, className }) => {
   const { isOpen } = useAccordionContext()
-  return <div className={cn(isOpen ? '' : '', className)}>{children}</div>
+  const { icon } = useTheme().theme.accordion
+  return <div className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}>{children}</div>
 }

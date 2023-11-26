@@ -1,7 +1,8 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { cn } from '~/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface ContainerProps {
   children?: ReactNode
@@ -14,15 +15,12 @@ export interface keepAccordionContainerTheme {
 }
 
 export const Container: FC<ContainerProps> = ({ children, className }) => {
-  const { isOpen, flush } = useAccordionContext()
+  const { isOpen, flush, setIsOpen } = useAccordionContext()
+  const { container } = useTheme().theme.accordion
   return (
     <div
-      className={cn(
-        'base from theme',
-        !flush && isOpen ? 'open from theme' : '',
-        flush && isOpen ? '' : '',
-        className,
-      )}>
+      onClick={() => setIsOpen && setIsOpen(!isOpen)}
+      className={cn(container.base, !flush && isOpen ? container.open : '', flush && isOpen ? '' : '', className)}>
       {children}
     </div>
   )

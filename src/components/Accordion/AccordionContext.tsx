@@ -1,11 +1,10 @@
 import { createContext, useContext } from 'react'
-import type { AccordionProps } from './Accordion'
+import { AccordionProps } from './Accordion'
 
 type AccordionContext = Omit<AccordionProps, 'children'> & {
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>
   isOpen?: boolean
   flush?: boolean
-  openFirstPanel?: boolean
 }
 
 export const AccordionContext = createContext<AccordionContext | undefined>(undefined)

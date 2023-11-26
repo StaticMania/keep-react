@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import useCopy from '~/hooks/useCopy'
 import { ComponentList } from '~/routes/routes'
-import { ArrowUpRight, Check, Clipboard } from 'phosphor-react'
+import { ArrowUpRight, Check, Clipboard, Plus } from 'phosphor-react'
 import Image from 'next/image'
 import { Accordion } from '~/src'
 
@@ -25,19 +25,19 @@ const Hero = () => {
           Supercharge Your Web Development with
           <span className="hero-text block">Keep React</span>
         </h1>
-        <p className="text-metal-600 mx-auto max-w-xs text-body-5 md:max-w-lg md:text-body-3">
+        <p className="mx-auto max-w-xs text-body-5 text-metal-600 md:max-w-lg md:text-body-3">
           Unlocking the Power of Code to Transform Your Ideas into Stunning Web Realities.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-5 md:flex-row">
-          <div className="divide-metal-100 flex items-center justify-between gap-5 divide-x-2 rounded-md bg-white px-4 py-3">
-            <p className="text-metal-500 text-body-5 font-normal">npm install keep-react</p>
+          <div className="flex items-center justify-between gap-5 divide-x-2 divide-metal-100 rounded-md bg-white px-4 py-3">
+            <p className="text-body-5 font-normal text-metal-500">npm install keep-react</p>
             <button className="pl-2" onClick={() => copyToClipboard('npm install keep-react')}>
               {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
             </button>
           </div>
           <Link
             href="/docs/getting-started/Introduction"
-            className="border-metal-900 bg-metal-900 hover:bg-metal-800 focus:ring-metal-800 active:bg-metal-900 group h-min  w-fit justify-center rounded-md border px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in focus:ring-4">
+            className="group h-min w-fit justify-center rounded-md border border-metal-900  bg-metal-900 px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-metal-800 focus:ring-4 focus:ring-metal-800 active:bg-metal-900">
             Get Started
           </Link>
         </div>
@@ -65,7 +65,7 @@ const ComponentUI = () => {
           <h2 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1px] text-black lg:text-heading-5 lg:!leading-[44px]">
             Design Excellence with Our React Component Library
           </h2>
-          <p className="text-metal-600 text-center text-body-5 font-normal leading-6 md:text-body-4">
+          <p className="text-center text-body-5 font-normal leading-6 text-metal-600 md:text-body-4">
             Explore our library of 40+ open-source React UI components and interactive elements, empowering you to
             create stunning web projects effortlessly.
           </p>
@@ -75,11 +75,11 @@ const ComponentUI = () => {
             return (
               <div
                 key={item.id}
-                className={`border-metal-200 md:border-metal-100 group relative flex h-[244px] w-full cursor-pointer items-center justify-center rounded-2xl border bg-white`}>
+                className={`group relative flex h-[244px] w-full cursor-pointer items-center justify-center rounded-2xl border border-metal-200 bg-white md:border-metal-100`}>
                 {item.component()}
                 <Link
                   href={item.href}
-                  className="bg-metal-900 invisible absolute bottom-2 right-2 translate-y-1 rounded-md p-1 text-white transition-all duration-300 group-hover:visible group-hover:translate-y-0">
+                  className="invisible absolute bottom-2 right-2 translate-y-1 rounded-md bg-metal-900 p-1 text-white transition-all duration-300 group-hover:visible group-hover:translate-y-0">
                   <ArrowUpRight size={18} />
                 </Link>
               </div>
@@ -89,7 +89,7 @@ const ComponentUI = () => {
         <div className="flex items-center justify-center">
           <Link
             href="/docs/getting-started/Introduction"
-            className="bg-metal-25 border-metal-200 text-metal-900 hover:bg-metal-900 flex items-center gap-2 rounded-md border px-4 py-2.5 text-body-5 transition-all duration-300 hover:text-white md:px-6 md:py-3 md:text-body-4">
+            className="flex items-center gap-2 rounded-md border border-metal-200 bg-metal-25 px-4 py-2.5 text-body-5 text-metal-900 transition-all duration-300 hover:bg-metal-900 hover:text-white md:px-6 md:py-3 md:text-body-4">
             View All Component
             <ArrowUpRight size={18} />
           </Link>
@@ -114,7 +114,7 @@ const Community = () => {
           <a
             href="https://github.com/StaticMania/keep-react"
             target="_blank"
-            className="bg-metal-900 hover:bg-metal-800 flex items-center  gap-2 rounded-md px-4 py-2.5 text-body-5 text-white md:px-6 md:py-3 md:text-body-4">
+            className="flex items-center gap-2 rounded-md  bg-metal-900 px-4 py-2.5 text-body-5 text-white hover:bg-metal-800 md:px-6 md:py-3 md:text-body-4">
             See Github Repository
             <ArrowUpRight size={18} />
           </a>
@@ -172,43 +172,47 @@ const FAQ = () => {
       </div>
 
       <div className="mt-12 block w-full xl:hidden">
-        <Accordion collapseAll={true} flush>
+        <Accordion>
           {faqs.map((faq) => (
             <Accordion.Panel key={faq.id}>
-              <Accordion.Title
-                theme={{
-                  heading: 'sm:w-full w-[260px]',
-                }}>
-                {faq.question}
-              </Accordion.Title>
-              <Accordion.Content>
-                <p>{faq.answer}</p>
-              </Accordion.Content>
+              <Accordion.Container>
+                <Accordion.Title>{faq.question}</Accordion.Title>
+                <Accordion.Icon>
+                  <Plus size={24} color="#444" />
+                </Accordion.Icon>
+              </Accordion.Container>
+              <Accordion.Content>{faq.answer}</Accordion.Content>
             </Accordion.Panel>
           ))}
         </Accordion>
       </div>
       <div className="mt-12 hidden grid-cols-1 gap-5 xl:grid xl:grid-cols-2">
         <div className="w-full xl:col-span-1">
-          <Accordion collapseAll={true} flush>
+          <Accordion openFirstPanel>
             {faqs.slice(0, 3).map((faq) => (
               <Accordion.Panel key={faq.id}>
-                <Accordion.Title>{faq.question}</Accordion.Title>
-                <Accordion.Content>
-                  <p>{faq.answer}</p>
-                </Accordion.Content>
+                <Accordion.Container>
+                  <Accordion.Title>{faq.question}</Accordion.Title>
+                  <Accordion.Icon>
+                    <Plus size={24} color="#444" />
+                  </Accordion.Icon>
+                </Accordion.Container>
+                <Accordion.Content>{faq.answer}</Accordion.Content>
               </Accordion.Panel>
             ))}
           </Accordion>
         </div>
         <div className="w-full xl:col-span-1">
-          <Accordion collapseAll={true} flush>
+          <Accordion openFirstPanel>
             {faqs.slice(3, 6).map((faq) => (
               <Accordion.Panel key={faq.id}>
-                <Accordion.Title>{faq.question}</Accordion.Title>
-                <Accordion.Content>
-                  <p>{faq.answer}</p>
-                </Accordion.Content>
+                <Accordion.Container>
+                  <Accordion.Title>{faq.question}</Accordion.Title>
+                  <Accordion.Icon>
+                    <Plus size={24} color="#444" />
+                  </Accordion.Icon>
+                </Accordion.Container>
+                <Accordion.Content>{faq.answer}</Accordion.Content>
               </Accordion.Panel>
             ))}
           </Accordion>

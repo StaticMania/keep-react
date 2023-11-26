@@ -3,15 +3,15 @@ import { Accordion } from '~/src'
 
 const DefaultAccordion = () => {
   return (
-    <Accordion showIcon={true}>
+    <Accordion>
       <Accordion.Panel>
-        <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+        <Accordion.Container>
+          <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+        </Accordion.Container>
         <Accordion.Content>
-          <p>
-            The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a
-            unified user experience across our products. It simplifies the design and development process by providing
-            ready-to-use components that can be easily customized and integrated into various applications.
-          </p>
+          The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
+          user experience across our products. It simplifies the design and development process by providing
+          ready-to-use components that can be easily customized and integrated into various applications.
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
@@ -24,22 +24,20 @@ import { Accordion } from "keep-react";
 
 export const AccordionComponent = () => {
   return (
-    <Accordion showIcon={true}>
+    <Accordion>
       <Accordion.Panel>
-        <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+        <Accordion.Container>
+          <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+        </Accordion.Container>
         <Accordion.Content>
-          <p>
-            The Keep React is a collection of UI components, styles, and
-            guidelines that ensure consistency and a unified user experience
-            across our products. It simplifies the design and development
-            process by providing ready-to-use components that can be easily
-            customized and integrated into various applications.
-          </p>
+            The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a
+            unified user experience across our products. It simplifies the design and development process by providing
+            ready-to-use components that can be easily customized and integrated into various applications.
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
-  );
-};
+  )
+}
 `
 
 export { DefaultAccordion, DefaultAccordionCode }

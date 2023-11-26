@@ -76,7 +76,7 @@ const ModalComponent: FC<ModalProps> = ({
   useEffect(() => {
     if (!parent) setParent(document.body)
     if (!container) setContainer(document.createElement('div'))
-  }, [])
+  }, [parent, container])
 
   useEffect(() => {
     if (!container || !parent || !show) {

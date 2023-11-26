@@ -1,9 +1,9 @@
 'use client'
-
 import { FC, ReactNode } from 'react'
 import { Collapse } from 'react-collapse'
-import { cn } from '~/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface ContentProps {
   children?: ReactNode
@@ -15,10 +15,11 @@ export interface keepAccordionContentTheme {
 }
 
 export const Content: FC<ContentProps> = ({ children, className }) => {
-  const { isOpen = false, openFirstPanel } = useAccordionContext()
+  const { isOpen = false } = useAccordionContext()
+  const { content } = useTheme().theme.accordion
   return (
-    <Collapse isOpened={openFirstPanel ? openFirstPanel : isOpen}>
-      <div className={cn('base from content', className)}>{children}</div>
+    <Collapse isOpened={isOpen}>
+      <div className={cn(content.base, className)}>{children}</div>
     </Collapse>
   )
 }

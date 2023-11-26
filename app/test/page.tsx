@@ -1,12 +1,12 @@
 'use client'
-import { Accordion } from './accordion'
 import { Plus } from 'phosphor-react'
+import { Accordion } from '~/src'
 
 const AccordionComponent = () => {
   return (
     <section className="py-20">
       <div className="container max-w-4xl">
-        <Accordion>
+        <Accordion flush>
           <Accordion.Panel>
             <Accordion.Container>
               <Accordion.Title>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Title>

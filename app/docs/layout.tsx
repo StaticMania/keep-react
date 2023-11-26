@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Accordion } from '~/src'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { CaretDown, CaretUp } from 'phosphor-react'
 import { gettingStartedRoutes, routes } from '~/routes/routes'
 
 export interface Sections {
@@ -83,32 +82,21 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
     <section className="pt-12 2xl:container">
       <aside
         id="linkPage"
-        className="border-r-metal-100 fixed left-0 top-20 z-20  hidden  h-screen overflow-y-auto border-r bg-white pt-8  lg:block lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] 4k:w-[calc(100%-78%)]">
+        className="fixed left-0 top-20 z-20 hidden  h-screen  overflow-y-auto border-r border-r-metal-100 bg-white pt-8  lg:block lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] 4k:w-[calc(100%-78%)]">
         <div className="ml-auto w-56 space-y-3 pr-3">
-          <Accordion
-            flush
-            className="border-none bg-transparent"
-            closeIcon={<CaretDown size={18} color="#000000e6" />}
-            openIcon={<CaretUp size={18} color="#000000e6" />}
-            iconPosition="right">
+          <Accordion flush openFirstPanel className="border-none bg-transparent">
             <Accordion.Panel>
-              <Accordion.Title
-                theme={{
-                  base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
-                }}>
-                Getting Started
-              </Accordion.Title>
-              <Accordion.Content
-                theme={{
-                  base: 'text-metal-500 font-normal',
-                }}>
-                <ul className="border-l-metal-100 -ml-px mt-3 space-y-2 border-l">
+              <Accordion.Container className="p-0">
+                <Accordion.Title className="text-body-5 font-semibold text-metal-900">Getting Started</Accordion.Title>
+              </Accordion.Container>
+              <Accordion.Content className="p-0">
+                <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                   {gettingStartedRoutes.map((route) => (
                     <li key={route.id}>
                       <Link
-                        className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
+                        className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                           IsActive(route.href)
-                            ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
+                            ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
                             : ''
                         }`}
                         href={route.href}>
@@ -120,30 +108,19 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
               </Accordion.Content>
             </Accordion.Panel>
           </Accordion>
-          <Accordion
-            flush
-            closeIcon={<CaretDown size={18} color="#000000e6" />}
-            openIcon={<CaretUp size={18} color="#000000e6" />}
-            iconPosition="right"
-            className="border-none bg-transparent">
+          <Accordion openFirstPanel flush className="border-none bg-transparent">
             <Accordion.Panel>
-              <Accordion.Title
-                theme={{
-                  base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
-                }}>
-                Components
-              </Accordion.Title>
-              <Accordion.Content
-                theme={{
-                  base: '',
-                }}>
-                <ul className="border-l-metal-100 mt-3 space-y-2 border-l pb-24">
+              <Accordion.Container className="p-0">
+                <Accordion.Title className="text-body-5 font-semibold text-metal-900">Components</Accordion.Title>
+              </Accordion.Container>
+              <Accordion.Content className="p-0">
+                <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
                   {routes.map((route) => (
                     <li key={route.id}>
                       <Link
-                        className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
+                        className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                           IsActive(route.href)
-                            ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
+                            ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
                             : ''
                         }`}
                         href={route.href}>
@@ -171,7 +148,7 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
                 dangerouslySetInnerHTML={{
                   __html: innerHtml ? innerHtml : '',
                 }}
-                className="border-l-metal-100 border-l"
+                className="border-l border-l-metal-100"
               />
             </nav>
           </div>
