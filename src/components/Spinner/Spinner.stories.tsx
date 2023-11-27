@@ -31,7 +31,6 @@ const meta: Meta<typeof Spinner> = {
       description: 'Availabe Toast size',
     },
   },
-
   parameters: {
     componentSubtitle:
       'A Spinner component is a visual indicator used to show that a system is working or processing a request. It usually consists of a circular graphic that spins continuously, indicating that the system is still active and the user should wait for the process to complete.',

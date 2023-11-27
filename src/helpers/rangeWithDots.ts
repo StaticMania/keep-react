@@ -1,3 +1,9 @@
+/**
+ * Generates an array of page numbers for pagination with dots to represent skipped pages.
+ * @param currentPage - The current page number.
+ * @param totalPages - The total number of pages.
+ * @returns An array of page numbers with dots to represent skipped pages.
+ */
 export const paginationGenerator = (currentPage: number, totalPages: number) => {
   const shownPages = 5
   const result: Array<string | number> = []

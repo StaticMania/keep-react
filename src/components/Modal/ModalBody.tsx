@@ -3,6 +3,12 @@ import { excludeClassName } from '../../helpers/exclude'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the ModalBody component.
+ * @typedef ModalBodyProps
+ * @property {React.ComponentProps<'div'>} - Props for the div element.
+ * @property {string} [className] - Optional class name for the component.
+ */
 export type ModalBodyProps = PropsWithChildren<ComponentProps<'div'> & { className?: string }>
 
 export const ModalBody: FC<ModalBodyProps> = ({ children, className, ...props }) => {

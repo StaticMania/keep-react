@@ -26,14 +26,56 @@ export interface keepTableRootTheme {
   shadow: string
   wrapper: string
 }
+/**
+ * Props for the Table component.
+ * @interface TableProps
+ * @extends {PropsWithChildren<ComponentProps<'table'>>}
+ * @extends {TableContextType}
+ */
 export interface TableProps extends PropsWithChildren, ComponentProps<'table'>, TableContextType {
+  /**
+   * The theme for the table.
+   * @type {DeepPartial<keepTableTheme>}
+   * @default {theme.table}
+   */
   theme?: DeepPartial<keepTableTheme>
+
+  /**
+   * Determines whether to show checkboxes in the table.
+   * @type {boolean}
+   * @default false
+   */
   showCheckbox?: boolean
+
+  /**
+   * Determines whether to show borders in the table.
+   * @type {boolean}
+   * @default false
+   */
   showBorder?: boolean
+
+  /**
+   * The position of the border in the table.
+   * @type {'left' | 'right'}
+   * @default 'right'
+   */
   showBorderPosition?: 'left' | 'right'
+
+  /**
+   * Determines whether the table is checked.
+   * @type {boolean}
+   * @default false
+   */
   checked?: boolean
+
+  /**
+   * Additional CSS class for the table.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
+
 const TableComponent: FC<TableProps> = ({
   children,
   className,

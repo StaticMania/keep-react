@@ -37,6 +37,7 @@ export const DefaultAvatarGroup: Story = {
     ),
   },
 }
+
 export const AvatarWithAddIcon: Story = {
   args: {
     children: mergeChildren(
@@ -51,11 +52,13 @@ export const AvatarWithAddIcon: Story = {
     ),
   },
 }
+
 export const AvatarWithNotification: Story = {
   args: {
     children: mergeChildren(DefaultAvatarGroup?.args?.children, <Avatar.Counter size="md" total={99} href="/" />),
   },
 }
+
 export const AvatarWithNotificationAndAddIcon: Story = {
   args: {
     children: mergeChildren(

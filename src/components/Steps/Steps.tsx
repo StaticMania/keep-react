@@ -5,13 +5,6 @@ import { StepContext } from './StepContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
-export interface StepsProps {
-  stepType?: 'point' | 'icon' | 'number'
-  children?: React.ReactNode
-  borderType?: 'solid' | 'dashed' | 'none'
-  className?: string
-}
-
 export interface KeepStepTheme {
   base: string
   items: {
@@ -57,6 +50,40 @@ export interface KeepStepTheme {
       none: string
     }
   }
+}
+
+/**
+ * Props for the Steps component.
+ * @interface StepsProps
+ */
+export interface StepsProps {
+  /**
+   * The type of step to be rendered.
+   * @type {'point' | 'icon' | 'number'}
+   * @default 'point'
+   */
+  stepType?: 'point' | 'icon' | 'number'
+
+  /**
+   * The content to be rendered inside the Steps component.
+   * @type {React.ReactNode}
+   * @default null
+   */
+  children?: React.ReactNode
+
+  /**
+   * The type of border to be applied to the Steps component.
+   * @type {'solid' | 'dashed' | 'none'}
+   * @default 'solid'
+   */
+  borderType?: 'solid' | 'dashed' | 'none'
+
+  /**
+   * Additional CSS class name(s) to be applied to the Steps component.
+   * @type {string}
+   * @default null
+   */
+  className?: string
 }
 
 const StepsComponent: FC<StepsProps> = ({ children, className, stepType = 'point', borderType = 'solid' }) => {

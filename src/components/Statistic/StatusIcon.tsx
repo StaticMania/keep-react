@@ -11,8 +11,23 @@ export interface keepIconTheme {
   }
 }
 
+/**
+ * Props for the StatusIcon component.
+ * @interface StatusIconProps
+ */
 export interface StatusIconProps {
+  /**
+   * The icon to be displayed.
+   * @type {ReactNode}
+   * @default ''
+   */
   icon: ReactNode
+
+  /**
+   * Additional CSS class name for the component.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
 

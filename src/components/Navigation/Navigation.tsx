@@ -9,11 +9,30 @@ import { CollapseTheme, NavigationCollapse } from './NavigationCollapse'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the Navigation component.
+ * @interface NavigationProps
+ */
 export interface NavigationProps {
+  /**
+   * The children of the Navigation component.
+   */
   children?: React.ReactNode
+  /**
+   * Determines if the Navigation component should have a fluid width.
+   */
   fluid?: boolean
+  /**
+   * Determines if the Navigation component should have a bordered style.
+   */
   bordered?: boolean
+  /**
+   * Determines if the Navigation component should have a rounded style.
+   */
   rounded?: boolean
+  /**
+   * Additional CSS class name for the Navigation component.
+   */
   className?: string
 }
 

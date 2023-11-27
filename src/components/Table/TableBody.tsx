@@ -13,7 +13,17 @@ export interface keepTableBodyTheme {
   }
 }
 
+/**
+ * Props for the TableBody component.
+ * @interface TableBodyProps
+ * @extends {PropsWithChildren}
+ * @extends {ComponentProps<'tbody'>}
+ */
 export interface TableBodyProps extends PropsWithChildren, ComponentProps<'tbody'> {
+  /**
+   * Optional theme for the TableBody component.
+   * @type {DeepPartial<keepTableBodyTheme>}
+   */
   theme?: DeepPartial<keepTableCellTheme>
 }
 

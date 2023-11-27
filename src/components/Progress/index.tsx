@@ -28,14 +28,43 @@ export interface keepProgressTheme {
   size: ProgressSizes
 }
 
+/**
+ * Props for the Progress component.
+ * @interface ProgressProps
+ * @extends PropsWithChildren<ComponentProps<'div'>>
+ */
 export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> {
+  /**
+   * The size of the progress component.
+   */
   size?: keyof ProgressSizes
+  /**
+   * The label for the progress component.
+   */
   label?: string
+  /**
+   * The position of the label relative to the progress component.
+   */
   labelPosition?: 'inside' | 'outside' | 'none'
+  /**
+   * Whether to show the progress value as a label.
+   */
   labelProgress?: boolean
+  /**
+   * Whether to show a popup label for the progress value.
+   */
   showPopupLabelProgress?: boolean
+  /**
+   * Whether the progress component should have rounded corners.
+   */
   rounded?: boolean
+  /**
+   * Whether the progress component should have a border.
+   */
   bordered?: boolean
+  /**
+   * The progress value.
+   */
   progress: number
 }
 
@@ -43,6 +72,11 @@ export interface ProgressColor
   extends Pick<KeepColors, 'info' | 'error' | 'success' | 'warning' | 'indigo' | 'purple'> {
   [key: string]: string
 }
+/**
+ * Interface for defining the sizes of the Progress component.
+ * @interface ProgressSizes
+ * @extends Pick<KeepSizes, 'sm' | 'md' | 'lg' | 'xl'>
+ */
 export interface ProgressSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg' | 'xl'> {
   [key: string]: string
 }

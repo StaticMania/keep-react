@@ -1,4 +1,5 @@
 import type { keepProgressTheme } from '.'
+
 export const progressTheme: keepProgressTheme = {
   base: 'flex items-center',
   label: 'mb-1 flex justify-between text-metal-500 font-medium',

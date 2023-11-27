@@ -1,5 +1,5 @@
-import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, useMemo, useState } from 'react'
+import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { KeepBoolean } from '../../Keep/KeepTheme'
@@ -23,16 +23,88 @@ export interface keepAccordionRootTheme {
   flush: KeepBoolean
 }
 
+/**
+ * Props for the Accordion component.
+ *
+ * @interface AccordionProps
+ * @extends {PropsWithChildren<ComponentProps<'div'>>}
+ */
 export interface AccordionProps extends PropsWithChildren<ComponentProps<'div'>> {
+  /**
+   * Determines whether the accordion should always be open.
+   *
+   * @type {boolean}
+   * @default false
+   */
   alwaysOpen?: boolean
+
+  /**
+   * Determines whether to show the open/close icon for each accordion panel.
+   *
+   * @type {boolean}
+   * @default true
+   */
   showIcon?: boolean
+
+  /**
+   * The icon to display when the accordion panel is open.
+   *
+   * @type {ReactNode}
+   * @default <ChevronUpIcon />
+   */
   openIcon?: ReactNode
+
+  /**
+   * The icon to display when the accordion panel is closed.
+   *
+   * @type {ReactNode}
+   * @default <ChevronDownIcon />
+   */
   closeIcon?: ReactNode
+
+  /**
+   * The accordion panels to display.
+   *
+   * @type {(ReactElement<AccordionPanelProps> | ReactElement<AccordionPanelProps>[])}
+   * @default []
+   */
   children: ReactElement<AccordionPanelProps> | ReactElement<AccordionPanelProps>[]
+  /**
+   * Determines whether the accordion should be flush.
+   *
+   * @type {boolean}
+   * @default false
+   */
   flush?: boolean
+  /**
+   * Determines whether the accordion should be collapsed by default.
+   *
+   * @type {boolean}
+   * @default false
+   */
   collapseAll?: boolean
+  /**
+   * Additional CSS class name(s) to apply.
+   *
+   * @type {string}
+   * @default ''
+   */
+
   theme?: DeepPartial<keepAccordionTheme>
+  /**
+   * The position of the icon relative to the panel title.
+   *
+   * @type {string}
+   * @default 'right'
+   */
+
   iconPosition?: string
+  /**
+   * Determines whether the accordion is disabled.
+   *
+   * @type {boolean}
+   * @default false
+   */
   disabled?: boolean
 }
 

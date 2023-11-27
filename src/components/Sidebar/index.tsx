@@ -31,10 +31,32 @@ export interface KeepSidebarTheme {
   logo: KeepSidebarLogoTheme
 }
 
+/**
+ * Props for the Sidebar component.
+ * @interface SidebarProps
+ * @extends {PropsWithChildren}
+ */
 export interface SidebarProps extends PropsWithChildren, ComponentProps<'div'> {
+  /**
+   * The behavior of the sidebar when collapsed.
+   * - 'collapse': The sidebar collapses to a smaller width.
+   * - 'hide': The sidebar is completely hidden.
+   */
   collapseBehavior?: 'collapse' | 'hide'
+
+  /**
+   * Determines whether the sidebar is initially collapsed.
+   */
   collapsed?: boolean
+
+  /**
+   * The theme configuration for the sidebar.
+   */
   theme?: DeepPartial<KeepSidebarTheme>
+
+  /**
+   * Additional CSS class name for the sidebar.
+   */
   className?: string
 }
 

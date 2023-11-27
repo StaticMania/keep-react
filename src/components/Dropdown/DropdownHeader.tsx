@@ -7,6 +7,10 @@ export interface keepDropdownHeaderTheme {
   header: string
 }
 
+/**
+ * DropdownHeader component.
+ * @param {PropsWithChildren<ComponentProps<'div'>>} props
+ */
 export const DropdownHeader: FC<PropsWithChildren & ComponentProps<'div'>> = ({ children, className, ...props }) => {
   const theme = useTheme().theme.dropdown.floating.header
 

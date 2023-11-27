@@ -32,6 +32,7 @@ export interface keepButtonTheme {
   }
   outlinePrimary: {
     color: ButtonColors
+
     transition: KeepBoolean
   }
   dashed: {
@@ -58,20 +59,97 @@ export interface keepButtonTheme {
   size: ButtonSizes
 }
 
+/**
+ * Props for the Button component.
+ * @interface ButtonProps
+ * @extends {Omit<ComponentProps<'button'>, 'className' | 'color' | 'type'>}
+ */
 
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color' | 'type'> {
+  /**
+   * The URL to navigate to when the button is clicked (if provided).
+   * @type {string}
+   */
   href?: string
+
+  /**
+   * The color variant of the button.
+   * @type {keyof ButtonColors}
+   * @default 'info'
+   */
   color?: keyof ButtonColors
+
+  /**
+   * The type of the button.
+   * @type {keyof ButtonTypes}
+   * @default 'default'
+   */
   type?: keyof ButtonTypes
+
+  /**
+   * The label for the notification badge displayed on the button.
+   * @type {string}
+   */
   notificationLabel?: string
+
+  /**
+   * The CSS style for the notification label.
+   * @type {string}
+   * @default 'bg-red-500 text-white'
+   */
   notificationLabelStyle?: string
+
+  /**
+   * Whether the button should be rendered as a pill shape.
+   * @type {boolean}
+   * @default false
+   */
   pill?: boolean
+
+  /**
+   * Whether the button should be rendered as a circle shape.
+   * @type {boolean}
+   * @default false
+   */
   circle?: boolean
+
+  /**
+   * The position of the button within a group of buttons.
+   * @type {keyof PositionInButtonGroup}
+   * @default 'none'
+   */
   positionInGroup?: keyof PositionInButtonGroup
+
+  /**
+   * The content of the button.
+   * @type {ReactNode}
+   */
   children?: ReactNode
+
+  /**
+   * The size variant of the button.
+   * @type {keyof ButtonSizes}
+   * @default 'md'
+   */
   size?: keyof ButtonSizes
+
+  /**
+   * The width of the button.
+   * @type {'full' | 'half'}
+   */
   width?: 'full' | 'half'
+
+  /**
+   * Additional CSS class name(s) for the button.
+   * @type {string}
+   * @default ''
+   */
   className?: string
+
+  /**
+   * The callback function to be executed when the button is clicked.
+   * @type {() => void}
+   */
   onClick?: () => void
 }
 
