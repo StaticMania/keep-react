@@ -9,10 +9,10 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
 export interface UploadHorizontalTheme {
-  base: string
-  disabled: string
-  label: {
-    base: string
+  base: string  
+  disabled: string 
+  label: {    
+    base: string   
     root: {
       base: string
       iconBox: {

@@ -3,9 +3,24 @@ import { List, X } from 'phosphor-react'
 import { useNavigationContext } from './NavigationContext'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the NavigationToggle component.
+ * @interface NavigationToggleProps
+ */
 export interface NavigationToggleProps {
+  /**
+   * The icon to display when the navigation is open.
+   */
   openIcon?: React.ReactNode
+
+  /**
+   * The icon to display when the navigation is closed.
+   */
   closeIcon?: React.ReactNode
+
+  /**
+   * Additional class name for the component.
+   */
   className?: string
 }
 

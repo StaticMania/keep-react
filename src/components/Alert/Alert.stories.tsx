@@ -88,6 +88,7 @@ export const AlertWithBorder: Story = {
     withBorder: true,
   },
 }
+
 export const AlertWithAccentBorder: Story = {
   args: {
     ...DefaultAlert.args,
@@ -100,6 +101,7 @@ export const InfoAlert: Story = {
     ...DefaultAlert.args,
   },
 }
+
 export const GrayAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -107,6 +109,7 @@ export const GrayAlert: Story = {
     icon: <Info size={24} color="gray" />,
   },
 }
+
 export const ErrorAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -114,6 +117,7 @@ export const ErrorAlert: Story = {
     icon: <XCircle size={24} color="#E92215" />,
   },
 }
+
 export const SuccessAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -121,6 +125,7 @@ export const SuccessAlert: Story = {
     icon: <CheckCircle size={24} color="#0A9952" />,
   },
 }
+
 export const WarningAlert: Story = {
   args: {
     ...DefaultAlert.args,

@@ -77,6 +77,7 @@ export const DefaultUpload: Story = {
     disabled: false,
   },
 }
+
 export const UploadPending: Story = {
   args: {
     showProgressBar: true,
@@ -84,6 +85,7 @@ export const UploadPending: Story = {
     progress: 45,
   },
 }
+
 export const UploadFailed: Story = {
   args: {
     showProgressBar: true,
@@ -91,13 +93,16 @@ export const UploadFailed: Story = {
     progress: 55,
   },
 }
+
 export const UploadSuccess: Story = {
   args: {
     showProgressBar: true,
     progressType: 'success',
   },
 }
+
 export const HorizontalUpload: Story = { args: { horizontal: true } }
+
 export const HorizontalUploadPending: Story = {
   args: {
     ...HorizontalUpload.args,
@@ -106,6 +111,7 @@ export const HorizontalUploadPending: Story = {
     progress: 45,
   },
 }
+
 export const HorizontalUploadFailed: Story = {
   args: {
     ...HorizontalUpload.args,
@@ -114,6 +120,7 @@ export const HorizontalUploadFailed: Story = {
     progress: 55,
   },
 }
+
 export const HorizontalUploadSuccess: Story = {
   args: {
     ...HorizontalUpload.args,
@@ -121,7 +128,9 @@ export const HorizontalUploadSuccess: Story = {
     progressType: 'success',
   },
 }
+
 export const UploadDisabled: Story = { args: { disabled: true } }
+
 export const HorizontalUploadDisabled: Story = {
   args: { disabled: true, horizontal: true },
 }

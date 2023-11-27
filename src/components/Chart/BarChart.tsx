@@ -4,29 +4,170 @@ import { Bar, BarChart as BarChartCom, CartesianGrid, Cell, Legend, Tooltip, XAx
 import CustomLegend from './CustomLegend'
 import { CustomTooltip } from './CustomTooltip'
 
+/**
+ * Props for the BarChart component.
+ * @interface BarChartProps
+ */
 interface BarChartProps {
+  /**
+   * Determines if the bar is active.
+   * @type {boolean}
+   * @default false
+   */
   active?: boolean
+
+  /**
+   * The color of the active bar.
+   * @type {string}
+   * @default '#1B4DFF'
+   */
   activeColor?: string
+
+  /**
+   * The index of the active bar.
+   * @type {number}
+   * @default 4
+   */
   activeIndex?: number
+
+  /**
+   * The background color of the bar.
+   * @type {string}
+   * @default '#E8EDFF'
+   */
   barBg?: string
+
+  /**
+   * The color of the bar.
+   * @type {string}
+   * @default '#1B4DFF'
+   */
   barColor?: string
+
+  /**
+   * The radius of the bar's border.
+   * @type {number | [number, number, number, number]}
+   * @default 4
+   */
   barRadius?: number | [number, number, number, number]
+
+  /**
+   * The size of the bar.
+   * @type {number}
+   * @default 6
+   */
   barSize?: number
+
+  /**
+   * The data for the chart.
+   * @type {unknown[]}
+   * @default []
+   */
   chartData?: unknown[]
+
+  /**
+   * The key for accessing the data in the chartData array.
+   * @type {string}
+   * @default ''
+   */
   dataKey: string
+
+  /**
+   * The height of the chart.
+   * @type {number}
+   * @default 300
+   */
   height?: number
+
+  /**
+   * The color of the inactive bar.
+   * @type {string}
+   * @default '#E8EDFF'
+   */
   inActiveColor?: string
+
+  /**
+   * The background color of the secondary bar.
+   * @type {string}
+   * @default '#D7FFEB'
+   */
   secondaryBarBg?: string
+
+  /**
+   * The color of the secondary bar.
+   * @type {string}
+   * @default '#1DB469'
+   */
   secondaryBarColor?: string
+
+  /**
+   * The key for accessing the secondary data in the chartData array.
+   * @type {string}
+   * @default ''
+   */
   secondaryDataKey?: string
+
+  /**
+   * Determines if the background is shown.
+   * @type {boolean}
+   * @default false
+   */
   showBg?: boolean
+
+  /**
+   * Determines if the grid lines are shown.
+   * @type {boolean}
+   * @default false
+   */
   showGridLine?: boolean
+
+  /**
+   * Determines if the legend is shown.
+   * @type {boolean}
+   * @default false
+   */
   showLegend?: boolean
+
+  /**
+   * Determines if the tooltip is shown.
+   * @type {boolean}
+   * @default false
+   */
   showTooltip?: boolean
+
+  /**
+   * Determines if the X-axis is shown.
+   * @type {boolean}
+   * @default false
+   */
   showXaxis?: boolean
+
+  /**
+   * Determines if the Y-axis is shown.
+   * @type {boolean}
+   * @default false
+   */
   showYaxis?: boolean
+
+  /**
+   * The width of the chart.
+   * @type {number}
+   * @default 600
+   */
   width?: number
+
+  /**
+   * The key for accessing the data on the X-axis.
+   * @type {string}
+   * @default ''
+   */
   XAxisDataKey?: string
+
+  /**
+   * The key for accessing the data on the Y-axis.
+   * @type {string}
+   * @default ''
+   */
   YAxisDataKey?: string
 }
 

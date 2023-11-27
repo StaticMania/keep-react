@@ -104,6 +104,7 @@ export const EmptyFolder: Story = {
     ),
   },
 }
+
 export const NoDataFound: Story = {
   args: {
     title: 'No Data Found',
@@ -121,6 +122,7 @@ export const NoDataFound: Story = {
     buttonText: 'Go Back',
   },
 }
+
 export const NoResultPage: Story = {
   args: {
     title: 'Sorry, no result found!',
@@ -137,6 +139,7 @@ export const NoResultPage: Story = {
     ),
   },
 }
+
 export const NotFoundPage: Story = {
   args: {
     title: '404 Not Found',
@@ -153,6 +156,7 @@ export const NotFoundPage: Story = {
     ),
   },
 }
+
 export const PageNotAvailable: Story = {
   args: {
     title: "This page isn't available right now",

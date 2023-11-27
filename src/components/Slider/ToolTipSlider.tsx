@@ -4,6 +4,13 @@ import Tooltip from 'rc-tooltip'
 import raf from 'rc-util/lib/raf'
 import * as React from 'react'
 
+/**
+ * Custom tooltip component for the Slider.
+ *
+ * @param props - The props for the HandleTooltip component.
+ * @returns The rendered HandleTooltip component.
+ */
+
 const HandleTooltip = (props: {
   value: number
   children: React.ReactElement
@@ -13,12 +20,21 @@ const HandleTooltip = (props: {
   const { value, children, visible, tipFormatter = (val) => `${val} %`, ...restProps } = props
 
   const tooltipRef = React.useRef<any>()
+  /**
+   * A reference to the requestAnimationFrame ID used for animation.
+   */
   const rafRef = React.useRef<number | null>(null)
 
+  /**
+   * Cancels the alignment of the keep.
+   */
   function cancelKeepAlign() {
     raf.cancel(rafRef.current!)
   }
 
+  /**
+   * Forces the alignment of the tooltip.
+   */
   function keepAlign() {
     rafRef.current = raf(() => {
       tooltipRef?.current?.forceAlign()
@@ -49,6 +65,12 @@ const HandleTooltip = (props: {
   )
 }
 
+/**
+ * Custom handleRender function for the Slider.
+ * @param node The node to render.
+ * @param props The props for the node.
+ * @returns The rendered node.
+ */
 export const handleRender: SliderProps['handleRender'] = (node, props) => {
   return (
     <HandleTooltip value={props.value} visible={props.dragging}>

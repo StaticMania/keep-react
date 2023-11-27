@@ -3,8 +3,21 @@ import { useTheme } from '../../Keep/ThemeContext'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the RatingAdvanced component.
+ * @interface RatingAdvancedProps
+ * @extends {PropsWithChildren<ComponentProps<'div'>>}
+ */
 export interface RatingAdvancedProps extends PropsWithChildren<ComponentProps<'div'>> {
+  /**
+   * The percentage of the rating that should be filled.
+   */
   percentFilled?: number
+
+  /**
+   * The size of the rating.
+   * Options: 'sm', 'md', 'lg'
+   */
   size?: keyof RatingAdvancedSizes
 }
 

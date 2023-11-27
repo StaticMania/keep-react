@@ -8,11 +8,31 @@ export interface keepAmountTheme {
   spacing: string
 }
 
+/**
+ * Props for the Amount component.
+ * @interface AmountProps
+ */
 export interface AmountProps {
+  /**
+   * The number to be displayed as the amount.
+   * @type {number}
+   * @default 0
+   */
   children: number
+  /**
+   * Additional CSS class name for styling purposes.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
 
+/**
+ * Formats a number by adding commas as thousand separators.
+ *
+ * @param number - The number to be formatted.
+ * @returns The formatted number as a string.
+ */
 function formatNumber(number: number): string {
   const formattedNumber = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   return formattedNumber

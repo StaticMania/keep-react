@@ -38,6 +38,7 @@ export interface KeepCheckboxShape {
   circle: string
   round: string
 }
+
 export interface KeepShapes {
   square: string
   round: string

@@ -20,16 +20,73 @@ import { FC, useRef, useState } from 'react'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the Popover component.
+ * @interface PopoverProps
+ */
 interface PopoverProps {
+  /**
+   * Specifies the trigger event for the popover.
+   * - 'hover': Popover is triggered on hover.
+   * - 'click': Popover is triggered on click.
+   */
   trigger?: 'hover' | 'click'
+
+  /**
+   * The content of the popover.
+   */
   children: React.ReactNode
+
+  /**
+   * Additional content to be displayed within the popover.
+   */
   additionalContent?: React.ReactNode
+
+  /**
+   * The title of the popover.
+   */
   title?: string
+
+  /**
+   * The description of the popover.
+   */
   description?: string
+
+  /**
+   * The icon to be displayed within the popover.
+   */
   icon?: React.ReactNode
+
+  /**
+   * Additional CSS class name(s) for the popover.
+   */
   className?: string
+
+  /**
+   * Specifies whether to show the dismiss icon in the popover.
+   */
   showDismissIcon?: boolean
+
+  /**
+   * Specifies whether to show the arrow in the popover.
+   */
   showArrow?: boolean
+
+  /**
+   * The position of the popover.
+   * - 'top': Popover is positioned at the top.
+   * - 'top-end': Popover is positioned at the top-end.
+   * - 'top-start': Popover is positioned at the top-start.
+   * - 'bottom': Popover is positioned at the bottom.
+   * - 'bottom-end': Popover is positioned at the bottom-end.
+   * - 'bottom-start': Popover is positioned at the bottom-start.
+   * - 'left': Popover is positioned at the left.
+   * - 'left-end': Popover is positioned at the left-end.
+   * - 'left-start': Popover is positioned at the left-start.
+   * - 'right': Popover is positioned at the right.
+   * - 'right-end': Popover is positioned at the right-end.
+   * - 'right-start': Popover is positioned at the right-start.
+   */
   position?:
     | 'top'
     | 'top-end'

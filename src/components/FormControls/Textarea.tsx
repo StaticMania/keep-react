@@ -24,13 +24,59 @@ export interface TextareaColors extends Pick<KeepColors, 'gray' | 'info' | 'erro
   [key: string]: string
 }
 
+/**
+ * Props for the Textarea component.
+ * @interface TextareaProps
+ * @extends {Omit<ComponentProps<'textarea'>, 'className' | 'color' | 'ref'>}
+ */
 export interface TextareaProps extends Omit<ComponentProps<'textarea'>, 'className' | 'color' | 'ref'> {
+  /**
+   * If true, the textarea will have a shadow.
+   * @type {boolean}
+   * @default false
+   */
   shadow?: boolean
+
+  /**
+   * The helper text to display below the textarea.
+   * @type {ReactNode}
+   * @default null
+   */
   helperText?: ReactNode
+
+  /**
+   * If true, the textarea will have a background color.
+   * @type {boolean}
+   * @default false
+   */
   withBg?: boolean
+
+  /**
+   * If true, the textarea will have a border.
+   * @type {boolean}
+   * @default true
+   */
   border?: boolean
+
+  /**
+   * If true, the textarea will be disabled.
+   * @type {boolean}
+   * @default false
+   */
   disabled?: boolean
+
+  /**
+   * The color of the textarea.
+   * @type {keyof TextareaColors}
+   * @default 'default'
+   */
   color?: keyof TextareaColors
+
+  /**
+   * The CSS class name for the textarea.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
 

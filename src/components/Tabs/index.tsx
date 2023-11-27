@@ -34,6 +34,7 @@ export interface keepTabTheme {
   }
   tabPanel: string
 }
+
 export interface TabStyles {
   default: string
   underline: string
@@ -54,21 +55,52 @@ export type TabStyleItem<Type> = {
 }
 export type TabItemStatus = 'active' | 'notActive'
 
+/**
+ * Represents the event object for tab events.
+ * @interface TabEventProps
+ */
 interface TabEventProps {
   target: number
 }
+
 interface TabKeyboardEventProps extends TabEventProps {
   event: KeyboardEvent<HTMLButtonElement>
 }
+
 export interface TabNotificationColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
   [key: string]: string
 }
+/**
+ * Props for the Tabs component.
+ * @interface TabsProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'style' | 'ref'>>}
+ */
 export interface TabsProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'style' | 'ref'>> {
+  /**
+   * The style of the tabs.
+   * @type {keyof TabStyles}
+   * @default 'default'
+   */
   style?: keyof TabStyles
+  /**
+   * The position of the icon relative to the tab label.
+   * @type {'left' | 'right'}
+   * @default 'left'
+   */
   iconPosition?: 'left' | 'right'
+  /**
+   * The position of the tab border.
+   * @type {'top' | 'bottom'}
+   * @default 'bottom'
+   */
   borderPosition?: 'top' | 'bottom'
+  /**
+   * Callback function triggered when the active tab changes.
+   * @param activeTab - The index of the active tab.
+   */
   onActiveTabChange?: (activeTab: number) => void
 }
+
 export interface TabsRef {
   setActiveTab: (activeTab: number) => void
 }
