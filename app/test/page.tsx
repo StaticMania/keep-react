@@ -1,52 +1,7 @@
-'use client'
-import { Plus } from 'phosphor-react'
-import { Accordion } from '~/src'
+import React from 'react'
 
-const AccordionComponent = () => {
-  return (
-    <section className="py-20">
-      <div className="container max-w-4xl">
-        <Accordion flush>
-          <Accordion.Panel>
-            <Accordion.Container>
-              <Accordion.Title>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Title>
-              <Accordion.Icon>
-                <Plus size={24} color="#444" />
-              </Accordion.Icon>
-            </Accordion.Container>
-            <Accordion.Content>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, accusamus. Odio impedit commodi,
-              repellat omnis fuga fugit numquam culpa architecto.
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Container>
-              <Accordion.Title>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Title>
-              <Accordion.Icon>
-                <Plus size={24} color="#444" />
-              </Accordion.Icon>
-            </Accordion.Container>
-            <Accordion.Content>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, accusamus. Odio impedit commodi,
-              repellat omnis fuga fugit numquam culpa architecto.
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Container>
-              <Accordion.Title>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Accordion.Title>
-              <Accordion.Icon>
-                <Plus size={24} color="#444" />
-              </Accordion.Icon>
-            </Accordion.Container>
-            <Accordion.Content>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, accusamus. Odio impedit commodi,
-              repellat omnis fuga fugit numquam culpa architecto.
-            </Accordion.Content>
-          </Accordion.Panel>
-        </Accordion>
-      </div>
-    </section>
-  )
+const page = () => {
+  return <div>Testing</div>
 }
 
-export default AccordionComponent
+export default page
