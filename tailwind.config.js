@@ -23,11 +23,23 @@ module.exports = {
     extend: {
       screens: {
         '4k': '1980px',
-      }, 
-      
+      },
+      keyframes: {
+        'bounce-open': {
+          '0%': { transform: 'scale(0.7)' },
+          '45%': { transform: 'scale(1.05)' },
+          '80%': {
+            transform: 'scale(0.95)',
+          },
+          '100%': {
+            transform: 'scale(1)',
+          },
+        },
+      },
+      animation: {
+        'modal-open': 'bounce-open 0.3s',
+      },
     },
-
-    
   },
   plugins: [],
 }

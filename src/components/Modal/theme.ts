@@ -7,7 +7,7 @@ export const modalTheme: keepModalTheme = {
     off: 'hidden',
   },
   content: {
-    base: 'relative h-full w-full p-4 h-auto',
+    base: 'relative h-full w-full p-4 h-auto animate-modal-open',
     inner: 'relative rounded-lg bg-white shadow p-6',
   },
   body: {
