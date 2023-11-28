@@ -22,10 +22,8 @@ module.exports = {
     extend: {
       screens: {
         '4k': '1980px',
-      }, 
-      
+      },
     },
-      
   },
   presets: [require('./src/theme/keep-preset.ts')],
   plugins: [],

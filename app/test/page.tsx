@@ -1,15 +1,7 @@
-'use client'
-import { Popover } from './Popover/Popover'
+import React from 'react'
 
 const page = () => {
-  return (
-    <div className="container py-20 text-metal-400">
-      <p>
-        around 170 million people holds a general election on January 7, with Prime Minister
-        <Popover>Sheikh Hasina</Popover> eyeing her fourth consecutive term in power. range of violent crimes.
-      </p>
-    </div>
-  )
+  return <div></div>
 }
 
 export default page
