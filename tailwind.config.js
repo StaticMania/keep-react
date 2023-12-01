@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+const { extendTailwindMerge } = require('tailwind-merge')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './mdx-components.tsx',
@@ -26,5 +27,4 @@ module.exports = {
     },
   },
   presets: [require('./src/theme/keep-preset.ts')],
-  plugins: [],
 }

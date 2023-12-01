@@ -1,5 +1,11 @@
-import React from 'react'
+import { FC, ReactNode } from 'react'
+import { cn } from '~/src/helpers/cn'
 
-export const Title = () => {
-  return <div>Title</div>
+interface CardTitleProps {
+  className?: string
+  children?: ReactNode
+}
+
+export const Title: FC<CardTitleProps> = ({ className, children }) => {
+  return <h3 className={cn('text-body-1 font-semibold text-metal-700', className)}>{children}</h3>
 }

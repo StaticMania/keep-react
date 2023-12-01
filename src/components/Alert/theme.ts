@@ -20,6 +20,13 @@ export const alertTheme: keepAlertTheme = {
     error: 'border-error-100',
     metal: 'border-metal-200',
   },
+  icon: {
+    primary: 'text-primary-600',
+    success: 'text-success-600',
+    warning: 'text-warning-600',
+    error: 'text-error-600',
+    metal: 'text-metal-500',
+  },
   disMissButton: {
     base: 'absolute right-4 top-4 p-1 rounded-lg',
     color: {
@@ -37,7 +44,7 @@ export const alertTheme: keepAlertTheme = {
     bottom: 'border-b-[6px]',
   },
   title: {
-    base: 'mb-3 !text-body-3 font-semibold',
+    base: 'mb-3 text-body-3 font-semibold',
     color: {
       primary: 'text-primary-600',
       success: 'text-success-600',
@@ -46,5 +53,5 @@ export const alertTheme: keepAlertTheme = {
       metal: 'text-metal-600',
     },
   },
-  description: 'md:text-body-4 font-normal text-metal-500',
+  description: 'text-body-4 font-normal text-metal-500',
 }

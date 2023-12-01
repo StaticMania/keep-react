@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import Link from 'next/link'
-import { CheckCircle, Info, WarningCircle, XCircle } from 'phosphor-react'
+import { CheckCircle, Info, WarningCircle, X, XCircle } from 'phosphor-react'
 import { Alert } from '.'
 import { removeFragment } from '../../helpers/mergeDeep'
 
@@ -54,12 +54,12 @@ export const DefaultAlert: Story = {
     withBorderAccentPosition: 'left',
     dismiss: false,
     title: 'Default message - make it short',
-    icon: <Info size={24} color="#0F3CD9" />,
+    icon: <X size={24} />,
     children: removeFragment(
       <>
         <Alert.Container>
           <Alert.Icon>
-            <Info size={24} color="#0F3CD9" />
+            <Info size={24} />
           </Alert.Icon>
           <Alert.Body>
             <Alert.Title>Default message - make it short</Alert.Title>
@@ -88,20 +88,17 @@ export const AlertWithBorder: Story = {
     withBorder: true,
   },
 }
-
 export const AlertWithAccentBorder: Story = {
   args: {
     ...DefaultAlert.args,
     withBorderAccent: true,
   },
 }
-
 export const InfoAlert: Story = {
   args: {
     ...DefaultAlert.args,
   },
 }
-
 export const GrayAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -109,7 +106,6 @@ export const GrayAlert: Story = {
     icon: <Info size={24} color="gray" />,
   },
 }
-
 export const ErrorAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -117,7 +113,6 @@ export const ErrorAlert: Story = {
     icon: <XCircle size={24} color="#E92215" />,
   },
 }
-
 export const SuccessAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -125,11 +120,33 @@ export const SuccessAlert: Story = {
     icon: <CheckCircle size={24} color="#0A9952" />,
   },
 }
-
 export const WarningAlert: Story = {
   args: {
     ...DefaultAlert.args,
     color: 'warning',
     icon: <WarningCircle size={24} color="#D8A800" />,
+  },
+}
+export const CustomAlert: Story = {
+  args: {
+    className: 'rounded-lg bg-slate-900',
+    children: removeFragment(
+      <>
+        <Alert.Container>
+          <Alert.Icon>
+            <Info size={24} color="#fff" />
+          </Alert.Icon>
+          <Alert.Body>
+            <Alert.Title className="text-white">Default message - make it short</Alert.Title>
+            <Alert.Description className="text-gray-400">
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
+              <Link href="/alert" className="ml-1 inline-block text-body-4 text-primary-600 underline">
+                Link style
+              </Link>
+            </Alert.Description>
+          </Alert.Body>
+        </Alert.Container>
+      </>,
+    ),
   },
 }

@@ -47,6 +47,13 @@ export interface keepAlertTheme {
     error: string
     metal: string
   }
+  icon: {
+    primary: string
+    success: string
+    warning: string
+    error: string
+    metal: string
+  }
   title: {
     base: string
     color: {
@@ -96,6 +103,7 @@ const AlertComponent: FC<AlertProps> = ({
     withBorder && theme.border,
     withBorder && theme.borderColor[color],
     withBorderAccent && theme.borderAccent[withBorderAccentPosition],
+    withBorderAccent && theme.borderColor[color],
     rounded && theme.rounded,
     dismiss && theme.dismiss,
   )

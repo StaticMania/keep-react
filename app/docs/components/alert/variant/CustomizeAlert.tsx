@@ -30,16 +30,16 @@ import Link from 'next/link'
 import { Alert } from 'keep-react'
 import { Info } from 'phosphor-react'
 
-const CustomizeAlert = () => {
+export const AlertComponent = () => {
   return (
-    <Alert>
-      <Alert.Container >
+    <Alert className="rounded-lg bg-slate-900">
+      <Alert.Container>
         <Alert.Icon>
-          <Info size={24} color="#0F3CD9" />
+          <Info size={24} color="#fff" />
         </Alert.Icon>
         <Alert.Body>
-          <Alert.Title>Default message - make it short</Alert.Title>
-          <Alert.Description>
+          <Alert.Title className="text-white">Default message - make it short</Alert.Title>
+          <Alert.Description className="text-gray-400">
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
             <Link href="/alert" className="ml-1 inline-block text-body-4 text-primary-600 underline">
               Link style

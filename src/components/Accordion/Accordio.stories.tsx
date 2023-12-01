@@ -4,8 +4,8 @@ import { removeFragment } from '../../helpers/mergeDeep'
 import { Plus } from 'phosphor-react'
 
 const meta: Meta<typeof Accordion> = {
-  tags: ['autodocs'],
   component: Accordion,
+  tags: ['autodocs'],
   argTypes: {
     children: {
       description: 'Accordion content',
