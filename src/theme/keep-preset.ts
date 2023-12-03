@@ -69,6 +69,34 @@ module.exports = {
         },
       },
       fontSize: {
+        'display-1': [
+          '11rem',
+          {
+            lineHeight: '13.125rem',
+            letterSpacing: '-3.5px',
+          },
+        ],
+        'display-2': [
+          '9rem',
+          {
+            lineHeight: '10.62rem',
+            letterSpacing: '-3.5px',
+          },
+        ],
+        'display-3': [
+          '7.5rem',
+          {
+            lineHeight: '8.375rem',
+            letterSpacing: '-3.5px',
+          },
+        ],
+        'display-4': [
+          '6rem',
+          {
+            lineHeight: '6.875rem',
+            letterSpacing: '-2.5px',
+          },
+        ],
         'heading-1': [
           '4.5rem',
           {

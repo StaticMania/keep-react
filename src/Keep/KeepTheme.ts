@@ -130,6 +130,12 @@ export interface KeepGradientDuoToneColors {
   tealToLime: string
 }
 
+export type KeepTypography =
+  | `heading-${1 | 2 | 3 | 4 | 5 | 6}`
+  | `body-${1 | 2 | 3 | 4 | 5 | 6}`
+  | `display-${1 | 2 | 3 | 4}`
+  | `description-${1 | 2 | 3 | 4}`
+
 export type KeepHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
 export type CustomKeepTheme = DeepPartial<KeepTheme>
