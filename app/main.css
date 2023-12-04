@@ -993,3 +993,125 @@ input[type='number'] {
   right: 15%;
 }
 /* ================ TOOLTIP CSS END =========== */
+
+/* ================ TYPOGRAPHY CSS START =========== */
+
+.display-1 {
+  font-size: 11rem;
+  line-height: 13.125rem;
+  letter-spacing: -3.5px;
+}
+
+.display-2 {
+  font-size: 9rem;
+  line-height: 10.62rem;
+  letter-spacing: -3.5px;
+}
+
+.display-3 {
+  font-size: 7.5rem;
+  line-height: 8.375rem;
+  letter-spacing: -3.5px;
+}
+
+.display-4 {
+  font-size: 6rem;
+  line-height: 6.875rem;
+  letter-spacing: -2.5px;
+}
+
+.heading-1 {
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+  letter-spacing: -2.3px;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  line-height: 4.875rem;
+  letter-spacing: -2.3px;
+}
+
+.heading-3 {
+  font-size: 3.5rem;
+  line-height: 4.125rem;
+  letter-spacing: -1.75px;
+}
+
+.heading-4 {
+  font-size: 3rem;
+  line-height: 3.75rem;
+  letter-spacing: -1.75px;
+}
+
+.heading-5 {
+  font-size: 2.25rem;
+  line-height: 3rem;
+  letter-spacing: -1px;
+}
+
+.heading-6 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  letter-spacing: -0.5px;
+}
+
+.description-1 {
+  font-size: 1.875rem;
+  line-height: 2.625rem;
+  letter-spacing: -0.5px;
+}
+
+.description-2 {
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  letter-spacing: -0.5px;
+}
+
+.description-3 {
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.description-4 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.5px;
+}
+
+.body-1 {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  letter-spacing: -0.3px;
+}
+
+.body-2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.3px;
+}
+
+.body-3 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+.body-4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+.body-5 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.2px;
+}
+
+.body-6 {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  letter-spacing: -0.2px;
+}
