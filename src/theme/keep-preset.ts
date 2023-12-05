@@ -221,6 +221,21 @@ module.exports = {
         xLarge: '0px 24px 50px -12px rgba(45, 54, 67, 0.12)',
         '2xLarge': '0px 32px 64px -12px rgba(45, 54, 67, 0.14)',
       },
+      keyframes: {
+        'bounce-open': {
+          '0%': { transform: 'scale(0.7)' },
+          '45%': { transform: 'scale(1.05)' },
+          '80%': {
+            transform: 'scale(0.95)',
+          },
+          '100%': {
+            transform: 'scale(1)',
+          },
+        },
+      },
+      animation: {
+        'keep-bounce': 'bounce-open 0.3s',
+      },
     },
   },
 }

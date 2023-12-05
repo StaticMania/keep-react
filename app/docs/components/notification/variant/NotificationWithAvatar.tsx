@@ -3,117 +3,81 @@ import { useState } from 'react'
 import { Notification, Button, Avatar } from '~/src'
 
 const NotificationWithAvatar = () => {
-  const [showNotification, setShowNotification] = useState(false)
+  const [showNotification, setShowNotification] = useState(true)
   const onDismiss = () => {
     setShowNotification(!showNotification)
   }
 
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification)
-  }
-
   return (
-    <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
+    <div className="px-5 py-3">
+      <Button type="primary" onClick={onDismiss}>
         Show Notification
       </Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        className="max-w-[400px]"
-        position="top-left"
-        additionalContent={
-          <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
+      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="bottom-left">
+        <Notification.Container className="grid grid-cols-12">
+          <Notification.Avatar className="col-span-2">
+            <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+          </Notification.Avatar>
+          <Notification.Body className="col-span-10">
+            <Notification.Title>Kausar Ahmed Pial</Notification.Title>
+            <Notification.Description>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </Notification.Description>
+            <Notification.Container className="!mt-6 flex gap-3">
+              <Button type="primary" size="sm">
                 Accept
               </Button>
-              <Button size="xs" type="outlineGray" color="info" className="ml-3">
-                View Profile
+              <Button type="outlineGray" size="sm">
+                Review
               </Button>
-            </div>
-          </div>
-        }
-        infoIcon={
-          <div className="h-12 w-12">
-            <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
-          </div>
-        }>
-        <h3 className="text-body-4 font-medium text-metal-700 md:text-body-2">
-          Rono Pixel
-          <span className="pl-2 text-body-6 font-medium text-metal-400 md:text-body-5">Product Designer</span>
-        </h3>
+            </Notification.Container>
+          </Notification.Body>
+        </Notification.Container>
       </Notification>
     </div>
   )
 }
 
 const NotificationWithAvatarCode = `
-"use client";
-import { useState } from "react";
-import { Notification, Button, Avatar } from "keep-react";
+'use client'
+import { useState } from 'react'
+import { Notification, Button, Avatar } from 'keep-react'
 
-export const NotificationComponent = () => {
-
-  const [showNotification, setShowNotification] = useState(false);
+const NotificationWithAvatar = () => {
+  const [showNotification, setShowNotification] = useState(true)
   const onDismiss = () => {
-    setShowNotification(!showNotification);
-  };
-
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification);
-  };
+    setShowNotification(!showNotification)
+  }
 
   return (
-    <>
-      <Button type="primary" onClick={handleShowNotification}>Show Notification</Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        className="max-w-[400px]"
-        position="top-left"
-        additionalContent={
-          <div className="mt-2.5 text-body-5 md:text-body-4 font-normal text-metal-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry.
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
+    <div className="px-2 py-3">
+      <Button type="primary" onClick={onDismiss}>
+        Show Notification
+      </Button>
+      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="bottom-left">
+        <Notification.Container className="grid grid-cols-12">
+          <Notification.Avatar className="col-span-2">
+            <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+          </Notification.Avatar>
+          <Notification.Body className="col-span-10">
+            <Notification.Title>Kausar Ahmed Pial</Notification.Title>
+            <Notification.Description>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </Notification.Description>
+            <Notification.Container className="!mt-6 flex gap-3">
+              <Button type="primary" size="sm">
                 Accept
               </Button>
-              <Button
-                size="xs"
-                type="outlineGray"
-                color="info"
-                className="ml-3"
-              >
-                View Profile
+              <Button type="outlineGray" size="sm">
+                Review
               </Button>
-            </div>
-          </div>
-        }
-        infoIcon={
-          <div className="h-12 w-12">
-            <Avatar
-              shape="circle"
-              size="md"
-              img="/images/avatar/avatar-4.png"
-            />
-          </div>
-        }
-      >
-        <h3 className="text-body-4 md:text-body-2 font-medium text-metal-700">
-          Rono Pixel
-          <span className="pl-2 text-body-6 md:text-body-5 font-medium text-metal-400">
-            Product Designer
-          </span>
-        </h3>
+            </Notification.Container>
+          </Notification.Body>
+        </Notification.Container>
       </Notification>
-    </>
-  );
-};
+    </div>
+  )
+}
 `
 
 export { NotificationWithAvatar, NotificationWithAvatarCode }
