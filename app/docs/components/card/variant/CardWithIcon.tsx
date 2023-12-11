@@ -39,14 +39,11 @@ const CardWithIcon = () => {
             </Card.Container>
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
-            <Popover
-              className="!w-[20rem]"
-              additionalContent={
-                <h2 className="text-body-3 font-medium leading-6 tracking-[-0.3px] text-metal-500">
-                  Keep Design System
-                </h2>
-              }>
-              <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
+            <Popover className="!w-[20rem]">
+              <Popover.Title>Keep Design System</Popover.Title>
+              <Popover.Action>
+                <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
+              </Popover.Action>
             </Popover>
           </Card.Container>
         </Card.Container>
@@ -122,19 +119,11 @@ export const CardComponent = () => {
             </Card.Container>
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
-            <Popover
-              className="!w-[20rem]"
-              additionalContent={
-                <h2 className="text-body-3 leading-6 tracking-[-0.3px] font-medium text-metal-500">
-                  Keep Design System
-                </h2>
-              }
-            >
-              <DotsThreeVertical
-                size={24}
-                color="#5E718D"
-                className="flex cursor-pointer items-start"
-              />
+            <Popover className="!w-[20rem]">
+              <Popover.Title>Keep Design System</Popover.Title>
+              <Popover.Action>
+                <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
+              </Popover.Action>
             </Popover>
           </Card.Container>
         </Card.Container>

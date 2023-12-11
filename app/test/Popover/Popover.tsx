@@ -24,7 +24,6 @@ import {
 import { Container } from './Container'
 import { XCircle } from 'phosphor-react'
 import { PopoverContext } from './PopoverContext'
-import { useTheme } from '~/src/Keep/ThemeContext'
 
 export interface PopoverProps {
   children?: ReactNode
@@ -46,23 +45,7 @@ export interface PopoverProps {
   trigger?: 'hover' | 'click'
   showArrow?: boolean
   icon?: ReactNode
-  // [key: string]: any
-}
-
-export interface keepPopoverTheme {
-  root: {
-    base: string
-    icon: string
-  }
-  title: string
-  description: {
-    base: string
-    title: {
-      off: string
-      on: string
-    }
-  }
-  container: string
+  [key: string]: any
 }
 
 export const PopoverComponent: FC<PopoverProps> = ({
@@ -78,7 +61,6 @@ export const PopoverComponent: FC<PopoverProps> = ({
   const [isOpen, setIsOpen] = useState(false)
   const [title, setTitle] = useState(true)
   const arrowRef = useRef(null)
-  const { root } = useTheme().theme.popover
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -136,10 +118,13 @@ export const PopoverComponent: FC<PopoverProps> = ({
           ref={refs.setFloating}
           style={{ ...floatingStyles, ...styles }}
           {...getFloatingProps()}
-          className={cn(className, root.base)}>
+          className={cn(
+            className,
+            'relative z-40 max-w-sm rounded-md bg-white px-6 py-[22px] shadow-small transition-all duration-300',
+          )}>
           {showArrow && <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFF" />}
           {showDismissIcon && (
-            <button onClick={() => setIsOpen(false)} className={root.icon}>
+            <button onClick={() => setIsOpen(false)} className="absolute right-6 top-[22px]">
               {typeof icon !== 'undefined' ? icon : <XCircle size={24} color="#5E718D" weight="light" />}
             </button>
           )}
