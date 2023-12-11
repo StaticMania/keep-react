@@ -7,6 +7,7 @@ import { useTheme } from '~/src/Keep/ThemeContext'
 export interface IconProps {
   children?: ReactNode
   className?: string
+  [key: string]: any
 }
 
 export interface keepAccordionIconTheme {
@@ -17,8 +18,12 @@ export interface keepAccordionIconTheme {
   }
 }
 
-export const Icon: FC<IconProps> = ({ children, className }) => {
+export const Icon: FC<IconProps> = ({ children, className, ...otherProps }) => {
   const { isOpen } = useAccordionContext()
   const { icon } = useTheme().theme.accordion
-  return <div className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}>{children}</div>
+  return (
+    <div {...otherProps} className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}>
+      {children}
+    </div>
+  )
 }

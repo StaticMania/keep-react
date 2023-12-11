@@ -8,18 +8,21 @@ import { useTheme } from '../../Keep/ThemeContext'
 export interface ContentProps {
   children?: ReactNode
   className?: string
+  [key: string]: any
 }
 
 export interface keepAccordionContentTheme {
   base: string
 }
 
-export const Content: FC<ContentProps> = ({ children, className }) => {
+export const Content: FC<ContentProps> = ({ children, className, ...otherProps }) => {
   const { isOpen = false } = useAccordionContext()
   const { content } = useTheme().theme.accordion
   return (
     <Collapse isOpened={isOpen}>
-      <div className={cn(content.base, className)}>{children}</div>
+      <div role="contentinfo" {...otherProps} className={cn(content.base, className)}>
+        {children}
+      </div>
     </Collapse>
   )
 }

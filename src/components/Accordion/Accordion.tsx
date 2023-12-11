@@ -13,6 +13,7 @@ export interface AccordionProps {
   flush?: boolean
   disabled?: boolean
   openFirstPanel?: boolean
+  [key: string]: any
 }
 
 export interface keepAccordionTheme {
@@ -29,6 +30,7 @@ export const AccordionComponent: FC<AccordionProps> = ({
   flush,
   disabled = false,
   openFirstPanel,
+  ...otherProps
 }) => {
   const [isOpen, setIsOpen] = useState(openFirstPanel ? 0 : -1)
 
@@ -45,7 +47,15 @@ export const AccordionComponent: FC<AccordionProps> = ({
     return child
   })
 
-  return <div className={cn(className, disabled && 'pointer-events-none opacity-50')}>{modifiedChildren}</div>
+  return (
+    <div
+      role="region"
+      aria-labelledby="accordion"
+      {...otherProps}
+      className={cn(className, disabled && 'pointer-events-none opacity-50')}>
+      {modifiedChildren}
+    </div>
+  )
 }
 
 Title.displayName = 'Accordion.Title'

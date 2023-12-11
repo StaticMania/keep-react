@@ -7,6 +7,7 @@ import { useTheme } from '../../Keep/ThemeContext'
 export interface ContainerProps {
   children?: ReactNode
   className?: string
+  [key: string]: any
 }
 
 export interface keepAccordionContainerTheme {
@@ -14,11 +15,12 @@ export interface keepAccordionContainerTheme {
   open: string
 }
 
-export const Container: FC<ContainerProps> = ({ children, className }) => {
+export const Container: FC<ContainerProps> = ({ children, className, ...otherProps }) => {
   const { isOpen, flush, setIsOpen } = useAccordionContext()
   const { container } = useTheme().theme.accordion
   return (
     <div
+      {...otherProps}
       onClick={() => setIsOpen && setIsOpen(!isOpen)}
       className={cn(container.base, !flush && isOpen ? container.open : '', flush && isOpen ? '' : '', className)}>
       {children}
