@@ -206,6 +206,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       handleOnChange,
       addonStyle,
       iconStyle,
+      className = '',
       ...props
     },
     ref,
@@ -248,6 +249,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 addon ? theme.field.input.withAddon.on[addonPosition] : theme.field.input.withAddon.off,
                 withBg ? theme.field.input.withBg.on.colors[color] : theme.field.input.withBg.off,
                 !border && '!rounded-none',
+                className,
               )}
               {...theirProps}
               ref={ref}
