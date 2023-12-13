@@ -7,7 +7,7 @@
 // `lib` by copying and appropriately renaming files from `lib-untouched`. It
 // keeps the extensions of esm files intact.
 //
-// Since tsc can't yet ouput files these extenstions(https://github.com/microsoft/TypeScript/issues/49462),
+// Since tsc can't yet output files in these extensions(https://github.com/microsoft/TypeScript/issues/49462),
 // this is just a way to do it.
 //
 // TODO: Optimizie it if it's slow.
