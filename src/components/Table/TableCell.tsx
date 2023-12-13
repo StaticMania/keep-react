@@ -8,7 +8,16 @@ export interface keepTableCellTheme {
   base: string
 }
 
+/**
+ * Props for the TableCell component.
+ * @interface TableCellProps
+ * @extends {PropsWithChildren<ComponentProps<'td'>>}
+ */
 export interface TableCellProps extends PropsWithChildren, ComponentProps<'td'> {
+  /**
+   * Optional theme for the TableCell.
+   * @type {DeepPartial<keepTableCellTheme>}
+   */
   theme?: DeepPartial<keepTableCellTheme>
 }
 

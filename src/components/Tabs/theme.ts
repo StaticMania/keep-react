@@ -28,7 +28,7 @@ export const tabTheme: keepTabTheme = {
           },
         },
         underline: {
-          base: 'rounded-none',
+          base: 'rounded-none border-b-2 border-transparent',
           active: {
             on: 'bg-primary-25 text-primary-500 border-primary-200 active',
             off: 'border-transparent text-metal-700 hover:bg-primary-25 hover:border-primary-200 hover:text-primary-500',
@@ -39,10 +39,10 @@ export const tabTheme: keepTabTheme = {
           },
         },
         pills: {
-          base: '',
+          base: 'rounded-md border border-transparent',
           active: {
             on: 'rounded-md bg-primary-25 text-primary-500 border border-primary-200',
-            off: 'rounded-md hover:text-primary-500 hover:bg-primary-25 hover:border hover:border-primary-200',
+            off: 'rounded-md text-metal-700 hover:text-primary-500 hover:bg-primary-25 hover:border hover:border-primary-200',
           },
           borderPosition: {
             top: '',

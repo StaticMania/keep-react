@@ -3,9 +3,27 @@ import { forwardRef } from 'react'
 import { useDatePickerContext } from './DatePickerContext'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the CustomInput component.
+ * @interface CustomInputProps
+ */
 export interface CustomInputProps {
+  /**
+   * The value of the input.
+   * @type {string}
+   * @default ''
+   */
   value?: string
+  /**
+   * Callback function to handle click event.
+   * @type {() => void}
+   */
   onClick?: () => void
+  /**
+   * The placeholder text for the input.
+   * @type {string}
+   * @default 'Date / Month / Year'
+   */
   placeholder?: string
 }
 

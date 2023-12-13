@@ -14,13 +14,52 @@ export interface keepStatisticTheme {
   icon: keepIconTheme
 }
 
+/**
+ * Props for the Statistic component.
+ * @interface StatisticProps
+ */
 export interface StatisticProps {
+  /**
+   * Whether to show the dollar sign.
+   * @type {boolean}
+   * @default false
+   */
   showDollar?: boolean
+  /**
+   * Whether to show the filter icon.
+   * @type {boolean}
+   * @default false
+   */
   showFilter?: boolean
+  /**
+   * Specifies the background color of the icon.
+   * @type {'primary' | 'success'}
+   * @default 'primary'
+   */
   iconBg?: 'primary' | 'success'
+  /**
+   * The child components of the Statistic component.
+   * @type {ReactNode}
+   * @default ''
+   */
   children?: ReactNode
+  /**
+   * The label for the filter.
+   * @type {string}
+   * @default ''
+   */
   filterLabel?: string
+  /**
+   * The data for the filter.
+   * @type {string[]}
+   * @default []
+   */
   filterData?: string[]
+  /**
+   * Additional class name for the component.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
 

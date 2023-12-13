@@ -11,9 +11,24 @@ export interface keepSkeletonTheme {
   avatar: string
 }
 
+/**
+ * Props for the keepSkeletonTheme component.
+ * @interface keepSkeletonThemeProps
+ */
 export interface keepSkeletonThemeProps {
+  /**
+   * Determines whether the animation should be enabled or not.
+   */
   animation?: boolean
+
+  /**
+   * The children components to be rendered inside the keepSkeletonTheme component.
+   */
   children?: ReactNode
+
+  /**
+   * Additional CSS class name for the keepSkeletonTheme component.
+   */
   className?: string
 }
 

@@ -57,7 +57,6 @@ const meta: Meta<typeof Slider> = {
         defaultValue: { summary: false },
       },
     },
-
     defaultValue: {
       description: 'Initial default value or values for the slider.',
       table: {

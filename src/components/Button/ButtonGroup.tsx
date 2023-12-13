@@ -10,6 +10,11 @@ export interface keepButtonGroupTheme {
   position: PositionInButtonGroup
 }
 
+/**
+ * Props for the ButtonGroup component.
+ * @typedef {Object} ButtonGroupProps
+ * @extends {ComponentProps<'div'>}
+ */
 export type ButtonGroupProps = PropsWithChildren<ComponentProps<'div'> & Pick<ButtonProps, 'pill'>>
 
 export interface PositionInButtonGroup {

@@ -2,6 +2,7 @@ import { useTheme } from '../../Keep/ThemeContext'
 import { Check, FilePdf, Trash } from 'phosphor-react'
 import { FC } from 'react'
 import { cn } from '../../helpers/cn'
+
 export interface UploadSuccessTheme {
   base: string
   bgColor: string

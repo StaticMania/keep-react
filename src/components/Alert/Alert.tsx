@@ -35,20 +35,106 @@ export interface keepAlertTheme {
   }
 }
 
+/**
+ * Props for the Alert component.
+ * @interface AlertProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>>}
+ */
 export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+  /**
+   * The additional content of the Alert component.
+   * @type ReactNode
+   * @default
+   */
   additionalContent?: ReactNode
+
+  /**
+   * The color of the Alert component.
+   * @type string
+   * @default info
+   */
   color?: keyof AlertColors
+
+  /**
+   * The icon of the Alert component.
+   * @type ReactNode
+   * @default false
+   */
   icon?: ReactNode
+
+  /**
+   * The icon style of the Alert component.
+   * @type string
+   * @default false
+   */
   iconStyle?: string
+
+  /**
+   * Whether to enable the dismiss icon for the Alert component.
+   * @type boolean
+   * @default false
+   */
   dismiss?: boolean
+
+  /**
+   * Whether to enable the dismiss icon for the Alert component.
+   * @type boolean
+   * @default false
+   */
   onDismiss?: boolean | (() => void)
+
+  /**
+   * Whether to add rounded corners to the Alert component.
+   * @type boolean
+   * @default false
+   */
   rounded?: boolean
+
+  /**
+   * Whether to add a border around the Alert component.
+   * @type boolean
+   * @default false
+   */
   withBorder?: boolean
+
+  /**
+   * The title of the Alert component.
+   * @type string
+   */
   title?: string
+
+  /**
+   * The title style of the Alert component.
+   * @type string
+   * @default
+   */
   titleStyle?: string
+
+  /**
+   * Whether to add a border accent to the Alert component.
+   * @type boolean
+   * @default false
+   */
   withBorderAccent?: boolean
+
+  /**
+   * The position of the border accent for the Alert component.
+   * @type string
+   * @default left
+   * @options left | right | top | bottom
+   */
   withBorderAccentPosition?: 'left' | 'right' | 'top' | 'bottom'
+
+  /**
+   * The children of the Alert component.
+   * @type ReactNode
+   */
   children?: ReactNode
+
+  /**
+   * className to apply to the Alert.
+   * @type string
+   */
   className?: string
 }
 

@@ -23,10 +23,38 @@ export interface keepAccordionTitleTheme {
   }
 }
 
+/**
+ * Props for the AccordionTitle component.
+ * @interface AccordionTitleProps
+ * @extends {ComponentProps<'button'>}
+ */
+
 export interface AccordionTitleProps extends ComponentProps<'button'> {
+  /**
+   * The icon to display when the accordion panel is closed.
+   * @type {ReactNode}
+   * @default "<PlusCircle />"
+   */
   arrowIcon?: FC<ComponentProps<'svg'>>
+
+  /**
+   * The heading level to use for the AccordionTitle.
+   * @type {KeepHeadingLevel}
+   * @default 'h1'
+   */
   as?: KeepHeadingLevel
+
+  /**
+   * The theme for the AccordionTitle component.
+   * @type {DeepPartial<keepAccordionTitleTheme>}
+   * @default {}
+   */
   theme?: DeepPartial<keepAccordionTitleTheme>
+
+  /**
+   * className to apply to the AccordionTitle.
+   * @type {string}
+   */
   className?: string
 }
 
@@ -47,6 +75,10 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
     closeIcon: CloseIcon,
     openIcon: OpenIcon,
   } = useAccordionContext()
+  /**
+   * Handles the click event for the AccordionTitle.
+   * If the Accordion is not disabled, it toggles the open/closed state of the Accordion item.
+   */
   const onClick = () => typeof setOpen !== 'undefined' && setOpen()
 
   const oldTheme = useTheme().theme.accordion.title

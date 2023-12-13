@@ -73,7 +73,7 @@ const meta: Meta<typeof Popover> = {
       },
     },
     trigger: {
-      description: 'Avaiable Trigger type',
+      description: 'Available Trigger type',
       control: { type: 'radio' },
       options: ['hover', 'click'],
       table: {
@@ -82,7 +82,7 @@ const meta: Meta<typeof Popover> = {
       },
     },
     position: {
-      description: 'Avaiable Popover Position',
+      description: 'Available Popover Position',
       control: { type: 'select' },
       table: {
         type: { summary: 'String' },
@@ -136,7 +136,6 @@ export const SingleLinePopover: Story = {
     children: <Button size="xs">Popover</Button>,
   },
 }
-
 export const TriggerVariantPopover: Story = {
   args: {
     trigger: 'hover',
@@ -146,6 +145,7 @@ export const TriggerVariantPopover: Story = {
     children: <Button size="xs">Popover</Button>,
   },
 }
+
 export const PopoverPosition: Story = {
   args: {
     position: 'right-end',

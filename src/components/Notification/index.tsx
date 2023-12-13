@@ -33,13 +33,47 @@ export interface keepNotificationTheme {
   }
 }
 
+/**
+ * Props for the Notification component.
+ * @interface NotificationProps
+ * @extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>>
+ */
+
 export interface NotificationProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+  /**
+   * Additional content to be displayed within the notification.
+   */
   additionalContent?: ReactNode
+
+  /**
+   * Icon to be displayed for informational purposes.
+   */
   infoIcon?: ReactNode
+
+  /**
+   * Determines whether the notification can be dismissed.
+   */
   dismiss?: boolean
+
+  /**
+   * Source URL for the header banner image.
+   */
   headerBannerSrc?: string
+
+  /**
+   * Callback function to be executed when the notification is dismissed.
+   * If set to `true`, a default dismiss behavior will be applied.
+   */
   onDismiss?: boolean | (() => void)
+
+  /**
+   * Determines whether the notification should be shown.
+   */
   showNotification?: boolean
+
+  /**
+   * Position of the notification on the screen.
+   */
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 

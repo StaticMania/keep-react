@@ -60,7 +60,7 @@ export const DefaultAlert: Story = {
     icon: <Info size={24} color="#0F3CD9" />,
     additionalContent: removeFragment(
       <>
-        <div className="text-metal-500 mt-1 text-body-5">
+        <div className="mt-1 text-body-5 text-metal-500">
           Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
           <Link href="/" className="ml-2 text-primary-600 underline">
             Link style
@@ -83,6 +83,7 @@ export const AlertWithBorder: Story = {
     withBorder: true,
   },
 }
+
 export const AlertWithAccentBorder: Story = {
   args: {
     ...DefaultAlert.args,
@@ -95,6 +96,7 @@ export const InfoAlert: Story = {
     ...DefaultAlert.args,
   },
 }
+
 export const GrayAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -102,6 +104,7 @@ export const GrayAlert: Story = {
     icon: <Info size={24} color="gray" />,
   },
 }
+
 export const ErrorAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -109,6 +112,7 @@ export const ErrorAlert: Story = {
     icon: <XCircle size={24} color="#E92215" />,
   },
 }
+
 export const SuccessAlert: Story = {
   args: {
     ...DefaultAlert.args,
@@ -116,6 +120,7 @@ export const SuccessAlert: Story = {
     icon: <CheckCircle size={24} color="#0A9952" />,
   },
 }
+
 export const WarningAlert: Story = {
   args: {
     ...DefaultAlert.args,

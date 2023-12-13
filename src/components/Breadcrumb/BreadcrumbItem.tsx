@@ -4,11 +4,46 @@ import { useBreadcrumbContext } from './BreadcrumbContext'
 import type { ComponentProps, PropsWithChildren, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the BreadcrumbItem component.
+ * @interface BreadcrumbItemProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'li'>, 'ref'>>}
+ */
 export interface BreadcrumbItemProps extends PropsWithChildren<Omit<ComponentProps<'li'>, 'ref'>> {
+  /**
+   * The URL to navigate to when the breadcrumb item is clicked.
+   * @type {string}
+   */
   href?: string
+
+  /**
+   * The icon to display alongside the breadcrumb item.
+   * @type {ReactNode}
+   */
   icon?: ReactNode
+
+  /**
+   * The active state of the breadcrumb item.
+   * - 'border': Adds a border to the breadcrumb item.
+   * - 'bar': Adds a bar to the breadcrumb item.
+   * - 'base': Default active state.
+   * @type {'border' | 'bar' | 'base'}
+   * @default 'base'
+   */
   active?: 'border' | 'bar' | 'base'
+
+  /**
+   * Determines if the breadcrumb item is disabled.
+   * @type {boolean}
+   * @default false
+   */
   disabled?: boolean
+
+  /**
+   * Additional CSS class name for the breadcrumb item.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
 

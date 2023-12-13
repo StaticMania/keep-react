@@ -1,6 +1,15 @@
 import { createContext, useContext } from 'react'
 
+/**
+ * Represents the context for the Sidebar component.
+ * @interface SidebarContext
+ */
 export type SidebarContext = {
+  /**
+   * Indicates whether the sidebar is collapsed or not.
+   * @type {boolean}
+   * @default false
+   */
   isCollapsed: boolean
 }
 

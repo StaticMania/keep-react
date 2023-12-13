@@ -1,3 +1,9 @@
+/**
+ * Custom hook that calculates the width of two progress divs based on the given width and progress values.
+ * @param {number} width - The width of the progress bar.
+ * @param {number} progress - The progress value (between 0 and 100).
+ * @returns {Object} - An object containing the calculated widths for the two progress divs.
+ */
 export const useProgress = ({ width, progress }: { width: number; progress: number }) => {
   const progressBar = 20 + width / 100 + (width / 100) * (progress === 1 ? 0 : progress)
   const progressBar2 = progressBar - 20

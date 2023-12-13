@@ -94,6 +94,7 @@ export const DefaultAccordion: Story = {
     ),
   },
 }
+
 export const AccordionWithCollapseAll: Story = {
   args: {
     children: removeFragment(
@@ -163,12 +164,14 @@ export const AccordionWithCollapseAll: Story = {
     collapseAll: true,
   },
 }
+
 export const AccordionWithLeftSideIcon: Story = {
   args: {
     iconPosition: 'left',
     ...AccordionWithCollapseAll.args,
   },
 }
+
 export const OpenAccordion: Story = {
   args: {
     ...AccordionWithCollapseAll.args,
@@ -176,6 +179,7 @@ export const OpenAccordion: Story = {
     collapseAll: false,
   },
 }
+
 export const DisabledAccordion: Story = {
   args: {
     ...AccordionWithCollapseAll.args,

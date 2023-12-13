@@ -130,6 +130,7 @@ const NotificationWithCardComponent = () => {
     </div>
   )
 }
+
 const NotificationWithIconComponent = () => {
   const [showNotification, setShowNotification] = useState(false)
   const onDismiss = () => {
@@ -237,12 +238,15 @@ type Story = StoryObj<typeof Notification>
 export const DefaultNotification: Story = {
   render: () => <DefaultNotificationComponent />,
 }
+
 export const NotificationWithIcon: Story = {
   render: () => <NotificationWithIconComponent />,
 }
+
 export const NotificationWithAvatar: Story = {
   render: () => <NotificationWithAvatarComponent />,
 }
+
 export const NotificationWithCard: Story = {
   render: () => <NotificationWithCardComponent />,
 }

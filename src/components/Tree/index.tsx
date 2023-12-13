@@ -4,21 +4,102 @@ import { ReactNode, useState } from 'react'
 import { CheckBox } from '../CheckBox'
 import { cn } from '../../helpers/cn'
 
+/**
+ * A node for the Tree component.
+ * @interface Node
+ */
 interface Node {
+  /**
+   * The id of the node.
+   * @type {number}
+   */
   id: number
+  /**
+   * The title of the node.
+   * @type {string}
+   */
   title: string
+  /**
+   * An array of child nodes.
+   * @type {Node[]}
+   * @default []
+   */
   children?: Node[]
 }
+
+/**
+ * Props for the Tree component.
+ * @interface Props
+ */
 interface Props {
+  /**
+   * An array of nodes to be rendered in the tree.
+   * @type {Node[]}
+   * @default []
+   */
   nodes: Node[]
+
+  /**
+   * Determines whether to show icons for parent and child nodes.
+   * @type {boolean}
+   * @default false
+   */
   showIcon?: boolean
+
+  /**
+   * Determines whether to show the number of items for each node.
+   * @type {boolean}
+   * @default false
+   */
   showItemsNumber?: boolean
+
+  /**
+   * Determines whether to show a border around the tree component.
+   * @type {boolean}
+   * @default false
+   */
   showBorder?: boolean
+
+  /**
+   * The icon to be displayed for parent nodes.
+   * @type {ReactNode}
+   * @default ''
+   */
   ParentIcon?: ReactNode
+
+  /**
+   * The icon to be displayed for child nodes.
+   * @type {ReactNode}
+   * @default ''
+   */
   ChildIcon?: ReactNode
+
+  /**
+   * Determines whether to show checkboxes for each node.
+   * @type {boolean}
+   * @default false
+   */
   showCheckbox?: boolean
+
+  /**
+   * A callback function to handle the checked state of the checkboxes.
+   * @param value - The checked state value.
+   * @type {(value: boolean) => void}
+   */
   handleChecked?: (value: boolean) => void
+
+  /**
+   * The CSS class name for the tree component.
+   * @type {string}
+   * @default ''
+   */
   className?: string
+
+  /**
+   * The CSS style for each tree item.
+   * @type {string}
+   * @default ''
+   */
   itemStyle?: string
 }
 
@@ -91,12 +172,12 @@ export const Tree: React.FC<Props> = ({
           node.children
             ? theme.list.hasChild.on
             : showIcon && !showCheckbox
-            ? theme.list.hasChild.off.hasIcon.on
-            : !showIcon && showCheckbox
-            ? theme.list.hasChild.off.hasIcon.on
-            : showIcon && showCheckbox
-            ? theme.list.hasChild.off.hasIcon.on
-            : theme.list.hasChild.off.hasIcon.off,
+              ? theme.list.hasChild.off.hasIcon.on
+              : !showIcon && showCheckbox
+                ? theme.list.hasChild.off.hasIcon.on
+                : showIcon && showCheckbox
+                  ? theme.list.hasChild.off.hasIcon.on
+                  : theme.list.hasChild.off.hasIcon.off,
           theme.list.base,
           itemStyle,
         )}>

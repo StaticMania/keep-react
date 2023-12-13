@@ -22,7 +22,15 @@ export interface keepRatingTheme {
   }
 }
 
+/**
+ * Props for the Rating component.
+ * @interface RatingProps
+ * @extends {PropsWithChildren<ComponentProps<'div'>>}
+ */
 export interface RatingProps extends PropsWithChildren<ComponentProps<'div'>> {
+  /**
+   * The size of the rating.
+   */
   size?: number
 }
 

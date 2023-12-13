@@ -2,25 +2,141 @@ import { FC } from 'react'
 import { Area, AreaChart as AreaChartCom, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { CustomTooltip } from './CustomTooltip'
 
+/**
+ * Props for the AreaChart component.
+ * @interface AreaChartProps
+ */
 interface AreaChartProps {
+  /**
+   * Determines whether to show the tooltip.
+   * @type {boolean}
+   * @default false
+   */
   showTooltip?: boolean
+
+  /**
+   * Determines whether to show the grid lines.
+   * @type {boolean}
+   * @default false
+   */
   showGridLine?: boolean
+
+  /**
+   * The type of chart to display. Can be either 'natural' or 'linear'.
+   * @type {'natural' | 'linear'}
+   * @default 'linear'
+   */
   chartType?: 'natural' | 'linear'
+
+  /**
+   * Determines whether to show the X-axis.
+   * @type {boolean}
+   * @default false
+   */
   showXaxis?: boolean
+
+  /**
+   * Determines whether to show the Y-axis.
+   * @type {boolean}
+   * @default false
+   */
   showYaxis?: boolean
+
+  /**
+   * The key for the main data in the chart.
+   * @type {string}
+   * @default ''
+   */
   dataKey: string
+
+  /**
+   * The key for the secondary data in the chart.
+   * @type {string}
+   * @default ''
+   */
   secondaryDataKey?: string
+
+  /**
+   * The key for the X-axis data.
+   * @type {string}
+   * @default ''
+   */
   XAxisDataKey?: string
+
+  /**
+   * The key for the Y-axis data.
+   * @type {string}
+   * @default ''
+   */
   YAxisDataKey?: string
+
+  /**
+   * The chart data.
+   * @type {unknown[]}
+   * @default []
+   */
   chartData?: unknown[]
+
+  /**
+   * The color of the main chart.
+   * @type {string}
+   * @default '#1B4DFF'
+   */
   chartColor?: string
+
+  /**
+   * The color of the secondary chart.
+   * @type {string}
+   * @default '#1B4DFF'
+   */
   secondaryChartColor?: string
+
+  /**
+   * The stroke color of the main area.
+   * @type {string}
+   * @default '#1B4DFF'
+   */
   areaStoke?: string
+
+  /**
+   * The stroke color of the secondary area.
+   * @type {string}
+   * @default '#94ABFF'
+   */
   secondaryAreaStoke?: string
+
+  /**
+   * The opacity values for different parts of the chart.
+   * @type {object}
+   * @default "{ topStartOpacity: 0.3, topEndOpacity: 0, secondaryStartOpacity: 0.2, secondaryEndOpacity: 0 }"
+   */
   opacity?: {
+    /**
+     * The start opacity for the top area.
+     * @type {number}
+     * @default 0.3
+     */
     topStartOpacity?: number
+
+    /**
+     * The end opacity for the top area.
+     * @type {number}
+     * @default 0
+     */
     topEndOpacity?: number
+
+    /**
+     * The start opacity for the secondary area.
+     * @type {number}
+     * @default 0
+     */
     secondaryStartOpacity?: number
+
+    /**
+     * The end opacity for the secondary area.
+     * @type {number}
+     * @default 0
+     */
     secondaryEndOpacity?: number
   }
 }

@@ -3,8 +3,18 @@ import { useTimelineContext } from './TimelineContext'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the TimelineItem component.
+ * @type TimelineItemProps
+ * @extends {PropsWithChildren<ComponentProps<'li'>>}
+ */
 export type TimelineItemProps = PropsWithChildren<
   ComponentProps<'li'> & {
+    /**
+     * Additional class name for the component.
+     * @type {string}
+     * @default ''
+     */
     className?: string
   }
 >
