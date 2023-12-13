@@ -2,7 +2,7 @@
 import { Children, FC, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
 import { Description } from './Description'
 import { Title } from './Title'
-import { cn } from '~/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { Action } from './Action'
 import {
   useClick,
@@ -24,7 +24,7 @@ import {
 import { Container } from './Container'
 import { XCircle } from 'phosphor-react'
 import { PopoverContext } from './PopoverContext'
-import { useTheme } from '~/src/Keep/ThemeContext'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface PopoverProps {
   children?: ReactNode

@@ -1,8 +1,8 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { cn } from '~/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { usePopoverContext } from './PopoverContext'
-import { useTheme } from '~/src/Keep/ThemeContext'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface PopoverDescriptionProps {
   children?: ReactNode
