@@ -16,3 +16,4 @@ yarn-error.log*
 yarn.lock
 vercel.json
 package-lock.json
+prepare-lib.js

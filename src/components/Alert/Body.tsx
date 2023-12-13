@@ -1,6 +1,6 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { cn } from '~/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 
 export interface BodyProps {
   className?: string

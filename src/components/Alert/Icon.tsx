@@ -1,7 +1,7 @@
 'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '~/src/Keep/ThemeContext'
+import { useTheme } from '../../Keep/ThemeContext'
 import { useAlertContext } from './AlertContext'
 
 export interface IconProps {

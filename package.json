@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Official React components built for React and Tailwind CSS",
   "license": "MIT",
+  "type": "module",
   "keywords": [
     "design-system",
     "keep-design-system",
@@ -50,10 +51,11 @@
     "newApp": "rm -rf node_modules && rm -rf .next && yarn install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
-    "build:css": "css-minify -f ./app/main.css -o ./lib/cjs/theme",
-    "build:lib:cjs": "tsc -p tsconfig.lib.json",
-    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm"
+    "build:lib": "rm -rf ./lib-untouched/ ./lib && yarn build:lib:dev",
+    "build:lib:dev": "yarn build:lib:esm && yarn build:lib:cjs && yarn build:css && node prepare-lib.js",
+    "build:css": "css-minify -f ./app/main.css -o ./lib-untouched/cjs/theme",
+    "build:lib:cjs": "tsc -p tsconfig.lib.json --declaration",
+    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib-untouched/esm"
   },
   "dependencies": {
     "@floating-ui/react": "^0.25.3",

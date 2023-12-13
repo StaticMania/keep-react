@@ -2,7 +2,7 @@
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
-import { useTheme } from '~/src/Keep/ThemeContext'
+import { useTheme } from '../../Keep/ThemeContext'
 
 export interface IconProps {
   children?: ReactNode
