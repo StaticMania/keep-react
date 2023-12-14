@@ -28,7 +28,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className="border-metal-100 fixed top-0 z-50 w-full border-b bg-white">
+    <header className="fixed top-0 z-50 w-full border-b border-metal-100 bg-white">
       <div className="relative px-6 2xl:container">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-28">
@@ -42,7 +42,7 @@ const Navbar = () => {
                   key={nav.id}
                   href={nav.href}
                   target={nav.redirect ? '_blank' : '_self'}
-                  className="text-metal-500 hover:text-metal-900 active:text-metal-900 text-body-5 font-normal">
+                  className="text-body-5 font-normal text-metal-500 hover:text-metal-900 active:text-metal-900">
                   {nav.name}
                 </Link>
               ))}
@@ -78,14 +78,14 @@ const Navbar = () => {
               </svg>
             </a>
             <a
-              href="https://discord.com/invite/xsNDwPks"
+              href="https://discord.gg/fSxDJyvJmr"
               target="_blank"
               className="rounded hover:bg-primary-50 sm:bg-primary-25 sm:p-3">
-              <DiscordLogo size={20} color="#5562EA" />
+              <Image src="/images/icon/discord.svg" height={20} width={20} alt="github" />
             </a>
             <Link
               href="/docs/getting-started/Introduction"
-              className="border-metal-900 bg-metal-900 hover:bg-metal-800 focus:ring-metal-800 active:bg-metal-900 group h-min  w-fit justify-center rounded-md border px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in focus:ring-4">
+              className="group h-min w-fit justify-center rounded-md border border-metal-900  bg-metal-900 px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-metal-800 focus:ring-4 focus:ring-metal-800 active:bg-metal-900">
               get started
             </Link>
           </div>
@@ -135,7 +135,7 @@ const Navbar = () => {
           </div>
           <div
             id="linkPage"
-            className={`border-l-metal-100 fixed right-0 top-[73px] h-screen w-72 overflow-y-auto border-l bg-white pl-8 transition-all duration-300 lg:hidden ${
+            className={`fixed right-0 top-[73px] h-screen w-72 overflow-y-auto border-l border-l-metal-100 bg-white pl-8 transition-all duration-300 lg:hidden ${
               active ? 'translate-x-0' : 'translate-x-full'
             }`}>
             <div className="mt-5 space-y-3 pr-4">
@@ -156,13 +156,13 @@ const Navbar = () => {
                     theme={{
                       base: 'text-metal-500 font-normal',
                     }}>
-                    <ul className="border-l-metal-100 -ml-px mt-3 space-y-2 border-l">
+                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {navbarRoutes.map((route) => (
                         <li key={route.id}>
                           <Link
-                            className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
+                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href)
-                                ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
+                                ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
                                 : ''
                             }`}
                             href={route.href}>
@@ -191,13 +191,13 @@ const Navbar = () => {
                     theme={{
                       base: 'text-metal-500 font-normal',
                     }}>
-                    <ul className="border-l-metal-100 -ml-px mt-3 space-y-2 border-l">
+                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {gettingStartedRoutes.map((route) => (
                         <li key={route.id}>
                           <Link
-                            className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
+                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href)
-                                ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
+                                ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
                                 : ''
                             }`}
                             href={route.href}>
@@ -227,13 +227,13 @@ const Navbar = () => {
                     theme={{
                       base: '',
                     }}>
-                    <ul className="border-l-metal-100 mt-3 space-y-2 border-l pb-24">
+                    <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
                       {routes.map((route) => (
                         <li key={route.id}>
                           <Link
-                            className={`text-metal-500 hover:border-metal-500 hover:text-metal-900 -ml-px border-l  border-l-transparent pl-3 text-body-5 leading-[28px] tracking-[-0.2px] hover:-ml-px hover:border-l ${
+                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href)
-                                ? '!border-metal-900 text-metal-900 border-l transition-all duration-150'
+                                ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
                                 : ''
                             }`}
                             href={route.href}>
