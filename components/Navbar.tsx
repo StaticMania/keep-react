@@ -78,10 +78,10 @@ const Navbar = () => {
               </svg>
             </a>
             <a
-              href="https://discord.com/invite/xsNDwPks"
+              href="https://discord.gg/fSxDJyvJmr"
               target="_blank"
               className="rounded hover:bg-primary-50 sm:bg-primary-25 sm:p-3">
-              <DiscordLogo size={20} color="#5562EA" />
+              <Image src="/images/icon/discord.svg" height={20} width={20} alt="github" />
             </a>
             <Link
               href="/docs/getting-started/Introduction"
