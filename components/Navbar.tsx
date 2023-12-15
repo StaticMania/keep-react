@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Accordion } from '~/src'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { DiscordLogo, List, MagnifyingGlass, X } from 'phosphor-react'
+import { List, MagnifyingGlass, X } from 'phosphor-react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '~/routes/routes'
 import Search from './Search'
 
@@ -119,7 +119,7 @@ const Navbar = () => {
               href="https://discord.com/invite/xsNDwPks"
               target="_blank"
               className="sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
-              <DiscordLogo size={20} color="#5562EA" />
+              <Image src="/images/icon/discord.svg" height={20} width={20} alt="github" />
             </a>
             <button onClick={() => setActive(!active)}>
               {active ? (

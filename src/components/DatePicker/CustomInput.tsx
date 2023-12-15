@@ -1,44 +1,19 @@
+'use client'
 import { Calendar } from 'phosphor-react'
-import { forwardRef } from 'react'
 import { useDatePickerContext } from './DatePickerContext'
 import { cn } from '../../helpers/cn'
+import { HTMLProps, Ref } from 'react'
 
-/**
- * Props for the CustomInput component.
- * @interface CustomInputProps
- */
-export interface CustomInputProps {
-  /**
-   * The value of the input.
-   * @type {string}
-   * @default ''
-   */
-  value?: string
-  /**
-   * Callback function to handle click event.
-   * @type {() => void}
-   */
-  onClick?: () => void
-  /**
-   * The placeholder text for the input.
-   * @type {string}
-   * @default 'Date / Month / Year'
-   */
-  placeholder?: string
-}
-
-const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(({ value, onClick }, ref) => {
-  const { className, icon, iconStyle, placeholder } = useDatePickerContext()
+export const CustomInput = (props: HTMLProps<HTMLInputElement>, ref: Ref<HTMLInputElement>) => {
+  const { className, icon, iconStyle } = useDatePickerContext()
   return (
     <>
       <input
         ref={ref}
-        placeholder={placeholder ? placeholder : 'Date / Month / Year'}
-        value={value}
         readOnly
-        onClick={onClick}
+        {...props}
         className={cn(
-          'relative w-full rounded-md border border-metal-200 px-4 py-3 placeholder:text-body-4 placeholder:font-normal placeholder:text-metal-300 focus-within:border-metal-300 focus:outline-none',
+          'relative w-full rounded-md border border-metal-200 px-4 py-3 placeholder:text-body-4 placeholder:font-normal placeholder:text-metal-300 focus-within:border-metal-200 focus:outline-none',
           className,
         )}
       />
@@ -51,8 +26,4 @@ const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(({ value, onC
       </span>
     </>
   )
-})
-
-CustomInput.displayName = 'CustomInput'
-
-export default CustomInput
+}

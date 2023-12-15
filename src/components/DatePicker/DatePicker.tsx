@@ -1,5 +1,5 @@
+'use client'
 import { FC, ReactNode } from 'react'
-
 import { DatePickerContext, rangePicker } from './DatePickerContext'
 import { DateRangePicker } from './DateRangePicker'
 import { MonthPicker } from './MonthPicker'
@@ -124,7 +124,6 @@ const DatePickerComponent: FC<DatePickerProps> = ({
   )
 }
 
-DatePickerComponent.displayName = 'DatePicker'
 DateRangePicker.displayName = 'DatePicker.Range'
 SingleDatePicker.displayName = 'DatePicker.SingleDate'
 MonthPicker.displayName = 'DatePicker.Month'

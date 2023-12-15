@@ -1,3 +1,4 @@
+'use client'
 import type { FC } from 'react'
 import { TooltipSlider } from './ToolTipSlider'
 import { excludeClassName } from '../../helpers/exclude'

@@ -1,10 +1,11 @@
-import { FC, useState } from 'react'
+'use client'
+import { FC, createElement, forwardRef, useState } from 'react'
 import DatePicker from 'react-datepicker'
-import CustomInput from './CustomInput'
 import { useDatePickerContext } from './DatePickerContext'
+import { CustomInput } from './CustomInput'
 
 export const TimePicker: FC = () => {
-  const { timePicker } = useDatePickerContext()
+  const { timePicker, placeholder } = useDatePickerContext()
   const [selectedTime, setSelectedTime] = useState(new Date())
 
   const handleTimePicker = (date: Date) => {
@@ -25,7 +26,8 @@ export const TimePicker: FC = () => {
 
   return (
     <DatePicker
-      customInput={<CustomInput />}
+      placeholderText={placeholder}
+      customInput={createElement(forwardRef(CustomInput))}
       selected={selectedTime}
       onChange={handleTimePicker}
       showTimeSelect

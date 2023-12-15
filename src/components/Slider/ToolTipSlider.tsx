@@ -1,3 +1,4 @@
+'use client'
 import type { SliderProps } from 'rc-slider'
 import Slider from 'rc-slider'
 import Tooltip from 'rc-tooltip'
