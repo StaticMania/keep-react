@@ -39,28 +39,28 @@ export interface DatePickerProps {
    * @type {React.Dispatch<React.SetStateAction<Date | null>>}
    * @default null
    */
-  singleDatePicker?: React.Dispatch<React.SetStateAction<Date | null>>
+  singleDate?: React.Dispatch<React.SetStateAction<Date | null>>
 
   /**
    * State setter for year selection.
    * @type {React.Dispatch<React.SetStateAction<number | Date | null | undefined>>}
    * @default null
    */
-  yearPicker?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
+  year?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
 
   /**
    * State setter for month selection.
    * @type {React.Dispatch<React.SetStateAction<string | Date | null | undefined>>}
    * @default null
    */
-  monthPicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+  month?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
 
   /**
    * State setter for time selection.
    * @type {React.Dispatch<React.SetStateAction<string | Date | null | undefined>>}
    * @default null
    */
-  timePicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+  time?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
 
   /**
    * The CSS class name for the DatePicker component.
@@ -95,10 +95,10 @@ const DatePickerComponent: FC<DatePickerProps> = ({
   children,
   showTwoMonth = false,
   rangeDate,
-  yearPicker,
-  monthPicker,
-  singleDatePicker,
-  timePicker,
+  year,
+  month,
+  singleDate,
+  time,
   className,
   icon,
   iconStyle,
@@ -110,10 +110,10 @@ const DatePickerComponent: FC<DatePickerProps> = ({
         children,
         showTwoMonth,
         rangeDate,
-        yearPicker,
-        monthPicker,
-        singleDatePicker,
-        timePicker,
+        year,
+        month,
+        singleDate,
+        time,
         className,
         icon,
         iconStyle,
@@ -128,7 +128,7 @@ DateRangePicker.displayName = 'DatePicker.Range'
 SingleDatePicker.displayName = 'DatePicker.SingleDate'
 MonthPicker.displayName = 'DatePicker.Month'
 YearPicker.displayName = 'DatePicker.Year'
-TimePicker.displayName = 'DatePicker.Year'
+TimePicker.displayName = 'DatePicker.Time'
 
 export const DatePicker = Object.assign(DatePickerComponent, {
   Range: DateRangePicker,

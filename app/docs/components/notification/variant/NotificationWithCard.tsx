@@ -129,7 +129,7 @@ import { useState } from 'react'
 import { Button, Notification } from 'keep-react'
 import { DownloadSimple, FigmaLogo } from 'phosphor-react'
 
-const NotificationWithCard = () => {
+export const NotificationComponent = () => {
   const [notificationOne, setNotificationOne] = useState(true)
   const [notificationTwo, setNotificationTwo] = useState(true)
   const [notificationThree, setNotificationThree] = useState(true)

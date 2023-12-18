@@ -45,7 +45,7 @@ export type DatePickerContextType = {
    * @type {React.Dispatch<React.SetStateAction<Date | null>>}
    * @default null
    */
-  singleDatePicker?: React.Dispatch<React.SetStateAction<Date | null>>
+  singleDate?: React.Dispatch<React.SetStateAction<Date | null>>
 
   /**
    * A function to handle range date selection.
@@ -59,21 +59,21 @@ export type DatePickerContextType = {
    * @type {React.Dispatch<React.SetStateAction<number | Date | null | undefined>>}
    * @default null
    */
-  yearPicker?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
+  year?: React.Dispatch<React.SetStateAction<number | Date | null | undefined>>
 
   /**
    * A state setter for the month picker.
    * @type {React.Dispatch<React.SetStateAction<string | Date | null | undefined>>}
    * @default null
    */
-  monthPicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+  month?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
 
   /**
    * A state setter for the time picker.
    * @type {React.Dispatch<React.SetStateAction<string | Date | null | undefined>>}
    * @default null
    */
-  timePicker?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
+  time?: React.Dispatch<React.SetStateAction<string | Date | null | undefined>>
 
   /**
    * The CSS class name for the DatePicker component.

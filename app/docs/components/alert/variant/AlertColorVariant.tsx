@@ -143,8 +143,8 @@ export const AlertComponent = () => {
   return (
     <div className="space-y-5">
       <Alert
-        onDismiss={() => handleDismiss(1)}
-        dismiss={dismiss[1]}
+        onDismiss={onDismiss}
+        dismiss={showAlert}
         rounded={true}
         withBorder={true}
         withBorderAccent={true}
@@ -165,8 +165,8 @@ export const AlertComponent = () => {
         </Alert.Container>
       </Alert>
       <Alert
-        onDismiss={() => handleDismiss(2)}
-        dismiss={dismiss[2]}
+        onDismiss={onDismiss}
+        dismiss={showAlert}
         rounded={true}
         withBorder={true}
         withBorderAccent={true}
@@ -187,8 +187,8 @@ export const AlertComponent = () => {
         </Alert.Container>
       </Alert>
       <Alert
-        onDismiss={() => handleDismiss(3)}
-        dismiss={dismiss[3]}
+        onDismiss={onDismiss}
+        dismiss={showAlert}
         rounded={true}
         withBorder={true}
         withBorderAccent={true}
@@ -209,8 +209,8 @@ export const AlertComponent = () => {
         </Alert.Container>
       </Alert>
       <Alert
-        onDismiss={() => handleDismiss(4)}
-        dismiss={dismiss[4]}
+        onDismiss={onDismiss}
+        dismiss={showAlert}
         rounded={true}
         withBorder={true}
         withBorderAccent={true}
@@ -231,8 +231,8 @@ export const AlertComponent = () => {
         </Alert.Container>
       </Alert>
       <Alert
-        onDismiss={() => handleDismiss(5)}
-        dismiss={dismiss[5]}
+        onDismiss={onDismiss}
+        dismiss={showAlert}
         rounded={true}
         withBorder={true}
         withBorderAccent={true}

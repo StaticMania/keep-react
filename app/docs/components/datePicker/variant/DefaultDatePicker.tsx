@@ -6,7 +6,7 @@ const DefaultDatePicker = () => {
   const [_, setDate] = useState<Date | null>(null)
   return (
     <div className="w-1/3">
-      <DatePicker singleDatePicker={setDate} placeholder="Date / Month / Year">
+      <DatePicker singleDate={setDate} placeholder="Date / Month / Year">
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
@@ -21,7 +21,7 @@ import { DatePicker } from "keep-react";
 export const DatePickerComponent = () => {
   const [date, setDate] = useState(null);
   return (
-    <DatePicker singleDatePicker={setDate} placeholder="Date / Month / Year">
+    <DatePicker singleDate={setDate} placeholder="Date / Month / Year">
       <DatePicker.SingleDate />
     </DatePicker>
   );

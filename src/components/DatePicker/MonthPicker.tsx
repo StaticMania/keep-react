@@ -1,26 +1,26 @@
 'use client'
 import { CaretLeft, CaretRight } from 'phosphor-react'
 import { createElement, forwardRef, useState } from 'react'
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
+import MonthPick from 'react-datepicker'
 import { useDatePickerContext } from './DatePickerContext'
 import { CustomInput } from './CustomInput'
 
 export const MonthPicker: React.FC = () => {
-  const { monthPicker, placeholder } = useDatePickerContext()
-  const [month, setMonth] = useState(new Date())
+  const { month, placeholder } = useDatePickerContext()
+  const [selectedMonth, setSelectedMonth] = useState(new Date())
+
   const handleMonthChange = (date: Date) => {
-    setMonth(date)
-    const month = String(date.getMonth() + 1).padStart(2, '0')
+    setSelectedMonth(date)
+    const monthInNumber = String(date.getMonth() + 1).padStart(2, '0')
     const year = new Date(date).getFullYear()
-    const newMonth = `${month}/${year}`
-    monthPicker && monthPicker(newMonth)
+    const newMonth = `${monthInNumber}/${year}`
+    month && month(newMonth)
   }
 
   return (
-    <DatePicker
+    <MonthPick
       placeholderText={placeholder}
-      selected={month}
+      selected={selectedMonth}
       onChange={handleMonthChange}
       dateFormat="MM/yyyy"
       showPopperArrow={false}

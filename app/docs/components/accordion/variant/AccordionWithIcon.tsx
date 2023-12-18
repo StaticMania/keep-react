@@ -53,7 +53,7 @@ const AccordionWithIconCode = `
 import { Accordion } from "keep-react";
 import { Plus } from "phosphor-react";
 
-export const AccordionWithIcon = () => {
+export const AccordionComponent = () => {
   return (
     <Accordion>
       <Accordion.Panel>

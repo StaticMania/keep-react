@@ -3,7 +3,7 @@ import type { SliderProps } from 'rc-slider'
 import Slider from 'rc-slider'
 import Tooltip from 'rc-tooltip'
 import raf from 'rc-util/lib/raf'
-import * as React from 'react'
+import { ReactElement, ReactNode, useEffect, useRef } from 'react'
 
 /**
  * Custom tooltip component for the Slider.
@@ -14,17 +14,17 @@ import * as React from 'react'
 
 const HandleTooltip = (props: {
   value: number
-  children: React.ReactElement
+  children: ReactElement
   visible: boolean
-  tipFormatter?: (value: number) => React.ReactNode
+  tipFormatter?: (value: number) => ReactNode
 }) => {
   const { value, children, visible, tipFormatter = (val) => `${val} %`, ...restProps } = props
 
-  const tooltipRef = React.useRef<any>()
+  const tooltipRef = useRef<any>()
   /**
    * A reference to the requestAnimationFrame ID used for animation.
    */
-  const rafRef = React.useRef<number | null>(null)
+  const rafRef = useRef<number | null>(null)
 
   /**
    * Cancels the alignment of the keep.
@@ -42,7 +42,7 @@ const HandleTooltip = (props: {
     })
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (visible) {
       keepAlign()
     } else {
@@ -85,7 +85,7 @@ export const TooltipSlider = ({
   tipProps,
   ...props
 }: SliderProps & {
-  tipFormatter?: (value: number) => React.ReactNode
+  tipFormatter?: (value: number) => ReactNode
   tipProps: any
 }) => {
   const tipHandleRender: SliderProps['handleRender'] = (node, handleProps) => {

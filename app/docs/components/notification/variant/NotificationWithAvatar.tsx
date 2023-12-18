@@ -43,7 +43,7 @@ const NotificationWithAvatarCode = `
 import { useState } from 'react'
 import { Notification, Button, Avatar } from 'keep-react'
 
-const NotificationWithAvatar = () => {
+export const NotificationComponent = () => {
   const [showNotification, setShowNotification] = useState(true)
   const onDismiss = () => {
     setShowNotification(!showNotification)
