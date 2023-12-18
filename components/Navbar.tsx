@@ -50,7 +50,9 @@ const Navbar = () => {
           </div>
           {showModal && <Search setShowMainModal={setShowMainModal} showModal={showModal} />}
           <div className="hidden items-end gap-3 lg:flex">
-            <button onClick={handleModal} className="rounded hover:bg-primary-50 sm:bg-primary-25 sm:p-3">
+            <button
+              onClick={handleModal}
+              className="rounded grayscale transition duration-300 hover:bg-primary-50 hover:grayscale-0 sm:bg-primary-25 sm:p-3">
               <span>
                 <MagnifyingGlass size={20} color="#455468" />
               </span>
@@ -58,13 +60,13 @@ const Navbar = () => {
             <a
               href="https://github.com/StaticMania/keep-react"
               target="_blank"
-              className="rounded hover:bg-primary-50 sm:bg-primary-25 sm:p-3">
+              className="rounded grayscale transition duration-300 hover:bg-primary-50 hover:grayscale-0 sm:bg-primary-25 sm:p-3">
               <Image src="/images/icon/github.svg" height={20} width={20} alt="github" />
             </a>
             <a
               href="https://keep-storybook.vercel.app"
               target="_blank"
-              className="rounded hover:bg-primary-50 sm:bg-primary-25 sm:p-3">
+              className="rounded grayscale transition duration-300 hover:bg-primary-50 hover:grayscale-0 sm:bg-primary-25 sm:p-3">
               <svg
                 stroke="#FF4785"
                 fill="#FF4785"
@@ -80,7 +82,7 @@ const Navbar = () => {
             <a
               href="https://discord.gg/fSxDJyvJmr"
               target="_blank"
-              className="rounded hover:bg-primary-50 sm:bg-primary-25 sm:p-3">
+              className="rounded grayscale transition duration-300 hover:bg-primary-50 hover:grayscale-0 sm:bg-primary-25 sm:p-3">
               <Image src="/images/icon/discord.svg" height={20} width={20} alt="github" />
             </a>
             <Link
@@ -90,19 +92,21 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center justify-between gap-3 lg:hidden">
-            <button onClick={handleModal} className="sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
+            <button
+              onClick={handleModal}
+              className="grayscale transition duration-300 hover:grayscale-0 sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
               <MagnifyingGlass size={20} color="#455468" />
             </button>
             <a
               href="https://github.com/StaticMania/keep-react"
               target="_blank"
-              className="sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
+              className="grayscale transition duration-300 hover:grayscale-0 sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
               <Image src="/images/icon/github.svg" height={20} width={20} alt="github" />
             </a>
             <a
               href="https://keep-storybook.vercel.app"
               target="_blank"
-              className="sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
+              className="grayscale transition duration-300 hover:grayscale-0 sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
               <svg
                 stroke="#FF4785"
                 fill="#FF4785"
@@ -118,7 +122,7 @@ const Navbar = () => {
             <a
               href="https://discord.com/invite/xsNDwPks"
               target="_blank"
-              className="sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
+              className="grayscale transition duration-300 hover:grayscale-0 sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
               <Image src="/images/icon/discord.svg" height={20} width={20} alt="github" />
             </a>
             <button onClick={() => setActive(!active)}>
