@@ -1,7 +1,7 @@
 export const accordionApiData = [
   {
     id: 1,
-    propsName: 'alwaysOpen',
+    propsName: 'openFirstPanel',
     propsType: 'boolean',
     propsDescription: 'Keep first panels always open.',
     default: 'false',
@@ -10,23 +10,8 @@ export const accordionApiData = [
     id: 3,
     propsName: 'flush',
     propsType: 'boolean',
-    propsDescription: 'Accordion without outer border and rounded corners.',
+    propsDescription: 'Accordion without outer border and and background color',
     default: 'false',
-  },
-  {
-    id: 4,
-    propsName: 'collapseAll',
-    propsType: 'boolean',
-    propsDescription: 'Collapse panels by default.',
-    default: 'false',
-  },
-
-  {
-    id: 6,
-    propsName: 'iconPosition',
-    propsType: ['left', 'right'],
-    propsDescription: 'Position of the arrow icon.',
-    default: 'left',
   },
   {
     id: 7,

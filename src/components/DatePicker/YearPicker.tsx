@@ -1,27 +1,29 @@
+'use client'
 import { CaretLeft, CaretRight } from 'phosphor-react'
-import { useState } from 'react'
-import ReactDatePicker from 'react-datepicker'
-import CustomInput from './CustomInput'
+import { createElement, forwardRef, useState } from 'react'
+import YearPick from 'react-datepicker'
 import { useDatePickerContext } from './DatePickerContext'
+import { CustomInput } from './CustomInput'
 
 export const YearPicker: React.FC = () => {
-  const { yearPicker } = useDatePickerContext()
+  const { year, placeholder } = useDatePickerContext()
   const [startDate, setStartDate] = useState<Date | null>(null)
   const handleDateChange = (date: Date | null) => {
     if (date) {
       setStartDate(date)
-      const year = new Date(date).getFullYear()
-      yearPicker && yearPicker(year)
+      const newYear = new Date(date).getFullYear()
+      year && year(newYear)
     }
   }
 
   return (
-    <ReactDatePicker
+    <YearPick
+      placeholderText={placeholder}
       selected={startDate}
       onChange={handleDateChange}
       showYearPicker
       dateFormat="yyyy"
-      customInput={<CustomInput />}
+      customInput={createElement(forwardRef(CustomInput))}
       showPopperArrow={false}
       renderCustomHeader={({ date, decreaseYear, increaseYear, customHeaderCount }) => {
         const year = date.getFullYear()

@@ -1,37 +1,23 @@
-import type { keepAccordionTheme } from './Accordion'
+import { keepAccordionTheme } from '.'
+
 export const accordionTheme: keepAccordionTheme = {
-  root: {
-    base: 'bg-metal-50',
-    flush: {
-      off: 'border-b-2 border-b-metal-200',
-      on: 'border-b',
-    },
+  container: {
+    base: 'flex cursor-pointer items-center justify-between px-5 py-[18px]',
+    open: 'border-b border-b-metal-200 bg-metal-200/50 group-hover:bg-metal-100 group-hover:bg-metal-200/50',
   },
   content: {
-    base: 'pb-5 px-5 md:text-body-4 text-body-5 text-metal-500 font-normal transition-all duration-300',
+    base: 'p-6 text-body-4 font-normal text-metal-500',
   },
-  title: {
-    disabled: 'cursor-not-allowed opacity-50',
-    arrow: {
-      base: 'h-6 w-6 shrink-0',
-      open: {
-        off: '',
-        on: 'rotate-180',
-      },
-    },
-    base: 'flex w-full items-center py-5 px-5 text-left font-medium md:text-body-2  text-metal-800 hover:bg-metal-100',
-    iconPosition: {
-      left: 'gap-5',
-      right: 'justify-between',
-    },
-    flush: {
-      off: 'hover:bg-metal-50',
-      on: '!bg-transparent',
-    },
-    heading: '',
-    open: {
-      off: 'bg-metal-25',
-      on: 'bg-metal-50',
+  panel: {
+    base: 'group transition-colors duration-200',
+    panelBg: 'bg-metal-50',
+  },
+  icon: {
+    base: 'transition-transform duration-300',
+    rotated: {
+      full: 'rotate-180',
+      half: 'rotate-90',
     },
   },
+  title: { base: 'select-none text-body-2 font-medium text-metal-700' },
 }

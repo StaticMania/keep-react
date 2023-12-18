@@ -10,24 +10,22 @@ const AlertWithBorderAccent = () => {
     setShowAlert(!showAlert)
   }
   return (
-    <Alert
-      rounded={true}
-      withBorder={true}
-      withBorderAccent
-      dismiss={showAlert}
-      onDismiss={onDismiss}
-      withBorderAccentPosition="left"
-      additionalContent={
-        <div className="text-metal-500 mt-1 text-body-4">
-          Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-          <Link href="/" className="ml-2 text-primary-500 underline">
-            Link style
-          </Link>
-        </div>
-      }
-      icon={<Info size={24} color="#0F3CD9" />}
-      title="Default message - make it short"
-    />
+    <Alert onDismiss={onDismiss} dismiss={showAlert} rounded={true} withBorder={true} withBorderAccent={true}>
+      <Alert.Container>
+        <Alert.Icon>
+          <Info size={24} color="#0F3CD9" />
+        </Alert.Icon>
+        <Alert.Body>
+          <Alert.Title>Default message - make it short</Alert.Title>
+          <Alert.Description>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            <Link href="/alert" className="ml-1 inline-block text-body-4 text-primary-600 underline">
+              Link style
+            </Link>
+          </Alert.Description>
+        </Alert.Body>
+      </Alert.Container>
+    </Alert>
   )
 }
 
@@ -39,32 +37,29 @@ import { Alert } from "keep-react";
 import { Info } from "phosphor-react";
 
 export const AlertComponent = () => {
-  const [showAlert, setShowAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(false)
   const onDismiss = () => {
-    setShowAlert(!showAlert);
-  };
+    setShowAlert(!showAlert)
+  }
   return (
-    <Alert
-      rounded={true}
-      withBorder={true}
-      withBorderAccent
-      dismiss={showAlert}
-      onDismiss={onDismiss}
-      withBorderAccentPosition="left"
-      additionalContent={
-        <div className="mt-1 text-body-4 text-metal-500">
-          Default message - Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry
-          <Link href="/" className="ml-2 text-primary-500 underline">
-            Link style
-          </Link>
-        </div>
-      }
-      icon={<Info size={24} color="#0F3CD9" />}
-      title="Default message - make it short"
-    />
-  );
-};
+    <Alert onDismiss={onDismiss} dismiss={showAlert} rounded={true} withBorder={true} withBorderAccent={true}>
+      <Alert.Container >
+        <Alert.Icon>
+          <Info size={24} color="#0F3CD9" />
+        </Alert.Icon>
+        <Alert.Body>
+          <Alert.Title>Default message - make it short</Alert.Title>
+          <Alert.Description>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            <Link href="/alert" className="ml-1 inline-block text-body-4 text-primary-600 underline">
+              Link style
+            </Link>
+          </Alert.Description>
+        </Alert.Body>
+      </Alert.Container>
+    </Alert>
+  )
+}
 `
 
 export { AlertWithBorderAccent, AlertWithBorderAccentCode }

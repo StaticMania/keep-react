@@ -29,5 +29,5 @@
     "allowJs": true
   },
   "exclude": ["./build/", "./lib/", "./.next/"],
-  "include": [".next/types/**/*.ts", "**/*.mdx", "**/*.ts", "**/*.tsx"]
+  "include": [".next/types/**/*.ts", "**/*.mdx", "**/*.ts", "**/*.tsx", "prepare-lib"]
 }

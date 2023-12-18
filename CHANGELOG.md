@@ -20,3 +20,19 @@ All notable changes to this project will be documented in this file.
  - Update Documentation
  - Add className Props in every component
  - customClass props removed with className props
+
+ ### v1.1.0 (2023-12-18)
+
+ #### Features
+ - Alert component props and structure changed
+ - Accordion component props and structure changed
+ - Notification component props and structure changed
+ - Popover component props and structure changed
+ - Added Modal and Notification component open animation
+ - Added Typography component
+ - CSS Import Style changed
+ - Keep Preset import styles changed
+
+#### Bug fixes
+ - Date Picker Type Issue
+ - Popover width Issue

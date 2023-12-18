@@ -69,6 +69,34 @@ module.exports = {
         },
       },
       fontSize: {
+        'display-1': [
+          '11rem',
+          {
+            lineHeight: '13.125rem',
+            letterSpacing: '-3.5px',
+          },
+        ],
+        'display-2': [
+          '9rem',
+          {
+            lineHeight: '10.62rem',
+            letterSpacing: '-3.5px',
+          },
+        ],
+        'display-3': [
+          '7.5rem',
+          {
+            lineHeight: '8.375rem',
+            letterSpacing: '-3.5px',
+          },
+        ],
+        'display-4': [
+          '6rem',
+          {
+            lineHeight: '6.875rem',
+            letterSpacing: '-2.5px',
+          },
+        ],
         'heading-1': [
           '4.5rem',
           {
@@ -182,7 +210,7 @@ module.exports = {
           },
         ],
       },
-       fontFamily: {
+      fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
       boxShadow: {
@@ -192,6 +220,21 @@ module.exports = {
         large: '0px 20px 24px -4px rgba(45, 54, 67, 0.04), 0px 8px 11px -4px rgba(45, 54, 67, 0.04)',
         xLarge: '0px 24px 50px -12px rgba(45, 54, 67, 0.12)',
         '2xLarge': '0px 32px 64px -12px rgba(45, 54, 67, 0.14)',
+      },
+      keyframes: {
+        'bounce-open': {
+          '0%': { transform: 'scale(0.7)' },
+          '45%': { transform: 'scale(1.05)' },
+          '80%': {
+            transform: 'scale(0.95)',
+          },
+          '100%': {
+            transform: 'scale(1)',
+          },
+        },
+      },
+      animation: {
+        'keep-bounce': 'bounce-open 0.3s',
       },
     },
   },

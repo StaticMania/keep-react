@@ -1,10 +1,17 @@
-import type { keepPopoverTheme } from '.'
+import { keepPopoverTheme } from './Popover'
 
 export const popoverTheme: keepPopoverTheme = {
-  target: 'w-fit z-50',
-  body: {
-    base: 'bg-white py-[22px] px-[24px] max-w-sm rounded-md shadow-small relative z-40',
-    title: 'text-body-3 leading-[27px] tracking-[-0.3px] font-medium text-metal-700 max-w-[92%] mb-[14px]',
-    description: 'text-body-5 font-normal text-metal-500',
+  root: {
+    base: 'relative z-40 max-w-sm rounded-md bg-white px-6 py-[22px] shadow-medium transition-all duration-300',
+    icon: 'absolute right-6 top-[22px]',
   },
+  title: 'w-[92%] text-body-2 font-medium text-metal-700',
+  description: {
+    base: 'text-body-5 font-normal text-metal-500',
+    title: {
+      off: 'w-[92%]',
+      on: 'mt-[14px]',
+    },
+  },
+  container: 'mt-4 flex items-center gap-3',
 }

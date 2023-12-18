@@ -382,6 +382,11 @@ export const gettingStartedRoutes: routerPath[] = [
     name: 'Introduction',
     href: '/docs/getting-started/Introduction',
   },
+  {
+    id: 2,
+    name: 'Typography',
+    href: '/docs/getting-started/Typography',
+  },
 ]
 
 export const navbarRoutes: routerPath[] = [

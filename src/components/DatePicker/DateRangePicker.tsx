@@ -1,21 +1,22 @@
-import { useState } from 'react'
-import DatePicker from 'react-datepicker'
-import CustomInput from './CustomInput'
+'use client'
+import { createElement, forwardRef, useState } from 'react'
+import RangePicker from 'react-datepicker'
 import { useDatePickerContext } from './DatePickerContext'
+import { CustomInput } from './CustomInput'
 
 export const DateRangePicker: React.FC = () => {
-  const { showTwoMonth, rangeDate } = useDatePickerContext()
+  const { showTwoMonth, rangeDate, placeholder } = useDatePickerContext()
   const [selectedStartDate, setSelectedStartDate] = useState<Date | null>(null)
   const [selectedEndDate, setSelectedEndDate] = useState<Date | null>(null)
-
   return (
-    <DatePicker
-      selectsRange
+    <RangePicker
+      selectsRange={true}
       monthsShown={showTwoMonth ? 2 : 1}
       showPopperArrow={false}
       startDate={selectedStartDate}
       endDate={selectedEndDate}
       dateFormat="dd/MM/yy"
+      placeholderText={placeholder}
       onChange={(dates) => {
         const [startDate, endDate] = dates as [Date, Date]
         setSelectedStartDate(startDate)
@@ -26,7 +27,7 @@ export const DateRangePicker: React.FC = () => {
             endDate: endDate,
           })
       }}
-      customInput={<CustomInput />}
+      customInput={createElement(forwardRef(CustomInput))}
     />
   )
 }
