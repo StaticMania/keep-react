@@ -1,31 +1,20 @@
-import type { keepNotificationTheme } from '.'
+import { keepNotificationTheme } from './Notification'
 
 export const notificationTheme: keepNotificationTheme = {
-  base: 'rounded-md shadow-large px-4 border border-metal-50 z-50 bg-white transition-all duration-300 fixed',
-  dismiss: 'hidden',
-  wrapper: 'flex items-start gap-2 relative',
-  infoIcon: {
-    base: 'flex items-center justify-center rounded-full',
-    on: 'px-4',
-    off: 'pl-[30px] pr-4',
-  },
-  closeButton: {
-    base: 'absolute right-0 h-8 w-8 rounded-lg flex items-center justify-center focus:ring-2',
-    icon: 'w-6 h-6',
-  },
-  headerBanner: {
-    base: 'relative overflow-hidden',
-    img: 'w-full rounded-t-md',
-    on: '!px-0',
-    off: 'py-5',
-    closeIcon:
-      'absolute cursor-pointer flex items-center justify-center w-7 h-7 rounded-full bg-white top-3 right-3 opacity-90',
-  },
-  content: 'p-6',
+  root: 'relative max-w-sm overflow-hidden rounded-xl bg-white pb-5 pl-[30px] pr-4 pt-5 shadow-large',
   position: {
-    'top-left': 'top-3 left-3',
-    'top-right': 'top-3 right-3',
-    'bottom-left': 'bottom-3 left-3',
-    'bottom-right': 'bottom-3 right-0',
+    show: 'fixed z-50 animate-keep-bounce',
+    hidden: 'hidden',
+    'top-left': 'top-5 left-5',
+    'top-right': 'top-5 right-5',
+    'bottom-left': 'bottom-5 left-5',
+    'bottom-right': 'bottom-5 right-5',
   },
+  crossBtn: 'absolute right-5 top-[18px] flex h-8 w-8 items-center justify-center rounded-full bg-white/90',
+  description: 'text-body-4 font-normal text-metal-500',
+  media: '',
+  icon: '-mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-metal-50',
+  body: 'space-y-3',
+  avatar: '-mt-1',
+  title: 'w-[90%] text-body-2 font-medium text-metal-700',
 }

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Accordion } from '~/src'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { CaretDown, CaretUp, DiscordLogo, List, MagnifyingGlass, X } from 'phosphor-react'
+import { List, MagnifyingGlass, X } from 'phosphor-react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '~/routes/routes'
 import Search from './Search'
 
@@ -119,7 +119,7 @@ const Navbar = () => {
               href="https://discord.com/invite/xsNDwPks"
               target="_blank"
               className="sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
-              <DiscordLogo size={20} color="#5562EA" />
+              <Image src="/images/icon/discord.svg" height={20} width={20} alt="github" />
             </a>
             <button onClick={() => setActive(!active)}>
               {active ? (
@@ -139,23 +139,12 @@ const Navbar = () => {
               active ? 'translate-x-0' : 'translate-x-full'
             }`}>
             <div className="mt-5 space-y-3 pr-4">
-              <Accordion
-                flush
-                className="border-none bg-transparent"
-                closeIcon={<CaretDown size={18} color="#000000e6" />}
-                openIcon={<CaretUp size={18} color="#000000e6" />}
-                iconPosition="right">
+              <Accordion flush className="border-none bg-transparent">
                 <Accordion.Panel>
-                  <Accordion.Title
-                    theme={{
-                      base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
-                    }}>
-                    Quick Link
-                  </Accordion.Title>
-                  <Accordion.Content
-                    theme={{
-                      base: 'text-metal-500 font-normal',
-                    }}>
+                  <Accordion.Container className="p-0">
+                    <Accordion.Title className="text-body-5 font-semibold text-metal-900">Quick Link</Accordion.Title>
+                  </Accordion.Container>
+                  <Accordion.Content className="p-0">
                     <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {navbarRoutes.map((route) => (
                         <li key={route.id}>
@@ -174,23 +163,14 @@ const Navbar = () => {
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
-              <Accordion
-                flush
-                className="border-none bg-transparent"
-                closeIcon={<CaretDown size={18} color="#000000e6" />}
-                openIcon={<CaretUp size={18} color="#000000e6" />}
-                iconPosition="right">
+              <Accordion flush className="border-none bg-transparent">
                 <Accordion.Panel>
-                  <Accordion.Title
-                    theme={{
-                      base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
-                    }}>
-                    Getting Started
-                  </Accordion.Title>
-                  <Accordion.Content
-                    theme={{
-                      base: 'text-metal-500 font-normal',
-                    }}>
+                  <Accordion.Container className="p-0">
+                    <Accordion.Title className="text-body-5 font-semibold text-metal-900">
+                      Getting Started
+                    </Accordion.Title>
+                  </Accordion.Container>
+                  <Accordion.Content className="p-0">
                     <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {gettingStartedRoutes.map((route) => (
                         <li key={route.id}>
@@ -209,24 +189,12 @@ const Navbar = () => {
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
-              <Accordion
-                flush
-                closeIcon={<CaretDown size={18} color="#000000e6" />}
-                openIcon={<CaretUp size={18} color="#000000e6" />}
-                iconPosition="right"
-                className="border-none bg-transparent"
-                collapseAll={true}>
+              <Accordion flush className="border-none bg-transparent">
                 <Accordion.Panel>
-                  <Accordion.Title
-                    theme={{
-                      base: 'flex w-full items-center text-left font-semibold text-body-5 text-black/100 hover:text-black',
-                    }}>
-                    Components
-                  </Accordion.Title>
-                  <Accordion.Content
-                    theme={{
-                      base: '',
-                    }}>
+                  <Accordion.Container className="p-0">
+                    <Accordion.Title className="text-body-5 font-semibold text-metal-900">Components</Accordion.Title>
+                  </Accordion.Container>
+                  <Accordion.Content className="p-0">
                     <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
                       {routes.map((route) => (
                         <li key={route.id}>

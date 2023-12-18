@@ -1,7 +1,7 @@
 import { KeepCarouselTheme } from '.'
 
 export const carouselTheme: KeepCarouselTheme = {
-  base: 'relative h-full w-full h-56 w-full sm:h-64 xl:h-80 2xl:h-96',
+  base: 'relative h-56 sm:h-64 xl:h-80 2xl:h-96',
   indicators: {
     active: {
       off: {
@@ -37,9 +37,10 @@ export const carouselTheme: KeepCarouselTheme = {
     },
   },
   item: {
-    base: 'absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2',
+    base: 'absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2 flex h-full items-center justify-center',
     wrapper: 'w-full flex-shrink-0 transform cursor-grab snap-center',
   },
+
   control: {
     base: 'inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-2 group-focus:ring-white sm:h-10 sm:w-10',
     icon: 'h-5 w-5 text-white sm:h-6 sm:w-6',

@@ -67,7 +67,7 @@ const meta: Meta<typeof Carousel> = {
       },
     },
     indicatorsType: {
-      description: 'Carousel indocator Type',
+      description: 'Carousel indicator Type',
       control: 'select',
       options: ['dot', 'ring', 'bar', 'square', 'squareRing'],
       table: {
@@ -76,7 +76,7 @@ const meta: Meta<typeof Carousel> = {
       },
     },
     indicatorsTypeColors: {
-      description: 'Carousel indocator color Type',
+      description: 'Carousel indicator color Type',
       control: 'select',
       options: ['white', 'slate'],
       table: {

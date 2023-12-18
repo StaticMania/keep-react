@@ -1,3 +1,9 @@
+'use client'
+import { Children, FC, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
+import { Description } from './Description'
+import { Title } from './Title'
+import { cn } from '../../helpers/cn'
+import { Action } from './Action'
 import {
   useClick,
   useDismiss,
@@ -15,78 +21,14 @@ import {
   autoPlacement,
   hide,
 } from '@floating-ui/react'
+import { Container } from './Container'
 import { XCircle } from 'phosphor-react'
-import { FC, useRef, useState } from 'react'
+import { PopoverContext } from './PopoverContext'
 import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
 
-/**
- * Props for the Popover component.
- * @interface PopoverProps
- */
-interface PopoverProps {
-  /**
-   * Specifies the trigger event for the popover.
-   * - 'hover': Popover is triggered on hover.
-   * - 'click': Popover is triggered on click.
-   */
-  trigger?: 'hover' | 'click'
-
-  /**
-   * The content of the popover.
-   */
-  children: React.ReactNode
-
-  /**
-   * Additional content to be displayed within the popover.
-   */
-  additionalContent?: React.ReactNode
-
-  /**
-   * The title of the popover.
-   */
-  title?: string
-
-  /**
-   * The description of the popover.
-   */
-  description?: string
-
-  /**
-   * The icon to be displayed within the popover.
-   */
-  icon?: React.ReactNode
-
-  /**
-   * Additional CSS class name(s) for the popover.
-   */
+export interface PopoverProps {
+  children?: ReactNode
   className?: string
-
-  /**
-   * Specifies whether to show the dismiss icon in the popover.
-   */
-  showDismissIcon?: boolean
-
-  /**
-   * Specifies whether to show the arrow in the popover.
-   */
-  showArrow?: boolean
-
-  /**
-   * The position of the popover.
-   * - 'top': Popover is positioned at the top.
-   * - 'top-end': Popover is positioned at the top-end.
-   * - 'top-start': Popover is positioned at the top-start.
-   * - 'bottom': Popover is positioned at the bottom.
-   * - 'bottom-end': Popover is positioned at the bottom-end.
-   * - 'bottom-start': Popover is positioned at the bottom-start.
-   * - 'left': Popover is positioned at the left.
-   * - 'left-end': Popover is positioned at the left-end.
-   * - 'left-start': Popover is positioned at the left-start.
-   * - 'right': Popover is positioned at the right.
-   * - 'right-end': Popover is positioned at the right-end.
-   * - 'right-start': Popover is positioned at the right-start.
-   */
   position?:
     | 'top'
     | 'top-end'
@@ -100,31 +42,43 @@ interface PopoverProps {
     | 'right'
     | 'right-end'
     | 'right-start'
+  showDismissIcon?: boolean
+  trigger?: 'hover' | 'click'
+  showArrow?: boolean
+  icon?: ReactNode
+  // [key: string]: any
 }
 
 export interface keepPopoverTheme {
-  target: string
-  body: {
+  root: {
     base: string
-    title: string
-    description: string
+    icon: string
   }
+  title: string
+  description: {
+    base: string
+    title: {
+      off: string
+      on: string
+    }
+  }
+  container: string
 }
 
-export const Popover: FC<PopoverProps> = ({
-  trigger = 'click',
+export const PopoverComponent: FC<PopoverProps> = ({
   children,
-  title,
-  description,
-  icon,
-  additionalContent: additionalContent,
   className,
+  trigger = 'click',
   position = 'bottom-start',
   showDismissIcon = true,
   showArrow = true,
+  icon,
+  ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [title, setTitle] = useState(true)
   const arrowRef = useRef(null)
+  const { root } = useTheme().theme.popover
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -160,35 +114,50 @@ export const Popover: FC<PopoverProps> = ({
   })
 
   const { getReferenceProps, getFloatingProps } = useInteractions([click, dismiss, role, hover])
+  const actions = Children.toArray(children).filter((child) => isValidElement(child) && child.type === Action)
+  const isTitleExists = Children.toArray(children).some((child) => isValidElement(child) && child.type === Title)
+  const filteredChildren = Children.toArray(children).filter((child) => isValidElement(child) && child.type !== Action)
 
-  const theme = useTheme().theme.popover
-
+  useEffect(() => {
+    if (isTitleExists) {
+      setTitle(true)
+    } else {
+      setTitle(false)
+    }
+  }, [isTitleExists])
   return (
-    <>
-      <div ref={refs.setReference} {...getReferenceProps()} className={theme.target} onClick={() => setIsOpen(!isOpen)}>
-        {children}
+    <PopoverContext.Provider value={{ isTitleExist: title }}>
+      <div className="inline-block" ref={refs.setReference} {...getReferenceProps()} onClick={() => setIsOpen(!isOpen)}>
+        {actions}
       </div>
       {isOpen && (
         <div
+          {...props}
           ref={refs.setFloating}
           style={{ ...floatingStyles, ...styles }}
           {...getFloatingProps()}
-          className={cn(theme.body.base, className)}>
-          {showArrow && <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFf" />}
+          className={cn(className, root.base)}>
+          {showArrow && <FloatingArrow ref={arrowRef} context={context} fill="#FFFFFF" />}
           {showDismissIcon && (
-            <button onClick={() => setIsOpen(false)} className="absolute right-6 top-[25px]">
+            <button onClick={() => setIsOpen(false)} className={root.icon}>
               {typeof icon !== 'undefined' ? icon : <XCircle size={24} color="#5E718D" weight="light" />}
             </button>
           )}
-          {title && (
-            <h2 role="keep-popover" className={theme.body.title}>
-              {title}
-            </h2>
-          )}
-          {description && <p className={theme.body.description}>{description}</p>}
-          {typeof additionalContent !== 'undefined' && additionalContent}
+          <div>{filteredChildren}</div>
         </div>
       )}
-    </>
+    </PopoverContext.Provider>
   )
 }
+
+Title.displayName = 'Popover.Title'
+Description.displayName = 'Popover.Description'
+Action.displayName = 'Popover.Body'
+Container.displayName = 'Popover.Container'
+
+export const Popover = Object.assign(PopoverComponent, {
+  Title,
+  Description,
+  Action,
+  Container,
+})

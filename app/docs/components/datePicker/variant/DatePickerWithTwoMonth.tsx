@@ -7,7 +7,7 @@ const DatePickerWithTwoMonth = () => {
 
   return (
     <div className="w-1/3">
-      <DatePicker showTwoMonth={true} singleDatePicker={setDate}>
+      <DatePicker showTwoMonth={true} singleDate={setDate} placeholder="Select date">
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
@@ -22,7 +22,7 @@ import { DatePicker } from "keep-react";
 export const DatePickerComponent = () => {
   const [date, setDate] = useState(null);
   return (
-    <DatePicker showTwoMonth={true} singleDatePicker={setDate}>
+    <DatePicker showTwoMonth={true} singleDate={setDate} placeholder="Select date">
       <DatePicker.SingleDate />
     </DatePicker>
   );

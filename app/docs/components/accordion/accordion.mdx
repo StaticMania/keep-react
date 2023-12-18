@@ -1,9 +1,9 @@
 import { DefaultAccordion, DefaultAccordionCode } from './variant/DefaultAccordion'
-import { AccordionCollapseAll, AccordionCollapseAllCode } from './variant/AccordionCollapseAll'
-import { AccordionWithLeftSideIcon, AccordionWithLeftSideIconCode } from './variant/AccordionWithLeftSideIcon'
-import { AccordionAlwaysOpen, AccordionAlwaysOpenCode } from './variant/AccordionAlwaysOpen'
+import { AccordionFlush, AccordionFlushCode } from './variant/AccordionFlush'
+import { AccordionOpenPanel, AccordionOpenPanelCode } from './variant/AccordionOpenPanel'
 import { DisabledAccordionCode, DisabledAccordion } from './variant/DisabledAccordion'
-import { AccordionWithCustomIcon, AccordionWithCustomIconCode } from './variant/AccordionWithCustomIcon'
+import { AccordionWithIcon, AccordionWithIconCode } from './variant/AccordionWithIcon'
+import { CustomizeAccordion, CustomizeAccordionCode } from './variant/CustomizeAccordion'
 import CodePreview from '~/components/CodePreview'
 import CssThemePreview from '~/components/CssThemePreview'
 import ComponentApi from '~/components/ComponentApi'
@@ -15,50 +15,50 @@ The Accordion Component in the Keep React allows you to create collapsible secti
 
 ## Default Accordion
 
-The Default Accordion Component allows you to craft collapsible content sections. Users can reveal and hide the content by simply clicking on the disclosure button.
+The default Accordion component allows users to reveal and hide content by simply clicking on the disclosure button.
 
 <CodePreview github="Accordion" code={DefaultAccordionCode}>
   <DefaultAccordion />
 </CodePreview>
 
-## Controlling Collapse Behavior
+## Flush Accordion
 
-The `collapseAll` property lets you control the initial state of accordion panels. When set to `true`, all panels are collapsed by default. Users can then expand individual panels as needed.
+Control the initial state of accordion panels with the `flush` property.
 
-<CodePreview github="Accordion" code={AccordionCollapseAllCode}>
-  <AccordionCollapseAll />
+<CodePreview github="Accordion" code={AccordionFlushCode}>
+  <AccordionFlush />
 </CodePreview>
 
-## Visual Context with Left-Side Icons
+## Accordion First Open Panel
 
-Using the `iconPosition="left"` property in the AccordionPanel, you can position icons on the left side of the panel header. This allows you to offer context or indicate the content within the panel.
+Use the `openFirstPanel` property to set the first accordion panel to be open by default.
 
-<CodePreview github="Accordion" code={AccordionWithLeftSideIconCode}>
-  <AccordionWithLeftSideIcon />
+<CodePreview github="Accordion" code={AccordionOpenPanelCode}>
+  <AccordionOpenPanel />
 </CodePreview>
 
-## Customizing Icons
+## Accordion With Icon
 
-If you prefer custom icons, you have the freedom to choose your preferred icons for the accordion's open and close states. Utilize the `openIcon` and `closeIcon` props for this purpose.
+Enhance your accordion with icons for a more visually appealing experience.
 
-<CodePreview github="Accordion" code={AccordionWithCustomIconCode}>
-  <AccordionWithCustomIcon />
-</CodePreview>
-
-## Panels That Stay Open
-
-With the `alwaysOpen={true}` property, you can configure all panels to remain expanded. This eliminates the need for users to manually toggle panels, ensuring all content is consistently visible.
-
-<CodePreview github="Accordion" code={AccordionAlwaysOpenCode}>
-  <AccordionAlwaysOpen />
+<CodePreview github="Accordion" code={AccordionWithIconCode}>
+  <AccordionWithIcon />
 </CodePreview>
 
 ## Disabled Accordions
 
-If you need to control which panels users can interact with, the `disabled` property on specific AccordionPanel components makes certain panels non-interactive.
+Control user interactions by making specific AccordionPanel components non-interactive with the `disabled` property.
 
 <CodePreview github="Accordion" code={DisabledAccordionCode}>
   <DisabledAccordion />
+</CodePreview>
+
+## Customize Accordion
+
+Tailor the accordion to fit your design preferences with custom styling.
+
+<CodePreview github="Accordion" code={CustomizeAccordionCode}>
+  <CustomizeAccordion />
 </CodePreview>
 
 ## API Reference

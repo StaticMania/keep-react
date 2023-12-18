@@ -1,7 +1,13 @@
-import type { keepEmptyTheme } from '.'
+import { keepEmptyTheme } from './Empty'
 
 export const emptyTheme: keepEmptyTheme = {
-  base: 'w-full py-10 flex flex-col items-center justify-center',
-  title: 'text-body-3 md:text-description-4 text-metal-700 font-medium mt-5',
-  content: 'text-body-5 md:text-body-3 text-metal-400 text-center font-normal mt-2.5 mb-8 max-w-lg',
+  root: {
+    base: 'flex max-w-xl mx-auto flex-col items-center justify-center p-6',
+  },
+  title: {
+    base: 'mb-[14px] mt-5 text-heading-5 font-medium text-metal-700',
+  },
+  description: {
+    base: 'mb-8 text-center text-body-3 font-normal text-metal-400',
+  },
 }

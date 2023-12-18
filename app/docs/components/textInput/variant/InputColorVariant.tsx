@@ -6,7 +6,7 @@ const InputColorVariant = () => {
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <Label value="Gray Color Input" />
+        <Label htmlFor="#id-1" value="Gray Color Input" />
         <TextInput
           id="#id-1"
           placeholder="Gray Color Input"
@@ -21,7 +21,7 @@ const InputColorVariant = () => {
         />
       </div>
       <div>
-        <Label value="Info Color Input" color="info" />
+        <Label htmlFor="#id-2" value="Info Color Input" color="info" />
         <TextInput
           id="#id-2"
           placeholder="Info Color Input"
@@ -36,7 +36,7 @@ const InputColorVariant = () => {
         />
       </div>
       <div>
-        <Label value="Error Color Input" color="error" />
+        <Label htmlFor="#id-3" value="Error Color Input" color="error" />
         <TextInput
           id="#id-3"
           placeholder="Error Color Input"
@@ -51,7 +51,7 @@ const InputColorVariant = () => {
         />
       </div>
       <div>
-        <Label value="Warning Color Input" color="warning" />
+        <Label htmlFor="#id-4" value="Warning Color Input" color="warning" />
         <TextInput
           id="#id-4"
           placeholder="Warning Color Input"
@@ -66,7 +66,7 @@ const InputColorVariant = () => {
         />
       </div>
       <div>
-        <Label value="Success Color Input" color="success" />
+        <Label htmlFor="#id-5" value="Success Color Input" color="success" />
         <TextInput
           id="#id-5"
           placeholder="Success Color Input"
@@ -85,15 +85,15 @@ const InputColorVariant = () => {
 }
 
 const InputColorVariantCode = `
-"use client";
-import { Label,TextInput } from "keep-react";
-import { EyeSlash, Lock } from "phosphor-react";
+'use client'
+import { Label, TextInput } from 'keep-react'
+import { EyeSlash, Lock } from 'phosphor-react'
 
-export const TextInputComponent = () => {
+export const InputComponent = () => {
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <Label value="Gray Color Input" />
+        <Label htmlFor="#id-1" value="Gray Color Input" />
         <TextInput
           id="#id-1"
           placeholder="Gray Color Input"
@@ -108,7 +108,7 @@ export const TextInputComponent = () => {
         />
       </div>
       <div>
-        <Label value="Info Color Input" color="info" />
+        <Label htmlFor="#id-2" value="Info Color Input" color="info" />
         <TextInput
           id="#id-2"
           placeholder="Info Color Input"
@@ -123,7 +123,7 @@ export const TextInputComponent = () => {
         />
       </div>
       <div>
-        <Label value="Error Color Input" color="error" />
+        <Label htmlFor="#id-3" value="Error Color Input" color="error" />
         <TextInput
           id="#id-3"
           placeholder="Error Color Input"
@@ -138,7 +138,7 @@ export const TextInputComponent = () => {
         />
       </div>
       <div>
-        <Label value="Warning Color Input" color="warning" />
+        <Label htmlFor="#id-4" value="Warning Color Input" color="warning" />
         <TextInput
           id="#id-4"
           placeholder="Warning Color Input"
@@ -153,7 +153,7 @@ export const TextInputComponent = () => {
         />
       </div>
       <div>
-        <Label value="Success Color Input" color="success" />
+        <Label htmlFor="#id-5" value="Success Color Input" color="success" />
         <TextInput
           id="#id-5"
           placeholder="Success Color Input"
@@ -168,8 +168,8 @@ export const TextInputComponent = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 `
 
 export { InputColorVariant, InputColorVariantCode }

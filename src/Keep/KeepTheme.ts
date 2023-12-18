@@ -1,3 +1,4 @@
+import { keepNotificationTheme } from '../components'
 import { keepAccordionTheme } from '../components/Accordion'
 import { keepAlertTheme } from '../components/Alert'
 import { keepAvatarTheme } from '../components/Avatar/Avatar'
@@ -15,7 +16,6 @@ import { keepFloatingTheme } from '../components/Floating'
 import { keepFormControlTheme } from '../components/FormControls/formControls'
 import { keepModalTheme } from '../components/Modal'
 import { KeepNavigationTheme } from '../components/Navigation'
-import { keepNotificationTheme } from '../components/Notification'
 import { keepPaginationTheme } from '../components/Pagination'
 import { keepPopoverTheme } from '../components/Popover'
 import { keepProgressTheme } from '../components/Progress'
@@ -129,6 +129,12 @@ export interface KeepGradientDuoToneColors {
   redToYellow: string
   tealToLime: string
 }
+
+export type KeepTypography =
+  | `heading-${1 | 2 | 3 | 4 | 5 | 6}`
+  | `body-${1 | 2 | 3 | 4 | 5 | 6}`
+  | `display-${1 | 2 | 3 | 4}`
+  | `description-${1 | 2 | 3 | 4}`
 
 export type KeepHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 

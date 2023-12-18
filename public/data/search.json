@@ -1289,5 +1289,28 @@
         "id": "#popover-position"
       }
     ]
+  },
+  {
+    "id": 46,
+    "name": "Typography",
+    "href": "/docs/getting-started/Typography",
+    "sections": [
+      {
+        "title": "Heading Typography",
+        "id": "#heading-typography"
+      },
+      {
+        "title": "Description Typography",
+        "id": "#description-typography"
+      },
+      {
+        "title": "Body Typography",
+        "id": "#body-typography"
+      },
+      {
+        "title": "Display Typography",
+        "id": "#display-typography"
+      }
+    ]
   }
 ]

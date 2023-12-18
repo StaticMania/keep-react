@@ -1,5 +1,5 @@
 const twConfig = `
-import keepPreset from "keep-react/src/keep-preset.js";
+import keepPreset from "keep-react/preset";
 export default {
   content: [
     "./index.html",
@@ -10,7 +10,7 @@ export default {
 };
 `
 const twCss = `
-  @import "keep-react/src/main.min.css";
+  @import "keep-react/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,7 +47,7 @@ module.exports = {
     // ... (existing content)
     "./node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
   ],
-  presets: [require("keep-react/src/keep-preset.js")],
+  presets: [require("keep-react/preset")],
 };
 `
 const viteReact = `
@@ -60,7 +60,7 @@ const nextJsInstall = `npx create-next-app@latest`
 const NextJsQnA = () => {
   return (
     <div className="my-5">
-      <ul className="bg-metal-50 text-metal-700 -space-y-0 rounded-md px-4 py-3 text-body-5">
+      <ul className="-space-y-0 rounded-md bg-metal-50 px-4 py-3 text-body-5 text-metal-700">
         <li>Would you like to use Tailwind CSS? Yes</li>
       </ul>
     </div>
