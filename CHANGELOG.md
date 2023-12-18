@@ -29,7 +29,10 @@ All notable changes to this project will be documented in this file.
  - Notification component props and structure changed
  - Popover component props and structure changed
  - Added Modal and Notification component open animation
+ - Added Typography component
+ - CSS Import Style changed
+ - Keep Preset import styles changed
 
- #### Bug fixes
+#### Bug fixes
  - Date Picker Type Issue
  - Popover width Issue
