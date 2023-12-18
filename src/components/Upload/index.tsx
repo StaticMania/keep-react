@@ -20,20 +20,111 @@ export interface keepUploadTheme {
   uploadPending: UploadPendingTheme
   uploadSuccess: UploadSuccessTheme
 }
+
+/**
+ * Props for the UploadComponent.
+ * @interface UploadComponentProps
+ */
 interface UploadComponentProps {
+  /**
+   * The selected file.
+   * @type {string}
+   * @default ''
+   */
   file?: string
+
+  /**
+   * Determines if the component should be displayed horizontally.
+   * @type {boolean}
+   * @default false
+   */
   horizontal?: boolean
+
+  /**
+   * Determines if the component is disabled.
+   * @type {boolean}
+   * @default false
+   */
   disabled?: boolean
+
+  /**
+   * Determines if the progress bar should be shown.
+   * @type {boolean}
+   * @default false
+   */
   showProgressBar?: boolean
+
+  /**
+   * The type of progress (success, error, pending).
+   * @type {'success' | 'error' | 'pending'}
+   * @default 'success'
+   */
   progressType?: 'success' | 'error' | 'pending'
+
+  /**
+   * The progress value (0-100).
+   * @type {number}
+   * @default 0
+   */
   progress?: number
+
+  /**
+   * The time of upload.
+   * @type {string}
+   * @default ''
+   */
   uploadTime?: string
+
+  /**
+   * Event handler for file change.
+   * @type {React.ChangeEvent<HTMLInputElement>}
+   * @default () => {}
+   */
   onFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+  /**
+   * The title of the component.
+   * @type {string}
+   * @default ''
+   */
   title?: string
+
+  /**
+   * The type of file.
+   * @type {string}
+   * @default ''
+   */
   fileType?: string
+
+  /**
+   * The ID of the component.
+   * @type {string}
+   * @default ''
+   */
   id?: string
+
+  /**
+   * The type of upload button.
+   * @type {keyof ButtonTypes}
+   * @default 'primary'
+   */
   uploadBtnType?: keyof ButtonTypes
+
+  /**
+   * Additional CSS class name for styling purposes.
+   * @type {string}
+   * @default ''
+   */
+  className?: string
+
+  /**
+   * Additional CSS style for the label.
+   * @type {string}
+   * @default ''
+   */
+  labelStyle?: string
 }
+
 const UploadComponent: FC<UploadComponentProps> = ({
   file,
   horizontal = false,
@@ -47,6 +138,8 @@ const UploadComponent: FC<UploadComponentProps> = ({
   fileType,
   id,
   uploadBtnType = 'primary',
+  className,
+  labelStyle,
 }) => {
   let content = null
 
@@ -70,6 +163,8 @@ const UploadComponent: FC<UploadComponentProps> = ({
         fileType,
         id,
         uploadBtnType,
+        className,
+        labelStyle,
       }}>
       {content}
     </UploadContext.Provider>

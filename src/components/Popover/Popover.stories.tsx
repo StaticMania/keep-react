@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Popover } from '.'
 import { Button } from '../Button/Button'
+import { removeFragment } from '~/src/helpers/mergeDeep'
 
 const meta: Meta<typeof Popover> = {
   component: Popover,
@@ -16,32 +17,11 @@ const meta: Meta<typeof Popover> = {
     ),
   ],
   argTypes: {
-    title: {
-      description: 'Popover title',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'Popover...' },
-      },
-    },
-    customClass: {
+    className: {
       description: 'Popover custom className',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '' },
-      },
-    },
-    description: {
-      description: 'Popover description',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'Loream...' },
-      },
-    },
-    additionalContent: {
-      description: 'Popover additional content',
-      control: { type: null },
-      table: {
-        type: { summary: 'ReactNode' },
       },
     },
     children: {
@@ -73,7 +53,7 @@ const meta: Meta<typeof Popover> = {
       },
     },
     trigger: {
-      description: 'Avaiable Trigger type',
+      description: 'Available Trigger type',
       control: { type: 'radio' },
       options: ['hover', 'click'],
       table: {
@@ -82,7 +62,7 @@ const meta: Meta<typeof Popover> = {
       },
     },
     position: {
-      description: 'Avaiable Popover Position',
+      description: 'Available Popover Position',
       control: { type: 'select' },
       table: {
         type: { summary: 'String' },
@@ -97,62 +77,99 @@ type Story = StoryObj<typeof Popover>
 
 export const DefaultPopover: Story = {
   args: {
-    title: 'Popover title here',
-    description:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    additionalContent: (
-      <div className="mt-3 flex items-center gap-3">
-        <Button type="outlinePrimary" size="xs">
-          Checkout
-        </Button>
-        <button className="text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">Skip Now</button>
-      </div>
+    children: removeFragment(
+      <>
+        <Popover.Title>Popover title here</Popover.Title>
+        <Popover.Description>
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+          some form, by injected humour
+        </Popover.Description>
+        <Popover.Container>
+          <Button type="outlinePrimary" size="xs">
+            Checkout
+          </Button>
+        </Popover.Container>
+        <Popover.Action>
+          <Button size="xs">Popover</Button>
+        </Popover.Action>
+      </>,
     ),
-    children: <Button size="xs">Popover</Button>,
   },
 }
+
 export const OneParagraphPopover: Story = {
   args: {
     showDismissIcon: false,
-    additionalContent: (
+    children: removeFragment(
       <>
-        <h2 className="text-metal-500 text-body-4 font-medium">
-          There are many variations of passages of Lorem Ipsum available.
-        </h2>
-        <button className="mt-3 text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">
-          Skip Now
-        </button>
-      </>
+        <Popover.Description>There are many variations of passages of Lorem Ipsum available.</Popover.Description>
+        <Popover.Container>
+          <button className="mt-3 text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">
+            Skip Now
+          </button>
+        </Popover.Container>
+        <Popover.Action>
+          <Button size="xs">Popover</Button>
+        </Popover.Action>
+      </>,
     ),
-    children: <Button size="xs">Popover</Button>,
   },
 }
 export const SingleLinePopover: Story = {
   args: {
-    customClass: '!w-[20rem]',
-    additionalContent: (
-      <h2 className="text-metal-500 text-body-3 font-medium leading-6 tracking-[-0.3px]">Single line message</h2>
+    className: '!w-full',
+    children: removeFragment(
+      <>
+        <Popover.Title>Single line message</Popover.Title>
+        <Popover.Action>
+          <Button size="xs">Popover</Button>
+        </Popover.Action>
+      </>,
     ),
-    children: <Button size="xs">Popover</Button>,
   },
 }
-
 export const TriggerVariantPopover: Story = {
   args: {
     trigger: 'hover',
-    title: 'Popover title here',
-    description:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    children: <Button size="xs">Popover</Button>,
+    children: removeFragment(
+      <>
+        <Popover.Title>Popover title here</Popover.Title>
+        <Popover.Description>
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+          some form, by injected humour
+        </Popover.Description>
+        <Popover.Container>
+          <Button type="outlinePrimary" size="xs">
+            Checkout
+          </Button>
+        </Popover.Container>
+        <Popover.Action>
+          <Button size="xs">Popover</Button>
+        </Popover.Action>
+      </>,
+    ),
   },
 }
+
 export const PopoverPosition: Story = {
   args: {
     position: 'right-end',
-    trigger: 'hover',
-    title: 'Popover title here',
-    description:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-    children: <Button size="xs">Popover</Button>,
+    children: removeFragment(
+      <>
+        <Popover.Title>Popover title here</Popover.Title>
+        <Popover.Description>
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+          some form, by injected humour
+        </Popover.Description>
+        <Popover.Container>
+          <Button type="outlinePrimary" size="xs">
+            Checkout
+          </Button>
+        </Popover.Container>
+        <Popover.Action>
+          <Button size="xs">Popover</Button>
+        </Popover.Action>
+      </>,
+    ),
   },
 }

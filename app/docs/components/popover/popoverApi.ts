@@ -43,7 +43,7 @@ export const popoverAPI = [
   },
   {
     id: 7,
-    propsName: 'customClass',
+    propsName: 'className',
     propsType: ['string'],
     propsDescription: 'Custom CSS class for styling the popover.',
     default: 'None',

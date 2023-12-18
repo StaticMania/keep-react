@@ -1,14 +1,29 @@
 import { FC } from 'react'
 import type { ReactNode } from 'react'
-import { twMerge } from 'tailwind-merge'
+import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the NavigationContainer component.
+ * @interface NavigationContainerProps
+ */
 export interface NavigationContainerProps {
+  /**
+   * The children of the NavigationContainer component.
+   */
   children?: ReactNode
+
+  /**
+   * The CSS class name for the NavigationContainer component.
+   */
   className?: string
+
+  /**
+   * The HTML tag to be used for the NavigationContainer component.
+   */
   tag?: keyof JSX.IntrinsicElements
 }
 
 export const NavigationContainer: FC<NavigationContainerProps> = ({ children, className, tag = 'div' }) => {
   const Tag = tag ? tag : 'div'
-  return <Tag className={twMerge(className)}>{children}</Tag>
+  return <Tag className={cn(className)}>{children}</Tag>
 }

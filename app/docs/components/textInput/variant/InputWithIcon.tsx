@@ -4,8 +4,8 @@ import { Label, TextInput } from '~/src'
 
 const InputWithIcon = () => {
   return (
-    <>
-      <Label value="Label" />
+    <div>
+      <Label htmlFor="#id-11" value="Label" />
       <TextInput
         id="#id-11"
         placeholder="Default Input Field"
@@ -13,7 +13,7 @@ const InputWithIcon = () => {
         icon={<WarningCircle size={20} color="#5E718D" />}
         helperText="Info that helps a user with this field."
       />
-    </>
+    </div>
   )
 }
 
@@ -23,8 +23,8 @@ import { Label ,TextInput} from "keep-react";
 
 export const TextInputComponent = () => {
   return (
-    <>
-      <Label value="Label" />
+    <div>
+      <Label htmlFor="#id-11" value="Label" />
       <TextInput
         id="#id-11"
         placeholder="Default Input Field"
@@ -32,7 +32,7 @@ export const TextInputComponent = () => {
         icon={<WarningCircle size={20} color="#5E718D" />}
         helperText="Info that helps a user with this field."
       />
-    </>
+    </div>
   );
 }
 `

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Cookie } from 'phosphor-react'
+import { Cookie, DownloadSimple, FigmaLogo } from 'phosphor-react'
 import { Notification } from '.'
 import { Button } from '../Button/Button'
-
 import { useState } from 'react'
 import { Avatar } from '../Avatar/Avatar'
+import Image from 'next/image'
 
 const DefaultNotificationComponent = () => {
   const [showNotification, setShowNotification] = useState(false)
@@ -12,35 +12,26 @@ const DefaultNotificationComponent = () => {
     setShowNotification(!showNotification)
   }
 
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification)
-  }
   return (
-    <div className="px-2 py-3">
-      <Button onClick={handleShowNotification} type="primary">
+    <div className="px-5 py-3">
+      <Button onClick={onDismiss} type="primary">
         Show Notification
       </Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        className="max-w-sm"
-        additionalContent={
-          <div className="mt-2.5">
-            <p className="text-metal-500 text-body-5 font-normal md:text-body-4">
-              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
-                Accept
-              </Button>
-              <Button size="xs" type="outlineGray" color="info" customClass="ml-3">
-                Review
-              </Button>
-            </div>
-          </div>
-        }>
-        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Can we store cookies?</h3>
+      <Notification dismiss={showNotification} onDismiss={onDismiss}>
+        <Notification.Body>
+          <Notification.Title>Can we store cookies?</Notification.Title>
+          <Notification.Description>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </Notification.Description>
+          <Notification.Container className="!mt-6 flex gap-3">
+            <Button type="primary" size="sm">
+              Accept
+            </Button>
+            <Button type="outlineGray" size="sm">
+              Review
+            </Button>
+          </Notification.Container>
+        </Notification.Body>
       </Notification>
     </div>
   )
@@ -51,81 +42,31 @@ const NotificationWithAvatarComponent = () => {
     setShowNotification(!showNotification)
   }
 
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification)
-  }
-
   return (
-    <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
+    <div className="px-5 py-3">
+      <Button type="primary" onClick={onDismiss}>
         Show Notification
       </Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        className="max-w-[400px]"
-        position="top-left"
-        additionalContent={
-          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
+      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="bottom-left">
+        <Notification.Container className="grid grid-cols-12">
+          <Notification.Avatar className="col-span-2">
+            <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+          </Notification.Avatar>
+          <Notification.Body className="col-span-10">
+            <Notification.Title>Kausar Ahmed Pial</Notification.Title>
+            <Notification.Description>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </Notification.Description>
+            <Notification.Container className="!mt-6 flex gap-3">
+              <Button type="primary" size="sm">
                 Accept
               </Button>
-              <Button size="xs" type="outlineGray" color="info" customClass="ml-3">
-                View Profile
+              <Button type="outlineGray" size="sm">
+                Review
               </Button>
-            </div>
-          </div>
-        }
-        infoIcon={
-          <div className="h-12 w-12">
-            <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
-          </div>
-        }>
-        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">
-          Rono Pixel
-          <span className="text-metal-400 pl-2 text-body-6 font-medium md:text-body-5">Product Designer</span>
-        </h3>
-      </Notification>
-    </div>
-  )
-}
-const NotificationWithCardComponent = () => {
-  const [showNotification, setShowNotification] = useState(false)
-  const onDismiss = () => {
-    setShowNotification(!showNotification)
-  }
-
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification)
-  }
-  return (
-    <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
-        Show Notification
-      </Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        className="max-w-sm"
-        headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
-        additionalContent={
-          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info" width="half">
-                Download
-              </Button>
-              <Button size="xs" type="outlineGray" color="info" customClass="ml-3" width="half">
-                View Figma
-              </Button>
-            </div>
-          </div>
-        }>
-        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Welcome Keep Design</h3>
+            </Notification.Container>
+          </Notification.Body>
+        </Notification.Container>
       </Notification>
     </div>
   )
@@ -135,42 +76,149 @@ const NotificationWithIconComponent = () => {
   const onDismiss = () => {
     setShowNotification(!showNotification)
   }
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification)
-  }
 
   return (
-    <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
+    <div className="px-5 py-3">
+      <Button type="primary" onClick={onDismiss}>
         Show Notification
       </Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        position="bottom-left"
-        className="max-w-[400px]"
-        infoIcon={
-          <Button type="default" circle={true} size="xs">
-            <span>
-              <Cookie size={24} weight="bold" color="#3D4A5C" />
-            </span>
-          </Button>
-        }
-        additionalContent={
-          <div className="text-metal-500 mt-2.5 text-body-5 font-normal md:text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info">
+      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="top-left">
+        <Notification.Container className="grid grid-cols-12">
+          <Notification.Icon className="col-span-2">
+            <Cookie size={24} color="#3D4A5C" />
+          </Notification.Icon>
+          <Notification.Body className="col-span-10">
+            <Notification.Title>Can we store cookies?</Notification.Title>
+            <Notification.Description>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </Notification.Description>
+            <Notification.Container className="!mt-6 flex gap-3">
+              <Button type="primary" size="sm">
                 Accept
               </Button>
-              <Button size="xs" type="outlineGray" color="info" customClass="ml-3">
+              <Button type="outlineGray" size="sm">
                 Review
               </Button>
-            </div>
-          </div>
-        }>
-        <h3 className="text-metal-700 text-body-4 font-medium md:text-body-2">Can we store cookies?</h3>
+            </Notification.Container>
+          </Notification.Body>
+        </Notification.Container>
+      </Notification>
+    </div>
+  )
+}
+const NotificationWithCardComponent = () => {
+  const [notificationOne, setNotificationOne] = useState(true)
+  const [notificationTwo, setNotificationTwo] = useState(true)
+  const [notificationThree, setNotificationThree] = useState(true)
+
+  const onDismissOne = () => {
+    setNotificationOne(!notificationOne)
+    setNotificationTwo(true)
+    setNotificationThree(true)
+  }
+  const onDismissTwo = () => {
+    setNotificationTwo(!notificationTwo)
+    setNotificationOne(true)
+    setNotificationThree(true)
+  }
+  const onDismissThree = () => {
+    setNotificationTwo(true)
+    setNotificationOne(true)
+    setNotificationThree(!notificationThree)
+  }
+  return (
+    <div className="px-5 py-3">
+      <Button.Group>
+        <Button onClick={onDismissOne} type="primary" positionInGroup="start">
+          Bottom Left
+        </Button>
+        <Button onClick={onDismissTwo} type="primary" positionInGroup="middle">
+          Bottom Right
+        </Button>
+        <Button onClick={onDismissThree} type="primary" positionInGroup="end">
+          Top Right
+        </Button>
+      </Button.Group>
+      <Notification dismiss={notificationOne} onDismiss={onDismissOne} className="p-0" position="bottom-left">
+        <Notification.Media>
+          <Image
+            src="https://images.prismic.io/staticmania/be298f8b-0acf-4db1-9453-0f6288bfc584_notification.jpg?auto=compress,format"
+            alt="notification"
+            width={382}
+            height={240}
+            className="rounded-t-xl"
+          />
+        </Notification.Media>
+        <Notification.Body className="pb-5 pl-[30px] pr-4 pt-5">
+          <Notification.Title>Keep React is awesome</Notification.Title>
+          <Notification.Description>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </Notification.Description>
+          <Notification.Container className="!mt-6 flex gap-3">
+            <Button type="primary" size="sm">
+              Accept
+            </Button>
+            <Button type="outlineGray" size="sm">
+              Review
+            </Button>
+          </Notification.Container>
+        </Notification.Body>
+      </Notification>
+      <Notification dismiss={notificationTwo} onDismiss={onDismissTwo} className="p-0" position="bottom-right">
+        <Notification.Media>
+          <Image
+            src="https://images.prismic.io/staticmania/be298f8b-0acf-4db1-9453-0f6288bfc584_notification.jpg?auto=compress,format"
+            alt="notification"
+            width={382}
+            height={240}
+            className="rounded-t-xl"
+          />
+        </Notification.Media>
+        <Notification.Body className="pb-5 pl-[30px] pr-4 pt-5">
+          <Notification.Title>Keep React is awesome</Notification.Title>
+          <Notification.Description>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </Notification.Description>
+          <Notification.Container className="!mt-6 flex flex-col gap-3">
+            <Button type="primary" size="sm" width="full">
+              Download
+            </Button>
+            <Button type="outlineGray" size="sm" width="full">
+              View Figma File
+            </Button>
+          </Notification.Container>
+        </Notification.Body>
+      </Notification>
+      <Notification dismiss={notificationThree} onDismiss={onDismissThree} position="top-right">
+        <Notification.Body>
+          <Notification.Title>Can we store cookies?</Notification.Title>
+          <Notification.Description>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </Notification.Description>
+          <Notification.Media>
+            <Image
+              src="https://images.prismic.io/staticmania/be298f8b-0acf-4db1-9453-0f6288bfc584_notification.jpg?auto=compress,format"
+              alt="notification"
+              width={382}
+              height={240}
+              className="rounded-xl"
+            />
+          </Notification.Media>
+          <Notification.Container className="!mt-6 flex gap-3">
+            <Button type="primary" size="sm">
+              <span className="pr-2">
+                <DownloadSimple size={18} color="#fff" />
+              </span>
+              Download
+            </Button>
+            <Button type="outlineGray" size="sm">
+              <span className="pr-2">
+                <FigmaLogo size={18} color="#455468" />
+              </span>
+              View Figma File
+            </Button>
+          </Notification.Container>
+        </Notification.Body>
       </Notification>
     </div>
   )
@@ -180,13 +228,6 @@ const meta: Meta<typeof Notification> = {
   component: Notification,
   tags: ['autodocs'],
   argTypes: {
-    headerBannerSrc: {
-      description: 'Source URL for an image to be used as the header banner of the notification',
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: '' },
-      },
-    },
     children: {
       description: 'Notification content',
       control: { type: null },
@@ -202,14 +243,6 @@ const meta: Meta<typeof Notification> = {
         type: { summary: 'String' },
         defaultValue: { summary: 'top-right' },
       },
-    },
-    infoIcon: {
-      description: 'Icon to be displayed in the notification as an informational indicator',
-      control: { type: null },
-    },
-    additionalContent: {
-      description: 'Additional content to be displayed within the notification.',
-      control: { type: null },
     },
     onDismiss: {
       description: 'Determines whether the notification can be dismissed by the user',
@@ -237,12 +270,15 @@ type Story = StoryObj<typeof Notification>
 export const DefaultNotification: Story = {
   render: () => <DefaultNotificationComponent />,
 }
+
 export const NotificationWithIcon: Story = {
   render: () => <NotificationWithIconComponent />,
 }
+
 export const NotificationWithAvatar: Story = {
   render: () => <NotificationWithAvatarComponent />,
 }
+
 export const NotificationWithCard: Story = {
   render: () => <NotificationWithCardComponent />,
 }

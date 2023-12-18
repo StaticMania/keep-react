@@ -1,12 +1,19 @@
+/**
+ * Renders an avatar component with optional image, shape, size, and status.
+ * @param {AvatarProps} props - The props object containing optional alt text, bordered, children, img, shape, size, stacked, status, statusType, statusPosition, and totalNotification.
+ * @returns {JSX.Element} - The rendered Avatar component.
+ * @see https://react.keepdesign.io/docs/components/avatar
+ */
+
 /* eslint-disable @next/next/no-img-element */
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepPositions, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { AvatarAdd } from './AvatarAdd'
 import { AvatarGroup } from './AvatarGroup'
 import { AvatarGroupCounter } from './AvatarGroupCounter'
+import { cn } from '../../helpers/cn'
 
 export interface keepAvatarTheme {
   base: string
@@ -89,17 +96,90 @@ export interface KeepAvatarStatusFontSize {
   notification: AvatarSizes
 }
 
+/**
+ * Props for the Avatar component
+ * @interface AvatarProps
+ * @extends {PropsWithChildren<ComponentProps<'div'>>}
+ */
 export interface AvatarProps extends PropsWithChildren<ComponentProps<'div'>> {
+  /**
+   * Alternative text for the avatar image
+   * @type string
+   * @default ''
+   */
   alt?: string
+
+  /**
+   * Whether to show a border around the avatar
+   * @type boolean
+   * @default false
+   */
   bordered?: boolean
+
+  /**
+   * URL of the image to display as the avatar
+   * @type string
+   */
   img?: string
+
+  /**
+   * Size of the avatar
+   * @type keyof AvatarSizes
+   * @default 'md'
+   */
   size?: keyof AvatarSizes
+
+  /**
+   * Shape of the avatar
+   * @type ('circle' | 'rounded' | 'square')
+   * @default 'square'
+   */
   shape?: 'circle' | 'rounded' | 'square'
+
+  /**
+   * Whether to stack the avatar on top of other avatars
+   * @type boolean
+   * @default false
+   */
   stacked?: boolean
+
+  /**
+   * Status of the user associated with the avatar
+   * @type ('away' | 'busy' | 'offline' | 'online')
+   */
   status?: 'away' | 'busy' | 'offline' | 'online'
+
+  /**
+   * Type of status icon to display
+   * @type keyof KeepAvatarStatusType
+   * @default 'dot'
+   */
   statusType?: keyof KeepAvatarStatusType
+
+  /**
+   * Position of the status icon
+   * @type keyof KeepPositions
+   * @default 'top-left'
+   */
   statusPosition?: keyof KeepPositions
+
+  /**
+   * Number of notifications to display on the avatar
+   * @type number
+   */
   totalNotification?: number
+
+  /**
+   * className to apply to the Avatar.
+   * @type string
+   */
+  className?: string
+
+  /**
+   * style to apply to the Avatar status.
+   * @type string
+   */
+  statusStyle?: string
 }
 
 const AvatarComponent: FC<AvatarProps> = ({
@@ -114,6 +194,8 @@ const AvatarComponent: FC<AvatarProps> = ({
   statusType = 'dot',
   statusPosition = 'top-left',
   totalNotification = 99,
+  className,
+  statusStyle,
   ...props
 }) => {
   const theirProps = excludeClassName(props)
@@ -125,24 +207,26 @@ const AvatarComponent: FC<AvatarProps> = ({
         {img ? (
           <img
             alt={alt}
-            className={twMerge(
+            className={cn(
               shape === 'rounded' ? theme.shape.rounded[size] : theme.shape[shape],
               bordered && theme.bordered,
               stacked && theme.stacked,
               theme.img.on,
               theme.size[size],
+              className,
             )}
             data-testid="keep-avatar-img"
             src={img}
           />
         ) : (
           <div
-            className={twMerge(
+            className={cn(
               shape === 'rounded' ? theme.shape.rounded[size] : theme.shape[shape],
               bordered && theme.bordered,
               stacked && theme.stacked,
               theme.img.off,
               theme.size[size],
+              className,
             )}
             data-testid="keep-avatar-img">
             <svg
@@ -168,12 +252,13 @@ const AvatarComponent: FC<AvatarProps> = ({
         )}
         {status && (
           <span
-            className={twMerge(
+            className={cn(
               theme.status[status],
               theme.statusType.type[statusType],
               theme.statusType.size[statusType][size],
               theme.statusPosition[shape][statusType][size as keyof StatusPositions][statusPosition],
               statusType === 'notification' && theme.statusType.fontSize.notification[size],
+              statusStyle,
             )}>
             {statusType === 'notification' && `${totalNotification}`}
           </span>

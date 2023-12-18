@@ -1,10 +1,10 @@
 import { ComponentProps, forwardRef, ReactNode } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepBoolean, KeepButtonType, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import type { PositionInButtonGroup } from './ButtonGroup'
 import { ButtonGroup } from './ButtonGroup'
+import { cn } from '../../helpers/cn'
 
 export interface keepButtonTheme {
   base: string
@@ -32,6 +32,7 @@ export interface keepButtonTheme {
   }
   outlinePrimary: {
     color: ButtonColors
+
     transition: KeepBoolean
   }
   dashed: {
@@ -58,18 +59,97 @@ export interface keepButtonTheme {
   size: ButtonSizes
 }
 
+/**
+ * Props for the Button component.
+ * @interface ButtonProps
+ * @extends {Omit<ComponentProps<'button'>, 'className' | 'color' | 'type'>}
+ */
+
 export interface ButtonProps extends Omit<ComponentProps<'button'>, 'className' | 'color' | 'type'> {
+  /**
+   * The URL to navigate to when the button is clicked (if provided).
+   * @type {string}
+   */
   href?: string
+
+  /**
+   * The color variant of the button.
+   * @type {keyof ButtonColors}
+   * @default 'info'
+   */
   color?: keyof ButtonColors
+
+  /**
+   * The type of the button.
+   * @type {keyof ButtonTypes}
+   * @default 'default'
+   */
   type?: keyof ButtonTypes
+
+  /**
+   * The label for the notification badge displayed on the button.
+   * @type {string}
+   */
   notificationLabel?: string
+
+  /**
+   * The CSS style for the notification label.
+   * @type {string}
+   * @default 'bg-red-500 text-white'
+   */
+  notificationLabelStyle?: string
+
+  /**
+   * Whether the button should be rendered as a pill shape.
+   * @type {boolean}
+   * @default false
+   */
   pill?: boolean
+
+  /**
+   * Whether the button should be rendered as a circle shape.
+   * @type {boolean}
+   * @default false
+   */
   circle?: boolean
+
+  /**
+   * The position of the button within a group of buttons.
+   * @type {keyof PositionInButtonGroup}
+   * @default 'none'
+   */
   positionInGroup?: keyof PositionInButtonGroup
+
+  /**
+   * The content of the button.
+   * @type {ReactNode}
+   */
   children?: ReactNode
+
+  /**
+   * The size variant of the button.
+   * @type {keyof ButtonSizes}
+   * @default 'md'
+   */
   size?: keyof ButtonSizes
+
+  /**
+   * The width of the button.
+   * @type {'full' | 'half'}
+   */
   width?: 'full' | 'half'
-  customClass?: string
+
+  /**
+   * Additional CSS class name(s) for the button.
+   * @type {string}
+   * @default ''
+   */
+  className?: string
+
+  /**
+   * The callback function to be executed when the button is clicked.
+   * @type {() => void}
+   */
   onClick?: () => void
 }
 
@@ -103,7 +183,8 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
       positionInGroup = 'none',
       size = 'md',
       width,
-      customClass,
+      className,
+      notificationLabelStyle,
       ...props
     },
     ref,
@@ -114,8 +195,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
     const Component = isLink ? 'a' : 'button'
     return (
       <Component
-        className={twMerge(
-          customClass,
+        className={cn(
           theme.base,
           disabled && theme.disabled,
           width && theme.width[width],
@@ -130,6 +210,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
           type === 'text' && theme.text.color[color],
           type === 'linkPrimary' && theme.linkPrimary.color[color],
           type === 'linkGray' && theme.linkGray.color[color],
+          className,
         )}
         disabled={disabled}
         href={href}
@@ -138,7 +219,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
         {...theirProps}>
         <span
           ref={ref}
-          className={twMerge(
+          className={cn(
             theme.inner.base,
             !circle && theme.size[size],
             theme.inner.position[positionInGroup],
@@ -154,7 +235,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
           <>
             {typeof children !== 'undefined' && children}
             {typeof notificationLabel !== 'undefined' && (
-              <span className={theme.notificationLabel} data-testid="keep-button-label">
+              <span className={cn(theme.notificationLabel, notificationLabelStyle)} data-testid="keep-button-label">
                 {notificationLabel}
               </span>
             )}

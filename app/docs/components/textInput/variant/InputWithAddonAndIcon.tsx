@@ -4,8 +4,8 @@ import { Label, TextInput } from '~/src'
 
 const InputWithAddonAndIcon = () => {
   return (
-    <>
-      <Label value="Password" />
+    <div>
+      <Label htmlFor="#id-10" value="Password" />
       <TextInput
         id="#id-10"
         placeholder="example@gmail.com"
@@ -17,7 +17,7 @@ const InputWithAddonAndIcon = () => {
         icon={<EyeSlash size={20} color="#5E718D" />}
         iconPosition="right"
       />
-    </>
+    </div>
   )
 }
 
@@ -28,8 +28,8 @@ import { EyeSlash, Lock } from "phosphor-react";
 
 export const TextInputComponent = () => {
   return (
-    <>
-      <Label value="Password" />
+    <div>
+      <Label htmlFor="#id-10" value="Password" />
       <TextInput
         id="#id-10"
         placeholder="example@gmail.com"
@@ -41,7 +41,7 @@ export const TextInputComponent = () => {
         icon={<EyeSlash size={20} color="#5E718D" />}
         iconPosition="right"
       />
-    </>
+    </div>
   );
 }
 `

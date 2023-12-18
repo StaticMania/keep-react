@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+const { extendTailwindMerge } = require('tailwind-merge')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './mdx-components.tsx',
@@ -7,7 +8,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  presets: [require('./src/theme/keep-preset.ts')],
   theme: {
     container: {
       center: true,
@@ -23,11 +23,8 @@ module.exports = {
     extend: {
       screens: {
         '4k': '1980px',
-      }, 
-      
+      },
     },
-
-    
   },
-  plugins: [],
+  presets: [require('./src/theme/keep-preset.ts')],
 }

@@ -1,6 +1,6 @@
 {
   "name": "keep-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official React components built for React and Tailwind CSS",
   "license": "MIT",
   "keywords": [
@@ -15,14 +15,28 @@
   "homepage": "https://react.keepdesign.io/",
   "bugs": "https://github.com/StaticMania/keep-react/issues",
   "files": [
-    "./lib/",
-    "./src"
+    "./lib/"
   ],
   "main": "./lib/cjs/index.js",
-  "style": "./src/main.min.css",
-  "preset": "./src/keep-preset.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "default": "./lib/cjs/index.js"
+      }
+    },
+    "./preset": {
+      "default": "./lib/cjs/theme/keep-preset.js"
+    },
+    "./css": {
+      "default": "./lib/cjs/theme/main.min.css"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/StaticMania/keep-react"
@@ -35,7 +49,8 @@
     "newApp": "rm -rf node_modules && rm -rf .next && yarn install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
+    "build:lib": "rm -rf ./lib/ ./lib && yarn build:lib:dev",
+    "build:lib:dev": "yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
     "build:css": "css-minify -f ./app/main.css -o ./lib/cjs/theme",
     "build:lib:cjs": "tsc -p tsconfig.lib.json",
     "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm"
@@ -43,31 +58,31 @@
   "dependencies": {
     "@floating-ui/react": "^0.25.3",
     "@headlessui/react": "^1.7.16",
+    "clsx": "^2.0.0",
     "phosphor-react": "^1.4.1",
     "rc-slider": "^10.2.1",
     "rc-tooltip": "^6.0.1",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-collapse": "^5.1.1",
-    "react-datepicker": "^4.16.0",
-    "react-dom": "18.2.0",
+    "react-datepicker": "^4.24.0",
+    "react-dom": "^18.2.0",
     "react-indiana-drag-scroll": "^2.2.0",
     "react-syntax-highlighter": "^15.5.0",
     "recharts": "^2.8.0",
-    "tailwind-merge": "1.14.0"
+    "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
-    "@docsearch/react": "^3.5.2",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.2",
-    "@storybook/addon-essentials": "7.5.2",
-    "@storybook/addon-interactions": "7.5.2",
-    "@storybook/addon-links": "7.5.2",
+    "@storybook/addon-essentials": "7.6.1",
+    "@storybook/addon-interactions": "7.6.1",
+    "@storybook/addon-links": "7.6.1",
     "@storybook/addon-onboarding": "1.0.8",
-    "@storybook/blocks": "7.5.2",
-    "@storybook/nextjs": "7.5.2",
-    "@storybook/react": "7.5.2",
+    "@storybook/blocks": "7.6.1",
+    "@storybook/nextjs": "7.6.1",
+    "@storybook/react": "7.6.1",
     "@storybook/testing-library": "0.2.2",
     "@tailwindcss/forms": "^0.5.4",
     "@types/babel__core": "^7.20.3",
@@ -84,9 +99,9 @@
     "autoprefixer": "10.4.14",
     "css-minify": "^2.0.0",
     "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12",
+    "eslint-config-next": "^14.0.4",
     "eslint-plugin-storybook": "^0.6.15",
-    "next": "^13.5.6",
+    "next": "^14.0.4",
     "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "prettier": "^3.0.3",
@@ -96,7 +111,7 @@
     "prop-types": "^15.8.1",
     "rehype-slug": "^6.0.0",
     "remark-toc": "^8.0.1",
-    "storybook": "^7.5.2",
+    "storybook": "^7.6.1",
     "tailwindcss": "3.3.3",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "5.1.6"

@@ -1,10 +1,10 @@
 import type { FC, ReactNode } from 'react'
 import { useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { Switch } from '@headlessui/react'
 import { KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { excludeClassName } from '../../helpers/exclude'
+import { cn } from '../../helpers/cn'
 
 export interface keepToggleTheme {
   base: string
@@ -26,12 +26,66 @@ export interface keepToggleTheme {
   withIconBase: string
 }
 
+/**
+ * Props for the Toggle component.
+ * @interface ToggleProps
+ */
 export interface ToggleProps {
+  /**
+   * The label to be displayed alongside the toggle.
+   * @type {ReactNode}
+   * @default 'Toggle'
+   */
   label?: ReactNode
+
+  /**
+   * Determines whether to display an icon alongside the toggle.
+   * @type {boolean}
+   * @default false
+   */
   withIcon?: boolean
+
+  /**
+   * Determines whether the toggle is disabled.
+   * @type {boolean}
+   * @default false
+   */
   disabled?: boolean
+
+  /**
+   * The size of the toggle.
+   * @type {keyof ToggleSizes}
+   * @default 'sm'
+   */
   size?: keyof ToggleSizes
+
+  /**
+   * The background color of the toggle.
+   * @type {'primary' | 'slate'}
+   * @default 'primary'
+   */
   bgColor?: 'primary' | 'slate'
+
+  /**
+   * Additional CSS class name for the toggle component.
+   * @type {string}
+   * @default ''
+   */
+  className?: string
+
+  /**
+   * Additional CSS styles for the toggle circle.
+   * @type {string}
+   * @default ''
+   */
+  circleStyle?: string
+
+  /**
+   * Additional CSS styles for the toggle label.
+   * @type {string}
+   * @default ''
+   */
+  labelStyle?: string
 }
 
 export interface ToggleSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
@@ -44,7 +98,9 @@ const ToggleComponent: FC<ToggleProps> = ({
   disabled = false,
   withIcon = false,
   size = 'sm',
-
+  className,
+  circleStyle,
+  labelStyle,
   ...props
 }) => {
   const [enabled, setEnabled] = useState(false)
@@ -75,25 +131,27 @@ const ToggleComponent: FC<ToggleProps> = ({
         id="test-switchId"
         checked={disabled ? disabled : enabled}
         onChange={setEnabled}
-        className={twMerge(
+        className={cn(
           theme.base,
           theme.size[size],
           disabled && theme.disabled,
           enabled ? theme.enabledBg.on[bgColor] : theme.enabledBg.off,
+          className,
         )}>
         <span className="sr-only">Enable notifications</span>
         <span
-          className={twMerge(
+          className={cn(
             theme.circleBase,
             theme.enabledCircle[enabled ? 'on' : 'off'][size],
             withIcon && theme.withIconBase,
             withIcon && showWithIcon(enabled, size),
             enabled ? theme.enabledCircle.on[size] : theme.enabledCircle.off[size],
+            circleStyle,
           )}
         />
       </Switch>
       {typeof label !== 'undefined' ||
-        (!label && <label className={twMerge(theme.label[size], disabled && theme.disabled)}>{label}</label>)}
+        (!label && <label className={cn(theme.label[size], disabled && theme.disabled, labelStyle)}>{label}</label>)}
     </div>
   )
 }

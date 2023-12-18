@@ -67,7 +67,7 @@ const meta: Meta<typeof Carousel> = {
       },
     },
     indicatorsType: {
-      description: 'Carousel indocator Type',
+      description: 'Carousel indicator Type',
       control: 'select',
       options: ['dot', 'ring', 'bar', 'square', 'squareRing'],
       table: {
@@ -76,7 +76,7 @@ const meta: Meta<typeof Carousel> = {
       },
     },
     indicatorsTypeColors: {
-      description: 'Carousel indocator color Type',
+      description: 'Carousel indicator color Type',
       control: 'select',
       options: ['white', 'slate'],
       table: {
@@ -116,7 +116,7 @@ function renderImageMultipleTimes(): React.ReactElement[] {
 function renderSlideMultipleTimes(): React.ReactElement[] {
   const slides = []
   for (let i = 0; i < 5; i++) {
-    const item = <div className="bg-metal-400 flex h-full items-center justify-center">Slide {i + 1}</div>
+    const item = <div className="flex h-full items-center justify-center bg-metal-400">Slide {i + 1}</div>
     slides.push(item)
   }
   return slides
@@ -133,7 +133,6 @@ export const DefaultCarousel: Story = {
     children: renderImageMultipleTimes(),
   },
 }
-
 export const StaticCarousel: Story = {
   args: {
     ...DefaultCarousel.args,
@@ -159,6 +158,7 @@ export const CarouselWithSquareIndicator: Story = {
     indicatorsType: 'square',
   },
 }
+
 export const CarouselWithSquareRingIndicator: Story = {
   args: {
     ...CarouselWithRingIndicator.args,

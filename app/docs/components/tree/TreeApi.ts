@@ -49,4 +49,11 @@ export const treeApiData = [
     propsDescription: 'Determines whether checkboxes are displayed for nodes.',
     default: 'false',
   },
+  {
+    id: 8,
+    propsName: 'itemStyle',
+    propsType: 'string',
+    propsDescription: 'Custom class to style the tree item.',
+    default: 'None',
+  },
 ]

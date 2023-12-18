@@ -53,7 +53,7 @@ pnpm add keep-react
 following code:
 
 ```jsx
-import keepPreset from "keep-react/src/keep-preset.js";
+import keepPreset from "keep-react/preset";
 export default {
   content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
   presets: [keepPreset],
@@ -63,7 +63,7 @@ export default {
 `Step 4:` Add Tailwind CSS to index.css File:
 
 ```css
-@import "keep-react/src/main.min.css";
+@import "keep-react/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -107,14 +107,14 @@ following code
 ```js
 module.exports = {
     content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
-    presets: [require("keep-react/src/keep-preset.js")],
+    presets: [require("keep-react/preset")],
 };
 ```
 
 `Step 4:` Add Tailwind CSS to globals.css File:
 
 ```css
-@import "keep-react/src/main.min.css";
+@import "keep-react/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

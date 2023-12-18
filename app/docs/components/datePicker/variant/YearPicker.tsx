@@ -5,22 +5,23 @@ import { DatePicker } from '~/src'
 const YearPicker = () => {
   const [_, setYearPicker] = useState<number | Date | null>()
   return (
-    <DatePicker yearPicker={setYearPicker}>
-      <DatePicker.Year />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker year={setYearPicker} placeholder="Select Year">
+        <DatePicker.Year />
+      </DatePicker>
+    </div>
   )
 }
 
 const YearPickerCode = `
 "use client";
-
 import { useState } from "react";
 import { DatePicker } from "keep-react";
 
 export const YearPickerComponent = () => {
   const [yearPicker, setYearPicker] = useState();
   return (
-    <DatePicker yearPicker={setYearPicker}>
+    <DatePicker year={setYearPicker} placeholder="Select Year">
       <DatePicker.Year />
     </DatePicker>
   );

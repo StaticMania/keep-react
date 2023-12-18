@@ -1,8 +1,8 @@
-import { twMerge } from 'tailwind-merge'
 import { ComponentProps, FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepCheckboxTheme {
   base: string
@@ -19,16 +19,87 @@ export interface keepCheckboxTheme {
   color: KeepStateColors
 }
 
+/**
+ * Checkbox component props.
+ * @interface CheckboxProps
+ * @extends {Omit<ComponentProps<'input'>, 'className' | 'color' | 'size' | 'type'>}
+ */
 export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'className' | 'color' | 'size' | 'type'> {
+  /**
+   * The label to display next to the checkbox.
+   * @type {ReactNode}
+   */
   label?: ReactNode
+
+  /**
+   * Determines if the checkbox is disabled.
+   * @type {boolean}
+   * @default false
+   */
   disabled?: boolean
+
+  /**
+   * The size of the checkbox.
+   * @type {keyof CheckboxSizes}
+   * @default 'md'
+   */
   size?: keyof CheckboxSizes
+
+  /**
+   * The color of the checkbox.
+   * @type {keyof KeepStateColors}
+   * @default 'info'
+   */
   color?: keyof KeepStateColors
+
+  /**
+   * The color of the label.
+   * @type {keyof CheckboxLabelColors}
+   * @default 'info'
+   */
   labelColor?: keyof CheckboxLabelColors
+
+  /**
+   * The variant of the checkbox (square or circle).
+   * @type {'square' | 'circle'}
+   * @default 'square'
+   */
   variant?: 'square' | 'circle'
+
+  /**
+   * The name of the field associated with the checkbox.
+   * @type {string}
+   * @default ''
+   */
   fieldName?: string
+
+  /**
+   * Determines if the checkbox is checked.
+   * @type {boolean}
+   * @default false
+   */
   isChecked?: boolean
+
+  /**
+   * Callback function to handle checkbox checked state changes.
+   * @param value - The new checked state value.
+   * @type {"(value: boolean) => void}
+   */
   handleChecked?: (value: boolean) => void
+
+  /**
+   * Additional class name for the checkbox component.
+   * @type {string}
+   * @default ''
+   */
+  className?: string
+
+  /**
+   * Additional inline style for the label.
+   * @type {string}
+   * @default ''
+   */
+  labelStyle?: string
 }
 
 export interface CheckboxSizes extends Pick<KeepSizes, 'sm' | 'lg' | 'md'> {
@@ -49,6 +120,8 @@ const CheckboxComponent: FC<CheckboxProps> = ({
   variant = 'square',
   handleChecked,
   fieldName,
+  className,
+  labelStyle,
   ...props
 }) => {
   const theirProps = excludeClassName(props)
@@ -60,7 +133,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
 
   return (
     <div data-testid="checkbox-element">
-      <div className="flex items-center gap-2">
+      <div className={cn(typeof label !== 'undefined' ? 'flex items-center gap-2' : '')}>
         <input
           type="checkbox"
           id={id}
@@ -68,26 +141,28 @@ const CheckboxComponent: FC<CheckboxProps> = ({
           name={fieldName}
           onChange={handleOnChange}
           {...theirProps}
-          className={twMerge(theme.checkboxInput, theme.size[size])}
+          className={cn(theme.checkboxInput, theme.size[size])}
         />
         <div
-          className={twMerge(
+          className={cn(
             theme.base,
             theme.color[color],
             theme.size[size],
             theme.variant[variant],
             !disabled && theme.enabled,
             disabled && theme.disabled,
+            className,
           )}></div>
 
         {typeof label !== 'undefined' && (
           <label
             htmlFor={id}
-            className={twMerge(
+            className={cn(
               !disabled && theme.enabled,
               disabled && theme.disabled,
               theme.label[size],
               theme.labelColor[labelColor ? labelColor : color],
+              labelStyle,
             )}>
             {label}
           </label>

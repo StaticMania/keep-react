@@ -4,8 +4,8 @@ import { WarningCircle } from 'phosphor-react'
 
 const InputFieldURL = () => {
   return (
-    <>
-      <Label value="Enter URL" color="error" />
+    <div>
+      <Label htmlFor="#id-7" value="Enter URL" color="error" />
       <TextInput
         id="#id-7"
         placeholder="Enter your URL"
@@ -18,7 +18,7 @@ const InputFieldURL = () => {
         icon={<WarningCircle size={20} color="#FF574D" />}
         iconPosition="right"
       />
-    </>
+    </div>
   )
 }
 
@@ -29,8 +29,8 @@ import { WarningCircle } from "phosphor-react";
 
 export const TextInputComponent = () => {
   return (
-    <>
-      <Label value="Enter URL" color="error" />
+    <div>
+      <Label htmlFor="#id-7" value="Enter URL" color="error" />
       <TextInput
         id="#id-7"
         placeholder="Enter your URL"
@@ -43,7 +43,7 @@ export const TextInputComponent = () => {
         icon={<WarningCircle size={20} color="#FF574D" />}
         iconPosition="right"
       />
-    </>
+    </div>
   );
 }
 `

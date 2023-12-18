@@ -1,10 +1,11 @@
-import { FC, useState } from 'react'
-import DatePicker from 'react-datepicker'
-import CustomInput from './CustomInput'
+'use client'
+import { FC, createElement, forwardRef, useState } from 'react'
+import TimePick from 'react-datepicker'
 import { useDatePickerContext } from './DatePickerContext'
+import { CustomInput } from './CustomInput'
 
 export const TimePicker: FC = () => {
-  const { timePicker } = useDatePickerContext()
+  const { time, placeholder } = useDatePickerContext()
   const [selectedTime, setSelectedTime] = useState(new Date())
 
   const handleTimePicker = (date: Date) => {
@@ -20,12 +21,13 @@ export const TimePicker: FC = () => {
     const amOrPm = hours < 12 ? 'am' : 'pm'
     const formattedMinutes = String(minutes).padStart(2, '0')
     const newTime = `${formattedHours}:${formattedMinutes}${amOrPm}`
-    timePicker && timePicker(newTime)
+    time && time(newTime)
   }
 
   return (
-    <DatePicker
-      customInput={<CustomInput />}
+    <TimePick
+      placeholderText={placeholder}
+      customInput={createElement(forwardRef(CustomInput))}
       selected={selectedTime}
       onChange={handleTimePicker}
       showTimeSelect

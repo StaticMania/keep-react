@@ -1,10 +1,10 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, ForwardedRef, KeyboardEvent, PropsWithChildren, ReactElement } from 'react'
 import { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
 import type { TabItemProps } from './TabItem'
 import { TabItem } from './TabItem'
 import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepTabTheme {
   base: string
@@ -34,6 +34,7 @@ export interface keepTabTheme {
   }
   tabPanel: string
 }
+
 export interface TabStyles {
   default: string
   underline: string
@@ -54,21 +55,52 @@ export type TabStyleItem<Type> = {
 }
 export type TabItemStatus = 'active' | 'notActive'
 
+/**
+ * Represents the event object for tab events.
+ * @interface TabEventProps
+ */
 interface TabEventProps {
   target: number
 }
+
 interface TabKeyboardEventProps extends TabEventProps {
   event: KeyboardEvent<HTMLButtonElement>
 }
+
 export interface TabNotificationColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
   [key: string]: string
 }
+/**
+ * Props for the Tabs component.
+ * @interface TabsProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'style' | 'ref'>>}
+ */
 export interface TabsProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'style' | 'ref'>> {
+  /**
+   * The style of the tabs.
+   * @type {keyof TabStyles}
+   * @default 'default'
+   */
   style?: keyof TabStyles
+  /**
+   * The position of the icon relative to the tab label.
+   * @type {'left' | 'right'}
+   * @default 'left'
+   */
   iconPosition?: 'left' | 'right'
+  /**
+   * The position of the tab border.
+   * @type {'top' | 'bottom'}
+   * @default 'bottom'
+   */
   borderPosition?: 'top' | 'bottom'
+  /**
+   * Callback function triggered when the active tab changes.
+   * @param activeTab - The index of the active tab.
+   */
   onActiveTabChange?: (activeTab: number) => void
 }
+
 export interface TabsRef {
   setActiveTab: (activeTab: number) => void
 }
@@ -142,11 +174,11 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
     }))
 
     return (
-      <div className={twMerge(theme.base, className)}>
+      <div className={cn(theme.base, className)}>
         <div
           aria-label="Tabs"
           role="tablist"
-          className={twMerge(
+          className={cn(
             theme.tabList.base,
 
             style !== 'pills' && theme.tabList.borderPosition[borderPosition],
@@ -159,7 +191,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
               type="button"
               aria-controls={`${index + 1}-tabpanel-${index}`}
               aria-selected={index === activeTab}
-              className={twMerge(
+              className={cn(
                 theme.tabList.tabItem.base,
                 tabItemStyle.base,
                 index === activeTab && tabItemStyle.active.on,
@@ -182,7 +214,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
               )}
               {tab.notification && (
                 <span
-                  className={twMerge(
+                  className={cn(
                     theme.tabList.tabItem.notification.base,
                     tab.notificationColor &&
                       theme.tabList.tabItem.notification.notificationColor[tab.notificationColor],

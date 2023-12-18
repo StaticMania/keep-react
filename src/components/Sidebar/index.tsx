@@ -1,4 +1,3 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import type { DeepPartial } from '../../helpers/deep-partial'
 import type { KeepSidebarCollapseTheme } from './SidebarCollapse'
@@ -16,6 +15,7 @@ import { SidebarLogo } from './SidebarLogo'
 import { KeepBoolean } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { mergeDeep } from '../../helpers/mergeDeep'
+import { cn } from '../../helpers/cn'
 
 export interface KeepSidebarTheme {
   root: {
@@ -31,10 +31,33 @@ export interface KeepSidebarTheme {
   logo: KeepSidebarLogoTheme
 }
 
+/**
+ * Props for the Sidebar component.
+ * @interface SidebarProps
+ * @extends {PropsWithChildren}
+ */
 export interface SidebarProps extends PropsWithChildren, ComponentProps<'div'> {
+  /**
+   * The behavior of the sidebar when collapsed.
+   * - 'collapse': The sidebar collapses to a smaller width.
+   * - 'hide': The sidebar is completely hidden.
+   */
   collapseBehavior?: 'collapse' | 'hide'
+
+  /**
+   * Determines whether the sidebar is initially collapsed.
+   */
   collapsed?: boolean
+
+  /**
+   * The theme configuration for the sidebar.
+   */
   theme?: DeepPartial<KeepSidebarTheme>
+
+  /**
+   * Additional CSS class name for the sidebar.
+   */
+  className?: string
 }
 
 const SidebarComponent: FC<SidebarProps> = ({
@@ -42,6 +65,7 @@ const SidebarComponent: FC<SidebarProps> = ({
   collapseBehavior = 'collapse',
   collapsed: isCollapsed = false,
   theme: customTheme = {},
+  className,
   ...props
 }) => {
   const oldTheme = useTheme().theme.sidebar
@@ -52,7 +76,7 @@ const SidebarComponent: FC<SidebarProps> = ({
       <aside
         aria-label="Sidebar"
         hidden={isCollapsed && collapseBehavior === 'hide'}
-        className={twMerge(theme.root.base, theme.root.collapsed[isCollapsed ? 'on' : 'off'])}
+        className={cn(theme.root.base, theme.root.collapsed[isCollapsed ? 'on' : 'off'], className)}
         {...props}
         id="sidebar">
         <div className={theme.root.inner}>{children}</div>

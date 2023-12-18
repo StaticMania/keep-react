@@ -1,14 +1,39 @@
-import { twMerge } from 'tailwind-merge'
 import { Star, StarHalf } from 'phosphor-react'
 import type { FC, ReactNode } from 'react'
 import { useRatingContext } from './RatingContext'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
+/**
+ * Props for the RatingStar component.
+ * @interface RatingStarProps
+ */
 export interface RatingStarProps {
+  /**
+   * The type of filled star icon to use.
+   * Options: 'regular', 'fill', 'bold', 'duotone', 'thin', 'light'
+   */
   filledType?: 'regular' | 'fill' | 'bold' | 'duotone' | 'thin' | 'light'
+
+  /**
+   * The type of star to display.
+   * Options: 'half', 'full'
+   */
   starType?: 'half' | 'full'
+
+  /**
+   * The custom star icon to use.
+   */
   starIcon?: ReactNode
+
+  /**
+   * The CSS class name for the component.
+   */
   className?: string
+
+  /**
+   * The color of the star.
+   */
   color?: string
 }
 
@@ -30,7 +55,7 @@ export const RatingStar: FC<RatingStarProps> = ({
     )
 
   return (
-    <span className={twMerge(theme.base, className)} data-testid="keep-rating-star">
+    <span className={cn(theme.base, className)} data-testid="keep-rating-star">
       {Icon}
     </span>
   )

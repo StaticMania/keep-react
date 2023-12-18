@@ -1,4 +1,3 @@
-import { twMerge } from 'tailwind-merge'
 import type { FC, PropsWithChildren } from 'react'
 import { TimelineBody, TimelineBodyStyle } from './TimelineBody'
 import { TimelineContent, TimelineContentStyle } from './TimelineContent'
@@ -9,6 +8,7 @@ import { TimelineTime, TimelineTimeStyle } from './TimelineTime'
 import { TimelineTitle, TimelineTitleStyle } from './TimelineTitle'
 import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface TimelinePointSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg' | 'xl'> {
   [key: string]: string
@@ -18,11 +18,46 @@ export interface TimelinePointColor extends Pick<KeepColors, 'info' | 'error' | 
   [key: string]: string
 }
 
+/**
+ * Props for the Timeline component.
+ * @type {TimelineProps}
+ */
 export type TimelineProps = PropsWithChildren<{
+  /**
+   * Additional class name for the Timeline component.
+   * @type {string}
+   * @default ''
+   */
   className?: string
+
+  /**
+   * Determines if the timeline should be displayed horizontally.
+   * @type {boolean}
+   * @default false
+   */
   horizontal?: boolean
+
+  /**
+   * Determines if the timeline should have a gradient point.
+   * @type {boolean}
+   * @default false
+   */
   gradientPoint?: boolean
+
+  /**
+   * The color of the gradient.
+   * @type {keyof TimelinePointColor}
+   * @default 'info'
+   */
   gradientColor?: string
+
+  /**
+   * The type of the timeline bar.
+   * - 'solid': Solid line.
+   * - 'dashed': Dashed line.
+   * @type {'solid' | 'dashed'}
+   * @default 'solid'
+   */
   timelineBarType?: 'solid' | 'dashed'
 }>
 
@@ -60,7 +95,7 @@ const TimelineComponent: FC<TimelineProps> = ({
     <TimelineContext.Provider value={{ horizontal, gradientPoint, gradientColor }}>
       <ol
         data-testid="timeline-component"
-        className={twMerge(
+        className={cn(
           !horizontal && root.horizontal.off,
           horizontal && root.horizontal.on,
           timelineBarType === 'solid' && root.barType.solid,

@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -10,6 +9,7 @@ import { ModalFooter } from './ModalFooter'
 import { ModalHeader } from './ModalHeader'
 import { KeepBoolean, KeepPositions, KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface keepModalTheme {
   base: string
@@ -49,12 +49,51 @@ export interface ModalSizes extends Omit<KeepSizes, 'xs'> {
   [key: string]: string
 }
 
+/**
+ * Props for the Modal component.
+ * @interface ModalProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>>}
+ */
 export interface ModalProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'className'>> {
+  /**
+   * Callback function to be called when the modal is closed.
+   * @type {() => void}
+   */
   onClose?: () => void
+
+  /**
+   * The root element where the modal should be rendered.
+   * @type {HTMLElement}
+   * @default document.body
+   */
   root?: HTMLElement
+
+  /**
+   * Determines whether the modal should be shown or hidden.
+   * @type {boolean}
+   * @default false
+   */
   show?: boolean
+
+  /**
+   * The icon to be displayed in the modal.
+   * @type {ReactNode}
+   * @default null
+   */
   icon?: ReactNode
+
+  /**
+   * The size of the modal.
+   * @type {keyof ModalSizes}
+   * @default 'sm'
+   */
   size?: keyof ModalSizes
+
+  /**
+   * The position of the modal.
+   * @type {keyof ModalPositions}
+   * @default 'center'
+   */
   position?: keyof ModalPositions
 }
 
@@ -76,7 +115,7 @@ const ModalComponent: FC<ModalProps> = ({
   useEffect(() => {
     if (!parent) setParent(document.body)
     if (!container) setContainer(document.createElement('div'))
-  }, [])
+  }, [parent, container])
 
   useEffect(() => {
     if (!container || !parent || !show) {
@@ -97,11 +136,11 @@ const ModalComponent: FC<ModalProps> = ({
         <ModalContext.Provider value={{ icon, onClose }}>
           <div
             aria-hidden={!show}
-            className={twMerge(theme.base, theme.positions[position], show ? theme.show.on : theme.show.off)}
+            className={cn(theme.base, theme.positions[position], show ? theme.show.on : theme.show.off)}
             data-testid="modal"
             role="dialog"
             {...theirProps}>
-            <div className={twMerge(theme.content.base, theme.sizes[size])}>
+            <div className={cn(theme.content.base, theme.sizes[size])}>
               <div className={theme.content.inner}>{children}</div>
             </div>
           </div>

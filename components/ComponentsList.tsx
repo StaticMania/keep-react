@@ -2,10 +2,9 @@
 import { CloudArrowUp, GridFour, Phone, User } from 'phosphor-react'
 import { useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '~/app/docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
-import { DefaultDatePicker } from '~/app/docs/components/datePicker/variant/DefaultDatePicker'
 import { DefaultRadio } from '~/app/docs/components/radio/variant/DefaultRadio'
 
-import { Button, CheckboxGroup, Modal, Pagination, Slider, Tooltip, Tabs } from '~/src'
+import { Button, CheckboxGroup, Modal, Pagination, Slider, Tooltip, Tabs, DatePicker } from '~/src'
 
 export const SliderComponent = () => {
   return (
@@ -100,9 +99,12 @@ export const CheckboxGroupComponent = () => {
   )
 }
 export const DatePickerComponent = () => {
+  const [_, setDate] = useState<Date | null>(null)
   return (
-    <div className="scale-75">
-      <DefaultDatePicker />
+    <div className="mx-auto flex w-3/5 scale-75">
+      <DatePicker singleDate={setDate}>
+        <DatePicker.SingleDate />
+      </DatePicker>
     </div>
   )
 }
@@ -125,7 +127,7 @@ export const ModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>

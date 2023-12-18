@@ -19,25 +19,25 @@ const meta: Meta<typeof DatePicker> = {
         type: { summary: 'SetState' },
       },
     },
-    singleDatePicker: {
+    singleDate: {
       description: 'Date picker single date function',
       table: {
         type: { summary: 'SetState' },
       },
     },
-    monthPicker: {
+    month: {
       description: 'Month picker function',
       table: {
         type: { summary: 'SetState' },
       },
     },
-    yearPicker: {
+    year: {
       description: 'Year picker function',
       table: {
         type: { summary: 'SetState' },
       },
     },
-    timePicker: {
+    time: {
       description: 'Time picker function',
       table: {
         type: { summary: 'SetState' },
@@ -61,7 +61,7 @@ const DefaultDatePickerComponent = () => {
 
   return (
     <div className="w-2/6">
-      <DatePicker singleDatePicker={setDate}>
+      <DatePicker singleDate={setDate}>
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
@@ -71,7 +71,7 @@ const DatePickerWithTwoMonthComponent = () => {
   const [_, setDate] = useState<Date | null>(null)
   return (
     <div className="w-2/6">
-      <DatePicker showTwoMonth singleDatePicker={setDate}>
+      <DatePicker showTwoMonth singleDate={setDate}>
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
@@ -101,7 +101,7 @@ const MonthPickerComponent = () => {
   const [_, setMonthPicker] = useState<Date | null | string>()
   return (
     <div className="w-2/6">
-      <DatePicker monthPicker={setMonthPicker}>
+      <DatePicker month={setMonthPicker}>
         <DatePicker.Month />
       </DatePicker>
     </div>
@@ -112,7 +112,7 @@ const YearPickerComponent = () => {
 
   return (
     <div className="w-2/6">
-      <DatePicker yearPicker={setYearPicker}>
+      <DatePicker year={setYearPicker}>
         <DatePicker.Year />
       </DatePicker>
     </div>
@@ -122,7 +122,7 @@ const TimePickerComponent = () => {
   const [_, setTime] = useState<string | null | Date>()
   return (
     <div className="w-2/6">
-      <DatePicker timePicker={setTime}>
+      <DatePicker time={setTime}>
         <DatePicker.Time />
       </DatePicker>
     </div>

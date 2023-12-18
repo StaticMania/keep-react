@@ -3,11 +3,11 @@ import { keepModalTheme } from '.'
 export const modalTheme: keepModalTheme = {
   base: 'fixed z-[90] inset-0 flex items-center justify-center top-0',
   show: {
-    on: 'flex bg-gray-900 bg-opacity-50',
+    on: 'flex bg-metal-900 bg-opacity-50',
     off: 'hidden',
   },
   content: {
-    base: 'relative h-full w-full p-4 h-auto',
+    base: 'relative h-full w-full p-4 h-auto animate-keep-bounce',
     inner: 'relative rounded-lg bg-white shadow p-6',
   },
   body: {

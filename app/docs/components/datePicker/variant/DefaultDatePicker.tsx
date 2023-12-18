@@ -5,9 +5,11 @@ import { DatePicker } from '~/src'
 const DefaultDatePicker = () => {
   const [_, setDate] = useState<Date | null>(null)
   return (
-    <DatePicker singleDatePicker={setDate}>
-      <DatePicker.SingleDate />
-    </DatePicker>
+    <div className="w-1/3">
+      <DatePicker singleDate={setDate} placeholder="Date / Month / Year">
+        <DatePicker.SingleDate />
+      </DatePicker>
+    </div>
   )
 }
 
@@ -19,7 +21,7 @@ import { DatePicker } from "keep-react";
 export const DatePickerComponent = () => {
   const [date, setDate] = useState(null);
   return (
-    <DatePicker singleDatePicker={setDate}>
+    <DatePicker singleDate={setDate} placeholder="Date / Month / Year">
       <DatePicker.SingleDate />
     </DatePicker>
   );

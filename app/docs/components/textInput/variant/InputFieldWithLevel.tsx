@@ -16,14 +16,14 @@ import { Label,TextInput } from "keep-react";
 
 export const TextInputComponent = () => {
   return (
-    <>
-      <Label value="Label" />
+    <div>
+      <Label htmlFor="#id-8" value="Label" />
       <TextInput
         id="#id-8"
         placeholder="Default Input Field"
         color="gray"
       />
-    </>
+    </div>
   );
 }
 `

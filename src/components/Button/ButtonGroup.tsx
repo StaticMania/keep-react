@@ -3,12 +3,18 @@ import { Children, cloneElement, useMemo } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { useTheme } from '../../Keep/ThemeContext'
 import type { ButtonProps } from './Button'
+import { cn } from '../../helpers/cn'
 
 export interface keepButtonGroupTheme {
   base: string
   position: PositionInButtonGroup
 }
 
+/**
+ * Props for the ButtonGroup component.
+ * @typedef {Object} ButtonGroupProps
+ * @extends {ComponentProps<'div'>}
+ */
 export type ButtonGroupProps = PropsWithChildren<ComponentProps<'div'> & Pick<ButtonProps, 'pill'>>
 
 export interface PositionInButtonGroup {
@@ -18,7 +24,7 @@ export interface PositionInButtonGroup {
   end: string
 }
 
-export const ButtonGroup: FC<ButtonGroupProps> = ({ children, pill, ...props }): JSX.Element => {
+export const ButtonGroup: FC<ButtonGroupProps> = ({ children, pill, className, ...props }): JSX.Element => {
   const theirProps = excludeClassName(props)
 
   const items = useMemo(
@@ -35,7 +41,7 @@ export const ButtonGroup: FC<ButtonGroupProps> = ({ children, pill, ...props }):
   const theme = useTheme().theme.buttonGroup
 
   return (
-    <div className={theme.base} role="group" {...theirProps}>
+    <div className={cn(theme.base, className)} role="group" {...theirProps}>
       {items}
     </div>
   )

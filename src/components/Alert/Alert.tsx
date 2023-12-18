@@ -1,103 +1,136 @@
+'use client'
+import { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
+import { Title } from './Title'
+import { Description } from './Description'
+import { Container } from './Container'
 import { X } from 'phosphor-react'
-import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
-import { twMerge } from 'tailwind-merge'
-import type { KeepColors } from '../../Keep/KeepTheme'
+import { AlertContext } from './AlertContext'
+import { cn } from '../../helpers/cn'
+import clsx from 'clsx'
+import { Icon } from './Icon'
+import { Body } from './Body'
 import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepAlertTheme {
   base: string
+  container: string
   dismiss: string
-  border: {
-    off: string
-    on: AlertColors
-    borderAccent: {
-      top: string
-      bottom: string
-      left: string
-      right: string
+  rounded: string
+  border: string
+  disMissButton: {
+    base: string
+    color: {
+      primary: string
+      success: string
+      warning: string
+      error: string
+      metal: string
     }
   }
-  wrapper: string
-  infoButton: {
-    base: string
+  borderColor: {
+    primary: string
+    success: string
+    warning: string
+    error: string
+    metal: string
   }
-  closeButton: {
-    base: string
-    icon: string
-    color: AlertColors
+  borderAccent: {
+    left: string
+    right: string
+    top: string
+    bottom: string
   }
-  color: AlertColors
-  icon: string
-  rounded: string
+  color: {
+    primary: string
+    success: string
+    warning: string
+    error: string
+    metal: string
+  }
+  icon: {
+    primary: string
+    success: string
+    warning: string
+    error: string
+    metal: string
+  }
   title: {
     base: string
-    color: AlertColors
+    color: {
+      primary: string
+      success: string
+      warning: string
+      error: string
+      metal: string
+    }
   }
+  description: string
 }
 
-export interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
-  additionalContent?: ReactNode
-  color?: keyof AlertColors
+interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+  color?: 'primary' | 'success' | 'warning' | 'error' | 'metal'
   icon?: ReactNode
   dismiss?: boolean
   onDismiss?: boolean | (() => void)
   rounded?: boolean
   withBorder?: boolean
-  title?: string
   withBorderAccent?: boolean
   withBorderAccentPosition?: 'left' | 'right' | 'top' | 'bottom'
   children?: ReactNode
+  className?: string
+  BtnStyle?: string
+  [key: string]: any
 }
 
-export interface AlertColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
-  [key: string]: string
-}
-
-export const Alert: FC<AlertProps> = ({
-  additionalContent,
+const AlertComponent: FC<AlertProps> = ({
   children,
-  color = 'info',
-  icon: Icon,
-  onDismiss,
-  dismiss = false,
-  rounded = false,
+  color = 'primary',
   withBorder = false,
   withBorderAccent = false,
   withBorderAccentPosition = 'left',
-  title,
   className,
+  BtnStyle,
+  rounded,
+  icon,
+  dismiss,
+  onDismiss,
+  ...restProps
 }) => {
   const theme = useTheme().theme.alert
+  let alertClasses = clsx(
+    theme.base,
+    theme.color[color],
+    withBorder && theme.border,
+    withBorder && theme.borderColor[color],
+    withBorderAccent && theme.borderAccent[withBorderAccentPosition],
+    withBorderAccent && theme.borderColor[color],
+    rounded && theme.rounded,
+    dismiss && theme.dismiss,
+  )
+  let btnClasses = clsx(theme.disMissButton.base, theme.disMissButton.color[color])
 
   return (
-    <div
-      className={twMerge(
-        theme.base,
-        theme.color[color],
-        dismiss && theme.dismiss,
-        rounded && theme.rounded,
-        withBorder && theme.border.on[color],
-        withBorderAccent && theme.border.borderAccent[withBorderAccentPosition],
-        className,
+    <div role="alert" className={cn(alertClasses, className)} {...restProps}>
+      {onDismiss && typeof onDismiss === 'function' && (
+        <button aria-label="dismiss" role="button" className={cn(btnClasses, BtnStyle)} onClick={onDismiss}>
+          {icon ? icon : <X size={20} />}
+        </button>
       )}
-      role="alert">
-      <div className={theme.wrapper}>
-        <div className={twMerge(theme.infoButton.base)}>{Icon}</div>
-        <div>
-          {typeof children !== 'undefined' && children}
-          {title && <p className={twMerge(theme.title.base, theme.title.color[color])}>{title}</p>}
-          {additionalContent && <div>{additionalContent}</div>}
-        </div>
-        {onDismiss && typeof onDismiss === 'function' && (
-          <button
-            aria-label="Dismiss"
-            className={twMerge(theme.closeButton.base, theme.closeButton.color[color])}
-            onClick={onDismiss}
-            type="button">
-            <X size={20} />
-          </button>
-        )}
-      </div>
+      <AlertContext.Provider value={{ color }}>{children}</AlertContext.Provider>
     </div>
   )
 }
+
+Title.displayName = 'Alert.Title'
+Description.displayName = 'Alert.Description'
+Container.displayName = 'Alert.Container'
+Icon.displayName = 'Alert.Icon'
+Body.displayName = 'Alert.Body'
+
+export const Alert = Object.assign(AlertComponent, {
+  Title: Title,
+  Description: Description,
+  Container: Container,
+  Icon: Icon,
+  Body: Body,
+})

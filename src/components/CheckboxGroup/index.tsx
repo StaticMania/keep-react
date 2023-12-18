@@ -1,26 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { twMerge } from 'tailwind-merge'
+import { cn } from '../../helpers/cn'
 import type { ReactNode } from 'react'
 import { FC } from 'react'
-
 import { Avatar } from '../Avatar/Avatar'
 import { useTheme } from '../../Keep/ThemeContext'
 import { Radio } from '../FormControls/Radio'
-
-interface CheckboxGroupProps {
-  checkboxType?: 'square' | 'circle'
-  checkboxPosition?: 'left' | 'right'
-  title: string
-  description?: string
-  icon?: ReactNode
-  img?: string
-  imgShape?: 'square' | 'circle'
-  fieldName?: string
-  select?: 'single' | 'multiple'
-  value?: string
-  selected?: string
-  onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
 
 export interface keepCheckboxGroupTheme {
   label: {
@@ -81,6 +65,118 @@ export interface keepCheckboxGroupTheme {
   }
 }
 
+/**
+ * Props for the CheckboxGroup component.
+ * @interface CheckboxGroupProps
+ */
+
+interface CheckboxGroupProps {
+  /**
+   * The type of the CheckboxGroup.
+   * @type {'square' | 'circle'}
+   * @default 'square'
+   */
+  checkboxType?: 'square' | 'circle'
+
+  /**
+   * The position of the CheckboxGroup.
+   * @type {'left' | 'right'}
+   * @default 'left'
+   */
+  checkboxPosition?: 'left' | 'right'
+
+  /**
+   * The title for the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  title: string
+
+  /**
+   * The description for the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  description?: string
+
+  /**
+   * The icon for the CheckboxGroup.
+   * @type {ReactNode}
+   * @default ''
+   */
+  icon?: ReactNode
+
+  /**
+   * The image for the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  img?: string
+
+  /**
+   * The shape of the image for the CheckboxGroup.
+   * @type {'square' | 'circle'}
+   * @default 'circle'
+   */
+  imgShape?: 'square' | 'circle'
+
+  /**
+   * The name of the field for the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  fieldName?: string
+
+  /**
+   * The selection mode for the CheckboxGroup.
+   * @type {'single' | 'multiple'}
+   * @default 'single'
+   */
+  select?: 'single' | 'multiple'
+
+  /**
+   * The value of the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  value?: string
+
+  /**
+   * The selected value of the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  selected?: string
+
+  /**
+   * The event handler for option change in the CheckboxGroup.
+   * @type {(e: React.ChangeEvent<HTMLInputElement>) => void}
+   * @default () => {}
+   */
+  onOptionChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+  /**
+   * The CSS class name for the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  className?: string
+
+  /**
+   * The CSS class name for the title of the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  titleClassName?: string
+
+  /**
+   * The CSS class name for the description of the CheckboxGroup.
+   * @type {string}
+   * @default ''
+   */
+  descriptionClassName?: string
+}
+
 export const CheckboxGroup: FC<CheckboxGroupProps> = ({
   checkboxType = 'square',
   title,
@@ -93,18 +189,22 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
   value = '',
   selected,
   onOptionChange,
+  titleClassName,
+  descriptionClassName,
+  className,
 }) => {
   const theme = useTheme().theme.checkboxGroup
   return (
     <label
-      className={twMerge(
+      className={cn(
         theme.label.base,
         checkboxPosition === 'right' || icon || img ? theme.label.iconRight.on : theme.label.iconRight.off,
         selected === value ? theme.label.selected.on : theme.label.selected.off,
         imgShape === 'circle' && theme.label.spacing,
+        className,
       )}>
       <div
-        className={twMerge(
+        className={cn(
           checkboxPosition === 'right' || icon || img ? theme.main.order : '',
           imgShape === 'square' && theme.main.spacing,
         )}>
@@ -117,10 +217,10 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
           onOptionChange={onOptionChange}
         />
       </div>
-      <div className={twMerge(theme.root.base)}>
+      <div className={cn(theme.root.base)}>
         {!img && typeof icon !== 'undefined' && (
           <div
-            className={twMerge(
+            className={cn(
               selected === value ? theme.root.icon.selected.on : theme.root.icon.selected.off,
               theme.root.icon.base,
             )}>
@@ -129,7 +229,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
         )}
         {img && imgShape === 'circle' && (
           <div
-            className={twMerge(
+            className={cn(
               theme.root.circleImg.base,
               selected === value ? theme.root.circleImg.selected.on : theme.root.circleImg.selected.off,
             )}>
@@ -137,21 +237,21 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
           </div>
         )}
         {img && imgShape === 'square' && (
-          <div className={twMerge(theme.root.squareImg.base)}>
-            <img src={img} alt="checkbox" className={twMerge(theme.root.squareImg.img)} />
+          <div className={cn(theme.root.squareImg.base)}>
+            <img src={img} alt="checkbox" className={cn(theme.root.squareImg.img)} />
           </div>
         )}
-
         <div
-          className={twMerge(
+          className={cn(
             imgShape === 'square' && theme.textBox.spacing,
             checkboxPosition === 'right' ? theme.textBox.order : '',
           )}>
           {title && (
             <p
-              className={twMerge(
+              className={cn(
                 theme.textBox.title.base,
                 selected === value ? theme.textBox.title.selected.on : theme.textBox.title.selected.off,
+                titleClassName,
               )}>
               {title}
             </p>
@@ -159,9 +259,10 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
 
           {description && (
             <p
-              className={twMerge(
+              className={cn(
                 theme.textBox.description.base,
                 selected === value ? theme.textBox.description.selected.on : theme.textBox.description.selected.off,
+                descriptionClassName,
               )}>
               {description}
             </p>

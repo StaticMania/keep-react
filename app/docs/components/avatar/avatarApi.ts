@@ -69,4 +69,18 @@ export const avatarApiData = [
     propsDescription: 'Total number of notifications',
     default: '99',
   },
+  {
+    id: 12,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'Injects the class name in avatar',
+    default: 'None',
+  },
+  {
+    id: 13,
+    propsName: 'statusStyle',
+    propsType: 'string',
+    propsDescription: 'Injects the class name in avatar status',
+    default: 'None',
+  },
 ]

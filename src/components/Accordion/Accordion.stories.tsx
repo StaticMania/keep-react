@@ -1,42 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Accordion } from '.'
 import { removeFragment } from '../../helpers/mergeDeep'
+import { Plus } from 'phosphor-react'
 
 const meta: Meta<typeof Accordion> = {
-  tags: ['autodocs'],
   component: Accordion,
+  tags: ['autodocs'],
   argTypes: {
     children: {
       description: 'Accordion content',
       control: { type: null },
-    },
-    openIcon: {
-      description: 'Accordion content Open Icon',
-      control: { type: null },
-    },
-    closeIcon: {
-      description: 'Accordion content Close Icon',
-      control: { type: null },
-    },
-    iconPosition: {
-      description: 'Accordion icon position',
-      control: { type: 'radio' },
-      options: ['left', 'right'],
-      table: {
-        type: { summary: 'string' },
-        defaultValue: {
-          summary: 'right',
-        },
-      },
-    },
-    alwaysOpen: {
-      description: 'Accordion content always show or not',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: {
-          summary: false,
-        },
-      },
     },
     flush: {
       description: 'Accordion flush show or not',
@@ -47,8 +20,8 @@ const meta: Meta<typeof Accordion> = {
         },
       },
     },
-    collapseAll: {
-      description: 'Accordion item collapseAll or not',
+    openFirstPanel: {
+      description: 'Accordion first panel open',
       table: {
         type: { summary: 'boolean' },
         defaultValue: {
@@ -65,13 +38,6 @@ const meta: Meta<typeof Accordion> = {
         },
       },
     },
-    theme: {
-      description: 'Accordion theme',
-      control: { type: null },
-      table: {
-        type: { summary: 'Object' },
-      },
-    },
   },
 }
 export default meta
@@ -81,104 +47,134 @@ export const DefaultAccordion: Story = {
   args: {
     children: (
       <Accordion.Panel>
-        <Accordion.Title>What does the free version include?</Accordion.Title>
+        <Accordion.Container>
+          <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+        </Accordion.Container>
         <Accordion.Content>
-          <p className="mb-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.
-          </p>
+          The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
+          user experience across our products. It simplifies the design and development process by providing
+          ready-to-use components that can be easily customized and integrated into various applications.
         </Accordion.Content>
       </Accordion.Panel>
     ),
   },
 }
-export const AccordionWithCollapseAll: Story = {
+export const FlushAccordion: Story = {
   args: {
+    flush: true,
     children: removeFragment(
       <>
         <Accordion.Panel>
-          <Accordion.Title>Is there a free version available?</Accordion.Title>
+          <Accordion.Container>
+            <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+          </Accordion.Container>
           <Accordion.Content>
-            <p className="mb-2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
-            <p>
-              Check out this guide to learn how to and start developing websites even faster with components on top of
-              Tailwind CSS.
-            </p>
+            The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a
+            unified user experience across our products. It simplifies the design and development process by providing
+            ready-to-use components that can be easily customized and integrated into various applications.
           </Accordion.Content>
         </Accordion.Panel>
         <Accordion.Panel>
-          <Accordion.Title>Is there a Figma file available?</Accordion.Title>
+          <Accordion.Container>
+            <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+          </Accordion.Container>
           <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officia laudantium est atque qui illum
-              voluptatibus nam placeat, dolores eaque ut id quisquam. Veniam, nulla at quos rem laudantium ullam?
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis voluptatibus, illo nostrum fugit
-              inventore.
-            </p>
+            The Keep React offers a range of color variants for components. To customize the color scheme, you can use
+            the available color options such as gray,info,error,warning and success. Simply set the desired color
+            variant as a prop when using the component, and it will reflect the chosen color.
           </Accordion.Content>
         </Accordion.Panel>
         <Accordion.Panel>
-          <Accordion.Title>What are the differences between Keep React and Tailwind UI?</Accordion.Title>
+          <Accordion.Container>
+            <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+          </Accordion.Container>
           <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              The main difference is that the core components from Keep Design System are open source under the MIT
-              license, whereas Tailwind UI is a paid product. Another difference is that keep Design relies on smaller
-              and standalone components, whereas Tailwind UI offers sections of pages.
-            </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              However, we actually recommend using both keep Design, keep Design Pro, and even Tailwind UI as there is
-              no technical reason stopping you from using the best of two worlds.
-            </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-            <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-              <li>
-                <a
-                  href="https://keep Design.com/pro/"
-                  className="text-primary-600 hover:underline dark:text-primary-500">
-                  keep Design Pro
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tailwindui.com/"
-                  rel="nofollow"
-                  className="text-primary-600 hover:underline dark:text-primary-500">
-                  Tailwind UI
-                </a>
-              </li>
-            </ul>
+            Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
+            message. The additionalContent prop can be used to display supplementary information, such as buttons,
+            links, or icons, within the notification to provide users with more context and options.
           </Accordion.Content>
         </Accordion.Panel>
       </>,
     ),
-    collapseAll: true,
   },
 }
-export const AccordionWithLeftSideIcon: Story = {
+export const AccordionFirstPanelOpen: Story = {
   args: {
-    iconPosition: 'left',
-    ...AccordionWithCollapseAll.args,
+    ...FlushAccordion.args,
+    openFirstPanel: true,
   },
 }
-export const OpenAccordion: Story = {
+export const AccordionWithIcon: Story = {
   args: {
-    ...AccordionWithCollapseAll.args,
-    alwaysOpen: true,
-    collapseAll: false,
+    children: removeFragment(
+      <>
+        <Accordion.Panel>
+          <Accordion.Container>
+            <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+            <Accordion.Icon>
+              <Plus size={24} color="#444" />
+            </Accordion.Icon>
+          </Accordion.Container>
+          <Accordion.Content>
+            The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a
+            unified user experience across our products. It simplifies the design and development process by providing
+            ready-to-use components that can be easily customized and integrated into various applications.
+          </Accordion.Content>
+        </Accordion.Panel>
+        <Accordion.Panel>
+          <Accordion.Container>
+            <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+            <Accordion.Icon>
+              <Plus size={24} color="#444" />
+            </Accordion.Icon>
+          </Accordion.Container>
+          <Accordion.Content>
+            The Keep React offers a range of color variants for components. To customize the color scheme, you can use
+            the available color options such as gray,info,error,warning and success. Simply set the desired color
+            variant as a prop when using the component, and it will reflect the chosen color.
+          </Accordion.Content>
+        </Accordion.Panel>
+        <Accordion.Panel>
+          <Accordion.Container>
+            <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+            <Accordion.Icon>
+              <Plus size={24} color="#444" />
+            </Accordion.Icon>
+          </Accordion.Container>
+          <Accordion.Content>
+            Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
+            message. The additionalContent prop can be used to display supplementary information, such as buttons,
+            links, or icons, within the notification to provide users with more context and options.
+          </Accordion.Content>
+        </Accordion.Panel>
+      </>,
+    ),
   },
 }
 export const DisabledAccordion: Story = {
   args: {
-    ...AccordionWithCollapseAll.args,
+    ...DefaultAccordion.args,
     disabled: true,
+  },
+}
+export const CustomizeAccordion: Story = {
+  args: {
+    children: removeFragment(
+      <>
+        <Accordion.Panel className="bg-metal-900">
+          <Accordion.Container className="bg-metal-900 text-white group-hover:bg-metal-800">
+            <Accordion.Title className="text-white">What is the of the Keep React?</Accordion.Title>
+            <Accordion.Icon>
+              <Plus size={24} color="#fff" />
+            </Accordion.Icon>
+          </Accordion.Container>
+          <Accordion.Content className="text-white">
+            The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a
+            unified user experience across our products. It simplifies the design and development process by providing
+            ready-to-use components that can be easily customized and integrated into various applications.
+          </Accordion.Content>
+        </Accordion.Panel>
+      </>,
+    ),
   },
 }

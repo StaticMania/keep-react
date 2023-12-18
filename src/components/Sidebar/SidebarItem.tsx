@@ -1,7 +1,5 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react'
 import type { DeepPartial } from '../../helpers/deep-partial'
-
 import { forwardRef, useId } from 'react'
 import { Tooltip } from '../Tooltip'
 import { useSidebarContext } from './SidebarContext'
@@ -10,6 +8,7 @@ import { KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { mergeDeep } from '../../helpers/mergeDeep'
 import { Badge } from '../Badge'
+import { cn } from '../../helpers/cn'
 
 export interface KeepSidebarItemTheme {
   active: string
@@ -28,16 +27,58 @@ export interface KeepSidebarItemTheme {
   label: string
 }
 
+/**
+ * Props for the SidebarItem component.
+ * @interface SidebarItemProps
+ * @extends {PropsWithChildren}
+ * @extends {Omit<ComponentProps<'div'>, 'ref'>}
+ * @extends {Record<string, unknown>}
+ */
 export interface SidebarItemProps
   extends PropsWithChildren,
     Omit<ComponentProps<'div'>, 'ref'>,
     Record<string, unknown> {
+  /**
+   * Determines if the sidebar item is active.
+   * @type {boolean}
+   * @default false
+   */
   active?: boolean
+  /**
+   * The HTML element type or React component to be rendered as the sidebar item.
+   * @type {ElementType}
+   * @default 'a'
+   */
   as?: ElementType
+  /**
+   * The URL to navigate to when the sidebar item is clicked.
+   * @type {string}
+   * @default ''
+   */
   href?: string
+  /**
+   * The icon to be displayed in the sidebar item.
+   * @type {ReactNode}
+   * @default ''
+   */
   icon?: ReactNode
+  /**
+   * The label text to be displayed in the sidebar item.
+   * @type {string}
+   * @default ''
+   */
   label?: string
+  /**
+   * The color of the label text in the sidebar item.
+   * @type {keyof SidebarItemLabelColors}
+   * @default 'info'
+   */
   labelColor?: keyof SidebarItemLabelColors
+  /**
+   * The theme configuration for the sidebar item.
+   * @type {DeepPartial<KeepSidebarItemTheme>}
+   * @default {}
+   */
   theme?: DeepPartial<KeepSidebarItemTheme>
 }
 
@@ -71,10 +112,7 @@ const Children: FC<PropsWithChildren<{ id: string }>> = ({ id, children }) => {
   const theme = useTheme().theme.sidebar.item
 
   return (
-    <span
-      data-testid="keep-sidebar-item-content"
-      id={`keep-sidebar-item-${id}`}
-      className={twMerge(theme.content.base)}>
+    <span data-testid="keep-sidebar-item-content" id={`keep-sidebar-item-${id}`} className={cn(theme.content.base)}>
       {children}
     </span>
   )
@@ -106,7 +144,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
         <Component
           aria-labelledby={`keep-sidebar-item-${id}`}
           ref={ref}
-          className={twMerge(
+          className={cn(
             theme.base,
             isActive && theme.active,
             !isCollapsed && isInsideCollapse && theme.collapsed?.insideCollapse,
@@ -117,7 +155,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
             <div
               aria-hidden
               data-testid="keep-sidebar-item-icon"
-              className={twMerge(theme.icon?.base, isActive && theme.icon?.active)}>
+              className={cn(theme.icon?.base, isActive && theme.icon?.active)}>
               {Icon}
             </div>
           )}

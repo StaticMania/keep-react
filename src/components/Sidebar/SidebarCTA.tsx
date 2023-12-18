@@ -1,18 +1,30 @@
-import { twMerge } from 'tailwind-merge'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import type { DeepPartial } from '../../helpers/deep-partial'
 
 import { useSidebarContext } from './SidebarContext'
 import { KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
 export interface KeepSidebarCTATheme {
   base: string
   color: KeepSidebarCTAColors
 }
 
+/**
+ * Props for the SidebarCTA component.
+ * @interface SidebarCTAProps
+ * @extends {PropsWithChildren}
+ */
 export interface SidebarCTAProps extends PropsWithChildren, Omit<ComponentProps<'div'>, 'color'> {
+  /**
+   * The color of the SidebarCTA component.
+   */
   color?: keyof KeepSidebarCTAColors
+
+  /**
+   * The theme configuration for the SidebarCTA component.
+   */
   theme?: DeepPartial<KeepSidebarCTATheme>
 }
 
@@ -32,7 +44,7 @@ export const SidebarCTA: FC<SidebarCTAProps> = ({ children, color = 'info', clas
     <div
       data-testid="sidebar-cta"
       hidden={isCollapsed}
-      className={twMerge(theme.base, theme.color[color], className)}
+      className={cn(theme.base, theme.color[color], className)}
       {...props}>
       {children}
     </div>

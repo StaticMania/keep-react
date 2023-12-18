@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { twMerge } from 'tailwind-merge'
 import { useTheme } from '../../Keep/ThemeContext'
+import { cn } from '../../helpers/cn'
 
-export const SkeletonAvatar: FC = () => {
+export const SkeletonAvatar: FC<{ className?: string }> = ({ className }) => {
   const theme = useTheme().theme.skeleton
-  return <div className={twMerge(theme.avatar)}></div>
+  return <div className={cn(theme.avatar, className)}></div>
 }
