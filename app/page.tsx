@@ -4,7 +4,14 @@ import useCopy from '~/hooks/useCopy'
 import { ComponentList } from '~/routes/routes'
 import { ArrowUpRight, Check, Clipboard, Plus } from 'phosphor-react'
 import Image from 'next/image'
-import { Accordion } from '~/src'
+import { Accordion, Avatar } from '~/src'
+import { useEffect, useState } from 'react'
+
+interface Contributor {
+  login: string
+  id: number
+  avatar_url: string
+}
 
 export default function Home() {
   return (
@@ -99,11 +106,30 @@ const ComponentUI = () => {
   )
 }
 const Community = () => {
+  const [contributors, setContributors] = useState<Contributor[]>([])
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const response = await fetch('https://api.github.com/repos/StaticMania/keep-react/contributors?per_page=10')
+        const result = await response.json()
+        setContributors(result)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getUser()
+  }, [])
   return (
     <div className="container">
       <div className="flex flex-col items-start justify-between gap-5 rounded-md bg-[url('https://staticmania.cdn.prismic.io/staticmania/59c3bc39-d8bc-4382-80e9-db3c7f10230d_community.svg')] bg-cover bg-center bg-no-repeat p-8 md:px-8 md:py-10 lg:flex-row lg:items-center lg:gap-0 lg:px-28 lg:py-12">
         <div>
-          <h3 className="text-description-3 font-semibold leading-[50px] tracking-[-1px] text-white md:text-description-2 lg:text-heading-5">
+          <Avatar.Group>
+            {contributors?.map((user) => (
+              <Avatar key={user?.id} shape="circle" size="md" stacked={true} img={user?.avatar_url} />
+            ))}
+          </Avatar.Group>
+          <h3 className="mt-2 text-description-3 font-semibold leading-[50px] tracking-[-1px] text-white md:text-description-2 lg:text-heading-5">
             Join the community
           </h3>
           <p className="max-w-sm text-body-5 font-normal text-white md:text-body-4">
