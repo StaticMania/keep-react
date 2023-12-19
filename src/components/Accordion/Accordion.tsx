@@ -7,12 +7,45 @@ import { cn } from '../../helpers/cn'
 import { Icon, keepAccordionIconTheme } from './Icon'
 import { Container, keepAccordionContainerTheme } from './Container'
 
+/**
+ * Props for the Accordion component.
+ * @interface AccordionProps
+ * @extends {PanelProps}
+ */
 export interface AccordionProps {
+  /**
+   * The content of the Accordion component.
+   * @type {ReactElement<PanelProps> | ReactElement<PanelProps>[]}
+   */
   children?: ReactElement<PanelProps> | ReactElement<PanelProps>[]
+  /**
+   * Additional class name for the Accordion component.
+   * @type {string}
+   * @default ''
+   */
   className?: string
+  /**
+   * Determines if the Accordion component should have flush style.
+   * @type {boolean}
+   * @default false
+   */
   flush?: boolean
+  /**
+   * Determines if the Accordion component is disabled.
+   * @type {boolean}
+   * @default false
+   */
   disabled?: boolean
+  /**
+   * Determines if the first panel of the Accordion component should be open by default.
+   * @type {boolean}
+   * @default false
+   */
   openFirstPanel?: boolean
+  /**
+   * Additional props for the Accordion component.
+   * @type {any}
+   */
   [key: string]: any
 }
 
