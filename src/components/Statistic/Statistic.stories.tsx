@@ -15,17 +15,11 @@ const meta: Meta<typeof Statistic> = {
       },
     },
     showDollar: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
-      },
+      control: { type: 'boolean' },
       description: 'Dollar Sign Show or Not?',
     },
     showFilter: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
-      },
+      control: { type: 'boolean' },
       description: 'Filter Button Show or Not?',
     },
     iconBg: {
@@ -33,7 +27,10 @@ const meta: Meta<typeof Statistic> = {
         type: { summary: 'string' },
         defaultValue: { summary: 'primary' },
       },
-      description: 'Avaiable icon background color',
+      description: 'Available icon background color',
+    },
+    filterData: {
+      control: { type: null },
     },
   },
   decorators: [

@@ -7,20 +7,14 @@ const meta: Meta<typeof Upload> = {
   argTypes: {
     horizontal: {
       description: 'Upload type horizontal or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showProgressBar: {
       description: 'Progress bar show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     progressType: {
-      description: 'Avaiable Progress type',
+      description: 'Available Progress type',
       control: { type: 'radio' },
       options: ['success', 'error', 'pending'],
       table: {
@@ -45,10 +39,7 @@ const meta: Meta<typeof Upload> = {
     },
     disabled: {
       description: 'Upload disabled or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     file: {
       description: 'Selected file name',

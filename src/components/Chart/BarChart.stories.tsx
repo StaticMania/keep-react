@@ -83,7 +83,7 @@ const meta: Meta<typeof BarChart> = {
   argTypes: {
     chartData: {
       description:
-        'Chart data is an array of object. Where every object has three property. name,price and sell. Price and sell is our data key. You can choose your data key from your choosen array of object.',
+        'Chart data is an array of object. Where every object has three property. name,price and sell. Price and sell is our data key. You can choose your data key from your chosen array of object.',
       table: {
         type: { summary: 'Array' },
       },
@@ -107,17 +107,11 @@ const meta: Meta<typeof BarChart> = {
 
     showTooltip: {
       description: 'Chart tooltip show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showXaxis: {
       description: 'Chart X Axis data show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     XAxisDataKey: {
       description: 'Chart X Axis data key',
@@ -135,38 +129,23 @@ const meta: Meta<typeof BarChart> = {
     },
     showYaxis: {
       description: 'Chart Y Axis data show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showGridLine: {
       description: 'Chart grid line show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showBg: {
       description: 'Chart bar background color show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showLegend: {
       description: 'Chart bar legend show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     active: {
       description: 'Chart bar active bar show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     barSize: {
       description: 'Chart bar size',
@@ -306,7 +285,7 @@ export const ChartWithDoubleSeriesAndGraphLine: Story = {
   },
 }
 
-export const ChartWithGridlineAndGraphline: Story = {
+export const ChartWithGridLineAndGraphLine: Story = {
   args: {
     ...ChartWithDoubleSeries.args,
     showGridLine: true,
@@ -315,47 +294,47 @@ export const ChartWithGridlineAndGraphline: Story = {
   },
 }
 
-export const ChartWithSmoothline: Story = {
+export const ChartWithSmoothLine: Story = {
   args: {
     ...DefaultBarChart.args,
   },
 }
-export const ChartWithSmoothlineWithTooltip: Story = {
+export const ChartWithSmoothLineWithTooltip: Story = {
   args: {
-    ...ChartWithSmoothline.args,
+    ...ChartWithSmoothLine.args,
     showTooltip: true,
   },
 }
-export const ChartWithSmoothlineWithGraphLine: Story = {
+export const ChartWithSmoothLineWithGraphLine: Story = {
   args: {
-    ...ChartWithSmoothlineWithTooltip.args,
+    ...ChartWithSmoothLineWithTooltip.args,
     showXaxis: true,
     showYaxis: true,
   },
 }
-export const ChartWithSmoothlineWithGraphLineAndGridLine: Story = {
+export const ChartWithSmoothLineWithGraphLineAndGridLine: Story = {
   args: {
-    ...ChartWithSmoothlineWithGraphLine.args,
+    ...ChartWithSmoothLineWithGraphLine.args,
     showGridLine: true,
   },
 }
 
-export const ChartWithSmoothlineDoubleSeries: Story = {
+export const ChartWithSmoothLineDoubleSeries: Story = {
   args: {
-    ...ChartWithSmoothlineWithTooltip.args,
+    ...ChartWithSmoothLineWithTooltip.args,
     secondaryDataKey: 'sell',
   },
 }
-export const ChartWithSmoothlineDoubleSeriesAndGraphLine: Story = {
+export const ChartWithSmoothLineDoubleSeriesAndGraphLine: Story = {
   args: {
-    ...ChartWithSmoothlineDoubleSeries.args,
+    ...ChartWithSmoothLineDoubleSeries.args,
     showXaxis: true,
     showYaxis: true,
   },
 }
-export const ChartWithSmoothlineDoubleSeriesAndGridLine: Story = {
+export const ChartWithSmoothLineDoubleSeriesAndGridLine: Story = {
   args: {
-    ...ChartWithSmoothlineDoubleSeriesAndGraphLine.args,
+    ...ChartWithSmoothLineDoubleSeriesAndGraphLine.args,
     showGridLine: true,
   },
 }

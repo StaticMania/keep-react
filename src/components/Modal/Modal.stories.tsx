@@ -17,12 +17,8 @@ const meta: Meta<typeof Modal> = {
       description: 'Modal Inner Element',
     },
     show: {
-      control: 'boolean',
       description: 'Controls the visibility of the modal.',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     icon: {
       description: 'Optional icon to be displayed within the modal.',
@@ -55,7 +51,7 @@ const DefaultModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -77,7 +73,7 @@ const DefaultModalComponent = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -95,13 +91,13 @@ const DefaultModalComponent = () => {
   )
 }
 const ConfirmationModalComponent = () => {
-  const [showModalConfirm, setshowModalConfirm] = useState(false)
-  const [showModalError, setshowModalError] = useState(false)
+  const [showModalConfirm, setShowModalConfirm] = useState(false)
+  const [showModalError, setShowModalError] = useState(false)
 
   return (
     <div className="flex flex-wrap items-end gap-2">
-      <Button onClick={() => setshowModalConfirm(!showModalConfirm)}>Info Modal</Button>
-      <Button color="error" onClick={() => setshowModalError(!showModalError)}>
+      <Button onClick={() => setShowModalConfirm(!showModalConfirm)}>Info Modal</Button>
+      <Button color="error" onClick={() => setShowModalError(!showModalError)}>
         Error Modal
       </Button>
 
@@ -116,10 +112,10 @@ const ConfirmationModalComponent = () => {
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button type="outlineGray" size="sm" onClick={() => setshowModalConfirm(false)}>
+            <Button type="outlineGray" size="sm" onClick={() => setShowModalConfirm(false)}>
               Cancel
             </Button>
-            <Button type="primary" color="info" size="sm" onClick={() => setshowModalConfirm(false)}>
+            <Button type="primary" color="info" size="sm" onClick={() => setShowModalConfirm(false)}>
               Confirm
             </Button>
           </div>
@@ -130,20 +126,20 @@ const ConfirmationModalComponent = () => {
         icon={<Trash size={28} weight="bold" color="#E92215" />}
         size="md"
         show={showModalError}
-        onClose={() => setshowModalError(!showModalError)}>
+        onClose={() => setShowModalError(!showModalError)}>
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={() => setshowModalError(false)}>
+          <Button type="outlineGray" onClick={() => setShowModalError(false)}>
             Cancel
           </Button>
-          <Button type="primary" color="error" onClick={() => setshowModalError(false)}>
+          <Button type="primary" color="error" onClick={() => setShowModalError(false)}>
             Delete
           </Button>
         </Modal.Footer>
@@ -152,20 +148,20 @@ const ConfirmationModalComponent = () => {
   )
 }
 const HistoryModalComponent = () => {
-  const [showModalHistory, setshowModalHistory] = useState(false)
-  const [showModalAccess, setshowModalAccess] = useState(false)
+  const [showModalHistory, setShowModalHistory] = useState(false)
+  const [showModalAccess, setShowModalAccess] = useState(false)
   const [isChecked, setIsChecked] = useState(true)
 
   return (
     <div className="flex flex-wrap items-end gap-2">
-      <Button onClick={() => setshowModalHistory(!showModalHistory)}>History Modal</Button>
-      <Button onClick={() => setshowModalAccess(!showModalAccess)}>Access Modal</Button>
+      <Button onClick={() => setShowModalHistory(!showModalHistory)}>History Modal</Button>
+      <Button onClick={() => setShowModalAccess(!showModalAccess)}>Access Modal</Button>
 
       <Modal icon={<CloudArrowUp size={28} weight="bold" color="#1B4DFF" />} size="md" show={showModalHistory}>
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -184,10 +180,10 @@ const HistoryModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={() => setshowModalHistory(false)}>
+          <Button type="outlineGray" onClick={() => setShowModalHistory(false)}>
             Cancel
           </Button>
-          <Button type="primary" onClick={() => setshowModalHistory(false)}>
+          <Button type="primary" onClick={() => setShowModalHistory(false)}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -197,8 +193,8 @@ const HistoryModalComponent = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+            <p className="text-body-4 leading-relaxed text-metal-500">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classic.
             </p>
 
             <div className="mb-6 flex items-center gap-2">
@@ -225,10 +221,10 @@ const HistoryModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={() => setshowModalAccess(false)}>
+          <Button type="outlineGray" onClick={() => setShowModalAccess(false)}>
             Cancel
           </Button>
-          <Button type="primary" onClick={() => setshowModalAccess(false)}>
+          <Button type="primary" onClick={() => setShowModalAccess(false)}>
             Confirm
           </Button>
         </Modal.Footer>

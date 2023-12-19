@@ -23,19 +23,11 @@ const meta: Meta<typeof Carousel> = {
     },
     indicators: {
       description: 'Carousel indicators show or not?',
-      control: 'boolean',
-      table: {
-        type: { summary: 'Boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
     },
     showControls: {
       description: 'Carousel Control button show or not?',
-      control: 'boolean',
-      table: {
-        type: { summary: 'Boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
     },
     leftControl: {
       control: { disable: true },
@@ -53,11 +45,7 @@ const meta: Meta<typeof Carousel> = {
     },
     slide: {
       description: 'Carousel auto slide?',
-      control: 'boolean',
-      table: {
-        type: { summary: 'Boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
     },
     slideInterval: {
       description: 'Carousel Interval Time',

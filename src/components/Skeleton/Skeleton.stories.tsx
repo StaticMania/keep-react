@@ -15,14 +15,11 @@ const meta: Meta<typeof Skeleton> = {
   ],
   argTypes: {
     animation: {
-      description: 'Skeletion animation show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
+      description: 'Skeleton animation show or not?',
     },
     children: {
-      description: 'Skeletion element',
+      description: 'Skeleton element',
       control: { type: null },
     },
   },

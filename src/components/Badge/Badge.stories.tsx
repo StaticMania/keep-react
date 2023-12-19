@@ -31,6 +31,8 @@ const meta: Meta<typeof Badge> = {
     },
     iconPosition: {
       description: 'Position of the icon inside the badge.',
+      control: 'select',
+      options: ['left', 'right'],
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'left' },
@@ -81,12 +83,22 @@ const meta: Meta<typeof Badge> = {
     },
     dot: {
       description: 'Show a dot on the badge',
+      control: { type: 'boolean' },
     },
     dotPosition: {
       description: 'Position of the dot inside the badge',
+      control: 'select',
+      options: ['left', 'right'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'left' },
+      },
     },
     children: {
       description: 'Badge text',
+      control: {
+        disable: true,
+      },
     },
   },
 }

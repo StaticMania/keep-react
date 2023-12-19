@@ -92,31 +92,19 @@ const meta: Meta<typeof AreaChart> = {
     },
     showTooltip: {
       description: 'Chart tooltip show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showXaxis: {
       description: 'Chart X Axis data show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showYaxis: {
       description: 'Chart Y Axis data show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showGridLine: {
       description: 'Chart grid line show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
   },
 }

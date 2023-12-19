@@ -33,7 +33,7 @@ const meta: Meta<typeof Progress> = {
         type: { summary: 'string' },
         defaultValue: { summary: 'info' },
       },
-      description: 'It defines the avaiable color for progress',
+      description: 'It defines the Available color for progress',
     },
     size: {
       control: 'select',
@@ -55,34 +55,18 @@ const meta: Meta<typeof Progress> = {
     labelProgress: {
       description: 'Specifies whether the progress label is shown.',
       control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
     },
     showPopupLabelProgress: {
       description: 'Specifies whether the popup label progress is shown',
       control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
     },
     rounded: {
       description: 'Specifies whether the progress bar is rounded.',
       control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
     },
     bordered: {
       description: 'Specifies whether the progress bar is bordered.',
       control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
     },
   },
 

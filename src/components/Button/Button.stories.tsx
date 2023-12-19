@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
   tags: ['autodocs'],
   argTypes: {
     type: {
-      description: 'Avaiable button type',
+      description: 'Available button type',
       control: {
         type: 'select',
       },
@@ -18,7 +18,7 @@ const meta: Meta<typeof Button> = {
       },
     },
     size: {
-      description: 'Avaiable button size',
+      description: 'Available button size',
       control: {
         type: 'select',
       },
@@ -37,19 +37,24 @@ const meta: Meta<typeof Button> = {
     },
     circle: {
       description: 'Button circle or not',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
+    },
+
+    onClick: {
+      description: 'Button Onclick event',
+      control: { type: 'null' },
     },
 
     width: {
       description: 'Button width full or half?',
+      control: {
+        type: 'select',
+      },
+      options: ['full', 'half'],
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: 'full' },
+        defaultValue: { summary: 'half' },
       },
-      control: { type: 'radio' },
     },
     href: {
       description: 'Href to navigate',
@@ -67,10 +72,7 @@ const meta: Meta<typeof Button> = {
     },
     pill: {
       description: 'Button pill or not',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     positionInGroup: {
       description: 'Button position in button group',
@@ -89,7 +91,7 @@ const meta: Meta<typeof Button> = {
       },
     },
     color: {
-      description: 'Button avaiable color',
+      description: 'Button available color',
       table: {
         type: { summary: 'String' },
         defaultValue: { summary: 'info' },

@@ -6,7 +6,16 @@ import Image from 'next/image'
 const meta: Meta<typeof Empty> = {
   tags: ['autodocs'],
   component: Empty,
-  argTypes: {},
+  argTypes: {
+    children: {
+      description: 'Children is Empty element',
+      control: { type: null },
+    },
+    className: {
+      description: 'The class name of the Empty.',
+      control: { type: null },
+    },
+  },
 }
 
 export default meta

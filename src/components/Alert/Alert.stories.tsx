@@ -17,10 +17,10 @@ const meta: Meta<typeof Alert> = {
       },
       description: 'What background color to use like',
     },
-    rounded: { description: 'Adds rounded corners to the alert.' },
-    dismiss: { description: 'Enables or disables the dismiss icon.' },
-    withBorder: { description: 'Adds a border around the alert.' },
-    withBorderAccent: { description: 'Adds a border accent to the alert.' },
+    rounded: { description: 'Adds rounded corners to the alert.', control: { type: 'boolean' } },
+    dismiss: { description: 'Enables or disables the dismiss icon.', control: { type: 'boolean' } },
+    withBorder: { description: 'Adds a border around the alert.', control: { type: 'boolean' } },
+    withBorderAccent: { description: 'Adds a border accent to the alert.', control: { type: 'boolean' } },
     withBorderAccentPosition: {
       control: 'select',
       options: ['left', 'right', 'top', 'bottom'],
@@ -53,7 +53,6 @@ export const DefaultAlert: Story = {
     withBorderAccent: false,
     withBorderAccentPosition: 'left',
     dismiss: false,
-    title: 'Default message - make it short',
     icon: <X size={24} />,
     children: removeFragment(
       <>
