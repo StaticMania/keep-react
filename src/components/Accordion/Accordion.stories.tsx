@@ -9,34 +9,19 @@ const meta: Meta<typeof Accordion> = {
   argTypes: {
     children: {
       description: 'Accordion content',
-      control: { type: null },
+      control: { type: 'null' },
     },
     flush: {
       description: 'Accordion flush show or not',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: {
-          summary: false,
-        },
-      },
+      control: { type: 'boolean' },
     },
     openFirstPanel: {
       description: 'Accordion first panel open',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: {
-          summary: false,
-        },
-      },
+      control: { type: 'boolean' },
     },
     disabled: {
       description: 'Accordion item disabled or not',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: {
-          summary: false,
-        },
-      },
+      control: { type: 'boolean' },
     },
   },
 }
