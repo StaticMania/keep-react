@@ -1,9 +1,6 @@
 'use client'
 import { Children, FC, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
-import { Description } from './Description'
-import { Title } from './Title'
-import { cn } from '../../helpers/cn'
-import { Action } from './Action'
+import { XCircle } from 'phosphor-react'
 import {
   useClick,
   useDismiss,
@@ -21,14 +18,37 @@ import {
   autoPlacement,
   hide,
 } from '@floating-ui/react'
+
 import { Container } from './Container'
-import { XCircle } from 'phosphor-react'
+import { Title } from './Title'
+import { Action } from './Action'
+import { Description } from './Description'
 import { PopoverContext } from './PopoverContext'
+
+import { cn } from '../../helpers/cn'
 import { useTheme } from '../../Keep/ThemeContext'
 
+/**
+ * Props for the Popover component.
+ * @interface PopoverProps
+ */
 export interface PopoverProps {
+  /**
+   * The content of the Popover.
+   * @type {ReactNode}
+   */
   children?: ReactNode
+  /**
+   * The class name of the Popover.
+   * @type {string}
+   * @default ''
+   */
   className?: string
+  /**
+   * The position of the Popover.
+   * @type {string}
+   * @default 'bottom-start'
+   */
   position?:
     | 'top'
     | 'top-end'
@@ -42,9 +62,28 @@ export interface PopoverProps {
     | 'right'
     | 'right-end'
     | 'right-start'
+  /**
+   * Whether to show the dismiss icon.
+   * @type {boolean}
+   * @default true
+   */
   showDismissIcon?: boolean
+  /**
+   * The trigger of the Popover.
+   * @type {'hover' | 'click'}
+   * @default 'click'
+   */
   trigger?: 'hover' | 'click'
+  /**
+   * Whether to show the arrow.
+   * @type {boolean}
+   * @default true
+   */
   showArrow?: boolean
+  /**
+   * The icon of the Popover.
+   * @type {ReactNode}
+   */
   icon?: ReactNode
   // [key: string]: any
 }

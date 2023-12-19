@@ -67,18 +67,82 @@ export interface keepAlertTheme {
   description: string
 }
 
+/**
+ * Props for the Alert component.
+ * @interface AlertProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>>}
+ */
 interface AlertProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 'color'>> {
+  /**
+   * The color of the alert.
+   * @type {'primary' | 'success' | 'warning' | 'error' | 'metal'}
+   * @default 'primary'
+   */
   color?: 'primary' | 'success' | 'warning' | 'error' | 'metal'
+  /**
+   * The icon to be displayed in the alert.
+   * @type {ReactNode}
+   */
   icon?: ReactNode
+  /**
+   * Determines whether the alert can be dismissed.
+   * If set to `true`, a default dismiss button will be applied.
+   * @type {boolean}
+   * @default false
+   */
   dismiss?: boolean
+  /**
+   * The callback function to be called when the alert is dismissed.
+   * @type {boolean | (() => void)}
+   */
   onDismiss?: boolean | (() => void)
+  /**
+   * Determines whether the alert has rounded corners.
+   * @type {boolean}
+   * @default false
+   */
   rounded?: boolean
+  /**
+   * Determines whether the alert has a border.
+   * @type {boolean}
+   * @default false
+   */
   withBorder?: boolean
+  /**
+   * Determines whether the alert has an accent border.
+   * @type {boolean}
+   * @default false
+   */
   withBorderAccent?: boolean
+  /**
+   * The position of the accent border.
+   * @type {'left' | 'right' | 'top' | 'bottom'}
+   * @default 'left'
+   */
   withBorderAccentPosition?: 'left' | 'right' | 'top' | 'bottom'
+  /**
+   * The content of the alert.
+   * @type {ReactNode}
+   * @default ''
+   */
   children?: ReactNode
+  /**
+   * Additional CSS class name for the alert.
+   * @type {string}
+   * @default ''
+   */
   className?: string
+  /**
+   * Additional CSS style for the alert button.
+   * @type {string}
+   * @default ''
+   */
   BtnStyle?: string
+  /**
+   * Additional props for the alert component.
+   * @type {any}
+   * @default ''
+   */
   [key: string]: any
 }
 

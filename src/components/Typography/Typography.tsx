@@ -1,11 +1,31 @@
 'use client'
 import { ReactNode, HTMLProps, createElement, FC } from 'react'
+
 import { cn } from '../../helpers/cn'
 import { KeepTypography } from '../../Keep/KeepTheme'
 
+/**
+ * Props for the Typography component.
+ * @interface TypographyProps
+ * @extends {HTMLProps<HTMLElement>}
+ */
 interface TypographyProps extends HTMLProps<HTMLElement> {
+  /**
+   * The variant of the Typography.
+   * @type {keyof JSX.IntrinsicElements | KeepTypography}
+   * @default 'div'
+   */
   variant?: keyof JSX.IntrinsicElements | KeepTypography
+  /**
+   * The content of the Typography.
+   * @type {ReactNode}
+   */
   children?: ReactNode
+  /**
+   * The class name of the Typography.
+   * @type {string}
+   * @default ''
+   */
   className?: string
 }
 
