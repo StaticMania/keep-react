@@ -53,7 +53,6 @@ export const DefaultAlert: Story = {
     withBorderAccent: false,
     withBorderAccentPosition: 'left',
     dismiss: false,
-    title: 'Default message - make it short',
     icon: <X size={24} />,
     children: removeFragment(
       <>

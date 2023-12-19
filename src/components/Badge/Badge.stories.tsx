@@ -31,6 +31,8 @@ const meta: Meta<typeof Badge> = {
     },
     iconPosition: {
       description: 'Position of the icon inside the badge.',
+      control: 'select',
+      options: ['left', 'right'],
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'left' },

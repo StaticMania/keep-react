@@ -33,9 +33,12 @@ const meta: Meta<typeof Avatar> = {
       },
     },
     statusType: {
-      description: "Specifies the type of status. Possible values are: 'dot', 'notification'",
-      defaultValue: 'dot',
-      type: 'string',
+      description: 'Specifies the type of status.',
+      control: 'select',
+      options: ['dot', 'notification'],
+      table: {
+        defaultValue: { summary: 'dot' },
+      },
     },
     children: {
       description: 'It define text about the avatar',
@@ -44,9 +47,19 @@ const meta: Meta<typeof Avatar> = {
     },
     shape: {
       description: 'Determines the shape of the avatar.',
+      control: 'select',
+      options: ['circle', 'rounded', 'square'],
+      table: {
+        defaultValue: { summary: 'square' },
+      },
     },
     status: {
       description: "Reflects the user's availability status.",
+      control: 'select',
+      options: ['away', 'busy', 'offline', 'online'],
+      table: {
+        defaultValue: { summary: 'online' },
+      },
     },
     stacked: {
       description: 'Specifies if avatars should be stacked together.',
