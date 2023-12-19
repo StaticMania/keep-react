@@ -64,7 +64,7 @@ const Navbar = () => {
               <Image src="/images/icon/github.svg" height={20} width={20} alt="github" />
             </a>
             <a
-              href="https://keep-storybook.vercel.app"
+              href="https://react-storybook.keepdesign.io"
               target="_blank"
               className="rounded grayscale transition duration-300 hover:bg-primary-50 hover:grayscale-0 sm:bg-primary-25 sm:p-3">
               <svg
@@ -104,7 +104,7 @@ const Navbar = () => {
               <Image src="/images/icon/github.svg" height={20} width={20} alt="github" />
             </a>
             <a
-              href="https://keep-storybook.vercel.app"
+              href="https://react-storybook.keepdesign.io"
               target="_blank"
               className="grayscale transition duration-300 hover:grayscale-0 sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
               <svg
