@@ -1,10 +1,12 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { cn } from '../../helpers/cn'
-import { Title, keepTitleTheme } from './Title'
-import { Description, keepDescriptionTheme } from './Description'
+
 import { Image } from './Image'
 import { Redirect } from './Redirect'
+import { Title, keepTitleTheme } from './Title'
+import { Description, keepDescriptionTheme } from './Description'
+
+import { cn } from '../../helpers/cn'
 import { useTheme } from '../../Keep/ThemeContext'
 
 export interface keepEmptyTheme {
@@ -17,8 +19,21 @@ interface RootTheme {
   base: string
 }
 
+/**
+ * Props for the Empty component.
+ * @interface EmptyProps
+ */
 interface EmptyProps {
+  /**
+   * The class name of the Empty.
+   * @type {string}
+   * @default ''
+   */
   className?: string
+  /**
+   * The content of the Empty.
+   * @type {ReactNode}
+   */
   children?: ReactNode
 }
 const EmptyComponent: FC<EmptyProps> = ({ children, className }) => {
