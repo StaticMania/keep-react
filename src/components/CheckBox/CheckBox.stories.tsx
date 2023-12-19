@@ -15,22 +15,16 @@ const meta: Meta<typeof CheckBox> = {
     },
     checked: {
       description: 'Checkbox checked or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
     },
     disabled: {
       description: 'Checkbox disabled or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
-      description: 'Checkbox avaiable sizes',
+      description: 'Checkbox available sizes',
       table: {
         type: { summary: 'lg | sm | md' },
         defaultValue: { summary: 'md' },
@@ -39,7 +33,7 @@ const meta: Meta<typeof CheckBox> = {
     color: {
       control: 'select',
       options: ['error', 'info', 'success', 'warning'],
-      description: 'Checkbox avaiable colors',
+      description: 'Checkbox available colors',
       table: {
         type: { summary: 'error | info | success | warning' },
         defaultValue: { summary: 'info' },
@@ -48,7 +42,7 @@ const meta: Meta<typeof CheckBox> = {
     labelColor: {
       control: 'select',
       options: ['error', 'info', 'success', 'warning'],
-      description: 'Checkbox avaiable label colors',
+      description: 'Checkbox available label colors',
       table: {
         type: { summary: 'error | info | success | warning' },
         defaultValue: { summary: 'info' },
@@ -57,7 +51,7 @@ const meta: Meta<typeof CheckBox> = {
     variant: {
       control: 'select',
       options: ['square', 'circle'],
-      description: 'Checkbox avaiable variant',
+      description: 'Checkbox available variant',
       table: {
         type: { summary: 'square | circle' },
         defaultValue: { summary: 'square' },

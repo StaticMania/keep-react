@@ -43,7 +43,6 @@ const meta: Meta<typeof SearchBar> = {
       },
       description: 'Input Field Placeholder text',
     },
-
     addonPosition: {
       description: 'Addon Position',
       control: 'radio',
@@ -61,7 +60,7 @@ const meta: Meta<typeof SearchBar> = {
       },
     },
     size: {
-      description: 'Avaiable size for searchbar',
+      description: 'Available size for searchbar',
       control: 'select',
       options: ['sm', 'md', 'lg'],
       table: {
@@ -70,28 +69,16 @@ const meta: Meta<typeof SearchBar> = {
       },
     },
     disabled: {
-      control: 'boolean',
       description: 'Disables interactions with the search input component',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     bordered: {
-      control: 'boolean',
       description: 'Displays a border around the search input component',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     withBg: {
-      control: 'boolean',
       description: 'Applies a background style to the search input component.',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     icon: {
       description: 'Search Bar Icon',

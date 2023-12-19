@@ -15,20 +15,17 @@ const meta: Meta<typeof Tag> = {
         },
         defaultValue: { summary: 'gray' },
       },
-      description: 'Availabe Tag colors',
+      description: 'Available Tag colors',
     },
     borderType: {
       table: {
         type: { summary: 'solid | dashed' },
         defaultValue: { summary: 'solid' },
       },
-      description: 'Availabe Tag border type',
+      description: 'Available Tag border type',
     },
     dismiss: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
       description: 'Tag show or not?',
     },
     children: {

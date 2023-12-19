@@ -14,7 +14,7 @@ const meta: Meta<typeof PlayButton> = {
       },
     },
     size: {
-      description: 'Avaiale button size',
+      description: 'Available button size',
       table: {
         defaultValue: { summary: 'md' },
       },
@@ -22,7 +22,7 @@ const meta: Meta<typeof PlayButton> = {
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
     },
     type: {
-      description: 'Avaiale button type',
+      description: 'Available button type',
       table: {
         defaultValue: { summary: 'primary' },
       },

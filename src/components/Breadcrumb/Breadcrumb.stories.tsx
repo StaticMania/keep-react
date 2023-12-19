@@ -20,11 +20,10 @@ const meta: Meta<typeof Breadcrumb> = {
       description: 'It is breadcrumb item itself',
     },
     breadCrumbWithBorder: {
-      table: {
-        type: { summary: 'boolean' },
-      },
-      defaultValue: false,
       description: 'Breadcrumb border show or not?',
+      control: {
+        type: 'boolean',
+      },
     },
   },
 }

@@ -48,10 +48,7 @@ const meta: Meta<typeof Sidebar> = {
     },
     collapsed: {
       description: 'Sidebar collapse or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
   },
   decorators: [
@@ -258,7 +255,7 @@ export const SidebarWithCTA: Story = {
               </svg>
             </button>
           </div>
-          <p className="text-body-5 mb-3 text-primary-900 dark:text-primary-400">
+          <p className="mb-3 text-body-5 text-primary-900 dark:text-primary-400">
             Preview the new keep design dashboard navigation! You can turn the new navigation off for a limited time in
             your profile.
           </p>

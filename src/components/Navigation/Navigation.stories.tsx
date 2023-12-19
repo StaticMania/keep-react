@@ -18,24 +18,15 @@ const meta: Meta<typeof Navbar> = {
     },
     fluid: {
       description: 'Navbar container fluid or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     bordered: {
       description: 'Navbar bordered or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     rounded: {
       description: 'Navbar rounded or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     className: {
       description: 'Navbar custom className',
@@ -80,7 +71,7 @@ export const DefaultNavbar: Story = {
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
-            <span className="text-metal-600 ml-2">Search</span>
+            <span className="ml-2 text-metal-600">Search</span>
           </Button>
           <Button size="sm" type="primary">
             Contact
@@ -124,7 +115,7 @@ export const NavbarWithCenterLogo: Story = {
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
-            <span className="text-metal-600 ml-2">Search</span>
+            <span className="ml-2 text-metal-600">Search</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>
@@ -166,7 +157,7 @@ export const NavbarEcommerceMenu: Story = {
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>
-            <span className="text-metal-600 ml-1">Cart $0.00</span>
+            <span className="ml-1 text-metal-600">Cart $0.00</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>

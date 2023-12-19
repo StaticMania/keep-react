@@ -15,25 +15,15 @@ const meta: Meta<typeof Toggle> = {
       },
     },
     withIcon: {
+      control: { type: 'boolean' },
       description: 'Switch With Level or Not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: {
-          summary: false,
-        },
-      },
     },
     disabled: {
       description: 'Switch disabled or Not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: {
-          summary: false,
-        },
-      },
+      control: { type: 'boolean' },
     },
     size: {
-      description: 'Switch avaiable sizes?',
+      description: 'Switch Available sizes?',
       control: 'select',
       options: ['sm', 'md', 'lg'],
       table: {
@@ -44,7 +34,7 @@ const meta: Meta<typeof Toggle> = {
       },
     },
     bgColor: {
-      description: 'Switch avaiable background colors?',
+      description: 'Switch Available background colors?',
       control: 'select',
       options: ['primary', 'slate'],
       table: {
@@ -54,10 +44,6 @@ const meta: Meta<typeof Toggle> = {
         },
       },
     },
-  },
-
-  parameters: {
-    componentSubtitle: '',
   },
 }
 

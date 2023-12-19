@@ -8,10 +8,10 @@ import Image from 'next/image'
 
 const DefaultNotificationComponent = () => {
   const [showNotification, setShowNotification] = useState(false)
+
   const onDismiss = () => {
     setShowNotification(!showNotification)
   }
-
   return (
     <div className="px-5 py-3">
       <Button onClick={onDismiss} type="primary">
@@ -72,7 +72,7 @@ const NotificationWithAvatarComponent = () => {
   )
 }
 const NotificationWithIconComponent = () => {
-  const [showNotification, setShowNotification] = useState(false)
+  const [showNotification, setShowNotification] = useState(true)
   const onDismiss = () => {
     setShowNotification(!showNotification)
   }
@@ -246,10 +246,7 @@ const meta: Meta<typeof Notification> = {
     },
     onDismiss: {
       description: 'Determines whether the notification can be dismissed by the user',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
   },
   parameters: {
@@ -257,7 +254,7 @@ const meta: Meta<typeof Notification> = {
   },
   decorators: [
     (Story) => (
-      <div className="h-64">
+      <div className="h-96">
         <Story />
       </div>
     ),

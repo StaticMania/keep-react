@@ -27,35 +27,19 @@ const meta: Meta<typeof Slider> = {
     },
     range: {
       description: 'Determines whether the slider displays a range color',
-      control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     dots: {
       description: 'Determines whether dots are displayed on the slider',
-      control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     reverse: {
       description: 'Determines if the slider values are shown in reverse',
-      control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     disabled: {
       description: 'Determines if the slider is disabled',
-      control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     defaultValue: {
       description: 'Initial default value or values for the slider.',
@@ -68,6 +52,7 @@ const meta: Meta<typeof Slider> = {
       description: 'Defines points on the slider with custom labels.',
     },
     onChange: {
+      control: { type: null },
       description: 'Callback function when the slider value changes',
     },
     tooltip: {

@@ -12,7 +12,7 @@ const meta: Meta<typeof Radio> = {
         type: { summary: 'sm | md | lg' },
         defaultValue: { summary: 'md' },
       },
-      description: 'Radio avaiable size',
+      description: 'Radio Available size',
     },
     radioShape: {
       control: 'select',
@@ -21,7 +21,7 @@ const meta: Meta<typeof Radio> = {
         type: { summary: 'string' },
         defaultValue: { summary: 'circle' },
       },
-      description: 'Avaiable radio shape',
+      description: 'Available radio shape',
     },
     value: {
       table: {

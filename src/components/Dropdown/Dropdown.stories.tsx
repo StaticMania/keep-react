@@ -38,7 +38,7 @@ const meta: Meta<typeof Dropdown> = {
       },
     },
     type: {
-      description: 'Avaiable button type',
+      description: 'Available button type',
       control: {
         type: 'select',
       },
@@ -49,7 +49,7 @@ const meta: Meta<typeof Dropdown> = {
       },
     },
     size: {
-      description: 'Avaiable button size',
+      description: 'Available button size',
       control: {
         type: 'select',
       },
@@ -66,24 +66,15 @@ const meta: Meta<typeof Dropdown> = {
     },
     arrowIcon: {
       description: 'Dropdown button arrow icon show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     dismissOnClick: {
+      control: { type: 'boolean' },
       description: 'Dropdown items select dismiss on click or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: true },
-      },
     },
     floatingArrow: {
       description: 'Dropdown floating arrow show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     theme: {
       description: 'Dropdown theme',
@@ -101,7 +92,7 @@ const meta: Meta<typeof Dropdown> = {
       control: { type: 'radio' },
     },
     color: {
-      description: 'Dropdown button avaiable color',
+      description: 'Dropdown button Available color',
       table: {
         type: { summary: 'String' },
         defaultValue: { summary: 'info' },
@@ -111,10 +102,7 @@ const meta: Meta<typeof Dropdown> = {
     },
     circle: {
       description: 'Dropdown button circle or not',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     placement: {
       description: 'Dropdown placement',
@@ -126,11 +114,14 @@ const meta: Meta<typeof Dropdown> = {
     },
     width: {
       description: 'Button width full or half?',
+      control: {
+        type: 'select',
+      },
+      options: ['full', 'half'],
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: 'full' },
+        defaultValue: { summary: 'half' },
       },
-      control: { type: 'radio' },
     },
     href: {
       description: 'Href to navigate',
@@ -148,11 +139,7 @@ const meta: Meta<typeof Dropdown> = {
     },
     pill: {
       description: 'Button pill or not',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
-      control: { type: 'radio' },
+      control: { type: 'boolean' },
     },
     positionInGroup: {
       description: 'Button position in button group',
@@ -170,8 +157,8 @@ const meta: Meta<typeof Dropdown> = {
         defaultValue: { summary: '' },
       },
     },
-
     onClick: {
+      control: { type: null },
       description: 'Optional click handler',
     },
   },

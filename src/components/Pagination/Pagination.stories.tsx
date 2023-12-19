@@ -18,28 +18,25 @@ const meta: Meta<typeof Pagination> = {
       },
     },
     showGoToPaginate: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Whether to show the go-to page input field.',
-      table: {
-        defaultValue: { summary: false },
-      },
     },
     paginateWithBorder: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Whether to add borders to pagination elements',
       table: {
         defaultValue: { summary: false },
       },
     },
     iconWithOutText: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Whether to display icons without text.',
       table: {
         defaultValue: { summary: false },
       },
     },
     iconWithText: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Whether to display icons with text',
       table: {
         defaultValue: { summary: false },

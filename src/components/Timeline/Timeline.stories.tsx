@@ -26,18 +26,11 @@ const meta: Meta<typeof Timeline> = {
     },
     horizontal: {
       description: 'Timeline show in horizontal or not?',
-
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     gradientPoint: {
       description: 'Timeline point color gradient or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     timelineBarType: {
       description: 'Timeline bar type dashed or solid?',
@@ -156,7 +149,7 @@ export const TimelineWithImage: Story = {
             <Timeline.Time>February 2023</Timeline.Time>
             <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
             <Timeline.Body>
-              Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
+              Get access to over 20+ pages including a dashboard layout, charts, kansan board, calendar, and pre-order
               E-commerce & Marketing pages.
             </Timeline.Body>
 

@@ -19,7 +19,7 @@ const meta: Meta<typeof Spinner> = {
         type: { summary: 'string' },
         defaultValue: { summary: 'gray' },
       },
-      description: 'Availabe Toast color',
+      description: 'Available Toast color',
     },
     size: {
       control: 'select',
@@ -28,7 +28,7 @@ const meta: Meta<typeof Spinner> = {
         type: { summary: 'string' },
         defaultValue: { summary: 'lg' },
       },
-      description: 'Availabe Toast size',
+      description: 'Available Toast size',
     },
   },
   parameters: {

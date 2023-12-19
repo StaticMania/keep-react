@@ -13,10 +13,7 @@ const meta: Meta<typeof Textarea> = {
       description: 'Text area placeholder text',
     },
     withBg: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: null },
       description: 'Text area input with background color or not?',
     },
     border: {
@@ -27,17 +24,11 @@ const meta: Meta<typeof Textarea> = {
       description: 'Text area input with border or not?',
     },
     shadow: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: null },
       description: 'Text area with shadow or not?',
     },
     disabled: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: null },
       description: 'Text area disabled or not?',
     },
     helperText: {
@@ -59,7 +50,7 @@ const meta: Meta<typeof Textarea> = {
     color: {
       control: 'select',
       options: ['gray', 'info', 'error', 'warning', 'success'],
-      description: 'Avaiable color for Text area',
+      description: 'Available color for Text area',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'gray' },
@@ -110,6 +101,6 @@ export const SuccessTextarea: Story = {
 export const TextareaWithHelperText: Story = {
   args: {
     ...InfoTextarea.args,
-    helperText: <span className="text-metal-500 font-medium">Info that helps a user with this field!</span>,
+    helperText: <span className="font-medium text-metal-500">Info that helps a user with this field!</span>,
   },
 }

@@ -61,7 +61,7 @@ const DefaultDatePickerComponent = () => {
 
   return (
     <div className="w-2/6">
-      <DatePicker singleDate={setDate}>
+      <DatePicker singleDate={setDate} placeholder="Select date">
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
@@ -71,7 +71,7 @@ const DatePickerWithTwoMonthComponent = () => {
   const [_, setDate] = useState<Date | null>(null)
   return (
     <div className="w-2/6">
-      <DatePicker showTwoMonth singleDate={setDate}>
+      <DatePicker showTwoMonth singleDate={setDate} placeholder="Select date">
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
@@ -81,7 +81,7 @@ const DateRangePickerComponent = () => {
   const [_, setRangeDate] = useState<rangePicker>()
   return (
     <div className="w-2/6">
-      <DatePicker rangeDate={setRangeDate}>
+      <DatePicker rangeDate={setRangeDate} placeholder="Start - Finish">
         <DatePicker.Range />
       </DatePicker>
     </div>
@@ -91,7 +91,7 @@ const DateRangePickerWithTwoMonthComponent = () => {
   const [_, setRangeDate] = useState<rangePicker>()
   return (
     <div className="w-2/6">
-      <DatePicker showTwoMonth rangeDate={setRangeDate}>
+      <DatePicker showTwoMonth rangeDate={setRangeDate} placeholder="Start - Finish">
         <DatePicker.Range />
       </DatePicker>
     </div>
@@ -101,7 +101,7 @@ const MonthPickerComponent = () => {
   const [_, setMonthPicker] = useState<Date | null | string>()
   return (
     <div className="w-2/6">
-      <DatePicker month={setMonthPicker}>
+      <DatePicker month={setMonthPicker} placeholder="Select Month">
         <DatePicker.Month />
       </DatePicker>
     </div>
@@ -112,7 +112,7 @@ const YearPickerComponent = () => {
 
   return (
     <div className="w-2/6">
-      <DatePicker year={setYearPicker}>
+      <DatePicker year={setYearPicker} placeholder="Select year">
         <DatePicker.Year />
       </DatePicker>
     </div>

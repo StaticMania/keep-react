@@ -6,7 +6,9 @@ import {
   CaretRight,
   CheckCircle,
   DotsThreeVertical,
+  FacebookLogo,
   Heart,
+  LinkedinLogo,
   MapPinLine,
   PencilCircle,
   Play,
@@ -16,10 +18,11 @@ import {
   SkipBack,
   SkipForward,
   SpeakerHigh,
+  TwitterLogo,
   Users,
 } from 'phosphor-react'
 
-import { Card, Badge, Button, PlayButton, Progress, Rating, Avatar } from '~/src'
+import { Card, Badge, Button, PlayButton, Progress, Avatar, Popover } from '~/src'
 
 import Image from 'next/image'
 import { removeFragment } from '../../helpers/mergeDeep'
@@ -45,25 +48,15 @@ const meta: Meta<typeof Card> = {
       },
     },
     border: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
       description: 'Card Border show or not?',
     },
     shadow: {
-      control: 'boolean',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
       description: 'Toggle the border for the card',
     },
     horizontal: {
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
       description: 'Card direction is horizontal or not?',
     },
     href: {
@@ -94,7 +87,7 @@ const meta: Meta<typeof Card> = {
         type: { summary: 'string' },
         defaultValue: { summary: 'md' },
       },
-      description: 'Card Image avaiable size',
+      description: 'Card Image available size',
     },
   },
   parameters: {
@@ -117,18 +110,17 @@ export const DefaultCard: Story = {
   args: {
     children: removeFragment(
       <>
-        <h5 className="text-body-1 font-bold tracking-tight text-metal-700">Keep React</h5>
-        <p className="font-normal text-metal-500">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
-          standard dummy text ever since the 1500s, when an unknown printer took.
-        </p>
-        <a href="/" className="flex items-center gap-1 text-primary-600">
-          <span>Learn More</span>
-          <CaretRight size={16} color="#1B4DFF" />
-        </a>
+        <Card.Title>Keep design system</Card.Title>
+        <Card.Description>
+          Component design systems can help developers to be more productive by providing them with a ready-made set of
+          components to use.
+        </Card.Description>
+        <Card.Link href="/" icon={<CaretRight size={16} color="#1B4DFF" />} iconPosition="left">
+          Learn More
+        </Card.Link>
       </>,
     ),
-    className: 'p-6',
+    className: 'max-w-lg p-5 md:p-6',
   },
 
   decorators: [
@@ -141,128 +133,100 @@ export const DefaultCard: Story = {
 }
 export const CardWithIcon: Story = {
   args: {
-    className: 'p-6',
+    className: 'max-w-xl p-6',
     children: removeFragment(
       <>
-        <div className="flex items-start gap-5">
-          <div className="flex items-center justify-center rounded-full bg-gray-50 p-4">
+        <Card.Container className="flex items-start gap-3.5 md:gap-5">
+          <Card.Container className="flex items-center justify-center rounded-full bg-metal-50 p-2.5 md:p-4">
             <ArchiveTray size={28} color="#3D4A5C" />
-          </div>
-          <div className="flex flex-col gap-2">
-            <h5 className="text-body-1 font-bold tracking-tight text-metal-700">Keep React</h5>
-            <p className="font-normal text-metal-500">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              standard dummy text ever since the 1500s, when an unknown printer took.
-            </p>
-            <a href="/" className="flex items-center gap-1 text-primary-600">
-              <span>Learn More</span>
-              <CaretRight size={16} color="#1B4DFF" />
-            </a>
-          </div>
-        </div>
+          </Card.Container>
+          <Card.Container className="flex flex-col gap-2">
+            <Card.Title>Keep React</Card.Title>
+            <Card.Description>
+              Component design systems can help developers to be more productive by providing them with a ready-made set
+              of components to use.
+            </Card.Description>
+            <Card.Link href="/" icon={<CaretRight size={16} color="#1B4DFF" />} iconPosition="left">
+              Learn More
+            </Card.Link>
+          </Card.Container>
+        </Card.Container>
       </>,
     ),
   },
 }
 export const CardWithListIcon: Story = {
   args: {
-    className: 'p-6',
+    className: 'max-w-xl p-6',
     children: removeFragment(
       <>
-        <div className="flex gap-5">
-          <div className="flex items-center gap-5">
-            <div className="flex items-center justify-center rounded-full bg-gray-50 p-4">
+        <Card.Container className="flex gap-5">
+          <Card.Container className="flex items-start gap-5">
+            <Card.Container className="flex items-center justify-start rounded-full bg-metal-50 p-2.5 md:p-4">
               <ArchiveTray size={28} color="#3D4A5C" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h5 className="text-body-1 font-bold tracking-tight text-metal-700">Keep React</h5>
-              <p className="font-normal text-metal-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                standard dummy text ever since the 1500s, when an unknown printer took.
-              </p>
-            </div>
-          </div>
-          <button className="flex items-start">
-            <DotsThreeVertical size={28} color="#5E718D" className="flex items-start" />
-          </button>
-        </div>
+            </Card.Container>
+            <Card.Container className="flex flex-col gap-2">
+              <Card.Title>Keep React</Card.Title>
+              <Card.Description>
+                Component design systems can help developers to be more productive by providing them with a ready-made
+                set of components to use.
+              </Card.Description>
+            </Card.Container>
+          </Card.Container>
+          <Card.Container className="hidden items-start md:flex">
+            <Popover className="!w-[20rem]">
+              <Popover.Title>Keep Design System</Popover.Title>
+              <Popover.Action>
+                <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
+              </Popover.Action>
+            </Popover>
+          </Card.Container>
+        </Card.Container>
       </>,
     ),
   },
-  decorators: DefaultCard.decorators,
-}
-export const CardWithImage: Story = {
-  args: {
-    children: (
-      <Card.Container className="flex items-start px-5 py-3">
-        <Card.Container>
-          <Card.Title>Keep React</Card.Title>
-          <Card.Description>
-            Component design systems can help developers to be more productive by providing them with a ready-made set
-            of components to use.
-          </Card.Description>
-        </Card.Container>
-        <Card.Container className="flex items-start">
-          <DotsThreeVertical size={28} color="#5E718D" className="flex cursor-pointer items-start" />
-        </Card.Container>
-      </Card.Container>
-    ),
-    className: 'max-w-lg',
-    horizontal: true,
-    imgSrc: 'https://images.prismic.io/staticmania/b6fe0b6c-5c0d-46a1-8ac6-68fe59d418c8_blog2.jpg?auto=compress,format',
-  },
-
   decorators: DefaultCard.decorators,
 }
 export const CardWithAvatar: Story = {
   args: {
     children: removeFragment(
       <>
-        <Card.Description>
-          Component design systems can help developers to be more productive by providing them with a ready-made set of
-          components to use. This can save time and effort, and it can also help to reduce the risk of errors.
-        </Card.Description>
-        <Card.Container className="flex items-center">
-          <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/11.jpg" />
-          <Card.Container className="ml-3">
-            <Card.Title className="text-body-4 font-semibold text-metal-800">Md Ariful Islam</Card.Title>
-            <Card.Title className="text-body-6 font-medium text-metal-400">Product Designer</Card.Title>
-          </Card.Container>
+        <Card.Container className="flex items-center justify-center">
+          <Avatar
+            shape="circle"
+            img="https://randomuser.me/api/portraits/men/50.jpg"
+            statusPosition="bottom-right"
+            size="2xl"
+          />
+        </Card.Container>
+        <Card.Container className="text-center">
+          <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">
+            Khairul Islam Ridoy
+          </Card.Title>
+          <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+        </Card.Container>
+        <Card.Container className="circled mx-auto flex max-w-[220px] items-center justify-center divide-x divide-metal-200 rounded-md border border-metal-200 p-1 md:p-2">
+          <Card.Link
+            className="flex items-center justify-center px-3 py-1"
+            icon={<LinkedinLogo size={24} color="#0072b1" weight="fill" />}
+            href="#"
+          />
+          <Card.Link
+            className="flex items-center justify-center px-3 py-1"
+            icon={<FacebookLogo size={24} color="#0C63D4" weight="fill" />}
+            href="#"
+          />
+          <Card.Link
+            className="flex items-center justify-center px-3 py-1"
+            icon={<TwitterLogo size={24} color="#0C8BD9" weight="fill" />}
+            href="#"
+          />
         </Card.Container>
       </>,
     ),
-    className: 'max-w-lg p-6',
+    className: 'max-w-[250px] p-6',
   },
   decorators: DefaultCard.decorators,
-}
-export const CardWithProfile: Story = {
-  args: {
-    className: 'max-w-sm',
-    imgSrc: 'https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format',
-    children: removeFragment(
-      <>
-        <Card.Container className="flex items-center justify-between p-5">
-          <Card.Container className="flex items-center ">
-            <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/50.jpg" />
-            <Card.Container className="ml-3">
-              <Card.Title className="text-body-4 font-semibold text-metal-800">Khairul Islam</Card.Title>
-              <Card.Title className="text-body-6 font-medium text-metal-400">UI/UX Designer</Card.Title>
-            </Card.Container>
-          </Card.Container>
-          <Button size="sm" type="outlineGray">
-            View Profile
-          </Button>
-        </Card.Container>
-      </>,
-    ),
-  },
-  decorators: [
-    (Story) => (
-      <div className="mx-auto max-w-sm ">
-        <Story />
-      </div>
-    ),
-  ],
 }
 export const CardWithProfileDetails: Story = {
   args: {
@@ -270,30 +234,35 @@ export const CardWithProfileDetails: Story = {
     imgSize: 'md',
     children: removeFragment(
       <>
-        <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-metal-50/50">
+        <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-metal-200">
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="flex flex-col items-center justify-center">
           <Card.Container className="absolute top-32  rounded-full ring-4 ring-white ring-offset-0">
-            <Avatar size="2xl" shape="circle" img="https://randomuser.me/api/portraits/men/50.jpg" />
+            <Avatar size="2xl" shape="circle" img="/images/avatar/avatar-4.png" />
           </Card.Container>
           <Card.Container className="mb-3 mt-10 text-center">
-            <Card.Title className="text-body-4 font-semibold text-metal-800">Khairul Islam</Card.Title>
-            <Card.Title className="text-body-6 font-medium text-metal-400">UI/UX Designer</Card.Title>
+            <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">Khairul Islam</Card.Title>
+            <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
           </Card.Container>
-
           <Card.Container className="flex w-full justify-between border-t border-t-metal-50 px-5 py-3">
             <Card.Container className="text-center">
-              <Card.Title className="text-body-5 text-metal-400">Post</Card.Title>
-              <Card.Title className="text-description-4 font-semibold text-metal-800">254</Card.Title>
+              <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
+                Post
+              </Card.Title>
+              <Card.Title className="!text-body-1 !font-semibold text-metal-800">254</Card.Title>
             </Card.Container>
             <Card.Container className="text-center">
-              <Card.Title className="text-body-5 text-metal-400">Followers</Card.Title>
-              <Card.Title className="text-description-4 font-semibold text-metal-800">12,45M</Card.Title>
+              <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
+                Followers
+              </Card.Title>
+              <Card.Title className="!text-body-1 !font-semibold text-metal-800">1245M</Card.Title>
             </Card.Container>
             <Card.Container className="text-center">
-              <Card.Title className="text-body-5 text-metal-400">Following</Card.Title>
-              <Card.Title className="text-description-4 font-semibold text-metal-800">58</Card.Title>
+              <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
+                Following
+              </Card.Title>
+              <Card.Title className="!text-body-1 !font-semibold text-metal-800">58</Card.Title>
             </Card.Container>
           </Card.Container>
         </Card.Container>
@@ -331,39 +300,6 @@ export const CardWithPostCard: Story = {
   decorators: [
     (Story) => (
       <div className="mx-auto max-w-sm ">
-        <Story />
-      </div>
-    ),
-  ],
-}
-export const CardWithRating: Story = {
-  args: {
-    imgSrc: 'https://images.prismic.io/staticmania/821cee7b-6b44-48c4-ab95-8a525056489d_blog.jpg?auto=compress,format',
-    imgSize: 'md',
-    children: removeFragment(
-      <>
-        <Card.Container className="px-6 pb-2 pt-5">
-          <Card.Title>Keep React</Card.Title>
-          <Card.Description className="text-body-4 font-normal text-metal-500">
-            Component design systems can help developers to be more productive by providing them.
-          </Card.Description>
-        </Card.Container>
-        <Card.Container className="border-t border-t-metal-50 p-6">
-          <Card.Title className="text-body-5 font-medium text-metal-700">From 850+ reviews</Card.Title>
-          <Rating size={24}>
-            <Rating.Star filledType="fill" />
-            <Rating.Star filledType="fill" />
-            <Rating.Star filledType="fill" />
-            <Rating.Star filledType="fill" />
-            <Rating.Star filledType="fill" starType="half" />
-          </Rating>
-        </Card.Container>
-      </>,
-    ),
-  },
-  decorators: [
-    (Story) => (
-      <div className="mx-auto max-w-[340px]">
         <Story />
       </div>
     ),
@@ -464,33 +400,35 @@ export const ProductCard: Story = {
           <Heart size={20} weight="bold" color="white" />
         </Card.Container>
         <Card.Container className="space-y-4 p-6">
-          <Card.Title className="flex items-center gap-2 text-body-2 font-medium text-metal-700">
+          <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500 md:!text-body-4">
             <MapPinLine size={20} color="#5E718D" />
             <span>Garden Street,Ring Road</span>
           </Card.Title>
           <Card.Container className="flex items-center justify-between">
-            <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
+            <Card.Title className="flex items-center gap-2 !text-body-5 font-medium text-metal-500">
               <Bed size={20} color="#5E718D" />
               <span>3 Bed Room</span>
             </Card.Title>
-            <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
+            <Card.Title className="flex items-center gap-2 !text-body-5 font-medium text-metal-500">
               <Shower size={20} color="#5E718D" />
               <span>1 Bath</span>
             </Card.Title>
           </Card.Container>
           <Card.Container className="flex items-center justify-between">
-            <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500">
+            <Card.Title className="flex items-center gap-2 !text-body-5 font-medium text-metal-500">
               <ArrowsOutSimple size={20} color="#5E718D" />
               <span>1,032 sqft</span>
             </Card.Title>
-            <Card.Title className="flex items-center gap-1 text-body-5 font-medium text-metal-500">
+            <Card.Title className="flex items-center gap-2 !text-body-5 font-medium text-metal-500">
               <Users size={20} color="#5E718D" />
               <span>Family</span>
             </Card.Title>
           </Card.Container>
           <Card.Container className="my-3 flex items-center justify-between">
-            <Button type="primary">Check Out</Button>
-            <Card.Title className="text-body-1 font-semibold text-metal-700">$649,00</Card.Title>
+            <Button type="primary" size="sm">
+              Check Out
+            </Button>
+            <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
           </Card.Container>
         </Card.Container>
       </>,

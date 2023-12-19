@@ -29,34 +29,21 @@ const meta: Meta<typeof Table> = {
         type: { summary: 'ReactNode' },
       },
     },
-
     showCheckbox: {
       description: 'Table checkbox show Or Not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: true },
-      },
+      control: { type: 'boolean' },
     },
     striped: {
       description: 'Table Striped Or Not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     hoverable: {
       description: 'Table hoverable Or Not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showBorder: {
       description: 'Table border show Or Not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     icon: {
       control: { disable: true },
@@ -75,19 +62,19 @@ const meta: Meta<typeof Table> = {
     iconPosition: {
       control: 'radio',
       options: ['left', 'right'],
-      description: 'Avaiable Icon Postion',
+      description: 'Available Icon Position',
       table: {
         type: { summary: 'left | right' },
-        defaultValue: { summart: 'right' },
+        defaultValue: { summary: 'right' },
       },
     },
     showBorderPosition: {
       control: 'radio',
       options: ['left', 'right'],
-      description: 'Avaiable border Postion',
+      description: 'Available border Position',
       table: {
         type: { summary: 'left | right' },
-        defaultValue: { summart: 'right' },
+        defaultValue: { summary: 'right' },
       },
     },
   },
@@ -107,7 +94,7 @@ export const DefaultTable: Story = {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-metal-600 text-body-1 font-semibold">Team member</p>
+              <p className="text-body-1 font-semibold text-metal-600">Team member</p>
               <Badge size="xs" colorType="light" color="gray">
                 100 Member
               </Badge>
@@ -130,7 +117,7 @@ export const DefaultTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[290px]">
-            <p className="text-metal-400 text-body-6 font-medium">Type</p>
+            <p className="text-body-6 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
           <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
@@ -148,7 +135,7 @@ export const DefaultTable: Story = {
                     <Avatar shape="circle" img="/images/avatar/avatar-1.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Ralph Edwards</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Ralph Edwards</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -208,7 +195,7 @@ export const DefaultTable: Story = {
                     <Avatar shape="circle" img="/images/avatar/avatar-2.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Wade Warren</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Wade Warren</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -269,7 +256,7 @@ export const DefaultTable: Story = {
                   <div className="flex items-center gap-2">
                     <Avatar shape="circle" img="/images/avatar/avatar-3.png" size="md" />
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Eleanor Pena</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Eleanor Pena</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -328,7 +315,7 @@ export const DefaultTable: Story = {
                     <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Jerome Bell</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Jerome Bell</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -388,7 +375,7 @@ export const DefaultTable: Story = {
                     <Avatar shape="circle" img="/images/avatar/avatar-5.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Macky Scheman</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Macky Scheman</p>
                       <span>&ralph</span>
                     </div>
                   </div>
@@ -452,7 +439,7 @@ export const CashOutTransitionTable: Story = {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-metal-600 text-body-1 font-semibold">Cash Out Transactions</p>
+              <p className="text-body-1 font-semibold text-metal-600">Cash Out Transactions</p>
             </div>
             <div className="flex items-center gap-5">
               <Button type="outlineGray" size="sm">
@@ -472,7 +459,7 @@ export const CashOutTransitionTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[290px]">
-            <p className="text-metal-400 text-body-6 font-medium">Type</p>
+            <p className="text-body-6 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[183px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
             Date
@@ -497,19 +484,19 @@ export const CashOutTransitionTable: Story = {
                     <Avatar shape="circle" img="/images/company/paypal.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Paypal</p>
-                      <span className="text-metal-500 text-body-6 font-normal">Withdraw</span>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Paypal</p>
+                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$652.00</p>
+              <p className="text-body-5 font-medium text-metal-500">$652.00</p>
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
@@ -519,8 +506,8 @@ export const CashOutTransitionTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -538,19 +525,19 @@ export const CashOutTransitionTable: Story = {
                     <Avatar shape="circle" img="/images/company/Visa.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Visa</p>
-                      <span className="text-metal-500 text-body-6 font-normal">Withdraw</span>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Visa</p>
+                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 10, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">4:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$534.00</p>
+              <p className="text-body-5 font-medium text-metal-500">$534.00</p>
             </Table.Cell>
 
             <Table.Cell>
@@ -561,8 +548,8 @@ export const CashOutTransitionTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -580,19 +567,19 @@ export const CashOutTransitionTable: Story = {
                     <Avatar shape="circle" img="/images/company/stripe.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Stripe</p>
-                      <span className="text-metal-500 text-body-6 font-normal">Withdraw</span>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Stripe</p>
+                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Mar 12, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">4:00 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Mar 12, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">4:00 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$123.00</p>
+              <p className="text-body-5 font-medium text-metal-500">$123.00</p>
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
@@ -602,8 +589,8 @@ export const CashOutTransitionTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -621,19 +608,19 @@ export const CashOutTransitionTable: Story = {
                     <Avatar shape="circle" img="/images/company/western.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Western Union</p>
-                      <span className="text-metal-500 text-body-6 font-normal">Withdraw</span>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Western Union</p>
+                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Nov 23, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">5:30 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Nov 23, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">5:30 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$434.00</p>
+              <p className="text-body-5 font-medium text-metal-500">$434.00</p>
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
@@ -643,8 +630,8 @@ export const CashOutTransitionTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -662,19 +649,19 @@ export const CashOutTransitionTable: Story = {
                     <Avatar shape="circle" img="/images/company/mastercard.png" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Mastercard</p>
-                      <span className="text-metal-500 text-body-6 font-normal">Withdraw</span>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Mastercard</p>
+                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Apr 23, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">7:30 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Apr 23, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">7:30 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$786.00</p>
+              <p className="text-body-5 font-medium text-metal-500">$786.00</p>
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
@@ -684,8 +671,8 @@ export const CashOutTransitionTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -709,7 +696,7 @@ export const OrdersTable: Story = {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-metal-600 text-body-1 font-semibold">Orders</p>
+              <p className="text-body-1 font-semibold text-metal-600">Orders</p>
             </div>
             <div className="flex items-center gap-5">
               <Button type="outlineGray" size="sm">
@@ -729,7 +716,7 @@ export const OrdersTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[302px]">
-            <p className="text-metal-400 text-body-6 font-medium">Order no.</p>
+            <p className="text-body-6 font-medium text-metal-400">Order no.</p>
           </Table.HeadCell>
           <Table.HeadCell
             className="min-w-[165px]"
@@ -761,11 +748,11 @@ export const OrdersTable: Story = {
         <Table.Body className="divide-gray-25 divide-y">
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-metal-500 text-body-4 font-medium">DL - 19266755</p>
+              <p className="text-body-4 font-medium text-metal-500">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-0.svg" alt="country" />
@@ -778,13 +765,13 @@ export const OrdersTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">3</p>
+              <p className="text-body-5 font-medium text-metal-500">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$21,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">285 Great North Road, Grey Lynn.</p>
+              <p className="text-body-5 font-medium text-metal-500">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -796,11 +783,11 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-metal-500 text-body-4 font-medium">DL - 34233451</p>
+              <p className="text-body-4 font-medium text-metal-500">DL - 34233451</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 23, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">4:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 23, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-1.svg" alt="country" />
@@ -813,13 +800,13 @@ export const OrdersTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">6</p>
+              <p className="text-body-5 font-medium text-metal-500">6</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$13,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$13,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">19 Great North Road, Grey Lynn</p>
+              <p className="text-body-5 font-medium text-metal-500">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -831,11 +818,11 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-metal-500 text-body-4 font-medium">DL - 19266567</p>
+              <p className="text-body-4 font-medium text-metal-500">DL - 19266567</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 31, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">5:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 31, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">5:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-2.svg" alt="country" />
@@ -848,13 +835,13 @@ export const OrdersTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">8</p>
+              <p className="text-body-5 font-medium text-metal-500">8</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$24,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$24,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">19 Great North Road, Grey Lynn</p>
+              <p className="text-body-5 font-medium text-metal-500">19 Great North Road, Grey Lynn</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -866,11 +853,11 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-metal-500 text-body-4 font-medium">DL - 19266755</p>
+              <p className="text-body-4 font-medium text-metal-500">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-5.svg" alt="country" />
@@ -883,13 +870,13 @@ export const OrdersTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">9</p>
+              <p className="text-body-5 font-medium text-metal-500">9</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$82,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$82,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">686 Great South Road, Manukau</p>
+              <p className="text-body-5 font-medium text-metal-500">686 Great South Road, Manukau</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -901,11 +888,11 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-metal-500 text-body-4 font-medium">DL - 19264155</p>
+              <p className="text-body-4 font-medium text-metal-500">DL - 19264155</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 07, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">02:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 07, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">02:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-4.svg" alt="country" />
@@ -918,13 +905,13 @@ export const OrdersTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">3</p>
+              <p className="text-body-5 font-medium text-metal-500">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$21,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">20 Poland Road, Wairau Valley</p>
+              <p className="text-body-5 font-medium text-metal-500">20 Poland Road, Wairau Valley</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -936,11 +923,11 @@ export const OrdersTable: Story = {
           </Table.Row>
           <Table.Row className="bg-white">
             <Table.Cell>
-              <p className="text-metal-500 text-body-4 font-medium">DL - 19266755</p>
+              <p className="text-body-4 font-medium text-metal-500">DL - 19266755</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 19, 2022</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-5.svg" alt="country" />
@@ -953,13 +940,13 @@ export const OrdersTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">3</p>
+              <p className="text-body-5 font-medium text-metal-500">3</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">$21,000</p>
+              <p className="text-body-5 font-medium text-metal-500">$21,000</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">285 Great North Road, Grey Lynn.</p>
+              <p className="text-body-5 font-medium text-metal-500">285 Great North Road, Grey Lynn.</p>
             </Table.Cell>
             <Table.Cell>
               <Button type="outlineGray" size="xs" circle>
@@ -982,7 +969,7 @@ export const FileUploadedTable: Story = {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-metal-600 text-body-1 font-semibold">Files uploaded</p>
+              <p className="text-body-1 font-semibold text-metal-600">Files uploaded</p>
             </div>
             <div className="flex items-center gap-5">
               <Button type="outlineGray" size="sm">
@@ -1002,7 +989,7 @@ export const FileUploadedTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[344px]">
-            <p className="text-metal-400 text-body-6 font-medium">File no.</p>
+            <p className="text-body-6 font-medium text-metal-400">File no.</p>
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[160px]">File size</Table.HeadCell>
           <Table.HeadCell className="min-w-[171px]">Date uploaded</Table.HeadCell>
@@ -1019,8 +1006,8 @@ export const FileUploadedTable: Story = {
                     <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Static Next Plan.pdf</p>
-                      <p className="text-metal-500 text-body-6 font-normal">200 KB</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
+                      <p className="text-body-6 font-normal text-metal-500">200 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1028,15 +1015,15 @@ export const FileUploadedTable: Story = {
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Total 0.2 MB</p>
-              <p className="text-metal-500 text-body-6 font-normal">200 KB</p>
+              <p className="text-body-5 font-medium text-metal-500">Total 0.2 MB</p>
+              <p className="text-body-6 font-normal text-metal-500">200 KB</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 10, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">4:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 10, 2023</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
             </Table.Cell>
 
             <Table.Cell>
@@ -1066,8 +1053,8 @@ export const FileUploadedTable: Story = {
                     <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Static Next Plan.pdf</p>
-                      <p className="text-metal-500 text-body-6 font-normal">700 KB</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
+                      <p className="text-body-6 font-normal text-metal-500">700 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1075,15 +1062,15 @@ export const FileUploadedTable: Story = {
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Total 0.7 MB</p>
-              <p className="text-metal-500 text-body-6 font-normal">700 KB</p>
+              <p className="text-body-5 font-medium text-metal-500">Total 0.7 MB</p>
+              <p className="text-body-6 font-normal text-metal-500">700 KB</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 12, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">4:12 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 12, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">4:12 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 15, 2023</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 15, 2023</p>
             </Table.Cell>
 
             <Table.Cell>
@@ -1113,8 +1100,8 @@ export const FileUploadedTable: Story = {
                     <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Static Next Plan.pdf</p>
-                      <p className="text-metal-500 text-body-6 font-normal">500 KB</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
+                      <p className="text-body-6 font-normal text-metal-500">500 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1122,15 +1109,15 @@ export const FileUploadedTable: Story = {
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Total 0.5 MB</p>
-              <p className="text-metal-500 text-body-6 font-normal">500 KB</p>
+              <p className="text-body-5 font-medium text-metal-500">Total 0.5 MB</p>
+              <p className="text-body-6 font-normal text-metal-500">500 KB</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Nov 23, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">02:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Nov 23, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">02:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Nov 10, 2023</p>
+              <p className="text-body-5 font-medium text-metal-500">Nov 10, 2023</p>
             </Table.Cell>
 
             <Table.Cell>
@@ -1160,8 +1147,8 @@ export const FileUploadedTable: Story = {
                     <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Static Next Plan.pdf</p>
-                      <p className="text-metal-500 text-body-6 font-normal">900 KB</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
+                      <p className="text-body-6 font-normal text-metal-500">900 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1169,15 +1156,15 @@ export const FileUploadedTable: Story = {
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Total 0.9 MB</p>
-              <p className="text-metal-500 text-body-6 font-normal">900 KB</p>
+              <p className="text-body-5 font-medium text-metal-500">Total 0.9 MB</p>
+              <p className="text-body-6 font-normal text-metal-500">900 KB</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Feb 21, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">3:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Feb 21, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Jan 10, 2023</p>
+              <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
             </Table.Cell>
 
             <Table.Cell>
@@ -1207,8 +1194,8 @@ export const FileUploadedTable: Story = {
                     <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
 
                     <div>
-                      <p className="text-metal-600 -mb-0.5 text-body-4 font-medium">Static Next Plan.pdf</p>
-                      <p className="text-metal-500 text-body-6 font-normal">200 KB</p>
+                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
+                      <p className="text-body-6 font-normal text-metal-500">200 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1216,15 +1203,15 @@ export const FileUploadedTable: Story = {
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Total 0.1 MB</p>
-              <p className="text-metal-500 text-body-6 font-normal">100 KB</p>
+              <p className="text-body-5 font-medium text-metal-500">Total 0.1 MB</p>
+              <p className="text-body-6 font-normal text-metal-500">100 KB</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Mar 25, 2023</p>
-              <p className="text-metal-500 text-body-6 font-normal">8:45 pm</p>
+              <p className="text-body-5 font-medium text-metal-500">Mar 25, 2023</p>
+              <p className="text-body-6 font-normal text-metal-500">8:45 pm</p>
             </Table.Cell>
             <Table.Cell>
-              <p className="text-metal-500 text-body-5 font-medium">Apr 10, 2023</p>
+              <p className="text-body-5 font-medium text-metal-500">Apr 10, 2023</p>
             </Table.Cell>
 
             <Table.Cell>

@@ -39,18 +39,12 @@ const meta: Meta<typeof Popover> = {
       },
     },
     showArrow: {
+      control: { type: 'boolean' },
       description: 'Popover arrow show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: true },
-      },
     },
     showDismissIcon: {
       description: 'Popover dismiss icon show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     trigger: {
       description: 'Available Trigger type',

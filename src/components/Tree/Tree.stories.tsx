@@ -65,35 +65,23 @@ const meta: Meta<typeof Tree> = {
     },
     showIcon: {
       description: 'Icon show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showItemsNumber: {
       description: 'Items number show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showBorder: {
       description: 'Items Border show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     showCheckbox: {
       description: 'Checkbox show or not?',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: false },
-      },
+      control: { type: 'boolean' },
     },
     ParentIcon: {
       description: 'Items Parent Icon',
-      control: { type: null },
+      control: { type: 'boolean' },
       table: {
         type: { summary: 'ReactNode' },
       },
