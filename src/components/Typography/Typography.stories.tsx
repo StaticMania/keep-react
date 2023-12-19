@@ -7,7 +7,7 @@ const meta: Meta<typeof Typography> = {
   tags: ['autodocs'],
   argTypes: {
     children: {
-      description: 'Typography text',
+      description: 'Typography description',
       control: { type: null },
     },
     variant: {
