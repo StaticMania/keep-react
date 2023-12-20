@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { CaretRight, MagnifyingGlass, XCircle } from 'phosphor-react'
-import React, { useState, useEffect, FC, Dispatch, SetStateAction } from 'react'
+import React, { useState, useEffect, FC, Dispatch, SetStateAction, useCallback } from 'react'
 import { Modal, Skeleton, TextInput } from '~/src'
 import { cn } from '~/src/helpers/cn'
 import { getData, storeData } from '~/utils/Searching'
@@ -29,12 +29,21 @@ interface SearchProps {
   setShowMainModal: Dispatch<SetStateAction<boolean>>
 }
 
+type InputFocusCallback = (n: HTMLInputElement) => void
+
 const projectUrl: string = `https://react.keepdesign.io`
 
 const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
   const [query, setQuery] = useState<string>('')
   const [results, setResults] = useState<Result[]>([])
   const [loading, setLoading] = useState<boolean>(false)
+  const inputFocus = useCallback<InputFocusCallback>((node) => {
+    if (node) {
+      setTimeout(() => {
+        node.focus();
+      }, 1);
+    }
+  }, [])
 
   useEffect(() => {
     let timeout: NodeJS.Timeout
@@ -100,6 +109,7 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
               addonPosition="left"
               value={query}
               handleOnChange={(e) => setQuery(e.target.value)}
+              ref={inputFocus}
             />
           </div>
         </form>
