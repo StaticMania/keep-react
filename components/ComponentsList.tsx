@@ -102,7 +102,7 @@ export const DatePickerComponent = () => {
   const [_, setDate] = useState<Date | null>(null)
   return (
     <div className="mx-auto flex w-3/5 scale-75">
-      <DatePicker singleDate={setDate}>
+      <DatePicker singleDate={setDate} placeholder="Select date">
         <DatePicker.SingleDate />
       </DatePicker>
     </div>
