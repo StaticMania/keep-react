@@ -98,11 +98,9 @@ export const CheckboxGroupComponent = () => {
   )
 }
 export const DatePickerComponent = () => {
-  const [date, setDate] = useState<Date | null>(null)
-  console.log(date)
   return (
     <div className="mx-auto flex w-3/5 scale-75">
-      <DatePicker singleDate={setDate} placeholder="Select date">
+      <DatePicker placeholder="Select date">
         <DatePicker.SingleDate />
       </DatePicker>
     </div>

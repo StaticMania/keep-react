@@ -14,10 +14,6 @@ const HistoryModal = () => {
     setShowAccessModal(!showAccessModal)
   }
 
-  const handleChecked = (value: any) => {
-    console.log(value)
-  }
-
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
       <Button type="primary" onClick={onClickHistoryModal}>
@@ -35,7 +31,7 @@ const HistoryModal = () => {
             </p>
           </div>
           <div className="mt-5 flex items-center">
-            <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
+            <CheckBox size="md" variant="square" id="two" name="countries" color="info" />
             <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
               Save on this browser
             </label>
@@ -66,7 +62,7 @@ const HistoryModal = () => {
             </div>
           </div>
           <div className="mt-5 flex items-center">
-            <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
+            <CheckBox size="md" variant="square" id="two" name="countries" color="info" />
             <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
               Save on this browser
             </label>
@@ -103,7 +99,7 @@ export const ModalComponent = () => {
   };
 
   const handleChecked = (value) => {
-    console.log(value)
+    //value
   };
 
   return (

@@ -1,5 +1,5 @@
-import type { FC, ReactNode } from 'react'
-import { useState } from 'react'
+import type { Dispatch, FC, ReactNode, SetStateAction } from 'react'
+import { useEffect, useState } from 'react'
 import { Switch } from '@headlessui/react'
 import { KeepSizes } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
@@ -86,6 +86,12 @@ export interface ToggleProps {
    * @default ''
    */
   labelStyle?: string
+
+  /**
+   * Toggle onChange event handler
+   * @type {function}
+   */
+  onChange?: Dispatch<SetStateAction<boolean>>
 }
 
 export interface ToggleSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
@@ -101,11 +107,20 @@ const ToggleComponent: FC<ToggleProps> = ({
   className,
   circleStyle,
   labelStyle,
+  onChange,
   ...props
 }) => {
   const [enabled, setEnabled] = useState(false)
   const theirProps = excludeClassName(props)
   const theme = useTheme().theme.switch
+
+  useEffect(() => {
+    if (enabled && onChange) {
+      onChange(true)
+    } else {
+      onChange && onChange(false)
+    }
+  }, [enabled, onChange])
 
   const showWithIcon = (enabled: boolean, size: keyof ToggleSizes): string => {
     if (enabled) {

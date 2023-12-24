@@ -10,7 +10,8 @@ const DefaultSwitchCode = `
 import { Toggle } from "keep-react";
 
 export const SwitchComponent = () => {
-  return <Toggle bgColor="primary" size="md" />;
+  const [toggle, setToggle] = useState(false)
+  return return <Toggle bgColor="primary" size="md" onChange={setToggle} />
 }
 `
 

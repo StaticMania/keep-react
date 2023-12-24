@@ -1,0 +1,32 @@
+name: Continuous Integration
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.9.0'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run format check
+        run: npm run format
+
+      - name: Check commit messages
+        uses: wagoid/commitlint-github-action@v3
+        with:
+          configFile: commitlint.config.cjs

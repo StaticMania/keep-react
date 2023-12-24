@@ -2,21 +2,7 @@
 import { CheckBox } from '../../../../src'
 
 const DefaultCheckbox = () => {
-  const handleChecked = (value: boolean) => {
-    console.log(value)
-  }
-  return (
-    <div className="py-3">
-      <CheckBox
-        variant="square"
-        label="Checkbox"
-        id="two"
-        name="countries"
-        color="info"
-        handleChecked={handleChecked}
-      />
-    </div>
-  )
+  return <CheckBox variant="square" label="Checkbox" id="two" name="countries" color="info" />
 }
 
 const DefaultCheckboxCode = `
@@ -25,7 +11,7 @@ import { CheckBox } from "keep-react";
 
 export const CheckboxComponent = () => { 
   const handleChecked = (value) => {
-    console.log(value);
+    //value
   };
   return (
       <CheckBox

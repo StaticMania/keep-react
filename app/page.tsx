@@ -115,7 +115,7 @@ const Community = () => {
         const result = await response.json()
         setContributors(result)
       } catch (error) {
-        console.log(error)
+        console.error(error)
       }
     }
     getUser()
