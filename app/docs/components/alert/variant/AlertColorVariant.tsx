@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { Alert } from '~/src'
+import { Alert } from '../../../../src'
 import { useState } from 'react'
 import { CheckCircle, Info, XCircle } from 'phosphor-react'
 

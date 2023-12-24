@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Empty } from '~/src'
+import { Empty } from '../../../../src'
 
 const PageNotAvailable = () => {
   return (
@@ -13,7 +13,7 @@ const PageNotAvailable = () => {
           alt="404"
         />
       </Empty.Image>
-      <Empty.Title>Page isn't available right now</Empty.Title>
+      <Empty.Title>Page is not available right now</Empty.Title>
       <Empty.Description>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </Empty.Description>

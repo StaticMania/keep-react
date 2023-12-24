@@ -1,5 +1,5 @@
 'use client'
-import { Button } from '~/src'
+import { Button } from '../../../../src'
 import { Gear, SquaresFour } from 'phosphor-react'
 
 const KeepButtonIcon = () => {

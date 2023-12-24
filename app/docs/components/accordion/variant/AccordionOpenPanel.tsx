@@ -1,5 +1,5 @@
 'use client'
-import { Accordion } from '~/src'
+import { Accordion } from '../../../../src'
 
 const AccordionOpenPanel = () => {
   return (

@@ -1,5 +1,5 @@
 'use client'
-import { Skeleton } from '~/src'
+import { Skeleton } from '../../../../src'
 
 const SkeletonLayout = () => {
   return (

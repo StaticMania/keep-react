@@ -1,9 +1,10 @@
 'use client'
 import { useState } from 'react'
-import { DatePicker } from '~/src'
+import { DatePicker } from '../../../../src'
 
 const DefaultDatePicker = () => {
-  const [_, setDate] = useState<Date | null>(null)
+  const [date, setDate] = useState<Date | null>(null)
+  console.log(date)
   return (
     <div className="w-1/3">
       <DatePicker singleDate={setDate} placeholder="Date / Month / Year">

@@ -1,5 +1,5 @@
 'use client'
-import { CheckBox } from '~/src'
+import { CheckBox } from '../../../../src'
 
 const DefaultCheckbox = () => {
   const handleChecked = (value: boolean) => {

@@ -1,5 +1,5 @@
 'use client'
-import { Dropdown } from '~/src'
+import { Dropdown } from '../../../../src'
 
 const DefaultDropdown = () => {
   return (

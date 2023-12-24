@@ -1,5 +1,5 @@
 'use client'
-import { Toggle } from '~/src'
+import { Toggle } from '../../../../src'
 
 const DefaultSwitch = () => {
   return <Toggle bgColor="primary" size="md" />

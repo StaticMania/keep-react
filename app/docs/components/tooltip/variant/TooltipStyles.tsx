@@ -1,5 +1,5 @@
 'use client'
-import { Button, Tooltip } from '~/src'
+import { Button, Tooltip } from '../../../../src'
 
 const TooltipStyles = () => {
   return (

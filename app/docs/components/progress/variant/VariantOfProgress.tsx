@@ -1,5 +1,5 @@
 'use client'
-import { Progress } from '~/src'
+import { Progress } from '../../../../src'
 
 const VariantOfProgress = () => {
   return (

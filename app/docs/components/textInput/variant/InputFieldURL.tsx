@@ -1,5 +1,5 @@
 'use client'
-import { Label, TextInput } from '~/src'
+import { Label, TextInput } from '../../../../src'
 import { WarningCircle } from 'phosphor-react'
 
 const InputFieldURL = () => {

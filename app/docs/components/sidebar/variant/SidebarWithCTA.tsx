@@ -1,5 +1,5 @@
 'use client'
-import { Sidebar, Badge, Button } from '~/src'
+import { Sidebar, Badge, Button } from '../../../../src'
 import { X } from 'phosphor-react'
 import {
   ChartBar,
@@ -52,7 +52,7 @@ const SidebarWithCTA = () => {
               <X size="20" color="#5E718D" />
             </Button>
           </div>
-          <p className="text-body-5 mb-3 text-primary-900 dark:text-primary-400">
+          <p className="mb-3 text-body-5 text-primary-900 dark:text-primary-400">
             Preview the new keep design dashboard navigation! You can turn the new navigation off for a limited time in
             your profile.
           </p>

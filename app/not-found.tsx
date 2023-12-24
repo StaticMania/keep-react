@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Empty } from '~/src'
+import { Empty } from './src'
 
 const NotFound = () => {
   return (

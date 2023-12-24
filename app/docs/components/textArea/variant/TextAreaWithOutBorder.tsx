@@ -1,5 +1,5 @@
 'use client'
-import { Textarea } from '~/src'
+import { Textarea } from '../../../../src'
 
 const TextAreaWithOutBorder = () => {
   return <Textarea id="comment" placeholder="Leave a comment..." withBg={true} border={false} color="info" rows={4} />

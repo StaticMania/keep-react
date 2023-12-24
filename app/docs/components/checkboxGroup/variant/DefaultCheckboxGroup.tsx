@@ -1,10 +1,10 @@
 'use client'
-import { useState } from 'react'
-import { CheckboxGroup } from '~/src'
+import { ChangeEvent, useState } from 'react'
+import { CheckboxGroup } from '../../../../src'
 
 const DefaultCheckboxGroup = () => {
   const [selected, setSelected] = useState('')
-  const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOptionChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSelected(e.target.value)
   }
   return (

@@ -1,6 +1,6 @@
 'use client'
 
-import { Typography } from '~/src'
+import { Typography } from '../../../../src'
 
 const Display = () => {
   return (

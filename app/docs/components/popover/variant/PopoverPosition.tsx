@@ -1,5 +1,5 @@
 'use client'
-import { Button, Popover } from '~/src'
+import { Button, Popover } from '../../../../src'
 
 const PopoverPosition = () => {
   return (

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Avatar, Modal, Button, CheckBox } from '~/src'
+import { Avatar, Modal, Button, CheckBox } from '../../../../src'
 import { CloudArrowUp, UserPlus } from 'phosphor-react'
 
 const HistoryModal = () => {
@@ -30,13 +30,13 @@ const HistoryModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
           <div className="mt-5 flex items-center">
             <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
-            <label htmlFor="two" className="text-metal-500 ml-2 text-body-4 font-medium">
+            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
               Save on this browser
             </label>
           </div>
@@ -54,7 +54,7 @@ const HistoryModal = () => {
         <Modal.Header>Someone request edit access</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica.
             </p>
             <div className="mb-4 flex items-center gap-2 md:mb-6">
@@ -67,7 +67,7 @@ const HistoryModal = () => {
           </div>
           <div className="mt-5 flex items-center">
             <CheckBox size="md" variant="square" id="two" name="countries" color="info" handleChecked={handleChecked} />
-            <label htmlFor="two" className="text-metal-500 ml-2 text-body-4 font-medium">
+            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
               Save on this browser
             </label>
           </div>

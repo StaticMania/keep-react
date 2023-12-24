@@ -1,5 +1,5 @@
 'use client'
-import { Textarea } from '~/src'
+import { Textarea } from '../../../../src'
 
 const TextAreaWithHelperText = () => {
   return (
@@ -10,7 +10,7 @@ const TextAreaWithHelperText = () => {
       border={false}
       color="info"
       rows={4}
-      helperText={<span className="text-metal-500 font-medium">Info that helps a user with this field!</span>}
+      helperText={<span className="font-medium text-metal-500">Info that helps a user with this field!</span>}
     />
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Button, Modal } from '~/src'
+import { Button, Modal } from '../../../../src'
 import { CloudArrowUp, Trash } from 'phosphor-react'
 
 const ConfirmationModal = () => {
@@ -27,7 +27,7 @@ const ConfirmationModal = () => {
             <div className="mt-2 rounded bg-primary-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-metal-900 text-body-4 font-semibold md:text-body-2">
+            <h3 className="text-body-4 font-semibold text-metal-900 md:text-body-2">
               Do you want to upload this file?
             </h3>
           </div>
@@ -47,7 +47,7 @@ const ConfirmationModal = () => {
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>

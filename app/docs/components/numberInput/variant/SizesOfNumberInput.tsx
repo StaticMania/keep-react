@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { NumberInput } from '~/src'
+import { NumberInput } from '../../../../src'
 
 const SizesOfNumberInput = () => {
   const [value, setValue] = useState(100)

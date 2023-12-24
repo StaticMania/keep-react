@@ -1,5 +1,5 @@
 'use client'
-import { Card } from '~/src'
+import { Card } from '../../../../src'
 import { CaretRight } from 'phosphor-react'
 
 const DefaultCard = () => {

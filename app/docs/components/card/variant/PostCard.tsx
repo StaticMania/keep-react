@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Badge, Card } from '~/src'
+import { Badge, Card } from '../../../../src'
 import { CaretRight } from 'phosphor-react'
 
 const PostCard = () => {
@@ -49,10 +49,10 @@ const PostCard = () => {
                 Tips & Advice
               </Badge>
             </Card.Container>
-            <Card.Title className="text-metal-700 text-body-5 font-medium md:text-body-2">
+            <Card.Title className="text-body-5 font-medium text-metal-700 md:text-body-2">
               Keep Design System
             </Card.Title>
-            <Card.Description className="text-metal-500 text-body-6 font-normal md:text-body-5">
+            <Card.Description className="text-body-6 font-normal text-metal-500 md:text-body-5">
               Component design systems can help developers to be more productive by providing them with a ready-made set
               of components to use.
             </Card.Description>

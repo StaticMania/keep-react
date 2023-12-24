@@ -1,5 +1,5 @@
 'use client'
-import { Navbar } from '~/src'
+import { Navbar } from '../../../../src'
 import { CaretDown } from 'phosphor-react'
 import Image from 'next/image'
 

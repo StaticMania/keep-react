@@ -1,5 +1,5 @@
 'use client'
-import { Spinner } from '~/src'
+import { Spinner } from '../../../../src'
 
 const SpinnerColors = () => {
   return (

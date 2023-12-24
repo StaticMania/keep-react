@@ -1,5 +1,5 @@
 'use client'
-import { Steps } from '~/src'
+import { Steps } from '../../../../src'
 import { Club, DownloadSimple, Globe } from 'phosphor-react'
 
 const StepWithDashedBorder = () => {

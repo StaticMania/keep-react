@@ -1,10 +1,11 @@
 'use client'
 import { useState } from 'react'
-import { DatePicker } from '~/src'
-import { rangePicker } from '~/src/components/DatePicker/DatePickerContext'
+import { DatePicker } from '../../../../src'
+import { rangePicker } from '../../../../src/components/DatePicker/DatePickerContext'
 
 const DateRangePickerWithTwoMonth = () => {
-  const [_, setRangeDate] = useState<rangePicker>()
+  const [date, setRangeDate] = useState<rangePicker>()
+  console.log(date)
   return (
     <div className="w-1/3">
       <DatePicker showTwoMonth={true} rangeDate={setRangeDate} placeholder="Start - Finish">

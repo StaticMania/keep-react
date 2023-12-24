@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Notification, Button, Avatar } from '~/src'
+import { Notification, Button, Avatar } from '../../../../src'
 
 const NotificationWithAvatar = () => {
   const [showNotification, setShowNotification] = useState(true)

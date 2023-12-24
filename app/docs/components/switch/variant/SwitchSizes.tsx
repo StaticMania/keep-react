@@ -1,5 +1,5 @@
 'use client'
-import { Toggle } from '~/src'
+import { Toggle } from '../../../../src'
 
 const SwitchSizes = () => {
   return (

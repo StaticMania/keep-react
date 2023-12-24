@@ -1,5 +1,5 @@
 'use client'
-import { Badge } from '~/src'
+import { Badge } from '../../../../src'
 
 const DefaultBadge = () => {
   return (

@@ -1,5 +1,5 @@
 'use client'
-import { Button, Spinner } from '~/src'
+import { Button, Spinner } from '../../../../src'
 
 const SpinnerButton = () => {
   return (

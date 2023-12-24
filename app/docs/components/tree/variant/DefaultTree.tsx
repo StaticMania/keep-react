@@ -1,5 +1,5 @@
 'use client'
-import { Tree } from '~/src'
+import { Tree } from '../../../../src'
 
 export const nodes = [
   {

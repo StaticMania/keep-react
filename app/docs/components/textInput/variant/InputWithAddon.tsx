@@ -1,5 +1,5 @@
 'use client'
-import { TextInput } from '~/src'
+import { TextInput } from '../../../../src'
 import { Envelope } from 'phosphor-react'
 
 const InputWithAddon = () => {
