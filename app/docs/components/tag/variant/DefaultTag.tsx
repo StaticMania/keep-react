@@ -1,5 +1,5 @@
 'use client'
-import { Tag } from '~/src'
+import { Tag } from '../../../../src'
 
 const DefaultTag = () => {
   return (

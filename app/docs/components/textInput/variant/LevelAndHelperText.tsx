@@ -1,5 +1,5 @@
 'use client'
-import { Label, TextInput } from '~/src'
+import { Label, TextInput } from '../../../../src'
 
 const LevelAndHelperText = () => {
   return (

@@ -1,5 +1,5 @@
 'use client'
-import { Button, Card, Popover } from '~/src'
+import { Button, Card, Popover } from '../../../../src'
 import { ArchiveTray, CaretRight, DotsThreeVertical, PencilCircle } from 'phosphor-react'
 
 const CardWithIcon = () => {

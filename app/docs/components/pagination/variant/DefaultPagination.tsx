@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Pagination } from '~/src'
+import { Pagination } from '../../../../src'
 
 const DefaultPagination = () => {
   const [currentPage, setCurrentPage] = useState(1)

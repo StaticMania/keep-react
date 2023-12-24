@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Tag } from '~/src'
+import { Tag } from '../../../../src'
 import { CrownSimple, X } from 'phosphor-react'
 
 const BothSideIconTag = () => {

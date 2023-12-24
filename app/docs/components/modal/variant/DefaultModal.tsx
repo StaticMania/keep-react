@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { CloudArrowUp } from 'phosphor-react'
-import { Button, Modal } from '~/src'
+import { Button, Modal } from '../../../../src'
 
 const DefaultModal = () => {
   const [showModal, setShowModal] = useState(false)
@@ -26,7 +26,7 @@ const DefaultModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
@@ -44,7 +44,7 @@ const DefaultModal = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>

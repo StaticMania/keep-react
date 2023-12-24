@@ -1,5 +1,5 @@
 'use client'
-import { Avatar, Button, Table, Popover } from '~/src'
+import { Avatar, Button, Table, Popover } from '../../../../src'
 import { Cube, DotsThreeOutline, Trash, Pencil } from 'phosphor-react'
 
 const HoverableTable = () => {

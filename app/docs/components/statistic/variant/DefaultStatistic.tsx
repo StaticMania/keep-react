@@ -1,5 +1,5 @@
 'use client'
-import { Statistic } from '~/src'
+import { Statistic } from '../../../../src'
 
 const DefaultStatistic = () => {
   return (

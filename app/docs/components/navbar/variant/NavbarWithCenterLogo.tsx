@@ -1,5 +1,5 @@
 'use client'
-import { Navbar, Button } from '~/src'
+import { Navbar, Button } from '../../../../src'
 import { MagnifyingGlass } from 'phosphor-react'
 import Image from 'next/image'
 
@@ -35,7 +35,7 @@ const NavbarWithCenterLogo = () => {
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
-            <span className="text-metal-600 ml-2">Search</span>
+            <span className="ml-2 text-metal-600">Search</span>
           </Button>
           <Navbar.Toggle />
         </Navbar.Container>

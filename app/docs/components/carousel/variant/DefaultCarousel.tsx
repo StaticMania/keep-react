@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Carousel } from '~/src'
+import { Carousel } from '../../../../src'
 
 const DefaultCarousel = () => {
   return (

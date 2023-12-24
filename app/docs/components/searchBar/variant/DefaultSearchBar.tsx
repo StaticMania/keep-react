@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react'
-import { SearchBar, Dropdown } from '~/src'
+import { ChangeEvent, useState } from 'react'
+import { SearchBar, Dropdown } from '../../../../src'
 import { ArrowRight, MagnifyingGlass } from 'phosphor-react'
 
 export interface Book {
@@ -23,7 +23,7 @@ export const books: Book[] = [
 
 const DefaultSearchBar = () => {
   const [data, setData] = useState<Book[]>([])
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase()
     const results = books.filter((book) => book.name.toLowerCase().includes(searchTerm))
 

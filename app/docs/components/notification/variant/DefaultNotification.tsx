@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Button, Notification } from '~/src'
+import { Button, Notification } from '../../../../src'
 
 const DefaultNotification = () => {
   const [showNotification, setShowNotification] = useState(true)

@@ -1,16 +1,17 @@
+/* eslint-disable no-undef */
 'use client'
 import Link from 'next/link'
-import { Accordion } from '~/src'
-import { useEffect, useState } from 'react'
+import { Accordion } from '../src'
+import { ReactNode, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { gettingStartedRoutes, routes } from '~/routes/routes'
+import { gettingStartedRoutes, routes } from '../../routes/routes'
 
 export interface Sections {
   id: number
   idName: string
 }
 
-const DocsLayout = ({ children }: { children: React.ReactNode }) => {
+const DocsLayout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname()
   const [activeSection, setActiveSection] = useState<string>('')
   const [allSection, setAllSection] = useState<NodeListOf<Element> | []>([])

@@ -1,5 +1,5 @@
 'use client'
-import { Slider } from '~/src'
+import { Slider } from '../../../../src'
 
 const SliderTooltipPosition = () => {
   return (

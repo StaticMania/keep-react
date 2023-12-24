@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { MagnifyingGlass } from 'phosphor-react'
-import { Navbar, Button } from '~/src'
+import { Navbar, Button } from '../../../../src'
 
 const DefaultNavbar = () => {
   return (
@@ -33,7 +33,7 @@ const DefaultNavbar = () => {
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
-            <span className="text-metal-600 ml-2">Search</span>
+            <span className="ml-2 text-metal-600">Search</span>
           </Button>
           <Button size="sm" type="primary">
             Contact

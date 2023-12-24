@@ -1,5 +1,5 @@
 'use client'
-import { Sidebar } from '~/src'
+import { Sidebar } from '../../../../src'
 import {
   ChartBar,
   Chat,

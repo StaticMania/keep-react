@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Cookie } from 'phosphor-react'
-import { Notification, Button } from '~/src'
+import { Notification, Button } from '../../../../src'
 
 const NotificationWithIcon = () => {
   const [showNotification, setShowNotification] = useState(true)

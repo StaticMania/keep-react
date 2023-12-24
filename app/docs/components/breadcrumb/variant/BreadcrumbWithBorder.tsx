@@ -1,5 +1,5 @@
 'use client'
-import { Breadcrumb } from '~/src'
+import { Breadcrumb } from '../../../../src'
 import { CaretRight } from 'phosphor-react'
 
 const BreadcrumbWithBorder = () => {

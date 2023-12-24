@@ -1,5 +1,5 @@
 'use client'
-import { Alert } from '~/src'
+import { Alert } from '../../../../src'
 import Link from 'next/link'
 import { Info } from 'phosphor-react'
 

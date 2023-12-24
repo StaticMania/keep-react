@@ -1,5 +1,5 @@
 'use client'
-import { Tabs } from '~/src'
+import { Tabs } from '../../../../src'
 
 const BorderedTabs = () => {
   return (

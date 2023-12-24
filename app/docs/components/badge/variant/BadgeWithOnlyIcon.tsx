@@ -1,5 +1,5 @@
 'use client'
-import { Badge } from '~/src'
+import { Badge } from '../../../../src'
 import { Check, Checks, CloudCheck, XCircle } from 'phosphor-react'
 
 const OnlyIconOfBadge = () => {

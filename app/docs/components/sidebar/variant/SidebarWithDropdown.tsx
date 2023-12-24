@@ -1,5 +1,5 @@
 'use client'
-import { Sidebar } from '~/src'
+import { Sidebar } from '../../../../src'
 import { Chat, Handbag, ShoppingBagOpen, ShoppingCart, SignIn, SquaresFour, UserPlus, Users } from 'phosphor-react'
 
 const SidebarWithDropdown = () => {

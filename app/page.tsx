@@ -1,11 +1,11 @@
 'use client'
 import Link from 'next/link'
-import useCopy from '~/hooks/useCopy'
-import { ComponentList } from '~/routes/routes'
 import { ArrowUpRight, Check, Clipboard, Plus } from 'phosphor-react'
 import Image from 'next/image'
-import { Accordion, Avatar } from '~/src'
 import { useEffect, useState } from 'react'
+import useCopy from '../hooks/useCopy'
+import { ComponentList } from '../routes/routes'
+import { Accordion, Avatar } from './src'
 
 interface Contributor {
   login: string
@@ -115,7 +115,7 @@ const Community = () => {
         const result = await response.json()
         setContributors(result)
       } catch (error) {
-        console.log(error)
+        console.error(error)
       }
     }
     getUser()

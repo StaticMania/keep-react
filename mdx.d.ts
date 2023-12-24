@@ -1,4 +1,7 @@
+import { ReactElement } from 'react'
+
 declare module '*.mdx' {
-  let MDXComponent: (props: any) => JSX.Element;
-  export default MDXComponent;
+  // eslint-disable-next-line no-unused-vars
+  let MDXComponent: (props: any) => ReactElement
+  export default MDXComponent
 }

@@ -1,12 +1,12 @@
 'use client'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { Book, books } from './DefaultSearchBar'
-import { SearchBar, Dropdown } from '~/src'
+import { SearchBar, Dropdown } from '../../../../src'
 import { ArrowRight, MagnifyingGlass } from 'phosphor-react'
 
 const SearchBarWithIcon = () => {
   const [data, setData] = useState<Book[]>([])
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     const searchTerm = e.target.value.toLowerCase()
     const results = books.filter((book) => book.name.toLowerCase().includes(searchTerm))
 

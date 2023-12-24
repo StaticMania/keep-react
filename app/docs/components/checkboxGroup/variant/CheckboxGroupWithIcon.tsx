@@ -1,11 +1,11 @@
 'use client'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { SquaresFour } from 'phosphor-react'
-import { CheckboxGroup } from '~/src'
+import { CheckboxGroup } from '../../../../src'
 
 const CheckboxGroupWithIcon = () => {
   const [selected, setSelected] = useState('')
-  const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleOptionChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSelected(e.target.value)
   }
   return (

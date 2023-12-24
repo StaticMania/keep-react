@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Badge, Button, Popover, Table } from '~/src'
+import { Badge, Button, Popover, Table } from '../../../../src'
 import {
   CalendarBlank,
   Crown,

@@ -1,6 +1,6 @@
 'use client'
 import { WarningCircle } from 'phosphor-react'
-import { Label, TextInput } from '~/src'
+import { Label, TextInput } from '../../../../src'
 
 const InputWithIcon = () => {
   return (

@@ -1,12 +1,10 @@
 'use client'
-import { useState } from 'react'
-import { DatePicker } from '~/src'
+import { DatePicker } from '../../../../src'
 
 const MonthPicker = () => {
-  const [_, setMonthPicker] = useState<Date | null | string>()
   return (
     <div className="w-1/3">
-      <DatePicker month={setMonthPicker} placeholder="Select Month">
+      <DatePicker placeholder="Select Month">
         <DatePicker.Month />
       </DatePicker>
     </div>

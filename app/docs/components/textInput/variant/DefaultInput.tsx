@@ -1,5 +1,5 @@
 'use client'
-import { TextInput } from '~/src'
+import { TextInput } from '../../../../src'
 
 const DefaultInput = () => {
   return <TextInput id="#id-6" placeholder="Default Input Field" color="gray" />
