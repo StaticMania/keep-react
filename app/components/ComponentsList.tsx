@@ -37,7 +37,7 @@ export const TooltipComponent = () => {
   return (
     <Tooltip
       title="Tooltip Title here"
-      content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, alias."
+      content="A tooltip is a user interface component containing text that appears when a user hover."
       trigger="hover"
       placement="top"
       animation="duration-300"
