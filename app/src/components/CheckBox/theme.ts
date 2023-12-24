@@ -2,7 +2,7 @@ import { keepCheckboxTheme } from '.'
 
 export const checkboxTheme: keepCheckboxTheme = {
   checkboxInput: 'opacity-0 peer absolute cursor-pointer',
-  base: 'border flex items-center justify-center relative duration-300 transition-all cursor-pointer opacity-100 pointer-events-none',
+  base: 'border flex items-center justify-center relative cursor-pointer opacity-100 pointer-events-none',
   disabled: 'cursor-not-allowed opacity-50',
   enabled: 'cursor-pointer opacity-100',
   color: {
