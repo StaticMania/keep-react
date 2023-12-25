@@ -2,7 +2,12 @@
   "extends": ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "@next/next/no-img-element": "off"
   }
 }
