@@ -16,13 +16,13 @@ const BorderedTable = () => {
               </Badge>
             </div>
             <div className="flex items-center gap-5">
-              <Button type="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
                 New member
               </Button>
-              <Button type="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -115,7 +115,7 @@ const BorderedTable = () => {
                   </ul>
                 </Popover.Container>
                 <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
+                  <Button variant="outlineGray" size="xs" circle={true}>
                     <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                   </Button>
                 </Popover.Action>
@@ -194,7 +194,7 @@ const BorderedTable = () => {
                   </ul>
                 </Popover.Container>
                 <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
+                  <Button variant="outlineGray" size="xs" circle={true}>
                     <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                   </Button>
                 </Popover.Action>
@@ -273,7 +273,7 @@ const BorderedTable = () => {
                   </ul>
                 </Popover.Container>
                 <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
+                  <Button variant="outlineGray" size="xs" circle={true}>
                     <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                   </Button>
                 </Popover.Action>
@@ -352,7 +352,7 @@ const BorderedTable = () => {
                   </ul>
                 </Popover.Container>
                 <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
+                  <Button variant="outlineGray" size="xs" circle={true}>
                     <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                   </Button>
                 </Popover.Action>
@@ -431,7 +431,7 @@ const BorderedTable = () => {
                   </ul>
                 </Popover.Container>
                 <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
+                  <Button variant="outlineGray" size="xs" circle={true}>
                     <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                   </Button>
                 </Popover.Action>
@@ -462,13 +462,13 @@ export const TableComponent = () => {
             </Badge>
           </div>
           <div className="flex items-center gap-5">
-            <Button type="outlineGray" size="sm">
+            <Button variant="outlineGray" size="sm">
               <span className="pr-2">
                 <Cube size={24} />
               </span>
               New member
             </Button>
-            <Button type="outlineGray" size="sm">
+            <Button variant="outlineGray" size="sm">
               <span className="pr-2">
                 <Cube size={24} />
               </span>
@@ -561,7 +561,7 @@ export const TableComponent = () => {
                 </ul>
               </Popover.Container>
               <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover.Action>
@@ -640,7 +640,7 @@ export const TableComponent = () => {
                 </ul>
               </Popover.Container>
               <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover.Action>
@@ -719,7 +719,7 @@ export const TableComponent = () => {
                 </ul>
               </Popover.Container>
               <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover.Action>
@@ -798,7 +798,7 @@ export const TableComponent = () => {
                 </ul>
               </Popover.Container>
               <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover.Action>
@@ -877,7 +877,7 @@ export const TableComponent = () => {
                 </ul>
               </Popover.Container>
               <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
+                <Button variant="outlineGray" size="xs" circle={true}>
                   <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
                 </Button>
               </Popover.Action>

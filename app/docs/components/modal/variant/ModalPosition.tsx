@@ -10,7 +10,7 @@ const ModalPosition = () => {
   }
   return (
     <div className="px-2 py-3">
-      <Button type="primary" onClick={onClick}>
+      <Button variant="primary" onClick={onClick}>
         Modal
       </Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="top-center">
@@ -23,10 +23,10 @@ const ModalPosition = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClick}>
+          <Button variant="outlineGray" onClick={onClick}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClick}>
+          <Button variant="primary" onClick={onClick}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -64,10 +64,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClick}>
+          <Button variant="outlineGray" onClick={onClick}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClick}>
+          <Button variant="primary" onClick={onClick}>
             Confirm
           </Button>
         </Modal.Footer>

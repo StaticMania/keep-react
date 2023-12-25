@@ -6,8 +6,8 @@ const meta: Meta<typeof Button> = {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    type: {
-      description: 'Available button type',
+    variant: {
+      description: 'Available button variant',
       control: {
         type: 'select',
       },
@@ -15,6 +15,17 @@ const meta: Meta<typeof Button> = {
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: 'primary' },
+      },
+    },
+    type: {
+      description: 'Available button type',
+      control: {
+        type: 'select',
+      },
+      options: ['button', 'reset', 'submit'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'button' },
       },
     },
     size: {
@@ -107,7 +118,7 @@ type Story = StoryObj<typeof Button>
 
 export const DefaultButton: Story = {
   args: {
-    type: 'default',
+    variant: 'default',
     size: 'md',
     children: 'Default Button',
   },
@@ -115,49 +126,49 @@ export const DefaultButton: Story = {
 export const PrimaryButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: 'primary',
+    variant: 'primary',
     children: 'Primary Button',
   },
 }
 export const DashedButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: 'dashed',
+    variant: 'dashed',
     children: 'Dashed Button',
   },
 }
 export const OutlinePrimaryButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: 'outlinePrimary',
+    variant: 'outlinePrimary',
     children: 'Outline Primary Button',
   },
 }
 export const OutlineGrayButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: 'outlineGray',
+    variant: 'outlineGray',
     children: 'Outline Gray Button',
   },
 }
 export const TextButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: 'text',
+    variant: 'text',
     children: 'Text Button',
   },
 }
 export const LinkPrimaryButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: 'linkPrimary',
+    variant: 'linkPrimary',
     children: 'Link Primary Button',
   },
 }
 export const LinkGrayButton: Story = {
   args: {
     ...DefaultButton.args,
-    type: 'linkGray',
+    variant: 'linkGray',
     children: 'Link Gray Button',
   },
 }

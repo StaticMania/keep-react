@@ -16,10 +16,10 @@ const DefaultModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button onClick={onClickOne} type="primary">
+      <Button onClick={onClickOne} variant="primary">
         Modal
       </Button>
-      <Button onClick={onClickTwo} type="primary">
+      <Button onClick={onClickTwo} variant="primary">
         Modal With Cross
       </Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
@@ -32,10 +32,10 @@ const DefaultModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickOne}>
+          <Button variant="outlineGray" onClick={onClickOne}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickOne}>
+          <Button variant="primary" onClick={onClickOne}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -50,10 +50,10 @@ const DefaultModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickTwo}>
+          <Button variant="outlineGray" onClick={onClickTwo}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickTwo}>
+          <Button variant="primary" onClick={onClickTwo}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -81,8 +81,8 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <Button onClick={onClickOne} type='primary' >Modal</Button>
-      <Button onClick={onClickTwo} type='primary' >Modal With Cross</Button>
+      <Button onClick={onClickOne} variant="primary">Modal</Button>
+      <Button onClick={onClickTwo} variant="primary">Modal With Cross</Button>
       <Modal
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
@@ -98,10 +98,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickOne}>
+          <Button variant="outlineGray" onClick={onClickOne}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickOne}>
+          <Button variant="primary" onClick={onClickOne}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -121,10 +121,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickTwo}>
+          <Button variant="outlineGray" onClick={onClickTwo}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickTwo}>
+          <Button variant="primary" onClick={onClickTwo}>
             Confirm
           </Button>
         </Modal.Footer>

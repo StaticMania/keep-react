@@ -61,13 +61,13 @@ export const PlayButton: FC<PlayButtonProps> = ({
 }) => {
   if (type === 'blur') {
     return (
-      <Button onClick={onClick} type={type} circle={circle} size={size} className={className}>
+      <Button onClick={onClick} variant={type} circle={circle} size={size} className={className}>
         <span className="text-white">{icon}</span>
       </Button>
     )
   }
   return (
-    <Button onClick={onClick} type={type} circle={circle} size={size} className={className}>
+    <Button onClick={onClick} variant={type} circle={circle} size={size} className={className}>
       {typeof icon !== 'undefined' && <span className={cn(title ? 'pr-2' : '', titleStyle)}>{icon}</span>}
       {title}
     </Button>

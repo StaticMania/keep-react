@@ -48,7 +48,7 @@ const SidebarWithCTA = () => {
         <Sidebar.CTA>
           <div className="mb-3 flex items-center justify-between">
             <Badge color="warning">Beta</Badge>
-            <Button type="link">
+            <Button variant="link">
               <X size="20" color="#5E718D" />
             </Button>
           </div>
@@ -119,7 +119,7 @@ const SidebarWithCTA = () => {
         <Sidebar.CTA>
           <div className="mb-3 flex items-center justify-between">
             <Badge color="warning">Beta</Badge>
-            <Button type="link">
+            <Button variant="link">
               <X size="20" color="#5E718D" />
             </Button>
           </div>

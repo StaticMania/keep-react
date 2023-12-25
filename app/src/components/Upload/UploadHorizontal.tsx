@@ -69,7 +69,7 @@ export const UploadHorizontal: FC = () => {
             <p className={cn(theme.label.root.upload.fileSize)}>Maximum: 5MB</p>
 
             <Button
-              type={uploadBtnType}
+              variant={uploadBtnType}
               disabled={disabled}
               className="!relative !z-40 !cursor-pointer"
               onClick={handleClick}>

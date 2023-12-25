@@ -71,7 +71,7 @@ export interface KeepSizes {
   '7xl': string
 }
 
-export interface KeepButtonType {
+export interface KeepButtonVariant {
   primary: string
   outlineGray: string
   outlinePrimary: string

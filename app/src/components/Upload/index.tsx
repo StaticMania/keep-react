@@ -11,7 +11,7 @@ import { UploadHorizontal } from './UploadHorizontal'
 import { UploadPending } from './UploadPending'
 import { UploadSuccess } from './UploadSuccess'
 import { UploadContext } from './UploadContext'
-import { ButtonTypes } from '../Button/Button'
+import { ButtonVariant } from '../Button/Button'
 
 export interface keepUploadTheme {
   input: keepInputFieldTheme
@@ -109,7 +109,7 @@ interface UploadComponentProps {
    * @type {keyof ButtonTypes}
    * @default 'primary'
    */
-  uploadBtnType?: keyof ButtonTypes
+  uploadBtnType?: keyof ButtonVariant
 
   /**
    * Additional CSS class name for styling purposes.

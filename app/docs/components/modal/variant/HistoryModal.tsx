@@ -16,10 +16,10 @@ const HistoryModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button type="primary" onClick={onClickHistoryModal}>
+      <Button variant="primary" onClick={onClickHistoryModal}>
         History Modal
       </Button>
-      <Button type="primary" onClick={onClickAccessModal}>
+      <Button variant="primary" onClick={onClickAccessModal}>
         Access Modal
       </Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showHistoryModal}>
@@ -38,10 +38,10 @@ const HistoryModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outlineGray" width="half" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button type="primary" width="half" onClick={onClickHistoryModal}>
+          <Button variant="primary" width="half" onClick={onClickHistoryModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -69,10 +69,10 @@ const HistoryModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickAccessModal}>
+          <Button variant="outlineGray" onClick={onClickAccessModal}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickAccessModal}>
+          <Button variant="primary" onClick={onClickAccessModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -104,8 +104,8 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <Button type='primary' onClick={onClickHistoryModal}>History Modal</Button>
-      <Button type='primary' onClick={onClickAccessModal}>Access Modal</Button>
+      <Button variant='primary' onClick={onClickHistoryModal}>History Modal</Button>
+      <Button variant='primary' onClick={onClickAccessModal}>Access Modal</Button>
       <Modal
         icon={<CloudArrowUp size={28} color="#1B4DFF" />}
         size="md"
@@ -136,10 +136,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outlineGray" width="half" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button type="primary" width="half" onClick={onClickHistoryModal}>
+          <Button variant="primary" width="half" onClick={onClickHistoryModal}>
             Confirm
           </Button>
         </Modal.Footer>
@@ -189,10 +189,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickAccessModal}>
+          <Button variant="outlineGray" onClick={onClickAccessModal}>
             Cancel
           </Button>
-          <Button type="primary" onClick={onClickAccessModal}>
+          <Button variant="primary" onClick={onClickAccessModal}>
             Confirm
           </Button>
         </Modal.Footer>

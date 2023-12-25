@@ -3,7 +3,7 @@ import { Dropdown } from '../../../../src'
 
 const DefaultDropdown = () => {
   return (
-    <Dropdown label="Dropdown button" size="sm" type="primary" dismissOnClick={true}>
+    <Dropdown label="Dropdown button" size="sm" variant="primary" dismissOnClick={true}>
       <Dropdown.Item>Dashboard</Dropdown.Item>
       <Dropdown.Item>Settings</Dropdown.Item>
       <Dropdown.Item>Earnings</Dropdown.Item>
@@ -21,7 +21,7 @@ export const DropdownComponent = () => {
     <Dropdown
       label="Dropdown button"
       size="sm"
-      type="primary"
+      variant="primary"
       dismissOnClick={true}
     >
       <Dropdown.Item>Dashboard</Dropdown.Item>

@@ -4,7 +4,7 @@ import { CaretRight, Gear, Money, SignOut, SquaresFour } from 'phosphor-react'
 
 const DropdownWithBothSideIcon = () => {
   return (
-    <Dropdown label="Dropdown button" type="primary" size="sm" dismissOnClick={true}>
+    <Dropdown label="Dropdown button" variant="primary" size="sm" dismissOnClick={true}>
       <Dropdown.Item icon={<SquaresFour size={20} color="#5E718D" />}>
         Dashboard
         <span className="ml-auto">
@@ -42,7 +42,7 @@ export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
-      type="primary"
+      variant="primary"
       size="sm"
       dismissOnClick={true}
     >

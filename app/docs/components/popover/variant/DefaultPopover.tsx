@@ -11,7 +11,7 @@ const DefaultPopover = () => {
           some form, by injected humour
         </Popover.Description>
         <Popover.Container>
-          <Button type="outlinePrimary" size="xs">
+          <Button variant="outlinePrimary" size="xs">
             Checkout
           </Button>
         </Popover.Container>
@@ -36,7 +36,7 @@ export const PopoverComponent = () => {
         some form, by injected humour
       </Popover.Description>
       <Popover.Container>
-        <Button type="outlinePrimary" size="xs">
+        <Button variant="outlinePrimary" size="xs">
           Checkout
         </Button>
       </Popover.Container>

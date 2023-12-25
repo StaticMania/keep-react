@@ -45,9 +45,9 @@ const ProfileCardWithCover = () => {
 }
 
 const ProfileCardWithCoverCode = `
-"use client";
-import { Heart } from "phosphor-react";
-import { Avatar, Card } from "keep-react";
+"use client"
+import { Heart } from "phosphor-react"
+import { Avatar, Card } from "keep-react"
 
 export const CardComponent = () => {
   return (

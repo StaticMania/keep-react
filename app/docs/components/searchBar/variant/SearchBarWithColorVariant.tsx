@@ -21,13 +21,13 @@ const SearchBarWithColorVariant = () => {
       placeholder="Search Anything"
       bordered={false}
       addon={
-        <Button type="primary" color="info" size="xs">
+        <Button variant="primary" color="info" size="xs">
           Search
         </Button>
       }
       addonPosition="right"
       icon={
-        <Button type="text" color="info" size="xs">
+        <Button variant="text" color="info" size="xs">
           <span className="mr-2">
             <MapPinLine size={24} color="#5E718D" />
           </span>
@@ -92,13 +92,13 @@ const SearchBarComponent = () => {
       placeholder="Search Anything"
       bordered={false}
       addon={
-        <Button type="primary" color="info" size="xs">
+        <Button variant="primary" color="info" size="xs">
           Search
         </Button>
       }
       addonPosition="right"
       icon={
-        <Button type="text" color="info" size="xs">
+        <Button variant="text" color="info" size="xs">
           <span className="mr-2">
             <MapPinLine size={24} color="#5E718D" />
           </span>

@@ -79,7 +79,7 @@ export const DefaultPopover: Story = {
           some form, by injected humour
         </Popover.Description>
         <Popover.Container>
-          <Button type="outlinePrimary" size="xs">
+          <Button variant="outlinePrimary" size="xs">
             Checkout
           </Button>
         </Popover.Container>
@@ -133,7 +133,7 @@ export const TriggerVariantPopover: Story = {
           some form, by injected humour
         </Popover.Description>
         <Popover.Container>
-          <Button type="outlinePrimary" size="xs">
+          <Button variant="outlinePrimary" size="xs">
             Checkout
           </Button>
         </Popover.Container>
@@ -156,7 +156,7 @@ export const PopoverPosition: Story = {
           some form, by injected humour
         </Popover.Description>
         <Popover.Container>
-          <Button type="outlinePrimary" size="xs">
+          <Button variant="outlinePrimary" size="xs">
             Checkout
           </Button>
         </Popover.Container>

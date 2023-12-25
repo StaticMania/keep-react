@@ -5,10 +5,10 @@ import { ShoppingCart } from 'phosphor-react'
 const KeepButtonShape = () => {
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button size="md" type="primary" pill={true}>
+      <Button size="md" variant="primary" pill={true}>
         Default
       </Button>
-      <Button size="md" type="primary" circle={true}>
+      <Button size="md" variant="primary" circle={true}>
         <span>
           <ShoppingCart size={24} />
         </span>
@@ -25,8 +25,8 @@ import { ShoppingCart } from "phosphor-react";
 export const ButtonComponent = () => {
   return (
     <>
-      <Button size="md" type="primary" pill={true}>Default</Button>
-      <Button size="md" type="primary" circle={true}>
+      <Button size="md" variant="primary" pill={true}>Default</Button>
+      <Button size="md" variant="primary" circle={true}>
         <span>
           <ShoppingCart size={24} />
         </span>

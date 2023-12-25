@@ -1,5 +1,5 @@
 import { ChangeEvent, ReactNode, createContext, useContext } from 'react'
-import { ButtonTypes } from '../Button/Button'
+import { ButtonVariant } from '../Button/Button'
 
 /**
  * Represents the context for file upload.
@@ -89,7 +89,7 @@ export type UploadPropsContext = {
    * @type {keyof ButtonTypes}
    * @default 'primary'
    */
-  uploadBtnType?: keyof ButtonTypes
+  uploadBtnType?: keyof ButtonVariant
 
   /**
    * The additional class name for the upload.

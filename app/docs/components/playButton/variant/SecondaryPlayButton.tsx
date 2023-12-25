@@ -11,18 +11,18 @@ const SecondaryPlayButton = () => {
 }
 
 const SecondaryPlayButtonCode = `
-"use client";
-import { Play } from "phosphor-react";
-import { PlayButton } from "keep-react";
+"use client"
+import { Play } from "phosphor-react"
+import { PlayButton } from "keep-react"
 
 export const PlayButtonComponent = () => {
   return (
     <PlayButton
-    title="Play Video"
-    type="outlineGray"
-    icon={<Play size="24" />}
-  />
-  );
+      title="Play Video"
+      type="outlineGray"
+      icon={<Play size="24" />}
+    />
+  )
 }
 `
 

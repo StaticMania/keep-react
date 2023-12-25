@@ -11,7 +11,7 @@ const NotificationWithIcon = () => {
 
   return (
     <div className="px-5 py-3">
-      <Button type="primary" onClick={onDismiss}>
+      <Button variant="primary" onClick={onDismiss}>
         Show Notification
       </Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="top-left">
@@ -25,10 +25,10 @@ const NotificationWithIcon = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </Notification.Description>
             <Notification.Container className="!mt-6 flex gap-3">
-              <Button type="primary" size="sm">
+              <Button variant="primary" size="sm">
                 Accept
               </Button>
-              <Button type="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 Review
               </Button>
             </Notification.Container>
@@ -53,7 +53,7 @@ export const NotificationComponent = () => {
 
   return (
     <div>
-      <Button type="primary" onClick={onDismiss}>
+      <Button variant="primary" onClick={onDismiss}>
         Show Notification
       </Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="top-left">
@@ -67,10 +67,10 @@ export const NotificationComponent = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </Notification.Description>
             <Notification.Container className="!mt-6 flex gap-3">
-              <Button type="primary" size="sm">
+              <Button variant="primary" size="sm">
                 Accept
               </Button>
-              <Button type="outlineGray" size="sm">
+              <Button variant="outlineGray" size="sm">
                 Review
               </Button>
             </Notification.Container>

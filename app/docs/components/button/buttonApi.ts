@@ -15,10 +15,17 @@ export const buttonApiData = [
   },
   {
     id: 3,
-    propsName: 'type',
+    propsName: 'variant',
     propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
-    propsDescription: 'Type of the button.',
+    propsDescription: 'Variant of the button.',
     default: 'default',
+  },
+  {
+    id: 14,
+    propsName: 'type',
+    propsType: ['button', 'submit', 'reset'],
+    propsDescription: 'Type of the button.',
+    default: 'button',
   },
   {
     id: 4,

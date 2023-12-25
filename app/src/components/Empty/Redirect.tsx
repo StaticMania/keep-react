@@ -58,7 +58,7 @@ export const Redirect: FC<RedirectProps> = ({
 }) => {
   if (!children) {
     return (
-      <Button href={redirectUrl} size={redirectBtnSize} type={buttonType} className={cn(className)}>
+      <Button href={redirectUrl} size={redirectBtnSize} variant={buttonType} className={cn(className)}>
         {buttonText}
       </Button>
     )

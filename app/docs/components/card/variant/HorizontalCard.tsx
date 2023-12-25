@@ -36,7 +36,7 @@ const HorizontalCard = () => {
         </Card.Container>
         <Card.Container className="my-3 flex items-center justify-between">
           <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
-          <Button type="primary" size="sm">
+          <Button variant="primary" size="sm">
             Check Out
           </Button>
         </Card.Container>
@@ -46,16 +46,9 @@ const HorizontalCard = () => {
 }
 
 const HorizontalCardCode = `
-"use client";
-import {
-  ArrowsOutSimple,
-  Bed,
-  Heart,
-  MapPinLine,
-  Shower,
-  Users,
-} from "phosphor-react";
-import { Button, Card } from "keep-react";
+'use client'
+import { Button, Card } from 'keep-react'
+import { ArrowsOutSimple, Bed, MapPinLine, Shower, Users } from 'phosphor-react'
 
 export const CardComponent = () => {
   return (
@@ -91,7 +84,7 @@ export const CardComponent = () => {
         </Card.Container>
         <Card.Container className="my-3 flex items-center justify-between">
           <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
-          <Button type="primary" size="sm">
+          <Button variant="primary" size="sm">
             Check Out
           </Button>
         </Card.Container>
