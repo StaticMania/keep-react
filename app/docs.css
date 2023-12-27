@@ -63,7 +63,12 @@
   @apply border-l-metal-900 text-metal-900 transition-colors  duration-300 hover:text-metal-900 active:text-metal-900;
 }
 
+#componentListSidebar::-webkit-scrollbar {
+  display: none;
+}
+
 #linkPage::-webkit-scrollbar {
+  display: none;
   width: 4px !important;
 }
 #linkPage::-webkit-scrollbar-track {
@@ -74,6 +79,23 @@
   background-color: #e9eff6 !important;
 }
 
+body::-webkit-scrollbar {
+  width: 8px !important;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #333 !important;
+}
+
 .tabActive {
   @apply border-b-metal-900 !text-metal-900;
+}
+
+.docs-page {
+  position: relative;
+  border-radius: 16px;
+  background-image: linear-gradient(0deg, #f2f5ff 0%, #fff 100%);
 }

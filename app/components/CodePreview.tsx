@@ -15,16 +15,16 @@ interface CodePreviewProps {
 const CodePreview = ({ children, code, github }: CodePreviewProps) => {
   const [active, setActive] = useState(0)
   const { copy, copyToClipboard } = useCopy()
-  const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/src/components/${github}`
+  const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/app/src/components/${github}`
 
   return (
     <div className="my-10 w-full overflow-hidden rounded-md border border-metal-200 shadow-small">
-      <div className="-mb-px flex flex-wrap border-b border-metal-200 bg-white px-5 text-center">
+      <div className="-mb-px flex flex-wrap border-b border-metal-200 bg-metal-900 px-5 text-center">
         <button
           type="button"
           onClick={() => setActive(0)}
           className={`-mb-[0.7px] flex items-center justify-center border-b border-b-transparent px-5 py-3 text-body-5 font-medium text-metal-400 first:ml-0 ${
-            active === 0 ? '!border-b-metal-900 text-metal-900' : ''
+            active === 0 ? '!border-b-white text-white' : ''
           }`}
           id="preview-btn">
           Preview
@@ -33,7 +33,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
           id="code-btn"
           onClick={() => setActive(1)}
           className={` flex items-center justify-center border-b border-b-transparent px-5 py-3 text-body-5 font-medium  text-metal-400 first:ml-0 ${
-            active === 1 ? '!border-b-metal-900 text-metal-900' : ''
+            active === 1 ? '!border-b-metal-100 text-white' : ''
           }`}>
           Code
         </button>
@@ -81,7 +81,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
             </SyntaxHighlighter>
           </div>
         ) : (
-          <div className="flex w-full items-center justify-center px-2 py-3 md:p-6">
+          <div className="flex w-full items-center justify-center bg-white px-2 py-3 md:p-6">
             <div className="h-full w-full overflow-auto">{children}</div>
           </div>
         )}
