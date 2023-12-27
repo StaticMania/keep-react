@@ -95,7 +95,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 .docs-page {
-  position: relative;
-  border-radius: 16px;
-  background-image: linear-gradient(0deg, #f2f5ff 0%, #fff 100%);
+  @apply fixed left-0 right-0 top-40 -z-0 mx-auto hidden !h-3/4 rounded-2xl bg-gradient-to-t from-primary-25 to-white lg:block xl:max-w-[1560px] 4k:max-w-[2000px];
 }

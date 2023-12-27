@@ -80,7 +80,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
   return (
     <section>
       <div className="sticky top-20 z-30 hidden h-20 w-full bg-white md:bg-primary-25 lg:block"></div>
-      <div className="docs-page fixed left-0 right-0 -z-0 mx-auto hidden h-2/3 lg:block xl:max-w-[1560px] 4k:max-w-[2000px]"></div>
+      <div className="docs-page"></div>
       <div className="container relative z-20 grid grid-cols-12 gap-5 md:pt-16">
         <div className="hidden lg:col-span-3 lg:block xl:col-span-2">
           <aside
