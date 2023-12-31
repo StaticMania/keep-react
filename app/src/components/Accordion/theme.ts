@@ -15,7 +15,7 @@ export const accordionTheme: keepAccordionTheme = {
   icon: {
     base: 'transition-transform duration-300',
     rotated: {
-      full: 'rotate-25',
+      full: 'rotate-225',
       half: 'rotate-90',
     },
   },
