@@ -1,4 +1,5 @@
 module.exports = {
+  // extends: ['@commitlint/config-conventional'],
   extends: [],
   rules: {
     'header-min-length': [2, 'always', 14],
@@ -12,7 +13,7 @@ module.exports = {
           return [/^[A-Z]/.test(raw), 'Commit message must start with a capital letter']
         },
         'header-end-period': ({ header }) => {
-          return [/\.$/.test(header), 'Commit message must end with a period']
+          return [/\.$/.test(header), 'Commit message must end with a dot(.).']
         },
       },
     },
