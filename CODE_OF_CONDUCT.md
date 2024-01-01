@@ -35,7 +35,7 @@ If a community member engages in unacceptable behavior, we may take any action w
 
 ## Reporting Violations
 
-If you are subject to or witness unacceptable behavior, or have any other concerns, please notify us immediately. You can report violations by contacting the project maintainers at [INSERT EMAIL ADDRESS]. All reports will be kept confidential.
+If you are subject to or witness unacceptable behavior, or have any other concerns, please notify us immediately. You can report violations by contacting the project maintainers at hello@staticmania.com. All reports will be kept confidential.
 
 ## Attribution
 

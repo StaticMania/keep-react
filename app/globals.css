@@ -5,8 +5,9 @@ html {
 }
 
 body {
-  background-color: #f9fafb;
+  background-color: #f2f5ff;
   font-family: var(--font-inter), sans-serif;
+  @apply bg-white md:bg-primary-25;
 }
 
 .hero-text {
@@ -78,4 +79,14 @@ pre::-webkit-scrollbar-thumb {
 #tableScrollBar::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #d7dfe9;
+}
+
+.keep-shadow {
+  box-shadow:
+    0px 1px 2px 0px rgba(45, 54, 67, 0.05),
+    0px -4px 0px 0px rgba(215, 223, 233, 0.5) inset,
+    0px -3px 0px 0px #f0f4f9 inset;
+  border: 1px solid #d7dfe9;
+  border-radius: 16px;
+  background: #fff;
 }

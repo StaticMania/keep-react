@@ -14,7 +14,7 @@ const NotificationWithIcon = () => {
       <Button variant="primary" onClick={onDismiss}>
         Show Notification
       </Button>
-      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="top-left">
+      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="bottom-right">
         <Notification.Container className="grid grid-cols-12">
           <Notification.Icon className="col-span-2">
             <Cookie size={24} color="#3D4A5C" />

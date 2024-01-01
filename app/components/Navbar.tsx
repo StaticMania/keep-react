@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { List, MagnifyingGlass, X } from 'phosphor-react'
 import Search from './Search'
 import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
-import { Accordion } from '../src'
+import { Accordion, Typography } from '../src'
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
@@ -143,77 +143,71 @@ const Navbar = () => {
               active ? 'translate-x-0' : 'translate-x-full'
             }`}>
             <div className="mt-5 space-y-3 pr-4">
-              <Accordion flush className="border-none bg-transparent">
+              <Accordion flush>
                 <Accordion.Panel>
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-5 font-semibold text-metal-900">Quick Link</Accordion.Title>
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900">Quick Link</Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
+                    <Typography variant="ul" className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {navbarRoutes.map((route) => (
-                        <li key={route.id}>
+                        <Typography variant="li" key={route.id}>
                           <Link
-                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
-                              IsActive(route.href)
-                                ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
-                                : ''
+                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
+                              IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
                             }`}
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </li>
+                        </Typography>
                       ))}
-                    </ul>
+                    </Typography>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
               <Accordion flush className="border-none bg-transparent">
                 <Accordion.Panel>
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-5 font-semibold text-metal-900">
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900">
                       Getting Started
                     </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
+                    <Typography variant="ul" className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {gettingStartedRoutes.map((route) => (
-                        <li key={route.id}>
+                        <Typography variant="li" key={route.id}>
                           <Link
-                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
-                              IsActive(route.href)
-                                ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
-                                : ''
+                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
+                              IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
                             }`}
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </li>
+                        </Typography>
                       ))}
-                    </ul>
+                    </Typography>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
               <Accordion flush className="border-none bg-transparent">
                 <Accordion.Panel>
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-5 font-semibold text-metal-900">Components</Accordion.Title>
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900">Components</Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
+                    <Typography variant="ul" className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
                       {routes.map((route) => (
-                        <li key={route.id}>
+                        <Typography variant="li" key={route.id}>
                           <Link
-                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
-                              IsActive(route.href)
-                                ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
-                                : ''
+                            className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
+                              IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
                             }`}
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </li>
+                        </Typography>
                       ))}
-                    </ul>
+                    </Typography>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
