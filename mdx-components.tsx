@@ -5,7 +5,7 @@ export const useMDXComponents: (components: MDXComponents) => MDXComponents = (c
   return {
     h2: (props) => (
       <h2
-        className="section-title group z-10 before:invisible before:block before:content-[''] sm:before:-mt-36 sm:before:h-[224px]"
+        className="section-title group z-10 before:invisible before:block before:content-[''] xl:before:-mt-24 xl:before:h-32 2xl:before:-mt-48 2xl:before:h-[244px]"
         {...props}>
         {props.children}
         <a
