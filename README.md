@@ -53,9 +53,9 @@ pnpm add keep-react
 following code:
 
 ```jsx
-import keepPreset from "keep-react/preset";
+import keepPreset from 'keep-react/preset'
 export default {
-  content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
+  content: ['node_modules/keep-react/**/*.{js,jsx,ts,tsx}'],
   presets: [keepPreset],
 }
 ```
@@ -63,7 +63,7 @@ export default {
 `Step 4:` Add Tailwind CSS to index.css File:
 
 ```css
-@import "keep-react/css";
+@import 'keep-react/css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,15 +106,15 @@ following code
 
 ```js
 module.exports = {
-    content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
-    presets: [require("keep-react/preset")],
-};
+  content: ['node_modules/keep-react/**/*.{js,jsx,ts,tsx}'],
+  presets: [require('keep-react/preset')],
+}
 ```
 
 `Step 4:` Add Tailwind CSS to globals.css File:
 
 ```css
-@import "keep-react/css";
+@import 'keep-react/css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -125,14 +125,12 @@ Congratulations! You have successfully installed the Keep React. Now you can imp
 ## usage
 
 ```jsx
-'use client';
-import { Button } from "keep-react";
-  const App = () => {
-    return (
-      <Button size="md">Default</Button>
-    )
-  }
-export default App;
+'use client'
+import { Button } from 'keep-react'
+const App = () => {
+  return <Button size="md">Default</Button>
+}
+export default App
 ```
 
 ## Components
@@ -142,6 +140,10 @@ The Keep React offers a wide range of components to build your user interfaces. 
 ## Contributing
 
 If you want to contribute to the Keep React, you can follow the [contributing guide](https://github.com/StaticMania/keep-react/blob/main/Contribute.md).
+
+<a href="https://github.com/StaticMania/keep-react/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=StaticMania/keep-react"/>
+</a>
 
 ## Figma
 
