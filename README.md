@@ -141,6 +141,10 @@ The Keep React offers a wide range of components to build your user interfaces. 
 
 If you want to contribute to the Keep React, you can follow the [contributing guide](https://github.com/StaticMania/keep-react/blob/main/Contribute.md).
 
+## Contributors
+
+This project exists thanks to all the people who contribute:
+
 <a href="https://github.com/StaticMania/keep-react/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=StaticMania/keep-react"/>
 </a>
