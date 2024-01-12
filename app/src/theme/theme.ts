@@ -3,7 +3,7 @@ import { alertTheme } from '../components/Alert/theme'
 import { avatarTheme } from '../components/Avatar/theme'
 import { badgeTheme } from '../components/Badge/theme'
 import { breadcrumbTheme } from '../components/Breadcrumb/theme'
-import { buttonGroupTheme, buttonTheme } from '../components/Button/theme'
+import { buttonTheme } from '../components/Button/theme'
 import { cardTheme } from '../components/Card/theme'
 import { carouselTheme } from '../components/Carousel/theme'
 import { checkboxTheme } from '../components/CheckBox/theme'
@@ -37,7 +37,6 @@ export const theme = {
   avatar: avatarTheme,
   accordion: accordionTheme,
   button: buttonTheme,
-  buttonGroup: buttonGroupTheme,
   badge: badgeTheme,
   breadcrumb: breadcrumbTheme,
   card: cardTheme,

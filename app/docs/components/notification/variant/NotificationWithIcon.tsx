@@ -11,9 +11,7 @@ const NotificationWithIcon = () => {
 
   return (
     <div className="px-5 py-3">
-      <Button variant="primary" onClick={onDismiss}>
-        Show Notification
-      </Button>
+      <Button onClick={onDismiss}>Show Notification</Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="bottom-right">
         <Notification.Container className="grid grid-cols-12">
           <Notification.Icon className="col-span-2">
@@ -25,10 +23,8 @@ const NotificationWithIcon = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </Notification.Description>
             <Notification.Container className="!mt-6 flex gap-3">
-              <Button variant="primary" size="sm">
-                Accept
-              </Button>
-              <Button variant="outlineGray" size="sm">
+              <Button size="sm">Accept</Button>
+              <Button variant="outline" size="sm">
                 Review
               </Button>
             </Notification.Container>
@@ -53,7 +49,7 @@ export const NotificationComponent = () => {
 
   return (
     <div>
-      <Button variant="primary" onClick={onDismiss}>
+      <Button  onClick={onDismiss}>
         Show Notification
       </Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="top-left">
@@ -67,10 +63,10 @@ export const NotificationComponent = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </Notification.Description>
             <Notification.Container className="!mt-6 flex gap-3">
-              <Button variant="primary" size="sm">
+              <Button  size="sm">
                 Accept
               </Button>
-              <Button variant="outlineGray" size="sm">
+              <Button variant="outline" size="sm">
                 Review
               </Button>
             </Notification.Container>

@@ -112,11 +112,7 @@ export const DefaultTooltip: Story = {
     placement: 'right',
     animation: 'duration-300',
     style: 'dark',
-    children: (
-      <Button size="sm" variant="primary">
-        Tooltip
-      </Button>
-    ),
+    children: <Button size="sm">Tooltip</Button>,
   },
 }
 export const TooltipWithTitle: Story = {

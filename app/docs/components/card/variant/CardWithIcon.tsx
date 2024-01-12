@@ -60,9 +60,7 @@ const CardWithIcon = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button variant="primary" size="sm">
-            Learn More
-          </Button>
+          <Button size="sm">Learn More</Button>
         </Card.Container>
       </Card>
     </div>
@@ -132,7 +130,7 @@ export const CardComponent = () => {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button variant="primary" size="sm">
+          <Button  size="sm">
             Learn More
           </Button>
         </Card.Container>

@@ -6,13 +6,13 @@ import { ReactElement } from 'react'
 import { useChartContext } from './ChartContext'
 
 export const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>): ReactElement | null => {
-  const { tooltipBtnVariant, tooltipBtnStyle } = useChartContext()
+  const { tooltipBtnColor, tooltipBtnStyle } = useChartContext()
   if (active && payload?.length) {
     return (
       <>
         {payload.length > 1 ? (
           <TooltipCom content={``} trigger="hover" placement="top" animation="duration-300" style="dark">
-            <Button size="xs" variant={tooltipBtnVariant} className={tooltipBtnStyle}>
+            <Button size="xs" color={tooltipBtnColor} className={tooltipBtnStyle}>
               <span className="mr-2">
                 {payload[0].name}: {payload[0].value}
               </span>
@@ -23,7 +23,7 @@ export const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameT
           </TooltipCom>
         ) : (
           <TooltipCom content={``} trigger="hover" placement="top" animation="duration-300" style="dark">
-            <Button size="xs" variant={tooltipBtnVariant} className={tooltipBtnStyle}>
+            <Button size="xs" color={tooltipBtnColor} className={tooltipBtnStyle}>
               {payload[0].value}
             </Button>
           </TooltipCom>

@@ -11,9 +11,7 @@ const DefaultNotification = () => {
 
   return (
     <div className="px-5 py-3">
-      <Button onClick={onDismiss} variant="primary">
-        Show Notification
-      </Button>
+      <Button onClick={onDismiss}>Show Notification</Button>
       <Notification position="bottom-left" dismiss={showNotification} onDismiss={onDismiss}>
         <Notification.Body>
           <Notification.Title>Can we store cookies?</Notification.Title>
@@ -21,10 +19,8 @@ const DefaultNotification = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Notification.Description>
           <Notification.Container className="!mt-6 flex gap-3">
-            <Button variant="primary" size="sm">
-              Accept
-            </Button>
-            <Button variant="outlineGray" size="sm">
+            <Button size="sm">Accept</Button>
+            <Button variant="outline" size="sm">
               Review
             </Button>
           </Notification.Container>
@@ -47,9 +43,7 @@ export const NotificationComponent = () => {
   }
   return (
     <div>
-      <Button onClick={onDismiss} variant="primary">
-        Show Notification
-      </Button>
+      <Button onClick={onDismiss}>Show Notification</Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss}>
         <Notification.Body>
           <Notification.Title>Can we store cookies?</Notification.Title>
@@ -57,10 +51,10 @@ export const NotificationComponent = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Notification.Description>
           <Notification.Container className="!mt-6 flex gap-3">
-            <Button variant="primary" size="sm">
+            <Button  size="sm">
               Accept
             </Button>
-            <Button variant="outlineGray" size="sm">
+            <Button variant="outline" size="sm">
               Review
             </Button>
           </Notification.Container>

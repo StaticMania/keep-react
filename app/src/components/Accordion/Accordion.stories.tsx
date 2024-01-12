@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { Plus } from 'phosphor-react'
 import { Accordion } from '.'
 import { removeFragment } from '../../helpers/mergeDeep'
-import { Plus } from 'phosphor-react'
 
 const meta: Meta<typeof Accordion> = {
   component: Accordion,

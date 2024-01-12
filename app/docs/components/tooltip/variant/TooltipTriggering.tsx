@@ -5,14 +5,10 @@ const TooltipTriggering = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
       <Tooltip content="Tooltips text here" trigger="hover" placement="top" animation="duration-300" style="dark">
-        <Button size="sm" variant="primary">
-          Tooltip Hover
-        </Button>
+        <Button size="sm">Tooltip Hover</Button>
       </Tooltip>
       <Tooltip content="Tooltips text here" trigger="click" placement="bottom" animation="duration-300" style="dark">
-        <Button size="sm" variant="primary">
-          Tooltip Click
-        </Button>
+        <Button size="sm">Tooltip Click</Button>
       </Tooltip>
     </div>
   )
@@ -32,7 +28,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" variant="primary">
+        <Button size="sm" >
           Tooltip Hover
         </Button>
       </Tooltip>
@@ -43,7 +39,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" variant="primary">
+        <Button size="sm" >
           Tooltip Click
         </Button>
       </Tooltip>

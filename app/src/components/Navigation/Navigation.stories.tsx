@@ -73,9 +73,7 @@ export const DefaultNavbar: Story = {
             </span>
             <span className="ml-2 text-metal-600">Search</span>
           </Button>
-          <Button size="sm" variant="primary">
-            Contact
-          </Button>
+          <Button size="sm">Contact</Button>
           <Navbar.Toggle />
         </Navbar.Container>
       </Navbar.Container>
@@ -153,7 +151,7 @@ export const NavbarEcommerceMenu: Story = {
             <Navbar.Link icon={<Heart size={20} color="#444" />} iconAnimation={false} />
           </Navbar.Container>
 
-          <Button size="xs" variant="outlineGray">
+          <Button size="xs" variant="outline">
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>

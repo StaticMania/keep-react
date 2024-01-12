@@ -3,7 +3,7 @@ import { Dropdown } from '../../../../src'
 
 const DropdownWithTitleDescription = () => {
   return (
-    <Dropdown label="Dropdown button" variant="primary" size="sm" dismissOnClick={true}>
+    <Dropdown label="Dropdown button" size="sm" dismissOnClick={true}>
       <Dropdown.Item>
         <div className="flex flex-col items-start gap-1">
           <p className="text-body-4 font-semibold text-metal-700">Dropdown Title</p>
@@ -49,7 +49,6 @@ export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
-      variant="primary"
       size="sm"
       dismissOnClick={true}
     >

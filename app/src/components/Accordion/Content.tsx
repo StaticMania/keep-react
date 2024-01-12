@@ -1,9 +1,9 @@
 'use client'
 import { FC, ReactNode } from 'react'
 import { Collapse } from 'react-collapse'
+import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
-import { useTheme } from '../../Keep/ThemeContext'
 
 export interface ContentProps {
   children?: ReactNode

@@ -3,7 +3,6 @@ import { FC, useEffect, useState } from 'react'
 import { Bar, BarChart as BarChartCom, CartesianGrid, Cell, Legend, Tooltip, XAxis, YAxis } from 'recharts'
 import CustomLegend from './CustomLegend'
 import { CustomTooltip } from './CustomTooltip'
-import { ButtonVariant } from '../Button/Button'
 import { ChartContext } from './ChartContext'
 
 /**
@@ -16,7 +15,7 @@ interface BarChartProps {
    * @type {string}
    * @default primary
    */
-  tooltipBtnVariant?: keyof ButtonVariant
+  tooltipBtnColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
   /**
    * Tooltip custom className
    * @type {string}
@@ -214,7 +213,7 @@ export const BarChart: FC<BarChartProps> = ({
   width = 600,
   barSize = 6,
   secondaryDataKey,
-  tooltipBtnVariant = 'primary',
+  tooltipBtnColor = 'primary',
   tooltipBtnStyle,
 }) => {
   const [client, setClient] = useState(false)
@@ -270,7 +269,7 @@ export const BarChart: FC<BarChartProps> = ({
   }, [])
 
   return (
-    <ChartContext.Provider value={{ tooltipBtnVariant, tooltipBtnStyle }}>
+    <ChartContext.Provider value={{ tooltipBtnColor, tooltipBtnStyle }}>
       {client ? RenderBarChart : null}
     </ChartContext.Provider>
   )

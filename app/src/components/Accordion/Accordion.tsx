@@ -1,11 +1,11 @@
 'use client'
 import { Children, FC, ReactElement, cloneElement, isValidElement, useState } from 'react'
-import { Title, keepAccordionTitleTheme } from './Title'
-import { Content, keepAccordionContentTheme } from './Content'
-import { Panel, PanelProps, keepAccordionPanelTheme } from './Panel'
 import { cn } from '../../helpers/cn'
-import { Icon, keepAccordionIconTheme } from './Icon'
 import { Container, keepAccordionContainerTheme } from './Container'
+import { Content, keepAccordionContentTheme } from './Content'
+import { Icon, keepAccordionIconTheme } from './Icon'
+import { Panel, PanelProps, keepAccordionPanelTheme } from './Panel'
+import { Title, keepAccordionTitleTheme } from './Title'
 
 /**
  * Props for the Accordion component.
@@ -42,6 +42,7 @@ export interface AccordionProps {
    * @default false
    */
   openFirstPanel?: boolean
+
   /**
    * Additional props for the Accordion component.
    * @type {any}

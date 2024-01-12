@@ -4,8 +4,6 @@ import { keepAlertTheme } from '../components/Alert'
 import { keepAvatarTheme } from '../components/Avatar/Avatar'
 import { keepBadgeTheme } from '../components/Badge'
 import { keepBreadCrumbTheme } from '../components/Breadcrumb'
-import { keepButtonTheme } from '../components/Button/Button'
-import { keepButtonGroupTheme } from '../components/Button/ButtonGroup'
 import { KeepCardTheme } from '../components/Card'
 import { KeepCarouselTheme } from '../components/Carousel'
 import { keepCheckboxTheme } from '../components/CheckBox'
@@ -144,8 +142,6 @@ export interface KeepTheme {
   alert: keepAlertTheme
   avatar: keepAvatarTheme
   accordion: keepAccordionTheme
-  button: keepButtonTheme
-  buttonGroup: keepButtonGroupTheme
   badge: keepBadgeTheme
   breadcrumb: keepBreadCrumbTheme
   card: KeepCardTheme

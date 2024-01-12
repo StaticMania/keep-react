@@ -14,9 +14,7 @@ const DefaultNotificationComponent = () => {
   }
   return (
     <div className="px-5 py-3">
-      <Button onClick={onDismiss} variant="primary">
-        Show Notification
-      </Button>
+      <Button onClick={onDismiss}>Show Notification</Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss}>
         <Notification.Body>
           <Notification.Title>Can we store cookies?</Notification.Title>
@@ -24,10 +22,8 @@ const DefaultNotificationComponent = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Notification.Description>
           <Notification.Container className="!mt-6 flex gap-3">
-            <Button variant="primary" size="sm">
-              Accept
-            </Button>
-            <Button variant="outlineGray" size="sm">
+            <Button size="sm">Accept</Button>
+            <Button variant="outline" size="sm">
               Review
             </Button>
           </Notification.Container>
@@ -44,9 +40,7 @@ const NotificationWithAvatarComponent = () => {
 
   return (
     <div className="px-5 py-3">
-      <Button variant="primary" onClick={onDismiss}>
-        Show Notification
-      </Button>
+      <Button onClick={onDismiss}>Show Notification</Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="bottom-left">
         <Notification.Container className="grid grid-cols-12">
           <Notification.Avatar className="col-span-2">
@@ -58,10 +52,8 @@ const NotificationWithAvatarComponent = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </Notification.Description>
             <Notification.Container className="!mt-6 flex gap-3">
-              <Button variant="primary" size="sm">
-                Accept
-              </Button>
-              <Button variant="outlineGray" size="sm">
+              <Button size="sm">Accept</Button>
+              <Button variant="outline" size="sm">
                 Review
               </Button>
             </Notification.Container>
@@ -79,9 +71,7 @@ const NotificationWithIconComponent = () => {
 
   return (
     <div className="px-5 py-3">
-      <Button variant="primary" onClick={onDismiss}>
-        Show Notification
-      </Button>
+      <Button onClick={onDismiss}>Show Notification</Button>
       <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="top-left">
         <Notification.Container className="grid grid-cols-12">
           <Notification.Icon className="col-span-2">
@@ -93,10 +83,8 @@ const NotificationWithIconComponent = () => {
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </Notification.Description>
             <Notification.Container className="!mt-6 flex gap-3">
-              <Button variant="primary" size="sm">
-                Accept
-              </Button>
-              <Button variant="outlineGray" size="sm">
+              <Button size="sm">Accept</Button>
+              <Button variant="outline" size="sm">
                 Review
               </Button>
             </Notification.Container>
@@ -129,13 +117,13 @@ const NotificationWithCardComponent = () => {
   return (
     <div className="px-5 py-3">
       <Button.Group>
-        <Button onClick={onDismissOne} variant="primary" positionInGroup="start">
+        <Button onClick={onDismissOne} positionInGroup="start">
           Bottom Left
         </Button>
-        <Button onClick={onDismissTwo} variant="primary" positionInGroup="middle">
+        <Button onClick={onDismissTwo} positionInGroup="middle">
           Bottom Right
         </Button>
-        <Button onClick={onDismissThree} variant="primary" positionInGroup="end">
+        <Button onClick={onDismissThree} positionInGroup="end">
           Top Right
         </Button>
       </Button.Group>
@@ -155,10 +143,8 @@ const NotificationWithCardComponent = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Notification.Description>
           <Notification.Container className="!mt-6 flex gap-3">
-            <Button variant="primary" size="sm">
-              Accept
-            </Button>
-            <Button variant="outlineGray" size="sm">
+            <Button size="sm">Accept</Button>
+            <Button variant="outline" size="sm">
               Review
             </Button>
           </Notification.Container>
@@ -180,10 +166,10 @@ const NotificationWithCardComponent = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Notification.Description>
           <Notification.Container className="!mt-6 flex flex-col gap-3">
-            <Button variant="primary" size="sm" width="full">
+            <Button size="sm" width="full">
               Download
             </Button>
-            <Button variant="outlineGray" size="sm" width="full">
+            <Button variant="outline" size="sm" width="full">
               View Figma File
             </Button>
           </Notification.Container>
@@ -205,13 +191,13 @@ const NotificationWithCardComponent = () => {
             />
           </Notification.Media>
           <Notification.Container className="!mt-6 flex gap-3">
-            <Button variant="primary" size="sm">
+            <Button size="sm">
               <span className="pr-2">
                 <DownloadSimple size={18} color="#fff" />
               </span>
               Download
             </Button>
-            <Button variant="outlineGray" size="sm">
+            <Button variant="outline" size="sm">
               <span className="pr-2">
                 <FigmaLogo size={18} color="#455468" />
               </span>

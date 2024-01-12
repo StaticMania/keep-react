@@ -1,8 +1,8 @@
 'use client'
 import { FC, ReactNode } from 'react'
+import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
 import { AccordionContext } from './AccordionContext'
-import { useTheme } from '../../Keep/ThemeContext'
 
 export interface PanelProps {
   children?: ReactNode

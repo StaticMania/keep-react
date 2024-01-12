@@ -1,8 +1,7 @@
 import { createContext, useContext } from 'react'
-import { ButtonVariant } from '../Button/Button'
 
 type ChartContextProps = {
-  tooltipBtnVariant?: keyof ButtonVariant
+  tooltipBtnColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
   tooltipBtnStyle?: string
 }
 

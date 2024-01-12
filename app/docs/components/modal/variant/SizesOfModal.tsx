@@ -10,9 +10,7 @@ const SizesOfModal = () => {
   }
   return (
     <div className="px-2 py-3">
-      <Button variant="primary" onClick={onClick}>
-        Modal
-      </Button>
+      <Button onClick={onClick}>Modal</Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="xl" show={showModal} position="center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
@@ -23,12 +21,10 @@ const SizesOfModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClick}>
+          <Button variant="outline" onClick={onClick}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={onClick}>
-            Confirm
-          </Button>
+          <Button onClick={onClick}>Confirm</Button>
         </Modal.Footer>
       </Modal>
     </div>
@@ -48,13 +44,8 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button type='primary' onClick={onClick}>Modal</Button>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModal}
-        position="top-center"
-      >
+      <Button onClick={onClick}>Modal</Button>
+      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="xl" show={showModal} position="center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
@@ -64,12 +55,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClick}>
+          <Button variant="outline" onClick={onClick}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={onClick}>
-            Confirm
-          </Button>
+          <Button onClick={onClick}>Confirm</Button>
         </Modal.Footer>
       </Modal>
     </>

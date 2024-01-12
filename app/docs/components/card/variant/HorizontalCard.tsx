@@ -36,9 +36,7 @@ const HorizontalCard = () => {
         </Card.Container>
         <Card.Container className="my-3 flex items-center justify-between">
           <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
-          <Button variant="primary" size="sm">
-            Check Out
-          </Button>
+          <Button size="sm">Check Out</Button>
         </Card.Container>
       </Card.Container>
     </Card>
@@ -84,9 +82,7 @@ export const CardComponent = () => {
         </Card.Container>
         <Card.Container className="my-3 flex items-center justify-between">
           <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
-          <Button variant="primary" size="sm">
-            Check Out
-          </Button>
+          <Button size="sm">Check Out</Button>
         </Card.Container>
       </Card.Container>
     </Card>

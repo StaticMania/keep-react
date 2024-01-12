@@ -42,9 +42,7 @@ export const TooltipComponent = () => {
       placement="top"
       animation="duration-300"
       style="dark">
-      <Button size="sm" variant="primary">
-        Tooltip Content
-      </Button>
+      <Button size="sm">Tooltip Content</Button>
     </Tooltip>
   )
 }
@@ -131,12 +129,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClick}>
+          <Button variant="outline" onClick={onClick}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={onClick}>
-            Confirm
-          </Button>
+          <Button onClick={onClick}>Confirm</Button>
         </Modal.Footer>
       </Modal>
     </div>

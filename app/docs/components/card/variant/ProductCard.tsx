@@ -1,5 +1,5 @@
 'use client'
-import { Badge, PlayButton, Card, Button, Progress } from '../../../../src'
+import { Badge, Card, Button, Progress } from '../../../../src'
 import {
   ArrowsOutSimple,
   Bed,
@@ -40,10 +40,8 @@ const ProductCard = () => {
               </Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-start gap-5">
-              <Button size="sm" variant="outlineGray">
-                <span className="pr-2">
-                  <ShoppingCart size={24} />
-                </span>
+              <Button size="sm" variant="outline">
+                <ShoppingCart size={20} className="pr-2" />
                 Add To Cart
               </Button>
             </Card.Container>
@@ -64,19 +62,21 @@ const ProductCard = () => {
             </Card.Container>
             <Progress progress={45} color="info" rounded={true} />
             <Card.Container className="flex items-center justify-between">
-              <Button variant="text" circle={true}>
+              <Button variant="link" shape="circle">
                 <Rows size={20} color="#5E718D" weight="bold" />
               </Button>
               <Card.Container className="flex items-center justify-between py-2">
-                <Button variant="text" circle={true}>
-                  <SkipBack size={24} color="#5E718D" weight="bold" />
+                <Button variant="link" shape="circle">
+                  <SkipBack size={20} color="#5E718D" weight="bold" />
                 </Button>
-                <PlayButton type="primary" circle={true} size="lg" icon={<Play size="21" />} />
-                <Button variant="text" circle={true}>
-                  <SkipForward size={24} color="#5E718D" weight="bold" />
+                <Button shape="circle" size="lg">
+                  <Play size={20} />
+                </Button>
+                <Button variant="link" shape="circle">
+                  <SkipForward size={20} color="#5E718D" weight="bold" />
                 </Button>
               </Card.Container>
-              <Button variant="text" circle={true}>
+              <Button variant="link" shape="circle">
                 <SpeakerHigh size={20} color="#5E718D" weight="bold" />
               </Button>
             </Card.Container>
@@ -117,9 +117,7 @@ const ProductCard = () => {
               </Card.Title>
             </Card.Container>
             <Card.Container className="my-3 flex items-center justify-between">
-              <Button variant="primary" size="sm">
-                Check Out
-              </Button>
+              <Button size="sm">Check Out</Button>
               <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
             </Card.Container>
           </Card.Container>
@@ -131,24 +129,10 @@ const ProductCard = () => {
 
 const ProductCardCode = `
 "use client";
-import { Badge,
-Button,
-Card,
-PlayButton,
-Progress } from "keep-react";
+import { Badge,Button,Card,Progress } from "keep-react";
+
 import {
-  ArrowsOutSimple,
-  Bed,
-  Heart,
-  MapPinLine,
-  Play,
-  Rows,
-  ShoppingCart,
-  Shower,
-  SkipBack,
-  SkipForward,
-  SpeakerHigh,
-  Users,
+  ArrowsOutSimple,Bed,Heart,MapPinLine,Play,Rows,ShoppingCart,Shower,SkipBack,SkipForward,SpeakerHigh,Users,
 } from "phosphor-react";
 
 export const CardComponent = () => {
@@ -176,10 +160,8 @@ export const CardComponent = () => {
               </Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-start gap-5">
-              <Button size="sm" variant="outlineGray">
-                <span className="pr-2">
-                  <ShoppingCart size={24} />
-                </span>
+              <Button size="sm" variant="outline">
+                <ShoppingCart size={20} className="pr-2" />
                 Add To Cart
               </Button>
             </Card.Container>
@@ -202,19 +184,21 @@ export const CardComponent = () => {
             </Card.Container>
             <Progress progress={45} color="info" rounded={true} />
             <Card.Container className="flex items-center justify-between">
-              <Button variant="text" circle={true}>
+              <Button variant="link" shape="circle">
                 <Rows size={20} color="#5E718D" weight="bold" />
               </Button>
               <Card.Container className="flex items-center justify-between py-2">
-                <Button variant="text" circle={true}>
-                  <SkipBack size={24} color="#5E718D" weight="bold" />
+                <Button variant="link" shape="circle">
+                  <SkipBack size={20} color="#5E718D" weight="bold" />
                 </Button>
-                <PlayButton type="primary" circle={true} size="lg" icon={<Play size="21" />} />
-                <Button variant="text" circle={true}>
-                  <SkipForward size={24} color="#5E718D" weight="bold" />
+                <Button shape="circle" size="lg">
+                  <Play size={20} />
+                </Button>
+                <Button variant="link" shape="circle">
+                  <SkipForward size={20} color="#5E718D" weight="bold" />
                 </Button>
               </Card.Container>
-              <Button variant="text" circle={true}>
+              <Button variant="link" shape="circle">
                 <SpeakerHigh size={20} color="#5E718D" weight="bold" />
               </Button>
             </Card.Container>
@@ -223,7 +207,7 @@ export const CardComponent = () => {
 
         {/*=== PRODUCT CARD THREE === */}
         
-         <Card
+          <Card
           className="max-w-xs overflow-hidden rounded-md"
           imgSrc="https://images.prismic.io/staticmania/56ae80e7-4d23-4bd9-a2f3-01bd6f923a8b_product-2.avif?auto=compress,format"
           imgSize="md">
@@ -256,9 +240,7 @@ export const CardComponent = () => {
               </Card.Title>
             </Card.Container>
             <Card.Container className="my-3 flex items-center justify-between">
-              <Button variant="primary" size="sm">
-                Check Out
-              </Button>
+              <Button size="sm">Check Out</Button>
               <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
             </Card.Container>
           </Card.Container>

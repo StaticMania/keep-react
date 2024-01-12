@@ -15,12 +15,8 @@ const ConfirmationModal = () => {
   }
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button variant="primary" onClick={onClickInfoModal}>
-        Info Modal
-      </Button>
-      <Button variant="primary" onClick={onClickErrorModal}>
-        Error Modal
-      </Button>
+      <Button onClick={onClickInfoModal}>Info Modal</Button>
+      <Button onClick={onClickErrorModal}>Error Modal</Button>
       <Modal show={showInfoModal} size="sm">
         <Modal.Body>
           <div className="flex items-center gap-2 md:items-start">
@@ -34,10 +30,10 @@ const ConfirmationModal = () => {
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button variant="outlineGray" size="sm" onClick={onClickInfoModal}>
+            <Button variant="outline" size="sm" onClick={onClickInfoModal}>
               Cancel
             </Button>
-            <Button variant="primary" color="info" size="sm" onClick={onClickInfoModal}>
+            <Button size="sm" onClick={onClickInfoModal}>
               Confirm
             </Button>
           </div>
@@ -53,10 +49,10 @@ const ConfirmationModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClickErrorModal}>
+          <Button variant="outline" onClick={onClickErrorModal}>
             Cancel
           </Button>
-          <Button variant="primary" color="error" onClick={onClickErrorModal}>
+          <Button color="error" onClick={onClickErrorModal}>
             Delete
           </Button>
         </Modal.Footer>
@@ -83,43 +79,32 @@ export const ModalComponent = () => {
   };
   return (
     <>
-      <Button variant='primary' onClick={onClickInfoModal}>Info Modal</Button>
-      <Button variant='primary' onClick={onClickErrorModal}>
-        Error Modal
-      </Button>
-      <Modal show={showInfoModal} size="sm">
+      <Button onClick={onClickInfoModal}>Info Modal</Button>
+      <Button onClick={onClickErrorModal}>Error Modal</Button>
+  
+       <Modal show={showInfoModal} size="sm">
         <Modal.Body>
-          <div className="flex items-center md:items-start gap-2">
+          <div className="flex items-center gap-2 md:items-start">
             <div className="mt-2 rounded bg-primary-50  p-2  text-gray-400   ">
               <CloudArrowUp size={24} color="blue" />
             </div>
-            <h3 className="text-body-4 md:text-body-2 font-semibold text-metal-900">
+            <h3 className="text-body-4 font-semibold text-metal-900 md:text-body-2">
               Do you want to upload this file?
             </h3>
           </div>
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button variant="outlineGray" size="sm" onClick={onClickInfoModal}>
+            <Button variant="outline" size="sm" onClick={onClickInfoModal}>
               Cancel
             </Button>
-            <Button
-              variant="primary"
-              color="info"
-              size="sm"
-              onClick={onClickInfoModal}
-            >
+            <Button size="sm" onClick={onClickInfoModal}>
               Confirm
             </Button>
           </div>
         </Modal.Footer>
       </Modal>
-      <Modal
-        icon={<Trash size={28} color="#E92215" />}
-        size="md"
-        show={showErrorModalX}
-        onClose={onClickErrorModal}
-      >
+      <Modal icon={<Trash size={28} color="#E92215" />} size="md" show={showErrorModalX} onClose={onClickErrorModal}>
         <Modal.Header>Do you want to delete this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
@@ -129,10 +114,10 @@ export const ModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClickErrorModal}>
+          <Button variant="outline" onClick={onClickErrorModal}>
             Cancel
           </Button>
-          <Button variant="primary" color="error" onClick={onClickErrorModal}>
+          <Button color="error" onClick={onClickErrorModal}>
             Delete
           </Button>
         </Modal.Footer>

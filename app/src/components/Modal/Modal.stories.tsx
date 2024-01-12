@@ -57,12 +57,10 @@ const DefaultModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={() => setShowModal(false)}>
+          <Button variant="outline" onClick={() => setShowModal(false)}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={() => setShowModal(false)}>
-            Confirm
-          </Button>
+          <Button onClick={() => setShowModal(false)}>Confirm</Button>
         </Modal.Footer>
       </Modal>
       <Modal
@@ -79,12 +77,10 @@ const DefaultModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={() => setShowModalX(false)}>
+          <Button variant="outline" onClick={() => setShowModalX(false)}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={() => setShowModalX(false)}>
-            Confirm
-          </Button>
+          <Button onClick={() => setShowModalX(false)}>Confirm</Button>
         </Modal.Footer>
       </Modal>
     </div>
@@ -112,10 +108,10 @@ const ConfirmationModalComponent = () => {
         </Modal.Body>
         <Modal.Footer>
           <div className=" flex justify-start gap-4 ">
-            <Button variant="outlineGray" size="sm" onClick={() => setShowModalConfirm(false)}>
+            <Button variant="outline" size="sm" onClick={() => setShowModalConfirm(false)}>
               Cancel
             </Button>
-            <Button variant="primary" color="info" size="sm" onClick={() => setShowModalConfirm(false)}>
+            <Button color="primary" size="sm" onClick={() => setShowModalConfirm(false)}>
               Confirm
             </Button>
           </div>
@@ -136,10 +132,10 @@ const ConfirmationModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={() => setShowModalError(false)}>
+          <Button variant="outline" onClick={() => setShowModalError(false)}>
             Cancel
           </Button>
-          <Button variant="primary" color="error" onClick={() => setShowModalError(false)}>
+          <Button color="error" onClick={() => setShowModalError(false)}>
             Delete
           </Button>
         </Modal.Footer>
@@ -180,12 +176,10 @@ const HistoryModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={() => setShowModalHistory(false)}>
+          <Button variant="outline" onClick={() => setShowModalHistory(false)}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={() => setShowModalHistory(false)}>
-            Confirm
-          </Button>
+          <Button onClick={() => setShowModalHistory(false)}>Confirm</Button>
         </Modal.Footer>
       </Modal>
 
@@ -221,12 +215,10 @@ const HistoryModalComponent = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={() => setShowModalAccess(false)}>
+          <Button variant="outline" onClick={() => setShowModalAccess(false)}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={() => setShowModalAccess(false)}>
-            Confirm
-          </Button>
+          <Button onClick={() => setShowModalAccess(false)}>Confirm</Button>
         </Modal.Footer>
       </Modal>
     </div>

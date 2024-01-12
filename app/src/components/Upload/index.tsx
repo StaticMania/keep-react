@@ -11,7 +11,6 @@ import { UploadHorizontal } from './UploadHorizontal'
 import { UploadPending } from './UploadPending'
 import { UploadSuccess } from './UploadSuccess'
 import { UploadContext } from './UploadContext'
-import { ButtonVariant } from '../Button/Button'
 
 export interface keepUploadTheme {
   input: keepInputFieldTheme
@@ -109,7 +108,7 @@ interface UploadComponentProps {
    * @type {keyof ButtonTypes}
    * @default 'primary'
    */
-  uploadBtnType?: keyof ButtonVariant
+  uploadBtnColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
 
   /**
    * Additional CSS class name for styling purposes.
@@ -138,7 +137,7 @@ const UploadComponent: FC<UploadComponentProps> = ({
   title,
   fileType,
   id,
-  uploadBtnType = 'primary',
+  uploadBtnColor = 'primary',
   className,
   labelStyle,
 }) => {
@@ -163,7 +162,7 @@ const UploadComponent: FC<UploadComponentProps> = ({
         title,
         fileType,
         id,
-        uploadBtnType,
+        uploadBtnColor,
         className,
         labelStyle,
       }}>

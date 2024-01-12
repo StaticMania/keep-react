@@ -13,6 +13,7 @@ export interface keepEmptyTheme {
   root: RootTheme
   title: keepTitleTheme
   description: keepDescriptionTheme
+  redirectBtn: string
 }
 
 interface RootTheme {

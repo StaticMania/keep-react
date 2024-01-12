@@ -33,7 +33,7 @@ const InterActiveStep = () => {
 
       <div className="my-5 h-44 rounded-md  border-2 border-dashed border-metal-100"></div>
       <div className="mt-6 flex items-center justify-end">
-        <Button size="sm" variant="primary" disabled={step === 3} onClick={() => setStep((prev) => prev + 1)}>
+        <Button size="sm" disabled={step === 3} onClick={() => setStep((prev) => prev + 1)}>
           {step === 3 ? 'Completed' : 'Next Step'}
         </Button>
       </div>
@@ -77,7 +77,7 @@ export const StepComponent = () => {
       <div className="flex items-center justify-center mt-6">
         <Button
           size="sm"
-          variant="primary"
+          
           disabled={step === 3}
           onClick={() => setStep((prev) => prev + 1)}
         >

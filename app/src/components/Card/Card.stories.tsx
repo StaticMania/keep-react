@@ -29,7 +29,6 @@ import { Avatar } from '../Avatar/Avatar'
 import { Button } from '../Button/Button'
 import { Badge } from '../Badge'
 import { Progress } from '../Progress'
-import { PlayButton } from '../PlayButton'
 
 const meta: Meta<typeof Card> = {
   component: Card,
@@ -296,7 +295,7 @@ export const CardWithPostCard: Story = {
           </Card.Description>
         </Card.Container>
         <Card.Container className="mt-3 flex items-center justify-center">
-          <Button variant="outlinePrimary">Check this</Button>
+          <Button variant="outline">Check this</Button>
         </Card.Container>
       </>,
     ),
@@ -371,7 +370,7 @@ export const EcommerceProductCard: Story = {
             </Card.Description>
           </Card.Container>
           <Card.Container className="flex items-center justify-start gap-5">
-            <Button size="sm" variant="outlineGray">
+            <Button size="sm" variant="outline">
               <span className="pr-2">
                 <ShoppingCart size={24} />
               </span>
@@ -427,9 +426,7 @@ export const ProductCard: Story = {
             </Card.Title>
           </Card.Container>
           <Card.Container className="my-3 flex items-center justify-between">
-            <Button variant="primary" size="sm">
-              Check Out
-            </Button>
+            <Button size="sm">Check Out</Button>
             <Card.Title className="text-body-3 font-medium text-metal-500">$649,00</Card.Title>
           </Card.Container>
         </Card.Container>
@@ -462,19 +459,21 @@ export const PodcastCard: Story = {
         </Card.Container>
         <Progress progress={45} color="info" rounded={true} />
         <Card.Container className="flex items-center justify-between">
-          <Button variant="text" circle>
+          <Button variant="link" circle>
             <Rows size={20} color="#5E718D" />
           </Button>
           <Card.Container className="flex items-center justify-between py-2">
-            <Button variant="text" circle>
+            <Button variant="link" circle>
               <SkipBack size={24} color="#5E718D" weight="bold" />
             </Button>
-            <PlayButton type="primary" circle={true} size="lg" icon={<Play size="21" />} />
-            <Button variant="text" circle>
+            <Button size="lg" color="primary">
+              <Play size="20" />
+            </Button>
+            <Button variant="link" circle>
               <SkipForward size={24} color="#5E718D" weight="bold" />
             </Button>
           </Card.Container>
-          <Button variant="text" circle>
+          <Button variant="link" circle>
             <SpeakerHigh size={20} color="#5E718D" />
           </Button>
         </Card.Container>
@@ -526,10 +525,10 @@ export const PricingCard: Story = {
           </Card.List>
         </Card.Container>
         <Card.Container>
-          <Button variant="primary" width="full" className="hidden md:block">
+          <Button width="full" className="hidden md:block">
             Pro Access
           </Button>
-          <Button variant="primary" width="full" size="xs" className="block md:hidden">
+          <Button width="full" size="xs" className="block md:hidden">
             Pro Access
           </Button>
         </Card.Container>

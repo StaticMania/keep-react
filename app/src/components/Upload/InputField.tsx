@@ -37,7 +37,7 @@ export const InputField: FC = () => {
     title,
     icon,
     id,
-    uploadBtnType = 'primary',
+    uploadBtnColor = 'primary',
     className,
     labelStyle,
   } = useUploadContext()
@@ -60,7 +60,7 @@ export const InputField: FC = () => {
           <p className={cn(theme.label.fileType)}>{fileType ? fileType : 'Files: JPEG, PNG, GIF'}</p>
           <div className={cn(theme.label.upload.base)}>
             <Button
-              variant={uploadBtnType}
+              color={uploadBtnColor}
               disabled={disabled}
               className="!relative !z-40 !cursor-pointer"
               onClick={handleClick}>

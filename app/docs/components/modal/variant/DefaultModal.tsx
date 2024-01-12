@@ -16,12 +16,8 @@ const DefaultModal = () => {
 
   return (
     <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button onClick={onClickOne} variant="primary">
-        Modal
-      </Button>
-      <Button onClick={onClickTwo} variant="primary">
-        Modal With Cross
-      </Button>
+      <Button onClick={onClickOne}>Modal</Button>
+      <Button onClick={onClickTwo}>Modal With Cross</Button>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
@@ -32,12 +28,10 @@ const DefaultModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClickOne}>
+          <Button variant="outline" onClick={onClickOne}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={onClickOne}>
-            Confirm
-          </Button>
+          <Button onClick={onClickOne}>Confirm</Button>
         </Modal.Footer>
       </Modal>
       <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModalX} onClose={onClickTwo}>
@@ -50,12 +44,10 @@ const DefaultModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClickTwo}>
+          <Button variant="outline" onClick={onClickTwo}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={onClickTwo}>
-            Confirm
-          </Button>
+          <Button onClick={onClickTwo}>Confirm</Button>
         </Modal.Footer>
       </Modal>
     </div>
@@ -81,52 +73,38 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <Button onClick={onClickOne} variant="primary">Modal</Button>
-      <Button onClick={onClickTwo} variant="primary">Modal With Cross</Button>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModal}
-        position="center"
-      >
+      <Button onClick={onClickOne}>Modal</Button>
+      <Button onClick={onClickTwo}>Modal With Cross</Button>
+      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-body-5 md:text-body-4 leading-relaxed text-metal-500">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClickOne}>
+          <Button variant="outline" onClick={onClickOne}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={onClickOne}>
-            Confirm
-          </Button>
+          <Button onClick={onClickOne}>Confirm</Button>
         </Modal.Footer>
       </Modal>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModalX}
-        onClose={onClickTwo}
-      >
+      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModalX} onClose={onClickTwo}>
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-body-5 md:text-body-4 leading-relaxed text-metal-500">
+            <p className="text-body-5 leading-relaxed text-metal-500 md:text-body-4">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outlineGray" onClick={onClickTwo}>
+          <Button variant="outline" onClick={onClickTwo}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={onClickTwo}>
-            Confirm
-          </Button>
+          <Button onClick={onClickTwo}>Confirm</Button>
         </Modal.Footer>
       </Modal>
     </>

@@ -35,9 +35,7 @@ const DefaultNavbar = () => {
             </span>
             <span className="ml-2 text-metal-600">Search</span>
           </Button>
-          <Button size="sm" variant="primary">
-            Contact
-          </Button>
+          <Button size="sm">Contact</Button>
           <Navbar.Toggle />
         </Navbar.Container>
       </Navbar.Container>
@@ -91,7 +89,7 @@ export const NavbarComponent = () => {
             </span>
             <span className="ml-2 text-metal-600">Search</span>
           </Button>
-          <Button size="sm" variant="primary">
+          <Button size="sm">
             Contact
           </Button>
           <Navbar.Toggle />

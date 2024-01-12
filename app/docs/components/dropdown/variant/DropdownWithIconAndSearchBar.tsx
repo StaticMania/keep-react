@@ -4,7 +4,7 @@ import { CaretRight, Gear, Money, SignOut, SquaresFour } from 'phosphor-react'
 
 const DropdownWithIconAndSearchBar = () => {
   return (
-    <Dropdown label="Dropdown button" variant="primary" size="sm" dismissOnClick={true}>
+    <Dropdown label="Dropdown button" size="sm" dismissOnClick={true}>
       <div className="px-5 pb-2 pt-3">
         <TextInput id="#id-8yj95h" placeholder="Search" color="gray" />
       </div>
@@ -40,7 +40,6 @@ export const DropdownComponent = () => {
   return (
     <Dropdown
       label="Dropdown button"
-      variant="primary"
       size="sm"
       dismissOnClick={true}
     >

@@ -32,7 +32,7 @@ export interface UploadHorizontalTheme {
 }
 
 export const UploadHorizontal: FC = () => {
-  const { disabled, showProgressBar, progressType, file, onFileChange, title, fileType, id, uploadBtnType } =
+  const { disabled, showProgressBar, progressType, file, onFileChange, title, fileType, id, uploadBtnColor } =
     useUploadContext()
 
   const theme = useTheme().theme.upload.uploadHorizontal
@@ -69,7 +69,7 @@ export const UploadHorizontal: FC = () => {
             <p className={cn(theme.label.root.upload.fileSize)}>Maximum: 5MB</p>
 
             <Button
-              variant={uploadBtnType}
+              color={uploadBtnColor}
               disabled={disabled}
               className="!relative !z-40 !cursor-pointer"
               onClick={handleClick}>
