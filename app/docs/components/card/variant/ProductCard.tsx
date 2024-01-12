@@ -40,8 +40,8 @@ const ProductCard = () => {
               </Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-start gap-5">
-              <Button size="sm" variant="outline">
-                <ShoppingCart size={20} className="pr-2" />
+              <Button size="sm" variant="outline" color="secondary">
+                <ShoppingCart size={28} className="pr-2" />
                 Add To Cart
               </Button>
             </Card.Container>
@@ -69,8 +69,8 @@ const ProductCard = () => {
                 <Button variant="link" shape="circle">
                   <SkipBack size={20} color="#5E718D" weight="bold" />
                 </Button>
-                <Button shape="circle" size="lg">
-                  <Play size={20} />
+                <Button shape="circle" size="xl" color="primary">
+                  <Play size={24} />
                 </Button>
                 <Button variant="link" shape="circle">
                   <SkipForward size={20} color="#5E718D" weight="bold" />
@@ -160,9 +160,9 @@ export const CardComponent = () => {
               </Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-start gap-5">
-              <Button size="sm" variant="outline">
-                <ShoppingCart size={20} className="pr-2" />
-                Add To Cart
+               <Button size="sm" variant="outline" color="secondary">
+                  <ShoppingCart size={28} className="pr-2" />
+                  Add To Cart
               </Button>
             </Card.Container>
           </Card.Container>
@@ -191,8 +191,8 @@ export const CardComponent = () => {
                 <Button variant="link" shape="circle">
                   <SkipBack size={20} color="#5E718D" weight="bold" />
                 </Button>
-                <Button shape="circle" size="lg">
-                  <Play size={20} />
+                <Button shape="circle" size="xl" color="primary">
+                  <Play size={24} />
                 </Button>
                 <Button variant="link" shape="circle">
                   <SkipForward size={20} color="#5E718D" weight="bold" />

@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import { Badge, Card } from '../../../../src'
 import { CaretRight } from 'phosphor-react'
-
 const PostCard = () => {
   return (
     <div className="flex flex-col gap-5">
