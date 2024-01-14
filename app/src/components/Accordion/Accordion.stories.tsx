@@ -33,7 +33,8 @@ export const DefaultAccordion: Story = {
     children: (
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the of the Keep React?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
@@ -51,7 +52,8 @@ export const FlushAccordion: Story = {
       <>
         <Accordion.Panel>
           <Accordion.Container>
-            <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+            <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
+            <Accordion.Icon />
           </Accordion.Container>
           <Accordion.Content>
             The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a
@@ -61,7 +63,8 @@ export const FlushAccordion: Story = {
         </Accordion.Panel>
         <Accordion.Panel>
           <Accordion.Container>
-            <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+            <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
+            <Accordion.Icon />
           </Accordion.Container>
           <Accordion.Content>
             The Keep React offers a range of color variants for components. To customize the color scheme, you can use
@@ -71,7 +74,8 @@ export const FlushAccordion: Story = {
         </Accordion.Panel>
         <Accordion.Panel>
           <Accordion.Container>
-            <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+            <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
+            <Accordion.Icon />
           </Accordion.Container>
           <Accordion.Content>
             Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
@@ -95,7 +99,7 @@ export const AccordionWithIcon: Story = {
       <>
         <Accordion.Panel>
           <Accordion.Container>
-            <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+            <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
             <Accordion.Icon>
               <Plus size={24} color="#444" />
             </Accordion.Icon>
@@ -108,7 +112,7 @@ export const AccordionWithIcon: Story = {
         </Accordion.Panel>
         <Accordion.Panel>
           <Accordion.Container>
-            <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+            <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
             <Accordion.Icon>
               <Plus size={24} color="#444" />
             </Accordion.Icon>
@@ -121,7 +125,7 @@ export const AccordionWithIcon: Story = {
         </Accordion.Panel>
         <Accordion.Panel>
           <Accordion.Container>
-            <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+            <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
             <Accordion.Icon>
               <Plus size={24} color="#444" />
             </Accordion.Icon>
@@ -146,14 +150,12 @@ export const CustomizeAccordion: Story = {
   args: {
     children: removeFragment(
       <>
-        <Accordion.Panel className="bg-metal-900">
-          <Accordion.Container className="bg-metal-900 text-white group-hover:bg-metal-800">
-            <Accordion.Title className="text-white">What is the of the Keep React?</Accordion.Title>
-            <Accordion.Icon>
-              <Plus size={24} color="#fff" />
-            </Accordion.Icon>
+        <Accordion.Panel className="bg-metal-100">
+          <Accordion.Container>
+            <Accordion.Title className="text-metal-900">Q. What is the of the Keep React?</Accordion.Title>
+            <Accordion.Icon />
           </Accordion.Container>
-          <Accordion.Content className="text-white">
+          <Accordion.Content className="text-metal-500">
             The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a
             unified user experience across our products. It simplifies the design and development process by providing
             ready-to-use components that can be easily customized and integrated into various applications.

@@ -1,8 +1,6 @@
-'use client'
 import { FC, ReactNode } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
+import { accordionTheme } from './theme'
 import { cn } from '../../helpers/cn'
-import { Typography } from '../Typography'
 
 export interface TitleProps {
   children?: ReactNode
@@ -13,11 +11,7 @@ export interface keepAccordionTitleTheme {
   base: string
 }
 
-export const Title: FC<TitleProps> = ({ children, className, ...otherProps }) => {
-  const { title } = useTheme().theme.accordion
-  return (
-    <Typography variant="h3" {...otherProps} className={cn(title.base, className)}>
-      {children}
-    </Typography>
-  )
+export const Title: FC<TitleProps> = ({ children, className }) => {
+  const { title } = accordionTheme
+  return <h3 className={cn(title.base, className)}>{children}</h3>
 }

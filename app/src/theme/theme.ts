@@ -1,4 +1,3 @@
-import { accordionTheme } from '../components/Accordion/theme'
 import { alertTheme } from '../components/Alert/theme'
 import { avatarTheme } from '../components/Avatar/theme'
 import { badgeTheme } from '../components/Badge/theme'
@@ -35,7 +34,6 @@ import { uploadTheme } from '../components/Upload/theme'
 export const theme = {
   alert: alertTheme,
   avatar: avatarTheme,
-  accordion: accordionTheme,
   button: buttonTheme,
   badge: badgeTheme,
   breadcrumb: breadcrumbTheme,

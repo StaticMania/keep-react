@@ -144,9 +144,11 @@ const Navbar = () => {
             }`}>
             <div className="mt-5 space-y-3 pr-4">
               <Accordion flush>
-                <Accordion.Panel>
+                <Accordion.Panel className="!border-b-0">
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900">Quick Link</Accordion.Title>
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                      Quick Link
+                    </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
                     <Typography variant="ul" className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
@@ -165,10 +167,10 @@ const Navbar = () => {
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
-              <Accordion flush className="border-none bg-transparent">
-                <Accordion.Panel>
+              <Accordion flush>
+                <Accordion.Panel className="!border-b-0">
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900">
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
                       Getting Started
                     </Accordion.Title>
                   </Accordion.Container>
@@ -189,10 +191,12 @@ const Navbar = () => {
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
-              <Accordion flush className="border-none bg-transparent">
-                <Accordion.Panel>
+              <Accordion flush>
+                <Accordion.Panel className="!border-b-0">
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900">Components</Accordion.Title>
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                      Components
+                    </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
                     <Typography variant="ul" className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">

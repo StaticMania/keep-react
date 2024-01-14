@@ -4,10 +4,10 @@ import { Accordion } from '../../../../src'
 
 const AccordionWithIcon = () => {
   return (
-    <Accordion>
+    <Accordion className="space-y-4">
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
           <Accordion.Icon>
             <Plus size={24} color="#444" />
           </Accordion.Icon>
@@ -20,7 +20,7 @@ const AccordionWithIcon = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
           <Accordion.Icon>
             <Plus size={24} color="#444" />
           </Accordion.Icon>
@@ -33,7 +33,7 @@ const AccordionWithIcon = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
           <Accordion.Icon>
             <Plus size={24} color="#444" />
           </Accordion.Icon>
@@ -55,10 +55,10 @@ import { Plus } from "phosphor-react";
 
 export const AccordionComponent = () => {
   return (
-    <Accordion>
+    <Accordion className="space-y-4">
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
           <Accordion.Icon>
             <Plus size={24} color="#444" />
           </Accordion.Icon>
@@ -71,7 +71,7 @@ export const AccordionComponent = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
           <Accordion.Icon>
             <Plus size={24} color="#444" />
           </Accordion.Icon>
@@ -84,7 +84,7 @@ export const AccordionComponent = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
           <Accordion.Icon>
             <Plus size={24} color="#444" />
           </Accordion.Icon>

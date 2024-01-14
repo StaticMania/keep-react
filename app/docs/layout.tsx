@@ -86,10 +86,10 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
           <aside
             id="componentListSidebar"
             className="sticky top-28 h-[80vh] space-y-5 overflow-auto 2xl:top-56 2xl:py-6 2xl:pl-8">
-            <Accordion flush openFirstPanel className="border-none bg-transparent">
-              <Accordion.Panel>
+            <Accordion flush openFirstPanel>
+              <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">
-                  <Accordion.Title className="text-body-4 font-semibold text-metal-900">
+                  <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
                     Getting Started
                   </Accordion.Title>
                 </Accordion.Container>
@@ -112,10 +112,12 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>
-            <Accordion openFirstPanel flush className="border-none bg-transparent">
-              <Accordion.Panel>
+            <Accordion openFirstPanel flush>
+              <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">
-                  <Accordion.Title className="text-body-4 font-semibold text-metal-900">Components</Accordion.Title>
+                  <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                    Components
+                  </Accordion.Title>
                 </Accordion.Container>
                 <Accordion.Content className="p-0">
                   <Typography variant="ul" className="mb-4 mt-3 space-y-1.5 border-l border-l-metal-100">

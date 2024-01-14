@@ -2,22 +2,26 @@ import { keepAccordionTheme } from '.'
 
 export const accordionTheme: keepAccordionTheme = {
   container: {
-    base: 'flex cursor-pointer items-center justify-between px-5 py-[18px]',
-    open: 'border-b border-b-metal-200 bg-metal-200/50 group-hover:bg-metal-100 group-hover:bg-metal-200/50',
+    base: 'flex cursor-pointer items-center justify-between px-6 py-5',
+    open: '',
   },
   content: {
-    base: 'p-6 text-body-4 font-normal text-metal-500',
+    base: 'select-none text-body-4 font-normal text-metal-500 pb-5 px-6',
   },
   panel: {
-    base: 'group transition-colors duration-200',
-    panelBg: 'bg-metal-50',
+    flush: {
+      on: 'rounded-none border-b border-metal-100',
+      off: 'rounded-xl border border-metal-100 bg-white',
+    },
   },
   icon: {
     base: 'transition-transform duration-300',
     rotated: {
-      full: 'rotate-[225deg]',
-      half: 'rotate-90',
+      full: 'rotate-180',
+      half: 'rotate-0',
     },
   },
-  title: { base: 'select-none text-body-2 font-medium text-metal-700' },
+  title: {
+    base: 'select-none text-body-2 font-medium text-metal-700 first-letter:mr-1 first-letter:text-primary-500',
+  },
 }

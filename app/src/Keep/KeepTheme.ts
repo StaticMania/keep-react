@@ -1,5 +1,4 @@
 import { keepNotificationTheme } from '../components'
-import { keepAccordionTheme } from '../components/Accordion'
 import { keepAlertTheme } from '../components/Alert'
 import { keepAvatarTheme } from '../components/Avatar/Avatar'
 import { keepBadgeTheme } from '../components/Badge'
@@ -141,7 +140,6 @@ export type CustomKeepTheme = DeepPartial<KeepTheme>
 export interface KeepTheme {
   alert: keepAlertTheme
   avatar: keepAvatarTheme
-  accordion: keepAccordionTheme
   badge: keepBadgeTheme
   breadcrumb: keepBreadCrumbTheme
   card: KeepCardTheme

@@ -3,10 +3,11 @@ import { Accordion } from '../../../../src'
 
 const AccordionOpenPanel = () => {
   return (
-    <Accordion openFirstPanel={true}>
+    <Accordion openFirstPanel={true} className="space-y-4">
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
@@ -16,7 +17,8 @@ const AccordionOpenPanel = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           The Keep React offers a range of color variants for components. To customize the color scheme, you can use the
@@ -26,7 +28,8 @@ const AccordionOpenPanel = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
@@ -39,15 +42,16 @@ const AccordionOpenPanel = () => {
 }
 
 const AccordionOpenPanelCode = `
-"use client";
-import { Accordion } from "keep-react";
+'use client'
+import { Accordion } from 'keep-react'
 
-export const AccordionComponent = () => {
+const AccordionOpenPanel = () => {
   return (
-    <Accordion openFirstPanel={true}>
+    <Accordion openFirstPanel={true} className="space-y-4">
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
@@ -57,22 +61,24 @@ export const AccordionComponent = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
-          The Keep React offers a range of color variants for components. To customize the color scheme, you can use
-          the available color options such as gray,info,error,warning and success. Simply set the desired color
-          variant as a prop when using the component, and it will reflect the chosen color.
+          The Keep React offers a range of color variants for components. To customize the color scheme, you can use the
+          available color options such as gray,info,error,warning and success. Simply set the desired color variant as a
+          prop when using the component, and it will reflect the chosen color.
         </Accordion.Content>
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
-          message. The additionalContent prop can be used to display supplementary information, such as buttons,
-          links, or icons, within the notification to provide users with more context and options.
+          message. The additionalContent prop can be used to display supplementary information, such as buttons, links,
+          or icons, within the notification to provide users with more context and options.
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>
