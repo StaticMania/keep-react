@@ -1,4 +1,3 @@
-import { alertTheme } from '../components/Alert/theme'
 import { avatarTheme } from '../components/Avatar/theme'
 import { badgeTheme } from '../components/Badge/theme'
 import { breadcrumbTheme } from '../components/Breadcrumb/theme'
@@ -32,7 +31,6 @@ import { treeTheme } from '../components/Tree/theme'
 import { uploadTheme } from '../components/Upload/theme'
 
 export const theme = {
-  alert: alertTheme,
   avatar: avatarTheme,
   button: buttonTheme,
   badge: badgeTheme,

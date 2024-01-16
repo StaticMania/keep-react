@@ -1,6 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { cn } from '../../helpers/cn'
-import { alertTheme } from './theme'
+import { cn } from '~/app/src/helpers/cn'
 
 export interface TitleProps {
   children?: ReactNode
@@ -8,5 +7,5 @@ export interface TitleProps {
 }
 
 export const Title: FC<TitleProps> = ({ children, className }) => {
-  return <p className={cn(alertTheme.title.base, className)}>{children}</p>
+  return <p className={cn('text-body-3 font-semibold', className)}>{children}</p>
 }

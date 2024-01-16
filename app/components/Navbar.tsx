@@ -146,7 +146,7 @@ const Navbar = () => {
               <Accordion flush>
                 <Accordion.Panel className="!border-b-0">
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                       Quick Link
                     </Accordion.Title>
                   </Accordion.Container>
@@ -170,7 +170,7 @@ const Navbar = () => {
               <Accordion flush>
                 <Accordion.Panel className="!border-b-0">
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                       Getting Started
                     </Accordion.Title>
                   </Accordion.Container>
@@ -194,7 +194,7 @@ const Navbar = () => {
               <Accordion flush>
                 <Accordion.Panel className="!border-b-0">
                   <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                       Components
                     </Accordion.Title>
                   </Accordion.Container>

@@ -1,5 +1,4 @@
 import { keepNotificationTheme } from '../components'
-import { keepAlertTheme } from '../components/Alert'
 import { keepAvatarTheme } from '../components/Avatar/Avatar'
 import { keepBadgeTheme } from '../components/Badge'
 import { keepBreadCrumbTheme } from '../components/Breadcrumb'
@@ -138,7 +137,6 @@ export type KeepHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 export type CustomKeepTheme = DeepPartial<KeepTheme>
 
 export interface KeepTheme {
-  alert: keepAlertTheme
   avatar: keepAvatarTheme
   badge: keepBadgeTheme
   breadcrumb: keepBreadCrumbTheme

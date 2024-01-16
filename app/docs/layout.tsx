@@ -89,7 +89,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
             <Accordion flush openFirstPanel>
               <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">
-                  <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                  <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                     Getting Started
                   </Accordion.Title>
                 </Accordion.Container>
@@ -115,7 +115,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
             <Accordion openFirstPanel flush>
               <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">
-                  <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0">
+                  <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                     Components
                   </Accordion.Title>
                 </Accordion.Container>
