@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { ArrowUpRight, Check, Clipboard, Plus } from 'phosphor-react'
+import { ArrowUpRight, Check, Clipboard } from 'phosphor-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import useCopy from '../hooks/useCopy'
@@ -153,37 +153,37 @@ const FAQ = () => {
   const faqs = [
     {
       id: 1,
-      question: 'What is Keep React?',
+      question: 'Q. What is Keep React?',
       answer:
         'Keep React is an open-source component library built on React and Tailwind CSS. It offers a collection of pre-designed UI components and styles that you can easily integrate into your web applications.',
     },
     {
       id: 2,
-      question: 'How can I use Keep React components?',
+      question: 'Q. How can I use Keep React components?',
       answer:
         'To use Keep React components, you can install the library via npm or yarn, import the components you need in your React application, and start using them in your code.',
     },
     {
       id: 3,
-      question: 'Is Keep React compatible with other React projects?',
+      question: 'Q. Is Keep React compatible with other React projects?',
       answer:
         'Yes, Keep React is designed to be compatible with other React projects. You can seamlessly integrate its components into your existing React applications.',
     },
     {
       id: 4,
-      question: 'What makes Keep React different from other component libraries?',
+      question: 'Q. What makes Keep React different from other component libraries?',
       answer:
         'Keep React combines the power of React with the flexibility and utility of Tailwind CSS. It provides a wide range of customizable components to help you build beautiful, responsive, and functional user interfaces.',
     },
     {
       id: 5,
-      question: 'Can I customize the styling of Keep React components?',
+      question: 'Q. Can I customize the styling of Keep React components?',
       answer:
         "Yes, Keep React components are highly customizable. You can use Tailwind CSS utility classes or even create your own styles to tailor the appearance of the components to your project's needs.",
     },
     {
       id: 6,
-      question: 'Is Keep React suitable for both small and large-scale applications?',
+      question: 'Q. Is Keep React suitable for both small and large-scale applications?',
       answer:
         'Absolutely! Keep React is designed to be versatile, making it suitable for a wide range of projects, from small personal websites to large-scale applications. Its components and styles are designed to scale to your needs.',
     },
@@ -197,52 +197,18 @@ const FAQ = () => {
         </h2>
       </div>
 
-      <div className="mt-12 block w-full xl:hidden">
+      <div className="mx-auto mt-12 w-full xl:w-3/4">
         <Accordion flush>
           {faqs.map((faq) => (
             <Accordion.Panel key={faq.id}>
               <Accordion.Container>
                 <Accordion.Title>{faq.question}</Accordion.Title>
-                <Accordion.Icon>
-                  <Plus size={24} color="#444" />
-                </Accordion.Icon>
+                <Accordion.Icon />
               </Accordion.Container>
               <Accordion.Content>{faq.answer}</Accordion.Content>
             </Accordion.Panel>
           ))}
         </Accordion>
-      </div>
-      <div className="mt-12 hidden grid-cols-1 gap-5 xl:grid xl:grid-cols-2">
-        <div className="w-full xl:col-span-1">
-          <Accordion openFirstPanel flush>
-            {faqs.slice(0, 3).map((faq) => (
-              <Accordion.Panel key={faq.id}>
-                <Accordion.Container>
-                  <Accordion.Title>{faq.question}</Accordion.Title>
-                  <Accordion.Icon>
-                    <Plus size={24} color="#444" />
-                  </Accordion.Icon>
-                </Accordion.Container>
-                <Accordion.Content>{faq.answer}</Accordion.Content>
-              </Accordion.Panel>
-            ))}
-          </Accordion>
-        </div>
-        <div className="w-full xl:col-span-1">
-          <Accordion openFirstPanel flush>
-            {faqs.slice(3, 6).map((faq) => (
-              <Accordion.Panel key={faq.id}>
-                <Accordion.Container>
-                  <Accordion.Title>{faq.question}</Accordion.Title>
-                  <Accordion.Icon>
-                    <Plus size={24} color="#444" />
-                  </Accordion.Icon>
-                </Accordion.Container>
-                <Accordion.Content>{faq.answer}</Accordion.Content>
-              </Accordion.Panel>
-            ))}
-          </Accordion>
-        </div>
       </div>
     </div>
   )
