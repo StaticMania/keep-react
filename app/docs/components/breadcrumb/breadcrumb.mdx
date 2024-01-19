@@ -1,13 +1,12 @@
 import { DefaultBreadcrumb, DefaultBreadcrumbCode } from './variant/DefaultBreadcrumb'
+import { CustomizeBreadcrumb, CustomizeBreadcrumbCode } from './variant/CustomizeBreadcrumb'
 import { BreadcrumbWithBorder, BreadcrumbWithBorderCode } from './variant/BreadcrumbWithBorder'
-import { BreadcrumbWithPageIcon, BreadcrumbWithPageIconCode } from './variant/BreadcrumbWithPageIcon'
-import { BreadcrumbWithSeparatorIcon, BreadcrumbWithSeparatorIconCode } from './variant/BreadcrumbWithSeparatorIcon'
-import { BreadcrumbWithNumber, BreadcrumbWithNumberCode } from './variant/BreadcrumbWithNumber'
-import { breadcrumbApiData, breadcrumbItemApiData } from './breadcrumbApi'
+import { BreadcrumbDividerIcon, BreadcrumbDividerIconCode } from './variant/BreadcrumbDividerIcon'
 
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import { breadcrumbApiData, breadcrumbItemApiData } from './breadcrumbApi'
+import CodePreview from '../../../components/CodePreview'
+import CssThemePreview from '../../../components/CssThemePreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -21,36 +20,28 @@ The default Breadcrumbs component provides a simple and intuitive way for users 
   <DefaultBreadcrumb />
 </CodePreview>
 
-## Breadcrumb With Border
+## Border Types
 
-The Breadcrumbs component with the `breadCrumbWithBorder` prop set to `true` adds a subtle border around each breadcrumb item, providing a clear visual separation between the items.
+The Breadcrumbs component with the `borderType` prop with two value that will be `"border-xy"` and `"border-y"`.
 
 <CodePreview github="Breadcrumb" code={BreadcrumbWithBorderCode}>
   <BreadcrumbWithBorder />
 </CodePreview>
 
-## Breadcrumb With Page Icon
+## Divider Icon Type
 
-By utilizing the `icon` prop and providing an appropriate icon component, such as `<House size={24} color="#AFBACA" />`, you can visually represent each page or section within the breadcrumb navigation, making it easier for users to identify their current location within the website or application.
+The Breadcrumbs component with the `dividerIconStyle` prop with two value that will be `"slash"` and `"caret"`.
 
-<CodePreview github="Breadcrumb" code={BreadcrumbWithPageIconCode}>
-  <BreadcrumbWithPageIcon />
+<CodePreview github="Breadcrumb" code={BreadcrumbDividerIconCode}>
+  <BreadcrumbDividerIcon />
 </CodePreview>
 
-## Breadcrumb With Separator Icon
+## Customize Breadcrumb
 
-You can further customize the appearance of your breadcrumb navigation by adding a separator icon between items using the `separatorIcon` with any icon.
+You can customize breadcrumb component using className props. And also we have more api for customizable options.
 
-<CodePreview github="Breadcrumb" code={BreadcrumbWithSeparatorIconCode}>
-  <BreadcrumbWithSeparatorIcon />
-</CodePreview>
-
-## Breadcrumb With Number Item
-
-Enhance user navigation through step-by-step processes or hierarchical sections by incorporating numbered items into the Breadcrumbs component.
-
-<CodePreview github="Breadcrumb" code={BreadcrumbWithNumberCode}>
-  <BreadcrumbWithNumber />
+<CodePreview github="Breadcrumb" code={CustomizeBreadcrumbCode}>
+  <CustomizeBreadcrumb />
 </CodePreview>
 
 ## Breadcrumb API Reference
@@ -59,7 +50,7 @@ Explore the available props for the `<Breadcrumb>` component
 
 <ComponentApi data={breadcrumbApiData} />
 
-## Breadcrumb Item API Reference
+## Item API Reference
 
 Explore the available props for the `<Breadcrumb.Item>` component
 

@@ -1,6 +1,5 @@
 import { avatarTheme } from '../components/Avatar/theme'
 import { badgeTheme } from '../components/Badge/theme'
-import { breadcrumbTheme } from '../components/Breadcrumb/theme'
 import { buttonTheme } from '../components/Button/theme'
 import { cardTheme } from '../components/Card/theme'
 import { carouselTheme } from '../components/Carousel/theme'
@@ -34,7 +33,6 @@ export const theme = {
   avatar: avatarTheme,
   button: buttonTheme,
   badge: badgeTheme,
-  breadcrumb: breadcrumbTheme,
   card: cardTheme,
   carousel: carouselTheme,
   progress: progressTheme,

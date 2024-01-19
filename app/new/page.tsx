@@ -1,10 +1,23 @@
+import { Breadcrumb } from './Breadcrumb/Breadcrumb'
+
 const Page = () => {
   return (
-    <section className="py-20">
-      <div className="container">
-        <h1 className="mx-auto text-center text-3xl font-bold">Badge component</h1>
+    <section className="bg-white py-20">
+      <div className="container space-y-5">
+        <h1 className="mx-auto mb-10 text-center text-3xl font-bold">Breadcrumb component</h1>
 
-        <div className="flex items-end gap-5"></div>
+        <Breadcrumb borderType="border-xy">
+          <Breadcrumb.Item>Overview</Breadcrumb.Item>
+          <Breadcrumb.Item>Pools</Breadcrumb.Item>
+          <Breadcrumb.Item>Tokens</Breadcrumb.Item>
+          <Breadcrumb.Item activeType="base">Color</Breadcrumb.Item>
+        </Breadcrumb>
+
+        <Breadcrumb borderType="border-xy">
+          <Breadcrumb.Item>Overview</Breadcrumb.Item>
+          <Breadcrumb.Item>Pools</Breadcrumb.Item>
+          <Breadcrumb.Item activeType="border">Color</Breadcrumb.Item>
+        </Breadcrumb>
       </div>
     </section>
   )

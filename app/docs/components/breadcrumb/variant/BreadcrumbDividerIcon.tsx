@@ -1,40 +1,41 @@
+'use client'
 import { Breadcrumb } from '../../../../src'
 
-const BreadcrumbWithBorder = () => {
+const BreadcrumbDividerIcon = () => {
   return (
-    <div className="space-y-3">
-      <Breadcrumb borderType="border-xy">
+    <>
+      <Breadcrumb dividerIconStyle="caret">
         <Breadcrumb.Item>Overview</Breadcrumb.Item>
         <Breadcrumb.Item>Pools</Breadcrumb.Item>
         <Breadcrumb.Item>Tokens</Breadcrumb.Item>
         <Breadcrumb.Item activeType="base">Color</Breadcrumb.Item>
       </Breadcrumb>
-      <Breadcrumb borderType="border-xy">
+      <Breadcrumb dividerIconStyle="caret">
         <Breadcrumb.Item>Overview</Breadcrumb.Item>
         <Breadcrumb.Item>Pools</Breadcrumb.Item>
         <Breadcrumb.Item activeType="border">Color</Breadcrumb.Item>
       </Breadcrumb>
-      <Breadcrumb borderType="border-y">
+      <Breadcrumb dividerIconStyle="slash">
         <Breadcrumb.Item>Overview</Breadcrumb.Item>
         <Breadcrumb.Item>Pools</Breadcrumb.Item>
         <Breadcrumb.Item>Tokens</Breadcrumb.Item>
         <Breadcrumb.Item activeType="base">Color</Breadcrumb.Item>
       </Breadcrumb>
-      <Breadcrumb borderType="border-y">
+      <Breadcrumb dividerIconStyle="slash">
         <Breadcrumb.Item>Overview</Breadcrumb.Item>
         <Breadcrumb.Item>Pools</Breadcrumb.Item>
         <Breadcrumb.Item activeType="border">Color</Breadcrumb.Item>
       </Breadcrumb>
-    </div>
+    </>
   )
 }
 
-const BreadcrumbWithBorderCode = `
-import { Breadcrumb } from "keep-react";
+const BreadcrumbDividerIconCode = `
+import { Breadcrumb } from "keep-react"
 
 export const BreadcrumbComponent = () => {
   return (
-    <Breadcrumb borderType="border-xy">
+    <Breadcrumb dividerIconStyle="caret">
       <Breadcrumb.Item>Overview</Breadcrumb.Item>
       <Breadcrumb.Item>Pools</Breadcrumb.Item>
       <Breadcrumb.Item>Tokens</Breadcrumb.Item>
@@ -44,4 +45,4 @@ export const BreadcrumbComponent = () => {
 }
 `
 
-export { BreadcrumbWithBorder, BreadcrumbWithBorderCode }
+export { BreadcrumbDividerIcon, BreadcrumbDividerIconCode }

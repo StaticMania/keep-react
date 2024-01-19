@@ -1,7 +1,6 @@
 import { keepNotificationTheme } from '../components'
 import { keepAvatarTheme } from '../components/Avatar/Avatar'
 import { keepBadgeTheme } from '../components/Badge'
-import { keepBreadCrumbTheme } from '../components/Breadcrumb'
 import { KeepCardTheme } from '../components/Card'
 import { KeepCarouselTheme } from '../components/Carousel'
 import { keepCheckboxTheme } from '../components/CheckBox'
@@ -139,7 +138,6 @@ export type CustomKeepTheme = DeepPartial<KeepTheme>
 export interface KeepTheme {
   avatar: keepAvatarTheme
   badge: keepBadgeTheme
-  breadcrumb: keepBreadCrumbTheme
   card: KeepCardTheme
   carousel: KeepCarouselTheme
   dropdown: keepDropdownTheme
