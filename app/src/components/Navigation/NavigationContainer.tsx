@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import type { ReactNode } from 'react'
+import { FC } from 'react'
 import { cn } from '../../helpers/cn'
 
 /**

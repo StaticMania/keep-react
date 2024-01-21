@@ -1,4 +1,174 @@
-import { keepFormControlTheme } from './formControls'
+import { KeepBoolean, KeepColors, KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
+
+export interface keepFormControlTheme {
+  helperText: {
+    base: string
+    disabled: string
+    colors: HelperColors
+  }
+  label: {
+    base: string
+    colors: LabelColors
+    disabled: string
+  }
+  radio: keepRadioTheme
+  numberInput: keepNumberInputTheme
+  textInput: keepTextInputTheme
+  fileInput: {
+    base: string
+    field: {
+      base: string
+      input: {
+        base: string
+        sizes: TextInputSizes
+        colors: TextInputColors
+      }
+    }
+  }
+  textarea: keepTextAreaTheme
+}
+
+export interface HelperColors extends Pick<KeepColors, 'gray' | 'info' | 'error' | 'warning' | 'success'> {
+  [key: string]: string
+}
+
+export interface LabelColors extends KeepStateColors {
+  [key: string]: string
+  default: string
+}
+
+export interface keepNumberInputTheme {
+  base: string
+  field: {
+    base: string
+    icon: {
+      base: string
+      incrementIcon: string
+      decrementIcon: string
+      disabled: string
+      sizes: NumberInputSizes
+      position: {
+        right: string
+        incrementIcon: string
+        decrementIcon: string
+      }
+    }
+    input: {
+      base: string
+      disabled: string
+      sizes: NumberInputSizes
+      withIcon: {
+        on: {
+          left: string
+          right: string
+        }
+        off: string
+      }
+    }
+  }
+}
+
+export interface NumberInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
+  [key: string]: string
+}
+
+export interface keepRadioTheme {
+  base: string
+  radioInput: string
+  color: KeepStateColors
+  radioType: {
+    base: string
+    square: string
+    circle: string
+  }
+  sizes: RadioInputSizes
+}
+
+export interface RadioInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
+  [key: string]: string
+}
+
+export interface keepTextAreaTheme {
+  base: string
+  colors: TextareaColors
+  disabled: string
+  withBg: {
+    on: {
+      colors: TextareaColors
+    }
+    off: string
+  }
+  withBorder: KeepBoolean
+  withShadow: KeepBoolean
+}
+
+export interface TextareaColors extends Pick<KeepColors, 'gray' | 'info' | 'error' | 'warning' | 'success'> {
+  [key: string]: string
+}
+
+export interface keepTextInputTheme {
+  base: string
+  addon: {
+    base: string
+    separator: {
+      colors: TextInputColors
+    }
+    position: {
+      left: string
+      right: string
+    }
+    addonBorder: {
+      on: string
+      off: string
+    }
+  }
+  field: {
+    base: string
+    icon: {
+      base: string
+      position: {
+        left: string
+        right: string
+      }
+    }
+    input: {
+      base: string
+      disabled: string
+      sizes: TextInputSizes
+      colors: TextInputColors
+      withBorder: KeepBoolean
+      withBg: {
+        on: {
+          colors: TextInputColors
+        }
+        off: string
+      }
+      withIcon: {
+        on: {
+          left: string
+          right: string
+        }
+        off: string
+      }
+      withAddon: {
+        on: {
+          left: string
+          right: string
+        }
+        off: string
+      }
+      withShadow: KeepBoolean
+    }
+  }
+}
+
+export interface TextInputColors extends Pick<KeepColors, 'gray' | 'info' | 'error' | 'warning' | 'success'> {
+  [key: string]: string
+}
+
+export interface TextInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
+  [key: string]: string
+}
 
 export const formControlsTheme: keepFormControlTheme = {
   helperText: {

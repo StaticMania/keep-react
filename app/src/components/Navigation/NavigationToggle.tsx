@@ -1,7 +1,7 @@
-import { FC, ReactNode } from 'react'
 import { List, X } from 'phosphor-react'
-import { useNavigationContext } from './NavigationContext'
+import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
+import { useNavigationContext } from './NavigationContext'
 
 /**
  * Props for the NavigationToggle component.

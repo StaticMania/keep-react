@@ -1,41 +1,18 @@
 import { FileArrowUp } from 'phosphor-react'
 import { FC, useRef } from 'react'
+import { cn } from '../../helpers/cn'
 import { Button } from '../Button/Button'
 import { useUploadContext } from './UploadContext'
 import { UploadFailed } from './UploadFailed'
 import { UploadPending } from './UploadPending'
 import { UploadSuccess } from './UploadSuccess'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
-
-export interface UploadHorizontalTheme {
-  base: string
-  disabled: string
-  label: {
-    base: string
-    root: {
-      base: string
-      iconBox: {
-        base: string
-        icon: string
-        dragDrop: string
-        fileType: string
-      }
-      upload: {
-        base: string
-        input: string
-        fileName: string
-        fileSize: string
-      }
-    }
-  }
-}
+import { uploadTheme } from './theme'
 
 export const UploadHorizontal: FC = () => {
   const { disabled, showProgressBar, progressType, file, onFileChange, title, fileType, id, uploadBtnColor } =
     useUploadContext()
 
-  const theme = useTheme().theme.upload.uploadHorizontal
+  const theme = uploadTheme.uploadHorizontal
   const extension = file?.split('.').pop()
   const inputRef = useRef<HTMLInputElement>(null)
 

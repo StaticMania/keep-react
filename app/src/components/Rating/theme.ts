@@ -1,4 +1,25 @@
-import type { keepRatingTheme } from '.'
+import { KeepSizes } from '../../Keep/KeepTheme'
+
+export interface RatingAdvancedSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
+  [key: string]: string
+}
+
+interface keepRatingTheme {
+  base: string
+  star: {
+    base: string
+  }
+  advanced: {
+    base: string
+    label: string
+    progress: {
+      base: string
+      fill: string
+      label: string
+      size: RatingAdvancedSizes
+    }
+  }
+}
 
 export const ratingTheme: keepRatingTheme = {
   base: 'flex items-center',

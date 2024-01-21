@@ -1,24 +1,11 @@
 import type { ChangeEvent, FC } from 'react'
-import type { keepInputFieldTheme } from './InputField'
-import type { keepUploadFailedTheme } from './UploadFailed'
-import type { UploadHorizontalTheme } from './UploadHorizontal'
-import type { UploadPendingTheme } from './UploadPending'
-import type { UploadSuccessTheme } from './UploadSuccess'
 
 import { InputField } from './InputField'
+import { UploadContext } from './UploadContext'
 import { UploadFailed } from './UploadFailed'
 import { UploadHorizontal } from './UploadHorizontal'
 import { UploadPending } from './UploadPending'
 import { UploadSuccess } from './UploadSuccess'
-import { UploadContext } from './UploadContext'
-
-export interface keepUploadTheme {
-  input: keepInputFieldTheme
-  uploadFailed: keepUploadFailedTheme
-  uploadHorizontal: UploadHorizontalTheme
-  uploadPending: UploadPendingTheme
-  uploadSuccess: UploadSuccessTheme
-}
 
 /**
  * Props for the UploadComponent.

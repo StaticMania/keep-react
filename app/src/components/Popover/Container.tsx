@@ -1,7 +1,7 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { popoverTheme } from './theme'
 
 export interface PopoverContainerProps {
   children?: ReactNode
@@ -10,7 +10,7 @@ export interface PopoverContainerProps {
 }
 
 export const Container: FC<PopoverContainerProps> = ({ children, className, ...props }) => {
-  const { container } = useTheme().theme.popover
+  const { container } = popoverTheme
   return (
     <div className={cn(className, container)} {...props}>
       {children}

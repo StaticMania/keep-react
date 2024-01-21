@@ -1,36 +1,12 @@
 import { ArrowClockwise, X } from 'phosphor-react'
 import { FC, useEffect, useRef, useState } from 'react'
-import { useUploadContext } from './UploadContext'
-import { useTheme } from '../../Keep/ThemeContext'
-import { useProgress } from './useProgress'
 import { cn } from '../../helpers/cn'
-
-export interface keepUploadFailedTheme {
-  base: string
-  bgColor: string
-  root: {
-    base: string
-    status: string
-    statusBox: {
-      base: string
-      count: string
-      dot: string
-      time: string
-    }
-    confirmBox: {
-      base: string
-      restart: string
-      dismiss: string
-    }
-  }
-  progress: {
-    bgBar: string
-    mainBar: string
-  }
-}
+import { useUploadContext } from './UploadContext'
+import { uploadTheme } from './theme'
+import { useProgress } from './useProgress'
 
 export const UploadFailed: FC = () => {
-  const theme = useTheme().theme.upload.uploadFailed
+  const theme = uploadTheme.uploadFailed
   const { progress, uploadTime } = useUploadContext()
   const [divWidth, setDivWidth] = useState(0)
   const divRef = useRef<HTMLDivElement | null>(null)

@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { skeletonTheme } from './theme'
 
 export const SkeletonAvatar: FC<{ className?: string }> = ({ className }) => {
-  const theme = useTheme().theme.skeleton
+  const theme = skeletonTheme
   return <div className={cn(theme.avatar, className)}></div>
 }

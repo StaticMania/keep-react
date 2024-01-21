@@ -1,9 +1,8 @@
 import { X } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
-import { excludeClassName } from '../../helpers/exclude'
-import { useModalContext } from './ModalContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { useModalContext } from './ModalContext'
+import { modalTheme } from './theme'
 
 /**
  * Props for the ModalHeader component.
@@ -14,13 +13,12 @@ import { cn } from '../../helpers/cn'
 
 export type ModalHeaderProps = PropsWithChildren<ComponentProps<'div'> & { className?: string }>
 
-export const ModalHeader: FC<ModalHeaderProps> = ({ children, className, ...props }): ReactElement => {
+export const ModalHeader: FC<ModalHeaderProps> = ({ children, className }): ReactElement => {
   const { icon, onClose } = useModalContext()
-  const theme = useTheme().theme.modal.header
-  const theirProps = excludeClassName(props)
+  const theme = modalTheme.header
 
   return (
-    <div className={cn(theme.base, className)} {...theirProps}>
+    <div className={cn(theme.base, className)}>
       <div className={cn(theme.iconSection)}>
         <div className={cn(theme.headerIcon.base)}>{icon}</div>
         {onClose && (

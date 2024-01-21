@@ -1,18 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { excludeClassName } from '../../helpers/exclude'
-import type { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepHelperTextTheme {
-  base: string
-  disabled: string
-  colors: HelperColors
-}
-
-export interface HelperColors extends Pick<KeepColors, 'gray' | 'info' | 'error' | 'warning' | 'success'> {
-  [key: string]: string
-}
+import { excludeClassName } from '../../helpers/exclude'
+import { HelperColors, formControlsTheme } from './theme'
 
 /**
  * Props for the HelperText component.
@@ -57,7 +46,7 @@ export const HelperText: FC<HelperTextProps> = ({
   className,
   ...props
 }) => {
-  const theme = useTheme().theme.formControls.helperText
+  const theme = formControlsTheme.helperText
   const theirProps = excludeClassName(props)
 
   return (

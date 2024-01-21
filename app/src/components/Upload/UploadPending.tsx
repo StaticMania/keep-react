@@ -1,38 +1,14 @@
-import { FC, useEffect, useRef, useState } from 'react'
 import { Pause, X } from 'phosphor-react'
-import { useTheme } from '../../Keep/ThemeContext'
-import { useUploadContext } from './UploadContext'
-import { useProgress } from './useProgress'
+import { FC, useEffect, useRef, useState } from 'react'
 import { cn } from '../../helpers/cn'
-
-export interface UploadPendingTheme {
-  base: string
-  bgColor: string
-  root: {
-    base: string
-    status: string
-    statusBox: {
-      base: string
-      count: string
-      dot: string
-      time: string
-    }
-    confirmBox: {
-      base: string
-      pause: string
-      dismiss: string
-    }
-  }
-  progress: {
-    bgBar: string
-    mainBar: string
-  }
-}
+import { useUploadContext } from './UploadContext'
+import { uploadTheme } from './theme'
+import { useProgress } from './useProgress'
 
 export const UploadPending: FC = () => {
   const [divWidth, setDivWidth] = useState(0)
   const divRef = useRef<HTMLDivElement | null>(null)
-  const theme = useTheme().theme.upload.uploadPending
+  const theme = uploadTheme.uploadPending
   const { progress, uploadTime } = useUploadContext()
 
   useEffect(() => {

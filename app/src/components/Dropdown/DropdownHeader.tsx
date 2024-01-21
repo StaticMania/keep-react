@@ -1,19 +1,14 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { DropdownDivider } from './DropdownDivider'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepDropdownHeaderTheme {
-  header: string
-}
+import { dropdownTheme } from './theme'
 
 /**
  * DropdownHeader component.
  * @param {PropsWithChildren<ComponentProps<'div'>>} props
  */
 export const DropdownHeader: FC<PropsWithChildren & ComponentProps<'div'>> = ({ children, className, ...props }) => {
-  const theme = useTheme().theme.dropdown.floating.header
-
+  const theme = dropdownTheme
   return (
     <>
       <div className={cn(theme, className)} {...props}>

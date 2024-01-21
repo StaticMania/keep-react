@@ -1,4 +1,39 @@
-import { keepTreeTheme } from '.'
+export interface keepTreeTheme {
+  base: string
+  list: {
+    base: string
+    hasChild: {
+      on: string
+      off: {
+        hasIcon: {
+          on: string
+          off: string
+        }
+      }
+    }
+  }
+  caretIcon: {
+    base: string
+    icon: string
+  }
+
+  showChildren: {
+    base: string
+    on: string
+    off: string
+  }
+
+  nestedOrderList: {
+    on: {
+      base: string
+      border: {
+        on: string
+        off: string
+      }
+    }
+    off: string
+  }
+}
 
 export const treeTheme: keepTreeTheme = {
   base: 'list-none space-y-2  text-body-6 md:text-body-4 font-medium text-metal-700',

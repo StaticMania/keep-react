@@ -1,8 +1,8 @@
 import { Star, StarHalf } from 'phosphor-react'
 import type { FC, ReactNode } from 'react'
-import { useRatingContext } from './RatingContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { useRatingContext } from './RatingContext'
+import { ratingTheme } from './theme'
 
 /**
  * Props for the RatingStar component.
@@ -44,7 +44,7 @@ export const RatingStar: FC<RatingStarProps> = ({
   starIcon: Icon,
   className,
 }) => {
-  const theme = useTheme().theme.rating.star
+  const theme = ratingTheme.star
   const { size = 24 } = useRatingContext()
 
   Icon =

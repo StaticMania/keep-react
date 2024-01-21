@@ -2,7 +2,7 @@ import type { Placement } from '@floating-ui/core'
 import type { FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
 import { Floating } from '../Floating'
-import { useTheme } from '../../Keep/ThemeContext'
+import { tooltipTheme } from './theme'
 
 /**
  * Props for the Tooltip component.
@@ -80,7 +80,7 @@ export const Tooltip: FC<TooltipProps> = ({
   trigger = 'hover',
   ...props
 }) => {
-  const theme = useTheme().theme.tooltip
+  const theme = tooltipTheme
   const theirProps = excludeClassName(props)
 
   return (

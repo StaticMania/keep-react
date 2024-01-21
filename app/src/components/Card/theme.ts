@@ -1,4 +1,34 @@
-import type { KeepCardTheme } from '.'
+import { KeepBoolean, KeepSizes } from '../../Keep/KeepTheme'
+
+export interface KeepCardTheme {
+  base: string
+  children: string
+  shadow: KeepBoolean
+  border: KeepBoolean
+  horizontal: {
+    off: string
+    on: string
+  }
+  href: string
+  img: {
+    base: string
+    horizontal: {
+      off: {
+        base: string
+        size: CardBgImageSizes
+      }
+      on: {
+        base: string
+        size: CardBgImageSizes
+      }
+    }
+  }
+  description: string
+}
+
+export interface CardBgImageSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
+  [key: string]: string
+}
 
 export const cardTheme: KeepCardTheme = {
   base: 'flex rounded-md bg-white ',

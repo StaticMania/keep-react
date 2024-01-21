@@ -1,28 +1,10 @@
-import { KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { cn } from '../../helpers/cn'
+import { RatingAdvancedSizes, ratingTheme } from './theme'
 
-/**
- * Props for the RatingAdvanced component.
- * @interface RatingAdvancedProps
- * @extends {PropsWithChildren<ComponentProps<'div'>>}
- */
 export interface RatingAdvancedProps extends PropsWithChildren<ComponentProps<'div'>> {
-  /**
-   * The percentage of the rating that should be filled.
-   */
   percentFilled?: number
-
-  /**
-   * The size of the rating.
-   * Options: 'sm', 'md', 'lg'
-   */
   size?: keyof RatingAdvancedSizes
-}
-
-export interface RatingAdvancedSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
-  [key: string]: string
 }
 
 export const RatingAdvanced: FC<RatingAdvancedProps> = ({
@@ -32,7 +14,7 @@ export const RatingAdvanced: FC<RatingAdvancedProps> = ({
   className,
   ...props
 }) => {
-  const theme = useTheme().theme.rating.advanced
+  const theme = ratingTheme.advanced
 
   return (
     <div className={cn(theme.base, className)} {...props}>

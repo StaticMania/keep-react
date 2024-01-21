@@ -1,4 +1,61 @@
-import type { keepCheckboxGroupTheme } from '.'
+export interface keepCheckboxGroupTheme {
+  label: {
+    base: string
+    iconRight: {
+      on: string
+      off: string
+    }
+    selected: {
+      on: string
+      off: string
+    }
+    spacing: string
+  }
+
+  main: {
+    order: string
+    spacing: string
+  }
+  root: {
+    base: string
+    icon: {
+      base: string
+      selected: {
+        on: string
+        off: string
+      }
+    }
+    circleImg: {
+      base: string
+      selected: {
+        on: string
+        off: string
+      }
+    }
+    squareImg: {
+      base: string
+      img: string
+    }
+  }
+  textBox: {
+    spacing: string
+    order: string
+    title: {
+      base: string
+      selected: {
+        on: string
+        off: string
+      }
+    }
+    description: {
+      base: string
+      selected: {
+        on: string
+        off: string
+      }
+    }
+  }
+}
 
 export const checkboxGroupTheme: keepCheckboxGroupTheme = {
   label: {

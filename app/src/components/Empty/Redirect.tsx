@@ -1,7 +1,7 @@
 'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { emptyTheme } from './theme'
 
 export interface RedirectProps {
   /**
@@ -31,7 +31,7 @@ export interface RedirectProps {
 }
 
 export const Redirect: FC<RedirectProps> = ({ redirectUrl, buttonText, className, children }) => {
-  const { redirectBtn } = useTheme().theme.empty
+  const { redirectBtn } = emptyTheme
   if (!children) {
     return (
       <a href={redirectUrl} className={cn(redirectBtn, className)}>

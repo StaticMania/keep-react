@@ -1,63 +1,10 @@
-import { useState } from 'react'
 import { ArrowLeft, ArrowRight } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
-import { excludeClassName } from '../../helpers/exclude'
-import { useTheme } from '../../Keep/ThemeContext'
-import { paginationGenerator } from '../../helpers/rangeWithDots'
+import { useState } from 'react'
 import { cn } from '../../helpers/cn'
-
-export interface keepPaginationTheme {
-  paginateWithBorder: string
-  layout: {
-    table: {
-      base: string
-      span: string
-    }
-  }
-  pages: {
-    base: string
-    previous: {
-      base: string
-      icon: string
-      title: string
-      iconWithText: string
-      iconWithOutText: string
-    }
-    next: {
-      base: string
-      icon: string
-      title: string
-      iconWithText: string
-      iconWithOutText: string
-    }
-    selector: {
-      base: string
-      active: {
-        base: string
-        circle: string
-        roundSquare: string
-      }
-    }
-    prevNextShape: {
-      none: string
-      circle: string
-      round: string
-      roundSquare: string
-    }
-  }
-  goTo: {
-    base: string
-    title: string
-    input: string
-    withBorder: string
-    goToShape: {
-      none: string
-      circle: string
-      round: string
-      roundSquare: string
-    }
-  }
-}
+import { excludeClassName } from '../../helpers/exclude'
+import { paginationGenerator } from '../../helpers/rangeWithDots'
+import { paginationTheme } from './theme'
 
 export type PaginationProps = PropsWithChildren<PaginationProperty>
 
@@ -164,7 +111,7 @@ export const Pagination: FC<PaginationProps> = ({
   const firstPage = Math.max(1, currentPage - 4)
   const lastPage = Math.min(currentPage + 4, totalPages)
 
-  const theme = useTheme().theme.pagination
+  const theme = paginationTheme
   const theirProps = excludeClassName(props)
 
   const goToNextPage = (): void => {

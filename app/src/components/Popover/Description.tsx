@@ -2,7 +2,7 @@
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 import { usePopoverContext } from './PopoverContext'
-import { useTheme } from '../../Keep/ThemeContext'
+import { popoverTheme } from './theme'
 
 export interface PopoverDescriptionProps {
   children?: ReactNode
@@ -12,7 +12,7 @@ export interface PopoverDescriptionProps {
 
 export const Description: FC<PopoverDescriptionProps> = ({ children, className, ...props }) => {
   const { isTitleExist } = usePopoverContext()
-  const { description } = useTheme().theme.popover
+  const { description } = popoverTheme
   return (
     <p
       className={cn(

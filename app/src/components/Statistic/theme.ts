@@ -1,4 +1,27 @@
-import type { keepStatisticTheme } from '.'
+interface keepStatisticTheme {
+  rate: {
+    base?: string
+  }
+  amount: {
+    base: string
+    spacing: string
+  }
+  title: {
+    base: string
+    title: string
+    filter: {
+      text: string
+      icon: string
+    }
+  }
+  icon: {
+    base: string
+    selected: {
+      on: string
+      off: string
+    }
+  }
+}
 
 export const statisticsTheme: keepStatisticTheme = {
   rate: {

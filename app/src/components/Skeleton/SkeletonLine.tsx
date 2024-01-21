@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { skeletonTheme } from './theme'
 
 /**
  * Props for the SkeletonLine component.
@@ -23,6 +23,6 @@ export interface SkeletonProps {
 }
 
 export const SkeletonLine: FC<SkeletonProps> = ({ height, className }) => {
-  const theme = useTheme().theme.skeleton
+  const theme = skeletonTheme
   return <div className={cn(theme.line, height, className)}></div>
 }

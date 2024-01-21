@@ -1,29 +1,6 @@
-import { useTheme } from '../../Keep/ThemeContext'
-import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-
-export interface keepTagTheme {
-  base: string
-  dismiss: string
-  disabled: KeepBoolean
-  icon: {
-    left: string
-    right: string
-  }
-  borderType: {
-    solid: string
-    dashed: string
-  }
-  color: TagColors
-  bar: {
-    base: string
-    color: TagColors
-  }
-  children: {
-    colors: TagColors
-  }
-}
+import { TagColors, tagTheme } from './theme'
 
 /**
  * Props for the Tag component.
@@ -89,11 +66,6 @@ export interface TagProps extends PropsWithChildren<Omit<ComponentProps<'div'>, 
   className?: string
 }
 
-export interface TagColors
-  extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning' | 'teal' | 'purple'> {
-  [key: string]: string
-}
-
 export const Tag: FC<TagProps> = ({
   children,
   color = 'gray',
@@ -105,7 +77,7 @@ export const Tag: FC<TagProps> = ({
   disabled = false,
   className,
 }) => {
-  const theme = useTheme().theme.tag
+  const theme = tagTheme
 
   return (
     <div

@@ -1,15 +1,8 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import type { DeepPartial } from '../../helpers/deep-partial'
-
-import { useSidebarContext } from './SidebarContext'
-import { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface KeepSidebarCTATheme {
-  base: string
-  color: KeepSidebarCTAColors
-}
+import type { DeepPartial } from '../../helpers/deep-partial'
+import { useSidebarContext } from './SidebarContext'
+import { KeepSidebarCTAColors, KeepSidebarCTATheme, sidebarTheme } from './theme'
 
 /**
  * Props for the SidebarCTA component.
@@ -28,17 +21,9 @@ export interface SidebarCTAProps extends PropsWithChildren, Omit<ComponentProps<
   theme?: DeepPartial<KeepSidebarCTATheme>
 }
 
-export interface KeepSidebarCTAColors
-  extends Pick<
-    KeepColors,
-    'blue' | 'dark' | 'failure' | 'gray' | 'green' | 'light' | 'purple' | 'red' | 'success' | 'warning' | 'yellow'
-  > {
-  [key: string]: string
-}
-
 export const SidebarCTA: FC<SidebarCTAProps> = ({ children, color = 'info', className, ...props }) => {
   const { isCollapsed } = useSidebarContext()
-  const theme = useTheme().theme.sidebar.cta
+  const theme = sidebarTheme.cta
 
   return (
     <div

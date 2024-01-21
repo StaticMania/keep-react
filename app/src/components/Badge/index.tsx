@@ -1,62 +1,8 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
-import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { BadgeColors, BadgeSizes, badgeTheme } from './theme'
 
-export interface keepBadgeTheme {
-  base: string
-  href: string
-  badgeType: {
-    default: {
-      colorType: {
-        light: {
-          color: BadgeColors
-        }
-        strong: {
-          color: BadgeColors
-        }
-      }
-    }
-    outline: {
-      colorType: {
-        light: {
-          color: BadgeColors
-        }
-        strong: {
-          color: BadgeColors
-        }
-      }
-    }
-    text: {
-      colorType: {
-        light: {
-          color: BadgeColors
-        }
-        strong: {
-          color: BadgeColors
-        }
-      }
-    }
-  }
-  icon: {
-    off: string
-    on: string
-    size: BadgeSizes
-  }
-  size: BadgeSizes
-  dot: string
-  dotPosition: {
-    left: string
-    right: string
-  }
-}
-
-/**
- * Props for the Badge component.
- * @interface BadgeProps
- * @extends {PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>>}
- */
 export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>> {
   /**
    * The color of the badge.
@@ -149,14 +95,6 @@ export interface BadgeProps extends PropsWithChildren<Omit<ComponentProps<'span'
   iconStyle?: string
 }
 
-export interface BadgeColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
-  [key: string]: string
-}
-
-export interface BadgeSizes extends Pick<KeepSizes, 'xs' | 'sm'> {
-  [key: string]: string
-}
-
 export const Badge: FC<BadgeProps> = ({
   children,
   color = 'info',
@@ -175,7 +113,7 @@ export const Badge: FC<BadgeProps> = ({
 }): ReactElement => {
   const theirProps = excludeClassName(props)
 
-  const theme = useTheme().theme.badge
+  const theme = badgeTheme
 
   const Content = (): ReactElement => (
     <span

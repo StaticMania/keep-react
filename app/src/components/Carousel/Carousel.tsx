@@ -3,61 +3,8 @@ import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } f
 import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import { windowExists } from '../../helpers/window-exists'
-import { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface KeepCarouselTheme {
-  base: string
-  indicators: {
-    active: {
-      off: {
-        base: string
-        color: IndicatorsTypeColors
-      }
-      on: {
-        base: string
-        type: {
-          dot: string
-          ring: string
-          bar: string
-          square: string
-          squareRing: string
-        }
-        color: IndicatorsTypeColors
-      }
-    }
-    base: string
-    wrapper: string
-    type: {
-      dot: string
-      ring: string
-      bar: string
-      square: string
-      squareRing: string
-    }
-  }
-  item: {
-    base: string
-    wrapper: string
-  }
-  control: {
-    base: string
-    icon: string
-  }
-  leftControl: string
-  rightControl: string
-  scrollContainer: {
-    base: string
-    snap: string
-  }
-}
-
-export type IndicatorsType = 'dot' | 'ring' | 'bar' | 'square' | 'squareRing'
-
-export interface IndicatorsTypeColors extends Pick<KeepColors, 'white' | 'slate'> {
-  [key: string]: string
-}
+import { IndicatorsType, IndicatorsTypeColors, carouselTheme } from './theme'
 
 /**
  * Props for the Carousel component.
@@ -154,7 +101,7 @@ export const Carousel: FC<CarouselProps> = ({
   const carouselContainer = useRef<HTMLDivElement>(null)
   const [activeItem, setActiveItem] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-  const theme = useTheme().theme.carousel
+  const theme = carouselTheme
 
   const items = useMemo(
     () =>
@@ -262,7 +209,7 @@ export const Carousel: FC<CarouselProps> = ({
 }
 
 const DefaultLeftControl: FC = () => {
-  const theme = useTheme().theme.carousel
+  const theme = carouselTheme
   return (
     <span className={theme.control.base}>
       <CaretLeft size={20} weight="bold" color="white" />
@@ -271,7 +218,7 @@ const DefaultLeftControl: FC = () => {
 }
 
 const DefaultRightControl: FC = () => {
-  const theme = useTheme().theme.carousel
+  const theme = carouselTheme
   return (
     <span className={theme.control.base}>
       <CaretRight size={20} weight="bold" color="white" />

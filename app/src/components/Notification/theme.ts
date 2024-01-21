@@ -1,4 +1,21 @@
-import { keepNotificationTheme } from './Notification'
+export interface keepNotificationTheme {
+  root: string
+  position: {
+    show: string
+    hidden: string
+    'top-left': string
+    'top-right': string
+    'bottom-left': string
+    'bottom-right': string
+  }
+  crossBtn: string
+  description: string
+  media: string
+  icon: string
+  body: string
+  avatar: string
+  title: string
+}
 
 export const notificationTheme: keepNotificationTheme = {
   root: 'relative max-w-sm overflow-hidden rounded-xl bg-white pb-5 pl-[30px] pr-4 pt-5 shadow-large',

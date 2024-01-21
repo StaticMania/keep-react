@@ -4,45 +4,8 @@ import { CardDescription } from './CardDescription'
 import { CardLink } from './CardLink'
 import { CardList } from './CardList'
 import { CardTitle } from './CardTitle'
-import { KeepBoolean, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface KeepCardTheme {
-  base: string
-  children: string
-  shadow: KeepBoolean
-  border: KeepBoolean
-  horizontal: {
-    off: string
-    on: string
-  }
-  href: string
-  img: {
-    base: string
-    horizontal: {
-      off: {
-        base: string
-        size: CardBgImageSizes
-      }
-      on: {
-        base: string
-        size: CardBgImageSizes
-      }
-    }
-  }
-  description: string
-}
-
-export interface CardBgImageSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
-  [key: string]: string
-}
-
-/**
- * Props for the Card component.
- * @interface CardProps
- * @extends {PropsWithChildren<ComponentProps<'div'>>}
- */
+import { CardBgImageSizes, cardTheme } from './theme'
 
 export interface CardProps extends PropsWithChildren<ComponentProps<'div'>> {
   /**
@@ -114,8 +77,7 @@ const CardComponent: FC<CardProps> = ({
   imgStyle,
   ...props
 }): ReactElement => {
-  const theme = useTheme().theme.card
-
+  const theme = cardTheme
   const Component = typeof href === 'undefined' ? 'div' : 'a'
   const theirProps = props as object
   return (

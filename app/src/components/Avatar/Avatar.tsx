@@ -7,93 +7,12 @@
 
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
-import { KeepPositions, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import { AvatarAdd } from './AvatarAdd'
 import { AvatarGroup } from './AvatarGroup'
 import { AvatarGroupCounter } from './AvatarGroupCounter'
 import { cn } from '../../helpers/cn'
-
-export interface keepAvatarTheme {
-  base: string
-  bordered: string
-  img: {
-    off: string
-    on: string
-  }
-  size: AvatarSizes
-  customStatusIcon: AvatarSizes
-  shape: {
-    square: string
-    circle: string
-    rounded: AvatarSizes
-  }
-  stacked: string
-  status: {
-    away: string
-    busy: string
-    offline: string
-    online: string
-  }
-  statusType: {
-    type: AvatarStatusType
-    size: KeepAvatarStatusTypeSize
-    fontSize: KeepAvatarStatusFontSize
-  }
-  statusPosition: {
-    square: KeepAvatarStatusPositions
-    circle: KeepAvatarStatusPositions
-    rounded: KeepAvatarStatusPositions
-  }
-  groupCounter: {
-    base: string
-  }
-  add: {
-    base: string
-    iconSize: AvatarSizes
-  }
-}
-
-export interface AvatarSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'> {
-  [key: string]: string
-}
-
-export interface AvatarStatusType extends Pick<KeepAvatarStatusType, 'dot' | 'notification'> {
-  [key: string]: string
-}
-
-export interface AvatarStatusPositions
-  extends Pick<KeepPositions, 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right'> {
-  [key: string]: string
-}
-
-export interface KeepAvatarStatusType {
-  dot: string
-  notification: string
-}
-
-export interface KeepAvatarStatusTypeSize {
-  dot: AvatarSizes
-  notification: AvatarSizes
-}
-
-export interface StatusPositions {
-  xs: AvatarStatusPositions
-  sm: AvatarStatusPositions
-  md: AvatarStatusPositions
-  lg: AvatarStatusPositions
-  xl: AvatarStatusPositions
-  '2xl': AvatarStatusPositions
-}
-
-export interface KeepAvatarStatusPositions {
-  dot: StatusPositions
-  notification: StatusPositions
-}
-
-export interface KeepAvatarStatusFontSize {
-  notification: AvatarSizes
-}
+import { AvatarSizes, KeepAvatarStatusType, StatusPositions, avatarTheme } from './theme'
+import { KeepPositions } from '../../Keep/KeepTheme'
 
 /**
  * Props for the Avatar component
@@ -198,7 +117,7 @@ const AvatarComponent: FC<AvatarProps> = ({
   ...props
 }) => {
   const theirProps = excludeClassName(props)
-  const theme = useTheme().theme.avatar
+  const theme = avatarTheme
 
   return (
     <div data-testid="avatar-element" {...theirProps}>

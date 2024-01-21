@@ -1,13 +1,13 @@
 import { FC, ReactNode, useState } from 'react'
-import { NavigationBrand } from './NavigationBrand'
-import { NavigationContainer } from './NavigationContainer'
-import { DividerTheme, NavigationDivider } from './NavigationDivider'
-import { NavLinkTheme, NavigationLink } from './NavigationLink'
-import { NavigationToggle } from './NavigationToggle'
-import { NavigationContext } from './NavigationContext'
-import { CollapseTheme, NavigationCollapse } from './NavigationCollapse'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { NavigationBrand } from './NavigationBrand'
+import { NavigationCollapse } from './NavigationCollapse'
+import { NavigationContainer } from './NavigationContainer'
+import { NavigationContext } from './NavigationContext'
+import { NavigationDivider } from './NavigationDivider'
+import { NavigationLink } from './NavigationLink'
+import { NavigationToggle } from './NavigationToggle'
+import { navigationTheme } from './theme'
 
 /**
  * Props for the Navigation component.
@@ -36,32 +36,9 @@ export interface NavigationProps {
   className?: string
 }
 
-export interface KeepNavigationTheme {
-  root: NavigationRoot
-  collapse: CollapseTheme
-  divider: DividerTheme
-  navLink: NavLinkTheme
-}
-
-export interface NavigationRoot {
-  base: string
-  rounded: {
-    on: string
-    off: string
-  }
-  bordered: {
-    on: string
-    off: string
-  }
-  container: {
-    on: string
-    off: string
-  }
-}
-
 const NavigationComponent: FC<NavigationProps> = ({ fluid, bordered, rounded, children, className }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const { root } = useTheme().theme.navigation
+  const { root } = navigationTheme
 
   isOpen &&
     window.addEventListener('scroll', () => {

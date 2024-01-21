@@ -1,7 +1,6 @@
 import type { FC, PropsWithChildren } from 'react'
-import type { AvatarSizes } from './Avatar'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { AvatarSizes, avatarTheme } from './theme'
 
 /**
  * Props for the AvatarAdd component.
@@ -58,7 +57,7 @@ export const AvatarAdd: FC<AvatarAddProps> = ({
   ringColor = 'ring-white',
   className,
 }) => {
-  const theme = useTheme().theme.avatar
+  const theme = avatarTheme
 
   return (
     <div className={cn(theme.add.base, theme.add.iconSize['xl'], ringColor, className)} style={{ backgroundColor: bg }}>

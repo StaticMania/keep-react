@@ -1,41 +1,16 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { RatingAdvanced, RatingAdvancedSizes } from './RatingAdvanced'
+import { cn } from '../../helpers/cn'
+import { RatingAdvanced } from './RatingAdvanced'
 import { RatingContext } from './RatingContext'
 import { RatingStar } from './RatingStar'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
+import { ratingTheme } from './theme'
 
-export interface keepRatingTheme {
-  base: string
-  star: {
-    base: string
-  }
-  advanced: {
-    base: string
-    label: string
-    progress: {
-      base: string
-      fill: string
-      label: string
-      size: RatingAdvancedSizes
-    }
-  }
-}
-
-/**
- * Props for the Rating component.
- * @interface RatingProps
- * @extends {PropsWithChildren<ComponentProps<'div'>>}
- */
 export interface RatingProps extends PropsWithChildren<ComponentProps<'div'>> {
-  /**
-   * The size of the rating.
-   */
   size?: number
 }
 
 const RatingComponent: FC<RatingProps> = ({ children, size, className, ...props }) => {
-  const theme = useTheme().theme.rating
+  const theme = ratingTheme
 
   return (
     <RatingContext.Provider value={{ size }}>

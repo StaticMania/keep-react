@@ -1,4 +1,67 @@
-import { KeepSidebarTheme } from '.'
+import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
+
+export interface KeepSidebarCTAColors
+  extends Pick<
+    KeepColors,
+    'blue' | 'dark' | 'failure' | 'gray' | 'green' | 'light' | 'purple' | 'red' | 'success' | 'warning' | 'yellow'
+  > {
+  [key: string]: string
+}
+
+interface KeepSidebarCollapseTheme {
+  button: string
+  icon: {
+    base: string
+    open: KeepBoolean
+  }
+  label: {
+    base: string
+    icon: string
+  }
+  list: string
+}
+
+export interface KeepSidebarCTATheme {
+  base: string
+  color: KeepSidebarCTAColors
+}
+
+export interface KeepSidebarItemTheme {
+  active: string
+  base: string
+  collapsed: {
+    insideCollapse: string
+    noIcon: string
+  }
+  content: {
+    base: string
+  }
+  icon: {
+    base: string
+    active: string
+  }
+  label: string
+}
+
+interface KeepSidebarLogoTheme {
+  base: string
+  collapsed: KeepBoolean
+  img: string
+}
+
+export interface KeepSidebarTheme {
+  root: {
+    base: string
+    collapsed: KeepBoolean
+    inner: string
+  }
+  collapse: KeepSidebarCollapseTheme
+  cta: KeepSidebarCTATheme
+  item: KeepSidebarItemTheme
+  items: string
+  itemGroup: string
+  logo: KeepSidebarLogoTheme
+}
 
 export const sidebarTheme: KeepSidebarTheme = {
   root: {

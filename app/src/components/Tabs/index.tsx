@@ -1,76 +1,30 @@
 /* eslint-disable no-unused-vars */
 import type { ComponentProps, ForwardedRef, KeyboardEvent, PropsWithChildren, ReactElement } from 'react'
 import { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
+import { cn } from '../../helpers/cn'
 import type { TabItemProps } from './TabItem'
 import { TabItem } from './TabItem'
-import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
+import { TabStyleItemProps, TabStyles, tabTheme } from './theme'
 
-export interface keepTabTheme {
-  base: string
-  tabList: {
-    base: string
-    styles: TabStyles
-    borderPosition: {
-      top: string
-      bottom: string
-    }
-    tabItem: {
-      base: string
-      styles: TabStyleItem<TabStyles>
-      icon: {
-        left: string
-        right: string
-      }
-      notification: {
-        base: string
-        type: {
-          number: string
-          text: string
-        }
-        notificationColor: TabNotificationColors
-      }
-    }
-  }
-  tabPanel: string
+export interface TabEventProps {
+  target: number
 }
 
-export interface TabStyles {
-  default: string
-  underline: string
-  pills: string
-  fullWidth: string
+export interface TabKeyboardEventProps extends TabEventProps {
+  event: KeyboardEvent<HTMLButtonElement>
 }
-export interface BorderPosition {
-  top: string
-  bottom: string
-}
-export interface TabStyleItemProps {
-  base: string
-  active: KeepBoolean
-  borderPosition: BorderPosition
-}
+
 export type TabStyleItem<Type> = {
   [K in keyof Type]: TabStyleItemProps
 }
+
 export type TabItemStatus = 'active' | 'notActive'
 
 /**
  * Represents the event object for tab events.
  * @interface TabEventProps
  */
-interface TabEventProps {
-  target: number
-}
 
-interface TabKeyboardEventProps extends TabEventProps {
-  event: KeyboardEvent<HTMLButtonElement>
-}
-
-export interface TabNotificationColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
-  [key: string]: string
-}
 /**
  * Props for the Tabs component.
  * @interface TabsProps
@@ -118,7 +72,7 @@ const TabsComponent = forwardRef<TabsRef, TabsProps>(
     },
     ref: ForwardedRef<TabsRef>,
   ) => {
-    const theme = useTheme().theme.tabs
+    const theme = tabTheme
 
     const tabs = useMemo(
       () => Children.map(children as ReactElement<PropsWithChildren<TabItemProps>>[], ({ props }) => props),

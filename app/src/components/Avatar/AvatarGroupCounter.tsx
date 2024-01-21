@@ -1,7 +1,6 @@
 import type { FC, PropsWithChildren } from 'react'
-import type { AvatarSizes } from './Avatar'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { AvatarSizes, avatarTheme } from './theme'
 
 /**
  * Props for the AvatarGroupCounter component.
@@ -38,7 +37,7 @@ export type AvatarGroupCounterProps = PropsWithChildren<{
 }>
 
 export const AvatarGroupCounter: FC<AvatarGroupCounterProps> = ({ total, href, size = 'md', className }) => {
-  const theme = useTheme().theme.avatar
+  const theme = avatarTheme
   return (
     <a
       className={cn(theme.size[size], theme.groupCounter.base, theme.statusType.fontSize.notification[size], className)}

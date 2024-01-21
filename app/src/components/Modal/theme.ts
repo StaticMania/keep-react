@@ -1,4 +1,42 @@
-import { keepModalTheme } from '.'
+import { KeepSizes, KeepBoolean, KeepPositions } from '../../Keep/KeepTheme'
+
+export interface keepModalTheme {
+  base: string
+  show: KeepBoolean
+  content: {
+    base: string
+    inner: string
+  }
+  body: {
+    base: string
+  }
+  header: {
+    base: string
+    title: string
+    iconSection: string
+    headerIcon: {
+      base: string
+      icon: string
+    }
+    close: {
+      base: string
+      icon: string
+    }
+  }
+  footer: {
+    base: string
+  }
+  sizes: ModalSizes
+  positions: ModalPositions
+}
+
+export interface ModalPositions extends KeepPositions {
+  [key: string]: string
+}
+
+export interface ModalSizes extends Omit<KeepSizes, 'xs'> {
+  [key: string]: string
+}
 
 export const modalTheme: keepModalTheme = {
   base: 'fixed z-[90] inset-0 flex items-center justify-center top-0',

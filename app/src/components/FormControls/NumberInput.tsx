@@ -1,45 +1,9 @@
 import { Minus, Plus } from 'phosphor-react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { forwardRef } from 'react'
-import { excludeClassName } from '../../helpers/exclude'
-import type { KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepNumberInputTheme {
-  base: string
-  field: {
-    base: string
-    icon: {
-      base: string
-      incrementIcon: string
-      decrementIcon: string
-      disabled: string
-      sizes: NumberInputSizes
-      position: {
-        right: string
-        incrementIcon: string
-        decrementIcon: string
-      }
-    }
-    input: {
-      base: string
-      disabled: string
-      sizes: NumberInputSizes
-      withIcon: {
-        on: {
-          left: string
-          right: string
-        }
-        off: string
-      }
-    }
-  }
-}
-
-export interface NumberInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
-  [key: string]: string
-}
+import { excludeClassName } from '../../helpers/exclude'
+import { NumberInputSizes, formControlsTheme } from './theme'
 
 /**
  * Props for the NumberInput component.
@@ -100,7 +64,7 @@ export interface NumberInputProps extends Omit<ComponentProps<'input'>, 'ref' | 
 
 export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
   ({ value = 0, sizing = 'md', icon: Icon, disabled = false, iconPosition = 'right', setValue, ...props }, ref) => {
-    const theme = useTheme().theme.formControls.numberInput
+    const theme = formControlsTheme.numberInput
     const theirProps = excludeClassName(props)
     const handleScroll = (event: { deltaY: number }) => {
       if (!disabled) {

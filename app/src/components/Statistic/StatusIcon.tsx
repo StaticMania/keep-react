@@ -1,15 +1,7 @@
 import { FC, ReactNode } from 'react'
-import { useStatisticContext } from './StatisticContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepIconTheme {
-  base: string
-  selected: {
-    on: string
-    off: string
-  }
-}
+import { useStatisticContext } from './StatisticContext'
+import { statisticsTheme } from './theme'
 
 /**
  * Props for the StatusIcon component.
@@ -33,7 +25,7 @@ export interface StatusIconProps {
 
 export const StatusIcon: FC<StatusIconProps> = ({ icon, className }) => {
   const { iconBg } = useStatisticContext()
-  const theme = useTheme().theme.statistic
+  const theme = statisticsTheme
   return (
     <div
       className={cn(

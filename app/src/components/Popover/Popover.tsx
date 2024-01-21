@@ -1,32 +1,32 @@
 'use client'
-import { Children, FC, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
-import { XCircle } from 'phosphor-react'
 import {
-  useClick,
-  useDismiss,
-  useRole,
-  useInteractions,
-  useFloating,
-  autoUpdate,
-  offset,
-  flip,
-  shift,
-  useHover,
-  useTransitionStyles,
   FloatingArrow,
   arrow,
   autoPlacement,
+  autoUpdate,
+  flip,
   hide,
+  offset,
+  shift,
+  useClick,
+  useDismiss,
+  useFloating,
+  useHover,
+  useInteractions,
+  useRole,
+  useTransitionStyles,
 } from '@floating-ui/react'
+import { XCircle } from 'phosphor-react'
+import { Children, FC, ReactNode, isValidElement, useEffect, useRef, useState } from 'react'
 
-import { Container } from './Container'
-import { Title } from './Title'
 import { Action } from './Action'
+import { Container } from './Container'
 import { Description } from './Description'
 import { PopoverContext } from './PopoverContext'
+import { Title } from './Title'
 
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { popoverTheme } from './theme'
 
 /**
  * Props for the Popover component.
@@ -88,22 +88,6 @@ export interface PopoverProps {
   // [key: string]: any
 }
 
-export interface keepPopoverTheme {
-  root: {
-    base: string
-    icon: string
-  }
-  title: string
-  description: {
-    base: string
-    title: {
-      off: string
-      on: string
-    }
-  }
-  container: string
-}
-
 export const PopoverComponent: FC<PopoverProps> = ({
   children,
   className,
@@ -117,7 +101,7 @@ export const PopoverComponent: FC<PopoverProps> = ({
   const [isOpen, setIsOpen] = useState(false)
   const [title, setTitle] = useState(true)
   const arrowRef = useRef(null)
-  const { root } = useTheme().theme.popover
+  const { root } = popoverTheme
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,

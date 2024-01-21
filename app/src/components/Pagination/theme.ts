@@ -1,4 +1,55 @@
-import { keepPaginationTheme } from '.'
+export interface keepPaginationTheme {
+  paginateWithBorder: string
+  layout: {
+    table: {
+      base: string
+      span: string
+    }
+  }
+  pages: {
+    base: string
+    previous: {
+      base: string
+      icon: string
+      title: string
+      iconWithText: string
+      iconWithOutText: string
+    }
+    next: {
+      base: string
+      icon: string
+      title: string
+      iconWithText: string
+      iconWithOutText: string
+    }
+    selector: {
+      base: string
+      active: {
+        base: string
+        circle: string
+        roundSquare: string
+      }
+    }
+    prevNextShape: {
+      none: string
+      circle: string
+      round: string
+      roundSquare: string
+    }
+  }
+  goTo: {
+    base: string
+    title: string
+    input: string
+    withBorder: string
+    goToShape: {
+      none: string
+      circle: string
+      round: string
+      roundSquare: string
+    }
+  }
+}
 
 export const paginationTheme: keepPaginationTheme = {
   paginateWithBorder: 'p-2 border border-metal-200 rounded-md',

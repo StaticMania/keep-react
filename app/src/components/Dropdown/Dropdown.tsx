@@ -3,28 +3,13 @@ import type { Dispatch, FC, PropsWithChildren, ReactElement, ReactNode, SetState
 import React, { Children, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { DeepPartial } from '../../helpers/deep-partial'
 import { uuid } from '../../helpers/uuid'
-import { useTheme } from '../../Keep/ThemeContext'
 import type { ButtonProps } from '../Button/Button'
 import { Button } from '../Button/Button'
-import { Floating, FloatingProps, keepFloatingTheme } from '../Floating'
-import type { keepDropdownDividerTheme } from './DropdownDivider'
+import { Floating, FloatingProps } from '../Floating'
 import { DropdownDivider } from './DropdownDivider'
-import type { keepDropdownHeaderTheme } from './DropdownHeader'
 import { DropdownHeader } from './DropdownHeader'
-import { DropdownItem, keepDropdownItemTheme } from './DropdownItem'
-
-export interface keepDropdownFloatingTheme
-  extends keepFloatingTheme,
-    keepDropdownDividerTheme,
-    keepDropdownHeaderTheme {
-  item: keepDropdownItemTheme
-}
-
-export interface keepDropdownTheme {
-  floating: keepDropdownFloatingTheme
-  content: string
-  arrowIcon: string
-}
+import { DropdownItem } from './DropdownItem'
+import { dropdownTheme, keepDropdownTheme } from './theme'
 
 /**
  * Props for the Dropdown component.
@@ -92,7 +77,7 @@ const icons: Icons = {
 }
 
 const DropdownComponent: FC<DropdownProps> = ({ children, dismissOnClick = true, ...props }) => {
-  const theme = useTheme().theme.dropdown
+  const theme = dropdownTheme
   const theirProps = props as Omit<DropdownProps, 'theme'>
   const {
     placement = 'bottom-start',

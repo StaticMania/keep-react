@@ -1,4 +1,9 @@
-import { keepSkeletonTheme } from './Skeleton'
+interface keepSkeletonTheme {
+  base: string
+  animation: string
+  line: string
+  avatar: string
+}
 
 export const skeletonTheme: keepSkeletonTheme = {
   base: 'w-full',

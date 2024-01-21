@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
-import type { TabNotificationColors } from '.'
 import { cn } from '../../helpers/cn'
+import { TabNotificationColors } from './theme'
 
 /**
  * Props for the TabItem component.

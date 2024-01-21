@@ -1,18 +1,11 @@
 import { FC, ReactNode } from 'react'
-import { Rate, type keepRateTheme } from './Rate'
-import { Title, type keepTitleTheme } from './Title'
-import { StatusIcon, type keepIconTheme } from './StatusIcon'
-import { Amount, type keepAmountTheme } from './Amout'
-import { UserImg } from './UserImg'
-import { StatisticContext } from './StatisticContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepStatisticTheme {
-  rate: keepRateTheme
-  amount: keepAmountTheme
-  title: keepTitleTheme
-  icon: keepIconTheme
-}
+import { Amount } from './Amout'
+import { Rate } from './Rate'
+import { StatisticContext } from './StatisticContext'
+import { StatusIcon } from './StatusIcon'
+import { Title } from './Title'
+import { UserImg } from './UserImg'
 
 /**
  * Props for the Statistic component.

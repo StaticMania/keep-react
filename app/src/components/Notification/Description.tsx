@@ -1,7 +1,6 @@
-'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { notificationTheme } from './theme'
 
 export interface DescriptionProps {
   children?: ReactNode
@@ -9,6 +8,6 @@ export interface DescriptionProps {
 }
 
 export const Description: FC<DescriptionProps> = ({ children, className }) => {
-  const { description } = useTheme().theme.notification
+  const { description } = notificationTheme
   return <p className={cn(description, className)}>{children}</p>
 }

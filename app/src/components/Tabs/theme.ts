@@ -1,4 +1,56 @@
-import type { keepTabTheme } from '.'
+import { TabStyleItem } from '.'
+import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
+
+export interface keepTabTheme {
+  base: string
+  tabList: {
+    base: string
+    styles: TabStyles
+    borderPosition: {
+      top: string
+      bottom: string
+    }
+    tabItem: {
+      base: string
+      styles: TabStyleItem<TabStyles>
+      icon: {
+        left: string
+        right: string
+      }
+      notification: {
+        base: string
+        type: {
+          number: string
+          text: string
+        }
+        notificationColor: TabNotificationColors
+      }
+    }
+  }
+  tabPanel: string
+}
+
+export interface TabStyles {
+  default: string
+  underline: string
+  pills: string
+  fullWidth: string
+}
+
+export interface BorderPosition {
+  top: string
+  bottom: string
+}
+export interface TabStyleItemProps {
+  base: string
+  active: KeepBoolean
+  borderPosition: BorderPosition
+}
+
+export interface TabNotificationColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
+  [key: string]: string
+}
+
 export const tabTheme: keepTabTheme = {
   base: 'flex flex-col gap-2',
   tabList: {

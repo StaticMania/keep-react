@@ -1,15 +1,8 @@
 import { FC, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 import { SkeletonAvatar } from './SkeletonAvatar'
 import { SkeletonLine } from './SkeletonLine'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
-
-export interface keepSkeletonTheme {
-  base: string
-  animation: string
-  line: string
-  avatar: string
-}
+import { skeletonTheme } from './theme'
 
 /**
  * Props for the keepSkeletonTheme component.
@@ -33,7 +26,7 @@ export interface keepSkeletonThemeProps {
 }
 
 const SkeletonComponent: FC<keepSkeletonThemeProps> = ({ animation = false, className, children }) => {
-  const theme = useTheme().theme.skeleton
+  const theme = skeletonTheme
   return <div className={cn(animation && theme.animation, theme.base, className)}>{children}</div>
 }
 

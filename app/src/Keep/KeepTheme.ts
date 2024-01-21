@@ -1,34 +1,3 @@
-import { keepNotificationTheme } from '../components'
-import { keepAvatarTheme } from '../components/Avatar/Avatar'
-import { keepBadgeTheme } from '../components/Badge'
-import { KeepCardTheme } from '../components/Card'
-import { KeepCarouselTheme } from '../components/Carousel'
-import { keepCheckboxTheme } from '../components/CheckBox'
-import { keepCheckboxGroupTheme } from '../components/CheckboxGroup'
-import { keepDropdownTheme } from '../components/Dropdown'
-import { keepEmptyTheme } from '../components/Empty'
-import { keepFloatingTheme } from '../components/Floating'
-import { keepFormControlTheme } from '../components/FormControls/formControls'
-import { keepModalTheme } from '../components/Modal'
-import { KeepNavigationTheme } from '../components/Navigation'
-import { keepPaginationTheme } from '../components/Pagination'
-import { keepPopoverTheme } from '../components/Popover'
-import { keepProgressTheme } from '../components/Progress'
-import { keepRatingTheme } from '../components/Rating'
-import { KeepSidebarTheme } from '../components/Sidebar'
-import { keepSkeletonTheme } from '../components/Skeleton'
-import { KeepSpinnerTheme } from '../components/Spinner'
-import { keepStatisticTheme } from '../components/Statistic'
-import { KeepStepTheme } from '../components/Steps'
-import { keepToggleTheme } from '../components/Switch'
-import { keepTableTheme } from '../components/Table'
-import { keepTabTheme } from '../components/Tabs'
-import { keepTagTheme } from '../components/Tag'
-import { keepTimelineTheme } from '../components/Timeline'
-import { keepTreeTheme } from '../components/Tree'
-import { keepUploadTheme } from '../components/Upload'
-import { DeepPartial } from '../helpers/deep-partial'
-
 export interface KeepCheckboxShape {
   circle: string
   round: string
@@ -132,37 +101,3 @@ export type KeepTypography =
   | `description-${1 | 2 | 3 | 4}`
 
 export type KeepHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-
-export type CustomKeepTheme = DeepPartial<KeepTheme>
-
-export interface KeepTheme {
-  avatar: keepAvatarTheme
-  badge: keepBadgeTheme
-  card: KeepCardTheme
-  carousel: KeepCarouselTheme
-  dropdown: keepDropdownTheme
-  progress: keepProgressTheme
-  popover: keepPopoverTheme
-  pagination: keepPaginationTheme
-  navigation: KeepNavigationTheme
-  notification: keepNotificationTheme
-  tooltip: keepFloatingTheme
-  modal: keepModalTheme
-  rating: keepRatingTheme
-  spinner: KeepSpinnerTheme
-  tabs: keepTabTheme
-  sidebar: KeepSidebarTheme
-  switch: keepToggleTheme
-  skeleton: keepSkeletonTheme
-  tag: keepTagTheme
-  table: keepTableTheme
-  timeline: keepTimelineTheme
-  empty: keepEmptyTheme
-  statistic: keepStatisticTheme
-  upload: keepUploadTheme
-  checkbox: keepCheckboxTheme
-  formControls: keepFormControlTheme
-  checkboxGroup: keepCheckboxGroupTheme
-  tree: keepTreeTheme
-  step: KeepStepTheme
-}

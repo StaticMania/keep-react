@@ -1,6 +1,6 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { cn } from '~/app/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
 

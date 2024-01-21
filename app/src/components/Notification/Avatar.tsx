@@ -1,7 +1,6 @@
-'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { notificationTheme } from './theme'
 
 export interface AvatarProps {
   children?: ReactNode
@@ -9,6 +8,6 @@ export interface AvatarProps {
 }
 
 export const Avatar: FC<AvatarProps> = ({ children, className }) => {
-  const { avatar } = useTheme().theme.notification
+  const { avatar } = notificationTheme
   return <div className={cn(avatar, className)}>{children}</div>
 }

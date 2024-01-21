@@ -1,29 +1,9 @@
 import { ComponentProps, FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
-import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
+import { KeepStateColors } from '../../Keep/KeepTheme'
 import { cn } from '../../helpers/cn'
+import { CheckboxLabelColors, CheckboxSizes, checkboxTheme } from './theme'
 
-export interface keepCheckboxTheme {
-  base: string
-  checkboxInput: string
-  enabled: string
-  disabled: string
-  label: CheckboxSizes
-  labelColor: CheckboxLabelColors
-  variant: {
-    circle: string
-    square: string
-  }
-  size: CheckboxSizes
-  color: KeepStateColors
-}
-
-/**
- * Checkbox component props.
- * @interface CheckboxProps
- * @extends {Omit<ComponentProps<'input'>, 'className' | 'color' | 'size' | 'type'>}
- */
 export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'className' | 'color' | 'size' | 'type'> {
   /**
    * The label to display next to the checkbox.
@@ -103,14 +83,6 @@ export interface CheckboxProps extends Omit<ComponentProps<'input'>, 'className'
   labelStyle?: string
 }
 
-export interface CheckboxSizes extends Pick<KeepSizes, 'sm' | 'lg' | 'md'> {
-  [key: string]: string
-}
-
-export interface CheckboxLabelColors extends Pick<KeepStateColors, 'error' | 'info' | 'success' | 'warning'> {
-  [key: string]: string
-}
-
 const CheckboxComponent: FC<CheckboxProps> = ({
   color = 'info',
   labelColor = 'info',
@@ -126,7 +98,7 @@ const CheckboxComponent: FC<CheckboxProps> = ({
   ...props
 }) => {
   const theirProps = excludeClassName(props)
-  const theme = useTheme().theme.checkbox
+  const theme = checkboxTheme
 
   const handleOnChange = (e: { target: { checked: any } }) => {
     if (handleChecked) {

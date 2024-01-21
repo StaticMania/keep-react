@@ -1,4 +1,85 @@
-import type { keepAvatarTheme } from './Avatar'
+import { KeepPositions, KeepSizes } from '../../Keep/KeepTheme'
+
+export interface AvatarSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'> {
+  [key: string]: string
+}
+
+export interface AvatarStatusType extends Pick<KeepAvatarStatusType, 'dot' | 'notification'> {
+  [key: string]: string
+}
+
+export interface AvatarStatusPositions
+  extends Pick<KeepPositions, 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right'> {
+  [key: string]: string
+}
+
+export interface KeepAvatarStatusType {
+  dot: string
+  notification: string
+}
+
+export interface KeepAvatarStatusTypeSize {
+  dot: AvatarSizes
+  notification: AvatarSizes
+}
+
+export interface StatusPositions {
+  xs: AvatarStatusPositions
+  sm: AvatarStatusPositions
+  md: AvatarStatusPositions
+  lg: AvatarStatusPositions
+  xl: AvatarStatusPositions
+  '2xl': AvatarStatusPositions
+}
+
+export interface KeepAvatarStatusPositions {
+  dot: StatusPositions
+  notification: StatusPositions
+}
+
+export interface KeepAvatarStatusFontSize {
+  notification: AvatarSizes
+}
+
+export interface keepAvatarTheme {
+  base: string
+  bordered: string
+  img: {
+    off: string
+    on: string
+  }
+  size: AvatarSizes
+  customStatusIcon: AvatarSizes
+  shape: {
+    square: string
+    circle: string
+    rounded: AvatarSizes
+  }
+  stacked: string
+  status: {
+    away: string
+    busy: string
+    offline: string
+    online: string
+  }
+  statusType: {
+    type: AvatarStatusType
+    size: KeepAvatarStatusTypeSize
+    fontSize: KeepAvatarStatusFontSize
+  }
+  statusPosition: {
+    square: KeepAvatarStatusPositions
+    circle: KeepAvatarStatusPositions
+    rounded: KeepAvatarStatusPositions
+  }
+  groupCounter: {
+    base: string
+  }
+  add: {
+    base: string
+    iconSize: AvatarSizes
+  }
+}
 
 export const avatarTheme: keepAvatarTheme = {
   base: 'flex items-center space-x-4',

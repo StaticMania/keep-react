@@ -1,52 +1,12 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { excludeClassName } from '../../helpers/exclude'
+import { cn } from '../../helpers/cn'
 import { ModalBody } from './ModalBody'
 import { ModalContext } from './ModalContext'
 import { ModalFooter } from './ModalFooter'
 import { ModalHeader } from './ModalHeader'
-import { KeepBoolean, KeepPositions, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
-
-export interface keepModalTheme {
-  base: string
-  show: KeepBoolean
-  content: {
-    base: string
-    inner: string
-  }
-  body: {
-    base: string
-  }
-  header: {
-    base: string
-    title: string
-    iconSection: string
-    headerIcon: {
-      base: string
-      icon: string
-    }
-    close: {
-      base: string
-      icon: string
-    }
-  }
-  footer: {
-    base: string
-  }
-  sizes: ModalSizes
-  positions: ModalPositions
-}
-
-export interface ModalPositions extends KeepPositions {
-  [key: string]: string
-}
-
-export interface ModalSizes extends Omit<KeepSizes, 'xs'> {
-  [key: string]: string
-}
+import { ModalPositions, ModalSizes, modalTheme } from './theme'
 
 /**
  * Props for the Modal component.
@@ -96,20 +56,10 @@ export interface ModalProps extends PropsWithChildren<Omit<ComponentProps<'div'>
   position?: keyof ModalPositions
 }
 
-const ModalComponent: FC<ModalProps> = ({
-  children,
-  show,
-  root,
-  icon,
-  size = 'sm',
-  position = 'center',
-  onClose,
-  ...props
-}) => {
+const ModalComponent: FC<ModalProps> = ({ children, show, root, icon, size = 'sm', position = 'center', onClose }) => {
+  const theme = modalTheme
   const [parent, setParent] = useState<HTMLElement | undefined>(root)
   const [container, setContainer] = useState<HTMLDivElement | undefined>()
-  const theme = useTheme().theme.modal
-  const theirProps = excludeClassName(props)
 
   useEffect(() => {
     if (!parent) setParent(document.body)
@@ -137,8 +87,7 @@ const ModalComponent: FC<ModalProps> = ({
             aria-hidden={!show}
             className={cn(theme.base, theme.positions[position], show ? theme.show.on : theme.show.off)}
             data-testid="modal"
-            role="dialog"
-            {...theirProps}>
+            role="dialog">
             <div className={cn(theme.content.base, theme.sizes[size])}>
               <div className={theme.content.inner}>{children}</div>
             </div>

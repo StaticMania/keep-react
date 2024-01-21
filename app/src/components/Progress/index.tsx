@@ -1,38 +1,7 @@
-import { KeepBoolean, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
 import { cn } from '../../helpers/cn'
+import { ProgressSizes, progressTheme } from './theme'
 
-export interface keepProgressTheme {
-  base: string
-  label: string
-  progressBar: {
-    base: string
-    bar: string
-    rounded: KeepBoolean
-    bordered: {
-      on: {
-        base: string
-        color: ProgressColor
-      }
-      off: string
-    }
-    progressPercentage: {
-      base: string
-      color: ProgressColor
-    }
-    popupLabelProgress: string
-    progressBaseColor: ProgressColor
-    progressPercentageColor: ProgressColor
-  }
-  size: ProgressSizes
-}
-
-/**
- * Props for the Progress component.
- * @interface ProgressProps
- * @extends PropsWithChildren<ComponentProps<'div'>>
- */
 export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> {
   /**
    * The size of the progress component.
@@ -68,19 +37,6 @@ export interface ProgressProps extends PropsWithChildren<ComponentProps<'div'>> 
   progress: number
 }
 
-export interface ProgressColor
-  extends Pick<KeepColors, 'info' | 'error' | 'success' | 'warning' | 'indigo' | 'purple'> {
-  [key: string]: string
-}
-/**
- * Interface for defining the sizes of the Progress component.
- * @interface ProgressSizes
- * @extends Pick<KeepSizes, 'sm' | 'md' | 'lg' | 'xl'>
- */
-export interface ProgressSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg' | 'xl'> {
-  [key: string]: string
-}
-
 export const Progress: FC<ProgressProps> = ({
   color = 'blue',
   label = 'progressbar',
@@ -94,7 +50,7 @@ export const Progress: FC<ProgressProps> = ({
   className,
   ...props
 }): ReactElement => {
-  const theme = useTheme().theme.progress
+  const theme = progressTheme
 
   return (
     <>

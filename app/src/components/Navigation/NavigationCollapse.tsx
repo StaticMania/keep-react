@@ -1,8 +1,8 @@
-import { FC, ReactNode } from 'react'
-import { useNavigationContext } from './NavigationContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { CaretLeft } from 'phosphor-react'
+import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
+import { useNavigationContext } from './NavigationContext'
+import { navigationTheme } from './theme'
 
 /**
  * Props for the Collapse component.
@@ -25,22 +25,9 @@ export interface CollapseProps {
   collapseType?: 'sidebar' | 'fullWidth'
 }
 
-export interface CollapseTheme {
-  base: string
-  menu: {
-    open: string
-    close: string
-    position: string
-  }
-  type: {
-    sidebar: string
-    fullWidth: string
-  }
-}
-
 export const NavigationCollapse: FC<CollapseProps> = ({ children, className, collapseType = 'fullWidth' }) => {
   const { isOpen, setIsOpen } = useNavigationContext()
-  const { collapse } = useTheme().theme.navigation
+  const { collapse } = navigationTheme
   return (
     <div
       className={cn(

@@ -1,4 +1,30 @@
-import { keepDropdownTheme } from './Dropdown'
+import { keepFloatingTheme } from '../Floating'
+
+export interface keepDropdownDividerTheme {
+  divider: string
+}
+
+export interface keepDropdownHeaderTheme {
+  header: string
+}
+
+export interface keepDropdownItemTheme {
+  base: string
+  icon: string
+}
+
+export interface keepDropdownFloatingTheme
+  extends keepFloatingTheme,
+    keepDropdownDividerTheme,
+    keepDropdownHeaderTheme {
+  item: keepDropdownItemTheme
+}
+
+export interface keepDropdownTheme {
+  floating: keepDropdownFloatingTheme
+  content: string
+  arrowIcon: string
+}
 
 export const dropdownTheme: keepDropdownTheme = {
   arrowIcon: 'ml-2 h-4 w-4',

@@ -1,24 +1,8 @@
-import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
 import type { ChangeEvent, ComponentProps } from 'react'
 import { forwardRef } from 'react'
+import { KeepStateColors } from '../../Keep/KeepTheme'
 import { cn } from '../../helpers/cn'
-
-export interface keepRadioTheme {
-  base: string
-  radioInput: string
-  color: KeepStateColors
-  radioType: {
-    base: string
-    square: string
-    circle: string
-  }
-  sizes: RadioInputSizes
-}
-
-export interface RadioInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
-  [key: string]: string
-}
+import { RadioInputSizes, formControlsTheme } from './theme'
 
 /**
  * Props for the Radio component.
@@ -83,7 +67,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
     { className, sizing = 'md', radioShape = 'circle', value, color = 'info', onOptionChange, selected, ...props },
     ref,
   ) => {
-    const theme = useTheme().theme.formControls.radio
+    const theme = formControlsTheme.radio
 
     return (
       <>

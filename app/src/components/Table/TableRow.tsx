@@ -1,21 +1,16 @@
 import { useState, type ComponentProps, type FC, type PropsWithChildren } from 'react'
-import type { DeepPartial } from '../../helpers/deep-partial'
-import { useTableContext } from './TableContext'
-import { useTheme } from '../../Keep/ThemeContext'
-import { CheckBox } from '../CheckBox'
 import { cn } from '../../helpers/cn'
+import type { DeepPartial } from '../../helpers/deep-partial'
+import { CheckBox } from '../CheckBox'
+import { useTableContext } from './TableContext'
+import { keepTableRowTheme, tableTheme } from './theme'
 
-export interface keepTableRowTheme {
-  base: string
-  hovered: string
-  striped: string
-}
 export interface TableRowProps extends PropsWithChildren, ComponentProps<'tr'> {
   theme?: DeepPartial<keepTableRowTheme>
 }
 export const TableRow: FC<TableRowProps> = ({ children, className, ...props }) => {
   const { hoverable, striped, showCheckbox, checked } = useTableContext()
-  const theme = useTheme().theme.table.row
+  const theme = tableTheme.row
   const [isChecked, setIsChecked] = useState(false)
 
   const handleCheckbox = (value: boolean) => {

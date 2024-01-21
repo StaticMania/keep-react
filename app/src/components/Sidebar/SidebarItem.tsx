@@ -1,31 +1,14 @@
 import type { ComponentProps, ElementType, FC, PropsWithChildren, ReactNode } from 'react'
-import type { DeepPartial } from '../../helpers/deep-partial'
 import { forwardRef, useId } from 'react'
+import { KeepColors } from '../../Keep/KeepTheme'
+import { cn } from '../../helpers/cn'
+import type { DeepPartial } from '../../helpers/deep-partial'
+import { mergeDeep } from '../../helpers/mergeDeep'
+import { Badge } from '../Badge'
 import { Tooltip } from '../Tooltip'
 import { useSidebarContext } from './SidebarContext'
 import { useSidebarItemContext } from './SidebarItemContext'
-import { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { mergeDeep } from '../../helpers/mergeDeep'
-import { Badge } from '../Badge'
-import { cn } from '../../helpers/cn'
-
-export interface KeepSidebarItemTheme {
-  active: string
-  base: string
-  collapsed: {
-    insideCollapse: string
-    noIcon: string
-  }
-  content: {
-    base: string
-  }
-  icon: {
-    base: string
-    active: string
-  }
-  label: string
-}
+import { KeepSidebarItemTheme, sidebarTheme } from './theme'
 
 /**
  * Props for the SidebarItem component.
@@ -109,7 +92,7 @@ const TooltipContent: FC<PropsWithChildren<{ id: string }>> = ({ id, children })
 )
 
 const Children: FC<PropsWithChildren<{ id: string }>> = ({ id, children }) => {
-  const theme = useTheme().theme.sidebar.item
+  const theme = sidebarTheme.item
 
   return (
     <span data-testid="keep-sidebar-item-content" id={`keep-sidebar-item-${id}`} className={cn(theme.content.base)}>
@@ -136,7 +119,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
     const id = useId()
     const { isCollapsed } = useSidebarContext()
     const { isInsideCollapse } = useSidebarItemContext()
-    const oldTheme = useTheme().theme.sidebar.item
+    const oldTheme = sidebarTheme.item
     const theme = mergeDeep(oldTheme, customTheme)
 
     return (

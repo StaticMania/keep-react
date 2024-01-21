@@ -1,4 +1,117 @@
-import { keepUploadTheme } from '.'
+interface keepUploadTheme {
+  input: keepInputFieldTheme
+  uploadFailed: keepUploadFailedTheme
+  uploadHorizontal: UploadHorizontalTheme
+  uploadPending: UploadPendingTheme
+  uploadSuccess: UploadSuccessTheme
+}
+
+export interface UploadSuccessTheme {
+  base: string
+  bgColor: string
+  root: {
+    base: string
+    left: {
+      base: string
+      fileName: string
+      fileSize: string
+    }
+    confirmBox: {
+      base: string
+      checked: string
+      divider: string
+      trash: string
+    }
+  }
+}
+
+export interface UploadPendingTheme {
+  base: string
+  bgColor: string
+  root: {
+    base: string
+    status: string
+    statusBox: {
+      base: string
+      count: string
+      dot: string
+      time: string
+    }
+    confirmBox: {
+      base: string
+      pause: string
+      dismiss: string
+    }
+  }
+  progress: {
+    bgBar: string
+    mainBar: string
+  }
+}
+export interface UploadHorizontalTheme {
+  base: string
+  disabled: string
+  label: {
+    base: string
+    root: {
+      base: string
+      iconBox: {
+        base: string
+        icon: string
+        dragDrop: string
+        fileType: string
+      }
+      upload: {
+        base: string
+        input: string
+        fileName: string
+        fileSize: string
+      }
+    }
+  }
+}
+
+export interface keepUploadFailedTheme {
+  base: string
+  bgColor: string
+  root: {
+    base: string
+    status: string
+    statusBox: {
+      base: string
+      count: string
+      dot: string
+      time: string
+    }
+    confirmBox: {
+      base: string
+      restart: string
+      dismiss: string
+    }
+  }
+  progress: {
+    bgBar: string
+    mainBar: string
+  }
+}
+
+export interface keepInputFieldTheme {
+  base: string
+  disabled: string
+  label: {
+    base: string
+    root: string
+    icon: string
+    dragDrop: string
+    fileType: string
+
+    upload: {
+      base: string
+      input: string
+      fileName: string
+    }
+  }
+}
 
 export const uploadTheme: keepUploadTheme = {
   input: {

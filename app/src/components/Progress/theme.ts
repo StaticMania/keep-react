@@ -1,4 +1,37 @@
-import type { keepProgressTheme } from '.'
+import { KeepBoolean, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
+
+interface ProgressColor extends Pick<KeepColors, 'info' | 'error' | 'success' | 'warning' | 'indigo' | 'purple'> {
+  [key: string]: string
+}
+
+export interface ProgressSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg' | 'xl'> {
+  [key: string]: string
+}
+
+interface keepProgressTheme {
+  base: string
+  label: string
+  progressBar: {
+    base: string
+    bar: string
+    rounded: KeepBoolean
+    bordered: {
+      on: {
+        base: string
+        color: ProgressColor
+      }
+      off: string
+    }
+    progressPercentage: {
+      base: string
+      color: ProgressColor
+    }
+    popupLabelProgress: string
+    progressBaseColor: ProgressColor
+    progressPercentageColor: ProgressColor
+  }
+  size: ProgressSizes
+}
 
 export const progressTheme: keepProgressTheme = {
   base: 'flex items-center',

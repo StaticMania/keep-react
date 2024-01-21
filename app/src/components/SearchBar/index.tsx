@@ -1,5 +1,6 @@
 import { ChangeEvent, FC, ReactNode } from 'react'
-import { TextInput, TextInputColors, TextInputSizes } from '../FormControls/TextInput'
+import { TextInput } from '../FormControls/TextInput'
+import { TextInputColors, TextInputSizes } from '../FormControls/theme'
 
 /**
  * Props for the SearchBar component.

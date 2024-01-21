@@ -1,11 +1,7 @@
-import { FC } from 'react'
 import { ArrowUp } from 'phosphor-react'
-import { useTheme } from '../../Keep/ThemeContext'
+import { FC } from 'react'
 import { cn } from '../../helpers/cn'
-
-export interface keepRateTheme {
-  base?: string
-}
+import { statisticsTheme } from './theme'
 
 /**
  * Props for the Rate component.
@@ -26,7 +22,7 @@ export interface RateProps {
 }
 
 export const Rate: FC<RateProps> = ({ children, className }) => {
-  const theme = useTheme().theme.statistic
+  const theme = statisticsTheme
   return (
     <p className={cn(theme.rate.base, className)}>
       <span>

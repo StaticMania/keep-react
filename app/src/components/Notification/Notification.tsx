@@ -1,18 +1,15 @@
 'use client'
-import { FC, ReactNode } from 'react'
 import { X } from 'phosphor-react'
-
+import { FC, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
+import { Avatar } from './Avatar'
 import { Body } from './Body'
+import { Container } from './Container'
+import { Description } from './Description'
 import { Icon } from './Icon'
 import { Media } from './Media'
 import { Title } from './Title'
-import { Avatar } from './Avatar'
-import { Container } from './Container'
-import { Description } from './Description'
-
-import { cn } from '../../helpers/cn'
-
-import { useTheme } from '../../Keep/ThemeContext'
+import { notificationTheme } from './theme'
 
 /**
  * Props for the Notification component.
@@ -52,25 +49,6 @@ export interface NotificationProps {
   dismiss?: boolean
 }
 
-export interface keepNotificationTheme {
-  root: string
-  position: {
-    show: string
-    hidden: string
-    'top-left': string
-    'top-right': string
-    'bottom-left': string
-    'bottom-right': string
-  }
-  crossBtn: string
-  description: string
-  media: string
-  icon: string
-  body: string
-  avatar: string
-  title: string
-}
-
 const NotificationComponent: FC<NotificationProps> = ({
   className,
   children,
@@ -78,7 +56,7 @@ const NotificationComponent: FC<NotificationProps> = ({
   dismiss = false,
   onDismiss,
 }) => {
-  const { root, crossBtn, position: positionStyle } = useTheme().theme.notification
+  const { root, crossBtn, position: positionStyle } = notificationTheme
   return (
     <div className={cn(dismiss ? positionStyle.hidden : positionStyle.show, positionStyle[position])}>
       <div className={cn(root, className)}>

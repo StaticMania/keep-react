@@ -1,29 +1,13 @@
-import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import type { SidebarItemProps } from './SidebarItem'
 import { CaretDown } from 'phosphor-react'
+import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { useEffect, useId, useState } from 'react'
+import { cn } from '../../helpers/cn'
+import { DeepPartial } from '../../helpers/deep-partial'
 import { Tooltip } from '../Tooltip'
 import { useSidebarContext } from './SidebarContext'
+import type { SidebarItemProps } from './SidebarItem'
 import { SidebarItemContext } from './SidebarItemContext'
-import { KeepBoolean } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { KeepSidebarTheme } from '.'
-import { mergeDeep } from '../../helpers/mergeDeep'
-import { cn } from '../../helpers/cn'
-
-export interface KeepSidebarCollapseTheme {
-  button: string
-  icon: {
-    base: string
-    open: KeepBoolean
-  }
-  label: {
-    base: string
-    icon: string
-  }
-  list: string
-}
+import { KeepSidebarTheme, sidebarTheme } from './theme'
 
 /**
  * Props for the SidebarCollapse component.
@@ -59,15 +43,13 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
   icon: Icon,
   label,
   open = false,
-  theme: customTheme = {},
   ...props
 }) => {
   const id = useId()
   const { isCollapsed } = useSidebarContext()
   const [isOpen, setOpen] = useState(open)
 
-  const oldTheme = useTheme().theme.sidebar.collapse
-  const theme = mergeDeep(oldTheme, customTheme)
+  const theme = sidebarTheme.collapse
 
   useEffect(() => setOpen(open), [open])
 

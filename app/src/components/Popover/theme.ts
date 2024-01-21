@@ -1,4 +1,18 @@
-import { keepPopoverTheme } from './Popover'
+interface keepPopoverTheme {
+  root: {
+    base: string
+    icon: string
+  }
+  title: string
+  description: {
+    base: string
+    title: {
+      off: string
+      on: string
+    }
+  }
+  container: string
+}
 
 export const popoverTheme: keepPopoverTheme = {
   root: {

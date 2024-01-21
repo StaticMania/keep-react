@@ -1,11 +1,7 @@
 'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
-
-export interface keepTitleTheme {
-  base: string
-}
+import { emptyTheme } from './theme'
 
 export interface TitleProps {
   className?: string
@@ -13,6 +9,6 @@ export interface TitleProps {
 }
 
 export const Title: FC<TitleProps> = ({ children, className }) => {
-  const { title } = useTheme().theme.empty
+  const { title } = emptyTheme
   return <h1 className={cn(title.base, className)}>{children}</h1>
 }

@@ -1,28 +1,9 @@
 import type { ComponentProps, ReactNode } from 'react'
 import { forwardRef } from 'react'
+import { cn } from '../../helpers/cn'
 import { excludeClassName } from '../../helpers/exclude'
 import { HelperText } from './HelperText'
-import type { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
-
-export interface keepTextAreaTheme {
-  base: string
-  colors: TextareaColors
-  disabled: string
-  withBg: {
-    on: {
-      colors: TextareaColors
-    }
-    off: string
-  }
-  withBorder: KeepBoolean
-  withShadow: KeepBoolean
-}
-
-export interface TextareaColors extends Pick<KeepColors, 'gray' | 'info' | 'error' | 'warning' | 'success'> {
-  [key: string]: string
-}
+import { TextareaColors, formControlsTheme } from './theme'
 
 /**
  * Props for the Textarea component.
@@ -82,7 +63,7 @@ export interface TextareaProps extends Omit<ComponentProps<'textarea'>, 'classNa
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ shadow, helperText, withBg, border = true, disabled = false, color = 'default', className, ...props }, ref) => {
-    const theme = useTheme().theme.formControls.textarea
+    const theme = formControlsTheme.textarea
     const theirProps = excludeClassName(props)
 
     return (

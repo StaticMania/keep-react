@@ -1,4 +1,66 @@
-import { keepBadgeTheme } from '.'
+import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
+
+interface keepBadgeTheme {
+  base: string
+  href: string
+  badgeType: {
+    default: {
+      colorType: {
+        light: {
+          color: BadgeColors
+        }
+        strong: {
+          color: BadgeColors
+        }
+      }
+    }
+    outline: {
+      colorType: {
+        light: {
+          color: BadgeColors
+        }
+        strong: {
+          color: BadgeColors
+        }
+      }
+    }
+    text: {
+      colorType: {
+        light: {
+          color: BadgeColors
+        }
+        strong: {
+          color: BadgeColors
+        }
+      }
+    }
+  }
+  icon: {
+    off: string
+    on: string
+    size: BadgeSizes
+  }
+  size: BadgeSizes
+  dot: string
+  dotPosition: {
+    left: string
+    right: string
+  }
+}
+
+/**
+ * Props for the Badge component.
+ * @interface BadgeProps
+ * @extends {PropsWithChildren<Omit<ComponentProps<'span'>, 'className' | 'color'>>}
+ */
+
+export interface BadgeColors extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning'> {
+  [key: string]: string
+}
+
+export interface BadgeSizes extends Pick<KeepSizes, 'xs' | 'sm'> {
+  [key: string]: string
+}
 
 export const badgeTheme: keepBadgeTheme = {
   base: 'flex h-fit w-fit items-center justify-center gap-1 font-medium rounded-md cursor-pointer',

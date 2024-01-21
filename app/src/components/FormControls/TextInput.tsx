@@ -1,73 +1,8 @@
 import React, { ChangeEvent, ComponentProps, forwardRef, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 import { excludeClassName } from '../../helpers/exclude'
 import { HelperText } from './HelperText'
-import type { KeepBoolean, KeepColors, KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
-
-export interface keepTextInputTheme {
-  base: string
-  addon: {
-    base: string
-    separator: {
-      colors: TextInputColors
-    }
-    position: {
-      left: string
-      right: string
-    }
-    addonBorder: {
-      on: string
-      off: string
-    }
-  }
-  field: {
-    base: string
-    icon: {
-      base: string
-      position: {
-        left: string
-        right: string
-      }
-    }
-    input: {
-      base: string
-      disabled: string
-      sizes: TextInputSizes
-      colors: TextInputColors
-      withBorder: KeepBoolean
-      withBg: {
-        on: {
-          colors: TextInputColors
-        }
-        off: string
-      }
-      withIcon: {
-        on: {
-          left: string
-          right: string
-        }
-        off: string
-      }
-      withAddon: {
-        on: {
-          left: string
-          right: string
-        }
-        off: string
-      }
-      withShadow: KeepBoolean
-    }
-  }
-}
-
-export interface TextInputColors extends Pick<KeepColors, 'gray' | 'info' | 'error' | 'warning' | 'success'> {
-  [key: string]: string
-}
-
-export interface TextInputSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
-  [key: string]: string
-}
+import { formControlsTheme, TextInputColors, TextInputSizes } from './theme'
 
 /**
  * Props for the TextInput component.
@@ -211,7 +146,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     },
     ref,
   ) => {
-    const theme = useTheme().theme.formControls.textInput
+    const theme = formControlsTheme.textInput
     const theirProps = excludeClassName(props)
 
     return (

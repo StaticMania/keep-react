@@ -2,72 +2,8 @@ import { cn } from '../../helpers/cn'
 import type { ChangeEvent, ReactNode } from 'react'
 import { FC } from 'react'
 import { Avatar } from '../Avatar/Avatar'
-import { useTheme } from '../../Keep/ThemeContext'
 import { Radio } from '../FormControls/Radio'
-
-export interface keepCheckboxGroupTheme {
-  label: {
-    base: string
-    iconRight: {
-      on: string
-      off: string
-    }
-    selected: {
-      on: string
-      off: string
-    }
-    spacing: string
-  }
-
-  main: {
-    order: string
-    spacing: string
-  }
-  root: {
-    base: string
-    icon: {
-      base: string
-      selected: {
-        on: string
-        off: string
-      }
-    }
-    circleImg: {
-      base: string
-      selected: {
-        on: string
-        off: string
-      }
-    }
-    squareImg: {
-      base: string
-      img: string
-    }
-  }
-  textBox: {
-    spacing: string
-    order: string
-    title: {
-      base: string
-      selected: {
-        on: string
-        off: string
-      }
-    }
-    description: {
-      base: string
-      selected: {
-        on: string
-        off: string
-      }
-    }
-  }
-}
-
-/**
- * Props for the CheckboxGroup component.
- * @interface CheckboxGroupProps
- */
+import { checkboxGroupTheme } from './theme'
 
 interface CheckboxGroupProps {
   /**
@@ -193,7 +129,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({
   descriptionClassName,
   className,
 }) => {
-  const theme = useTheme().theme.checkboxGroup
+  const theme = checkboxGroupTheme
   return (
     <label
       className={cn(

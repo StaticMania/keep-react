@@ -1,8 +1,8 @@
-import { useTheme } from '../../Keep/ThemeContext'
 import { CaretDown, CaretRight } from 'phosphor-react'
 import { FC, ReactNode, useState } from 'react'
-import { CheckBox } from '../CheckBox'
 import { cn } from '../../helpers/cn'
+import { CheckBox } from '../CheckBox'
+import { treeTheme } from './theme'
 
 /**
  * A node for the Tree component.
@@ -104,43 +104,6 @@ interface Props {
   itemStyle?: string
 }
 
-export interface keepTreeTheme {
-  base: string
-  list: {
-    base: string
-    hasChild: {
-      on: string
-      off: {
-        hasIcon: {
-          on: string
-          off: string
-        }
-      }
-    }
-  }
-  caretIcon: {
-    base: string
-    icon: string
-  }
-
-  showChildren: {
-    base: string
-    on: string
-    off: string
-  }
-
-  nestedOrderList: {
-    on: {
-      base: string
-      border: {
-        on: string
-        off: string
-      }
-    }
-    off: string
-  }
-}
-
 export const Tree: FC<Props> = ({
   nodes,
   showIcon = false,
@@ -157,7 +120,7 @@ export const Tree: FC<Props> = ({
     [key: number]: boolean
   }>({})
 
-  const theme = useTheme().theme.tree
+  const theme = treeTheme
 
   const toggleNode = (id: number) => {
     setExpandedNodes({ ...expandedNodes, [id]: !expandedNodes[id] })

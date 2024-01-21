@@ -1,4 +1,59 @@
-import { keepTimelineTheme } from '.'
+export interface keepTimelineTheme {
+  root: TimelineComponentStyle
+  body: {
+    base: string
+  }
+  content: {
+    horizontal: {
+      on: string
+      off: string
+    }
+  }
+  item: {
+    horizontal: {
+      on: string
+      off: string
+    }
+  }
+  point: {
+    root: {
+      horizontal: {
+        on: string
+        off: string
+      }
+      icon: {
+        on: {
+          base: string
+          inner: string
+        }
+        off: {
+          base: string
+        }
+      }
+    }
+  }
+  time: {
+    base: string
+    horizontal: {
+      on: string
+      off: string
+    }
+  }
+  title: {
+    base: string
+  }
+}
+
+interface TimelineComponentStyle {
+  horizontal: {
+    on: string
+    off: string
+  }
+  barType: {
+    solid: string
+    dashed: string
+  }
+}
 
 export const timelineTheme: keepTimelineTheme = {
   root: {

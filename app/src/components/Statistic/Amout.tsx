@@ -1,12 +1,7 @@
 import { FC } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
-import { useStatisticContext } from './StatisticContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepAmountTheme {
-  base: string
-  spacing: string
-}
+import { useStatisticContext } from './StatisticContext'
+import { statisticsTheme } from './theme'
 
 /**
  * Props for the Amount component.
@@ -39,7 +34,7 @@ function formatNumber(number: number): string {
 }
 
 export const Amount: FC<AmountProps> = ({ children, className }) => {
-  const theme = useTheme().theme.statistic
+  const theme = statisticsTheme
   const { showDollar } = useStatisticContext()
   return (
     <h3 className={cn(theme.amount.base, className)}>

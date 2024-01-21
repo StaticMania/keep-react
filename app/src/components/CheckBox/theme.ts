@@ -1,4 +1,27 @@
-import { keepCheckboxTheme } from '.'
+import { KeepSizes, KeepStateColors } from '../../Keep/KeepTheme'
+
+export interface CheckboxSizes extends Pick<KeepSizes, 'sm' | 'lg' | 'md'> {
+  [key: string]: string
+}
+
+export interface CheckboxLabelColors extends Pick<KeepStateColors, 'error' | 'info' | 'success' | 'warning'> {
+  [key: string]: string
+}
+
+export interface keepCheckboxTheme {
+  base: string
+  checkboxInput: string
+  enabled: string
+  disabled: string
+  label: CheckboxSizes
+  labelColor: CheckboxLabelColors
+  variant: {
+    circle: string
+    square: string
+  }
+  size: CheckboxSizes
+  color: KeepStateColors
+}
 
 export const checkboxTheme: keepCheckboxTheme = {
   checkboxInput: 'opacity-0 peer absolute cursor-pointer',

@@ -1,4 +1,31 @@
-import { keepTagTheme } from '.'
+import { KeepBoolean, KeepColors } from '../../Keep/KeepTheme'
+
+export interface keepTagTheme {
+  base: string
+  dismiss: string
+  disabled: KeepBoolean
+  icon: {
+    left: string
+    right: string
+  }
+  borderType: {
+    solid: string
+    dashed: string
+  }
+  color: TagColors
+  bar: {
+    base: string
+    color: TagColors
+  }
+  children: {
+    colors: TagColors
+  }
+}
+
+export interface TagColors
+  extends Pick<KeepColors, 'error' | 'gray' | 'info' | 'success' | 'warning' | 'teal' | 'purple'> {
+  [key: string]: string
+}
 
 export const tagTheme: keepTagTheme = {
   base: 'flex items-center px-2 py-1 rounded',

@@ -1,4 +1,49 @@
-import { KeepStepTheme } from './Steps'
+export interface KeepStepTheme {
+  base: string
+  items: {
+    base: string
+    stepType: {
+      base: string
+      point: {
+        base: string
+        on: string
+        off: string
+        active: string
+      }
+      icon: {
+        active: string
+        base: string
+        on: string
+        off: string
+      }
+      number: { active: string; base: string; on: string; off: string }
+    }
+  }
+  stepText: {
+    base: string
+    title: {
+      base: string
+      active: string
+      inActive: string
+    }
+    description: {
+      base: string
+      active: string
+      inActive: string
+    }
+  }
+  main: {
+    completed: {
+      on: string
+      off: string
+    }
+    borderType: {
+      solid: string
+      dashed: string
+      none: string
+    }
+  }
+}
 
 export const stepTheme: KeepStepTheme = {
   base: 'flex items-center relative',

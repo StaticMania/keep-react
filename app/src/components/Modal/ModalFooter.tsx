@@ -1,7 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { excludeClassName } from '../../helpers/exclude'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { modalTheme } from './theme'
 
 /**
  * Props for the ModalFooter component.
@@ -12,13 +11,8 @@ import { cn } from '../../helpers/cn'
 
 export type ModalFooterProps = PropsWithChildren<ComponentProps<'div'> & { className?: string }>
 
-export const ModalFooter: FC<ModalFooterProps> = ({ children, className, ...props }) => {
-  const theme = useTheme().theme.modal.footer
-  const theirProps = excludeClassName(props)
+export const ModalFooter: FC<ModalFooterProps> = ({ children, className }) => {
+  const theme = modalTheme.footer
 
-  return (
-    <div className={cn(theme.base, className)} {...theirProps}>
-      {children}
-    </div>
-  )
+  return <div className={cn(theme.base, className)}>{children}</div>
 }

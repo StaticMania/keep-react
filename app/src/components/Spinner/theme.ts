@@ -1,4 +1,19 @@
-import type { KeepSpinnerTheme } from '.'
+import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
+
+interface KeepSpinnerTheme {
+  base: string
+  color: SpinnerColors
+  size: SpinnerSizes
+}
+
+export interface SpinnerColors
+  extends Pick<KeepColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
+  [key: string]: string
+}
+
+export interface SpinnerSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
+  [key: string]: string
+}
 
 export const spinnerTheme: KeepSpinnerTheme = {
   base: 'inline animate-spin text-gray-200',

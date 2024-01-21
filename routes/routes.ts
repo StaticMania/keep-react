@@ -3,12 +3,12 @@ import {
   BarChartComponent,
   CheckboxGroupComponent,
   DatePickerComponent,
-  RadioSelectComponent,
   ModalComponent,
-  SliderComponent,
-  TooltipComponent,
   PaginationComponent,
+  RadioSelectComponent,
+  SliderComponent,
   TabsComponent,
+  TooltipComponent,
 } from '../app/components/ComponentsList'
 
 interface routerPath {
@@ -24,21 +24,20 @@ interface routerPath {
 export const routes: routerPath[] = [
   {
     id: 1,
-    name: 'Alert',
-    href: '/docs/components/alert',
-    tag: false,
-    deprecate: false,
-    folderName: 'Alert',
-  },
-  {
-    id: 2,
     name: 'Accordion',
     href: '/docs/components/accordion',
     tag: false,
     deprecate: false,
     folderName: 'Accordion',
   },
-
+  {
+    id: 2,
+    name: 'Alert',
+    href: '/docs/components/alert',
+    tag: false,
+    deprecate: false,
+    folderName: 'Alert',
+  },
   {
     id: 3,
     name: 'Area Chart',
@@ -188,14 +187,6 @@ export const routes: routerPath[] = [
     name: 'Number Input',
     folderName: 'FormControls',
     href: '/docs/components/numberInput',
-    tag: false,
-    deprecate: false,
-  },
-  {
-    id: 21,
-    name: 'Play Button',
-    folderName: 'PlayButton',
-    href: '/docs/components/playButton',
     tag: false,
     deprecate: false,
   },

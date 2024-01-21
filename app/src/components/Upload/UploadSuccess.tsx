@@ -1,29 +1,10 @@
-import { useTheme } from '../../Keep/ThemeContext'
 import { Check, FilePdf, Trash } from 'phosphor-react'
 import { FC } from 'react'
 import { cn } from '../../helpers/cn'
-
-export interface UploadSuccessTheme {
-  base: string
-  bgColor: string
-  root: {
-    base: string
-    left: {
-      base: string
-      fileName: string
-      fileSize: string
-    }
-    confirmBox: {
-      base: string
-      checked: string
-      divider: string
-      trash: string
-    }
-  }
-}
+import { uploadTheme } from './theme'
 
 export const UploadSuccess: FC = () => {
-  const theme = useTheme().theme.upload.uploadSuccess
+  const theme = uploadTheme.uploadSuccess
   return (
     <div className={cn(theme.base)}>
       <div className={cn(theme.bgColor)}></div>

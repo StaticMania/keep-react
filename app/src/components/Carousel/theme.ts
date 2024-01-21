@@ -1,4 +1,56 @@
-import { KeepCarouselTheme } from '.'
+import { KeepColors } from '../../Keep/KeepTheme'
+
+export interface KeepCarouselTheme {
+  base: string
+  indicators: {
+    active: {
+      off: {
+        base: string
+        color: IndicatorsTypeColors
+      }
+      on: {
+        base: string
+        type: {
+          dot: string
+          ring: string
+          bar: string
+          square: string
+          squareRing: string
+        }
+        color: IndicatorsTypeColors
+      }
+    }
+    base: string
+    wrapper: string
+    type: {
+      dot: string
+      ring: string
+      bar: string
+      square: string
+      squareRing: string
+    }
+  }
+  item: {
+    base: string
+    wrapper: string
+  }
+  control: {
+    base: string
+    icon: string
+  }
+  leftControl: string
+  rightControl: string
+  scrollContainer: {
+    base: string
+    snap: string
+  }
+}
+
+export type IndicatorsType = 'dot' | 'ring' | 'bar' | 'square' | 'squareRing'
+
+export interface IndicatorsTypeColors extends Pick<KeepColors, 'white' | 'slate'> {
+  [key: string]: string
+}
 
 export const carouselTheme: KeepCarouselTheme = {
   base: 'relative h-56 sm:h-64 xl:h-80 2xl:h-96',
