@@ -1,3 +1,4 @@
+'use client'
 import { FC, ReactNode, useState } from 'react'
 import { cn } from '../../helpers/cn'
 import { NavigationBrand } from './NavigationBrand'

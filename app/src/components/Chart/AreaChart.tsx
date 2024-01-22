@@ -1,7 +1,8 @@
+'use client'
 import { FC } from 'react'
 import { Area, AreaChart as AreaChartCom, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { CustomTooltip } from './CustomTooltip'
 import { ChartContext } from './ChartContext'
+import { CustomTooltip } from './CustomTooltip'
 
 /**
  * Props for the AreaChart component.

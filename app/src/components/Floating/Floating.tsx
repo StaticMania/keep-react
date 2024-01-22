@@ -1,10 +1,11 @@
+'use client'
 import type { Placement } from '@floating-ui/core'
 import { autoUpdate, useFocus } from '@floating-ui/react'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { cn } from '../../helpers/cn'
 import { getArrowPlacement } from '../../helpers/floating'
 import { useBaseFLoating, useFloatingInteractions } from '../../helpers/use-Floating'
-import { cn } from '../../helpers/cn'
 
 export interface keepFloatingTheme {
   arrow: keepFloatingArrowTheme

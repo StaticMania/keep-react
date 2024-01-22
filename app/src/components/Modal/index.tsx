@@ -1,3 +1,4 @@
+'use client'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'

@@ -1,3 +1,4 @@
+'use client'
 import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
 import type { Dispatch, FC, PropsWithChildren, ReactElement, ReactNode, SetStateAction } from 'react'
 import React, { Children, useCallback, useEffect, useMemo, useRef, useState } from 'react'

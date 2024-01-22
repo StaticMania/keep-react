@@ -1,3 +1,4 @@
+'use client'
 import { ChangeEvent, ReactNode, createContext, useContext } from 'react'
 
 /**

@@ -1,3 +1,4 @@
+'use client'
 import { useState, type ComponentProps, type FC, type PropsWithChildren } from 'react'
 import { cn } from '../../helpers/cn'
 import { DeepPartial } from '../../helpers/deep-partial'

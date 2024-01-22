@@ -1,3 +1,4 @@
+'use client'
 /* eslint-disable no-unused-vars */
 import type { ComponentProps, ForwardedRef, KeyboardEvent, PropsWithChildren, ReactElement } from 'react'
 import { Children, forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'

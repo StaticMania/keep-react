@@ -1,3 +1,4 @@
+'use client'
 import { Pause, X } from 'phosphor-react'
 import { FC, useEffect, useRef, useState } from 'react'
 import { cn } from '../../helpers/cn'

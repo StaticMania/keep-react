@@ -1,3 +1,4 @@
+'use client'
 import { ArrowLeft, ArrowRight } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
 import { useState } from 'react'

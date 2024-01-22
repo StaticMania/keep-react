@@ -1,3 +1,4 @@
+'use client'
 import { Switch } from '@headlessui/react'
 import type { Dispatch, FC, ReactNode, SetStateAction } from 'react'
 import { useEffect, useState } from 'react'

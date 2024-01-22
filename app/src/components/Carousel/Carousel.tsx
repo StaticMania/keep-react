@@ -1,9 +1,10 @@
+'use client'
 import { CaretLeft, CaretRight } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ScrollContainer from 'react-indiana-drag-scroll'
-import { windowExists } from '../../helpers/window-exists'
 import { cn } from '../../helpers/cn'
+import { windowExists } from '../../helpers/window-exists'
 import { IndicatorsType, IndicatorsTypeColors, carouselTheme } from './theme'
 
 /**

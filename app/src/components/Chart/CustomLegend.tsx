@@ -1,3 +1,4 @@
+'use client'
 import type { Payload } from 'recharts/types/component/DefaultLegendContent'
 
 /**

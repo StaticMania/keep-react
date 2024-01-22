@@ -1,3 +1,4 @@
+'use client'
 import { CaretDown, CaretRight } from 'phosphor-react'
 import { FC, ReactNode, useState } from 'react'
 import { cn } from '../../helpers/cn'

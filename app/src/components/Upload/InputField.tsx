@@ -1,3 +1,4 @@
+'use client'
 import { FileArrowUp } from 'phosphor-react'
 import { FC, useRef } from 'react'
 import { cn } from '../../helpers/cn'

@@ -1,8 +1,9 @@
+'use client'
+import { ReactElement } from 'react'
 import { TooltipProps } from 'recharts'
 import type { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent'
 import { Button } from '../Button/Button'
 import { Tooltip as TooltipCom } from '../Tooltip'
-import { ReactElement } from 'react'
 import { useChartContext } from './ChartContext'
 
 export const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>): ReactElement | null => {
