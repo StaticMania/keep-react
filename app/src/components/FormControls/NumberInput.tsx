@@ -1,4 +1,3 @@
-import { Minus, Plus } from 'phosphor-react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
@@ -87,7 +86,14 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
             )}
             onClick={() => setValue((prevVal: number): number => prevVal + 1)}>
             <span className={cn(theme.field.icon.incrementIcon)}>
-              <Plus size={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16} weight="bold" color="#5E718D" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16}
+                height={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16}
+                fill="#5e718d"
+                viewBox="0 0 256 256">
+                <path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"></path>
+              </svg>
             </span>
           </div>
           <input
@@ -117,7 +123,14 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
               else setValue((prevVal: number): number => prevVal - 1)
             }}>
             <span className={cn(theme.field.icon.decrementIcon)}>
-              <Minus size={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16} weight="bold" color="#5E718D" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16}
+                height={sizing === 'sm' ? 14 : sizing === 'lg' ? 18 : 16}
+                fill="#5e718d"
+                viewBox="0 0 256 256">
+                <path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"></path>
+              </svg>
             </span>
           </div>
         </div>

@@ -1,5 +1,5 @@
+'use client'
 import type { ChangeEvent, FC } from 'react'
-
 import { InputField } from './InputField'
 import { UploadContext } from './UploadContext'
 import { UploadFailed } from './UploadFailed'

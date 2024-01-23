@@ -1,4 +1,3 @@
-import { ArrowUp } from 'phosphor-react'
 import { FC } from 'react'
 import { cn } from '../../helpers/cn'
 import { statisticsTheme } from './theme'
@@ -26,7 +25,9 @@ export const Rate: FC<RateProps> = ({ children, className }) => {
   return (
     <p className={cn(theme.rate.base, className)}>
       <span>
-        <ArrowUp size="12" weight="bold" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 256 256">
+          <path d="M208.49,120.49a12,12,0,0,1-17,0L140,69V216a12,12,0,0,1-24,0V69L64.49,120.49a12,12,0,0,1-17-17l72-72a12,12,0,0,1,17,0l72,72A12,12,0,0,1,208.49,120.49Z"></path>
+        </svg>
       </span>
       <span>{children}%</span>
     </p>

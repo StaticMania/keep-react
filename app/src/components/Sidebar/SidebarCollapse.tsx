@@ -1,5 +1,4 @@
 'use client'
-import { CaretDown } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
 import { useEffect, useId, useState } from 'react'
 import { cn } from '../../helpers/cn'
@@ -90,7 +89,9 @@ export const SidebarCollapse: FC<SidebarCollapseProps> = ({
             <span data-testid="keep-sidebar-collapse-label" className={theme.label.base}>
               {label}
             </span>
-            <CaretDown size={24} weight="bold" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+              <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
+            </svg>
           </>
         )}
       </button>

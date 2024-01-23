@@ -1,4 +1,3 @@
-import { CaretLeft } from 'phosphor-react'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 import { useNavigationContext } from './NavigationContext'
@@ -39,7 +38,14 @@ export const NavigationCollapse: FC<CollapseProps> = ({ children, className, col
       )}>
       <div className="mb-4">
         <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-px text-body-5 text-metal-400">
-          <CaretLeft size="16" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            className="text-metal-400"
+            viewBox="0 0 256 256">
+            <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+          </svg>
           Go Back
         </button>
       </div>

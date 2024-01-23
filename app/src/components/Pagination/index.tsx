@@ -1,5 +1,4 @@
 'use client'
-import { ArrowLeft, ArrowRight } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement } from 'react'
 import { useState } from 'react'
 import { cn } from '../../helpers/cn'
@@ -138,11 +137,17 @@ export const Pagination: FC<PaginationProps> = ({
             onClick={() => goToPreviousPage()}>
             {iconWithText && (
               <>
-                <ArrowLeft className={theme.pages.previous.icon} />
+                <svg xmlns="http://www.w3.org/2000/svg" className={theme.pages.previous.icon} viewBox="0 0 256 256">
+                  <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+                </svg>
                 <span className={theme.pages.previous.title}>Previous</span>
               </>
             )}
-            {iconWithOutText && <ArrowLeft className={theme.pages.previous.icon} />}
+            {iconWithOutText && (
+              <svg xmlns="http://www.w3.org/2000/svg" className={theme.pages.previous.icon} viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+              </svg>
+            )}
           </button>
         </li>
         {paginationGenerator(firstPage, lastPage).map((page: string | number, index: number): ReactElement => {
@@ -177,10 +182,16 @@ export const Pagination: FC<PaginationProps> = ({
             {iconWithText && (
               <>
                 <span className={theme.pages.next.title}>Next</span>
-                <ArrowRight className={theme.pages.next.icon} />
+                <svg xmlns="http://www.w3.org/2000/svg" className={theme.pages.next.icon} viewBox="0 0 256 256">
+                  <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                </svg>
               </>
             )}
-            {iconWithOutText && <ArrowRight className={theme.pages.next.icon} />}
+            {iconWithOutText && (
+              <svg xmlns="http://www.w3.org/2000/svg" className={theme.pages.next.icon} viewBox="0 0 256 256">
+                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+              </svg>
+            )}
           </button>
         </li>
         {showGoToPaginate && (

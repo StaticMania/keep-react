@@ -1,5 +1,4 @@
 'use client'
-import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
 import type { Dispatch, FC, PropsWithChildren, ReactElement, ReactNode, SetStateAction } from 'react'
 import React, { Children, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { DeepPartial } from '../../helpers/deep-partial'
@@ -71,10 +70,26 @@ export interface TriggerWrapperProps extends ButtonProps {
 type Icons = Record<string, ReactNode>
 
 const icons: Icons = {
-  top: <CaretUp size={18} />,
-  right: <CaretRight size={18} />,
-  bottom: <CaretDown size={18} />,
-  left: <CaretLeft size={18} />,
+  top: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+      <path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"></path>
+    </svg>
+  ),
+  right: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+      <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+    </svg>
+  ),
+  bottom: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+    </svg>
+  ),
+  left: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+      <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+    </svg>
+  ),
 }
 
 const DropdownComponent: FC<DropdownProps> = ({ children, dismissOnClick = true, ...props }) => {
@@ -91,7 +106,13 @@ const DropdownComponent: FC<DropdownProps> = ({ children, dismissOnClick = true,
 
   const Icon = useMemo(() => {
     const [p] = placement.split('-')
-    return icons[p] ?? <CaretDown size={18} />
+    return (
+      icons[p] ?? (
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+          <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+        </svg>
+      )
+    )
   }, [placement])
 
   const [closeRequestKey, setCloseRequestKey] = useState<string | undefined>(undefined)
