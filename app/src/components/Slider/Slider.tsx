@@ -1,7 +1,8 @@
 'use client'
-import type { FC } from 'react'
-import { TooltipSlider } from './ToolTipSlider'
+import type { FC, ReactNode } from 'react'
 import { excludeClassName } from '../../helpers/exclude'
+import { SliderRange } from './Rangebox'
+import { TooltipSlider } from './ToolTipSlider'
 
 export interface MarkObj {
   [key: number]: string | number
@@ -12,6 +13,7 @@ export interface MarkObj {
  * @interface SliderProps
  */
 export interface SliderProps {
+  children: ReactNode
   /**
    * The minimum value of the slider.
    * @type {number}
@@ -90,7 +92,7 @@ export interface SliderProps {
   tooltip?: 'top' | 'bottom' | 'none'
 }
 
-export const Slider: FC<SliderProps> = ({
+const SliderComponent: FC<SliderProps> = ({
   min,
   max,
   step,
@@ -102,6 +104,7 @@ export const Slider: FC<SliderProps> = ({
   reverse = false,
   tooltip = 'none',
   onChange,
+  children,
   ...props
 }) => {
   const theirProps = excludeClassName(props)
@@ -123,6 +126,11 @@ export const Slider: FC<SliderProps> = ({
         step={step}
         {...theirProps}
       />
+      {children}
     </div>
   )
 }
+SliderRange.displayName = 'Slider.Box'
+export const Slider = Object.assign(SliderComponent, {
+  Box: SliderRange,
+})

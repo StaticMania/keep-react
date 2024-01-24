@@ -613,7 +613,7 @@ input[type='number'] {
   top: 18px;
   left: 0;
   width: 100%;
-  font-size: 12px;
+  font-size: 10px;
 }
 .rc-slider-mark-text {
   display: inline-block;
@@ -813,6 +813,35 @@ input[type='number'] {
   border-top-color: #6c6c6c;
 }
 
+.rc-slider-handle-1::after {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  background-color: #005bea;
+  width: 8px;
+  height: 8px;
+  content: '';
+}
+.rc-slider-handle-2::after {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  background-color: #005bea;
+  width: 8px;
+  height: 8px;
+  content: '';
+}
+
 /* ================ SLIDER END =========== */
 
 /* ================ TOOLTIP CSS START =========== */
@@ -904,14 +933,7 @@ input[type='number'] {
   padding: 0 9px 0 5px;
 }
 .rc-tooltip-inner {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
-  border-radius: 6px;
-  background-color: #373737;
-  padding: 8px 10px;
-  min-height: 34px;
-  color: #fff;
-  text-align: left;
-  text-decoration: none;
+  @apply rounded-md border border-metal-200 bg-white px-2 py-[6px] text-body-6 font-medium text-metal-600 shadow-small;
 }
 .rc-tooltip-arrow {
   position: absolute;
@@ -921,13 +943,11 @@ input[type='number'] {
   width: 0;
   height: 0;
 }
+
 .rc-tooltip-placement-top .rc-tooltip-arrow,
 .rc-tooltip-placement-topLeft .rc-tooltip-arrow,
 .rc-tooltip-placement-topRight .rc-tooltip-arrow {
-  bottom: 0px;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #373737;
+  @apply absolute bottom-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-b border-r border-metal-200 bg-white;
 }
 .rc-tooltip-placement-top .rc-tooltip-arrow {
   left: 50%;
@@ -977,10 +997,7 @@ input[type='number'] {
 .rc-tooltip-placement-bottom .rc-tooltip-arrow,
 .rc-tooltip-placement-bottomLeft .rc-tooltip-arrow,
 .rc-tooltip-placement-bottomRight .rc-tooltip-arrow {
-  top: 4px;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #373737;
+  @apply absolute left-1/2 top-1 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-l border-t border-metal-200 bg-white;
 }
 .rc-tooltip-placement-bottom .rc-tooltip-arrow {
   left: 50%;
