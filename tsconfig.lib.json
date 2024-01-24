@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "module": "CommonJS",
+    "module": "ES2015",
     "outDir": "./lib/cjs"
   },
   "exclude": ["app/**/*.stories.tsx"],
