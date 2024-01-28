@@ -16,13 +16,11 @@ const NotFound = () => {
       </Empty.Image>
       <Empty.Title>Sorry, No Result Found!</Empty.Title>
       <Empty.Description>The page/topic you are looking for is not found.</Empty.Description>
-      <Empty.Redirect>
-        <Link
-          href="/"
-          className="group h-min w-fit justify-center rounded-md border border-slate-900 bg-slate-900 px-4 py-4 text-center text-sm font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-slate-800 focus:ring-4 focus:ring-slate-800 active:bg-slate-900">
-          Back to home
-        </Link>
-      </Empty.Redirect>
+      <Link
+        href="/"
+        className="group h-min w-fit justify-center rounded-md border border-slate-900 bg-slate-900 px-4 py-4 text-center text-sm font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-slate-800 focus:ring-4 focus:ring-slate-800 active:bg-slate-900">
+        Back to home
+      </Link>
     </Empty>
   )
 }
