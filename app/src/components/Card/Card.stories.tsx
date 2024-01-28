@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import Image from 'next/image'
 import {
   ArchiveTray,
   ArrowsOutSimple,
@@ -21,14 +22,13 @@ import {
   TwitterLogo,
   Users,
 } from 'phosphor-react'
-import Image from 'next/image'
 import { removeFragment } from '../../helpers/mergeDeep'
-import { Card } from './Card'
-import { Popover } from '../Popover'
 import { Avatar } from '../Avatar/Avatar'
-import { Button } from '../Button/Button'
 import { Badge } from '../Badge'
+import { Button } from '../Button/Button'
+import { Popover } from '../Popover'
 import { Progress } from '../Progress'
+import { Card } from './Card'
 
 const meta: Meta<typeof Card> = {
   component: Card,
@@ -195,12 +195,7 @@ export const CardWithAvatar: Story = {
     children: removeFragment(
       <>
         <Card.Container className="flex items-center justify-center">
-          <Avatar
-            shape="circle"
-            img="https://randomuser.me/api/portraits/men/50.jpg"
-            statusPosition="bottom-right"
-            size="2xl"
-          />
+          <Avatar shape="circle" img="https://randomuser.me/api/portraits/men/50.jpg" size="2xl" />
         </Card.Container>
         <Card.Container className="text-center">
           <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">

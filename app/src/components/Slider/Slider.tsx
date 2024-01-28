@@ -13,7 +13,7 @@ export interface MarkObj {
  * @interface SliderProps
  */
 export interface SliderProps {
-  children: ReactNode
+  children?: ReactNode
   /**
    * The minimum value of the slider.
    * @type {number}

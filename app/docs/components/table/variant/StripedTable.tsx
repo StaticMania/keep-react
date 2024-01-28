@@ -1,8 +1,8 @@
 'use client'
+import Image from 'next/image'
+import { ArrowDown, Cube } from 'phosphor-react'
 import { DefaultTableData } from '~/public/data/tableData'
 import { Avatar, Badge, Button, Table } from '../../../../src'
-import { ArrowDown, Cube } from 'phosphor-react'
-import Image from 'next/image'
 import TableActionBtn from './TableActionBtn'
 
 const StripedTable = () => {
@@ -51,7 +51,7 @@ const StripedTable = () => {
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
-                      <Avatar shape="circle" img={cell.img} size="md" />
+                      <Avatar img={cell.img} />
                       <div>
                         <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{cell.name}</p>
                         <span>{cell.tag}</span>
@@ -162,7 +162,7 @@ export const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
+                  <Avatar img="/images/avatar/avatar-4.png" />
                   <div>
                     <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Ralph Edwards</p>
                     <span>&ralph</span>
@@ -229,7 +229,7 @@ export const TableComponent = () => {
                 </ul>
               </Popover.Container>
               <Popover.Action>
-                <Button variant="outline" size="sm" shape="circle">
+                <Button variant="outline" size="sm" 
                   <DotsThreeOutline size={14}  />
                 </Button>
               </Popover.Action>

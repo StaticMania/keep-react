@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 
-interface GroupProps {
+export interface GroupProps {
   children?: ReactNode
 }
 

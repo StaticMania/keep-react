@@ -1,7 +1,7 @@
 'use client'
+import { ArrowsDownUp, Crown, Cube } from 'phosphor-react'
 import { TransactionsTableData } from '~/public/data/tableData'
 import { Avatar, Badge, Button, Table } from '../../../../src'
-import { ArrowsDownUp, Crown, Cube } from 'phosphor-react'
 import TableActionBtn from './TableActionBtn'
 
 const TransactionsTable = () => {
@@ -54,7 +54,7 @@ const TransactionsTable = () => {
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
-                      <Avatar shape="circle" img={cell.img} size="md" />
+                      <Avatar img={cell.img} />
                       <div>
                         <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{cell.name}</p>
                         <span className="text-body-6 font-normal text-metal-500">{cell.tag}</span>
@@ -149,7 +149,7 @@ export const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/company/paypal.png" size="md" />
+                  <Avatar img="/images/company/paypal.png" />
                   <div>
                     <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Paypal</p>
                     <span className="text-body-6 font-normal text-metal-500">Withdraw</span>

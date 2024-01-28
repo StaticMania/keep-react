@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { CloudArrowUp, Trash, UserPlus } from 'phosphor-react'
 import { useState } from 'react'
 import { Modal } from '.'
-import { Button } from '../Button/Button'
 import { Avatar } from '../Avatar/Avatar'
+import { Button } from '../Button/Button'
 
 const meta: Meta<typeof Modal> = {
   component: Modal,
@@ -192,7 +192,7 @@ const HistoryModalComponent = () => {
             </p>
 
             <div className="mb-6 flex items-center gap-2">
-              <Avatar shape="circle" img="/images/avatar/avatar-4.png" statusPosition="bottom-right" size="md" />
+              <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
 
               <div>
                 <p className="text-body-5 font-semibold text-gray-500">Albert Flores</p>

@@ -236,6 +236,9 @@ module.exports = {
       animation: {
         'keep-bounce': 'bounce-open 0.3s',
       },
+      content: {
+        img: 'url("/images/avatar/verify.svg")',
+      },
     },
   },
 }

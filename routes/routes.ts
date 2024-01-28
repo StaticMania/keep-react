@@ -55,14 +55,6 @@ export const routes: routerPath[] = [
     folderName: 'Avatar',
   },
   {
-    id: 5,
-    name: 'Avatar Group',
-    href: '/docs/components/avatarGroup',
-    tag: false,
-    deprecate: false,
-    folderName: 'Avatar',
-  },
-  {
     id: 6,
     name: 'Badge',
     folderName: 'Badge',

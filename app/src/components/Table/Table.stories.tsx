@@ -13,10 +13,10 @@ import {
   Tag,
 } from 'phosphor-react'
 import { Table } from '.'
-import { Badge } from '../Badge'
-import { Button } from '../Button/Button'
 import { removeFragment } from '../../helpers/mergeDeep'
 import { Avatar } from '../Avatar/Avatar'
+import { Badge } from '../Badge'
+import { Button } from '../Button/Button'
 
 const meta: Meta<typeof Table> = {
   component: Table,
@@ -1028,13 +1028,13 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-5.png" />
+                <Avatar shape="circle" size="md" />
+                <Avatar shape="circle" size="md" />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1075,13 +1075,13 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-5.png" />
+                <Avatar shape="circle" size="md" />
+                <Avatar shape="circle" size="md" />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1122,13 +1122,13 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-5.png" />
+                <Avatar shape="circle" size="md" />
+                <Avatar shape="circle" size="md" />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1169,13 +1169,13 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-5.png" />
+                <Avatar shape="circle" size="md" />
+                <Avatar shape="circle" size="md" />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>
@@ -1216,13 +1216,13 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-1.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-2.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-3.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-4.png" />
+                <Avatar shape="circle" size="md" img="/images/avatar/avatar-5.png" />
+                <Avatar shape="circle" size="md" />
+                <Avatar shape="circle" size="md" />
               </Avatar.Group>
             </Table.Cell>
             <Table.Cell>

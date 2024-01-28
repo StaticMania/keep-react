@@ -1,6 +1,6 @@
 'use client'
-import { Avatar, Card } from '../../../../src'
 import { FacebookLogo, LinkedinLogo, TwitterLogo } from 'phosphor-react'
+import { Avatar, Card } from '../../../../src'
 
 const ProfileCard = () => {
   return (
@@ -22,12 +22,7 @@ const ProfileCard = () => {
       {/*=== PROFILE CARD TWO=== */}
       <Card className="max-w-[250px] p-6">
         <Card.Container className="flex items-center justify-center">
-          <Avatar
-            shape="circle"
-            img="https://randomuser.me/api/portraits/men/50.jpg"
-            statusPosition="bottom-right"
-            size="2xl"
-          />
+          <Avatar shape="circle" img="https://randomuser.me/api/portraits/men/50.jpg" size="2xl" />
         </Card.Container>
         <Card.Container className="text-center">
           <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">

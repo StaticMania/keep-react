@@ -1,7 +1,7 @@
 'use client'
-import { useState } from 'react'
-import { Avatar, Modal, Button, CheckBox } from '../../../../src'
 import { CloudArrowUp, UserPlus } from 'phosphor-react'
+import { useState } from 'react'
+import { Avatar, Button, CheckBox, Modal } from '../../../../src'
 
 const HistoryModal = () => {
   const [showHistoryModal, setShowHistoryModal] = useState(false)
@@ -50,7 +50,7 @@ const HistoryModal = () => {
               Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica.
             </p>
             <div className="mb-4 flex items-center gap-2 md:mb-6">
-              <Avatar shape="circle" img="/images/avatar/avatar-4.png" statusPosition="bottom-right" size="md" />
+              <Avatar img="/images/avatar/avatar-4.png" />
               <div>
                 <p className="text-body-5 font-semibold text-gray-500">Albert Flores</p>
                 <p className="text-body-6 text-gray-500">keep@designsystem.com</p>

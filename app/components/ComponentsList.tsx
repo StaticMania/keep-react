@@ -1,9 +1,9 @@
 'use client'
 import { CloudArrowUp, GridFour, Phone, User } from 'phosphor-react'
 import { ChangeEvent, useState } from 'react'
-import { Button, CheckboxGroup, Modal, Pagination, Slider, Tooltip, Tabs, DatePicker } from '../src'
 import { CustomizedBarSizeWithAxisData } from '../docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultRadio } from '../docs/components/radio/variant/DefaultRadio'
+import { Button, CheckboxGroup, DatePicker, Modal, Pagination, Slider, Tabs, Tooltip } from '../src'
 
 export const SliderComponent = () => {
   return (

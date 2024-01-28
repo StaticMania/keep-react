@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
-import { Avatar, Badge, Button, Table } from '../../../../src'
 import { ArrowDown, Cube } from 'phosphor-react'
 import { DefaultTableData } from '~/public/data/tableData'
+import { Avatar, Badge, Button, Table } from '../../../../src'
 import TableActionBtn from './TableActionBtn'
 
 const BorderedTable = () => {
@@ -47,7 +47,7 @@ const BorderedTable = () => {
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
-                      <Avatar shape="circle" img={cell.img} size="md" />
+                      <Avatar img={cell.img} />
                       <div>
                         <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{cell.name}</p>
                         <span>{cell.tag}</span>
@@ -154,7 +154,7 @@ export const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/avatar/avatar-4.png" size="md" />
+                  <Avatar img="/images/avatar/avatar-4.png"/>
                   <div>
                     <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Ralph Edwards</p>
                     <span>&ralph</span>

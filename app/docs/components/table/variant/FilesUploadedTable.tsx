@@ -1,7 +1,7 @@
 'use client'
+import { Cube } from 'phosphor-react'
 import { FileUploadTableData } from '~/public/data/tableData'
 import { Avatar, Button, Table } from '../../../../src'
-import { Cube } from 'phosphor-react'
 import TableActionBtn from './TableActionBtn'
 
 const FilesUploadedTable = () => {
@@ -68,13 +68,12 @@ const FilesUploadedTable = () => {
               </Table.Cell>
               <Table.Cell>
                 <Avatar.Group>
-                  <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                  <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                  <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                  <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                  <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                  <Avatar shape="circle" size="md" stacked={true} />
-                  <Avatar shape="circle" size="md" stacked={true} />
+                  <Avatar img="/images/avatar/avatar-1.png" />
+                  <Avatar img="/images/avatar/avatar-2.png" />
+                  <Avatar img="/images/avatar/avatar-3.png" />
+                  <Avatar img="/images/avatar/avatar-4.png" />
+                  <Avatar img="/images/avatar/avatar-5.png" />
+                  <Avatar.Counter>+9</Avatar.Counter>
                 </Avatar.Group>
               </Table.Cell>
               <Table.Cell>
@@ -155,13 +154,12 @@ export const TableComponent = () => {
           </Table.Cell>
           <Table.Cell>
             <Avatar.Group>
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-              <Avatar shape="circle" size="md" stacked={true} />
-              <Avatar shape="circle" size="md" stacked={true} />
+              <Avatar img="/images/avatar/avatar-1.png" />
+              <Avatar img="/images/avatar/avatar-2.png" />
+              <Avatar img="/images/avatar/avatar-3.png" />
+              <Avatar img="/images/avatar/avatar-4.png" />
+              <Avatar img="/images/avatar/avatar-5.png" />
+              <Avatar.Counter>+9</Avatar.Counter>
             </Avatar.Group>
           </Table.Cell>
           <Table.Cell>
