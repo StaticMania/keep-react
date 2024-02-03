@@ -1,14 +1,11 @@
 'use client'
-import { Tree } from '~/src'
+import { Tree } from '../../../../src'
 import { nodes } from './DefaultTree'
 
 const TreeWithCheckbox = () => {
-  const handleChecked = (value: boolean) => {
-    console.log(value)
-  }
   return (
     <div className="overflow-x-auto py-5">
-      <Tree showCheckbox={true} showItemsNumber={true} showBorder={true} nodes={nodes} handleChecked={handleChecked} />
+      <Tree showCheckbox={true} showItemsNumber={true} showBorder={true} nodes={nodes} />
     </div>
   )
 }

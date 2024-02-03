@@ -1,16 +1,17 @@
 import type { MDXComponents } from 'mdx/types'
 
+// eslint-disable-next-line no-unused-vars
 export const useMDXComponents: (components: MDXComponents) => MDXComponents = (components) => {
   return {
     h2: (props) => (
       <h2
-        className="section-title group z-10 before:invisible before:-mt-20 before:block before:h-28 before:content-['']"
+        className="section-title group z-10 before:invisible before:block before:content-[''] xl:before:-mt-24 xl:before:h-32 2xl:before:-mt-48 2xl:before:h-[244px]"
         {...props}>
         {props.children}
         <a
           aria-label={`Link to this section: ${props.children}`}
           href={`#${props.id}`}
-          className="text-metal-500 ml-2 opacity-0 transition-opacity group-hover:opacity-100">
+          className="ml-2 text-metal-500 opacity-0 transition-opacity group-hover:opacity-100">
           #
         </a>
       </h2>

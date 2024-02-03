@@ -1,5 +1,5 @@
 'use client'
-import { AreaChart } from '~/src'
+import { AreaChart } from '../../../../src'
 import { chartData } from './DefaultAreaChart'
 
 const SmoothAreaChart = () => {

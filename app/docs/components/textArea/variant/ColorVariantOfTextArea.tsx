@@ -1,5 +1,5 @@
 'use client'
-import { Textarea } from '~/src'
+import { Textarea } from '../../../../src'
 
 const ColorVariantOfTextArea = () => {
   return <Textarea id="comment" placeholder="Leave a comment..." withBg={true} color="info" border={true} rows={4} />

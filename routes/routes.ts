@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import {
   BarChartComponent,
   CheckboxGroupComponent,
@@ -8,7 +9,7 @@ import {
   TooltipComponent,
   PaginationComponent,
   TabsComponent,
-} from '~/components/ComponentsList'
+} from '../app/components/ComponentsList'
 
 interface routerPath {
   id: number
@@ -407,7 +408,7 @@ export const navbarRoutes: routerPath[] = [
 export const ComponentList: {
   id: number
   href: string
-  component: () => JSX.Element
+  component: () => ReactElement
 }[] = [
   {
     id: 1,

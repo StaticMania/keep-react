@@ -1,5 +1,5 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '~/components/DocsContentLayout'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import AreaChartDocs from '.'
 
 export const metadata: Metadata = {

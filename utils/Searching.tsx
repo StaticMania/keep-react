@@ -1,10 +1,10 @@
 /**
  * This file contains utility functions for storing and retrieving search data in localStorage.
- * 
+ *
  * @remarks
  * The `storeData` function stores a `DataItem` object in localStorage, while the `getData` function
  * retrieves the stored data from localStorage. The stored data is an array of up to 4 `DataItem` objects.
- * 
+ *
  * @packageDocumentation
  */
 
@@ -19,10 +19,10 @@ interface DataItem {
  * @param item - The DataItem to store.
  */
 export const storeData = (item: DataItem) => {
-   // Get the stored data from localStorage
+  // Get the stored data from localStorage
   const storedDataStr = localStorage.getItem('searchData')
   // Initialize an empty array to hold the stored data
-  let storedData: DataItem[] = [] 
+  let storedData: DataItem[] = []
 
   /**
    * If there is stored data, parse it from a string to an array of DataItems

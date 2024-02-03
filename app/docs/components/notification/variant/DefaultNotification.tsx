@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Button, Notification } from '~/src'
+import { Button, Notification } from '../../../../src'
 
 const DefaultNotification = () => {
   const [showNotification, setShowNotification] = useState(true)
@@ -8,12 +8,13 @@ const DefaultNotification = () => {
   const onDismiss = () => {
     setShowNotification(!showNotification)
   }
+
   return (
     <div className="px-5 py-3">
       <Button onClick={onDismiss} type="primary">
         Show Notification
       </Button>
-      <Notification dismiss={showNotification} onDismiss={onDismiss}>
+      <Notification position="bottom-left" dismiss={showNotification} onDismiss={onDismiss}>
         <Notification.Body>
           <Notification.Title>Can we store cookies?</Notification.Title>
           <Notification.Description>

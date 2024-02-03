@@ -1,6 +1,6 @@
 'use client'
 
-import { BarChart } from '~/src'
+import { BarChart } from '../../../../src'
 import { BarChartData } from './DefaultBarChart'
 
 const CustomizedBarSize = () => {

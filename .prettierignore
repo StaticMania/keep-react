@@ -1,4 +1,5 @@
-*.md
-.gitignore
-build/
-coverage/
+# Ignore artifacts:
+.next/
+
+# Ignore specific files:
+package-lock.json

@@ -1,5 +1,5 @@
 'use client'
-import { Navbar, TextInput } from '~/src'
+import { Navbar, TextInput } from '../../../../src'
 import { CaretDown, FacebookLogo, InstagramLogo, MagnifyingGlass, TwitterLogo } from 'phosphor-react'
 import Image from 'next/image'
 

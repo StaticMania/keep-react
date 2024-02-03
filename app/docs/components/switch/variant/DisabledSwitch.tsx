@@ -1,5 +1,5 @@
 'use client'
-import { Toggle } from '~/src'
+import { Toggle } from '../../../../src'
 
 const DisabledSwitch = () => {
   return <Toggle bgColor="primary" label="Disabled" size="md" disabled={true} />

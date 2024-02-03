@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Button, Modal } from '~/src'
+import { Button, Modal } from '../../../../src'
 import { CloudArrowUp } from 'phosphor-react'
 
 const ModalPosition = () => {
@@ -17,7 +17,7 @@ const ModalPosition = () => {
         <Modal.Header>Do you want to upload this file?</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-            <p className="text-metal-500 text-body-4 leading-relaxed">
+            <p className="text-body-4 leading-relaxed text-metal-500">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>

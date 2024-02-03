@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Cookie } from 'phosphor-react'
-import { Notification, Button } from '~/src'
+import { Notification, Button } from '../../../../src'
 
 const NotificationWithIcon = () => {
   const [showNotification, setShowNotification] = useState(true)
@@ -14,7 +14,7 @@ const NotificationWithIcon = () => {
       <Button type="primary" onClick={onDismiss}>
         Show Notification
       </Button>
-      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="top-left">
+      <Notification dismiss={showNotification} onDismiss={onDismiss} className="max-w-[400px]" position="bottom-right">
         <Notification.Container className="grid grid-cols-12">
           <Notification.Icon className="col-span-2">
             <Cookie size={24} color="#3D4A5C" />

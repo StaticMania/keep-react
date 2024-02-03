@@ -16,6 +16,8 @@ If you're a developer, you can contribute to Keep React by submitting code chang
 
 - **Make Changes:** Make your code changes or additions.
 
+- **Proper Commit Message:** Commit your changes and commit message must be starts with Capital letter and ends with period sign like dot(.). Commit message will be minimum 14 characters long.
+
 - **Test Your Changes:** Ensure that your changes don't introduce new issues.
 
 - **Submit a Pull Request:** Push your changes to your forked repository and submit a pull request to the main Keep React repository.

@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Empty } from '~/src'
+import { Empty } from '../../../../src'
 
 const EmptyFolder = () => {
   return (

@@ -12,8 +12,8 @@ const Loading = () => {
         width="400"
       />
       <div className="mt-8 flex items-center gap-3">
-        <div className="border-metal-900 h-6 w-6 animate-spin rounded-full border-2 border-dashed"></div>
-        <h1 className="text-metal-900 animate-pulse text-body-2 font-normal">Please Wait</h1>
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-dashed border-metal-900"></div>
+        <h1 className="animate-pulse text-body-2 font-normal text-metal-900">Please Wait</h1>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '~/components/DocsContentLayout'
 import Introduction from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:

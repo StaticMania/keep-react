@@ -1,6 +1,6 @@
 'use client'
 import { Play } from 'phosphor-react'
-import { PlayButton } from '~/src'
+import { PlayButton } from '../../../../src'
 
 const SizesPlayButton = () => {
   return (

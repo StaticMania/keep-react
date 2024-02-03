@@ -1,5 +1,5 @@
 'use client'
-import { Avatar } from '~/src'
+import { Avatar } from '../../../../src'
 
 const NotificationOfAvatar = () => {
   return (

@@ -1,5 +1,3 @@
 {
-  "css.customData": [".vscode/tailwind.json"],
-  "css.lint.unknownAtRules": "ignore",
-  "cSpell.words": ["datepicker"]
+  "css.lint.unknownAtRules": "ignore"
 }

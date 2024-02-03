@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { DownloadSimple, FigmaLogo } from 'phosphor-react'
 import { useState } from 'react'
-import { Button, Notification } from '~/src'
+import { Button, Notification } from '../../../../src'
 
 const NotificationWithCard = () => {
   const [notificationOne, setNotificationOne] = useState(true)

@@ -1,5 +1,5 @@
 'use client'
-import { Avatar, Button, Popover, Table } from '~/src'
+import { Avatar, Button, Popover, Table } from '../../../../src'
 import { Cube, DotsThreeOutline, Pencil, Trash } from 'phosphor-react'
 
 const StripedTable = () => {

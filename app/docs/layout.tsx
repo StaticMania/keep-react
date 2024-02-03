@@ -1,20 +1,20 @@
+/* eslint-disable no-undef */
 'use client'
 import Link from 'next/link'
-import { Accordion } from '~/src'
-import { useEffect, useState } from 'react'
+import { Accordion, Typography } from '../src'
+import { ReactNode, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { gettingStartedRoutes, routes } from '~/routes/routes'
+import { gettingStartedRoutes, routes } from '../../routes/routes'
 
 export interface Sections {
   id: number
   idName: string
 }
 
-const DocsLayout = ({ children }: { children: React.ReactNode }) => {
+const DocsLayout = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname()
   const [activeSection, setActiveSection] = useState<string>('')
   const [allSection, setAllSection] = useState<NodeListOf<Element> | []>([])
-
   const [tableOfContents, setTableOfContents] = useState<HTMLUListElement | null>(null)
 
   // get the table of contents
@@ -53,7 +53,6 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
     })
   }
 
-  // On this page active section html
   const innerHtml = tableOfContents?.innerHTML
 
   useEffect(() => {
@@ -79,81 +78,89 @@ const DocsLayout = ({ children }: { children: React.ReactNode }) => {
   }, [newIdArr])
 
   return (
-    <section className="pt-12 2xl:container">
-      <aside
-        id="linkPage"
-        className="fixed left-0 top-20 z-20 hidden  h-screen  overflow-y-auto border-r border-r-metal-100 bg-white pt-8  lg:block lg:w-[calc(100vw-75vw)] 2xl:w-[calc(100%-75%)] 4k:w-[calc(100%-78%)]">
-        <div className="ml-auto w-56 space-y-3 pr-3">
-          <Accordion flush openFirstPanel className="border-none bg-transparent">
-            <Accordion.Panel>
-              <Accordion.Container className="p-0">
-                <Accordion.Title className="text-body-5 font-semibold text-metal-900">Getting Started</Accordion.Title>
-              </Accordion.Container>
-              <Accordion.Content className="p-0">
-                <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
-                  {gettingStartedRoutes.map((route) => (
-                    <li key={route.id}>
-                      <Link
-                        className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
-                          IsActive(route.href)
-                            ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
-                            : ''
-                        }`}
-                        href={route.href}>
-                        {route.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </Accordion.Content>
-            </Accordion.Panel>
-          </Accordion>
-          <Accordion openFirstPanel flush className="border-none bg-transparent">
-            <Accordion.Panel>
-              <Accordion.Container className="p-0">
-                <Accordion.Title className="text-body-5 font-semibold text-metal-900">Components</Accordion.Title>
-              </Accordion.Container>
-              <Accordion.Content className="p-0">
-                <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
-                  {routes.map((route) => (
-                    <li key={route.id}>
-                      <Link
-                        className={`-ml-px border-l border-l-transparent pl-3 text-body-5  leading-[28px] tracking-[-0.2px] text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
-                          IsActive(route.href)
-                            ? 'border-l !border-metal-900 text-metal-900 transition-all duration-150'
-                            : ''
-                        }`}
-                        href={route.href}>
-                        {route.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </Accordion.Content>
-            </Accordion.Panel>
-          </Accordion>
+    <section>
+      <div className="sticky top-20 z-30 hidden h-4 w-full bg-primary-25 lg:block 2xl:h-20"></div>
+      <div className="docs-page"></div>
+      <div className="container relative z-20 grid grid-cols-12 gap-5 pt-10 2xl:pt-16">
+        <div className="hidden lg:col-span-3 lg:block xl:col-span-2">
+          <aside
+            id="componentListSidebar"
+            className="sticky top-28 h-[80vh] space-y-5 overflow-auto 2xl:top-56 2xl:py-6 2xl:pl-8">
+            <Accordion flush openFirstPanel className="border-none bg-transparent">
+              <Accordion.Panel>
+                <Accordion.Container className="p-0">
+                  <Accordion.Title className="text-body-4 font-semibold text-metal-900">
+                    Getting Started
+                  </Accordion.Title>
+                </Accordion.Container>
+                <Accordion.Content className="p-0">
+                  <Typography variant="ul" className="mt-3 space-y-1.5 border-l border-l-metal-100">
+                    {gettingStartedRoutes.map((route) => (
+                      <Typography variant="li" key={route.id}>
+                        <Link
+                          className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
+                            IsActive(route.href)
+                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150'
+                              : ''
+                          }`}
+                          href={route.href}>
+                          {route.name}
+                        </Link>
+                      </Typography>
+                    ))}
+                  </Typography>
+                </Accordion.Content>
+              </Accordion.Panel>
+            </Accordion>
+            <Accordion openFirstPanel flush className="border-none bg-transparent">
+              <Accordion.Panel>
+                <Accordion.Container className="p-0">
+                  <Accordion.Title className="text-body-4 font-semibold text-metal-900">Components</Accordion.Title>
+                </Accordion.Container>
+                <Accordion.Content className="p-0">
+                  <Typography variant="ul" className="mb-4 mt-3 space-y-1.5 border-l border-l-metal-100">
+                    {routes.map((route) => (
+                      <Typography variant="li" key={route.id}>
+                        <Link
+                          className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
+                            IsActive(route.href)
+                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150'
+                              : ''
+                          }`}
+                          href={route.href}>
+                          {route.name}
+                        </Link>
+                      </Typography>
+                    ))}
+                  </Typography>
+                </Accordion.Content>
+              </Accordion.Panel>
+            </Accordion>
+          </aside>
         </div>
-      </aside>
-      <main className="mx-auto md:w-[calc(100vw-10vw)]  lg:w-[calc(100vw-5vw)] lg:pl-[calc(100vw-75vw)] xl:w-[calc(100vw-25vw)] xl:pl-[calc(100vw-85vw)] xl:pr-[calc(100vw-95vw)] 2xl:w-[calc(100vw-40vw)] 2xl:pl-[calc(100vw-93vw)] 2xl:pr-[calc(100vw-98vw)] 4k:w-[calc(100vw-49vw)] 4k:pl-[calc(100vw-100vw)] 4k:pr-[calc(100vw-95vw)]">
-        <div className="overflow-y-auto px-4 pb-10">{children}</div>
-      </main>
-      <aside
-        id="linkPage"
-        className="fixed bottom-0 right-[max(0px,calc(50%-51rem))] top-16 z-20 hidden h-[calc(100vh-3rem)] overflow-y-auto pt-12 lg:w-[calc(100vw-80vw)] xl:block xl:w-[calc(100vw-82vw)] 2xl:w-[calc(100vw-86vw)] 4k:w-[calc(100vw-88vw)]">
-        <div className="pl-5">
-          <div className="flex flex-col justify-between overflow-y-auto">
-            <h4 className="mb-2 text-body-5 font-semibold uppercase text-black/100">On this page</h4>
-            <nav id="visible-table-of-contents">
-              <ul
-                dangerouslySetInnerHTML={{
-                  __html: innerHtml ? innerHtml : '',
-                }}
-                className="border-l border-l-metal-100"
-              />
-            </nav>
+        <div className="col-span-12 py-6 lg:col-span-9 xl:col-span-8 2xl:py-4">
+          <div id="linkPage" className="overflow-y-auto">
+            {children}
           </div>
         </div>
-      </aside>
+        <div className="hidden lg:col-span-3 lg:block xl:col-span-2">
+          <aside id="linkPage" className="sticky top-28 h-[80vh] 2xl:top-60">
+            <div className="2xl:pl-5">
+              <div className="flex flex-col justify-between overflow-y-auto">
+                <h4 className="mb-2 text-body-5 font-semibold uppercase text-black/100">On this page</h4>
+                <nav id="visible-table-of-contents">
+                  <ul
+                    dangerouslySetInnerHTML={{
+                      __html: innerHtml ? innerHtml : '',
+                    }}
+                    className="border-l border-l-metal-100"
+                  />
+                </nav>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
     </section>
   )
 }

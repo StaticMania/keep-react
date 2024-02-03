@@ -1,6 +1,6 @@
 'use client'
 import { EyeSlash, Lock } from 'phosphor-react'
-import { TextInput, Label } from '~/src'
+import { TextInput, Label } from '../../../../src'
 
 const InputWithOutBorder = () => {
   return (

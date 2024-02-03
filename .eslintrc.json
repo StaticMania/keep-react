@@ -1,8 +1,13 @@
 {
-  "extends": "next",
+  "extends": ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "@next/next/no-img-element": "off"
   }
 }

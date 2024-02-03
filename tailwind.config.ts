@@ -1,5 +1,3 @@
-const { extendTailwindMerge } = require('tailwind-merge')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -26,5 +24,5 @@ module.exports = {
       },
     },
   },
-  presets: [require('./src/theme/keep-preset.ts')],
+  presets: [require('./app/src/theme/keep-preset.ts')],
 }

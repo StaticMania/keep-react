@@ -1,5 +1,5 @@
 'use client'
-import { Avatar, Badge, Button, Popover, Table } from '~/src'
+import { Avatar, Badge, Button, Popover, Table } from '../../../../src'
 import { ArrowsDownUp, Crown, Cube, DotsThreeOutline, Pencil, Trash } from 'phosphor-react'
 
 const TransactionsTable = () => {

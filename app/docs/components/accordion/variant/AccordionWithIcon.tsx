@@ -1,6 +1,6 @@
 'use client'
 import { Plus } from 'phosphor-react'
-import { Accordion } from '~/src'
+import { Accordion } from '../../../../src'
 
 const AccordionWithIcon = () => {
   return (

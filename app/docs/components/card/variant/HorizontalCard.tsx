@@ -1,6 +1,6 @@
 'use client'
 import { ArrowsOutSimple, Bed, MapPinLine, Shower, Users } from 'phosphor-react'
-import { Button, Card } from '~/src'
+import { Button, Card } from '../../../../src'
 
 const HorizontalCard = () => {
   return (

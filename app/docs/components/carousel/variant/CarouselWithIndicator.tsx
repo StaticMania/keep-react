@@ -1,5 +1,5 @@
 'use client'
-import { Carousel } from '~/src'
+import { Carousel } from '../../../../src'
 import Image from 'next/image'
 
 const CarouselWithIndicator = () => {

@@ -1,5 +1,5 @@
 'use client'
-import { Badge, PlayButton, Card, Button, Progress } from '~/src'
+import { Badge, PlayButton, Card, Button, Progress } from '../../../../src'
 import {
   ArrowsOutSimple,
   Bed,

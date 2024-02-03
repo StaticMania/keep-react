@@ -1,5 +1,5 @@
 'use client'
-import { Sidebar } from '~/src'
+import { Sidebar } from '../../../../src'
 import { Chat, LockSimple, ShoppingBagOpen, ShoppingCart, SignIn, SquaresFour, UserPlus, Users } from 'phosphor-react'
 
 const DefaultSidebar = () => {
