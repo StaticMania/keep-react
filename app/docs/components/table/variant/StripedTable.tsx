@@ -13,7 +13,7 @@ const StripedTable = () => {
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
               <p className="text-body-1 font-semibold text-metal-600">Team member</p>
-              <Badge size="xs" colorType="light" color="gray">
+              <Badge size="sm" color="secondary">
                 100 Member
               </Badge>
             </div>
@@ -62,11 +62,11 @@ const StripedTable = () => {
               </Table.Cell>
               <Table.Cell>
                 {cell.status ? (
-                  <Badge colorType="light" color="success" dot={true}>
+                  <Badge color="success" showIcon={true}>
                     Active
                   </Badge>
                 ) : (
-                  <Badge colorType="light" color="gray" dot={true}>
+                  <Badge color="secondary" showIcon={true}>
                     Offline
                   </Badge>
                 )}
@@ -77,11 +77,11 @@ const StripedTable = () => {
                 <div className="flex items-center gap-1">
                   {cell.tags.map((tag, index, arr) =>
                     index === arr.length - 1 ? (
-                      <Badge key={tag} colorType="light" color="gray">
+                      <Badge key={tag} color="secondary">
                         {tag}
                       </Badge>
                     ) : (
-                      <Badge key={tag} colorType="light" color="info">
+                      <Badge key={tag} color="primary">
                         {tag}
                       </Badge>
                     ),
@@ -125,7 +125,7 @@ export const TableComponent = () => {
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
             <p className="text-body-1 font-semibold text-metal-600">Team member</p>
-            <Badge size="xs" colorType="light" color="gray">
+            <Badge size="xs" color="secondary">
               100 Member
             </Badge>
           </div>
@@ -172,7 +172,7 @@ export const TableComponent = () => {
             </div>
           </Table.Cell>
           <Table.Cell>
-            <Badge colorType="light" color="success" dot={true}>
+            <Badge color="success" showIcon={true}>
               Active
             </Badge>
           </Table.Cell>
@@ -182,13 +182,13 @@ export const TableComponent = () => {
           <Table.Cell>nevaeh.simmons@example.com</Table.Cell>
           <Table.Cell>
             <div className="flex items-center gap-1">
-              <Badge colorType="light" color="info">
+              <Badge color="info">
                 Product
               </Badge>
-              <Badge colorType="light" color="info">
+              <Badge color="info">
                 Marketing
               </Badge>
-              <Badge colorType="light" color="gray">
+              <Badge color="secondary">
                 +3
               </Badge>
             </div>

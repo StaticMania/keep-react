@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
-import { Badge, Button, Table } from '../../../../src'
-import { CalendarBlank, Crown, Cube, CurrencyDollar, DotsNine, Flag, Spinner, Tag } from 'phosphor-react'
+import { CalendarBlank, Cube, CurrencyDollar, DotsNine, Flag, Spinner, Tag } from 'phosphor-react'
 import { OrderTableData } from '~/public/data/tableData'
+import { Badge, Button, Table } from '../../../../src'
 import TableActionBtn from './TableActionBtn'
 
 const OrdersTable = () => {
@@ -75,13 +75,7 @@ const OrdersTable = () => {
               </Table.Cell>
               <Table.Cell>
                 <div className="inline-block">
-                  <Badge
-                    colorType="light"
-                    color="success"
-                    icon={<Crown size={18} weight="light" />}
-                    iconPosition="left">
-                    Delivered
-                  </Badge>
+                  <Badge color="success">Delivered</Badge>
                 </div>
               </Table.Cell>
               <Table.Cell>
@@ -190,9 +184,7 @@ export const TableComponent = () => {
           </Table.Cell>
           <Table.Cell>
             <div className="inline-block">
-              <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
-                Delivered
-              </Badge>
+              <Badge color="success">Delivered</Badge>
             </div>
           </Table.Cell>
           <Table.Cell>

@@ -4,11 +4,20 @@ import { Badge } from '../../../../src'
 const BadgeWithDot = () => {
   return (
     <div className="flex items-center gap-3">
-      <Badge size="xs" dot={true} dotPosition="left" colorType="light" color="gray">
-        Left Dot
+      <Badge showIcon={true} color="primary">
+        Primary
       </Badge>
-      <Badge size="xs" dot={true} dotPosition="right" colorType="light" color="gray">
-        Right Dot
+      <Badge showIcon={true} color="secondary">
+        Secondary
+      </Badge>
+      <Badge showIcon={true} color="success">
+        Success
+      </Badge>
+      <Badge showIcon={true} color="warning">
+        Warning
+      </Badge>
+      <Badge showIcon={true} color="error">
+        Error
       </Badge>
     </div>
   )

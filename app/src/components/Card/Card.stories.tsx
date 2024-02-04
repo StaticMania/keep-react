@@ -321,7 +321,7 @@ export const RecentPostsCard: Story = {
 
         <Card.Container className="px-6">
           <Card.Container className="inline-block">
-            <Badge color="info">Tips & Advice</Badge>
+            <Badge>Tips & Advice</Badge>
           </Card.Container>
           <Card.Title className="text-body-2 font-medium text-metal-700">Keep React</Card.Title>
           <Card.Description className="text-body-5 font-normal text-metal-500">
@@ -353,9 +353,7 @@ export const EcommerceProductCard: Story = {
         </Card.Container>
         <Card.Container className="p-6">
           <Card.Container className="flex items-center justify-between">
-            <Badge size="sm" colorType="light" color="gray">
-              For Sale
-            </Badge>
+            <Badge size="sm">For Sale</Badge>
             <Card.Title>$9.99</Card.Title>
           </Card.Container>
           <Card.Container className="my-3">

@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
-import { Badge, Card } from '../../../../src'
 import { CaretRight } from 'phosphor-react'
+import { Badge, Card } from '../../../../src'
 const PostCard = () => {
   return (
     <div className="flex flex-col gap-5">
@@ -44,9 +44,7 @@ const PostCard = () => {
           </Card.Container>
           <Card.Container className="px-3 md:px-6">
             <Card.Container className="inline-block">
-              <Badge colorType="light" color="info" size="xs">
-                Tips & Advice
-              </Badge>
+              <Badge size="sm">Tips & Advice</Badge>
             </Card.Container>
             <Card.Title className="text-body-5 font-medium text-metal-700 md:text-body-2">
               Keep Design System
@@ -114,9 +112,7 @@ export const CardComponent = () => {
           </Card.Container>
           <Card.Container className="md:px-6 px-3">
             <Card.Container className="inline-block">
-              <Badge colorType="light" color="info" size="xs">
-                Tips & Advice
-              </Badge>
+              <Badge size="sm">Tips & Advice</Badge>
             </Card.Container>
             <Card.Title className="text-body-5 md:text-body-2 font-medium text-metal-700">
               Keep React

@@ -1,5 +1,5 @@
 'use client'
-import { ArrowsDownUp, Crown, Cube } from 'phosphor-react'
+import { ArrowsDownUp, Cube } from 'phosphor-react'
 import { TransactionsTableData } from '~/public/data/tableData'
 import { Avatar, Badge, Button, Table } from '../../../../src'
 import TableActionBtn from './TableActionBtn'
@@ -72,13 +72,7 @@ const TransactionsTable = () => {
               </Table.Cell>
               <Table.Cell>
                 <div className="inline-block">
-                  <Badge
-                    colorType="light"
-                    color="success"
-                    icon={<Crown size={18} weight="light" />}
-                    iconPosition="left">
-                    Delivered
-                  </Badge>
+                  <Badge color="success">Delivered</Badge>
                 </div>
               </Table.Cell>
               <Table.Cell>
@@ -167,9 +161,7 @@ export const TableComponent = () => {
           </Table.Cell>
           <Table.Cell>
             <div className="inline-block">
-              <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
-                Delivered
-              </Badge>
+              <Badge color="success">Delivered</Badge>
             </div>
           </Table.Cell>
           <Table.Cell>

@@ -3,7 +3,6 @@ import {
   ArrowDown,
   ArrowsDownUp,
   CalendarBlank,
-  Crown,
   Cube,
   CurrencyDollar,
   DotsNine,
@@ -95,7 +94,7 @@ export const DefaultTable: Story = {
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
               <p className="text-body-1 font-semibold text-metal-600">Team member</p>
-              <Badge size="xs" colorType="light" color="gray">
+              <Badge size="sm" color="secondary">
                 100 Member
               </Badge>
             </div>
@@ -143,7 +142,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Badge colorType="light" color="success" dot>
+              <Badge color="success" showIcon={true}>
                 Active
               </Badge>
             </Table.Cell>
@@ -154,15 +153,9 @@ export const DefaultTable: Story = {
 
             <Table.Cell>
               <div className="flex items-center gap-1">
-                <Badge colorType="light" color="info">
-                  Product
-                </Badge>
-                <Badge colorType="light" color="info">
-                  Marketing
-                </Badge>
-                <Badge colorType="light" color="gray">
-                  +3
-                </Badge>
+                <Badge color="primary">Product</Badge>
+                <Badge color="primary">Marketing</Badge>
+                <Badge color="secondary">+3</Badge>
               </div>
             </Table.Cell>
             <Table.Cell>
@@ -203,7 +196,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Badge colorType="light" color="gray" dot>
+              <Badge color="secondary" showIcon={true}>
                 Offline
               </Badge>
             </Table.Cell>
@@ -214,15 +207,9 @@ export const DefaultTable: Story = {
 
             <Table.Cell>
               <div className="flex items-center gap-1">
-                <Badge colorType="light" color="info">
-                  Product
-                </Badge>
-                <Badge colorType="light" color="info">
-                  Marketing
-                </Badge>
-                <Badge colorType="light" color="gray">
-                  +3
-                </Badge>
+                <Badge color="primary">Product</Badge>
+                <Badge color="primary">Marketing</Badge>
+                <Badge color="secondary">+3</Badge>
               </div>
             </Table.Cell>
             <Table.Cell>
@@ -264,7 +251,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Badge colorType="light" color="success" dot>
+              <Badge color="success" showIcon={true}>
                 Active
               </Badge>
             </Table.Cell>
@@ -274,15 +261,9 @@ export const DefaultTable: Story = {
             <Table.Cell>nathan.roberts@example.com</Table.Cell>
             <Table.Cell>
               <div className="flex items-center gap-1">
-                <Badge colorType="light" color="info">
-                  Product
-                </Badge>
-                <Badge colorType="light" color="info">
-                  Marketing
-                </Badge>
-                <Badge colorType="light" color="gray">
-                  +3
-                </Badge>
+                <Badge color="primary">Product</Badge>
+                <Badge color="primary">Marketing</Badge>
+                <Badge color="secondary">+3</Badge>
               </div>
             </Table.Cell>
             <Table.Cell>
@@ -323,7 +304,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Badge colorType="light" color="gray" dot>
+              <Badge color="secondary" showIcon={true}>
                 Offline
               </Badge>
             </Table.Cell>
@@ -334,15 +315,9 @@ export const DefaultTable: Story = {
 
             <Table.Cell>
               <div className="flex items-center gap-1">
-                <Badge colorType="light" color="info">
-                  Javascript
-                </Badge>
-                <Badge colorType="light" color="info">
-                  React
-                </Badge>
-                <Badge colorType="light" color="gray">
-                  +7
-                </Badge>
+                <Badge color="primary">Javascript</Badge>
+                <Badge color="primary">React</Badge>
+                <Badge color="secondary">+7</Badge>
               </div>
             </Table.Cell>
             <Table.Cell>
@@ -383,7 +358,7 @@ export const DefaultTable: Story = {
               </div>
             </Table.Cell>
             <Table.Cell>
-              <Badge colorType="light" color="success" dot>
+              <Badge color="success" showIcon={true}>
                 Active
               </Badge>
             </Table.Cell>
@@ -394,15 +369,9 @@ export const DefaultTable: Story = {
 
             <Table.Cell>
               <div className="flex items-center gap-1">
-                <Badge colorType="light" color="info">
-                  Adobe
-                </Badge>
-                <Badge colorType="light" color="info">
-                  Figma
-                </Badge>
-                <Badge colorType="light" color="gray">
-                  +6
-                </Badge>
+                <Badge color="primary">Adobe</Badge>
+                <Badge color="primary">Figma</Badge>
+                <Badge color="secondary">+6</Badge>
               </div>
             </Table.Cell>
             <Table.Cell>
@@ -500,7 +469,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -542,7 +511,7 @@ export const CashOutTransitionTable: Story = {
 
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -583,7 +552,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -624,7 +593,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -665,7 +634,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -759,7 +728,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -794,7 +763,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -829,7 +798,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="gray" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="secondary" iconPosition="left">
                   Pending
                 </Badge>
               </div>
@@ -864,7 +833,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>
@@ -899,7 +868,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="gray" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="secondary" iconPosition="left">
                   Pending
                 </Badge>
               </div>
@@ -934,7 +903,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <div className="inline-block">
-                <Badge colorType="light" color="success" icon={<Crown size={18} weight="light" />} iconPosition="left">
+                <Badge color="success" iconPosition="left">
                   Delivered
                 </Badge>
               </div>

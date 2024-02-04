@@ -110,7 +110,6 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
       className,
       icon: Icon,
       label,
-      labelColor = 'info',
       theme: customTheme = {},
       ...props
     },
@@ -147,7 +146,7 @@ export const SidebarItem = forwardRef<Element, SidebarItemProps>(
           )}
           {!isCollapsed && <Children id={id}>{children}</Children>}
           {!isCollapsed && label && (
-            <Badge color={labelColor} data-testid="keep-sidebar-label" hidden={isCollapsed} className={theme.label}>
+            <Badge data-testid="keep-sidebar-label" className={theme.label}>
               {label}
             </Badge>
           )}

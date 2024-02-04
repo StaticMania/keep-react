@@ -28,9 +28,7 @@ const ProductCard = () => {
           </Card.Container>
           <Card.Container className="p-6">
             <Card.Container className="flex items-center justify-between">
-              <Badge size="xs" colorType="light" color="gray">
-                For Sale
-              </Badge>
+              <Badge size="sm">For Sale</Badge>
               <Card.Title>$9.99</Card.Title>
             </Card.Container>
             <Card.Container className="my-3">
@@ -148,9 +146,7 @@ export const CardComponent = () => {
           </Card.Container>
           <Card.Container className="p-6">
             <Card.Container className="flex items-center justify-between">
-              <Badge size="xs" colorType="light" color="gray">
-                For Sale
-              </Badge>
+              <Badge size="sm">For Sale</Badge>
               <Card.Title>$9.99</Card.Title>
             </Card.Container>
             <Card.Container className="my-3">
