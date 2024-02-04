@@ -21,6 +21,13 @@ export const avatarApiData = [
     default: 'md',
   },
   {
+    id: 7,
+    propsName: 'color',
+    propsType: ['primary', 'secondary', 'success', 'warning', 'error'],
+    propsDescription: 'Specifies the color of the avatar',
+    default: 'primary',
+  },
+  {
     id: 4,
     propsName: 'shape',
     propsType: ['circle', 'rounded'],

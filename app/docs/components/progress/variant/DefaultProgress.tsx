@@ -1,20 +1,24 @@
 'use client'
-import { Progress } from '../../../../src'
+import { CircleProgress } from '../../../../src'
 
 const DefaultProgress = () => {
   return (
-    <div className="w-5/6 p-4">
-      <Progress progress={45} color="info" rounded={false} />
-    </div>
+    <CircleProgress progress={55}>
+      <CircleProgress.Text>55%</CircleProgress.Text>
+    </CircleProgress>
   )
 }
 
 const DefaultProgressCode = `
-"use client";
-import { Progress } from "keep-react";
+'use client'
+import { CircleProgress } from 'keep-react'
 
 export const ProgressComponent = () => {
-    return <Progress progress={45} color="info" rounded={false} />;
+  return (
+    <CircleProgress progress={55}>
+      <CircleProgress.Text>55%</CircleProgress.Text>
+    </CircleProgress>
+  )
 }
 `
 

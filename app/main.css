@@ -821,7 +821,7 @@ input[type='number'] {
   justify-content: center;
   align-items: center;
   transform: translate(-50%, -50%);
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  clippath: polygon(100% 0, 0 50%, 100% 100%);
   background-color: #005bea;
   width: 8px;
   height: 8px;
@@ -835,7 +835,7 @@ input[type='number'] {
   justify-content: center;
   align-items: center;
   transform: translate(-50%, -50%);
-  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  clippath: polygon(0 0, 0 100%, 100% 50%);
   background-color: #005bea;
   width: 8px;
   height: 8px;

@@ -1,5 +1,4 @@
 'use client'
-import { Badge, Card, Button, Progress } from '../../../../src'
 import {
   ArrowsOutSimple,
   Bed,
@@ -14,6 +13,7 @@ import {
   SpeakerHigh,
   Users,
 } from 'phosphor-react'
+import { Badge, Button, Card, LineProgress } from '../../../../src'
 
 const ProductCard = () => {
   return (
@@ -60,7 +60,7 @@ const ProductCard = () => {
               <Card.Title className="text-body-6 font-medium text-metal-500">4:05</Card.Title>
               <Card.Title className="text-body-6 font-medium text-metal-500">10:05</Card.Title>
             </Card.Container>
-            <Progress progress={45} color="info" rounded={true} />
+            <LineProgress progress={45} />
             <Card.Container className="flex items-center justify-between">
               <Button variant="link" shape="circle">
                 <Rows size={20} color="#5E718D" weight="bold" />
@@ -182,7 +182,7 @@ export const CardComponent = () => {
               <Card.Title className="text-body-6 font-medium text-metal-500">4:05</Card.Title>
               <Card.Title className="text-body-6 font-medium text-metal-500">10:05</Card.Title>
             </Card.Container>
-            <Progress progress={45} color="info" rounded={true} />
+            <LineProgress progress={45} />
             <Card.Container className="flex items-center justify-between">
               <Button variant="link" shape="circle">
                 <Rows size={20} color="#5E718D" weight="bold" />

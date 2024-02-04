@@ -27,7 +27,7 @@ import { Avatar } from '../Avatar/Avatar'
 import { Badge } from '../Badge'
 import { Button } from '../Button/Button'
 import { Popover } from '../Popover'
-import { Progress } from '../Progress'
+import { LineProgress } from '../Progress/LineProgress'
 import { Card } from './Card'
 
 const meta: Meta<typeof Card> = {
@@ -452,7 +452,7 @@ export const PodcastCard: Story = {
           <Card.Title className="text-body-6 font-medium text-metal-500">4:05</Card.Title>
           <Card.Title className="text-body-6 font-medium text-metal-500">10:05</Card.Title>
         </Card.Container>
-        <Progress progress={45} color="info" rounded={true} />
+        <LineProgress progress={45} />
         <Card.Container className="flex items-center justify-between">
           <Button variant="link" circle>
             <Rows size={20} color="#5E718D" />
