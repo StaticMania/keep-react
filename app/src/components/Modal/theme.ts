@@ -1,4 +1,4 @@
-import { KeepSizes, KeepBoolean, KeepPositions } from '../../Keep/KeepTheme'
+import { KeepBoolean, KeepPositions, KeepSizes } from '../../Keep/KeepTheme'
 
 export interface keepModalTheme {
   base: string

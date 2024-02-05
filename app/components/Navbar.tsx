@@ -1,12 +1,12 @@
 'use client'
-import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { List, MagnifyingGlass, X } from 'phosphor-react'
-import Search from './Search'
+import { useEffect, useState } from 'react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
 import { Accordion, Typography } from '../src'
+import Search from './Search'
 
 const Navbar = () => {
   const [active, setActive] = useState(false)

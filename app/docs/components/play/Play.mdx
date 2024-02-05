@@ -1,0 +1,50 @@
+import CodePreview from '../../../components/CodePreview'
+import { DefaultPlay, DefaultPlayCode } from './variant/DefaultPlay'
+import { PlaySize, PlaySizeCode } from './variant/PlaySizeVariant'
+import { PlayColor, PlayColorCode } from './variant/PlayColorVariant'
+import { CustomizePlay, CustomizePlayCode } from './variant/CustomizePlay'
+
+import ComponentApi from '../../../components/ComponentApi'
+import { playDataAPI } from './PlayApi'
+
+## Table of Contents
+
+The Pagination component provides a user-friendly way to navigate through large sets of content by breaking it down into manageable pages. It enhances user experience by allowing easy access to various sections of data or results, such as articles, search results, or product listings, through page numbers or next/previous controls.
+
+## Default Play
+
+Quickly implement the default Play button to add interactivity and user engagement.
+
+<CodePreview github="Play" code={DefaultPlayCode}>
+  <DefaultPlay />
+</CodePreview>
+
+## Play size variant
+
+Choose from a range of sizes to fit your design needs, from `'sm'`, `'md'`, `'lg'`, `'xl'`, `'2xl'`.
+
+<CodePreview github="Play" code={PlaySizeCode}>
+  <PlaySize />
+</CodePreview>
+
+## Play color variant
+
+Customize the Play button with different color options, including `'primary'`, `'secondary'`, `'success'`, `'warning'`, and `'error'`.
+
+<CodePreview github="Play" code={PlayColorCode}>
+  <PlayColor />
+</CodePreview>
+
+## How to customize
+
+Tailor the Play button to match your design by adding a className prop.
+
+<CodePreview github="Play" code={CustomizePlayCode}>
+  <CustomizePlay />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the Play component:
+
+<ComponentApi data={playDataAPI} />

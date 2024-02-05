@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 'use client'
 import Link from 'next/link'
-import { Accordion, Typography } from '../src'
-import { ReactNode, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { ReactNode, useEffect, useState } from 'react'
 import { gettingStartedRoutes, routes } from '../../routes/routes'
+import { Accordion, Typography } from '../src'
 
 export interface Sections {
   id: number

@@ -1,4 +1,5 @@
 import { ReactElement } from 'react'
+import { v4 as generatedID } from 'uuid'
 import {
   BarChartComponent,
   CheckboxGroupComponent,
@@ -12,7 +13,7 @@ import {
 } from '../app/components/ComponentsList'
 
 interface routerPath {
-  id: number
+  id: string
   name: string
   href: string
   tag?: boolean
@@ -23,7 +24,7 @@ interface routerPath {
 
 export const routes: routerPath[] = [
   {
-    id: 1,
+    id: generatedID(),
     name: 'Accordion',
     href: '/docs/components/accordion',
     tag: false,
@@ -31,7 +32,7 @@ export const routes: routerPath[] = [
     folderName: 'Accordion',
   },
   {
-    id: 2,
+    id: generatedID(),
     name: 'Alert',
     href: '/docs/components/alert',
     tag: false,
@@ -39,7 +40,7 @@ export const routes: routerPath[] = [
     folderName: 'Alert',
   },
   {
-    id: 3,
+    id: generatedID(),
     name: 'Area Chart',
     href: '/docs/components/areaChart',
     tag: false,
@@ -47,7 +48,7 @@ export const routes: routerPath[] = [
     folderName: 'Chart',
   },
   {
-    id: 4,
+    id: generatedID(),
     name: 'Avatar',
     href: '/docs/components/avatar',
     tag: false,
@@ -55,7 +56,7 @@ export const routes: routerPath[] = [
     folderName: 'Avatar',
   },
   {
-    id: 6,
+    id: generatedID(),
     name: 'Badge',
     folderName: 'Badge',
     href: '/docs/components/badge',
@@ -63,7 +64,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 43,
+    id: generatedID(),
     name: 'Bar Chart',
     folderName: 'Chart',
     href: '/docs/components/barChart',
@@ -71,7 +72,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 7,
+    id: generatedID(),
     name: 'BreadCrumb',
     folderName: 'Breadcrumb',
     href: '/docs/components/breadcrumb',
@@ -79,7 +80,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 8,
+    id: generatedID(),
     name: 'Button',
     folderName: 'Button',
     href: '/docs/components/button',
@@ -87,7 +88,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 9,
+    id: generatedID(),
     name: 'Button Group',
     folderName: 'Button',
     href: '/docs/components/buttonGroup',
@@ -95,7 +96,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 10,
+    id: generatedID(),
     name: 'Card',
     folderName: 'Card',
     href: '/docs/components/card',
@@ -103,7 +104,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 11,
+    id: generatedID(),
     name: 'Carousel',
     folderName: 'Carousel',
     href: '/docs/components/carousel',
@@ -111,7 +112,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 12,
+    id: generatedID(),
     name: 'CheckBox',
     folderName: 'CheckBox',
     href: '/docs/components/checkbox',
@@ -119,7 +120,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 13,
+    id: generatedID(),
     name: 'CheckBox Group',
     folderName: 'CheckboxGroup',
     href: '/docs/components/checkboxGroup',
@@ -127,7 +128,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 14,
+    id: generatedID(),
     name: 'Date Picker',
     folderName: 'DatePicker',
     href: '/docs/components/datePicker',
@@ -135,7 +136,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 15,
+    id: generatedID(),
     name: 'Dropdown',
     folderName: 'Dropdown',
     href: '/docs/components/dropdown',
@@ -143,7 +144,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 16,
+    id: generatedID(),
     name: 'Empty',
     folderName: 'Empty',
     href: '/docs/components/empty',
@@ -151,7 +152,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 17,
+    id: generatedID(),
     name: 'Modal',
     folderName: 'Modal',
     href: '/docs/components/modal',
@@ -159,7 +160,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 18,
+    id: generatedID(),
     name: 'Navbar',
     folderName: 'Navbar',
     href: '/docs/components/navbar',
@@ -167,7 +168,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 19,
+    id: generatedID(),
     name: 'Notification',
     folderName: 'Notification',
     href: '/docs/components/notification',
@@ -175,7 +176,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 20,
+    id: generatedID(),
     name: 'Number Input',
     folderName: 'FormControls',
     href: '/docs/components/numberInput',
@@ -183,7 +184,15 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 22,
+    id: generatedID(),
+    name: 'Play',
+    folderName: 'Play',
+    href: '/docs/components/play',
+    tag: false,
+    deprecate: false,
+  },
+  {
+    id: generatedID(),
     name: 'Progress',
     folderName: 'Progress',
     href: '/docs/components/progress',
@@ -191,7 +200,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 44,
+    id: generatedID(),
     name: 'Pagination',
     folderName: 'Pagination',
     href: '/docs/components/pagination',
@@ -199,7 +208,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 45,
+    id: generatedID(),
     name: 'Popover',
     folderName: 'Popover',
     href: '/docs/components/popover',
@@ -207,7 +216,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 23,
+    id: generatedID(),
     name: 'Radio',
     folderName: 'FormControls',
     href: '/docs/components/radio',
@@ -215,7 +224,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 24,
+    id: generatedID(),
     name: 'Rating',
     folderName: 'Rating',
     href: '/docs/components/rating',
@@ -223,7 +232,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 25,
+    id: generatedID(),
     name: 'Search Bar',
     folderName: 'SearchBar',
     href: '/docs/components/searchBar',
@@ -231,7 +240,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 26,
+    id: generatedID(),
     name: 'Sidebar',
     folderName: 'Sidebar',
     href: '/docs/components/sidebar',
@@ -239,7 +248,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 27,
+    id: generatedID(),
     name: 'Skeleton',
     folderName: 'Skeleton',
     href: '/docs/components/skeleton',
@@ -247,7 +256,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 28,
+    id: generatedID(),
     name: 'Slider',
     folderName: 'Slider',
     href: '/docs/components/slider',
@@ -255,7 +264,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 29,
+    id: generatedID(),
     name: 'Spinner',
     folderName: 'Spinner',
     href: '/docs/components/spinner',
@@ -263,7 +272,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 30,
+    id: generatedID(),
     name: 'Statistic',
     folderName: 'Statistic',
     href: '/docs/components/statistic',
@@ -271,7 +280,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 31,
+    id: generatedID(),
     name: 'Steps',
     folderName: 'Steps',
     href: '/docs/components/steps',
@@ -279,7 +288,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 32,
+    id: generatedID(),
     name: 'Switch',
     folderName: 'FormControls',
     href: '/docs/components/switch',
@@ -287,7 +296,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 33,
+    id: generatedID(),
     name: 'Table',
     folderName: 'Table',
     href: '/docs/components/table',
@@ -295,7 +304,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 34,
+    id: generatedID(),
     name: 'Tabs',
     folderName: 'Tabs',
     href: '/docs/components/tabs',
@@ -303,7 +312,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 35,
+    id: generatedID(),
     name: 'Tag',
     folderName: 'Tag',
     href: '/docs/components/tag',
@@ -311,7 +320,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 36,
+    id: generatedID(),
     name: 'Text Area',
     folderName: 'FormControls',
     href: '/docs/components/textArea',
@@ -319,7 +328,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 37,
+    id: generatedID(),
     name: 'Text Input',
     folderName: 'FormControls',
     href: '/docs/components/textInput',
@@ -327,7 +336,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 38,
+    id: generatedID(),
     name: 'Timeline',
     folderName: 'Timeline',
     href: '/docs/components/timeline',
@@ -335,7 +344,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 39,
+    id: generatedID(),
     name: 'Tooltip',
     folderName: 'Tooltip',
     href: '/docs/components/tooltip',
@@ -343,7 +352,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 40,
+    id: generatedID(),
     name: 'Tree',
     folderName: 'Tree',
     href: '/docs/components/tree',
@@ -351,7 +360,7 @@ export const routes: routerPath[] = [
     deprecate: false,
   },
   {
-    id: 41,
+    id: generatedID(),
     name: 'Upload',
     folderName: 'Upload',
     href: '/docs/components/upload',
@@ -362,12 +371,12 @@ export const routes: routerPath[] = [
 
 export const gettingStartedRoutes: routerPath[] = [
   {
-    id: 1,
+    id: generatedID(),
     name: 'Introduction',
     href: '/docs/getting-started/Introduction',
   },
   {
-    id: 2,
+    id: generatedID(),
     name: 'Typography',
     href: '/docs/getting-started/Typography',
   },
@@ -375,13 +384,13 @@ export const gettingStartedRoutes: routerPath[] = [
 
 export const navbarRoutes: routerPath[] = [
   {
-    id: 1,
+    id: generatedID(),
     href: 'https://keepdesign.io',
     name: 'Figma',
     redirect: true,
   },
   {
-    id: 2,
+    id: generatedID(),
     href: '/docs/getting-started/Introduction',
     name: 'Documentation',
     redirect: false,
@@ -389,54 +398,54 @@ export const navbarRoutes: routerPath[] = [
 ]
 
 export const ComponentList: {
-  id: number
+  id: string
   href: string
   component: () => ReactElement
 }[] = [
   {
-    id: 1,
+    id: generatedID(),
     href: '/docs/components/pagination',
     component: PaginationComponent,
   },
   {
-    id: 2,
+    id: generatedID(),
     href: '/docs/components/tabs',
     component: TabsComponent,
   },
   {
-    id: 3,
+    id: generatedID(),
     href: '/docs/components/modal',
     component: ModalComponent,
   },
   {
-    id: 4,
+    id: generatedID(),
     href: '/docs/components/tooltip',
     component: TooltipComponent,
   },
   {
-    id: 5,
+    id: generatedID(),
     href: '/docs/components/barChart',
     component: BarChartComponent,
   },
   {
-    id: 6,
+    id: generatedID(),
     href: '/docs/components/checkboxGroup',
     component: CheckboxGroupComponent,
   },
 
   {
-    id: 7,
+    id: generatedID(),
     href: '/docs/components/radio',
     component: RadioSelectComponent,
   },
 
   {
-    id: 8,
+    id: generatedID(),
     href: '/docs/components/slider',
     component: SliderComponent,
   },
   {
-    id: 9,
+    id: generatedID(),
     href: '/docs/components/datePicker',
     component: DatePickerComponent,
   },
