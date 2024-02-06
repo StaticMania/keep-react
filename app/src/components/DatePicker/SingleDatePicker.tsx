@@ -1,12 +1,12 @@
 'use client'
 import { FC, createElement, forwardRef, useState } from 'react'
 import SingleDate from 'react-datepicker'
-import { useDatePickerContext } from './DatePickerContext'
 import { CustomInput } from './CustomInput'
+import { useDatePickerContext } from './DatePickerContext'
 
 export const SingleDatePicker: FC = () => {
   const { showTwoMonth, singleDate, placeholder } = useDatePickerContext()
-  const [date, setDate] = useState<Date | null>()
+  const [date, setDate] = useState<Date | null>(new Date())
   const handleChange = (date: Date | null) => {
     setDate(date)
     singleDate && singleDate(date)

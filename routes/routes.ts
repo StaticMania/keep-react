@@ -129,6 +129,14 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Divider',
+    folderName: 'Divider',
+    href: '/docs/components/divider',
+    tag: false,
+    deprecate: false,
+  },
+  {
+    id: generatedID(),
     name: 'Date Picker',
     folderName: 'DatePicker',
     href: '/docs/components/datePicker',
