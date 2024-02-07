@@ -84,6 +84,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
               theme.field.icon.position.incrementIcon,
               disabled && theme.field.icon.disabled,
             )}
+            role="button"
             onClick={() => setValue((prevVal: number): number => prevVal + 1)}>
             <span className={cn(theme.field.icon.incrementIcon)}>
               <svg
