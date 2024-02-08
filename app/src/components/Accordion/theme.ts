@@ -2,7 +2,7 @@ import { keepAccordionTheme } from '.'
 
 export const accordionTheme: keepAccordionTheme = {
   container: {
-    base: 'flex cursor-pointer items-center justify-between px-6 py-5',
+    base: 'flex cursor-pointer items-center w-full justify-between px-6 py-5',
     open: '',
   },
   content: {

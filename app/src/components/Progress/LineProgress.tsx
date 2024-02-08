@@ -29,9 +29,9 @@ export const LineProgressComponent: FC<ProgressProps> = ({
 
   return (
     <div className={line.root}>
-      <div className={cn(line.progress.base, line.size[size], lineBg)} role="progressbar">
+      <progress className={cn(line.progress.base, line.size[size], lineBg)}>
         <div className={cn(line.progress.bar, className)} style={{ width: progressBar + '%' }}></div>
-      </div>
+      </progress>
       {children && <div className={cn(line.text.base, line.text.content[size])}>{children}</div>}
     </div>
   )

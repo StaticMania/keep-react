@@ -19,8 +19,12 @@ export const Container: FC<ContainerProps> = ({ children, className, ...otherPro
   const { isOpen, setIsOpen } = useAccordionContext()
   const { container } = accordionTheme
   return (
-    <div {...otherProps} onClick={() => setIsOpen && setIsOpen(!isOpen)} className={cn(container.base, className)}>
+    <button
+      tabIndex={0}
+      {...otherProps}
+      onClick={() => setIsOpen && setIsOpen(!isOpen)}
+      className={cn(container.base, className)}>
       {children}
-    </div>
+    </button>
   )
 }

@@ -43,6 +43,7 @@ export const PlayComponent: FC<PlayProps> = ({
       document.removeEventListener('keydown', handleKeyDown)
     }
   }, [show])
+
   return (
     <div {...props}>
       <button

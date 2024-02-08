@@ -1,3 +1,4 @@
+'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 

@@ -1,6 +1,7 @@
+'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { avatarTheme } from './Avatar'
+import { avatarTheme } from './theme'
 
 export interface VerifyProps {
   children?: ReactNode
@@ -13,9 +14,7 @@ export interface VerifyProps {
 export const Verify: FC<VerifyProps> = ({ children, className, size = 'md', position, color }) => {
   return (
     <div className={cn(avatarTheme.verifyIcon.base, position, className)}>
-      {children ? (
-        children
-      ) : (
+      {children ?? (
         <svg
           className={cn(avatarTheme.verifyIcon.size[size])}
           viewBox="0 0 32 32"

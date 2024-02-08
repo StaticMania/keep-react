@@ -12,11 +12,7 @@ interface EmptyProps {
 }
 const EmptyComponent: FC<EmptyProps> = ({ children, className }) => {
   const { root } = emptyTheme
-  return (
-    <section role="contentinfo" className={cn(root.base, className)}>
-      {children}
-    </section>
-  )
+  return <section className={cn(root.base, className)}>{children}</section>
 }
 
 Title.displayName = 'Empty.Title'

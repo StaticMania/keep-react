@@ -1,6 +1,7 @@
+'use client'
 import { FC, ReactNode } from 'react'
-import { breadcrumbTheme } from './theme'
 import { cn } from '../../helpers/cn'
+import { breadcrumbTheme } from './theme'
 
 export interface ItemsProps {
   className?: string
@@ -15,8 +16,7 @@ export const Item: FC<ItemsProps> = ({ className, children, activeType, href = '
   const { base, icon, text } = breadcrumbTheme.item
   return (
     <div className={base}>
-      {dividerIcon && dividerIcon}
-
+      {dividerIcon}
       {!dividerIcon && dividerIconStyle === 'slash' && <div className={icon.slash}>/</div>}
       {!dividerIcon && dividerIconStyle !== 'slash' && (
         <div className={icon.caret}>

@@ -1,6 +1,7 @@
+'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { avatarTheme } from './Avatar'
+import { avatarTheme } from './theme'
 
 export interface CounterProps {
   children?: ReactNode

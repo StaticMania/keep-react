@@ -20,6 +20,7 @@ export const ProgressCircleComponent: FC<ProgressCircleProps> = ({
   children,
   strokeBgColor,
   strokeColor,
+  className,
   strokeWidth = 2.5,
 }) => {
   const childrenWithProps = Children.map(children, (child) => cloneElement(child as ReactElement<any>, { size }))
@@ -32,7 +33,7 @@ export const ProgressCircleComponent: FC<ProgressCircleProps> = ({
   }, [progress])
 
   return (
-    <div className={cn(circle.root, circle.size[size])}>
+    <div className={cn(circle.root, circle.size[size], className)}>
       <svg className={circle.svg.base} viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
         <circle
           cx={18}

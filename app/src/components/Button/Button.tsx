@@ -1,7 +1,8 @@
+'use client'
 import { ButtonHTMLAttributes, FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { buttonTheme } from './theme'
 import { ButtonGroup } from '../ButtonGroup'
+import { buttonTheme } from './theme'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode

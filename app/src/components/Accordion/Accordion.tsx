@@ -1,11 +1,11 @@
 'use client'
 import { Children, FC, ReactElement, cloneElement, isValidElement, useState } from 'react'
+import { cn } from '../../helpers/cn'
 import { Container, keepAccordionContainerTheme } from './Container'
 import { Content, keepAccordionContentTheme } from './Content'
 import { Icon, keepAccordionIconTheme } from './Icon'
 import { Panel, PanelProps, keepAccordionPanelTheme } from './Panel'
 import { Title, keepAccordionTitleTheme } from './Title'
-import { cn } from '../../helpers/cn'
 
 export interface AccordionProps {
   children?: ReactElement<PanelProps> | ReactElement<PanelProps>[]
@@ -48,13 +48,12 @@ export const AccordionComponent: FC<AccordionProps> = ({
   })
 
   return (
-    <div
-      role="region"
+    <section
       aria-labelledby="accordion"
       {...otherProps}
       className={cn(disabled && 'pointer-events-none opacity-50', className)}>
       {modifiedChildren}
-    </div>
+    </section>
   )
 }
 

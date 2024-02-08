@@ -1,15 +1,17 @@
-import { Children, FC, ReactElement, ReactNode, cloneElement } from 'react'
+'use client'
+import { FC, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
+import { AlertContext } from './AlertContext'
+import { Body } from './Body'
 import { Container } from './Container'
 import { Description } from './Description'
-import { Title } from './Title'
 import { Dismiss } from './Dismiss'
-import { Link } from './Link'
 import { Icon } from './Icon'
-import { cn } from '../../helpers/cn'
+import { Link } from './Link'
+import { Title } from './Title'
 import { alertTheme } from './theme'
-import { Body } from './Body'
 
-interface AlertProps {
+export interface AlertProps {
   children?: ReactNode
   color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
   className?: string
@@ -19,9 +21,6 @@ interface AlertProps {
 }
 
 export const AlertComponent: FC<AlertProps> = ({ children, color = 'primary', withBg, dismiss, className }) => {
-  const childrenWithProps = Children.map(children, (child) =>
-    cloneElement(child as ReactElement<any>, { color: color }),
-  )
   return (
     <div
       className={cn(
@@ -30,7 +29,7 @@ export const AlertComponent: FC<AlertProps> = ({ children, color = 'primary', wi
         dismiss ? 'hidden' : 'flex',
         className,
       )}>
-      {childrenWithProps}
+      <AlertContext.Provider value={{ color }}>{children}</AlertContext.Provider>
     </div>
   )
 }

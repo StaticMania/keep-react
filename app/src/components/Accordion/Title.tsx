@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
-import { accordionTheme } from './theme'
 import { cn } from '../../helpers/cn'
+import { accordionTheme } from './theme'
 
 export interface TitleProps {
   children?: ReactNode
@@ -13,5 +13,5 @@ export interface keepAccordionTitleTheme {
 
 export const Title: FC<TitleProps> = ({ children, className }) => {
   const { title } = accordionTheme
-  return <h3 className={cn(title.base, className)}>{children}</h3>
+  return <span className={cn(title.base, className)}>{children}</span>
 }

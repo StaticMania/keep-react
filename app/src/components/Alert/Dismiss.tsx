@@ -1,3 +1,4 @@
+'use client'
 import { FC, ReactNode } from 'react'
 
 export interface DismissProps {
@@ -9,9 +10,7 @@ export interface DismissProps {
 export const Dismiss: FC<DismissProps> = ({ children, onClick }) => {
   return (
     <button onClick={onClick}>
-      {children ? (
-        children
-      ) : (
+      {children ?? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"

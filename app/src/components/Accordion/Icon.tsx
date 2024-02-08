@@ -1,8 +1,8 @@
 'use client'
 import { FC, ReactNode } from 'react'
+import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
-import { cn } from '../../helpers/cn'
 
 export interface IconProps {
   children?: ReactNode
@@ -22,12 +22,10 @@ export const Icon: FC<IconProps> = ({ children, className, ...otherProps }) => {
   const { isOpen } = useAccordionContext()
   const { icon } = accordionTheme
   return (
-    <div
+    <span
       {...otherProps}
       className={cn(icon.base, children && (isOpen ? icon.rotated.full : icon.rotated.half), className)}>
-      {children ? (
-        children
-      ) : (
+      {children ?? (
         <svg className="shrink-0 fill-metal-300" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
           <rect
             y="7"
@@ -45,6 +43,6 @@ export const Icon: FC<IconProps> = ({ children, className, ...otherProps }) => {
           />
         </svg>
       )}
-    </div>
+    </span>
   )
 }
