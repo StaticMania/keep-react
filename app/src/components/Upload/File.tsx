@@ -1,7 +1,7 @@
 'use client'
 import { Trash } from 'phosphor-react'
 import { FC, ReactNode } from 'react'
-import { cn } from '~/app/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 
 export interface FileProps {
   children?: ReactNode
@@ -14,8 +14,8 @@ export const File: FC<FileProps> = ({ children, className, onClick, icon = <Tras
   return (
     <li
       className={cn(
-        className,
         'flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-6 font-normal capitalize text-metal-600',
+        className,
       )}>
       {children}
       <button onClick={onClick}>{icon}</button>

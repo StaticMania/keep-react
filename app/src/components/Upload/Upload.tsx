@@ -1,7 +1,7 @@
 'use client'
 import { FC, ReactNode, useMemo } from 'react'
 import { DropzoneOptions } from 'react-dropzone'
-import { cn } from '~/app/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { Body } from './Body'
 import { File } from './File'
 import { Footer } from './Footer'
@@ -17,10 +17,10 @@ export interface UploadProps {
 }
 
 const UploadComponent: FC<UploadProps> = ({ children, className, options, horizontal }) => {
-  const dropzoneAPI = useMemo(() => ({ options, horizontal }), [options, horizontal])
+  const ContextValue = useMemo(() => ({ options, horizontal }), [options, horizontal])
   return (
     <div className={cn('max-w-md rounded-xl border border-dashed border-metal-100 bg-white p-6 ', className)}>
-      <UploadContext.Provider value={dropzoneAPI}>{children}</UploadContext.Provider>
+      <UploadContext.Provider value={ContextValue}>{children}</UploadContext.Provider>
     </div>
   )
 }

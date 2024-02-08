@@ -5,13 +5,13 @@ import { useCallback, useState } from 'react'
 import { UploadedFile } from '~/app/new/page'
 import { Typography, Upload } from '../../../../src'
 
-const DefaultUpload = () => {
+const SingleUpload = () => {
   const [files, setFiles] = useState<UploadedFile[]>([])
   const onDrop = useCallback((acceptedFiles: any) => {
     setFiles(acceptedFiles)
   }, [])
   return (
-    <Upload options={{ onDrop }}>
+    <Upload options={{ onDrop, multiple: false }}>
       <Upload.Body>
         <Upload.Icon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
@@ -38,7 +38,7 @@ const DefaultUpload = () => {
   )
 }
 
-const DefaultUploadCode = `
+const SingleUploadCode = `
 'use client'
 import Image from 'next/image'
 import { Info } from 'phosphor-react'
@@ -51,7 +51,7 @@ export const UploadComponent = () => {
     setFiles(acceptedFiles)
   }, [])
   return (
-    <Upload options={{ onDrop }}>
+    <Upload options={{ onDrop, multiple: false }}>
       <Upload.Body>
         <Upload.Icon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
@@ -79,4 +79,4 @@ export const UploadComponent = () => {
 }
 `
 
-export { DefaultUpload, DefaultUploadCode }
+export { SingleUpload, SingleUploadCode }

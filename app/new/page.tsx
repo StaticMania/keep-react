@@ -5,7 +5,7 @@ import { useCallback, useState } from 'react'
 import { Typography } from '../src'
 import { Upload } from './Upload'
 
-interface UploadFile {
+export interface UploadedFile {
   path: string
   lastModified: number
   lastModifiedDate: string
@@ -16,7 +16,7 @@ interface UploadFile {
 }
 
 export default function MyDropzone() {
-  const [files, setFiles] = useState<UploadFile[]>([])
+  const [files, setFiles] = useState<UploadedFile[]>([])
   const onDrop = useCallback((acceptedFiles: any) => {
     setFiles(acceptedFiles)
   }, [])
@@ -24,7 +24,7 @@ export default function MyDropzone() {
   return (
     <section>
       <div className="container space-y-5 py-20">
-        <Upload options={{ onDrop, maxFiles: 4 }}>
+        <Upload options={{ onDrop }}>
           <Upload.Body>
             <Upload.Icon>
               <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
@@ -48,7 +48,7 @@ export default function MyDropzone() {
             </Typography>
           </Upload.Footer>
         </Upload>
-        <Upload horizontal options={{ onDrop, maxFiles: 4 }}>
+        <Upload horizontal options={{ onDrop }}>
           <Upload.Body>
             <Upload.Icon>
               <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />

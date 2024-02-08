@@ -3,7 +3,7 @@ import { createContext, useContext } from 'react'
 import { DropzoneOptions } from 'react-dropzone'
 
 export type UploadPropsContext = {
-  options?: DropzoneOptions | undefined
+  options?: DropzoneOptions
   horizontal?: boolean
 }
 
