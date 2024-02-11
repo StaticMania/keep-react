@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { CaretRight, MagnifyingGlass, XCircle } from 'phosphor-react'
-import React, { useState, useEffect, FC, Dispatch, SetStateAction, useCallback } from 'react'
+import { Dispatch, FC, SetStateAction, useCallback, useEffect, useState } from 'react'
+import { getData, storeData } from '../../utils/Searching'
 import { Modal, Skeleton, TextInput } from '../src'
 import { cn } from '../src/helpers/cn'
-import { getData, storeData } from '../../utils/Searching'
 
 interface Result {
   id: number

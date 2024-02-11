@@ -1,10 +1,9 @@
-import type { FC } from 'react'
-import React from 'react'
+import type { FC, ReactNode } from 'react'
 
 interface DocsContentLayoutProps {
   title: string
   description: string
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export const DocsContentLayout: FC<DocsContentLayoutProps> = function ({ title, description, children }) {

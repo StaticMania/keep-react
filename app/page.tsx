@@ -18,7 +18,7 @@ export default function Home() {
     <section className="home -mt-1 space-y-20  first:pt-14 last:pb-20 md:first:pt-20 lg:space-y-32">
       <Hero />
       <ComponentUI />
-      <FAQ />
+      <Faq />
       <Community />
     </section>
   )
@@ -29,8 +29,7 @@ const Hero = () => {
     <div className="hero-area">
       <div className="relative z-10 mx-auto max-w-2xl text-center">
         <h1 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1.75px] text-black/100 md:text-heading-5 lg:text-[56px] lg:leading-[66px]">
-          Supercharge Your Web Development with
-          <span className="hero-text block">Keep React</span>
+          Supercharge Your Web Development with <span className="hero-text block">Keep React</span>
         </h1>
         <p className="mx-auto max-w-xs text-body-5 text-metal-600 md:max-w-lg md:text-body-3">
           Unlocking the Power of Code to Transform Your Ideas into Stunning Web Realities.
@@ -109,16 +108,23 @@ const Community = () => {
   const [contributors, setContributors] = useState<Contributor[]>([])
 
   useEffect(() => {
+    let ignore = false
     const getUser = async () => {
       try {
         const response = await fetch('https://api.github.com/repos/StaticMania/keep-react/contributors?per_page=10')
         const result = await response.json()
-        setContributors(result)
+        if (!ignore) {
+          setContributors(result)
+        }
       } catch (error) {
         console.error(error)
       }
     }
     getUser()
+
+    return () => {
+      ignore = true
+    }
   }, [])
   return (
     <div className="container">
@@ -147,7 +153,7 @@ const Community = () => {
     </div>
   )
 }
-const FAQ = () => {
+const Faq = () => {
   const faqs = [
     {
       id: 1,

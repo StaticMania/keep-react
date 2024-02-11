@@ -45,11 +45,10 @@ const Footer = () => {
       </div>
       <div className="border-t border-t-metal-100 py-5 text-center">
         <p className="text-body-4 font-normal text-metal-900">
-          &copy;{new Date().getFullYear()} All Rights Reserved by{' '}
+          &copy;{new Date().getFullYear()} All Rights Reserved by
           <a href="https://staticmania.com/" target="_blank" className="font-medium">
             StaticMania
           </a>
-          .
         </p>
       </div>
     </footer>

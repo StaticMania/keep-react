@@ -11,7 +11,7 @@ const CopyCode = ({ code }: { code: string }) => {
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    let ignore = true
+    let ignore = false
     if (!ignore) {
       setIsClient(true)
     }

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-const Page = () => {
+const Component = () => {
   const [active, setActive] = useState(false)
   const [theme, setTheme] = useState(false)
 
@@ -103,4 +103,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Component

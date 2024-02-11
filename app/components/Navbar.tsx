@@ -10,7 +10,7 @@ import Search from './Search'
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
-  const [showModal, setShowMainModal] = useState(false)
+  const [showModal, setShowModal] = useState(false)
   const pathname = usePathname()
 
   const IsActive = (str: string) => {
@@ -20,11 +20,11 @@ const Navbar = () => {
 
   useEffect(() => {
     setActive(false)
-    setShowMainModal(false)
+    setShowModal(false)
   }, [pathname])
 
   const handleModal = () => {
-    setShowMainModal(!showModal)
+    setShowModal(!showModal)
   }
 
   return (
@@ -48,7 +48,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          {showModal && <Search setShowMainModal={setShowMainModal} showModal={showModal} />}
+          {showModal && <Search setShowMainModal={setShowModal} showModal={showModal} />}
           <div className="hidden items-end gap-3 lg:flex">
             <button
               onClick={handleModal}
