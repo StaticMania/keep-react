@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import { Info } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { UploadedFile } from '~/app/new/page'
 import { Typography, Upload } from '../../../../src'
+import { UploadedFile } from './DefaultUpload'
 
 const HorizontalUpload = () => {
   const [files, setFiles] = useState<UploadedFile[]>([])
@@ -11,7 +11,7 @@ const HorizontalUpload = () => {
     setFiles(acceptedFiles)
   }, [])
   return (
-    <Upload horizontal={true} options={{ onDrop }}>
+    <Upload horizontal options={{ onDrop }}>
       <Upload.Body>
         <Upload.Icon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />

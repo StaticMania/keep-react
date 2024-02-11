@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import { Info } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { UploadedFile } from '~/app/new/page'
 import { Typography, Upload } from '../../../../src'
+import { UploadedFile } from './DefaultUpload'
 
 const SingleUpload = () => {
   const [files, setFiles] = useState<UploadedFile[]>([])

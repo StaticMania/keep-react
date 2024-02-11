@@ -1,5 +1,5 @@
 'use client'
-import { CloudArrowUp, GridFour, Phone, User } from 'phosphor-react'
+import { CloudArrowUp, HouseLine, Phone, SignIn, User } from 'phosphor-react'
 import { ChangeEvent, useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '../docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultRadio } from '../docs/components/radio/variant/DefaultRadio'
@@ -140,17 +140,30 @@ export const ModalComponent = () => {
 }
 export const TabsComponent = () => {
   return (
-    <div className="scale-75 md:scale-95">
-      <Tabs aria-label="Tabs" style="underline" borderPosition="bottom" iconPosition="left">
-        <Tabs.Item title="Profile" icon={<User size={20} />}>
-          Profile content
-        </Tabs.Item>
-        <Tabs.Item title="Dashboard" icon={<GridFour size={20} />}>
-          Dashboard content
-        </Tabs.Item>
-        <Tabs.Item title="Contacts" icon={<Phone size={20} />}>
-          Contacts content
-        </Tabs.Item>
+    <div className="scale-75">
+      <Tabs activeLabel="one">
+        <Tabs.List>
+          <Tabs.Item label="one" className="flex items-center gap-2">
+            <HouseLine size={20} />
+            Home
+          </Tabs.Item>
+          <Tabs.Item className="flex items-center gap-2" label="two">
+            <User size={20} />
+            About
+          </Tabs.Item>
+          <Tabs.Item className="flex items-center gap-2" label="three">
+            <Phone size={20} />
+            Contact
+          </Tabs.Item>
+          <Tabs.Item className="flex items-center gap-2" label="four">
+            <SignIn size={20} />
+            Sign Up
+          </Tabs.Item>
+        </Tabs.List>
+        <Tabs.Content label="one">Home Content</Tabs.Content>
+        <Tabs.Content label="two">About Content</Tabs.Content>
+        <Tabs.Content label="three">Contact Content</Tabs.Content>
+        <Tabs.Content label="four">Sign Up Content</Tabs.Content>
       </Tabs>
     </div>
   )

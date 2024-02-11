@@ -1,30 +1,35 @@
 'use client'
-import { HouseLine, Pen, Phone, SignIn, User } from 'phosphor-react'
+import { CaretRight, HouseLine, Pen, Phone, SignIn, User } from 'phosphor-react'
 import { Tabs } from '../../../../src'
 
-const TabsWithIcon = () => {
+const VerticalTab = () => {
   return (
-    <Tabs activeLabel="one">
+    <Tabs activeLabel="one" vertical={true}>
       <Tabs.List>
-        <Tabs.Item label="one" className="flex items-center gap-2">
+        <Tabs.Item label="one">
           <HouseLine size={20} />
           Home
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="two">
+        <Tabs.Item label="two">
           <User size={20} />
           About
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="three">
+        <Tabs.Item label="three">
           <Phone size={20} />
           Contact
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="four">
+        <Tabs.Item label="four">
           <Pen size={20} />
           Blogs
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="five">
+        <Tabs.Item label="five">
           <SignIn size={20} />
           Sign Up
+          <CaretRight size={20} />
         </Tabs.Item>
       </Tabs.List>
       <Tabs.Content label="one">
@@ -56,34 +61,39 @@ const TabsWithIcon = () => {
   )
 }
 
-const TabsWithIconCode = `
+const VerticalTabCode = `
 'use client'
+import { CaretRight, HouseLine, Pen, Phone, SignIn, User } from 'phosphor-react'
 import { Tabs } from 'keep-react'
-import { HouseLine, Pen, Phone, SignIn, User } from 'phosphor-react'
 
 export const TabsComponent = () => {
   return (
-    <Tabs activeLabel="one">
+    <Tabs activeLabel="one" vertical={true}>
       <Tabs.List>
-        <Tabs.Item label="one" className="flex items-center gap-2">
+        <Tabs.Item label="one">
           <HouseLine size={20} />
           Home
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="two">
+        <Tabs.Item label="two">
           <User size={20} />
           About
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="three">
+        <Tabs.Item label="three">
           <Phone size={20} />
           Contact
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="four">
+        <Tabs.Item label="four">
           <Pen size={20} />
           Blogs
+          <CaretRight size={20} />
         </Tabs.Item>
-        <Tabs.Item className="flex items-center gap-2" label="five">
+        <Tabs.Item label="five">
           <SignIn size={20} />
           Sign Up
+          <CaretRight size={20} />
         </Tabs.Item>
       </Tabs.List>
       <Tabs.Content label="one">
@@ -114,6 +124,7 @@ export const TabsComponent = () => {
     </Tabs>
   )
 }
+
 `
 
-export { TabsWithIcon, TabsWithIconCode }
+export { VerticalTab, VerticalTabCode }

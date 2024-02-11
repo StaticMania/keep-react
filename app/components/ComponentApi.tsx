@@ -1,5 +1,6 @@
+'use client'
 import { Space_Mono } from 'next/font/google'
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 interface ComponentApiProps {
   id: number
@@ -17,7 +18,7 @@ const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400'] })
 
 const ComponentApi: FC<ComponentProps> = ({ data }) => {
   return (
-    <div className={spaceMono.className + ' mx-auto w-full overflow-auto '}>
+    <div className={spaceMono.className + 'mx-auto w-full overflow-auto'}>
       <table className="whitespace-no-wrap z-50 mt-10 min-w-max table-auto border border-metal-100 bg-white text-left md:w-full lg:min-w-min">
         <thead>
           <tr>

@@ -1,4 +1,4 @@
-interface TabsStyleTheme {
+interface TabsTheme {
   root: {
     vertical: {
       on: string
@@ -35,7 +35,7 @@ interface TabsStyleTheme {
   }
 }
 
-export const tabsTheme: TabsStyleTheme = {
+export const tabsTheme: TabsTheme = {
   root: {
     vertical: {
       on: 'flex flex-row gap-x-5',

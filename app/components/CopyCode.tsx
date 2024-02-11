@@ -8,11 +8,16 @@ import { Skeleton } from '../src'
 
 const CopyCode = ({ code }: { code: string }) => {
   const { copy, copyToClipboard } = useCopy()
-
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    setIsClient(true)
+    let ignore = true
+    if (!ignore) {
+      setIsClient(true)
+    }
+    return () => {
+      ignore = true
+    }
   }, [])
   return (
     <div className="relative my-5">

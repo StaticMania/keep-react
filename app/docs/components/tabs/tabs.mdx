@@ -1,48 +1,37 @@
 import { DefaultTabs, DefaultTabsCode } from './variant/DefaultTabs'
-import { BorderedTabs, BorderedTabsCode } from './variant/BorderedTabs'
+import { VerticalTab, VerticalTabCode } from './variant/VerticalTabs'
 import { TabsWithIcon, TabsWithIconCode } from './variant/TabsWithIcon'
-
-import { TabsWithNotification, TabsWithNotificationCode } from './variant/TabsWithNotification'
 import { tabsApiData, tabsItemApiData } from './tabsApi'
 
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import CodePreview from '../../../components/CodePreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-The Tab Group Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container. With customizable options for size, type, and status, you can create versatile and visually appealing tab groups that align with your design aesthetic.
+The Tab Group Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container.
 
 ## Default Tabs
 
-The default Tabs component presents a collection of `pills` style button that include both tab elements and corresponding tab content.
+The Default Tabs component showcases the basic implementation of tabs.
 
 <CodePreview github="Tabs" code={DefaultTabsCode}>
   <DefaultTabs />
 </CodePreview>
 
-## Bordered Tabs
-
-By setting `borderPosition="top"`, you can make the border appear at the top of the tab group. Conversely, setting `borderPosition="bottom"` will cause the border to appear at the bottom of the tab group.
-
-<CodePreview github="Tabs" code={BorderedTabsCode}>
-  <BorderedTabs />
-</CodePreview>
-
 ## Tabs with Icon
 
-Tabs items with icons are a user interface design element where each tab in a tabbed navigation system is accompanied by an icon. You can change the icon position by using `iconPosition` props as `"right" | "left"`.
+Enhance your tabs by incorporating icons alongside the tab labels.
 
 <CodePreview github="Tabs" code={TabsWithIconCode}>
   <TabsWithIcon />
 </CodePreview>
 
-## Tab Notifications
+## Vertical Tab
 
-Keep users informed by adding notifications to tabs. Utilize badges to indicate new or important content.
+Display tabs vertically by setting the `vertical` prop to `true`.
 
-<CodePreview github="Tabs" code={TabsWithNotificationCode}>
-  <TabsWithNotification />
+<CodePreview github="Tabs" code={VerticalTabCode}>
+  <VerticalTab />
 </CodePreview>
 
 ## Tabs API Reference
