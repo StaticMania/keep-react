@@ -1,4 +1,34 @@
-export const paginationTheme = {
+interface keepPaginationTheme {
+  root: {
+    base: string
+  }
+  list: {
+    base: string
+  }
+  item: {
+    base: string
+    shape: {
+      rounded: string
+      circle: string
+    }
+    active: {
+      on: string
+      off: string
+    }
+  }
+  goto: {
+    base: string
+  }
+  navigator: {
+    base: string
+    shape: {
+      rounded: string
+      circle: string
+    }
+  }
+}
+
+export const paginationTheme: keepPaginationTheme = {
   root: {
     base: 'mx-auto flex w-full items-center gap-5',
   },
