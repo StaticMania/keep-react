@@ -83,4 +83,4 @@ export const ButtonComponent = () => {
 }
 `
 
-export { KeepButtonTypeCode, KeepButtonType }
+export { KeepButtonType, KeepButtonTypeCode }

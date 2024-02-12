@@ -2,9 +2,9 @@
 import { DotsThree } from 'phosphor-react'
 import { Pagination } from '../../../../src'
 
-const DefaultPagination = () => {
+const PaginationShape = () => {
   return (
-    <Pagination>
+    <Pagination shape="circle">
       <Pagination.List>
         <Pagination.Item>1</Pagination.Item>
         <Pagination.Item active>2</Pagination.Item>
@@ -19,14 +19,14 @@ const DefaultPagination = () => {
   )
 }
 
-const DefaultPaginationCode = `
+const PaginationShapeCode = `
 'use client'
 import { DotsThree } from 'phosphor-react'
 import { Pagination } from 'keep-react'
 
 export const PaginationComponent = () => {
   return (
-    <Pagination>
+    <Pagination shape="circle">
       <Pagination.List>
         <Pagination.Item>1</Pagination.Item>
         <Pagination.Item active>2</Pagination.Item>
@@ -42,4 +42,4 @@ export const PaginationComponent = () => {
 }
 `
 
-export { DefaultPagination, DefaultPaginationCode }
+export { PaginationShape, PaginationShapeCode }

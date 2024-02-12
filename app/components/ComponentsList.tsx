@@ -1,5 +1,5 @@
 'use client'
-import { CloudArrowUp, HouseLine, Phone, SignIn, User } from 'phosphor-react'
+import { CloudArrowUp, DotsThree, HouseLine, Phone, SignIn, User } from 'phosphor-react'
 import { ChangeEvent, useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '../docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultRadio } from '../docs/components/radio/variant/DefaultRadio'
@@ -20,16 +20,20 @@ export const SliderComponent = () => {
   )
 }
 export const PaginationComponent = () => {
-  const [currentPage, setCurrentPage] = useState(1)
   return (
     <div className="scale-75">
-      <Pagination
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
-        totalPages={30}
-        iconWithOutText={true}
-        prevNextShape="circle"
-      />
+      <Pagination>
+        <Pagination.List>
+          <Pagination.Item>1</Pagination.Item>
+          <Pagination.Item active>2</Pagination.Item>
+          <Pagination.Item>3</Pagination.Item>
+          <Pagination.Item>4</Pagination.Item>
+          <Pagination.Item>
+            <DotsThree size={20} />
+          </Pagination.Item>
+          <Pagination.Item>10</Pagination.Item>
+        </Pagination.List>
+      </Pagination>
     </div>
   )
 }
