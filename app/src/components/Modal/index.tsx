@@ -87,8 +87,7 @@ const ModalComponent: FC<ModalProps> = ({ children, show, root, icon, size = 'sm
           <div
             aria-hidden={!show}
             className={cn(theme.base, theme.positions[position], show ? theme.show.on : theme.show.off)}
-            data-testid="modal"
-            role="dialog">
+            data-testid="modal">
             <div className={cn(theme.content.base, theme.sizes[size])}>
               <div className={theme.content.inner}>{children}</div>
             </div>

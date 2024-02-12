@@ -153,7 +153,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                 <nav id="visible-table-of-contents">
                   <ul
                     dangerouslySetInnerHTML={{
-                      __html: innerHtml ? innerHtml : '',
+                      __html: innerHtml ?? '',
                     }}
                     className="border-l border-l-metal-100"
                   />
