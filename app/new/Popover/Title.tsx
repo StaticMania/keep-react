@@ -1,6 +1,6 @@
 'use client'
 import { HTMLProps, forwardRef, useId, useLayoutEffect } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '~/app/src/helpers/cn'
 import { usePopoverContext } from './Context'
 
 export const PopoverHeading = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadingElement>>(

@@ -26,7 +26,6 @@ import { removeFragment } from '../../helpers/mergeDeep'
 import { Avatar } from '../Avatar/Avatar'
 import { Badge } from '../Badge'
 import { Button } from '../Button/Button'
-import { Popover } from '../Popover'
 import { LineProgress } from '../Progress/LineProgress'
 import { Card } from './Card'
 
@@ -177,12 +176,7 @@ export const CardWithListIcon: Story = {
             </Card.Container>
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
-            <Popover className="!w-[20rem]">
-              <Popover.Title>Keep Design System</Popover.Title>
-              <Popover.Action>
-                <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
-              </Popover.Action>
-            </Popover>
+            <DotsThreeVertical size={24} color="#5E718D" />
           </Card.Container>
         </Card.Container>
       </>,

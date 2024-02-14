@@ -1,9 +1,8 @@
 'use client'
 import Image from 'next/image'
-import { ArrowDown, Cube } from 'phosphor-react'
+import { ArrowDown, Cube, DotsThreeOutline } from 'phosphor-react'
 import { DefaultTableData } from '~/public/data/tableData'
 import { Avatar, Badge, Button, Table } from '../../../../src'
-import TableActionBtn from './TableActionBtn'
 
 const DefaultTable = () => {
   return (
@@ -100,7 +99,9 @@ const DefaultTable = () => {
                 </div>
               </Table.Cell>
               <Table.Cell>
-                <TableActionBtn />
+                <Button variant="outline" size="sm" shape="circle">
+                  <DotsThreeOutline size={15} />
+                </Button>
               </Table.Cell>
             </Table.Row>
           ))}
@@ -203,33 +204,9 @@ export const TableComponent = () => {
             </div>
           </Table.Cell>
           <Table.Cell>
-            <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-              <Popover.Container className="!mt-0 !block">
-                <ul>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Delete</span>
-                      <span>
-                        <Trash />
-                      </span>
-                    </button>
-                  </li>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Edit</span>
-                      <span>
-                        <Pencil />
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </Popover.Container>
-              <Popover.Action>
-                <Button variant="outline" size="sm" shape="circle">
-                  <DotsThreeOutline size={14}  />
-                </Button>
-              </Popover.Action>
-            </Popover>
+            <Button variant="outline" size="sm" shape="circle">
+              <DotsThreeOutline size={15} />
+            </Button>
           </Table.Cell>
         </Table.Row>
       </Table.Body>

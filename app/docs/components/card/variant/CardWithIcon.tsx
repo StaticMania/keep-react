@@ -1,6 +1,6 @@
 'use client'
-import { Button, Card, Popover } from '../../../../src'
 import { ArchiveTray, CaretRight, DotsThreeVertical, PencilCircle } from 'phosphor-react'
+import { Button, Card } from '../../../../src'
 
 const CardWithIcon = () => {
   return (
@@ -39,12 +39,7 @@ const CardWithIcon = () => {
             </Card.Container>
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
-            <Popover className="!w-[20rem]">
-              <Popover.Title>Keep Design System</Popover.Title>
-              <Popover.Action>
-                <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
-              </Popover.Action>
-            </Popover>
+            <DotsThreeVertical size={24} color="#5E718D" />
           </Card.Container>
         </Card.Container>
       </Card>
@@ -109,12 +104,7 @@ export const CardComponent = () => {
             </Card.Container>
           </Card.Container>
           <Card.Container className="hidden items-start md:flex">
-            <Popover className="!w-[20rem]">
-              <Popover.Title>Keep Design System</Popover.Title>
-              <Popover.Action>
-                <DotsThreeVertical size={24} color="#5E718D" className="flex cursor-pointer items-start" />
-              </Popover.Action>
-            </Popover>
+            <DotsThreeVertical size={24} color="#5E718D" />
           </Card.Container>
         </Card.Container>
       </Card>

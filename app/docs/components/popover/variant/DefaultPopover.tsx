@@ -1,23 +1,69 @@
 'use client'
-import { Button, Popover } from '../../../../src'
+import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
+import { Avatar, Button, Popover } from '../../../../src'
 
 const DefaultPopover = () => {
   return (
-    <div className="px-2 py-3">
-      <Popover>
-        <Popover.Title>Popover title here</Popover.Title>
-        <Popover.Description>
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-          some form, by injected humour
-        </Popover.Description>
-        <Popover.Container>
-          <Button variant="outline" size="xs">
-            Checkout
-          </Button>
-        </Popover.Container>
+    <div className="flex h-44 items-center justify-center gap-5 bg-metal-900 p-5">
+      <Popover placement="left">
         <Popover.Action>
-          <Button size="xs">Popover</Button>
+          <CaretLeft size={20} />
         </Popover.Action>
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+          <Avatar verified img="/images/avatar/avatar-3.png" />
+          <div>
+            <Popover.Title>Popover title</Popover.Title>
+            <Popover.Description>demo_email@email.com</Popover.Description>
+          </div>
+          <Button size="xs" color="secondary" variant="outline">
+            Follow
+          </Button>
+        </Popover.Content>
+      </Popover>
+      <Popover placement="right">
+        <Popover.Action>
+          <CaretRight size={20} />
+        </Popover.Action>
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+          <Avatar verified img="/images/avatar/avatar-3.png" />
+          <div>
+            <Popover.Title>Popover title</Popover.Title>
+            <Popover.Description>demo_email@email.com</Popover.Description>
+          </div>
+          <Button size="xs" color="secondary" variant="outline">
+            Follow
+          </Button>
+        </Popover.Content>
+      </Popover>
+      <Popover placement="top">
+        <Popover.Action>
+          <CaretUp size={20} />
+        </Popover.Action>
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+          <Avatar verified img="/images/avatar/avatar-3.png" />
+          <div>
+            <Popover.Title>Popover title</Popover.Title>
+            <Popover.Description>demo_email@email.com</Popover.Description>
+          </div>
+          <Button size="xs" color="secondary" variant="outline">
+            Follow
+          </Button>
+        </Popover.Content>
+      </Popover>
+      <Popover placement="bottom">
+        <Popover.Action>
+          <CaretDown size={20} />
+        </Popover.Action>
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+          <Avatar verified img="/images/avatar/avatar-3.png" />
+          <div>
+            <Popover.Title>Popover title</Popover.Title>
+            <Popover.Description>demo_email@email.com</Popover.Description>
+          </div>
+          <Button size="xs" color="secondary" variant="outline">
+            Follow
+          </Button>
+        </Popover.Content>
       </Popover>
     </div>
   )
@@ -25,24 +71,25 @@ const DefaultPopover = () => {
 
 const DefaultPopoverCode = `
 'use client'
-import { Button, Popover } from 'keep-react'
+import { Popover } from 'keep-react'
+import { CaretRight } from 'phosphor-react'
 
-export const PopoverComponent = () => {
+export const PopoverComponent = () => { 
   return (
-    <Popover>
-      <Popover.Title>Popover title here</Popover.Title>
-      <Popover.Description>
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-        some form, by injected humour
-      </Popover.Description>
-      <Popover.Container>
-        <Button variant="outline" size="xs">
-          Checkout
-        </Button>
-      </Popover.Container>
+    <Popover placement="right">
       <Popover.Action>
-        <Button size="xs">Popover</Button>
+        <CaretRight size={20} />
       </Popover.Action>
+      <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+        <Avatar verified img="/images/avatar/avatar-3.png" />
+        <div>
+          <Popover.Title>Popover title</Popover.Title>
+          <Popover.Description>demo_email@email.com</Popover.Description>
+        </div>
+        <Button size="xs" color="secondary" variant="outline">
+          Follow
+        </Button>
+      </Popover.Content>
     </Popover>
   )
 }
