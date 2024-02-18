@@ -6,7 +6,7 @@ import React from 'react'
 const AppTopProgressBar = () => {
   return (
     <>
-      <ProgressBar height="4px" color="#fffd00" options={{ showSpinner: false }} shallowRouting />
+      <ProgressBar height="2px" color="#1fa2ff" options={{ showSpinner: false }} />
     </>
   )
 }
