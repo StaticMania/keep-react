@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import AppTopProgressBar from './components/AppTopProgressBar'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navbar />
         <main className="relative pt-20">{children}</main>
         <Footer />
+        <AppTopProgressBar />
       </body>
     </html>
   )
