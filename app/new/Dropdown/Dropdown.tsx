@@ -2,9 +2,7 @@
 import {
   FloatingArrow,
   FloatingFocusManager,
-  Placement,
   arrow,
-  autoPlacement,
   autoUpdate,
   flip,
   offset,
@@ -18,7 +16,7 @@ import {
 } from '@floating-ui/react'
 import { DotsThreeOutline } from 'phosphor-react'
 import { FC, ReactNode, useRef, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '~/app/src/helpers/cn'
 import { Item } from './Item'
 import { List } from './List'
 
@@ -27,22 +25,12 @@ interface DropdownProps {
   className?: string
   actionClassName?: string
   action?: ReactNode
-  showArrow?: boolean
-  placement?: Placement
 }
 
-export const DropdownComponent: FC<DropdownProps> = ({
-  className,
-  children,
-  action,
-  actionClassName,
-  showArrow = false,
-  placement = 'bottom-end',
-}) => {
+export const DropdownComponent: FC<DropdownProps> = ({ className, children, action, actionClassName }) => {
   const [isOpen, setIsOpen] = useState(false)
   const arrowRef = useRef(null)
   const { refs, floatingStyles, context } = useFloating({
-    placement,
     open: isOpen,
     onOpenChange: setIsOpen,
     middleware: [
@@ -51,11 +39,6 @@ export const DropdownComponent: FC<DropdownProps> = ({
       shift(),
       arrow({
         element: arrowRef,
-      }),
-      autoPlacement({
-        crossAxis: true,
-        alignment: 'start',
-        allowedPlacements: ['top', 'right', 'bottom', 'left'],
       }),
     ],
     whileElementsMounted: autoUpdate,
@@ -85,17 +68,7 @@ export const DropdownComponent: FC<DropdownProps> = ({
             aria-labelledby={headingId}
             {...getFloatingProps()}
             className={cn('w-[16rem] rounded-xl border border-metal-100 bg-white p-4 outline-none', className)}>
-            {showArrow && (
-              <FloatingArrow
-                width={20}
-                height={10}
-                tipRadius={2}
-                fill="#fff"
-                ref={arrowRef}
-                context={context}
-                className="hidden"
-              />
-            )}
+            <FloatingArrow width={20} height={10} tipRadius={2} fill="#fff" ref={arrowRef} context={context} />
             {children}
           </div>
         </FloatingFocusManager>

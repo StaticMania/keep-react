@@ -1,15 +1,7 @@
 import { DefaultDropdown, DefaultDropdownCode } from './variant/DefaultDropdown'
-
-import { DropdownSearchBar, DropdownSearchBarCode } from './variant/DropdownSearchBar'
-import { DropdownWithBothSideIcon, DropdownWithBothSideIconCode } from './variant/DropdownWithBothSideIcon'
-
-import { DropdownWithIconAndSearchBar, DropdownWithIconAndSearchBarCode } from './variant/DropdownWithIconAndSearchBar'
-
-import { DropdownWithTitleDescription, DropdownWithTitleDescriptionCode } from './variant/DropdownWithTitleDescription'
-
+import { DropdownWithIcon, DropdownWithIconCode } from './variant/DropdownWithIcon'
 import { dropdownAPIData } from './DropdownApi'
 import CodePreview from '../../../components/CodePreview'
-
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -24,36 +16,12 @@ The Default Dropdown represents some list items as a dropdown items with `<Dropd
   <DefaultDropdown />
 </CodePreview>
 
-## Dropdown With Search Bar
-
-The Dropdown with Search Bar component features a search bar that allows users to filter and select from a list of fruit options.
-
-<CodePreview github="Dropdown" code={DropdownSearchBarCode}>
-  <DropdownSearchBar />
-</CodePreview>
-
 ## Dropdown With Icon
 
 The Dropdown with Both Side Icon component combines dropdown items with icons on both sides of the label.
 
-<CodePreview github="Dropdown" code={DropdownWithBothSideIconCode}>
-  <DropdownWithBothSideIcon />
-</CodePreview>
-
-## Dropdown With Icon And SearchBar
-
-The Dropdown with Both Side Icon component combines dropdown items with search bar `<TextInput>` component.
-
-<CodePreview github="Dropdown" code={DropdownWithIconAndSearchBarCode}>
-  <DropdownWithIconAndSearchBar />
-</CodePreview>
-
-## Dropdown With Title Description
-
-The dropdown with title description component represents the title and description in every dropdown items.
-
-<CodePreview github="Dropdown" code={DropdownWithTitleDescriptionCode}>
-  <DropdownWithTitleDescription />
+<CodePreview github="Dropdown" code={DropdownWithIconCode}>
+  <DropdownWithIcon />
 </CodePreview>
 
 ## API Reference

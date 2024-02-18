@@ -1,20 +1,20 @@
 'use client'
+
 import { useState } from 'react'
+import { cn } from '../src/helpers/cn'
 
 const Component = () => {
   const [active, setActive] = useState(false)
-  const [theme, setTheme] = useState(false)
-
   return (
     <section className="min-h-screen bg-white py-20">
-      <div className="container max-w-4xl space-y-5">
+      {/* <div className="container max-w-4xl space-y-5">
         <div
           className={`relative flex h-5 w-9 cursor-pointer items-center justify-center rounded-full ${active ? 'bg-primary-500 ring-2 ring-primary-50 ring-offset-1' : 'bg-metal-100'}`}
           onClick={() => setActive(!active)}>
           <div
             className={`absolute left-1.5 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full  ring-4 ring-white transition-all duration-300 ${active ? 'translate-x-4 bg-white' : 'translate-x-0 bg-white'}`}></div>
 
-          {/* <div
+          <div
             className={`flex h-4 w-4 items-center justify-center rounded-full transition-all duration-300 ${active ? 'bg-transparent' : 'bg-white'}`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
               <path
@@ -31,7 +31,7 @@ const Component = () => {
                 fill="#8897AE"
               />
             </svg>
-          </div> */}
+          </div>
         </div>
         <hr className="my-5 block" />
         <div
@@ -97,6 +97,15 @@ const Component = () => {
             aria-hidden="true"
             className={`pointer-events-none
             inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out ${active ? 'translate-x-9' : 'translate-x-0'}`}></span>
+        </button>
+      </div> */}
+      <div className="container">
+        <button onClick={() => setActive(!active)} className="h-5 w-10 rounded-full bg-primary-50">
+          <span
+            className={cn(
+              'ml-1.5 block h-2 w-2 rounded-full ring-4 ring-white transition-transform duration-300',
+              active ? 'translate-x-[20px]' : 'translate-x-0',
+            )}></span>
         </button>
       </div>
     </section>
