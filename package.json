@@ -84,7 +84,6 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "next-nprogress-bar": "^2.1.2",
     "@babel/core": "^7.23.6",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
