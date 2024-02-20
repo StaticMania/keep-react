@@ -30,7 +30,7 @@ const TransactionsTable = () => {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[290px]">
-            <p className="text-body-6 font-medium text-metal-400">Type</p>
+            <p className="text-body-5 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[183px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
             Date
@@ -56,7 +56,7 @@ const TransactionsTable = () => {
                       <Avatar img={cell.img} />
                       <div>
                         <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{cell.name}</p>
-                        <span className="text-body-6 font-normal text-metal-500">{cell.tag}</span>
+                        <span className="text-body-5 font-normal text-metal-500">{cell.tag}</span>
                       </div>
                     </div>
                   </div>
@@ -64,7 +64,7 @@ const TransactionsTable = () => {
               </Table.Cell>
               <Table.Cell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.date}</p>
-                <p className="text-body-6 font-normal text-metal-500">{cell.time}</p>
+                <p className="text-body-5 font-normal text-metal-500">{cell.time}</p>
               </Table.Cell>
               <Table.Cell>
                 <p className="text-body-5 font-medium text-metal-500">${cell.amount}</p>
@@ -76,7 +76,7 @@ const TransactionsTable = () => {
               </Table.Cell>
               <Table.Cell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.date}</p>
-                <p className="text-body-6 font-normal text-metal-500">{cell.time}</p>
+                <p className="text-body-5 font-normal text-metal-500">{cell.time}</p>
               </Table.Cell>
               <Table.Cell>
                 <Button variant="outline" size="sm" shape="circle">
@@ -122,7 +122,7 @@ export const TableComponent = () => {
       </Table.Caption>
       <Table.Head>
         <Table.HeadCell className="min-w-[290px]">
-          <p className="text-body-6 font-medium text-metal-400">Type</p>
+          <p className="text-body-5 font-medium text-metal-400">Type</p>
         </Table.HeadCell>
         <Table.HeadCell className="min-w-[183px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
           Date
@@ -147,7 +147,7 @@ export const TableComponent = () => {
                   <Avatar img="/images/company/paypal.png" />
                   <div>
                     <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Paypal</p>
-                    <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
+                    <span className="text-body-5 font-normal text-metal-500">Withdraw</span>
                   </div>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export const TableComponent = () => {
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-            <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+            <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">$652.00</p>
@@ -167,7 +167,7 @@ export const TableComponent = () => {
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-            <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+            <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
           </Table.Cell>
           <Table.Cell>
             <Button variant="outline" size="sm" shape="circle">

@@ -196,7 +196,7 @@ const HistoryModalComponent = () => {
 
               <div>
                 <p className="text-body-5 font-semibold text-gray-500">Albert Flores</p>
-                <p className="text-body-6 text-gray-500">keep@designsystem.com</p>
+                <p className="text-body-5 text-gray-500">keep@designsystem.com</p>
               </div>
             </div>
           </div>

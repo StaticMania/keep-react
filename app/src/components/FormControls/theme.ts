@@ -239,7 +239,7 @@ export const formControlsTheme: keepFormControlTheme = {
         base: 'block text-center border border-metal-200 rounded-md text-metal-600 focus:outline-none focus:ring-0 focus:border-metal-500',
         disabled: 'cursor-not-allowed opacity-50',
         sizes: {
-          sm: 'max-w-[120px] py-2 px-8 sm:text-body-6',
+          sm: 'max-w-[120px] py-2 px-8 sm:text-body-5',
           md: 'max-w-[134px] py-2.5 px-10 text-body-5',
           lg: 'max-w-[140px] py-3 px-12 sm:',
         },
@@ -290,7 +290,7 @@ export const formControlsTheme: keepFormControlTheme = {
         base: 'block w-full focus:outline-none focus:ring-0',
         disabled: 'cursor-not-allowed opacity-50',
         sizes: {
-          sm: 'p-2 sm:text-body-6',
+          sm: 'p-2 sm:text-body-5',
           md: 'p-2.5 text-body-5',
           lg: 'sm: p-4',
         },
@@ -348,7 +348,7 @@ export const formControlsTheme: keepFormControlTheme = {
       input: {
         base: 'rounded-lg block w-full border disabled:cursor-not-allowed disabled:opacity-50',
         sizes: {
-          sm: 'sm:text-body-6',
+          sm: 'sm:text-body-5',
           md: 'text-body-5',
           lg: 'sm:',
         },

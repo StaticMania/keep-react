@@ -53,7 +53,7 @@ const HistoryModal = () => {
               <Avatar img="/images/avatar/avatar-4.png" />
               <div>
                 <p className="text-body-5 font-semibold text-gray-500">Albert Flores</p>
-                <p className="text-body-6 text-gray-500">keep@designsystem.com</p>
+                <p className="text-body-5 text-gray-500">keep@designsystem.com</p>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ export const ModalComponent = () => {
               <Avatar shape="circle" img="/images/avatar/avatar-4.png" statusPosition="bottom-right" size="md" />
               <div>
                 <p className="text-body-5 font-semibold text-gray-500">Albert Flores</p>
-                <p className="text-body-6 text-gray-500">keep@designsystem.com</p>
+                <p className="text-body-5 text-gray-500">keep@designsystem.com</p>
               </div>
             </div>
           </div>

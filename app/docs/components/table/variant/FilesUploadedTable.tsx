@@ -30,7 +30,7 @@ const FilesUploadedTable = () => {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[344px]">
-            <p className="text-body-6 font-medium text-metal-400">File no.</p>
+            <p className="text-body-5 font-medium text-metal-400">File no.</p>
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[160px]">File size</Table.HeadCell>
           <Table.HeadCell className="min-w-[171px]">Date uploaded</Table.HeadCell>
@@ -48,7 +48,7 @@ const FilesUploadedTable = () => {
                       <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
                       <div>
                         <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{cell.fileName}</p>
-                        <p className="text-body-6 font-normal text-metal-500">{cell.fileSize}</p>
+                        <p className="text-body-5 font-normal text-metal-500">{cell.fileSize}</p>
                       </div>
                     </div>
                   </div>
@@ -56,11 +56,11 @@ const FilesUploadedTable = () => {
               </Table.Cell>
               <Table.Cell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.totalSize}</p>
-                <p className="text-body-6 font-normal text-metal-500">{cell.fileSize}</p>
+                <p className="text-body-5 font-normal text-metal-500">{cell.fileSize}</p>
               </Table.Cell>
               <Table.Cell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.date}</p>
-                <p className="text-body-6 font-normal text-metal-500">{cell.time}</p>
+                <p className="text-body-5 font-normal text-metal-500">{cell.time}</p>
               </Table.Cell>
               <Table.Cell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.date}</p>
@@ -119,7 +119,7 @@ export const TableComponent = () => {
       </Table.Caption>
       <Table.Head>
         <Table.HeadCell className="min-w-[344px]">
-          <p className="text-body-6 font-medium text-metal-400">File no.</p>
+          <p className="text-body-5 font-medium text-metal-400">File no.</p>
         </Table.HeadCell>
         <Table.HeadCell className="min-w-[160px]">File size</Table.HeadCell>
         <Table.HeadCell className="min-w-[171px]">Date uploaded</Table.HeadCell>
@@ -136,7 +136,7 @@ export const TableComponent = () => {
                   <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
                   <div>
                     <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                    <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+                    <p className="text-body-5 font-normal text-metal-500">200 KB</p>
                   </div>
                 </div>
               </div>
@@ -144,11 +144,11 @@ export const TableComponent = () => {
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">Total 0.2 MB</p>
-            <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+            <p className="text-body-5 font-normal text-metal-500">200 KB</p>
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-            <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
+            <p className="text-body-5 font-normal text-metal-500">4:45 pm</p>
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>

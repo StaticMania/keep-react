@@ -23,7 +23,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
         <button
           type="button"
           onClick={() => setActive(0)}
-          className={`-mb-[0.7px] flex items-center justify-center border-b border-b-transparent px-5 py-3 text-body-5 font-medium text-metal-400 first:ml-0 ${
+          className={`-mb-[0.7px] flex items-center justify-center border-b border-b-transparent px-5 py-3 text-body-4 font-medium text-metal-400 first:ml-0 ${
             active === 0 ? '!border-b-white text-white' : ''
           }`}
           id="preview-btn">
@@ -32,7 +32,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
         <button
           id="code-btn"
           onClick={() => setActive(1)}
-          className={` flex items-center justify-center border-b border-b-transparent px-5 py-3 text-body-5 font-medium  text-metal-400 first:ml-0 ${
+          className={` flex items-center justify-center border-b border-b-transparent px-5 py-3 text-body-4 font-medium  text-metal-400 first:ml-0 ${
             active === 1 ? '!border-b-metal-100 text-white' : ''
           }`}>
           Code
@@ -54,7 +54,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
                 className="flex h-8 w-8 items-center justify-center rounded-md border-2 border-metal-800 bg-metal-900 transition-all duration-300 hover:border-transparent hover:bg-metal-700 md:h-9 md:w-9"
                 onClick={() => copyToClipboard(code)}>
                 {copy ? (
-                  <span className="flex items-center text-body-6">
+                  <span className="flex items-center text-body-5">
                     <Check size={20} color="white" />
                   </span>
                 ) : (

@@ -195,7 +195,7 @@ export const CardWithAvatar: Story = {
           <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">
             Khairul Islam Ridoy
           </Card.Title>
-          <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+          <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
         </Card.Container>
         <Card.Container className="circled mx-auto flex max-w-[220px] items-center justify-center divide-x divide-metal-200 rounded-md border border-metal-200 p-1 md:p-2">
           <Card.Link
@@ -235,7 +235,7 @@ export const CardWithProfileDetails: Story = {
           </Card.Container>
           <Card.Container className="mb-3 mt-10 text-center">
             <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">Khairul Islam</Card.Title>
-            <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+            <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
           </Card.Container>
           <Card.Container className="flex w-full justify-between border-t border-t-metal-50 px-5 py-3">
             <Card.Container className="text-center">
@@ -441,8 +441,8 @@ export const PodcastCard: Story = {
           <Card.Description className="text-body-5 font-medium text-metal-500">By Static Mania</Card.Description>
         </Card.Container>
         <Card.Container className="flex items-center justify-between">
-          <Card.Title className="text-body-6 font-medium text-metal-500">4:05</Card.Title>
-          <Card.Title className="text-body-6 font-medium text-metal-500">10:05</Card.Title>
+          <Card.Title className="text-body-5 font-medium text-metal-500">4:05</Card.Title>
+          <Card.Title className="text-body-5 font-medium text-metal-500">10:05</Card.Title>
         </Card.Container>
         <LineProgress progress={45} />
         <Card.Container className="flex items-center justify-between">
@@ -486,7 +486,7 @@ export const PricingCard: Story = {
         <Card.Container>
           <Card.Title className="text-body-4 font-medium text-primary-500 md:text-body-2">Business</Card.Title>
           <Card.Title className="my-3 flex items-center">
-            <span className="text-description-2 font-bold text-metal-800 md:text-heading-4">$79</span>
+            <span className="text-heading-6 font-bold text-metal-800 md:text-heading-3">$79</span>
             <span className="ml-1 text-body-4 font-medium text-metal-400">/ mth</span>
           </Card.Title>
           <Card.Description className="text-body-5 text-metal-700 md:text-body-4">

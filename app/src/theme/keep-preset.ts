@@ -69,28 +69,7 @@ module.exports = {
         },
       },
       fontSize: {
-        'display-1': [
-          '11rem',
-          {
-            lineHeight: '13.125rem',
-            letterSpacing: '-3.5px',
-          },
-        ],
-        'display-2': [
-          '9rem',
-          {
-            lineHeight: '10.62rem',
-            letterSpacing: '-3.5px',
-          },
-        ],
-        'display-3': [
-          '7.5rem',
-          {
-            lineHeight: '8.375rem',
-            letterSpacing: '-3.5px',
-          },
-        ],
-        'display-4': [
+        display: [
           '6rem',
           {
             lineHeight: '6.875rem',
@@ -98,114 +77,79 @@ module.exports = {
           },
         ],
         'heading-1': [
-          '4.5rem',
+          '4rem',
           {
-            lineHeight: '5.5rem',
+            lineHeight: '4.875rem',
             letterSpacing: '-2.3px',
           },
         ],
         'heading-2': [
-          '4rem',
-          {
-            lineHeight: '4.875rem ',
-            letterSpacing: '-2.3px',
-          },
-        ],
-        'heading-3': [
           '3.5rem',
           {
-            lineHeight: '4.125rem',
+            lineHeight: '4.125rem ',
             letterSpacing: '-1.75px',
           },
         ],
-        'heading-4': [
+        'heading-3': [
           '3rem',
           {
             lineHeight: '3.75rem',
             letterSpacing: '-1.75px',
           },
         ],
-        'heading-5': [
-          '2.25rem',
+        'heading-4': [
+          '2.5rem',
           {
             lineHeight: '3rem',
-            letterSpacing: '-1px',
+            letterSpacing: '-1.5px',
           },
         ],
-        'heading-6': [
+        'heading-5': [
           '2rem',
           {
             lineHeight: '2.625rem',
-            letterSpacing: '-0.5px',
+            letterSpacing: '-0.75px',
           },
         ],
-        'description-1': [
-          '1.875rem',
-          {
-            lineHeight: '2.625rem',
-            letterSpacing: '-0.5px',
-          },
-        ],
-        'description-2': [
-          '1.75rem',
-          {
-            lineHeight: '2.625rem',
-            letterSpacing: '-0.5px',
-          },
-        ],
-        'description-3': [
-          '1.625rem',
-          {
-            lineHeight: '2.5rem',
-            letterSpacing: '-0.5px',
-          },
-        ],
-        'description-4': [
+        'heading-6': [
           '1.5rem',
           {
-            lineHeight: '2.25rem',
-            letterSpacing: '-0.5px',
+            lineHeight: '2.125rem',
+            letterSpacing: '-0.4px',
           },
         ],
         'body-1': [
-          '1.375rem',
-          {
-            lineHeight: '1.875rem',
-            letterSpacing: '-0.3px',
-          },
-        ],
-        'body-2': [
           '1.25rem',
           {
             lineHeight: '1.75rem',
-            letterSpacing: '-0.3px',
+            letterSpacing: '-0.4px',
           },
         ],
-        'body-3': [
+        'body-2': [
           '1.125rem',
           {
             lineHeight: '1.5rem',
-            letterSpacing: '-0.3px',
+            letterSpacing: '-0.4px',
           },
         ],
-        'body-4': [
+        'body-3': [
           '1rem',
           {
             lineHeight: '1.5rem',
             letterSpacing: '-0.3px',
           },
         ],
-        'body-5': [
+        'body-4': [
           '0.875rem',
           {
             lineHeight: '1.375rem',
             letterSpacing: '-0.2px',
           },
         ],
-        'body-6': [
+        'body-5': [
           '0.75rem',
           {
-            lineHeight: '1.125rem',
+            lineHeight: '1.375rem',
             letterSpacing: '-0.2px',
           },
         ],

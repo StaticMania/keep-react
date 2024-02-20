@@ -42,7 +42,7 @@ const Navbar = () => {
                   key={nav.id}
                   href={nav.href}
                   target={nav.redirect ? '_blank' : '_self'}
-                  className="text-body-5 font-normal text-metal-500 hover:text-metal-900 active:text-metal-900">
+                  className="text-body-4 font-normal text-metal-500 hover:text-metal-900 active:text-metal-900">
                   {nav.name}
                 </Link>
               ))}
@@ -87,7 +87,7 @@ const Navbar = () => {
             </a>
             <Link
               href="/docs/getting-started/Introduction"
-              className="group h-min w-fit justify-center rounded-md border border-metal-900  bg-metal-900 px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-metal-800 focus:ring-4 focus:ring-metal-800 active:bg-metal-900">
+              className="group h-min w-fit justify-center rounded-md border border-metal-900  bg-metal-900 px-4 py-2.5 text-center text-body-4 font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-metal-800 focus:ring-4 focus:ring-metal-800 active:bg-metal-900">
               get started
             </Link>
           </div>

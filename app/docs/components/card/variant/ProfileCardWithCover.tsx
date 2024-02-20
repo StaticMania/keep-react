@@ -17,7 +17,7 @@ const ProfileCardWithCover = () => {
         </Card.Container>
         <Card.Container className="mb-3 mt-10 text-center">
           <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">Khairul Islam</Card.Title>
-          <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+          <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
         </Card.Container>
         <Card.Container className="flex w-full justify-between border-t border-t-metal-50 px-5 py-3">
           <Card.Container className="text-center">
@@ -64,7 +64,7 @@ export const CardComponent = () => {
         </Card.Container>
         <Card.Container className="mb-3 mt-10 text-center">
           <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">Khairul Islam</Card.Title>
-          <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+          <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
         </Card.Container>
         <Card.Container className="flex w-full justify-between border-t border-t-metal-50 px-5 py-3">
           <Card.Container className="text-center">

@@ -20,7 +20,7 @@ const SingleUpload = () => {
           <Typography variant="p" className="text-body-4 font-medium text-metal-600">
             Drag & Drop or Choose File to Upload
           </Typography>
-          <Typography variant="p" className="text-body-6 font-normal text-metal-400">
+          <Typography variant="p" className="text-body-5 font-normal text-metal-400">
             DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.
           </Typography>
         </Upload.Text>
@@ -60,7 +60,7 @@ export const UploadComponent = () => {
           <Typography variant="p" className="text-body-4 font-medium text-metal-600">
             Drag & Drop or Choose File to Upload
           </Typography>
-          <Typography variant="p" className="text-body-6 font-normal text-metal-400">
+          <Typography variant="p" className="text-body-5 font-normal text-metal-400">
             DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.
           </Typography>
         </Upload.Text>

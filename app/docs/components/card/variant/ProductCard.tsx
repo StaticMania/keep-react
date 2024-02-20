@@ -55,8 +55,8 @@ const ProductCard = () => {
               <Card.Description className="text-body-5 font-medium text-metal-500">By Static Mania</Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-between">
-              <Card.Title className="text-body-6 font-medium text-metal-500">4:05</Card.Title>
-              <Card.Title className="text-body-6 font-medium text-metal-500">10:05</Card.Title>
+              <Card.Title className="text-body-5 font-medium text-metal-500">4:05</Card.Title>
+              <Card.Title className="text-body-5 font-medium text-metal-500">10:05</Card.Title>
             </Card.Container>
             <LineProgress progress={45} />
             <Card.Container className="flex items-center justify-between">
@@ -175,8 +175,8 @@ export const CardComponent = () => {
               <Card.Description className="text-body-5 font-medium text-metal-500">By Static Mania</Card.Description>
             </Card.Container>
             <Card.Container className="flex items-center justify-between">
-              <Card.Title className="text-body-6 font-medium text-metal-500">4:05</Card.Title>
-              <Card.Title className="text-body-6 font-medium text-metal-500">10:05</Card.Title>
+              <Card.Title className="text-body-5 font-medium text-metal-500">4:05</Card.Title>
+              <Card.Title className="text-body-5 font-medium text-metal-500">10:05</Card.Title>
             </Card.Container>
             <LineProgress progress={45} />
             <Card.Container className="flex items-center justify-between">

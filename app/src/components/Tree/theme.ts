@@ -36,9 +36,9 @@ export interface keepTreeTheme {
 }
 
 export const treeTheme: keepTreeTheme = {
-  base: 'list-none space-y-2  text-body-6 md:text-body-4 font-medium text-metal-700',
+  base: 'list-none space-y-2  text-body-5 md:text-body-4 font-medium text-metal-700',
   list: {
-    base: 'text-body-6 md:text-body-4 font-medium text-metal-700 select-none',
+    base: 'text-body-5 md:text-body-4 font-medium text-metal-700 select-none',
     hasChild: {
       on: 'relative space-y-2',
       off: {
@@ -55,7 +55,7 @@ export const treeTheme: keepTreeTheme = {
   },
 
   showChildren: {
-    base: 'text-body-6 md:text-body-4 font-medium text-metal-400 select-none',
+    base: 'text-body-5 md:text-body-4 font-medium text-metal-400 select-none',
     on: '',
     off: 'hidden',
   },

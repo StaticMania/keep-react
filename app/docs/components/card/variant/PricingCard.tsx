@@ -13,7 +13,7 @@ const PricingCard = () => {
         <Card.Container>
           <Card.Title className="text-body-4 font-medium text-primary-500 md:text-body-2">Business</Card.Title>
           <Card.Title className="my-3 flex items-center">
-            <span className="text-description-2 font-bold text-metal-800 md:text-heading-4">$79</span>
+            <span className="text-heading-6 font-bold text-metal-800 md:text-heading-3">$79</span>
             <span className="ml-1 text-body-4 font-medium text-metal-400">/ mth</span>
           </Card.Title>
           <Card.Description className="text-body-5 text-metal-700 md:text-body-4">
@@ -69,7 +69,7 @@ export const CardComponent = () => {
             Business
           </Card.Title>
           <Card.Title className="flex items-center my-3">
-            <span className="text-heading-4 font-bold text-metal-800">$79</span>
+            <span className="text-heading-3 font-bold text-metal-800">$79</span>
             <span className="ml-1 text-body-4 font-medium text-metal-400">
               / mth
             </span>

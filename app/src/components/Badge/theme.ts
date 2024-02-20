@@ -45,7 +45,7 @@ interface BadgeTheme {
 }
 
 export const badgeTheme: BadgeTheme = {
-  base: 'inline-flex w-fit items-center font-inherit rounded-full text-body-6 font-medium cursor-pointer',
+  base: 'inline-flex w-fit items-center font-inherit rounded-full text-body-5 font-medium cursor-pointer',
   size: {
     sm: 'px-1 h-4',
     md: 'px-2 h-5',

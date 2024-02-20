@@ -71,7 +71,7 @@ export const tableTheme: keepTableTheme = {
   head: {
     base: 'text-metal-400 bg-metal-25 text-body-5 overflow-x-auto',
     cell: {
-      base: 'py-5 pl-4 text-body-6 font-medium text-metal-400',
+      base: 'py-5 pl-4 text-body-5 font-medium text-metal-400',
       icon: {
         base: 'flex items-center',
         on: {

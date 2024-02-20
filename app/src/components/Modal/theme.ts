@@ -54,7 +54,7 @@ export const modalTheme: keepModalTheme = {
   header: {
     base: 'rounded-t pb-2',
     iconSection: 'flex items-start  justify-between',
-    title: 'pt-2 text-body-3 md:text-description-4 font-semibold text-metal-800',
+    title: 'pt-2 text-body-3 md:text-heading-6 font-semibold text-metal-800',
     headerIcon: {
       base: 'w-10 h-10 flex items-center justify-center rounded-md bg-primary-25',
       icon: '',

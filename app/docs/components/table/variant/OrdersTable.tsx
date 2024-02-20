@@ -31,7 +31,7 @@ const OrdersTable = () => {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[302px]">
-            <p className="text-body-6 font-medium text-metal-400">Order no.</p>
+            <p className="text-body-5 font-medium text-metal-400">Order no.</p>
           </Table.HeadCell>
           <Table.HeadCell
             className="min-w-[165px]"
@@ -67,7 +67,7 @@ const OrdersTable = () => {
               </Table.Cell>
               <Table.Cell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.date}</p>
-                <p className="text-body-6 font-normal text-metal-500">{cell.time}</p>
+                <p className="text-body-5 font-normal text-metal-500">{cell.time}</p>
               </Table.Cell>
               <Table.Cell>
                 <Image src={cell.img} alt="country" height="18" width="24" />
@@ -143,7 +143,7 @@ export const TableComponent = () => {
       </Table.Caption>
       <Table.Head>
         <Table.HeadCell className="min-w-[302px]">
-          <p className="text-body-6 font-medium text-metal-400">Order no.</p>
+          <p className="text-body-5 font-medium text-metal-400">Order no.</p>
         </Table.HeadCell>
         <Table.HeadCell
           className="min-w-[165px]"
@@ -178,7 +178,7 @@ export const TableComponent = () => {
           </Table.Cell>
           <Table.Cell>
             <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-            <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+            <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
           </Table.Cell>
           <Table.Cell>
             <Image src="/images/icon/country-0.svg" alt="country" height="18" width="24" />

@@ -28,7 +28,7 @@ const BorderedTable = () => {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[290px]">
-            <p className="text-body-6 font-medium text-metal-400">Type</p>
+            <p className="text-body-5 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
           <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
@@ -136,7 +136,7 @@ export const TableComponent = () => {
       </Table.Caption>
       <Table.Head>
         <Table.HeadCell className="min-w-[290px]">
-          <p className="text-body-6 font-medium text-metal-400">Type</p>
+          <p className="text-body-5 font-medium text-metal-400">Type</p>
         </Table.HeadCell>
         <Table.HeadCell>Status</Table.HeadCell>
         <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>

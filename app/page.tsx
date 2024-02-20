@@ -28,22 +28,22 @@ const Hero = () => {
   return (
     <div className="hero-area">
       <div className="relative z-10 mx-auto max-w-2xl text-center">
-        <h1 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1.75px] text-black/100 md:text-heading-5 lg:text-[56px] lg:leading-[66px]">
+        <h1 className="mb-3 text-heading-6 font-semibold text-black/100 md:text-heading-5 lg:text-heading-2">
           Supercharge Your Web Development with <span className="hero-text block">Keep React</span>
         </h1>
-        <p className="mx-auto max-w-xs text-body-5 text-metal-600 md:max-w-lg md:text-body-3">
+        <p className="mx-auto max-w-xs text-body-4 text-metal-600 md:max-w-lg md:text-body-3">
           Unlocking the Power of Code to Transform Your Ideas into Stunning Web Realities.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-5 md:flex-row">
           <div className="flex items-center justify-between gap-5 divide-x-2 divide-metal-100 rounded-md bg-white px-4 py-3">
-            <p className="text-body-5 font-normal text-metal-500">npm install keep-react</p>
+            <p className="text-body-4 font-normal text-metal-500">npm install keep-react</p>
             <button className="pl-2" onClick={() => copyToClipboard('npm install keep-react')}>
               {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
             </button>
           </div>
           <Link
             href="/docs/getting-started/Introduction"
-            className="group h-min w-fit justify-center rounded-md border border-metal-900  bg-metal-900 px-4 py-2.5 text-center text-body-5 font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-metal-800 focus:ring-4 focus:ring-metal-800 active:bg-metal-900">
+            className="group h-min w-fit justify-center rounded-md border border-metal-900  bg-metal-900 px-4 py-2.5 text-center text-body-4 font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-metal-800 focus:ring-4 focus:ring-metal-800 active:bg-metal-900">
             Get Started
           </Link>
         </div>
@@ -68,7 +68,7 @@ const ComponentUI = () => {
       </div>
       <div className="container">
         <div className="mx-auto mb-4 px-5 text-center md:max-w-[500px] md:px-0">
-          <h2 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1px] text-black lg:text-heading-5 lg:!leading-[44px]">
+          <h2 className="mb-3 text-heading-6 font-semibold leading-8 text-black lg:text-heading-5">
             Design Excellence with Our React Component Library
           </h2>
           <p className="text-center text-body-5 font-normal leading-6 text-metal-600 md:text-body-4">
@@ -135,7 +135,7 @@ const Community = () => {
               {contributors?.map((user) => <Avatar key={user?.id} shape="circle" size="lg" img={user?.avatar_url} />)}
             </Avatar.Group>
           ) : null}
-          <h3 className="mt-2 text-description-3 font-semibold leading-[50px] tracking-[-1px] text-white md:text-description-2 lg:text-heading-5">
+          <h3 className="mt-2 text-heading-6 font-semibold leading-[50px] tracking-[-1px] text-white md:text-heading-6 lg:text-heading-5">
             Join the community
           </h3>
           <p className="max-w-sm text-body-5 font-normal text-white md:text-body-4">
@@ -198,7 +198,7 @@ const Faq = () => {
   return (
     <div className="container">
       <div className="mx-auto mb-4 px-5 text-center md:max-w-[500px] md:px-0">
-        <h2 className="mb-3 text-description-3 font-semibold leading-8 tracking-[-1px] text-black lg:text-heading-5 lg:!leading-[44px]">
+        <h2 className="mb-3 text-heading-6 font-semibold leading-8 tracking-[-1px] text-black lg:text-heading-5 lg:!leading-[44px]">
           Frequently Asked Questions
         </h2>
       </div>

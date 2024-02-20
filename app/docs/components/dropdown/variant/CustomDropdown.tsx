@@ -47,7 +47,7 @@ const CustomDropdown = () => {
               <Typography variant="p" className="text-body-5 font-medium text-metal-800">
                 {data.name}
               </Typography>
-              <Typography variant="p" className="text-body-6 font-normal text-metal-400">
+              <Typography variant="p" className="text-body-5 font-normal text-metal-400">
                 {data.title}
               </Typography>
             </div>
@@ -75,7 +75,7 @@ export const DropdownComponent = () => {
               <Typography variant="p" className="text-body-5 font-medium text-metal-800">
                 {data.name}
               </Typography>
-              <Typography variant="p" className="text-body-6 font-normal text-metal-400">
+              <Typography variant="p" className="text-body-5 font-normal text-metal-400">
                 {data.title}
               </Typography>
             </div>

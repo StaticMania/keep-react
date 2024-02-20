@@ -107,7 +107,7 @@ export const checkboxGroupTheme: keepCheckboxGroupTheme = {
       },
     },
     description: {
-      base: 'mt-1 text-body-6 md:text-body-4 font-normal',
+      base: 'mt-1 text-body-5 md:text-body-4 font-normal',
       selected: {
         on: 'text-primary-400',
         off: 'text-metal-400',

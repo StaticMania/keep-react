@@ -14,14 +14,14 @@ const Footer = () => {
             <Link href="/" className="flex">
               <Image width="113" height="40" src="/images/keep.svg" alt="Keep React" />
             </Link>
-            <p className="mt-6 max-w-lg text-body-4 font-normal text-metal-700">
+            <p className="mt-6 max-w-lg text-body-3 font-normal text-metal-700">
               Keep React is an open-source component library built on Tailwind CSS and React.js. It provides a versatile
               set of pre-designed UI components to build modern web applications.
             </p>
           </div>
           <div>
-            <h4 className="mb-3 text-body-4 font-medium uppercase text-metal-900">RESOURCES</h4>
-            <ul className="flex flex-col gap-3 text-body-4 font-normal text-metal-700">
+            <h4 className="mb-3 text-body-3 font-medium uppercase text-metal-900">RESOURCES</h4>
+            <ul className="flex flex-col gap-3 text-body-3 font-normal text-metal-700">
               <li>
                 <a href="https://github.com/StaticMania/keep-react" target="_blank">
                   GitHub
@@ -44,8 +44,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-t-metal-100 py-5 text-center">
-        <p className="text-body-4 font-normal text-metal-900">
-          &copy;{new Date().getFullYear()} All Rights Reserved by
+        <p className="text-body-3 font-normal text-metal-900">
+          &copy;{new Date().getFullYear()} All Rights Reserved by &nbsp;
           <a href="https://staticmania.com/" target="_blank" className="font-medium">
             StaticMania
           </a>

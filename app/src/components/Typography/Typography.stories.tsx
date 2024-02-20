@@ -30,25 +30,11 @@ export const DefaultTypography: Story = {
         <Typography variant="body-3">Body Text 3</Typography>
         <Typography variant="body-4">Body Text 4</Typography>
         <Typography variant="body-5">Body Text 5</Typography>
-        <Typography variant="body-6">Body Text 6</Typography>
       </>,
     ),
   },
 }
-export const DescriptionTypography: Story = {
-  args: {
-    className: 'space-y-4',
-    variant: 'div',
-    children: removeFragment(
-      <>
-        <Typography variant="description-1">Description 1</Typography>
-        <Typography variant="description-2">Description 2</Typography>
-        <Typography variant="description-3">Description 3</Typography>
-        <Typography variant="description-4">Description 4</Typography>
-      </>,
-    ),
-  },
-}
+
 export const HeadingTypography: Story = {
   args: {
     className: 'space-y-4',
@@ -71,10 +57,7 @@ export const DisplayTypography: Story = {
     variant: 'div',
     children: removeFragment(
       <>
-        <Typography variant="display-1">Display 1</Typography>
-        <Typography variant="display-2">Display 2</Typography>
-        <Typography variant="display-3">Display 3</Typography>
-        <Typography variant="display-4">Display 4</Typography>
+        <Typography variant="display">Display</Typography>
       </>,
     ),
   },

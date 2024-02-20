@@ -63,7 +63,7 @@ const Page = () => {
               </div>
               <div>
                 <p className="text-body-5 font-medium text-metal-800">Khairul Islam Ridoy</p>
-                <p className="text-body-6 font-normal text-metal-400">UI/UX Designer</p>
+                <p className="text-body-5 font-normal text-metal-400">UI/UX Designer</p>
               </div>
             </Dropdown.Item>
             <Dropdown.Item>
@@ -72,7 +72,7 @@ const Page = () => {
               </div>
               <div>
                 <p className="text-body-5 font-medium text-metal-800">Zakir Hossain</p>
-                <p className="text-body-6 font-normal text-metal-400">Web Designer</p>
+                <p className="text-body-5 font-normal text-metal-400">Web Designer</p>
               </div>
             </Dropdown.Item>
             <Dropdown.Item>
@@ -81,7 +81,7 @@ const Page = () => {
               </div>
               <div>
                 <p className="text-body-5 font-medium text-metal-800">Atique Hasan</p>
-                <p className="text-body-6 font-normal text-metal-400">CEO of StaticMania</p>
+                <p className="text-body-5 font-normal text-metal-400">CEO of StaticMania</p>
               </div>
             </Dropdown.Item>
             <Dropdown.Item>
@@ -90,7 +90,7 @@ const Page = () => {
               </div>
               <div>
                 <p className="text-body-5 font-medium text-metal-800">Kausar Ahamed Pial</p>
-                <p className="text-body-6 font-normal text-metal-400">CTO of StaticMania</p>
+                <p className="text-body-5 font-normal text-metal-400">CTO of StaticMania</p>
               </div>
             </Dropdown.Item>
             <Dropdown.Item>
@@ -99,7 +99,7 @@ const Page = () => {
               </div>
               <div>
                 <p className="text-body-5 font-medium text-metal-800">Md Ariful Islam</p>
-                <p className="text-body-6 font-normal text-metal-400">Web Developer</p>
+                <p className="text-body-5 font-normal text-metal-400">Web Developer</p>
               </div>
             </Dropdown.Item>
           </Dropdown.List>

@@ -116,7 +116,7 @@ export const DefaultTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[290px]">
-            <p className="text-body-6 font-medium text-metal-400">Type</p>
+            <p className="text-body-5 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
           <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
@@ -428,7 +428,7 @@ export const CashOutTransitionTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[290px]">
-            <p className="text-body-6 font-medium text-metal-400">Type</p>
+            <p className="text-body-5 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[183px]" icon={<ArrowsDownUp size={14} color="#8897AE" />}>
             Date
@@ -454,7 +454,7 @@ export const CashOutTransitionTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Paypal</p>
-                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
+                      <span className="text-body-5 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -462,7 +462,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">$652.00</p>
@@ -476,7 +476,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button variant="outline" size="xs" circle>
@@ -495,7 +495,7 @@ export const CashOutTransitionTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Visa</p>
-                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
+                      <span className="text-body-5 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -503,7 +503,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">$534.00</p>
@@ -518,7 +518,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button variant="outline" size="xs" circle>
@@ -537,7 +537,7 @@ export const CashOutTransitionTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Stripe</p>
-                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
+                      <span className="text-body-5 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -545,7 +545,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Mar 12, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">4:00 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">4:00 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">$123.00</p>
@@ -559,7 +559,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button variant="outline" size="xs" circle>
@@ -578,7 +578,7 @@ export const CashOutTransitionTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Western Union</p>
-                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
+                      <span className="text-body-5 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -586,7 +586,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Nov 23, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">5:30 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">5:30 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">$434.00</p>
@@ -600,7 +600,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button variant="outline" size="xs" circle>
@@ -619,7 +619,7 @@ export const CashOutTransitionTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Mastercard</p>
-                      <span className="text-body-6 font-normal text-metal-500">Withdraw</span>
+                      <span className="text-body-5 font-normal text-metal-500">Withdraw</span>
                     </div>
                   </div>
                 </div>
@@ -627,7 +627,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Apr 23, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">7:30 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">7:30 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">$786.00</p>
@@ -641,7 +641,7 @@ export const CashOutTransitionTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <Button variant="outline" size="xs" circle>
@@ -685,7 +685,7 @@ export const OrdersTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[302px]">
-            <p className="text-body-6 font-medium text-metal-400">Order no.</p>
+            <p className="text-body-5 font-medium text-metal-400">Order no.</p>
           </Table.HeadCell>
           <Table.HeadCell
             className="min-w-[165px]"
@@ -721,7 +721,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-0.svg" alt="country" />
@@ -756,7 +756,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 23, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-1.svg" alt="country" />
@@ -791,7 +791,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 31, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">5:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">5:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-2.svg" alt="country" />
@@ -826,7 +826,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-5.svg" alt="country" />
@@ -861,7 +861,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 07, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">02:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">02:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-4.svg" alt="country" />
@@ -896,7 +896,7 @@ export const OrdersTable: Story = {
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <img src="/images/icon/country-5.svg" alt="country" />
@@ -958,7 +958,7 @@ export const FileUploadedTable: Story = {
         </Table.Caption>
         <Table.Head>
           <Table.HeadCell className="min-w-[344px]">
-            <p className="text-body-6 font-medium text-metal-400">File no.</p>
+            <p className="text-body-5 font-medium text-metal-400">File no.</p>
           </Table.HeadCell>
           <Table.HeadCell className="min-w-[160px]">File size</Table.HeadCell>
           <Table.HeadCell className="min-w-[171px]">Date uploaded</Table.HeadCell>
@@ -976,7 +976,7 @@ export const FileUploadedTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+                      <p className="text-body-5 font-normal text-metal-500">200 KB</p>
                     </div>
                   </div>
                 </div>
@@ -985,11 +985,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Total 0.2 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+              <p className="text-body-5 font-normal text-metal-500">200 KB</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">4:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
@@ -1023,7 +1023,7 @@ export const FileUploadedTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">700 KB</p>
+                      <p className="text-body-5 font-normal text-metal-500">700 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1032,11 +1032,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Total 0.7 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">700 KB</p>
+              <p className="text-body-5 font-normal text-metal-500">700 KB</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 12, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">4:12 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">4:12 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 15, 2023</p>
@@ -1070,7 +1070,7 @@ export const FileUploadedTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">500 KB</p>
+                      <p className="text-body-5 font-normal text-metal-500">500 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1079,11 +1079,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Total 0.5 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">500 KB</p>
+              <p className="text-body-5 font-normal text-metal-500">500 KB</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Nov 23, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">02:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">02:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Nov 10, 2023</p>
@@ -1117,7 +1117,7 @@ export const FileUploadedTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">900 KB</p>
+                      <p className="text-body-5 font-normal text-metal-500">900 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1126,11 +1126,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Total 0.9 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">900 KB</p>
+              <p className="text-body-5 font-normal text-metal-500">900 KB</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Feb 21, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
@@ -1164,7 +1164,7 @@ export const FileUploadedTable: Story = {
 
                     <div>
                       <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+                      <p className="text-body-5 font-normal text-metal-500">200 KB</p>
                     </div>
                   </div>
                 </div>
@@ -1173,11 +1173,11 @@ export const FileUploadedTable: Story = {
 
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Total 0.1 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">100 KB</p>
+              <p className="text-body-5 font-normal text-metal-500">100 KB</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Mar 25, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">8:45 pm</p>
+              <p className="text-body-5 font-normal text-metal-500">8:45 pm</p>
             </Table.Cell>
             <Table.Cell>
               <p className="text-body-5 font-medium text-metal-500">Apr 10, 2023</p>

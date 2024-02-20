@@ -18,11 +18,11 @@ const PostCard = () => {
         <Card.Container className="absolute flex items-start px-5 py-3">
           <Card.Container>
             <Card.Title className=" font-medium text-white md:text-body-2">Keep Design System</Card.Title>
-            <Card.Description className="text-body-6 font-normal text-white md:text-body-5">
+            <Card.Description className="text-body-5 font-normal text-white md:text-body-5">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo excepturi quam incidunt tempora?
             </Card.Description>
             <Card.Link
-              className="mt-3 flex items-center gap-1 text-body-6 font-normal text-white md:text-body-5"
+              className="mt-3 flex items-center gap-1 text-body-5 font-normal text-white md:text-body-5"
               href="/"
               icon={<CaretRight size={16} color="#fff" />}
               iconPosition="left">
@@ -49,7 +49,7 @@ const PostCard = () => {
             <Card.Title className="text-body-5 font-medium text-metal-700 md:text-body-2">
               Keep Design System
             </Card.Title>
-            <Card.Description className="text-body-6 font-normal text-metal-500 md:text-body-5">
+            <Card.Description className="text-body-5 font-normal text-metal-500 md:text-body-5">
               Component design systems can help developers to be more productive by providing them with a ready-made set
               of components to use.
             </Card.Description>
@@ -84,12 +84,12 @@ export const CardComponent = () => {
             <Card.Title className=" md:text-body-2 font-medium text-white">
               Keep React
             </Card.Title>
-            <Card.Description className="text-body-6 md:text-body-5 font-normal text-white">
+            <Card.Description className="text-body-5 md:text-body-5 font-normal text-white">
               Component design systems can help developers to be more productive
               by providing them with a ready-made set of components to use.
             </Card.Description>
             <Card.Link
-              className="mt-3 flex items-center gap-1 text-body-6 md:text-body-5 font-normal text-white"
+              className="mt-3 flex items-center gap-1 text-body-5 md:text-body-5 font-normal text-white"
               href="/"
               icon={<CaretRight size={16} color="#fff" />}
               iconPosition="left"
@@ -117,7 +117,7 @@ export const CardComponent = () => {
             <Card.Title className="text-body-5 md:text-body-2 font-medium text-metal-700">
               Keep React
             </Card.Title>
-            <Card.Description className="text-body-6 md:text-body-5 font-normal text-metal-500">
+            <Card.Description className="text-body-5 md:text-body-5 font-normal text-metal-500">
               Component design systems can help developers to be more productive
               by providing them with a ready-made set of components to use.
             </Card.Description>

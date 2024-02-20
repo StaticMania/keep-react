@@ -67,7 +67,7 @@ export const timelineTheme: keepTimelineTheme = {
     },
   },
   body: {
-    base: '!mb-4 text-body-6 md:text-body-3 font-normal text-metal-500',
+    base: '!mb-4 text-body-5 md:text-body-3 font-normal text-metal-500',
   },
   content: {
     horizontal: {
@@ -107,6 +107,6 @@ export const timelineTheme: keepTimelineTheme = {
     },
   },
   title: {
-    base: 'mb-6 text-body-5 md:text-description-4 font-semibold text-metal-700',
+    base: 'mb-6 text-body-5 md:text-heading-6 font-semibold text-metal-700',
   },
 }

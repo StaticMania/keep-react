@@ -15,7 +15,7 @@ const ProfileCard = () => {
           <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/11.jpg" />
           <Card.Container className="ml-3">
             <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">Md Ariful Islam</Card.Title>
-            <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">Product Designer</Card.Title>
+            <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">Product Designer</Card.Title>
           </Card.Container>
         </Card.Container>
       </Card>
@@ -28,7 +28,7 @@ const ProfileCard = () => {
           <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">
             Khairul Islam Ridoy
           </Card.Title>
-          <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+          <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
         </Card.Container>
         <Card.Container className="circled mx-auto flex max-w-[220px] items-center justify-center divide-x divide-metal-200 rounded-md border border-metal-200 p-1 md:p-2">
           <Card.Link
@@ -69,7 +69,7 @@ export const CardComponent = () => {
           <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/11.jpg" />
           <Card.Container className="ml-3">
             <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">Md Ariful Islam</Card.Title>
-            <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">Product Designer</Card.Title>
+            <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">Product Designer</Card.Title>
           </Card.Container>
         </Card.Container>
       </Card>
@@ -86,7 +86,7 @@ export const CardComponent = () => {
           <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">
             Khairul Islam Ridoy
           </Card.Title>
-          <Card.Title className="!text-body-6 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+          <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
         </Card.Container>
         <Card.Container className="circled mx-auto flex max-w-[220px] items-center justify-center divide-x divide-metal-200 rounded-md border border-metal-200 p-1 md:p-2">
           <Card.Link

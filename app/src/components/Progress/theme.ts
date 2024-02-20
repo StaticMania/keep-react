@@ -63,11 +63,11 @@ export const progressTheme: ProgressThemeInterface = {
     text: {
       base: 'absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform',
       content: {
-        sm: 'text-body-6 font-normal text-primary-500',
+        sm: 'text-body-5 font-normal text-primary-500',
         md: 'text-body-4 font-normal text-primary-500',
         lg: 'text-body-3 font-medium text-primary-500',
         xl: 'text-body-2 font-semibold text-primary-500',
-        '2xl': 'text-description-2 font-semibold text-primary-500',
+        '2xl': 'text-heading-6 font-semibold text-primary-500',
       },
     },
     size: {
@@ -87,11 +87,11 @@ export const progressTheme: ProgressThemeInterface = {
     text: {
       base: 'w-10 text-end',
       content: {
-        sm: 'text-body-6 font-normal text-primary-500',
+        sm: 'text-body-5 font-normal text-primary-500',
         md: 'text-body-4 font-normal text-primary-500',
         lg: 'text-body-3 font-medium text-primary-500',
         xl: 'text-body-2 font-semibold text-primary-500',
-        '2xl': 'text-description-2 font-semibold text-primary-500',
+        '2xl': 'text-heading-6 font-semibold text-primary-500',
       },
     },
     size: {
