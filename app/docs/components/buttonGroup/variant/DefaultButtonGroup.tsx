@@ -14,8 +14,8 @@ const DefaultButtonGroup = () => {
 }
 
 const DefaultButtonGroupCode = `
-"use client";
-import { Button } from "keep-react";
+'use client'
+import { Button } from 'keep-react'
 
 export const ButtonGroupComponent = () => {
   return (

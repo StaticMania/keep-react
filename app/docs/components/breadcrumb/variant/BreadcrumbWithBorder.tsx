@@ -1,3 +1,4 @@
+'use client'
 import { Breadcrumb } from '../../../../src'
 
 const BreadcrumbWithBorder = () => {

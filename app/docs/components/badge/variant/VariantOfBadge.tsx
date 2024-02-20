@@ -60,8 +60,8 @@ const VariantOfBadge = () => {
 }
 
 const VariantOfBadgeCode = `
-"use client";
-import { Badge } from "keep-react";
+'use client'
+import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {
   return (

@@ -130,9 +130,11 @@ const Community = () => {
     <div className="container">
       <div className="flex flex-col items-start justify-between gap-5 rounded-md bg-[url('https://staticmania.cdn.prismic.io/staticmania/59c3bc39-d8bc-4382-80e9-db3c7f10230d_community.svg')] bg-cover bg-center bg-no-repeat p-8 md:px-8 md:py-10 lg:flex-row lg:items-center lg:gap-0 lg:px-28 lg:py-12">
         <div>
-          <Avatar.Group>
-            {contributors?.map((user) => <Avatar key={user?.id} shape="circle" size="lg" img={user?.avatar_url} />)}
-          </Avatar.Group>
+          {contributors?.length ? (
+            <Avatar.Group>
+              {contributors?.map((user) => <Avatar key={user?.id} shape="circle" size="lg" img={user?.avatar_url} />)}
+            </Avatar.Group>
+          ) : null}
           <h3 className="mt-2 text-description-3 font-semibold leading-[50px] tracking-[-1px] text-white md:text-description-2 lg:text-heading-5">
             Join the community
           </h3>

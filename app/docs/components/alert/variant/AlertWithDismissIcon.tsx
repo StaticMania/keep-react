@@ -1,6 +1,6 @@
 'use client'
-import { Alert } from '../../../../src'
 import { useState } from 'react'
+import { Alert } from '../../../../src'
 
 const AlertWithDismissIcon = () => {
   const [showAlert, setShowAlert] = useState(false)
@@ -22,8 +22,8 @@ const AlertWithDismissIcon = () => {
 
 const AlertWithDismissIconCode = `
 'use client'
-import { Alert } from '../../../../src'
 import { useState } from 'react'
+import { Alert } from 'keep-react'
 
 const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false)

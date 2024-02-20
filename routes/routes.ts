@@ -281,14 +281,6 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
-    name: 'Statistic',
-    folderName: 'Statistic',
-    href: '/docs/components/statistic',
-    tag: false,
-    deprecate: false,
-  },
-  {
-    id: generatedID(),
     name: 'Steps',
     folderName: 'Steps',
     href: '/docs/components/steps',

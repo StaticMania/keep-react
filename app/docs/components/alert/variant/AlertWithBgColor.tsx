@@ -1,3 +1,4 @@
+'use client'
 import { Alert } from '../../../../src'
 
 const AlertWithBgColor = () => {
@@ -53,6 +54,7 @@ const AlertWithBgColor = () => {
 }
 
 const AlertWithBgColorCode = `
+'use client'
 import { Alert } from 'keep-react'
 
 export const AlertComponent = () => {

@@ -1,5 +1,6 @@
 import { DefaultDropdown, DefaultDropdownCode } from './variant/DefaultDropdown'
 import { DropdownWithIcon, DropdownWithIconCode } from './variant/DropdownWithIcon'
+import { CustomDropdown, CustomDropdownCode } from './variant/CustomDropdown'
 import { dropdownAPIData } from './DropdownApi'
 import CodePreview from '../../../components/CodePreview'
 import ComponentApi from '../../../components/ComponentApi'
@@ -10,7 +11,7 @@ The Dropdown Component is a versatile user interface element that provides users
 
 ## Default Dropdown
 
-The Default Dropdown represents some list items as a dropdown items with `<Dropdown.Item>` components and the `<Dropdown>` is a wrapper button where user can click to show the dropdown items. `dismissOnClick={true}` props means when the user select a dropdown item dropdown will be closed.
+The Default Dropdown represents a list of items as dropdown items with `<Dropdown.Item>` components.
 
 <CodePreview github="Dropdown" code={DefaultDropdownCode}>
   <DefaultDropdown />
@@ -18,10 +19,18 @@ The Default Dropdown represents some list items as a dropdown items with `<Dropd
 
 ## Dropdown With Icon
 
-The Dropdown with Both Side Icon component combines dropdown items with icons on both sides of the label.
+The Dropdown with Icon component allows you to include icons within dropdown items.
 
 <CodePreview github="Dropdown" code={DropdownWithIconCode}>
   <DropdownWithIcon />
+</CodePreview>
+
+## Customize Dropdown
+
+Customize the dropdown according to your preferences.
+
+<CodePreview github="Dropdown" code={CustomDropdownCode}>
+  <CustomDropdown />
 </CodePreview>
 
 ## API Reference

@@ -1,3 +1,4 @@
+'use client'
 import { Breadcrumb } from '../../../../src'
 
 const DefaultBreadcrumb = () => {
@@ -19,6 +20,7 @@ const DefaultBreadcrumb = () => {
 }
 
 const DefaultBreadcrumbCode = `
+'use client'
 import { Breadcrumb } from 'keep-react'
 
 const BreadcrumbComponent = () => {

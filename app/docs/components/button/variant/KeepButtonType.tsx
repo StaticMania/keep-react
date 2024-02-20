@@ -43,7 +43,8 @@ const KeepButtonType = () => {
 }
 
 const KeepButtonTypeCode = `
-import { Button } from "keep-react";
+'use client'
+import { Button } from 'keep-react'
 
 export const ButtonComponent = () => {
   return (

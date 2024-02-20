@@ -1,3 +1,4 @@
+'use client'
 import { Alert } from '../../../../src'
 
 const AlertWithColorVariant = () => {
@@ -53,6 +54,7 @@ const AlertWithColorVariant = () => {
 }
 
 const AlertWithColorVariantCode = `
+'use client'
 import { Alert } from 'keep-react'
 
 export const AlertComponent = () => {

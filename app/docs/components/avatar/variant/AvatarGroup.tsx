@@ -1,3 +1,4 @@
+'use client'
 import { Avatar } from '../../../../src'
 
 const AvatarGroup = () => {
@@ -13,6 +14,7 @@ const AvatarGroup = () => {
 }
 
 const AvatarGroupCode = `
+'use client'
 import { Avatar } from 'keep-react'
 
 const AvatarGroupComponent = () => {

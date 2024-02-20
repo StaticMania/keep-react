@@ -1,6 +1,6 @@
 'use client'
-import { Button } from '../../../../src'
 import { ChatCircleDots, Cube, Gear } from 'phosphor-react'
+import { Button } from '../../../../src'
 
 const ButtonGroupWithIcon = () => {
   return (
@@ -24,9 +24,9 @@ const ButtonGroupWithIcon = () => {
 }
 
 const ButtonGroupWithIconCode = `
-"use client";
-import { Button } from "keep-react";
-import { ChatCircleDots, Cube, Gear } from "phosphor-react";
+'use client'
+import { Button } from 'keep-react'
+import { ChatCircleDots, Cube, Gear } from 'phosphor-react'
 
 export const ButtonGroupComponent = () => {
   return (

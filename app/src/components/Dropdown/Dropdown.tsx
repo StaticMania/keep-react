@@ -21,6 +21,7 @@ import { FC, ReactNode, useRef, useState } from 'react'
 import { cn } from '../../helpers/cn'
 import { Item } from './Item'
 import { List } from './List'
+import { dropdownTheme } from './theme'
 
 interface DropdownProps {
   children?: ReactNode
@@ -37,7 +38,7 @@ export const DropdownComponent: FC<DropdownProps> = ({
   action,
   actionClassName,
   showArrow = false,
-  placement = 'bottom-end',
+  placement = 'bottom-start',
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const arrowRef = useRef(null)
@@ -67,13 +68,7 @@ export const DropdownComponent: FC<DropdownProps> = ({
   const headingId = useId()
   return (
     <>
-      <div
-        className={cn(
-          'inline-block cursor-pointer select-none rounded-lg border border-metal-200 bg-white p-2.5 text-body-5 font-normal text-white',
-          actionClassName,
-        )}
-        ref={refs.setReference}
-        {...getReferenceProps()}>
+      <div className={cn(dropdownTheme.action, actionClassName)} ref={refs.setReference} {...getReferenceProps()}>
         {action ?? <DotsThreeOutline weight="thin" size={24} color="#444" />}
       </div>
 
@@ -84,7 +79,7 @@ export const DropdownComponent: FC<DropdownProps> = ({
             style={floatingStyles}
             aria-labelledby={headingId}
             {...getFloatingProps()}
-            className={cn('w-[16rem] rounded-xl border border-metal-100 bg-white p-4 outline-none', className)}>
+            className={cn(dropdownTheme.root, className)}>
             {showArrow && (
               <FloatingArrow
                 width={20}

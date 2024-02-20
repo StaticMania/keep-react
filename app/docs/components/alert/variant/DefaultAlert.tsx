@@ -1,3 +1,4 @@
+'use client'
 import { Alert } from '../../../../src'
 
 const DefaultAlert = () => {
@@ -15,6 +16,7 @@ const DefaultAlert = () => {
 }
 
 const DefaultAlertCode = `
+'use client'
 import { Alert } from 'keep-react'
 
 export const AlertComponent = () => {

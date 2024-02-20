@@ -1,3 +1,4 @@
+'use client'
 import { Avatar } from '../../../../src'
 
 const StatusOfAvatar = () => {
@@ -10,6 +11,7 @@ const StatusOfAvatar = () => {
 }
 
 const StatusOfAvatarCode = `
+'use client'
 import { Avatar } from "keep-react";
 
 export const AvatarComponent = () => {

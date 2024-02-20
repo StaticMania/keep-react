@@ -1,3 +1,4 @@
+'use client'
 import { Alert, Button, CheckBox } from '../../../../src'
 
 const AlertWithCard = () => {
@@ -158,6 +159,7 @@ const AlertWithCard = () => {
 }
 
 const AlertWithCardCode = `
+'use client'
 import { Alert, Button, CheckBox } from 'keep-react'
 
 export const AlertComponent = () => {
