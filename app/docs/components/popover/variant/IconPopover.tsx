@@ -20,7 +20,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
             Step - 1 / 5
           </Typography>
           <Typography className="flex items-center justify-between gap-5 pt-6">
@@ -48,7 +48,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
             Step - 1 / 5
           </Typography>
           <Typography className="flex items-center justify-between gap-5 pt-6">
@@ -76,7 +76,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
             Step - 1 / 5
           </Typography>
           <Typography className="flex items-center justify-between gap-5 pt-6">
@@ -104,7 +104,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
             Step - 1 / 5
           </Typography>
           <Typography className="flex items-center justify-between gap-5 pt-6">
@@ -143,7 +143,7 @@ export const PopoverComponent = () => {
             industrys standard dummy text ever since
           </Popover.Description>
         </div>
-        <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+        <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
           Step - 1 / 5
         </Typography>
         <Typography className="flex items-center justify-between gap-5 pt-6">

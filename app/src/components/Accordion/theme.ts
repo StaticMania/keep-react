@@ -6,7 +6,7 @@ export const accordionTheme: keepAccordionTheme = {
     open: '',
   },
   content: {
-    base: 'select-none text-body-4 font-normal text-metal-500 pb-5 px-6',
+    base: 'select-none text-body-3 font-normal text-metal-500 pb-5 px-6',
   },
   panel: {
     flush: {
@@ -22,6 +22,6 @@ export const accordionTheme: keepAccordionTheme = {
     },
   },
   title: {
-    base: 'select-none text-body-2 font-medium text-metal-700 first-letter:mr-1 first-letter:text-primary-500',
+    base: 'select-none text-body-1 font-medium text-metal-700 first-letter:mr-1 first-letter:text-primary-500',
   },
 }

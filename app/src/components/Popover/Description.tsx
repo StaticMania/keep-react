@@ -12,6 +12,6 @@ export const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTM
       return () => setDescriptionId(undefined)
     }, [id, setDescriptionId])
 
-    return <p {...props} ref={ref} id={id} className={cn('text-body-5 font-normal text-metal-600', props.className)} />
+    return <p {...props} ref={ref} id={id} className={cn('text-body-4 font-normal text-metal-600', props.className)} />
   },
 )

@@ -8,7 +8,7 @@ const AlertWithCard = () => {
         <Alert.Container className="flex items-start">
           <Alert.Icon />
           <Alert.Body className="flex flex-col items-start gap-3">
-            <Alert.Title>Alert here</Alert.Title>
+            <Alert.Title className="text-body-2">Alert here</Alert.Title>
             <Alert.Description className="block w-full sm:line-clamp-none">
               A short description followed by two actions items.
             </Alert.Description>

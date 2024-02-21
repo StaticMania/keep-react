@@ -44,10 +44,10 @@ const CustomDropdown = () => {
               <Avatar size="lg" color="secondary" img={data.img} />
             </div>
             <div>
-              <Typography variant="p" className="text-body-5 font-medium text-metal-800">
+              <Typography variant="p" className="text-body-3 font-medium text-metal-800">
                 {data.name}
               </Typography>
-              <Typography variant="p" className="text-body-5 font-normal text-metal-400">
+              <Typography variant="p" className="text-body-4 font-normal text-metal-400">
                 {data.title}
               </Typography>
             </div>

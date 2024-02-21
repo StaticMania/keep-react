@@ -61,12 +61,12 @@ export const buttonTheme: keepButtonTheme = {
       'bg-error-500 hover:bg-error-600 text-white focus-visible:ring-error-100 disabled:cursor-not-allowed disabled:bg-error-100',
   },
   size: {
-    xs: 'text-body-5 px-[14px] py-2 font-medium rounded-md',
-    sm: 'text-body-5 px-5 py-2.5 font-medium',
-    md: 'text-body-4 px-6 py-3 font-medium',
-    lg: 'text-body-3 px-6 py-4 font-medium',
-    xl: 'text-body-3 px-6 py-[17px] font-medium',
-    '2xl': 'text-body-3 px-6 py-[18px] font-medium',
+    xs: 'text-body-4 px-[14px] py-2 font-medium rounded-md',
+    sm: 'text-body-4 px-5 py-2.5 font-medium',
+    md: 'text-body-3 px-6 py-3 font-medium',
+    lg: 'text-body-2 px-6 py-4 font-medium',
+    xl: 'text-body-2 px-6 py-[17px] font-medium',
+    '2xl': 'text-body-1 px-6 py-[18px] font-medium',
   },
   iconBtn: {
     xs: 'h-6 w-6',

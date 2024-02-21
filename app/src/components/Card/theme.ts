@@ -67,5 +67,5 @@ export const cardTheme: KeepCardTheme = {
       },
     },
   },
-  description: 'text-metal-500 text-body-5 font-normal md:text-body-4',
+  description: 'text-metal-500 text-body-4 font-normal md:text-body-3',
 }

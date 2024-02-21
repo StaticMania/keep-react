@@ -19,14 +19,14 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
               Step - 1 / 5
             </Typography>
             <Typography className="flex items-center justify-between gap-5 pt-6">
-              <Button color="secondary" size="sm" variant="outline" className="w-full">
+              <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
-              <Button color="primary" size="sm" className="w-full">
+              <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
             </Typography>
@@ -45,14 +45,14 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
               Step - 1 / 5
             </Typography>
             <Typography className="flex items-center justify-between gap-5 pt-6">
-              <Button color="secondary" size="sm" variant="outline" className="w-full">
+              <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
-              <Button color="primary" size="sm" className="w-full">
+              <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
             </Typography>
@@ -71,14 +71,14 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
               Step - 1 / 5
             </Typography>
             <Typography className="flex items-center justify-between gap-5 pt-6">
-              <Button color="secondary" size="sm" variant="outline" className="w-full">
+              <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
-              <Button color="primary" size="sm" className="w-full">
+              <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
             </Typography>
@@ -97,14 +97,14 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
               Step - 1 / 5
             </Typography>
             <Typography className="flex items-center justify-between gap-5 pt-6">
-              <Button color="secondary" size="sm" variant="outline" className="w-full">
+              <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
-              <Button color="primary" size="sm" className="w-full">
+              <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
             </Typography>
@@ -135,14 +135,14 @@ export const PopoverComponent = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industrys standard dummy text ever since
           </Popover.Description>
-          <Typography variant="p" className="mt-5 text-body-5 font-normal text-metal-600">
+          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
             Step - 1 / 5
           </Typography>
           <Typography className="flex items-center justify-between gap-5 pt-6">
-            <Button color="secondary" size="sm" variant="outline" className="w-full">
+            <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
             </Button>
-            <Button color="primary" size="sm" className="w-full">
+            <Button color="primary" size="xs" className="w-full">
               Next
             </Button>
           </Typography>

@@ -33,11 +33,11 @@ export const breadcrumbTheme: BreadcrumbTheme = {
   item: {
     base: 'flex items-center gap-1',
     icon: {
-      slash: 'flex h-4 w-4 items-center justify-center text-xl text-metal-600',
-      caret: 'flex h-4 w-4 items-center justify-center text-metal-600',
+      slash: 'flex h-4 w-4 items-center justify-center text-body-4 text-metal-600',
+      caret: 'flex h-4 w-4 items-center justify-center text-body-4 text-metal-600',
     },
     text: {
-      base: 'rounded-md px-[6px] py-1 text-body-5 font-medium transition-all duration-150 hover:text-primary-500',
+      base: 'rounded-md px-[6px] py-1 text-body-4 font-medium transition-all duration-150 hover:text-primary-500',
       activeType: {
         base: 'bg-primary-25 text-primary-500',
         border: 'border border-primary-500 text-primary-500',

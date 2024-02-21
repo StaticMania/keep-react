@@ -36,7 +36,7 @@ export const paginationTheme: keepPaginationTheme = {
     base: 'flex items-center gap-[6px]',
   },
   item: {
-    base: 'flex h-9 w-9 items-center justify-center text-body-4 font-medium transition-colors duration-300',
+    base: 'flex h-9 w-9 items-center justify-center text-body-3 font-medium transition-colors duration-300',
     shape: {
       rounded: 'rounded-md',
       circle: 'rounded-full',
@@ -47,10 +47,10 @@ export const paginationTheme: keepPaginationTheme = {
     },
   },
   goto: {
-    base: 'flex items-center gap-2 text-body-5 font-medium text-metal-400',
+    base: 'flex items-center gap-2 text-body-4 font-medium text-metal-400',
   },
   navigator: {
-    base: 'flex items-center justify-center gap-1 border border-metal-100 bg-white text-body-5 font-medium transition-all duration-300 hover:bg-metal-25 text-metal-600',
+    base: 'flex items-center justify-center gap-1 border border-metal-100 bg-white text-body-4 font-medium transition-all duration-300 hover:bg-metal-25 text-metal-600',
     shape: {
       rounded: 'rounded-lg px-2.5 py-2',
       circle: 'h-9 w-9 rounded-full',

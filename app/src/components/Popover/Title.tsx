@@ -13,7 +13,7 @@ export const PopoverHeading = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadi
     }, [id, setLabelId])
 
     return (
-      <h2 {...props} ref={ref} id={id} className={cn('text-body-2 font-medium text-metal-900', props.className)}>
+      <h2 {...props} ref={ref} id={id} className={cn('text-body-1 font-medium text-metal-900', props.className)}>
         {props.children}
       </h2>
     )

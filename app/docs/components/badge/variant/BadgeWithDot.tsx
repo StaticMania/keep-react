@@ -3,7 +3,7 @@ import { Badge } from '../../../../src'
 
 const BadgeWithDot = () => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 py-1">
       <Badge showIcon={true} color="primary">
         Primary
       </Badge>

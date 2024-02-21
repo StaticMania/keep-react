@@ -12,10 +12,10 @@ const ProfileCard = () => {
           components to use. This can save time and effort, and it can also help to reduce the risk of errors.
         </Card.Description>
         <Card.Container className="flex items-center">
-          <Avatar size="lg" shape="circle" img="https://randomuser.me/api/portraits/men/11.jpg" />
+          <Avatar size="xl" shape="circle" img="https://randomuser.me/api/portraits/men/11.jpg" />
           <Card.Container className="ml-3">
-            <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">Md Ariful Islam</Card.Title>
-            <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">Product Designer</Card.Title>
+            <Card.Title className="text-body-4 font-semibold text-metal-800 md:text-body-3">Md Ariful Islam</Card.Title>
+            <Card.Title className="text-body-5 font-normal text-metal-400 md:text-body-4">Product Designer</Card.Title>
           </Card.Container>
         </Card.Container>
       </Card>
@@ -25,10 +25,10 @@ const ProfileCard = () => {
           <Avatar shape="circle" img="https://randomuser.me/api/portraits/men/50.jpg" size="2xl" />
         </Card.Container>
         <Card.Container className="text-center">
-          <Card.Title className="text-body-5 font-semibold text-metal-800 md:text-body-4">
+          <Card.Title className="text-body-4 font-semibold text-metal-800 md:text-body-3">
             Khairul Islam Ridoy
           </Card.Title>
-          <Card.Title className="!text-body-5 font-normal text-metal-400 md:text-body-5">UI/UX Designer</Card.Title>
+          <Card.Title className="text-body-5 font-normal text-metal-400 md:text-body-4">UI/UX Designer</Card.Title>
         </Card.Container>
         <Card.Container className="circled mx-auto flex max-w-[220px] items-center justify-center divide-x divide-metal-200 rounded-md border border-metal-200 p-1 md:p-2">
           <Card.Link

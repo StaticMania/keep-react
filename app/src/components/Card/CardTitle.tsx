@@ -22,7 +22,5 @@ export interface CardTitleProps {
 }
 
 export const CardTitle: FC<CardTitleProps> = ({ children, className }) => {
-  return (
-    <p className={cn('text-body-4 font-bold tracking-tight text-metal-700 md:text-body-2', className)}>{children}</p>
-  )
+  return <p className={cn('text-body-3 font-bold text-metal-700 md:text-body-1', className)}>{children}</p>
 }

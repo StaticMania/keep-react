@@ -45,10 +45,10 @@ interface BadgeTheme {
 }
 
 export const badgeTheme: BadgeTheme = {
-  base: 'inline-flex w-fit items-center font-inherit rounded-full text-body-5 font-medium cursor-pointer',
+  base: 'inline-flex w-fit items-center font-medium rounded-full cursor-pointer',
   size: {
-    sm: 'px-1 h-4',
-    md: 'px-2 h-5',
+    sm: 'px-1.5 h-4 text-body-5',
+    md: 'px-2.5 h-5 text-body-4',
   },
   disabled: 'pointer-events-none cursor-not-allowed select-none bg-metal-300 opacity-30',
   variant: {

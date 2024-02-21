@@ -3,7 +3,7 @@ import { Badge } from '../../../../src'
 
 const DefaultBadge = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <div className="flex flex-wrap items-end gap-2 py-1">
       <Badge color="primary">Primary</Badge>
       <Badge color="secondary">Secondary</Badge>
       <Badge color="success">Success</Badge>

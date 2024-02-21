@@ -17,16 +17,16 @@ const HorizontalUpload = () => {
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
         </Upload.Icon>
         <Upload.Text>
-          <Typography variant="p" className="text-body-4 font-medium text-metal-600">
+          <Typography variant="p" className="text-body-3 font-medium text-metal-600">
             Choose File to Upload
           </Typography>
-          <Typography variant="p" className="text-body-5 font-normal text-metal-400">
+          <Typography variant="p" className="text-body-4 font-normal text-metal-400">
             PDF and JPG formats
           </Typography>
         </Upload.Text>
       </Upload.Body>
       <Upload.Footer isFileExists={files.length > 0}>
-        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-5 font-normal text-metal-600">
+        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
         </Typography>
@@ -57,16 +57,16 @@ export const UploadComponent = () => {
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
         </Upload.Icon>
         <Upload.Text>
-          <Typography variant="p" className="text-body-4 font-medium text-metal-600">
+          <Typography variant="p" className="text-body-3 font-medium text-metal-600">
             Choose File to Upload
           </Typography>
-          <Typography variant="p" className="text-body-5 font-normal text-metal-400">
+          <Typography variant="p" className="text-body-4 font-normal text-metal-400">
             PDF and JPG formats
           </Typography>
         </Upload.Text>
       </Upload.Body>
       <Upload.Footer isFileExists={files.length > 0}>
-        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-5 font-normal text-metal-600">
+        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
         </Typography>

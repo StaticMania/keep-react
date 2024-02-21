@@ -14,7 +14,7 @@ export const File: FC<FileProps> = ({ children, className, onClick, icon = <Tras
   return (
     <li
       className={cn(
-        'flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-5 font-normal capitalize text-metal-600',
+        'flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-4 font-normal capitalize text-metal-600',
         className,
       )}>
       {children}
