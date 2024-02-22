@@ -58,9 +58,7 @@ const DefaultRadio = () => {
           value="China"
           disabled={true}
         />
-        <Label htmlFor="country-4" disabled={true}>
-          China (disabled)
-        </Label>
+        <Label htmlFor="country-4">China (disabled)</Label>
       </div>
     </fieldset>
   )

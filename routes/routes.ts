@@ -241,14 +241,6 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
-    name: 'Search Bar',
-    folderName: 'SearchBar',
-    href: '/docs/components/searchBar',
-    tag: false,
-    deprecate: false,
-  },
-  {
-    id: generatedID(),
     name: 'Sidebar',
     folderName: 'Sidebar',
     href: '/docs/components/sidebar',
@@ -327,11 +319,12 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
   },
+
   {
     id: generatedID(),
-    name: 'Text Input',
-    folderName: 'FormControls',
-    href: '/docs/components/textInput',
+    name: 'Input',
+    folderName: 'Input',
+    href: '/docs/components/input',
     tag: false,
     deprecate: false,
   },

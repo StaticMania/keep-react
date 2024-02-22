@@ -59,9 +59,7 @@ const RadioVariant = () => {
           value="China"
           disabled={true}
         />
-        <Label htmlFor="country-08" disabled={true}>
-          China (disabled)
-        </Label>
+        <Label htmlFor="country-08">China (disabled)</Label>
       </div>
     </fieldset>
   )

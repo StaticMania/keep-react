@@ -1,109 +1,69 @@
 'use client'
-import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Avatar, Divider } from '../src'
-import { Dropdown } from './Dropdown'
+import { Envelope, Lock } from 'phosphor-react'
+import { Button } from '../src'
+import { Icon } from './Input/Icon'
+import { Input } from './Input/Input'
+import { Label } from './label'
 
 const Page = () => {
   return (
     <section className="py-20">
-      <div className="container flex gap-5">
-        <Dropdown>
-          <Dropdown.List>
-            <Dropdown.Item>Contacts</Dropdown.Item>
-            <Dropdown.Item>Phone</Dropdown.Item>
-            <Dropdown.Item>Statistics</Dropdown.Item>
-            <Divider />
-            <Dropdown.Item>Rename</Dropdown.Item>
-            <Dropdown.Item>Duplicate</Dropdown.Item>
-            <Divider />
-            <Dropdown.Item>Account</Dropdown.Item>
-            <Dropdown.Item>Logout</Dropdown.Item>
-          </Dropdown.List>
-        </Dropdown>
-        <Dropdown>
-          <Dropdown.List>
-            <Dropdown.Item>
-              <Users size={24} />
-              Contacts
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Phone size={24} />
-              Phone
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <ChartPieSlice size={24} />
-              Statistics
-            </Dropdown.Item>
-            <Divider />
+      <div className="container space-y-3">
+        <form className="mx-auto max-w-xs space-y-2">
+          <fieldset className="space-y-1">
+            <Label htmlFor="name">Enter Name</Label>
+            <Input id="name" placeholder="Enter name" type="text" />
+          </fieldset>
+          <fieldset className="space-y-1">
+            <Label htmlFor="email">Enter E-mail</Label>
+            <Input id="email" placeholder="Enter e-mail" type="email" />
+          </fieldset>
+          <Button className="w-full" size="sm">
+            Submit
+          </Button>
+        </form>
 
-            <Dropdown.Item>
-              <Pen size={24} />
-              Rename
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Copy size={24} />
-              Duplicate
-            </Dropdown.Item>
-            <Divider />
-            <Dropdown.Item>
-              <UserCircle size={24} />
-              Account
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <SignOut size={24} />
-              Logout
-            </Dropdown.Item>
-          </Dropdown.List>
-        </Dropdown>
-        <Dropdown>
-          <Dropdown.List>
-            <Dropdown.Item>
-              <div>
-                <Avatar size="lg" color="secondary" img="/images/avatar/avatar-3.png" />
+        <fieldset className="mx-auto max-w-sm space-y-1">
+          <Label htmlFor="name1">Enter Name</Label>
+          <div className="relative flex items-center">
+            <Input id="name1" placeholder="Enter name" className="ps-10" />
+            <Icon>
+              <Envelope size={20} color="#AFBACA" />
+            </Icon>
+          </div>
+        </fieldset>
+        <fieldset className="relative mx-auto max-w-sm">
+          <Input placeholder="Enter password" type="password" className="ps-10" />
+          <Icon>
+            <Lock size={20} color="#AFBACA" />
+          </Icon>
+        </fieldset>
+
+        <div className="mt-5">
+          <form className="mx-auto max-w-md space-y-2 rounded-lg border p-8">
+            <fieldset className="space-y-1">
+              <Label htmlFor="name">Email</Label>
+              <div className="relative">
+                <Input placeholder="Enter email" className="ps-11" />
+                <Icon>
+                  <Envelope size={19} color="#AFBACA" />
+                </Icon>
               </div>
-              <div>
-                <p className="text-body-5 font-medium text-metal-800">Khairul Islam Ridoy</p>
-                <p className="text-body-5 font-normal text-metal-400">UI/UX Designer</p>
+            </fieldset>
+            <fieldset className="space-y-1">
+              <Label htmlFor="password">Password</Label>
+              <div className="relative">
+                <Input id="password" placeholder="Enter password" type="password" className="ps-11" />
+                <Icon>
+                  <Lock size={19} color="#AFBACA" />
+                </Icon>
               </div>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <div>
-                <Avatar size="lg" color="secondary" img="/images/avatar/avatar-1.png" />
-              </div>
-              <div>
-                <p className="text-body-5 font-medium text-metal-800">Zakir Hossain</p>
-                <p className="text-body-5 font-normal text-metal-400">Web Designer</p>
-              </div>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <div>
-                <Avatar size="lg" color="secondary" img="/images/avatar/avatar-2.png" />
-              </div>
-              <div>
-                <p className="text-body-5 font-medium text-metal-800">Atique Hasan</p>
-                <p className="text-body-5 font-normal text-metal-400">CEO of StaticMania</p>
-              </div>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <div>
-                <Avatar size="lg" color="secondary" img="/images/avatar/avatar-4.png" />
-              </div>
-              <div>
-                <p className="text-body-5 font-medium text-metal-800">Kausar Ahamed Pial</p>
-                <p className="text-body-5 font-normal text-metal-400">CTO of StaticMania</p>
-              </div>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <div>
-                <Avatar size="lg" color="secondary" img="/images/avatar/avatar-5.png" />
-              </div>
-              <div>
-                <p className="text-body-5 font-medium text-metal-800">Md Ariful Islam</p>
-                <p className="text-body-5 font-normal text-metal-400">Web Developer</p>
-              </div>
-            </Dropdown.Item>
-          </Dropdown.List>
-        </Dropdown>
+            </fieldset>
+            <Button size="sm" color="secondary" type="submit">
+              Sign In
+            </Button>
+          </form>
+        </div>
       </div>
     </section>
   )

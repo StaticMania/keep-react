@@ -1,8 +1,9 @@
+'use client'
 import Link from 'next/link'
 import { CaretRight, MagnifyingGlass, XCircle } from 'phosphor-react'
 import { Dispatch, FC, SetStateAction, useCallback, useEffect, useState } from 'react'
 import { getData, storeData } from '../../utils/Searching'
-import { Modal, Skeleton, TextInput } from '../src'
+import { Icon, Input, Modal, Skeleton } from '../src'
 import { cn } from '../src/helpers/cn'
 
 interface Result {
@@ -101,18 +102,18 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
         </div>
         <form className="mt-2">
           <div>
-            <TextInput
-              id="#id-10"
-              placeholder="Search Component"
-              color="gray"
-              sizing="md"
-              type="text"
-              addon={<MagnifyingGlass size={20} color="#5E718D" />}
-              addonPosition="left"
-              value={query}
-              handleOnChange={(e: any) => setQuery(e.target.value)}
-              ref={inputFocus}
-            />
+            <fieldset className="relative">
+              <Input
+                value={query}
+                onChange={(e: any) => setQuery(e.target.value)}
+                ref={inputFocus}
+                placeholder="Search Component"
+                className="ps-11"
+              />
+              <Icon>
+                <MagnifyingGlass size={19} color="#AFBACA" />
+              </Icon>
+            </fieldset>
           </div>
         </form>
 
