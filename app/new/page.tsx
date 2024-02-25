@@ -1,18 +1,14 @@
 'use client'
+import { Textarea } from './Textarea/Textarea'
 
-import { Checkbox } from './Checkbox/Checkbox'
-
-const Page = () => {
+const page = () => {
   return (
-    <section className=" py-20">
+    <section className="py-20">
       <div className="container">
-        <Checkbox variant="checked" />
-        <Checkbox variant="dashed" />
-        <Checkbox variant="rounded" />
-        <Checkbox variant="circle" />
+        <Textarea placeholder="Type your message here." />
       </div>
     </section>
   )
 }
 
-export default Page
+export default page
