@@ -1,7 +1,7 @@
 'use client'
 import { FC, ReactNode, useState } from 'react'
 import { cn } from '../../helpers/cn'
-import { CheckBox } from '../CheckBox'
+import { Checkbox } from '../Checkbox/Checkbox'
 import { treeTheme } from './theme'
 
 /**
@@ -112,7 +112,6 @@ export const Tree: FC<Props> = ({
   ParentIcon,
   ChildIcon,
   showCheckbox = false,
-  handleChecked,
   className,
   itemStyle,
 }) => {
@@ -160,7 +159,7 @@ export const Tree: FC<Props> = ({
           {node.children && showIcon && typeof ParentIcon !== 'undefined' && ParentIcon}
           {!node.children && showIcon && typeof ChildIcon !== 'undefined' && ChildIcon}
 
-          {showCheckbox && <CheckBox size="md" variant="square" id="tree" color="info" handleChecked={handleChecked} />}
+          {showCheckbox && <Checkbox />}
 
           {node.title}
           {node.children && (

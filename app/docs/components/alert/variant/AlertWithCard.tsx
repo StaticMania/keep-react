@@ -1,10 +1,10 @@
 'use client'
-import { Alert, Button, CheckBox } from '../../../../src'
+import { Alert, Button, Checkbox, Label } from '../../../../src'
 
 const AlertWithCard = () => {
   return (
     <div className="space-y-5">
-      <Alert className="!max-w-md" color="primary" withBg={true}>
+      <Alert className="!max-w-[420px]" color="primary" withBg={true}>
         <Alert.Container className="flex items-start">
           <Alert.Icon />
           <Alert.Body className="flex flex-col items-start gap-3">
@@ -12,16 +12,12 @@ const AlertWithCard = () => {
             <Alert.Description className="block w-full sm:line-clamp-none">
               A short description followed by two actions items.
             </Alert.Description>
-            <div>
-              <CheckBox
-                size="md"
-                variant="square"
-                label="Don't show again"
-                id="one"
-                color="info"
-                labelStyle="text-body-4 font-medium text-metal-900"
-              />
-            </div>
+            <fieldset className="flex items-center gap-2">
+              <Checkbox id="checked1" variant="checked" className="border-primary-500 peer-checked:bg-primary-500" />
+              <Label htmlFor="checked1" className="text-body-4 font-normal text-primary-500">
+                Don&apos;t show again
+              </Label>
+            </fieldset>
             <Alert.Container>
               <Button size="sm" color="primary">
                 Learn More
@@ -34,7 +30,7 @@ const AlertWithCard = () => {
           <Alert.Dismiss />
         </Alert.Container>
       </Alert>
-      <Alert className="!max-w-md" color="secondary" withBg={true}>
+      <Alert className="!max-w-[420px]" color="secondary" withBg={true}>
         <Alert.Container className="flex items-start">
           <Alert.Icon />
           <Alert.Body className="flex flex-col items-start gap-3">
@@ -42,16 +38,12 @@ const AlertWithCard = () => {
             <Alert.Description className="block w-full sm:line-clamp-none">
               A short description followed by two actions items.
             </Alert.Description>
-            <div>
-              <CheckBox
-                size="md"
-                variant="square"
-                label="Don't show again"
-                id="two"
-                color="info"
-                labelStyle="text-body-4 font-medium text-metal-900"
-              />
-            </div>
+            <fieldset className="flex items-center gap-2">
+              <Checkbox id="checked2" variant="checked" className="border-metal-200 peer-checked:bg-metal-500" />
+              <Label htmlFor="checked2" className="text-body-4 font-normal text-metal-500">
+                Don&apos;t show again
+              </Label>
+            </fieldset>
             <Alert.Container>
               <Button size="sm" color="secondary">
                 Learn More
@@ -64,7 +56,7 @@ const AlertWithCard = () => {
           <Alert.Dismiss />
         </Alert.Container>
       </Alert>
-      <Alert className="!max-w-md" color="success" withBg={true}>
+      <Alert className="!max-w-[420px]" color="success" withBg={true}>
         <Alert.Container className="flex items-start">
           <Alert.Icon />
           <Alert.Body className="flex flex-col items-start gap-3">
@@ -72,16 +64,12 @@ const AlertWithCard = () => {
             <Alert.Description className="block w-full sm:line-clamp-none">
               A short description followed by two actions items.
             </Alert.Description>
-            <div>
-              <CheckBox
-                size="md"
-                variant="square"
-                label="Don't show again"
-                id="three"
-                color="info"
-                labelStyle="text-body-4 font-medium text-metal-900"
-              />
-            </div>
+            <fieldset className="flex items-center gap-2">
+              <Checkbox id="checked3" variant="checked" className="border-success-200 peer-checked:bg-success-500" />
+              <Label htmlFor="checked3" className="text-body-4 font-normal text-success-500">
+                Don&apos;t show again
+              </Label>
+            </fieldset>
             <Alert.Container>
               <Button size="sm" color="success">
                 Learn More
@@ -94,7 +82,7 @@ const AlertWithCard = () => {
           <Alert.Dismiss />
         </Alert.Container>
       </Alert>
-      <Alert className="!max-w-md" color="warning" withBg={true}>
+      <Alert className="!max-w-[420px]" color="warning" withBg={true}>
         <Alert.Container className="flex items-start">
           <Alert.Icon />
           <Alert.Body className="flex flex-col items-start gap-3">
@@ -102,16 +90,12 @@ const AlertWithCard = () => {
             <Alert.Description className="block w-full sm:line-clamp-none">
               A short description followed by two actions items.
             </Alert.Description>
-            <div>
-              <CheckBox
-                size="md"
-                variant="square"
-                label="Don't show again"
-                id="five"
-                color="info"
-                labelStyle="text-body-4 font-medium text-metal-900"
-              />
-            </div>
+            <fieldset className="flex items-center gap-2">
+              <Checkbox id="checked4" variant="checked" className="border-warning-200 peer-checked:bg-warning-500" />
+              <Label htmlFor="checked4" className="text-body-4 font-normal text-warning-500">
+                Don&apos;t show again
+              </Label>
+            </fieldset>
             <Alert.Container>
               <Button size="sm" color="warning">
                 Learn More
@@ -124,7 +108,7 @@ const AlertWithCard = () => {
           <Alert.Dismiss />
         </Alert.Container>
       </Alert>
-      <Alert className="!max-w-md" color="error" withBg={true}>
+      <Alert className="!max-w-[420px]" color="error" withBg={true}>
         <Alert.Container className="flex items-start">
           <Alert.Icon />
           <Alert.Body className="flex flex-col items-start gap-3">
@@ -132,16 +116,12 @@ const AlertWithCard = () => {
             <Alert.Description className="block w-full sm:line-clamp-none">
               A short description followed by two actions items.
             </Alert.Description>
-            <div>
-              <CheckBox
-                size="md"
-                variant="square"
-                label="Don't show again"
-                id="four"
-                color="info"
-                labelStyle="text-body-4 font-medium text-metal-900"
-              />
-            </div>
+            <fieldset className="flex items-center gap-2">
+              <Checkbox id="checked5" variant="checked" className="border-error-200 peer-checked:bg-error-500" />
+              <Label htmlFor="checked5" className="text-body-4 font-normal text-error-500">
+                Don&apos;t show again
+              </Label>
+            </fieldset>
             <Alert.Container>
               <Button size="sm" color="error">
                 Learn More
@@ -160,28 +140,24 @@ const AlertWithCard = () => {
 
 const AlertWithCardCode = `
 'use client'
-import { Alert, Button, CheckBox } from 'keep-react'
+import { Alert, Button, Checkbox } from 'keep-react'
 
 export const AlertComponent = () => {
   return (
-    <Alert className="!max-w-md" color="primary" withBg={true}>
+    <Alert className="!max-w-[420px]" color="primary" withBg={true}>
       <Alert.Container className="flex items-start">
         <Alert.Icon />
         <Alert.Body className="flex flex-col items-start gap-3">
-          <Alert.Title>Alert here</Alert.Title>
+          <Alert.Title className="text-body-2">Alert here</Alert.Title>
           <Alert.Description className="block w-full sm:line-clamp-none">
             A short description followed by two actions items.
           </Alert.Description>
-          <div>
-            <CheckBox
-              size="md"
-              variant="square"
-              label="Don't show again"
-              id="one"
-              color="info"
-              labelStyle="text-body-4 font-medium text-metal-900"
-            />
-          </div>
+          <fieldset className="flex items-center gap-2">
+            <Checkbox id="checked1" variant="checked" className="border-primary-500 peer-checked:bg-primary-500" />
+            <Label htmlFor="checked1" className="text-body-4 font-normal text-primary-500">
+              Don&apos;t show again
+            </Label>
+          </fieldset>
           <Alert.Container>
             <Button size="sm" color="primary">
               Learn More
@@ -196,6 +172,7 @@ export const AlertComponent = () => {
     </Alert>
   )
 }
+
 `
 
 export { AlertWithCard, AlertWithCardCode }

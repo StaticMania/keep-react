@@ -1,7 +1,8 @@
 import { useState, type ComponentProps, type FC, type PropsWithChildren } from 'react'
 import { cn } from '../../helpers/cn'
 import type { DeepPartial } from '../../helpers/deep-partial'
-import { CheckBox } from '../CheckBox'
+
+import { Checkbox } from '../Checkbox/Checkbox'
 import { useTableContext } from './TableContext'
 import { keepTableRowTheme, tableTheme } from './theme'
 
@@ -9,13 +10,9 @@ export interface TableRowProps extends PropsWithChildren, ComponentProps<'tr'> {
   theme?: DeepPartial<keepTableRowTheme>
 }
 export const TableRow: FC<TableRowProps> = ({ children, className, ...props }) => {
-  const { hoverable, striped, showCheckbox, checked } = useTableContext()
+  const { hoverable, striped, showCheckbox } = useTableContext()
   const theme = tableTheme.row
   const [isChecked, setIsChecked] = useState(false)
-
-  const handleCheckbox = (value: boolean) => {
-    setIsChecked(value)
-  }
 
   return (
     <tr
@@ -24,15 +21,7 @@ export const TableRow: FC<TableRowProps> = ({ children, className, ...props }) =
       {...props}>
       {showCheckbox && (
         <th className="p-4">
-          <CheckBox
-            size="md"
-            variant="square"
-            id="two"
-            name="table"
-            color="info"
-            checked={checked ? checked : isChecked}
-            handleChecked={handleCheckbox}
-          />
+          <Checkbox variant="checked" checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
         </th>
       )}
       {children}

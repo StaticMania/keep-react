@@ -1,7 +1,7 @@
 'use client'
 import { CloudArrowUp, UserPlus } from 'phosphor-react'
 import { useState } from 'react'
-import { Avatar, Button, CheckBox, Modal } from '../../../../src'
+import { Avatar, Button, Checkbox, Label, Modal } from '../../../../src'
 
 const HistoryModal = () => {
   const [showHistoryModal, setShowHistoryModal] = useState(false)
@@ -26,12 +26,10 @@ const HistoryModal = () => {
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
-          <div className="mt-5 flex items-center">
-            <CheckBox size="md" variant="square" id="two" name="countries" color="info" />
-            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
-              Save on this browser
-            </label>
-          </div>
+          <fieldset className="mt-5 flex items-center gap-2">
+            <Checkbox variant="rounded" id="two" />
+            <Label htmlFor="two">Save on this browser</Label>
+          </fieldset>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline" width="half" onClick={onClickHistoryModal}>
@@ -57,12 +55,10 @@ const HistoryModal = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 flex items-center">
-            <CheckBox size="md" variant="square" id="two" name="countries" color="info" />
-            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
-              Save on this browser
-            </label>
-          </div>
+          <fieldset className="mt-5 flex items-center gap-2">
+            <Checkbox variant="rounded" id="three" />
+            <Label htmlFor="three">Save on this browser</Label>
+          </fieldset>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline" onClick={onClickAccessModal}>
@@ -108,12 +104,10 @@ export const ModalComponent = () => {
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>
           </div>
-          <div className="mt-5 flex items-center">
-            <CheckBox size="md" variant="square" id="two" name="countries" color="info" />
-            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
-              Save on this browser
-            </label>
-          </div>
+          <fieldset className="mt-5 flex items-center gap-2">
+            <Checkbox variant="rounded" id="two" />
+            <Label htmlFor="two">Save on this browser</Label>
+          </fieldset>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline" width="half" onClick={onClickHistoryModal}>
@@ -139,12 +133,10 @@ export const ModalComponent = () => {
               </div>
             </div>
           </div>
-          <div className="mt-5 flex items-center">
-            <CheckBox size="md" variant="square" id="two" name="countries" color="info" />
-            <label htmlFor="two" className="ml-2 text-body-4 font-medium text-metal-500">
-              Save on this browser
-            </label>
-          </div>
+          <fieldset className="mt-5 flex items-center gap-2">
+            <Checkbox variant="rounded" id="two" />
+            <Label htmlFor="two">Save on this browser</Label>
+          </fieldset>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline" onClick={onClickAccessModal}>
