@@ -1,9 +1,9 @@
 'use client'
 import { CloudArrowUp, DotsThree, HouseLine, Phone, SignIn, User } from 'phosphor-react'
-import { ChangeEvent, useState } from 'react'
+import { useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '../docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultRadio } from '../docs/components/radio/variant/DefaultRadio'
-import { Button, CheckboxGroup, DatePicker, Modal, Pagination, Slider, Tabs, Tooltip } from '../src'
+import { Button, DatePicker, Modal, Pagination, Slider, Tabs, Tooltip } from '../src'
 
 export const SliderComponent = () => {
   return (
@@ -54,48 +54,6 @@ export const BarChartComponent = () => {
   return (
     <div className="scale-50 md:scale-75">
       <CustomizedBarSizeWithAxisData />
-    </div>
-  )
-}
-export const CheckboxGroupComponent = () => {
-  const [selected, setSelected] = useState('')
-  const handleOptionChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value)
-  }
-  return (
-    <div className="scale-50">
-      <form className="space-y-4 p-5">
-        <CheckboxGroup
-          title="Paypal"
-          description="Payment with paypal and get 10% discount"
-          checkboxType="circle"
-          img="/images/company/paypal.png"
-          imgShape="circle"
-          value="paypal"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-        />
-        <CheckboxGroup
-          title="Stripe"
-          description="Payment with stripe and get 10% discount"
-          checkboxType="circle"
-          img="/images/company/stripe.png"
-          imgShape="circle"
-          value="stripe"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-        />
-        <CheckboxGroup
-          title="Visa"
-          description="Payment with Visa and get 10% discount"
-          checkboxType="circle"
-          img="/images/company/Visa.png"
-          imgShape="circle"
-          value="Visa"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-        />
-      </form>
     </div>
   )
 }

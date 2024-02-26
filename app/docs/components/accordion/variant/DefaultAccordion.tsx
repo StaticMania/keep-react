@@ -6,7 +6,7 @@ const DefaultAccordion = () => {
     <Accordion>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>Q. What is the of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
           <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
@@ -28,7 +28,7 @@ export const AccordionComponent = () => {
     <Accordion>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>Q. What is the of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
           <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>

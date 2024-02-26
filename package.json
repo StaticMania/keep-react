@@ -87,7 +87,6 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "next-nprogress-bar": "^2.1.2",
     "@babel/core": "^7.23.6",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
@@ -118,6 +117,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
+    "next-nprogress-bar": "^2.1.2",
     "postcss-loader": "^7.3.3",
     "prettier": "^3.1.1",
     "prettier-plugin-css-order": "^2.0.1",

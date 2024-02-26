@@ -2,7 +2,6 @@ import { ReactElement } from 'react'
 import { v4 as generatedID } from 'uuid'
 import {
   BarChartComponent,
-  CheckboxGroupComponent,
   DatePickerComponent,
   ModalComponent,
   PaginationComponent,
@@ -116,14 +115,6 @@ export const routes: routerPath[] = [
     name: 'CheckBox',
     folderName: 'CheckBox',
     href: '/docs/components/checkbox',
-    tag: false,
-    deprecate: false,
-  },
-  {
-    id: generatedID(),
-    name: 'CheckBox Group',
-    folderName: 'CheckboxGroup',
-    href: '/docs/components/checkboxGroup',
     tag: false,
     deprecate: false,
   },
@@ -419,11 +410,6 @@ export const ComponentList: {
     id: generatedID(),
     href: '/docs/components/barChart',
     component: BarChartComponent,
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/checkboxGroup',
-    component: CheckboxGroupComponent,
   },
 
   {

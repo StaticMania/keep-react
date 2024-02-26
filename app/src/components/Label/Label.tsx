@@ -9,7 +9,7 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(({ className, chil
     <label
       ref={ref}
       {...props}
-      className={cn('cursor-pointer select-none text-body-4 font-medium text-metal-600', className)}>
+      className={cn('inline cursor-pointer select-none text-body-4 font-medium text-metal-600', className)}>
       {children}
     </label>
   )

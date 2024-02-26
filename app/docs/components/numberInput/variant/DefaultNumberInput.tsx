@@ -1,21 +1,40 @@
 'use client'
-import { useState } from 'react'
+import { Minus, Plus } from 'phosphor-react'
 import { NumberInput } from '../../../../src'
 
 const DefaultNumberInput = () => {
-  const [value, setValue] = useState(100)
-  return <NumberInput sizing="md" value={value} setValue={setValue} />
+  return (
+    <NumberInput>
+      <NumberInput.Button>
+        <Minus size={16} color="#455468" />
+      </NumberInput.Button>
+      <NumberInput.Input defaultValue={12} />
+      <NumberInput.Button>
+        <Plus size={16} color="#455468" />
+      </NumberInput.Button>
+    </NumberInput>
+  )
 }
 
 const DefaultNumberInputCode = `
-"use client";
-import { useState } from "react";
-import { NumberInput } from "keep-react";
+'use client'
+import { Minus, Plus } from 'phosphor-react'
+import { NumberInput } from 'keep-react'
 
 export const NumberInputComponent = () => {
-  const [value, setValue] = useState(100);
-   return <NumberInput sizing="md" value={value} setValue={setValue} />
+  return (
+    <NumberInput>
+      <NumberInput.Button>
+        <Minus size={16} color="#455468" />
+      </NumberInput.Button>
+      <NumberInput.Input defaultValue={12} />
+      <NumberInput.Button>
+        <Plus size={16} color="#455468" />
+      </NumberInput.Button>
+    </NumberInput>
+  )
 }
+
 `
 
 export { DefaultNumberInput, DefaultNumberInputCode }
