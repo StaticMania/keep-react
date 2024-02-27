@@ -2,18 +2,15 @@ import { DefaultNumberInput, DefaultNumberInputCode } from './variant/DefaultNum
 import { NumberInputWithLabel, NumberInputWithLabelCode } from './variant/NumberInputWithLabel'
 import { NumberInputWithState, NumberInputWithStateCode } from './variant/NumberInputWithState'
 import { numberInputApiData } from './NumberInputApi'
-
 import CodePreview from '../../../components/CodePreview'
-
-import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-Number Input Component is a user interface element designed for collecting numeric input from users. It provides a field where users can enter numerical values, such as integers or decimals, using keyboard input or arrow buttons.
+The Number Input Component is a user interface element designed for collecting numeric input from users. It provides a field where users can enter numerical values, such as integers or decimals, using keyboard input or arrow buttons.
 
 ## Default Number Input
 
-Default Number Input a simple numeric input field with two buttons for incrementing and decrementing the value.
+Default Number Input is a simple numeric input field with two buttons for incrementing and decrementing the value.
 
 <CodePreview github="NumberInput" code={DefaultNumberInputCode}>
   <DefaultNumberInput />
@@ -21,18 +18,16 @@ Default Number Input a simple numeric input field with two buttons for increment
 
 ## Number Input With Label
 
+You can show a label and helper text to assist the user.
+
 <CodePreview github="NumberInput" code={NumberInputWithLabelCode}>
   <NumberInputWithLabel />
 </CodePreview>
 
 ## Number Input With State
 
+You can manage the input state with React state.
+
 <CodePreview github="NumberInput" code={NumberInputWithStateCode}>
   <NumberInputWithState />
 </CodePreview>
-
-## API Reference
-
-Explore the available props for the number input component
-
-<ComponentApi data={numberInputApiData} />
