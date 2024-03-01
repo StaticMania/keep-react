@@ -33,7 +33,7 @@ const CopyCode = ({ code }: { code: string }) => {
         </SyntaxHighlighter>
       ) : (
         <Skeleton animation={true}>
-          <Skeleton.Line height="h-[60px]" />
+          <Skeleton.Line className="h-[60px]" />
         </Skeleton>
       )}
       <button onClick={() => copyToClipboard(code)} className="absolute right-5 top-5 cursor-pointer">

@@ -2,24 +2,8 @@ import type { ComponentProps, FC } from 'react'
 import { cn } from '../../helpers/cn'
 import { SpinnerColors, SpinnerSizes, spinnerTheme } from './theme'
 
-/**
- * Props for the Spinner component.
- * @interface SpinnerProps
- * @extends {Omit<ComponentProps<'span'>, 'color'>}
- */
 export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
-  /**
-   * The color of the spinner.
-   * @type {keyof SpinnerColors}
-   * @default 'info'
-   */
   color?: keyof SpinnerColors
-
-  /**
-   * The size of the spinner.
-   * @type {keyof SpinnerSizes}
-   * @default 'md'
-   */
   size?: keyof SpinnerSizes
 }
 

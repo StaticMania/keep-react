@@ -1,19 +1,18 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { forwardRef, HTMLAttributes } from 'react'
 import { cn } from '../../helpers/cn'
 import { paginationTheme } from './theme'
 
-export interface ListProps {
-  children?: ReactNode
-  className?: string
-  [key: string]: any
-}
+interface ListProps extends HTMLAttributes<HTMLUListElement> {}
 
-export const List: FC<ListProps> = ({ className, children, ...props }) => {
+const List = forwardRef<HTMLUListElement, ListProps>(({ children, ...props }, ref) => {
   const { list } = paginationTheme
   return (
-    <ul className={cn(list.base, className)} {...props}>
+    <ul {...props} ref={ref} className={cn(list.base, props.className)}>
       {children}
     </ul>
   )
-}
+})
+List.displayName = 'Pagination.List'
+
+export { List }

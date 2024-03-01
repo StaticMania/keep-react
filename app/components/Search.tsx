@@ -148,10 +148,10 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
         {loading ? (
           <div>
             <Skeleton animation>
-              <Skeleton.Line height="h-12" />
-              <Skeleton.Line height="h-12" />
-              <Skeleton.Line height="h-12" />
-              <Skeleton.Line height="h-12" />
+              <Skeleton.Line className="h-12" />
+              <Skeleton.Line className="h-12" />
+              <Skeleton.Line className="h-12" />
+              <Skeleton.Line className="h-12" />
             </Skeleton>
           </div>
         ) : query && results.length ? (

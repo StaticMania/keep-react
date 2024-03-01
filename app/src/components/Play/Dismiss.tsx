@@ -1,10 +1,10 @@
 'use client'
-import { FC } from 'react'
+import { ButtonHTMLAttributes, FC } from 'react'
 import { cn } from '../../helpers/cn'
 import { usePlayContext } from './PlayContext'
 import { playTheme } from './theme'
 
-export interface DismissProps {
+export interface DismissProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   [key: string]: any
 }

@@ -1,5 +1,5 @@
 'use client'
-import { FC, ReactNode, useState } from 'react'
+import { FC, ForwardedRef, HTMLAttributes, forwardRef, useState } from 'react'
 import { cn } from '../../helpers/cn'
 import { Content } from './Content'
 import { TabsContext } from './Context'
@@ -7,29 +7,28 @@ import { Item } from './Item'
 import { TabsList } from './TabsList'
 import { tabsTheme } from './theme'
 
-interface TabsProps {
-  children?: ReactNode
+interface TabsProps extends HTMLAttributes<HTMLElement> {
   activeLabel?: string
-  className?: string
   vertical?: boolean
 }
 
-Content.displayName = 'Tabs.Content'
-Item.displayName = 'Tabs.Item'
-TabsList.displayName = 'Tabs.List'
+const TabsComponent: FC<TabsProps> = forwardRef(
+  ({ children, activeLabel, className, vertical = false, ...props }, ref: ForwardedRef<HTMLElement>) => {
+    const [activeItem, setActiveItem] = useState(activeLabel)
+    const { root } = tabsTheme
+    const handleActive = (item: string) => {
+      setActiveItem(item)
+    }
 
-export const TabsComponent: FC<TabsProps> = ({ children, activeLabel, className, vertical = false }) => {
-  const [activeItem, setActiveItem] = useState(activeLabel)
-  const { root } = tabsTheme
-  const handleActive = (item: string) => {
-    setActiveItem(item)
-  }
-  return (
-    <nav className={cn(vertical && root.vertical.on, className)}>
-      <TabsContext.Provider value={{ handleActive, activeItem, vertical }}>{children}</TabsContext.Provider>
-    </nav>
-  )
-}
+    return (
+      <nav ref={ref} {...props} className={cn(vertical && root.vertical.on, className)}>
+        <TabsContext.Provider value={{ handleActive, activeItem, vertical }}>{children}</TabsContext.Provider>
+      </nav>
+    )
+  },
+)
+
+TabsComponent.displayName = 'Tabs'
 
 export const Tabs = Object.assign(TabsComponent, {
   Content,

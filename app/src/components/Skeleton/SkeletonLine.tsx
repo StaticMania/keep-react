@@ -1,14 +1,15 @@
 'use client'
-import { FC } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { skeletonTheme } from './theme'
 
-export interface SkeletonLineProps {
-  height?: string
-  className?: string
-}
+interface SkeletonLineProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const SkeletonLine: FC<SkeletonLineProps> = ({ height, className }) => {
+const SkeletonLine = forwardRef<HTMLDivElement, SkeletonLineProps>(({ className, ...props }, ref) => {
   const theme = skeletonTheme
-  return <div className={cn(theme.line, height, className)}></div>
-}
+  return <div {...props} ref={ref} className={cn(theme.line, className)}></div>
+})
+
+SkeletonLine.displayName = 'Skeleton.Line'
+
+export { SkeletonLine }
