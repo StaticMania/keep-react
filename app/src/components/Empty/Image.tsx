@@ -1,12 +1,13 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { forwardRef, HTMLProps } from 'react'
 import { cn } from '../../helpers/cn'
 
-export interface ImageProps {
-  className?: string
-  children?: ReactNode
-}
+export const Image = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(({ children, ...props }, ref) => {
+  return (
+    <div {...props} ref={ref} className={cn(props.className)}>
+      {children}
+    </div>
+  )
+})
 
-export const Image: FC<ImageProps> = ({ children, className }) => {
-  return <div className={cn(className)}>{children}</div>
-}
+Image.displayName = 'Empty.Image'

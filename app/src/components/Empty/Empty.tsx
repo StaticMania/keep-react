@@ -1,24 +1,21 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLProps, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { Description } from './Description'
 import { Image } from './Image'
 import { Title } from './Title'
 import { emptyTheme } from './theme'
 
-interface EmptyProps {
-  className?: string
-  children?: ReactNode
-}
-const EmptyComponent: FC<EmptyProps> = ({ children, className }) => {
+const EmptyComponent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(({ children, ...props }, ref) => {
   const { root } = emptyTheme
-  return <section className={cn(root.base, className)}>{children}</section>
-}
+  return (
+    <div {...props} ref={ref} className={cn(root.base, props.className)}>
+      {children}
+    </div>
+  )
+})
 
-Title.displayName = 'Empty.Title'
-Description.displayName = 'Empty.Description'
-Image.displayName = 'Empty.Image'
-
+EmptyComponent.displayName = 'Empty'
 export const Empty = Object.assign(EmptyComponent, {
   Title,
   Description,
