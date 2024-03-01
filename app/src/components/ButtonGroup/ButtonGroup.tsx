@@ -1,17 +1,17 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-export interface ButtonGroupProps {
-  className?: string
-  children?: ReactNode
-  [key: string]: any
-}
+const ButtonGroup = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  ({ children, ...props }, ref: Ref<HTMLDivElement>) => {
+    return (
+      <div {...props} className={cn('flex items-center', props.className)} ref={ref}>
+        {children}
+      </div>
+    )
+  },
+)
 
-export const ButtonGroup: FC<ButtonGroupProps> = ({ children, className, ...props }) => {
-  return (
-    <div {...props} className={cn('flex items-center', className)}>
-      {children}
-    </div>
-  )
-}
+ButtonGroup.displayName = 'Button.Group'
+
+export { ButtonGroup }

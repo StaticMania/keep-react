@@ -32,12 +32,10 @@ const HistoryModal = () => {
           </fieldset>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outline" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outline" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button width="half" onClick={onClickHistoryModal}>
-            Confirm
-          </Button>
+          <Button onClick={onClickHistoryModal}>Confirm</Button>
         </Modal.Footer>
       </Modal>
       <Modal icon={<UserPlus size={28} color="#5E718D" />} size="lg" show={showAccessModal}>
@@ -110,10 +108,10 @@ export const ModalComponent = () => {
           </fieldset>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="outline" width="half" onClick={onClickHistoryModal}>
+          <Button variant="outline" onClick={onClickHistoryModal}>
             Cancel
           </Button>
-          <Button width="half" onClick={onClickHistoryModal}>
+          <Button onClick={onClickHistoryModal}>
             Confirm
           </Button>
         </Modal.Footer>

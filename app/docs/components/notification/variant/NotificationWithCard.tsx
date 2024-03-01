@@ -65,10 +65,8 @@ const NotificationWithCard = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Notification.Description>
           <Notification.Container className="!mt-6 flex flex-col gap-3">
-            <Button size="sm" width="full">
-              Download
-            </Button>
-            <Button variant="outline" size="sm" width="full">
+            <Button size="sm">Download</Button>
+            <Button variant="outline" size="sm">
               View Figma File
             </Button>
           </Notification.Container>
@@ -154,10 +152,10 @@ export const NotificationComponent = () => {
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Notification.Description>
           <Notification.Container className="!mt-6 flex flex-col gap-3">
-            <Button size="sm" width="full">
+            <Button size="sm" >
               Download
             </Button>
-            <Button variant="outline" size="sm" width="full">
+            <Button variant="outline" size="sm" >
               View Figma File
             </Button>
           </Notification.Container>
