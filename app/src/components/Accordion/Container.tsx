@@ -1,30 +1,31 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { ButtonHTMLAttributes, FC, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
-
-export interface ContainerProps {
-  children?: ReactNode
-  className?: string
-  [key: string]: any
-}
 
 export interface keepAccordionContainerTheme {
   base: string
   open: string
 }
 
-export const Container: FC<ContainerProps> = ({ children, className, ...otherProps }) => {
-  const { isOpen, setIsOpen } = useAccordionContext()
-  const { container } = accordionTheme
-  return (
-    <button
-      tabIndex={0}
-      {...otherProps}
-      onClick={() => setIsOpen && setIsOpen(!isOpen)}
-      className={cn(container.base, className)}>
-      {children}
-    </button>
-  )
-}
+const Container: FC<ButtonHTMLAttributes<HTMLButtonElement>> = forwardRef(
+  ({ children, className, ...otherProps }, ref: Ref<HTMLButtonElement>) => {
+    const { isOpen, setIsOpen } = useAccordionContext()
+    const { container } = accordionTheme
+    return (
+      <button
+        tabIndex={0}
+        {...otherProps}
+        onClick={() => setIsOpen && setIsOpen(!isOpen)}
+        className={cn(container.base, className)}
+        ref={ref}>
+        {children}
+      </button>
+    )
+  },
+)
+
+Container.displayName = 'Accordion.Container'
+
+export { Container }
