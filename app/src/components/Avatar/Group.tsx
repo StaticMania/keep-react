@@ -1,10 +1,16 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { FC, HTMLAttributes, Ref, forwardRef } from 'react'
 
-export interface GroupProps {
-  children?: ReactNode
-}
+const Group: FC<HTMLAttributes<HTMLDivElement>> = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  (props, ref: Ref<HTMLDivElement>) => {
+    return (
+      <div ref={ref} {...props} className="flex items-center -space-x-3">
+        {props.children}
+      </div>
+    )
+  },
+)
 
-export const Group: FC<GroupProps> = ({ children }) => {
-  return <div className="flex items-center -space-x-3">{children}</div>
-}
+Group.displayName = 'Avatar.Group'
+
+export { Group }

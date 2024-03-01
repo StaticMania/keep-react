@@ -1,5 +1,5 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { AlertContext } from './AlertContext'
 import { Body } from './Body'
@@ -11,36 +11,35 @@ import { Link } from './Link'
 import { Title } from './Title'
 import { alertTheme } from './theme'
 
-export interface AlertProps {
+interface AlertComponentProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode
   color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
-  className?: string
   withBg?: boolean
   dismiss?: boolean
-  [key: string]: any
 }
 
-export const AlertComponent: FC<AlertProps> = ({ children, color = 'primary', withBg, dismiss, className }) => {
-  return (
-    <div
-      className={cn(
-        alertTheme.root.base,
-        withBg ? alertTheme.colorWithBg[color] : alertTheme.colorWithOutBg[color],
-        dismiss ? 'hidden' : 'flex',
-        className,
-      )}>
-      <AlertContext.Provider value={{ color }}>{children}</AlertContext.Provider>
-    </div>
-  )
-}
+const AlertComponent = forwardRef<HTMLDivElement, AlertComponentProps>(
+  (
+    { children, color = 'primary', withBg, dismiss, className, ...otherProps }: AlertComponentProps,
+    ref: Ref<HTMLDivElement>,
+  ) => {
+    return (
+      <div
+        {...otherProps}
+        ref={ref}
+        className={cn(
+          alertTheme.root.base,
+          withBg ? alertTheme.colorWithBg[color] : alertTheme.colorWithOutBg[color],
+          dismiss ? 'hidden' : 'flex',
+          className,
+        )}>
+        <AlertContext.Provider value={{ color }}>{children}</AlertContext.Provider>
+      </div>
+    )
+  },
+)
 
-Container.displayName = 'Alert.Container'
-Description.displayName = 'Alert.Description'
-Title.displayName = 'Alert.Title'
-Dismiss.displayName = 'Alert.Dismiss'
-Link.displayName = 'Alert.Link'
-Icon.displayName = 'Alert.Icon'
-Body.displayName = 'Alert.Body'
+AlertComponent.displayName = 'Alert'
 
 export const Alert = Object.assign(AlertComponent, {
   Container,

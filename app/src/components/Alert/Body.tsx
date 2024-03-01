@@ -1,12 +1,17 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-export interface AlertBodyProps {
-  children?: ReactNode
-  className?: string
-}
+const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  ({ children, className, ...otherProps }, ref: Ref<HTMLDivElement>) => {
+    return (
+      <div {...otherProps} className={cn(className)} ref={ref}>
+        {children}
+      </div>
+    )
+  },
+)
 
-export const Body: FC<AlertBodyProps> = ({ children, className }) => {
-  return <div className={cn(className)}>{children}</div>
-}
+Body.displayName = 'Alert.Body'
+
+export { Body }

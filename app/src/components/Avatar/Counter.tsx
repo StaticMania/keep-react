@@ -1,23 +1,29 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { FC, HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { avatarTheme } from './theme'
 
-export interface CounterProps {
-  children?: ReactNode
-  className?: string
+interface CounterProps extends HTMLAttributes<HTMLDivElement> {
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 }
 
-export const Counter: FC<CounterProps> = ({ children, className, size = 'xl' }) => {
-  return (
-    <div
-      className={cn(
-        avatarTheme.size[size],
-        'bg-gradient-1 z-20 flex items-center justify-center rounded-full border-2 border-white text-body-4 font-semibold text-white',
-        className,
-      )}>
-      {children}
-    </div>
-  )
-}
+const Counter: FC<CounterProps> = forwardRef<HTMLDivElement, CounterProps>(
+  ({ children, className, size = 'xl', ...props }: CounterProps, ref: Ref<HTMLDivElement>) => {
+    return (
+      <div
+        {...props}
+        ref={ref}
+        className={cn(
+          avatarTheme.size[size],
+          'bg-gradient-1 z-20 flex items-center justify-center rounded-full border-2 border-white text-body-4 font-semibold text-white',
+          className,
+        )}>
+        {children}
+      </div>
+    )
+  },
+)
+
+Counter.displayName = 'Avatar.Counter'
+
+export { Counter }

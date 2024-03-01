@@ -1,13 +1,18 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { alertTheme } from './theme'
 
-export interface ContainerProps {
-  children?: ReactNode
-  className?: string
-}
+const Container = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  ({ children, ...props }, ref: Ref<HTMLDivElement>) => {
+    return (
+      <div {...props} className={cn(alertTheme.container.base, props.className)} ref={ref}>
+        {children}
+      </div>
+    )
+  },
+)
 
-export const Container: FC<ContainerProps> = ({ children, className }) => {
-  return <div className={cn(alertTheme.container.base, className)}>{children}</div>
-}
+Container.displayName = 'Alert.Container'
+
+export { Container }

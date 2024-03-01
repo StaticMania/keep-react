@@ -1,13 +1,18 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { alertTheme } from './theme'
 
-export interface TitleProps {
-  children?: ReactNode
-  className?: string
-}
+const Title = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
+  ({ children, ...props }: HTMLAttributes<HTMLParagraphElement>, ref: Ref<HTMLParagraphElement>) => {
+    return (
+      <p {...props} className={cn(alertTheme.title.base, props.className)} ref={ref}>
+        {children}
+      </p>
+    )
+  },
+)
 
-export const Title: FC<TitleProps> = ({ children, className }) => {
-  return <p className={cn(alertTheme.title.base, className)}>{children}</p>
-}
+Title.displayName = 'Alert.Title'
+
+export { Title }

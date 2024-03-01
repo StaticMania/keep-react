@@ -1,7 +1,6 @@
 import { createContext, useContext } from 'react'
-import { AlertProps } from './Alert'
 
-type AlertContextProps = Omit<AlertProps, 'children'> & {
+type AlertContextProps = {
   color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
 }
 
