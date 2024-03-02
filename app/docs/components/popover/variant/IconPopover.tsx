@@ -4,7 +4,7 @@ import { Button, Popover, Typography } from '../../../../src'
 
 const IconPopover = () => {
   return (
-    <div className="flex h-44 items-center justify-center gap-5 bg-metal-900 p-5">
+    <div className="flex h-44 items-center justify-center gap-5 p-5">
       <Popover placement="left">
         <Popover.Action>
           <CaretLeft size={20} />

@@ -5,20 +5,22 @@ import { ReactNode, useState } from 'react'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import useCopy from '../../hooks/useCopy'
+import { cn } from '../src/helpers/cn'
 
 interface CodePreviewProps {
   children: ReactNode
   code: string
   github?: string
+  className?: string
 }
 
-const CodePreview = ({ children, code, github }: CodePreviewProps) => {
+const CodePreview = ({ children, code, github, className }: CodePreviewProps) => {
   const [active, setActive] = useState(0)
   const { copy, copyToClipboard } = useCopy()
   const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/app/src/components/${github}`
 
   return (
-    <div className="my-10 w-full overflow-hidden rounded-md border border-metal-200 shadow-small">
+    <div className="my-10 w-full overflow-hidden rounded-xl border border-metal-200 shadow-small">
       <div className="-mb-px flex flex-wrap border-b border-metal-200 bg-metal-900 px-5 text-center">
         <button
           type="button"
@@ -81,7 +83,7 @@ const CodePreview = ({ children, code, github }: CodePreviewProps) => {
             </SyntaxHighlighter>
           </div>
         ) : (
-          <div className="flex w-full items-center justify-center bg-white px-2 py-3 md:p-6">
+          <div className={cn('flex w-full items-center justify-center bg-white px-2 py-3 md:p-6', className)}>
             <div className="h-full w-full overflow-auto">{children}</div>
           </div>
         )}

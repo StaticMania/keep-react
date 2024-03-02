@@ -47,7 +47,7 @@ interface keepButtonTheme {
 }
 
 export const buttonTheme: keepButtonTheme = {
-  base: 'active:focus:scale-95 duration-150 transition-all rounded-md flex items-center justify-center  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+  base: 'active:focus:scale-95 duration-150 transition-all rounded-lg flex items-center justify-center  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
   color: {
     primary:
       'bg-primary-500 hover:bg-primary-600 text-white focus-visible:ring-primary-100 disabled:cursor-not-allowed disabled:bg-primary-100',
@@ -61,7 +61,7 @@ export const buttonTheme: keepButtonTheme = {
       'bg-error-500 hover:bg-error-600 text-white focus-visible:ring-error-100 disabled:cursor-not-allowed disabled:bg-error-100',
   },
   size: {
-    xs: 'text-body-4 px-[14px] py-2 font-medium rounded-md',
+    xs: 'text-body-4 px-[14px] py-2 font-medium rounded-lg',
     sm: 'text-body-4 px-5 py-2.5 font-medium',
     md: 'text-body-3 px-6 py-3 font-medium',
     lg: 'text-body-2 px-6 py-4 font-medium',

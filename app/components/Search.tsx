@@ -1,44 +1,22 @@
+/* eslint-disable no-unused-vars */
 'use client'
 import Link from 'next/link'
-import { CaretRight, MagnifyingGlass, XCircle } from 'phosphor-react'
-import { Dispatch, FC, SetStateAction, useCallback, useEffect, useState } from 'react'
-import { getData, storeData } from '../../utils/Searching'
-import { Icon, Input, Modal, Skeleton } from '../src'
-import { cn } from '../src/helpers/cn'
+import { File, MagnifyingGlass, RadioButton } from 'phosphor-react'
+import { ChangeEvent, FC, useCallback, useState, useTransition } from 'react'
+import { routerPath, routes } from '~/routes/routes'
+import { Icon, Input, Modal, Typography } from '../src'
 
-interface Result {
-  id: number
-  name: string
-  href: string
-  sections: { title: string; id: string }[]
+interface ModalProps {
+  isOpen: boolean
+  closeModal: () => void
 }
 
-export interface result {
-  id: number
-  name: string
-  href: string
-  sections: [
-    {
-      title: string
-      id: string
-    },
-  ]
-}
+const Search: FC<ModalProps> = ({ closeModal, isOpen }) => {
+  const [query, setQuery] = useState('')
+  const [data, setData] = useState<routerPath[]>(routes)
+  const [isPending, startTransition] = useTransition()
+  type InputFocusCallback = (n: HTMLInputElement) => void
 
-interface SearchProps {
-  showModal: boolean
-  setShowMainModal: Dispatch<SetStateAction<boolean>>
-}
-
-// eslint-disable-next-line no-unused-vars
-type InputFocusCallback = (n: HTMLInputElement) => void
-
-const projectUrl: string = `https://react.keepdesign.io`
-
-const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
-  const [query, setQuery] = useState<string>('')
-  const [results, setResults] = useState<Result[]>([])
-  const [loading, setLoading] = useState<boolean>(false)
   const inputFocus = useCallback<InputFocusCallback>((node) => {
     if (node) {
       setTimeout(() => {
@@ -47,145 +25,81 @@ const Search: FC<SearchProps> = ({ showModal, setShowMainModal }) => {
     }
   }, [])
 
-  useEffect(() => {
-    // eslint-disable-next-line no-undef
-    let timeout: NodeJS.Timeout
-    if (query) {
-      setLoading(true)
-      timeout = setTimeout(() => {
-        performSearch(query)
-      }, 1000)
-    } else {
-      setLoading(false)
-      setResults([])
-    }
-
-    return () => clearTimeout(timeout)
-  }, [query])
-
-  const performSearch = async (query: string) => {
-    try {
-      const res = await fetch('/data/search.json')
-      const data = await res.json()
-      const result = data.filter((com: Result) => {
-        const queryStr = query.toLowerCase()
-        return (
-          com.name.toLowerCase().includes(queryStr) ||
-          com.sections.some((section) => section.title.toLowerCase().includes(queryStr))
-        )
-      })
-      setResults(result)
-    } catch (error) {
-      console.log(error)
-    }
-    setLoading(false)
-  }
-
-  if (results.length > 0 && !loading) {
-    storeData({
-      id: results[0].id,
-      name: results[0].name,
-      href: results[0].href,
+  const handleSearchData = (e: ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value.toLowerCase()
+    setQuery(inputValue)
+    startTransition(() => {
+      if (inputValue.trim() === '') {
+        setData(routes)
+      } else {
+        setData(routes.filter((item) => item.name.toLowerCase().includes(inputValue)))
+      }
     })
   }
 
-  const storedData = getData()
-
   return (
-    <Modal position="top-center" size="xl" show={showModal}>
-      <div className="p-3">
-        <div className="flex items-center justify-between  border-b border-b-metal-50 pb-1">
-          <p className="text-body-4 font-semibold text-metal-900">Search at Keep React</p>
-          <button onClick={() => setShowMainModal(!showModal)} className="text-metal-900 hover:text-metal-600">
-            <XCircle size={20} />
-          </button>
-        </div>
-        <form className="mt-2">
-          <div>
-            <fieldset className="relative">
-              <Input
-                value={query}
-                onChange={(e: any) => setQuery(e.target.value)}
-                ref={inputFocus}
-                placeholder="Search Component"
-                className="ps-11"
-              />
-              <Icon>
-                <MagnifyingGlass size={19} color="#AFBACA" />
-              </Icon>
-            </fieldset>
-          </div>
-        </form>
+    <Modal isOpen={isOpen} onClose={closeModal}>
+      <Modal.Body className="block w-[35rem] p-8">
+        <fieldset className="relative">
+          <Input
+            value={query}
+            onChange={handleSearchData}
+            ref={inputFocus}
+            placeholder="Search Component"
+            className="ps-11"
+          />
+          <Icon>
+            <MagnifyingGlass size={19} color="#AFBACA" />
+          </Icon>
+        </fieldset>
+        <Modal.Content id="search" className="mt-2 max-h-[300px] overflow-y-auto">
+          <Typography variant="div" className={query.length ? 'hidden' : 'block'}>
+            <p className="my-2 text-body-4 font-normal text-metal-400">Quick Access</p>
+            <ul>
+              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25">
+                <Link href="https://keepdesign.io/" target="_blank" className="flex items-center gap-1">
+                  <File size={14} />
+                  Figma
+                </Link>
+              </li>
+              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25">
+                <Link href="/docs/getting-started/Introduction" className="flex items-center gap-1">
+                  <File size={14} />
+                  Installation
+                </Link>
+              </li>
+              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25">
+                <Link href="/docs/getting-started/Typography" className="flex items-center gap-1">
+                  <File size={14} />
+                  Typography
+                </Link>
+              </li>
+            </ul>
+          </Typography>
+          <Typography variant="div">
+            <p className="my-2 text-body-4 font-normal text-metal-400">Components</p>
 
-        <p
-          className={cn(
-            'text-body-5 font-normal text-metal-500',
-            storedData?.length || results?.length ? 'py-3' : 'pt-2',
-          )}>
-          {!query && !storedData.length ? (
-            <span>No recent searches</span>
-          ) : !query && storedData.length ? (
-            <span>Recent searches</span>
-          ) : (
-            <span>Documentation</span>
-          )}
-        </p>
-
-        {!query && storedData.length
-          ? storedData?.map((item: result) => (
-              <Link
-                key={item.id}
-                href={projectUrl + item.href}
-                className="mb-1 flex items-center justify-between rounded bg-metal-100 p-3 text-body-5 font-medium text-metal-900 transition-colors  first:mt-1 hover:bg-metal-900 hover:text-white">
-                <span>{item.name}</span>
-                <span>
-                  <CaretRight size={20} color="#ccc" />
-                </span>
-              </Link>
-            ))
-          : null}
-
-        {loading ? (
-          <div>
-            <Skeleton animation>
-              <Skeleton.Line className="h-12" />
-              <Skeleton.Line className="h-12" />
-              <Skeleton.Line className="h-12" />
-              <Skeleton.Line className="h-12" />
-            </Skeleton>
-          </div>
-        ) : query && results.length ? (
-          results?.slice(0, 1).map((item) => (
-            <div key={item.id}>
-              <Link
-                href={projectUrl + item.href}
-                className="mb-1 flex items-center justify-between rounded bg-metal-900 p-3 text-body-5 font-medium text-white transition-colors first:mt-1 hover:bg-metal-800">
-                <span>{item.name}</span>
-                <span>
-                  <CaretRight size={20} color="#ccc" />
-                </span>
-              </Link>
-              <div className="flex flex-col gap-2">
-                {item?.sections?.slice(0, 5).map((sec) => (
-                  <Link
-                    className="flex items-center justify-between rounded bg-metal-100 p-3 text-body-5 font-normal hover:bg-metal-900 hover:text-white"
-                    key={sec.id}
-                    href={projectUrl + item.href + sec.id}>
-                    <span>{sec.title}</span>
-                    <span>
-                      <CaretRight size={20} color="#ccc" />
-                    </span>
-                  </Link>
+            {isPending ? (
+              <p className="text-left text-body-4 font-normal text-metal-600">Loading...</p>
+            ) : data.length > 0 ? (
+              <ul>
+                {data.map((route) => (
+                  <li
+                    key={route.id}
+                    className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25">
+                    <Link href={route.href} className="flex items-center gap-1">
+                      <RadioButton size={14} />
+                      {route.name}
+                    </Link>
+                  </li>
                 ))}
-              </div>
-            </div>
-          ))
-        ) : !loading && query && !results.length ? (
-          <div>
-            <p className="text-center text-body-5 font-medium text-metal-400">No Result Found with {query} word</p>
-          </div>
-        ) : null}
-      </div>
+              </ul>
+            ) : (
+              <p className="text-left text-body-4 font-normal text-metal-600">No results found.</p>
+            )}
+          </Typography>
+        </Modal.Content>
+      </Modal.Body>
     </Modal>
   )
 }

@@ -7,15 +7,15 @@ const ButtonGroupWithIcon = () => {
     <div className="h-20 p-4">
       <Button.Group>
         <Button position="start">
-          <Cube size={20} className="mr-2" />
+          <Cube size={20} className="mr-1.5" />
           Profile
         </Button>
         <Button position="center">
-          <Gear size={20} className="mr-2" />
+          <Gear size={20} className="mr-1.5" />
           Settings
         </Button>
         <Button position="end">
-          <ChatCircleDots size={24} className="mr-2" />
+          <ChatCircleDots size={24} className="mr-1.5" />
           Messages
         </Button>
       </Button.Group>

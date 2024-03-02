@@ -44,9 +44,19 @@ body {
   border-radius: 10px;
   background-color: #f9fafb;
 }
-#sidebar ::-webkit-scrollbar-thumb {
+#sidebar::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #d7dfe9;
+}
+
+#search::-webkit-scrollbar {
+  @apply w-2.5;
+}
+#search::-webkit-scrollbar-track {
+  @apply bg-metal-25;
+}
+#search::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-metal-100;
 }
 
 main::-webkit-scrollbar {

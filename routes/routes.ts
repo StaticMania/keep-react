@@ -11,7 +11,7 @@ import {
   TooltipComponent,
 } from '../app/components/ComponentsList'
 
-interface routerPath {
+export interface routerPath {
   id: string
   name: string
   href: string

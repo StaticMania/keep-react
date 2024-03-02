@@ -3,7 +3,7 @@ import { CloudArrowUp, DotsThree, HouseLine, Phone, SignIn, User } from 'phospho
 import { useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '../docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultRadio } from '../docs/components/radio/variant/DefaultRadio'
-import { Button, DatePicker, Modal, Pagination, Slider, Tabs, Tooltip } from '../src'
+import { Button, DatePicker, Modal, Pagination, Slider, Tabs, Tooltip, Typography } from '../src'
 
 export const SliderComponent = () => {
   return (
@@ -74,28 +74,40 @@ export const RadioSelectComponent = () => {
   )
 }
 export const ModalComponent = () => {
-  const [showModal, setShowModal] = useState(false)
-  const onClick = () => {
-    setShowModal(!showModal)
+  const [isOpen, setIsOpen] = useState(false)
+  const openModal = () => {
+    setIsOpen(true)
+  }
+  const closeModal = () => {
+    setIsOpen(false)
   }
   return (
     <div>
-      <Button onClick={onClick}>Modal</Button>
-      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
-        <Modal.Header>Do you want to upload this file?</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-body-4 leading-relaxed text-metal-500">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </p>
-          </div>
+      <Button onClick={openModal}>Modal</Button>
+      <Modal isOpen={isOpen} onClose={closeModal}>
+        <Modal.Body className="space-y-3">
+          <Modal.Icon>
+            <CloudArrowUp size={28} color="#1B4DFF" />
+          </Modal.Icon>
+          <Modal.Content>
+            <Typography variant="div" className="!mb-6">
+              <Typography variant="h3" className="mb-2 text-body-1 font-medium text-metal-900">
+                Update Modal Status
+              </Typography>
+              <Typography variant="p" className="text-body-4 font-normal text-metal-600">
+                Your document has unsaved changes. Discard or save them as a new page to continue.
+              </Typography>
+            </Typography>
+          </Modal.Content>
+          <Modal.Footer>
+            <Button onClick={closeModal} size="sm" variant="outline" color="secondary">
+              Cancel
+            </Button>
+            <Button onClick={closeModal} size="sm" color="primary">
+              Confirm
+            </Button>
+          </Modal.Footer>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="outline" onClick={onClick}>
-            Cancel
-          </Button>
-          <Button onClick={onClick}>Confirm</Button>
-        </Modal.Footer>
       </Modal>
     </div>
   )

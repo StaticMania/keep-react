@@ -4,12 +4,12 @@ import { Avatar, Button, Popover } from '../../../../src'
 
 const DefaultPopover = () => {
   return (
-    <div className="flex h-44 items-center justify-center gap-5 bg-metal-900 p-5">
+    <div className="flex h-44 items-center justify-center gap-5  p-5">
       <Popover placement="left">
         <Popover.Action>
           <CaretLeft size={20} />
         </Popover.Action>
-        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <Popover.Title>Popover title</Popover.Title>
@@ -24,7 +24,7 @@ const DefaultPopover = () => {
         <Popover.Action>
           <CaretRight size={20} />
         </Popover.Action>
-        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <Popover.Title>Popover title</Popover.Title>
@@ -39,7 +39,7 @@ const DefaultPopover = () => {
         <Popover.Action>
           <CaretUp size={20} />
         </Popover.Action>
-        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <Popover.Title>Popover title</Popover.Title>
@@ -54,7 +54,7 @@ const DefaultPopover = () => {
         <Popover.Action>
           <CaretDown size={20} />
         </Popover.Action>
-        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+        <Popover.Content className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <Popover.Title>Popover title</Popover.Title>
@@ -80,7 +80,7 @@ export const PopoverComponent = () => {
       <Popover.Action>
         <CaretRight size={20} />
       </Popover.Action>
-      <Popover.Content className="z-20 flex items-center gap-3 rounded-xl border bg-white p-4">
+      <Popover.Content className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
         <Avatar verified img="/images/avatar/avatar-3.png" />
         <div>
           <Popover.Title>Popover title</Popover.Title>

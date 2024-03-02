@@ -1,7 +1,7 @@
 'use client'
-import { FC, HTMLAttributes, ReactNode, forwardRef, useEffect } from 'react'
+import { FC, HTMLAttributes, forwardRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { cn } from '~/app/src/helpers/cn'
+import { cn } from '../../helpers/cn'
 import { Body } from './Body'
 import { Content } from './Content'
 import { Footer } from './Footer'
@@ -11,7 +11,6 @@ import { modalTheme } from './theme'
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   isOpen: boolean
   onClose: () => void
-  children?: ReactNode
 }
 
 const ModalComponent: FC<ModalProps> = forwardRef<HTMLDivElement, ModalProps>(

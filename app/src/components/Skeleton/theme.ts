@@ -7,5 +7,5 @@ interface keepSkeletonTheme {
 export const skeletonTheme: keepSkeletonTheme = {
   base: 'w-full cursor-wait',
   animation: 'animate-pulse',
-  line: 'w-full bg-metal-100 rounded-md',
+  line: 'w-full bg-metal-100 rounded-xl',
 }

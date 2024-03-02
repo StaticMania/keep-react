@@ -1,9 +1,9 @@
 'use client'
-import { CloudArrowUp } from 'phosphor-react'
+import { Info } from 'phosphor-react'
 import { useState } from 'react'
-import { Button, Modal, Typography } from '../../../../src'
+import { Button, Checkbox, Label, Modal, Typography } from '../../../../src'
 
-const DefaultModal = () => {
+const ModalWithCheckbox = () => {
   const [isOpen, setIsOpen] = useState(false)
   const openModal = () => {
     setIsOpen(true)
@@ -18,7 +18,7 @@ const DefaultModal = () => {
       <Modal isOpen={isOpen} onClose={closeModal}>
         <Modal.Body className="space-y-3">
           <Modal.Icon>
-            <CloudArrowUp size={28} color="#1B4DFF" />
+            <Info size={28} weight="fill" />
           </Modal.Icon>
           <Modal.Content>
             <Typography variant="div" className="!mb-6">
@@ -28,6 +28,12 @@ const DefaultModal = () => {
               <Typography variant="p" className="text-body-4 font-normal text-metal-600">
                 Your document has unsaved changes. Discard or save them as a new page to continue.
               </Typography>
+            </Typography>
+            <Typography variant="fieldset" className="mb-3 flex items-center gap-2">
+              <Checkbox id="checkbox" />
+              <Label htmlFor="checkbox" className="text-body-4 font-normal text-metal-600">
+                I understand, no need to repeat
+              </Label>
             </Typography>
           </Modal.Content>
           <Modal.Footer>
@@ -44,7 +50,7 @@ const DefaultModal = () => {
   )
 }
 
-const DefaultModalCode = `
+const ModalWithCheckboxCode = `
 'use client'
 import { useState } from 'react'
 import { Info } from 'phosphor-react'
@@ -65,7 +71,7 @@ export const ModalComponent = () => {
       <Modal isOpen={isOpen} onClose={closeModal}>
         <Modal.Body className="space-y-3">
           <Modal.Icon>
-            <CloudArrowUp size={28} color="#1B4DFF" />
+            <Info size={28} weight="fill" />
           </Modal.Icon>
           <Modal.Content>
             <Typography variant="div" className="!mb-6">
@@ -75,6 +81,12 @@ export const ModalComponent = () => {
               <Typography variant="p" className="text-body-4 font-normal text-metal-600">
                 Your document has unsaved changes. Discard or save them as a new page to continue.
               </Typography>
+            </Typography>
+            <Typography variant="fieldset" className="mb-3 flex items-center gap-2">
+              <Checkbox id="checkbox" />
+              <Label htmlFor="checkbox" className="text-body-4 font-normal text-metal-600">
+                I understand, no need to repeat
+              </Label>
             </Typography>
           </Modal.Content>
           <Modal.Footer>
@@ -92,4 +104,4 @@ export const ModalComponent = () => {
 }
 `
 
-export { DefaultModal, DefaultModalCode }
+export { ModalWithCheckbox, ModalWithCheckboxCode }

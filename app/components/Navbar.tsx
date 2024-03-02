@@ -10,8 +10,16 @@ import Search from './Search'
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+
+  const openModal = () => {
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsOpen(false)
+  }
 
   const IsActive = (str: string) => {
     const lastPart = pathname.toLocaleLowerCase().split('/').pop()
@@ -20,12 +28,8 @@ const Navbar = () => {
 
   useEffect(() => {
     setActive(false)
-    setShowModal(false)
+    setIsOpen(false)
   }, [pathname])
-
-  const handleModal = () => {
-    setShowModal(!showModal)
-  }
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-metal-100 bg-white">
@@ -48,10 +52,10 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          {showModal && <Search setShowMainModal={setShowModal} showModal={showModal} />}
+          {isOpen && <Search isOpen={isOpen} closeModal={closeModal} />}
           <div className="hidden items-end gap-3 lg:flex">
             <button
-              onClick={handleModal}
+              onClick={openModal}
               className="rounded grayscale transition duration-300 hover:bg-primary-50 hover:grayscale-0 sm:bg-primary-25 sm:p-3">
               <span>
                 <MagnifyingGlass size={20} color="#455468" />
@@ -93,7 +97,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center justify-between gap-3 lg:hidden">
             <button
-              onClick={handleModal}
+              onClick={openModal}
               className="grayscale transition duration-300 hover:grayscale-0 sm:rounded sm:bg-primary-25 sm:p-2.5 sm:hover:bg-primary-50">
               <MagnifyingGlass size={20} color="#455468" />
             </button>
