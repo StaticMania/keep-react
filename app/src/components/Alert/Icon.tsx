@@ -3,7 +3,7 @@ import { HTMLAttributes, ReactElement, ReactNode, Ref, cloneElement, forwardRef 
 import { cn } from '../../helpers/cn'
 import { useAlertContext } from './AlertContext'
 
-interface IconProps extends HTMLAttributes<SVGSVGElement> {
+export interface IconProps extends HTMLAttributes<SVGSVGElement> {
   children?: ReactNode
 }
 

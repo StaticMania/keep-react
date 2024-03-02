@@ -3,7 +3,7 @@ import { forwardRef, HTMLAttributes } from 'react'
 import { cn } from '../../helpers/cn'
 import { paginationTheme } from './theme'
 
-interface ListProps extends HTMLAttributes<HTMLUListElement> {}
+export interface ListProps extends HTMLAttributes<HTMLUListElement> {}
 
 const List = forwardRef<HTMLUListElement, ListProps>(({ children, ...props }, ref) => {
   const { list } = paginationTheme

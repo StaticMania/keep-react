@@ -1,7 +1,7 @@
 'use client'
 import { ButtonHTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
 
-interface DismissProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface DismissProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode
 }
 

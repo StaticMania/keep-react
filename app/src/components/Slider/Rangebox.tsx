@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
 
-interface SliderRangeProps {
+export interface SliderRangeProps {
   children?: ReactNode
   className?: string
 }

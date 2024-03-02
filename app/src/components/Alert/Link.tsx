@@ -3,7 +3,7 @@ import { AnchorHTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { alertTheme } from './theme'
 
-interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children?: ReactNode
 }
 
