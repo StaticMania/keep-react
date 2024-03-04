@@ -28,15 +28,6 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
-  .home {
-    background-image: url('https://staticmania.cdn.prismic.io/staticmania/248e8aae-351f-4cc8-8f1c-f44f9c292ac1_top-bg.svg');
-    background-position: center top;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-}
-
 #sidebar ::-webkit-scrollbar {
   width: 4px;
 }

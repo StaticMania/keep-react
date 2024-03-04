@@ -2,16 +2,17 @@
 'use client'
 import Link from 'next/link'
 import { File, MagnifyingGlass, RadioButton } from 'phosphor-react'
-import { ChangeEvent, FC, useCallback, useState, useTransition } from 'react'
+import { ChangeEvent, Dispatch, FC, SetStateAction, useCallback, useEffect, useState, useTransition } from 'react'
 import { routerPath, routes } from '~/routes/routes'
 import { Icon, Input, Modal, Typography } from '../src'
 
 interface ModalProps {
   isOpen: boolean
   closeModal: () => void
+  setIsOpen?: Dispatch<SetStateAction<boolean>>
 }
 
-const Search: FC<ModalProps> = ({ closeModal, isOpen }) => {
+const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
   const [query, setQuery] = useState('')
   const [data, setData] = useState<routerPath[]>(routes)
   const [isPending, startTransition] = useTransition()
@@ -37,9 +38,30 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen }) => {
     })
   }
 
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || e.key === '/') {
+        if (
+          (e.target instanceof HTMLElement && e.target.isContentEditable) ||
+          e.target instanceof HTMLInputElement ||
+          e.target instanceof HTMLTextAreaElement ||
+          e.target instanceof HTMLSelectElement
+        ) {
+          return
+        }
+
+        e.preventDefault()
+        setIsOpen && setIsOpen((open) => !open)
+      }
+    }
+
+    document.addEventListener('keydown', down)
+    return () => document.removeEventListener('keydown', down)
+  }, [setIsOpen])
+
   return (
     <Modal isOpen={isOpen} onClose={closeModal}>
-      <Modal.Body className="block w-[35rem] p-8">
+      <Modal.Body className="block p-8 lg:w-[35rem]">
         <fieldset className="relative">
           <Input
             value={query}

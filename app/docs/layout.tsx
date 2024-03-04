@@ -30,9 +30,9 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
 
   // link is active or not active
   const IsActive = (str: string) => {
-    const lastPart = pathname.toLocaleLowerCase().split('/').pop()
-    const strLastPart = str.toLocaleLowerCase().split('/').pop()
-    return strLastPart === lastPart
+    const lastPart = pathname.toLowerCase().split('/').pop()
+    const strPart = str.toLowerCase().split('/').pop()
+    return strPart === lastPart
   }
 
   const newIdArr: Sections[] = Array.from(allSection).map((section, index) => ({
@@ -100,7 +100,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                         <Link
                           className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                             IsActive(route.href)
-                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150'
+                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150 hover:text-primary-500'
                               : ''
                           }`}
                           href={route.href}>
@@ -126,7 +126,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                         <Link
                           className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                             IsActive(route.href)
-                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150'
+                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150 hover:text-primary-500'
                               : ''
                           }`}
                           href={route.href}>

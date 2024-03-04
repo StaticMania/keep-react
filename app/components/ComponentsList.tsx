@@ -3,7 +3,19 @@ import { CloudArrowUp, DotsThree, HouseLine, Phone, SignIn, User } from 'phospho
 import { useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '../docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultRadio } from '../docs/components/radio/variant/DefaultRadio'
-import { Button, DatePicker, Modal, Pagination, Slider, Tabs, Tooltip, Typography } from '../src'
+import {
+  Accordion,
+  AreaChart,
+  Button,
+  DatePicker,
+  Modal,
+  Pagination,
+  Skeleton,
+  Slider,
+  Tabs,
+  Tooltip,
+  Typography,
+} from '../src'
 
 export const SliderComponent = () => {
   return (
@@ -139,6 +151,132 @@ export const TabsComponent = () => {
         <Tabs.Content label="three">Contact Content</Tabs.Content>
         <Tabs.Content label="four">Sign Up Content</Tabs.Content>
       </Tabs>
+    </div>
+  )
+}
+export const AreaChartComponent = () => {
+  const chartData = [
+    {
+      name: '1',
+      price: 0,
+      sell: 0,
+    },
+    {
+      name: '2',
+      price: 300,
+      sell: 200,
+    },
+    {
+      name: '3',
+      price: 170,
+      sell: 120,
+    },
+    {
+      name: '4',
+      price: 190,
+      sell: 130,
+    },
+    {
+      name: '5',
+      price: 220,
+      sell: 120,
+    },
+    {
+      name: '6',
+      price: 400,
+      sell: 213,
+    },
+    {
+      name: '7',
+      price: 420,
+      sell: 325,
+    },
+    {
+      name: '8',
+      price: 450,
+      sell: 250,
+    },
+    {
+      name: '9',
+      price: 400,
+      sell: 300,
+    },
+    {
+      name: '10',
+      price: 500,
+      sell: 400,
+    },
+  ]
+  return (
+    <AreaChart
+      dataKey="price"
+      secondaryDataKey="sell"
+      showTooltip={true}
+      showGridLine={true}
+      showXaxis={true}
+      showYaxis={true}
+      chartData={chartData}
+    />
+  )
+}
+
+export const AccordionComponent = () => {
+  return (
+    <Accordion openFirstPanel={true} className="space-y-4">
+      <Accordion.Panel>
+        <Accordion.Container>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Icon />
+        </Accordion.Container>
+        <Accordion.Content>
+          The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
+          user experience across our products. It simplifies the design and development process by providing
+          ready-to-use components that can be easily customized and integrated into various applications.
+        </Accordion.Content>
+      </Accordion.Panel>
+      <Accordion.Panel>
+        <Accordion.Container>
+          <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Icon />
+        </Accordion.Container>
+        <Accordion.Content>
+          The Keep React offers a range of color variants for components. To customize the color scheme, you can use the
+          available color options such as gray,info,error,warning and success. Simply set the desired color variant as a
+          prop when using the component, and it will reflect the chosen color.
+        </Accordion.Content>
+      </Accordion.Panel>
+      <Accordion.Panel>
+        <Accordion.Container>
+          <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Icon />
+        </Accordion.Container>
+        <Accordion.Content>
+          Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
+          message. The additionalContent prop can be used to display supplementary information, such as buttons, links,
+          or icons, within the notification to provide users with more context and options.
+        </Accordion.Content>
+      </Accordion.Panel>
+    </Accordion>
+  )
+}
+
+export const SkeletonComponent = () => {
+  return (
+    <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+      <Skeleton className="w-full space-y-2.5 xl:max-w-md">
+        <Skeleton.Line className="h-52 w-full" />
+        <Skeleton.Line className="h-4 w-full" />
+        <Skeleton.Line className="h-4 w-3/5" />
+        <Skeleton.Line className="h-4 w-4/5" />
+        <Skeleton.Line className="h-10 w-2/5" />
+      </Skeleton>
+      <Skeleton className="w-full space-y-2.5 xl:max-w-md">
+        <Skeleton.Line className="h-52 w-full" />
+        <Skeleton.Line className="h-4 w-full" />
+        <Skeleton.Line className="h-4 w-3/5" />
+        <Skeleton.Line className="h-4 w-4/5" />
+        <Skeleton.Line className="h-10 w-2/5" />
+      </Skeleton>
     </div>
   )
 }

@@ -167,18 +167,14 @@ module.exports = {
       },
       keyframes: {
         'bounce-open': {
-          '0%': { transform: 'scale(0.7)' },
-          '45%': { transform: 'scale(1.05)' },
-          '80%': {
-            transform: 'scale(0.95)',
-          },
+          '0%': { transform: 'scale(0.95)' },
           '100%': {
             transform: 'scale(1)',
           },
         },
       },
       animation: {
-        'keep-bounce': 'bounce-open 0.3s',
+        'keep-bounce': 'bounce-open 0.1s',
       },
       content: {
         img: 'url("/images/avatar/verify.svg")',

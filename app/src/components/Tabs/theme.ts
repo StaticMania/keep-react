@@ -53,7 +53,7 @@ export const tabsTheme: TabsStyleTheme = {
   item: {
     base: 'border-transparent bg-transparent px-4 py-3 text-body-3 font-medium hover:bg-primary-50 hover:text-primary-500',
     vertical: {
-      on: 'flex w-full items-center justify-between gap-2 border-b border-b-metal-50  text-metal-600  last-of-type:border-b-0',
+      on: 'flex w-full items-center justify-between gap-2 border-b border-b-metal-50 text-metal-600 last-of-type:border-b-0',
       off: 'border-b-2 border-transparent',
     },
     active: {

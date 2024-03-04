@@ -50,7 +50,7 @@ export const AccordionComponent = () => {
     <Accordion flush={true}>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
           <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
@@ -61,7 +61,7 @@ export const AccordionComponent = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>How do I customize the color scheme of components?</Accordion.Title>
+          <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
           <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
@@ -72,7 +72,7 @@ export const AccordionComponent = () => {
       </Accordion.Panel>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>Can I add additional content to notifications?</Accordion.Title>
+          <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
           <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
@@ -84,6 +84,7 @@ export const AccordionComponent = () => {
     </Accordion>
   )
 }
+
 `
 
 export { AccordionFlush, AccordionFlushCode }

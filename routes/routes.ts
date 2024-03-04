@@ -1,11 +1,14 @@
 import { ReactElement } from 'react'
 import { v4 as generatedID } from 'uuid'
 import {
+  AccordionComponent,
+  AreaChartComponent,
   BarChartComponent,
   DatePickerComponent,
   ModalComponent,
   PaginationComponent,
   RadioSelectComponent,
+  SkeletonComponent,
   SliderComponent,
   TabsComponent,
   TooltipComponent,
@@ -378,6 +381,37 @@ export const navbarRoutes: routerPath[] = [
     href: '/docs/getting-started/Introduction',
     name: 'Documentation',
     redirect: false,
+  },
+]
+
+export const NewList: { id: string; href: string; name: string; label: string; component: () => ReactElement }[] = [
+  {
+    id: generatedID(),
+    href: '/docs/components/accordion',
+    component: AccordionComponent,
+    name: 'Accordion',
+    label: 'item1',
+  },
+  {
+    id: generatedID(),
+    href: '/docs/components/areaChart',
+    component: AreaChartComponent,
+    name: 'Area Chart',
+    label: 'item2',
+  },
+  {
+    id: generatedID(),
+    href: '/docs/components/modal',
+    component: ModalComponent,
+    name: 'Modal',
+    label: 'item3',
+  },
+  {
+    id: generatedID(),
+    href: '/docs/components/skeleton',
+    component: SkeletonComponent,
+    name: 'Skeleton',
+    label: 'item4',
   },
 ]
 
