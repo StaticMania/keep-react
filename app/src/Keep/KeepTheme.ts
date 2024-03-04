@@ -35,17 +35,6 @@ export interface KeepSizes {
   '7xl': string
 }
 
-export interface KeepButtonVariant {
-  primary: string
-  outlineGray: string
-  outlinePrimary: string
-  dashed: string
-  text: string
-  linkPrimary: string
-  linkGray: string
-  default: string
-}
-
 export interface KeepBoolean {
   off: string
   on: string
