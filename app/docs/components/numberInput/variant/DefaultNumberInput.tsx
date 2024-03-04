@@ -8,7 +8,7 @@ const DefaultNumberInput = () => {
       <NumberInput.Button>
         <Minus size={16} color="#455468" />
       </NumberInput.Button>
-      <NumberInput.Input defaultValue={12} />
+      <NumberInput.Input defaultValue={0} />
       <NumberInput.Button>
         <Plus size={16} color="#455468" />
       </NumberInput.Button>
@@ -27,7 +27,7 @@ export const NumberInputComponent = () => {
       <NumberInput.Button>
         <Minus size={16} color="#455468" />
       </NumberInput.Button>
-      <NumberInput.Input defaultValue={12} />
+      <NumberInput.Input defaultValue={0} />
       <NumberInput.Button>
         <Plus size={16} color="#455468" />
       </NumberInput.Button>

@@ -31,7 +31,8 @@ const BreadcrumbWithBorder = () => {
 }
 
 const BreadcrumbWithBorderCode = `
-import { Breadcrumb } from "keep-react";
+'use client'
+import { Breadcrumb } from 'keep-react'
 
 export const BreadcrumbComponent = () => {
   return (

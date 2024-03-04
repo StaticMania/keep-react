@@ -5,7 +5,7 @@ import { Suspense } from 'react'
 const TopProgressBar = () => {
   return (
     <Suspense>
-      <ProgressBar height="2px" color="#1B4DFF" options={{ showSpinner: false }} />
+      <ProgressBar height="2px" color="#1B4DFF" options={{ showSpinner: false }} shallowRouting />
     </Suspense>
   )
 }

@@ -18,7 +18,7 @@ const CustomizeProgressCode = `
 'use client'
 import { CircleProgress, LineProgress } from 'keep-react'
 
-const CustomizeProgress = () => {
+export const ProgressComponent = () => {
   return (
     <>
       <CircleProgress progress={45} strokeBgColor="text-error-50" strokeColor="text-error-500">

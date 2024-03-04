@@ -33,7 +33,7 @@ const CheckboxVariantCode = `
 'use client'
 import { Checkbox, Label } from 'keep-react'
 
-const CheckboxVariant = () => {
+export const CheckboxComponent = () => {
   return (
     <>
       <fieldset className="flex items-center gap-2">

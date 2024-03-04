@@ -32,7 +32,7 @@ const BreadcrumbDividerIcon = () => {
 
 const BreadcrumbDividerIconCode = `
 'use client'
-import { Breadcrumb } from "keep-react"
+import { Breadcrumb } from 'keep-react'
 
 export const BreadcrumbComponent = () => {
   return (

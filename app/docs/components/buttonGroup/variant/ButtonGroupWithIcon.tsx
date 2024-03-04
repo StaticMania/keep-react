@@ -37,7 +37,7 @@ export const ButtonGroupComponent = () => {
         </span>
         Profile
       </Button>
-      <Button  position="middle">
+      <Button  position="center">
         <span className="pr-2">
           <Gear size={24} />
         </span>

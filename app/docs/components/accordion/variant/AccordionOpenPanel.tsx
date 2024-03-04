@@ -45,7 +45,7 @@ const AccordionOpenPanelCode = `
 'use client'
 import { Accordion } from 'keep-react'
 
-const AccordionOpenPanel = () => {
+export const AccordionComponent = () => {
   return (
     <Accordion openFirstPanel={true} className="space-y-4">
       <Accordion.Panel>

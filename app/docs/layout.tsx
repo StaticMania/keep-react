@@ -45,6 +45,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
 
     linkElements.forEach((link) => {
       const href = link.getAttribute('href')
+      link.setAttribute('data-disable-nprogress', 'true')
       if ('#' + activeSection === href) {
         link.classList.add('active-link')
       } else {

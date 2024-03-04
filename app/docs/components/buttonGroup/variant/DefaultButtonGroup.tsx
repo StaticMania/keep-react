@@ -24,8 +24,8 @@ export const ButtonGroupComponent = () => {
         <Button position="center">Settings</Button>
         <Button position="end">Messages</Button>
     </Button.Group>
-  );
-};
+  )
+}
 `
 
 export { DefaultButtonGroup, DefaultButtonGroupCode }

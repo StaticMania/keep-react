@@ -1,18 +1,4 @@
-import { ReactElement } from 'react'
 import { v4 as generatedID } from 'uuid'
-import {
-  AccordionComponent,
-  AreaChartComponent,
-  BarChartComponent,
-  DatePickerComponent,
-  ModalComponent,
-  PaginationComponent,
-  RadioSelectComponent,
-  SkeletonComponent,
-  SliderComponent,
-  TabsComponent,
-  TooltipComponent,
-} from '../app/components/ComponentsList'
 
 export interface routerPath {
   id: string
@@ -182,14 +168,6 @@ export const routes: routerPath[] = [
     name: 'Number Input',
     folderName: 'FormControls',
     href: '/docs/components/numberInput',
-    tag: false,
-    deprecate: false,
-  },
-  {
-    id: generatedID(),
-    name: 'Play',
-    folderName: 'Play',
-    href: '/docs/components/play',
     tag: false,
     deprecate: false,
   },
@@ -381,85 +359,5 @@ export const navbarRoutes: routerPath[] = [
     href: '/docs/getting-started/Introduction',
     name: 'Documentation',
     redirect: false,
-  },
-]
-
-export const NewList: { id: string; href: string; name: string; label: string; component: () => ReactElement }[] = [
-  {
-    id: generatedID(),
-    href: '/docs/components/accordion',
-    component: AccordionComponent,
-    name: 'Accordion',
-    label: 'item1',
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/areaChart',
-    component: AreaChartComponent,
-    name: 'Area Chart',
-    label: 'item2',
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/modal',
-    component: ModalComponent,
-    name: 'Modal',
-    label: 'item3',
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/skeleton',
-    component: SkeletonComponent,
-    name: 'Skeleton',
-    label: 'item4',
-  },
-]
-
-export const ComponentList: {
-  id: string
-  href: string
-  component: () => ReactElement
-}[] = [
-  {
-    id: generatedID(),
-    href: '/docs/components/pagination',
-    component: PaginationComponent,
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/tabs',
-    component: TabsComponent,
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/modal',
-    component: ModalComponent,
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/tooltip',
-    component: TooltipComponent,
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/barChart',
-    component: BarChartComponent,
-  },
-
-  {
-    id: generatedID(),
-    href: '/docs/components/radio',
-    component: RadioSelectComponent,
-  },
-
-  {
-    id: generatedID(),
-    href: '/docs/components/slider',
-    component: SliderComponent,
-  },
-  {
-    id: generatedID(),
-    href: '/docs/components/datePicker',
-    component: DatePickerComponent,
   },
 ]
