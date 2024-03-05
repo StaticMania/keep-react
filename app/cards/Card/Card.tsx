@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '~/app/src/helpers/cn'
 import { Content } from './Content'
 import { Description } from './Description'
 import { Footer } from './Footer'

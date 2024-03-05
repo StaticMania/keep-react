@@ -1,10 +1,10 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import CardDocs from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:
-    'The Card component in the Keep React library is a versatile and visually appealing UI element designed for React applications. It provides a structured container for displaying various types of content, such as text, images, buttons, and more, in an organized and elegant manner.',
+    'The card component in Keep React offers a variety of button types, sizes, and states to meet your design needs. With options for icons and destructiveness, you can create visually appealing and functional buttons for your product.',
   title: 'Card - Keep React',
 }
 
