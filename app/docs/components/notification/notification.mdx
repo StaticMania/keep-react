@@ -1,52 +1,41 @@
 import { DefaultNotification, DefaultNotificationCode } from './variant/DefaultNotification'
-import { NotificationWithIcon, NotificationWithIconCode } from './variant/NotificationWithIcon'
-import { NotificationWithAvatar, NotificationWithAvatarCode } from './variant/NotificationWithAvatar'
+import { NotificationPosition, NotificationPositionCode } from './variant/NotificationPosition'
 import { NotificationWithCard, NotificationWithCardCode } from './variant/NotificationWithCard'
-
 import { notificationApi } from './notificationApi'
 
 import CodePreview from '../../../components/CodePreview'
-
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-Notification component in the Keep React allows you to display informative messages or alerts to users. With various styles and options for positioning, you can effectively communicate important updates or messages in a visually appealing manner.
+The Notification component in Keep React allows you to deliver informative messages or alerts to users. With versatile styling and positioning options, you can effectively communicate important updates or messages in a visually appealing manner.
 
 ## Default Notification
 
-Default Notification component in the Keep React allows you to display informative messages or alerts to users.
+Display informative messages or alerts to users with the Default Notification component in Keep React.
 
 <CodePreview github="Notification" code={DefaultNotificationCode}>
   <DefaultNotification />
 </CodePreview>
 
-## Notification With Icon
-
-The Notification component in the Keep React can be enhanced with icons, providing users with visual cues alongside the message. This combination of text and icon ensures that notifications are both informative and easily comprehensible.
-
-<CodePreview github="Notification" code={NotificationWithIconCode}>
-  <NotificationWithIcon />
-</CodePreview>
-
-## Notification With Avatar
-
-The Notification component in the Keep React can include avatars, allowing you to associate user images with notifications. This integration enhances user recognition and engagement by providing personalized and context-rich notifications.
-
-<CodePreview github="Notification" code={NotificationWithAvatarCode}>
-  <NotificationWithAvatar />
-</CodePreview>
-
 ## Notification With Card
 
-The Notification component in the Keep React can be enhanced with a card layout, allowing you to present notifications in a visually structured manner. This design accommodates more content and context, providing users with detailed and informative notifications.
+Enhance the Notification component with a card layout for a more visually appealing display.
 
 <CodePreview github="Notification" code={NotificationWithCardCode}>
   <NotificationWithCard />
 </CodePreview>
 
+## Notification Position
+
+Position notifications according to your preference with available options: `"top-left"`, `"top-right"`, `"bottom-left"`, `"bottom-right"`. Default position is `"bottom-right"`.
+
+<CodePreview github="Notification" code={NotificationPositionCode}>
+  <NotificationPosition />
+</CodePreview>
+
 ## API Reference
 
-Explore the available props for the notification component
+Explore the available props for the Notification component.
 
 <ComponentApi data={notificationApi} />

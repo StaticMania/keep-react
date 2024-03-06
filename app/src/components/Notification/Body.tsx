@@ -1,13 +1,37 @@
-import { FC, ReactNode } from 'react'
+'use client'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { notificationTheme } from './theme'
+import { useNotificationContext } from './Context'
 
-export interface BodyProps {
-  children?: ReactNode
-  className?: string
+const contentTheme = {
+  position: {
+    'top-left': 'top-5 left-5',
+    'top-right': 'top-5 right-5',
+    'bottom-left': 'bottom-5 left-5',
+    'bottom-right': 'bottom-5 right-5',
+    center: 'right-0 left-0',
+  },
 }
 
-export const Body: FC<BodyProps> = ({ children, className }) => {
-  const { body } = notificationTheme
-  return <div className={cn(body, className)}>{children}</div>
-}
+const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
+    const { isOpen, position = 'bottom-right' } = useNotificationContext()
+    return (
+      <div
+        {...props}
+        className={cn(
+          'notification-body absolute max-w-sm rounded-lg bg-white p-6 transition-all duration-300',
+          isOpen && 'animate-keep-bounce',
+          contentTheme.position[position],
+          className,
+        )}
+        ref={ref}>
+        {children}
+      </div>
+    )
+  },
+)
+
+Body.displayName = 'Notification.Body'
+
+export { Body }

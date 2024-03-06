@@ -1,15 +1,15 @@
 export const notificationApi = [
   {
     id: 1,
-    propsName: 'dismiss',
+    propsName: 'isOpen',
     propsType: 'boolean',
-    propsDescription: 'Determines whether the notification can be dismissed.',
+    propsDescription: 'Notification show or not.',
     default: 'false',
   },
   {
     id: 2,
-    propsName: 'onDismiss',
-    propsType: 'boolean | (() => void)',
+    propsName: 'onClose',
+    propsType: '(() => void)',
     propsDescription: 'Function to call when the notification is dismissed.',
     default: 'false',
   },
@@ -18,13 +18,6 @@ export const notificationApi = [
     propsName: 'position',
     propsType: ['top-left', 'top-right', 'bottom-left', 'bottom-right'],
     propsDescription: 'Sets the position of the notification.',
-    default: 'top-left',
-  },
-  {
-    id: 4,
-    propsName: 'className',
-    propsType: 'string',
-    propsDescription: 'Custom class name for the notification',
-    default: 'None',
+    default: 'bottom-right',
   },
 ]

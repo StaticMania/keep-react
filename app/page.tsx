@@ -76,14 +76,18 @@ const ComponentUI = () => {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2">
-          {routes.slice(0, 20).map((item) => (
-            <Link
-              href={item.href}
-              key={item.id}
-              className="rounded-lg border border-dashed border-metal-200 bg-white px-6 py-2.5 transition-all duration-300 hover:bg-metal-900 hover:text-white">
-              {item.name}
-            </Link>
-          ))}
+          {routes.slice(0, 20).map((item) => {
+            const { href, id, Icon } = item
+            return (
+              <Link
+                href={href}
+                key={id}
+                className="flex items-center gap-1 rounded-lg border border-dashed border-metal-200 bg-white px-6 py-2.5 transition-all duration-300 hover:bg-metal-900 hover:text-white">
+                {Icon && <Icon />}
+                {item.name}
+              </Link>
+            )
+          })}
         </div>
         <div className="flex items-center justify-center">
           <Link

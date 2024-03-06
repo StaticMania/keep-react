@@ -1,3 +1,27 @@
+import {
+  BatteryWarning,
+  BellRinging,
+  Browser,
+  Browsers,
+  Calendar,
+  Cards,
+  CaretDoubleRight,
+  ChartBar,
+  ChartLineUp,
+  CheckCircle,
+  DotsThreeCircle,
+  IconProps,
+  ListNumbers,
+  Minus,
+  Notification,
+  Option,
+  PictureInPicture,
+  RadioButton,
+  SlidersHorizontal,
+  User,
+  Warning,
+} from 'phosphor-react'
+import { ForwardRefExoticComponent, RefAttributes } from 'react'
 import { v4 as generatedID } from 'uuid'
 
 export interface routerPath {
@@ -8,6 +32,7 @@ export interface routerPath {
   deprecate?: boolean
   redirect?: boolean
   folderName?: string
+  Icon?: ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>
 }
 
 export const routes: routerPath[] = [
@@ -18,6 +43,7 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
     folderName: 'Accordion',
+    Icon: Browsers,
   },
   {
     id: generatedID(),
@@ -26,6 +52,7 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
     folderName: 'Alert',
+    Icon: Warning,
   },
   {
     id: generatedID(),
@@ -34,6 +61,7 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
     folderName: 'Chart',
+    Icon: ChartLineUp,
   },
   {
     id: generatedID(),
@@ -42,6 +70,7 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
     folderName: 'Avatar',
+    Icon: User,
   },
   {
     id: generatedID(),
@@ -50,6 +79,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/badge',
     tag: false,
     deprecate: false,
+    Icon: Notification,
   },
   {
     id: generatedID(),
@@ -58,6 +88,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/barChart',
     tag: false,
     deprecate: false,
+    Icon: ChartBar,
   },
   {
     id: generatedID(),
@@ -66,6 +97,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/breadcrumb',
     tag: false,
     deprecate: false,
+    Icon: CaretDoubleRight,
   },
   {
     id: generatedID(),
@@ -74,6 +106,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/button',
     tag: false,
     deprecate: false,
+    Icon: RadioButton,
   },
   {
     id: generatedID(),
@@ -82,6 +115,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/buttonGroup',
     tag: false,
     deprecate: false,
+    Icon: DotsThreeCircle,
   },
   {
     id: generatedID(),
@@ -90,6 +124,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/card',
     tag: false,
     deprecate: false,
+    Icon: Cards,
   },
   {
     id: generatedID(),
@@ -98,6 +133,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/carousel',
     tag: false,
     deprecate: false,
+    Icon: SlidersHorizontal,
   },
   {
     id: generatedID(),
@@ -106,6 +142,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/checkbox',
     tag: false,
     deprecate: false,
+    Icon: CheckCircle,
   },
   {
     id: generatedID(),
@@ -114,6 +151,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/divider',
     tag: false,
     deprecate: false,
+    Icon: Minus,
   },
   {
     id: generatedID(),
@@ -122,6 +160,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/datePicker',
     tag: false,
     deprecate: false,
+    Icon: Calendar,
   },
   {
     id: generatedID(),
@@ -130,6 +169,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/dropdown',
     tag: false,
     deprecate: false,
+    Icon: Option,
   },
   {
     id: generatedID(),
@@ -138,6 +178,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/empty',
     tag: false,
     deprecate: false,
+    Icon: BatteryWarning,
   },
   {
     id: generatedID(),
@@ -146,6 +187,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/modal',
     tag: false,
     deprecate: false,
+    Icon: PictureInPicture,
   },
   {
     id: generatedID(),
@@ -154,6 +196,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/navbar',
     tag: false,
     deprecate: false,
+    Icon: Browser,
   },
   {
     id: generatedID(),
@@ -162,6 +205,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/notification',
     tag: false,
     deprecate: false,
+    Icon: BellRinging,
   },
   {
     id: generatedID(),
@@ -170,6 +214,7 @@ export const routes: routerPath[] = [
     href: '/docs/components/numberInput',
     tag: false,
     deprecate: false,
+    Icon: ListNumbers,
   },
   {
     id: generatedID(),
