@@ -25,7 +25,7 @@ export const avatarApiData = [
     propsName: 'color',
     propsType: ['primary', 'secondary', 'success', 'warning', 'error'],
     propsDescription: 'Specifies the color of the avatar',
-    default: 'primary',
+    default: 'secondary',
   },
   {
     id: 4,

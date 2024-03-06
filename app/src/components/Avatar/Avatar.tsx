@@ -23,7 +23,7 @@ const AvatarComponent: FC<AvatarProps> = forwardRef<HTMLDivElement, AvatarProps>
       alt = 'avatar',
       size = 'xl',
       shape = 'circle',
-      color = 'primary',
+      color = 'secondary',
       active = false,
       verified = false,
       className,
