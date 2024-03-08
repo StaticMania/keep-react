@@ -47,8 +47,8 @@ const DefaultModal = () => {
 const DefaultModalCode = `
 'use client'
 import { useState } from 'react'
-import { Info } from 'phosphor-react'
-import { Button, Checkbox, Label, Modal, Typography } from 'keep-react'
+import { CloudArrowUp } from 'phosphor-react'
+import { Button, Modal, Typography } from 'keep-react'
 
 export const ModalComponent = () => {
   const [isOpen, setIsOpen] = useState(false)

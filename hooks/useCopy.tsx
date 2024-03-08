@@ -8,8 +8,8 @@ const useCopy = () => {
     }, 3000)
   }
   const copyToClipboard = (text: string) => {
-    navigator.clipboard
-      .writeText(text)
+    navigator?.clipboard
+      ?.writeText(text)
       .then(() => {
         setCopy(true)
       })
