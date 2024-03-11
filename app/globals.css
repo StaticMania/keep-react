@@ -131,7 +131,7 @@ pre::-webkit-scrollbar-thumb {
 
 .community-1 {
   background: linear-gradient(227deg, #c0adff 0%, #6457c6 95.09%);
-  @apply w-full rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1 md:col-span-1 lg:col-span-2 lg:row-span-2;
+  @apply w-full rounded-2xl bg-white p-7 transition-all duration-300 hover:-translate-y-1 md:col-span-1 lg:col-span-2 lg:row-span-2 lg:p-0;
 }
 
 .community-2 {
