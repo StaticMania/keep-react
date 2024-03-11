@@ -41,7 +41,7 @@ const Footer = () => {
               <li>
                 <Link
                   className="inline-block text-body-4 font-normal transition-all duration-300 hover:translate-x-1"
-                  href="https://www.figma.com/file/J2i6VhncmepyLt8OS7i0GQ/Keep-Design-System---Pro-Version---Preview?type=design&node-id=2411-87283&mode=design&t=sYkDt6aaEl1EGXgV-0"
+                  href="https://keepdesign.io"
                   target="_blank">
                   Figma
                 </Link>
