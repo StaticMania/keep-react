@@ -3,7 +3,7 @@ import { InputHTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { checkboxTheme } from './theme'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   variant?: 'circle' | 'rounded' | 'checked' | 'dashed'
 }
 

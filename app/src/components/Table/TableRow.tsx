@@ -2,7 +2,7 @@ import { useState, type ComponentProps, type FC, type PropsWithChildren } from '
 import { cn } from '../../helpers/cn'
 import type { DeepPartial } from '../../helpers/deep-partial'
 
-import { Checkbox } from '../Checkbox/Checkbox'
+import { Checkbox } from '../Checkbox'
 import { useTableContext } from './TableContext'
 import { keepTableRowTheme, tableTheme } from './theme'
 
