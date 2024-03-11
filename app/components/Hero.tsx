@@ -1,16 +1,18 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Check, Clipboard } from 'phosphor-react'
 import useCopy from '~/hooks/useCopy'
+import HeroImg from '../../public/images/home/hero-1.png'
 
 const Hero = () => {
   const { copy, copyToClipboard } = useCopy()
   return (
-    <section className="hero-area py-10 md:py-20 lg:py-32">
+    <section className="hero-area py-10 md:py-20 lg:pb-24 lg:pt-28">
       <div className="mx-auto max-w-7xl px-6 2xl:px-0">
         <div className="grid grid-cols-1 items-start justify-between gap-5 lg:grid-cols-2">
           <div className="w-full lg:col-span-1">
-            <div>
+            <div className="mt-5">
               <Link
                 href="https://www.producthunt.com/posts/keep-react?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-keep&#0045;react"
                 target="_blank"
@@ -47,7 +49,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="w-full lg:col-span-1">
-            <div className="h-[500px] rounded-lg bg-white"></div>
+            <Image src={HeroImg} alt="hero" className="lg:scale-[1.2]" />
           </div>
         </div>
       </div>

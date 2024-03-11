@@ -14,41 +14,48 @@ const Footer = () => {
             <Link href="/" className="flex">
               <Image width="113" height="40" src="/images/keep.svg" alt="Keep React" />
             </Link>
-            <p className="mt-6 max-w-lg text-body-3 font-normal text-metal-700">
+            <p className="mt-6 max-w-lg text-body-4 font-normal text-metal-600">
               Keep React is an open-source component library built on Tailwind CSS and React.js. It provides a versatile
               set of pre-designed UI components to build modern web applications.
             </p>
           </div>
           <div>
-            <h4 className="mb-3 text-body-3 font-medium uppercase text-metal-900">RESOURCES</h4>
-            <ul className="flex flex-col gap-3 text-body-3 font-normal text-metal-700">
+            <h4 className="mb-3 text-body-3 font-medium text-metal-900">Resource</h4>
+            <ul className="flex flex-col gap-3 text-body-3 font-normal text-metal-600">
               <li>
-                <a href="https://github.com/StaticMania/keep-react" target="_blank">
+                <Link
+                  className="inline-block text-body-4 font-normal transition-all duration-300 hover:translate-x-1"
+                  href="https://github.com/StaticMania/keep-react"
+                  target="_blank">
                   GitHub
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://tailwindcss.com/" target="_blank">
+                <Link
+                  className="inline-block text-body-4 font-normal transition-all duration-300 hover:translate-x-1"
+                  href="https://tailwindcss.com"
+                  target="_blank">
                   Tailwind CSS
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
+                  className="inline-block text-body-4 font-normal transition-all duration-300 hover:translate-x-1"
                   href="https://www.figma.com/file/J2i6VhncmepyLt8OS7i0GQ/Keep-Design-System---Pro-Version---Preview?type=design&node-id=2411-87283&mode=design&t=sYkDt6aaEl1EGXgV-0"
                   target="_blank">
                   Figma
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="border-t border-t-metal-100 py-5 text-center">
-        <p className="text-body-3 font-normal text-metal-900">
+        <p className="text-body-4 font-normal text-metal-600">
           &copy;{new Date().getFullYear()} All Rights Reserved by &nbsp;
-          <a href="https://staticmania.com/" target="_blank" className="font-medium">
+          <Link href="https://staticmania.com/" target="_blank" className="font-medium">
             StaticMania
-          </a>
+          </Link>
         </p>
       </div>
     </footer>
