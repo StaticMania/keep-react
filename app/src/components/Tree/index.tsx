@@ -1,7 +1,7 @@
 'use client'
 import { FC, ReactNode, useState } from 'react'
 import { cn } from '../../helpers/cn'
-import { Checkbox } from '../Checkbox-'
+import { Checkbox } from '../Checkbox'
 import { treeTheme } from './theme'
 
 /**
