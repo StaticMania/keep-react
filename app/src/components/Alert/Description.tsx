@@ -1,14 +1,18 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { alertTheme } from './theme'
 
-export interface DescriptionProps {
-  className?: string
-  children?: ReactNode
-}
+const Description = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
+  ({ children, ...props }: HTMLAttributes<HTMLParagraphElement>, ref: Ref<HTMLParagraphElement>) => {
+    return (
+      <p {...props} className={cn(alertTheme.description.base, props.className)} ref={ref}>
+        {children}
+      </p>
+    )
+  },
+)
 
-export const Description: FC<DescriptionProps> = ({ children, className }) => {
-  const { description } = useTheme().theme.alert
-  return <p className={cn(description, className)}>{children}</p>
-}
+Description.displayName = 'Alert.Description'
+
+export { Description }

@@ -10,7 +10,6 @@ const BodyTypo = () => {
       <Typography variant="body-3">Body Text 3</Typography>
       <Typography variant="body-4">Body Text 4</Typography>
       <Typography variant="body-5">Body Text 5</Typography>
-      <Typography variant="body-6">Body Text 6</Typography>
     </Typography>
   )
 }
@@ -26,7 +25,6 @@ export const BodyTypo = () => {
       <Typography variant="body-3">Body Text 3</Typography>
       <Typography variant="body-4">Body Text 4</Typography>
       <Typography variant="body-5">Body Text 5</Typography>
-      <Typography variant="body-6">Body Text 6</Typography>
     </Typography>
   )
 }

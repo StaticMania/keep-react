@@ -8,11 +8,16 @@ import { Skeleton } from '../src'
 
 const CopyCode = ({ code }: { code: string }) => {
   const { copy, copyToClipboard } = useCopy()
-
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    setIsClient(true)
+    let ignore = false
+    if (!ignore) {
+      setIsClient(true)
+    }
+    return () => {
+      ignore = true
+    }
   }, [])
   return (
     <div className="relative my-5">
@@ -28,7 +33,7 @@ const CopyCode = ({ code }: { code: string }) => {
         </SyntaxHighlighter>
       ) : (
         <Skeleton animation={true}>
-          <Skeleton.Line height="h-[60px]" />
+          <Skeleton.Line className="h-[60px]" />
         </Skeleton>
       )}
       <button onClick={() => copyToClipboard(code)} className="absolute right-5 top-5 cursor-pointer">

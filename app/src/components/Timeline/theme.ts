@@ -1,4 +1,59 @@
-import { keepTimelineTheme } from '.'
+export interface keepTimelineTheme {
+  root: TimelineComponentStyle
+  body: {
+    base: string
+  }
+  content: {
+    horizontal: {
+      on: string
+      off: string
+    }
+  }
+  item: {
+    horizontal: {
+      on: string
+      off: string
+    }
+  }
+  point: {
+    root: {
+      horizontal: {
+        on: string
+        off: string
+      }
+      icon: {
+        on: {
+          base: string
+          inner: string
+        }
+        off: {
+          base: string
+        }
+      }
+    }
+  }
+  time: {
+    base: string
+    horizontal: {
+      on: string
+      off: string
+    }
+  }
+  title: {
+    base: string
+  }
+}
+
+interface TimelineComponentStyle {
+  horizontal: {
+    on: string
+    off: string
+  }
+  barType: {
+    solid: string
+    dashed: string
+  }
+}
 
 export const timelineTheme: keepTimelineTheme = {
   root: {
@@ -12,7 +67,7 @@ export const timelineTheme: keepTimelineTheme = {
     },
   },
   body: {
-    base: '!mb-4 text-body-6 md:text-body-3 font-normal text-metal-500',
+    base: '!mb-4 text-body-5 md:text-body-3 font-normal text-metal-500',
   },
   content: {
     horizontal: {
@@ -52,6 +107,6 @@ export const timelineTheme: keepTimelineTheme = {
     },
   },
   title: {
-    base: 'mb-6 text-body-5 md:text-description-4 font-semibold text-metal-700',
+    base: 'mb-6 text-body-5 md:text-heading-6 font-semibold text-metal-700',
   },
 }

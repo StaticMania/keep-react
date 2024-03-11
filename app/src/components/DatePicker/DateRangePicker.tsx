@@ -1,12 +1,12 @@
 'use client'
 import { FC, createElement, forwardRef, useState } from 'react'
 import RangePicker from 'react-datepicker'
-import { useDatePickerContext } from './DatePickerContext'
 import { CustomInput } from './CustomInput'
+import { useDatePickerContext } from './DatePickerContext'
 
 export const DateRangePicker: FC = () => {
   const { showTwoMonth, rangeDate, placeholder } = useDatePickerContext()
-  const [selectedStartDate, setSelectedStartDate] = useState<Date | null>(null)
+  const [selectedStartDate, setSelectedStartDate] = useState<Date | null>(new Date())
   const [selectedEndDate, setSelectedEndDate] = useState<Date | null>(null)
   return (
     <RangePicker

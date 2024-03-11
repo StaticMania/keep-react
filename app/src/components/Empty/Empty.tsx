@@ -1,58 +1,23 @@
 'use client'
-import { FC, ReactNode } from 'react'
-
-import { Image } from './Image'
-import { Redirect } from './Redirect'
-import { Title, keepTitleTheme } from './Title'
-import { Description, keepDescriptionTheme } from './Description'
-
+import { HTMLProps, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { Description } from './Description'
+import { Image } from './Image'
+import { Title } from './Title'
+import { emptyTheme } from './theme'
 
-export interface keepEmptyTheme {
-  root: RootTheme
-  title: keepTitleTheme
-  description: keepDescriptionTheme
-}
-
-interface RootTheme {
-  base: string
-}
-
-/**
- * Props for the Empty component.
- * @interface EmptyProps
- */
-interface EmptyProps {
-  /**
-   * The class name of the Empty.
-   * @type {string}
-   * @default ''
-   */
-  className?: string
-  /**
-   * The content of the Empty.
-   * @type {ReactNode}
-   */
-  children?: ReactNode
-}
-const EmptyComponent: FC<EmptyProps> = ({ children, className }) => {
-  const { root } = useTheme().theme.empty
+const EmptyComponent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(({ children, ...props }, ref) => {
+  const { root } = emptyTheme
   return (
-    <section role="contentinfo" className={cn(root.base, className)}>
+    <div {...props} ref={ref} className={cn(root.base, props.className)}>
       {children}
-    </section>
+    </div>
   )
-}
+})
 
-Title.displayName = 'Empty.Title'
-Description.displayName = 'Empty.Description'
-Image.displayName = 'Empty.Image'
-Redirect.displayName = 'Empty.Redirect'
-
+EmptyComponent.displayName = 'Empty'
 export const Empty = Object.assign(EmptyComponent, {
   Title,
   Description,
   Image,
-  Redirect,
 })

@@ -1,13 +1,8 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { useTimelineContext } from './TimelineContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { useTimelineContext } from './TimelineContext'
+import { timelineTheme } from './theme'
 
-/**
- * Props for the TimelineItem component.
- * @type TimelineItemProps
- * @extends {PropsWithChildren<ComponentProps<'li'>>}
- */
 export type TimelineItemProps = PropsWithChildren<
   ComponentProps<'li'> & {
     /**
@@ -19,16 +14,9 @@ export type TimelineItemProps = PropsWithChildren<
   }
 >
 
-export interface TimelineItemStyle {
-  horizontal: {
-    on: string
-    off: string
-  }
-}
-
 export const TimelineItem: FC<TimelineItemProps> = ({ children, className, ...props }) => {
   const { horizontal } = useTimelineContext()
-  const { item } = useTheme().theme.timeline
+  const { item } = timelineTheme
   return (
     <li
       data-testid="timeline-item"

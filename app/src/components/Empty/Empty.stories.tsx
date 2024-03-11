@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Empty } from './'
 import Image from 'next/image'
+import { Button } from '../Button'
+import { Empty } from './'
 
 const meta: Meta<typeof Empty> = {
   tags: ['autodocs'],
@@ -37,7 +38,7 @@ export const DefaultEmptyPage: Story = {
         <Empty.Description>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
         </Empty.Description>
-        <Empty.Redirect buttonText="Go to Home" redirectUrl="/" />
+        <Button variant="outline">Go to home</Button>
       </>
     ),
   },
@@ -59,7 +60,7 @@ export const EmptyFolder: Story = {
         <Empty.Description>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
         </Empty.Description>
-        <Empty.Redirect buttonText="Go to Home" redirectUrl="/" />
+        <Button variant="outline">Go to home</Button>
       </>
     ),
   },
@@ -81,7 +82,7 @@ export const NoDataFound: Story = {
         <Empty.Description>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
         </Empty.Description>
-        <Empty.Redirect buttonText="Go Back" redirectUrl="/" />
+        <Button variant="outline">Go to home</Button>
       </>
     ),
   },
@@ -103,7 +104,7 @@ export const NoResultPage: Story = {
         <Empty.Description>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
         </Empty.Description>
-        <Empty.Redirect buttonText="Go Back" redirectUrl="/" />
+        <Button variant="outline">Go to home</Button>
       </>
     ),
   },
@@ -125,7 +126,7 @@ export const NotFoundPage: Story = {
         <Empty.Description>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
         </Empty.Description>
-        <Empty.Redirect buttonText="Go Back" redirectUrl="/" />
+        <Button variant="outline">Go to home</Button>
       </>
     ),
   },
@@ -147,7 +148,7 @@ export const PageNotAvailable: Story = {
         <Empty.Description>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
         </Empty.Description>
-        <Empty.Redirect buttonText="Go Back" redirectUrl="/" />
+        <Button variant="outline">Go to home</Button>
       </>
     ),
   },

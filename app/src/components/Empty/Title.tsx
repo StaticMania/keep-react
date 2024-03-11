@@ -1,18 +1,15 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { forwardRef, HTMLProps } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { emptyTheme } from './theme'
 
-export interface keepTitleTheme {
-  base: string
-}
+export const Title = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadingElement>>(({ children, ...props }, ref) => {
+  const { title } = emptyTheme
+  return (
+    <h1 {...props} ref={ref} className={cn(title.base, props.className)}>
+      {children}
+    </h1>
+  )
+})
 
-export interface TitleProps {
-  className?: string
-  children?: ReactNode
-}
-
-export const Title: FC<TitleProps> = ({ children, className }) => {
-  const { title } = useTheme().theme.empty
-  return <h1 className={cn(title.base, className)}>{children}</h1>
-}
+Title.displayName = 'Empty.Title'

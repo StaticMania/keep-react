@@ -1,34 +1,18 @@
 'use client'
 import Image from 'next/image'
 import { Carousel } from '../../../../src'
+import CarouselOne from '../../../../../public/images/carousel/one.svg'
+import CarouselTwo from '../../../../../public/images/carousel/two.svg'
+import CarouselThree from '../../../../../public/images/carousel/three.svg'
+import CarouselFour from '../../../../../public/images/carousel/four.svg'
 
 const DefaultCarousel = () => {
   return (
     <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image
-        src="https://images.prismic.io/staticmania/ecd45179-4b86-4a34-b245-0078e022db5a_1.png?auto=compress,format"
-        alt="slider-1"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/dee3ff09-3ddc-4340-bc8f-ea0028bb4a61_2.png?auto=compress,format"
-        alt="slider-2"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/a5c7143d-24dd-4531-9f00-243f4eb27e28_3.png?auto=compress,format"
-        alt="slider-3"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/c5cf46a8-b10c-43c8-a60e-6692838cdee1_4.png?auto=compress,format"
-        alt="slider-4"
-        height={400}
-        width={910}
-      />
+      <Image src={CarouselOne} alt="slider-1" />
+      <Image src={CarouselTwo} alt="slider-2" />
+      <Image src={CarouselThree} alt="slider-3" />
+      <Image src={CarouselFour} alt="slider-4" />
     </Carousel>
   )
 }
@@ -41,30 +25,10 @@ import { Carousel } from "keep-react";
 export const CarouselComponent = () => {
   return (
     <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image
-        src="https://images.prismic.io/staticmania/ecd45179-4b86-4a34-b245-0078e022db5a_1.png?auto=compress,format"
-        alt="slider-1"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/dee3ff09-3ddc-4340-bc8f-ea0028bb4a61_2.png?auto=compress,format"
-        alt="slider-2"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/a5c7143d-24dd-4531-9f00-243f4eb27e28_3.png?auto=compress,format"
-        alt="slider-3"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/c5cf46a8-b10c-43c8-a60e-6692838cdee1_4.png?auto=compress,format"
-        alt="slider-4"
-        height={400}
-        width={910}
-      />
+      <Image src="img source" alt="slider-1" />
+      <Image src="img source" alt="slider-2" />
+      <Image src="img source" alt="slider-3" />
+      <Image src="img source" alt="slider-4" />
     </Carousel>
   )
 }

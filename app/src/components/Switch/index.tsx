@@ -1,30 +1,10 @@
+'use client'
+import { Switch } from '@headlessui/react'
 import type { Dispatch, FC, ReactNode, SetStateAction } from 'react'
 import { useEffect, useState } from 'react'
-import { Switch } from '@headlessui/react'
-import { KeepSizes } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { excludeClassName } from '../../helpers/exclude'
 import { cn } from '../../helpers/cn'
-
-export interface keepToggleTheme {
-  base: string
-  circleBase: string
-  enabledBg: {
-    on: {
-      primary: string
-      slate: string
-    }
-    off: string
-  }
-  enabledCircle: {
-    on: ToggleSizes
-    off: ToggleSizes
-  }
-  disabled: string
-  size: ToggleSizes
-  label: ToggleSizes
-  withIconBase: string
-}
+import { excludeClassName } from '../../helpers/exclude'
+import { ToggleSizes, switchTheme } from './theme'
 
 /**
  * Props for the Toggle component.
@@ -94,10 +74,6 @@ export interface ToggleProps {
   onChange?: Dispatch<SetStateAction<boolean>>
 }
 
-export interface ToggleSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
-  [key: string]: string
-}
-
 const ToggleComponent: FC<ToggleProps> = ({
   label = 'Toggle',
   bgColor = 'primary',
@@ -112,7 +88,7 @@ const ToggleComponent: FC<ToggleProps> = ({
 }) => {
   const [enabled, setEnabled] = useState(false)
   const theirProps = excludeClassName(props)
-  const theme = useTheme().theme.switch
+  const theme = switchTheme
 
   useEffect(() => {
     if (enabled && onChange) {

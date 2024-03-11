@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 'use client'
-import { ReactNode, HTMLProps, createElement, FC } from 'react'
+import { createElement, FC, HTMLProps, ReactNode } from 'react'
 
 import { cn } from '../../helpers/cn'
 import { KeepTypography } from '../../Keep/KeepTheme'
@@ -45,7 +45,7 @@ const mapStringToElement = (variant: string): keyof JSX.IntrinsicElements | unde
     return 'h1'
   }
 
-  if (variant.startsWith('body') || variant.startsWith('description')) {
+  if (variant.startsWith('body')) {
     return 'p'
   }
 
@@ -70,11 +70,10 @@ export const Typography: FC<TypographyProps> = ({ variant = 'div', children, cla
       )
     }
     case variant?.startsWith('display'): {
-      const display = +variant?.split('-')[1]
       return createElement(
         FinalElement,
         {
-          className: cn(display > 4 ? `display-4` : variant, className),
+          className: cn(`display`, className),
           ...otherProps,
         },
         children,
@@ -85,23 +84,13 @@ export const Typography: FC<TypographyProps> = ({ variant = 'div', children, cla
       return createElement(
         FinalElement,
         {
-          className: cn(body > 6 ? `body-6` : variant, className),
+          className: cn(body > 5 ? `body-5` : variant, className),
           ...otherProps,
         },
         children,
       )
     }
-    case variant?.startsWith('description'): {
-      const description = +variant?.split('-')[1]
-      return createElement(
-        FinalElement,
-        {
-          className: cn(description > 4 ? `description-4` : variant, className),
-          ...otherProps,
-        },
-        children,
-      )
-    }
+
     default:
       return createElement(
         FinalElement,

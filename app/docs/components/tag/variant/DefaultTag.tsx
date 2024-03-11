@@ -2,11 +2,7 @@
 import { Tag } from '../../../../src'
 
 const DefaultTag = () => {
-  return (
-    <div className="inline-block">
-      <Tag color="gray">Default Tag</Tag>
-    </div>
-  )
+  return <Tag>Default Tag</Tag>
 }
 
 const DefaultTagCode = `

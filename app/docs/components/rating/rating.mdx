@@ -1,12 +1,9 @@
 import { DefaultRating, DefaultRatingCode } from './variant/DefaultRating'
 import { VariantOfRating, VariantOfRatingCode } from './variant/RatingVariant'
 import { RatingTypes, RatingTypesCode } from './variant/RatingTypes'
-import { RatingWithProgress, RatingWithProgressCode } from './variant/RatingWithProgress'
 import { RatingDataApi } from './ratingApi'
-
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import CodePreview from '../../../components/CodePreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -34,14 +31,6 @@ Rating Type refers to the specific behavior and appearance of individual rating 
 
 <CodePreview github="Rating" code={RatingTypesCode}>
   <RatingTypes />
-</CodePreview>
-
-## Rating With Progress
-
-The Rating component appears to be used to render each rating item. The `percentFilled` prop is utilized to indicate the percentage of the rating that should be filled. This creates a visually meaningful representation of each rating with varying levels of filled content, akin to a progress bar that indicates the level of the rating's completeness.
-
-<CodePreview github="Rating" code={RatingWithProgressCode}>
-  <RatingWithProgress />
 </CodePreview>
 
 ## API Reference

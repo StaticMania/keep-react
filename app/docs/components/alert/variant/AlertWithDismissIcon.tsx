@@ -1,8 +1,6 @@
 'use client'
-import Link from 'next/link'
-import { Alert } from '../../../../src'
 import { useState } from 'react'
-import { Info } from 'phosphor-react'
+import { Alert } from '../../../../src'
 
 const AlertWithDismissIcon = () => {
   const [showAlert, setShowAlert] = useState(false)
@@ -10,31 +8,22 @@ const AlertWithDismissIcon = () => {
     setShowAlert(!showAlert)
   }
   return (
-    <Alert onDismiss={onDismiss} dismiss={showAlert}>
+    <Alert color="primary" dismiss={showAlert}>
       <Alert.Container>
-        <Alert.Icon>
-          <Info size={24} color="#0F3CD9" />
-        </Alert.Icon>
-        <Alert.Body>
-          <Alert.Title>Default message - make it short</Alert.Title>
-          <Alert.Description>
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            <Link href="/alert" className="ml-1 inline-block text-body-4 text-primary-600 underline">
-              Link style
-            </Link>
-          </Alert.Description>
-        </Alert.Body>
+        <Alert.Icon />
+        <Alert.Title>Alert here</Alert.Title>
+        <Alert.Description>A short description followed by two actions items.</Alert.Description>
       </Alert.Container>
+      <Alert.Link>Learn More</Alert.Link>
+      <Alert.Dismiss onClick={onDismiss} />
     </Alert>
   )
 }
 
 const AlertWithDismissIconCode = `
 'use client'
-import Link from 'next/link'
 import { useState } from 'react'
 import { Alert } from 'keep-react'
-import { Info } from 'phosphor-react'
 
 const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false)
@@ -42,21 +31,14 @@ const AlertComponent = () => {
     setShowAlert(!showAlert)
   }
   return (
-    <Alert onDismiss={onDismiss} dismiss={showAlert}>
-      <Alert.Container >
-        <Alert.Icon>
-          <Info size={24} color="#0F3CD9" />
-        </Alert.Icon>
-        <Alert.Body>
-          <Alert.Title>Default message - make it short</Alert.Title>
-          <Alert.Description>
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            <Link href="/alert" className="ml-1 inline-block text-body-4 text-primary-600 underline">
-              Link style
-            </Link>
-          </Alert.Description>
-        </Alert.Body>
+    <Alert color="primary" dismiss={showAlert}>
+      <Alert.Container>
+        <Alert.Icon />
+        <Alert.Title>Alert here</Alert.Title>
+        <Alert.Description>A short description followed by two actions items.</Alert.Description>
       </Alert.Container>
+      <Alert.Link>Learn More</Alert.Link>
+      <Alert.Dismiss onClick={onDismiss} />
     </Alert>
   )
 }

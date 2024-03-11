@@ -1,15 +1,9 @@
 import { type ComponentProps, type FC, type PropsWithChildren } from 'react'
-import type { keepTableHeadCellTheme } from './TableHeadCell'
-import { useTableContext } from './TableContext'
-import { useTheme } from '../../Keep/ThemeContext'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { CheckBox } from '../CheckBox'
 import { cn } from '../../helpers/cn'
-
-export interface keepTableHeadTheme {
-  base: string
-  cell: keepTableHeadCellTheme
-}
+import { DeepPartial } from '../../helpers/deep-partial'
+import { Checkbox } from '../Checkbox'
+import { useTableContext } from './TableContext'
+import { keepTableHeadTheme, tableTheme } from './theme'
 
 /**
  * Props for the TableHead component.
@@ -26,23 +20,15 @@ export interface TableHeadProps extends PropsWithChildren, ComponentProps<'thead
 }
 
 export const TableHead: FC<TableHeadProps> = ({ children, className, ...props }) => {
-  const theme = useTheme().theme.table
-  const { showCheckbox, checked, handleCheckbox } = useTableContext()
+  const theme = tableTheme
+  const { showCheckbox } = useTableContext()
 
   return (
     <thead className={cn(theme.head.base, className)} {...props}>
       <tr>
         {showCheckbox && (
           <td className="pl-4">
-            <CheckBox
-              size="md"
-              variant="square"
-              id="two"
-              name="table"
-              color="info"
-              checked={checked}
-              handleChecked={handleCheckbox}
-            />
+            <Checkbox variant="checked" />
           </td>
         )}
         {children}

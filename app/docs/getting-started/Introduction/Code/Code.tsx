@@ -37,9 +37,9 @@ export default App;
   `
 const twNpmInstall = 'npm i autoprefixer postcss tailwindcss\nnpx tailwindcss init -p'
 
-const keepNpmInstall = 'npm i keep-react'
-const keepPnpmInstall = 'pnpm add keep-react'
-const keepYarnInstall = 'yarn add keep-react'
+const keepNpmInstall = 'npm i keep-react phosphor-react'
+const keepPnpmInstall = 'pnpm add keep-react phosphor-react'
+const keepYarnInstall = 'yarn add keep-react phosphor-react'
 
 const twConfigForNextJs = `
 module.exports = {
@@ -68,16 +68,16 @@ const NextJsQnA = () => {
 }
 
 export {
-  twConfig,
-  twCss,
-  reactCodeString,
-  nextCodeString,
-  twNpmInstall,
-  keepNpmInstall,
-  twConfigForNextJs,
-  keepYarnInstall,
-  viteReact,
-  nextJsInstall,
   NextJsQnA,
+  keepNpmInstall,
   keepPnpmInstall,
+  keepYarnInstall,
+  nextCodeString,
+  nextJsInstall,
+  reactCodeString,
+  twConfig,
+  twConfigForNextJs,
+  twCss,
+  twNpmInstall,
+  viteReact,
 }

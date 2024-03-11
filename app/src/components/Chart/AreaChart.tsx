@@ -1,5 +1,7 @@
+'use client'
 import { FC } from 'react'
 import { Area, AreaChart as AreaChartCom, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { ChartContext } from './ChartContext'
 import { CustomTooltip } from './CustomTooltip'
 
 /**
@@ -7,6 +9,18 @@ import { CustomTooltip } from './CustomTooltip'
  * @interface AreaChartProps
  */
 interface AreaChartProps {
+  /**
+   * Determines tooltip button variant.
+   * @type {string}
+   * @default primary
+   */
+  tooltipBtnColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  /**
+   * Tooltip custom className
+   * @type {string}
+   * @default ''
+   */
+  tooltipBtnStyle?: string
   /**
    * Determines whether to show the tooltip.
    * @type {boolean}
@@ -156,6 +170,8 @@ export const AreaChart: FC<AreaChartProps> = ({
   secondaryChartColor = '#1B4DFF',
   areaStoke = '#1B4DFF',
   secondaryAreaStoke = '#94ABFF',
+  tooltipBtnColor = 'primary',
+  tooltipBtnStyle,
   opacity = {
     topStartOpacity: 0.3,
     topEndOpacity: 0,
@@ -209,5 +225,5 @@ export const AreaChart: FC<AreaChartProps> = ({
     </ResponsiveContainer>
   )
 
-  return <>{RenderLineChart}</>
+  return <ChartContext.Provider value={{ tooltipBtnStyle, tooltipBtnColor }}>{RenderLineChart}</ChartContext.Provider>
 }

@@ -159,7 +159,7 @@ export const ChartWithDoubleSeriesAndGraphLine: Story = {
   },
 }
 
-export const ChartWithGridlineAndGraphline: Story = {
+export const ChartWithGridLineAndGraphLine: Story = {
   args: {
     ...ChartWithDoubleSeries.args,
     showGridLine: true,
@@ -168,48 +168,48 @@ export const ChartWithGridlineAndGraphline: Story = {
   },
 }
 
-export const ChartWithSmoothline: Story = {
+export const ChartWithSmoothLine: Story = {
   args: {
     ...DefaultAreaChart.args,
     chartType: 'natural',
   },
 }
-export const ChartWithSmoothlineWithTooltip: Story = {
+export const ChartWithSmoothLineWithTooltip: Story = {
   args: {
-    ...ChartWithSmoothline.args,
+    ...ChartWithSmoothLine.args,
     showTooltip: true,
   },
 }
-export const ChartWithSmoothlineWithGraphLine: Story = {
+export const ChartWithSmoothLineWithGraphLine: Story = {
   args: {
-    ...ChartWithSmoothlineWithTooltip.args,
+    ...ChartWithSmoothLineWithTooltip.args,
     showXaxis: true,
     showYaxis: true,
   },
 }
-export const ChartWithSmoothlineWithGraphLineAndGridLine: Story = {
+export const ChartWithSmoothLineWithGraphLineAndGridLine: Story = {
   args: {
-    ...ChartWithSmoothlineWithGraphLine.args,
+    ...ChartWithSmoothLineWithGraphLine.args,
     showGridLine: true,
   },
 }
 
-export const ChartWithSmoothlineDoubleSeries: Story = {
+export const ChartWithSmoothLineDoubleSeries: Story = {
   args: {
-    ...ChartWithSmoothlineWithTooltip.args,
+    ...ChartWithSmoothLineWithTooltip.args,
     secondaryDataKey: 'sell',
   },
 }
-export const ChartWithSmoothlineDoubleSeriesAndGraphLine: Story = {
+export const ChartWithSmoothLineDoubleSeriesAndGraphLine: Story = {
   args: {
-    ...ChartWithSmoothlineDoubleSeries.args,
+    ...ChartWithSmoothLineDoubleSeries.args,
     showXaxis: true,
     showYaxis: true,
   },
 }
-export const ChartWithSmoothlineDoubleSeriesAndGridLine: Story = {
+export const ChartWithSmoothLineDoubleSeriesAndGridLine: Story = {
   args: {
-    ...ChartWithSmoothlineDoubleSeriesAndGraphLine.args,
+    ...ChartWithSmoothLineDoubleSeriesAndGraphLine.args,
     showGridLine: true,
   },
 }

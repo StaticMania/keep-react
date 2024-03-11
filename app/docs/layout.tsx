@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 'use client'
 import Link from 'next/link'
-import { Accordion, Typography } from '../src'
-import { ReactNode, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { ReactNode, useEffect, useState } from 'react'
 import { gettingStartedRoutes, routes } from '../../routes/routes'
+import { Accordion, Typography } from '../src'
 
 export interface Sections {
   id: number
@@ -30,9 +30,9 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
 
   // link is active or not active
   const IsActive = (str: string) => {
-    const lastPart = pathname.toLocaleLowerCase().split('/').pop()
-    const strLastPart = str.toLocaleLowerCase().split('/').pop()
-    return strLastPart === lastPart
+    const lastPart = pathname.toLowerCase().split('/').pop()
+    const strPart = str.toLowerCase().split('/').pop()
+    return strPart === lastPart
   }
 
   const newIdArr: Sections[] = Array.from(allSection).map((section, index) => ({
@@ -45,6 +45,7 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
 
     linkElements.forEach((link) => {
       const href = link.getAttribute('href')
+      link.setAttribute('data-disable-nprogress', 'true')
       if ('#' + activeSection === href) {
         link.classList.add('active-link')
       } else {
@@ -86,10 +87,10 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
           <aside
             id="componentListSidebar"
             className="sticky top-28 h-[80vh] space-y-5 overflow-auto 2xl:top-56 2xl:py-6 2xl:pl-8">
-            <Accordion flush openFirstPanel className="border-none bg-transparent">
-              <Accordion.Panel>
+            <Accordion flush openFirstPanel>
+              <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">
-                  <Accordion.Title className="text-body-4 font-semibold text-metal-900">
+                  <Accordion.Title className="text-body-3 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                     Getting Started
                   </Accordion.Title>
                 </Accordion.Container>
@@ -98,9 +99,9 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                     {gettingStartedRoutes.map((route) => (
                       <Typography variant="li" key={route.id}>
                         <Link
-                          className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
+                          className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                             IsActive(route.href)
-                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150'
+                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150 hover:text-primary-500'
                               : ''
                           }`}
                           href={route.href}>
@@ -112,19 +113,21 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>
-            <Accordion openFirstPanel flush className="border-none bg-transparent">
-              <Accordion.Panel>
+            <Accordion openFirstPanel flush>
+              <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">
-                  <Accordion.Title className="text-body-4 font-semibold text-metal-900">Components</Accordion.Title>
+                  <Accordion.Title className="text-body-3 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
+                    Components
+                  </Accordion.Title>
                 </Accordion.Container>
                 <Accordion.Content className="p-0">
                   <Typography variant="ul" className="mb-4 mt-3 space-y-1.5 border-l border-l-metal-100">
                     {routes.map((route) => (
                       <Typography variant="li" key={route.id}>
                         <Link
-                          className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
+                          className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                             IsActive(route.href)
-                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150'
+                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150 hover:text-primary-500'
                               : ''
                           }`}
                           href={route.href}>
@@ -147,11 +150,11 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
           <aside id="linkPage" className="sticky top-28 h-[80vh] 2xl:top-60">
             <div className="2xl:pl-5">
               <div className="flex flex-col justify-between overflow-y-auto">
-                <h4 className="mb-2 text-body-5 font-semibold uppercase text-black/100">On this page</h4>
+                <h4 className="mb-2 text-body-4 font-semibold uppercase text-black/100">On this page</h4>
                 <nav id="visible-table-of-contents">
                   <ul
                     dangerouslySetInnerHTML={{
-                      __html: innerHtml ? innerHtml : '',
+                      __html: innerHtml ?? '',
                     }}
                     className="border-l border-l-metal-100"
                   />

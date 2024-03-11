@@ -1,14 +1,13 @@
 import { DefaultAlert, DefaultAlertCode } from './variant/DefaultAlert'
 import { AlertWithDismissIcon, AlertWithDismissIconCode } from './variant/AlertWithDismissIcon'
-import { AlertWithRounded, AlertWithRoundedCode } from './variant/AlertWithRounded'
 import { AlertWithColorVariant, AlertWithColorVariantCode } from './variant/AlertColorVariant'
-import { AlertWithBorderAccent, AlertWithBorderAccentCode } from './variant/AlertWithBorderAccent'
-import { CustomizeAlert, CustomizeAlertCode } from './variant/CustomizeAlert'
+import { AlertWithBgColor, AlertWithBgColorCode } from './variant/AlertWithBgColor'
+import { AlertWithCard, AlertWithCardCode } from './variant/AlertWithCard'
 
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
-import { alertApiData } from './alertApi'
+import CodePreview from '../../../components/CodePreview'
+
+import ComponentApi from '../../../components/ComponentApi'
+import { alertApiData, dismissButtonApi } from './alertApi'
 
 ## Table of Contents
 
@@ -22,44 +21,36 @@ The Default Alert is a clean and simple design, ideal for conveying straightforw
   <DefaultAlert />
 </CodePreview>
 
-## Dismissible Alerts
-
-For alerts that users can close, the Dismiss Icon comes in handy. Pass a handler function to the `onDismiss` prop to enable this feature.
-
-<CodePreview github="Alert" code={AlertWithDismissIconCode}>
-  <AlertWithDismissIcon />
-</CodePreview>
-
-## Softly Rounded Alerts
-
-If you prefer a more approachable appearance, the Rounded Alert is a great option. By setting the `rounded` prop to `true`, the alert corners become rounded, giving it a friendly touch.
-
-<CodePreview github="Alert" code={AlertWithRoundedCode}>
-  <AlertWithRounded />
-</CodePreview>
-
-## Accented Border Alerts
-
-To make alerts stand out, you can add a border using the `withBorder` prop set to `true`. For an elegant accent, use the `withBorderAccent` prop. By default, the accent appears on the left, but you can customize its position using `withBorderAccentPosition="left"|"right"|"top"|"bottom"`.
-
-<CodePreview github="Alert" code={AlertWithBorderAccentCode}>
-  <AlertWithBorderAccent />
-</CodePreview>
-
 ## Color Variants of Alerts
 
-Colors can convey the nature of alerts. While the default color is `info`, you can choose from `success`, `warning`, `error`, `gray`, or `info`. Simply set the `color` prop accordingly.
+Colors can convey the nature of alerts. While the default color is `primary`, you can choose from `secondary`, `success`, `warning`, or `error`. Simply set the `color` prop accordingly.
 
 <CodePreview github="Alert" code={AlertWithColorVariantCode}>
   <AlertWithColorVariant />
 </CodePreview>
 
-## Customize Alert
+## Alert With Background Color
 
-Alert is fully customizable component. You can inject any className from tailwind as your desired.
+Switch the background color of alerts using the `withBg={true}` prop. By default, `withBg` is set to `false`.
 
-<CodePreview github="Alert" code={CustomizeAlertCode}>
-  <CustomizeAlert />
+<CodePreview github="Alert" code={AlertWithBgColorCode}>
+  <AlertWithBgColor />
+</CodePreview>
+
+## Alert With Card
+
+Display the alert message with a card view, and access all the available props for customization.
+
+<CodePreview github="Alert" code={AlertWithCardCode}>
+  <AlertWithCard />
+</CodePreview>
+
+## Dismissible Alerts
+
+Dismiss alert messages by using the `dismiss` prop. The default behavior is server-side rendering. If you want to use a click event handler, set the alert as a client-side component.
+
+<CodePreview github="Alert" code={AlertWithDismissIconCode}>
+  <AlertWithDismissIcon />
 </CodePreview>
 
 ## API Reference
@@ -67,3 +58,9 @@ Alert is fully customizable component. You can inject any className from tailwin
 Explore the available props for the Alert component
 
 <ComponentApi data={alertApiData} />
+
+## Dismiss Button API Reference
+
+Explore the available props for the `<Alert.Dismiss/>` component
+
+<ComponentApi data={dismissButtonApi} />

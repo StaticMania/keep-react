@@ -1,14 +1,8 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
-import { useTheme } from '../../Keep/ThemeContext'
-
-export interface IconProps {
-  children?: ReactNode
-  className?: string
-  [key: string]: any
-}
+import { accordionTheme } from './theme'
 
 export interface keepAccordionIconTheme {
   base: string
@@ -18,12 +12,38 @@ export interface keepAccordionIconTheme {
   }
 }
 
-export const Icon: FC<IconProps> = ({ children, className, ...otherProps }) => {
-  const { isOpen } = useAccordionContext()
-  const { icon } = useTheme().theme.accordion
-  return (
-    <div {...otherProps} className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}>
-      {children}
-    </div>
-  )
-}
+const Icon = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement>>(
+  ({ children, className, ...otherProps }: HTMLAttributes<HTMLSpanElement>, ref: Ref<HTMLSpanElement>) => {
+    const { isOpen } = useAccordionContext()
+    const { icon } = accordionTheme
+    return (
+      <span
+        {...otherProps}
+        className={cn(icon.base, children && (isOpen ? icon.rotated.full : icon.rotated.half), className)}
+        ref={ref}>
+        {children ?? (
+          <svg className="shrink-0 fill-metal-300" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+            <rect
+              y="7"
+              width="16"
+              height="2"
+              rx="1"
+              className={`origin-center transform transition duration-150 ease-out ${isOpen && '!rotate-180'}`}
+            />
+            <rect
+              y="7"
+              width="16"
+              height="2"
+              rx="1"
+              className={`origin-center rotate-90 transform transition duration-150 ease-out ${isOpen && '!rotate-180'}`}
+            />
+          </svg>
+        )}
+      </span>
+    )
+  },
+)
+
+Icon.displayName = 'Accordion.Icon'
+
+export { Icon }

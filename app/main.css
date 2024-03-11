@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .ReactCollapse--collapse {
   transition: height 300ms;
 }
@@ -147,6 +148,8 @@
     background: radial-gradient(100% 100% at 50% 100%, #71dda6 0%, #70b2bc 100%);
   }
 }
+
+/* ================= SELECT COMPONENT ===================== */
 
 /* ================= NUMBER INPUT ARROW ===================== */
 input::-webkit-outer-spin-button,
@@ -613,7 +616,7 @@ input[type='number'] {
   top: 18px;
   left: 0;
   width: 100%;
-  font-size: 12px;
+  font-size: 10px;
 }
 .rc-slider-mark-text {
   display: inline-block;
@@ -813,6 +816,35 @@ input[type='number'] {
   border-top-color: #6c6c6c;
 }
 
+.rc-slider-handle-1::after {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  background-color: #005bea;
+  width: 8px;
+  height: 8px;
+  content: '';
+}
+.rc-slider-handle-2::after {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  background-color: #005bea;
+  width: 8px;
+  height: 8px;
+  content: '';
+}
+
 /* ================ SLIDER END =========== */
 
 /* ================ TOOLTIP CSS START =========== */
@@ -904,14 +936,7 @@ input[type='number'] {
   padding: 0 9px 0 5px;
 }
 .rc-tooltip-inner {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
-  border-radius: 6px;
-  background-color: #373737;
-  padding: 8px 10px;
-  min-height: 34px;
-  color: #fff;
-  text-align: left;
-  text-decoration: none;
+  @apply rounded-md border border-metal-200 bg-white px-2 py-[6px] text-body-5 font-medium text-metal-600 shadow-small;
 }
 .rc-tooltip-arrow {
   position: absolute;
@@ -921,13 +946,11 @@ input[type='number'] {
   width: 0;
   height: 0;
 }
+
 .rc-tooltip-placement-top .rc-tooltip-arrow,
 .rc-tooltip-placement-topLeft .rc-tooltip-arrow,
 .rc-tooltip-placement-topRight .rc-tooltip-arrow {
-  bottom: 0px;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #373737;
+  @apply absolute bottom-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-b border-r border-metal-200 bg-white;
 }
 .rc-tooltip-placement-top .rc-tooltip-arrow {
   left: 50%;
@@ -977,10 +1000,7 @@ input[type='number'] {
 .rc-tooltip-placement-bottom .rc-tooltip-arrow,
 .rc-tooltip-placement-bottomLeft .rc-tooltip-arrow,
 .rc-tooltip-placement-bottomRight .rc-tooltip-arrow {
-  top: 4px;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #373737;
+  @apply absolute left-1/2 top-1 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-l border-t border-metal-200 bg-white;
 }
 .rc-tooltip-placement-bottom .rc-tooltip-arrow {
   left: 50%;
@@ -995,88 +1015,46 @@ input[type='number'] {
 
 /* ================ TYPOGRAPHY CSS START =========== */
 
-.display-1 {
-  font-size: 11rem;
-  line-height: 13.125rem;
-  letter-spacing: -3.5px;
-}
-
-.display-2 {
-  font-size: 9rem;
-  line-height: 10.62rem;
-  letter-spacing: -3.5px;
-}
-
-.display-3 {
-  font-size: 7.5rem;
-  line-height: 8.375rem;
-  letter-spacing: -3.5px;
-}
-
-.display-4 {
+.display {
   font-size: 6rem;
   line-height: 6.875rem;
   letter-spacing: -2.5px;
 }
 
 .heading-1 {
-  font-size: 4.5rem;
-  line-height: 5.5rem;
-  letter-spacing: -2.3px;
-}
-
-.heading-2 {
   font-size: 4rem;
   line-height: 4.875rem;
   letter-spacing: -2.3px;
 }
 
-.heading-3 {
+.heading-2 {
   font-size: 3.5rem;
   line-height: 4.125rem;
   letter-spacing: -1.75px;
 }
 
-.heading-4 {
+.heading-3 {
   font-size: 3rem;
   line-height: 3.75rem;
   letter-spacing: -1.75px;
 }
 
-.heading-5 {
-  font-size: 2.25rem;
+.heading-4 {
+  font-size: 2.5rem;
   line-height: 3rem;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
+}
+
+.heading-5 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  letter-spacing: -0.75px;
 }
 
 .heading-6 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  letter-spacing: -0.5px;
-}
-
-.description-1 {
-  font-size: 1.875rem;
-  line-height: 2.625rem;
-  letter-spacing: -0.5px;
-}
-
-.description-2 {
-  font-size: 1.75rem;
-  line-height: 2.625rem;
-  letter-spacing: -0.5px;
-}
-
-.description-3 {
-  font-size: 1.625rem;
-  line-height: 2.5rem;
-  letter-spacing: -0.5px;
-}
-
-.description-4 {
   font-size: 1.5rem;
-  line-height: 2.25rem;
-  letter-spacing: -0.5px;
+  line-height: 2.125rem;
+  letter-spacing: -0.4px;
 }
 
 .body-1 {
@@ -1106,11 +1084,5 @@ input[type='number'] {
 .body-5 {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  letter-spacing: -0.2px;
-}
-
-.body-6 {
-  font-size: 0.75rem;
-  line-height: 1.125rem;
   letter-spacing: -0.2px;
 }

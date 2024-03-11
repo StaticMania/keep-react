@@ -1,31 +1,17 @@
+'use client'
 import { useState, type ComponentProps, type FC, type PropsWithChildren } from 'react'
-import type { keepTableBodyTheme } from './TableBody'
-import type { TableContextType } from './TableContext'
-import type { keepTableHeadTheme } from './TableHead'
-import type { keepTableRowTheme } from './TableRow'
+import { cn } from '../../helpers/cn'
+import { DeepPartial } from '../../helpers/deep-partial'
 import { TableBody } from './TableBody'
-import { keepTableCaptionTheme, TableCaption } from './TableCaption'
+import { TableCaption } from './TableCaption'
 import { TableCell } from './TableCell'
+import type { TableContextType } from './TableContext'
 import { TableContext } from './TableContext'
 import { TableHead } from './TableHead'
 import { TableHeadCell } from './TableHeadCell'
 import { TableRow } from './TableRow'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
+import { keepTableTheme, tableTheme } from './theme'
 
-export interface keepTableTheme {
-  root: keepTableRootTheme
-  head: keepTableHeadTheme
-  row: keepTableRowTheme
-  body: keepTableBodyTheme
-  caption: keepTableCaptionTheme
-}
-export interface keepTableRootTheme {
-  base: string
-  shadow: string
-  wrapper: string
-}
 /**
  * Props for the Table component.
  * @interface TableProps
@@ -86,7 +72,7 @@ const TableComponent: FC<TableProps> = ({
   showBorderPosition = 'right',
   ...props
 }) => {
-  const theme = useTheme().theme.table
+  const theme = tableTheme
 
   const [isChecked, setIsChecked] = useState(false)
 

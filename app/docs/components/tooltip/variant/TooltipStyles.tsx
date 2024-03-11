@@ -5,14 +5,10 @@ const TooltipStyles = () => {
   return (
     <div className="flex flex-wrap items-end gap-2">
       <Tooltip content="Tooltips text here" trigger="hover" placement="top" animation="duration-300" style="light">
-        <Button size="sm" type="primary">
-          Light Tooltip
-        </Button>
+        <Button size="sm">Light Tooltip</Button>
       </Tooltip>
       <Tooltip content="Tooltips text here" trigger="hover" placement="right" animation="duration-300" style="dark">
-        <Button size="sm" type="primary">
-          Dark Tooltip
-        </Button>
+        <Button size="sm">Dark Tooltip</Button>
       </Tooltip>
     </div>
   )
@@ -32,7 +28,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="light"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" >
           Light Tooltip
         </Button>
       </Tooltip>
@@ -43,7 +39,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" >
           Dark Tooltip
         </Button>
       </Tooltip>

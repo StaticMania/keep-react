@@ -1,12 +1,12 @@
 import { createContext, useContext } from 'react'
 
-type AlertPropsContext = {
-  color?: 'primary' | 'success' | 'warning' | 'error' | 'metal'
+type AlertContextProps = {
+  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
 }
 
-export const AlertContext = createContext<AlertPropsContext | undefined>(undefined)
+export const AlertContext = createContext<AlertContextProps | undefined>(undefined)
 
-export function useAlertContext(): AlertPropsContext {
+export function useAlertContext(): AlertContextProps {
   const context = useContext(AlertContext)
 
   if (!context) {

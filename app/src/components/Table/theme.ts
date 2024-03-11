@@ -1,4 +1,56 @@
-import { keepTableTheme } from './Table'
+export interface keepTableTheme {
+  root: keepTableRootTheme
+  head: keepTableHeadTheme
+  row: keepTableRowTheme
+  body: keepTableBodyTheme
+  caption: keepTableCaptionTheme
+}
+
+export interface keepTableCaptionTheme {
+  base: string
+}
+
+export interface keepTableCellTheme {
+  base: string
+}
+
+export interface keepTableBodyTheme {
+  base: string
+  cell: keepTableCellTheme
+  showBorderPosition: {
+    left: string
+    right: string
+  }
+}
+
+export interface keepTableRowTheme {
+  base: string
+  hovered: string
+  striped: string
+}
+
+export interface keepTableHeadTheme {
+  base: string
+  cell: keepTableHeadCellTheme
+}
+
+export interface keepTableHeadCellTheme {
+  base: string
+  icon: {
+    base: string
+    on: {
+      left: string
+      right: string
+    }
+    off: string
+  }
+}
+
+export interface keepTableRootTheme {
+  base: string
+  shadow: string
+  wrapper: string
+}
 
 export const tableTheme: keepTableTheme = {
   root: {
@@ -19,7 +71,7 @@ export const tableTheme: keepTableTheme = {
   head: {
     base: 'text-metal-400 bg-metal-25 text-body-5 overflow-x-auto',
     cell: {
-      base: 'py-5 pl-4 text-body-6 font-medium text-metal-400',
+      base: 'py-5 pl-4 text-body-5 font-medium text-metal-400',
       icon: {
         base: 'flex items-center',
         on: {

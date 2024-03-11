@@ -20,11 +20,4 @@ export const RatingDataApi = [
     propsDescription: 'Rating start icon type.',
     default: 'full',
   },
-  {
-    id: 4,
-    propsName: 'percentFilled',
-    propsType: 'number',
-    propsDescription: 'rating progress number',
-    default: '70',
-  },
 ]

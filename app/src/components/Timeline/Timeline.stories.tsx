@@ -65,7 +65,7 @@ export const DefaultTimeline: Story = {
               Launching our new mobile app on both iOS and Android platforms, providing users with seamless access to
               our services on the go.
             </Timeline.Body>
-            <Button type="primary" size="sm">
+            <Button size="sm">
               Discover App Features
               <ArrowRight className="ml-2 h-3 w-3" />
             </Button>

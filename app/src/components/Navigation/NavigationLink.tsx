@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { navigationTheme } from './theme'
 
 /**
  * Props for the NavigationLink component.
@@ -33,21 +33,8 @@ export interface NavLinkProps {
   href?: string
 }
 
-export interface NavLinkTheme {
-  base: string
-  icon: {
-    on: string
-    off: string
-  }
-  linkText: string
-  iconAnimation: {
-    on: string
-    off: string
-  }
-}
-
 export const NavigationLink: FC<NavLinkProps> = ({ icon, iconAnimation = true, linkName, href = '/', className }) => {
-  const { navLink } = useTheme().theme.navigation
+  const { navLink } = navigationTheme
   return (
     <li>
       <a href={href} className={cn(navLink.base, icon ? navLink.icon.on : navLink.icon.off, className)}>

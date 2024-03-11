@@ -1,112 +1,68 @@
 'use client'
-import { FC, ReactNode } from 'react'
-import { X } from 'phosphor-react'
-
-import { Body } from './Body'
-import { Icon } from './Icon'
-import { Media } from './Media'
-import { Title } from './Title'
-import { Avatar } from './Avatar'
-import { Container } from './Container'
-import { Description } from './Description'
-
+import { HTMLAttributes, Ref, forwardRef, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { cn } from '../../helpers/cn'
+import { Body } from './Body'
+import { Content } from './Content'
+import { NotificationContext } from './Context'
+import { Description } from './Description'
+import { Footer } from './Footer'
+import { Header } from './Header'
+import { Title } from './Title'
 
-import { useTheme } from '../../Keep/ThemeContext'
-
-/**
- * Props for the Notification component.
- * @interface NotificationProps
- */
-export interface NotificationProps {
-  /**
-   * The content of the Notification.
-   * @type {ReactNode}
-   * @default ''
-   */
-  children?: ReactNode
-  /**
-   * Additional class name for the Notification.
-   * @type {string}
-   * @default ''
-   */
-  className?: string
-  /**
-   * The position of the Notification.
-   * @type {'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'}
-   * @default 'top-right'
-   */
+export interface NotificationProps extends HTMLAttributes<HTMLDivElement> {
+  isOpen?: boolean
+  onClose?: () => void
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
-  /**
-   * Callback function to be called when the Notification is dismissed.
-   * If set to `true`, the Notification will be dismissed automatically.
-   * @type {boolean | (() => void)}
-   * @default false
-   */
-  onDismiss?: boolean | (() => void)
-  /**
-   * Determines whether the Notification can be dismissed.
-   * @type {boolean}
-   * @default false
-   */
-  dismiss?: boolean
 }
 
-export interface keepNotificationTheme {
-  root: string
-  position: {
-    show: string
-    hidden: string
-    'top-left': string
-    'top-right': string
-    'bottom-left': string
-    'bottom-right': string
-  }
-  crossBtn: string
-  description: string
-  media: string
-  icon: string
-  body: string
-  avatar: string
-  title: string
-}
+const NotificationComponent = forwardRef<HTMLDivElement, NotificationProps>(
+  ({ children, className, isOpen, onClose, position = 'bottom-right', ...props }, ref: Ref<HTMLDivElement>) => {
+    useEffect(() => {
+      const handleEscapeKeyPress = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          onClose && onClose()
+        }
+      }
 
-const NotificationComponent: FC<NotificationProps> = ({
-  className,
-  children,
-  position = 'top-right',
-  dismiss = false,
-  onDismiss,
-}) => {
-  const { root, crossBtn, position: positionStyle } = useTheme().theme.notification
-  return (
-    <div className={cn(dismiss ? positionStyle.hidden : positionStyle.show, positionStyle[position])}>
-      <div className={cn(root, className)}>
-        {onDismiss && typeof onDismiss === 'function' && (
-          <button className={crossBtn} onClick={() => onDismiss()}>
-            <X size="20" color="#222" />
-          </button>
-        )}
-        {children}
-      </div>
-    </div>
-  )
-}
+      const handleClickOutsideModal = (event: MouseEvent) => {
+        if (!(event.target as HTMLElement).closest('.notification-body')) {
+          onClose && onClose()
+        }
+      }
 
-Icon.displayName = 'Notification.Icon'
-Avatar.displayName = 'Notification.Avatar'
-Media.displayName = 'Notification.Media'
-Description.displayName = 'Notification.Description'
-Title.displayName = 'Notification.Title'
-Body.displayName = 'Notification.Body'
-Container.displayName = 'Notification.Container'
+      if (isOpen) {
+        document.addEventListener('keydown', handleEscapeKeyPress)
+        document.addEventListener('mousedown', handleClickOutsideModal)
+      }
 
-export const Notification = Object.assign(NotificationComponent, {
-  Icon,
-  Avatar,
-  Media,
+      return () => {
+        document.removeEventListener('keydown', handleEscapeKeyPress)
+        document.removeEventListener('mousedown', handleClickOutsideModal)
+      }
+    }, [isOpen, onClose])
+    return isOpen
+      ? createPortal(
+          <div {...props} className={cn('fixed inset-0 z-50 overflow-auto', className)} ref={ref}>
+            <NotificationContext.Provider value={{ isOpen, onClose, position }}>
+              {children}
+            </NotificationContext.Provider>
+          </div>,
+          document.body,
+        )
+      : null
+  },
+)
+
+NotificationComponent.displayName = 'Notification'
+
+const Notification = Object.assign(NotificationComponent, {
+  Header,
   Description,
   Title,
+  Content,
   Body,
-  Container,
+  Footer,
 })
+
+export { Notification }

@@ -1,12 +1,8 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { useTableContext } from './TableContext'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepTableCellTheme {
-  base: string
-}
+import { DeepPartial } from '../../helpers/deep-partial'
+import { useTableContext } from './TableContext'
+import { keepTableCellTheme, tableTheme } from './theme'
 
 /**
  * Props for the TableCell component.
@@ -22,7 +18,7 @@ export interface TableCellProps extends PropsWithChildren, ComponentProps<'td'> 
 }
 
 export const TableCell: FC<TableCellProps> = ({ children, className, ...props }) => {
-  const theme = useTheme().theme.table
+  const theme = tableTheme
   const { showBorder, showBorderPosition } = useTableContext()
   return (
     <td

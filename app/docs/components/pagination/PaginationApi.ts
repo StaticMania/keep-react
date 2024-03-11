@@ -1,93 +1,73 @@
-export const paginationApiData = [
+const paginationApiData = [
   {
     id: 1,
-    propsName: 'currentPage',
-    propsType: 'number',
-    propsDescription: 'Current page number.',
-    default: '1',
+    propsName: 'children',
+    propsType: 'ReactNode',
+    propsDescription: 'Pagination content',
+    default: 'JSX',
   },
   {
     id: 2,
-    propsName: 'prevNextShape',
-    propsType: ['circle', 'round', 'roundSquare', 'none'],
-    propsDescription: 'Shape of the previous and next buttons.',
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'ClassName for style elements',
     default: 'none',
   },
   {
     id: 3,
-    propsName: 'goToShape',
-    propsType: ['circle', 'round', 'roundSquare', 'none'],
-    propsDescription: 'Shape of the go-to page input field.',
+    propsName: 'shape',
+    propsType: ['rounded', 'circle'],
+    propsDescription: 'Shape of the pagination element',
+    default: 'rounded',
+  },
+]
+
+const itemApiData = [
+  {
+    id: 1,
+    propsName: 'children',
+    propsType: 'ReactNode',
+    propsDescription: 'Pagination Item content',
+    default: 'Page',
+  },
+  {
+    id: 2,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'ClassName for style elements',
     default: 'none',
   },
   {
-    id: 4,
-    propsName: 'activeCurrentPageShape',
-    propsType: ['circle', 'roundSquare'],
-    propsDescription: 'Shape of the active/current page number.',
-    default: '"roundSquare"',
-  },
-  {
-    id: 6,
-    propsName: 'onPageChange',
-    propsType: 'function',
-    propsDescription: 'Function to be called when a page is changed.',
-    default: 'function',
-  },
-  {
-    id: 7,
-    propsName: 'iconWithText',
+    id: 3,
+    propsName: 'active',
     propsType: 'boolean',
-    propsDescription: 'Whether to display icons with text.',
+    propsDescription: 'Page is active or not',
     default: 'false',
-  },
-  {
-    id: 8,
-    propsName: 'iconWithOutText',
-    propsType: 'boolean',
-    propsDescription: 'Whether to display icons without text.',
-    default: 'false',
-  },
-  {
-    id: 9,
-    propsName: 'paginateWithBorder',
-    propsType: 'boolean',
-    propsDescription: 'Whether to add borders to pagination elements.',
-    default: 'false',
-  },
-  {
-    id: 10,
-    propsName: 'showGoToPaginate',
-    propsType: 'boolean',
-    propsDescription: 'Whether to show the go-to page input field.',
-    default: 'false',
-  },
-  {
-    id: 11,
-    propsName: 'totalPages',
-    propsType: 'number',
-    propsDescription: 'Total number of pages.',
-    default: '30',
-  },
-  {
-    id: 12,
-    propsName: 'nextBtnStyle',
-    propsType: 'string',
-    propsDescription: 'Custom class to style the next button.',
-    default: 'None',
-  },
-  {
-    id: 13,
-    propsName: 'previousBtnStyle',
-    propsType: 'string',
-    propsDescription: 'Custom class to style the previous button.',
-    default: 'None',
-  },
-  {
-    id: 14,
-    propsName: 'pageStyle',
-    propsType: 'string',
-    propsDescription: 'Custom class to style the page button.',
-    default: 'None',
   },
 ]
+
+const navigatorApiData = [
+  {
+    id: 1,
+    propsName: 'children',
+    propsType: 'ReactNode',
+    propsDescription: 'Navigator content',
+    default: 'Icon',
+  },
+  {
+    id: 2,
+    propsName: 'className',
+    propsType: 'string',
+    propsDescription: 'ClassName for style elements',
+    default: 'none',
+  },
+  {
+    id: 3,
+    propsName: 'shape',
+    propsType: ['rounded', 'circle'],
+    propsDescription: 'Shape of the pagination navigator',
+    default: 'rounded',
+  },
+]
+
+export { itemApiData, navigatorApiData, paginationApiData }

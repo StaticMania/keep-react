@@ -1,17 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { keepTableCellTheme } from './TableCell'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepTableBodyTheme {
-  base: string
-  cell: keepTableCellTheme
-  showBorderPosition: {
-    left: string
-    right: string
-  }
-}
+import { DeepPartial } from '../../helpers/deep-partial'
+import { keepTableCellTheme, tableTheme } from './theme'
 
 /**
  * Props for the TableBody component.
@@ -28,7 +18,7 @@ export interface TableBodyProps extends PropsWithChildren, ComponentProps<'tbody
 }
 
 export const TableBody: FC<TableBodyProps> = ({ children, className, ...props }) => {
-  const theme = useTheme().theme.table.body
+  const theme = tableTheme.body
 
   return (
     <tbody className={cn(theme.base, className)} {...props}>

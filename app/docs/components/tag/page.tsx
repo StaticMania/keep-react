@@ -1,10 +1,10 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import TagDocs from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:
-    'The Color Tag Component in the Keep React allows you to visually represent and label items with different colors. With customizable options for the type, close button, color, and border, you can create color tags that align with your design and provide a clear visual distinction.',
+    'The Color Tag Component in the Keep React allows you to visually represent and label items. With customizable options for the style, icon.',
   title: 'Tag - Keep React',
 }
 

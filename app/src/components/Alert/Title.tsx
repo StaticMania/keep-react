@@ -1,18 +1,18 @@
 'use client'
-import clsx from 'clsx'
-import { FC, ReactNode } from 'react'
-import { useAlertContext } from './AlertContext'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
+import { alertTheme } from './theme'
 
-export interface TitleProps {
-  className?: string
-  children?: ReactNode
-}
+const Title = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
+  ({ children, ...props }: HTMLAttributes<HTMLParagraphElement>, ref: Ref<HTMLParagraphElement>) => {
+    return (
+      <p {...props} className={cn(alertTheme.title.base, props.className)} ref={ref}>
+        {children}
+      </p>
+    )
+  },
+)
 
-export const Title: FC<TitleProps> = ({ className, children }) => {
-  const { color } = useAlertContext()
-  let { title } = useTheme().theme.alert
-  let titleClasses = clsx(title.base, title.color[color ? color : 'primary'])
-  return <h3 className={cn(titleClasses, className)}>{children}</h3>
-}
+Title.displayName = 'Alert.Title'
+
+export { Title }

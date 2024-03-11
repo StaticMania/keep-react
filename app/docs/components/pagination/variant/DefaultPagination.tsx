@@ -1,36 +1,44 @@
 'use client'
-import { useState } from 'react'
+import { DotsThree } from 'phosphor-react'
 import { Pagination } from '../../../../src'
 
 const DefaultPagination = () => {
-  const [currentPage, setCurrentPage] = useState(1)
   return (
-    <Pagination
-      currentPage={currentPage}
-      onPageChange={setCurrentPage}
-      totalPages={30}
-      iconWithOutText={true}
-      prevNextShape="roundSquare"
-    />
+    <Pagination>
+      <Pagination.List>
+        <Pagination.Item>1</Pagination.Item>
+        <Pagination.Item active>2</Pagination.Item>
+        <Pagination.Item>3</Pagination.Item>
+        <Pagination.Item>4</Pagination.Item>
+        <Pagination.Item>
+          <DotsThree size={20} />
+        </Pagination.Item>
+        <Pagination.Item>10</Pagination.Item>
+      </Pagination.List>
+    </Pagination>
   )
 }
 
 const DefaultPaginationCode = `
-"use client";
-import { Pagination } from "keep-react";
-import { useState } from "react";
+'use client'
+import { DotsThree } from 'phosphor-react'
+import { Pagination } from 'keep-react'
 
 export const PaginationComponent = () => {
-  const [currentPage, setCurrentPage] = useState(1);
   return (
-    <Pagination
-      currentPage={currentPage}
-      onPageChange={(val) => setCurrentPage(val)}
-      totalPages={30}
-      iconWithOutText
-      prevNextShape="roundSquare"
-    />
-  );
+    <Pagination>
+      <Pagination.List>
+        <Pagination.Item>1</Pagination.Item>
+        <Pagination.Item active>2</Pagination.Item>
+        <Pagination.Item>3</Pagination.Item>
+        <Pagination.Item>4</Pagination.Item>
+        <Pagination.Item>
+          <DotsThree size={20} />
+        </Pagination.Item>
+        <Pagination.Item>10</Pagination.Item>
+      </Pagination.List>
+    </Pagination>
+  )
 }
 `
 
