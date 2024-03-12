@@ -44,7 +44,7 @@ const Faq = () => {
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-6 2xl:px-0">
         <div className="mx-auto mb-4 px-5 text-center md:max-w-[500px] md:px-0">
-          <h3 className="text-body-1 font-semibold text-black lg:text-heading-5">Frequently Asked Questions</h3>
+          <h3 className="text-body-1 !font-semibold text-black lg:text-heading-5">Frequently Asked Questions</h3>
         </div>
         <div className="mx-auto mt-12 grid grid-cols-1 items-start gap-5 lg:grid-cols-2">
           <div className="w-full lg:col-span-1">

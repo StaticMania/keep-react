@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className={`bg-white shadow-small ${pathname === '/' ? '' : 'hidden'}`}>
-      <div className="container py-10">
+      <div className="mx-auto max-w-7xl px-6 py-10 2xl:px-0">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center md:gap-0">
           <div>
             <Link href="/" className="flex">

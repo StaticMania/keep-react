@@ -8,7 +8,7 @@ const ComponentUI = () => {
       <div className="mx-auto max-w-7xl px-6 2xl:px-0">
         <div className="my-5 flex items-center justify-between">
           <div className="mx-auto mb-4 px-5 text-center md:max-w-xl md:px-0">
-            <h2 className="mb-3 text-body-1 font-semibold leading-8 text-black lg:text-heading-5">
+            <h2 className="mb-3 text-body-1 !font-semibold text-black lg:text-heading-5">
               Design Excellence with Our React Component Library
             </h2>
             <p className="text-body-5 font-normal leading-6 text-metal-600 md:text-body-3">

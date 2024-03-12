@@ -35,7 +35,7 @@ const Community = () => {
     <section className="community py-20">
       <div className="mx-auto max-w-7xl px-6 py-6 2xl:px-0">
         <div className="mb-12 text-center">
-          <h4 className="mb-1 text-body-1 font-semibold text-black lg:text-heading-5">Join The Community</h4>
+          <h4 className="mb-1 text-body-1 !font-semibold text-black lg:text-heading-5">Join The Community</h4>
           <p className="mx-auto max-w-sm text-body-4 font-normal text-metal-600 md:text-body-3">
             Become a member of a community of developers by supporting Keep React
           </p>
@@ -48,7 +48,13 @@ const Community = () => {
                   {contributors?.length ? (
                     <Avatar.Group>
                       {contributors?.map((user) => (
-                        <Avatar key={user?.id} shape="circle" size="lg" img={user?.avatar_url} />
+                        <Avatar
+                          key={user?.id}
+                          shape="circle"
+                          size="lg"
+                          img={user?.avatar_url}
+                          className="border-2 border-[#9686E5] p-0"
+                        />
                       ))}
                     </Avatar.Group>
                   ) : null}
@@ -62,7 +68,7 @@ const Community = () => {
                 <Link
                   href="https://github.com/StaticMania/keep-react"
                   target="_blank"
-                  className="mt-5 inline-flex items-center gap-2 rounded-lg border border-white/70 bg-[#f9fafb33] px-4 py-3.5 text-body-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5">
+                  className="repo-btn mt-5 inline-flex items-center gap-2 px-4 py-3.5  transition-all duration-300 hover:-translate-y-0.5">
                   See Our Repository
                   <ArrowLineUpRight size={18} color="white" />
                 </Link>

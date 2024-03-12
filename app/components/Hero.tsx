@@ -23,7 +23,7 @@ const Hero = () => {
                   className="h-[40px] w-[200px] lg:h-[54px] lg:w-[250px]"
                 />
               </Link>
-              <h1 className="mt-3 max-w-xl text-heading-6 font-semibold text-metal-900 md:text-heading-3">
+              <h1 className="mt-3 max-w-xl text-heading-6 !font-semibold text-metal-900 md:text-heading-3">
                 <span className="block">Supercharge your web</span>
                 <span className="block">development with</span>
                 <span className="hero-text block">Keep React</span>

@@ -147,3 +147,16 @@ pre::-webkit-scrollbar-thumb {
   background: linear-gradient(72deg, #3a6df0 3.09%, #ee95d5 96.55%);
   @apply w-full rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1 md:col-span-1 lg:col-span-2 lg:row-span-1;
 }
+
+.repo-btn {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  background: rgba(249, 250, 251, 0.2);
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Inter;
+  letter-spacing: -0.3px;
+}
