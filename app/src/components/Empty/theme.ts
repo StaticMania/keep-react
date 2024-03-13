@@ -1,4 +1,20 @@
-import { keepEmptyTheme } from './Empty'
+export interface keepEmptyTheme {
+  root: RootTheme
+  title: keepTitleTheme
+  description: keepDescriptionTheme
+}
+
+export interface keepDescriptionTheme {
+  base: string
+}
+
+export interface keepTitleTheme {
+  base: string
+}
+
+interface RootTheme {
+  base: string
+}
 
 export const emptyTheme: keepEmptyTheme = {
   root: {

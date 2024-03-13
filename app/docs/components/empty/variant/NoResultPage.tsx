@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { Empty } from '../../../../src'
+import { Button, Empty } from '../../../../src'
 
 const NoResultPage = () => {
   return (
@@ -17,7 +17,7 @@ const NoResultPage = () => {
       <Empty.Description>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </Empty.Description>
-      <Empty.Redirect buttonText="Go to Home" redirectUrl="/" />
+      <Button variant="outline">Go to home</Button>
     </Empty>
   )
 }
@@ -42,7 +42,7 @@ export const EmptyComponent = () => {
       <Empty.Description>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </Empty.Description>
-      <Empty.Redirect buttonText="Go to Home" redirectUrl="/" />
+      <Button variant="outline">Go to home</Button>
     </Empty>
   )
 }

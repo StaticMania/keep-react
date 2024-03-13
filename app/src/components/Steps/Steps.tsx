@@ -1,56 +1,9 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { StepItem } from './StepItem'
-import { StepContext } from './StepContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface KeepStepTheme {
-  base: string
-  items: {
-    base: string
-    stepType: {
-      base: string
-      point: {
-        base: string
-        on: string
-        off: string
-        active: string
-      }
-      icon: {
-        active: string
-        base: string
-        on: string
-        off: string
-      }
-      number: { active: string; base: string; on: string; off: string }
-    }
-  }
-  stepText: {
-    base: string
-    title: {
-      base: string
-      active: string
-      inActive: string
-    }
-    description: {
-      base: string
-      active: string
-      inActive: string
-    }
-  }
-  main: {
-    completed: {
-      on: string
-      off: string
-    }
-    borderType: {
-      solid: string
-      dashed: string
-      none: string
-    }
-  }
-}
+import { StepContext } from './StepContext'
+import { StepItem } from './StepItem'
+import { stepTheme } from './theme'
 
 /**
  * Props for the Steps component.
@@ -87,7 +40,7 @@ export interface StepsProps {
 }
 
 const StepsComponent: FC<StepsProps> = ({ children, className, stepType = 'point', borderType = 'solid' }) => {
-  const theme = useTheme().theme.step
+  const theme = stepTheme
   return (
     <div className={cn(theme.base, className)}>
       <StepContext.Provider

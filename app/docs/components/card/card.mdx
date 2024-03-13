@@ -1,86 +1,43 @@
 import { DefaultCard, DefaultCardCode } from './variant/DefaultCard'
-import { CardWithIcon, CardWithIconCode } from './variant/CardWithIcon'
-import { ProfileCard, ProfileCardCode } from './variant/ProfileCard'
-import { PostCard, PostCardCode } from './variant/PostCard'
+import { RegisterCard, RegisterCardCode } from './variant/RegisterCard'
+import { CardWithAvatar, CardWithAvatarCode } from './variant/CardWithAvatar'
 import { ProductCard, ProductCardCode } from './variant/ProductCard'
-import { PricingCard, PricingCardCode } from './variant/PricingCard'
-import { HorizontalCard, HorizontalCardCode } from './variant/HorizontalCard'
 import { cardAPIData } from './cardApi'
-import { ProfileCardWithCover, ProfileCardWithCoverCode } from './variant/ProfileCardWithCover'
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import CodePreview from '../../../components/CodePreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-The card component in the Keep React offers a variety of button types, sizes, and states to meet your design needs. With options for icons and destructiveness, you can create visually appealing and functional buttons for your product.
+The card component in Keep React offers a variety of button types, sizes, and states to meet your design needs. With options for icons and destructiveness, you can create visually appealing and functional buttons for your product.
 
 ## Default Card
 
-The Default Card in the Keep React is a foundational component that provides a clean and straightforward appearance. It serves as a starting point for creating more complex card designs.
+The Default Card in Keep React is a foundational component that provides a clean and straightforward appearance. It serves as a starting point for creating more complex card designs.
 
 <CodePreview github="Card" code={DefaultCardCode}>
   <DefaultCard />
 </CodePreview>
 
-## Card With Icon
+## Card with avatar
 
-The Card component in the Keep React can be enhanced with icons to provide additional visual context and meaning. By incorporating icons into your cards, you can effectively communicate information and improve the overall user experience.
+Any component can be placed inside the card, including avatars.
 
-<CodePreview github="Card" code={CardWithIconCode}>
-  <CardWithIcon />
+<CodePreview github="Card" code={CardWithAvatarCode}>
+  <CardWithAvatar />
 </CodePreview>
 
-## Profile Card
+## Card with product
 
-The Profile Card is a specialized variant of the Card component in the Keep React that is specifically designed to display user profiles. It combines textual information with icons and images to create a visually appealing and informative representation of an individual's profile.
-
-<CodePreview github="Card" code={ProfileCardCode}>
-  <ProfileCard />
-</CodePreview>
-
-## Profile Card With Cover Image
-
-The Profile Card with Cover Image is an extended version of the Profile Card component in the Keep React. It includes a prominent cover image alongside the user's profile information, offering a visually striking way to showcase individuals' profiles.
-
-<CodePreview github="Card" code={ProfileCardWithCoverCode}>
-  <ProfileCardWithCover />
-</CodePreview>
-
-## Post Card
-
-This component is particularly useful for creating an organized and engaging display of your blog content, allowing users to quickly browse through and access your latest articles.
-
-<CodePreview github="Card" code={PostCardCode}>
-  <PostCard />
-</CodePreview>
-
-## Product Card
-
-It provides a structured layout that includes key details about each product, such as the product image, title, price, and a brief description. This component is designed to effectively present your products to users, making it easier for them to evaluate and make purchase decisions.
+Any component can be placed inside the card, including avatars.
 
 <CodePreview github="Card" code={ProductCardCode}>
   <ProductCard />
 </CodePreview>
 
-## Horizontal Card
+## Register Card
 
-To make a card in Horizontal view you need to set `horizontal` props as `true`.
+Here we design a demo register card for the user. Customize it as desired using the className props.
 
-<CodePreview github="Card" code={HorizontalCardCode}>
-  <HorizontalCard />
+<CodePreview github="Card" code={RegisterCardCode}>
+  <RegisterCard />
 </CodePreview>
-
-## Pricing Card
-
-It offers a structured layout that includes details such as the plan name, price, features, and call-to-action buttons. This component is particularly useful for displaying pricing options in a clear and organized manner, helping users make informed decisions about which plan suits their needs best.
-
-<CodePreview github="Card" code={PricingCardCode}>
-  <PricingCard />
-</CodePreview>
-
-## API Reference
-
-Explore the available props for the card component
-
-<ComponentApi data={cardAPIData} />

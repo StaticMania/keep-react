@@ -1,7 +1,7 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { useTimelineContext } from './TimelineContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { useTimelineContext } from './TimelineContext'
+import { timelineTheme } from './theme'
 
 /**
  * Props for the TimelineTime component.
@@ -19,17 +19,9 @@ export type TimelineTimeProps = PropsWithChildren<
   }
 >
 
-export interface TimelineTimeStyle {
-  base: string
-  horizontal: {
-    on: string
-    off: string
-  }
-}
-
 export const TimelineTime: FC<TimelineTimeProps> = ({ children, className, ...props }) => {
   const { horizontal } = useTimelineContext()
-  const { time } = useTheme().theme.timeline
+  const { time } = timelineTheme
   return (
     <time className={cn(time.base, horizontal ? time.horizontal.on : time.horizontal.off, className)} {...props}>
       {children}

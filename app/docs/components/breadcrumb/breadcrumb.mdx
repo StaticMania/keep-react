@@ -1,66 +1,57 @@
 import { DefaultBreadcrumb, DefaultBreadcrumbCode } from './variant/DefaultBreadcrumb'
+import { CustomizeBreadcrumb, CustomizeBreadcrumbCode } from './variant/CustomizeBreadcrumb'
 import { BreadcrumbWithBorder, BreadcrumbWithBorderCode } from './variant/BreadcrumbWithBorder'
-import { BreadcrumbWithPageIcon, BreadcrumbWithPageIconCode } from './variant/BreadcrumbWithPageIcon'
-import { BreadcrumbWithSeparatorIcon, BreadcrumbWithSeparatorIconCode } from './variant/BreadcrumbWithSeparatorIcon'
-import { BreadcrumbWithNumber, BreadcrumbWithNumberCode } from './variant/BreadcrumbWithNumber'
-import { breadcrumbApiData, breadcrumbItemApiData } from './breadcrumbApi'
+import { BreadcrumbDividerIcon, BreadcrumbDividerIconCode } from './variant/BreadcrumbDividerIcon'
 
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import { breadcrumbApiData, breadcrumbItemApiData } from './breadcrumbApi'
+import CodePreview from '../../../components/CodePreview'
+
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-The Breadcrumbs component in the Keep React provides a navigation aid that allows users to understand their current location within a website or application. With customizable options for type, icon, divider, line, and style, you can create breadcrumbs that align with your design and enhance the navigation experience.
+The Breadcrumbs component in Keep React serves as a navigation aid, enabling users to comprehend their current location within a website or application. With customizable options for type, icon, divider, line, and style, you can create breadcrumbs that seamlessly integrate with your design and enhance the navigation experience.
 
 ## Default Breadcrumb
 
-The default Breadcrumbs component provides a simple and intuitive way for users to understand their current location within a website or application.
+The default Breadcrumbs component offers a simple and intuitive way for users to grasp their current location within a website or application.
 
 <CodePreview github="Breadcrumb" code={DefaultBreadcrumbCode}>
   <DefaultBreadcrumb />
 </CodePreview>
 
-## Breadcrumb With Border
+## Border Types
 
-The Breadcrumbs component with the `breadCrumbWithBorder` prop set to `true` adds a subtle border around each breadcrumb item, providing a clear visual separation between the items.
+The Breadcrumbs component includes the `borderType` prop with two possible values: `"border-xy"` and `"border-y"`.
 
 <CodePreview github="Breadcrumb" code={BreadcrumbWithBorderCode}>
   <BreadcrumbWithBorder />
 </CodePreview>
 
-## Breadcrumb With Page Icon
+## Divider Icon Type
 
-By utilizing the `icon` prop and providing an appropriate icon component, such as `<House size={24} color="#AFBACA" />`, you can visually represent each page or section within the breadcrumb navigation, making it easier for users to identify their current location within the website or application.
+The Breadcrumbs component incorporates the `dividerIconStyle` prop with two possible values: `"slash"` and `"caret"`.
 
-<CodePreview github="Breadcrumb" code={BreadcrumbWithPageIconCode}>
-  <BreadcrumbWithPageIcon />
+<CodePreview github="Breadcrumb" code={BreadcrumbDividerIconCode}>
+  <BreadcrumbDividerIcon />
 </CodePreview>
 
-## Breadcrumb With Separator Icon
+## Customize Breadcrumb
 
-You can further customize the appearance of your breadcrumb navigation by adding a separator icon between items using the `separatorIcon` with any icon.
+You can customize the breadcrumb component using the `className` props. Additionally, we provide more APIs for customizable options.
 
-<CodePreview github="Breadcrumb" code={BreadcrumbWithSeparatorIconCode}>
-  <BreadcrumbWithSeparatorIcon />
-</CodePreview>
-
-## Breadcrumb With Number Item
-
-Enhance user navigation through step-by-step processes or hierarchical sections by incorporating numbered items into the Breadcrumbs component.
-
-<CodePreview github="Breadcrumb" code={BreadcrumbWithNumberCode}>
-  <BreadcrumbWithNumber />
+<CodePreview github="Breadcrumb" code={CustomizeBreadcrumbCode}>
+  <CustomizeBreadcrumb />
 </CodePreview>
 
 ## Breadcrumb API Reference
 
-Explore the available props for the `<Breadcrumb>` component
+Explore the available props for the `<Breadcrumb>` component.
 
 <ComponentApi data={breadcrumbApiData} />
 
-## Breadcrumb Item API Reference
+## Item API Reference
 
-Explore the available props for the `<Breadcrumb.Item>` component
+Explore the available props for the `<Breadcrumb.Item>` component.
 
 <ComponentApi data={breadcrumbItemApiData} />

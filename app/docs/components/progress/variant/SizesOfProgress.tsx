@@ -1,30 +1,38 @@
 'use client'
-import { Progress } from '../../../../src'
+import { CircleProgress } from '../../../../src'
 
 const SizesOfProgress = () => {
   return (
-    <div className="flex h-36 w-5/6 flex-col gap-5 p-4">
-      <Progress progress={20} color="info" rounded={true} size="sm" />
-      <Progress progress={40} color="info" bordered={true} size="md" />
-      <Progress progress={60} color="info" bordered={true} size="lg" />
-      <Progress progress={80} color="info" bordered={true} size="xl" />
+    <div className="flex items-end gap-x-5">
+      <CircleProgress progress={55} size="sm">
+        <CircleProgress.Text>55%</CircleProgress.Text>
+      </CircleProgress>
+      <CircleProgress progress={55} size="md">
+        <CircleProgress.Text>55%</CircleProgress.Text>
+      </CircleProgress>
+      <CircleProgress progress={55} size="lg">
+        <CircleProgress.Text>55%</CircleProgress.Text>
+      </CircleProgress>
+      <CircleProgress progress={55} size="xl">
+        <CircleProgress.Text>55%</CircleProgress.Text>
+      </CircleProgress>
+      <CircleProgress progress={55} size="2xl">
+        <CircleProgress.Text>55%</CircleProgress.Text>
+      </CircleProgress>
     </div>
   )
 }
 
 const SizesOfProgressCode = `
-"use client";
-import { Progress } from "keep-react";
+"use client"
+import { CircleProgress } from "keep-react"
 
 export const ProgressComponent = () => {
   return (
-    <div className="flex flex-col gap-5">
-      <Progress progress={20} color="info" rounded={true} size="sm" />
-      <Progress progress={40} color="info" bordered={true} size="md" />
-      <Progress progress={60} color="info" bordered={true} size="lg" />
-      <Progress progress={80} color="info" bordered={true} size="xl" />
-    </div>
-  );
+    <CircleProgress progress={55} size="md">
+      <CircleProgress.Text>55%</CircleProgress.Text>
+    </CircleProgress>
+  )
 }
 `
 

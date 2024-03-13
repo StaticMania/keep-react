@@ -4,9 +4,7 @@ import { Button, Tooltip } from '../../../../src'
 const DefaultTooltip = () => {
   return (
     <Tooltip content="Tooltips text here" trigger="hover" placement="right" animation="duration-300" style="dark">
-      <Button size="sm" type="primary">
-        Default Tooltip
-      </Button>
+      <Button size="sm">Default Tooltip</Button>
     </Tooltip>
   )
 }
@@ -24,7 +22,7 @@ export const TooltipComponent = () => {
       animation="duration-300"
       style="dark"
     >
-      <Button size="sm" type="primary">
+      <Button size="sm" >
         Default Tooltip
       </Button>
     </Tooltip>

@@ -3,12 +3,30 @@ import { FC, useEffect, useState } from 'react'
 import { Bar, BarChart as BarChartCom, CartesianGrid, Cell, Legend, Tooltip, XAxis, YAxis } from 'recharts'
 import CustomLegend from './CustomLegend'
 import { CustomTooltip } from './CustomTooltip'
+import { ChartContext } from './ChartContext'
 
 /**
  * Props for the BarChart component.
  * @interface BarChartProps
  */
 interface BarChartProps {
+  /**
+   * Determines tooltip button variant.
+   * @type {string}
+   * @default primary
+   */
+  tooltipBtnColor?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  /**
+   * Tooltip custom className
+   * @type {string}
+   * @default ''
+   */
+  tooltipBtnStyle?: string
+  /**
+   * Determines whether to show the tooltip.
+   * @type {boolean}
+   * @default false
+   */
   /**
    * Determines if the bar is active.
    * @type {boolean}
@@ -195,6 +213,8 @@ export const BarChart: FC<BarChartProps> = ({
   width = 600,
   barSize = 6,
   secondaryDataKey,
+  tooltipBtnColor = 'primary',
+  tooltipBtnStyle,
 }) => {
   const [client, setClient] = useState(false)
   const RenderBarChart = (
@@ -248,5 +268,9 @@ export const BarChart: FC<BarChartProps> = ({
     setClient(true)
   }, [])
 
-  return <>{client ? RenderBarChart : null}</>
+  return (
+    <ChartContext.Provider value={{ tooltipBtnColor, tooltipBtnStyle }}>
+      {client ? RenderBarChart : null}
+    </ChartContext.Provider>
+  )
 }

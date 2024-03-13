@@ -1,4 +1,55 @@
-import { KeepNavigationTheme } from './Navigation'
+interface NavigationRoot {
+  base: string
+  rounded: {
+    on: string
+    off: string
+  }
+  bordered: {
+    on: string
+    off: string
+  }
+  container: {
+    on: string
+    off: string
+  }
+}
+
+interface CollapseTheme {
+  base: string
+  menu: {
+    open: string
+    close: string
+    position: string
+  }
+  type: {
+    sidebar: string
+    fullWidth: string
+  }
+}
+
+interface DividerTheme {
+  base: string
+}
+
+interface NavLinkTheme {
+  base: string
+  icon: {
+    on: string
+    off: string
+  }
+  linkText: string
+  iconAnimation: {
+    on: string
+    off: string
+  }
+}
+
+export interface KeepNavigationTheme {
+  root: NavigationRoot
+  collapse: CollapseTheme
+  divider: DividerTheme
+  navLink: NavLinkTheme
+}
 
 export const navigationTheme: KeepNavigationTheme = {
   root: {

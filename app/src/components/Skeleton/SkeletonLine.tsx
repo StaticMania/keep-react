@@ -1,28 +1,15 @@
-import { FC } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
+'use client'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
+import { skeletonTheme } from './theme'
 
-/**
- * Props for the SkeletonLine component.
- * @interface SkeletonProps
- */
-export interface SkeletonProps {
-  /**
-   * The height of the skeleton line.
-   * @type {string}
-   * @default 'h-4'
-   */
-  height?: string
+export interface SkeletonLineProps extends HTMLAttributes<HTMLDivElement> {}
 
-  /**
-   * Additional CSS class for the component.
-   * @type {string}
-   * @default ''
-   */
-  className?: string
-}
+const SkeletonLine = forwardRef<HTMLDivElement, SkeletonLineProps>(({ className, ...props }, ref) => {
+  const theme = skeletonTheme
+  return <div {...props} ref={ref} className={cn(theme.line, className)}></div>
+})
 
-export const SkeletonLine: FC<SkeletonProps> = ({ height, className }) => {
-  const theme = useTheme().theme.skeleton
-  return <div className={cn(theme.line, height, className)}></div>
-}
+SkeletonLine.displayName = 'Skeleton.Line'
+
+export { SkeletonLine }

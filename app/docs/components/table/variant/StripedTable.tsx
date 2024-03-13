@@ -1,6 +1,8 @@
 'use client'
-import { Avatar, Button, Popover, Table } from '../../../../src'
-import { Cube, DotsThreeOutline, Pencil, Trash } from 'phosphor-react'
+import Image from 'next/image'
+import { ArrowDown, Cube, DotsThreeOutline } from 'phosphor-react'
+import { DefaultTableData } from '~/public/data/tableData'
+import { Avatar, Badge, Button, Table } from '../../../../src'
 
 const StripedTable = () => {
   return (
@@ -9,16 +11,19 @@ const StripedTable = () => {
         <Table.Caption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
-              <p className="text-body-1 font-semibold text-metal-600">Files uploaded</p>
+              <p className="text-body-1 font-semibold text-metal-600">Team member</p>
+              <Badge size="sm" color="secondary">
+                100 Member
+              </Badge>
             </div>
             <div className="flex items-center gap-5">
-              <Button type="outlineGray" size="sm">
+              <Button variant="outline" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
-                Filter
+                New member
               </Button>
-              <Button type="outlineGray" size="sm">
+              <Button variant="outline" size="sm">
                 <span className="pr-2">
                   <Cube size={24} />
                 </span>
@@ -28,346 +33,80 @@ const StripedTable = () => {
           </div>
         </Table.Caption>
         <Table.Head>
-          <Table.HeadCell className="min-w-[344px]">
-            <p className="text-body-6 font-medium text-metal-400">File no.</p>
+          <Table.HeadCell className="min-w-[290px]">
+            <p className="text-body-5 font-medium text-metal-400">Type</p>
           </Table.HeadCell>
-          <Table.HeadCell className="min-w-[160px]">File size</Table.HeadCell>
-          <Table.HeadCell className="min-w-[171px]">Date uploaded</Table.HeadCell>
-          <Table.HeadCell className="min-w-[170px]">Last uploaded</Table.HeadCell>
-          <Table.HeadCell className="min-w-[300px]">Team</Table.HeadCell>
+          <Table.HeadCell>Status</Table.HeadCell>
+          <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
+          <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
+          <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
+          <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
           <Table.HeadCell className="min-w-[100px]" />
         </Table.Head>
         <Table.Body className="divide-gray-25 divide-y">
-          <Table.Row className="bg-white">
-            <Table.Cell>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                    <div>
-                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+          {DefaultTableData.map((cell) => (
+            <Table.Row className="bg-white" key={cell.id}>
+              <Table.Cell>
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <Avatar img={cell.img} />
+                      <div>
+                        <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{cell.name}</p>
+                        <span>{cell.tag}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Total 0.2 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">200 KB</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-            </Table.Cell>
-            <Table.Cell>
-              <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
-              </Avatar.Group>
-            </Table.Cell>
-            <Table.Cell>
-              <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-                <Popover.Container className="!mt-0 !block">
-                  <ul>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Delete</span>
-                        <span>
-                          <Trash />
-                        </span>
-                      </button>
-                    </li>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Edit</span>
-                        <span>
-                          <Pencil />
-                        </span>
-                      </button>
-                    </li>
-                  </ul>
-                </Popover.Container>
-                <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
-                    <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                  </Button>
-                </Popover.Action>
-              </Popover>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white">
-            <Table.Cell>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                    <div>
-                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">700 KB</p>
-                    </div>
+              </Table.Cell>
+              <Table.Cell>
+                {cell.status ? (
+                  <Badge color="success" showIcon={true}>
+                    Active
+                  </Badge>
+                ) : (
+                  <Badge color="secondary" showIcon={true}>
+                    Offline
+                  </Badge>
+                )}
+              </Table.Cell>
+              <Table.Cell>{cell.position}</Table.Cell>
+              <Table.Cell>{cell.email}</Table.Cell>
+              <Table.Cell>
+                <div className="flex items-center gap-1">
+                  {cell.tags.map((tag, index, arr) =>
+                    index === arr.length - 1 ? (
+                      <Badge key={tag} color="secondary">
+                        {tag}
+                      </Badge>
+                    ) : (
+                      <Badge key={tag} color="primary">
+                        {tag}
+                      </Badge>
+                    ),
+                  )}
+                </div>
+              </Table.Cell>
+              <Table.Cell>
+                <div className="flex items-center gap-3">
+                  <div>
+                    <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span>
+                      <ArrowDown size={20} color="#D7DFE9" />
+                    </span>
+                    <span>{cell.performance}%</span>
                   </div>
                 </div>
-              </div>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Total 0.7 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">700 KB</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Jan 12, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">4:12 pm</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Jan 15, 2023</p>
-            </Table.Cell>
-            <Table.Cell>
-              <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
-              </Avatar.Group>
-            </Table.Cell>
-            <Table.Cell>
-              <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-                <Popover.Container className="!mt-0 !block">
-                  <ul>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Delete</span>
-                        <span>
-                          <Trash />
-                        </span>
-                      </button>
-                    </li>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Edit</span>
-                        <span>
-                          <Pencil />
-                        </span>
-                      </button>
-                    </li>
-                  </ul>
-                </Popover.Container>
-                <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
-                    <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                  </Button>
-                </Popover.Action>
-              </Popover>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white">
-            <Table.Cell>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                    <div>
-                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">500 KB</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Total 0.5 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">500 KB</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Nov 23, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">02:45 pm</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Nov 10, 2023</p>
-            </Table.Cell>
-            <Table.Cell>
-              <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
-              </Avatar.Group>
-            </Table.Cell>
-            <Table.Cell>
-              <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-                <Popover.Container className="!mt-0 !block">
-                  <ul>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Delete</span>
-                        <span>
-                          <Trash />
-                        </span>
-                      </button>
-                    </li>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Edit</span>
-                        <span>
-                          <Pencil />
-                        </span>
-                      </button>
-                    </li>
-                  </ul>
-                </Popover.Container>
-                <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
-                    <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                  </Button>
-                </Popover.Action>
-              </Popover>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white">
-            <Table.Cell>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                    <div>
-                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">900 KB</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Total 0.9 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">900 KB</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Feb 21, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-            </Table.Cell>
-            <Table.Cell>
-              <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
-              </Avatar.Group>
-            </Table.Cell>
-            <Table.Cell>
-              <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-                <Popover.Container className="!mt-0 !block">
-                  <ul>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Delete</span>
-                        <span>
-                          <Trash />
-                        </span>
-                      </button>
-                    </li>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Edit</span>
-                        <span>
-                          <Pencil />
-                        </span>
-                      </button>
-                    </li>
-                  </ul>
-                </Popover.Container>
-                <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
-                    <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                  </Button>
-                </Popover.Action>
-              </Popover>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className="bg-white">
-            <Table.Cell>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                    <div>
-                      <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                      <p className="text-body-6 font-normal text-metal-500">200 KB</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Total 0.1 MB</p>
-              <p className="text-body-6 font-normal text-metal-500">100 KB</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Mar 25, 2023</p>
-              <p className="text-body-6 font-normal text-metal-500">8:45 pm</p>
-            </Table.Cell>
-            <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">Apr 10, 2023</p>
-            </Table.Cell>
-            <Table.Cell>
-              <Avatar.Group>
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-                <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-                <Avatar shape="circle" size="md" stacked={true} />
-                <Avatar shape="circle" size="md" stacked={true} />
-              </Avatar.Group>
-            </Table.Cell>
-            <Table.Cell>
-              <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-                <Popover.Container className="!mt-0 !block">
-                  <ul>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Delete</span>
-                        <span>
-                          <Trash />
-                        </span>
-                      </button>
-                    </li>
-                    <li className="rounded px-2 py-1 hover:bg-metal-100">
-                      <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                        <span>Edit</span>
-                        <span>
-                          <Pencil />
-                        </span>
-                      </button>
-                    </li>
-                  </ul>
-                </Popover.Container>
-                <Popover.Action>
-                  <Button type="outlineGray" size="xs" circle={true}>
-                    <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                  </Button>
-                </Popover.Action>
-              </Popover>
-            </Table.Cell>
-          </Table.Row>
+              </Table.Cell>
+              <Table.Cell>
+                <Button variant="outline" size="sm" shape="circle">
+                  <DotsThreeOutline size={15} />
+                </Button>
+              </Table.Cell>
+            </Table.Row>
+          ))}
         </Table.Body>
       </Table>
     </div>
@@ -376,8 +115,9 @@ const StripedTable = () => {
 
 const StripedTableCode = `
 "use client";
-import { Avatar, Button, Popover, Table } from "keep-react";
-import { Cube, DotsThreeOutline, Pencil, Trash } from "phosphor-react";
+import Image from "next/image";
+import { Avatar, Badge, Button, Popover, Table } from "keep-react";
+import { ArrowDown, Cube, DotsThreeOutline, Pencil, Trash } from "phosphor-react";
 
 export const TableComponent = () => {
   return (
@@ -385,16 +125,19 @@ export const TableComponent = () => {
       <Table.Caption>
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
-            <p className="text-body-1 font-semibold text-metal-600">Files uploaded</p>
+            <p className="text-body-1 font-semibold text-metal-600">Team member</p>
+            <Badge size="xs" color="secondary">
+              100 Member
+            </Badge>
           </div>
           <div className="flex items-center gap-5">
-            <Button type="outlineGray" size="sm">
+            <Button variant="outline" size="sm">
               <span className="pr-2">
                 <Cube size={24} />
               </span>
-              Filter
+              New member
             </Button>
-            <Button type="outlineGray" size="sm">
+            <Button variant="outline" size="sm">
               <span className="pr-2">
                 <Cube size={24} />
               </span>
@@ -404,13 +147,14 @@ export const TableComponent = () => {
         </div>
       </Table.Caption>
       <Table.Head>
-        <Table.HeadCell className="min-w-[344px]">
-          <p className="text-body-6 font-medium text-metal-400">File no.</p>
+        <Table.HeadCell className="min-w-[290px]">
+          <p className="text-body-5 font-medium text-metal-400">Type</p>
         </Table.HeadCell>
-        <Table.HeadCell className="min-w-[160px]">File size</Table.HeadCell>
-        <Table.HeadCell className="min-w-[171px]">Date uploaded</Table.HeadCell>
-        <Table.HeadCell className="min-w-[170px]">Last uploaded</Table.HeadCell>
-        <Table.HeadCell className="min-w-[300px]">Team</Table.HeadCell>
+        <Table.HeadCell>Status</Table.HeadCell>
+        <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
+        <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
+        <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
+        <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
         <Table.HeadCell className="min-w-[100px]" />
       </Table.Head>
       <Table.Body className="divide-gray-25 divide-y">
@@ -419,329 +163,54 @@ export const TableComponent = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
+                  <Avatar img="/images/avatar/avatar-4.png" />
                   <div>
-                    <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                    <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+                    <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Ralph Edwards</p>
+                    <span>&ralph</span>
                   </div>
                 </div>
               </div>
             </div>
           </Table.Cell>
           <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Total 0.2 MB</p>
-            <p className="text-body-6 font-normal text-metal-500">200 KB</p>
+            <Badge color="success" showIcon={true}>
+              Active
+            </Badge>
           </Table.Cell>
           <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-            <p className="text-body-6 font-normal text-metal-500">4:45 pm</p>
+            <p>UI/UX Designer</p>
           </Table.Cell>
+          <Table.Cell>nevaeh.simmons@example.com</Table.Cell>
           <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
+            <div className="flex items-center gap-1">
+              <Badge color="info">
+                Product
+              </Badge>
+              <Badge color="info">
+                Marketing
+              </Badge>
+              <Badge color="secondary">
+                +3
+              </Badge>
+            </div>
           </Table.Cell>
-          <Table.Cell>
-            <Avatar.Group>
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-              <Avatar shape="circle" size="md" stacked={true} />
-              <Avatar shape="circle" size="md" stacked={true} />
-            </Avatar.Group>
-          </Table.Cell>
-          <Table.Cell>
-            <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-              <Popover.Container className="!mt-0 !block">
-                <ul>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Delete</span>
-                      <span>
-                        <Trash />
-                      </span>
-                    </button>
-                  </li>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Edit</span>
-                      <span>
-                        <Pencil />
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </Popover.Container>
-              <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
-                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </Button>
-              </Popover.Action>
-            </Popover>
-          </Table.Cell>
-        </Table.Row>
-        <Table.Row className="bg-white">
           <Table.Cell>
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                  <div>
-                    <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                    <p className="text-body-6 font-normal text-metal-500">700 KB</p>
-                  </div>
-                </div>
+              <div>
+                <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
+              </div>
+              <div className="flex items-center gap-1">
+                <span>
+                  <ArrowDown size={20} color="#D7DFE9" />
+                </span>
+                <span>20%</span>
               </div>
             </div>
           </Table.Cell>
           <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Total 0.7 MB</p>
-            <p className="text-body-6 font-normal text-metal-500">700 KB</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Jan 12, 2023</p>
-            <p className="text-body-6 font-normal text-metal-500">4:12 pm</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Jan 15, 2023</p>
-          </Table.Cell>
-          <Table.Cell>
-            <Avatar.Group>
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-              <Avatar shape="circle" size="md" stacked={true} />
-              <Avatar shape="circle" size="md" stacked={true} />
-            </Avatar.Group>
-          </Table.Cell>
-          <Table.Cell>
-            <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-              <Popover.Container className="!mt-0 !block">
-                <ul>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Delete</span>
-                      <span>
-                        <Trash />
-                      </span>
-                    </button>
-                  </li>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Edit</span>
-                      <span>
-                        <Pencil />
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </Popover.Container>
-              <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
-                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </Button>
-              </Popover.Action>
-            </Popover>
-          </Table.Cell>
-        </Table.Row>
-        <Table.Row className="bg-white">
-          <Table.Cell>
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                  <div>
-                    <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                    <p className="text-body-6 font-normal text-metal-500">500 KB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Total 0.5 MB</p>
-            <p className="text-body-6 font-normal text-metal-500">500 KB</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Nov 23, 2023</p>
-            <p className="text-body-6 font-normal text-metal-500">02:45 pm</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Nov 10, 2023</p>
-          </Table.Cell>
-          <Table.Cell>
-            <Avatar.Group>
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-              <Avatar shape="circle" size="md" stacked={true} />
-              <Avatar shape="circle" size="md" stacked={true} />
-            </Avatar.Group>
-          </Table.Cell>
-          <Table.Cell>
-            <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-              <Popover.Container className="!mt-0 !block">
-                <ul>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Delete</span>
-                      <span>
-                        <Trash />
-                      </span>
-                    </button>
-                  </li>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Edit</span>
-                      <span>
-                        <Pencil />
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </Popover.Container>
-              <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
-                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </Button>
-              </Popover.Action>
-            </Popover>
-          </Table.Cell>
-        </Table.Row>
-        <Table.Row className="bg-white">
-          <Table.Cell>
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                  <div>
-                    <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                    <p className="text-body-6 font-normal text-metal-500">900 KB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Total 0.9 MB</p>
-            <p className="text-body-6 font-normal text-metal-500">900 KB</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Feb 21, 2023</p>
-            <p className="text-body-6 font-normal text-metal-500">3:45 pm</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Jan 10, 2023</p>
-          </Table.Cell>
-          <Table.Cell>
-            <Avatar.Group>
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-              <Avatar shape="circle" size="md" stacked={true} />
-              <Avatar shape="circle" size="md" stacked={true} />
-            </Avatar.Group>
-          </Table.Cell>
-          <Table.Cell>
-            <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-              <Popover.Container className="!mt-0 !block">
-                <ul>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Delete</span>
-                      <span>
-                        <Trash />
-                      </span>
-                    </button>
-                  </li>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Edit</span>
-                      <span>
-                        <Pencil />
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </Popover.Container>
-              <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
-                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </Button>
-              </Popover.Action>
-            </Popover>
-          </Table.Cell>
-        </Table.Row>
-        <Table.Row className="bg-white">
-          <Table.Cell>
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <Avatar shape="circle" img="/images/icon/file.svg" size="md" />
-                  <div>
-                    <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Static Next Plan.pdf</p>
-                    <p className="text-body-6 font-normal text-metal-500">200 KB</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Total 0.1 MB</p>
-            <p className="text-body-6 font-normal text-metal-500">100 KB</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Mar 25, 2023</p>
-            <p className="text-body-6 font-normal text-metal-500">8:45 pm</p>
-          </Table.Cell>
-          <Table.Cell>
-            <p className="text-body-5 font-medium text-metal-500">Apr 10, 2023</p>
-          </Table.Cell>
-          <Table.Cell>
-            <Avatar.Group>
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-1.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-2.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-3.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-4.png" />
-              <Avatar shape="circle" size="md" stacked={true} img="/images/avatar/avatar-5.png" />
-              <Avatar shape="circle" size="md" stacked={true} />
-              <Avatar shape="circle" size="md" stacked={true} />
-            </Avatar.Group>
-          </Table.Cell>
-          <Table.Cell>
-            <Popover showDismissIcon={false} showArrow={false} className="w-52 border border-metal-100 p-2">
-              <Popover.Container className="!mt-0 !block">
-                <ul>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Delete</span>
-                      <span>
-                        <Trash />
-                      </span>
-                    </button>
-                  </li>
-                  <li className="rounded px-2 py-1 hover:bg-metal-100">
-                    <button className="flex w-full items-center justify-between text-body-4 font-normal text-metal-600">
-                      <span>Edit</span>
-                      <span>
-                        <Pencil />
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </Popover.Container>
-              <Popover.Action>
-                <Button type="outlineGray" size="xs" circle={true}>
-                  <DotsThreeOutline size={14} color="#5E718D" weight="bold" />
-                </Button>
-              </Popover.Action>
-            </Popover>
+            <Button variant="outline" size="sm" shape="circle">
+              <DotsThreeOutline size={15} />
+            </Button>
           </Table.Cell>
         </Table.Row>
       </Table.Body>

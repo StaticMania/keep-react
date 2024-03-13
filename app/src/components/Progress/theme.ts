@@ -1,63 +1,105 @@
-import type { keepProgressTheme } from '.'
+export interface ProgressThemeInterface {
+  circle: {
+    root: string
+    svg: {
+      base: string
+      circle: string
+      g: string
+      gCircle: string
+    }
+    text: {
+      base: string
+      content: {
+        sm: string
+        md: string
+        lg: string
+        xl: string
+        '2xl': string
+      }
+    }
+    size: {
+      sm: string
+      md: string
+      lg: string
+      xl: string
+      '2xl': string
+    }
+  }
+  line: {
+    root: string
+    progress: {
+      base: string
+      bar: string
+    }
+    text: {
+      base: string
+      content: {
+        sm: string
+        md: string
+        lg: string
+        xl: string
+        '2xl': string
+      }
+    }
+    size: {
+      sm: string
+      md: string
+      lg: string
+      xl: string
+      '2xl': string
+    }
+  }
+}
 
-export const progressTheme: keepProgressTheme = {
-  base: 'flex items-center',
-  label: 'mb-1 flex justify-between text-metal-500 font-medium',
-  progressBar: {
-    base: 'w-full',
-    bar: 'relative flex items-center justify-center text-center font-medium leading-none text-primary-100',
-    rounded: {
-      on: 'rounded-full',
-      off: 'rounded-none',
+export const progressTheme: ProgressThemeInterface = {
+  circle: {
+    root: 'relative',
+    svg: {
+      base: 'h-full w-full',
+      circle: 'stroke-current text-primary-50',
+      g: 'origin-center -rotate-90 transform',
+      gCircle: 'stroke-current text-primary-500 transition-all duration-300',
     },
-    bordered: {
-      on: {
-        base: 'ring-offset-2 ring-2',
-        color: {
-          info: 'ring-primary-100',
-          error: 'ring-error-100',
-          success: 'ring-success-100',
-          warning: 'ring-warning-100',
-          indigo: 'ring-indigo-100',
-          purple: 'ring-purple-100',
-        },
-      },
-      off: 'ring-0',
-    },
-    progressPercentage: {
-      base: 'pl-5 font-medium',
-      color: {
-        info: 'text-primary-500',
-        error: 'text-error-500',
-        success: 'text-success-500',
-        warning: 'text-warning-500',
-        indigo: 'text-indigo-500',
-        purple: 'text-purple-500',
+    text: {
+      base: 'absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform',
+      content: {
+        sm: 'text-body-5 font-normal text-primary-500',
+        md: 'text-body-4 font-normal text-primary-500',
+        lg: 'text-body-3 font-medium text-primary-500',
+        xl: 'text-body-2 font-semibold text-primary-500',
+        '2xl': 'text-heading-6 font-semibold text-primary-500',
       },
     },
-    popupLabelProgress:
-      'absolute px-3 py-3 -top-14 -right-5 rounded-md before:content[""] before:absolute before:w-4 before:h-4 before:-bottom-1 before:left-2/4 before:bg-inherit before:-translate-x-2/4 before:rotate-45 before:rounded-sm',
-    progressBaseColor: {
-      info: 'bg-primary-50',
-      error: 'bg-error-50',
-      success: 'bg-success-50',
-      warning: 'bg-warning-50',
-      indigo: 'bg-indigo-50',
-      purple: 'bg-purple-50',
-    },
-    progressPercentageColor: {
-      info: 'bg-primary-500',
-      error: 'bg-error-500',
-      success: 'bg-success-500',
-      warning: 'bg-warning-500',
-      indigo: 'bg-indigo-500',
-      purple: 'bg-purple-500',
+    size: {
+      sm: 'w-10 h-10',
+      md: 'w-20 h-20',
+      lg: 'w-24 h-24',
+      xl: 'w-32 h-32',
+      '2xl': 'w-40 h-40',
     },
   },
-  size: {
-    sm: 'h-1.5',
-    md: 'h-2.5',
-    lg: 'h-4',
-    xl: 'h-6',
+  line: {
+    root: 'flex items-center gap-x-3 whitespace-nowrap',
+    progress: {
+      base: 'relative flex w-full overflow-hidden rounded-full bg-primary-50',
+      bar: 'relative flex flex-col justify-center overflow-hidden rounded-full bg-gradient-17 transition-all duration-300',
+    },
+    text: {
+      base: 'w-10 text-end',
+      content: {
+        sm: 'text-body-5 font-normal text-primary-500',
+        md: 'text-body-4 font-normal text-primary-500',
+        lg: 'text-body-3 font-medium text-primary-500',
+        xl: 'text-body-2 font-semibold text-primary-500',
+        '2xl': 'text-heading-6 font-semibold text-primary-500',
+      },
+    },
+    size: {
+      sm: 'h-1',
+      md: 'h-2.5',
+      lg: 'h-3',
+      xl: 'h-4',
+      '2xl': 'h-5',
+    },
   },
 }

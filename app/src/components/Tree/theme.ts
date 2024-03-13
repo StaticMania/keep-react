@@ -1,9 +1,44 @@
-import { keepTreeTheme } from '.'
+export interface keepTreeTheme {
+  base: string
+  list: {
+    base: string
+    hasChild: {
+      on: string
+      off: {
+        hasIcon: {
+          on: string
+          off: string
+        }
+      }
+    }
+  }
+  caretIcon: {
+    base: string
+    icon: string
+  }
+
+  showChildren: {
+    base: string
+    on: string
+    off: string
+  }
+
+  nestedOrderList: {
+    on: {
+      base: string
+      border: {
+        on: string
+        off: string
+      }
+    }
+    off: string
+  }
+}
 
 export const treeTheme: keepTreeTheme = {
-  base: 'list-none space-y-2  text-body-6 md:text-body-4 font-medium text-metal-700',
+  base: 'list-none space-y-2  text-body-5 md:text-body-4 font-medium text-metal-700',
   list: {
-    base: 'text-body-6 md:text-body-4 font-medium text-metal-700 select-none',
+    base: 'text-body-5 md:text-body-4 font-medium text-metal-700 select-none',
     hasChild: {
       on: 'relative space-y-2',
       off: {
@@ -20,7 +55,7 @@ export const treeTheme: keepTreeTheme = {
   },
 
   showChildren: {
-    base: 'text-body-6 md:text-body-4 font-medium text-metal-400 select-none',
+    base: 'text-body-5 md:text-body-4 font-medium text-metal-400 select-none',
     on: '',
     off: 'hidden',
   },

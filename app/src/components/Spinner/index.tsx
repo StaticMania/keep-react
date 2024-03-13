@@ -1,46 +1,14 @@
 import type { ComponentProps, FC } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
-import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
 import { cn } from '../../helpers/cn'
+import { SpinnerColors, SpinnerSizes, spinnerTheme } from './theme'
 
-export interface KeepSpinnerTheme {
-  base: string
-  color: SpinnerColors
-  size: SpinnerSizes
-}
-
-export interface SpinnerColors
-  extends Pick<KeepColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
-  [key: string]: string
-}
-
-export interface SpinnerSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
-  [key: string]: string
-}
-
-/**
- * Props for the Spinner component.
- * @interface SpinnerProps
- * @extends {Omit<ComponentProps<'span'>, 'color'>}
- */
 export interface SpinnerProps extends Omit<ComponentProps<'span'>, 'color'> {
-  /**
-   * The color of the spinner.
-   * @type {keyof SpinnerColors}
-   * @default 'info'
-   */
   color?: keyof SpinnerColors
-
-  /**
-   * The size of the spinner.
-   * @type {keyof SpinnerSizes}
-   * @default 'md'
-   */
   size?: keyof SpinnerSizes
 }
 
 export const Spinner: FC<SpinnerProps> = ({ className, color = 'info', size = 'md', ...props }) => {
-  const theme = useTheme().theme.spinner
+  const theme = spinnerTheme
 
   return (
     <span role="status" {...props}>

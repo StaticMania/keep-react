@@ -1,28 +1,17 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLProps, forwardRef, useId, useLayoutEffect } from 'react'
 import { cn } from '../../helpers/cn'
-import { usePopoverContext } from './PopoverContext'
-import { useTheme } from '../../Keep/ThemeContext'
+import { usePopoverContext } from './Context'
 
-export interface PopoverDescriptionProps {
-  children?: ReactNode
-  className?: string
-  [key: string]: any
-}
+export const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
+  function PopoverDescription(props, ref) {
+    const { setDescriptionId } = usePopoverContext()
+    const id = useId()
+    useLayoutEffect(() => {
+      setDescriptionId(id)
+      return () => setDescriptionId(undefined)
+    }, [id, setDescriptionId])
 
-export const Description: FC<PopoverDescriptionProps> = ({ children, className, ...props }) => {
-  const { isTitleExist } = usePopoverContext()
-  const { description } = useTheme().theme.popover
-  return (
-    <p
-      className={cn(
-        description.base,
-        !isTitleExist && description.title.off,
-        isTitleExist && description.title.on,
-        className,
-      )}
-      {...props}>
-      {children}
-    </p>
-  )
-}
+    return <p {...props} ref={ref} id={id} className={cn('text-body-4 font-normal text-metal-600', props.className)} />
+  },
+)

@@ -1,8 +1,8 @@
 #mainContent > h2 {
-  @apply border-b border-b-metal-200 pb-2 text-body-3 font-semibold leading-6 tracking-[-0.3px] text-metal-900;
+  @apply border-b border-b-metal-200 pb-2 text-body-2 font-semibold text-metal-900;
 }
 #mainContent > p {
-  @apply mt-4 text-body-5 font-normal leading-6 tracking-[-0.3px] text-metal-700 md:text-body-4;
+  @apply mt-4 text-body-3 font-normal text-metal-500;
 }
 
 #mainContent > p a {
@@ -56,7 +56,7 @@
 }
 
 #visible-table-of-contents li {
-  @apply my-2 -ml-px border-l border-l-transparent pl-3 text-body-5 leading-7 tracking-[-0.2px] text-metal-500 hover:border-l-metal-900 hover:text-metal-900  active:text-metal-900;
+  @apply my-2 -ml-px border-l border-l-transparent pl-3 text-body-4 text-metal-500 hover:border-l-metal-900 hover:text-metal-900 active:text-metal-900;
 }
 
 #visible-table-of-contents li:has(.active-link) {

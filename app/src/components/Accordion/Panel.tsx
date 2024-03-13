@@ -1,26 +1,34 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, Ref, forwardRef, useMemo } from 'react'
 import { cn } from '../../helpers/cn'
 import { AccordionContext } from './AccordionContext'
-import { useTheme } from '../../Keep/ThemeContext'
-
-export interface PanelProps {
-  children?: ReactNode
-  className?: string
-  [key: string]: any
-}
+import { accordionTheme } from './theme'
 
 export interface keepAccordionPanelTheme {
-  base: string
-  panelBg: string
+  flush: {
+    on: string
+    off: string
+  }
 }
 
-export const Panel: FC<PanelProps> = ({ children, className, ...props }) => {
-  const { isOpen, setIsOpen, flush } = props.state
-  const { panel } = useTheme().theme.accordion
+const Panel = forwardRef<
+  HTMLDivElement,
+  HTMLAttributes<HTMLDivElement> & {
+    [key: string]: any
+  }
+>(({ children, className, state: { isOpen, setIsOpen, flush }, ...props }, ref: Ref<HTMLDivElement>) => {
+  const { panel } = accordionTheme
+  const contextValue = useMemo(() => ({ isOpen, setIsOpen, flush }), [isOpen, setIsOpen, flush])
+
   return (
-    <div className={cn(panel.base, !flush && panel.panelBg, className)} {...props}>
-      <AccordionContext.Provider value={{ isOpen, setIsOpen, flush }}>{children}</AccordionContext.Provider>
+    <div
+      className={cn(flush ? panel.flush.on : panel.flush.off, !flush && isOpen && 'shadow-large', className)}
+      {...props}
+      ref={ref}>
+      <AccordionContext.Provider value={contextValue}>{children}</AccordionContext.Provider>
     </div>
   )
-}
+})
+
+Panel.displayName = 'Accordion.Panel'
+export { Panel }

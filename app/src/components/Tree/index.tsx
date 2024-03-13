@@ -1,8 +1,8 @@
-import { useTheme } from '../../Keep/ThemeContext'
-import { CaretDown, CaretRight } from 'phosphor-react'
+'use client'
 import { FC, ReactNode, useState } from 'react'
-import { CheckBox } from '../CheckBox'
 import { cn } from '../../helpers/cn'
+import { Checkbox } from '../Checkbox'
+import { treeTheme } from './theme'
 
 /**
  * A node for the Tree component.
@@ -104,43 +104,6 @@ interface Props {
   itemStyle?: string
 }
 
-export interface keepTreeTheme {
-  base: string
-  list: {
-    base: string
-    hasChild: {
-      on: string
-      off: {
-        hasIcon: {
-          on: string
-          off: string
-        }
-      }
-    }
-  }
-  caretIcon: {
-    base: string
-    icon: string
-  }
-
-  showChildren: {
-    base: string
-    on: string
-    off: string
-  }
-
-  nestedOrderList: {
-    on: {
-      base: string
-      border: {
-        on: string
-        off: string
-      }
-    }
-    off: string
-  }
-}
-
 export const Tree: FC<Props> = ({
   nodes,
   showIcon = false,
@@ -149,7 +112,6 @@ export const Tree: FC<Props> = ({
   ParentIcon,
   ChildIcon,
   showCheckbox = false,
-  handleChecked,
   className,
   itemStyle,
 }) => {
@@ -157,7 +119,7 @@ export const Tree: FC<Props> = ({
     [key: number]: boolean
   }>({})
 
-  const theme = useTheme().theme.tree
+  const theme = treeTheme
 
   const toggleNode = (id: number) => {
     setExpandedNodes({ ...expandedNodes, [id]: !expandedNodes[id] })
@@ -186,14 +148,18 @@ export const Tree: FC<Props> = ({
           {node.children &&
             !showIcon &&
             (isExpanded ? (
-              <CaretDown size={20} color="#3D4A5C" weight="fill" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#3D4A5C" viewBox="0 0 256 256">
+                <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,48,88H208a8,8,0,0,1,5.66,13.66Z"></path>
+              </svg>
             ) : (
-              <CaretRight size={20} color="#3D4A5C" weight="fill" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#3D4A5C" viewBox="0 0 256 256">
+                <path d="M181.66,133.66l-80,80A8,8,0,0,1,88,208V48a8,8,0,0,1,13.66-5.66l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+              </svg>
             ))}
           {node.children && showIcon && typeof ParentIcon !== 'undefined' && ParentIcon}
           {!node.children && showIcon && typeof ChildIcon !== 'undefined' && ChildIcon}
 
-          {showCheckbox && <CheckBox size="md" variant="square" id="tree" color="info" handleChecked={handleChecked} />}
+          {showCheckbox && <Checkbox />}
 
           {node.title}
           {node.children && (

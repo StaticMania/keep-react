@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-import slug from 'rehype-slug'
 import mdx from '@next/mdx'
+import slug from 'rehype-slug'
 import tableOfContents from 'remark-toc'
 const nextConfig = {
   pageExtensions: ['mdx', 'tsx'],
@@ -230,6 +230,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.prismic.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
       },
     ],
   },

@@ -67,15 +67,13 @@ export const DefaultNavbar: Story = {
         </Navbar.Container>
 
         <Navbar.Container className="flex gap-2">
-          <Button size="sm" type="link">
+          <Button size="sm" variant="link">
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
             <span className="ml-2 text-metal-600">Search</span>
           </Button>
-          <Button size="sm" type="primary">
-            Contact
-          </Button>
+          <Button size="sm">Contact</Button>
           <Navbar.Toggle />
         </Navbar.Container>
       </Navbar.Container>
@@ -111,7 +109,7 @@ export const NavbarWithCenterLogo: Story = {
             <Navbar.Link linkName="News" />
             <Navbar.Link linkName="Resources" />
           </Navbar.Container>
-          <Button size="sm" type="link">
+          <Button size="sm" variant="link">
             <span>
               <MagnifyingGlass size={20} color="#444" />
             </span>
@@ -153,7 +151,7 @@ export const NavbarEcommerceMenu: Story = {
             <Navbar.Link icon={<Heart size={20} color="#444" />} iconAnimation={false} />
           </Navbar.Container>
 
-          <Button size="xs" type="outlineGray">
+          <Button size="xs" variant="outline">
             <span>
               <ShoppingCart size={20} color="#444" />
             </span>

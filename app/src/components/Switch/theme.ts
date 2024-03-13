@@ -1,4 +1,29 @@
-import type { keepToggleTheme } from '.'
+import { KeepSizes } from '../../Keep/KeepTheme'
+
+export interface ToggleSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
+  [key: string]: string
+}
+
+export interface keepToggleTheme {
+  base: string
+  circleBase: string
+  enabledBg: {
+    on: {
+      primary: string
+      slate: string
+    }
+    off: string
+  }
+  enabledCircle: {
+    on: ToggleSizes
+    off: ToggleSizes
+  }
+  disabled: string
+  size: ToggleSizes
+  label: ToggleSizes
+  withIconBase: string
+}
+
 export const switchTheme: keepToggleTheme = {
   base: 'relative inline-flex items-center rounded-full',
   circleBase:

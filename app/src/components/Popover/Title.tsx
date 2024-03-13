@@ -1,19 +1,21 @@
 'use client'
-import { FC, ReactNode } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
+import { HTMLProps, forwardRef, useId, useLayoutEffect } from 'react'
 import { cn } from '../../helpers/cn'
+import { usePopoverContext } from './Context'
 
-export interface PopoverTitleProps {
-  children?: ReactNode
-  className?: string
-  [key: string]: any
-}
+export const PopoverHeading = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadingElement>>(
+  function PopoverHeading(props, ref) {
+    const { setLabelId } = usePopoverContext()
+    const id = useId()
+    useLayoutEffect(() => {
+      setLabelId(id)
+      return () => setLabelId(undefined)
+    }, [id, setLabelId])
 
-export const Title: FC<PopoverTitleProps> = ({ children, className, ...props }) => {
-  const { title } = useTheme().theme.popover
-  return (
-    <h3 className={cn(className, title)} {...props}>
-      {children}
-    </h3>
-  )
-}
+    return (
+      <h2 {...props} ref={ref} id={id} className={cn('text-body-1 font-medium text-metal-900', props.className)}>
+        {props.children}
+      </h2>
+    )
+  },
+)

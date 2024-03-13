@@ -1,14 +1,12 @@
 import { DefaultSkeleton, DefaultSkeletonCode } from './variant/DefaultSkeleton'
-import { SkeletonLayout, SkeletonLayoutCode } from './variant/SkeletonLayout'
 import { CommentLayout, CommentLayoutCode } from './variant/CommentLayout'
 import { PostSkeleton, PostSkeletonCode } from './variant/PostSkeleton'
-import { SkeletonWithAnimation, SkeletonWithAnimationCode } from './variant/SkeletonWithAnimation'
 import { ParagraphSkeleton, ParagraphSkeletonCode } from './variant/ParagraphSkeleton'
 import { SkeletonApiData } from './SkeletonApi'
 
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import CodePreview from '../../../components/CodePreview'
+
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -22,28 +20,12 @@ The Default Skeleton component provides a visual placeholder that mimics the app
   <DefaultSkeleton />
 </CodePreview>
 
-## Skeleton Layout
-
-With the `<Skeleton>` component, you can create various layout structures to match your design. This example showcases one possible skeleton layout, but you can tailor it to your specific requirements.
-
-<CodePreview github="Skeleton" code={SkeletonLayoutCode}>
-  <SkeletonLayout />
-</CodePreview>
-
 ## Comment Layout
 
 The Comment Layout skeleton mimics a comment structure with a larger line, an avatar-like circle, and a description skeleton. You can customize this layout to fit your design seamlessly.
 
 <CodePreview github="Skeleton" code={CommentLayoutCode}>
   <CommentLayout />
-</CodePreview>
-
-## Post Skeleton
-
-The Post Skeleton demonstrates a skeleton representing a post-like structure, ideal for showcasing loading placeholders in a social media or content platform.
-
-<CodePreview github="Skeleton" code={PostSkeletonCode}>
-  <PostSkeleton />
 </CodePreview>
 
 ## Paragraph Skeleton
@@ -54,12 +36,12 @@ The Paragraph Skeleton incorporates multiple lines of skeleton components, resem
   <ParagraphSkeleton />
 </CodePreview>
 
-## Skeleton With Animation
+## Post Skeleton
 
-To enhance the loading experience, you can add animation to the skeleton component by using the `animation={true}` props.
+The Post Skeleton demonstrates a skeleton representing a post-like structure, ideal for showcasing loading placeholders in a social media or content platform.
 
-<CodePreview github="Skeleton" code={SkeletonWithAnimationCode}>
-  <SkeletonWithAnimation />
+<CodePreview github="Skeleton" code={PostSkeletonCode}>
+  <PostSkeleton />
 </CodePreview>
 
 ## API Reference

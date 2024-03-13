@@ -2,24 +2,21 @@
 import { Textarea } from '../../../../src'
 
 const DefaultTextArea = () => {
-  return <Textarea id="comment" placeholder="Leave a comment..." withBg={true} color="gray" border={true} rows={4} />
+  return (
+    <div className="p-2">
+      <Textarea placeholder="Write your message here." />
+    </div>
+  )
 }
 
 const DefaultTextAreaCode = `
-"use client";
-import { Textarea } from "keep-react";
+'use client'
+import { Textarea } from 'keep-react'
 
 export const TextAreaComponent = () => {
   return (
-    <Textarea
-      id="comment"
-      placeholder="Leave a comment..."
-      withBg={true}
-      color="gray"
-      border={true}
-      rows={4}
-    />
-  );
+     <Textarea placeholder="Write your message here." />
+  )
 }
 `
 

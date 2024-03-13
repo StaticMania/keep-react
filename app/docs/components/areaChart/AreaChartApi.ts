@@ -97,4 +97,18 @@ export const areaChartAPIData = [
     propsDescription: 'Color for the secondary area stroke',
     default: '#94ABFF',
   },
+  {
+    id: 15,
+    propsName: 'tooltipBtnVariant',
+    propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
+    propsDescription: 'Variant of the tooltip button.',
+    default: 'default',
+  },
+  {
+    id: 16,
+    propsName: 'tooltipBtnStyle',
+    propsType: 'string',
+    propsDescription: 'Custom style of the tooltip.',
+    default: 'None',
+  },
 ]

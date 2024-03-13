@@ -1,14 +1,10 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTheme } from '../../Keep/ThemeContext'
 
-export interface TitleProps {
-  children?: ReactNode
-  className?: string
-}
+const Title = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLHeadingElement>>(({ className, ...props }, ref) => (
+  <h3 ref={ref} className={cn('text-heading-6 font-semibold text-metal-800', className)} {...props} />
+))
+Title.displayName = 'Notification.Title'
 
-export const Title: FC<TitleProps> = ({ children, className }) => {
-  const { title } = useTheme().theme.notification
-  return <h2 className={cn(title, className)}>{children}</h2>
-}
+export { Title }

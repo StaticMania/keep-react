@@ -1,16 +1,9 @@
 import { DefaultDropdown, DefaultDropdownCode } from './variant/DefaultDropdown'
-
-import { DropdownSearchBar, DropdownSearchBarCode } from './variant/DropdownSearchBar'
-import { DropdownWithBothSideIcon, DropdownWithBothSideIconCode } from './variant/DropdownWithBothSideIcon'
-
-import { DropdownWithIconAndSearchBar, DropdownWithIconAndSearchBarCode } from './variant/DropdownWithIconAndSearchBar'
-
-import { DropdownWithTitleDescription, DropdownWithTitleDescriptionCode } from './variant/DropdownWithTitleDescription'
-
+import { DropdownWithIcon, DropdownWithIconCode } from './variant/DropdownWithIcon'
+import { CustomDropdown, CustomDropdownCode } from './variant/CustomDropdown'
 import { dropdownAPIData } from './DropdownApi'
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import CodePreview from '../../../components/CodePreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -18,42 +11,26 @@ The Dropdown Component is a versatile user interface element that provides users
 
 ## Default Dropdown
 
-The Default Dropdown represents some list items as a dropdown items with `<Dropdown.Item>` components and the `<Dropdown>` is a wrapper button where user can click to show the dropdown items. `dismissOnClick={true}` props means when the user select a dropdown item dropdown will be closed.
+The Default Dropdown represents a list of items as dropdown items with `<Dropdown.Item>` components.
 
 <CodePreview github="Dropdown" code={DefaultDropdownCode}>
   <DefaultDropdown />
 </CodePreview>
 
-## Dropdown With Search Bar
-
-The Dropdown with Search Bar component features a search bar that allows users to filter and select from a list of fruit options.
-
-<CodePreview github="Dropdown" code={DropdownSearchBarCode}>
-  <DropdownSearchBar />
-</CodePreview>
-
 ## Dropdown With Icon
 
-The Dropdown with Both Side Icon component combines dropdown items with icons on both sides of the label.
+The Dropdown with Icon component allows you to include icons within dropdown items.
 
-<CodePreview github="Dropdown" code={DropdownWithBothSideIconCode}>
-  <DropdownWithBothSideIcon />
+<CodePreview github="Dropdown" code={DropdownWithIconCode}>
+  <DropdownWithIcon />
 </CodePreview>
 
-## Dropdown With Icon And SearchBar
+## Customize Dropdown
 
-The Dropdown with Both Side Icon component combines dropdown items with search bar `<TextInput>` component.
+Customize the dropdown according to your preferences.
 
-<CodePreview github="Dropdown" code={DropdownWithIconAndSearchBarCode}>
-  <DropdownWithIconAndSearchBar />
-</CodePreview>
-
-## Dropdown With Title Description
-
-The dropdown with title description component represents the title and description in every dropdown items.
-
-<CodePreview github="Dropdown" code={DropdownWithTitleDescriptionCode}>
-  <DropdownWithTitleDescription />
+<CodePreview github="Dropdown" code={CustomDropdownCode}>
+  <CustomDropdown />
 </CodePreview>
 
 ## API Reference

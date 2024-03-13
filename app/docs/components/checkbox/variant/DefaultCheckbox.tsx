@@ -1,29 +1,28 @@
 'use client'
-import { CheckBox } from '../../../../src'
+import { useState } from 'react'
+import { Checkbox, Label } from '../../../../src'
 
 const DefaultCheckbox = () => {
-  return <CheckBox variant="square" label="Checkbox" id="two" name="countries" color="info" />
+  const [checked, setChecked] = useState(true)
+  return (
+    <fieldset className="flex items-center gap-2">
+      <Checkbox id="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+      <Label htmlFor="checkbox">Checkbox</Label>
+    </fieldset>
+  )
 }
 
 const DefaultCheckboxCode = `
-"use client";
-import { CheckBox } from "keep-react";
+'use client'
+import { Checkbox, Label } from 'keep-react'
 
-export const CheckboxComponent = () => { 
-  const handleChecked = (value) => {
-    //value
-  };
+export const CheckboxComponent = () => {
   return (
-      <CheckBox
-        size="md"
-        variant="square"
-        label="Checkbox"
-        id="two"
-        name="countries"
-        color="info"
-        handleChecked={handleChecked}
-      />
-  );
+    <fieldset className="flex items-center gap-2">
+      <Checkbox checked id="checkbox" />
+      <Label htmlFor="checkbox">Checkbox</Label>
+    </fieldset>
+  )
 }
 `
 

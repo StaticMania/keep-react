@@ -5,24 +5,16 @@ const TooltipPlacement = () => {
   return (
     <div className="my-8 flex flex-wrap items-end gap-2">
       <Tooltip content="Tooltips text here" trigger="hover" placement="top" animation="duration-300" style="dark">
-        <Button size="sm" type="primary">
-          Tooltip Top
-        </Button>
+        <Button size="sm">Tooltip Top</Button>
       </Tooltip>
       <Tooltip content="Tooltips text here" trigger="hover" placement="bottom" animation="duration-300" style="dark">
-        <Button size="sm" type="primary">
-          Tooltip Bottom
-        </Button>
+        <Button size="sm">Tooltip Bottom</Button>
       </Tooltip>
       <Tooltip content="Tooltips text here" trigger="hover" placement="left" animation="duration-300" style="dark">
-        <Button size="sm" type="primary">
-          Tooltip Left
-        </Button>
+        <Button size="sm">Tooltip Left</Button>
       </Tooltip>
       <Tooltip content="Tooltips text here" trigger="hover" placement="right" animation="duration-300" style="dark">
-        <Button size="sm" type="primary">
-          Tooltip Right
-        </Button>
+        <Button size="sm">Tooltip Right</Button>
       </Tooltip>
     </div>
   )
@@ -42,7 +34,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" >
           Tooltip Top
         </Button>
       </Tooltip>
@@ -53,7 +45,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" >
           Tooltip Bottom
         </Button>
       </Tooltip>
@@ -64,7 +56,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" >
           Tooltip Left
         </Button>
       </Tooltip>
@@ -75,7 +67,7 @@ export const TooltipComponent = () => {
         animation="duration-300"
         style="dark"
       >
-        <Button size="sm" type="primary">
+        <Button size="sm" >
           Tooltip Right
         </Button>
       </Tooltip>

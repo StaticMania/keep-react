@@ -1,7 +1,7 @@
-import { useTimelineContext } from './TimelineContext'
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { useTimelineContext } from './TimelineContext'
+import { timelineTheme } from './theme'
 
 /**
  * Props for the TimelinePoint component.
@@ -59,27 +59,9 @@ export const gradientColor: string[] = [
   'bg-gradient-31',
 ]
 
-export interface TimelinePointStyle {
-  root: {
-    horizontal: {
-      on: string
-      off: string
-    }
-    icon: {
-      on: {
-        base: string
-        inner: string
-      }
-      off: {
-        base: string
-      }
-    }
-  }
-}
-
 export const TimelinePoint: FC<TimelinePointProps> = ({ children, className, icon: Icon, ...props }) => {
   const { horizontal, gradientPoint, gradientColor } = useTimelineContext()
-  const { point } = useTheme().theme.timeline
+  const { point } = timelineTheme
   return (
     <div
       data-testid="timeline-point"

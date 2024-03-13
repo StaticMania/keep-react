@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
-import { useStepContext } from './StepContext'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { useStepContext } from './StepContext'
+import { stepTheme } from './theme'
 
 /**
  * Props for the StepItem component.
@@ -92,7 +92,7 @@ export const StepItem: FC<StepItemProps> = ({
   icon,
 }) => {
   const { stepType, borderType = 'solid' } = useStepContext()
-  const theme = useTheme().theme.step
+  const theme = stepTheme
   return (
     <div
       className={cn(

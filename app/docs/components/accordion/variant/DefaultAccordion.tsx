@@ -6,7 +6,8 @@ const DefaultAccordion = () => {
     <Accordion>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
@@ -27,7 +28,8 @@ export const AccordionComponent = () => {
     <Accordion>
       <Accordion.Panel>
         <Accordion.Container>
-          <Accordion.Title>What is the of the Keep React?</Accordion.Title>
+          <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
             The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a

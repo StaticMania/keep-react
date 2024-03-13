@@ -1,10 +1,6 @@
+'use client'
 import { createContext, useContext } from 'react'
 
-/**
- * Represents the context for the Rating component.
- * @typedef {Object} RatingContext
- * @property {number} [size] - The size of the rating.
- */
 export type RatingPropsContext = {
   size?: number
 }

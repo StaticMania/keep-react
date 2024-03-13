@@ -1,20 +1,8 @@
 import type { ComponentProps, FC, PropsWithChildren, ReactNode } from 'react'
-import { TableContext } from './TableContext'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
-export interface keepTableHeadCellTheme {
-  base: string
-  icon: {
-    base: string
-    on: {
-      left: string
-      right: string
-    }
-    off: string
-  }
-}
+import { DeepPartial } from '../../helpers/deep-partial'
+import { TableContext } from './TableContext'
+import { keepTableHeadCellTheme, tableTheme } from './theme'
 
 export interface TableHeadCellProps extends PropsWithChildren, ComponentProps<'th'> {
   theme?: DeepPartial<keepTableHeadCellTheme>
@@ -29,7 +17,7 @@ export const TableHeadCell: FC<TableHeadCellProps> = ({
   iconPosition = 'right',
   ...props
 }) => {
-  const theme = useTheme().theme.table.head.cell
+  const theme = tableTheme.head.cell
 
   return (
     <TableContext.Provider value={{ icon, iconPosition }}>

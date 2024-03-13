@@ -1,6 +1,6 @@
 import type { ComponentProps, FC, PropsWithChildren } from 'react'
-import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
+import { timelineTheme } from './theme'
 
 /**
  * Props for the TimelineBody component.
@@ -18,11 +18,8 @@ export type TimelineBodyProps = PropsWithChildren<
   }
 >
 
-export interface TimelineBodyStyle {
-  base: string
-}
 export const TimelineBody: FC<TimelineBodyProps> = ({ children, className, ...props }) => {
-  const { body } = useTheme().theme.timeline
+  const { body } = timelineTheme
   return (
     <p className={cn(body.base, className)} {...props}>
       {children}

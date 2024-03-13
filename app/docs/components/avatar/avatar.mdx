@@ -3,11 +3,12 @@ import { ShapeAvatar, ShapeAvatarCode } from './variant/ShapeAvatar'
 import { SizesOfAvatar, SizesOfAvatarCode } from './variant/SizesOfAvatar'
 import { ImageOfAvatar, ImageOfAvatarCode } from './variant/ImageOfAvatar'
 import { StatusOfAvatar, StatusOfAvatarCode } from './variant/StatusOfAvatar'
-import { NotificationOfAvatar, NotificationOfAvatarCode } from './variant/NotificationOfAvatar'
+import { AvatarGroup, AvatarGroupCode } from './variant/AvatarGroup'
+
 import { avatarApiData } from './avatarApi'
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import CodePreview from '../../../components/CodePreview'
+
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -23,7 +24,7 @@ When you enable the placeholder option, a default avatar image appears when ther
 
 ## Avatar Shapes
 
-Choose from three different avatar shapes: round, round square, or square. Just use the `shape` prop with values: `"circle"`, `"rounded"`, or `"square"`.
+Choose between two avatar shapes: rounded and circle. Utilize the shape prop with values `"circle"` or `"rounded"`.
 
 <CodePreview github="Avatar/Avatar.tsx" code={ShapeAvatarCode}>
   <ShapeAvatar />
@@ -31,7 +32,7 @@ Choose from three different avatar shapes: round, round square, or square. Just 
 
 ## Avatar Sizes
 
-There are various avatar sizes to fit your design. To change the size, use the `size` prop with values: `xs`, `sm`, `md`, `lg`, `xl`, or `2xl`.
+There are various avatar sizes to fit your design. To change the size, use the `size` prop with values: `"sm"`, `"md"`, `"lg"`, `"xl"`, or `"2xl"`.
 
 <CodePreview github="Avatar/Avatar.tsx" code={SizesOfAvatarCode}>
   <SizesOfAvatar />
@@ -39,7 +40,7 @@ There are various avatar sizes to fit your design. To change the size, use the `
 
 ## Using User Images
 
-Instead of an icon, you can display a user's image. Use the `img` prop and provide the path to the user's image, whether it's a local or remote URL.
+Display a user's image using the `img` prop. Provide the path to the user's image, whether it's a local or remote URL.
 
 <CodePreview github="Avatar/Avatar.tsx" code={ImageOfAvatarCode}>
   <ImageOfAvatar />
@@ -47,18 +48,18 @@ Instead of an icon, you can display a user's image. Use the `img` prop and provi
 
 ## Avatar Status
 
-The avatar's status reflects the user's availability. You can show the user's status using the `status` prop with values: `online`, `offline`, `away`, or `busy`. You can also customize the status position with the `statusPosition` prop, which accepts values: `bottom-left`, `bottom-right`, `top-left`, or `top-right`.
+The avatar's status reflects the user's availability. Show the user's status using the `"active"` prop, and use the `"verified"` prop to indicate a verified status.
 
 <CodePreview github="Avatar/Avatar.tsx" code={StatusOfAvatarCode}>
   <StatusOfAvatar />
 </CodePreview>
 
-## Avatar Notifications
+## Avatar Group
 
-You can use the avatar to indicate notifications for the user. Use the `status` prop with values: `"online"`, `"offline"`, `"away"`, or `"busy"` and set the `statusType` prop to `notification` to display notification indicators.
+Display multiple avatars in a group setting. Customize the layout for visually appealing designs.
 
-<CodePreview github="Avatar/Avatar.tsx" code={NotificationOfAvatarCode}>
-  <NotificationOfAvatar />
+<CodePreview github="Avatar/Avatar.tsx" code={AvatarGroupCode}>
+  <AvatarGroup />
 </CodePreview>
 
 ## API Reference

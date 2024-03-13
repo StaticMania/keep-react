@@ -1,11 +1,8 @@
 import { DefaultRadio, DefaultRadioCode } from './variant/DefaultRadio'
-import { SizesOfRadio, SizesOfRadioCode } from './variant/SizesOfRadio'
 import { RadioVariant, RadioVariantCode } from './variant/RadioVariant'
 import { radioApiData } from './RadioApi'
-
-import CodePreview from "../../../components/CodePreview"
-import CssThemePreview from "../../../components/CssThemePreview"
-import ComponentApi from "../../../components/ComponentApi"
+import CodePreview from '../../../components/CodePreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -15,24 +12,16 @@ Radio Input Component is a user interface element used for selecting a single op
 
 The Default Radio Input is a fundamental user interface element that allows users to choose a single option from a group of options. It presents a list of choices, each accompanied by a radio button.
 
-<CodePreview github="FormControls/Radio.tsx" code={DefaultRadioCode}>
+<CodePreview github="Radio" code={DefaultRadioCode}>
   <DefaultRadio />
 </CodePreview>
 
 ## Radio shape variant
 
-The Radio Shape Variant component introduces different shape options for radio inputs, allowing you to customize the appearance of radio buttons. The available shape variants are: `"circle"` and `"square"`.
+The Radio Shape Variant component introduces different shape options for radio inputs, allowing you to customize the appearance of radio buttons. The available shape variants are: `"circle"` `"rounded"` and `"square"`.
 
-<CodePreview github="FormControls/Radio.tsx" code={RadioVariantCode}>
+<CodePreview github="Radio" code={RadioVariantCode}>
   <RadioVariant />
-</CodePreview>
-
-## Sizes Of Radio
-
-The Sizes of Radio component offers different size options for radio inputs to suit various design preferences and layouts. The available sizes include: `sm` `md` and `lg`.
-
-<CodePreview github="FormControls/Radio.tsx" code={SizesOfRadioCode}>
-  <SizesOfRadio />
 </CodePreview>
 
 ## API Reference

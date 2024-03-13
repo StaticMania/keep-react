@@ -1,11 +1,11 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import ProgressDocs from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:
     'The Progress Bar Component in the Keep React allows you to visually represent the progress or completion of a task or process.',
-  title: 'Progress Bar - Keep React',
+  title: 'Progress - Keep React',
 }
 
 const page: NextPage = () => {

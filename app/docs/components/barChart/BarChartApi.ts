@@ -160,4 +160,18 @@ export const barChartAPIData = [
     propsDescription: 'Key in the data array for the Y-axis data.',
     default: 'None',
   },
+  {
+    id: 24,
+    propsName: 'tooltipBtnVariant',
+    propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
+    propsDescription: 'Variant of the tooltip button.',
+    default: 'default',
+  },
+  {
+    id: 25,
+    propsName: 'tooltipBtnStyle',
+    propsType: 'string',
+    propsDescription: 'Custom style of the tooltip.',
+    default: 'None',
+  },
 ]

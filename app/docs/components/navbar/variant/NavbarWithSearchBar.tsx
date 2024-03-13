@@ -1,7 +1,7 @@
 'use client'
-import { Navbar, TextInput } from '../../../../src'
-import { CaretDown, FacebookLogo, InstagramLogo, MagnifyingGlass, TwitterLogo } from 'phosphor-react'
 import Image from 'next/image'
+import { CaretDown, FacebookLogo, InstagramLogo, MagnifyingGlass, TwitterLogo } from 'phosphor-react'
+import { Icon, Input, Navbar } from '../../../../src'
 
 const NavbarWithSearchBar = () => {
   return (
@@ -13,15 +13,12 @@ const NavbarWithSearchBar = () => {
 
         <Navbar.Container className="flex items-center gap-6">
           <Navbar.Container tag="ul" className="hidden items-center justify-between gap-4 lg:flex">
-            <TextInput
-              id="#id-10"
-              placeholder="Search anything"
-              color="gray"
-              sizing="sm"
-              type="text"
-              addon={<MagnifyingGlass size={20} color="#5E718D" />}
-              addonPosition="left"
-            />
+            <fieldset className="relative">
+              <Input placeholder="Search" className="ps-11" />
+              <Icon>
+                <MagnifyingGlass size={19} color="#AFBACA" />
+              </Icon>
+            </fieldset>
             <Navbar.Link icon={<FacebookLogo size={20} color="#444" />} iconAnimation={false} />
             <Navbar.Link icon={<InstagramLogo size={20} color="#444" />} iconAnimation={false} />
             <Navbar.Link icon={<TwitterLogo size={20} color="#444" />} iconAnimation={false} />
