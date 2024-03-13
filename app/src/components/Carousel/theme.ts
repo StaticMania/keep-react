@@ -89,7 +89,7 @@ export const carouselTheme: KeepCarouselTheme = {
     },
   },
   item: {
-    base: 'w-full h-full rounded',
+    base: 'w-full h-full rounded-lg',
     wrapper: 'flex-[0_0_100%] min-w-0 pl-4',
   },
 

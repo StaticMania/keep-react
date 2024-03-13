@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
-import { Carousel } from './CarouselEmbla'
+import { Carousel } from './Carousel'
 import Image from 'next/image'
 
 const meta: Meta<typeof Carousel> = {

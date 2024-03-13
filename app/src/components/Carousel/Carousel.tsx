@@ -1,10 +1,10 @@
 'use client'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
-import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import ScrollContainer from 'react-indiana-drag-scroll'
+import { Children, cloneElement, useMemo } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
 import { cn } from '../../helpers/cn'
-import { windowExists } from '../../helpers/window-exists'
 import { IndicatorsType, IndicatorsTypeColors, carouselTheme } from './theme'
+import { useDotButton, usePrevNextButtons } from './hooks'
 
 /**
  * Props for the Carousel component.
@@ -89,18 +89,11 @@ export const Carousel: FC<CarouselProps> = ({
   showControls = false,
   leftControl,
   rightControl,
-  slide = true,
-  slideInterval,
   indicatorsType = 'dot',
   indicatorsTypeColors = 'white',
   className,
   ...props
 }): ReactElement => {
-  const isDeviceMobile = windowExists() && navigator.userAgent.indexOf('IEMobile') !== -1
-
-  const carouselContainer = useRef<HTMLDivElement>(null)
-  const [activeItem, setActiveItem] = useState(0)
-  const [isDragging, setIsDragging] = useState(false)
   const theme = carouselTheme
 
   const items = useMemo(
@@ -113,69 +106,39 @@ export const Carousel: FC<CarouselProps> = ({
     [children, theme.item.base],
   )
 
-  const navigateTo = useCallback(
-    (item: number) => () => {
-      if (!items) return
-      item = (item + items.length) % items.length
-      if (carouselContainer.current) {
-        carouselContainer.current.scrollLeft = carouselContainer.current.clientWidth * item
-      }
-      setActiveItem(item)
-    },
-    [items],
-  )
-
-  useEffect(() => {
-    if (carouselContainer.current && !isDragging && carouselContainer.current.scrollLeft !== 0) {
-      setActiveItem(Math.round(carouselContainer.current.scrollLeft / carouselContainer.current.clientWidth))
-    }
-  }, [isDragging])
-
-  useEffect(() => {
-    if (slide) {
-      const intervalId = setInterval(() => !isDragging && navigateTo(activeItem + 1)(), slideInterval ?? 3000)
-
-      return () => clearInterval(intervalId)
-    }
-  }, [activeItem, isDragging, navigateTo, slide, slideInterval])
-
-  const handleDragging = (dragging: boolean) => () => setIsDragging(dragging)
+  const [emblaRef, emblaApi] = useEmblaCarousel({})
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
+  const { onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
   return (
-    <div className={cn(theme.base, className)} data-testid="carousel" {...props}>
-      <ScrollContainer
-        className={cn(theme.scrollContainer.base, (isDeviceMobile || !isDragging) && theme.scrollContainer.snap)}
-        draggingClassName="cursor-grab"
-        innerRef={carouselContainer}
-        onEndScroll={handleDragging(false)}
-        onStartScroll={handleDragging(true)}
-        vertical={false}>
+    <div className={cn(theme.base, className)} data-testid="carousel" {...props} ref={emblaRef}>
+      <div className={theme.scrollContainer.base}>
         {items?.map(
           (item, index): ReactElement => (
             <div
               key={index}
               className={theme.item.wrapper}
-              data-active={activeItem === index}
+              data-active={selectedIndex === index}
               data-testid="carousel-item">
               {item}
             </div>
           ),
         )}
-      </ScrollContainer>
+      </div>
       {indicators && (
         <div className={theme.indicators.wrapper}>
-          {items?.map(
+          {scrollSnaps?.map(
             (_, index): ReactElement => (
               <button
                 key={index}
                 className={cn(
                   theme.indicators.base,
                   theme.indicators.type[indicatorsType],
-                  index === activeItem && theme.indicators.active.on.type[indicatorsType],
-                  index === activeItem && theme.indicators.active.on.color[indicatorsTypeColors],
-                  index !== activeItem && theme.indicators.active.off.color[indicatorsTypeColors],
+                  index === selectedIndex && theme.indicators.active.on.type[indicatorsType],
+                  index === selectedIndex && theme.indicators.active.on.color[indicatorsTypeColors],
+                  index !== selectedIndex && theme.indicators.active.off.color[indicatorsTypeColors],
                 )}
-                onClick={navigateTo(index)}
+                onClick={() => onDotButtonClick(index)}
                 data-testid="carousel-indicator"
               />
             ),
@@ -185,20 +148,12 @@ export const Carousel: FC<CarouselProps> = ({
       {items && showControls && (
         <>
           <div className={theme.leftControl}>
-            <button
-              className="group"
-              data-testid="carousel-left-control"
-              onClick={navigateTo(activeItem - 1)}
-              type="button">
+            <button className="group" data-testid="carousel-left-control" onClick={onPrevButtonClick} type="button">
               {leftControl ? leftControl : <DefaultLeftControl />}
             </button>
           </div>
           <div className={theme.rightControl}>
-            <button
-              className="group"
-              data-testid="carousel-right-control"
-              onClick={navigateTo(activeItem + 1)}
-              type="button">
+            <button className="group" data-testid="carousel-right-control" onClick={onNextButtonClick} type="button">
               {rightControl ? rightControl : <DefaultRightControl />}
             </button>
           </div>
