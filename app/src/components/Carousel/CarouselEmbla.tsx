@@ -1,12 +1,13 @@
 import { CaretLeft, CaretRight } from 'phosphor-react'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import ScrollContainer from 'react-indiana-drag-scroll'
 import { windowExists } from '../../helpers/window-exists'
 import { KeepColors } from '../../Keep/KeepTheme'
 import { useTheme } from '../../Keep/ThemeContext'
 import { cn } from '../../helpers/cn'
-
+import { EmblaCarouselType } from 'embla-carousel'
+// import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import useEmblaCarousel from 'embla-carousel-react'
 export interface KeepCarouselTheme {
   base: string
   indicators: {
@@ -136,14 +137,14 @@ export interface CarouselProps extends PropsWithChildren<ComponentProps<'div'>> 
   className?: string
 }
 
-export const Carousel: FC<CarouselProps> = ({
+export const CarouselEmbla: FC<CarouselProps> = ({
   children,
   indicators = false,
   showControls = false,
   leftControl,
   rightControl,
-  slide = true,
-  slideInterval,
+  // slide = true,
+  // slideInterval,
   indicatorsType = 'dot',
   indicatorsTypeColors = 'white',
   className,
@@ -153,7 +154,6 @@ export const Carousel: FC<CarouselProps> = ({
 
   const carouselContainer = useRef<HTMLDivElement>(null)
   const [activeItem, setActiveItem] = useState(0)
-  const [isDragging, setIsDragging] = useState(false)
   const theme = useTheme().theme.carousel
 
   const items = useMemo(
@@ -178,45 +178,71 @@ export const Carousel: FC<CarouselProps> = ({
     [items],
   )
 
-  useEffect(() => {
-    if (carouselContainer.current && !isDragging && carouselContainer.current.scrollLeft !== 0) {
-      setActiveItem(Math.round(carouselContainer.current.scrollLeft / carouselContainer.current.clientWidth))
+  type UsePrevNextButtonsType = {
+    prevBtnDisabled: boolean
+    nextBtnDisabled: boolean
+    onPrevButtonClick: () => void
+    onNextButtonClick: () => void
+  }
+
+  const usePrevNextButtons = (emblaApi: EmblaCarouselType | undefined): UsePrevNextButtonsType => {
+    const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
+    const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+
+    const onPrevButtonClick = useCallback(() => {
+      if (!emblaApi) return
+      emblaApi.scrollPrev()
+    }, [emblaApi])
+
+    const onNextButtonClick = useCallback(() => {
+      if (!emblaApi) return
+      emblaApi.scrollNext()
+    }, [emblaApi])
+
+    const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+      setPrevBtnDisabled(!emblaApi.canScrollPrev())
+      setNextBtnDisabled(!emblaApi.canScrollNext())
+    }, [])
+
+    useEffect(() => {
+      if (!emblaApi) return
+
+      onSelect(emblaApi)
+      emblaApi.on('reInit', onSelect)
+      emblaApi.on('select', onSelect)
+    }, [emblaApi, onSelect])
+
+    return {
+      prevBtnDisabled,
+      nextBtnDisabled,
+      onPrevButtonClick,
+      onNextButtonClick,
     }
-  }, [isDragging])
+  }
 
-  useEffect(() => {
-    if (slide) {
-      const intervalId = setInterval(() => !isDragging && navigateTo(activeItem + 1)(), slideInterval ?? 3000)
+  const [emblaRef, emblaApi] = useEmblaCarousel({})
 
-      return () => clearInterval(intervalId)
-    }
-  }, [activeItem, isDragging, navigateTo, slide, slideInterval])
+  // const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
 
-  const handleDragging = (dragging: boolean) => () => setIsDragging(dragging)
+  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
-  console.log({ items })
+  console.log({ theme })
 
   return (
-    <div className={cn(theme.base, className)} data-testid="carousel" {...props}>
-      <ScrollContainer
-        className={cn(theme.scrollContainer.base, (isDeviceMobile || !isDragging) && theme.scrollContainer.snap)}
-        draggingClassName="cursor-grab"
-        innerRef={carouselContainer}
-        onEndScroll={handleDragging(false)}
-        onStartScroll={handleDragging(true)}
-        vertical={false}>
+    <div className={`${cn(theme.base, className)}`} data-testid="carousel" {...props}>
+      <div className={cn(theme.scrollContainer.base, isDeviceMobile && theme.scrollContainer.snap)} ref={emblaRef}>
         {items?.map(
           (item, index): ReactElement => (
             <div
               key={index}
-              className={theme.item.wrapper}
+              className="min-w-0 flex-[0_0_100%]  pl-4 "
               data-active={activeItem === index}
               data-testid="carousel-item">
               {item}
             </div>
           ),
         )}
-      </ScrollContainer>
+      </div>
       {indicators && (
         <div className={theme.indicators.wrapper}>
           {items?.map(
@@ -243,16 +269,18 @@ export const Carousel: FC<CarouselProps> = ({
             <button
               className="group"
               data-testid="carousel-left-control"
-              onClick={navigateTo(activeItem - 1)}
+              disabled={prevBtnDisabled}
+              onClick={onPrevButtonClick}
               type="button">
               {leftControl ? leftControl : <DefaultLeftControl />}
             </button>
           </div>
           <div className={theme.rightControl}>
             <button
+              disabled={nextBtnDisabled}
               className="group"
               data-testid="carousel-right-control"
-              onClick={navigateTo(activeItem + 1)}
+              onClick={onNextButtonClick}
               type="button">
               {rightControl ? rightControl : <DefaultRightControl />}
             </button>

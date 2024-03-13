@@ -1,61 +1,61 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
-import { Carousel } from '.'
+import { CarouselEmbla } from './CarouselEmbla'
 import Image from 'next/image'
 
-const meta: Meta<typeof Carousel> = {
-  component: Carousel,
+const meta: Meta<typeof CarouselEmbla> = {
+  component: CarouselEmbla,
   tags: ['autodocs'],
   decorators: [
     (Story) => (
-      <div className="h-56 w-full  sm:h-64 xl:h-80 2xl:h-96">
+      <div className="h-56 w-full  overflow-hidden sm:h-64 xl:h-80 2xl:h-96">
         <Story />
       </div>
     ),
   ],
   argTypes: {
     children: {
-      control: { disable: false },
-      description: 'Children is carousel Image item',
+      control: { disable: true },
+      description: 'Children is CarouselEmbla Image item',
       table: {
         type: { summary: 'ReactNode' },
       },
     },
     indicators: {
-      description: 'Carousel indicators show or not?',
+      description: 'CarouselEmbla indicators show or not?',
       control: { type: 'boolean' },
     },
     showControls: {
-      description: 'Carousel Control button show or not?',
+      description: 'CarouselEmbla Control button show or not?',
       control: { type: 'boolean' },
     },
     leftControl: {
       control: { disable: true },
-      description: 'Carousel Left Control Icon',
+      description: 'CarouselEmbla Left Control Icon',
       table: {
         type: { summary: 'ReactNode' },
       },
     },
     rightControl: {
       control: { disable: true },
-      description: 'Carousel Right Control Icon',
+      description: 'CarouselEmbla Right Control Icon',
       table: {
         type: { summary: 'ReactNode' },
       },
     },
     slide: {
-      description: 'Carousel auto slide?',
+      description: 'CarouselEmbla auto slide?',
       control: { type: 'boolean' },
     },
     slideInterval: {
-      description: 'Carousel Interval Time',
+      description: 'CarouselEmbla Interval Time',
       table: {
         type: { summary: 'number' },
         defaultValue: { summary: 5000 },
       },
     },
     indicatorsType: {
-      description: 'Carousel indicator Type',
+      description: 'CarouselEmbla indicator Type',
       control: 'select',
       options: ['dot', 'ring', 'bar', 'square', 'squareRing'],
       table: {
@@ -64,7 +64,7 @@ const meta: Meta<typeof Carousel> = {
       },
     },
     indicatorsTypeColors: {
-      description: 'Carousel indicator color Type',
+      description: 'CarouselEmbla indicator color Type',
       control: 'select',
       options: ['white', 'slate'],
       table: {
@@ -76,7 +76,7 @@ const meta: Meta<typeof Carousel> = {
 }
 
 export default meta
-type Story = StoryObj<typeof Carousel>
+type Story = StoryObj<typeof CarouselEmbla>
 
 const imgUrl = [
   'd1bfb4f8-ee1d-44c6-be78-9662656e0210_slider-1.jpg?auto=compress,format',
@@ -110,7 +110,7 @@ function renderSlideMultipleTimes(): React.ReactElement[] {
   return slides
 }
 
-export const DefaultCarousel: Story = {
+export const DefaultCarouselEmbla: Story = {
   args: {
     slideInterval: 5000,
     showControls: true,
@@ -121,46 +121,46 @@ export const DefaultCarousel: Story = {
     children: renderImageMultipleTimes(),
   },
 }
-export const StaticCarousel: Story = {
+export const StaticCarouselEmbla: Story = {
   args: {
-    ...DefaultCarousel.args,
+    ...DefaultCarouselEmbla.args,
     slide: false,
   },
 }
-export const CarouselWithRingIndicator: Story = {
+export const CarouselEmblaWithRingIndicator: Story = {
   args: {
-    ...DefaultCarousel.args,
+    ...DefaultCarouselEmbla.args,
     slide: true,
     indicatorsType: 'ring',
   },
 }
-export const CarouselWithBarIndicator: Story = {
+export const CarouselEmblaWithBarIndicator: Story = {
   args: {
-    ...CarouselWithRingIndicator.args,
+    ...CarouselEmblaWithRingIndicator.args,
     indicatorsType: 'bar',
   },
 }
-export const CarouselWithSquareIndicator: Story = {
+export const CarouselEmblaWithSquareIndicator: Story = {
   args: {
-    ...CarouselWithRingIndicator.args,
+    ...CarouselEmblaWithRingIndicator.args,
     indicatorsType: 'square',
   },
 }
 
-export const CarouselWithSquareRingIndicator: Story = {
+export const CarouselEmblaWithSquareRingIndicator: Story = {
   args: {
-    ...CarouselWithRingIndicator.args,
+    ...CarouselEmblaWithRingIndicator.args,
     indicatorsType: 'squareRing',
   },
 }
 
-export const CarouselWithoutIndicator: Story = {
+export const CarouselEmblaWithoutIndicator: Story = {
   args: {
-    ...CarouselWithRingIndicator.args,
+    ...CarouselEmblaWithRingIndicator.args,
     indicators: false,
   },
 }
-export const CarouselWithSlide: Story = {
+export const CarouselEmblaWithSlide: Story = {
   args: {
     children: renderSlideMultipleTimes(),
   },

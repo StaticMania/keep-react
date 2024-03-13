@@ -26,7 +26,7 @@ export const carouselTheme: KeepCarouselTheme = {
         },
       },
     },
-    base: '',
+    base: 'overflow-hidden',
     wrapper: 'absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3',
     type: {
       dot: 'h-3 w-3 rounded-full',
@@ -42,13 +42,13 @@ export const carouselTheme: KeepCarouselTheme = {
   },
 
   control: {
-    base: 'inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-2 group-focus:ring-white sm:h-10 sm:w-10',
+    base: 'inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-2 group-focus:ring-white sm:h-10 sm:w-10 cursor-pointer',
     icon: 'h-5 w-5 text-white sm:h-6 sm:w-6',
   },
   leftControl: 'absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none',
   rightControl: 'absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none',
   scrollContainer: {
-    base: 'flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg',
+    base: 'flex touch-pan-y h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg',
     snap: 'snap-x',
   },
 }
