@@ -1,64 +1,11 @@
-import { CaretLeft, CaretRight } from 'phosphor-react'
+'use client'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
-import { Children, cloneElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { windowExists } from '../../helpers/window-exists'
-import { KeepColors } from '../../Keep/KeepTheme'
-import { useTheme } from '../../Keep/ThemeContext'
-import { cn } from '../../helpers/cn'
-import { EmblaCarouselType } from 'embla-carousel'
-// import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import { Children, cloneElement, useMemo } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-export interface KeepCarouselTheme {
-  base: string
-  indicators: {
-    active: {
-      off: {
-        base: string
-        color: IndicatorsTypeColors
-      }
-      on: {
-        base: string
-        type: {
-          dot: string
-          ring: string
-          bar: string
-          square: string
-          squareRing: string
-        }
-        color: IndicatorsTypeColors
-      }
-    }
-    base: string
-    wrapper: string
-    type: {
-      dot: string
-      ring: string
-      bar: string
-      square: string
-      squareRing: string
-    }
-  }
-  item: {
-    base: string
-    wrapper: string
-  }
-  control: {
-    base: string
-    icon: string
-  }
-  leftControl: string
-  rightControl: string
-  scrollContainer: {
-    base: string
-    snap: string
-  }
-}
-
-export type IndicatorsType = 'dot' | 'ring' | 'bar' | 'square' | 'squareRing'
-
-export interface IndicatorsTypeColors extends Pick<KeepColors, 'white' | 'slate'> {
-  [key: string]: string
-}
+import { cn } from '../../helpers/cn'
+import { windowExists } from '../../helpers/window-exists'
+import { IndicatorsType, IndicatorsTypeColors, carouselTheme } from './theme'
+import { useDotButton, usePrevNextButtons } from './hooks'
 
 /**
  * Props for the Carousel component.
@@ -137,14 +84,12 @@ export interface CarouselProps extends PropsWithChildren<ComponentProps<'div'>> 
   className?: string
 }
 
-export const CarouselEmbla: FC<CarouselProps> = ({
+export const Carousel: FC<CarouselProps> = ({
   children,
   indicators = false,
   showControls = false,
   leftControl,
   rightControl,
-  // slide = true,
-  // slideInterval,
   indicatorsType = 'dot',
   indicatorsTypeColors = 'white',
   className,
@@ -152,9 +97,7 @@ export const CarouselEmbla: FC<CarouselProps> = ({
 }): ReactElement => {
   const isDeviceMobile = windowExists() && navigator.userAgent.indexOf('IEMobile') !== -1
 
-  const carouselContainer = useRef<HTMLDivElement>(null)
-  const [activeItem, setActiveItem] = useState(0)
-  const theme = useTheme().theme.carousel
+  const theme = carouselTheme
 
   const items = useMemo(
     () =>
@@ -166,77 +109,19 @@ export const CarouselEmbla: FC<CarouselProps> = ({
     [children, theme.item.base],
   )
 
-  const navigateTo = useCallback(
-    (item: number) => () => {
-      if (!items) return
-      item = (item + items.length) % items.length
-      if (carouselContainer.current) {
-        carouselContainer.current.scrollLeft = carouselContainer.current.clientWidth * item
-      }
-      setActiveItem(item)
-    },
-    [items],
-  )
-
-  type UsePrevNextButtonsType = {
-    prevBtnDisabled: boolean
-    nextBtnDisabled: boolean
-    onPrevButtonClick: () => void
-    onNextButtonClick: () => void
-  }
-
-  const usePrevNextButtons = (emblaApi: EmblaCarouselType | undefined): UsePrevNextButtonsType => {
-    const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
-    const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
-
-    const onPrevButtonClick = useCallback(() => {
-      if (!emblaApi) return
-      emblaApi.scrollPrev()
-    }, [emblaApi])
-
-    const onNextButtonClick = useCallback(() => {
-      if (!emblaApi) return
-      emblaApi.scrollNext()
-    }, [emblaApi])
-
-    const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-      setPrevBtnDisabled(!emblaApi.canScrollPrev())
-      setNextBtnDisabled(!emblaApi.canScrollNext())
-    }, [])
-
-    useEffect(() => {
-      if (!emblaApi) return
-
-      onSelect(emblaApi)
-      emblaApi.on('reInit', onSelect)
-      emblaApi.on('select', onSelect)
-    }, [emblaApi, onSelect])
-
-    return {
-      prevBtnDisabled,
-      nextBtnDisabled,
-      onPrevButtonClick,
-      onNextButtonClick,
-    }
-  }
-
   const [emblaRef, emblaApi] = useEmblaCarousel({})
-
-  // const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
-
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
-
-  console.log({ theme })
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
+  const { onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
   return (
-    <div className={`${cn(theme.base, className)}`} data-testid="carousel" {...props}>
-      <div className={cn(theme.scrollContainer.base, isDeviceMobile && theme.scrollContainer.snap)} ref={emblaRef}>
+    <div className={cn(theme.base, className)} data-testid="carousel" {...props} ref={emblaRef}>
+      <div className={theme.scrollContainer.base}>
         {items?.map(
           (item, index): ReactElement => (
             <div
               key={index}
-              className="min-w-0 flex-[0_0_100%]  pl-4 "
-              data-active={activeItem === index}
+              className={theme.item.wrapper}
+              data-active={selectedIndex === index}
               data-testid="carousel-item">
               {item}
             </div>
@@ -245,18 +130,18 @@ export const CarouselEmbla: FC<CarouselProps> = ({
       </div>
       {indicators && (
         <div className={theme.indicators.wrapper}>
-          {items?.map(
+          {scrollSnaps?.map(
             (_, index): ReactElement => (
               <button
                 key={index}
                 className={cn(
                   theme.indicators.base,
                   theme.indicators.type[indicatorsType],
-                  index === activeItem && theme.indicators.active.on.type[indicatorsType],
-                  index === activeItem && theme.indicators.active.on.color[indicatorsTypeColors],
-                  index !== activeItem && theme.indicators.active.off.color[indicatorsTypeColors],
+                  index === selectedIndex && theme.indicators.active.on.type[indicatorsType],
+                  index === selectedIndex && theme.indicators.active.on.color[indicatorsTypeColors],
+                  index !== selectedIndex && theme.indicators.active.off.color[indicatorsTypeColors],
                 )}
-                onClick={navigateTo(index)}
+                onClick={() => onDotButtonClick(index)}
                 data-testid="carousel-indicator"
               />
             ),
@@ -266,22 +151,12 @@ export const CarouselEmbla: FC<CarouselProps> = ({
       {items && showControls && (
         <>
           <div className={theme.leftControl}>
-            <button
-              className="group"
-              data-testid="carousel-left-control"
-              disabled={prevBtnDisabled}
-              onClick={onPrevButtonClick}
-              type="button">
+            <button className="group" data-testid="carousel-left-control" onClick={onPrevButtonClick} type="button">
               {leftControl ? leftControl : <DefaultLeftControl />}
             </button>
           </div>
           <div className={theme.rightControl}>
-            <button
-              disabled={nextBtnDisabled}
-              className="group"
-              data-testid="carousel-right-control"
-              onClick={onNextButtonClick}
-              type="button">
+            <button className="group" data-testid="carousel-right-control" onClick={onNextButtonClick} type="button">
               {rightControl ? rightControl : <DefaultRightControl />}
             </button>
           </div>
@@ -292,19 +167,23 @@ export const CarouselEmbla: FC<CarouselProps> = ({
 }
 
 const DefaultLeftControl: FC = () => {
-  const theme = useTheme().theme.carousel
+  const theme = carouselTheme
   return (
     <span className={theme.control.base}>
-      <CaretLeft size={20} weight="bold" color="white" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+        <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"></path>
+      </svg>
     </span>
   )
 }
 
 const DefaultRightControl: FC = () => {
-  const theme = useTheme().theme.carousel
+  const theme = carouselTheme
   return (
     <span className={theme.control.base}>
-      <CaretRight size={20} weight="bold" color="white" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+        <path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"></path>
+      </svg>
     </span>
   )
 }

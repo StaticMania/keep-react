@@ -53,7 +53,7 @@ export interface IndicatorsTypeColors extends Pick<KeepColors, 'white' | 'slate'
 }
 
 export const carouselTheme: KeepCarouselTheme = {
-  base: 'relative h-56 sm:h-64 xl:h-80 2xl:h-96',
+  base: 'relative h-56 sm:h-64 xl:h-80 2xl:h-96 overflow-hidden',
   indicators: {
     active: {
       off: {
@@ -89,8 +89,8 @@ export const carouselTheme: KeepCarouselTheme = {
     },
   },
   item: {
-    base: 'absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2 flex h-full items-center justify-center',
-    wrapper: 'w-full flex-shrink-0 transform cursor-grab snap-center',
+    base: 'w-full h-full rounded',
+    wrapper: 'flex-[0_0_100%] min-w-0 pl-4',
   },
 
   control: {
@@ -100,7 +100,7 @@ export const carouselTheme: KeepCarouselTheme = {
   leftControl: 'absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none',
   rightControl: 'absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none',
   scrollContainer: {
-    base: 'flex touch-pan-y h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg',
+    base: 'flex touch-pan-y h-full snap-mandatory  scroll-smooth rounded-lg ml-[calc(1rem*-1)]',
     snap: 'snap-x',
   },
 }
