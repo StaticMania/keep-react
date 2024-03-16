@@ -134,7 +134,6 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
     Icon: SlidersHorizontal,
-    
   },
   {
     id: generatedID(),
