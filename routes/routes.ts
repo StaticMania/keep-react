@@ -128,6 +128,15 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Carousel-Embla',
+    folderName: 'Carousel-Embla',
+    href: '/docs/components/carousel-embla',
+    tag: false,
+    deprecate: false,
+    Icon: SlidersHorizontal,
+  },
+  {
+    id: generatedID(),
     name: 'Carousel',
     folderName: 'Carousel',
     href: '/docs/components/carousel',
