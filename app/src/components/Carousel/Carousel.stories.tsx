@@ -14,6 +14,12 @@ const meta: Meta<typeof Carousel> = {
     ),
   ],
   argTypes: {
+    config: {
+      description: 'Embla Carousel Options',
+      table: {
+        type: { summary: 'EmblaOptionsType' },
+      },
+    },
     children: {
       control: { disable: true },
       description: 'Children is Carousel Image item',
@@ -112,11 +118,10 @@ function renderSlideMultipleTimes(): React.ReactElement[] {
 
 export const DefaultCarousel: Story = {
   args: {
-    slideInterval: 5000,
+    config: {},
     showControls: true,
     indicators: true,
     indicatorsType: 'dot',
-    slide: true,
     indicatorsTypeColors: 'white',
     children: renderImageMultipleTimes(),
   },

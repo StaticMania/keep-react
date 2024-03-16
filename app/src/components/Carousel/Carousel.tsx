@@ -1,6 +1,7 @@
 'use client'
 import type { ComponentProps, FC, PropsWithChildren, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, useMemo } from 'react'
+import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { cn } from '../../helpers/cn'
 import { IndicatorsType, IndicatorsTypeColors, carouselTheme } from './theme'
@@ -81,6 +82,13 @@ export interface CarouselProps extends PropsWithChildren<ComponentProps<'div'>> 
    * @default ''
    */
   className?: string
+
+  /**
+   * config for customizing embla slider
+   * @type{EmblaOptionsType}
+   * default {}
+   */
+  config?: EmblaOptionsType
 }
 
 export const Carousel: FC<CarouselProps> = ({
@@ -92,7 +100,7 @@ export const Carousel: FC<CarouselProps> = ({
   indicatorsType = 'dot',
   indicatorsTypeColors = 'white',
   className,
-  ...props
+  config,
 }): ReactElement => {
   const theme = carouselTheme
 
@@ -106,12 +114,12 @@ export const Carousel: FC<CarouselProps> = ({
     [children, theme.item.base],
   )
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({})
+  const [emblaRef, emblaApi] = useEmblaCarousel(config)
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
   const { onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
   return (
-    <div className={cn(theme.base, className)} data-testid="carousel" {...props} ref={emblaRef}>
+    <div className={cn(theme.base, className)} data-testid="carousel" ref={emblaRef}>
       <div className={theme.scrollContainer.base}>
         {items?.map(
           (item, index): ReactElement => (

@@ -46,6 +46,7 @@ export const usePrevNextButtons = (emblaApi: EmblaCarouselType | undefined): Use
 type UseDotButtonType = {
   selectedIndex: number
   scrollSnaps: number[]
+  // eslint-disable-next-line no-unused-vars
   onDotButtonClick: (index: number) => void
 }
 
