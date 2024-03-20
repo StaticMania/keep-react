@@ -35,13 +35,6 @@ export const carouselDataApi = [
     default: 'false',
   },
   {
-    id: 6,
-    propsName: 'slideInterval',
-    propsType: 'number',
-    propsDescription: 'Interval in milliseconds for automatic slide transitions.',
-    default: '500',
-  },
-  {
     id: 7,
     propsName: 'indicatorsType',
     propsType: ['dot', 'ring', 'bar', 'square', 'squareRing'],
@@ -61,5 +54,12 @@ export const carouselDataApi = [
     propsType: 'string',
     propsDescription: 'Custom class to be added to the carousel.',
     default: 'None',
+  },
+  {
+    id: 10,
+    propsName: 'config',
+    propsType: 'Object<EmblaOptionsType>',
+    propsDescription: 'Options for customizing the default carousel',
+    default: '{}',
   },
 ]

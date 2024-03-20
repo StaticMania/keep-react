@@ -45,7 +45,7 @@ const ComponentApi: FC<ComponentProps> = ({ data }) => {
                 <td className="border-t border-metal-100 px-4 py-3 text-body-4 text-metal-400">
                   {typeof item.propsType === 'string'
                     ? item.propsType
-                    : item.propsType.map((prop) => (
+                    : item?.propsType?.map((prop) => (
                         <pre key={prop} className="m-0.5 inline-block rounded-lg bg-metal-100 px-2 py-0.5 ">
                           {prop}
                         </pre>
