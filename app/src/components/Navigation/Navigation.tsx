@@ -10,6 +10,10 @@ import { NavigationLink } from './NavigationLink'
 import { NavigationToggle } from './NavigationToggle'
 import { navigationTheme } from './theme'
 
+// Import to maintain focus within the specified wrapper, enhancing accessibility
+// Documentation: https://github.com/theKashey/react-focus-lock#readme
+import FocusLock from 'react-focus-lock'
+
 /**
  * Props for the Navigation component.
  * @interface NavigationProps
@@ -54,7 +58,9 @@ const NavigationComponent: FC<NavigationProps> = ({ fluid, bordered, rounded, ch
           bordered ? root.bordered.on : root.bordered.off,
           className,
         )}>
-        <div className={fluid ? root.container.on : root.container.off}>{children}</div>
+        <FocusLock returnFocus disabled={!isOpen}>
+          <div className={fluid ? root.container.on : root.container.off}>{children}</div>
+        </FocusLock>
       </header>
     </NavigationContext.Provider>
   )
