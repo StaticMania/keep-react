@@ -1,0 +1,88 @@
+export const carouselEmblaApi = [
+  {
+    id: 1,
+    propsName: 'indicators',
+    propsType: 'boolean',
+    propsDescription: 'Whether to display indicators for carousel items.',
+    default: 'true',
+  },
+  {
+    id: 2,
+    propsName: 'indicatorsPosition',
+    propsType: ['top', 'bottom', 'left', 'right'],
+    propsDescription: 'The position of indicators.',
+    default: 'bottom',
+  },
+  {
+    id: 3,
+    propsName: 'autoPlay',
+    propsType: 'boolean',
+    propsDescription: 'Wheather to autoplay the slides with a given or default delay.',
+    default: 'true',
+  },
+  {
+    id: 4,
+    propsName: 'autoPlaySpeed',
+    propsType: 'number',
+    propsDescription: 'Defines autoplay delay in seconds.',
+    default: '3',
+  },
+  {
+    id: 5,
+    propsName: 'pauseAutoPlayOnMouseover',
+    propsType: 'boolean',
+    propsDescription: 'Pauses autoplay when cursor is hovered over the slide.',
+    default: 'true',
+  },
+  {
+    id: 6,
+    propsName: 'setCarousel',
+    propsType: 'function',
+    propsDescription: 'This prop receives the setCarousel function provided by useCarouselControls hook.',
+    default: 'None',
+  },
+  {
+    id: 7,
+    propsName: 'gap',
+    propsType: 'number',
+    propsDescription: 'Gap between each slides in pixels.',
+    default: 'None',
+  },
+  {
+    id: 8,
+    propsName: 'align',
+    propsType: ['start', 'center', 'end'],
+    propsDescription: 'This prop aligns the slides relative to the carousel viewport.',
+    default: 'center',
+  },
+  {
+    id: 9,
+    propsName: 'axis',
+    propsType: ['x', 'y'],
+    propsDescription: 'Choose scroll axis between x and y. It defines the scroll direction of the Carousel.',
+    default: 'x',
+  },
+  {
+    id: 10,
+    propsName: 'loop',
+    propsType: 'boolean',
+    propsDescription: 'Enables infinite looping.',
+    default: 'true',
+  },
+  {
+    id: 11,
+    propsName: 'slidesToScroll',
+    propsType: 'number',
+    propsDescription:
+      'Group slides together. Drag interactions, dot navigation, and previous/next buttons are mapped to group slides into the given number.',
+    default: 'true',
+  },
+  {
+    id: 12,
+    propsName: 'startIndex',
+    propsType: 'number',
+    propsDescription:
+      'Set the initial scroll snap to the given number. First snap index starts at 0. Please note that this is not necessarily equal to the number of slides when used together with the slidesToScroll option.',
+    default: '0',
+  },
+]

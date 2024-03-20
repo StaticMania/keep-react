@@ -1,0 +1,62 @@
+import CodePreview from '../../../components/CodePreview'
+import { CarouselWithDirectionCode, CarouselWithDirection } from './variant/CarouselWithDirection'
+import { CarouselWithAutoplayCode, CarouselWithAutoplay } from './variant/CarouselWithAutoplay'
+import { CarouselWithSlidesPerViewCode, CarouselWithSlidesPerView } from './variant/CarouselWithSlidesPerView'
+import { DefaultCarousel, DefaultCarouselCode } from './variant/DefaultCarousel'
+import { CarouselWithApiCode, CarouselWithApi } from './variant/CarouselWithApi'
+import { carouselEmblaApi } from './carouselEmblaApi'
+import ComponentApi from '../../../components/ComponentApi'
+
+## Table of Contents
+
+A Carousel component is a user interface element commonly found in web and mobile applications that allows you to display a series of images, content, or media items in a rotating manner. It is often used to showcase multiple items in a limited space, allowing users to view different items by sliding or swiping through them.
+
+## Default Carousel
+
+Default Carousel component allows you to display a series of images, content, or media items in a rotating manner. It is often used to showcase multiple items in a limited space, allowing users to view different items by sliding or swiping through them.
+
+<CodePreview github="Carousel" code={DefaultCarouselCode}>
+  <DefaultCarousel />
+</CodePreview>
+
+## Carousel With Autoplay
+
+Carousel with Autoplay prop allows you to autoplay the slides without any user interactions. You can turn it or off on by providing autoPlay prop and modify it's speed by providing autoPlaySpeed prop.
+
+<CodePreview github="Carousel" code={CarouselWithAutoplayCode}>
+  <CarouselWithAutoplay />
+</CodePreview>
+
+## Carousel With SlidesPerView
+
+Carousel with SlidesPerView prop let's you decide how many slides you want to display in a single view.
+
+<CodePreview github="Carousel" code={CarouselWithSlidesPerViewCode}>
+  <CarouselWithSlidesPerView />
+</CodePreview>
+
+## Carousel Direction
+
+You can change direction of the carousel by using the axis prop. But be aware that you have to set a height in the parent Component before you use the y axis. You can also change the position of indicators
+
+<CodePreview github="Carousel" code={CarouselWithDirectionCode}>
+  <CarouselWithDirection />
+</CodePreview>
+
+## Carousel With Api
+
+You can try useCarouselControls hook to control or modify the carousel however you want. you can even write your own logic to slide
+
+<CodePreview github="Carousel" code={CarouselWithApiCode}>
+  <CarouselWithApi />
+</CodePreview>
+
+## API Reference
+
+Explore the available props for the Carousel-Embla component
+
+<ComponentApi data={carouselEmblaApi} />
+
+## Reference
+
+To learn more about the Carousel, please see the documentation of [Carousel](https://github.com/davidjerleke/embla-carousel)
