@@ -8,6 +8,14 @@ import { Footer } from './Footer'
 import { Icon } from './Icon'
 import { modalTheme } from './theme'
 
+// Import to disable scrolling outside of designated components
+// Documentation: https://github.com/theKashey/react-remove-scroll#readme
+import { RemoveScroll } from 'react-remove-scroll'
+
+// Import to maintain focus within the specified wrapper, enhancing accessibility
+// Documentation: https://github.com/theKashey/react-focus-lock#readme
+import FocusLock from 'react-focus-lock'
+
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   isOpen: boolean
   onClose: () => void
@@ -40,9 +48,13 @@ const ModalComponent = forwardRef<HTMLDivElement, ModalProps>(({ isOpen, onClose
 
   return isOpen
     ? createPortal(
-        <div role="dialog" ref={ref} {...props} className={cn(modalTheme.modal, props.className)}>
-          {children}
-        </div>,
+        <RemoveScroll enabled={isOpen}>
+          <FocusLock disabled={!isOpen} returnFocus>
+            <div role="dialog" ref={ref} {...props} className={cn(modalTheme.modal, props.className)}>
+              {children}
+            </div>
+          </FocusLock>
+        </RemoveScroll>,
         document.body,
       )
     : null
