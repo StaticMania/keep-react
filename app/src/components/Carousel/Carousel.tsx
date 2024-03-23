@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
+import { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
 import { DotButton, useDotButton } from './CarouselDotButton'
 import { PrevButton, NextButton, usePrevNextButtons } from './CarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -8,12 +8,23 @@ import { cn } from '../../helpers/cn'
 
 type PropType = {
   slides: Array<ReactNode>
+  slideClass: string
+  slideContainerClasses: string
+  carouselViewportClasses: string
+  carouselPlugins: Array<EmblaPluginType>
   options?: EmblaOptionsType
 }
 
-const Carousel: React.FC<PropType> = ({ slides, options }) => {
+const Carousel: React.FC<PropType> = ({
+  slides,
+  options,
+  slideClass,
+  slideContainerClasses,
+  carouselViewportClasses,
+  carouselPlugins,
+}) => {
   const theme = carouselTheme
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, carouselPlugins)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
 
@@ -21,10 +32,10 @@ const Carousel: React.FC<PropType> = ({ slides, options }) => {
 
   return (
     <>
-      <div className={theme.viewport} ref={emblaRef}>
-        <div className={theme.item.container}>
+      <div className={cn(theme.viewport, carouselViewportClasses)} ref={emblaRef}>
+        <div className={cn(theme.item.container, slideContainerClasses)}>
           {slides.map((slide, index) => (
-            <div className={theme.item.slide} key={index}>
+            <div className={cn(theme.item.slide, slideClass)} key={index}>
               {slide}
             </div>
           ))}

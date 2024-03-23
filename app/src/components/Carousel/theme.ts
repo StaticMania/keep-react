@@ -42,7 +42,7 @@ export const carouselTheme: KeepCarouselTheme = {
     },
   },
   item: {
-    container: 'flex gap-4',
-    slide: 'flex-[0_0_100%] h-auto min-w-0 overflow-hidden',
+    container: 'flex',
+    slide: 'flex-[0_0_100%] h-auto min-w-0 overflow-hidden pl-4 ',
   },
 }
