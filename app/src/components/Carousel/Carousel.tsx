@@ -8,10 +8,10 @@ import { cn } from '../../helpers/cn'
 
 type PropType = {
   slides: Array<ReactNode>
-  slideClass: string
-  slideContainerClasses: string
-  carouselViewportClasses: string
-  carouselPlugins: Array<EmblaPluginType>
+  slideClass?: string
+  slideContainerClasses?: string
+  carouselViewportClasses?: string
+  carouselPlugins?: Array<EmblaPluginType>
   options?: EmblaOptionsType
 }
 

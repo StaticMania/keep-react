@@ -1,36 +1,42 @@
 'use client'
 import Image from 'next/image'
-import { Carousel } from '../../../../src'
-import CarouselOne from '../../../../../public/images/carousel/one.svg'
-import CarouselTwo from '../../../../../public/images/carousel/two.svg'
-import CarouselThree from '../../../../../public/images/carousel/three.svg'
-import CarouselFour from '../../../../../public/images/carousel/four.svg'
+import Carousel from '~/app/src/components/Carousel/Carousel'
 
 const DefaultCarousel = () => {
-  return (
-    <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image src={CarouselOne} alt="slider-1" />
-      <Image src={CarouselTwo} alt="slider-2" />
-      <Image src={CarouselThree} alt="slider-3" />
-      <Image src={CarouselFour} alt="slider-4" />
-    </Carousel>
-  )
+  const images = [
+    '/images/carousel/1.jpg',
+    '/images/carousel/2.jpg',
+    '/images/carousel/3.jpg',
+    '/images/carousel/4.jpg',
+  ]
+
+  const slides = images.map((src, idx) => (
+    <div className="b relative h-[400px] w-full overflow-hidden rounded-lg" key={idx}>
+      <Image fill src={src} alt={'img' + idx} className="w-full object-cover" />
+    </div>
+  ))
+  return <Carousel slides={slides} />
 }
 
 const DefaultCarouselCode = `
-"use client";
-import Image from "next/image";
-import { Carousel } from "keep-react";
+'use client'
+import Image from 'next/image'
+import Carousel from '~/app/src/components/Carousel/Carousel'
 
-export const CarouselComponent = () => {
-  return (
-    <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image src="img source" alt="slider-1" />
-      <Image src="img source" alt="slider-2" />
-      <Image src="img source" alt="slider-3" />
-      <Image src="img source" alt="slider-4" />
-    </Carousel>
-  )
+const DefaultCarousel = () => {
+  const images = [
+    '/images/carousel/1.jpg',
+    '/images/carousel/2.jpg',
+    '/images/carousel/3.jpg',
+    '/images/carousel/4.jpg',
+  ]
+
+  const slides = images.map((src, idx) => (
+    <div className="b relative h-[400px] w-full overflow-hidden rounded-lg" key={idx}>
+      <Image fill src={src} alt={'img'+idx} className="w-full object-cover" />
+    </div>
+  ))
+  return <Carousel slides={slides} />
 }
 `
 export { DefaultCarousel, DefaultCarouselCode }
