@@ -33,12 +33,12 @@ export const carouselTheme: KeepCarouselTheme = {
     button: {
       container: 'flex items-center gap-2',
       wrapper:
-        'inline-flex items-center justify-center border border-gray-100 rounded-full size-[3rem] text-gray-600 hover:text-gray-800 hover:bg-gray-50 disabled:bg-gray-50 disabled:opacity-50',
-      svg: 'size-4',
+        'inline-flex items-center justify-center border border-gray-100 rounded-full size-[2rem] text-gray-600 hover:text-gray-800 hover:bg-gray-50 disabled:bg-gray-50 disabled:opacity-50',
+      svg: 'size-3',
     },
     indicators: {
       container: 'flex flex-wrap items-center gap-2',
-      dot: 'inline-flex size-4 rounded-full border-2 border-gray-200',
+      dot: 'inline-flex size-3 rounded-full border-2 border-gray-200',
     },
   },
   item: {
