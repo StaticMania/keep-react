@@ -4,7 +4,7 @@ import { Calendar } from 'phosphor-react'
 import { useState } from 'react'
 import { Button, DatePicker, Popover } from '../../../../src'
 
-const DefaultDatePicker = () => {
+const MultipleDatePicker = () => {
   const [date, setDate] = useState<Date>()
   return (
     <Popover showArrow={false} placement="bottom-start">
@@ -18,13 +18,13 @@ const DefaultDatePicker = () => {
         </Button>
       </Popover.Action>
       <Popover.Content className="z-50 max-w-min">
-        <DatePicker mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
+        <DatePicker numberOfMonths={2} mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
       </Popover.Content>
     </Popover>
   )
 }
 
-const DefaultDatePickerCode = `
+const MultipleDatePickerCode = `
 'use client'
 import { format } from 'date-fns'
 import { useState } from 'react'
@@ -45,11 +45,11 @@ export const DatePickerComponent = () => {
         </Button>
       </Popover.Action>
       <Popover.Content className="z-50 max-w-min">
-        <DatePicker mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
+        <DatePicker numberOfMonths={2} mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
       </Popover.Content>
     </Popover>
   )
 }
 `
 
-export { DefaultDatePicker, DefaultDatePickerCode }
+export { MultipleDatePicker, MultipleDatePickerCode }

@@ -4,7 +4,6 @@ import {
   arrow,
   autoPlacement,
   autoUpdate,
-  flip,
   offset,
   shift,
   useClick,
@@ -20,16 +19,18 @@ export interface PopoverOptions {
   placement?: Placement
   modal?: boolean
   trigger?: boolean
+  showArrow?: boolean
   onOpenChange?: () => void
 }
 
 export function usePopover({
   initialOpen = false,
+  showArrow = true,
   placement = 'bottom',
   modal,
   trigger: controlledOpen,
   onOpenChange: setControlledOpen,
-}: PopoverOptions = {}) {
+}: PopoverOptions) {
   const [uncontrolledOpen, setUncontrolledOpen] = useState(initialOpen)
   const [labelId, setLabelId] = useState<string | undefined>()
   const [descriptionId, setDescriptionId] = useState<string | undefined>()
@@ -45,17 +46,13 @@ export function usePopover({
     whileElementsMounted: autoUpdate,
     middleware: [
       offset(14),
-      flip({
-        crossAxis: placement.includes('-'),
-        fallbackAxisSideDirection: 'end',
-        padding: 5,
-      }),
+
       shift({ padding: 5 }),
       arrow({
-        element: arrowRef,
+        element: showArrow ? arrowRef : null,
       }),
+
       autoPlacement({
-        crossAxis: true,
         alignment: 'start',
         allowedPlacements: ['top', 'right', 'bottom', 'left'],
       }),
@@ -84,8 +81,9 @@ export function usePopover({
       setLabelId,
       setDescriptionId,
       arrowRef,
+      showArrow,
     }),
-    [open, setOpen, interactions, data, modal, labelId, descriptionId],
+    [open, setOpen, interactions, data, modal, labelId, descriptionId, showArrow],
   )
 }
 
