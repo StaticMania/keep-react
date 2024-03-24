@@ -31,18 +31,18 @@ export const carouselTheme: KeepCarouselTheme = {
   controls: {
     wrapper: 'flex items-center justify-between mt-[1.8rem]',
     button: {
-      container: 'flex items-center gap-2',
+      container: 'flex items-center gap-2 pl-4',
       wrapper:
-        'inline-flex items-center justify-center border border-gray-100 rounded-full size-[2rem] text-gray-600 hover:text-gray-800 hover:bg-gray-50 disabled:bg-gray-50 disabled:opacity-50',
+        'inline-flex items-center justify-center border border-metal-100 rounded-full size-[2rem] text-metal-600 hover:text-metal-800 hover:bg-metal-50 disabled:bg-metal-50 disabled:opacity-50',
       svg: 'size-3',
     },
     indicators: {
       container: 'flex flex-wrap items-center gap-2',
-      dot: 'inline-flex size-3 rounded-full border-2 border-gray-200',
+      dot: 'inline-flex size-3 rounded-full border-2 border-metal-200',
     },
   },
   item: {
     container: 'flex',
-    slide: 'flex-[0_0_100%] h-auto min-w-0 overflow-hidden pl-4 ',
+    slide: 'flex-[0_0_100%] h-auto min-w-0 overflow-hidden pl-4',
   },
 }
