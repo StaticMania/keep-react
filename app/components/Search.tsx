@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { File, MagnifyingGlass, RadioButton } from 'phosphor-react'
 import { ChangeEvent, Dispatch, FC, SetStateAction, useCallback, useEffect, useState, useTransition } from 'react'
 import { routerPath, routes } from '~/routes/routes'
-import { Icon, Input, Modal, Typography } from '../src'
+import { Icon, Input, Modal } from '../src'
 
 interface ModalProps {
   isOpen: boolean
@@ -75,7 +75,7 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
           </Icon>
         </fieldset>
         <Modal.Content id="search" className="mt-2 max-h-[300px] overflow-y-auto">
-          <Typography variant="div" className={query.length ? 'hidden' : 'block'}>
+          <div className={query.length ? 'hidden' : 'block'}>
             <p className="my-2 text-body-4 font-normal text-metal-400">Quick Access</p>
             <ul>
               <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25">
@@ -97,8 +97,8 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
                 </Link>
               </li>
             </ul>
-          </Typography>
-          <Typography variant="div">
+          </div>
+          <div>
             <p className="my-2 text-body-4 font-normal text-metal-400">Components</p>
 
             {isPending ? (
@@ -119,7 +119,7 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
             ) : (
               <p className="text-left text-body-4 font-normal text-metal-600">No results found.</p>
             )}
-          </Typography>
+          </div>
         </Modal.Content>
       </Modal.Body>
     </Modal>

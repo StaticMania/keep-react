@@ -3,38 +3,44 @@ import ComponentApi from '../../../components/ComponentApi'
 import { Heading, HeadingCode } from './variant/Heading'
 import { Display, DisplayCode } from './variant/Display'
 import { BodyTypo, BodyTypoCode } from './variant/Body'
-import { TypographyAPI } from './TypographyAPI'
+import TypographyTable from './TypographyTable'
 
 ## Table of Contents
 
-The Accordion Component in the Keep React allows you to create collapsible sections of content, commonly known as accordions. Users can toggle the visibility of the content by clicking on the disclosure button. With customizable options for the theme, open state, type, and state, you can create accordion components that fit seamlessly into your design and provide an intuitive user experience.
+Typography in Keep React is a reusable className that simplifies text styling, offering a consistent way to format and present text across a web application. It allows developers to easily add properties like font size, line height and letter spacing.
 
 ## Heading Typography
 
-The Heading Typography component in Keep React allows you to style headings easily. Utilize the `<Typography>` component with the `variant` prop, offering six heading types from `"heading-1"` to `"heading-6"`.
+The Heading Typography component in Keep React allows you to style headings easily.
 
-<CodePreview github="Typography" code={HeadingCode}>
+<CodePreview github="Typography" code={HeadingCode} activeTab={1}>
   <Heading />
 </CodePreview>
 
+Utilities for controlling the font size of an element.
+
+<TypographyTable typoType="heading" />
+
 ## Body Typography
 
-Elevate the readability of your text with the Body Typography component in Keep React. Employ `<Typography>` with the `variant` prop, featuring six body text styles from `"body-1"` to `"body-5"`.
+Elevate the readability of your text with the Body Typography component in Keep React.
 
-<CodePreview github="Typography" code={BodyTypoCode}>
+<CodePreview github="Typography" code={BodyTypoCode} activeTab={1}>
   <BodyTypo />
 </CodePreview>
 
+Utilities for controlling the font size of an element.
+
+<TypographyTable typoType="body" />
+
 ## Display Typography
 
-Make a visual impact with the Display Typography component in Keep React. Use `<Typography>` with the `variant` prop with `'display'`.
+Make a visual impact with the Display Typography component in Keep React.
 
-<CodePreview github="Typography" code={DisplayCode}>
+<CodePreview github="Typography" code={DisplayCode} activeTab={1}>
   <Display />
 </CodePreview>
 
-## API Reference
+Utilities for controlling the font size of an element.
 
-For a comprehensive overview of the Typography component's properties, refer to the API documentation.
-
-<ComponentApi data={TypographyAPI} />
+<TypographyTable typoType="display" />

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { Info } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { Typography, Upload } from '../../../../src'
+import { Upload } from '../../../../src'
 
 export interface UploadedFile {
   path?: string
@@ -25,22 +25,16 @@ const DefaultUpload = () => {
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
         </Upload.Icon>
         <Upload.Text>
-          <Typography variant="p" className="text-body-3 font-medium text-metal-600">
-            Drag & Drop or Choose File to Upload
-          </Typography>
-          <Typography variant="p" className="text-body-4 font-normal text-metal-400">
-            DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.
-          </Typography>
+          <p className="text-body-3 font-medium text-metal-600">Drag & Drop or Choose File to Upload</p>
+          <p className="text-body-4 font-normal text-metal-400">DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.</p>
         </Upload.Text>
       </Upload.Body>
       <Upload.Footer isFileExists={files.length > 0}>
-        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
+        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
-        </Typography>
-        <Typography variant="ul" className="space-y-1">
-          {files?.map((file) => <Upload.File key={file?.name}>{file?.name}</Upload.File>)}
-        </Typography>
+        </p>
+        <ul className="space-y-1">{files?.map((file) => <Upload.File key={file?.name}>{file?.name}</Upload.File>)}</ul>
       </Upload.Footer>
     </Upload>
   )
@@ -51,7 +45,7 @@ const DefaultUploadCode = `
 import Image from 'next/image'
 import { Info } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { Typography, Upload } from 'keep-react'
+import { Upload } from 'keep-react'
 
 export const UploadComponent = () => {
   const [files, setFiles] = useState([])
@@ -65,22 +59,22 @@ export const UploadComponent = () => {
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
         </Upload.Icon>
         <Upload.Text>
-          <Typography variant="p" className="text-body-3 font-medium text-metal-600">
+          <p className="text-body-3 font-medium text-metal-600">
             Drag & Drop or Choose File to Upload
-          </Typography>
-          <Typography variant="p" className="text-body-4 font-normal text-metal-400">
+          </p>
+          <p className="text-body-4 font-normal text-metal-400">
             DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.
-          </Typography>
+          </p>
         </Upload.Text>
       </Upload.Body>
       <Upload.Footer isFileExists={files.length > 0}>
-        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
+        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
-        </Typography>
-        <Typography variant="ul" className="space-y-1">
+        </p>
+        <ul className="space-y-1">
           {files?.map((file) => <Upload.File key={file?.name}>{file?.name}</Upload.File>)}
-        </Typography>
+        </ul>
       </Upload.Footer>
     </Upload>
   )

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReactNode, useEffect, useState } from 'react'
 import { gettingStartedRoutes, routes } from '../../routes/routes'
-import { Accordion, Typography } from '../src'
+import { Accordion } from '../src'
 
 export interface Sections {
   id: number
@@ -95,9 +95,9 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                   </Accordion.Title>
                 </Accordion.Container>
                 <Accordion.Content className="p-0">
-                  <Typography variant="ul" className="mt-3 space-y-1.5 border-l border-l-metal-100">
+                  <ul className="mt-3 space-y-1.5 border-l border-l-metal-100">
                     {gettingStartedRoutes.map((route) => (
-                      <Typography variant="li" key={route.id}>
+                      <li key={route.id}>
                         <Link
                           className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                             IsActive(route.href)
@@ -107,9 +107,9 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                           href={route.href}>
                           {route.name}
                         </Link>
-                      </Typography>
+                      </li>
                     ))}
-                  </Typography>
+                  </ul>
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>
@@ -121,9 +121,9 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                   </Accordion.Title>
                 </Accordion.Container>
                 <Accordion.Content className="p-0">
-                  <Typography variant="ul" className="mb-4 mt-3 space-y-1.5 border-l border-l-metal-100">
+                  <ul className="mb-4 mt-3 space-y-1.5 border-l border-l-metal-100">
                     {routes.map((route) => (
-                      <Typography variant="li" key={route.id}>
+                      <li key={route.id}>
                         <Link
                           className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                             IsActive(route.href)
@@ -133,9 +133,9 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                           href={route.href}>
                           {route.name}
                         </Link>
-                      </Typography>
+                      </li>
                     ))}
-                  </Typography>
+                  </ul>
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>

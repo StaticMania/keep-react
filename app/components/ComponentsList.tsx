@@ -3,19 +3,7 @@ import { CloudArrowUp, DotsThree, HouseLine, Phone, SignIn, User } from 'phospho
 import { useState } from 'react'
 import { CustomizedBarSizeWithAxisData } from '../docs/components/barChart/variant/CustomizedBarSizeWithAxisData'
 import { DefaultRadio } from '../docs/components/radio/variant/DefaultRadio'
-import {
-  Accordion,
-  AreaChart,
-  Button,
-  DatePicker,
-  Modal,
-  Pagination,
-  Skeleton,
-  Slider,
-  Tabs,
-  Tooltip,
-  Typography,
-} from '../src'
+import { Accordion, AreaChart, Button, DatePicker, Modal, Pagination, Skeleton, Slider, Tabs, Tooltip } from '../src'
 
 export const SliderComponent = () => {
   return (
@@ -102,14 +90,12 @@ export const ModalComponent = () => {
             <CloudArrowUp size={28} color="#1B4DFF" />
           </Modal.Icon>
           <Modal.Content>
-            <Typography variant="div" className="!mb-6">
-              <Typography variant="h3" className="mb-2 text-body-1 font-medium text-metal-900">
-                Update Modal Status
-              </Typography>
-              <Typography variant="p" className="text-body-4 font-normal text-metal-600">
+            <div className="!mb-6">
+              <h3 className="mb-2 text-body-1 font-medium text-metal-900">Update Modal Status</h3>
+              <p className="text-body-4 font-normal text-metal-600">
                 Your document has unsaved changes. Discard or save them as a new page to continue.
-              </Typography>
-            </Typography>
+              </p>
+            </div>
           </Modal.Content>
           <Modal.Footer>
             <Button onClick={closeModal} size="sm" variant="outline" color="secondary">

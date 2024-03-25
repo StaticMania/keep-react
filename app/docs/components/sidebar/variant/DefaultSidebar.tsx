@@ -10,7 +10,7 @@ import {
   SquaresFour,
   Users,
 } from 'phosphor-react'
-import { Avatar, Button, Divider, Icon, Input, Sidebar, Typography } from '../../../../src'
+import { Avatar, Button, Divider, Icon, Input, Sidebar } from '../../../../src'
 
 const DefaultSidebar = () => {
   return (
@@ -18,9 +18,7 @@ const DefaultSidebar = () => {
       <Sidebar className="max-w-max">
         <Sidebar.Header className="space-y-2.5">
           <div className="flex items-center justify-between">
-            <Typography variant="heading-5" className="font-bold text-primary-500">
-              Keep
-            </Typography>
+            <h5 className="font-bold text-primary-500">Keep</h5>
             <Button variant="outline" shape="icon" color="primary" className="border-none">
               <List size={24} />
             </Button>
@@ -70,12 +68,8 @@ const DefaultSidebar = () => {
             <Avatar shape="circle" img="/images/avatar/avatar-3.png" />
           </div>
           <div>
-            <Typography variant="p" className="mb-0 text-body-3 font-medium text-metal-600">
-              Md Ariful Islam
-            </Typography>
-            <Typography variant="p" className="text-body-4 font-normal text-metal-400">
-              Web Developer
-            </Typography>
+            <p className="mb-0 text-body-3 font-medium text-metal-600">Md Ariful Islam</p>
+            <p className="text-body-4 font-normal text-metal-400">Web Developer</p>
           </div>
         </Sidebar.Footer>
       </Sidebar>
@@ -96,16 +90,16 @@ import {
   SquaresFour,
   Users,
 } from 'phosphor-react'
-import { Avatar, Button, Divider, Icon, Input, Sidebar, Typography } from 'keep-react'
+import { Avatar, Button, Divider, Icon, Input, Sidebar } from 'keep-react'
 
 export const SidebarComponent = () => {
   return (
     <Sidebar>
       <Sidebar.Header className="space-y-2.5">
         <div className="flex items-center justify-between">
-          <Typography variant="heading-5" className="font-bold text-primary-500">
+          <h5 className="font-bold text-primary-500">
             Keep
-          </Typography>
+          </h5>
           <Button variant="outline" shape="icon" color="primary" className="border-none">
             <List size={24} />
           </Button>
@@ -155,12 +149,8 @@ export const SidebarComponent = () => {
           <Avatar shape="circle" img="/images/avatar/avatar-3.png" />
         </div>
         <div>
-          <Typography variant="p" className="mb-0 text-body-3 font-medium text-metal-600">
-            Md Ariful Islam
-          </Typography>
-          <Typography variant="p" className="text-body-4 font-normal text-metal-400">
-            Web Developer
-          </Typography>
+          <p className="mb-0 text-body-3 font-medium text-metal-600">Md Ariful Islam</p>
+          <p className="text-body-4 font-normal text-metal-400">Web Developer</p>
         </div>
       </Sidebar.Footer>
     </Sidebar>

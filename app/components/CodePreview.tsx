@@ -12,10 +12,11 @@ interface CodePreviewProps {
   code: string
   github?: string
   className?: string
+  activeTab?: number
 }
 
-const CodePreview = ({ children, code, github, className }: CodePreviewProps) => {
-  const [active, setActive] = useState(0)
+const CodePreview = ({ children, code, github, className, activeTab }: CodePreviewProps) => {
+  const [active, setActive] = useState(activeTab ? activeTab : 0)
   const { copy, copyToClipboard } = useCopy()
   const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/app/src/components/${github}`
 

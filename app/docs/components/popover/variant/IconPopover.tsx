@@ -1,6 +1,6 @@
 'use client'
 import { CaretDown, CaretLeft, CaretRight, CaretUp, Confetti } from 'phosphor-react'
-import { Button, Popover, Typography } from '../../../../src'
+import { Button, Popover } from '../../../../src'
 
 const IconPopover = () => {
   return (
@@ -20,17 +20,15 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-            Step - 1 / 5
-          </Typography>
-          <Typography className="flex items-center justify-between gap-5 pt-6">
+          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
             </Button>
             <Button color="primary" size="xs" className="w-full">
               Next
             </Button>
-          </Typography>
+          </div>
         </Popover.Content>
       </Popover>
       <Popover placement="right">
@@ -48,17 +46,15 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-            Step - 1 / 5
-          </Typography>
-          <Typography className="flex items-center justify-between gap-5 pt-6">
+          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
             </Button>
             <Button color="primary" size="xs" className="w-full">
               Next
             </Button>
-          </Typography>
+          </div>
         </Popover.Content>
       </Popover>
       <Popover placement="top">
@@ -76,17 +72,15 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-            Step - 1 / 5
-          </Typography>
-          <Typography className="flex items-center justify-between gap-5 pt-6">
+          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
             </Button>
             <Button color="primary" size="xs" className="w-full">
               Next
             </Button>
-          </Typography>
+          </div>
         </Popover.Content>
       </Popover>
       <Popover placement="bottom">
@@ -104,17 +98,15 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </Popover.Description>
           </div>
-          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-            Step - 1 / 5
-          </Typography>
-          <Typography className="flex items-center justify-between gap-5 pt-6">
+          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
             </Button>
             <Button color="primary" size="xs" className="w-full">
               Next
             </Button>
-          </Typography>
+          </div>
         </Popover.Content>
       </Popover>
     </div>
@@ -124,7 +116,7 @@ const IconPopover = () => {
 const IconPopoverCode = `
 'use client'
 import { CaretLeft } from 'phosphor-react'
-import { Button, Popover, Typography } from 'keep-react'
+import { Button, Popover } from 'keep-react'
 
 export const PopoverComponent = () => {
   return (
@@ -143,17 +135,17 @@ export const PopoverComponent = () => {
             industrys standard dummy text ever since
           </Popover.Description>
         </div>
-        <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
+        <p className="mt-5 text-body-4 font-normal text-metal-600">
           Step - 1 / 5
-        </Typography>
-        <Typography className="flex items-center justify-between gap-5 pt-6">
+        </p>
+        <div className="flex items-center justify-between gap-5 pt-6">
           <Button color="secondary" size="xs" variant="outline" className="w-full">
             Skip
           </Button>
           <Button color="primary" size="xs" className="w-full">
             Next
           </Button>
-        </Typography>
+        </div>
       </Popover.Content>
     </Popover>
   )

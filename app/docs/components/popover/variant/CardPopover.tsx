@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
 import CardImg from '../../../../../public/images/card.jpg'
-import { Button, Popover, Typography } from '../../../../src'
+import { Button, Popover } from '../../../../src'
 
 const CardPopover = () => {
   return (
@@ -19,17 +19,15 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-              Step - 1 / 5
-            </Typography>
-            <Typography className="flex items-center justify-between gap-5 pt-6">
+            <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+            <div className="flex items-center justify-between gap-5 pt-6">
               <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
               <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
-            </Typography>
+            </div>
           </div>
         </Popover.Content>
       </Popover>
@@ -45,17 +43,15 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-              Step - 1 / 5
-            </Typography>
-            <Typography className="flex items-center justify-between gap-5 pt-6">
+            <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+            <div className="flex items-center justify-between gap-5 pt-6">
               <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
               <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
-            </Typography>
+            </div>
           </div>
         </Popover.Content>
       </Popover>
@@ -71,17 +67,15 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-              Step - 1 / 5
-            </Typography>
-            <Typography className="flex items-center justify-between gap-5 pt-6">
+            <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+            <div className="flex items-center justify-between gap-5 pt-6">
               <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
               <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
-            </Typography>
+            </div>
           </div>
         </Popover.Content>
       </Popover>
@@ -97,17 +91,15 @@ const CardPopover = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
             </Popover.Description>
-            <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
-              Step - 1 / 5
-            </Typography>
-            <Typography className="flex items-center justify-between gap-5 pt-6">
+            <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+            <div className="flex items-center justify-between gap-5 pt-6">
               <Button color="secondary" size="xs" variant="outline" className="w-full">
                 Skip
               </Button>
               <Button color="primary" size="xs" className="w-full">
                 Next
               </Button>
-            </Typography>
+            </div>
           </div>
         </Popover.Content>
       </Popover>
@@ -119,7 +111,7 @@ const CardPopoverCode = `
 'use client'
 import Image from 'next/image'
 import CardImg from '@/public/images/card.jpg'
-import { Button, Popover, Typography } from 'keep-react'
+import { Button, Popover } from 'keep-react'
 
 export const PopoverComponent = () => {
   return (
@@ -135,17 +127,17 @@ export const PopoverComponent = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industrys standard dummy text ever since
           </Popover.Description>
-          <Typography variant="p" className="mt-5 text-body-4 font-normal text-metal-600">
+          <p className="mt-5 text-body-4 font-normal text-metal-600">
             Step - 1 / 5
-          </Typography>
-          <Typography className="flex items-center justify-between gap-5 pt-6">
+          </p>
+          <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
             </Button>
             <Button color="primary" size="xs" className="w-full">
               Next
             </Button>
-          </Typography>
+          </div>
         </div>
       </Popover.Content>
     </Popover>
