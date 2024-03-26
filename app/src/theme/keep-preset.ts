@@ -154,9 +154,6 @@ module.exports = {
           },
         ],
       },
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-      },
       boxShadow: {
         small: '0px 1px 2px rgba(45, 54, 67, 0.05)',
         default: '0px 2px 4px rgba(45, 54, 67, 0.08), 0px 1px 2px rgba(45, 54, 67, 0.04)',
