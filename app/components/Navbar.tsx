@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { Command, List, MagnifyingGlass, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
-import { Accordion, Typography } from '../src'
+import { Accordion } from '../src'
 import Search from './Search'
 
 const Navbar = () => {
@@ -140,9 +140,9 @@ const Navbar = () => {
                     </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <Typography variant="ul" className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
+                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {navbarRoutes.map((route) => (
-                        <Typography variant="li" key={route.id}>
+                        <li key={route.id}>
                           <Link
                             className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
@@ -150,9 +150,9 @@ const Navbar = () => {
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </Typography>
+                        </li>
                       ))}
-                    </Typography>
+                    </ul>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
@@ -164,9 +164,9 @@ const Navbar = () => {
                     </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <Typography variant="ul" className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
+                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {gettingStartedRoutes.map((route) => (
-                        <Typography variant="li" key={route.id}>
+                        <li key={route.id}>
                           <Link
                             className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
@@ -174,9 +174,9 @@ const Navbar = () => {
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </Typography>
+                        </li>
                       ))}
-                    </Typography>
+                    </ul>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
@@ -188,9 +188,9 @@ const Navbar = () => {
                     </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <Typography variant="ul" className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
+                    <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
                       {routes.map((route) => (
-                        <Typography variant="li" key={route.id}>
+                        <li key={route.id}>
                           <Link
                             className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
@@ -198,9 +198,9 @@ const Navbar = () => {
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </Typography>
+                        </li>
                       ))}
-                    </Typography>
+                    </ul>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
