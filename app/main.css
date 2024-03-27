@@ -9,28 +9,13 @@
 @layer base {
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: textfield !important;
     margin: 0;
   }
 }
-@layer components {
-  .radio-ringed-item {
-    @apply border border-primary-500 bg-none before:absolute before:left-2/4 before:top-2/4 before:-translate-x-2/4 before:-translate-y-2/4 before:rounded-full before:bg-primary-500 before:content-[""];
-  }
-  .radio-square-item {
-    @apply border border-primary-500 bg-none before:absolute before:left-2/4 before:top-2/4 before:-translate-x-2/4 before:-translate-y-2/4 before:rounded-none before:bg-primary-500 before:content-[""];
-  }
-  .radio-checked-item {
-    @apply bg-primary-500 before:absolute before:left-2/4 before:top-[45%] before:-translate-x-2/4 before:-translate-y-2/4 before:rotate-45  before:border before:border-white before:content-[""];
-  }
-  .checkbox-ringed-item {
-    @apply border border-primary-500 bg-none before:absolute before:left-2/4 before:top-2/4 before:-translate-x-2/4 before:-translate-y-2/4 before:bg-primary-500 before:content-[""];
-  }
-  .checkbox-checked-item {
-    @apply bg-primary-500 before:absolute before:left-2/4 before:top-[45%] before:-translate-x-2/4 before:-translate-y-2/4 before:rotate-45  before:border before:border-white before:content-[""];
-  }
-}
+
 @layer utilities {
   .bg-gradient-1 {
     background: linear-gradient(223.48deg, #fad0c4 0%, #ff9a9e 58.54%);
