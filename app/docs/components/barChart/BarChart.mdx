@@ -1,12 +1,7 @@
 import { DefaultBarChart, DefaultBarChartCode } from './variant/DefaultBarChart'
 import { ChartWithAxisData, ChartWithAxisDataCode } from './variant/ChartWithAxisData'
-import { BarChartWithGridLine, BarChartWithAxisDataCode } from './variant/ChartWithGridLine'
 import { ChartWithDoubleData, ChartWithDoubleDataCode } from './variant/ChartWithDoubleData'
-import { CustomizedBarSize, CustomizedBarSizeCode } from './variant/CustomizedBarSize'
-import {
-  CustomizedBarSizeWithAxisData,
-  CustomizedBarSizeWithAxisDataCode,
-} from './variant/CustomizedBarSizeWithAxisData'
+
 import { barChartAPIData } from './BarChartApi'
 import CodePreview from '../../../components/CodePreview'
 import ComponentApi from '../../../components/ComponentApi'
@@ -31,36 +26,12 @@ Learn how to populate your bar chart with custom data for both the X and Y axes.
   <ChartWithAxisData />
 </CodePreview>
 
-## Bar Chart With Grid Lines
-
-Enhance your data visualization by adding grid lines to your bar chart.
-
-<CodePreview github="Chart/BarChart.tsx" code={BarChartWithAxisDataCode}>
-  <BarChartWithGridLine />
-</CodePreview>
-
 ## Bar Chart With Double Series Data
 
 Discover how to create a bar chart with multiple data series for more detailed insights.
 
 <CodePreview github="Chart/BarChart.tsx" code={ChartWithDoubleDataCode}>
   <ChartWithDoubleData />
-</CodePreview>
-
-## Customized Bar Size
-
-Learn to customize the size of individual bars in your chart for better visual impact.
-
-<CodePreview github="Chart/BarChart.tsx" code={CustomizedBarSizeCode}>
-  <CustomizedBarSize />
-</CodePreview>
-
-## Customized Bar Size With Axis Data
-
-Combine customized bar size with specified axis data for a tailored chart appearance.
-
-<CodePreview github="Chart/BarChart.tsx" code={CustomizedBarSizeWithAxisDataCode}>
-  <CustomizedBarSizeWithAxisData />
 </CodePreview>
 
 ## API Reference

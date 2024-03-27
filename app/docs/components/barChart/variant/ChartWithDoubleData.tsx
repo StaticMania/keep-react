@@ -6,17 +6,14 @@ const ChartWithDoubleData = () => {
   return (
     <BarChart
       height={250}
-      width={700}
-      active
-      activeIndex={5}
+      width={600}
+      active={true}
+      showBg={true}
+      showXAxis={true}
+      showYAxis={true}
+      showTooltip={true}
+      chartData={BarChartData.slice(0, 6)}
       dataKey="price"
-      chartData={BarChartData}
-      barRadius={[4, 4, 0, 0]}
-      showLegend
-      showBg
-      showXaxis
-      showYaxis
-      showTooltip
       secondaryDataKey="sell"
     />
   )
@@ -71,57 +68,25 @@ const BarChartData = [
     price: 280,
     sell: 160,
   },
-  {
-    name: "20",
-    price: 390,
-    sell: 110,
-  },
-  {
-    name: "22",
-    price: 220,
-    sell: 90,
-  },
-  {
-    name: "24",
-    price: 360,
-    sell: 170,
-  },
-  {
-    name: "26",
-    price: 410,
-    sell: 140,
-  },
-  {
-    name: "28",
-    price: 280,
-    sell: 200,
-  },
-  {
-    name: "30",
-    price: 330,
-    sell: 160,
-  },
 ];
 
 export const BarComponent = () => {
   return (
     <BarChart
       height={250}
-      width={700}
-      active
-      activeIndex={5}
-      dataKey="price"
-      chartData={BarChartData}
-      barRadius={[4, 4, 0, 0]}
-      showLegend={true}
+      width={600}
+      active={true}
       showBg={true}
-      showXaxis={true}
-      showYaxis={true}
+      showXAxis={true}
+      showYAxis={true}
       showTooltip={true}
+      chartData={BarChartData}
+      dataKey="price"
       secondaryDataKey="sell"
     />
-  );
+  )
 }
+
 `
 
 export { ChartWithDoubleData, ChartWithDoubleDataCode }

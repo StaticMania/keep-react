@@ -9,8 +9,8 @@ const AreaChartWithGridGraphLine = () => {
       secondaryDataKey="sell"
       showTooltip={true}
       showGridLine={true}
-      showXaxis={true}
-      showYaxis={true}
+      showXAxis={true}
+      showYAxis={true}
       chartData={chartData}
     />
   )
@@ -79,12 +79,12 @@ export const AreaChartComponent = () => {
       secondaryDataKey="sell"
       showTooltip={true}
       showGridLine={true}
-      showXaxis={true}
-      showYaxis={true}
+      showXAxis={true}
+      showYAxis={true}
       chartData={chartData}
     />
-  );
-};
+  )
+}
 `
 
 export { AreaChartWithGridGraphLine, AreaChartWithGridGraphLineCode }
