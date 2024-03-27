@@ -96,6 +96,12 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
                   Typography
                 </Link>
               </li>
+              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25">
+                <Link href="/docs/getting-started/Colors" className="flex items-center gap-1">
+                  <File size={14} />
+                  Colors
+                </Link>
+              </li>
             </ul>
           </Typography>
           <Typography variant="div">
