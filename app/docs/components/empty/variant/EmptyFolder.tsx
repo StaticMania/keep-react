@@ -23,9 +23,9 @@ const EmptyFolder = () => {
 }
 
 const EmptyFolderCode = `
-"use client";
-import Image from "next/image";
-import { Empty } from "keep-react";
+'use client'
+import Image from 'next/image'
+import { Button, Empty } from 'keep-react'
 
 export const EmptyComponent = () => {
   return (

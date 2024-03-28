@@ -23,9 +23,9 @@ const DefaultEmpty = () => {
 }
 
 const DefaultEmptyCode = `
-"use client";
-import Image from "next/image";
-import { Empty } from "keep-react";
+'use client'
+import Image from 'next/image'
+import { Button, Empty } from 'keep-react'
 
 export const EmptyComponent = () => {
   return (
@@ -42,7 +42,7 @@ export const EmptyComponent = () => {
       <Empty.Description>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </Empty.Description>
-      <Button value="outline">Go to home</Button>
+      <Button variant="outline">Go to home</Button>
     </Empty>
   )
 }
