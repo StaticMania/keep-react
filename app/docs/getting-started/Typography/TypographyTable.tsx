@@ -18,10 +18,14 @@ const TypographyTable: FC<TypographyTableProps> = ({ typoType }) => {
       <tbody className="align-baseline">
         {typographyData.heading.map((data, index) => (
           <tr key={data['font-size']}>
-            <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-metal-500">
+            <td
+              translate="no"
+              className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-metal-500 dark:border-metal-800 dark:text-metal-300">
               text-heading-{index + 1}
             </td>
-            <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-medium text-metal-500">
+            <td
+              translate="no"
+              className="border-t border-metal-100 px-4 py-3 text-body-4 font-medium text-metal-500 dark:border-metal-800 dark:text-metal-300">
               font-size: {data['font-size']}; /* {remToPx(data['font-size'])} */
               <br />
               line-height: {data['line-height']}; /* {remToPx(data['line-height'])} */
@@ -39,10 +43,14 @@ const TypographyTable: FC<TypographyTableProps> = ({ typoType }) => {
       <tbody className="align-baseline">
         {typographyData.body.map((data, index) => (
           <tr key={data['font-size']}>
-            <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-metal-500">
+            <td
+              translate="no"
+              className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-metal-500 dark:border-metal-800 dark:text-metal-300">
               text-body-{index + 1}
             </td>
-            <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-medium text-metal-500">
+            <td
+              translate="no"
+              className="border-t border-metal-100 px-4 py-3 text-body-4 font-medium text-metal-500 dark:border-metal-800 dark:text-metal-300">
               font-size: {data['font-size']}; /* {remToPx(data['font-size'])} */
               <br />
               line-height: {data['line-height']}; /* {remToPx(data['line-height'])} */
@@ -59,10 +67,14 @@ const TypographyTable: FC<TypographyTableProps> = ({ typoType }) => {
       <tbody className="align-baseline">
         {typographyData.display.map((data) => (
           <tr key={data['font-size']}>
-            <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-metal-500">
+            <td
+              translate="no"
+              className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-metal-500 dark:border-metal-800 dark:text-metal-300">
               text-display
             </td>
-            <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-medium text-metal-500">
+            <td
+              translate="no"
+              className="border-t border-metal-100 px-4 py-3 text-body-4 font-medium text-metal-500 dark:border-metal-800 dark:text-metal-300">
               font-size: {data['font-size']}; /* {remToPx(data['font-size'])} */
               <br />
               line-height: {data['line-height']}; /* {remToPx(data['line-height'])} */
@@ -76,7 +88,7 @@ const TypographyTable: FC<TypographyTableProps> = ({ typoType }) => {
   }
   return (
     <div className="min-w-full flex-none overflow-hidden px-4 sm:px-6 md:px-0 lg:overflow-auto">
-      <table className="whitespace-no-wrap z-50 mt-10 w-full min-w-max table-auto overflow-hidden rounded-xl bg-white text-left lg:min-w-min">
+      <table className="whitespace-no-wrap z-50 mt-10 w-full min-w-max table-auto overflow-hidden rounded-xl  bg-white text-left dark:bg-metal-900 lg:min-w-min">
         <thead>
           <tr>
             <th className="rounded-tl-xl bg-metal-900 px-4 py-3 text-body-4 font-medium text-white">Class</th>

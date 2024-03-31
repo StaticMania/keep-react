@@ -336,6 +336,14 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
   },
+  {
+    id: generatedID(),
+    name: 'Toast',
+    folderName: 'Toast',
+    href: '/docs/components/toast',
+    tag: false,
+    deprecate: false,
+  },
 
   {
     id: generatedID(),

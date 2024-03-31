@@ -84,7 +84,11 @@ const CodePreview = ({ children, code, github, className, activeTab }: CodePrevi
             </SyntaxHighlighter>
           </div>
         ) : (
-          <div className={cn('flex w-full items-center justify-center bg-white px-2 py-3 md:p-6', className)}>
+          <div
+            className={cn(
+              'flex w-full items-center justify-center bg-white px-2 py-3 dark:bg-metal-900 md:p-6',
+              className,
+            )}>
             <div className="h-full w-full overflow-auto">{children}</div>
           </div>
         )}

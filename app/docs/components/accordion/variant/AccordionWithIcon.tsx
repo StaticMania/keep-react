@@ -1,5 +1,4 @@
 'use client'
-import { Plus } from 'phosphor-react'
 import { Accordion } from '../../../../src'
 
 const AccordionWithIcon = () => {
@@ -8,9 +7,7 @@ const AccordionWithIcon = () => {
       <Accordion.Panel>
         <Accordion.Container>
           <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
-          <Accordion.Icon>
-            <Plus size={24} color="#444" />
-          </Accordion.Icon>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
@@ -21,9 +18,7 @@ const AccordionWithIcon = () => {
       <Accordion.Panel>
         <Accordion.Container>
           <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
-          <Accordion.Icon>
-            <Plus size={24} color="#444" />
-          </Accordion.Icon>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           The Keep React offers a range of color variants for components. To customize the color scheme, you can use the
@@ -34,9 +29,7 @@ const AccordionWithIcon = () => {
       <Accordion.Panel>
         <Accordion.Container>
           <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
-          <Accordion.Icon>
-            <Plus size={24} color="#444" />
-          </Accordion.Icon>
+          <Accordion.Icon />
         </Accordion.Container>
         <Accordion.Content>
           Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
@@ -49,9 +42,8 @@ const AccordionWithIcon = () => {
 }
 
 const AccordionWithIconCode = `
-"use client";
-import { Accordion } from "keep-react";
-import { Plus } from "phosphor-react";
+'use client'
+import { Accordion } from 'keep-react'
 
 export const AccordionComponent = () => {
   return (
@@ -59,9 +51,7 @@ export const AccordionComponent = () => {
       <Accordion.Panel>
         <Accordion.Container>
           <Accordion.Title>Q. What is the purpose of the Keep React?</Accordion.Title>
-          <Accordion.Icon>
-            <Plus size={24} color="#444" />
-          </Accordion.Icon>
+          <Accordion.Icon/>
         </Accordion.Container>
         <Accordion.Content>
           The Keep React is a collection of UI components, styles, and guidelines that ensure consistency and a unified
@@ -72,9 +62,7 @@ export const AccordionComponent = () => {
       <Accordion.Panel>
         <Accordion.Container>
           <Accordion.Title>Q. How do I customize the color scheme of components?</Accordion.Title>
-          <Accordion.Icon>
-            <Plus size={24} color="#444" />
-          </Accordion.Icon>
+          <Accordion.Icon/>
         </Accordion.Container>
         <Accordion.Content>
           The Keep React offers a range of color variants for components. To customize the color scheme, you can use the
@@ -85,9 +73,7 @@ export const AccordionComponent = () => {
       <Accordion.Panel>
         <Accordion.Container>
           <Accordion.Title>Q. Can I add additional content to notifications?</Accordion.Title>
-          <Accordion.Icon>
-            <Plus size={24} color="#444" />
-          </Accordion.Icon>
+          <Accordion.Icon/>
         </Accordion.Container>
         <Accordion.Content>
           Yes, the Notification component in the Keep React allows you to include extra content alongside the primary
