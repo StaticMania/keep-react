@@ -1,64 +1,38 @@
 import React, { ReactNode } from 'react'
 import { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
-import { DotButton, useDotButton } from './CarouselDotButton'
-import { PrevButton, NextButton, usePrevNextButtons } from './CarouselArrowButtons'
-import useEmblaCarousel from 'embla-carousel-react'
 import { carouselTheme } from './theme'
-import { cn } from '../../helpers/cn'
-
+import Slides from './Slides'
+import Item from './Item'
+import Control from './Control'
+import Buttons from './Buttons'
+import PrevButton from './PrevButton'
+import NextButton from './NextButton'
+import CarouselContext from './CarouselContext'
+import Indicators from './Indicators'
+import ViewPort from './Viewport'
 type PropType = {
-  slides: Array<ReactNode>
-  slideClass?: string
-  slideContainerClasses?: string
-  carouselViewportClasses?: string
-  carouselPlugins?: Array<EmblaPluginType>
+  children: ReactNode
   options?: EmblaOptionsType
+  carouselPlugins?: EmblaPluginType[]
 }
 
-const Carousel: React.FC<PropType> = ({
-  slides,
-  options,
-  slideClass,
-  slideContainerClasses,
-  carouselViewportClasses,
-  carouselPlugins,
-}) => {
+const CarouselComponent: React.FC<PropType> = ({ children, ...props }) => {
   const theme = carouselTheme
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, carouselPlugins)
-
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
-
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
   return (
-    <>
-      <div className={cn(theme.viewport, carouselViewportClasses)} ref={emblaRef}>
-        <div className={cn(theme.item.container, slideContainerClasses)}>
-          {slides.map((slide, index) => (
-            <div className={cn(theme.item.slide, slideClass)} key={index}>
-              {slide}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className={theme.controls.wrapper}>
-        <div className={theme.controls.button.container}>
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-        <div className={theme.controls.indicators.container}>
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={cn(theme.controls.indicators.dot, index === selectedIndex && 'border-gray-600')}
-            />
-          ))}
-        </div>
-      </div>
-    </>
+    <div className={theme.carouselContainer}>
+      <CarouselContext.Provider value={props}>{children}</CarouselContext.Provider>
+    </div>
   )
 }
 
-export default Carousel
+export const Carousel = Object.assign(CarouselComponent, {
+  ViewPort,
+  Slides,
+  Item,
+  Control,
+  Buttons,
+  PrevButton,
+  NextButton,
+  Indicators,
+})

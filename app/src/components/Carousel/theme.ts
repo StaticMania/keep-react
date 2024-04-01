@@ -1,6 +1,7 @@
 import { KeepColors } from '../../Keep/KeepTheme'
 
 export interface KeepCarouselTheme {
+  carouselContainer: string
   viewport: string
   controls: {
     wrapper: string
@@ -27,6 +28,7 @@ export interface IndicatorsTypeColors extends Pick<KeepColors, 'white' | 'slate'
 }
 
 export const carouselTheme: KeepCarouselTheme = {
+  carouselContainer: 'w-full',
   viewport: 'overflow-hidden',
   controls: {
     wrapper: 'flex items-center justify-between mt-[1.8rem]',
