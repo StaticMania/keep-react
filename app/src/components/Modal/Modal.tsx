@@ -1,20 +1,14 @@
 'use client'
 import { HTMLAttributes, forwardRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import FocusLock from 'react-focus-lock'
+import { RemoveScroll } from 'react-remove-scroll'
 import { cn } from '../../helpers/cn'
 import { Body } from './Body'
 import { Content } from './Content'
 import { Footer } from './Footer'
 import { Icon } from './Icon'
 import { modalTheme } from './theme'
-
-// Import to disable scrolling outside of designated components
-// Documentation: https://github.com/theKashey/react-remove-scroll#readme
-import { RemoveScroll } from 'react-remove-scroll'
-
-// Import to maintain focus within the specified wrapper, enhancing accessibility
-// Documentation: https://github.com/theKashey/react-focus-lock#readme
-import FocusLock from 'react-focus-lock'
 
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   isOpen: boolean

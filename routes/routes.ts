@@ -17,6 +17,7 @@ import {
   Option,
   PictureInPicture,
   RadioButton,
+  Sidebar,
   SlidersHorizontal,
   User,
   Warning,
@@ -170,6 +171,15 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
     Icon: Option,
+  },
+  {
+    id: generatedID(),
+    name: 'Drawer',
+    folderName: 'Drawer',
+    href: '/docs/components/drawer',
+    tag: false,
+    deprecate: false,
+    Icon: Sidebar,
   },
   {
     id: generatedID(),

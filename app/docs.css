@@ -95,5 +95,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 .docs-page {
-  @apply fixed left-0 right-0 top-24 -z-0 mx-auto max-w-[1240px] rounded-2xl bg-gradient-to-t from-primary-25 to-white xl:!h-2/4 2xl:top-40 2xl:!h-3/4  2xl:max-w-[1560px] 4k:max-w-[2000px] dark:from-metal-900 dark:to-metal-800/50;
+  @apply fixed left-0 right-0 top-24 -z-0 mx-auto max-w-[1240px] rounded-2xl bg-gradient-to-t from-primary-25 to-white dark:from-metal-900 dark:to-metal-800/50 xl:!h-2/4  2xl:top-40 2xl:!h-3/4 2xl:max-w-[1560px] 4k:max-w-[2000px];
 }
