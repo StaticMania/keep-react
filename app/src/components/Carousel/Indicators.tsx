@@ -6,7 +6,6 @@ import { cn } from '../../helpers/cn'
 
 const Indicators = () => {
   const { emblaApi } = useCarouselContext()
-  console.log({ emblaApi })
   const theme = carouselTheme
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
   return (
