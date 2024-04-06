@@ -1,35 +1,24 @@
 'use client'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { Carousel } from '~/app/src'
+import imgSrc1 from '/public/images/carousel/1.jpg'
+import imgSrc2 from '/public/images/carousel/2.jpg'
+import imgSrc3 from '/public/images/carousel/3.jpg'
+import imgSrc4 from '/public/images/carousel/4.jpg'
+import imgSrc5 from '/public/images/carousel/5.jpg'
+
+const images: Array<StaticImageData> = [imgSrc1, imgSrc2, imgSrc3, imgSrc4, imgSrc5]
 
 const DefaultCarousel = () => (
   <Carousel options={{}}>
     <Carousel.Slides>
-      <Carousel.Item>
-        <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
-          <Image fill src={'/images/carousel/1.jpg'} alt={`img item`} className="w-full object-cover" />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
-          <Image fill src={'/images/carousel/2.jpg'} alt={`img item`} className="w-full object-cover" />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
-          <Image fill src={'/images/carousel/3.jpg'} alt={`img item`} className="w-full object-cover" />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
-          <Image fill src={'/images/carousel/4.jpg'} alt={`img item`} className="w-full object-cover" />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
-          <Image fill src={'/images/carousel/5.jpg'} alt={`img item`} className="w-full object-cover" />
-        </div>
-      </Carousel.Item>
+      {images.map((src, index) => (
+        <Carousel.Item key={index}>
+          <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
+            <Image fill src={src} className="w-full object-cover" alt="carousel img" />
+          </div>
+        </Carousel.Item>
+      ))}
     </Carousel.Slides>
     <Carousel.Control>
       <Carousel.Buttons>
@@ -43,23 +32,35 @@ const DefaultCarousel = () => (
 
 const DefaultCarouselCode = `
 'use client'
-import Image from 'next/image'
-import Carousel from '~/app/src/components/Carousel/Carousel'
+import Image, { StaticImageData } from 'next/image'
+import { Carousel } from '~/app/src'
+import imgSrc1 from '/public/images/carousel/1.jpg'
+import imgSrc2 from '/public/images/carousel/2.jpg'
+import imgSrc3 from '/public/images/carousel/3.jpg'
+import imgSrc4 from '/public/images/carousel/4.jpg'
+import imgSrc5 from '/public/images/carousel/5.jpg'
 
-const DefaultCarousel = () => {
-  const images = [
-    '/images/carousel/1.jpg',
-    '/images/carousel/2.jpg',
-    '/images/carousel/3.jpg',
-    '/images/carousel/4.jpg',
-  ]
+const images: Array<StaticImageData> = [imgSrc1, imgSrc2, imgSrc3, imgSrc4, imgSrc5]
 
-  const slides = images.map((src, idx) => (
-    <div className="b relative h-[400px] w-full overflow-hidden rounded-lg" key={idx}>
-      <Image fill src={src} alt={'img'+idx} className="w-full object-cover" />
-    </div>
-  ))
-  return <Carousel slides={slides} />
-}
+const DefaultCarousel = () => (
+  <Carousel options={{}}>
+    <Carousel.Slides>
+      {images.map((src, index) => (
+        <Carousel.Item key={index}>
+          <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
+            <Image fill src={src} className="w-full object-cover" alt="carousel img" />
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel.Slides>
+    <Carousel.Control>
+      <Carousel.Buttons>
+        <Carousel.PrevButton />
+        <Carousel.NextButton />
+      </Carousel.Buttons>
+      <Carousel.Indicators />
+    </Carousel.Control>
+  </Carousel>
+)
 `
 export { DefaultCarousel, DefaultCarouselCode }
