@@ -1,13 +1,16 @@
+import { EmblaCarouselType } from 'embla-carousel'
 import { createContext, useContext } from 'react'
-import { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
-type CarouselContextProptypes = {
-  options?: EmblaOptionsType
-  carouselPlugins?: EmblaPluginType[]
+// eslint-disable-next-line no-unused-vars
+type EmblaViewportRefType = <ViewportElement extends HTMLElement>(instance: ViewportElement | null) => void
+type CaourselContextPropTypes = {
+  emblaApi: EmblaCarouselType | undefined
+  emblaRef: EmblaViewportRefType
 }
 
-const CarouselContext = createContext<CarouselContextProptypes>({})
+// eslint-disable-next-line no-undef
+const CarouselContext = createContext<CaourselContextPropTypes | undefined>(undefined)
 
-export function useCarouselContext(): CarouselContextProptypes {
+export function useCarouselContext() {
   const context = useContext(CarouselContext)
   if (!context) {
     throw new Error('useCarouselContext should be used within the CarouselContext provider!')

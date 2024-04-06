@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
 import { Carousel } from './Carousel'
 import Image from 'next/image'
-import { Car } from 'phosphor-react'
 // import { default as autoPlay } from 'embla-carousel-autoplay'
 // import { default as classNames } from 'embla-carousel-class-names'
 const meta: Meta<typeof Carousel> = {
@@ -27,10 +26,8 @@ const meta: Meta<typeof Carousel> = {
 export default meta
 type Story = StoryObj<typeof Carousel>
 
-// const images = ['/images/carousel/1.jpg', '/images/carousel/2.jpg', '/images/carousel/3.jpg', '/images/carousel/4.jpg']
-
 const children = (
-  <Carousel.ViewPort>
+  <Carousel options={{}}>
     <Carousel.Slides>
       <Carousel.Item>
         <div className="b relative h-[400px] w-full overflow-hidden rounded-lg">
@@ -65,13 +62,13 @@ const children = (
       </Carousel.Buttons>
       <Carousel.Indicators />
     </Carousel.Control>
-  </Carousel.ViewPort>
+  </Carousel>
 )
 
 export const DefaultCarousel: Story = {
   args: {
     options: {},
-    children: children,
+    children,
   },
 }
 

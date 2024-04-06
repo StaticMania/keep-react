@@ -1,24 +1,16 @@
 import React, { ReactNode, FC } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
 import { cn } from '../../helpers/cn'
 import { carouselTheme } from './theme'
-import { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
+import { useCarouselContext } from './CarouselContext'
 
 type CarouselViewportTypes = {
   children: ReactNode
-  carouselViewportClasses?: string
-  carouselPlugins?: Array<EmblaPluginType>
-  options?: EmblaOptionsType
+  carouselViewportClasses?: String
 }
 
-const CarouselViewport: FC<CarouselViewportTypes> = ({
-  children,
-  carouselViewportClasses,
-  carouselPlugins,
-  options,
-}) => {
+const CarouselViewport: FC<CarouselViewportTypes> = ({ children, carouselViewportClasses }) => {
   const theme = carouselTheme
-  const [emblaRef] = useEmblaCarousel(options, carouselPlugins)
+  const { emblaRef } = useCarouselContext()
   return (
     <div className={cn(theme.viewport, carouselViewportClasses)} ref={emblaRef}>
       {children}

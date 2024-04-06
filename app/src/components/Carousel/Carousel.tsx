@@ -10,24 +10,27 @@ import NextButton from './NextButton'
 import CarouselContext from './CarouselContext'
 import Indicators from './Indicators'
 import ViewPort from './Viewport'
+import useEmblaCarousel from 'embla-carousel-react'
 type PropType = {
   children: ReactNode
   options?: EmblaOptionsType
   carouselPlugins?: EmblaPluginType[]
+  carouselViewportClasses?: String
 }
 
-const CarouselComponent: React.FC<PropType> = ({ children, ...props }) => {
+const CarouselComponent: React.FC<PropType> = ({ children, options, carouselPlugins, carouselViewportClasses }) => {
   const theme = carouselTheme
-
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, carouselPlugins)
   return (
     <div className={theme.carouselContainer}>
-      <CarouselContext.Provider value={props}>{children}</CarouselContext.Provider>
+      <CarouselContext.Provider value={{ emblaApi, emblaRef }}>
+        <ViewPort carouselViewportClasses={carouselViewportClasses}>{children}</ViewPort>
+      </CarouselContext.Provider>
     </div>
   )
 }
 
 export const Carousel = Object.assign(CarouselComponent, {
-  ViewPort,
   Slides,
   Item,
   Control,
