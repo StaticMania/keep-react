@@ -81,7 +81,7 @@ const Navbar = () => {
               <Image src="/images/icon/discord.svg" height={22} width={22} alt="discord" />
             </Link>
             <Link
-              href="/docs/getting-started/Introduction"
+              href="/docs/getting-started/introduction"
               className="rounded-lg bg-metal-900 px-4 py-2.5 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-metal-800">
               get started
             </Link>

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReactNode, useEffect, useState } from 'react'
-import { gettingStartedRoutes, routes } from '../../routes/routes'
+import { gettingStartedRoutes, layoutRoutes, routes } from '../../routes/routes'
 import { Accordion } from '../src'
 
 export interface Sections {
@@ -113,6 +113,33 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>
+            <Accordion flush openFirstPanel>
+              <Accordion.Panel className="!border-b-0">
+                <Accordion.Container className="p-0">
+                  <Accordion.Title className="text-body-3 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900 dark:text-white dark:first-letter:!text-white">
+                    Layout
+                  </Accordion.Title>
+                </Accordion.Container>
+                <Accordion.Content className="p-0">
+                  <ul className="mt-3 space-y-1.5 border-l border-l-metal-100 dark:border-l-metal-600">
+                    {layoutRoutes.map((route) => (
+                      <li key={route.id}>
+                        <Link
+                          className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 dark:hover:border-white dark:hover:text-white ${
+                            IsActive(route.href)
+                              ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150 hover:text-primary-500 dark:!border-white dark:text-white'
+                              : ''
+                          }`}
+                          href={route.href}>
+                          {route.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Accordion.Content>
+              </Accordion.Panel>
+            </Accordion>
+
             <Accordion openFirstPanel flush>
               <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">

@@ -85,19 +85,19 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
                 </Link>
               </li>
               <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                <Link href="/docs/getting-started/Introduction" className="flex items-center gap-1">
+                <Link href="/docs/getting-started/introduction" className="flex items-center gap-1">
                   <File size={14} />
                   Installation
                 </Link>
               </li>
               <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                <Link href="/docs/getting-started/Typography" className="flex items-center gap-1">
+                <Link href="/docs/getting-started/typography" className="flex items-center gap-1">
                   <File size={14} />
                   Typography
                 </Link>
               </li>
               <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                <Link href="/docs/getting-started/Colors" className="flex items-center gap-1">
+                <Link href="/docs/getting-started/colors" className="flex items-center gap-1">
                   <File size={14} />
                   Colors
                 </Link>

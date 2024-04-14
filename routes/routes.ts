@@ -401,17 +401,40 @@ export const gettingStartedRoutes: routerPath[] = [
   {
     id: generatedID(),
     name: 'Introduction',
-    href: '/docs/getting-started/Introduction',
+    href: '/docs/getting-started/introduction',
   },
   {
     id: generatedID(),
     name: 'Typography',
-    href: '/docs/getting-started/Typography',
+    href: '/docs/getting-started/typography',
   },
   {
     id: generatedID(),
     name: 'Colors',
-    href: '/docs/getting-started/Colors',
+    href: '/docs/getting-started/colors',
+  },
+]
+
+export const layoutRoutes: routerPath[] = [
+  {
+    id: generatedID(),
+    name: 'Container',
+    href: '/docs/layout/container',
+  },
+  {
+    id: generatedID(),
+    name: 'Column',
+    href: '/docs/layout/column',
+  },
+  {
+    id: generatedID(),
+    name: 'Flex',
+    href: '/docs/layout/flex',
+  },
+  {
+    id: generatedID(),
+    name: 'Grid',
+    href: '/docs/layout/grid',
   },
 ]
 
@@ -424,7 +447,7 @@ export const navbarRoutes: routerPath[] = [
   },
   {
     id: generatedID(),
-    href: '/docs/getting-started/Introduction',
+    href: '/docs/getting-started/introduction',
     name: 'Documentation',
     redirect: false,
   },

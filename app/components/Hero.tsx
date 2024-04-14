@@ -42,7 +42,7 @@ const Hero = () => {
                   </button>
                 </div>
                 <Link
-                  href="/docs/getting-started/Introduction"
+                  href="/docs/getting-started/introduction"
                   className="rounded-lg bg-metal-900 px-4 py-3 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-metal-800">
                   Get Started
                 </Link>

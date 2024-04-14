@@ -3,7 +3,8 @@ import ComponentApi from '../../../components/ComponentApi'
 import { Heading, HeadingCode } from './variant/Heading'
 import { Display, DisplayCode } from './variant/Display'
 import { BodyTypo, BodyTypoCode } from './variant/Body'
-import TypographyTable from './TypographyTable'
+import { PropertiesTable } from '../../../components/PropertiesTable'
+import { HeadingContent, BodyContent, DisplayContent } from './Content'
 
 ## Table of Contents
 
@@ -19,7 +20,9 @@ The Heading Typography component in Keep React allows you to style headings easi
 
 Utilities for controlling the font size of an element.
 
-<TypographyTable typoType="heading" />
+<PropertiesTable>
+  <HeadingContent />
+</PropertiesTable>
 
 ## Body Typography
 
@@ -31,7 +34,9 @@ Elevate the readability of your text with the Body Typography component in Keep 
 
 Utilities for controlling the font size of an element.
 
-<TypographyTable typoType="body" />
+<PropertiesTable>
+  <BodyContent />
+</PropertiesTable>
 
 ## Display Typography
 
@@ -43,4 +48,6 @@ Make a visual impact with the Display Typography component in Keep React.
 
 Utilities for controlling the font size of an element.
 
-<TypographyTable typoType="display" />
+<PropertiesTable>
+  <DisplayContent />
+</PropertiesTable>

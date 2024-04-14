@@ -1,6 +1,6 @@
 'use client'
 import type { FC } from 'react'
-import ColorsContent from './Colors.mdx'
+import ColorsContent from './colors.mdx'
 
 const Colors: FC = () => <ColorsContent />
 

@@ -1,6 +1,6 @@
 'use client'
 import type { FC } from 'react'
-import TypographyContent from './Typography.mdx'
+import TypographyContent from './typography.mdx'
 
 const Typography: FC = () => <TypographyContent />
 
