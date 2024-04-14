@@ -1,11 +1,8 @@
 import { DefaultCarousel, DefaultCarouselCode } from './variant/DefaultCarousel'
-import { StaticCarousel, StaticCarouselCode } from './variant/StaticCarousel'
-import {
-  CarouselWithCustomControlIcon,
-  CarouselWithCustomControlIconCode,
-} from './variant/CarouselWithCustomControlIcon'
-import { CarouselWithTextControl, CarouselWithTextControlCode } from './variant/CarouselWithTextControl'
-import { CarouselWithIndicator, CarouselWithIndicatorCode } from './variant/CarouselWithIndicator'
+import { Loop, LoopCode } from './variant/Loop'
+import { SlidesToScroll, SlidesToScrollCode } from './variant/SlidesToScroll'
+import { Autoplay, AutoplayCode } from './variant/Autoplay'
+import { ClassNames, ClassNamesCode } from './variant/ClassNames'
 
 import { carouselDataApi } from './carouselApi'
 
@@ -25,36 +22,36 @@ Default Carousel component allows you to display a series of images, content, or
   <DefaultCarousel />
 </CodePreview>
 
-## Static Carousel
+## Loop
 
-A Static Carousel is a type of carousel component that displays a sequence of items without providing any indicators or navigation controls for users to manually switch between items. Instead, the items in a static carousel automatically transition or scroll to the next item at a predefined interval.
+Carousel with loop option for slide items.
 
-<CodePreview github="Carousel" code={StaticCarouselCode}>
-  <StaticCarousel />
+<CodePreview github="Carousel" code={LoopCode}>
+  <Loop />
 </CodePreview>
 
-## Carousel With Text Control
+## SlidesToScroll
 
-A Carousel with Text Control is a carousel component that includes textual navigation controls, typically in the form of `Next` and `Previous` buttons.
+The number of slides to scroll at a time.
 
-<CodePreview github="Carousel" code={CarouselWithTextControlCode}>
-  <CarouselWithTextControl />
+<CodePreview github="Carousel" code={SlidesToScrollCode}>
+  <SlidesToScroll />
 </CodePreview>
 
-## Carousel With Custom Control Icon
+## Autoplay
 
-A Carousel with Custom Control Icons is a carousel component that provides navigation controls with customized icons for moving between items. By using `leftControl` and `rightControl` props, we can add custom controls.
+Autoplay carousel slides.
 
-<CodePreview github="Carousel" code={CarouselWithCustomControlIconCode}>
-  <CarouselWithCustomControlIcon />
+<CodePreview github="Carousel" code={AutoplayCode}>
+  <Autoplay />
 </CodePreview>
 
-## Carousel With Indicator
+## ClassNames
 
-The IndicatorsType prop allows you to choose from different types of indicators. By using `indicatorsType` props as `dots`, `rings`, `bars`, `squares`, or `squareRing`, based on your design preferences.
+Style slide items with a custom class.
 
-<CodePreview github="Carousel" code={CarouselWithIndicatorCode}>
-  <CarouselWithIndicator />
+<CodePreview github="Carousel" code={ClassNamesCode}>
+  <ClassNames />
 </CodePreview>
 
 ## API Reference
@@ -65,4 +62,4 @@ Explore the available props for the carousel component
 
 ## Reference
 
-To learn more about the Carousel, please see the documentation of [Carousel](https://norserium.github.io/react-indiana-drag-scroll)
+To learn more about the Carousel, please see the documentation of [Carousel](https://www.embla-carousel.com/)

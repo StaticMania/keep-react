@@ -9,8 +9,8 @@ import imgSrc5 from '/public/images/carousel/5.jpg'
 
 const images: Array<StaticImageData> = [imgSrc1, imgSrc2, imgSrc3, imgSrc4, imgSrc5]
 
-const DefaultCarousel = () => (
-  <Carousel options={{}}>
+const Loop = () => (
+  <Carousel options={{ loop: true }}>
     <Carousel.Slides>
       {images.map((src, index) => (
         <Carousel.Item key={index}>
@@ -30,7 +30,7 @@ const DefaultCarousel = () => (
   </Carousel>
 )
 
-const DefaultCarouselCode = `
+const LoopCode = `
 'use client'
 import Image, { StaticImageData } from 'next/image'
 import { Carousel } from '~/app/src'
@@ -42,8 +42,8 @@ import imgSrc5 from '/public/images/carousel/5.jpg'
 
 const images: Array<StaticImageData> = [imgSrc1, imgSrc2, imgSrc3, imgSrc4, imgSrc5]
 
-const DefaultCarousel = () => (
-  <Carousel options={{}}>
+const Loop = () => (
+  <Carousel options={{ loop: true }}>
     <Carousel.Slides>
       {images.map((src, index) => (
         <Carousel.Item key={index}>
@@ -63,4 +63,4 @@ const DefaultCarousel = () => (
   </Carousel>
 )
 `
-export { DefaultCarousel, DefaultCarouselCode }
+export { Loop, LoopCode }
