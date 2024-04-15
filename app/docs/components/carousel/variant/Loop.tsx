@@ -1,6 +1,6 @@
 'use client'
 import Image, { StaticImageData } from 'next/image'
-import { Carousel } from '~/app/src'
+import { Carousel } from '../../../../src'
 import imgSrc1 from '/public/images/carousel/1.jpg'
 import imgSrc2 from '/public/images/carousel/2.jpg'
 import imgSrc3 from '/public/images/carousel/3.jpg'
@@ -33,7 +33,7 @@ const Loop = () => (
 const LoopCode = `
 'use client'
 import Image, { StaticImageData } from 'next/image'
-import { Carousel } from '~/app/src'
+import { Carousel } from 'keep-react'
 import imgSrc1 from '/public/images/carousel/1.jpg'
 import imgSrc2 from '/public/images/carousel/2.jpg'
 import imgSrc3 from '/public/images/carousel/3.jpg'
