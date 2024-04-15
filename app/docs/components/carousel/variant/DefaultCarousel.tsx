@@ -1,6 +1,6 @@
 'use client'
 import Image, { StaticImageData } from 'next/image'
-import { Carousel } from '~/app/src'
+import { Carousel } from '../../../../src'
 import imgSrc1 from '/public/images/carousel/1.jpg'
 import imgSrc2 from '/public/images/carousel/2.jpg'
 import imgSrc3 from '/public/images/carousel/3.jpg'
@@ -10,7 +10,7 @@ import imgSrc5 from '/public/images/carousel/5.jpg'
 const images: Array<StaticImageData> = [imgSrc1, imgSrc2, imgSrc3, imgSrc4, imgSrc5]
 
 const DefaultCarousel = () => (
-  <Carousel options={{}}>
+  <Carousel>
     <Carousel.Slides>
       {images.map((src, index) => (
         <Carousel.Item key={index}>
@@ -33,7 +33,7 @@ const DefaultCarousel = () => (
 const DefaultCarouselCode = `
 'use client'
 import Image, { StaticImageData } from 'next/image'
-import { Carousel } from '~/app/src'
+import { Carousel } from 'keep-react'
 import imgSrc1 from '/public/images/carousel/1.jpg'
 import imgSrc2 from '/public/images/carousel/2.jpg'
 import imgSrc3 from '/public/images/carousel/3.jpg'
