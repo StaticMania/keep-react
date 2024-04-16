@@ -1,9 +1,10 @@
 'use client'
+import autoPlay from 'embla-carousel-autoplay'
 import { Carousel } from '../../../../src'
 
-const DefaultCarousel = () => {
+const CarouselWithAutoPlay = () => {
   return (
-    <Carousel>
+    <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
       <Carousel.Slides>
         {Array.from({ length: 5 }).map((_, index) => (
           <Carousel.Item key={index}>
@@ -24,13 +25,14 @@ const DefaultCarousel = () => {
   )
 }
 
-const DefaultCarouselCode = `
+const CarouselWithAutoPlayCode = `
 'use client'
+import autoPlay from 'embla-carousel-autoplay'
 import { Carousel } from 'keep-react'
 
-export const CarouselComponent = () => (
+export const CarouselComponent = () => {
   return (
-    <Carousel>
+    <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
       <Carousel.Slides>
         {Array.from({ length: 5 }).map((_, index) => (
           <Carousel.Item key={index}>
@@ -52,4 +54,5 @@ export const CarouselComponent = () => (
 }
 
 `
-export { DefaultCarousel, DefaultCarouselCode }
+
+export { CarouselWithAutoPlay, CarouselWithAutoPlayCode }

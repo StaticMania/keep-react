@@ -1,9 +1,9 @@
 'use client'
 import { Carousel } from '../../../../src'
 
-const DefaultCarousel = () => {
+const CarouselWithLoop = () => {
   return (
-    <Carousel>
+    <Carousel options={{ loop: true }}>
       <Carousel.Slides>
         {Array.from({ length: 5 }).map((_, index) => (
           <Carousel.Item key={index}>
@@ -24,13 +24,13 @@ const DefaultCarousel = () => {
   )
 }
 
-const DefaultCarouselCode = `
+const CarouselWithLoopCode = `
 'use client'
 import { Carousel } from 'keep-react'
 
 export const CarouselComponent = () => (
   return (
-    <Carousel>
+    <Carousel options={{ loop: true }}>
       <Carousel.Slides>
         {Array.from({ length: 5 }).map((_, index) => (
           <Carousel.Item key={index}>
@@ -52,4 +52,4 @@ export const CarouselComponent = () => (
 }
 
 `
-export { DefaultCarousel, DefaultCarouselCode }
+export { CarouselWithLoop, CarouselWithLoopCode }

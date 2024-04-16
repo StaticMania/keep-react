@@ -1,15 +1,14 @@
 'use client'
+import classNames from 'embla-carousel-class-names'
 import { Carousel } from '../../../../src'
 
-const DefaultCarousel = () => {
+const CarouselWithClassNames = () => {
   return (
-    <Carousel>
+    <Carousel options={{ loop: true }} plugins={[classNames()]}>
       <Carousel.Slides>
         {Array.from({ length: 5 }).map((_, index) => (
-          <Carousel.Item key={index}>
-            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
-              <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
-            </div>
+          <Carousel.Item key={index} className="flex-[0_0_80%] [&:not(.is-snapped)]:opacity-[0.16]">
+            <img className="rounded-xl" src={`https://picsum.photos/700/350?v=${index}`} alt="Carousel Item" />
           </Carousel.Item>
         ))}
       </Carousel.Slides>
@@ -24,19 +23,18 @@ const DefaultCarousel = () => {
   )
 }
 
-const DefaultCarouselCode = `
+const CarouselWithClassNamesCode = `
 'use client'
+import classNames from 'embla-carousel-class-names'
 import { Carousel } from 'keep-react'
 
-export const CarouselComponent = () => (
+export const CarouselComponent = () => {
   return (
-    <Carousel>
+    <Carousel options={{ loop: true }} plugins={[classNames()]}>
       <Carousel.Slides>
         {Array.from({ length: 5 }).map((_, index) => (
-          <Carousel.Item key={index}>
-            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
-              <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
-            </div>
+          <Carousel.Item key={index} className="flex-[0_0_70%] [&:not(.is-snapped)]:opacity-[0.16]">
+            <img className="rounded-xl" src={"https://picsum.photos/600/350?v=1"} alt="Carousel Item" />
           </Carousel.Item>
         ))}
       </Carousel.Slides>
@@ -50,6 +48,6 @@ export const CarouselComponent = () => (
     </Carousel>
   )
 }
-
 `
-export { DefaultCarousel, DefaultCarouselCode }
+
+export { CarouselWithClassNames, CarouselWithClassNamesCode }
