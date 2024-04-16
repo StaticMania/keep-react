@@ -4,7 +4,7 @@ import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:
-    'Grid in Keep React is a reusable className that simplifies text styling, offering a consistent way to format and present text across a web application. It allows developers to easily add properties like font size, line height and letter spacing.',
+    'A grid layout is a design technique that organizes content into rows and columns, providing a structured and flexible way to arrange elements on a webpage.',
   title: 'Grid - Keep React',
 }
 

@@ -1,5 +1,5 @@
 import CodeBox from './CodeBox'
-import { colors } from './colorsApi'
+import { colors } from './ColorsApi'
 
 const ColorsTable = () => {
   return (

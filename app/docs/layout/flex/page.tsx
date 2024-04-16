@@ -4,7 +4,7 @@ import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:
-    'Flex in Keep React is a reusable className that simplifies text styling, offering a consistent way to format and present text across a web application. It allows developers to easily add properties like font size, line height and letter spacing.',
+    'A flex layout is a design approach that leverages the flex box model to create flexible and responsive arrangements of elements within a container. It allows items to dynamically adjust their size, alignment, and distribution, making it ideal for building responsive and visually appealing user interfaces.',
   title: 'Flex - Keep React',
 }
 
