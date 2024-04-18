@@ -1,0 +1,19 @@
+import { HTMLAttributes, forwardRef } from 'react'
+import { cn } from '~/app/src/helpers/cn'
+import { useTooltipContext } from './Context'
+
+export const Action = forwardRef<HTMLButtonElement, HTMLAttributes<HTMLButtonElement>>(
+  ({ children, className }, ref) => {
+    const { refs, getReferenceProps } = useTooltipContext()
+    return (
+      <button
+        ref={refs.setReference || ref}
+        {...getReferenceProps()}
+        className={cn('rounded-lg bg-metal-900 px-3.5 py-2 text-body-5 text-white', className)}>
+        {children}
+      </button>
+    )
+  },
+)
+
+Action.displayName = 'Tooltip.Action'

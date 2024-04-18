@@ -139,7 +139,6 @@ const DocsLayout = ({ children }: { children: ReactNode }) => {
                 </Accordion.Content>
               </Accordion.Panel>
             </Accordion>
-
             <Accordion openFirstPanel flush>
               <Accordion.Panel className="!border-b-0">
                 <Accordion.Container className="p-0">

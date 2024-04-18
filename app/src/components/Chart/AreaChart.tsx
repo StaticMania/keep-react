@@ -100,7 +100,6 @@ export const AreaChart: FC<AreaChartProps> = ({
         {showGridLine && <CartesianGrid strokeDasharray="4 4" fill="#E9EFF6" y={800} fillOpacity={0.6} />}
 
         <Area type={chartType} dataKey={dataKey} stroke={areaStoke} fillOpacity={1} fill="url(#colorUv)" />
-
         {showTooltip && <Tooltip cursor={false} content={<CustomTooltip />} />}
         {secondaryDataKey && (
           <Area

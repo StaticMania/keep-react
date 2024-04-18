@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import { ArrowLineUpRight } from 'phosphor-react'
 import { useEffect, useState } from 'react'

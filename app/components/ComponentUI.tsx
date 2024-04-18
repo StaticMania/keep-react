@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import { ArrowUpRight } from 'phosphor-react'
 import { routes } from '../../routes/routes'
