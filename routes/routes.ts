@@ -33,6 +33,7 @@ export interface routerPath {
   deprecate?: boolean
   redirect?: boolean
   folderName?: string
+  target?: string
   Icon?: ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>
 }
 
@@ -412,6 +413,39 @@ export const gettingStartedRoutes: routerPath[] = [
     id: generatedID(),
     name: 'Colors',
     href: '/docs/getting-started/colors',
+  },
+]
+
+export const quickAccessRoute: routerPath[] = [
+  {
+    id: generatedID(),
+    name: 'Installation',
+    href: '/docs/getting-started/introduction',
+    target: '_self',
+  },
+  {
+    id: generatedID(),
+    name: 'Figma',
+    href: 'https://keepdesign.io/',
+    target: '_blank',
+  },
+  {
+    id: generatedID(),
+    name: 'Typography',
+    href: '/docs/getting-started/typography',
+    target: '_self',
+  },
+  {
+    id: generatedID(),
+    name: 'Colors',
+    href: '/docs/getting-started/colors',
+    target: '_self',
+  },
+  {
+    id: generatedID(),
+    name: 'Layout',
+    href: '/docs/layout/column',
+    target: '_self',
   },
 ]
 

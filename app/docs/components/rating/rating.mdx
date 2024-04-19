@@ -1,7 +1,7 @@
 import { DefaultRating, DefaultRatingCode } from './variant/DefaultRating'
-import { VariantOfRating, VariantOfRatingCode } from './variant/RatingVariant'
+import { ValueFromRating, ValueFromRatingCode } from './variant/ValueFromRating'
 import { RatingTypes, RatingTypesCode } from './variant/RatingTypes'
-import { RatingDataApi } from './ratingApi'
+import { RatingDataApi, RatingStarApi } from './ratingApi'
 import CodePreview from '../../../components/CodePreview'
 import ComponentApi from '../../../components/ComponentApi'
 
@@ -17,24 +17,30 @@ The "Default Rating" is a pre-configured or initial rating value within the cont
   <DefaultRating />
 </CodePreview>
 
-## Rating Variant
-
-Rating Variant refers to the different visual styles or appearances that can be applied to a rating component in order to match various design preferences or themes. Each variant alters the way the rating symbols.The variants you've mentioned, `fill` `regular` `duotone` `bold` `light` and `thin` likely correspond to different styles.
-
-<CodePreview github="Rating" code={VariantOfRatingCode}>
-  <VariantOfRating />
-</CodePreview>
-
 ## Rating Types
 
-Rating Type refers to the specific behavior and appearance of individual rating symbols (such as stars) within a rating component. The two types you've mentioned, `starType` being `full` or `half` define how each rating symbol is displayed based on the level of rating assigned.
+You can use your own rating icon to display the rating star.
 
 <CodePreview github="Rating" code={RatingTypesCode}>
   <RatingTypes />
 </CodePreview>
 
-## API Reference
+## Value From Rating
 
-Explore the available props for the rating component
+You can access the value from the rating.
+
+<CodePreview github="Rating" code={ValueFromRatingCode}>
+  <ValueFromRating />
+</CodePreview>
+
+## Rating API Reference
+
+Explore the available props for the `<Rating>` component
 
 <ComponentApi data={RatingDataApi} />
+
+## Star API Reference
+
+Explore the available props for the `<Rating.Star>` component
+
+<ComponentApi data={RatingStarApi} />

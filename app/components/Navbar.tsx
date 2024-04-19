@@ -1,5 +1,4 @@
 'use client'
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -8,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
 import { Accordion } from '../src'
 import Search from './Search'
-const ThemeSwitcher = dynamic(() => import('./ThemeSwitcher'), { ssr: false })
+// const ThemeSwitcher = dynamic(() => import('./ThemeSwitcher'), { ssr: false })
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
@@ -85,7 +84,6 @@ const Navbar = () => {
               className="rounded-lg bg-metal-900 px-4 py-2.5 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-metal-800">
               get started
             </Link>
-            <ThemeSwitcher />
           </div>
           <div className="flex items-center justify-between gap-1.5 sm:gap-3 lg:hidden">
             <button

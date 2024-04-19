@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { File, MagnifyingGlass, RadioButton } from 'phosphor-react'
 import { ChangeEvent, Dispatch, FC, SetStateAction, useCallback, useEffect, useState, useTransition } from 'react'
-import { routerPath, routes } from '~/routes/routes'
+import { quickAccessRoute, routerPath, routes } from '~/routes/routes'
 import { Icon, Input, Modal } from '../src'
 
 interface ModalProps {
@@ -78,30 +78,16 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
           <div className={query.length ? 'hidden' : 'block'}>
             <p className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">Quick Access</p>
             <ul>
-              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                <Link href="https://keepdesign.io/" target="_blank" className="flex items-center gap-1">
-                  <File size={14} />
-                  Figma
-                </Link>
-              </li>
-              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                <Link href="/docs/getting-started/introduction" className="flex items-center gap-1">
-                  <File size={14} />
-                  Installation
-                </Link>
-              </li>
-              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                <Link href="/docs/getting-started/typography" className="flex items-center gap-1">
-                  <File size={14} />
-                  Typography
-                </Link>
-              </li>
-              <li className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                <Link href="/docs/getting-started/colors" className="flex items-center gap-1">
-                  <File size={14} />
-                  Colors
-                </Link>
-              </li>
+              {quickAccessRoute.map((route) => (
+                <li
+                  key={route.id}
+                  className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
+                  <Link href={route.href} target={route.target} className="flex items-center gap-1">
+                    <File size={14} />
+                    {route.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
