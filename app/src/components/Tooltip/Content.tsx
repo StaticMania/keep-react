@@ -4,7 +4,7 @@ import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useTooltipContext } from './Context'
 
-interface floatingArrow extends HTMLAttributes<HTMLDivElement> {
+export interface floatingArrow extends HTMLAttributes<HTMLDivElement> {
   width?: number
   height?: number
   tipRadius?: number

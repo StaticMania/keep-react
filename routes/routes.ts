@@ -485,4 +485,10 @@ export const navbarRoutes: routerPath[] = [
     name: 'Documentation',
     redirect: false,
   },
+  {
+    id: generatedID(),
+    href: '/blog',
+    name: 'Blog',
+    redirect: false,
+  },
 ]
