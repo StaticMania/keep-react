@@ -63,15 +63,8 @@ const chartData = [
 ];
 
 export const AreaChartComponent = () => {
-  return (
-    <AreaChart
-      chartData={chartData}
-      dataKey="price"
-      secondaryDataKey="sell"
-      showTooltip={true}
-    />
-  );
-};
+  return <AreaChart chartData={chartData} dataKey="price" secondaryDataKey="sell" showTooltip={true} />
+}
 `
 
 export { AreaChartWithDoubleSeries, AreaChartWithDoubleSeriesCode }

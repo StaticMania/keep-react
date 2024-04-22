@@ -51,47 +51,10 @@ export const BarChartData = [
     price: 390,
     sell: 110,
   },
-  {
-    name: '22',
-    price: 220,
-    sell: 90,
-  },
-  {
-    name: '24',
-    price: 360,
-    sell: 170,
-  },
-  {
-    name: '26',
-    price: 410,
-    sell: 140,
-  },
-  {
-    name: '28',
-    price: 280,
-    sell: 200,
-  },
-  {
-    name: '30',
-    price: 330,
-    sell: 160,
-  },
 ]
 
 const DefaultBarChart = () => {
-  return (
-    <BarChart
-      height={250}
-      width={500}
-      dataKey="price"
-      chartData={BarChartData}
-      barRadius={[4, 4, 0, 0]}
-      active={true}
-      activeIndex={5}
-      activeColor="#1B4DFF"
-      inActiveColor="#94ABFF"
-    />
-  )
+  return <BarChart height={250} width={600} dataKey="price" chartData={BarChartData} active={true} activeIndex={5} />
 }
 
 const DefaultBarChartCode = `

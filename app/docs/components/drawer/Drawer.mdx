@@ -1,0 +1,32 @@
+import { DefaultDrawer, DefaultDrawerCode } from './variant/DefaultDrawer'
+import { DrawerPosition, DrawerPositionCode } from './variant/DrawerPosition'
+
+import { drawerAPIData } from './DrawerApi'
+import CodePreview from '../../../components/CodePreview'
+import ComponentApi from '../../../components/ComponentApi'
+
+## Table of Contents
+
+The Drawer component provides a flexible and customizable way to create drawers that can slide in from different directions (left, right, top, or bottom) within your React application. It supports features like animation, keyboard accessibility (ESC key to close), and clicking outside the drawer to close it.
+
+## Default Drawer
+
+The Default Drawer component showcases a simple content inside the drawer.
+
+<CodePreview github="Drawer" code={DefaultDrawerCode}>
+  <DefaultDrawer />
+</CodePreview>
+
+## Drawer Position
+
+You can position the drawer in a specific direction, such as `left`, `right`, `top`, or `bottom`.
+
+<CodePreview github="Drawer" code={DrawerPositionCode}>
+  <DrawerPosition />
+</CodePreview>
+
+## API Reference
+
+Here is a list of the props that you can pass to the drawer component:
+
+<ComponentApi data={drawerAPIData} />

@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
-import { Info } from 'phosphor-react'
+import { Info, Trash } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { Typography, Upload } from '../../../../src'
+import { Upload } from '../../../../src'
 
 export interface UploadedFile {
   path?: string
@@ -25,22 +25,25 @@ const DefaultUpload = () => {
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
         </Upload.Icon>
         <Upload.Text>
-          <Typography variant="p" className="text-body-3 font-medium text-metal-600">
-            Drag & Drop or Choose File to Upload
-          </Typography>
-          <Typography variant="p" className="text-body-4 font-normal text-metal-400">
-            DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.
-          </Typography>
+          <p className="text-body-3 font-medium text-metal-600">Drag & Drop or Choose File to Upload</p>
+          <p className="text-body-4 font-normal text-metal-400">DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.</p>
         </Upload.Text>
       </Upload.Body>
       <Upload.Footer isFileExists={files.length > 0}>
-        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
+        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
-        </Typography>
-        <Typography variant="ul" className="space-y-1">
-          {files?.map((file) => <Upload.File key={file?.name}>{file?.name}</Upload.File>)}
-        </Typography>
+        </p>
+        <ul className="space-y-1">
+          {files?.map((file) => (
+            <li
+              key={file?.name}
+              className="flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-4 font-normal capitalize text-metal-600">
+              {file?.name}
+              <Trash size={16} color="red" />
+            </li>
+          ))}
+        </ul>
       </Upload.Footer>
     </Upload>
   )
@@ -48,39 +51,43 @@ const DefaultUpload = () => {
 
 const DefaultUploadCode = `
 'use client'
-import Image from 'next/image'
-import { Info } from 'phosphor-react'
+import { Info,Trash } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { Typography, Upload } from 'keep-react'
+import { Upload } from 'keep-react'
 
 export const UploadComponent = () => {
   const [files, setFiles] = useState([])
+
   const onDrop = useCallback((acceptedFiles) => {
     setFiles(acceptedFiles)
   }, [])
+
   return (
     <Upload options={{ onDrop }}>
       <Upload.Body>
         <Upload.Icon>
-          <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
+          <img src="/images/icon/folder.svg" alt="folder"/>
         </Upload.Icon>
         <Upload.Text>
-          <Typography variant="p" className="text-body-3 font-medium text-metal-600">
-            Drag & Drop or Choose File to Upload
-          </Typography>
-          <Typography variant="p" className="text-body-4 font-normal text-metal-400">
-            DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.
-          </Typography>
+          <p className="text-body-3 font-medium text-metal-600">Drag & Drop or Choose File to Upload</p>
+          <p className="text-body-4 font-normal text-metal-400">DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.</p>
         </Upload.Text>
       </Upload.Body>
       <Upload.Footer isFileExists={files.length > 0}>
-        <Typography variant="p" className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
+        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
-        </Typography>
-        <Typography variant="ul" className="space-y-1">
-          {files?.map((file) => <Upload.File key={file?.name}>{file?.name}</Upload.File>)}
-        </Typography>
+        </p>
+        <ul className="space-y-1">
+          {files?.map((file) => (
+            <li
+              key={file?.name}
+              className="flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-4 font-normal capitalize text-metal-600">
+              {file?.name}
+              <Trash size={16} color="red" />
+            </li>
+          ))}
+        </ul>
       </Upload.Footer>
     </Upload>
   )

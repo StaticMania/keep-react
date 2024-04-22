@@ -1,56 +1,41 @@
 'use client'
-import Image from 'next/image'
 import { Timeline } from '../../../../src'
 
 const TimelineWithImage = () => {
   return (
     <div className="px-5 py-6">
-      <Timeline timelineBarType="dashed" gradientPoint={true} gradientColor="bg-gradient-9">
+      <Timeline>
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>
-            <Timeline.Time>February 2023</Timeline.Time>
-            <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
-            <Timeline.Body>
-              Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
-              E-commerce & Marketing pages.
-            </Timeline.Body>
-
-            <Image
-              height={220}
-              width={400}
-              src="https://images.prismic.io/staticmania/3b419e42-6dde-4598-a7c1-33e585b922bd_timeline.png?auto=compress,format"
-              alt="timeline"
-            />
+            <p className="text-body-5 font-normal leading-[1.4] text-metal-400">September 23,2022</p>
+            <h1 className="text-body-3 font-medium text-metal-900">Step 1 Completed</h1>
+            <p className="text-body-4 font-normal text-metal-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, incidunt.
+            </p>
+            <img src="https://picsum.photos/400/230?v=1" className="!mt-4 block rounded-xl" alt="item1" />
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>
-            <Timeline.Time>March 2023</Timeline.Time>
-            <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
-            <Timeline.Body>
-              All of the pages and components are first designed in Figma and we keep a parity between the two versions
-              even as we update the project.
-            </Timeline.Body>
-
-            <Image
-              height={213}
-              width={340}
-              src="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
-              alt="timeline"
-              className="rounded-lg"
-            />
+            <p className="text-body-5 font-normal leading-[1.4] text-metal-400">November 10, 2023</p>
+            <h1 className="text-body-3 font-medium text-metal-900">Step 2 Completed</h1>
+            <p className="text-body-4 font-normal text-metal-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, incidunt.
+            </p>
+            <img src="https://picsum.photos/400/230?v=2" className="!mt-4 block rounded-xl" alt="item2" />
           </Timeline.Content>
         </Timeline.Item>
         <Timeline.Item>
           <Timeline.Point />
           <Timeline.Content>
-            <Timeline.Time>April 2023</Timeline.Time>
-            <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
-            <Timeline.Body>
-              Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
-            </Timeline.Body>
+            <p className="text-body-5 font-normal leading-[1.4] text-metal-400">December 20,2023</p>
+            <h1 className="text-body-3 font-medium text-metal-900">Step 3 Completed</h1>
+            <p className="text-body-4 font-normal text-metal-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, incidunt.
+            </p>
+            <img src="https://picsum.photos/400/230?v=3" className="!mt-4 block rounded-xl" alt="item3" />
           </Timeline.Content>
         </Timeline.Item>
       </Timeline>
@@ -59,65 +44,48 @@ const TimelineWithImage = () => {
 }
 
 const TimelineWithImageCode = `
-"use client";
-import Image from "next/image";
-import { Timeline } from "keep-react";
+'use client'
+import { Timeline } from 'keep-react'
 
 export const TimelineComponent = () => {
   return (
-     <Timeline timelineBarType="dashed" gradientPoint={true}>
-        <Timeline.Item>
-          <Timeline.Point />
-          <Timeline.Content>
-            <Timeline.Time>February 2023</Timeline.Time>
-            <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
-            <Timeline.Body>
-              Get access to over 20+ pages including a dashboard layout, charts,
-              kanban board, calendar, and pre-order E-commerce & Marketing
-              pages.
-            </Timeline.Body>
-
-            <Image
-              height={220}
-              width={400}
-              src="https://images.prismic.io/staticmania/3b419e42-6dde-4598-a7c1-33e585b922bd_timeline.png?auto=compress,format"
-              alt="timeline"
-            />
-          </Timeline.Content>
-        </Timeline.Item>
-        <Timeline.Item>
-          <Timeline.Point />
-          <Timeline.Content>
-            <Timeline.Time>March 2023</Timeline.Time>
-            <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
-            <Timeline.Body>
-              All of the pages and components are first designed in Figma and we
-              keep a parity between the two versions even as we update the
-              project.
-            </Timeline.Body>
-
-            <Image
-              height={213}
-              width={340}
-              src="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
-              alt="timeline"
-              className="rounded-lg"
-            />
-          </Timeline.Content>
-        </Timeline.Item>
-        <Timeline.Item>
-          <Timeline.Point />
-          <Timeline.Content>
-            <Timeline.Time>April 2023</Timeline.Time>
-            <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
-            <Timeline.Body>
-              Get started with dozens of web components and interactive elements
-              built on top of Tailwind CSS.
-            </Timeline.Body>
-          </Timeline.Content>
-        </Timeline.Item>
-      </Timeline>
-  );
+    <Timeline>
+      <Timeline.Item>
+        <Timeline.Point />
+        <Timeline.Content>
+          <p className="text-body-5 font-normal leading-[1.4] text-metal-400">September 23,2022</p>
+          <h1 className="text-body-3 font-medium text-metal-900">Step 1 Completed</h1>
+          <p className="text-body-4 font-normal text-metal-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, incidunt.
+          </p>
+          <img src="https://picsum.photos/400/230?v=1" className="!mt-4 block rounded-xl" alt="item1" />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Point />
+        <Timeline.Content>
+          <p className="text-body-5 font-normal leading-[1.4] text-metal-400">November 10, 2023</p>
+          <h1 className="text-body-3 font-medium text-metal-900">Step 2 Completed</h1>
+          <p className="text-body-4 font-normal text-metal-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, incidunt.
+          </p>
+          <img src="https://picsum.photos/400/230?v=2" className="!mt-4 block rounded-xl" alt="item2" />
+        </Timeline.Content>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Point />
+        <Timeline.Content>
+          <p className="text-body-5 font-normal leading-[1.4] text-metal-400">December 20,2023</p>
+          <h1 className="text-body-3 font-medium text-metal-900">Step 3 Completed</h1>
+          <p className="text-body-4 font-normal text-metal-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, incidunt.
+          </p>
+          <img src="https://picsum.photos/400/230?v=3" className="!mt-4 block rounded-xl" alt="item3" />
+        </Timeline.Content>
+      </Timeline.Item>
+    </Timeline>
+  )
 }
+
 `
 export { TimelineWithImage, TimelineWithImageCode }

@@ -1,7 +1,7 @@
 'use client'
 import { CloudArrowUp } from 'phosphor-react'
 import { useState } from 'react'
-import { Button, Modal, Typography } from '../../../../src'
+import { Button, Modal } from '../../../../src'
 
 const DefaultModal = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,14 +21,12 @@ const DefaultModal = () => {
             <CloudArrowUp size={28} color="#1B4DFF" />
           </Modal.Icon>
           <Modal.Content>
-            <Typography variant="div" className="!mb-6">
-              <Typography variant="h3" className="mb-2 text-body-1 font-medium text-metal-900">
-                Update Modal Status
-              </Typography>
-              <Typography variant="p" className="text-body-4 font-normal text-metal-600">
+            <div className="!mb-6">
+              <h3 className="mb-2 text-body-1 font-medium text-metal-900">Update Modal Status</h3>
+              <p className="text-body-4 font-normal text-metal-600">
                 Your document has unsaved changes. Discard or save them as a new page to continue.
-              </Typography>
-            </Typography>
+              </p>
+            </div>
           </Modal.Content>
           <Modal.Footer>
             <Button onClick={closeModal} size="sm" variant="outline" color="secondary">
@@ -48,7 +46,7 @@ const DefaultModalCode = `
 'use client'
 import { useState } from 'react'
 import { CloudArrowUp } from 'phosphor-react'
-import { Button, Modal, Typography } from 'keep-react'
+import { Button, Modal } from 'keep-react'
 
 export const ModalComponent = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -68,14 +66,12 @@ export const ModalComponent = () => {
             <CloudArrowUp size={28} color="#1B4DFF" />
           </Modal.Icon>
           <Modal.Content>
-            <Typography variant="div" className="!mb-6">
-              <Typography variant="h3" className="mb-2 text-body-1 font-medium text-metal-900">
-                Update Modal Status
-              </Typography>
-              <Typography variant="p" className="text-body-4 font-normal text-metal-600">
+            <div className="!mb-6">
+              <h3 className="mb-2 text-body-1 font-medium text-metal-900">Update Modal Status</h3>
+              <p className="text-body-4 font-normal text-metal-600">
                 Your document has unsaved changes. Discard or save them as a new page to continue.
-              </Typography>
-            </Typography>
+              </p>
+            </div>
           </Modal.Content>
           <Modal.Footer>
             <Button onClick={closeModal} size="sm" variant="outline" color="secondary">

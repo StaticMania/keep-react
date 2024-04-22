@@ -1,50 +1,38 @@
 'use client'
-import { Button, Tooltip } from '../../../../src'
+import { Tooltip } from '../../../../src'
 
 const TooltipTriggering = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
-      <Tooltip content="Tooltips text here" trigger="hover" placement="top" animation="duration-300" style="dark">
-        <Button size="sm">Tooltip Hover</Button>
-      </Tooltip>
-      <Tooltip content="Tooltips text here" trigger="click" placement="bottom" animation="duration-300" style="dark">
-        <Button size="sm">Tooltip Click</Button>
-      </Tooltip>
+    <div className="flex items-center gap-5 p-2.5">
+      {['click', 'hover', 'focus'].map((trigger) => (
+        <Tooltip trigger={trigger as 'click' | 'hover' | 'focus'} key={trigger}>
+          <Tooltip.Action>{trigger}</Tooltip.Action>
+          <Tooltip.Content>
+            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+          </Tooltip.Content>
+        </Tooltip>
+      ))}
     </div>
   )
 }
 
 const TooltipTriggeringCode = `
-"use client";
-import {Tooltip,Button } from "keep-react";
+'use client'
+import { Tooltip } from 'keep-react'
 
 export const TooltipComponent = () => {
   return (
     <>
-      <Tooltip
-        content="Tooltips text here"
-        trigger="hover"
-        placement="top"
-        animation="duration-300"
-        style="dark"
-      >
-        <Button size="sm" >
-          Tooltip Hover
-        </Button>
-      </Tooltip>
-      <Tooltip
-        content="Tooltips text here"
-        trigger="click"
-        placement="bottom"
-        animation="duration-300"
-        style="dark"
-      >
-        <Button size="sm" >
-          Tooltip Click
-        </Button>
-      </Tooltip>
+      {['click', 'hover', 'focus'].map((trigger) => (
+        <Tooltip trigger={trigger} key={trigger}>
+          <Tooltip.Action>{trigger}</Tooltip.Action>
+          <Tooltip.Content>
+            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+          </Tooltip.Content>
+        </Tooltip>
+      ))}
     </>
-  );
+  )
 }
 `
 

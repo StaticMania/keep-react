@@ -1,13 +1,23 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-export interface FooterProps {
+export interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   isFileExists?: boolean
 }
 
-export const Footer: FC<FooterProps> = ({ children, className, isFileExists = false }) => {
-  return <div className={cn(className)}>{isFileExists ? children : null}</div>
-}
+const Footer = forwardRef<HTMLDivElement, FooterProps>(
+  ({ children, className, isFileExists = false, ...props }, ref: Ref<HTMLDivElement>) => {
+    return (
+      <div {...props} className={cn(className)} ref={ref}>
+        {isFileExists ? children : null}
+      </div>
+    )
+  },
+)
+
+Footer.displayName = 'Upload.Footer'
+
+export { Footer }

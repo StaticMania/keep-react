@@ -22,14 +22,14 @@ export const areaChartAPIData = [
   },
   {
     id: 4,
-    propsName: 'showXaxis',
+    propsName: 'showXAxis',
     propsType: 'boolean',
     propsDescription: 'Determines whether the X-axis is displayed.',
     default: 'false',
   },
   {
     id: 5,
-    propsName: 'showYaxis',
+    propsName: 'showYAxis',
     propsType: 'boolean',
     propsDescription: 'Determines whether the Y-axis is displayed.',
     default: 'false',
@@ -96,13 +96,6 @@ export const areaChartAPIData = [
     propsType: 'string',
     propsDescription: 'Color for the secondary area stroke',
     default: '#94ABFF',
-  },
-  {
-    id: 15,
-    propsName: 'tooltipBtnVariant',
-    propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
-    propsDescription: 'Variant of the tooltip button.',
-    default: 'default',
   },
   {
     id: 16,

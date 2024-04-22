@@ -144,7 +144,7 @@ export default App
 
 ## Components
 
-The Keep React offers a wide range of components to build your user interfaces. For detailed usage and examples of each component, refer to our [component documentation](https://react.keepdesign.io/docs/getting-started/Introduction).
+The Keep React offers a wide range of components to build your user interfaces. For detailed usage and examples of each component, refer to our [component documentation](https://react.keepdesign.io/docs/getting-started/introduction).
 
 ## Contributing
 

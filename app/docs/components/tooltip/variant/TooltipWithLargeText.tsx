@@ -1,65 +1,40 @@
 'use client'
-import { Button, Tooltip } from '../../../../src'
+import { Tooltip } from '../../../../src'
 
 const TooltipWithLargeText = () => {
   return (
-    <div className=" flex flex-wrap items-end gap-2">
-      <Tooltip
-        title="Tooltip Title here"
-        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, alias."
-        trigger="hover"
-        placement="top"
-        animation="duration-300"
-        style="dark">
-        <Button size="sm">Tooltip Content</Button>
-      </Tooltip>
-      <Tooltip
-        title="Tooltip Title here"
-        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, alias."
-        trigger="hover"
-        placement="bottom"
-        animation="duration-300"
-        style="light">
-        <Button size="sm">Tooltip Content</Button>
+    <div className="p-2.5">
+      <Tooltip>
+        <Tooltip.Action>Tooltip</Tooltip.Action>
+        <Tooltip.Content className="px-4 py-3">
+          <p className="mb-1 text-body-3 font-medium text-white">Tooltips - Title here</p>
+          <p className="text-body-5 font-normal text-white/80">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </Tooltip.Content>
       </Tooltip>
     </div>
   )
 }
 
 const TooltipWithLargeTextCode = `
-"use client";
-import { Tooltip,Button } from "keep-react";
+'use client'
+import { Tooltip } from 'keep-react'
 
 export const TooltipComponent = () => {
   return (
-    <>
-      <Tooltip
-        title="Tooltip Title here"
-        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, alias."
-        trigger="hover"
-        placement="top"
-        animation="duration-300"
-        style="dark"
-      >
-        <Button size="sm" >
-          Tooltip Content
-        </Button>
-      </Tooltip>
-      <Tooltip
-        title="Tooltip Title here"
-        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, alias."
-        trigger="hover"
-        placement="bottom"
-        animation="duration-300"
-        style="light"
-      >
-        <Button size="sm" >
-          Tooltip Content
-        </Button>
-      </Tooltip>
-    </>
-  );
+    <Tooltip>
+      <Tooltip.Action>Tooltip</Tooltip.Action>
+      <Tooltip.Content className="px-4 py-3">
+        <p className="mb-1 text-body-3 font-medium text-white">Tooltips - Title here</p>
+        <p className="text-body-5 font-normal text-white/80">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+      </Tooltip.Content>
+    </Tooltip>
+  )
 }
+
 `
 
 export { TooltipWithLargeText, TooltipWithLargeTextCode }

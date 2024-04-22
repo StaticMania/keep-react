@@ -11,7 +11,7 @@ export const barChartAPIData = [
     propsName: 'activeColor',
     propsType: 'string',
     propsDescription: 'Color of the active bars.',
-    default: '#1B4DFF',
+    default: '#1C222B',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const barChartAPIData = [
     propsName: 'barBg',
     propsType: 'string',
     propsDescription: 'Background color of the bars.',
-    default: '#E8EDFF',
+    default: '#F0F3F9',
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ export const barChartAPIData = [
     propsName: 'barSize',
     propsType: 'number',
     propsDescription: 'Size of the bars.',
-    default: '6',
+    default: '32',
   },
   {
     id: 8,
@@ -74,21 +74,21 @@ export const barChartAPIData = [
     propsName: 'inActiveColor',
     propsType: 'string',
     propsDescription: 'Color of the inactive bars.',
-    default: '#1B4DFF',
+    default: '#1C222B',
   },
   {
     id: 12,
     propsName: 'secondaryBarBg',
     propsType: 'string',
     propsDescription: 'Background color of the secondary bars.',
-    default: '#D7FFEB',
+    default: '#F0F3F9',
   },
   {
     id: 13,
     propsName: 'secondaryBarColor',
     propsType: 'string',
     propsDescription: 'Color of the secondary bars.',
-    default: '#1DB469',
+    default: '#3D4A5C',
   },
   {
     id: 14,
@@ -127,14 +127,14 @@ export const barChartAPIData = [
   },
   {
     id: 19,
-    propsName: 'showXaxis',
+    propsName: 'showXAxis',
     propsType: 'boolean',
     propsDescription: 'Determines if the X-axis is visible.',
     default: 'false',
   },
   {
     id: 20,
-    propsName: 'showYaxis',
+    propsName: 'showYAxis',
     propsType: 'boolean',
     propsDescription: 'Determines if the Y-axis is visible.',
     default: 'false',
@@ -144,7 +144,7 @@ export const barChartAPIData = [
     propsName: 'width',
     propsType: 'number',
     propsDescription: 'Width of the chart.',
-    default: '500',
+    default: '600',
   },
   {
     id: 22,
@@ -159,13 +159,6 @@ export const barChartAPIData = [
     propsType: 'string',
     propsDescription: 'Key in the data array for the Y-axis data.',
     default: 'None',
-  },
-  {
-    id: 24,
-    propsName: 'tooltipBtnVariant',
-    propsType: ['primary', 'dashed', 'text', 'linkPrimary', 'linkGray', 'outlineGray', 'outlinePrimary', 'default'],
-    propsDescription: 'Variant of the tooltip button.',
-    default: 'default',
   },
   {
     id: 25,

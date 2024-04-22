@@ -1,6 +1,6 @@
 'use client'
 import { CaretLeft, CaretRight, DotsThree } from 'phosphor-react'
-import { Pagination, Typography } from '../../../../src'
+import { Pagination } from '../../../../src'
 
 const PaginationInput = () => {
   return (
@@ -22,13 +22,13 @@ const PaginationInput = () => {
         <CaretRight size={18} />
       </Pagination.Navigator>
       <Pagination.GoTo>
-        <Typography variant="span">/ Go to</Typography>
+        <span>/ Go to</span>
         <input
           type="number"
           className="h-9 w-[60px] rounded-md border border-metal-100 text-center text-metal-500 focus:outline-none"
           defaultValue={20}
         />
-        <Typography variant="span">of 200</Typography>
+        <span>of 200</span>
       </Pagination.GoTo>
     </Pagination>
   )
@@ -36,7 +36,7 @@ const PaginationInput = () => {
 
 const PaginationInputCode = `
 'use client'
-import { Pagination, Typography } from 'keep-react'
+import { Pagination } from 'keep-react'
 import { CaretLeft, CaretRight, DotsThree } from 'phosphor-react'
 
 export const PaginationComponent = () => {
@@ -59,13 +59,13 @@ export const PaginationComponent = () => {
         <CaretRight size={18} />
       </Pagination.Navigator>
       <Pagination.GoTo>
-        <Typography variant="span">/ Go to</Typography>
+        <span>/ Go to</span>
         <input
           type="number"
           className="h-9 w-[60px] rounded-md border border-metal-100 text-center text-metal-500 focus:outline-none"
           defaultValue={20}
         />
-        <Typography variant="span">of 200</Typography>
+        <span>of 200</span>
       </Pagination.GoTo>
     </Pagination>
   )

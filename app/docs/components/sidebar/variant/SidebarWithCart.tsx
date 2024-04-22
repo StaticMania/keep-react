@@ -1,5 +1,5 @@
 'use client'
-import { Button, Divider, Sidebar, Typography } from '../../../../src'
+import { Button, Divider, Sidebar } from '../../../../src'
 
 const SidebarWithCart = () => {
   return (
@@ -11,8 +11,8 @@ const SidebarWithCart = () => {
               <div className="h-20 w-20 animate-pulse bg-metal-50"></div>
             </div>
             <div>
-              <Typography variant="p">Men&apos;s casual shoe</Typography>
-              <Typography variant="p">1 x 99 = $99</Typography>
+              <p>Men&apos;s casual shoe</p>
+              <p>1 x 99 = $99</p>
               <Button
                 color="secondary"
                 size="xs"
@@ -27,8 +27,8 @@ const SidebarWithCart = () => {
               <div className="h-20 w-20 animate-pulse bg-metal-50"></div>
             </div>
             <div>
-              <Typography variant="p">Men&apos;s casual shoe</Typography>
-              <Typography variant="p">1 x 99 = $99</Typography>
+              <p>Men&apos;s casual shoe</p>
+              <p>1 x 99 = $99</p>
               <Button
                 color="secondary"
                 size="xs"
@@ -43,8 +43,8 @@ const SidebarWithCart = () => {
               <div className="h-20 w-20 animate-pulse bg-metal-50"></div>
             </div>
             <div>
-              <Typography variant="p">Men&apos;s casual shoe</Typography>
-              <Typography variant="p">1 x 99 = $99</Typography>
+              <>Men&apos;s casual shoe</>
+              <>1 x 99 = $99</>
               <Button
                 color="secondary"
                 size="xs"
@@ -58,8 +58,8 @@ const SidebarWithCart = () => {
         <Divider className="my-3" />
         <Sidebar.Footer>
           <div className="mb-2 flex items-center justify-between">
-            <Typography>Total</Typography>
-            <Typography>$297</Typography>
+            <p>Total</p>
+            <p>$297</p>
           </div>
           <Button className="w-full">Checkout Now</Button>
         </Sidebar.Footer>
@@ -70,7 +70,7 @@ const SidebarWithCart = () => {
 
 const SidebarWithCartCode = `
 'use client'
-import { Button, Divider, Sidebar, Typography } from 'keep-react'
+import { Button, Divider, Sidebar } from 'keep-react'
 
 export const SidebarComponent = () => {
   return (
@@ -81,8 +81,8 @@ export const SidebarComponent = () => {
             <div className="h-20 w-20 animate-pulse bg-metal-50"></div>
           </div>
           <div>
-            <Typography variant="p">Men&apos;s casual shoe</Typography>
-            <Typography variant="p">1 x 99 = $99</Typography>
+            <p>Men&apos;s casual shoe</p>
+            <p>1 x 99 = $99</p>
             <Button
               color="secondary"
               size="xs"
@@ -97,8 +97,8 @@ export const SidebarComponent = () => {
             <div className="h-20 w-20 animate-pulse bg-metal-50"></div>
           </div>
           <div>
-            <Typography variant="p">Men&apos;s casual shoe</Typography>
-            <Typography variant="p">1 x 99 = $99</Typography>
+            <p>Men&apos;s casual shoe</p>
+            <p>1 x 99 = $99</p>
             <Button
               color="secondary"
               size="xs"
@@ -113,8 +113,8 @@ export const SidebarComponent = () => {
             <div className="h-20 w-20 animate-pulse bg-metal-50"></div>
           </div>
           <div>
-            <Typography variant="p">Men&apos;s casual shoe</Typography>
-            <Typography variant="p">1 x 99 = $99</Typography>
+            <p>Men&apos;s casual shoe</p>
+            <p>1 x 99 = $99</p>
             <Button
               color="secondary"
               size="xs"
@@ -128,8 +128,8 @@ export const SidebarComponent = () => {
       <Divider className="my-3" />
       <Sidebar.Footer>
         <div className="mb-2 flex items-center justify-between">
-          <Typography>Total</Typography>
-          <Typography>$297</Typography>
+          <p>Total</p>
+          <p>$297</p>
         </div>
         <Button className="w-full">Checkout Now</Button>
       </Sidebar.Footer>

@@ -1,33 +1,34 @@
 'use client'
-import { Button, Tooltip } from '../../../../src'
+import { Tooltip } from '../../../../src'
 
 const DefaultTooltip = () => {
   return (
-    <Tooltip content="Tooltips text here" trigger="hover" placement="right" animation="duration-300" style="dark">
-      <Button size="sm">Default Tooltip</Button>
-    </Tooltip>
+    <div className="p-2.5">
+      <Tooltip>
+        <Tooltip.Action>Tooltip</Tooltip.Action>
+        <Tooltip.Content>
+          <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+        </Tooltip.Content>
+      </Tooltip>
+    </div>
   )
 }
 
 const DefaultTooltipCode = `
-"use client";
-import { Button,Tooltip } from "keep-react";
+'use client'
+import { Tooltip } from 'keep-react'
 
 export const TooltipComponent = () => {
   return (
-    <Tooltip
-      content="Tooltips text here"
-      trigger="hover"
-      placement="right"
-      animation="duration-300"
-      style="dark"
-    >
-      <Button size="sm" >
-        Default Tooltip
-      </Button>
+    <Tooltip>
+      <Tooltip.Action>Tooltip</Tooltip.Action>
+      <Tooltip.Content>
+        <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+      </Tooltip.Content>
     </Tooltip>
-  );
+  )
 }
+
 `
 
 export { DefaultTooltip, DefaultTooltipCode }

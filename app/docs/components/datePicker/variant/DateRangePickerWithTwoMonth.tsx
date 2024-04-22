@@ -1,29 +1,68 @@
 'use client'
-import { DatePicker } from '../../../../src'
+import { format } from 'date-fns'
+import { Calendar } from 'phosphor-react'
+import { useState } from 'react'
+import { DateRange } from 'react-day-picker'
+import { Button, DatePicker, Popover } from '../../../../src'
 
-const DateRangePickerWithTwoMonth = () => {
+const DateRangePicker2 = () => {
+  const [selected, setSelected] = useState<DateRange>()
   return (
-    <div className="w-1/3">
-      <DatePicker showTwoMonth={true} placeholder="Start - Finish">
-        <DatePicker.Range />
-      </DatePicker>
-    </div>
+    <Popover showArrow={false} placement="bottom-start">
+      <Popover.Action asChild>
+        <Button
+          className="w-[286px] justify-start gap-2 rounded-lg border border-metal-50 text-left text-body-4 font-normal hover:bg-white active:focus:scale-100"
+          variant="outline"
+          color="secondary">
+          <Calendar size={20} color="#AFBACA" />
+          {selected ? (
+            <>
+              {format(selected?.from ?? new Date(), 'LLL dd, y')} - {format(selected?.to ?? new Date(), 'LLL dd, y')}
+            </>
+          ) : (
+            <span>Select Your Date</span>
+          )}
+        </Button>
+      </Popover.Action>
+      <Popover.Content className="z-50 max-w-min">
+        <DatePicker mode="range" numberOfMonths={2} selected={selected} onSelect={setSelected} showOutsideDays={true} />
+      </Popover.Content>
+    </Popover>
   )
 }
 
-const DateRangePickerWithTwoMonthCode = `
-"use client";
-import { useState } from "react";
-import { DatePicker } from "keep-react";
+const DateRangePicker2Code = `
+'use client'
+import { useState } from 'react'
+import { format } from 'date-fns'
+import { Calendar } from 'phosphor-react'
+import { Button, DatePicker, Popover } from 'keep-react'
 
 export const DatePickerComponent = () => {
-  const [rangeDate, setRangeDate] = useState(null);
+  const [selected, setSelected] = useState(null)
   return (
-    <DatePicker showTwoMonth={true} rangeDate={setRangeDate} placeholder="Start - Finish">
-      <DatePicker.Range />
-    </DatePicker>
-  );
+    <Popover showArrow={false} placement="bottom-start">
+      <Popover.Action asChild>
+        <Button
+          className="w-[286px] justify-start gap-2 rounded-lg border border-metal-50 text-left text-body-4 font-normal hover:bg-white active:focus:scale-100"
+          variant="outline"
+          color="secondary">
+          <Calendar size={20} color="#AFBACA" />
+          {selected ? (
+            <>
+              {format(selected?.from ?? new Date(), 'LLL dd, y')} - {format(selected?.to ?? new Date(), 'LLL dd, y')}
+            </>
+          ) : (
+            <span>Select Your Date</span>
+          )}
+        </Button>
+      </Popover.Action>
+      <Popover.Content className="z-50 max-w-min">
+        <DatePicker mode="range" numberOfMonths={2} selected={selected} onSelect={setSelected} showOutsideDays={true} />
+      </Popover.Content>
+    </Popover>
+  )
 }
 `
 
-export { DateRangePickerWithTwoMonth, DateRangePickerWithTwoMonthCode }
+export { DateRangePicker2, DateRangePicker2Code }

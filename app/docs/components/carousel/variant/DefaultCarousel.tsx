@@ -1,36 +1,55 @@
 'use client'
-import Image from 'next/image'
 import { Carousel } from '../../../../src'
-import CarouselOne from '../../../../../public/images/carousel/one.svg'
-import CarouselTwo from '../../../../../public/images/carousel/two.svg'
-import CarouselThree from '../../../../../public/images/carousel/three.svg'
-import CarouselFour from '../../../../../public/images/carousel/four.svg'
 
 const DefaultCarousel = () => {
   return (
-    <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image src={CarouselOne} alt="slider-1" />
-      <Image src={CarouselTwo} alt="slider-2" />
-      <Image src={CarouselThree} alt="slider-3" />
-      <Image src={CarouselFour} alt="slider-4" />
+    <Carousel>
+      <Carousel.Slides>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <Carousel.Item key={index}>
+            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
+              <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel.Slides>
+      <Carousel.Control>
+        <Carousel.Buttons>
+          <Carousel.PrevButton />
+          <Carousel.NextButton />
+        </Carousel.Buttons>
+        <Carousel.Indicators />
+      </Carousel.Control>
     </Carousel>
   )
 }
 
 const DefaultCarouselCode = `
-"use client";
-import Image from "next/image";
-import { Carousel } from "keep-react";
+'use client'
+import { Carousel } from 'keep-react'
 
-export const CarouselComponent = () => {
+export const CarouselComponent = () => (
   return (
-    <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image src="img source" alt="slider-1" />
-      <Image src="img source" alt="slider-2" />
-      <Image src="img source" alt="slider-3" />
-      <Image src="img source" alt="slider-4" />
+    <Carousel>
+      <Carousel.Slides>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <Carousel.Item key={index}>
+            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
+              <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel.Slides>
+      <Carousel.Control>
+        <Carousel.Buttons>
+          <Carousel.PrevButton />
+          <Carousel.NextButton />
+        </Carousel.Buttons>
+        <Carousel.Indicators />
+      </Carousel.Control>
     </Carousel>
   )
 }
+
 `
 export { DefaultCarousel, DefaultCarouselCode }

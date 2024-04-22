@@ -44,6 +44,6 @@ Ready to contribute? Here's how to get started:
 
 - [Fork Keep React on GitHub](https://github.com/StaticMania/keep-react/fork)
 - [Browse Open Issues](https://github.com/StaticMania/keep-react/issues)
-- [Read the Documentation](https://react.keepdesign.io/docs/getting-started/Introduction)
+- [Read the Documentation](https://react.keepdesign.io/docs/getting-started/introduction)
 
 We're excited to have you as part of the Keep React community! Thank you for your support and contributions.

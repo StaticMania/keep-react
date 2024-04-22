@@ -12,10 +12,11 @@ interface CodePreviewProps {
   code: string
   github?: string
   className?: string
+  activeTab?: number
 }
 
-const CodePreview = ({ children, code, github, className }: CodePreviewProps) => {
-  const [active, setActive] = useState(0)
+const CodePreview = ({ children, code, github, className, activeTab }: CodePreviewProps) => {
+  const [active, setActive] = useState(activeTab ? activeTab : 0)
   const { copy, copyToClipboard } = useCopy()
   const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/app/src/components/${github}`
 
@@ -83,7 +84,11 @@ const CodePreview = ({ children, code, github, className }: CodePreviewProps) =>
             </SyntaxHighlighter>
           </div>
         ) : (
-          <div className={cn('flex w-full items-center justify-center bg-white px-2 py-3 md:p-6', className)}>
+          <div
+            className={cn(
+              'flex w-full items-center justify-center bg-white px-2 py-3 dark:bg-metal-900 md:p-6',
+              className,
+            )}>
             <div className="h-full w-full overflow-auto">{children}</div>
           </div>
         )}

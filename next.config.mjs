@@ -9,12 +9,7 @@ const nextConfig = {
     return [
       {
         source: '/introduction',
-        destination: '/docs/getting-started/Introduction',
-        permanent: true,
-      },
-      {
-        source: '/installation',
-        destination: '/docs/getting-started/Installation',
+        destination: '/docs/getting-started/introduction',
         permanent: true,
       },
       {

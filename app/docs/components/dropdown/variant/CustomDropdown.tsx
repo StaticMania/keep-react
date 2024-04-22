@@ -1,5 +1,5 @@
 'use client'
-import { Avatar, Button, Dropdown, Typography } from '../../../../src'
+import { Avatar, Button, Dropdown } from '../../../../src'
 
 const dropdownData = [
   {
@@ -44,12 +44,8 @@ const CustomDropdown = () => {
               <Avatar size="lg" color="secondary" img={data.img} />
             </div>
             <div>
-              <Typography variant="p" className="text-body-3 font-medium text-metal-800">
-                {data.name}
-              </Typography>
-              <Typography variant="p" className="text-body-4 font-normal text-metal-400">
-                {data.title}
-              </Typography>
+              <p className="text-body-3 font-medium text-metal-800">{data.name}</p>
+              <p className="text-body-4 font-normal text-metal-400">{data.title}</p>
             </div>
           </Dropdown.Item>
         ))}
@@ -60,7 +56,7 @@ const CustomDropdown = () => {
 
 const CustomDropdownCode = `
 'use client'
-import { Avatar, Dropdown, Typography, Button } from 'keep-react'
+import { Avatar, Dropdown, Button } from 'keep-react'
 
 export const DropdownComponent = () => {
   return (
@@ -72,12 +68,8 @@ export const DropdownComponent = () => {
               <Avatar size="lg" color="secondary" img={data.img} />
             </div>
             <div>
-              <Typography variant="p" className="text-body-5 font-medium text-metal-800">
-                {data.name}
-              </Typography>
-              <Typography variant="p" className="text-body-5 font-normal text-metal-400">
-                {data.title}
-              </Typography>
+              <p className="text-body-3 font-medium text-metal-800">{data.name}</p>
+              <p className="text-body-4 font-normal text-metal-400">{data.title}</p>
             </div>
           </Dropdown.Item>
         ))}

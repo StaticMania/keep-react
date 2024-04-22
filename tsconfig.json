@@ -15,19 +15,19 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "~/*": ["./*"],
+      "~/*": ["./*"]
     },
     "plugins": [
       {
-        "name": "next",
-      },
+        "name": "next"
+      }
     ],
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "allowJs": true,
+    "allowJs": true
   },
   "exclude": ["./build/", "./lib/", "./.next/"],
-  "include": [".next/types/**/*.ts", "**/*.mdx", "**/*.ts", "**/*.tsx"],
+  "include": [".next/types/**/*.ts", "**/*.mdx", "**/*.ts", "**/*.tsx"]
 }

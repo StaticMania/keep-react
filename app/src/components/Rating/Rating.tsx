@@ -1,25 +1,27 @@
+/* eslint-disable no-unused-vars */
 'use client'
-import type { ComponentProps, FC, PropsWithChildren } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { RatingContext } from './RatingContext'
-import { RatingStar } from './RatingStar'
+import { RatingContext } from './Context'
+import { Star } from './Star'
 
-export interface RatingProps extends PropsWithChildren<ComponentProps<'div'>> {
-  size?: number
+interface RatingProps extends HTMLAttributes<HTMLDivElement> {
+  handleRating?: (value: number | undefined) => void
 }
 
-const RatingComponent: FC<RatingProps> = ({ children, size, className, ...props }) => {
-  return (
-    <RatingContext.Provider value={{ size }}>
-      <div className={cn('flex items-center', className)} {...props}>
-        {children}
+export const RatingComponent = forwardRef<HTMLDivElement, RatingProps>(
+  ({ children, className, handleRating, ...props }, ref: Ref<HTMLDivElement>) => {
+    return (
+      <div {...props} className={cn('items center flex flex-row-reverse justify-end gap-0.5', className)} ref={ref}>
+        <RatingContext.Provider value={{ handleRating }}>{children}</RatingContext.Provider>
       </div>
-    </RatingContext.Provider>
-  )
-}
+    )
+  },
+)
 
-RatingStar.displayName = 'Rating.Star'
+RatingComponent.displayName = 'Rating'
+Star.displayName = 'Rating.Star'
 
 export const Rating = Object.assign(RatingComponent, {
-  Star: RatingStar,
+  Star,
 })
