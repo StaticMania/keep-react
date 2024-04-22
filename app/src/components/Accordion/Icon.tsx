@@ -19,7 +19,7 @@ const Icon = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement>>(
     return (
       <span
         {...otherProps}
-        className={cn(icon.base, children && (isOpen ? icon.rotated.full : icon.rotated.half), className)}
+        className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}
         ref={ref}>
         {children ?? (
           <svg className="shrink-0 fill-metal-300" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
