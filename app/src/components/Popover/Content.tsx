@@ -8,7 +8,7 @@ export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElemen
   { style, ...props },
   propRef,
 ) {
-  const { context: floatingContext, ...context } = usePopoverContext()
+  const { context: floatingContext, showArrow, ...context } = usePopoverContext()
   const ref = useMergeRefs([context.refs.setFloating, propRef])
 
   if (!floatingContext.open) return null
@@ -24,14 +24,16 @@ export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElemen
           aria-describedby={context.descriptionId}
           {...context.getFloatingProps(props)}>
           {props.children}
-          <FloatingArrow
-            fill="#fff"
-            width={20}
-            height={10}
-            tipRadius={2}
-            ref={context.arrowRef}
-            context={floatingContext}
-          />
+          {showArrow && (
+            <FloatingArrow
+              fill="#fff"
+              width={20}
+              height={10}
+              tipRadius={2}
+              ref={context.arrowRef}
+              context={floatingContext}
+            />
+          )}
         </div>
       </FloatingFocusManager>
     </FloatingPortal>

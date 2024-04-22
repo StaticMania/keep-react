@@ -5,8 +5,9 @@ import { usePathname } from 'next/navigation'
 import { Command, List, MagnifyingGlass, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
-import { Accordion, Typography } from '../src'
+import { Accordion } from '../src'
 import Search from './Search'
+// const ThemeSwitcher = dynamic(() => import('./ThemeSwitcher'), { ssr: false })
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
@@ -33,7 +34,7 @@ const Navbar = () => {
   }, [pathname])
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-metal-100 bg-white">
+    <header className="fixed top-0 z-50 w-full border-b border-metal-100 bg-white dark:border-metal-800 dark:bg-metal-900">
       <div className="relative mx-auto max-w-7xl px-6 2xl:px-0">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-28">
@@ -47,7 +48,7 @@ const Navbar = () => {
                   key={nav.id}
                   href={nav.href}
                   target={nav.redirect ? '_blank' : '_self'}
-                  className={`text-body-4 font-medium text-metal-600 hover:text-primary-500 active:text-primary-500 ${nav.name === 'Documentation' && pathname.includes('/docs/') ? 'text-primary-500' : ''}`}>
+                  className={`text-body-4 font-medium text-metal-600 hover:text-primary-500 active:text-primary-500 dark:text-metal-300 ${nav.name === 'Documentation' && pathname.includes('/docs/') ? 'text-primary-500' : ''}`}>
                   {nav.name}
                 </Link>
               ))}
@@ -57,7 +58,7 @@ const Navbar = () => {
           <div className="hidden items-center gap-3 lg:flex">
             <button
               onClick={openModal}
-              className="flex w-[300px] items-center justify-between rounded-lg bg-primary-25 px-3 py-2.5 text-body-4 font-normal text-metal-600 transition-all duration-300 hover:bg-primary-50">
+              className="flex w-[300px] items-center justify-between rounded-lg bg-primary-25 px-3 py-2.5 text-body-4 font-normal text-metal-600 transition-all duration-300 hover:bg-primary-50 dark:bg-metal-800">
               <span className="flex items-center gap-2 text-body-4 font-normal text-metal-400">
                 <MagnifyingGlass size={20} />
                 <span>Search component...</span>
@@ -69,18 +70,18 @@ const Navbar = () => {
             <Link
               href="https://github.com/StaticMania/keep-react"
               target="_blank"
-              className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50">
+              className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50 dark:bg-metal-800">
               <Image src="/images/icon/github.svg" height={22} width={22} alt="github" />
             </Link>
             <Link
               href="https://discord.gg/fSxDJyvJmr"
               target="_blank"
-              className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50">
+              className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50 dark:bg-metal-800">
               <Image src="/images/icon/discord.svg" height={22} width={22} alt="discord" />
             </Link>
             <Link
-              href="/docs/getting-started/Introduction"
-              className="rounded-lg bg-metal-900 px-4 py-2.5 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800">
+              href="/docs/getting-started/introduction"
+              className="rounded-lg bg-metal-900 px-4 py-2.5 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-metal-800">
               get started
             </Link>
           </div>
@@ -99,19 +100,19 @@ const Navbar = () => {
 
             <button
               onClick={openModal}
-              className="flex rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50 sm:hidden">
+              className="flex rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50 dark:bg-metal-800 sm:hidden">
               <MagnifyingGlass size={20} />
             </button>
             <Link
               href="https://github.com/StaticMania/keep-react"
               target="_blank"
-              className="rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50">
+              className="rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50 dark:bg-metal-800">
               <Image src="/images/icon/github.svg" height={20} width={20} alt="github" />
             </Link>
             <Link
               href="https://discord.gg/xTf6w2nm9Z"
               target="_blank"
-              className="rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50">
+              className="rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50 dark:bg-metal-800">
               <Image src="/images/icon/discord.svg" height={20} width={20} alt="github" />
             </Link>
             <button onClick={() => setActive(!active)}>
@@ -140,9 +141,9 @@ const Navbar = () => {
                     </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <Typography variant="ul" className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
+                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {navbarRoutes.map((route) => (
-                        <Typography variant="li" key={route.id}>
+                        <li key={route.id}>
                           <Link
                             className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
@@ -150,9 +151,9 @@ const Navbar = () => {
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </Typography>
+                        </li>
                       ))}
-                    </Typography>
+                    </ul>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
@@ -164,9 +165,9 @@ const Navbar = () => {
                     </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <Typography variant="ul" className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
+                    <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {gettingStartedRoutes.map((route) => (
-                        <Typography variant="li" key={route.id}>
+                        <li key={route.id}>
                           <Link
                             className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
@@ -174,9 +175,9 @@ const Navbar = () => {
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </Typography>
+                        </li>
                       ))}
-                    </Typography>
+                    </ul>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>
@@ -188,9 +189,9 @@ const Navbar = () => {
                     </Accordion.Title>
                   </Accordion.Container>
                   <Accordion.Content className="p-0">
-                    <Typography variant="ul" className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
+                    <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
                       {routes.map((route) => (
-                        <Typography variant="li" key={route.id}>
+                        <li key={route.id}>
                           <Link
                             className={`-ml-px border-l border-l-transparent pl-3 text-body-5 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 ${
                               IsActive(route.href) ? 'border-l !border-primary-500 !text-primary-500' : ''
@@ -198,9 +199,9 @@ const Navbar = () => {
                             href={route.href}>
                             {route.name}
                           </Link>
-                        </Typography>
+                        </li>
                       ))}
-                    </Typography>
+                    </ul>
                   </Accordion.Content>
                 </Accordion.Panel>
               </Accordion>

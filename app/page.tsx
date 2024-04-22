@@ -1,4 +1,3 @@
-'use client'
 import Community from './components/Community'
 import ComponentUI from './components/ComponentUI'
 import Faq from './components/Faq'

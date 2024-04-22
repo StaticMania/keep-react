@@ -3,9 +3,11 @@ import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import { ThemeProvider } from './components/ThemeProvider'
 import TopProgressBar from './components/TopProgressBar'
 import './docs.css'
 import './globals.css'
+import { ToastWrapper } from './src'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -18,11 +20,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className={inter.className}>
-        <Navbar />
-        <main className="relative pt-20">{children}</main>
-        <Footer />
-        <TopProgressBar />
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ToastWrapper />
+          <Navbar />
+          <main className="relative pt-20">{children}</main>
+          <Footer />
+          <TopProgressBar />
+        </ThemeProvider>
       </body>
     </html>
   )

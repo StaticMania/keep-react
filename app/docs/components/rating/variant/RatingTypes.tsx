@@ -1,27 +1,56 @@
 'use client'
+import { Star } from 'phosphor-react'
 import { Rating } from '../../../../src'
 
 const RatingTypes = () => {
   return (
-    <Rating size={30} className="space-x-1">
-      <Rating.Star starType="full" filledType="fill" />
-      <Rating.Star starType="half" filledType="fill" />
+    <Rating>
+      <Rating.Star value={1}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={2}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={3}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={4}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={5}>
+        <Star size={20} />
+      </Rating.Star>
     </Rating>
   )
 }
 
 const RatingTypesCode = `
 'use client'
+import { Star } from 'phosphor-react'
 import { Rating } from 'keep-react'
 
 export const RatingComponent = () => {
   return (
-    <Rating size={30} className="space-x-1">
-      <Rating.Star starType="full" filledType="fill" />
-      <Rating.Star starType="half" filledType="fill" />
+    <Rating>
+      <Rating.Star value={1}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={2}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={3}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={4}>
+        <Star size={20} />
+      </Rating.Star>
+      <Rating.Star value={5}>
+        <Star size={20} />
+      </Rating.Star>
     </Rating>
   )
 }
+
 `
 
 export { RatingTypes, RatingTypesCode }

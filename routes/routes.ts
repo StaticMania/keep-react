@@ -17,6 +17,7 @@ import {
   Option,
   PictureInPicture,
   RadioButton,
+  Sidebar,
   SlidersHorizontal,
   User,
   Warning,
@@ -32,6 +33,7 @@ export interface routerPath {
   deprecate?: boolean
   redirect?: boolean
   folderName?: string
+  target?: string
   Icon?: ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>
 }
 
@@ -170,6 +172,15 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
     Icon: Option,
+  },
+  {
+    id: generatedID(),
+    name: 'Drawer',
+    folderName: 'Drawer',
+    href: '/docs/components/drawer',
+    tag: false,
+    deprecate: false,
+    Icon: Sidebar,
   },
   {
     id: generatedID(),
@@ -336,6 +347,14 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
   },
+  {
+    id: generatedID(),
+    name: 'Toast',
+    folderName: 'Toast',
+    href: '/docs/components/toast',
+    tag: false,
+    deprecate: false,
+  },
 
   {
     id: generatedID(),
@@ -383,12 +402,73 @@ export const gettingStartedRoutes: routerPath[] = [
   {
     id: generatedID(),
     name: 'Introduction',
-    href: '/docs/getting-started/Introduction',
+    href: '/docs/getting-started/introduction',
   },
   {
     id: generatedID(),
     name: 'Typography',
-    href: '/docs/getting-started/Typography',
+    href: '/docs/getting-started/typography',
+  },
+  {
+    id: generatedID(),
+    name: 'Colors',
+    href: '/docs/getting-started/colors',
+  },
+]
+
+export const quickAccessRoute: routerPath[] = [
+  {
+    id: generatedID(),
+    name: 'Installation',
+    href: '/docs/getting-started/introduction',
+    target: '_self',
+  },
+  {
+    id: generatedID(),
+    name: 'Figma',
+    href: 'https://keepdesign.io/',
+    target: '_blank',
+  },
+  {
+    id: generatedID(),
+    name: 'Typography',
+    href: '/docs/getting-started/typography',
+    target: '_self',
+  },
+  {
+    id: generatedID(),
+    name: 'Colors',
+    href: '/docs/getting-started/colors',
+    target: '_self',
+  },
+  {
+    id: generatedID(),
+    name: 'Layout',
+    href: '/docs/layout/column',
+    target: '_self',
+  },
+]
+
+export const layoutRoutes: routerPath[] = [
+  {
+    id: generatedID(),
+    name: 'Container',
+    href: '/docs/layout/container',
+  },
+  {
+    id: generatedID(),
+    name: 'Column',
+    href: '/docs/layout/column',
+  },
+  {
+    id: generatedID(),
+    name: 'Flex',
+    href: '/docs/layout/flex',
+  },
+  {
+    id: generatedID(),
+    name: 'Grid',
+    href: '/docs/layout/grid',
   },
 ]
 
@@ -401,8 +481,14 @@ export const navbarRoutes: routerPath[] = [
   },
   {
     id: generatedID(),
-    href: '/docs/getting-started/Introduction',
+    href: '/docs/getting-started/introduction',
     name: 'Documentation',
+    redirect: false,
+  },
+  {
+    id: generatedID(),
+    href: '/blog',
+    name: 'Blog',
     redirect: false,
   },
 ]

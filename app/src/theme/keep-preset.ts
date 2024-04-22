@@ -154,9 +154,6 @@ module.exports = {
           },
         ],
       },
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-      },
       boxShadow: {
         small: '0px 1px 2px rgba(45, 54, 67, 0.05)',
         default: '0px 2px 4px rgba(45, 54, 67, 0.08), 0px 1px 2px rgba(45, 54, 67, 0.04)',
@@ -172,9 +169,29 @@ module.exports = {
             transform: 'scale(1)',
           },
         },
+        'slide-up': {
+          '0%': { opacity: '0', transform: 'translateY(100px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'slide-down': {
+          '0%': { opacity: '0', transform: 'translateY(-100px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'slide-left': {
+          '0%': { opacity: '0', transform: 'translateX(-100px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'slide-right': {
+          '0%': { opacity: '0', transform: 'translateX(100px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
       },
       animation: {
         'keep-bounce': 'bounce-open 0.1s',
+        'keep-slide-up': 'slide-up 0.2s',
+        'keep-slide-down': 'slide-down 0.2s',
+        'keep-slide-left': 'slide-left 0.2s',
+        'keep-slide-right': 'slide-right 0.2s',
       },
       content: {
         img: 'url("/images/avatar/verify.svg")',

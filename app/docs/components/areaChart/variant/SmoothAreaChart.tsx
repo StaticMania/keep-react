@@ -10,8 +10,8 @@ const SmoothAreaChart = () => {
       chartType="natural"
       secondaryDataKey="sell"
       showTooltip={true}
-      showXaxis={true}
-      showYaxis={true}
+      showXAxis={true}
+      showYAxis={true}
       showGridLine={true}
     />
   )
@@ -81,12 +81,12 @@ export const AreaChartComponent = () => {
       chartType="natural"
       secondaryDataKey="sell"
       showTooltip={true}
-      showXaxis={true}
-      showYaxis={true}
+      showXAxis={true}
+      showYAxis={true}
       showGridLine={true}
     />
-  );
-};
+  )
+}
 `
 
 export { SmoothAreaChart, SmoothAreaChartCode }

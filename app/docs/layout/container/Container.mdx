@@ -1,0 +1,35 @@
+import { ContainerContent } from './Content'
+import { ContainerCenter, ContainerHorizontalPadding, ContainerBreakPointPadding } from './ContainerData'
+import HighlightCode from '../../../components/HighlightCode'
+
+## Table of Contents
+
+This component helps you control the width of an element based on the screen size.
+
+## Container Breakpoints
+
+The `container` class sets the maximum width of an element to match the minimum width of the current screen size. This is useful if you want to design for specific screen sizes instead of a fully flexible layout.
+
+<ContainerContent />
+
+## Centering Container
+
+To automatically center containers, you can enable the `center` option as `true` in your `tailwind.config.js` file:
+
+<HighlightCode code={ContainerCenter} />
+
+## Horizontal padding
+
+You can add horizontal padding to containers by setting the `padding` option in your `tailwind.config.js` file:
+
+<HighlightCode code={ContainerHorizontalPadding} />
+
+## Breakpoints padding
+
+If you need different padding for each screen size, you can specify a default value and override it for specific breakpoints using an object:
+
+<HighlightCode code={ContainerBreakPointPadding} />
+
+## Reference
+
+If you want to know more about container class then you can read the documentation of tailwind css [container](https://tailwindcss.com/docs/container).

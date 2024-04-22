@@ -60,7 +60,7 @@ const nextJsInstall = `npx create-next-app@latest`
 const NextJsQnA = () => {
   return (
     <div className="my-5">
-      <ul className="-space-y-0 rounded-md bg-metal-50 px-4 py-3 text-body-5 text-metal-700">
+      <ul className="-space-y-0 rounded-md bg-metal-50 px-4 py-3 text-body-5 text-metal-700 dark:bg-metal-900 dark:text-white">
         <li>Would you like to use Tailwind CSS? Yes</li>
       </ul>
     </div>

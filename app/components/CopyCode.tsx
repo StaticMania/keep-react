@@ -1,4 +1,5 @@
 'use client'
+import { useTheme } from 'next-themes'
 import { Check, Clipboard } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -7,6 +8,7 @@ import useCopy from '../../hooks/useCopy'
 import { Skeleton } from '../src'
 
 const CopyCode = ({ code }: { code: string }) => {
+  const { theme } = useTheme()
   const { copy, copyToClipboard } = useCopy()
   const [isClient, setIsClient] = useState(false)
 
@@ -26,8 +28,8 @@ const CopyCode = ({ code }: { code: string }) => {
           language="javascript"
           style={coldarkDark}
           customStyle={{
-            borderRadius: '8px',
-            backgroundColor: '#1C222B',
+            borderRadius: '12px',
+            backgroundColor: theme === 'dark' ? '#2D3643' : '#1C222B',
           }}>
           {code.trim()}
         </SyntaxHighlighter>
