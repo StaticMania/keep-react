@@ -19,34 +19,28 @@ const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400'] })
 const ComponentApi: FC<ComponentProps> = ({ data }) => {
   return (
     <div className={spaceMono.className + 'mx-auto w-full overflow-auto'}>
-      <table className="whitespace-no-wrap z-50 mt-10 min-w-max table-auto overflow-hidden rounded-lg bg-white text-left dark:bg-metal-800 md:w-full lg:min-w-min">
+      <table className="whitespace-no-wrap z-50 mt-10 min-w-max table-auto overflow-hidden rounded-lg bg-white text-left md:w-full lg:min-w-min">
         <thead>
           <tr>
-            <th className="rounded-bl rounded-tl bg-metal-50 px-4  py-3 text-body-4 font-medium text-metal-900 dark:bg-metal-900 dark:text-white">
+            <th className="rounded-bl rounded-tl bg-metal-50 px-4  py-3 text-body-4 font-medium text-metal-900">
               Property
             </th>
-            <th className="bg-metal-50 px-4 py-3 text-body-4 font-medium text-metal-900 dark:bg-metal-900 dark:text-white">
-              Description
-            </th>
-            <th className="bg-metal-50 px-4  py-3 text-body-4 font-medium text-metal-900 dark:bg-metal-900 dark:text-white">
-              Type
-            </th>
-            <th className="rounded-br  bg-metal-50 px-4 py-3 text-body-4 font-medium text-metal-900 dark:bg-metal-900 dark:text-white">
-              Default
-            </th>
+            <th className="bg-metal-50 px-4 py-3 text-body-4 font-medium text-metal-900">Description</th>
+            <th className="bg-metal-50 px-4  py-3 text-body-4 font-medium text-metal-900">Type</th>
+            <th className="rounded-br  bg-metal-50 px-4 py-3 text-body-4 font-medium text-metal-900">Default</th>
           </tr>
         </thead>
         <tbody>
           {data?.map((item) => {
             return (
               <tr key={item.id}>
-                <td className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-black dark:border-metal-600 dark:bg-metal-800 dark:text-white">
+                <td className="border-t border-metal-100 px-4 py-3 text-body-4 !font-medium text-black">
                   {item.propsName}
                 </td>
-                <td className="border-t border-metal-100 px-4 py-3 text-body-4 text-metal-400 dark:border-metal-600 dark:bg-metal-800 dark:text-white">
+                <td className="border-t border-metal-100 px-4 py-3 text-body-4 text-metal-400">
                   {item.propsDescription}
                 </td>
-                <td className="border-t border-metal-100 px-4 py-3 text-body-4 text-metal-400 dark:border-metal-600 dark:bg-metal-800 dark:text-white">
+                <td className="border-t border-metal-100 px-4 py-3 text-body-4 text-metal-400">
                   {typeof item.propsType === 'string'
                     ? item.propsType
                     : item?.propsType?.map((prop) => (
@@ -55,7 +49,7 @@ const ComponentApi: FC<ComponentProps> = ({ data }) => {
                         </pre>
                       ))}
                 </td>
-                <td className="border-t border-metal-100 px-4 py-3 text-body-4 text-metal-400 dark:border-metal-600 dark:bg-metal-800 dark:text-white">
+                <td className="border-t border-metal-100 px-4 py-3 text-body-4 text-metal-400">
                   {item.default ? item.default : 'None'}
                 </td>
               </tr>

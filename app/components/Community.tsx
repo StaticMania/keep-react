@@ -36,10 +36,8 @@ const Community = () => {
     <section className="community py-20">
       <div className="mx-auto max-w-7xl px-6 py-6 2xl:px-0">
         <div className="mb-12 text-center">
-          <h4 className="mb-1 text-body-1 !font-semibold text-black dark:text-white lg:text-heading-5">
-            Join The Community
-          </h4>
-          <p className="mx-auto max-w-sm text-body-4 font-normal text-metal-600 dark:text-metal-300 md:text-body-3">
+          <h4 className="mb-1 text-body-1 !font-semibold text-black lg:text-heading-5">Join The Community</h4>
+          <p className="mx-auto max-w-sm text-body-4 font-normal text-metal-600 md:text-body-3">
             Become a member of a community of developers by supporting Keep React
           </p>
         </div>

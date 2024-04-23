@@ -1,19 +1,19 @@
 #mainContent > h2 {
-  @apply border-b border-b-metal-200 pb-2 text-body-2 font-semibold text-metal-900 dark:border-b-metal-600 dark:text-white;
+  @apply border-b border-b-metal-200 pb-2 text-body-2 font-semibold text-metal-900;
 }
 #mainContent > p {
-  @apply mt-4 text-body-3 font-normal text-metal-600 dark:text-metal-300;
+  @apply mt-4 text-body-3 font-normal text-metal-600;
 }
 
 #mainContent > p a {
   @apply text-primary-600 underline;
 }
 #mainContent > ul li {
-  @apply mb-3 mt-4 text-body-4 font-normal text-metal-600 dark:text-metal-300;
+  @apply mb-3 mt-4 text-body-4 font-normal text-metal-600;
 }
 
 #mainContent code {
-  @apply rounded  bg-metal-50 px-2 py-1 dark:bg-metal-800;
+  @apply rounded  bg-metal-50 px-2 py-1;
 }
 
 #mainContent pre > code {
@@ -56,11 +56,11 @@
 }
 
 #visible-table-of-contents li {
-  @apply my-2 -ml-px border-l border-l-transparent pl-3 text-body-4 text-metal-500 hover:border-l-metal-900 hover:text-metal-900 active:text-metal-900 dark:text-metal-600 dark:hover:border-l-white;
+  @apply my-2 -ml-px border-l border-l-transparent pl-3 text-body-4 text-metal-500 hover:border-l-metal-900 hover:text-metal-900 active:text-metal-900;
 }
 
 #visible-table-of-contents li:has(.active-link) {
-  @apply border-l-metal-900 text-metal-900 transition-colors duration-300 hover:text-metal-900  active:text-metal-900 dark:border-l-white dark:text-white;
+  @apply border-l-metal-900 text-metal-900 transition-colors duration-300 hover:text-metal-900  active:text-metal-900;
 }
 
 #componentListSidebar::-webkit-scrollbar {
@@ -95,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .docs-page {
-  @apply fixed left-0 right-0 top-24 -z-0 mx-auto max-w-[1240px] rounded-2xl bg-gradient-to-t from-primary-25 to-white dark:from-metal-900 dark:to-metal-800/50 xl:!h-2/4  2xl:top-40 2xl:!h-3/4 2xl:max-w-[1560px] 4k:max-w-[2000px];
+  @apply fixed left-0 right-0 top-24 -z-0 mx-auto max-w-[1240px] rounded-2xl bg-gradient-to-t from-primary-25 to-white xl:!h-2/4  2xl:top-40 2xl:!h-3/4 2xl:max-w-[1560px] 4k:max-w-[2000px];
 }
 
 /* Blog Post */

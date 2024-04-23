@@ -23,33 +23,29 @@ const Hero = () => {
                   className="h-[40px] w-[200px] lg:h-[54px] lg:w-[250px]"
                 />
               </Link>
-              <h1 className="mt-3 max-w-xl text-heading-6 !font-semibold text-metal-900 dark:text-white md:text-heading-3">
+              <h1 className="mt-3 max-w-xl text-heading-6 !font-semibold text-metal-900 md:text-heading-3">
                 <span className="block">Supercharge your web</span>
                 <span className="block">development with</span>
                 <span className="hero-text block">Keep React</span>
               </h1>
-              <p className="mb-7 mt-2 w-full text-body-4 font-normal text-metal-600 dark:text-metal-300 md:max-w-[500px] lg:max-w-[526px] lg:text-body-3">
+              <p className="mb-7 mt-2 w-full text-body-4 font-normal text-metal-600 md:max-w-[500px] lg:max-w-[526px] lg:text-body-3">
                 Elevate your web projects with Keep React&apos;s 40+ customizable components. Access open-source
                 resources for efficient development and bring your ideas to life with ease.
               </p>
               <div className="flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-5">
-                <div className="inline-flex w-[270px] items-center justify-between divide-x-2 divide-metal-100 rounded-lg border border-metal-200 bg-white px-3.5 py-3 dark:bg-metal-800">
-                  <span className="text-body-4 font-normal text-metal-500 dark:text-metal-300">
-                    npm install keep-react
-                  </span>
+                <div className="inline-flex w-[270px] items-center justify-between divide-x-2 divide-metal-100 rounded-lg border border-metal-200 bg-white px-3.5 py-3">
+                  <span className="text-body-4 font-normal text-metal-500">npm install keep-react</span>
                   <button className="pl-2" onClick={() => copyToClipboard('npm install keep-react')}>
                     {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
                   </button>
                 </div>
                 <Link
                   href="/docs/getting-started/introduction"
-                  className="rounded-lg bg-metal-900 px-4 py-3 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-metal-800">
+                  className="rounded-lg bg-metal-900 px-4 py-3 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800">
                   Get Started
                 </Link>
               </div>
-              <p className="mt-2 text-body-4 font-normal text-metal-600 dark:text-metal-300">
-                ⭐ Got 1.2k stars on Github Repository
-              </p>
+              <p className="mt-2 text-body-4 font-normal text-metal-600">⭐ Got 1.2k stars on Github Repository</p>
             </div>
           </div>
           <div className="w-full lg:col-span-1">

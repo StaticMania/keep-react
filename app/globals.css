@@ -6,7 +6,7 @@ html {
 
 body {
   font-family: var(--font-inter), sans-serif;
-  @apply bg-primary-25 dark:bg-metal-900;
+  @apply bg-primary-25;
 }
 
 .hero-text {
@@ -43,10 +43,10 @@ body {
   @apply w-2.5;
 }
 #search::-webkit-scrollbar-track {
-  @apply bg-metal-25 dark:bg-metal-800;
+  @apply bg-metal-25;
 }
 #search::-webkit-scrollbar-thumb {
-  @apply rounded-full bg-metal-100 dark:bg-metal-200;
+  @apply rounded-full bg-metal-100;
 }
 
 main::-webkit-scrollbar {

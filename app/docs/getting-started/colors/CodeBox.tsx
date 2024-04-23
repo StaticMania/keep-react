@@ -26,8 +26,8 @@ const CodeBox: FC<CodeBoxProps> = ({ color, id, code }) => {
         </span>
       </button>
       <div className="mt-1 text-left">
-        <p className="text-[10px] font-medium text-metal-600 dark:text-metal-300">{id}</p>
-        <p className="text-[10px] font-medium text-metal-600 dark:text-metal-300">{code}</p>
+        <p className="text-[10px] font-medium text-metal-600">{id}</p>
+        <p className="text-[10px] font-medium text-metal-600">{code}</p>
       </div>
     </div>
   )
