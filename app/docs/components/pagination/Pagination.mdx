@@ -1,7 +1,7 @@
 import { DefaultPagination, DefaultPaginationCode } from './variant/DefaultPagination'
 import { PaginationInput, PaginationInputCode } from './variant/PaginationInput'
 import { PaginationShape, PaginationShapeCode } from './variant/PaginationShape'
-import { PaginationNavigator, PaginationNavigatorCode } from './variant/PaginationNavigator'
+import { PaginationNavigatorComponent, PaginationNavigatorCode } from './variant/PaginationNavigator'
 import { PaginationNavigatorText, PaginationNavigatorTextCode } from './variant/PaginationNavigatorText'
 import { itemApiData, navigatorApiData, paginationApiData } from './PaginationApi'
 import CodePreview from '../../../components/CodePreview'
@@ -32,7 +32,7 @@ You can customize the shape of pagination items using the `shape` prop. Availabl
 Enhance the navigational controls with icons to make them more visually appealing and intuitive.
 
 <CodePreview github="Pagination" code={PaginationNavigatorCode}>
-  <PaginationNavigator />
+  <PaginationNavigatorComponent />
 </CodePreview>
 
 ## Navigator With Text

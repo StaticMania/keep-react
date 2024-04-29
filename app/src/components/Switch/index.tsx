@@ -6,71 +6,15 @@ import { cn } from '../../helpers/cn'
 import { excludeClassName } from '../../helpers/exclude'
 import { ToggleSizes, switchTheme } from './theme'
 
-/**
- * Props for the Toggle component.
- * @interface ToggleProps
- */
 export interface ToggleProps {
-  /**
-   * The label to be displayed alongside the toggle.
-   * @type {ReactNode}
-   * @default 'Toggle'
-   */
   label?: ReactNode
-
-  /**
-   * Determines whether to display an icon alongside the toggle.
-   * @type {boolean}
-   * @default false
-   */
   withIcon?: boolean
-
-  /**
-   * Determines whether the toggle is disabled.
-   * @type {boolean}
-   * @default false
-   */
   disabled?: boolean
-
-  /**
-   * The size of the toggle.
-   * @type {keyof ToggleSizes}
-   * @default 'sm'
-   */
   size?: keyof ToggleSizes
-
-  /**
-   * The background color of the toggle.
-   * @type {'primary' | 'slate'}
-   * @default 'primary'
-   */
   bgColor?: 'primary' | 'slate'
-
-  /**
-   * Additional CSS class name for the toggle component.
-   * @type {string}
-   * @default ''
-   */
   className?: string
-
-  /**
-   * Additional CSS styles for the toggle circle.
-   * @type {string}
-   * @default ''
-   */
   circleStyle?: string
-
-  /**
-   * Additional CSS styles for the toggle label.
-   * @type {string}
-   * @default ''
-   */
   labelStyle?: string
-
-  /**
-   * Toggle onChange event handler
-   * @type {function}
-   */
   onChange?: Dispatch<SetStateAction<boolean>>
 }
 
@@ -148,4 +92,5 @@ const ToggleComponent: FC<ToggleProps> = ({
 }
 
 ToggleComponent.displayName = 'Toggle'
+
 export const Toggle = ToggleComponent

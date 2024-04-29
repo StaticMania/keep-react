@@ -1,15 +1,26 @@
 'use client'
 import { Envelope, FacebookLogo, GoogleLogo, Lock } from 'phosphor-react'
-import { Button, Card, Divider, Icon, Input, Label } from '../../../../src'
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Divider,
+  Input,
+  InputIcon,
+  Label,
+} from '../../../../src'
 
 const RegisterCard = () => {
   return (
     <Card className="max-w-sm">
-      <Card.Content className="space-y-3">
-        <Card.Header>
-          <Card.Title>Create an account</Card.Title>
-          <Card.Description>If you don&apos;t have any account then just click here</Card.Description>
-        </Card.Header>
+      <CardContent className="space-y-3">
+        <CardHeader>
+          <CardTitle>Create an account</CardTitle>
+          <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
+        </CardHeader>
         <div className="flex items-center justify-between gap-3">
           <Button size="xs" variant="outline" color="secondary" className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
@@ -26,25 +37,25 @@ const RegisterCard = () => {
             <Label htmlFor="email">Email*</Label>
             <div className="relative">
               <Input id="email" type="email" placeholder="Enter email" className="ps-11" />
-              <Icon>
+              <InputIcon>
                 <Envelope size={19} color="#AFBACA" />
-              </Icon>
+              </InputIcon>
             </div>
           </fieldset>
           <fieldset className="space-y-1">
             <Label htmlFor="password">Password*</Label>
             <div className="relative">
               <Input id="password" placeholder="Enter password" type="password" className="ps-11" />
-              <Icon>
+              <InputIcon>
                 <Lock size={19} color="#AFBACA" />
-              </Icon>
+              </InputIcon>
             </div>
           </fieldset>
           <Button className="!mt-3 block w-full" size="xs" color="secondary" variant="outline">
             Create Account
           </Button>
         </form>
-      </Card.Content>
+      </CardContent>
     </Card>
   )
 }
@@ -52,16 +63,27 @@ const RegisterCard = () => {
 const RegisterCardCode = `
 'use client'
 import { Envelope, FacebookLogo, GoogleLogo, Lock } from 'phosphor-react'
-import { Button, Card, Divider, Icon, Input, Label } from 'keep-react'
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Divider,
+  InputIcon,
+  Input,
+  Label,
+} from 'keep-react'
 
 export const CardComponent = () => {
   return (
     <Card className="max-w-sm">
-      <Card.Content className="space-y-3">
-        <Card.Header>
-          <Card.Title>Create an account</Card.Title>
-          <Card.Description>If you don&apos;t have any account then just click here</Card.Description>
-        </Card.Header>
+      <CardContent className="space-y-3">
+        <CardHeader>
+          <CardTitle>Create an account</CardTitle>
+          <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
+        </CardHeader>
         <div className="flex items-center justify-between gap-3">
           <Button size="xs" variant="outline" color="secondary" className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
@@ -78,29 +100,28 @@ export const CardComponent = () => {
             <Label htmlFor="email">Email*</Label>
             <div className="relative">
               <Input id="email" type="email" placeholder="Enter email" className="ps-11" />
-              <Icon>
+              <InputIcon>
                 <Envelope size={19} color="#AFBACA" />
-              </Icon>
+              </InputIcon>
             </div>
           </fieldset>
           <fieldset className="space-y-1">
             <Label htmlFor="password">Password*</Label>
             <div className="relative">
               <Input id="password" placeholder="Enter password" type="password" className="ps-11" />
-              <Icon>
+              <InputIcon>
                 <Lock size={19} color="#AFBACA" />
-              </Icon>
+              </InputIcon>
             </div>
           </fieldset>
           <Button className="!mt-3 block w-full" size="xs" color="secondary" variant="outline">
             Create Account
           </Button>
         </form>
-      </Card.Content>
+      </CardContent>
     </Card>
   )
 }
-
 `
 
 export { RegisterCard, RegisterCardCode }

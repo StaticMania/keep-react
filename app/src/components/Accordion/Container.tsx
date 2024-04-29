@@ -1,5 +1,5 @@
 'use client'
-import { ButtonHTMLAttributes, FC, Ref, forwardRef } from 'react'
+import { ButtonHTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
@@ -9,7 +9,7 @@ export interface keepAccordionContainerTheme {
   open: string
 }
 
-const Container: FC<ButtonHTMLAttributes<HTMLButtonElement>> = forwardRef(
+const AccordionContainer = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLButtonElement>>(
   ({ children, className, ...otherProps }, ref: Ref<HTMLButtonElement>) => {
     const { isOpen, setIsOpen } = useAccordionContext()
     const { container } = accordionTheme
@@ -26,6 +26,6 @@ const Container: FC<ButtonHTMLAttributes<HTMLButtonElement>> = forwardRef(
   },
 )
 
-Container.displayName = 'Accordion.Container'
+AccordionContainer.displayName = 'Accordion.Container'
 
-export { Container }
+export { AccordionContainer }

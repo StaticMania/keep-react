@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { File, MagnifyingGlass, RadioButton } from 'phosphor-react'
 import { ChangeEvent, Dispatch, FC, SetStateAction, useCallback, useEffect, useState, useTransition } from 'react'
 import { quickAccessRoute, routerPath, routes } from '~/routes/routes'
-import { Icon, Input, Modal } from '../src'
+import { Input, InputIcon, Modal, ModalBody, ModalContent } from '../src'
 
 interface ModalProps {
   isOpen: boolean
@@ -61,7 +61,7 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={closeModal}>
-      <Modal.Body className="block bg-white p-8 lg:w-[35rem]">
+      <ModalBody className="block bg-white p-8 lg:w-[35rem]">
         <fieldset className="relative">
           <Input
             value={query}
@@ -70,11 +70,11 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
             placeholder="Search Component"
             className="ps-11"
           />
-          <Icon>
+          <InputIcon>
             <MagnifyingGlass size={19} color="#AFBACA" />
-          </Icon>
+          </InputIcon>
         </fieldset>
-        <Modal.Content id="search" className="mt-2 max-h-[300px] overflow-y-auto">
+        <ModalContent id="search" className="mt-2 max-h-[300px] overflow-y-auto">
           <div className={query.length ? 'hidden' : 'block'}>
             <p className="my-2 text-body-4 font-normal text-metal-400">Quick Access</p>
             <ul>
@@ -112,8 +112,8 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
               <p className="text-left text-body-4 font-normal text-metal-600">No results found.</p>
             )}
           </div>
-        </Modal.Content>
-      </Modal.Body>
+        </ModalContent>
+      </ModalBody>
     </Modal>
   )
 }

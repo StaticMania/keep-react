@@ -1,4 +1,3 @@
-'use client'
 import { Toggle } from '../../../../src'
 
 const SwitchWithIcon = () => {
@@ -6,8 +5,7 @@ const SwitchWithIcon = () => {
 }
 
 const SwitchWithIconCode = `
-"use client";
-import { Toggle } from "keep-react";
+import { Toggle } from "keep-react"
 
 export const SwitchComponent = () => {
   const [toggle, setToggle] = useState(false)

@@ -1,50 +1,106 @@
-'use client'
-import { Steps } from '../../../../src'
+import {
+  StepContent,
+  StepDescription,
+  StepItem,
+  StepPoint,
+  StepPointLine,
+  StepPointText,
+  StepTitle,
+  Steps,
+} from '../../../../src'
 
 const DefaultStep = () => {
   return (
-    <Steps>
-      <Steps.Item
-        completed
-        title="Visit Keep Design Site"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      />
-      <Steps.Item
-        active
-        title="Visit Keep Design Site"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      />
-      <Steps.Item
-        title="Visit Keep Design Site"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      />
-    </Steps>
+    <div className="p-6">
+      <Steps>
+        <StepItem active>
+          <StepPoint>
+            <StepPointText />
+            <StepPointLine />
+          </StepPoint>
+          <StepContent>
+            <StepTitle>Visit Keep Design Site</StepTitle>
+            <StepDescription>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, accusamus?
+            </StepDescription>
+          </StepContent>
+        </StepItem>
+        <StepItem>
+          <StepPoint>
+            <StepPointText />
+            <StepPointLine />
+          </StepPoint>
+          <StepContent>
+            <StepTitle>Visit Keep Design Site</StepTitle>
+            <StepDescription>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, accusamus?
+            </StepDescription>
+          </StepContent>
+        </StepItem>
+        <StepItem>
+          <StepPoint>
+            <StepPointText />
+            <StepPointLine />
+          </StepPoint>
+          <StepContent>
+            <StepTitle>Visit Keep Design Site</StepTitle>
+            <StepDescription>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, accusamus?
+            </StepDescription>
+          </StepContent>
+        </StepItem>
+      </Steps>
+    </div>
   )
 }
 
 const DefaultStepCode = `
-"use client";
-import { Steps } from "keep-react";
+import {
+  StepContent,
+  StepDescription,
+  StepItem,
+  StepPoint,
+  StepPointLine,
+  StepPointText,
+  StepTitle,
+  Steps,
+} from 'keep-react'
 
 export const StepComponent = () => {
   return (
     <Steps>
-      <Steps.Item
-        completed
-        title="Visit Keep Design Site"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      />
-      <Steps.Item
-        active
-        title="Visit Keep Design Site"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      />
-      <Steps.Item
-        title="Visit Keep Design Site"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      />
+      <StepItem active>
+        <StepPoint>
+          <StepPointText />
+          <StepPointLine />
+        </StepPoint>
+        <StepContent>
+          <StepTitle>Visit Keep Design Site</StepTitle>
+          <StepDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, accusamus?</StepDescription>
+        </StepContent>
+      </StepItem>
+      <StepItem>
+        <StepPoint>
+          <StepPointText />
+          <StepPointLine />
+        </StepPoint>
+        <StepContent>
+          <StepTitle>Visit Keep Design Site</StepTitle>
+          <StepDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, accusamus?</StepDescription>
+        </StepContent>
+      </StepItem>
+      <StepItem>
+        <StepPoint>
+          <StepPointText />
+          <StepPointLine />
+        </StepPoint>
+        <StepContent>
+          <StepTitle>Visit Keep Design Site</StepTitle>
+          <StepDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, accusamus?</StepDescription>
+        </StepContent>
+      </StepItem>
     </Steps>
-  );
+  )
 }
 `
 export { DefaultStep, DefaultStepCode }

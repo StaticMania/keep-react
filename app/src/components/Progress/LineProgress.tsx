@@ -1,43 +1,36 @@
 'use client'
-import { FC, ReactNode, useEffect, useState } from 'react'
+import { HTMLAttributes, forwardRef, useEffect, useState } from 'react'
 import { cn } from '../../helpers/cn'
-import { LineText } from './LineText'
+import { ProgressContext } from './Context'
+import { LineProgressText } from './LineText'
 import { progressTheme } from './theme'
 
-interface ProgressProps {
-  children?: ReactNode
-  className?: string
+interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
   progress?: number
-  lineBg?: string
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 }
 
-export const LineProgressComponent: FC<ProgressProps> = ({
-  progress = 0,
-  size = 'md',
-  lineBg = 'bg-primary-50',
-  children,
-  className,
-}) => {
-  const [progressBar, setProgressBar] = useState(0)
-  const { line } = progressTheme
+export const LineProgressComponent = forwardRef<HTMLDivElement, ProgressProps>(
+  ({ progress = 0, size = 'md', children, className, ...props }, ref) => {
+    const [progressBar, setProgressBar] = useState(0)
+    const { line } = progressTheme
 
-  useEffect(() => {
-    const timer = setTimeout(() => setProgressBar(progress), 200)
-    return () => clearTimeout(timer)
-  }, [progress])
+    useEffect(() => {
+      const timer = setTimeout(() => setProgressBar(progress), 200)
+      return () => clearTimeout(timer)
+    }, [progress])
 
-  return (
-    <div className={line.root}>
-      <div className={cn(line.progress.base, line.size[size], lineBg)}>
-        <div className={cn(line.progress.bar, className)} style={{ width: progressBar + '%' }}></div>
+    return (
+      <div ref={ref} {...props} className={cn(line.root, className)}>
+        <ProgressContext.Provider value={{ lineProgressBar: progressBar, size }}>{children}</ProgressContext.Provider>
       </div>
-      {children && <div className={cn(line.text.base, line.text.content[size])}>{children}</div>}
-    </div>
-  )
-}
+    )
+  },
+)
 
-LineText.displayName = 'LineProgress.Text'
+LineProgressComponent.displayName = 'LineProgress'
+
 export const LineProgress = Object.assign(LineProgressComponent, {
-  Text: LineText,
+  Text: LineProgressText,
+  Bar: LineProgressText,
 })

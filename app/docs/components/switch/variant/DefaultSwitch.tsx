@@ -1,4 +1,3 @@
-'use client'
 import { Toggle } from '../../../../src'
 
 const DefaultSwitch = () => {
@@ -6,7 +5,6 @@ const DefaultSwitch = () => {
 }
 
 const DefaultSwitchCode = `
-"use client";
 import { Toggle } from "keep-react";
 
 export const SwitchComponent = () => {

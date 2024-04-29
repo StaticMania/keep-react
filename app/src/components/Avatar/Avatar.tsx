@@ -1,8 +1,8 @@
 'use client'
 import { FC, HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { Counter } from './Counter'
-import { Group } from './Group'
+import { AvatarCounter } from './Counter'
+import { AvatarGroup } from './Group'
 import { Verify } from './Verify'
 import { avatarTheme } from './theme'
 
@@ -104,8 +104,8 @@ const AvatarComponent: FC<AvatarProps> = forwardRef<HTMLDivElement, AvatarProps>
 AvatarComponent.displayName = 'Avatar'
 
 const Avatar = Object.assign(AvatarComponent, {
-  Group,
-  Counter,
+  Group: AvatarGroup,
+  Counter: AvatarCounter,
 })
 
 export { Avatar }

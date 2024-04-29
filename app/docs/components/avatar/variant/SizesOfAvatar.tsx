@@ -1,4 +1,3 @@
-'use client'
 import { Avatar } from '../../../../src'
 
 const SizesOfAvatar = () => {
@@ -14,7 +13,6 @@ const SizesOfAvatar = () => {
 }
 
 const SizesOfAvatarCode = `
-'use client'
 import { Avatar } from "keep-react"
 
 export const AvatarComponent = () => {

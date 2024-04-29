@@ -1,9 +1,8 @@
 import { DefaultBreadcrumb, DefaultBreadcrumbCode } from './variant/DefaultBreadcrumb'
-import { CustomizeBreadcrumb, CustomizeBreadcrumbCode } from './variant/CustomizeBreadcrumb'
 import { BreadcrumbWithBorder, BreadcrumbWithBorderCode } from './variant/BreadcrumbWithBorder'
 import { BreadcrumbDividerIcon, BreadcrumbDividerIconCode } from './variant/BreadcrumbDividerIcon'
 
-import { breadcrumbApiData, breadcrumbItemApiData } from './breadcrumbApi'
+import { breadcrumbApiData } from './breadcrumbApi'
 import CodePreview from '../../../components/CodePreview'
 
 import ComponentApi from '../../../components/ComponentApi'
@@ -30,18 +29,10 @@ The Breadcrumbs component includes the `borderType` prop with two possible value
 
 ## Divider Icon Type
 
-The Breadcrumbs component incorporates the `dividerIconStyle` prop with two possible values: `"slash"` and `"caret"`.
+You can use any kind of divider icon desire to your application design.
 
 <CodePreview github="Breadcrumb" code={BreadcrumbDividerIconCode}>
   <BreadcrumbDividerIcon />
-</CodePreview>
-
-## Customize Breadcrumb
-
-You can customize the breadcrumb component using the `className` props. Additionally, we provide more APIs for customizable options.
-
-<CodePreview github="Breadcrumb" code={CustomizeBreadcrumbCode}>
-  <CustomizeBreadcrumb />
 </CodePreview>
 
 ## Breadcrumb API Reference
@@ -49,9 +40,3 @@ You can customize the breadcrumb component using the `className` props. Addition
 Explore the available props for the `<Breadcrumb>` component.
 
 <ComponentApi data={breadcrumbApiData} />
-
-## Item API Reference
-
-Explore the available props for the `<Breadcrumb.Item>` component.
-
-<ComponentApi data={breadcrumbItemApiData} />

@@ -1,4 +1,4 @@
-import { keepAccordionTheme } from '.'
+import { keepAccordionTheme } from './Accordion'
 
 export const accordionTheme: keepAccordionTheme = {
   container: {

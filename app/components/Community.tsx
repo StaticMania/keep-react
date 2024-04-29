@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { ArrowLineUpRight } from 'phosphor-react'
 import { useEffect, useState } from 'react'
-import { Avatar } from '../src'
+import { Avatar, AvatarGroup } from '../src'
 
 interface Contributor {
   login: string
@@ -47,7 +47,7 @@ const Community = () => {
               <div className="my-20">
                 <div>
                   {contributors?.length ? (
-                    <Avatar.Group>
+                    <AvatarGroup>
                       {contributors?.map((user) => (
                         <Avatar
                           key={user?.id}
@@ -57,7 +57,7 @@ const Community = () => {
                           className="border-2 border-[#9686E5] p-0"
                         />
                       ))}
-                    </Avatar.Group>
+                    </AvatarGroup>
                   ) : null}
                 </div>
                 <div className="mt-3">

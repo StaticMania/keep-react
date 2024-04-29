@@ -13,7 +13,7 @@ const contentTheme = {
   },
 }
 
-const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const NotificationBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     const { isOpen, position = 'bottom-right' } = useNotificationContext()
     return (
@@ -32,6 +32,6 @@ const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Body.displayName = 'Notification.Body'
+NotificationBody.displayName = 'Notification.Body'
 
-export { Body }
+export { NotificationBody }

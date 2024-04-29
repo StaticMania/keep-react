@@ -4,7 +4,7 @@ import { cn } from '../../helpers/cn'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export const NumberInputEl = forwardRef<HTMLInputElement, InputProps>(({ className, ...props }, ref) => {
+export const NumberInputBox = forwardRef<HTMLInputElement, InputProps>(({ className, ...props }, ref) => {
   return (
     <input
       type="number"
@@ -15,4 +15,4 @@ export const NumberInputEl = forwardRef<HTMLInputElement, InputProps>(({ classNa
   )
 })
 
-NumberInputEl.displayName = 'NumberInput.Input'
+NumberInputBox.displayName = 'NumberInput.Input'

@@ -1,32 +1,32 @@
 'use client'
 import { ArchiveTray, Chat, Gear, ShoppingCart, SignIn, SquaresFour, Users } from 'phosphor-react'
-import { Sidebar } from '../../../../src'
+import { Sidebar, SidebarItem } from '../../../../src'
 
 const SidebarWithIcon = () => {
   return (
     <div className="p-2">
       <Sidebar className="max-w-max p-4">
-        <Sidebar.Item>
+        <SidebarItem>
           <SquaresFour size={24} />
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <ShoppingCart size={24} />
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <ArchiveTray size={24} />
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <Chat size={24} />
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <Gear size={24} />
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <Users size={24} />
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <SignIn size={24} />
-        </Sidebar.Item>
+        </SidebarItem>
       </Sidebar>
     </div>
   )
@@ -35,32 +35,32 @@ const SidebarWithIcon = () => {
 const SidebarWithIconCode = `
 'use client'
 import { ArchiveTray, Chat, Gear, ShoppingCart, SignIn, SquaresFour, Users } from 'phosphor-react'
-import { Sidebar } from 'keep-react'
+import { Sidebar, SidebarItem } from 'keep-react'
 
 export const SidebarComponent = () => {
   return (
     <Sidebar className="max-w-max p-4">
-      <Sidebar.Item>
+      <SidebarItem>
         <SquaresFour size={24} />
-      </Sidebar.Item>
-      <Sidebar.Item>
+      </SidebarItem>
+      <SidebarItem>
         <ShoppingCart size={24} />
-      </Sidebar.Item>
-      <Sidebar.Item>
+      </SidebarItem>
+      <SidebarItem>
         <ArchiveTray size={24} />
-      </Sidebar.Item>
-      <Sidebar.Item>
+      </SidebarItem>
+      <SidebarItem>
         <Chat size={24} />
-      </Sidebar.Item>
-      <Sidebar.Item>
+      </SidebarItem>
+      <SidebarItem>
         <Gear size={24} />
-      </Sidebar.Item>
-      <Sidebar.Item>
+      </SidebarItem>
+      <SidebarItem>
         <Users size={24} />
-      </Sidebar.Item>
-      <Sidebar.Item>
+      </SidebarItem>
+      <SidebarItem>
         <SignIn size={24} />
-      </Sidebar.Item>
+      </SidebarItem>
     </Sidebar>
   )
 }

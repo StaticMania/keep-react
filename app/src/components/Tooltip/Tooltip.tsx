@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode } from 'react'
-import { Action } from './Action'
-import { Content } from './Content'
+import { TooltipAction } from './Action'
+import { TooltipContent } from './Content'
 import { TooltipContext, TooltipOptions, useTooltip } from './Context'
 
 const TooltipComponent = ({
@@ -16,6 +16,6 @@ const TooltipComponent = ({
 }
 
 export const Tooltip = Object.assign(TooltipComponent, {
-  Action,
-  Content,
+  Action: TooltipAction,
+  Content: TooltipContent,
 })

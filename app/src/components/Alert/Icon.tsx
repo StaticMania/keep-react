@@ -1,14 +1,10 @@
 'use client'
-import { HTMLAttributes, ReactElement, ReactNode, Ref, cloneElement, forwardRef } from 'react'
+import { HTMLAttributes, ReactElement, Ref, cloneElement, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useAlertContext } from './AlertContext'
 
-export interface IconProps extends HTMLAttributes<SVGSVGElement> {
-  children?: ReactNode
-}
-
-const Icon = forwardRef<SVGSVGElement, IconProps>(
-  ({ children, className, ...otherProps }: IconProps, ref: Ref<SVGSVGElement>) => {
+const AlertIcon = forwardRef<SVGSVGElement, HTMLAttributes<SVGSVGElement>>(
+  ({ children, className, ...otherProps }, ref: Ref<SVGSVGElement>) => {
     const { color } = useAlertContext()
     const iconStyles = cn(className)
 
@@ -60,6 +56,6 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
   },
 )
 
-Icon.displayName = 'Alert.Icon'
+AlertIcon.displayName = 'Alert.Icon'
 
-export { Icon }
+export { AlertIcon }

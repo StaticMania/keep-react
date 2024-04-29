@@ -3,7 +3,7 @@ import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { alertTheme } from './theme'
 
-const Container = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const AlertContainer = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div {...props} className={cn(alertTheme.container.base, props.className)} ref={ref}>
@@ -13,6 +13,6 @@ const Container = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Container.displayName = 'Alert.Container'
+AlertContainer.displayName = 'Alert.Container'
 
-export { Container }
+export { AlertContainer }

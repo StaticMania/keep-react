@@ -1,6 +1,6 @@
 'use client'
-import { Button } from '../../../../src'
 import { ShoppingCart } from 'phosphor-react'
+import { Button } from '../../../../src'
 
 const KeepButtonShape = () => {
   return (
@@ -16,6 +16,7 @@ const KeepButtonShape = () => {
 }
 
 const KeepButtonShapeCode = `
+'use client'
 import { Button } from 'keep-react'
 import { ShoppingCart } from 'phosphor-react'
 

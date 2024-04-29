@@ -1,16 +1,16 @@
 'use client'
 import Image from 'next/image'
 import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
-import { Button, Popover } from '../../../../src'
+import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from '../../../../src'
 
 const CardPopover = () => {
   return (
     <div className="flex h-44 items-center justify-center gap-5 p-5">
       <Popover placement="left">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretLeft size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -19,21 +19,21 @@ const CardPopover = () => {
             height={300}
           />
           <div className="space-y-3 p-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
-            </Popover.Description>
+            </PopoverDescription>
             <Button size="sm" color="primary">
               Learn More
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
       <Popover placement="right">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretRight size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -42,21 +42,21 @@ const CardPopover = () => {
             height={300}
           />
           <div className="space-y-3 p-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
-            </Popover.Description>
+            </PopoverDescription>
             <Button size="sm" color="primary">
               Learn More
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
       <Popover placement="top">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretUp size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -65,21 +65,21 @@ const CardPopover = () => {
             height={300}
           />
           <div className="space-y-3 p-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
-            </Popover.Description>
+            </PopoverDescription>
             <Button size="sm" color="primary">
               Learn More
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
       <Popover placement="bottom">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretDown size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -88,15 +88,15 @@ const CardPopover = () => {
             height={300}
           />
           <div className="space-y-3 p-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
-            </Popover.Description>
+            </PopoverDescription>
             <Button size="sm" color="primary">
               Learn More
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
     </div>
   )
@@ -105,15 +105,17 @@ const CardPopover = () => {
 const CardPopoverCode = `
 'use client'
 import Image from 'next/image'
-import { Button, Popover } from 'keep-react'
+import { CaretRight } from 'phosphor-react'
+import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from 'keep-react'
+
 
 export const PopoverComponent = () => {
   return (
     <Popover placement="left">
-      <Popover.Action>
+      <PopoverTrigger>
           <CaretLeft size={20} />
-      </Popover.Action>
-      <Popover.Content className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+      </PopoverTrigger>
+      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -122,15 +124,15 @@ export const PopoverComponent = () => {
             height={300}
           />
           <div className="space-y-3 p-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
-            </Popover.Description>
+            </PopoverDescription>
             <Button size="sm" color="primary">
               Learn More
             </Button>
           </div>
-      </Popover.Content>
+      </PopoverContent>
     </Popover>
   )
 }

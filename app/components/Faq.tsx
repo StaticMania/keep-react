@@ -1,5 +1,5 @@
 'use client'
-import { Accordion } from '../src'
+import { Accordion, AccordionContainer, AccordionContent, AccordionIcon, AccordionPanel, AccordionTitle } from '../src'
 
 const Faq = () => {
   const faqs = [
@@ -50,26 +50,26 @@ const Faq = () => {
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(0, 3).map((faq) => (
-                <Accordion.Panel key={faq.id}>
-                  <Accordion.Container>
-                    <Accordion.Title className="text-body-4 md:text-body-3">{faq.question}</Accordion.Title>
-                    <Accordion.Icon />
-                  </Accordion.Container>
-                  <Accordion.Content>{faq.answer}</Accordion.Content>
-                </Accordion.Panel>
+                <AccordionPanel key={faq.id}>
+                  <AccordionContainer>
+                    <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
+                    <AccordionIcon />
+                  </AccordionContainer>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionPanel>
               ))}
             </Accordion>
           </div>
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(3).map((faq) => (
-                <Accordion.Panel key={faq.id}>
-                  <Accordion.Container>
-                    <Accordion.Title className="text-body-4 md:text-body-3">{faq.question}</Accordion.Title>
-                    <Accordion.Icon />
-                  </Accordion.Container>
-                  <Accordion.Content>{faq.answer}</Accordion.Content>
-                </Accordion.Panel>
+                <AccordionPanel key={faq.id}>
+                  <AccordionContainer>
+                    <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
+                    <AccordionIcon />
+                  </AccordionContainer>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionPanel>
               ))}
             </Accordion>
           </div>

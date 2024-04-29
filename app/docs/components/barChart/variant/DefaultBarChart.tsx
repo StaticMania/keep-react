@@ -58,7 +58,6 @@ const DefaultBarChart = () => {
 }
 
 const DefaultBarChartCode = `
-"use client";
 import { BarChart } from "keep-react";
 const BarChartData = [
   {

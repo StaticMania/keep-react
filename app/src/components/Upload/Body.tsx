@@ -4,7 +4,7 @@ import { useDropzone } from 'react-dropzone'
 import { cn } from '../../helpers/cn'
 import { useUploadContext } from './UploadContext'
 
-const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const UploadBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     const { options, horizontal } = useUploadContext()
     const { getRootProps, getInputProps } = useDropzone(options)
@@ -26,6 +26,6 @@ const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Body.displayName = 'Upload.Body'
+UploadBody.displayName = 'Upload.Body'
 
-export { Body }
+export { UploadBody }

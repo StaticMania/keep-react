@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Button, Drawer } from '../../../../src'
+import { Button, Drawer, DrawerContent } from '../../../../src'
 
 const DefaultDrawer = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -10,7 +10,7 @@ const DefaultDrawer = () => {
         Drawer
       </Button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Content className="flex items-center justify-center">
+        <DrawerContent className="flex items-center justify-center">
           <div className="mx-auto max-w-lg space-y-3 px-6 py-5 lg:px-0">
             <h1 className="text-heading-3 font-bold text-metal-900 lg:text-heading-2">Keep React</h1>
             <p className="text-body-3 font-normal text-metal-600">
@@ -21,7 +21,7 @@ const DefaultDrawer = () => {
               Explore Now
             </Button>
           </div>
-        </Drawer.Content>
+        </DrawerContent>
       </Drawer>
     </>
   )
@@ -30,7 +30,7 @@ const DefaultDrawer = () => {
 const DefaultDrawerCode = `
 'use client'
 import { useState } from 'react'
-import { Button, Drawer } from 'keep-react'
+import { Button, Drawer, DrawerContent } from 'keep-react'
 
 export const DrawerComponent = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,7 +40,7 @@ export const DrawerComponent = () => {
         Toggle Drawer
       </Button>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Drawer.Content className="flex items-center justify-center">
+        <DrawerContent className="flex items-center justify-center">
           <div className="mx-auto max-w-lg space-y-3 px-6 py-5 lg:px-0">
             <h1 className="text-heading-3 font-bold text-metal-900 lg:text-heading-2">Keep React</h1>
             <p className="text-body-3 font-normal text-metal-600">
@@ -51,7 +51,7 @@ export const DrawerComponent = () => {
               Explore Now
             </Button>
           </div>
-        </Drawer.Content>
+        </DrawerContent>
       </Drawer>
     </>
   )

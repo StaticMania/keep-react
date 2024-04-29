@@ -17,7 +17,7 @@ export interface floatingArrow extends HTMLAttributes<HTMLDivElement> {
   className?: string
 }
 
-export const Content = forwardRef<HTMLDivElement, floatingArrow>(
+export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
   (
     { children, className, width, height, tipRadius, staticOffset, fill = '#1C222B', stroke, strokeWidth, d, ...props },
     ref: Ref<HTMLDivElement>,
@@ -50,4 +50,4 @@ export const Content = forwardRef<HTMLDivElement, floatingArrow>(
   },
 )
 
-Content.displayName = 'Tooltip.Content'
+TooltipContent.displayName = 'Tooltip.Content'

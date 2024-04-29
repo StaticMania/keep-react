@@ -17,7 +17,6 @@ const AreaChartWithGridGraphLine = () => {
 }
 
 const AreaChartWithGridGraphLineCode = `
-"use client";
 import { AreaChart } from "keep-react";
 const chartData = [
   {

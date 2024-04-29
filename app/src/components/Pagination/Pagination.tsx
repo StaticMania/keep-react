@@ -2,10 +2,10 @@
 import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { PaginationContext } from './Context'
-import { GoTo } from './GoTo'
-import { Item } from './Item'
-import { List } from './List'
-import { Navigator } from './Navigator'
+import { PaginationGoTo } from './GoTo'
+import { PaginationItem } from './Item'
+import { PaginationList } from './List'
+import { PaginationNavigator } from './Navigator'
 import { paginationTheme } from './theme'
 
 interface PaginationProps extends HTMLAttributes<HTMLElement> {
@@ -24,9 +24,10 @@ const PaginationComponent = forwardRef<HTMLElement, PaginationProps>(
 )
 
 PaginationComponent.displayName = 'Pagination'
+
 export const Pagination = Object.assign(PaginationComponent, {
-  List,
-  Item,
-  Navigator,
-  GoTo,
+  List: PaginationList,
+  Item: PaginationItem,
+  Navigator: PaginationNavigator,
+  GoTo: PaginationGoTo,
 })

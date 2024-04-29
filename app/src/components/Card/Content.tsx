@@ -2,7 +2,7 @@
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-const Content = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const CardContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div {...props} className={cn('p-6', className)} ref={ref}>
@@ -12,6 +12,6 @@ const Content = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Content.displayName = 'Card.Content'
+CardContent.displayName = 'Card.Content'
 
-export { Content }
+export { CardContent }

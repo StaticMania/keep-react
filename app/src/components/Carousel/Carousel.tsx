@@ -3,14 +3,14 @@ import { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { Buttons } from './Buttons'
+import { CarouselButtons } from './Buttons'
 import { CarouselContext } from './CarouselContext'
-import { Control } from './Control'
-import { Indicators } from './Indicators'
-import { Item } from './Item'
-import { NextButton } from './NextButton'
-import { PrevButton } from './PrevButton'
-import { Slides } from './Slides'
+import { CarouselControl } from './Control'
+import { CarouselIndicators } from './Indicators'
+import { CarouselItem } from './Item'
+import { CarouselNextButton } from './NextButton'
+import { CarouselPrevButton } from './PrevButton'
+import { CarouselSlides } from './Slides'
 import { CarouselViewport } from './Viewport'
 import { carouselTheme } from './theme'
 
@@ -38,11 +38,11 @@ const CarouselComponent = forwardRef<HTMLDivElement, CarouselProps>(
 CarouselComponent.displayName = 'Carousel'
 
 export const Carousel = Object.assign(CarouselComponent, {
-  Slides,
-  Item,
-  Control,
-  Buttons,
-  PrevButton,
-  NextButton,
-  Indicators,
+  Slides: CarouselSlides,
+  Item: CarouselItem,
+  Control: CarouselControl,
+  Buttons: CarouselButtons,
+  PrevButton: CarouselPrevButton,
+  NextButton: CarouselNextButton,
+  Indicators: CarouselIndicators,
 })

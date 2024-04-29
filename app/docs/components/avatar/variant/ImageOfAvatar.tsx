@@ -1,4 +1,3 @@
-'use client'
 import { Avatar } from '../../../../src'
 
 const ImageOfAvatar = () => {
@@ -11,7 +10,6 @@ const ImageOfAvatar = () => {
 }
 
 const ImageOfAvatarCode = `
-'use client'
 import { Avatar } from "keep-react"
 
 export const AvatarComponent = () => {

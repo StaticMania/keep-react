@@ -1,29 +1,27 @@
-'use client'
-import { Button } from '../../../../src'
+import { Button, ButtonGroup } from '../../../../src'
 
 const DefaultButtonGroup = () => {
   return (
     <div className="h-20 p-4">
-      <Button.Group>
+      <ButtonGroup>
         <Button position="start">Profile</Button>
         <Button position="center">Settings</Button>
         <Button position="end">Messages</Button>
-      </Button.Group>
+      </ButtonGroup>
     </div>
   )
 }
 
 const DefaultButtonGroupCode = `
-'use client'
-import { Button } from 'keep-react'
+import { Button, ButtonGroup } from 'keep-react'
 
 export const ButtonGroupComponent = () => {
   return (
-    <Button.Group>
-        <Button position="start">Profile</Button>
-        <Button position="center">Settings</Button>
-        <Button position="end">Messages</Button>
-    </Button.Group>
+    <ButtonGroup>
+      <Button position="start">Profile</Button>
+      <Button position="center">Settings</Button>
+      <Button position="end">Messages</Button>
+    </ButtonGroup>
   )
 }
 `

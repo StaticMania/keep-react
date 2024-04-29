@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Button, Slider } from '../../../../src'
+import { Button, Slider, SliderRange } from '../../../../src'
 
 const DefaultSlider = () => {
   const [value, setValue] = useState<number | number[]>([])
@@ -14,14 +14,14 @@ const DefaultSlider = () => {
         range={true}
         onChange={(value: number | number[]) => setValue(value)}>
         {Array.isArray(value) && (
-          <Slider.Box>
+          <SliderRange>
             <Button size="sm" variant="outline">
               {value[0] ? value[0] : 100}
             </Button>
             <Button size="sm" variant="outline">
               {value[1] ? value[1] : 1000}
             </Button>
-          </Slider.Box>
+          </SliderRange>
         )}
       </Slider>
     </div>
@@ -31,7 +31,7 @@ const DefaultSlider = () => {
 const DefaultSliderCode = `
 'use client'
 import { useState } from 'react'
-import { Button, Slider } from 'keep-react'
+import { Button, Slider, SliderRange } from 'keep-react'
 
 export const SliderComponent = () => {
   const [value, setValue] = useState([])
@@ -44,14 +44,14 @@ export const SliderComponent = () => {
       range={true}
       onChange={(value) => setValue(value)}>
       {Array.isArray(value) && (
-        <Slider.Box>
+        <SliderRange>
           <Button size="sm" variant="outline">
             {value[0] ? value[0] : 100}
           </Button>
           <Button size="sm" variant="outline">
             {value[1] ? value[1] : 1000}
           </Button>
-        </Slider.Box>
+        </SliderRange>
       )}
     </Slider>
   )

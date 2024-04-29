@@ -1,1 +1,5 @@
+export { SidebarBody } from './Body'
+export { SidebarFooter } from './Footer'
+export { SidebarHeader } from './Header'
+export { SidebarItem } from './Item'
 export { Sidebar } from './Sidebar'

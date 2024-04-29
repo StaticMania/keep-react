@@ -1,24 +1,24 @@
 'use client'
 import { CaretDown, CaretLeft, CaretRight, CaretUp, Confetti } from 'phosphor-react'
-import { Button, Popover } from '../../../../src'
+import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from '../../../../src'
 
 const IconPopover = () => {
   return (
     <div className="flex h-44 items-center justify-center gap-5 p-5">
       <Popover placement="left">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretLeft size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-xs rounded-xl bg-white p-5">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
           <div className="pt-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
-            </Popover.Description>
+            </PopoverDescription>
           </div>
           <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
@@ -29,22 +29,22 @@ const IconPopover = () => {
               Next
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
       <Popover placement="right">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretRight size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-xs rounded-xl bg-white p-5">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
           <div className="pt-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
-            </Popover.Description>
+            </PopoverDescription>
           </div>
           <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
@@ -55,22 +55,22 @@ const IconPopover = () => {
               Next
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
       <Popover placement="top">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretUp size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-xs rounded-xl bg-white p-5">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
           <div className="pt-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
-            </Popover.Description>
+            </PopoverDescription>
           </div>
           <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
@@ -81,22 +81,22 @@ const IconPopover = () => {
               Next
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
       <Popover placement="bottom">
-        <Popover.Action>
+        <PopoverTrigger>
           <CaretDown size={20} />
-        </Popover.Action>
-        <Popover.Content className="z-20 max-w-xs rounded-xl bg-white p-5">
+        </PopoverTrigger>
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
           <div className="pt-4">
-            <Popover.Title>Popover title</Popover.Title>
-            <Popover.Description>
+            <PopoverHeading>Popover title</PopoverHeading>
+            <PopoverDescription>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since
-            </Popover.Description>
+            </PopoverDescription>
           </div>
           <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
@@ -107,7 +107,7 @@ const IconPopover = () => {
               Next
             </Button>
           </div>
-        </Popover.Content>
+        </PopoverContent>
       </Popover>
     </div>
   )
@@ -116,24 +116,24 @@ const IconPopover = () => {
 const IconPopoverCode = `
 'use client'
 import { CaretLeft } from 'phosphor-react'
-import { Button, Popover } from 'keep-react'
+import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from 'keep-react'
 
 export const PopoverComponent = () => {
   return (
     <Popover placement="left">
-      <Popover.Action>
+      <PopoverTrigger>
         <CaretLeft size={20} />
-      </Popover.Action>
-      <Popover.Content className="max-w-xs z-20 rounded-xl bg-white p-5">
+      </PopoverTrigger>
+      <PopoverContent className="max-w-xs z-20 rounded-xl bg-white p-5">
         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
           <Confetti size={24} color="#fff" weight="fill" />
         </div>
         <div className="pt-4">
-          <Popover.Title>Popover title</Popover.Title>
-          <Popover.Description>
+          <PopoverTitle>Popover title</PopoverTitle>
+          <PopoverDescription>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industrys standard dummy text ever since
-          </Popover.Description>
+          </PopoverDescription>
         </div>
         <p className="mt-5 text-body-4 font-normal text-metal-600">
           Step - 1 / 5
@@ -146,7 +146,7 @@ export const PopoverComponent = () => {
             Next
           </Button>
         </div>
-      </Popover.Content>
+      </PopoverContent>
     </Popover>
   )
 }`

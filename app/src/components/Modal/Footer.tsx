@@ -3,7 +3,7 @@ import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { modalTheme } from './theme'
 
-const Footer = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const ModalFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div {...props} className={cn(modalTheme.footer, className)} ref={ref}>
@@ -13,6 +13,6 @@ const Footer = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Footer.displayName = 'Modal.Footer'
+ModalFooter.displayName = 'Modal.Footer'
 
-export { Footer }
+export { ModalFooter }

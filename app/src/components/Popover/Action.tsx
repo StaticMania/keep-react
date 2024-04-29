@@ -39,3 +39,5 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
     )
   },
 )
+
+PopoverTrigger.displayName = 'Popover.Action'

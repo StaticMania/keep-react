@@ -1,5 +1,5 @@
 'use client'
-import { FC, HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
+import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { badgeTheme } from './theme'
 
@@ -14,7 +14,7 @@ interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
   disabled?: boolean
 }
 
-const Badge: FC<BadgeProps> = forwardRef<HTMLDivElement, BadgeProps>(
+const Badge = forwardRef<HTMLDivElement, BadgeProps>(
   (
     {
       size = 'md',

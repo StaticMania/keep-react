@@ -4,7 +4,7 @@ import { cn } from '../../helpers/cn'
 import { useDrawerContext } from './Context'
 import { keepDrawerTheme } from './theme'
 
-const Content = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const DrawerContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     const { position = 'bottom' } = useDrawerContext()
     return (
@@ -18,6 +18,6 @@ const Content = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Content.displayName = 'Drawer.Content'
+DrawerContent.displayName = 'Drawer.Content'
 
-export { Content }
+export { DrawerContent }

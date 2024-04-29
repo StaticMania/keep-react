@@ -1,10 +1,10 @@
 'use client'
 import { FC, ForwardedRef, HTMLAttributes, forwardRef, useState } from 'react'
 import { cn } from '../../helpers/cn'
-import { Content } from './Content'
+import { TabContent } from './Content'
 import { TabsContext } from './Context'
-import { Item } from './Item'
-import { TabsList } from './TabsList'
+import { TabItem } from './Item'
+import { TabList } from './TabsList'
 import { tabsTheme } from './theme'
 
 interface TabsProps extends HTMLAttributes<HTMLElement> {
@@ -31,7 +31,7 @@ const TabsComponent: FC<TabsProps> = forwardRef(
 TabsComponent.displayName = 'Tabs'
 
 export const Tabs = Object.assign(TabsComponent, {
-  Content,
-  Item,
-  List: TabsList,
+  Content: TabContent,
+  Item: TabItem,
+  List: TabList,
 })

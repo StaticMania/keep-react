@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom'
 import FocusLock from 'react-focus-lock'
 import { RemoveScroll } from 'react-remove-scroll'
 import { cn } from '../../helpers/cn'
-import { Content } from './Content'
+import { DrawerContent } from './Content'
 import { DrawerContext } from './Context'
 import { keepDrawerTheme } from './theme'
 
@@ -75,5 +75,5 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerProps>(
 DrawerComponent.displayName = 'Drawer'
 
 export const Drawer = Object.assign(DrawerComponent, {
-  Content,
+  Content: DrawerContent,
 })

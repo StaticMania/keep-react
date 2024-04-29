@@ -1,1 +1,6 @@
 export { Card } from './Card'
+export { CardContent } from './Content'
+export { CardDescription } from './Description'
+export { CardFooter } from './Footer'
+export { CardHeader } from './Header'
+export { CardTitle } from './Title'

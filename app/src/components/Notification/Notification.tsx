@@ -2,13 +2,13 @@
 import { HTMLAttributes, Ref, forwardRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { cn } from '../../helpers/cn'
-import { Body } from './Body'
-import { Content } from './Content'
+import { NotificationBody } from './Body'
+import { NotificationContent } from './Content'
 import { NotificationContext } from './Context'
-import { Description } from './Description'
-import { Footer } from './Footer'
-import { Header } from './Header'
-import { Title } from './Title'
+import { NotificationDescription } from './Description'
+import { NotificationFooter } from './Footer'
+import { NotificationHeader } from './Header'
+import { NotificationTitle } from './Title'
 
 export interface NotificationProps extends HTMLAttributes<HTMLDivElement> {
   isOpen?: boolean
@@ -57,12 +57,12 @@ const NotificationComponent = forwardRef<HTMLDivElement, NotificationProps>(
 NotificationComponent.displayName = 'Notification'
 
 const Notification = Object.assign(NotificationComponent, {
-  Header,
-  Description,
-  Title,
-  Content,
-  Body,
-  Footer,
+  Header: NotificationHeader,
+  Description: NotificationDescription,
+  Title: NotificationTitle,
+  Content: NotificationContent,
+  Body: NotificationBody,
+  Footer: NotificationFooter,
 })
 
 export { Notification }

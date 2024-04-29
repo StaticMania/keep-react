@@ -11,7 +11,7 @@ export interface keepAccordionPanelTheme {
   }
 }
 
-const Panel = forwardRef<
+const AccordionPanel = forwardRef<
   HTMLDivElement,
   HTMLAttributes<HTMLDivElement> & {
     [key: string]: any
@@ -30,5 +30,5 @@ const Panel = forwardRef<
   )
 })
 
-Panel.displayName = 'Accordion.Panel'
-export { Panel }
+AccordionPanel.displayName = 'Accordion.Panel'
+export { AccordionPanel }

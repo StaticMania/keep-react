@@ -1,1 +1,6 @@
-export * from './Accordion'
+export { Accordion } from './Accordion'
+export { AccordionContainer } from './Container'
+export { AccordionContent } from './Content'
+export { AccordionIcon } from './Icon'
+export { AccordionPanel } from './Panel'
+export { AccordionTitle } from './Title'

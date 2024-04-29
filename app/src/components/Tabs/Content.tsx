@@ -1,5 +1,5 @@
 'use client'
-import { FC, ForwardedRef, HTMLAttributes, forwardRef } from 'react'
+import { ForwardedRef, HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useTabsContext } from './Context'
 import { tabsTheme } from './theme'
@@ -8,8 +8,8 @@ export interface TabsContentProps extends HTMLAttributes<HTMLElement> {
   label: string
 }
 
-const Content: FC<TabsContentProps> = forwardRef(
-  ({ children, label, className, ...props }: TabsContentProps, ref: ForwardedRef<HTMLDivElement>) => {
+const TabContent = forwardRef<HTMLDivElement, TabsContentProps>(
+  ({ children, label, className, ...props }, ref: ForwardedRef<HTMLDivElement>) => {
     const { activeItem, vertical } = useTabsContext()
     const { content } = tabsTheme
 
@@ -29,6 +29,6 @@ const Content: FC<TabsContentProps> = forwardRef(
   },
 )
 
-Content.displayName = 'Tabs.Content'
+TabContent.displayName = 'Tabs.Content'
 
-export { Content }
+export { TabContent }

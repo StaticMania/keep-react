@@ -1,30 +1,51 @@
 'use client'
-import { Breadcrumb } from '../../../../src'
+import { CaretRight, HouseLine } from 'phosphor-react'
+import { Breadcrumb, BreadcrumbItem } from '../../../../src'
 
 const BreadcrumbWithBorder = () => {
   return (
     <div className="space-y-3">
       <Breadcrumb borderType="border-xy">
-        <Breadcrumb.Item>Overview</Breadcrumb.Item>
-        <Breadcrumb.Item>Pools</Breadcrumb.Item>
-        <Breadcrumb.Item>Tokens</Breadcrumb.Item>
-        <Breadcrumb.Item activeType="base">Color</Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb borderType="border-xy">
-        <Breadcrumb.Item>Overview</Breadcrumb.Item>
-        <Breadcrumb.Item>Pools</Breadcrumb.Item>
-        <Breadcrumb.Item activeType="border">Color</Breadcrumb.Item>
+        <BreadcrumbItem>
+          <HouseLine size={18} color="#455468" />
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Overview
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Pools
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Token
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Colors
+        </BreadcrumbItem>
       </Breadcrumb>
       <Breadcrumb borderType="border-y">
-        <Breadcrumb.Item>Overview</Breadcrumb.Item>
-        <Breadcrumb.Item>Pools</Breadcrumb.Item>
-        <Breadcrumb.Item>Tokens</Breadcrumb.Item>
-        <Breadcrumb.Item activeType="base">Color</Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb borderType="border-y">
-        <Breadcrumb.Item>Overview</Breadcrumb.Item>
-        <Breadcrumb.Item>Pools</Breadcrumb.Item>
-        <Breadcrumb.Item activeType="border">Color</Breadcrumb.Item>
+        <BreadcrumbItem>
+          <HouseLine size={18} color="#455468" />
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Overview
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Pools
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Token
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <CaretRight size={18} color="#455468" />
+          Colors
+        </BreadcrumbItem>
       </Breadcrumb>
     </div>
   )
@@ -32,15 +53,31 @@ const BreadcrumbWithBorder = () => {
 
 const BreadcrumbWithBorderCode = `
 'use client'
-import { Breadcrumb } from 'keep-react'
+import { CaretRight, HouseLine } from 'phosphor-react'
+import { Breadcrumb, BreadcrumbItem } from 'keep-react'
 
 export const BreadcrumbComponent = () => {
   return (
     <Breadcrumb borderType="border-xy">
-      <Breadcrumb.Item>Overview</Breadcrumb.Item>
-      <Breadcrumb.Item>Pools</Breadcrumb.Item>
-      <Breadcrumb.Item>Tokens</Breadcrumb.Item>
-      <Breadcrumb.Item activeType="base">Color</Breadcrumb.Item>
+      <BreadcrumbItem>
+        <HouseLine size={18} color="#455468" />
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Overview
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Pools
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Token
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Colors
+      </BreadcrumbItem>
     </Breadcrumb>
   )
 }

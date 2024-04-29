@@ -1,58 +1,58 @@
 'use client'
 import { CaretLeft, CaretRight, DotsThree } from 'phosphor-react'
-import { Pagination } from '../../../../src'
+import { Pagination, PaginationItem, PaginationList, PaginationNavigator } from '../../../../src'
 
 const PaginationNavigatorText = () => {
   return (
     <Pagination shape="rounded">
-      <Pagination.Navigator>
+      <PaginationNavigator>
         <CaretLeft size={18} />
         Previous
-      </Pagination.Navigator>
-      <Pagination.List>
-        <Pagination.Item>1</Pagination.Item>
-        <Pagination.Item active>2</Pagination.Item>
-        <Pagination.Item>3</Pagination.Item>
-        <Pagination.Item>4</Pagination.Item>
-        <Pagination.Item>
+      </PaginationNavigator>
+      <PaginationList>
+        <PaginationItem>1</PaginationItem>
+        <PaginationItem active>2</PaginationItem>
+        <PaginationItem>3</PaginationItem>
+        <PaginationItem>4</PaginationItem>
+        <PaginationItem>
           <DotsThree size={20} />
-        </Pagination.Item>
-        <Pagination.Item>10</Pagination.Item>
-      </Pagination.List>
-      <Pagination.Navigator>
+        </PaginationItem>
+        <PaginationItem>10</PaginationItem>
+      </PaginationList>
+      <PaginationNavigator>
         Next
         <CaretRight size={18} />
-      </Pagination.Navigator>
+      </PaginationNavigator>
     </Pagination>
   )
 }
 
 const PaginationNavigatorTextCode = `
 'use client'
-import { Pagination } from 'keep-react'
+import { Pagination, PaginationItem, PaginationList, PaginationNavigator } from 'keep-react'
 import { CaretLeft, CaretRight, DotsThree } from 'phosphor-react'
 
 export const PaginationComponent = () => {
   return (
     <Pagination shape="rounded">
-      <Pagination.Navigator>
+      <PaginationNavigator>
         <CaretLeft size={18} />
         Previous
-      </Pagination.Navigator>
-      <Pagination.List>
-        <Pagination.Item>1</Pagination.Item>
-        <Pagination.Item active>2</Pagination.Item>
-        <Pagination.Item>3</Pagination.Item>
-        <Pagination.Item>4</Pagination.Item>
-        <Pagination.Item>
+      </PaginationNavigator>
+      <PaginationList>
+        <PaginationItem>1</PaginationItem>
+        <PaginationItem active>2</PaginationItem>
+        <PaginationItem>3</PaginationItem>
+        <PaginationItem>4</PaginationItem>
+        <PaginationItem>
           <DotsThree size={20} />
-        </Pagination.Item>
-        <Pagination.Item>10</Pagination.Item>
-      </Pagination.List>
-      <Pagination.Navigator>
+        </PaginationItem>
+        <PaginationItem>10</PaginationItem>
+      </PaginationList>
+      <PaginationNavigator>
         Next
         <CaretRight size={18} />
-      </Pagination.Navigator>
+      </PaginationNavigator>
     </Pagination>
   )
 }

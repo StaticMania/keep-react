@@ -1,19 +1,18 @@
 'use client'
-import { Rating } from '../../../../src'
+import { Rating, RatingStar } from '../../../../src'
 
 const ValueFromRating = () => {
   return (
     <Rating>
       {[1, 2, 3, 4, 5].map((rating) => (
-        <Rating.Star value={rating} key={rating}></Rating.Star>
+        <RatingStar value={rating} key={rating}></RatingStar>
       ))}
     </Rating>
   )
 }
 
 const ValueFromRatingCode = `
-'use client'
-import { Rating } from 'keep-react'
+import { Rating, RatingStar } from 'keep-react'
 
 export const RatingComponent = () => {
   const handleRating = (value) => {
@@ -22,7 +21,7 @@ export const RatingComponent = () => {
   return (
     <Rating handleRating={handleRating}>
       {[1, 2, 3, 4, 5].map((rating) => (
-        <Rating.Star value={rating} key={rating}></Rating.Star>
+        <RatingStar value={rating} key={rating}></RatingStar>
       ))}
     </Rating>
   )

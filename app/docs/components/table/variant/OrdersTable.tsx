@@ -2,13 +2,23 @@
 import Image from 'next/image'
 import { CalendarBlank, Cube, CurrencyDollar, DotsNine, DotsThreeOutline, Flag, Spinner, Tag } from 'phosphor-react'
 import { OrderTableData } from '~/public/data/tableData'
-import { Badge, Button, Table } from '../../../../src'
+import {
+  Badge,
+  Button,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeadCell,
+  TableRow,
+} from '../../../../src'
 
 const OrdersTable = () => {
   return (
     <div className="scale-95">
       <Table showCheckbox={true}>
-        <Table.Caption>
+        <TableCaption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
               <p className="text-body-1 font-semibold text-metal-600">Orders</p>
@@ -28,80 +38,92 @@ const OrdersTable = () => {
               </Button>
             </div>
           </div>
-        </Table.Caption>
-        <Table.Head>
-          <Table.HeadCell className="min-w-[302px]">
+        </TableCaption>
+        <TableHead>
+          <TableHeadCell className="min-w-[302px]">
             <p className="text-body-5 font-medium text-metal-400">Order no.</p>
-          </Table.HeadCell>
-          <Table.HeadCell
+          </TableHeadCell>
+          <TableHeadCell
             className="min-w-[165px]"
             icon={<CalendarBlank size={14} color="#8897AE" />}
             iconPosition="left">
             Date
-          </Table.HeadCell>
-          <Table.HeadCell className="min-w-[124px]" icon={<Flag size={14} color="#8897AE" />} iconPosition="left">
+          </TableHeadCell>
+          <TableHeadCell className="min-w-[124px]" icon={<Flag size={14} color="#8897AE" />} iconPosition="left">
             Country
-          </Table.HeadCell>
-          <Table.HeadCell className="min-w-[152px]" icon={<Spinner size={14} color="#8897AE" />} iconPosition="left">
+          </TableHeadCell>
+          <TableHeadCell className="min-w-[152px]" icon={<Spinner size={14} color="#8897AE" />} iconPosition="left">
             State
-          </Table.HeadCell>
-          <Table.HeadCell className="min-w-[114px]" icon={<DotsNine size={14} color="#8897AE" />} iconPosition="left">
+          </TableHeadCell>
+          <TableHeadCell className="min-w-[114px]" icon={<DotsNine size={14} color="#8897AE" />} iconPosition="left">
             Quant.
-          </Table.HeadCell>
-          <Table.HeadCell
+          </TableHeadCell>
+          <TableHeadCell
             className="min-w-[138px]"
             icon={<CurrencyDollar size={14} color="#8897AE" />}
             iconPosition="left">
             Total Price
-          </Table.HeadCell>
-          <Table.HeadCell className="min-w-[150px]" icon={<Tag size={14} color="#8897AE" />} iconPosition="left">
+          </TableHeadCell>
+          <TableHeadCell className="min-w-[150px]" icon={<Tag size={14} color="#8897AE" />} iconPosition="left">
             Location
-          </Table.HeadCell>
-          <Table.HeadCell className="min-w-[100px]" />
-        </Table.Head>
-        <Table.Body className="divide-gray-25 divide-y">
+          </TableHeadCell>
+          <TableHeadCell className="min-w-[100px]" />
+        </TableHead>
+        <TableBody className="divide-gray-25 divide-y">
           {OrderTableData.map((cell) => (
-            <Table.Row key={cell.id} className="bg-white">
-              <Table.Cell>
+            <TableRow key={cell.id} className="bg-white">
+              <TableCell>
                 <p className="text-body-4 font-medium text-metal-500">{cell.orderNo}</p>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.date}</p>
                 <p className="text-body-5 font-normal text-metal-500">{cell.time}</p>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <Image src={cell.img} alt="country" height="18" width="24" />
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <div className="inline-block">
                   <Badge color="success">Delivered</Badge>
                 </div>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.quantity}</p>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <p className="text-body-5 font-medium text-metal-500">${cell.amount}</p>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <p className="text-body-5 font-medium text-metal-500">{cell.location}</p>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <Button variant="outline" size="sm" shape="circle">
                   <DotsThreeOutline size={15} />
                 </Button>
-              </Table.Cell>
-            </Table.Row>
+              </TableCell>
+            </TableRow>
           ))}
-        </Table.Body>
+        </TableBody>
       </Table>
     </div>
   )
 }
 
 const OrdersTableCode = `
-"use client";
-import { Badge, Button, Popover, Table } from "keep-react";
+'use client'
+import {
+  Avatar,
+  Badge,
+  Button,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeadCell,
+  TableRow,
+} from 'keep-react'
+
 import {
   CalendarBlank,
   Crown,
@@ -115,12 +137,12 @@ import {
   Tag,
   Trash,
 } from "phosphor-react";
-import Image from "next/image";
+
 
 export const TableComponent = () => {
   return (
     <Table showCheckbox={true}>
-      <Table.Caption>
+      <TableCaption>
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
             <p className="text-body-1 font-semibold text-metal-600">Orders</p>
@@ -140,70 +162,70 @@ export const TableComponent = () => {
             </Button>
           </div>
         </div>
-      </Table.Caption>
-      <Table.Head>
-        <Table.HeadCell className="min-w-[302px]">
+      </TableCaption>
+      <TableHead>
+        <TableHeadCell className="min-w-[302px]">
           <p className="text-body-5 font-medium text-metal-400">Order no.</p>
-        </Table.HeadCell>
-        <Table.HeadCell
+        </TableHeadCell>
+        <TableHeadCell
           className="min-w-[165px]"
           icon={<CalendarBlank size={14} color="#8897AE" />}
           iconPosition="left">
           Date
-        </Table.HeadCell>
-        <Table.HeadCell className="min-w-[124px]" icon={<Flag size={14} color="#8897AE" />} iconPosition="left">
+        </TableHeadCell>
+        <TableHeadCell className="min-w-[124px]" icon={<Flag size={14} color="#8897AE" />} iconPosition="left">
           Country
-        </Table.HeadCell>
-        <Table.HeadCell className="min-w-[152px]" icon={<Spinner size={14} color="#8897AE" />} iconPosition="left">
+        </TableHeadCell>
+        <TableHeadCell className="min-w-[152px]" icon={<Spinner size={14} color="#8897AE" />} iconPosition="left">
           State
-        </Table.HeadCell>
-        <Table.HeadCell className="min-w-[114px]" icon={<DotsNine size={14} color="#8897AE" />} iconPosition="left">
+        </TableHeadCell>
+        <TableHeadCell className="min-w-[114px]" icon={<DotsNine size={14} color="#8897AE" />} iconPosition="left">
           Quant.
-        </Table.HeadCell>
-        <Table.HeadCell
+        </TableHeadCell>
+        <TableHeadCell
           className="min-w-[138px]"
           icon={<CurrencyDollar size={14} color="#8897AE" />}
           iconPosition="left">
           Total Price
-        </Table.HeadCell>
-        <Table.HeadCell className="min-w-[150px]" icon={<Tag size={14} color="#8897AE" />} iconPosition="left">
+        </TableHeadCell>
+        <TableHeadCell className="min-w-[150px]" icon={<Tag size={14} color="#8897AE" />} iconPosition="left">
           Location
-        </Table.HeadCell>
-        <Table.HeadCell className="min-w-[100px]" />
-      </Table.Head>
-      <Table.Body className="divide-gray-25 divide-y">
-        <Table.Row className="bg-white">
-          <Table.Cell>
+        </TableHeadCell>
+        <TableHeadCell className="min-w-[100px]" />
+      </TableHead>
+      <TableBody className="divide-gray-25 divide-y">
+        <TableRow className="bg-white">
+          <TableCell>
             <p className="text-body-4 font-medium text-metal-500">DL - 19266755</p>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <p className="text-body-5 font-medium text-metal-500">Jan 19, 2022</p>
             <p className="text-body-5 font-normal text-metal-500">3:45 pm</p>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <Image src="/images/icon/country-0.svg" alt="country" height="18" width="24" />
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <div className="inline-block">
               <Badge color="success">Delivered</Badge>
             </div>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <p className="text-body-5 font-medium text-metal-500">3</p>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <p className="text-body-5 font-medium text-metal-500">$21,000</p>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <p className="text-body-5 font-medium text-metal-500">285 Great North Road, Grey Lynn.</p>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <Button variant="outline" size="sm" shape="circle">
                 <DotsThreeOutline size={15} />
             </Button>
-          </Table.Cell>
-        </Table.Row>
-      </Table.Body>
+          </TableCell>
+        </TableRow>
+      </TableBody>
     </Table>
   )
 }

@@ -3,7 +3,7 @@
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { RatingContext } from './Context'
-import { Star } from './Star'
+import { RatingStar } from './Star'
 
 interface RatingProps extends HTMLAttributes<HTMLDivElement> {
   handleRating?: (value: number | undefined) => void
@@ -20,8 +20,8 @@ export const RatingComponent = forwardRef<HTMLDivElement, RatingProps>(
 )
 
 RatingComponent.displayName = 'Rating'
-Star.displayName = 'Rating.Star'
+RatingStar.displayName = 'Rating.Star'
 
 export const Rating = Object.assign(RatingComponent, {
-  Star,
+  Star: RatingStar,
 })

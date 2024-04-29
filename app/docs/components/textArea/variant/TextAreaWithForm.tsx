@@ -1,6 +1,6 @@
 'use client'
 import { Envelope } from 'phosphor-react'
-import { Button, Icon, Input, Label, Textarea } from '../../../../src'
+import { Button, Input, InputIcon, Label, Textarea } from '../../../../src'
 
 const TextAreaWithForm = () => {
   return (
@@ -9,9 +9,9 @@ const TextAreaWithForm = () => {
         <Label htmlFor="email">Email</Label>
         <div className="relative">
           <Input id="email" placeholder="Enter email" className="ps-11" />
-          <Icon>
+          <InputIcon>
             <Envelope size={19} color="#AFBACA" />
-          </Icon>
+          </InputIcon>
         </div>
       </fieldset>
       <fieldset className="space-y-1">
@@ -28,7 +28,7 @@ const TextAreaWithForm = () => {
 const TextAreaWithFormCode = `
 'use client'
 import { Envelope } from 'phosphor-react'
-import { Button, Icon, Input, Label, Textarea } from 'keep-react'
+import { Button, InputIcon, Input, Label, Textarea } from 'keep-react'
 
 export const TextAreaComponent = () => {
   return (
@@ -37,9 +37,9 @@ export const TextAreaComponent = () => {
         <Label htmlFor="email">Email</Label>
         <div className="relative">
           <Input id="email" placeholder="Enter email" className="ps-11" />
-          <Icon>
+          <InputIcon>
             <Envelope size={19} color="#AFBACA" />
-          </Icon>
+          </InputIcon>
         </div>
       </fieldset>
       <fieldset className="space-y-1">

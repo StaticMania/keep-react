@@ -1,1 +1,7 @@
+export { NotificationBody } from './Body'
+export { NotificationContent } from './Content'
+export { NotificationDescription } from './Description'
+export { NotificationFooter } from './Footer'
+export { NotificationHeader } from './Header'
 export { Notification } from './Notification'
+export { NotificationTitle } from './Title'

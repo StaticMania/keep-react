@@ -1,12 +1,8 @@
 'use client'
-import { ButtonHTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
+import { ButtonHTMLAttributes, Ref, forwardRef } from 'react'
 
-export interface DismissProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children?: ReactNode
-}
-
-const Dismiss = forwardRef<HTMLButtonElement, DismissProps>(
-  ({ children, onClick, ...props }: DismissProps, ref: Ref<HTMLButtonElement>) => {
+const AlertDismiss = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ children, onClick, ...props }, ref: Ref<HTMLButtonElement>) => {
     return (
       <button {...props} onClick={onClick} ref={ref}>
         {children ?? (
@@ -24,5 +20,7 @@ const Dismiss = forwardRef<HTMLButtonElement, DismissProps>(
     )
   },
 )
-Dismiss.displayName = 'Alert.Dismiss'
-export { Dismiss }
+
+AlertDismiss.displayName = 'Alert.Dismiss'
+
+export { AlertDismiss }

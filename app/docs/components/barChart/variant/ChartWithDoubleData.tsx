@@ -20,7 +20,6 @@ const ChartWithDoubleData = () => {
 }
 
 const ChartWithDoubleDataCode = `
-"use client";
 import { BarChart } from "keep-react";
 const BarChartData = [
   {

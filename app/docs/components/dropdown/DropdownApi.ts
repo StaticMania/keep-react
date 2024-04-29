@@ -28,23 +28,9 @@ export const dropdownAPIData = [
   },
   {
     id: 3,
-    propsName: 'className',
-    propsType: 'string',
-    propsDescription: 'Custom class for styling the dropdown',
-    default: '',
-  },
-  {
-    id: 4,
-    propsName: 'actionClassName',
-    propsType: 'string',
-    propsDescription: 'action button Custom class for styling',
-    default: '',
-  },
-  {
-    id: 5,
-    propsName: 'action',
-    propsType: 'ReactNode',
-    propsDescription: 'Dropdown clickable item',
-    default: 'Dot Icon',
+    propsName: 'trigger',
+    propsType: ['hover', 'click', 'focus'],
+    propsDescription: 'Trigger mode for displaying the dropdown.',
+    default: 'click',
   },
 ]

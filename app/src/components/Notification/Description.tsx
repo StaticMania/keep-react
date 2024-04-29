@@ -2,11 +2,11 @@
 import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-const Description = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
+const NotificationDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
   ({ className, ...props }, ref) => (
     <p ref={ref} className={cn('text-body-4 font-normal text-metal-600', className)} {...props} />
   ),
 )
-Description.displayName = 'Notification.Description'
+NotificationDescription.displayName = 'Notification.Description'
 
-export { Description }
+export { NotificationDescription }

@@ -1,21 +1,11 @@
 'use client'
-import {
-  Children,
-  FC,
-  HTMLAttributes,
-  ReactElement,
-  Ref,
-  cloneElement,
-  forwardRef,
-  isValidElement,
-  useState,
-} from 'react'
+import { Children, HTMLAttributes, ReactElement, Ref, cloneElement, forwardRef, isValidElement, useState } from 'react'
 import { cn } from '../../helpers/cn'
-import { Container, keepAccordionContainerTheme } from './Container'
-import { Content, keepAccordionContentTheme } from './Content'
-import { Icon, keepAccordionIconTheme } from './Icon'
-import { Panel, keepAccordionPanelTheme } from './Panel'
-import { Title, keepAccordionTitleTheme } from './Title'
+import { AccordionContainer, keepAccordionContainerTheme } from './Container'
+import { AccordionContent, keepAccordionContentTheme } from './Content'
+import { AccordionIcon, keepAccordionIconTheme } from './Icon'
+import { AccordionPanel, keepAccordionPanelTheme } from './Panel'
+import { AccordionTitle, keepAccordionTitleTheme } from './Title'
 
 export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactElement<{ [key: string]: any }> | ReactElement<{ [key: string]: any }>[]
@@ -32,7 +22,7 @@ export interface keepAccordionTheme {
   title: keepAccordionTitleTheme
 }
 
-const AccordionComponent: FC<AccordionProps> = forwardRef(
+const AccordionComponent = forwardRef<HTMLDivElement, AccordionProps>(
   (
     { children, className, flush, disabled = false, openFirstPanel, ...otherProps }: AccordionProps,
     ref: Ref<HTMLDivElement>,
@@ -66,10 +56,12 @@ const AccordionComponent: FC<AccordionProps> = forwardRef(
 
 AccordionComponent.displayName = 'Accordion'
 
-export const Accordion = Object.assign(AccordionComponent, {
-  Title,
-  Content,
-  Panel,
-  Icon,
-  Container,
+const Accordion = Object.assign(AccordionComponent, {
+  Title: AccordionTitle,
+  Content: AccordionContent,
+  Panel: AccordionPanel,
+  Icon: AccordionIcon,
+  Container: AccordionContainer,
 })
+
+export { Accordion }

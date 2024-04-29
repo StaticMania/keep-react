@@ -2,10 +2,10 @@
 import { HTMLAttributes, ReactNode, forwardRef, useMemo } from 'react'
 import { DropzoneOptions } from 'react-dropzone'
 import { cn } from '../../helpers/cn'
-import { Body } from './Body'
-import { Footer } from './Footer'
-import { Icon } from './Icon'
-import { Text } from './Text'
+import { UploadBody } from './Body'
+import { UploadFooter } from './Footer'
+import { UploadIcon } from './Icon'
+import { UploadText } from './Text'
 import { UploadContext } from './UploadContext'
 
 export interface UploadProps extends HTMLAttributes<HTMLDivElement> {
@@ -32,10 +32,10 @@ const UploadComponent = forwardRef<HTMLDivElement, UploadProps>(
 UploadComponent.displayName = 'Upload'
 
 const Upload = Object.assign(UploadComponent, {
-  Body,
-  Icon,
-  Text,
-  Footer,
+  Body: UploadBody,
+  Icon: UploadIcon,
+  Text: UploadText,
+  Footer: UploadFooter,
 })
 
 export { Upload }

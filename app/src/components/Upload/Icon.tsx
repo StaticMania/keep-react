@@ -2,7 +2,7 @@
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-const Icon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const UploadIcon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div
@@ -15,6 +15,6 @@ const Icon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Icon.displayName = 'Upload.Icon'
+UploadIcon.displayName = 'Upload.Icon'
 
-export { Icon }
+export { UploadIcon }

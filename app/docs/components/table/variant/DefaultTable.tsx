@@ -2,13 +2,24 @@
 import Image from 'next/image'
 import { ArrowDown, Cube, DotsThreeOutline } from 'phosphor-react'
 import { DefaultTableData } from '~/public/data/tableData'
-import { Avatar, Badge, Button, Table } from '../../../../src'
+import {
+  Avatar,
+  Badge,
+  Button,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeadCell,
+  TableRow,
+} from '../../../../src'
 
 const DefaultTable = () => {
   return (
     <div className="scale-95">
       <Table showCheckbox={true}>
-        <Table.Caption>
+        <TableCaption>
           <div className="my-5 flex items-center justify-between px-6">
             <div className="flex items-center gap-5">
               <p className="text-body-1 font-semibold text-metal-600">Team member</p>
@@ -31,22 +42,20 @@ const DefaultTable = () => {
               </Button>
             </div>
           </div>
-        </Table.Caption>
-        <Table.Head>
-          <Table.HeadCell className="min-w-[290px]">
-            <p className="text-body-5 font-medium text-metal-400">Type</p>
-          </Table.HeadCell>
-          <Table.HeadCell>Status</Table.HeadCell>
-          <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
-          <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
-          <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
-          <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
-          <Table.HeadCell className="min-w-[100px]" />
-        </Table.Head>
-        <Table.Body className="divide-gray-25 divide-y">
+        </TableCaption>
+        <TableHead>
+          <TableHeadCell className="min-w-[290px]">Type</TableHeadCell>
+          <TableHeadCell className="min-w-[120px]">Status</TableHeadCell>
+          <TableHeadCell className="min-w-[152px]">Role</TableHeadCell>
+          <TableHeadCell className="min-w-[240px]">Email Address</TableHeadCell>
+          <TableHeadCell className="min-w-[215px]">Team</TableHeadCell>
+          <TableHeadCell className="min-w-[200px]">Performance</TableHeadCell>
+          <TableHeadCell className="min-w-[100px]" />
+        </TableHead>
+        <TableBody className="divide-gray-25 divide-y">
           {DefaultTableData.map((cell) => (
-            <Table.Row className="bg-white" key={cell.id}>
-              <Table.Cell>
+            <TableRow className="bg-white" key={cell.id}>
+              <TableCell>
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
@@ -58,8 +67,8 @@ const DefaultTable = () => {
                     </div>
                   </div>
                 </div>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 {cell.status ? (
                   <Badge color="success" showIcon={true}>
                     Active
@@ -69,10 +78,10 @@ const DefaultTable = () => {
                     Offline
                   </Badge>
                 )}
-              </Table.Cell>
-              <Table.Cell>{cell.position}</Table.Cell>
-              <Table.Cell>{cell.email}</Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>{cell.position}</TableCell>
+              <TableCell>{cell.email}</TableCell>
+              <TableCell>
                 <div className="flex items-center gap-1">
                   {cell.tags.map((tag, index, arr) =>
                     index === arr.length - 1 ? (
@@ -84,8 +93,8 @@ const DefaultTable = () => {
                     ),
                   )}
                 </div>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <div className="flex items-center gap-3">
                   <div>
                     <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
@@ -97,30 +106,40 @@ const DefaultTable = () => {
                     <span>{cell.performance}%</span>
                   </div>
                 </div>
-              </Table.Cell>
-              <Table.Cell>
+              </TableCell>
+              <TableCell>
                 <Button variant="outline" size="sm" shape="circle">
                   <DotsThreeOutline size={15} />
                 </Button>
-              </Table.Cell>
-            </Table.Row>
+              </TableCell>
+            </TableRow>
           ))}
-        </Table.Body>
+        </TableBody>
       </Table>
     </div>
   )
 }
 
 const DefaultTableCode = `
-"use client";
-import Image from "next/image";
-import { Avatar, Badge, Button, Popover, Table } from "keep-react";
-import { ArrowDown, Cube, DotsThreeOutline, Pencil, Trash } from "phosphor-react";
+'use client'
+import {
+  Avatar,
+  Badge,
+  Button,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeadCell,
+  TableRow,
+} from 'keep-react'
+import { ArrowDown, Cube, DotsThreeOutline } from 'phosphor-react'
 
 export const TableComponent = () => {
   return (
     <Table showCheckbox={true}>
-      <Table.Caption>
+      <TableCaption>
         <div className="my-5 flex items-center justify-between px-6">
           <div className="flex items-center gap-5">
             <p className="text-body-1 font-semibold text-metal-600">Team member</p>
@@ -141,21 +160,19 @@ export const TableComponent = () => {
             </Button>
           </div>
         </div>
-      </Table.Caption>
-      <Table.Head>
-        <Table.HeadCell className="min-w-[290px]">
-          <p className="text-body-5 font-medium text-metal-400">Type</p>
-        </Table.HeadCell>
-        <Table.HeadCell>Status</Table.HeadCell>
-        <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
-        <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
-        <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
-        <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
-        <Table.HeadCell className="min-w-[100px]" />
-      </Table.Head>
-      <Table.Body className="divide-gray-25 divide-y">
-        <Table.Row className="bg-white">
-          <Table.Cell>
+      </TableCaption>
+      <TableHead>
+        <TableHeadCell className="min-w-[290px]">Type</TableHeadCell>
+        <TableHeadCell className="min-w-[120px]">Status</TableHeadCell>
+        <TableHeadCell className="min-w-[152px]">Role</TableHeadCell>
+        <TableHeadCell className="min-w-[240px]">Email Address</TableHeadCell>
+        <TableHeadCell className="min-w-[215px]">Team</TableHeadCell>
+        <TableHeadCell className="min-w-[200px]">Performance</TableHeadCell>
+        <TableHeadCell className="min-w-[100px]" />
+      </TableHead>
+      <TableBody className="divide-gray-25 divide-y">
+        <TableRow className="bg-white">
+          <TableCell>
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
@@ -167,33 +184,27 @@ export const TableComponent = () => {
                 </div>
               </div>
             </div>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <Badge color="success" showIcon={true}>
               Active
             </Badge>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <p>UI/UX Designer</p>
-          </Table.Cell>
-          <Table.Cell>nevaeh.simmons@example.com</Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>nevaeh.simmons@example.com</TableCell>
+          <TableCell>
             <div className="flex items-center gap-1">
-              <Badge>
-                Product
-              </Badge>
-              <Badge>
-                Marketing
-              </Badge>
-              <Badge color="secondary">
-                +3
-              </Badge>
+              <Badge>Product</Badge>
+              <Badge>Marketing</Badge>
+              <Badge color="secondary">+3</Badge>
             </div>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <div className="flex items-center gap-3">
               <div>
-                <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
+                <img src="/images/icon/Series.png" alt="line" />
               </div>
               <div className="flex items-center gap-1">
                 <span>
@@ -202,14 +213,14 @@ export const TableComponent = () => {
                 <span>20%</span>
               </div>
             </div>
-          </Table.Cell>
-          <Table.Cell>
+          </TableCell>
+          <TableCell>
             <Button variant="outline" size="sm" shape="circle">
               <DotsThreeOutline size={15} />
             </Button>
-          </Table.Cell>
-        </Table.Row>
-      </Table.Body>
+          </TableCell>
+        </TableRow>
+      </TableBody>
     </Table>
   )
 }

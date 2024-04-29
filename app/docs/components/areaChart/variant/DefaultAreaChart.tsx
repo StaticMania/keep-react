@@ -1,4 +1,3 @@
-'use client'
 import { AreaChart } from '../../../../src'
 export const chartData = [
   {
@@ -58,7 +57,6 @@ const DefaultAreaChart = () => {
 }
 
 const DefaultAreaChartCode = `
-"use client";
 import { AreaChart } from "keep-react";
 const chartData = [
   {

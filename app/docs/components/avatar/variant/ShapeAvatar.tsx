@@ -1,4 +1,3 @@
-'use client'
 import { Avatar } from '../../../../src'
 
 const ShapeAvatar = () => {

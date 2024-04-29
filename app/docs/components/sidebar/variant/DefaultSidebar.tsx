@@ -10,13 +10,24 @@ import {
   SquaresFour,
   Users,
 } from 'phosphor-react'
-import { Avatar, Button, Divider, Icon, Input, Sidebar } from '../../../../src'
+import {
+  Avatar,
+  Button,
+  Divider,
+  Input,
+  InputIcon,
+  Sidebar,
+  SidebarBody,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarItem,
+} from '../../../../src'
 
 const DefaultSidebar = () => {
   return (
     <div className="p-2">
       <Sidebar className="max-w-max">
-        <Sidebar.Header className="space-y-2.5">
+        <SidebarHeader className="space-y-2.5">
           <div className="flex items-center justify-between">
             <h5 className="font-bold text-primary-500">Keep</h5>
             <Button variant="outline" shape="icon" color="primary" className="border-none">
@@ -26,44 +37,44 @@ const DefaultSidebar = () => {
           <div>
             <fieldset className="relative max-w-md">
               <Input placeholder="Search here" className="ps-11" />
-              <Icon>
+              <InputIcon>
                 <MagnifyingGlass size={18} color="#AFBACA" />
-              </Icon>
+              </InputIcon>
             </fieldset>
           </div>
-        </Sidebar.Header>
-        <Sidebar.Body>
-          <Sidebar.Item>
+        </SidebarHeader>
+        <SidebarBody>
+          <SidebarItem>
             <SquaresFour size={24} />
             Profile
-          </Sidebar.Item>
-          <Sidebar.Item>
+          </SidebarItem>
+          <SidebarItem>
             <ShoppingCart size={24} />
             Products
-          </Sidebar.Item>
-          <Sidebar.Item>
+          </SidebarItem>
+          <SidebarItem>
             <ArchiveTray size={24} />
             Download
-          </Sidebar.Item>
-          <Sidebar.Item>
+          </SidebarItem>
+          <SidebarItem>
             <Chat size={24} />
             Message
-          </Sidebar.Item>
-          <Sidebar.Item>
+          </SidebarItem>
+          <SidebarItem>
             <Gear size={24} />
             Settings
-          </Sidebar.Item>
-          <Sidebar.Item>
+          </SidebarItem>
+          <SidebarItem>
             <Users size={24} />
             Users
-          </Sidebar.Item>
-          <Sidebar.Item>
+          </SidebarItem>
+          <SidebarItem>
             <SignIn size={24} />
             Log Out
-          </Sidebar.Item>
-        </Sidebar.Body>
+          </SidebarItem>
+        </SidebarBody>
         <Divider className="my-3" />
-        <Sidebar.Footer className="flex items-center gap-2">
+        <SidebarFooter className="flex items-center gap-2">
           <div>
             <Avatar shape="circle" img="/images/avatar/avatar-3.png" />
           </div>
@@ -71,7 +82,7 @@ const DefaultSidebar = () => {
             <p className="mb-0 text-body-3 font-medium text-metal-600">Md Ariful Islam</p>
             <p className="text-body-4 font-normal text-metal-400">Web Developer</p>
           </div>
-        </Sidebar.Footer>
+        </SidebarFooter>
       </Sidebar>
     </div>
   )
@@ -90,12 +101,24 @@ import {
   SquaresFour,
   Users,
 } from 'phosphor-react'
-import { Avatar, Button, Divider, Icon, Input, Sidebar } from 'keep-react'
+
+import {
+  Avatar,
+  Button,
+  Divider,
+  InputIcon,
+  Input,
+  Sidebar,
+  SidebarBody,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarItem,
+} from from 'keep-react'
 
 export const SidebarComponent = () => {
   return (
     <Sidebar>
-      <Sidebar.Header className="space-y-2.5">
+      <SidebarHeader className="space-y-2.5">
         <div className="flex items-center justify-between">
           <h5 className="font-bold text-primary-500">
             Keep
@@ -107,44 +130,44 @@ export const SidebarComponent = () => {
         <div>
           <fieldset className="relative max-w-md">
             <Input placeholder="Search here" className="ps-11" />
-            <Icon>
+            <InputIcon>
               <MagnifyingGlass size={18} color="#AFBACA" />
-            </Icon>
+            </InputIcon>
           </fieldset>
         </div>
-      </Sidebar.Header>
-      <Sidebar.Body>
-        <Sidebar.Item>
+      </SidebarHeader>
+      <SidebarBody>
+        <SidebarItem>
           <SquaresFour size={24} />
           Profile
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <ShoppingCart size={24} />
           Products
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <ArchiveTray size={24} />
           Download
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <Chat size={24} />
           Message
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <Gear size={24} />
           Settings
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <Users size={24} />
           Users
-        </Sidebar.Item>
-        <Sidebar.Item>
+        </SidebarItem>
+        <SidebarItem>
           <SignIn size={24} />
           Log Out
-        </Sidebar.Item>
-      </Sidebar.Body>
+        </SidebarItem>
+      </SidebarBody>
       <Divider className="my-3" />
-      <Sidebar.Footer className="flex items-center gap-2">
+      <SidebarFooter className="flex items-center gap-2">
         <div>
           <Avatar shape="circle" img="/images/avatar/avatar-3.png" />
         </div>
@@ -152,7 +175,7 @@ export const SidebarComponent = () => {
           <p className="mb-0 text-body-3 font-medium text-metal-600">Md Ariful Islam</p>
           <p className="text-body-4 font-normal text-metal-400">Web Developer</p>
         </div>
-      </Sidebar.Footer>
+      </SidebarFooter>
     </Sidebar>
   )
 }

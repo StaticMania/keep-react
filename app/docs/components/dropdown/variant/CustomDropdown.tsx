@@ -1,5 +1,4 @@
-'use client'
-import { Avatar, Button, Dropdown } from '../../../../src'
+import { Avatar, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
 
 const dropdownData = [
   {
@@ -36,47 +35,53 @@ const dropdownData = [
 
 const CustomDropdown = () => {
   return (
-    <Dropdown action={<Button>Dropdown</Button>} actionClassName="border-none">
-      <Dropdown.List>
-        {dropdownData.map((data) => (
-          <Dropdown.Item key={data.id}>
-            <div>
-              <Avatar size="lg" color="secondary" img={data.img} />
-            </div>
-            <div>
-              <p className="text-body-3 font-medium text-metal-800">{data.name}</p>
-              <p className="text-body-4 font-normal text-metal-400">{data.title}</p>
-            </div>
-          </Dropdown.Item>
-        ))}
-      </Dropdown.List>
+    <Dropdown>
+      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownContent>
+        <DropdownList>
+          {dropdownData.map((data) => (
+            <DropdownItem key={data.id}>
+              <div>
+                <Avatar size="lg" color="secondary" img={data.img} />
+              </div>
+              <div>
+                <p className="text-body-4 font-medium text-metal-900">{data.name}</p>
+                <p className="text-body-5 font-normal text-metal-400">{data.title}</p>
+              </div>
+            </DropdownItem>
+          ))}
+        </DropdownList>
+      </DropdownContent>
     </Dropdown>
   )
 }
 
 const CustomDropdownCode = `
-'use client'
-import { Avatar, Dropdown, Button } from 'keep-react'
+import { Avatar, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from 'keep-react'
 
 export const DropdownComponent = () => {
   return (
-    <Dropdown action={<Button>Dropdown</Button>} actionClassName="border-none">
-      <Dropdown.List>
-        {dropdownData.map((data) => (
-          <Dropdown.Item key={data.id}>
-            <div>
-              <Avatar size="lg" color="secondary" img={data.img} />
-            </div>
-            <div>
-              <p className="text-body-3 font-medium text-metal-800">{data.name}</p>
-              <p className="text-body-4 font-normal text-metal-400">{data.title}</p>
-            </div>
-          </Dropdown.Item>
-        ))}
-      </Dropdown.List>
+    <Dropdown>
+      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownContent>
+        <DropdownList>
+          {dropdownData.map((data) => (
+            <DropdownItem key={data.id}>
+              <div>
+                <Avatar size="lg" color="secondary" img={data.img} />
+              </div>
+              <div>
+                <p className="text-body-4 font-medium text-metal-900">{data.name}</p>
+                <p className="text-body-5 font-normal text-metal-400">{data.title}</p>
+              </div>
+            </DropdownItem>
+          ))}
+        </DropdownList>
+      </DropdownContent>
     </Dropdown>
   )
 }
+
 `
 
 export { CustomDropdown, CustomDropdownCode }

@@ -1,4 +1,3 @@
-'use client'
 import { Badge } from '../../../../src'
 
 const DefaultBadge = () => {
@@ -14,7 +13,6 @@ const DefaultBadge = () => {
 }
 
 const DefaultBadgeCode = `
-'use client'
 import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {

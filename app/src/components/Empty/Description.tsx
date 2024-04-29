@@ -3,7 +3,7 @@ import { forwardRef, HTMLProps } from 'react'
 import { cn } from '../../helpers/cn'
 import { emptyTheme } from './theme'
 
-export const Description = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
+export const EmptyDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
   ({ children, ...props }, ref) => {
     const { description } = emptyTheme
     return (
@@ -14,4 +14,4 @@ export const Description = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagr
   },
 )
 
-Description.displayName = 'Empty.Description'
+EmptyDescription.displayName = 'Empty.Description'

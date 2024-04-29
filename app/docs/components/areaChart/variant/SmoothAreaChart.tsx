@@ -18,7 +18,6 @@ const SmoothAreaChart = () => {
 }
 
 const SmoothAreaChartCode = `
-"use client";
 import { AreaChart } from "keep-react";
 const chartData = [
   {

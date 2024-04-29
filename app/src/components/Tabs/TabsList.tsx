@@ -6,7 +6,7 @@ import { tabsTheme } from './theme'
 
 export interface TabsListProps extends HTMLAttributes<HTMLElement> {}
 
-const TabsList = forwardRef<HTMLDivElement, TabsListProps>(({ children, className, ...props }, ref) => {
+const TabList = forwardRef<HTMLDivElement, TabsListProps>(({ children, className, ...props }, ref) => {
   const { vertical } = useTabsContext()
   const { tabList } = tabsTheme
 
@@ -20,6 +20,6 @@ const TabsList = forwardRef<HTMLDivElement, TabsListProps>(({ children, classNam
   )
 })
 
-TabsList.displayName = 'Tabs.List'
+TabList.displayName = 'Tabs.List'
 
-export { TabsList }
+export { TabList }

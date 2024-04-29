@@ -1,67 +1,37 @@
 'use client'
-import { Children, FC, ReactElement, ReactNode, cloneElement, useEffect, useState } from 'react'
+import { HTMLAttributes, forwardRef, useEffect, useState } from 'react'
 import { cn } from '../../helpers/cn'
-import { CircleText } from './CircleText'
+import { CircleProgressLine } from './CircleLine'
+import { CircleProgressText } from './CircleText'
+import { ProgressContext } from './Context'
 import { progressTheme } from './theme'
 
-interface ProgressCircleProps {
-  children?: ReactNode
-  className?: string
+interface ProgressCircleProps extends HTMLAttributes<HTMLDivElement> {
   progress?: number
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  strokeBgColor?: string
-  strokeColor?: string
-  strokeWidth?: number
 }
 
-export const ProgressCircleComponent: FC<ProgressCircleProps> = ({
-  progress = 0,
-  size = 'md',
-  children,
-  strokeBgColor,
-  strokeColor,
-  className,
-  strokeWidth = 2.5,
-}) => {
-  const childrenWithProps = Children.map(children, (child) => cloneElement(child as ReactElement<any>, { size }))
-  const [progressBar, setProgressBar] = useState(0)
-  const { circle } = progressTheme
+export const ProgressCircleComponent = forwardRef<HTMLDivElement, ProgressCircleProps>(
+  ({ progress = 0, size = 'md', children, className, ...props }, ref) => {
+    const [progressBar, setProgressBar] = useState(0)
+    const { circle } = progressTheme
 
-  useEffect(() => {
-    const timer = setTimeout(() => setProgressBar(progress), 200)
-    return () => clearTimeout(timer)
-  }, [progress])
+    useEffect(() => {
+      const timer = setTimeout(() => setProgressBar(progress), 200)
+      return () => clearTimeout(timer)
+    }, [progress])
 
-  return (
-    <div className={cn(circle.root, circle.size[size], className)}>
-      <svg className={circle.svg.base} viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-        <circle
-          cx={18}
-          cy={18}
-          r={16}
-          fill="none"
-          className={cn(circle.svg.circle, strokeBgColor)}
-          strokeWidth={strokeWidth}
-        />
-        <g className={circle.svg.g}>
-          <circle
-            cx={18}
-            cy={18}
-            r={16}
-            fill="none"
-            className={cn(circle.svg.gCircle, strokeColor)}
-            strokeWidth={strokeWidth}
-            strokeDasharray={100}
-            strokeDashoffset={100 - progressBar}
-          />
-        </g>
-      </svg>
-      {childrenWithProps && <div className={cn(circle.text.base, circle.text.content[size])}>{childrenWithProps}</div>}
-    </div>
-  )
-}
+    return (
+      <div ref={ref} {...props} className={cn(circle.root, circle.size[size], className)}>
+        <ProgressContext.Provider value={{ progressBar: progressBar, size }}>{children}</ProgressContext.Provider>
+      </div>
+    )
+  },
+)
 
-CircleText.displayName = 'CircleProgress.Text'
+ProgressCircleComponent.displayName = 'CircleProgress'
+
 export const CircleProgress = Object.assign(ProgressCircleComponent, {
-  Text: CircleText,
+  Text: CircleProgressText,
+  Circle: CircleProgressLine,
 })

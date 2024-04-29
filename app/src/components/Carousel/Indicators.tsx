@@ -5,7 +5,7 @@ import { useCarouselContext } from './CarouselContext'
 import { DotButton, useDotButton } from './CarouselDotButton'
 import { carouselTheme } from './theme'
 
-export const Indicators = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+export const CarouselIndicators = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref: Ref<HTMLDivElement>) => {
     const { emblaApi } = useCarouselContext()
     const theme = carouselTheme
@@ -24,4 +24,4 @@ export const Indicators = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivEleme
   },
 )
 
-Indicators.displayName = 'Carousel.Indicators'
+CarouselIndicators.displayName = 'Carousel.Indicators'

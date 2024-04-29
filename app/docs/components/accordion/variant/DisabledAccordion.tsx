@@ -1,38 +1,36 @@
-'use client'
-import { Accordion } from '../../../../src'
+import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from '../../../../src'
 
 const DisabledAccordion = () => {
   return (
     <Accordion disabled={true}>
-      <Accordion.Panel>
-        <Accordion.Container>
-          <Accordion.Title>Q. What is keep Design?</Accordion.Title>
-        </Accordion.Container>
-        <Accordion.Content>
+      <AccordionPanel>
+        <AccordionContainer>
+          <AccordionTitle>Q. What is keep Design?</AccordionTitle>
+        </AccordionContainer>
+        <AccordionContent>
           keep Design is an open-source library of interactive components built on top of Tailwind CSS including
           buttons, dropdowns, modals, navbar, and more.
-        </Accordion.Content>
-      </Accordion.Panel>
+        </AccordionContent>
+      </AccordionPanel>
     </Accordion>
   )
 }
 
 const DisabledAccordionCode = `
-'use client'
-import { Accordion } from 'keep-react'
+import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from 'keep-react'
 
 export const AccordionComponent = () => {
   return (
     <Accordion disabled={true}>
-      <Accordion.Panel>
-        <Accordion.Container>
-          <Accordion.Title>What is keep Design?</Accordion.Title>
-        </Accordion.Container>
-        <Accordion.Content>
+      <AccordionPanel>
+        <AccordionContainer>
+          <AccordionTitle>What is keep Design?</AccordionTitle>
+        </AccordionContainer>
+        <AccordionContent>
           keep Design is an open-source library of interactive components built on top of Tailwind CSS including
           buttons, dropdowns, modals, navbar, and more.
-        </Accordion.Content>
-      </Accordion.Panel>
+        </AccordionContent>
+      </AccordionPanel>
     </Accordion>
   )
 }

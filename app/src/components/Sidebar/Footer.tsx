@@ -3,14 +3,14 @@ import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { sidebarTheme } from './theme'
 
-export interface FooterProps extends HTMLAttributes<HTMLDivElement> {}
+export const SidebarFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <div {...props} ref={ref} className={cn(sidebarTheme.footer, className)}>
+        {children}
+      </div>
+    )
+  },
+)
 
-export const Footer = forwardRef<HTMLDivElement, FooterProps>(({ className, children, ...props }, ref) => {
-  return (
-    <div {...props} ref={ref} className={cn(sidebarTheme.footer, className)}>
-      {children}
-    </div>
-  )
-})
-
-Footer.displayName = 'Sidebar.Footer'
+SidebarFooter.displayName = 'Sidebar.Footer'

@@ -1,4 +1,3 @@
-'use client'
 import { Toggle } from '../../../../src'
 
 const DisabledSwitch = () => {
@@ -6,13 +5,12 @@ const DisabledSwitch = () => {
 }
 
 const DisabledSwitchCode = `
-"use client";
-import { Toggle } from "keep-react";
+import { Toggle } from 'keep-react'
 
 export const SwitchComponent = () => {
   return (
     <Toggle bgColor="primary" label="Disabled" size="md" disabled={true} />
-  );
+  )
 }
 `
 

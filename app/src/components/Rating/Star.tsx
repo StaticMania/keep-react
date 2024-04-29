@@ -10,7 +10,7 @@ export interface StarProps {
   inputStyle?: string
 }
 
-export const Star: FC<StarProps> = ({ value, children, className, inputStyle }) => {
+export const RatingStar: FC<StarProps> = ({ value, children, className, inputStyle }) => {
   const { handleRating } = useRatingContext()
   return (
     <Fragment>

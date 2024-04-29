@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { Command, List, MagnifyingGlass, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
-import { Accordion } from '../src'
+import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from '../src'
 import Search from './Search'
 
 const Navbar = () => {
@@ -133,13 +133,13 @@ const Navbar = () => {
             }`}>
             <div className="mt-5 space-y-3 pr-4">
               <Accordion flush>
-                <Accordion.Panel className="!border-b-0">
-                  <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
+                <AccordionPanel className="!border-b-0">
+                  <AccordionContainer className="p-0">
+                    <AccordionTitle className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                       Quick Link
-                    </Accordion.Title>
-                  </Accordion.Container>
-                  <Accordion.Content className="p-0">
+                    </AccordionTitle>
+                  </AccordionContainer>
+                  <AccordionContent className="p-0">
                     <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {navbarRoutes.map((route) => (
                         <li key={route.id}>
@@ -153,17 +153,17 @@ const Navbar = () => {
                         </li>
                       ))}
                     </ul>
-                  </Accordion.Content>
-                </Accordion.Panel>
+                  </AccordionContent>
+                </AccordionPanel>
               </Accordion>
               <Accordion flush>
-                <Accordion.Panel className="!border-b-0">
-                  <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
+                <AccordionPanel className="!border-b-0">
+                  <AccordionContainer className="p-0">
+                    <AccordionTitle className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                       Getting Started
-                    </Accordion.Title>
-                  </Accordion.Container>
-                  <Accordion.Content className="p-0">
+                    </AccordionTitle>
+                  </AccordionContainer>
+                  <AccordionContent className="p-0">
                     <ul className="-ml-px mt-3 space-y-2 border-l border-l-metal-100">
                       {gettingStartedRoutes.map((route) => (
                         <li key={route.id}>
@@ -177,17 +177,17 @@ const Navbar = () => {
                         </li>
                       ))}
                     </ul>
-                  </Accordion.Content>
-                </Accordion.Panel>
+                  </AccordionContent>
+                </AccordionPanel>
               </Accordion>
               <Accordion flush>
-                <Accordion.Panel className="!border-b-0">
-                  <Accordion.Container className="p-0">
-                    <Accordion.Title className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
+                <AccordionPanel className="!border-b-0">
+                  <AccordionContainer className="p-0">
+                    <AccordionTitle className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900">
                       Components
-                    </Accordion.Title>
-                  </Accordion.Container>
-                  <Accordion.Content className="p-0">
+                    </AccordionTitle>
+                  </AccordionContainer>
+                  <AccordionContent className="p-0">
                     <ul className="mt-3 space-y-2 border-l border-l-metal-100 pb-24">
                       {routes.map((route) => (
                         <li key={route.id}>
@@ -201,8 +201,8 @@ const Navbar = () => {
                         </li>
                       ))}
                     </ul>
-                  </Accordion.Content>
-                </Accordion.Panel>
+                  </AccordionContent>
+                </AccordionPanel>
               </Accordion>
             </div>
           </div>

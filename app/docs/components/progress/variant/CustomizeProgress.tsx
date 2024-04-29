@@ -1,33 +1,49 @@
-'use client'
-import { CircleProgress, LineProgress } from '../../../../src'
+import {
+  CircleProgress,
+  CircleProgressLine,
+  CircleProgressText,
+  LineProgress,
+  LineProgressBar,
+  LineProgressText,
+} from '../../../../src'
 
 const CustomizeProgress = () => {
   return (
-    <div className="w-3/4">
-      <CircleProgress progress={45} strokeBgColor="text-error-50" strokeColor="text-error-500">
-        <CircleProgress.Text className="text-error-500">45%</CircleProgress.Text>
+    <div className="w-3/4 space-y-4">
+      <CircleProgress progress={45}>
+        <CircleProgressLine className="text-error-50" strokeColor="text-error-500" />
+        <CircleProgressText className="text-error-500">45%</CircleProgressText>
       </CircleProgress>
-      <LineProgress progress={65} lineBg="bg-error-50" className="bg-error-500">
-        <LineProgress.Text className="text-error-500">65%</LineProgress.Text>
+      <LineProgress progress={55}>
+        <LineProgressBar lineBackground="bg-error-50" className="bg-error-500" />
+        <LineProgressText className="text-error-500">55%</LineProgressText>
       </LineProgress>
     </div>
   )
 }
 
 const CustomizeProgressCode = `
-'use client'
-import { CircleProgress, LineProgress } from 'keep-react'
+import {
+  CircleProgress,
+  CircleProgressLine,
+  CircleProgressText,
+  LineProgress,
+  LineProgressBar,
+  LineProgressText,
+} from from 'keep-react'
 
 export const ProgressComponent = () => {
   return (
-    <>
-      <CircleProgress progress={45} strokeBgColor="text-error-50" strokeColor="text-error-500">
-        <CircleProgress.Text className="text-error-500">45%</CircleProgress.Text>
+    <div className="space-y-4">
+      <CircleProgress progress={45}>
+        <CircleProgressLine className="text-error-50" strokeColor="text-error-500" />
+        <CircleProgressText className="text-error-500">45%</CircleProgressText>
       </CircleProgress>
-      <LineProgress progress={65} lineBg="bg-error-50" className="bg-error-500">
-        <LineProgress.Text className="text-error-500">65%</LineProgress.Text>
+      <LineProgress progress={55}>
+        <LineProgressBar lineBackground="bg-error-50" className="bg-error-500" />
+        <LineProgressText className="text-error-500">55%</LineProgressText>
       </LineProgress>
-    </>
+    </div>
   )
 }
 `

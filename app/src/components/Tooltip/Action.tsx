@@ -3,7 +3,7 @@ import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useTooltipContext } from './Context'
 
-export const Action = forwardRef<HTMLButtonElement, HTMLAttributes<HTMLButtonElement>>(
+export const TooltipAction = forwardRef<HTMLButtonElement, HTMLAttributes<HTMLButtonElement>>(
   ({ children, className }, ref) => {
     const { refs, getReferenceProps } = useTooltipContext()
     return (
@@ -17,4 +17,4 @@ export const Action = forwardRef<HTMLButtonElement, HTMLAttributes<HTMLButtonEle
   },
 )
 
-Action.displayName = 'Tooltip.Action'
+TooltipAction.displayName = 'Tooltip.Action'

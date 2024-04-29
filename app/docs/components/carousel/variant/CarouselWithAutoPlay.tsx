@@ -1,54 +1,70 @@
-'use client'
 import autoPlay from 'embla-carousel-autoplay'
-import { Carousel } from '../../../../src'
+import {
+  Carousel,
+  CarouselButtons,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselItem,
+  CarouselNextButton,
+  CarouselPrevButton,
+  CarouselSlides,
+} from '../../../../src'
 
 const CarouselWithAutoPlay = () => {
   return (
     <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
-      <Carousel.Slides>
+      <CarouselSlides>
         {Array.from({ length: 5 }).map((_, index) => (
-          <Carousel.Item key={index}>
+          <CarouselItem key={index}>
             <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
               <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
             </div>
-          </Carousel.Item>
+          </CarouselItem>
         ))}
-      </Carousel.Slides>
-      <Carousel.Control>
-        <Carousel.Buttons>
-          <Carousel.PrevButton />
-          <Carousel.NextButton />
-        </Carousel.Buttons>
-        <Carousel.Indicators />
-      </Carousel.Control>
+      </CarouselSlides>
+      <CarouselControl>
+        <CarouselButtons>
+          <CarouselPrevButton />
+          <CarouselNextButton />
+        </CarouselButtons>
+        <CarouselIndicators />
+      </CarouselControl>
     </Carousel>
   )
 }
 
 const CarouselWithAutoPlayCode = `
-'use client'
 import autoPlay from 'embla-carousel-autoplay'
-import { Carousel } from 'keep-react'
+import {
+  Carousel,
+  CarouselButtons,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselItem,
+  CarouselNextButton,
+  CarouselPrevButton,
+  CarouselSlides,
+} from 'keep-react'
 
 export const CarouselComponent = () => {
   return (
     <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
-      <Carousel.Slides>
+      <CarouselSlides>
         {Array.from({ length: 5 }).map((_, index) => (
-          <Carousel.Item key={index}>
+          <CarouselItem key={index}>
             <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
               <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
             </div>
-          </Carousel.Item>
+          </CarouselItem>
         ))}
-      </Carousel.Slides>
-      <Carousel.Control>
-        <Carousel.Buttons>
-          <Carousel.PrevButton />
-          <Carousel.NextButton />
-        </Carousel.Buttons>
-        <Carousel.Indicators />
-      </Carousel.Control>
+      </CarouselSlides>
+      <CarouselControl>
+        <CarouselButtons>
+          <CarouselPrevButton />
+          <CarouselNextButton />
+        </CarouselButtons>
+        <CarouselIndicators />
+      </CarouselControl>
     </Carousel>
   )
 }

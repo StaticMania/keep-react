@@ -8,7 +8,7 @@ export interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   isFileExists?: boolean
 }
 
-const Footer = forwardRef<HTMLDivElement, FooterProps>(
+const UploadFooter = forwardRef<HTMLDivElement, FooterProps>(
   ({ children, className, isFileExists = false, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div {...props} className={cn(className)} ref={ref}>
@@ -18,6 +18,6 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>(
   },
 )
 
-Footer.displayName = 'Upload.Footer'
+UploadFooter.displayName = 'Upload.Footer'
 
-export { Footer }
+export { UploadFooter }

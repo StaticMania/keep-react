@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { Info, Trash } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { Upload } from '../../../../src'
+import { Upload, UploadBody, UploadFooter, UploadIcon, UploadText } from '../../../../src'
 
 export interface UploadedFile {
   path?: string
@@ -20,16 +20,16 @@ const DefaultUpload = () => {
   }, [])
   return (
     <Upload options={{ onDrop }}>
-      <Upload.Body>
-        <Upload.Icon>
+      <UploadBody>
+        <UploadIcon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
-        </Upload.Icon>
-        <Upload.Text>
+        </UploadIcon>
+        <UploadText>
           <p className="text-body-3 font-medium text-metal-600">Drag & Drop or Choose File to Upload</p>
           <p className="text-body-4 font-normal text-metal-400">DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.</p>
-        </Upload.Text>
-      </Upload.Body>
-      <Upload.Footer isFileExists={files.length > 0}>
+        </UploadText>
+      </UploadBody>
+      <UploadFooter isFileExists={files.length > 0}>
         <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
@@ -44,7 +44,7 @@ const DefaultUpload = () => {
             </li>
           ))}
         </ul>
-      </Upload.Footer>
+      </UploadFooter>
     </Upload>
   )
 }
@@ -53,7 +53,7 @@ const DefaultUploadCode = `
 'use client'
 import { Info,Trash } from 'phosphor-react'
 import { useCallback, useState } from 'react'
-import { Upload } from 'keep-react'
+import { Upload, UploadBody, UploadFooter, UploadIcon, UploadText } from 'keep-react'
 
 export const UploadComponent = () => {
   const [files, setFiles] = useState([])
@@ -64,16 +64,16 @@ export const UploadComponent = () => {
 
   return (
     <Upload options={{ onDrop }}>
-      <Upload.Body>
-        <Upload.Icon>
+      <UploadBody>
+        <UploadIcon>
           <img src="/images/icon/folder.svg" alt="folder"/>
-        </Upload.Icon>
-        <Upload.Text>
+        </UploadIcon>
+        <UploadText>
           <p className="text-body-3 font-medium text-metal-600">Drag & Drop or Choose File to Upload</p>
           <p className="text-body-4 font-normal text-metal-400">DOCX, XLSX, PPTX, PDF, and JPG formats, up to 50 MB.</p>
-        </Upload.Text>
-      </Upload.Body>
-      <Upload.Footer isFileExists={files.length > 0}>
+        </UploadText>
+      </UploadBody>
+      <UploadFooter isFileExists={files.length > 0}>
         <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
           <Info size={16} />
           Uploaded Files
@@ -88,7 +88,7 @@ export const UploadComponent = () => {
             </li>
           ))}
         </ul>
-      </Upload.Footer>
+      </UploadFooter>
     </Upload>
   )
 }

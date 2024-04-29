@@ -1,5 +1,5 @@
 'use client'
-import { ButtonHTMLAttributes, FC, ForwardedRef, ReactNode, forwardRef } from 'react'
+import { ButtonHTMLAttributes, ForwardedRef, ReactNode, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { useTabsContext } from './Context'
 import { tabsTheme } from './theme'
@@ -9,8 +9,8 @@ export interface TabsItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string
 }
 
-const Item: FC<TabsItemProps> = forwardRef(
-  ({ children, label, className, ...props }: TabsItemProps, ref: ForwardedRef<HTMLButtonElement>) => {
+const TabItem = forwardRef<HTMLButtonElement, TabsItemProps>(
+  ({ children, label, className, ...props }, ref: ForwardedRef<HTMLButtonElement>) => {
     const { item } = tabsTheme
     const { activeItem, handleActive, vertical } = useTabsContext()
     const active = activeItem === label
@@ -33,6 +33,6 @@ const Item: FC<TabsItemProps> = forwardRef(
   },
 )
 
-Item.displayName = 'Tabs.Item'
+TabItem.displayName = 'Tabs.Item'
 
-export { Item }
+export { TabItem }

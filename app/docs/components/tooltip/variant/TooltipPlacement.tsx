@@ -1,15 +1,14 @@
-'use client'
-import { Tooltip } from '../../../../src'
+import { Tooltip, TooltipAction, TooltipContent } from '../../../../src'
 
 const TooltipPlacement = () => {
   return (
     <div className="flex items-center gap-5 p-2.5">
       {['top', 'bottom', 'left', 'right'].map((position) => (
         <Tooltip placement={position as 'bottom' | 'top' | 'left' | 'right'} key={position}>
-          <Tooltip.Action>Tooltip</Tooltip.Action>
-          <Tooltip.Content>
+          <TooltipAction>Tooltip</TooltipAction>
+          <TooltipContent>
             <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
-          </Tooltip.Content>
+          </TooltipContent>
         </Tooltip>
       ))}
     </div>
@@ -17,18 +16,17 @@ const TooltipPlacement = () => {
 }
 
 const TooltipPlacementCode = `
-'use client'
-import { Tooltip } from 'keep-react'
+import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
   return (
     <>
       {['top', 'bottom', 'left', 'right'].map((position) => (
         <Tooltip placement={position} key={position}>
-          <Tooltip.Action>Tooltip</Tooltip.Action>
-          <Tooltip.Content>
+          <TooltipAction>Tooltip</TooltipAction>
+          <TooltipContent>
             <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
-          </Tooltip.Content>
+          </TooltipContent>
         </Tooltip>
       ))}
     </>

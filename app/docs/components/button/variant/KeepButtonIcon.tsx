@@ -26,7 +26,7 @@ const KeepButtonIconCode = `
 import { Button } from 'keep-react'
 import { ChatText, Gear, SignIn } from 'phosphor-react'
 
-const KeepButtonIcon = () => {
+export const ButtonComponent = () => {
   return (
     <>
       <Button>

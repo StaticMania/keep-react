@@ -7,7 +7,7 @@ export interface CounterProps extends HTMLAttributes<HTMLDivElement> {
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 }
 
-const Counter: FC<CounterProps> = forwardRef<HTMLDivElement, CounterProps>(
+const AvatarCounter: FC<CounterProps> = forwardRef<HTMLDivElement, CounterProps>(
   ({ children, className, size = 'xl', ...props }: CounterProps, ref: Ref<HTMLDivElement>) => {
     return (
       <div
@@ -24,6 +24,6 @@ const Counter: FC<CounterProps> = forwardRef<HTMLDivElement, CounterProps>(
   },
 )
 
-Counter.displayName = 'Avatar.Counter'
+AvatarCounter.displayName = 'Avatar.Counter'
 
-export { Counter }
+export { AvatarCounter }
