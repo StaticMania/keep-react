@@ -26,4 +26,18 @@ export const tooltipDataApi = [
     propsDescription: 'Trigger mode for displaying the tooltip.',
     default: 'hover',
   },
+  {
+    id: 3,
+    propsName: 'initialOpen',
+    propsType: 'boolean',
+    propsDescription: 'Tooltip initial open state',
+    default: 'false',
+  },
+  {
+    id: 4,
+    propsName: 'showArrow',
+    propsType: 'boolean',
+    propsDescription: 'Tooltip arrow show or not?',
+    default: 'true',
+  },
 ]

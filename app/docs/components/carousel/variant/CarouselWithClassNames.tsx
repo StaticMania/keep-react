@@ -32,6 +32,7 @@ const CarouselWithClassNames = () => {
 }
 
 const CarouselWithClassNamesCode = `
+'use client'
 import classNames from 'embla-carousel-class-names'
 import {
   Carousel,

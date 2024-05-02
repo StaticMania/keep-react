@@ -1,11 +1,31 @@
 'use client'
-import { HTMLAttributes, forwardRef } from 'react'
+import { useMergeRefs } from '@floating-ui/react'
+import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 import { useTooltipContext } from './Context'
 
-export const TooltipAction = forwardRef<HTMLButtonElement, HTMLAttributes<HTMLButtonElement>>(
-  ({ children, className }, ref) => {
-    const { refs, getReferenceProps } = useTooltipContext()
+export interface TooltipActionProps extends HTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean
+}
+
+export const TooltipAction = forwardRef<HTMLButtonElement, TooltipActionProps>(
+  ({ children, className, asChild, ...props }, propsRef) => {
+    const { refs, getReferenceProps, isOpen } = useTooltipContext()
+
+    const childrenRef = (children as any).ref
+    const ref = useMergeRefs([refs.setReference, propsRef, childrenRef])
+
+    if (asChild && isValidElement(children)) {
+      return cloneElement(
+        children,
+        getReferenceProps({
+          ref,
+          ...props,
+          ...children.props,
+          'data-state': isOpen ? 'open' : 'closed',
+        }),
+      )
+    }
     return (
       <button
         ref={refs.setReference || ref}
@@ -17,4 +37,4 @@ export const TooltipAction = forwardRef<HTMLButtonElement, HTMLAttributes<HTMLBu
   },
 )
 
-TooltipAction.displayName = 'Tooltip.Action'
+TooltipAction.displayName = 'Dropdown.Action'

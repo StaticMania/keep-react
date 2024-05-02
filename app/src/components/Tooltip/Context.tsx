@@ -1,3 +1,4 @@
+'use client'
 import {
   Placement,
   arrow,
@@ -18,9 +19,15 @@ export interface TooltipOptions {
   initialOpen?: boolean
   placement?: Placement
   trigger?: 'hover' | 'focus' | 'click'
+  showArrow?: boolean
 }
 
-export function useTooltip({ initialOpen = false, placement = 'top', trigger = 'hover' }: TooltipOptions) {
+export function useTooltip({
+  initialOpen = false,
+  placement = 'top',
+  showArrow = true,
+  trigger = 'hover',
+}: TooltipOptions) {
   const arrowRef = useRef(null)
   const [isOpen, setIsOpen] = useState(initialOpen)
 
@@ -30,7 +37,7 @@ export function useTooltip({ initialOpen = false, placement = 'top', trigger = '
     onOpenChange: setIsOpen,
     middleware: [
       arrow({
-        element: arrowRef,
+        element: showArrow ? arrowRef : null,
       }),
       offset(9 + 2),
       autoPlacement({
@@ -53,7 +60,10 @@ export function useTooltip({ initialOpen = false, placement = 'top', trigger = '
 
   const interactions = useInteractions([focus, click, hover, role, dismiss])
 
-  return useMemo(() => ({ ...interactions, ...data, context, isOpen, arrowRef }), [interactions, data, isOpen, context])
+  return useMemo(
+    () => ({ ...interactions, ...data, context, isOpen, arrowRef, showArrow }),
+    [interactions, data, isOpen, context, showArrow],
+  )
 }
 
 type ContextType = ReturnType<typeof useTooltip> | null

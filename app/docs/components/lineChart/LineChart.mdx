@@ -1,0 +1,37 @@
+import { DefaultLineChart, DefaultLineChartCode } from './variant/DefaultLineChart'
+import { LineChartWithSeriesData, LineChartWithSeriesDataCode } from './variant/LineChartWithSeriesData'
+import { LineChartType, LineChartTypeCode } from './variant/LineChartType'
+
+import CodePreview from '../../../components/CodePreview'
+
+## Table of Contents
+
+The Line Chart component is a powerful tool for visualizing numerical data trends over time or across categories. With its clear and intuitive presentation, it enables users to easily identify patterns, correlations, and outliers within their datasets. Whether tracking stock prices, monitoring sales performance, or analyzing temperature fluctuations, the Line Chart offers a comprehensive view of data dynamics.
+
+## Default Line Chart
+
+The Default Line Chart component showcases a basic line chart, providing a simple yet effective way to visualize data trends over time or across categories.
+
+<CodePreview github="Charts" code={DefaultLineChartCode}>
+  <DefaultLineChart />
+</CodePreview>
+
+## Double Series Line Chart
+
+The Double Series Line Chart component extends the functionality of the Default Line Chart by allowing the visualization of multiple data series simultaneously. This feature-rich chart is ideal for comparing trends between different datasets.
+
+<CodePreview github="Charts" code={LineChartWithSeriesDataCode}>
+  <LineChartWithSeriesData />
+</CodePreview>
+
+## Line Chart Line Type
+
+The Line Chart Line Type component explores the various line types available in the line chart, offering flexibility in visual representation. This component allows users to customize the appearance of lines to suit their specific needs.
+
+<CodePreview github="Charts" code={LineChartTypeCode}>
+  <LineChartType />
+</CodePreview>
+
+## Reference
+
+To learn more about the Line chart, please see the documentation of [Recharts](https://recharts.org/en-US)

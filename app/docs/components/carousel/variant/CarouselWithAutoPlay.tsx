@@ -34,6 +34,7 @@ const CarouselWithAutoPlay = () => {
 }
 
 const CarouselWithAutoPlayCode = `
+'use client'
 import autoPlay from 'embla-carousel-autoplay'
 import {
   Carousel,

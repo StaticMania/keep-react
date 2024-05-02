@@ -22,7 +22,7 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
     { children, className, width, height, tipRadius, staticOffset, fill = '#1C222B', stroke, strokeWidth, d, ...props },
     ref: Ref<HTMLDivElement>,
   ) => {
-    const { refs, floatingStyles, arrowRef, context, getFloatingProps, isOpen } = useTooltipContext()
+    const { refs, floatingStyles, arrowRef, context, getFloatingProps, isOpen, showArrow } = useTooltipContext()
     return (
       isOpen && (
         <div
@@ -31,18 +31,20 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
           ref={refs.setFloating || ref}
           {...getFloatingProps()}
           style={floatingStyles}>
-          <FloatingArrow
-            ref={arrowRef}
-            context={context}
-            width={width}
-            height={height}
-            tipRadius={tipRadius}
-            staticOffset={staticOffset}
-            d={d}
-            fill={fill}
-            stroke={stroke}
-            strokeWidth={strokeWidth}
-          />
+          {showArrow && (
+            <FloatingArrow
+              ref={arrowRef}
+              context={context}
+              width={width}
+              height={height}
+              tipRadius={tipRadius}
+              staticOffset={staticOffset}
+              d={d}
+              fill={fill}
+              stroke={stroke}
+              strokeWidth={strokeWidth}
+            />
+          )}
           {children}
         </div>
       )
