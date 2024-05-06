@@ -3,8 +3,13 @@ import { Switch } from '@headlessui/react'
 import type { Dispatch, FC, ReactNode, SetStateAction } from 'react'
 import { useEffect, useState } from 'react'
 import { cn } from '../../helpers/cn'
-import { excludeClassName } from '../../helpers/exclude'
-import { ToggleSizes, switchTheme } from './theme'
+import { switchTheme } from './theme'
+
+type ToggleSizes = {
+  sm: string
+  md: string
+  lg: string
+}
 
 export interface ToggleProps {
   label?: ReactNode
@@ -31,7 +36,7 @@ const ToggleComponent: FC<ToggleProps> = ({
   ...props
 }) => {
   const [enabled, setEnabled] = useState(false)
-  const theirProps = excludeClassName(props)
+
   const theme = switchTheme
 
   useEffect(() => {
@@ -61,7 +66,7 @@ const ToggleComponent: FC<ToggleProps> = ({
   }
 
   return (
-    <div data-testid="toggle-element" {...theirProps} className="inline-flex items-center" id="test-switch">
+    <div data-testid="toggle-element" {...props} className="inline-flex items-center" id="test-switch">
       <Switch
         id="test-switchId"
         checked={disabled ? disabled : enabled}

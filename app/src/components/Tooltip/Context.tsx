@@ -20,6 +20,7 @@ export interface TooltipOptions {
   placement?: Placement
   trigger?: 'hover' | 'focus' | 'click'
   showArrow?: boolean
+  contentOffset?: number
 }
 
 export function useTooltip({
@@ -27,6 +28,7 @@ export function useTooltip({
   placement = 'top',
   showArrow = true,
   trigger = 'hover',
+  contentOffset = 11,
 }: TooltipOptions) {
   const arrowRef = useRef(null)
   const [isOpen, setIsOpen] = useState(initialOpen)
@@ -39,7 +41,7 @@ export function useTooltip({
       arrow({
         element: showArrow ? arrowRef : null,
       }),
-      offset(9 + 2),
+      offset(contentOffset),
       autoPlacement({
         alignment: 'start',
         allowedPlacements: ['top', 'left', 'bottom', 'right'],

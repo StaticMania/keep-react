@@ -23,10 +23,7 @@ export interface keepAccordionTheme {
 }
 
 const AccordionComponent = forwardRef<HTMLDivElement, AccordionProps>(
-  (
-    { children, className, flush, disabled = false, openFirstPanel, ...otherProps }: AccordionProps,
-    ref: Ref<HTMLDivElement>,
-  ) => {
+  ({ children, className, flush, disabled = false, openFirstPanel, ...otherProps }, ref: Ref<HTMLDivElement>) => {
     const [isOpen, setIsOpen] = useState(openFirstPanel ? 0 : -1)
 
     const modifiedChildren = Children.map(children, (child, index) => {

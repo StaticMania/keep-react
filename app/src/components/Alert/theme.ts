@@ -1,18 +1,13 @@
+export interface ColorVariant {
+  primary: string
+  secondary: string
+  success: string
+  warning: string
+  error: string
+}
 interface keepAlertTheme {
-  colorWithBg: {
-    primary: string
-    secondary: string
-    success: string
-    warning: string
-    error: string
-  }
-  colorWithOutBg: {
-    primary: string
-    secondary: string
-    success: string
-    warning: string
-    error: string
-  }
+  colorWithBg: ColorVariant
+  colorWithOutBg: ColorVariant
   root: {
     base: string
   }

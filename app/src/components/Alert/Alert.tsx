@@ -9,11 +9,11 @@ import { AlertDismiss } from './Dismiss'
 import { AlertIcon } from './Icon'
 import { AlertLink } from './Link'
 import { AlertTitle } from './Title'
-import { alertTheme } from './theme'
+import { ColorVariant, alertTheme } from './theme'
 
 interface AlertComponentProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  color?: keyof ColorVariant
   withBg?: boolean
   dismiss?: boolean
 }

@@ -3,11 +3,11 @@ import { HTMLAttributes, forwardRef, useEffect, useState } from 'react'
 import { cn } from '../../helpers/cn'
 import { ProgressContext } from './Context'
 import { LineProgressText } from './LineText'
-import { progressTheme } from './theme'
+import { ProgressSizeVariant, progressTheme } from './theme'
 
 interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
   progress?: number
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+  size?: keyof ProgressSizeVariant
 }
 
 export const LineProgressComponent = forwardRef<HTMLDivElement, ProgressProps>(

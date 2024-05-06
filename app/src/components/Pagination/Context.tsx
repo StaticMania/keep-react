@@ -1,12 +1,10 @@
+'use client'
 import { createContext, useContext } from 'react'
+import { PaginationProps } from './Pagination'
 
-export type PaginationPropsContext = {
-  shape?: 'rounded' | 'circle'
-}
+export const PaginationContext = createContext<PaginationProps | undefined>(undefined)
 
-export const PaginationContext = createContext<PaginationPropsContext | undefined>(undefined)
-
-export function usePaginationContext(): PaginationPropsContext {
+export function usePaginationContext(): PaginationProps {
   const context = useContext(PaginationContext)
 
   if (!context) {

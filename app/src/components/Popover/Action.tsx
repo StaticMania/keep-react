@@ -1,11 +1,10 @@
 'use client'
 import { useMergeRefs } from '@floating-ui/react'
-import { HTMLProps, ReactNode, cloneElement, forwardRef, isValidElement } from 'react'
+import { HTMLProps, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 import { usePopoverContext } from './Context'
 
 export interface PopoverTriggerProps {
-  children: ReactNode
   asChild?: boolean
 }
 

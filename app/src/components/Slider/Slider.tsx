@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 'use client'
 import type { FC, ReactNode } from 'react'
-import { excludeClassName } from '../../helpers/exclude'
 import { SliderRange } from './Rangebox'
 import { TooltipSlider } from './ToolTipSlider'
 
@@ -39,8 +38,6 @@ const SliderComponent: FC<SliderProps> = ({
   children,
   ...props
 }) => {
-  const theirProps = excludeClassName(props)
-
   return (
     <div>
       <TooltipSlider
@@ -56,7 +53,7 @@ const SliderComponent: FC<SliderProps> = ({
         onChange={onChange}
         marks={{ ...marks }}
         step={step}
-        {...theirProps}
+        {...props}
       />
       {children}
     </div>

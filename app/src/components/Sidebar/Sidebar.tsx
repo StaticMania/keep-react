@@ -1,27 +1,23 @@
 'use client'
 import { BaseHTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { SidebarBody } from './Body'
-import { SidebarFooter } from './Footer'
-import { SidebarHeader } from './Header'
-import { SidebarItem } from './Item'
-import { sidebarTheme } from './theme'
 
-const SidebarComponent = forwardRef<HTMLBaseElement, BaseHTMLAttributes<HTMLBaseElement>>(
+const Sidebar = forwardRef<HTMLBaseElement, BaseHTMLAttributes<HTMLBaseElement>>(
   ({ className, children, ...props }, ref) => {
     return (
-      <aside className={cn(sidebarTheme.root, className)} {...props} ref={ref}>
+      <aside
+        {...props}
+        ref={ref}
+        className={cn(
+          'flex h-[calc(100vh-25vh)] w-[280px] flex-col justify-between rounded-xl border border-metal-100 bg-white p-5 shadow-xl',
+          className,
+        )}>
         {children}
       </aside>
     )
   },
 )
 
-SidebarComponent.displayName = 'Sidebar'
+Sidebar.displayName = 'Sidebar'
 
-export const Sidebar = Object.assign(SidebarComponent, {
-  Item: SidebarItem,
-  Body: SidebarBody,
-  Header: SidebarHeader,
-  Footer: SidebarFooter,
-})
+export { Sidebar }

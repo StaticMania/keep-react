@@ -1,7 +1,8 @@
+'use client'
 import { createContext, useContext } from 'react'
 import { DrawerProps } from './Drawer'
 
-export const DrawerContext = createContext<DrawerProps | undefined>(undefined)
+export const DrawerContext = createContext<Pick<DrawerProps, 'position'> | undefined>(undefined)
 
 export function useDrawerContext(): DrawerProps {
   const context = useContext(DrawerContext)

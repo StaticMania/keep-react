@@ -1,18 +1,24 @@
-import { KeepColors, KeepSizes } from '../../Keep/KeepTheme'
+export type SpinnerColorVariant = {
+  failure: string
+  gray: string
+  info: string
+  pink: string
+  purple: string
+  success: string
+  warning: string
+}
+export type SpinnerSizeVariant = {
+  xs: string
+  sm: string
+  md: string
+  lg: string
+  xl: string
+}
 
 interface KeepSpinnerTheme {
   base: string
-  color: SpinnerColors
-  size: SpinnerSizes
-}
-
-export interface SpinnerColors
-  extends Pick<KeepColors, 'failure' | 'gray' | 'info' | 'pink' | 'purple' | 'success' | 'warning'> {
-  [key: string]: string
-}
-
-export interface SpinnerSizes extends Pick<KeepSizes, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> {
-  [key: string]: string
+  color: SpinnerColorVariant
+  size: SpinnerSizeVariant
 }
 
 export const spinnerTheme: KeepSpinnerTheme = {

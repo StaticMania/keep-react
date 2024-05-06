@@ -12,7 +12,7 @@ export const TooltipAction = forwardRef<HTMLButtonElement, TooltipActionProps>(
   ({ children, className, asChild, ...props }, propsRef) => {
     const { refs, getReferenceProps, isOpen } = useTooltipContext()
 
-    const childrenRef = (children as any).ref
+    const childrenRef = (children as any)?.ref
     const ref = useMergeRefs([refs.setReference, propsRef, childrenRef])
 
     if (asChild && isValidElement(children)) {

@@ -1,3 +1,11 @@
+export type ProgressSizeVariant = {
+  sm: string
+  md: string
+  lg: string
+  xl: string
+  '2xl': string
+}
+
 export interface ProgressThemeInterface {
   circle: {
     root: string
@@ -9,21 +17,9 @@ export interface ProgressThemeInterface {
     }
     text: {
       base: string
-      content: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
+      content: ProgressSizeVariant
     }
-    size: {
-      sm: string
-      md: string
-      lg: string
-      xl: string
-      '2xl': string
-    }
+    size: ProgressSizeVariant
   }
   line: {
     root: string
@@ -33,21 +29,9 @@ export interface ProgressThemeInterface {
     }
     text: {
       base: string
-      content: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
+      content: ProgressSizeVariant
     }
-    size: {
-      sm: string
-      md: string
-      lg: string
-      xl: string
-      '2xl': string
-    }
+    size: ProgressSizeVariant
   }
 }
 

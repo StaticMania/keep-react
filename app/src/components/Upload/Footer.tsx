@@ -1,10 +1,8 @@
 'use client'
-import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
 export interface FooterProps extends HTMLAttributes<HTMLDivElement> {
-  children?: ReactNode
-  className?: string
   isFileExists?: boolean
 }
 

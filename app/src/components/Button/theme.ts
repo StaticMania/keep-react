@@ -1,43 +1,28 @@
+export interface ButtonColorVariant {
+  primary: string
+  secondary: string
+  success: string
+  warning: string
+  error: string
+}
+
+export interface ButtonSizeVariant {
+  xs: string
+  sm: string
+  md: string
+  lg: string
+  xl: string
+  '2xl': string
+}
+
 interface keepButtonTheme {
   base: string
-  color: {
-    primary: string
-    secondary: string
-    success: string
-    warning: string
-    error: string
-  }
-  size: {
-    xs: string
-    sm: string
-    md: string
-    lg: string
-    xl: string
-    '2xl': string
-  }
-  iconBtn: {
-    xs: string
-    sm: string
-    md: string
-    lg: string
-    xl: string
-    '2xl': string
-  }
+  color: ButtonColorVariant
+  size: ButtonSizeVariant
+  iconBtn: ButtonSizeVariant
   variant: {
-    link: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
-    outline: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
+    link: ButtonColorVariant
+    outline: ButtonColorVariant
   }
   position: {
     start: string
@@ -105,6 +90,6 @@ export const buttonTheme: keepButtonTheme = {
   position: {
     start: '!rounded-l-md !rounded-r-none',
     end: '!rounded-r-md !rounded-l-none',
-    center: '!rounded-none',
+    center: '!rounded-none !border-x-0',
   },
 }

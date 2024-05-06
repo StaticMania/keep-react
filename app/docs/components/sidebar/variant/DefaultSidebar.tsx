@@ -1,86 +1,83 @@
 'use client'
+import Link from 'next/link'
 import {
-  ArchiveTray,
-  Chat,
+  ChartPie,
+  CheckSquare,
   Gear,
-  List,
+  HouseLine,
+  Lifebuoy,
   MagnifyingGlass,
-  ShoppingCart,
-  SignIn,
-  SquaresFour,
+  PresentationChart,
+  Stack,
   Users,
 } from 'phosphor-react'
 import {
   Avatar,
-  Button,
-  Divider,
   Input,
   InputIcon,
   Sidebar,
   SidebarBody,
   SidebarFooter,
-  SidebarHeader,
   SidebarItem,
+  SidebarList,
 } from '../../../../src'
 
 const DefaultSidebar = () => {
   return (
-    <div className="p-2">
-      <Sidebar className="max-w-max">
-        <SidebarHeader className="space-y-2.5">
-          <div className="flex items-center justify-between">
-            <h5 className="font-bold text-primary-500">Keep</h5>
-            <Button variant="outline" shape="icon" color="primary" className="border-none">
-              <List size={24} />
-            </Button>
-          </div>
-          <div>
-            <fieldset className="relative max-w-md">
-              <Input placeholder="Search here" className="ps-11" />
-              <InputIcon>
-                <MagnifyingGlass size={18} color="#AFBACA" />
-              </InputIcon>
-            </fieldset>
-          </div>
-        </SidebarHeader>
+    <div className="p-3">
+      <Sidebar>
         <SidebarBody>
-          <SidebarItem>
-            <SquaresFour size={24} />
-            Profile
-          </SidebarItem>
-          <SidebarItem>
-            <ShoppingCart size={24} />
-            Products
-          </SidebarItem>
-          <SidebarItem>
-            <ArchiveTray size={24} />
-            Download
-          </SidebarItem>
-          <SidebarItem>
-            <Chat size={24} />
-            Message
-          </SidebarItem>
-          <SidebarItem>
-            <Gear size={24} />
-            Settings
-          </SidebarItem>
-          <SidebarItem>
-            <Users size={24} />
-            Users
-          </SidebarItem>
-          <SidebarItem>
-            <SignIn size={24} />
-            Log Out
-          </SidebarItem>
+          <Link href="/" className="flex items-center">
+            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+              K.
+            </span>
+          </Link>
+          <fieldset className="relative">
+            <Input placeholder="Search" className="ps-11" />
+            <InputIcon>
+              <MagnifyingGlass size={19} color="#AFBACA" />
+            </InputIcon>
+          </fieldset>
+          <SidebarList>
+            <SidebarItem>
+              <HouseLine size={20} />
+              House
+            </SidebarItem>
+            <SidebarItem>
+              <PresentationChart size={20} />
+              Dashboard
+            </SidebarItem>
+            <SidebarItem>
+              <Stack size={20} />
+              Projects
+            </SidebarItem>
+            <SidebarItem>
+              <CheckSquare size={20} />
+              Tasks
+            </SidebarItem>
+            <SidebarItem>
+              <ChartPie size={20} />
+              Reporting
+            </SidebarItem>
+            <SidebarItem>
+              <Users size={20} />
+              Users
+            </SidebarItem>
+            <SidebarItem>
+              <Lifebuoy size={20} />
+              Support
+            </SidebarItem>
+            <SidebarItem>
+              <Gear size={20} />
+              Settings
+            </SidebarItem>
+          </SidebarList>
         </SidebarBody>
-        <Divider className="my-3" />
-        <SidebarFooter className="flex items-center gap-2">
+        <SidebarFooter>
+          <Avatar img="/images/avatar/avatar-1.png" alt="avatar" />
           <div>
-            <Avatar shape="circle" img="/images/avatar/avatar-3.png" />
-          </div>
-          <div>
-            <p className="mb-0 text-body-3 font-medium text-metal-600">Md Ariful Islam</p>
-            <p className="text-body-4 font-normal text-metal-400">Web Developer</p>
+            <p className="text-body-4 font-medium text-metal-400">Enzo Farnandez</p>
+            <p className="text-body-4 font-normal text-metal-300">enzo123@gmail.com</p>
           </div>
         </SidebarFooter>
       </Sidebar>
@@ -90,90 +87,84 @@ const DefaultSidebar = () => {
 
 const DefaultSidebarCode = `
 'use client'
+import Link from 'next/link'
 import {
-  ArchiveTray,
-  Chat,
+  ChartPie,
+  CheckSquare,
   Gear,
-  List,
+  HouseLine,
+  Lifebuoy,
   MagnifyingGlass,
-  ShoppingCart,
-  SignIn,
-  SquaresFour,
+  PresentationChart,
+  Stack,
   Users,
 } from 'phosphor-react'
-
 import {
   Avatar,
-  Button,
-  Divider,
-  InputIcon,
   Input,
+  InputIcon,
   Sidebar,
   SidebarBody,
   SidebarFooter,
-  SidebarHeader,
   SidebarItem,
-} from from 'keep-react'
+  SidebarList,
+} from 'keep-react'
 
 export const SidebarComponent = () => {
-  return (
+   return (
     <Sidebar>
-      <SidebarHeader className="space-y-2.5">
-        <div className="flex items-center justify-between">
-          <h5 className="font-bold text-primary-500">
-            Keep
-          </h5>
-          <Button variant="outline" shape="icon" color="primary" className="border-none">
-            <List size={24} />
-          </Button>
-        </div>
-        <div>
-          <fieldset className="relative max-w-md">
-            <Input placeholder="Search here" className="ps-11" />
-            <InputIcon>
-              <MagnifyingGlass size={18} color="#AFBACA" />
-            </InputIcon>
-          </fieldset>
-        </div>
-      </SidebarHeader>
       <SidebarBody>
-        <SidebarItem>
-          <SquaresFour size={24} />
-          Profile
-        </SidebarItem>
-        <SidebarItem>
-          <ShoppingCart size={24} />
-          Products
-        </SidebarItem>
-        <SidebarItem>
-          <ArchiveTray size={24} />
-          Download
-        </SidebarItem>
-        <SidebarItem>
-          <Chat size={24} />
-          Message
-        </SidebarItem>
-        <SidebarItem>
-          <Gear size={24} />
-          Settings
-        </SidebarItem>
-        <SidebarItem>
-          <Users size={24} />
-          Users
-        </SidebarItem>
-        <SidebarItem>
-          <SignIn size={24} />
-          Log Out
-        </SidebarItem>
+        <Link href="/" className="flex items-center">
+          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+            K.
+          </span>
+        </Link>
+        <fieldset className="relative">
+          <Input placeholder="Search" className="ps-11" />
+          <InputIcon>
+            <MagnifyingGlass size={19} color="#AFBACA" />
+          </InputIcon>
+        </fieldset>
+        <SidebarList>
+          <SidebarItem>
+            <HouseLine size={20} />
+            House
+          </SidebarItem>
+          <SidebarItem>
+            <PresentationChart size={20} />
+            Dashboard
+          </SidebarItem>
+          <SidebarItem>
+            <Stack size={20} />
+            Projects
+          </SidebarItem>
+          <SidebarItem>
+            <CheckSquare size={20} />
+            Tasks
+          </SidebarItem>
+          <SidebarItem>
+            <ChartPie size={20} />
+            Reporting
+          </SidebarItem>
+          <SidebarItem>
+            <Users size={20} />
+            Users
+          </SidebarItem>
+          <SidebarItem>
+            <Lifebuoy size={20} />
+            Support
+          </SidebarItem>
+          <SidebarItem>
+            <Gear size={20} />
+            Settings
+          </SidebarItem>
+        </SidebarList>
       </SidebarBody>
-      <Divider className="my-3" />
-      <SidebarFooter className="flex items-center gap-2">
+      <SidebarFooter>
+        <Avatar img="/images/avatar/avatar-1.png" alt="avatar" />
         <div>
-          <Avatar shape="circle" img="/images/avatar/avatar-3.png" />
-        </div>
-        <div>
-          <p className="mb-0 text-body-3 font-medium text-metal-600">Md Ariful Islam</p>
-          <p className="text-body-4 font-normal text-metal-400">Web Developer</p>
+          <p className="text-body-4 font-medium text-metal-400">Enzo Farnandez</p>
+          <p className="text-body-4 font-normal text-metal-300">enzo123@gmail.com</p>
         </div>
       </SidebarFooter>
     </Sidebar>

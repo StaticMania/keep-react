@@ -2,11 +2,11 @@
 import { ButtonHTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { ButtonGroup } from '../ButtonGroup'
-import { buttonTheme } from './theme'
+import { ButtonColorVariant, ButtonSizeVariant, buttonTheme } from './theme'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  size?: keyof ButtonSizeVariant
+  color?: keyof ButtonColorVariant
   variant?: 'link' | 'outline'
   shape?: 'circle' | 'icon'
   position?: 'start' | 'end' | 'center'

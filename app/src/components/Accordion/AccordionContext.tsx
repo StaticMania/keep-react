@@ -1,3 +1,4 @@
+'use client'
 import { Dispatch, SetStateAction, createContext, useContext } from 'react'
 import { AccordionProps } from './Accordion'
 

@@ -1,75 +1,37 @@
+export interface DividerColorVariant {
+  primary: string
+  secondary: string
+  success: string
+  warning: string
+  error: string
+}
+
+export interface DividerSizeVariant {
+  sm: string
+  md: string
+  lg: string
+  xl: string
+  '2xl': string
+}
+
 interface DividerThemeInterface {
   withOutChildren: {
     base: string
-    color: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
-    size: {
-      sm: string
-      md: string
-      lg: string
-      xl: string
-      '2xl': string
-    }
+    color: DividerColorVariant
+    size: DividerSizeVariant
   }
   withChildren: {
     base: string
-    textColor: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
+    textColor: DividerColorVariant
     size: {
-      start: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
-      center: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
-      end: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
+      start: DividerSizeVariant
+      center: DividerSizeVariant
+      end: DividerSizeVariant
     }
     color: {
-      start: {
-        primary: string
-        secondary: string
-        success: string
-        warning: string
-        error: string
-      }
-      center: {
-        primary: string
-        secondary: string
-        success: string
-        warning: string
-        error: string
-      }
-      end: {
-        primary: string
-        secondary: string
-        success: string
-        warning: string
-        error: string
-      }
+      start: DividerColorVariant
+      center: DividerColorVariant
+      end: DividerColorVariant
     }
     variant: {
       start: string

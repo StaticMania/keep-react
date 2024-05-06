@@ -8,7 +8,7 @@ import { PaginationList } from './List'
 import { PaginationNavigator } from './Navigator'
 import { paginationTheme } from './theme'
 
-interface PaginationProps extends HTMLAttributes<HTMLElement> {
+export interface PaginationProps extends HTMLAttributes<HTMLElement> {
   shape?: 'rounded' | 'circle'
 }
 

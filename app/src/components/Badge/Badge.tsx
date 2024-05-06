@@ -1,15 +1,15 @@
 'use client'
 import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { badgeTheme } from './theme'
+import { BadgeColorVariant, BadgeSizeVariant, badgeTheme } from './theme'
 
 interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode
   dotStyle?: string
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  color?: keyof BadgeColorVariant
   showIcon?: boolean
   iconPosition?: 'left' | 'right'
-  size?: 'sm' | 'md'
+  size?: keyof BadgeSizeVariant
   variant?: 'base' | 'border' | 'background'
   disabled?: boolean
 }

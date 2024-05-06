@@ -4,11 +4,11 @@ import { cn } from '../../helpers/cn'
 import { CircleProgressLine } from './CircleLine'
 import { CircleProgressText } from './CircleText'
 import { ProgressContext } from './Context'
-import { progressTheme } from './theme'
+import { ProgressSizeVariant, progressTheme } from './theme'
 
 interface ProgressCircleProps extends HTMLAttributes<HTMLDivElement> {
   progress?: number
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+  size?: keyof ProgressSizeVariant
 }
 
 export const ProgressCircleComponent = forwardRef<HTMLDivElement, ProgressCircleProps>(
