@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
 import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from '../src'
 import Search from './Search'
+import ThemeSwitcher from './ThemeSwitcher'
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
@@ -83,6 +84,7 @@ const Navbar = () => {
               className="rounded-lg bg-metal-900 px-4 py-2.5 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800">
               get started
             </Link>
+            <ThemeSwitcher />
           </div>
           <div className="flex items-center justify-between gap-1.5 sm:gap-3 lg:hidden">
             <button

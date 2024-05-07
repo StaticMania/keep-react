@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import { ThemeProvider } from './components/ThemeProvider'
 import TopProgressBar from './components/TopProgressBar'
 import './docs.css'
 import './globals.css'
@@ -20,11 +21,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <ToastWrapper />
-        <Navbar />
-        <main className="relative pt-20">{children}</main>
-        <Footer />
-        <TopProgressBar />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ToastWrapper />
+          <Navbar />
+          <main className="relative pt-20">{children}</main>
+          <Footer />
+          <TopProgressBar />
+        </ThemeProvider>
       </body>
     </html>
   )

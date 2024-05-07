@@ -1,11 +1,23 @@
 'use client'
 import { useTheme } from 'next-themes'
 import { MoonStars, SunDim } from 'phosphor-react'
+import { useEffect, useState } from 'react'
 import { Dropdown, DropdownAction, DropdownContent, DropdownList } from '../src'
 
 const ThemeSwitcher = () => {
   const { setTheme, theme } = useTheme()
-  return (
+  const [client, setClient] = useState(false)
+
+  useEffect(() => {
+    let ignore = false
+    if (!ignore) {
+      setClient(true)
+    }
+    return () => {
+      ignore = true
+    }
+  }, [])
+  return client ? (
     <Dropdown placement="bottom-end" className="max-w-[150px]">
       <DropdownAction>
         {theme === 'dark' ? <MoonStars size={20} color="#fff" /> : <SunDim size={20} color="#444" />}
@@ -30,7 +42,7 @@ const ThemeSwitcher = () => {
         </DropdownList>
       </DropdownContent>
     </Dropdown>
-  )
+  ) : null
 }
 
 export default ThemeSwitcher
