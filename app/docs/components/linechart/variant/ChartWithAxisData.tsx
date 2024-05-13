@@ -1,15 +1,14 @@
 'use client'
-import { BarChart } from '../../../../src'
-import { BarChartData } from './DefaultLineChart'
+import { LineChart } from '../../../../src'
+import { LinechartData } from './DefaultLineChart'
 
 const ChartWithAxisData = () => {
   return (
-    <BarChart
+    <LineChart
       height={250}
       width={600}
       dataKey="price"
-      chartData={BarChartData}
-      showBg={true}
+      chartData={LinechartData}
       activeIndex={5}
       showTooltip={true}
       showXAxis={true}
@@ -20,8 +19,8 @@ const ChartWithAxisData = () => {
 
 const ChartWithAxisDataCode = `
 "use client";
-import { BarChart } from "keep-react";
-const BarChartData = [
+import { LineChart } from "keep-react";
+const LinechartData = [
   {
     name: "2",
     price: 340,
@@ -74,13 +73,13 @@ const BarChartData = [
   },
 ];
 
-export const BarComponent = () => {
+export const LineChartComponent = () => {
   return (
-    <BarChart
+    <LineCharts
       height={250}
       width={600}
       dataKey="price"
-      chartData={BarChartData}
+      chartData={LinechartData}
       showBg={true}
       activeIndex={5}
       showTooltip={true}

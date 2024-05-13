@@ -56,7 +56,7 @@ export const LinechartData = [
 ]
 
 const DefaultLineChart = () => {
-  return <LineChart height={250} width={600} dataKey="price" chartData={LinechartData} active={true} activeIndex={5} />
+  return <LineChart width={850} dataKey="price" chartData={LinechartData} />
 }
 
 const DefaultLineChartCode = `

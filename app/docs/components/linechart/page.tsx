@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
-import BarChartDocs from '.'
+import LineChartDocs from '.'
 
 export const metadata: Metadata = {
   description:
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
-      <BarChartDocs />
+      <LineChartDocs />
     </DocsContentLayout>
   )
 }

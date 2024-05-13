@@ -1,18 +1,16 @@
 'use client'
-import { BarChart } from '../../../../src'
-import { BarChartData } from './DefaultLineChart'
+import { LineChart } from '../../../../src'
+import { LinechartData } from './DefaultLineChart'
 
 const ChartWithDoubleData = () => {
   return (
-    <BarChart
+    <LineChart
       height={250}
       width={600}
-      active={true}
-      showBg={true}
       showXAxis={true}
       showYAxis={true}
       showTooltip={true}
-      chartData={BarChartData.slice(0, 6)}
+      chartData={LinechartData.slice(0, 6)}
       dataKey="price"
       secondaryDataKey="sell"
     />
@@ -21,8 +19,8 @@ const ChartWithDoubleData = () => {
 
 const ChartWithDoubleDataCode = `
 "use client";
-import { BarChart } from "keep-react";
-const BarChartData = [
+import { LineChart } from "keep-react";
+const LinechartData = [
   {
     name: "2",
     price: 340,
@@ -70,9 +68,9 @@ const BarChartData = [
   },
 ];
 
-export const BarComponent = () => {
+export const LineComponent = () => {
   return (
-    <BarChart
+    <LineChart
       height={250}
       width={600}
       active={true}
@@ -80,7 +78,7 @@ export const BarComponent = () => {
       showXAxis={true}
       showYAxis={true}
       showTooltip={true}
-      chartData={BarChartData}
+      chartData={LinechartData}
       dataKey="price"
       secondaryDataKey="sell"
     />
