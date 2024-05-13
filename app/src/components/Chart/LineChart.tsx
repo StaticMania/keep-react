@@ -43,7 +43,7 @@ interface LineChartProps extends BarProps {
   showYAxis?: boolean
 }
 
-const LineChart: FC<LineChartProps> = ({
+export const LineChart: FC<LineChartProps> = ({
   showGridLine = false,
   showTooltip = false,
   //   showBg = false,
@@ -68,10 +68,7 @@ const LineChart: FC<LineChartProps> = ({
   showXAxis = false,
   showYAxis = false,
 }) => {
-  const [client, setClient] = useState(() => {
-    console.log('before use effect')
-    return false
-  })
+  const [client, setClient] = useState(false)
   const RenderLineCart = (
     <ResponsiveContainer width="100%" height="100%">
       <LineCartCom width={width} height={height} data={chartData}>
@@ -105,7 +102,6 @@ const LineChart: FC<LineChartProps> = ({
     </ResponsiveContainer>
   )
   useEffect(() => {
-    console.log('after mounted')
     setClient(true)
   }, [])
   return (
@@ -114,5 +110,3 @@ const LineChart: FC<LineChartProps> = ({
     </ChartContext.Provider>
   )
 }
-
-export default LineChart
