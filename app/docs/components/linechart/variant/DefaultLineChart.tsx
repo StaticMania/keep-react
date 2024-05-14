@@ -142,7 +142,7 @@ const LinechartData = [
 
 export const LineComponent = () => {
   return (
-    <LineChart height={250} width={600} dataKey="price" chartData={LinechartData} active={true} activeIndex={5} />
+    <LineChart width={850} dataKey="price" chartData={LinechartData} />
   );
 }
 `

@@ -5,11 +5,9 @@ import { LinechartData } from './DefaultLineChart'
 const ChartWithAxisData = () => {
   return (
     <LineChart
-      height={250}
-      width={600}
+      width={850}
       dataKey="price"
       chartData={LinechartData}
-      activeIndex={5}
       showTooltip={true}
       showXAxis={true}
       showYAxis={true}
@@ -75,13 +73,10 @@ const LinechartData = [
 
 export const LineChartComponent = () => {
   return (
-    <LineCharts
-      height={250}
-      width={600}
+    <LineChart
+      width={850}
       dataKey="price"
       chartData={LinechartData}
-      showBg={true}
-      activeIndex={5}
       showTooltip={true}
       showXAxis={true}
       showYAxis={true}
