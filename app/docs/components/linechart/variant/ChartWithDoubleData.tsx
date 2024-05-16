@@ -71,16 +71,14 @@ const LinechartData = [
 export const LineComponent = () => {
   return (
     <LineChart
-      height={250}
-      width={600}
-      active={true}
-      showBg={true}
+      width={850}
       showXAxis={true}
       showYAxis={true}
       showTooltip={true}
-      chartData={LinechartData}
+      chartData={LinechartData.slice(0, 6)}
       dataKey="price"
       secondaryDataKey="sell"
+      showGridLine
     />
   )
 }

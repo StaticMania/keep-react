@@ -11,6 +11,7 @@ const ChartWithAxisData = () => {
       showTooltip={true}
       showXAxis={true}
       showYAxis={true}
+      tooltipBtnColor="error"
     />
   )
 }
