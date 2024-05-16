@@ -5,14 +5,14 @@ import { LinechartData } from './DefaultLineChart'
 const ChartWithDoubleData = () => {
   return (
     <LineChart
-      height={250}
-      width={600}
+      width={850}
       showXAxis={true}
       showYAxis={true}
       showTooltip={true}
       chartData={LinechartData.slice(0, 6)}
       dataKey="price"
       secondaryDataKey="sell"
+      showGridLine
     />
   )
 }
