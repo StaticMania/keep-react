@@ -67,6 +67,15 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Line Chart',
+    href: '/docs/components/linechart',
+    tag: false,
+    deprecate: false,
+    folderName: 'Chart',
+    Icon: ChartLineUp,
+  },
+  {
+    id: generatedID(),
     name: 'Avatar',
     href: '/docs/components/avatar',
     tag: false,
