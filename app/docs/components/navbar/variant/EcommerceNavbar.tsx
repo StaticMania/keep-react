@@ -47,6 +47,7 @@ const EcommerceNavbar = () => {
 
 const EcommerceNavbarCode = `
 "use client";
+import Image from "next/image";
 import { Button, Navbar } from "keep-react";
 import { Heart, MagnifyingGlass, ShoppingCart, User } from "phosphor-react";
 

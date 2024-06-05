@@ -46,6 +46,7 @@ const NavbarWithCenterLogo = () => {
 
 const NavbarWithCenterLogoCode = `
 "use client";
+import Image from "next/image";
 import { Button,Navbar } from "keep-react";
 import { MagnifyingGlass } from "phosphor-react";
 
