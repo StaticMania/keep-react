@@ -403,14 +403,6 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
-    name: 'Tree',
-    folderName: 'Tree',
-    href: '/docs/components/tree',
-    tag: false,
-    deprecate: false,
-  },
-  {
-    id: generatedID(),
     name: 'Upload',
     folderName: 'Upload',
     href: '/docs/components/upload',
