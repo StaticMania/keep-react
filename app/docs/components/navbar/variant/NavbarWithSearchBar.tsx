@@ -46,6 +46,7 @@ const NavbarWithSearchBar = () => {
 
 const NavbarWithSearchBarCode = `
 "use client";
+import Image from "next/image";
 import { Navbar, TextInput } from "keep-react";
 import {
   CaretDown,
