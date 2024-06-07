@@ -21,6 +21,7 @@ module.exports = {
     },
     extend: {
       screens: {
+        laptop: '1140px',
         '4k': '1980px',
       },
     },

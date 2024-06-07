@@ -8,17 +8,17 @@ import { PaginationList } from './List'
 import { PaginationNavigator } from './Navigator'
 import { paginationTheme } from './theme'
 
-export interface PaginationProps extends HTMLAttributes<HTMLElement> {
+export interface PaginationProps extends HTMLAttributes<HTMLDivElement> {
   shape?: 'rounded' | 'circle'
 }
 
-const PaginationComponent = forwardRef<HTMLElement, PaginationProps>(
+const PaginationComponent = forwardRef<HTMLDivElement, PaginationProps>(
   ({ className, children, shape = 'rounded', ...props }, ref) => {
     const { root } = paginationTheme
     return (
-      <nav {...props} role="navigation" ref={ref} aria-label="pagination" className={cn(root.base, className)}>
+      <div {...props} role="navigation" ref={ref} aria-label="pagination" className={cn(root.base, className)}>
         <PaginationContext.Provider value={{ shape }}>{children}</PaginationContext.Provider>
-      </nav>
+      </div>
     )
   },
 )

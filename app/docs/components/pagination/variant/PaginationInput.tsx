@@ -25,7 +25,7 @@ const PaginationInput = () => {
         <span>/ Go to</span>
         <input
           type="number"
-          className="h-9 w-[60px] rounded-md border border-metal-100 text-center text-metal-500 focus:outline-none"
+          className="h-9 w-[60px] rounded-md border border-metal-100 text-center text-metal-600 focus:outline-none dark:border-metal-800 dark:text-metal-300"
           defaultValue={20}
         />
         <span>of 200</span>
@@ -60,9 +60,9 @@ export const PaginationComponent = () => {
       </PaginationNavigator>
       <PaginationGoTo>
         <span>/ Go to</span>
-        <input
+         <input
           type="number"
-          className="h-9 w-[60px] rounded-md border border-metal-100 text-center text-metal-500 focus:outline-none"
+          className="h-9 w-[60px] rounded-md border border-metal-100 text-center text-metal-600 focus:outline-none dark:border-metal-800 dark:text-metal-300"
           defaultValue={20}
         />
         <span>of 200</span>

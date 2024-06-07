@@ -9,7 +9,7 @@ const Sidebar = forwardRef<HTMLBaseElement, BaseHTMLAttributes<HTMLBaseElement>>
         {...props}
         ref={ref}
         className={cn(
-          'flex h-[calc(100vh-25vh)] w-[280px] flex-col justify-between rounded-xl border border-metal-100 bg-white p-5 shadow-xl',
+          'flex h-[calc(100vh-25vh)] w-[280px] flex-col justify-between rounded-xl border border-metal-100 bg-white p-5 shadow-xl dark:border-metal-900 dark:bg-metal-900',
           className,
         )}>
         {children}

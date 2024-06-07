@@ -1,4 +1,4 @@
-import { ChartTooltip, Pie, PieChart, ResponsiveContainer } from '../../../../src'
+import { ChartTooltip, CustomTooltip, Pie, PieChart, ResponsiveContainer } from '../../../../src'
 
 const PieChartWithTwoLevel = () => {
   const data01 = [
@@ -69,14 +69,7 @@ const PieChartWithTwoLevel = () => {
           innerRadius={40}
           fill="#1B4DFF"></Pie>
 
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </PieChart>
     </ResponsiveContainer>
   )
@@ -84,7 +77,7 @@ const PieChartWithTwoLevel = () => {
 
 const PieChartWithTwoLevelCode = `
 
-import { Pie, PieChart, ResponsiveContainer } from 'keep-react'
+import { Pie, PieChart, ResponsiveContainer, CustomTooltip } from 'keep-react'
 
 export const PieChartComponent = () => {
   const data01 = [
@@ -147,14 +140,7 @@ export const PieChartComponent = () => {
           innerRadius={40}
           fill="#1B4DFF"></Pie>
 
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </PieChart>
     </ResponsiveContainer>
   )

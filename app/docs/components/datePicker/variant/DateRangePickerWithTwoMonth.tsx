@@ -11,10 +11,10 @@ const DateRangePicker2 = () => {
     <Popover showArrow={false} placement="bottom-start">
       <PopoverTrigger asChild>
         <Button
-          className="w-[286px] justify-start gap-2 rounded-lg border border-metal-50 text-left text-body-4 font-normal hover:bg-white active:focus:scale-100"
+          className="w-[286px] justify-start gap-2 rounded-xl border border-metal-50 px-4 text-left text-body-4 font-normal text-metal-600 hover:bg-white active:focus:scale-100 dark:border-metal-900 dark:bg-metal-900 dark:text-white dark:hover:bg-metal-800"
           variant="outline"
           color="secondary">
-          <Calendar size={20} color="#AFBACA" />
+          <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
             <>
               {format(selected?.from ?? new Date(), 'LLL dd, y')} - {format(selected?.to ?? new Date(), 'LLL dd, y')}
@@ -44,10 +44,10 @@ export const DatePickerComponent = () => {
     <Popover showArrow={false} placement="bottom-start">
       <PopoverTrigger asChild>
         <Button
-          className="w-[286px] justify-start gap-2 rounded-lg border border-metal-50 text-left text-body-4 font-normal hover:bg-white active:focus:scale-100"
+          className="w-[286px] justify-start gap-2 rounded-xl border border-metal-50 px-4 text-left text-body-4 font-normal text-metal-600 hover:bg-white active:focus:scale-100 dark:border-metal-900 dark:bg-metal-900 dark:text-white dark:hover:bg-metal-800"
           variant="outline"
           color="secondary">
-          <Calendar size={20} color="#AFBACA" />
+          <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
             <>
               {format(selected?.from ?? new Date(), 'LLL dd, y')} - {format(selected?.to ?? new Date(), 'LLL dd, y')}

@@ -84,7 +84,7 @@ const AvatarComponent = forwardRef<HTMLDivElement, AvatarProps>(
         ref={ref}
         className={cn(
           'relative border border-white bg-white',
-          shape === 'circle' && 'p-0.5',
+          shape === 'circle' && 'p-[1px]',
           avatarTheme.shape[shape],
           avatarTheme.size[size],
           active && avatarTheme.activeIcon.base,

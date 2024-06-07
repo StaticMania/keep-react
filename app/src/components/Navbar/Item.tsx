@@ -14,8 +14,8 @@ export const NavbarItem = forwardRef<HTMLLIElement, NavbarItemProps>(
         className={cn(
           'cursor-pointer rounded-md bg-transparent px-4 py-2 text-body-4 font-medium transition-all duration-300 active:scale-95',
           active
-            ? 'bg-metal-900 text-white hover:bg-metal-800'
-            : 'text-metal-700 hover:bg-metal-100 hover:text-metal-900',
+            ? 'bg-metal-900 text-white hover:bg-metal-800 dark:bg-metal-800'
+            : 'text-metal-700 hover:bg-metal-100 hover:text-metal-900 dark:text-white dark:hover:bg-metal-800',
           className,
         )}
         ref={ref}>

@@ -1,11 +1,15 @@
 'use client'
 import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
+import { Button, Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
 
 const DropdownTrigger = () => {
   return (
     <Dropdown trigger="hover">
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction asChild>
+        <Button color="secondary" size="xs">
+          Dropdown
+        </Button>
+      </DropdownAction>
       <DropdownContent>
         <DropdownList>
           <DropdownItem>
@@ -47,12 +51,16 @@ const DropdownTrigger = () => {
 const DropdownTriggerCode = `
 'use client'
 import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from 'keep-react'
+import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList, Button } from 'keep-react'
 
 export const DropdownComponent = () => {
   return (
     <Dropdown trigger="hover">
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction asChild>
+        <Button color="secondary" size="xs">
+          Dropdown
+        </Button>
+      </DropdownAction>
       <DropdownContent>
         <DropdownList>
           <DropdownItem>

@@ -1,18 +1,12 @@
 'use client'
-import { TableHTMLAttributes, forwardRef } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { tableTheme } from './theme'
 
-export const TableBody = forwardRef<HTMLTableSectionElement, TableHTMLAttributes<HTMLTableSectionElement>>(
-  ({ children, className, ...props }, ref) => {
-    const theme = tableTheme.body
-
-    return (
-      <tbody ref={ref} className={cn(theme.base, className)} {...props}>
-        {children}
-      </tbody>
-    )
-  },
+const TableBody = forwardRef<HTMLTableSectionElement, HTMLAttributes<HTMLTableSectionElement>>(
+  ({ className, ...props }, ref) => (
+    <tbody ref={ref} className={cn('[&_tr:last-child]:border-0', className)} {...props} />
+  ),
 )
+TableBody.displayName = 'TableBody'
 
-TableBody.displayName = 'Table.Body'
+export { TableBody }

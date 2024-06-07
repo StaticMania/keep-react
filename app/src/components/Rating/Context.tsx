@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { createContext, useContext } from 'react'
 
 type RatingContextProps = {

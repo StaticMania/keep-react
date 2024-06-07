@@ -1,28 +1,20 @@
 'use client'
-import { TableHTMLAttributes, forwardRef } from 'react'
+import { ThHTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { Checkbox } from '../Checkbox'
-import { useTableContext } from './TableContext'
-import { tableTheme } from './theme'
 
-export const TableHead = forwardRef<HTMLTableSectionElement, TableHTMLAttributes<HTMLTableSectionElement>>(
-  ({ children, className, ...props }, ref) => {
-    const theme = tableTheme
-    const { showCheckbox } = useTableContext()
-
-    return (
-      <thead ref={ref} className={cn(theme.head.base, className)} {...props}>
-        <tr>
-          {showCheckbox && (
-            <td className="pl-4">
-              <Checkbox variant="checked" />
-            </td>
-          )}
-          {children}
-        </tr>
-      </thead>
-    )
-  },
+const TableHead = forwardRef<HTMLTableCellElement, ThHTMLAttributes<HTMLTableCellElement>>(
+  ({ className, children, ...props }, ref) => (
+    <th
+      ref={ref}
+      className={cn(
+        'h-14 bg-metal-50 px-6 text-left align-middle text-body-4 font-medium text-metal-900  dark:bg-metal-800 dark:text-white [&:has([role=checkbox])]:pr-0',
+        className,
+      )}
+      {...props}>
+      {children}
+    </th>
+  ),
 )
+TableHead.displayName = 'TableHead'
 
-TableHead.displayName = 'Table.Head'
+export { TableHead }

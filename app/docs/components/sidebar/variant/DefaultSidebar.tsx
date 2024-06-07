@@ -27,8 +27,8 @@ const DefaultSidebar = () => {
     <div className="p-3">
       <Sidebar>
         <SidebarBody>
-          <Link href="/" className="flex items-center">
-            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+          <Link href="/" className="inline-flex items-center">
+            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white dark:bg-metal-800">
               K.
             </span>
           </Link>
@@ -76,8 +76,8 @@ const DefaultSidebar = () => {
         <SidebarFooter>
           <Avatar img="/images/avatar/avatar-1.png" alt="avatar" />
           <div>
-            <p className="text-body-4 font-medium text-metal-400">Enzo Farnandez</p>
-            <p className="text-body-4 font-normal text-metal-300">enzo123@gmail.com</p>
+            <p className="text-body-4 font-medium text-metal-400 dark:text-white">Enzo Farnandez</p>
+            <p className="text-body-4 font-normal text-metal-300 dark:text-metal-400">enzo123@gmail.com</p>
           </div>
         </SidebarFooter>
       </Sidebar>
@@ -114,8 +114,8 @@ export const SidebarComponent = () => {
    return (
     <Sidebar>
       <SidebarBody>
-        <Link href="/" className="flex items-center">
-          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+        <Link href="/" className="inline-flex items-center">
+          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 dark:bg-metal-800 text-heading-6 font-semibold text-white">
             K.
           </span>
         </Link>
@@ -163,8 +163,8 @@ export const SidebarComponent = () => {
       <SidebarFooter>
         <Avatar img="/images/avatar/avatar-1.png" alt="avatar" />
         <div>
-          <p className="text-body-4 font-medium text-metal-400">Enzo Farnandez</p>
-          <p className="text-body-4 font-normal text-metal-300">enzo123@gmail.com</p>
+           <p className="text-body-4 font-medium text-metal-400 dark:text-white">Enzo Farnandez</p>
+            <p className="text-body-4 font-normal text-metal-300 dark:text-metal-400">enzo123@gmail.com</p>
         </div>
       </SidebarFooter>
     </Sidebar>

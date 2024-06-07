@@ -1,3 +1,7 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 .ReactCollapse--collapse {
   transition: height 300ms;
 }
@@ -126,8 +130,6 @@ input[type='number']::-webkit-outer-spin-button {
   background: radial-gradient(100% 100% at 50% 100%, #71dda6 0%, #70b2bc 100%);
 }
 
-/* ================= SELECT COMPONENT ===================== */
-
 /* ================= NUMBER INPUT ARROW ===================== */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -138,6 +140,16 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   appearance: textfield;
   -moz-appearance: textfield;
+}
+
+#tableScrollBar::-webkit-scrollbar {
+  height: 10px !important;
+}
+#tableScrollBar::-webkit-scrollbar-track {
+  @apply bg-metal-50 dark:bg-metal-900;
+}
+#tableScrollBar::-webkit-scrollbar-thumb {
+  @apply rounded-[10px] bg-metal-200 dark:bg-metal-700;
 }
 
 /* ================ SLIDER START =========== */
@@ -157,17 +169,10 @@ input[type='number'] {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .rc-slider-rail {
-  position: absolute;
-  border-radius: 6px;
-  background-color: #e8edff;
-  width: 100%;
-  height: 10px;
+  @apply absolute h-2.5 w-full rounded-md bg-metal-100;
 }
 .rc-slider-track {
-  position: absolute;
-  border-radius: 6px;
-  background-color: #1b4dff;
-  height: 10px;
+  @apply absolute h-2.5 rounded-md bg-metal-900;
 }
 .rc-slider-track-draggable {
   transform: translateY(-5px);
@@ -178,44 +183,29 @@ input[type='number'] {
   background-clip: content-box;
 }
 .rc-slider-handle {
-  position: absolute;
-  opacity: 1;
   z-index: 1;
-  cursor: pointer;
-  cursor: -webkit-grab;
-  cursor: grab;
-  margin-top: -5px;
-  border: 2px solid #1b4dff;
-  border-radius: 50%;
-  background-color: #fff;
-  width: 20px;
-  height: 20px;
   touch-action: pan-x;
+
+  @apply absolute -mt-[5px] size-5 cursor-grab rounded-full border-[2px] border-metal-900 bg-white opacity-100;
 }
 .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
-  box-shadow: 0 0 0 5px #b4c4ff !important;
-  border-color: #1b4dff !important;
+  @apply !border-metal-900 shadow-small;
 }
 .rc-slider-handle:focus {
   outline: none;
   box-shadow: none;
 }
-.rc-slider-handle:focus-visible {
-  box-shadow: 0 0 0 3px #96dbfa;
-  border-color: #2db7f5;
-}
+
 .rc-slider-handle-click-focused:focus {
   box-shadow: unset;
-  border-color: #96dbfa;
+  /* border-color: #96dbfa; */
 }
-.rc-slider-handle:hover {
-  border-color: #1b4dff !important;
-}
+
 .rc-slider-handle:active {
   cursor: -webkit-grabbing;
   cursor: grabbing;
-  box-shadow: 0 0 5px #57c5f7;
-  border-color: #57c5f7;
+  /* box-shadow: 0 0 5px #57c5f7;
+  border-color: #57c5f7; */
 }
 .rc-slider-mark {
   position: absolute;
@@ -245,40 +235,32 @@ input[type='number'] {
   height: 10px;
 }
 .rc-slider-dot {
-  position: absolute;
-  bottom: 0px;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 2px solid #e9e9e9;
-  border-radius: 50%;
-  background-color: #fff;
-  width: 10px;
-  height: 10px;
+  @apply absolute bottom-0 h-2.5 w-2.5 cursor-pointer rounded-full border-2 border-metal-100 bg-white align-middle dark:border-metal-700;
 }
 .rc-slider-dot-active {
-  left: 5px !important;
-  border-color: #94abff;
+  left: 3px !important;
 }
 .rc-slider-dot-reverse {
-  margin-right: -4px;
+  margin-right: -3px;
 }
 .rc-slider-disabled {
   background-color: unset;
 }
 .rc-slider-disabled .rc-slider-track {
-  background-color: #ccc;
+  /* background-color: #ccc; */
+  @apply bg-metal-900;
 }
 
 .rc-slider-disabled > .rc-slider-handle:hover {
-  border-color: #cccccc !important;
+  /* border-color: #cccccc !important; */
 }
 
 .rc-slider-disabled .rc-slider-handle,
 .rc-slider-disabled .rc-slider-dot {
   cursor: not-allowed;
   box-shadow: none;
-  border-color: #cccccc !important;
-  background-color: #fff;
+  /* border-color: #cccccc !important;
+  background-color: #fff; */
 }
 .rc-slider-disabled .rc-slider-mark-text,
 .rc-slider-disabled .rc-slider-dot {
@@ -430,8 +412,6 @@ input[type='number'] {
   justify-content: center;
   align-items: center;
   transform: translate(-50%, -50%);
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  background-color: #005bea;
   width: 8px;
   height: 8px;
   content: '';
@@ -444,8 +424,6 @@ input[type='number'] {
   justify-content: center;
   align-items: center;
   transform: translate(-50%, -50%);
-  clip-path: polygon(0 0, 0 100%, 100% 50%);
-  background-color: #005bea;
   width: 8px;
   height: 8px;
   content: '';
@@ -542,7 +520,7 @@ input[type='number'] {
   padding: 0 9px 0 5px;
 }
 .rc-tooltip-inner {
-  @apply rounded-md border border-metal-200 bg-white px-2 py-[6px] text-body-5 font-medium text-metal-600 shadow-small;
+  @apply rounded-md border border-metal-200 bg-white px-3 py-[6px] text-body-5 font-medium text-metal-900 shadow-small dark:border-metal-800 dark:bg-metal-900 dark:text-white;
 }
 .rc-tooltip-arrow {
   position: absolute;
@@ -556,7 +534,7 @@ input[type='number'] {
 .rc-tooltip-placement-top .rc-tooltip-arrow,
 .rc-tooltip-placement-topLeft .rc-tooltip-arrow,
 .rc-tooltip-placement-topRight .rc-tooltip-arrow {
-  @apply absolute bottom-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-b border-r border-metal-200 bg-white;
+  @apply absolute bottom-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-b border-r border-metal-200 bg-white dark:border-metal-800 dark:bg-metal-900;
 }
 .rc-tooltip-placement-top .rc-tooltip-arrow {
   left: 50%;

@@ -30,7 +30,10 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
       <button
         ref={ref}
         type="button"
-        className={cn('rounded-xl border border-metal-400 p-2 text-metal-400', props.className)}
+        className={cn(
+          'rounded-xl border border-metal-400 p-2 text-metal-400 dark:border-metal-900 dark:text-metal-300',
+          props.className,
+        )}
         data-state={context.open ? 'open' : 'closed'}
         {...context.getReferenceProps(props)}>
         {children}

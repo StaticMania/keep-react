@@ -12,7 +12,10 @@ const CardComponent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>
     return (
       <div
         {...props}
-        className={cn('max-w-xs overflow-hidden rounded-xl border border-metal-100 bg-white shadow-small', className)}
+        className={cn(
+          'max-w-xs overflow-hidden rounded-xl border border-metal-100 bg-white shadow-small dark:border-metal-900 dark:bg-metal-900',
+          className,
+        )}
         ref={ref}>
         {children}
       </div>

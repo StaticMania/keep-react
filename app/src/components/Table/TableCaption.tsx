@@ -1,17 +1,16 @@
 'use client'
-import { TableHTMLAttributes, forwardRef } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { tableTheme } from './theme'
 
-export const TableCaption = forwardRef<HTMLTableCaptionElement, TableHTMLAttributes<HTMLTableCaptionElement>>(
-  ({ children, className, ...props }, ref) => {
-    const theme = tableTheme.caption.base
-    return (
-      <caption ref={ref} {...props} className={cn(theme, className)}>
-        {children}
-      </caption>
-    )
-  },
+const TableCaption = forwardRef<HTMLTableCaptionElement, HTMLAttributes<HTMLTableCaptionElement>>(
+  ({ className, ...props }, ref) => (
+    <caption
+      ref={ref}
+      className={cn('bg-white px-6 py-4 text-body-4 text-metal-900 dark:bg-metal-900 dark:text-white', className)}
+      {...props}
+    />
+  ),
 )
+TableCaption.displayName = 'TableCaption'
 
-TableCaption.displayName = 'Table.Caption'
+export { TableCaption }

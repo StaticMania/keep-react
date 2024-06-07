@@ -33,8 +33,8 @@ const SidebarWithDropdown = () => {
     <div className="p-3">
       <Sidebar>
         <SidebarBody>
-          <Link href="/" className="flex items-center">
-            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+          <Link href="/" className="inline-flex items-center">
+            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white dark:bg-metal-800">
               K.
             </span>
           </Link>
@@ -117,8 +117,8 @@ const SidebarWithDropdown = () => {
           <div className="flex items-center gap-2">
             <Avatar img="/images/avatar/avatar-1.png" alt="avatar" />
             <div>
-              <p className="text-body-4 font-medium text-metal-400">Enzo Farnandez</p>
-              <p className="text-body-4 font-normal text-metal-300">enzo123@gmail.com</p>
+              <p className="text-body-4 font-medium text-metal-400 dark:text-white">Enzo Farnandez</p>
+              <p className="text-body-4 font-normal text-metal-300 dark:text-metal-400">enzo123@gmail.com</p>
             </div>
           </div>
         </SidebarFooter>
@@ -162,10 +162,10 @@ export const SidebarComponent = () => {
   return (
     <Sidebar>
       <SidebarBody>
-        <Link href="/" className="flex items-center">
-          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+        <Link href="/" className="inline-flex items-center">
+         <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white dark:bg-metal-800">
             K.
-          </span>
+         </span>
         </Link>
 
         <fieldset className="relative">

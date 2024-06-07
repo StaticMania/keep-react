@@ -1,30 +1,19 @@
 'use client'
-import { TableHTMLAttributes, forwardRef, useState } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { Checkbox } from '../Checkbox'
-import { useTableContext } from './TableContext'
-import { tableTheme } from './theme'
 
-export const TableRow = forwardRef<HTMLTableRowElement, TableHTMLAttributes<HTMLTableRowElement>>(
-  ({ children, className, ...props }, ref) => {
-    const { hoverable, striped, showCheckbox } = useTableContext()
-    const theme = tableTheme.row
-    const [isChecked, setIsChecked] = useState(false)
-
-    return (
-      <tr
-        ref={ref}
-        className={cn(theme.base, striped && theme.striped, hoverable && theme.hovered, className)}
-        {...props}>
-        {showCheckbox && (
-          <th className="p-4">
-            <Checkbox variant="checked" checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
-          </th>
-        )}
-        {children}
-      </tr>
-    )
-  },
+const TableRow = forwardRef<HTMLTableRowElement, HTMLAttributes<HTMLTableRowElement>>(
+  ({ className, ...props }, ref) => (
+    <tr
+      ref={ref}
+      className={cn(
+        'border-b border-b-metal-50 transition-colors hover:bg-metal-25 data-[state=selected]:bg-metal-50 dark:border-b-metal-800 dark:hover:bg-metal-800',
+        className,
+      )}
+      {...props}
+    />
+  ),
 )
+TableRow.displayName = 'TableRow'
 
-TableRow.displayName = 'Table.Row'
+export { TableRow }

@@ -46,7 +46,7 @@ export const dividerTheme: DividerThemeInterface = {
     base: 'border-b-0 block',
     color: {
       primary: 'border-t-primary-100',
-      secondary: 'border-t-metal-100',
+      secondary: 'border-t-metal-100 dark:border-t-metal-700',
       success: 'border-t-success-100',
       warning: 'border-t-warning-100',
       error: 'border-t-error-100',
@@ -63,7 +63,7 @@ export const dividerTheme: DividerThemeInterface = {
     base: 'flex items-center text-body-4',
     textColor: {
       primary: 'text-primary-500',
-      secondary: 'text-metal-500',
+      secondary: 'text-metal-500 dark:text-white',
       success: 'text-success-500',
       warning: 'text-warning-500',
       error: 'text-error-500',
@@ -94,21 +94,22 @@ export const dividerTheme: DividerThemeInterface = {
     color: {
       start: {
         primary: 'after:border-primary-100',
-        secondary: 'after:border-metal-100',
+        secondary: 'after:border-metal-100 dark:after:border-metal-700',
         success: 'after:border-success-100',
         warning: 'after:border-warning-100',
         error: 'after:border-error-100',
       },
       center: {
         primary: 'before:border-primary-100 after:border-primary-100',
-        secondary: 'before:border-metal-100 after:border-metal-100',
+        secondary:
+          'before:border-metal-100 after:border-metal-100 dark:after:border-metal-700 dark:before:border-metal-700',
         success: 'before:border-success-100 after:border-success-100',
         warning: 'before:border-warning-100 after:border-warning-100',
         error: 'before:border-error-100 after:border-error-100',
       },
       end: {
         primary: 'before:border-primary-100',
-        secondary: 'before:border-metal-100',
+        secondary: 'before:border-metal-100 dark:before:border-metal-700',
         success: 'before:border-success-100',
         warning: 'before:border-warning-100',
         error: 'before:border-error-100',

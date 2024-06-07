@@ -17,6 +17,8 @@ import {
   YAxis,
 } from 'recharts'
 
+import { CustomTooltip } from './CustomTooltip'
+
 export {
   Area,
   AreaChart,
@@ -25,6 +27,7 @@ export {
   CartesianGrid,
   Cell,
   ChartTooltip,
+  CustomTooltip,
   Line,
   LineChart,
   Pie,

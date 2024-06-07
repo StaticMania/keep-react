@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'

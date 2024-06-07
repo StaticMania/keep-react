@@ -10,8 +10,8 @@ const StepPointText = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement
       <span
         {...props}
         className={cn(
-          'flex size-10 flex-shrink-0 items-center justify-center rounded-full border-4 border-primary-500 font-medium',
-          active ? 'bg-primary-500 text-white' : 'bg-primary-50 text-primary-500',
+          'flex size-10 flex-shrink-0 items-center justify-center rounded-full border-4 border-metal-900 font-medium',
+          active ? 'bg-metal-900 text-white dark:bg-metal-800' : 'bg-metal-50 text-metal-900 dark:bg-white/50',
           className,
         )}
         ref={ref}>

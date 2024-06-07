@@ -7,7 +7,7 @@ export const BreadcrumbItem = forwardRef<HTMLLIElement, HTMLAttributes<HTMLLIEle
       <li
         {...props}
         className={cn(
-          'flex cursor-pointer items-center gap-1.5 text-body-4 font-medium text-metal-900 transition-colors duration-300 hover:text-primary-500',
+          'flex cursor-pointer items-center gap-1.5 text-body-4 font-medium text-metal-900 transition-colors duration-300 hover:text-primary-500 dark:text-white dark:hover:text-primary-500',
           className,
         )}
         ref={ref}>

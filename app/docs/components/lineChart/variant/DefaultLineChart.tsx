@@ -1,4 +1,13 @@
-import { CartesianGrid, ChartTooltip, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from '../../../../src'
+import {
+  CartesianGrid,
+  ChartTooltip,
+  CustomTooltip,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
+} from '../../../../src'
 
 const DefaultLineChart = () => {
   const data = [
@@ -40,14 +49,7 @@ const DefaultLineChart = () => {
           stroke="#8897AE"
           strokeWidth={0.5}
         />
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
         <CartesianGrid stroke="#F0F3F9" strokeDasharray="2" />
         <Line type="natural" dataKey="price" stroke="#8897AE" />
       </LineChart>
@@ -56,7 +58,7 @@ const DefaultLineChart = () => {
 }
 
 const DefaultLineChartCode = `
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip } from 'keep-react'
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip, CustomTooltip } from 'keep-react'
 
 export const LineChartComponent = () => {
   const data = [
@@ -98,14 +100,7 @@ export const LineChartComponent = () => {
           stroke="#8897AE"
           strokeWidth={0.5}
         />
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
         <CartesianGrid stroke="#F0F3F9" strokeDasharray="2" />
         <Line type="natural" dataKey="price" stroke="#8897AE" />
       </LineChart>

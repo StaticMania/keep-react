@@ -1,5 +1,0 @@
-export { TabContent } from './Content'
-export { TabsContext } from './Context'
-export { TabItem } from './Item'
-export { Tabs } from './Tabs'
-export { TabList } from './TabsList'

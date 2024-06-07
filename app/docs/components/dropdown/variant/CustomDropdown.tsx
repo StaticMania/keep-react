@@ -1,4 +1,4 @@
-import { Avatar, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
+import { Avatar, Button, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
 
 const dropdownData = [
   {
@@ -36,7 +36,11 @@ const dropdownData = [
 const CustomDropdown = () => {
   return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction asChild>
+        <Button color="secondary" size="xs">
+          Dropdown
+        </Button>
+      </DropdownAction>
       <DropdownContent>
         <DropdownList>
           {dropdownData.map((data) => (
@@ -45,8 +49,8 @@ const CustomDropdown = () => {
                 <Avatar size="lg" color="secondary" img={data.img} />
               </div>
               <div>
-                <p className="text-body-4 font-medium text-metal-900">{data.name}</p>
-                <p className="text-body-5 font-normal text-metal-400">{data.title}</p>
+                <p className="text-body-4 font-medium text-metal-900 dark:text-white">{data.name}</p>
+                <p className="text-body-5 font-normal text-metal-400 dark:text-metal-500">{data.title}</p>
               </div>
             </DropdownItem>
           ))}
@@ -57,12 +61,16 @@ const CustomDropdown = () => {
 }
 
 const CustomDropdownCode = `
-import { Avatar, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from 'keep-react'
+import { Avatar, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList ,Button } from 'keep-react'
 
 export const DropdownComponent = () => {
   return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction>
+        <Button color="secondary" size="xs">
+          Dropdown
+        </Button>
+      </DropdownAction>
       <DropdownContent>
         <DropdownList>
           {dropdownData.map((data) => (

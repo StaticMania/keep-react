@@ -1,10 +1,10 @@
 @import './main.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
+  -webkit-font-smoothing: antialiased;
   @apply scroll-smooth;
 }
 
@@ -32,25 +32,23 @@ body {
 }
 
 #sidebar ::-webkit-scrollbar {
-  width: 4px;
+  @apply w-1;
 }
 #sidebar ::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #f9fafb;
+  @apply rounded-[10px] bg-metal-25;
 }
 #sidebar::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #d7dfe9;
+  @apply rounded-[10px] bg-metal-200;
 }
 
 #search::-webkit-scrollbar {
   @apply w-2.5;
 }
 #search::-webkit-scrollbar-track {
-  @apply bg-metal-25;
+  @apply rounded-full bg-metal-25 dark:bg-metal-800;
 }
 #search::-webkit-scrollbar-thumb {
-  @apply rounded-full bg-metal-100;
+  @apply rounded-full bg-metal-100 dark:bg-metal-600;
 }
 
 main::-webkit-scrollbar {
@@ -72,17 +70,6 @@ pre::-webkit-scrollbar-track {
 }
 pre::-webkit-scrollbar-thumb {
   background-color: #afbaca !important;
-}
-
-#tableScrollBar::-webkit-scrollbar {
-  height: 8px !important;
-}
-#tableScrollBar::-webkit-scrollbar-track {
-  background-color: #f9fafb;
-}
-#tableScrollBar::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #d7dfe9;
 }
 
 .keep-shadow {

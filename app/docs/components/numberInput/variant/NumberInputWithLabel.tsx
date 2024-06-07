@@ -15,7 +15,7 @@ const NumberInputWithLabel = () => {
           <Plus size={16} color="#455468" />
         </NumberInputButton>
       </NumberInput>
-      <p className="text-body-4 font-normal text-metal-600">Number Must be between 1 to 100</p>
+      <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">Number Must be between 1 to 100</p>
     </fieldset>
   )
 }
@@ -38,7 +38,7 @@ export const NumberInputComponent = () => {
           <Plus size={16} color="#455468" />
         </NumberInputButton>
       </NumberInput>
-      <p className="text-body-4 font-normal text-metal-600">Number Must be between 1 to 100</p>
+      <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">Number Must be between 1 to 100</p>
     </fieldset>
   )
 }

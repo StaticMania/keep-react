@@ -16,7 +16,10 @@ export const CarouselIndicators = forwardRef<HTMLDivElement, HTMLAttributes<HTML
           <DotButton
             key={index}
             onClick={() => onDotButtonClick(index)}
-            className={cn(theme.controls.indicators.dot, index === selectedIndex && 'border-metal-600')}
+            className={cn(
+              theme.controls.indicators.dot,
+              index === selectedIndex && 'border-metal-900 dark:border-metal-100',
+            )}
           />
         ))}
       </div>

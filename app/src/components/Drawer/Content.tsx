@@ -6,18 +6,24 @@ import { keepDrawerTheme } from './theme'
 
 const DrawerContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
-    const { position = 'bottom' } = useDrawerContext()
+    const { position = 'bottom', isClosing } = useDrawerContext()
+
     return (
       <div
         {...props}
         ref={ref}
-        className={cn(keepDrawerTheme.content.base, keepDrawerTheme.content.position[position], className)}>
+        className={cn(
+          keepDrawerTheme.content.base,
+          keepDrawerTheme.content.position[position],
+          isClosing && keepDrawerTheme.content.backPosition[position],
+          className,
+        )}>
         {children}
       </div>
     )
   },
 )
 
-DrawerContent.displayName = 'Drawer.Content'
+DrawerContent.displayName = 'DrawerContent'
 
 export { DrawerContent }

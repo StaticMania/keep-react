@@ -1,4 +1,4 @@
-import { Cell, ChartTooltip, Pie, PieChart, ResponsiveContainer } from '../../../../src'
+import { Cell, ChartTooltip, CustomTooltip, Pie, PieChart, ResponsiveContainer } from '../../../../src'
 
 const PieChartWithColor = () => {
   const data = [
@@ -31,21 +31,14 @@ const PieChartWithColor = () => {
             <Cell key={`cell-${index}`} fill={item.color} />
           ))}
         </Pie>
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </PieChart>
     </ResponsiveContainer>
   )
 }
 
 const PieChartWithColorCode = `
-import { Cell, ChartTooltip, Pie, PieChart, ResponsiveContainer } from 'keep-react'
+import { Cell, ChartTooltip, Pie, PieChart, ResponsiveContainer, CustomTooltip } from 'keep-react'
 
 export const PieChartComponent = () => {
   const data = [
@@ -78,14 +71,7 @@ export const PieChartComponent = () => {
             <Cell key={index} fill={item.color} />
           ))}
         </Pie>
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </PieChart>
     </ResponsiveContainer>
   )

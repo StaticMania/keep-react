@@ -18,7 +18,7 @@ const StepWithIcon = () => {
         <StepItem active>
           <StepPoint>
             <StepPointText>
-              <Globe size={20} color="#fff" />
+              <Globe size={20} />
             </StepPointText>
             <StepPointLine />
           </StepPoint>
@@ -32,7 +32,7 @@ const StepWithIcon = () => {
         <StepItem>
           <StepPoint>
             <StepPointText>
-              <DownloadSimple size={20} color="#1B4DFF" />
+              <DownloadSimple size={20} />
             </StepPointText>
             <StepPointLine />
           </StepPoint>
@@ -46,7 +46,7 @@ const StepWithIcon = () => {
         <StepItem>
           <StepPoint>
             <StepPointText>
-              <Club size={20} color="#1B4DFF" />
+              <Club size={20} />
             </StepPointText>
             <StepPointLine />
           </StepPoint>
@@ -82,7 +82,7 @@ export const StepComponent = () => {
       <StepItem active>
         <StepPoint>
           <StepPointText>
-            <Globe size={20} color="#fff" />
+            <Globe size={20} />
           </StepPointText>
           <StepPointLine />
         </StepPoint>
@@ -94,7 +94,7 @@ export const StepComponent = () => {
       <StepItem>
         <StepPoint>
           <StepPointText>
-            <DownloadSimple size={20} color="#fff" />
+            <DownloadSimple size={20} />
           </StepPointText>
           <StepPointLine />
         </StepPoint>
@@ -106,7 +106,7 @@ export const StepComponent = () => {
       <StepItem>
         <StepPoint>
           <StepPointText>
-            <Club size={20} color="#fff" />
+            <Club size={20} />
           </StepPointText>
           <StepPointLine />
         </StepPoint>

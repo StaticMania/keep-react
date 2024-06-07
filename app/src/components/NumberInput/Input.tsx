@@ -10,7 +10,10 @@ export const NumberInputBox = forwardRef<HTMLInputElement, InputProps>(({ classN
       type="number"
       ref={ref}
       {...props}
-      className={cn('h-full bg-white text-center text-body-2 font-medium text-metal-600 outline-none', className)}
+      className={cn(
+        'h-full bg-white text-center text-body-2 font-medium text-metal-600 outline-none dark:bg-metal-900 dark:text-metal-300',
+        className,
+      )}
     />
   )
 })

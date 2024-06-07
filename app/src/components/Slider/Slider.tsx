@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
 'use client'
 import type { FC, ReactNode } from 'react'
-import { SliderRange } from './Rangebox'
 import { TooltipSlider } from './ToolTipSlider'
 
 export interface MarkObj {
@@ -23,7 +21,7 @@ export interface SliderProps {
   tooltip?: 'top' | 'bottom' | 'none'
 }
 
-const SliderComponent: FC<SliderProps> = ({
+export const Slider: FC<SliderProps> = ({
   min,
   max,
   step,
@@ -33,7 +31,7 @@ const SliderComponent: FC<SliderProps> = ({
   dots = false,
   disabled = false,
   reverse = false,
-  tooltip = 'none',
+  tooltip = 'top',
   onChange,
   children,
   ...props
@@ -59,7 +57,3 @@ const SliderComponent: FC<SliderProps> = ({
     </div>
   )
 }
-
-export const Slider = Object.assign(SliderComponent, {
-  Box: SliderRange,
-})

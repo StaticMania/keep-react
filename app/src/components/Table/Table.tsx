@@ -1,71 +1,17 @@
 'use client'
-import { useState, type ComponentProps, type FC, type PropsWithChildren } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { TableBody } from './TableBody'
-import { TableCaption } from './TableCaption'
-import { TableCell } from './TableCell'
-import type { TableContextType } from './TableContext'
-import { TableContext } from './TableContext'
-import { TableHead } from './TableHead'
-import { TableHeadCell } from './TableHeadCell'
-import { TableRow } from './TableRow'
-import { tableTheme } from './theme'
 
-export interface TableProps extends PropsWithChildren, ComponentProps<'table'>, TableContextType {
-  showCheckbox?: boolean
-  showBorder?: boolean
-  showBorderPosition?: 'left' | 'right'
-  checked?: boolean
-  className?: string
-}
+const Table = forwardRef<HTMLTableElement, HTMLAttributes<HTMLTableElement>>(({ className, ...props }, ref) => (
+  <div id="tableScrollBar" className="relative w-full overflow-auto">
+    <table
+      ref={ref}
+      className={cn('w-full overflow-hidden rounded-2xl bg-white text-body-4 dark:bg-metal-900', className)}
+      {...props}
+    />
+  </div>
+))
 
-const TableComponent: FC<TableProps> = ({
-  children,
-  className,
-  hoverable,
-  striped,
-  showCheckbox = false,
-  showBorder = false,
-  showBorderPosition = 'right',
-  ...props
-}) => {
-  const theme = tableTheme
+Table.displayName = 'Table'
 
-  const [isChecked, setIsChecked] = useState(false)
-
-  const handleCheckbox = (value: boolean) => {
-    setIsChecked(value)
-  }
-
-  return (
-    <div id="tableScrollBar" className="w-full overflow-x-auto rounded-lg">
-      <div className={cn(theme.root.wrapper)}>
-        <TableContext.Provider
-          value={{
-            striped,
-            hoverable,
-            showCheckbox,
-            showBorder,
-            showBorderPosition,
-            checked: isChecked,
-            handleCheckbox: handleCheckbox,
-          }}>
-          <table className={cn(theme.root.base, className)} {...props}>
-            {children}
-          </table>
-        </TableContext.Provider>
-      </div>
-    </div>
-  )
-}
-
-TableComponent.displayName = 'Table'
-
-export const Table = Object.assign(TableComponent, {
-  Head: TableHead,
-  Body: TableBody,
-  Row: TableRow,
-  Cell: TableCell,
-  HeadCell: TableHeadCell,
-  Caption: TableCaption,
-})
+export { Table }

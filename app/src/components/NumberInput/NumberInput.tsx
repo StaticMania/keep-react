@@ -11,7 +11,7 @@ const NumberInputComponent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivEl
         {...props}
         ref={ref}
         className={cn(
-          'relative flex h-11 max-w-xs items-center justify-between overflow-hidden rounded-md border border-metal-100 bg-white px-2 shadow-sm',
+          'relative flex h-11 max-w-xs items-center justify-between overflow-hidden rounded-md border border-metal-100 bg-white px-2 shadow-sm dark:border-metal-900 dark:bg-metal-900',
           className,
         )}>
         {children}

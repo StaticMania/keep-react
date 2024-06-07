@@ -15,8 +15,8 @@ const DefaultCarousel = () => {
       <CarouselSlides>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
-              <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
+            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20 dark:border-metal-900 dark:bg-metal-900">
+              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{index + 1}</h1>
             </div>
           </CarouselItem>
         ))}
@@ -50,8 +50,8 @@ export const CarouselComponent = () => (
       <CarouselSlides>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
-              <h1 className="text-heading-1 font-medium text-metal-900">{index + 1}</h1>
+            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20 dark:border-metal-900 dark:bg-metal-900">
+              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{index + 1}</h1>
             </div>
           </CarouselItem>
         ))}

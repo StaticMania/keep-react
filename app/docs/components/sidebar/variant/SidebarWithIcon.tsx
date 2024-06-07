@@ -28,7 +28,7 @@ const SidebarWithIcon = () => {
       <Sidebar className="max-w-max">
         <SidebarBody className="space-y-4">
           <Link href="/" className="flex items-center gap-1">
-            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white dark:bg-metal-800">
               K.
             </span>
           </Link>
@@ -143,8 +143,8 @@ export const SidebarComponent = () => {
   return (
     <Sidebar className="max-w-max">
       <SidebarBody className="space-y-4">
-        <Link href="/" className="flex items-center gap-1">
-          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white">
+        <Link href="/" className="inline-flex items-center gap-1">
+          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 text-heading-6 font-semibold text-white dark:bg-metal-800">
             K.
           </span>
         </Link>

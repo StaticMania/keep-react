@@ -1,4 +1,3 @@
-'use client'
 import { Textarea } from '../../../../src'
 
 const DisabledTextArea = () => {
@@ -10,10 +9,9 @@ const DisabledTextArea = () => {
 }
 
 const DisabledTextAreaCode = `
-'use client'
-import { Textarea } from '../../../../src'
+import { Textarea } from 'keep-react'
 
-const DisabledTextArea = () => {
+export const TextAreaComponent = () => {
   return <Textarea disabled={true} placeholder="Write your message here" />
 }
 `

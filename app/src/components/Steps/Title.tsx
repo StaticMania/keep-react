@@ -10,7 +10,11 @@ export const StepTitle = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadingEle
       <h1
         {...props}
         ref={ref}
-        className={cn('block text-body-3 font-medium ', active ? 'text-primary-500' : 'text-metal-800', className)}>
+        className={cn(
+          'block text-body-3 font-medium ',
+          active ? 'opacity-1 text-metal-900 dark:text-white' : 'text-metal-600 opacity-50 dark:text-metal-300',
+          className,
+        )}>
         {children}
       </h1>
     )

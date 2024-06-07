@@ -1,23 +1,19 @@
 'use client'
-import { ForwardedRef, HTMLAttributes, ReactNode, forwardRef, useCallback, useEffect, useState } from 'react'
+import { ForwardedRef, HTMLAttributes, forwardRef, useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import FocusLock from 'react-focus-lock'
 import { RemoveScroll } from 'react-remove-scroll'
-import { cn } from '../../helpers/cn'
-import { DrawerContent } from './Content'
 import { DrawerContext } from './Context'
-import { keepDrawerTheme } from './theme'
 
 export interface DrawerProps extends HTMLAttributes<HTMLDivElement> {
   isOpen?: boolean
   onClose?: () => void
   position?: 'left' | 'right' | 'top' | 'bottom'
-  children?: ReactNode
 }
 
-const DrawerComponent = forwardRef<HTMLDivElement, DrawerProps>(
-  ({ isOpen, onClose, position = 'bottom', children, className }: DrawerProps, ref: ForwardedRef<HTMLDivElement>) => {
-    const [isClosing, setIsClosing] = useState(false)
+const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
+  ({ isOpen, onClose, position = 'bottom', children }: DrawerProps, ref: ForwardedRef<HTMLDivElement>) => {
+    const [isClosing, setIsClosing] = useState<boolean>(false)
 
     const handleClose = useCallback(() => {
       setIsClosing(true)
@@ -53,17 +49,9 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerProps>(
 
     return isOpen
       ? createPortal(
-          <RemoveScroll enabled={isOpen}>
+          <RemoveScroll enabled={isOpen} ref={ref}>
             <FocusLock disabled={!isOpen} returnFocus>
-              <div
-                ref={ref}
-                className={cn(
-                  keepDrawerTheme.base,
-                  isClosing ? keepDrawerTheme.isClosing.on : keepDrawerTheme.isClosing.off,
-                  className,
-                )}>
-                <DrawerContext.Provider value={{ position }}>{children}</DrawerContext.Provider>
-              </div>
+              <DrawerContext.Provider value={{ position, isClosing }}>{children}</DrawerContext.Provider>
             </FocusLock>
           </RemoveScroll>,
           document.body,
@@ -72,8 +60,6 @@ const DrawerComponent = forwardRef<HTMLDivElement, DrawerProps>(
   },
 )
 
-DrawerComponent.displayName = 'Drawer'
+Drawer.displayName = 'Drawer'
 
-export const Drawer = Object.assign(DrawerComponent, {
-  Content: DrawerContent,
-})
+export { Drawer }

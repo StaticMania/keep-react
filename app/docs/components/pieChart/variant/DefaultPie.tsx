@@ -1,4 +1,4 @@
-import { ChartTooltip, Pie, PieChart, ResponsiveContainer } from '../../../../src'
+import { ChartTooltip, CustomTooltip, Pie, PieChart, ResponsiveContainer } from '../../../../src'
 
 const DefaultPie = () => {
   const data = [
@@ -27,14 +27,7 @@ const DefaultPie = () => {
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>
         <Pie cx="50%" cy="50%" labelLine={false} data={data} dataKey="value" nameKey="name" fill="#1C222B"></Pie>
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </PieChart>
     </ResponsiveContainer>
   )
@@ -42,7 +35,7 @@ const DefaultPie = () => {
 
 const DefaultPieCode = `
 
-import { Pie, ChartTooltip, PieChart, ResponsiveContainer } from 'keep-react'
+import { Pie, ChartTooltip, PieChart, ResponsiveContainer, CustomTooltip } from 'keep-react'
 
 export const PieChartComponent = () => {
   const data = [
@@ -67,14 +60,7 @@ export const PieChartComponent = () => {
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>
         <Pie cx="50%" cy="50%" labelLine={false} data={data} dataKey="value" nameKey="name" fill="#1C222B"></Pie>
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </PieChart>
     </ResponsiveContainer>
   )

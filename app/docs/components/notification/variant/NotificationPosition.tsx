@@ -51,7 +51,7 @@ const NotificationPosition = () => {
                 <Avatar img="/images/avatar/avatar-1.png" className="border-2 border-error-100" />
               </div>
               <div className="max-w-[220px]">
-                <p className="text-body-4 font-medium text-metal-700">
+                <p className="text-body-4 font-medium text-metal-600 dark:text-metal-300">
                   Khairul Islam Ridoy comment on your recent posts
                 </p>
                 <p className="text-body-5 font-normal text-metal-400">5 min ago</p>
@@ -84,7 +84,7 @@ export const NotificationComponent = () => {
                 <Avatar img="/images/avatar/avatar-1.png" className="border-2 border-error-100" />
               </div>
               <div className="max-w-[220px]">
-                <p className="text-body-4 font-medium text-metal-700">
+                <p className="text-body-4 font-medium text-metal-600 dark:text-metal-300">
                   Khairul Islam Ridoy comment on your recent posts
                 </p>
                 <p className="text-body-5 font-normal text-metal-400">5 min ago</p>

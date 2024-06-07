@@ -7,7 +7,10 @@ export const TimelinePoint = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivEl
     return (
       <div
         {...props}
-        className={cn('absolute -left-[9px] h-4 w-4 rounded-full border border-white bg-metal-200', className)}
+        className={cn(
+          'absolute -left-[9px] h-4 w-4 rounded-full border border-white bg-metal-200 dark:border-metal-800 dark:bg-metal-800',
+          className,
+        )}
         ref={ref}>
         {children}
       </div>

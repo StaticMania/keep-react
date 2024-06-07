@@ -11,7 +11,7 @@ const BreadcrumbComponent = forwardRef<HTMLUListElement, BreadcrumbProps>(
     return (
       <ul
         className={cn(
-          'flex max-w-max items-center gap-3 border-metal-100 px-3.5 py-2.5',
+          'flex max-w-max items-center gap-3 border-metal-100 px-3.5 py-2.5 dark:border-metal-900',
           borderType === 'border-y' && 'border-y',
           borderType === 'border-xy' && 'rounded-xl border',
           className,

@@ -15,7 +15,7 @@ export const SidebarItem = forwardRef<HTMLLIElement, SidebarItemProps>(
         className={cn(
           dropdown
             ? ''
-            : 'flex cursor-pointer items-center gap-3 rounded-md p-2.5 text-body-4 font-normal text-metal-400 transition-all duration-200 hover:bg-primary-50 hover:text-primary-500',
+            : 'flex cursor-pointer items-center gap-3 rounded-md p-2.5 text-body-4 font-normal text-metal-400 transition-all duration-200 hover:bg-metal-50 hover:text-metal-900 dark:hover:bg-metal-800 dark:hover:text-white',
           childrenLength >= 2 ? '' : 'justify-center',
           className,
         )}

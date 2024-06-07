@@ -20,7 +20,7 @@ const NotificationBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElemen
       <div
         {...props}
         className={cn(
-          'notification-body absolute max-w-sm rounded-lg bg-white p-6 transition-all duration-300',
+          'notification-body absolute max-w-sm rounded-lg bg-white p-6 transition-all duration-300 dark:bg-metal-900',
           isOpen && 'animate-keep-bounce',
           contentTheme.position[position],
           className,

@@ -1,4 +1,3 @@
-'use client'
 import { Textarea } from '../../../../src'
 
 const DefaultTextArea = () => {
@@ -10,7 +9,6 @@ const DefaultTextArea = () => {
 }
 
 const DefaultTextAreaCode = `
-'use client'
 import { Textarea } from 'keep-react'
 
 export const TextAreaComponent = () => {

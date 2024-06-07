@@ -17,12 +17,12 @@ const HorizontalUpload = () => {
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
         </UploadIcon>
         <UploadText>
-          <p className="text-body-3 font-medium text-metal-600">Choose File to Upload</p>
-          <p className="text-body-4 font-normal text-metal-400">PDF and JPG formats</p>
+          <p className="text-body-3 font-medium text-metal-600 dark:text-metal-300">Choose File to Upload</p>
+          <p className="text-body-4 font-normal text-metal-400 dark:text-metal-400">PDF and JPG formats</p>
         </UploadText>
       </UploadBody>
       <UploadFooter isFileExists={files.length > 0}>
-        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
+        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600 dark:text-metal-300">
           <Info size={16} />
           Uploaded Files
         </p>
@@ -30,7 +30,7 @@ const HorizontalUpload = () => {
           {files?.map((file) => (
             <li
               key={file?.name}
-              className="flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-4 font-normal capitalize text-metal-600">
+              className="flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-4 font-normal capitalize text-metal-600 dark:border-l-metal-600 dark:bg-metal-800 dark:text-metal-300 ">
               {file?.name}
               <Trash size={16} color="red" />
             </li>
@@ -66,7 +66,7 @@ export const UploadComponent = () => {
         </UploadText>
       </UploadBody>
       <UploadFooter isFileExists={files.length > 0}>
-        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600">
+        <p className="my-2 flex items-center gap-1 text-body-4 font-normal text-metal-600 dark:text-metal-300">
           <Info size={16} />
           Uploaded Files
         </p>
@@ -74,7 +74,7 @@ export const UploadComponent = () => {
           {files?.map((file) => (
             <li
               key={file?.name}
-              className="flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-4 font-normal capitalize text-metal-600">
+              className="flex items-center justify-between border-l-4 border-l-metal-100 bg-metal-25 px-4 py-2.5 text-left text-body-4 font-normal capitalize text-metal-600 dark:border-l-metal-600 dark:bg-metal-800 dark:text-metal-300 ">
               {file?.name}
               <Trash size={16} color="red" />
             </li>

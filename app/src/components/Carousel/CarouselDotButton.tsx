@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 'use client'
 import { EmblaCarouselType } from 'embla-carousel'
 import { ButtonHTMLAttributes, forwardRef, useCallback, useEffect, useState } from 'react'

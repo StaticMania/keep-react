@@ -1,0 +1,47 @@
+import { DefaultTabs, DefaultTabsCode } from './variant/DefaultTabs'
+import { VerticalTab, VerticalTabCode } from './variant/VerticalTabs'
+import { TabItemVariant, TabItemVariantCode } from './variant/TabItemVariant'
+import { tabsApiData, tabsItemApiData } from './tabsApi'
+
+import CodePreview from '../../../components/CodePreview'
+import ComponentApi from '../../../components/ComponentApi'
+
+## Table of Contents
+
+The Tab Group Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container.
+
+## Default Tabs
+
+The Default Tabs component showcases the basic implementation of tabs.
+
+<CodePreview github="Tabs" code={DefaultTabsCode}>
+  <DefaultTabs />
+</CodePreview>
+
+## Tab Item Variant
+
+There are two variants of Tab Item. One is `"button"` which will by default selected and the other is `"link"` which will be enabled with props `itemType="link"`.
+
+<CodePreview github="Tabs" code={TabItemVariantCode}>
+  <TabItemVariant />
+</CodePreview>
+
+## Vertical Tab
+
+Display tabs vertically by setting the `vertical` prop to `true`.
+
+<CodePreview github="Tabs" code={VerticalTabCode}>
+  <VerticalTab />
+</CodePreview>
+
+## Tabs API Reference
+
+Explore the available props for the `<Tab>` component
+
+<ComponentApi data={tabsApiData} />
+
+## Tabs Items API Reference
+
+Explore the available props for the `<Tabs.Item>` component
+
+<ComponentApi data={tabsItemApiData} />

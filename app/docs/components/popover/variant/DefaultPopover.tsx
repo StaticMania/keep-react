@@ -12,12 +12,12 @@ import {
 
 const DefaultPopover = () => {
   return (
-    <div className="flex h-44 items-center justify-center gap-5  p-5">
+    <div className="flex h-44 items-center justify-center gap-5 p-5">
       <Popover placement="left">
         <PopoverTrigger>
           <CaretLeft size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <PopoverHeading>Popover title</PopoverHeading>
@@ -33,7 +33,7 @@ const DefaultPopover = () => {
         <PopoverTrigger>
           <CaretRight size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <PopoverHeading>Popover title</PopoverHeading>
@@ -48,7 +48,7 @@ const DefaultPopover = () => {
         <PopoverTrigger>
           <CaretUp size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <PopoverHeading>Popover title</PopoverHeading>
@@ -63,7 +63,7 @@ const DefaultPopover = () => {
         <PopoverTrigger>
           <CaretDown size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <Avatar verified img="/images/avatar/avatar-3.png" />
           <div>
             <PopoverHeading>Popover title</PopoverHeading>
@@ -97,7 +97,7 @@ export const PopoverComponent = () => {
       <PopoverTrigger>
         <CaretRight size={20} />
       </PopoverTrigger>
-      <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4">
+      <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white dark:bg-metal-900 p-4">
         <Avatar verified img="/images/avatar/avatar-3.png" />
         <div>
           <PopoverHeading>Popover title</PopoverHeading>

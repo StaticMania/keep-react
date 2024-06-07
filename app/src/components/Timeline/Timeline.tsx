@@ -8,7 +8,10 @@ import { TimelinePoint } from './Point'
 const TimelineComponent = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLOListElement>>(
   ({ children, className, ...props }, ref) => {
     return (
-      <ol ref={ref} {...props} className={cn('relative space-y-6 border-l-2 border-metal-100', className)}>
+      <ol
+        ref={ref}
+        {...props}
+        className={cn('relative space-y-6 border-l-2 border-metal-100 dark:border-metal-800', className)}>
         {children}
       </ol>
     )

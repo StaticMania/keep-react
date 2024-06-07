@@ -16,7 +16,7 @@ const NoDataFound = () => {
       <EmptyDescription>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-      <Button variant="outline">Go to home</Button>
+      <Button>Go to home</Button>
     </Empty>
   )
 }
@@ -40,7 +40,7 @@ export const EmptyComponent = () => {
       <EmptyDescription>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-      <Button variant="outline">Go to home</Button>
+      <Button>Go to home</Button>
     </Empty>
   )
 }

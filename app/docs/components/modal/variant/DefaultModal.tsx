@@ -22,8 +22,8 @@ const DefaultModal = () => {
           </ModalIcon>
           <ModalContent>
             <div className="!mb-6">
-              <h3 className="mb-2 text-body-1 font-medium text-metal-900">Update Modal Status</h3>
-              <p className="text-body-4 font-normal text-metal-600">
+              <h3 className="mb-2 text-body-1 font-medium text-metal-900 dark:text-white">Update Modal Status</h3>
+              <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">
                 Your document has unsaved changes. Discard or save them as a new page to continue.
               </p>
             </div>
@@ -67,8 +67,8 @@ export const ModalComponent = () => {
           </ModalIcon>
           <ModalContent>
             <div className="!mb-6">
-              <h3 className="mb-2 text-body-1 font-medium text-metal-900">Update Modal Status</h3>
-              <p className="text-body-4 font-normal text-metal-600">
+              <h3 className="mb-2 text-body-1 font-medium text-metal-900 dark:text-white">Update Modal Status</h3>
+              <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">
                 Your document has unsaved changes. Discard or save them as a new page to continue.
               </p>
             </div>

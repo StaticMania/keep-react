@@ -56,13 +56,7 @@ const ChartWithAxisData = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data}>
-        <Bar
-          radius={[8, 8, 0, 0]}
-          barSize={32}
-          dataKey="price"
-          fill="#1C222B"
-          background={{ fill: '#F0F3F9', radius: 6 }}
-        />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" fill="#2d3643" background={{ fill: '#F0F3F9' }} />
         <XAxis
           className="text-body-4 font-medium text-metal-600"
           dataKey="name"
@@ -123,13 +117,7 @@ const ChartWithAxisDataCode = `
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data}>
-        <Bar
-          radius={[8,8, 0, 0]}
-          barSize={50}
-          dataKey="price"
-          fill="#1C222B"
-          background={{ fill: '#F0F3F9', radius: 6 }}
-        />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" fill="#2d3643" background={{ fill: '#F0F3F9' }} />
         <XAxis
           className="text-body-4 font-medium text-metal-600"
           dataKey="name"
@@ -150,5 +138,6 @@ const ChartWithAxisDataCode = `
     </ResponsiveContainer>
   )
 }
+
 `
 export { ChartWithAxisData, ChartWithAxisDataCode }

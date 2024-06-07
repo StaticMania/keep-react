@@ -22,7 +22,10 @@ const UploadComponent = forwardRef<HTMLDivElement, UploadProps>(
       <div
         ref={ref}
         {...props}
-        className={cn('max-w-md rounded-xl border border-dashed border-metal-100 bg-white p-6 ', className)}>
+        className={cn(
+          'max-w-full rounded-xl border border-dashed border-metal-100 bg-white p-6 dark:border-metal-300 dark:bg-metal-900 ',
+          className,
+        )}>
         <UploadContext.Provider value={ContextValue}>{children}</UploadContext.Provider>
       </div>
     )

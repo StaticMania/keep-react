@@ -11,7 +11,7 @@ const StepPointLine = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>
         {...props}
         className={cn(
           'mt-2 h-full w-px group-last:hidden md:ms-2 md:mt-0 md:h-[2px] md:w-full md:flex-1',
-          active ? 'bg-primary-500' : 'bg-primary-50',
+          active ? 'bg-metal-900 dark:bg-white' : 'bg-metal-50 dark:bg-metal-800',
           className,
         )}
         ref={ref}>

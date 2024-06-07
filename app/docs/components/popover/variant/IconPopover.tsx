@@ -9,7 +9,7 @@ const IconPopover = () => {
         <PopoverTrigger>
           <CaretLeft size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5 dark:bg-metal-900">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
@@ -20,7 +20,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </PopoverDescription>
           </div>
-          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <p className="mt-5 text-body-4 font-normal text-metal-600 dark:text-metal-300">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
@@ -35,7 +35,7 @@ const IconPopover = () => {
         <PopoverTrigger>
           <CaretRight size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5 dark:bg-metal-900">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
@@ -46,7 +46,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </PopoverDescription>
           </div>
-          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <p className="mt-5 text-body-4 font-normal text-metal-600 dark:text-metal-300">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
@@ -61,7 +61,7 @@ const IconPopover = () => {
         <PopoverTrigger>
           <CaretUp size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5 dark:bg-metal-900">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
@@ -72,7 +72,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </PopoverDescription>
           </div>
-          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <p className="mt-5 text-body-4 font-normal text-metal-600 dark:text-metal-300">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
@@ -87,7 +87,7 @@ const IconPopover = () => {
         <PopoverTrigger>
           <CaretDown size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-5 dark:bg-metal-900">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
             <Confetti size={24} color="#fff" weight="fill" />
           </div>
@@ -98,7 +98,7 @@ const IconPopover = () => {
               industrys standard dummy text ever since
             </PopoverDescription>
           </div>
-          <p className="mt-5 text-body-4 font-normal text-metal-600">Step - 1 / 5</p>
+          <p className="mt-5 text-body-4 font-normal text-metal-600 dark:text-metal-300">Step - 1 / 5</p>
           <div className="flex items-center justify-between gap-5 pt-6">
             <Button color="secondary" size="xs" variant="outline" className="w-full">
               Skip
@@ -124,7 +124,7 @@ export const PopoverComponent = () => {
       <PopoverTrigger>
         <CaretLeft size={20} />
       </PopoverTrigger>
-      <PopoverContent className="max-w-xs z-20 rounded-xl bg-white p-5">
+      <PopoverContent className="max-w-xs z-20 rounded-xl bg-white dark:bg-metal-900 p-5">
         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500">
           <Confetti size={24} color="#fff" weight="fill" />
         </div>

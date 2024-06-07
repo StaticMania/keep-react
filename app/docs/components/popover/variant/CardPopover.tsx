@@ -10,7 +10,7 @@ const CardPopover = () => {
         <PopoverTrigger>
           <CaretLeft size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -33,7 +33,7 @@ const CardPopover = () => {
         <PopoverTrigger>
           <CaretRight size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -56,7 +56,7 @@ const CardPopover = () => {
         <PopoverTrigger>
           <CaretUp size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -79,7 +79,7 @@ const CardPopover = () => {
         <PopoverTrigger>
           <CaretDown size={20} />
         </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -115,7 +115,7 @@ export const PopoverComponent = () => {
       <PopoverTrigger>
           <CaretLeft size={20} />
       </PopoverTrigger>
-      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md">
+      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900 shadow-md">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"

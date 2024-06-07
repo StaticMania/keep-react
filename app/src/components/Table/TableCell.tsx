@@ -1,26 +1,19 @@
 'use client'
-import { TableHTMLAttributes, forwardRef } from 'react'
+import { TdHTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { useTableContext } from './TableContext'
-import { tableTheme } from './theme'
 
-export const TableCell = forwardRef<HTMLTableCellElement, TableHTMLAttributes<HTMLTableCellElement>>(
-  ({ children, className, ...props }, ref) => {
-    const theme = tableTheme
-    const { showBorder, showBorderPosition } = useTableContext()
-    return (
-      <td
-        ref={ref}
-        className={cn(
-          theme.body.cell.base,
-          showBorder && showBorderPosition === 'right' && theme.body.showBorderPosition.right,
-          showBorder && showBorderPosition === 'left' && theme.body.showBorderPosition.left,
-          className,
-        )}
-        {...props}>
-        {children}
-      </td>
-    )
-  },
+const TableCell = forwardRef<HTMLTableCellElement, TdHTMLAttributes<HTMLTableCellElement>>(
+  ({ className, ...props }, ref) => (
+    <td
+      ref={ref}
+      className={cn(
+        'px-6 py-3.5 align-middle text-body-4 font-medium capitalize text-metal-800 dark:text-white [&:has([role=checkbox])]:pr-0',
+        className,
+      )}
+      {...props}
+    />
+  ),
 )
-TableCell.displayName = 'Table.Cell'
+TableCell.displayName = 'TableCell'
+
+export { TableCell }

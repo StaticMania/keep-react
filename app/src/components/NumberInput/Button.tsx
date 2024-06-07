@@ -10,7 +10,10 @@ export const NumberInputButton = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         {...props}
-        className={cn('flex h-9 w-9 items-center justify-center rounded hover:bg-metal-25', className)}>
+        className={cn(
+          'flex h-9 w-9 items-center justify-center rounded hover:bg-metal-25 dark:hover:bg-metal-800',
+          className,
+        )}>
         {children}
       </button>
     )

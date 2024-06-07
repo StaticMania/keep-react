@@ -1,4 +1,4 @@
-import { Area, AreaChart, ChartTooltip, ResponsiveContainer, XAxis, YAxis } from '../../../../src'
+import { Area, AreaChart, ChartTooltip, CustomTooltip, ResponsiveContainer, XAxis, YAxis } from '../../../../src'
 
 const AreaChartType = () => {
   const data = [
@@ -79,21 +79,14 @@ const AreaChartType = () => {
           stroke="#8897AE"
           strokeWidth={0.5}
         />
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </AreaChart>
     </ResponsiveContainer>
   )
 }
 
 const AreaChartTypeCode = `
-import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip } from 'keep-react'
+import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip, CustomTooltip } from 'keep-react'
 
   const data = [
     {
@@ -173,14 +166,7 @@ import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip } from
           stroke="#8897AE"
           strokeWidth={0.5}
         />
-        <ChartTooltip
-          contentStyle={{
-            fontSize: '12px',
-            textTransform: 'capitalize',
-            border: '1px solid #E9EFF6',
-            borderRadius: '10px',
-          }}
-        />
+        <ChartTooltip content={<CustomTooltip />} />
       </AreaChart>
     </ResponsiveContainer>
   )

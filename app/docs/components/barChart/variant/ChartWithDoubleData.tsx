@@ -36,20 +36,8 @@ const ChartWithDoubleData = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} barGap={10}>
-        <Bar
-          radius={[8, 8, 0, 0]}
-          barSize={45}
-          dataKey="price"
-          fill="#1C222B"
-          background={{ fill: '#F0F3F9', radius: 6 }}
-        />
-        <Bar
-          radius={[8, 8, 0, 0]}
-          barSize={45}
-          dataKey="sell"
-          fill="#8897AE"
-          background={{ fill: '#F0F3F9', radius: 6 }}
-        />
+        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="price" fill="#0a9952" background={{ fill: '#d7f8e9' }} />
+        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="sell" fill="#1db469" background={{ fill: '#d7f8e9' }} />
         <XAxis
           className="text-body-4 font-medium text-metal-600"
           dataKey="name"
@@ -110,20 +98,8 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "keep-react"
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} barGap={10}>
-        <Bar
-          radius={[8, 8, 0, 0]}
-          barSize={45}
-          dataKey="price"
-          fill="#1C222B"
-          background={{ fill: '#F0F3F9', radius: 6 }}
-        />
-        <Bar
-          radius={[8, 8, 0, 0]}
-          barSize={45}
-          dataKey="sell"
-          fill="#8897AE"
-          background={{ fill: '#F0F3F9', radius: 6 }}
-        />
+        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="price" fill="#0a9952" background={{ fill: '#d7f8e9' }} />
+        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="sell" fill="#1db469" background={{ fill: '#d7f8e9' }} />
         <XAxis
           className="text-body-4 font-medium text-metal-600"
           dataKey="name"
