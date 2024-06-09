@@ -19,12 +19,12 @@ interface CodePreviewProps {
 }
 
 const CodePreview = ({ children, code, github, className, activeTab, hasData, data }: CodePreviewProps) => {
-  const [active, setActive] = useState(activeTab ? activeTab : 0)
+  const [active, setActive] = useState(activeTab ?? 0)
   const { copy, copyToClipboard } = useCopy()
   const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/app/src/components/${github}`
 
   return (
-    <div className="my-10 w-full overflow-hidden rounded-xl border border-metal-200 shadow-small">
+    <div className="my-10 w-full overflow-hidden rounded-xl border border-metal-200 shadow-small dark:border-metal-800">
       <div className="-mb-px flex flex-wrap border-b border-metal-200 bg-metal-900 px-5 text-center">
         <button
           type="button"

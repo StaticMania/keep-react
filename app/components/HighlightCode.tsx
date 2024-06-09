@@ -12,7 +12,7 @@ interface HighlightCodeProps {
 const HighlightCode: FC<HighlightCodeProps> = ({ code }) => {
   const { copy, copyToClipboard } = useCopy()
   return (
-    <div className="relative my-10 w-full overflow-hidden rounded-xl border border-metal-200 shadow-small">
+    <div className="relative my-10 w-full overflow-hidden rounded-xl border border-metal-200 shadow-small dark:border-metal-800">
       <div className="absolute -top-10 right-3 flex items-center justify-between gap-3 md:top-5 lg:right-10">
         <button
           className="flex h-8 w-8 items-center justify-center rounded-md border-2 border-metal-800 bg-metal-900 transition-all duration-300 hover:border-transparent hover:bg-metal-700 md:h-9 md:w-9"

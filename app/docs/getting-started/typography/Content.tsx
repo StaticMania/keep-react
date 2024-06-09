@@ -6,10 +6,14 @@ export const HeadingContent = () => {
     <tbody className="align-baseline">
       {typographyData.heading.map((data, index) => (
         <tr key={data['font-size']}>
-          <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500">
+          <td
+            translate="no"
+            className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500 dark:border-metal-800 dark:text-metal-300">
             text-heading-{index + 1}
           </td>
-          <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500">
+          <td
+            translate="no"
+            className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500 dark:border-metal-800 dark:text-metal-300">
             font-size: {data['font-size']}; /* {remToPx(data['font-size'])} */
             <br />
             line-height: {data['line-height']}; /* {remToPx(data['line-height'])} */
@@ -26,10 +30,14 @@ export const BodyContent = () => {
     <tbody className="align-baseline ">
       {typographyData.body.map((data, index) => (
         <tr key={data['font-size']}>
-          <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500">
+          <td
+            translate="no"
+            className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500 dark:border-metal-800 dark:text-metal-300">
             text-body-{index + 1}
           </td>
-          <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500">
+          <td
+            translate="no"
+            className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500 dark:border-metal-800 dark:text-metal-300">
             font-size: {data['font-size']}; /* {remToPx(data['font-size'])} */
             <br />
             line-height: {data['line-height']}; /* {remToPx(data['line-height'])} */
@@ -46,10 +54,14 @@ export const DisplayContent = () => {
     <tbody className="align-baseline ">
       {typographyData.display.map((data) => (
         <tr key={data['font-size']}>
-          <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500">
+          <td
+            translate="no"
+            className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500 dark:border-metal-800 dark:text-metal-300">
             text-display
           </td>
-          <td translate="no" className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500">
+          <td
+            translate="no"
+            className="border-t border-metal-100 px-4 py-3 text-body-4 font-normal text-metal-500 dark:border-metal-800 dark:text-metal-300">
             font-size: {data['font-size']}; /* {remToPx(data['font-size'])} */
             <br />
             line-height: {data['line-height']}; /* {remToPx(data['line-height'])} */

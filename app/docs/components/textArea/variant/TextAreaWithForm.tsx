@@ -16,7 +16,7 @@ const TextAreaWithForm = () => {
       </fieldset>
       <fieldset className="space-y-1">
         <Label htmlFor="m1">Message*</Label>
-        <Textarea id="m1" placeholder="Write your message here" />
+        <Textarea id="m1" placeholder="Write your message here" rows={8} />
       </fieldset>
       <Button size="sm" color="secondary" type="submit" className="w-full">
         Send Message
@@ -44,7 +44,7 @@ export const TextAreaComponent = () => {
       </fieldset>
       <fieldset className="space-y-1">
         <Label htmlFor="m1">Message*</Label>
-        <Textarea id="m1" placeholder="Write your message here" />
+        <Textarea id="m1" placeholder="Write your message here" rows={8} />
       </fieldset>
       <Button size="sm" color="secondary" type="submit" className="w-full">
         Send Message

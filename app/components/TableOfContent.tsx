@@ -73,13 +73,13 @@ const TableOfContent = () => {
       <aside id="linkPage" className="sticky top-28 h-[80vh] 2xl:top-60">
         <div className="2xl:pl-5">
           <div className="flex flex-col justify-between overflow-y-auto">
-            <h4 className="mb-2 text-body-4 font-semibold uppercase text-black/100">On this page</h4>
+            <h4 className="mb-2 text-body-4 font-semibold uppercase text-black/100 dark:text-white">On this page</h4>
             <nav id="visible-table-of-contents">
               <ul
                 dangerouslySetInnerHTML={{
                   __html: innerHtml ?? '',
                 }}
-                className="border-l border-l-metal-100"
+                className="border-l border-l-metal-100 dark:border-l-metal-800"
               />
             </nav>
           </div>

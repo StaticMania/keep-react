@@ -3,7 +3,7 @@ import { Textarea } from '../../../../src'
 const DefaultTextArea = () => {
   return (
     <div className="p-2">
-      <Textarea placeholder="Write your message here." />
+      <Textarea placeholder="Write your message here." rows={8} />
     </div>
   )
 }
@@ -13,7 +13,7 @@ import { Textarea } from 'keep-react'
 
 export const TextAreaComponent = () => {
   return (
-     <Textarea placeholder="Write your message here." />
+     <Textarea placeholder="Write your message here." rows={8} />
   )
 }
 `

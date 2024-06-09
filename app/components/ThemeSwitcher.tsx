@@ -21,8 +21,8 @@ const ThemeSwitcher = () => {
   return client ? (
     <Dropdown placement="bottom-end">
       <DropdownAction asChild>
-        <button className="rounded-lg bg-primary-25 p-2.5 dark:bg-metal-900">
-          <MoonStars size={20} color="#fff" className="hidden dark:block" />
+        <button className="rounded-lg bg-primary-25 p-2.5 dark:bg-white">
+          <MoonStars size={20} color="#1C222B" className="hidden dark:block" />
           <SunDim size={20} color="#444" className="block dark:hidden" />
           <span className="sr-only">Toggle theme</span>
         </button>
