@@ -6,14 +6,19 @@ const page = () => {
 
   return (
     <section>
-      <div className="-mt-2 bg-metal-100 py-20 dark:bg-metal-900">
-        <div className="mx-auto max-w-7xl px-6 text-center 2xl:px-0">
-          <h1 className="text-heading-5 font-medium text-metal-900 dark:text-white">The latest Keep React news</h1>
-        </div>
-      </div>
-      <div className="mx-auto mt-12 max-w-7xl px-6 text-center 2xl:px-0">
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-4">
-          {blogs?.map((blog) => <Blog key={blog.slug} {...blog} />)}
+      <div className="-mt-2 py-20 ">
+        <div className="mx-auto max-w-7xl px-6 2xl:px-0">
+          <div className="max-w-md space-y-3">
+            <h1 className="text-heading-5 font-semibold text-metal-900 dark:text-white">
+              Stay Updated with the Latest Keep React Library
+            </h1>
+            <p className="text-body-3 text-metal-600 dark:text-metal-300">
+              Keep React library continues to evolve with new features, bug fixes, and performance improvements.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {blogs?.map((blog) => <Blog key={blog.slug} {...blog} />)}
+          </div>
         </div>
       </div>
     </section>

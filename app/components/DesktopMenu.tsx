@@ -28,8 +28,8 @@ const DesktopMenu = () => {
     <>
       <div className="flex items-center space-x-28">
         <Link href="/" className="flex">
-          <Image src={KeepLogo} alt="Keep React" className="block dark:hidden" />
-          <Image src={KeepDarkLogo} alt="Keep React" className="hidden dark:block" />
+          <Image src={KeepLogo} alt="Keep React" width="130" height="53" className="block dark:hidden" />
+          <Image src={KeepDarkLogo} alt="Keep React" width="130" height="53" className="hidden dark:block" />
         </Link>
         <div className="hidden laptop:ml-auto laptop:flex laptop:items-center laptop:space-x-10">
           {navbarRoutes.map((nav) => (
@@ -37,7 +37,7 @@ const DesktopMenu = () => {
               key={nav.id}
               href={nav.href}
               target={nav.redirect ? '_blank' : '_self'}
-              className={`text-body-4 font-medium text-metal-600 hover:text-primary-500 active:text-primary-500 dark:text-metal-300 dark:active:text-white ${nav.name === 'Documentation' && pathname.includes('/docs/') ? 'text-primary-500 dark:text-white' : ''}`}>
+              className={`text-body-4 font-medium text-metal-600 hover:text-primary-500 active:text-primary-500 dark:text-metal-300 dark:active:text-white ${nav.name === 'Documentation' && pathname.includes('/docs/') ? 'text-primary-500 dark:text-white' : ''} ${nav.name === 'Blog' && pathname === '/blog' ? 'text-primary-500 dark:text-white' : ''}`}>
               {nav.name}
             </Link>
           ))}
@@ -60,7 +60,8 @@ const DesktopMenu = () => {
           href="https://github.com/StaticMania/keep-react"
           target="_blank"
           className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50 dark:border dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600">
-          <Image src="/images/icon/github.svg" height={22} width={22} alt="github" />
+          <Image src="/images/icon/github.svg" height={22} width={22} alt="github" className="block dark:hidden" />
+          <Image src="/images/icon/github-dark.svg" height={22} width={22} alt="github" className="hidden dark:block" />
         </Link>
         <Link
           href="https://discord.gg/fSxDJyvJmr"

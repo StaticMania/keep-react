@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import { ThemeProvider } from './components/ThemeProvider'
+import { KeepThemeProvider } from './components/ThemeProvider'
 import TopProgressBar from './components/TopProgressBar'
 import './docs.css'
 import './globals.css'
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     'Explore our library of 40+ open-source React UI components and interactive elements, empowering you to create stunning web projects effortlessly.',
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <KeepThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ToastWrapper
             toastOptions={{
               classNames: {
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="relative pt-20">{children}</main>
           <Footer />
           <TopProgressBar />
-        </ThemeProvider>
+        </KeepThemeProvider>
       </body>
     </html>
   )

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import KeepDarkLogo from '../../../../../public/images/keep-dark.svg'
 import KeepLogo from '../../../../../public/images/keep.svg'
 import {
   Navbar,
@@ -21,7 +22,8 @@ const NavbarLayout2 = () => {
             <NavbarItem>Contact</NavbarItem>
           </NavbarList>
           <NavbarBrand>
-            <Image src={KeepLogo} alt="keep" width="88" height="40" />
+            <Image src={KeepLogo} alt="keep" width="88" height="40" className="block dark:hidden" />
+            <Image src={KeepDarkLogo} alt="keep" width="88" height="40" className="hidden dark:block" />
           </NavbarBrand>
           <NavbarList>
             <NavbarItem>Figma</NavbarItem>
@@ -44,7 +46,6 @@ const NavbarLayout2 = () => {
 }
 
 const NavbarLayout2Code = `
-import KeepLogo from '@/public/images/keep.svg'
 import {
   Navbar,
   NavbarBrand,

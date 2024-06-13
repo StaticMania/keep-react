@@ -198,14 +198,11 @@ input[type='number'] {
 
 .rc-slider-handle-click-focused:focus {
   box-shadow: unset;
-  /* border-color: #96dbfa; */
 }
 
 .rc-slider-handle:active {
   cursor: -webkit-grabbing;
   cursor: grabbing;
-  /* box-shadow: 0 0 5px #57c5f7;
-  border-color: #57c5f7; */
 }
 .rc-slider-mark {
   position: absolute;
@@ -247,20 +244,13 @@ input[type='number'] {
   background-color: unset;
 }
 .rc-slider-disabled .rc-slider-track {
-  /* background-color: #ccc; */
   @apply bg-metal-900;
-}
-
-.rc-slider-disabled > .rc-slider-handle:hover {
-  /* border-color: #cccccc !important; */
 }
 
 .rc-slider-disabled .rc-slider-handle,
 .rc-slider-disabled .rc-slider-dot {
   cursor: not-allowed;
   box-shadow: none;
-  /* border-color: #cccccc !important;
-  background-color: #fff; */
 }
 .rc-slider-disabled .rc-slider-mark-text,
 .rc-slider-disabled .rc-slider-dot {
@@ -316,6 +306,7 @@ input[type='number'] {
 .rc-slider-tooltip-zoom-down-leave {
   display: block !important;
   animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   animation-fill-mode: both;
   animation-play-state: paused;
 }
@@ -333,9 +324,7 @@ input[type='number'] {
   transform: scale(0, 0);
   animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
-.rc-slider-tooltip-zoom-down-leave {
-  animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-}
+
 @keyframes rcSliderTooltipZoomDownIn {
   0% {
     transform: scale(0, 0);

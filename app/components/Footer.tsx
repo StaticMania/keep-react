@@ -2,17 +2,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import KeepDarkLogo from '../../public/images/keep-dark.svg'
+import KeepLogo from '../../public/images/keep.svg'
 
 const Footer = () => {
   const pathname = usePathname()
 
   return (
-    <footer className={`bg-white shadow-small dark:bg-metal-900 ${pathname === '/' ? '' : 'hidden'}`}>
+    <footer className={`bg-white shadow-small dark:bg-black ${pathname === '/' ? '' : 'hidden'}`}>
       <div className="mx-auto max-w-7xl px-6 py-10 2xl:px-0">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center md:gap-0">
           <div>
             <Link href="/" className="flex">
-              <Image width="113" height="40" src="/images/keep.svg" alt="Keep React" />
+              <Image src={KeepLogo} alt="Keep React" width="130" height="53" className="block dark:hidden" />
+              <Image src={KeepDarkLogo} alt="Keep React" width="130" height="53" className="hidden dark:block" />
             </Link>
             <p className="mt-6 max-w-lg text-body-4 font-normal text-metal-600 dark:text-metal-300">
               Keep React is an open-source component library built on Tailwind CSS and React.js. It provides a versatile

@@ -99,19 +99,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Blog Post */
-
+.post {
+  font-family: var(--font-inter), sans-serif;
+}
 .post h2 {
-  @apply mb-3 mt-4 text-body-2 font-semibold text-metal-900;
+  @apply mb-3 mt-4 text-body-2 font-semibold text-metal-900 dark:text-white;
 }
 .post p {
-  @apply mb-2 text-body-3 font-normal text-metal-600;
+  @apply mb-2 text-body-3 font-normal text-metal-600 dark:text-metal-300;
 }
 .post ul {
   @apply space-y-2;
 }
 .post ul li {
-  @apply ml-6 list-disc text-body-4 font-normal text-metal-600;
+  @apply ml-6 list-disc text-body-4 font-normal text-metal-600 dark:text-metal-300;
 }
 .post ul li code {
-  @apply rounded  bg-primary-50 px-2 py-1 text-primary-500;
+  @apply rounded  bg-primary-50 px-2 py-1 text-primary-500 dark:bg-metal-800 dark:text-white;
+}
+
+.post pre {
+  @apply my-10 overflow-x-auto rounded-xl bg-metal-900 p-5 text-white;
 }

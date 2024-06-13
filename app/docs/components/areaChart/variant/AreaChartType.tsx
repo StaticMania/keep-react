@@ -86,8 +86,9 @@ const AreaChartType = () => {
 }
 
 const AreaChartTypeCode = `
-import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip, CustomTooltip } from 'keep-react'
+import { Area, AreaChart, ChartTooltip, CustomTooltip, ResponsiveContainer, XAxis, YAxis } from 'keep-react'
 
+export const AreaChartComponent = () => {
   const data = [
     {
       name: 'Jan',
@@ -152,7 +153,7 @@ import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip, Custo
         <Area type="linear" dataKey="price" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
         <Area type="linear" dataKey="amount" stroke="#1B4DFF" fillOpacity={1} fill="url(#amount)" />
 
-       <XAxis
+        <XAxis
           className="text-body-4 font-medium text-metal-600"
           dataKey="name"
           stroke="#8897AE"

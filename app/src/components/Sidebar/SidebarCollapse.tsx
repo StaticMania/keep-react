@@ -1,8 +1,8 @@
 'use client'
-import { DetailsHTMLAttributes, forwardRef } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-const SidebarCollapse = forwardRef<HTMLDetailsElement, DetailsHTMLAttributes<HTMLDetailsElement>>(
+const SidebarCollapse = forwardRef<HTMLDetailsElement, HTMLAttributes<HTMLElement>>(
   ({ children, className, ...props }, ref) => {
     return (
       <summary

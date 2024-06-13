@@ -79,9 +79,9 @@ const ChartWithAxisData = () => {
 }
 
 const ChartWithAxisDataCode = `
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'keep-react'
 
-  import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'keep-react'  
-
+export const BarChartComponent = () => {
   const data = [
     {
       name: 'A',
@@ -95,12 +95,12 @@ const ChartWithAxisDataCode = `
     },
     {
       name: 'C',
-      price: 170,
+      price: 250,
       sell: 120,
     },
     {
       name: 'D',
-      price: 190,
+      price: 200,
       sell: 130,
     },
     {
@@ -112,6 +112,26 @@ const ChartWithAxisDataCode = `
       name: 'F',
       price: 400,
       sell: 213,
+    },
+    {
+      name: 'G',
+      price: 340,
+      sell: 140,
+    },
+    {
+      name: 'H',
+      price: 300,
+      sell: 200,
+    },
+    {
+      name: 'I',
+      price: 250,
+      sell: 120,
+    },
+    {
+      name: 'J',
+      price: 200,
+      sell: 130,
     },
   ]
   return (

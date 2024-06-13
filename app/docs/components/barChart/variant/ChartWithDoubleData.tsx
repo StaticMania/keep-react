@@ -60,8 +60,9 @@ const ChartWithDoubleData = () => {
 }
 
 const ChartWithDoubleDataCode = `
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "keep-react"
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'keep-react'
 
+export const BarChartComponent = () => {
   const data = [
     {
       name: 'A',
@@ -94,7 +95,6 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "keep-react"
       sell: 213,
     },
   ]
-
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} barGap={10}>
@@ -120,7 +120,6 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "keep-react"
     </ResponsiveContainer>
   )
 }
-
 `
 
 export { ChartWithDoubleData, ChartWithDoubleDataCode }

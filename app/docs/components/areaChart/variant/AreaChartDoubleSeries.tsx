@@ -86,8 +86,9 @@ const AreaChartWithDoubleSeries = () => {
 }
 
 const AreaChartWithDoubleSeriesCode = `
-import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip, CustomTooltip } from 'keep-react'
+import { Area, AreaChart, ChartTooltip, CustomTooltip, ResponsiveContainer, XAxis, YAxis } from 'keep-react'
 
+export const AreaChartComponent = () => {
   const data = [
     {
       name: 'Jan',
@@ -165,6 +166,7 @@ import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip, Custo
           stroke="#8897AE"
           strokeWidth={0.5}
         />
+
         <ChartTooltip content={<CustomTooltip />} />
       </AreaChart>
     </ResponsiveContainer>

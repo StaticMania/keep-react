@@ -33,7 +33,7 @@ const Hero = () => {
                 resources for efficient development and bring your ideas to life with ease.
               </p>
               <div className="flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-5">
-                <div className="inline-flex w-[270px] items-center justify-between divide-x-2 divide-metal-100 rounded-lg border border-metal-200 bg-white px-3.5 py-3 dark:border-metal-100 dark:bg-metal-900">
+                <div className="inline-flex w-[270px] items-center justify-between divide-x-2 divide-metal-100 rounded-lg border border-metal-200 bg-white px-3.5 py-3 dark:border-metal-600 dark:bg-metal-900">
                   <span className="text-body-4 font-normal text-metal-600 dark:text-white">npm install keep-react</span>
                   <button className="pl-2" onClick={() => copyToClipboard('npm install keep-react')}>
                     {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
