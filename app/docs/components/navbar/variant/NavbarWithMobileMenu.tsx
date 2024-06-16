@@ -32,6 +32,7 @@ const NavbarWithMobileMenu = () => {
 
 const NavbarWithMobileMenuCode = `
 "use client";
+import Image from "next/image";
 import { Navbar } from "keep-react";
 import { CaretDown } from "phosphor-react";
 
