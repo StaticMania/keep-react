@@ -28,7 +28,7 @@ const SlidesToScrollCode = `
 'use client'
 import { Carousel } from 'keep-react'
 
-export const CarouselComponent = () => (
+export const CarouselComponent = () => {
   return (
     <Carousel options={{ SlidesToScroll: 2 }}>
       <Carousel.Slides>

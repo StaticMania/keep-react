@@ -28,7 +28,7 @@ const DefaultCarouselCode = `
 'use client'
 import { Carousel } from 'keep-react'
 
-export const CarouselComponent = () => (
+export const CarouselComponent = () => {
   return (
     <Carousel>
       <Carousel.Slides>

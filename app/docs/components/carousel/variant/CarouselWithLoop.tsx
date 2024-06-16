@@ -28,7 +28,7 @@ const CarouselWithLoopCode = `
 'use client'
 import { Carousel } from 'keep-react'
 
-export const CarouselComponent = () => (
+export const CarouselComponent = () => {
   return (
     <Carousel options={{ loop: true }}>
       <Carousel.Slides>
