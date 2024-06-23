@@ -14,10 +14,10 @@ const CarouselWithAutoPlay = () => {
   return (
     <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
       <CarouselSlides>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
+        {[1, 2, 3, 4, 5].map((slide) => (
+          <CarouselItem key={slide}>
             <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20 dark:border-metal-900 dark:bg-metal-900">
-              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{index + 1}</h1>
+              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
             </div>
           </CarouselItem>
         ))}
@@ -51,10 +51,10 @@ export const CarouselComponent = () => {
   return (
     <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
       <CarouselSlides>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
+        {[1, 2, 3, 4, 5].map((slide) => (
+          <CarouselItem key={slide}>
             <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20 dark:border-metal-900 dark:bg-metal-900">
-              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{index + 1}</h1>
+              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
             </div>
           </CarouselItem>
         ))}
@@ -69,7 +69,6 @@ export const CarouselComponent = () => {
     </Carousel>
   )
 }
-
 `
 
 export { CarouselWithAutoPlay, CarouselWithAutoPlayCode }

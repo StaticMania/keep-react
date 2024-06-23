@@ -56,7 +56,7 @@ const ChartWithAxisData = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data}>
-        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" fill="#2d3643" background={{ fill: '#F0F3F9' }} />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-metal-900 dark:fill-metal-25" />
         <XAxis
           className="text-body-4 font-medium text-metal-600"
           dataKey="name"
@@ -137,7 +137,7 @@ export const BarChartComponent = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data}>
-        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" fill="#2d3643" background={{ fill: '#F0F3F9' }} />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-metal-900 dark:fill-metal-25" />
         <XAxis
           className="text-body-4 font-medium text-metal-600"
           dataKey="name"

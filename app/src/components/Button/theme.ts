@@ -37,7 +37,7 @@ export const buttonTheme: keepButtonTheme = {
     primary:
       'bg-primary-500 hover:bg-primary-600 text-white focus-visible:ring-primary-100 disabled:cursor-not-allowed disabled:bg-primary-100',
     secondary:
-      'bg-metal-900 hover:bg-metal-800 text-white focus-visible:ring-metal-200 disabled:cursor-not-allowed disabled:bg-metal-200',
+      'bg-metal-600 hover:bg-metal-700 dark:bg-metal-25 dark:text-metal-900 text-white focus-visible:ring-metal-200 disabled:cursor-not-allowed disabled:bg-metal-200 dark:disabled:bg-metal-600',
     success:
       'bg-success-500 hover:bg-success-600 text-white focus-visible:ring-success-100 disabled:cursor-not-allowed disabled:bg-success-100',
     warning:

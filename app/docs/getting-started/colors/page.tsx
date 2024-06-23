@@ -4,7 +4,7 @@ import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:
-    'A Colors component in Keep React is a reusable element that simplifies text styling, offering a consistent way to format and present text across a web application. It allows developers to easily customize typography properties like font size and weight, promoting code consistency and readability.',
+    'The color palette includes primary, secondary, success, warning, and error colors. The primary color is used for branding and main actions, while the secondary color complements the primary and is used for secondary elements. The success color, usually green, indicates positive actions. The warning color, often yellow or orange, is used for cautionary information, and the error color, typically red, signifies errors or critical actions.',
   title: 'Colors - Keep React',
 }
 

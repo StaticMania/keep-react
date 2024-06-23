@@ -36,10 +36,10 @@ const ChartWithDoubleData = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} barGap={10}>
-        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="price" fill="#0a9952" background={{ fill: '#d7f8e9' }} />
-        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="sell" fill="#1db469" background={{ fill: '#d7f8e9' }} />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-metal-900 dark:fill-metal-25" />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="sell" className="fill-metal-600 dark:fill-metal-100" />
         <XAxis
-          className="text-body-4 font-medium text-metal-600"
+          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
           dataKey="name"
           stroke="#8897AE"
           tickSize={10}
@@ -47,7 +47,7 @@ const ChartWithDoubleData = () => {
           strokeWidth={0.5}
         />
         <YAxis
-          className="text-body-4 font-medium text-metal-600"
+          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
           tickSize={10}
           dataKey="price"
           stroke="#8897AE"
@@ -98,10 +98,10 @@ export const BarChartComponent = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} barGap={10}>
-        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="price" fill="#0a9952" background={{ fill: '#d7f8e9' }} />
-        <Bar radius={[8, 8, 0, 0]} barSize={45} dataKey="sell" fill="#1db469" background={{ fill: '#d7f8e9' }} />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-metal-900 dark:fill-metal-25" />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="sell" className="fill-metal-600 dark:fill-metal-100" />
         <XAxis
-          className="text-body-4 font-medium text-metal-600"
+          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
           dataKey="name"
           stroke="#8897AE"
           tickSize={10}
@@ -109,7 +109,7 @@ export const BarChartComponent = () => {
           strokeWidth={0.5}
         />
         <YAxis
-          className="text-body-4 font-medium text-metal-600"
+          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
           tickSize={10}
           dataKey="price"
           stroke="#8897AE"

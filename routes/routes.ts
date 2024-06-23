@@ -427,6 +427,11 @@ export const gettingStartedRoutes: routerPath[] = [
     name: 'Colors',
     href: '/docs/getting-started/colors',
   },
+  {
+    id: generatedID(),
+    name: 'Dark Mode',
+    href: '/docs/getting-started/dark-mode',
+  },
 ]
 
 export const quickAccessRoute: routerPath[] = [

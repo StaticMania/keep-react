@@ -51,7 +51,7 @@ const RegisterCard = () => {
               </InputIcon>
             </div>
           </fieldset>
-          <Button className="!mt-3 block w-full" size="xs" color="secondary" variant="outline">
+          <Button className="!mt-3 block w-full" size="sm" color="secondary">
             Create Account
           </Button>
         </form>
@@ -114,7 +114,7 @@ export const CardComponent = () => {
               </InputIcon>
             </div>
           </fieldset>
-          <Button className="!mt-3 block w-full" size="xs" color="secondary" variant="outline">
+          <Button className="!mt-3 block w-full" size="sm" color="secondary">
             Create Account
           </Button>
         </form>

@@ -12,7 +12,7 @@ const ProductCard = () => {
         <CardDescription>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsam animi voluptas perspiciatis quidem esse!
         </CardDescription>
-        <Button size="sm" color="primary">
+        <Button size="sm" color="secondary">
           Buy Now
         </Button>
       </CardContent>
@@ -35,7 +35,7 @@ export const CardComponent = () => {
         <CardDescription>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsam animi voluptas perspiciatis quidem esse!
         </CardDescription>
-        <Button size="sm" color="primary">
+        <Button size="sm" color="secondary">
           Buy Now
         </Button>
       </CardContent>
