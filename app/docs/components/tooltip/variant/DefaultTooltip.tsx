@@ -1,30 +1,28 @@
-'use client'
-import { Tooltip } from '../../../../src'
+import { Tooltip, TooltipAction, TooltipContent } from '../../../../src'
 
 const DefaultTooltip = () => {
   return (
     <div className="p-2.5">
       <Tooltip>
-        <Tooltip.Action>Tooltip</Tooltip.Action>
-        <Tooltip.Content>
-          <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
-        </Tooltip.Content>
+        <TooltipAction>Tooltip</TooltipAction>
+        <TooltipContent>
+          <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
+        </TooltipContent>
       </Tooltip>
     </div>
   )
 }
 
 const DefaultTooltipCode = `
-'use client'
-import { Tooltip } from 'keep-react'
+import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
   return (
     <Tooltip>
-      <Tooltip.Action>Tooltip</Tooltip.Action>
-      <Tooltip.Content>
-        <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
-      </Tooltip.Content>
+      <TooltipAction>Tooltip</TooltipAction>
+      <TooltipContent>
+        <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
+      </TooltipContent>
     </Tooltip>
   )
 }

@@ -1,33 +1,49 @@
-'use client'
-import { CircleProgress, LineProgress } from '../../../../src'
+import {
+  CircleProgress,
+  CircleProgressLine,
+  CircleProgressText,
+  LineProgress,
+  LineProgressBar,
+  LineProgressText,
+} from '../../../../src'
 
 const VariantOfProgress = () => {
   return (
     <div className="flex w-1/2 flex-col gap-5">
       <CircleProgress progress={55}>
-        <CircleProgress.Text>55%</CircleProgress.Text>
+        <CircleProgressLine />
+        <CircleProgressText>55%</CircleProgressText>
       </CircleProgress>
       <LineProgress progress={55}>
-        <LineProgress.Text>55%</LineProgress.Text>
+        <LineProgressBar />
+        <LineProgressText>55%</LineProgressText>
       </LineProgress>
     </div>
   )
 }
 
 const VariantOfProgressCode = `
-'use client'
-import { CircleProgress, LineProgress } from 'keep-react'
+import {
+  CircleProgress,
+  CircleProgressLine,
+  CircleProgressText,
+  LineProgress,
+  LineProgressBar,
+  LineProgressText,
+} from 'keep-react'
 
 export const ProgressComponent = () => {
   return (
-    <>
+    <div className="flex flex-col gap-5">
       <CircleProgress progress={55}>
-        <CircleProgress.Text>55%</CircleProgress.Text>
+        <CircleProgressLine />
+        <CircleProgressText>55%</CircleProgressText>
       </CircleProgress>
       <LineProgress progress={55}>
-        <LineProgress.Text>55%</LineProgress.Text>
+        <LineProgressBar />
+        <LineProgressText>55%</LineProgressText>
       </LineProgress>
-    </>
+    </div>
   )
 }
 `

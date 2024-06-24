@@ -2,7 +2,6 @@
 import { EmblaCarouselType } from 'embla-carousel'
 import { createContext, useContext } from 'react'
 
-// eslint-disable-next-line no-unused-vars
 type EmblaViewportRefType = <ViewportElement extends HTMLElement>(instance: ViewportElement | null) => void
 
 type CarouselContextPropTypes = {

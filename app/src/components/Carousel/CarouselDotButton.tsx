@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
 'use client'
 import { EmblaCarouselType } from 'embla-carousel'
-import { ButtonHTMLAttributes, DetailedHTMLProps, FC, PropsWithChildren, useCallback, useEffect, useState } from 'react'
+import { ButtonHTMLAttributes, forwardRef, useCallback, useEffect, useState } from 'react'
+import { cn } from '../../helpers/cn'
 
 type UseDotButtonType = {
   selectedIndex: number
@@ -46,14 +46,14 @@ export const useDotButton = (emblaApi: EmblaCarouselType | undefined): UseDotBut
   }
 }
 
-type PropType = PropsWithChildren<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>>
+export const DotButton = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <button ref={ref} type="button" {...props} className={cn(className)}>
+        {children}
+      </button>
+    )
+  },
+)
 
-export const DotButton: FC<PropType> = (props) => {
-  const { children, ...restProps } = props
-
-  return (
-    <button type="button" {...restProps}>
-      {children}
-    </button>
-  )
-}
+DotButton.displayName = 'DotButton'

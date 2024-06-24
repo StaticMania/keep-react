@@ -1,11 +1,10 @@
 'use client'
 import { useMergeRefs } from '@floating-ui/react'
-import { HTMLProps, ReactNode, cloneElement, forwardRef, isValidElement } from 'react'
+import { HTMLProps, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 import { usePopoverContext } from './Context'
 
 export interface PopoverTriggerProps {
-  children: ReactNode
   asChild?: boolean
 }
 
@@ -31,7 +30,10 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
       <button
         ref={ref}
         type="button"
-        className={cn('rounded-xl border border-metal-400 p-2 text-metal-400', props.className)}
+        className={cn(
+          'rounded-xl border border-metal-400 p-2 text-metal-400 dark:border-metal-900 dark:text-metal-300',
+          props.className,
+        )}
         data-state={context.open ? 'open' : 'closed'}
         {...context.getReferenceProps(props)}>
         {children}
@@ -39,3 +41,5 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
     )
   },
 )
+
+PopoverTrigger.displayName = 'Popover.Action'

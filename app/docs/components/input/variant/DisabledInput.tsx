@@ -1,4 +1,3 @@
-'use client'
 import { Input } from '../../../../src'
 
 const DisabledInput = () => {
@@ -10,7 +9,6 @@ const DisabledInput = () => {
 }
 
 const DisabledInputCode = `
-'use client'
 import { Input } from 'keep-react'
 
 export const InputComponent = () => {

@@ -1,12 +1,12 @@
 'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { avatarTheme } from './theme'
+import { AvatarSizeVariant, avatarTheme } from './theme'
 
 export interface VerifyProps {
   children?: ReactNode
   className?: string
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+  size?: keyof AvatarSizeVariant
   position?: string
   color?: string
 }

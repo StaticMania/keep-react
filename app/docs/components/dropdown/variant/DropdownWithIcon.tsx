@@ -1,42 +1,45 @@
 'use client'
 import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Divider, Dropdown } from '../../../../src'
+import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
 
 const DropdownWithIcon = () => {
   return (
     <Dropdown>
-      <Dropdown.List>
-        <Dropdown.Item>
-          <Users size={24} />
-          Contacts
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <Phone size={24} />
-          Phone
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <ChartPieSlice size={24} />
-          Statistics
-        </Dropdown.Item>
-        <Divider />
-        <Dropdown.Item>
-          <Pen size={24} />
-          Rename
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <Copy size={24} />
-          Duplicate
-        </Dropdown.Item>
-        <Divider />
-        <Dropdown.Item>
-          <UserCircle size={24} />
-          Account
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <SignOut size={24} />
-          Logout
-        </Dropdown.Item>
-      </Dropdown.List>
+      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownContent>
+        <DropdownList>
+          <DropdownItem>
+            <Users size={20} />
+            Contacts
+          </DropdownItem>
+          <DropdownItem>
+            <Phone size={20} />
+            Phone
+          </DropdownItem>
+          <DropdownItem>
+            <ChartPieSlice size={20} />
+            Statistics
+          </DropdownItem>
+          <Divider />
+          <DropdownItem>
+            <Pen size={20} />
+            Rename
+          </DropdownItem>
+          <DropdownItem>
+            <Copy size={20} />
+            Duplicate
+          </DropdownItem>
+          <Divider />
+          <DropdownItem>
+            <UserCircle size={20} />
+            Account
+          </DropdownItem>
+          <DropdownItem>
+            <SignOut size={20} />
+            Logout
+          </DropdownItem>
+        </DropdownList>
+      </DropdownContent>
     </Dropdown>
   )
 }
@@ -44,43 +47,46 @@ const DropdownWithIcon = () => {
 const DropdownWithIconCode = `
 'use client'
 import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Divider, Dropdown } from 'keep-react'
+import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList} from 'keep-react'
 
 export const DropdownComponent = () => {
   return (
     <Dropdown>
-      <Dropdown.List>
-        <Dropdown.Item>
-          <Users size={24} />
-          Contacts
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <Phone size={24} />
-          Phone
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <ChartPieSlice size={24} />
-          Statistics
-        </Dropdown.Item>
-        <Divider />
-        <Dropdown.Item>
-          <Pen size={24} />
-          Rename
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <Copy size={24} />
-          Duplicate
-        </Dropdown.Item>
-        <Divider />
-        <Dropdown.Item>
-          <UserCircle size={24} />
-          Account
-        </Dropdown.Item>
-        <Dropdown.Item>
-          <SignOut size={24} />
-          Logout
-        </Dropdown.Item>
-      </Dropdown.List>
+      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownContent>
+        <DropdownList>
+          <DropdownItem>
+            <Users size={20} />
+            Contacts
+          </DropdownItem>
+          <DropdownItem>
+            <Phone size={20} />
+            Phone
+          </DropdownItem>
+          <DropdownItem>
+            <ChartPieSlice size={20} />
+            Statistics
+          </DropdownItem>
+          <Divider />
+          <DropdownItem>
+            <Pen size={20} />
+            Rename
+          </DropdownItem>
+          <DropdownItem>
+            <Copy size={20} />
+            Duplicate
+          </DropdownItem>
+          <Divider />
+          <DropdownItem>
+            <UserCircle size={20} />
+            Account
+          </DropdownItem>
+          <DropdownItem>
+            <SignOut size={20} />
+            Logout
+          </DropdownItem>
+        </DropdownList>
+      </DropdownContent>
     </Dropdown>
   )
 }

@@ -1,33 +1,31 @@
-'use client'
-import { Avatar } from '../../../../src'
+import { Avatar, AvatarCounter, AvatarGroup } from '../../../../src'
 
-const AvatarGroup = () => {
+const AvatarGroupComponent = () => {
   return (
-    <Avatar.Group>
+    <AvatarGroup>
       <Avatar img="/images/avatar/avatar-2.png" />
       <Avatar img="/images/avatar/avatar-3.png" />
       <Avatar img="/images/avatar/avatar-4.png" />
       <Avatar img="/images/avatar/avatar-5.png" />
-      <Avatar.Counter>+9</Avatar.Counter>
-    </Avatar.Group>
+      <AvatarCounter>+9</AvatarCounter>
+    </AvatarGroup>
   )
 }
 
 const AvatarGroupCode = `
-'use client'
-import { Avatar } from 'keep-react'
+import { Avatar, AvatarCounter, AvatarGroup } from 'keep-react'
 
 const AvatarGroupComponent = () => {
   return (
-    <Avatar.Group>
+    <AvatarGroup>
       <Avatar img="/images/avatar/avatar-2.png" />
       <Avatar img="/images/avatar/avatar-3.png" />
       <Avatar img="/images/avatar/avatar-4.png" />
       <Avatar img="/images/avatar/avatar-5.png" />
-      <Avatar.Counter>+9</Avatar.Counter>
-    </Avatar.Group>
+      <AvatarCounter>+9</AvatarCounter>
+    </AvatarGroup>
   )
 }
 `
 
-export { AvatarGroup, AvatarGroupCode }
+export { AvatarGroupCode, AvatarGroupComponent }

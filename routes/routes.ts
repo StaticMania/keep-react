@@ -7,7 +7,9 @@ import {
   Cards,
   CaretDoubleRight,
   ChartBar,
+  ChartLine,
   ChartLineUp,
+  ChartPie,
   CheckCircle,
   DotsThreeCircle,
   IconProps,
@@ -67,6 +69,33 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Bar Chart',
+    folderName: 'Chart',
+    href: '/docs/components/barChart',
+    tag: false,
+    deprecate: false,
+    Icon: ChartBar,
+  },
+  {
+    id: generatedID(),
+    name: 'Line Chart',
+    folderName: 'Chart',
+    href: '/docs/components/lineChart',
+    tag: false,
+    deprecate: false,
+    Icon: ChartLine,
+  },
+  {
+    id: generatedID(),
+    name: 'Pie Chart',
+    folderName: 'Chart',
+    href: '/docs/components/pieChart',
+    tag: false,
+    deprecate: false,
+    Icon: ChartPie,
+  },
+  {
+    id: generatedID(),
     name: 'Avatar',
     href: '/docs/components/avatar',
     tag: false,
@@ -83,15 +112,7 @@ export const routes: routerPath[] = [
     deprecate: false,
     Icon: Notification,
   },
-  {
-    id: generatedID(),
-    name: 'Bar Chart',
-    folderName: 'Chart',
-    href: '/docs/components/barChart',
-    tag: false,
-    deprecate: false,
-    Icon: ChartBar,
-  },
+
   {
     id: generatedID(),
     name: 'BreadCrumb',
@@ -325,9 +346,9 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
-    name: 'Tabs',
-    folderName: 'Tabs',
-    href: '/docs/components/tabs',
+    name: 'Tab',
+    folderName: 'Tab',
+    href: '/docs/components/tab',
     tag: false,
     deprecate: false,
   },
@@ -382,14 +403,6 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
-    name: 'Tree',
-    folderName: 'Tree',
-    href: '/docs/components/tree',
-    tag: false,
-    deprecate: false,
-  },
-  {
-    id: generatedID(),
     name: 'Upload',
     folderName: 'Upload',
     href: '/docs/components/upload',
@@ -413,6 +426,11 @@ export const gettingStartedRoutes: routerPath[] = [
     id: generatedID(),
     name: 'Colors',
     href: '/docs/getting-started/colors',
+  },
+  {
+    id: generatedID(),
+    name: 'Dark Mode',
+    href: '/docs/getting-started/dark-mode',
   },
 ]
 
@@ -445,6 +463,12 @@ export const quickAccessRoute: routerPath[] = [
     id: generatedID(),
     name: 'Layout',
     href: '/docs/layout/column',
+    target: '_self',
+  },
+  {
+    id: generatedID(),
+    name: 'Dark Mode',
+    href: '/docs/getting-started/dark-mode',
     target: '_self',
   },
 ]

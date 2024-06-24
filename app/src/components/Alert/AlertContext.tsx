@@ -1,7 +1,9 @@
+'use client'
 import { createContext, useContext } from 'react'
+import { ColorVariant } from './theme'
 
 type AlertContextProps = {
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  color?: keyof ColorVariant
 }
 
 export const AlertContext = createContext<AlertContextProps | undefined>(undefined)

@@ -1,1 +1,5 @@
-export * from './Modal'
+export { ModalBody } from './Body'
+export { ModalContent } from './Content'
+export { ModalFooter } from './Footer'
+export { ModalIcon } from './Icon'
+export { Modal } from './Modal'

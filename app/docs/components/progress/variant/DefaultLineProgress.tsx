@@ -1,24 +1,24 @@
-'use client'
-import { LineProgress } from '../../../../src'
+import { LineProgress, LineProgressBar, LineProgressText } from '../../../../src'
 
 const DefaultLineProgress = () => {
   return (
     <div className="w-1/2">
       <LineProgress progress={55}>
-        <LineProgress.Text>55%</LineProgress.Text>
+        <LineProgressBar />
+        <LineProgressText>55%</LineProgressText>
       </LineProgress>
     </div>
   )
 }
 
 const DefaultLineProgressCode = `
-'use client'
-import { LineProgress } from 'keep-react'
+import { LineProgress, LineProgressBar, LineProgressText }  from 'keep-react'
 
 export const ProgressComponent = () => {
   return (
     <LineProgress progress={55}>
-      <LineProgress.Text>55%</LineProgress.Text>
+      <LineProgressBar />
+      <LineProgressText>55%</LineProgressText>
     </LineProgress>
   )
 }

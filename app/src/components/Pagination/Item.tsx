@@ -1,5 +1,5 @@
 'use client'
-import { ButtonHTMLAttributes, FC, forwardRef } from 'react'
+import { ButtonHTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { usePaginationContext } from './Context'
 import { paginationTheme } from './theme'
@@ -8,7 +8,7 @@ export interface ItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   active?: boolean
 }
 
-const Item: FC<ItemProps> = forwardRef<HTMLButtonElement, ItemProps>(
+const PaginationItem = forwardRef<HTMLButtonElement, ItemProps>(
   ({ className, children, active = false, ...props }, ref) => {
     const { shape = 'rounded' } = usePaginationContext()
     const { item } = paginationTheme
@@ -24,5 +24,7 @@ const Item: FC<ItemProps> = forwardRef<HTMLButtonElement, ItemProps>(
     )
   },
 )
-Item.displayName = 'Pagination.Item'
-export { Item }
+
+PaginationItem.displayName = 'Pagination.Item'
+
+export { PaginationItem }

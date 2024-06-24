@@ -4,7 +4,7 @@ import { Label, Radio } from '../../../../src'
 const DefaultRadio = () => {
   return (
     <form className="flex flex-col gap-2">
-      <legend className="mb-1 text-body-3 text-metal-600">Choose your favorite country</legend>
+      <legend className="mb-1 text-body-3 text-metal-600 dark:text-metal-300">Choose your favorite country</legend>
       <fieldset className="flex items-center gap-2">
         <Radio id="bd" name="country" />
         <Label htmlFor="bd">Bangladesh</Label>
@@ -28,7 +28,7 @@ import { Label, Radio } from 'keep-react'
 export const RadioComponent = () => {
   return (
     <form className="flex flex-col gap-2">
-      <legend className="mb-1 text-body-3 text-metal-600">Choose your favorite country</legend>
+      <legend className="mb-1 text-body-3 text-metal-600 dark:text-metal-300">Choose your favorite country</legend>
       <fieldset className="flex items-center gap-2">
         <Radio id="bd" name="country" />
         <Label htmlFor="bd">Bangladesh</Label>

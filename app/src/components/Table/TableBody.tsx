@@ -1,28 +1,12 @@
-import type { ComponentProps, FC, PropsWithChildren } from 'react'
+'use client'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { keepTableCellTheme, tableTheme } from './theme'
 
-/**
- * Props for the TableBody component.
- * @interface TableBodyProps
- * @extends {PropsWithChildren}
- * @extends {ComponentProps<'tbody'>}
- */
-export interface TableBodyProps extends PropsWithChildren, ComponentProps<'tbody'> {
-  /**
-   * Optional theme for the TableBody component.
-   * @type {DeepPartial<keepTableBodyTheme>}
-   */
-  theme?: DeepPartial<keepTableCellTheme>
-}
+const TableBody = forwardRef<HTMLTableSectionElement, HTMLAttributes<HTMLTableSectionElement>>(
+  ({ className, ...props }, ref) => (
+    <tbody ref={ref} className={cn('[&_tr:last-child]:border-0', className)} {...props} />
+  ),
+)
+TableBody.displayName = 'TableBody'
 
-export const TableBody: FC<TableBodyProps> = ({ children, className, ...props }) => {
-  const theme = tableTheme.body
-
-  return (
-    <tbody className={cn(theme.base, className)} {...props}>
-      {children}
-    </tbody>
-  )
-}
+export { TableBody }

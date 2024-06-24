@@ -3,7 +3,7 @@ import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { modalTheme } from './theme'
 
-const Icon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const ModalIcon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div {...props} className={cn(modalTheme.icon, className)} ref={ref}>
@@ -13,6 +13,6 @@ const Icon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Icon.displayName = 'Modal.Icon'
+ModalIcon.displayName = 'Modal.Icon'
 
-export { Icon }
+export { ModalIcon }

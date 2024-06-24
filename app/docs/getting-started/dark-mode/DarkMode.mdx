@@ -1,0 +1,73 @@
+import CopyCode from '../../../components/CopyCode'
+import {
+  viteReactDarkModeCode,
+  ThemeProviderWrapper,
+  tailwindConfig,
+  viteThemeSwitcherComponent,
+  nextThemeInstall,
+  nextThemeProvider,
+  nextThemeWrapper,
+  nextThemeSwitcher,
+} from './Code'
+import CodePreview from '../../../components/CodePreview'
+import ViteThemeSwitcher from './ViteThemeSwitch'
+
+## Table of Contents
+
+Dark Mode is a user interface design option that uses a darker color palette, typically black or dark grey, for backgrounds and light-colored text and icons. It reduces eye strain in low-light environments, conserves battery life on OLED and AMOLED screens, and can enhance visual appeal.
+
+## Vite React
+
+`Step 1:`
+
+Create a new file called "theme-provider.jsx" in the components folder. Copy and paste the provided theme provider code into "theme-provider.jsx".
+
+<CopyCode code={viteReactDarkModeCode} />
+
+`Step: 2`
+
+Open the "main.jsx" file. Wrap the "App" component with the "ThemeProvider" component.
+
+<CopyCode code={ThemeProviderWrapper} />
+
+`Step: 3`
+
+Open the "tailwind.config.js" file. Add the configuration to enable dark mode.
+
+<CopyCode code={tailwindConfig} />
+
+`Step: 4`
+
+Create a theme switcher component to toggle between dark and light modes. Use the example code provided to create a simple theme switcher.
+
+<CodePreview github="dark-mode" code={viteThemeSwitcherComponent}>
+  <ViteThemeSwitcher />
+</CodePreview>
+
+## Next Js
+
+`Step 1:`
+
+Start by installing next-themes:
+
+<CopyCode code={nextThemeInstall} />
+
+`Step 2:`
+
+Create a new file called "theme-provider.jsx" in the components folder. Copy and paste the provided theme provider code into "theme-provider.jsx".
+
+<CopyCode code={nextThemeProvider} />
+
+`Step 3:`
+
+Wrap your root layout. Add the ThemeProvider to your root layout.
+
+<CopyCode code={nextThemeWrapper} />
+
+`Step 4:`
+
+Create a theme switcher component to toggle between dark and light modes. Use the example code provided to create a simple theme switcher.
+
+<CodePreview github="dark-mode" code={nextThemeSwitcher}>
+  <ViteThemeSwitcher />
+</CodePreview>

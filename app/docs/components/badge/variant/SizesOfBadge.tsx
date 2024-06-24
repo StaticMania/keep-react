@@ -1,4 +1,3 @@
-'use client'
 import { Badge } from '../../../../src'
 
 const SizesOfBadge = () => {
@@ -43,7 +42,6 @@ const SizesOfBadge = () => {
 }
 
 const SizesOfBadgeCode = `
-'use client'
 import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {

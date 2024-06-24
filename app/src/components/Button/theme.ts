@@ -1,43 +1,28 @@
+export interface ButtonColorVariant {
+  primary: string
+  secondary: string
+  success: string
+  warning: string
+  error: string
+}
+
+export interface ButtonSizeVariant {
+  xs: string
+  sm: string
+  md: string
+  lg: string
+  xl: string
+  '2xl': string
+}
+
 interface keepButtonTheme {
   base: string
-  color: {
-    primary: string
-    secondary: string
-    success: string
-    warning: string
-    error: string
-  }
-  size: {
-    xs: string
-    sm: string
-    md: string
-    lg: string
-    xl: string
-    '2xl': string
-  }
-  iconBtn: {
-    xs: string
-    sm: string
-    md: string
-    lg: string
-    xl: string
-    '2xl': string
-  }
+  color: ButtonColorVariant
+  size: ButtonSizeVariant
+  iconBtn: ButtonSizeVariant
   variant: {
-    link: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
-    outline: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
+    link: ButtonColorVariant
+    outline: ButtonColorVariant
   }
   position: {
     start: string
@@ -52,7 +37,7 @@ export const buttonTheme: keepButtonTheme = {
     primary:
       'bg-primary-500 hover:bg-primary-600 text-white focus-visible:ring-primary-100 disabled:cursor-not-allowed disabled:bg-primary-100',
     secondary:
-      'bg-metal-600 hover:bg-metal-700 text-white focus-visible:ring-metal-200 disabled:cursor-not-allowed disabled:bg-metal-200',
+      'bg-metal-600 hover:bg-metal-700 dark:bg-metal-25 dark:text-metal-900 text-white focus-visible:ring-metal-200 disabled:cursor-not-allowed disabled:bg-metal-200 dark:disabled:bg-metal-600',
     success:
       'bg-success-500 hover:bg-success-600 text-white focus-visible:ring-success-100 disabled:cursor-not-allowed disabled:bg-success-100',
     warning:
@@ -91,20 +76,20 @@ export const buttonTheme: keepButtonTheme = {
     },
     outline: {
       primary:
-        'bg-white border border-primary-500 hover:bg-primary-50 hover:text-primary-600 text-primary-500 focus-visible:ring-primary-100 disabled:cursor-not-allowed disabled:bg-white disabled:text-primary-200 disabled:border-primary-100',
+        'bg-transparent border border-primary-500 hover:bg-transparent hover:text-primary-600 text-primary-500 focus-visible:ring-primary-100 disabled:cursor-not-allowed disabled:bg-transparent disabled:text-primary-200 disabled:border-primary-100',
       secondary:
-        'bg-white border border-metal-300 hover:bg-metal-50 hover:text-metal-500 text-metal-500 focus-visible:ring-metal-100 disabled:cursor-not-allowed disabled:bg-white disabled:text-metal-200 disabled:border-metal-200',
+        'bg-transparent border border-metal-300 dark:border-metal-800 hover:bg-transparent dark:hover:bg-transparent dark:hover:text-metal-300 dark:text-metal-300 hover:text-metal-500 text-metal-600 focus-visible:ring-metal-100 disabled:cursor-not-allowed disabled:bg-transparent disabled:text-metal-200 disabled:border-metal-200',
       success:
-        'bg-white border border-success-500 hover:bg-success-50 hover:text-success-700 text-success-600 focus-visible:ring-success-100 disabled:cursor-not-allowed disabled:bg-white disabled:text-success-100 disabled:border-success-100',
+        'bg-transparent border border-success-500 hover:bg-transparent dar:hover:bg-transparent hover:text-success-700 text-success-600 focus-visible:ring-success-100 disabled:cursor-not-allowed disabled:bg-transparent disabled:text-success-100 disabled:border-success-100',
       warning:
-        'bg-white border border-warning-600 hover:bg-warning-50 hover:text-warning-700 text-warning-600 focus-visible:ring-warning-200 disabled:cursor-not-allowed disabled:bg-white disabled:text-warning-100 disabled:border-warning-100',
+        'bg-transparent border border-warning-600 hover:bg-transparent hover:text-warning-700 text-warning-600 focus-visible:ring-warning-200 disabled:cursor-not-allowed disabled:bg-transparent disabled:text-warning-100 disabled:border-warning-100',
       error:
-        'bg-white border border-error-500 hover:bg-error-25 hover:text-error-700 text-error-600 focus-visible:ring-error-200 disabled:cursor-not-allowed disabled:bg-white disabled:text-error-100 disabled:border-error-100',
+        'bg-transparent border border-error-500 hover:bg-transparent hover:text-error-700 text-error-600 focus-visible:ring-error-200 disabled:cursor-not-allowed disabled:bg-transparent disabled:text-error-100 disabled:border-error-100',
     },
   },
   position: {
     start: '!rounded-l-md !rounded-r-none',
     end: '!rounded-r-md !rounded-l-none',
-    center: '!rounded-none',
+    center: '!rounded-none !border-x-0',
   },
 }

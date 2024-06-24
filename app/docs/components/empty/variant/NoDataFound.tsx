@@ -1,48 +1,46 @@
-'use client'
 import Image from 'next/image'
-import { Button, Empty } from '../../../../src'
+import { Button, Empty, EmptyDescription, EmptyImage, EmptyTitle } from '../../../../src'
 
 const NoDataFound = () => {
   return (
     <Empty>
-      <Empty.Image>
+      <EmptyImage>
         <Image
           src="https://staticmania.cdn.prismic.io/staticmania/16994ca5-ac01-4868-8ade-1b9e276ccdb3_Property+1%3DFolder_+Property+2%3DLg.svg"
           height={234}
           width={350}
           alt="404"
         />
-      </Empty.Image>
-      <Empty.Title>No Data Found</Empty.Title>
-      <Empty.Description>
+      </EmptyImage>
+      <EmptyTitle>No Data Found</EmptyTitle>
+      <EmptyDescription>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
-      </Empty.Description>
-      <Button variant="outline">Go to home</Button>
+      </EmptyDescription>
+      <Button>Go to home</Button>
     </Empty>
   )
 }
 
 const NoDataFoundCode = `
-'use client'
 import Image from 'next/image'
-import { Button, Empty } from 'keep-react'
+import { Button, Empty, EmptyDescription, EmptyImage, EmptyTitle } from 'keep-react'
 
 export const EmptyComponent = () => {
   return (
     <Empty>
-      <Empty.Image>
+      <EmptyImage>
         <Image
           src="https://staticmania.cdn.prismic.io/staticmania/16994ca5-ac01-4868-8ade-1b9e276ccdb3_Property+1%3DFolder_+Property+2%3DLg.svg"
           height={234}
           width={350}
           alt="404"
         />
-      </Empty.Image>
-      <Empty.Title>No Data Found</Empty.Title>
-      <Empty.Description>
+      </EmptyImage>
+      <EmptyTitle>No Data Found</EmptyTitle>
+      <EmptyDescription>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
-      </Empty.Description>
-      <Button variant="outline">Go to home</Button>
+      </EmptyDescription>
+      <Button>Go to home</Button>
     </Empty>
   )
 }

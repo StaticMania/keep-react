@@ -14,17 +14,10 @@ export const LineProgressDataApi = [
     default: '55',
   },
   {
-    id: 4,
-    propsName: 'lineBg',
+    id: 3,
+    propsName: 'lineBackground',
     propsType: 'string',
     propsDescription: 'Progress line background color',
-    default: '',
-  },
-  {
-    id: 3,
-    propsName: 'className',
-    propsType: 'string',
-    propsDescription: 'Add your own className',
     default: '',
   },
 ]
@@ -46,30 +39,16 @@ export const circleProgressDataApi = [
   },
   {
     id: 3,
-    propsName: 'strokeBgColor',
-    propsType: 'string',
-    propsDescription: 'Circle Stroke Background Color',
-    default: '',
-  },
-  {
-    id: 5,
     propsName: 'strokeColor',
     propsType: 'string',
     propsDescription: 'Circle Stroke Color',
     default: '',
   },
   {
-    id: 6,
+    id: 4,
     propsName: 'strokeWidth',
     propsType: 'number',
     propsDescription: 'Circle Stroke Width',
     default: '2.5',
-  },
-  {
-    id: 7,
-    propsName: 'className',
-    propsType: 'string',
-    propsDescription: 'Add your own className',
-    default: '',
   },
 ]

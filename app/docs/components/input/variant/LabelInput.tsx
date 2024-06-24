@@ -1,4 +1,3 @@
-'use client'
 import { Input, Label } from '../../../../src'
 
 const LabelInput = () => {
@@ -11,7 +10,6 @@ const LabelInput = () => {
 }
 
 const LabelInputCode = `
-'use client'
 import { Input, Label } from 'keep-react'
 
 const LabelInput = () => {

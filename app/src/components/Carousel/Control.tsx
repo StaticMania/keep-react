@@ -3,7 +3,7 @@ import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { carouselTheme } from './theme'
 
-export const Control = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+export const CarouselControl = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     const theme = carouselTheme
     return (
@@ -14,4 +14,4 @@ export const Control = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>
   },
 )
 
-Control.displayName = 'Carousel.Control'
+CarouselControl.displayName = 'Carousel.Control'

@@ -1,4 +1,3 @@
-'use client'
 import { Input } from '../../../../src'
 
 const DefaultInput = () => {
@@ -10,7 +9,6 @@ const DefaultInput = () => {
 }
 
 const DefaultInputCode = `
-'use client'
 import { Input } from 'keep-react'
 
 export const InputComponent = () => {

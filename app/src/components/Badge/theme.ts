@@ -1,46 +1,29 @@
+export type BadgeColorVariant = {
+  primary: string
+  secondary: string
+  success: string
+  warning: string
+  error: string
+}
+
+export type BadgeSizeVariant = {
+  sm: string
+  md: string
+}
+
 interface BadgeTheme {
   base: string
-  size: {
-    sm: string
-    md: string
-  }
+  size: BadgeSizeVariant
   disabled: string
   variant: {
-    base: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
-    border: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
-    background: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
+    base: BadgeColorVariant
+    border: BadgeColorVariant
+    background: BadgeColorVariant
   }
   icon: {
     base: string
-    size: {
-      sm: string
-      md: string
-    }
-    color: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
+    size: BadgeSizeVariant
+    color: BadgeColorVariant
   }
 }
 

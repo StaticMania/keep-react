@@ -1,22 +1,22 @@
 'use client'
 import { Envelope } from 'phosphor-react'
-import { Button, Icon, Input, Label, Textarea } from '../../../../src'
+import { Button, Input, InputIcon, Label, Textarea } from '../../../../src'
 
 const TextAreaWithForm = () => {
   return (
-    <form className="mx-auto max-w-md space-y-3 rounded-md border border-metal-100 p-6">
+    <form className="mx-auto max-w-md space-y-3 rounded-md border border-metal-100 p-6 dark:border-metal-800">
       <fieldset className="space-y-1">
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email">Email*</Label>
         <div className="relative">
           <Input id="email" placeholder="Enter email" className="ps-11" />
-          <Icon>
+          <InputIcon>
             <Envelope size={19} color="#AFBACA" />
-          </Icon>
+          </InputIcon>
         </div>
       </fieldset>
       <fieldset className="space-y-1">
-        <Label htmlFor="m1">Message</Label>
-        <Textarea id="m1" placeholder="Write your message here" />
+        <Label htmlFor="m1">Message*</Label>
+        <Textarea id="m1" placeholder="Write your message here" rows={8} />
       </fieldset>
       <Button size="sm" color="secondary" type="submit" className="w-full">
         Send Message
@@ -28,23 +28,23 @@ const TextAreaWithForm = () => {
 const TextAreaWithFormCode = `
 'use client'
 import { Envelope } from 'phosphor-react'
-import { Button, Icon, Input, Label, Textarea } from 'keep-react'
+import { Button, InputIcon, Input, Label, Textarea } from 'keep-react'
 
 export const TextAreaComponent = () => {
   return (
-    <form className="mx-auto max-w-md space-y-3 rounded-md border border-metal-100 p-6">
+    <form className="mx-auto max-w-md space-y-3 rounded-md border border-metal-100 p-6 dark:border-metal-800">
       <fieldset className="space-y-1">
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email">Email*</Label>
         <div className="relative">
           <Input id="email" placeholder="Enter email" className="ps-11" />
-          <Icon>
+          <InputIcon>
             <Envelope size={19} color="#AFBACA" />
-          </Icon>
+          </InputIcon>
         </div>
       </fieldset>
       <fieldset className="space-y-1">
-        <Label htmlFor="m1">Message</Label>
-        <Textarea id="m1" placeholder="Write your message here" />
+        <Label htmlFor="m1">Message*</Label>
+        <Textarea id="m1" placeholder="Write your message here" rows={8} />
       </fieldset>
       <Button size="sm" color="secondary" type="submit" className="w-full">
         Send Message

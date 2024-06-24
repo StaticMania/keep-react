@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Avatar, Button, Notification } from '../../../../src'
+import { Avatar, Button, ButtonGroup, Notification, NotificationBody, NotificationContent } from '../../../../src'
 
 const NotificationPosition = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -9,7 +9,7 @@ const NotificationPosition = () => {
 
   return (
     <div className="px-5 py-3">
-      <Button.Group>
+      <ButtonGroup>
         <Button
           onClick={() => {
             openController()
@@ -42,23 +42,23 @@ const NotificationPosition = () => {
           position="end">
           Bottom Right
         </Button>
-      </Button.Group>
+      </ButtonGroup>
       <Notification isOpen={isOpen} onClose={openController} position={position}>
-        <Notification.Body className="max-w-sm p-6">
-          <Notification.Content>
+        <NotificationBody className="max-w-sm p-6">
+          <NotificationContent>
             <div className="flex items-start gap-2">
               <div>
                 <Avatar img="/images/avatar/avatar-1.png" className="border-2 border-error-100" />
               </div>
               <div className="max-w-[220px]">
-                <p className="text-body-4 font-medium text-metal-700">
+                <p className="text-body-4 font-medium text-metal-600 dark:text-metal-300">
                   Khairul Islam Ridoy comment on your recent posts
                 </p>
                 <p className="text-body-5 font-normal text-metal-400">5 min ago</p>
               </div>
             </div>
-          </Notification.Content>
-        </Notification.Body>
+          </NotificationContent>
+        </NotificationBody>
       </Notification>
     </div>
   )
@@ -67,7 +67,7 @@ const NotificationPosition = () => {
 const NotificationPositionCode = `
 'use client'
 import { useState } from 'react'
-import { Avatar, Button, Notification } from 'keep-react'
+import { Avatar, Button, ButtonGroup, Notification, NotificationBody, NotificationContent } from 'keep-react'
 
 export const NotificationComponent = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -77,21 +77,21 @@ export const NotificationComponent = () => {
     <div className="px-5 py-3">
       <Button onClick={control}>Show Notification</Button>
       <Notification isOpen={isOpen} onClose={control}>
-        <Notification.Body className="max-w-sm p-4">
-          <Notification.Content>
+        <NotificationBody className="max-w-sm p-4">
+          <NotificationContent>
             <div className="flex items-start gap-2">
               <div>
                 <Avatar img="/images/avatar/avatar-1.png" className="border-2 border-error-100" />
               </div>
               <div className="max-w-[220px]">
-                <p className="text-body-4 font-medium text-metal-700">
+                <p className="text-body-4 font-medium text-metal-600 dark:text-metal-300">
                   Khairul Islam Ridoy comment on your recent posts
                 </p>
                 <p className="text-body-5 font-normal text-metal-400">5 min ago</p>
               </div>
             </div>
-          </Notification.Content>
-        </Notification.Body>
+          </NotificationContent>
+        </NotificationBody>
       </Notification>
     </div>
   )

@@ -5,7 +5,7 @@ import { inputTheme } from './theme'
 
 export interface IconProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const Icon = forwardRef<HTMLDivElement, IconProps>(({ className, children, ...props }, ref) => {
+export const InputIcon = forwardRef<HTMLDivElement, IconProps>(({ className, children, ...props }, ref) => {
   return (
     <div {...props} ref={ref} className={cn(inputTheme.icon, className)}>
       {children}
@@ -13,4 +13,4 @@ export const Icon = forwardRef<HTMLDivElement, IconProps>(({ className, children
   )
 })
 
-Icon.displayName = 'Icon'
+InputIcon.displayName = 'Icon'

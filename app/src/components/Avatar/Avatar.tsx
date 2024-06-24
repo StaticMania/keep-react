@@ -1,22 +1,22 @@
 'use client'
-import { FC, HTMLAttributes, Ref, forwardRef } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { Counter } from './Counter'
-import { Group } from './Group'
+import { AvatarCounter } from './Counter'
+import { AvatarGroup } from './Group'
 import { Verify } from './Verify'
-import { avatarTheme } from './theme'
+import { AvatarColorVariant, AvatarSizeVariant, avatarTheme } from './theme'
 
 interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
   img?: string
   alt?: string
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  size?: keyof AvatarSizeVariant
+  color?: keyof AvatarColorVariant
   shape?: 'circle' | 'rounded'
   verified?: boolean
   active?: boolean
 }
 
-const AvatarComponent: FC<AvatarProps> = forwardRef<HTMLDivElement, AvatarProps>(
+const AvatarComponent = forwardRef<HTMLDivElement, AvatarProps>(
   (
     {
       img,
@@ -84,7 +84,7 @@ const AvatarComponent: FC<AvatarProps> = forwardRef<HTMLDivElement, AvatarProps>
         ref={ref}
         className={cn(
           'relative border border-white bg-white',
-          shape === 'circle' && 'p-0.5',
+          shape === 'circle' && 'p-[1px]',
           avatarTheme.shape[shape],
           avatarTheme.size[size],
           active && avatarTheme.activeIcon.base,
@@ -104,8 +104,8 @@ const AvatarComponent: FC<AvatarProps> = forwardRef<HTMLDivElement, AvatarProps>
 AvatarComponent.displayName = 'Avatar'
 
 const Avatar = Object.assign(AvatarComponent, {
-  Group,
-  Counter,
+  Group: AvatarGroup,
+  Counter: AvatarCounter,
 })
 
 export { Avatar }

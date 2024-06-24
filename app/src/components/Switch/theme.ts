@@ -1,9 +1,3 @@
-import { KeepSizes } from '../../Keep/KeepTheme'
-
-export interface ToggleSizes extends Pick<KeepSizes, 'sm' | 'md' | 'lg'> {
-  [key: string]: string
-}
-
 export interface keepToggleTheme {
   base: string
   circleBase: string
@@ -15,12 +9,28 @@ export interface keepToggleTheme {
     off: string
   }
   enabledCircle: {
-    on: ToggleSizes
-    off: ToggleSizes
+    on: {
+      sm: string
+      md: string
+      lg: string
+    }
+    off: {
+      sm: string
+      md: string
+      lg: string
+    }
   }
   disabled: string
-  size: ToggleSizes
-  label: ToggleSizes
+  size: {
+    sm: string
+    md: string
+    lg: string
+  }
+  label: {
+    sm: string
+    md: string
+    lg: string
+  }
   withIconBase: string
 }
 

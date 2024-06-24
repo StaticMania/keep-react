@@ -1,89 +1,44 @@
+export type AvatarColorVariant = {
+  primary: string
+  secondary: string
+  success: string
+  warning: string
+  error: string
+}
+
+export type AvatarSizeVariant = {
+  sm: string
+  md: string
+  lg: string
+  xl: string
+  '2xl': string
+}
+
 interface AvatarTheme {
   base: string
-  color: {
-    primary: string
-    secondary: string
-    success: string
-    warning: string
-    error: string
-  }
-  size: {
-    sm: string
-    md: string
-    lg: string
-    xl: string
-    '2xl': string
-  }
+  color: AvatarColorVariant
+  size: AvatarSizeVariant
   shape: {
     circle: string
     rounded: string
   }
-  svgIcon: {
-    xs: string
-    sm: string
-    md: string
-    lg: string
-    xl: string
-    '2xl': string
-  }
+  svgIcon: AvatarSizeVariant & { xs: string }
   activeIcon: {
     base: string
-    color: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
+    color: AvatarColorVariant
     size: {
-      rounded: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
-      circle: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
+      rounded: AvatarSizeVariant
+      circle: AvatarSizeVariant
     }
   }
   verifyIcon: {
     base: string
     position: {
-      circle: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
-      rounded: {
-        sm: string
-        md: string
-        lg: string
-        xl: string
-        '2xl': string
-      }
+      circle: AvatarSizeVariant
+      rounded: AvatarSizeVariant
     }
-    size: {
-      sm: string
-      md: string
-      lg: string
-      xl: string
-      '2xl': string
-    }
-    color: {
-      primary: string
-      secondary: string
-      success: string
-      warning: string
-      error: string
-    }
+    size: AvatarSizeVariant
+    color: AvatarColorVariant
   }
 }
 

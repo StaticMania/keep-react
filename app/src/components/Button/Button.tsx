@@ -1,20 +1,20 @@
 'use client'
-import { ButtonHTMLAttributes, FC, Ref, forwardRef } from 'react'
+import { ButtonHTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { ButtonGroup } from '../ButtonGroup'
-import { buttonTheme } from './theme'
+import { ButtonColorVariant, ButtonSizeVariant, buttonTheme } from './theme'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
+  size?: keyof ButtonSizeVariant
+  color?: keyof ButtonColorVariant
   variant?: 'link' | 'outline'
   shape?: 'circle' | 'icon'
   position?: 'start' | 'end' | 'center'
 }
 
-const ButtonComponent: FC<ButtonProps> = forwardRef(
+const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, className, size = 'md', color = 'primary', variant, shape, position, ...props }: ButtonProps,
+    { children, className, size = 'md', color = 'primary', variant, shape, position, ...props },
     ref: Ref<HTMLButtonElement>,
   ) => {
     const classNames = {
@@ -51,6 +51,8 @@ const ButtonComponent: FC<ButtonProps> = forwardRef(
 ButtonComponent.displayName = 'Button'
 ButtonGroup.displayName = 'Button.Group'
 
-export const Button = Object.assign(ButtonComponent, {
+const Button = Object.assign(ButtonComponent, {
   Group: ButtonGroup,
 })
+
+export { Button }

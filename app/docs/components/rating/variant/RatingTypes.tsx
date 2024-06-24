@@ -1,25 +1,25 @@
 'use client'
 import { Star } from 'phosphor-react'
-import { Rating } from '../../../../src'
+import { Rating, RatingStar } from '../../../../src'
 
 const RatingTypes = () => {
   return (
     <Rating>
-      <Rating.Star value={1}>
+      <RatingStar value={1}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={2}>
+      </RatingStar>
+      <RatingStar value={2}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={3}>
+      </RatingStar>
+      <RatingStar value={3}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={4}>
+      </RatingStar>
+      <RatingStar value={4}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={5}>
+      </RatingStar>
+      <RatingStar value={5}>
         <Star size={20} />
-      </Rating.Star>
+      </RatingStar>
     </Rating>
   )
 }
@@ -27,26 +27,26 @@ const RatingTypes = () => {
 const RatingTypesCode = `
 'use client'
 import { Star } from 'phosphor-react'
-import { Rating } from 'keep-react'
+import { Rating, RatingStar } from 'keep-react'
 
 export const RatingComponent = () => {
   return (
     <Rating>
-      <Rating.Star value={1}>
+      <RatingStar value={1}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={2}>
+      </RatingStar>
+      <RatingStar value={2}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={3}>
+      </RatingStar>
+      <RatingStar value={3}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={4}>
+      </RatingStar>
+      <RatingStar value={4}>
         <Star size={20} />
-      </Rating.Star>
-      <Rating.Star value={5}>
+      </RatingStar>
+      <RatingStar value={5}>
         <Star size={20} />
-      </Rating.Star>
+      </RatingStar>
     </Rating>
   )
 }

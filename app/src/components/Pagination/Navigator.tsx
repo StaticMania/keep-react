@@ -1,5 +1,5 @@
 'use client'
-import { ButtonHTMLAttributes, FC, forwardRef } from 'react'
+import { ButtonHTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { paginationTheme } from './theme'
 
@@ -7,7 +7,7 @@ export interface NavigatorProps extends ButtonHTMLAttributes<HTMLButtonElement> 
   shape?: 'rounded' | 'circle'
 }
 
-const Navigator: FC<NavigatorProps> = forwardRef<HTMLButtonElement, NavigatorProps>(
+const PaginationNavigator = forwardRef<HTMLButtonElement, NavigatorProps>(
   ({ className, children, shape = 'rounded', ...props }, ref) => {
     const { navigator } = paginationTheme
     return (
@@ -18,6 +18,6 @@ const Navigator: FC<NavigatorProps> = forwardRef<HTMLButtonElement, NavigatorPro
   },
 )
 
-Navigator.displayName = 'Pagination.Navigator'
+PaginationNavigator.displayName = 'Pagination.Navigator'
 
-export { Navigator }
+export { PaginationNavigator }

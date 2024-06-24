@@ -2,10 +2,7 @@ import { DefaultStep, DefaultStepCode } from './variant/DefaultStep'
 import { StepWithNumber, StepWithNumberCode } from './variant/StepWithNumber'
 import { StepWithIcon, StepWithIconCode } from './variant/StepWithIcon'
 import { InterActiveStep, InterActiveStepCode } from './variant/InterActiveStep'
-import { StepWithDashedBorder, StepWithDashedBorderCode } from './variant/DashedBorderStep'
-import { DashedBorderStep, DashedBorderStepCode } from './variant/DashedBorderStep'
-
-import { stepPropsAPI, StepItemsAPI } from './StepApi'
+import { StepItemsAPI } from './StepApi'
 import CodePreview from '../../../components/CodePreview'
 
 import ComponentApi from '../../../components/ComponentApi'
@@ -24,26 +21,14 @@ The Default Step refers to the fundamental and default configuration of a Steps 
 
 ## Step With Number
 
-To change the step style use the `stepType="number"` prop.
-
 <CodePreview github="Steps" code={StepWithNumberCode}>
   <StepWithNumber />
 </CodePreview>
 
 ## Step With Icon
 
-To change the step style use the `stepType="icon"` prop and use the `icon` props in steps items.
-
 <CodePreview github="Steps" code={StepWithIconCode}>
   <StepWithIcon />
-</CodePreview>
-
-## Step With Dashed Border
-
-To change the border style between two steps and apply a dashed line, use the `borderType="dashed"` prop.
-
-<CodePreview github="Steps" code={StepWithDashedBorderCode}>
-  <StepWithDashedBorder />
 </CodePreview>
 
 ## Interactive Step
@@ -52,14 +37,8 @@ To change the border style between two steps and apply a dashed line, use the `b
   <InterActiveStep />
 </CodePreview>
 
-## Step API Reference
-
-Explore the available props for the `<Step/>` component
-
-<ComponentApi data={stepPropsAPI} />
-
 ## Step Item API Reference
 
-Explore the available props for the `<Step.Item/>` component
+Explore the available props for the `<StepItem/>` component
 
 <ComponentApi data={StepItemsAPI} />

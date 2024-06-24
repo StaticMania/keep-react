@@ -1,6 +1,8 @@
 import { DefaultDropdown, DefaultDropdownCode } from './variant/DefaultDropdown'
 import { DropdownWithIcon, DropdownWithIconCode } from './variant/DropdownWithIcon'
 import { CustomDropdown, CustomDropdownCode } from './variant/CustomDropdown'
+import { DropdownTrigger, DropdownTriggerCode } from './variant/DropdownTrigger'
+
 import { dropdownAPIData } from './DropdownApi'
 import CodePreview from '../../../components/CodePreview'
 import ComponentApi from '../../../components/ComponentApi'
@@ -11,7 +13,7 @@ The Dropdown Component is a versatile user interface element that provides users
 
 ## Default Dropdown
 
-The Default Dropdown represents a list of items as dropdown items with `<Dropdown.Item>` components.
+The Default Dropdown represents a list of items as dropdown items with `<DropdownItem>` components.
 
 <CodePreview github="Dropdown" code={DefaultDropdownCode}>
   <DefaultDropdown />
@@ -31,6 +33,14 @@ Customize the dropdown according to your preferences.
 
 <CodePreview github="Dropdown" code={CustomDropdownCode}>
   <CustomDropdown />
+</CodePreview>
+
+## Trigger Variant
+
+Dropdown has three variants of trigger. Such as `"click"`, `"hover"`, and `"focus"`.
+
+<CodePreview github="Dropdown" code={DropdownTriggerCode}>
+  <DropdownTrigger />
 </CodePreview>
 
 ## API Reference

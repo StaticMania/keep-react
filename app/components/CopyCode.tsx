@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import useCopy from '../../hooks/useCopy'
-import { Skeleton } from '../src'
+import { Skeleton, SkeletonLine } from '../src'
 
 const CopyCode = ({ code }: { code: string }) => {
   const { copy, copyToClipboard } = useCopy()
@@ -33,7 +33,7 @@ const CopyCode = ({ code }: { code: string }) => {
         </SyntaxHighlighter>
       ) : (
         <Skeleton animation={true}>
-          <Skeleton.Line className="h-[60px]" />
+          <SkeletonLine className="h-[60px]" />
         </Skeleton>
       )}
       <button onClick={() => copyToClipboard(code)} className="absolute right-5 top-5 cursor-pointer">

@@ -12,7 +12,7 @@ export interface keepAccordionIconTheme {
   }
 }
 
-const Icon = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement>>(
+const AccordionIcon = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement>>(
   ({ children, className, ...otherProps }: HTMLAttributes<HTMLSpanElement>, ref: Ref<HTMLSpanElement>) => {
     const { isOpen } = useAccordionContext()
     const { icon } = accordionTheme
@@ -44,6 +44,6 @@ const Icon = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement>>(
   },
 )
 
-Icon.displayName = 'Accordion.Icon'
+AccordionIcon.displayName = 'Accordion.Icon'
 
-export { Icon }
+export { AccordionIcon }

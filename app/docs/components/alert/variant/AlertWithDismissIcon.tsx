@@ -1,6 +1,14 @@
 'use client'
 import { useState } from 'react'
-import { Alert } from '../../../../src'
+import {
+  Alert,
+  AlertContainer,
+  AlertDescription,
+  AlertDismiss,
+  AlertIcon,
+  AlertLink,
+  AlertTitle,
+} from '../../../../src'
 
 const AlertWithDismissIcon = () => {
   const [showAlert, setShowAlert] = useState(false)
@@ -9,13 +17,13 @@ const AlertWithDismissIcon = () => {
   }
   return (
     <Alert color="primary" dismiss={showAlert}>
-      <Alert.Container>
-        <Alert.Icon />
-        <Alert.Title>Alert here</Alert.Title>
-        <Alert.Description>A short description followed by two actions items.</Alert.Description>
-      </Alert.Container>
-      <Alert.Link>Learn More</Alert.Link>
-      <Alert.Dismiss onClick={onDismiss} />
+      <AlertContainer>
+        <AlertIcon />
+        <AlertTitle>Alert here</AlertTitle>
+        <AlertDescription>A short description followed by two actions items.</AlertDescription>
+      </AlertContainer>
+      <AlertLink href="/">Learn More</AlertLink>
+      <AlertDismiss onClick={onDismiss} />
     </Alert>
   )
 }
@@ -23,7 +31,15 @@ const AlertWithDismissIcon = () => {
 const AlertWithDismissIconCode = `
 'use client'
 import { useState } from 'react'
-import { Alert } from 'keep-react'
+import {
+  Alert,
+  AlertContainer,
+  AlertDescription,
+  AlertDismiss,
+  AlertIcon,
+  AlertLink,
+  AlertTitle,
+} from 'keep-react'
 
 const AlertComponent = () => {
   const [showAlert, setShowAlert] = useState(false)
@@ -32,16 +48,17 @@ const AlertComponent = () => {
   }
   return (
     <Alert color="primary" dismiss={showAlert}>
-      <Alert.Container>
-        <Alert.Icon />
-        <Alert.Title>Alert here</Alert.Title>
-        <Alert.Description>A short description followed by two actions items.</Alert.Description>
-      </Alert.Container>
-      <Alert.Link>Learn More</Alert.Link>
-      <Alert.Dismiss onClick={onDismiss} />
+      <AlertContainer>
+        <AlertIcon />
+        <AlertTitle>Alert here</AlertTitle>
+        <AlertDescription>A short description followed by two actions items.</AlertDescription>
+      </AlertContainer>
+      <AlertLink href="/">Learn More</AlertLink>
+      <AlertDismiss onClick={onDismiss} />
     </Alert>
   )
 }
+
 `
 
 export { AlertWithDismissIcon, AlertWithDismissIconCode }

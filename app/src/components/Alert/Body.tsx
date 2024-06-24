@@ -2,7 +2,7 @@
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
-const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const AlertBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...otherProps }, ref: Ref<HTMLDivElement>) => {
     return (
       <div {...otherProps} className={cn(className)} ref={ref}>
@@ -12,6 +12,6 @@ const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Body.displayName = 'Alert.Body'
+AlertBody.displayName = 'Alert.Body'
 
-export { Body }
+export { AlertBody }

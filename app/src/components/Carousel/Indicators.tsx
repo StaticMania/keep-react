@@ -5,7 +5,7 @@ import { useCarouselContext } from './CarouselContext'
 import { DotButton, useDotButton } from './CarouselDotButton'
 import { carouselTheme } from './theme'
 
-export const Indicators = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+export const CarouselIndicators = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref: Ref<HTMLDivElement>) => {
     const { emblaApi } = useCarouselContext()
     const theme = carouselTheme
@@ -16,7 +16,10 @@ export const Indicators = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivEleme
           <DotButton
             key={index}
             onClick={() => onDotButtonClick(index)}
-            className={cn(theme.controls.indicators.dot, index === selectedIndex && 'border-metal-600')}
+            className={cn(
+              theme.controls.indicators.dot,
+              index === selectedIndex && 'border-metal-900 dark:border-metal-100',
+            )}
           />
         ))}
       </div>
@@ -24,4 +27,4 @@ export const Indicators = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivEleme
   },
 )
 
-Indicators.displayName = 'Carousel.Indicators'
+CarouselIndicators.displayName = 'Carousel.Indicators'

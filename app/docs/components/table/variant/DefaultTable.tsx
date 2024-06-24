@@ -1,215 +1,93 @@
 'use client'
-import Image from 'next/image'
-import { ArrowDown, Cube, DotsThreeOutline } from 'phosphor-react'
-import { DefaultTableData } from '~/public/data/tableData'
-import { Avatar, Badge, Button, Table } from '../../../../src'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../../../src'
+import { data1 } from '../TableApi'
 
 const DefaultTable = () => {
   return (
-    <div className="scale-95">
-      <Table showCheckbox={true}>
-        <Table.Caption>
-          <div className="my-5 flex items-center justify-between px-6">
-            <div className="flex items-center gap-5">
-              <p className="text-body-1 font-semibold text-metal-600">Team member</p>
-              <Badge size="sm" color="secondary">
-                100 Member
-              </Badge>
-            </div>
-            <div className="flex items-center gap-5">
-              <Button variant="outline" size="sm">
-                <span className="pr-2">
-                  <Cube size={24} />
-                </span>
-                New member
-              </Button>
-              <Button variant="outline" size="sm">
-                <span className="pr-2">
-                  <Cube size={24} />
-                </span>
-                Search
-              </Button>
-            </div>
-          </div>
-        </Table.Caption>
-        <Table.Head>
-          <Table.HeadCell className="min-w-[290px]">
-            <p className="text-body-5 font-medium text-metal-400">Type</p>
-          </Table.HeadCell>
-          <Table.HeadCell>Status</Table.HeadCell>
-          <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
-          <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
-          <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
-          <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
-          <Table.HeadCell className="min-w-[100px]" />
-        </Table.Head>
-        <Table.Body className="divide-gray-25 divide-y">
-          {DefaultTableData.map((cell) => (
-            <Table.Row className="bg-white" key={cell.id}>
-              <Table.Cell>
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <Avatar shape="circle" img={cell.img} />
-                      <div>
-                        <p className="-mb-0.5 text-body-4 font-medium text-metal-600">{cell.name}</p>
-                        <span>{cell.tag}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Table.Cell>
-              <Table.Cell>
-                {cell.status ? (
-                  <Badge color="success" showIcon={true}>
-                    Active
-                  </Badge>
-                ) : (
-                  <Badge color="secondary" showIcon={true}>
-                    Offline
-                  </Badge>
-                )}
-              </Table.Cell>
-              <Table.Cell>{cell.position}</Table.Cell>
-              <Table.Cell>{cell.email}</Table.Cell>
-              <Table.Cell>
-                <div className="flex items-center gap-1">
-                  {cell.tags.map((tag, index, arr) =>
-                    index === arr.length - 1 ? (
-                      <Badge key={tag} color="secondary">
-                        {tag}
-                      </Badge>
-                    ) : (
-                      <Badge key={tag}>{tag}</Badge>
-                    ),
-                  )}
-                </div>
-              </Table.Cell>
-              <Table.Cell>
-                <div className="flex items-center gap-3">
-                  <div>
-                    <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <span>
-                      <ArrowDown size={20} color="#D7DFE9" />
-                    </span>
-                    <span>{cell.performance}%</span>
-                  </div>
-                </div>
-              </Table.Cell>
-              <Table.Cell>
-                <Button variant="outline" size="sm" shape="circle">
-                  <DotsThreeOutline size={15} />
-                </Button>
-              </Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
-    </div>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>
+            <div className="max-w-[250px]">File Name</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[80px]">File Format</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[85px]">Aspect Ratio</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[90px]">Resolution</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[90px]">File Size</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[80px]">Status</div>
+          </TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {data1.map((item) => (
+          <TableRow key={item.id}>
+            <TableCell>
+              <div className="max-w-[250px] truncate">{item.fileName}</div>
+            </TableCell>
+            <TableCell>{item.fileFormat}</TableCell>
+            <TableCell>{item.ratio}</TableCell>
+            <TableCell>{item.resolution}</TableCell>
+            <TableCell>{item.fileSize}</TableCell>
+            <TableCell>{item.status}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   )
 }
 
 const DefaultTableCode = `
-"use client";
-import Image from "next/image";
-import { Avatar, Badge, Button, Popover, Table } from "keep-react";
-import { ArrowDown, Cube, DotsThreeOutline, Pencil, Trash } from "phosphor-react";
+'use client'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from 'keep-react'
 
 export const TableComponent = () => {
   return (
-    <Table showCheckbox={true}>
-      <Table.Caption>
-        <div className="my-5 flex items-center justify-between px-6">
-          <div className="flex items-center gap-5">
-            <p className="text-body-1 font-semibold text-metal-600">Team member</p>
-            <Badge size="sm" color="secondary">100 Member</Badge>
-          </div>
-          <div className="flex items-center gap-5">
-            <Button variant="outline" size="sm">
-              <span className="pr-2">
-                <Cube size={24} />
-              </span>
-              New member
-            </Button>
-            <Button variant="outline" size="sm">
-              <span className="pr-2">
-                <Cube size={24} />
-              </span>
-              Search
-            </Button>
-          </div>
-        </div>
-      </Table.Caption>
-      <Table.Head>
-        <Table.HeadCell className="min-w-[290px]">
-          <p className="text-body-5 font-medium text-metal-400">Type</p>
-        </Table.HeadCell>
-        <Table.HeadCell>Status</Table.HeadCell>
-        <Table.HeadCell className="min-w-[152px]">Role</Table.HeadCell>
-        <Table.HeadCell className="min-w-[240px]">Email Address</Table.HeadCell>
-        <Table.HeadCell className="min-w-[215px]">Team</Table.HeadCell>
-        <Table.HeadCell className="min-w-[200px]">Performance</Table.HeadCell>
-        <Table.HeadCell className="min-w-[100px]" />
-      </Table.Head>
-      <Table.Body className="divide-gray-25 divide-y">
-        <Table.Row className="bg-white">
-          <Table.Cell>
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <Avatar img="/images/avatar/avatar-4.png" />
-                  <div>
-                    <p className="-mb-0.5 text-body-4 font-medium text-metal-600">Ralph Edwards</p>
-                    <span>&ralph</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Table.Cell>
-          <Table.Cell>
-            <Badge color="success" showIcon={true}>
-              Active
-            </Badge>
-          </Table.Cell>
-          <Table.Cell>
-            <p>UI/UX Designer</p>
-          </Table.Cell>
-          <Table.Cell>nevaeh.simmons@example.com</Table.Cell>
-          <Table.Cell>
-            <div className="flex items-center gap-1">
-              <Badge>
-                Product
-              </Badge>
-              <Badge>
-                Marketing
-              </Badge>
-              <Badge color="secondary">
-                +3
-              </Badge>
-            </div>
-          </Table.Cell>
-          <Table.Cell>
-            <div className="flex items-center gap-3">
-              <div>
-                <Image src="/images/icon/Series.png" width={72} height={36} alt="line" />
-              </div>
-              <div className="flex items-center gap-1">
-                <span>
-                  <ArrowDown size={20} color="#D7DFE9" />
-                </span>
-                <span>20%</span>
-              </div>
-            </div>
-          </Table.Cell>
-          <Table.Cell>
-            <Button variant="outline" size="sm" shape="circle">
-              <DotsThreeOutline size={15} />
-            </Button>
-          </Table.Cell>
-        </Table.Row>
-      </Table.Body>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>
+            <div className="max-w-[250px]">File Name</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[80px]">File Format</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[85px]">Aspect Ratio</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[90px]">Resolution</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[90px]">File Size</div>
+          </TableHead>
+          <TableHead>
+            <div className="w-[80px]">Status</div>
+          </TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {tableData.map((item) => (
+          <TableRow key={item.id}>
+            <TableCell>
+              <div className="max-w-[250px] truncate">{item.fileName}</div>
+            </TableCell>
+            <TableCell>{item.fileFormat}</TableCell>
+            <TableCell>{item.ratio}</TableCell>
+            <TableCell>{item.resolution}</TableCell>
+            <TableCell>{item.fileSize}</TableCell>
+            <TableCell>{item.status}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
     </Table>
   )
 }

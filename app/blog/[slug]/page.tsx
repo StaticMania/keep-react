@@ -19,13 +19,12 @@ const page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <section>
-      <div className="bg-metal-100 py-20">
-        <h1 className="text-center text-heading-5 font-medium text-metal-900">{title}</h1>
-      </div>
       <div className="mx-auto my-12 max-w-7xl px-6 text-center 2xl:px-0">
-        <div className="text-left">
-          <p className="text-body-5 font-medium text-primary-500">{date}</p>
-          <div className="mt-3">
+        <div className="py-12 text-left">
+          <p className="mb-1 text-body-3 font-medium text-primary-500">{date}</p>
+          <p className="text-heading-5 font-medium text-metal-900 dark:text-white">{title}</p>
+          <hr className="my-5 block border-b border-b-metal-100 dark:border-b-metal-800" />
+          <div className="mt-10">
             <Markdown className="post">{post.content}</Markdown>
           </div>
         </div>

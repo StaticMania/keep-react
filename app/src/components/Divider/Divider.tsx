@@ -1,15 +1,14 @@
 'use client'
 import { FC, ReactNode } from 'react'
 import { cn } from '../../helpers/cn'
-import { dividerTheme } from './theme'
+import { DividerColorVariant, DividerSizeVariant, dividerTheme } from './theme'
 
 interface DividerProps {
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error'
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+  color?: keyof DividerColorVariant
+  size?: keyof DividerSizeVariant
   variant?: 'start' | 'end' | 'center'
   className?: string
   children?: ReactNode
-  [key: string]: any
 }
 
 export const Divider: FC<DividerProps> = ({

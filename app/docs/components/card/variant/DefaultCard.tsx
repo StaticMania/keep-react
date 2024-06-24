@@ -1,34 +1,32 @@
-'use client'
-import { Card } from '../../../../src'
+import { Card, CardContent, CardDescription, CardTitle } from '../../../../src'
 
 const DefaultCard = () => {
   return (
     <Card className="max-w-md">
-      <Card.Content>
-        <Card.Title>Keep design system</Card.Title>
-        <Card.Description>
+      <CardContent>
+        <CardTitle>Keep design system</CardTitle>
+        <CardDescription>
           Component design systems can help developers to be more productive by providing them with a ready-made set of
           components to use.
-        </Card.Description>
-      </Card.Content>
+        </CardDescription>
+      </CardContent>
     </Card>
   )
 }
 
 const DefaultCardCode = `
-'use client'
-import { Card } from 'keep-react'
+import { Card, CardContent, CardDescription, CardTitle }  from 'keep-react'
 
 export const CardComponent = () => {
   return (
     <Card className="max-w-md">
-      <Card.Content>
-        <Card.Title>Keep design system</Card.Title>
-        <Card.Description>
+      <CardContent>
+        <CardTitle>Keep design system</CardTitle>
+        <CardDescription>
           Component design systems can help developers to be more productive by providing them with a ready-made set of
           components to use.
-        </Card.Description>
-      </Card.Content>
+        </CardDescription>
+      </CardContent>
     </Card>
   )
 }

@@ -1,46 +1,44 @@
-'use client'
 import Image from 'next/image'
-import { Button, Card } from '../../../../src'
+import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../../src'
 
 const ProductCard = () => {
   return (
     <Card>
-      <Card.Header>
+      <CardHeader>
         <Image src="https://via.placeholder.com/600x400" alt="image" width={600} height={400} />
-      </Card.Header>
-      <Card.Content className="space-y-3">
-        <Card.Title>Lorem ipsum dolor sit</Card.Title>
-        <Card.Description>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <CardTitle>Lorem ipsum dolor sit</CardTitle>
+        <CardDescription>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsam animi voluptas perspiciatis quidem esse!
-        </Card.Description>
-        <Button size="sm" color="primary">
+        </CardDescription>
+        <Button size="sm" color="secondary">
           Buy Now
         </Button>
-      </Card.Content>
+      </CardContent>
     </Card>
   )
 }
 
 const ProductCardCode = `
-'use client'
 import Image from 'next/image'
-import { Button, Card } from 'keep-react'
+import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from 'keep-react'
 
 export const CardComponent = () => {
   return (
     <Card>
-      <Card.Header>
+      <CardHeader>
         <Image src="https://via.placeholder.com/600x400" alt="image" width={600} height={400} />
-      </Card.Header>
-      <Card.Content className="space-y-3">
-        <Card.Title>Lorem ipsum dolor sit</Card.Title>
-        <Card.Description>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <CardTitle>Lorem ipsum dolor sit</CardTitle>
+        <CardDescription>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsam animi voluptas perspiciatis quidem esse!
-        </Card.Description>
-        <Button size="sm" color="primary">
+        </CardDescription>
+        <Button size="sm" color="secondary">
           Buy Now
         </Button>
-      </Card.Content>
+      </CardContent>
     </Card>
   )
 }

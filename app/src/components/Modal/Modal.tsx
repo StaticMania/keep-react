@@ -4,10 +4,10 @@ import { createPortal } from 'react-dom'
 import FocusLock from 'react-focus-lock'
 import { RemoveScroll } from 'react-remove-scroll'
 import { cn } from '../../helpers/cn'
-import { Body } from './Body'
-import { Content } from './Content'
-import { Footer } from './Footer'
-import { Icon } from './Icon'
+import { ModalBody } from './Body'
+import { ModalContent } from './Content'
+import { ModalFooter } from './Footer'
+import { ModalIcon } from './Icon'
 import { modalTheme } from './theme'
 
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
@@ -57,8 +57,8 @@ const ModalComponent = forwardRef<HTMLDivElement, ModalProps>(({ isOpen, onClose
 ModalComponent.displayName = 'Modal'
 
 export const Modal = Object.assign(ModalComponent, {
-  Footer,
-  Body,
-  Icon,
-  Content,
+  Footer: ModalFooter,
+  Body: ModalBody,
+  Icon: ModalIcon,
+  Content: ModalContent,
 })

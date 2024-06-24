@@ -1,21 +1,21 @@
 'use client'
 import { Minus, Plus } from 'phosphor-react'
-import { Label, NumberInput } from '../../../../src'
+import { Label, NumberInput, NumberInputBox, NumberInputButton } from '../../../../src'
 
 const NumberInputWithLabel = () => {
   return (
     <fieldset className="space-y-1">
       <Label>Choose Number</Label>
       <NumberInput>
-        <NumberInput.Button>
+        <NumberInputButton>
           <Minus size={16} color="#455468" />
-        </NumberInput.Button>
-        <NumberInput.Input defaultValue={12} />
-        <NumberInput.Button>
+        </NumberInputButton>
+        <NumberInputBox defaultValue={12} />
+        <NumberInputButton>
           <Plus size={16} color="#455468" />
-        </NumberInput.Button>
+        </NumberInputButton>
       </NumberInput>
-      <p className="text-body-4 font-normal text-metal-600">Number Must be between 1 to 100</p>
+      <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">Number Must be between 1 to 100</p>
     </fieldset>
   )
 }
@@ -23,22 +23,22 @@ const NumberInputWithLabel = () => {
 const NumberInputWithLabelCode = `
 'use client'
 import { Minus, Plus } from 'phosphor-react'
-import { Label, NumberInput } from 'keep-react'
+import { Label, NumberInput, NumberInputBox, NumberInputButton } from 'keep-react'
 
 export const NumberInputComponent = () => {
   return (
     <fieldset className="space-y-1">
       <Label>Choose Number</Label>
       <NumberInput>
-        <NumberInput.Button>
+        <NumberInputButton>
           <Minus size={16} color="#455468" />
-        </NumberInput.Button>
-        <NumberInput.Input defaultValue={12} />
-        <NumberInput.Button>
+        </NumberInputButton>
+        <NumberInputBox defaultValue={12} />
+        <NumberInputButton>
           <Plus size={16} color="#455468" />
-        </NumberInput.Button>
+        </NumberInputButton>
       </NumberInput>
-      <p className="text-body-4 font-normal text-metal-600">Number Must be between 1 to 100</p>
+      <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">Number Must be between 1 to 100</p>
     </fieldset>
   )
 }

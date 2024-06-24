@@ -3,7 +3,7 @@ import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { modalTheme } from './theme'
 
-const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const ModalBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div {...props} className={cn(modalTheme.body, className)} ref={ref}>
@@ -13,6 +13,6 @@ const Body = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-Body.displayName = 'Modal.Body'
+ModalBody.displayName = 'Modal.Body'
 
-export { Body }
+export { ModalBody }

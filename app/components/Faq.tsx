@@ -1,5 +1,5 @@
 'use client'
-import { Accordion } from '../src'
+import { Accordion, AccordionContainer, AccordionContent, AccordionIcon, AccordionPanel, AccordionTitle } from '../src'
 
 const Faq = () => {
   const faqs = [
@@ -44,32 +44,34 @@ const Faq = () => {
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-6 2xl:px-0">
         <div className="mx-auto mb-4 px-5 text-center md:max-w-[500px] md:px-0">
-          <h3 className="text-body-1 !font-semibold text-black lg:text-heading-5">Frequently Asked Questions</h3>
+          <h3 className="text-body-1 !font-semibold text-black dark:text-white lg:text-heading-5">
+            Frequently Asked Questions
+          </h3>
         </div>
         <div className="mx-auto mt-12 grid grid-cols-1 items-start gap-5 lg:grid-cols-2">
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(0, 3).map((faq) => (
-                <Accordion.Panel key={faq.id}>
-                  <Accordion.Container>
-                    <Accordion.Title className="text-body-4 md:text-body-3">{faq.question}</Accordion.Title>
-                    <Accordion.Icon />
-                  </Accordion.Container>
-                  <Accordion.Content>{faq.answer}</Accordion.Content>
-                </Accordion.Panel>
+                <AccordionPanel key={faq.id}>
+                  <AccordionContainer>
+                    <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
+                    <AccordionIcon />
+                  </AccordionContainer>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionPanel>
               ))}
             </Accordion>
           </div>
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(3).map((faq) => (
-                <Accordion.Panel key={faq.id}>
-                  <Accordion.Container>
-                    <Accordion.Title className="text-body-4 md:text-body-3">{faq.question}</Accordion.Title>
-                    <Accordion.Icon />
-                  </Accordion.Container>
-                  <Accordion.Content>{faq.answer}</Accordion.Content>
-                </Accordion.Panel>
+                <AccordionPanel key={faq.id}>
+                  <AccordionContainer>
+                    <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
+                    <AccordionIcon />
+                  </AccordionContainer>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionPanel>
               ))}
             </Accordion>
           </div>

@@ -1,15 +1,15 @@
 'use client'
 import { Envelope } from 'phosphor-react'
-import { Icon, Input } from '../../../../src'
+import { Input, InputIcon } from '../../../../src'
 
 const InputWithIcon = () => {
   return (
     <div className="p-2">
       <fieldset className="relative max-w-md">
         <Input placeholder="Enter email" className="ps-11" />
-        <Icon>
+        <InputIcon>
           <Envelope size={19} color="#AFBACA" />
-        </Icon>
+        </InputIcon>
       </fieldset>
     </div>
   )
@@ -18,15 +18,15 @@ const InputWithIcon = () => {
 const InputWithIconCode = `
 'use client'
 import { Envelope } from 'phosphor-react'
-import { Icon, Input } from 'keep-react'
+import { InputIcon, Input } from 'keep-react'
 
 const InputWithIcon = () => {
   return (
     <fieldset className="relative max-w-md">
       <Input placeholder="Enter email" className="ps-11" />
-      <Icon>
+      <InputIcon>
         <Envelope size={19} color="#AFBACA" />
-      </Icon>
+      </InputIcon>
     </fieldset>
   )
 }

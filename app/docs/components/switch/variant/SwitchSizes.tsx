@@ -18,6 +18,7 @@ import { Toggle } from "keep-react"
 
 export const SwitchComponent = () => {
   const [toggle, setToggle] = useState(false)
+  
   return (
     <div className="flex gap-5">
       <Toggle bgColor="primary" label="Small" size="sm" onChange={setToggle} />

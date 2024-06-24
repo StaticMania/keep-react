@@ -1,12 +1,19 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
+import { useProgressContext } from './Context'
+import { progressTheme } from './theme'
 
-export interface LineTextProps {
-  children?: ReactNode
-  className?: string
-}
+export const LineProgressText = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => {
+    const { line } = progressTheme
+    const { size = 'md' } = useProgressContext()
+    return (
+      <div ref={ref} {...props} className={cn(line.text.base, line.text.content[size], className)}>
+        {children}
+      </div>
+    )
+  },
+)
 
-export const LineText: FC<LineTextProps> = ({ className, children }) => {
-  return <p className={cn(className)}>{children}</p>
-}
+LineProgressText.displayName = 'LineProgress.Text'

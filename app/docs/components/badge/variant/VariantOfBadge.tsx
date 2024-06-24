@@ -1,4 +1,3 @@
-'use client'
 import { Badge } from '../../../../src'
 
 const VariantOfBadge = () => {
@@ -60,7 +59,6 @@ const VariantOfBadge = () => {
 }
 
 const VariantOfBadgeCode = `
-'use client'
 import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {

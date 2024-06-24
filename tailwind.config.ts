@@ -6,6 +6,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
@@ -20,6 +21,7 @@ module.exports = {
     },
     extend: {
       screens: {
+        laptop: '1140px',
         '4k': '1980px',
       },
     },

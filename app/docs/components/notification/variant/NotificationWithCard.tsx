@@ -1,7 +1,16 @@
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Button, Notification } from '../../../../src'
+import {
+  Button,
+  Notification,
+  NotificationBody,
+  NotificationContent,
+  NotificationDescription,
+  NotificationFooter,
+  NotificationHeader,
+  NotificationTitle,
+} from '../../../../src'
 
 const NotificationWithCard = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,25 +20,25 @@ const NotificationWithCard = () => {
     <div className="px-5 py-3">
       <Button onClick={control}>Show Notification</Button>
       <Notification isOpen={isOpen} onClose={control}>
-        <Notification.Body className="max-w-xs">
-          <Notification.Header className="mb-2 overflow-hidden rounded-lg">
+        <NotificationBody className="max-w-xs">
+          <NotificationHeader className="mb-2 overflow-hidden rounded-lg">
             <Image src="https://via.placeholder.com/600x400" alt="image" width={600} height={400} />
-          </Notification.Header>
-          <Notification.Content>
-            <Notification.Title>Can we store cookies?</Notification.Title>
-            <Notification.Description>
+          </NotificationHeader>
+          <NotificationContent>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </Notification.Description>
-          </Notification.Content>
-          <Notification.Footer>
+            </NotificationDescription>
+          </NotificationContent>
+          <NotificationFooter>
             <Button onClick={control} size="sm">
               Accept
             </Button>
             <Button onClick={control} variant="outline" size="sm">
               Review
             </Button>
-          </Notification.Footer>
-        </Notification.Body>
+          </NotificationFooter>
+        </NotificationBody>
       </Notification>
     </div>
   )
@@ -39,7 +48,16 @@ const NotificationWithCardCode = `
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Button, Notification } from 'keep-react'
+import {
+  Button,
+  Notification,
+  NotificationBody,
+  NotificationContent,
+  NotificationDescription,
+  NotificationFooter,
+  NotificationHeader,
+  NotificationTitle,
+} from 'keep-react'
 
 
 export const NotificationComponent = () => {
@@ -50,25 +68,25 @@ export const NotificationComponent = () => {
     <div className="px-5 py-3">
       <Button onClick={control}>Show Notification</Button>
       <Notification isOpen={isOpen} onClose={control}>
-        <Notification.Body className="max-w-xs">
-          <Notification.Header className="mb-2 overflow-hidden rounded-lg">
+        <NotificationBody className="max-w-xs">
+          <NotificationHeader className="mb-2 overflow-hidden rounded-lg">
             <Image src="https://via.placeholder.com/600x400" alt="image" width={600} height={400} />
-          </Notification.Header>
-          <Notification.Content>
-            <Notification.Title>Can we store cookies?</Notification.Title>
-            <Notification.Description>
+          </NotificationHeader>
+          <NotificationContent>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </Notification.Description>
-          </Notification.Content>
-          <Notification.Footer>
+            </NotificationDescription>
+          </NotificationContent>
+          <NotificationFooter>
             <Button onClick={control} size="sm">
               Accept
             </Button>
             <Button onClick={control} variant="outline" size="sm">
               Review
             </Button>
-          </Notification.Footer>
-        </Notification.Body>
+          </NotificationFooter>
+        </NotificationBody>
       </Notification>
     </div>
   )

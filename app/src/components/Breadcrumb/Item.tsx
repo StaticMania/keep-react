@@ -1,33 +1,20 @@
-'use client'
-import { FC, ReactNode } from 'react'
+import { forwardRef, HTMLAttributes, Ref } from 'react'
 import { cn } from '../../helpers/cn'
-import { breadcrumbTheme } from './theme'
 
-export interface ItemsProps {
-  className?: string
-  children?: ReactNode
-  activeType?: 'base' | 'border'
-  href?: string
-  [keyof: string]: any
-}
-
-export const Item: FC<ItemsProps> = ({ className, children, activeType, href = '#', ...props }) => {
-  const { dividerIconStyle, dividerIcon } = props
-  const { base, icon, text } = breadcrumbTheme.item
-  return (
-    <div className={base}>
-      {dividerIcon}
-      {!dividerIcon && dividerIconStyle === 'slash' && <div className={icon.slash}>/</div>}
-      {!dividerIcon && dividerIconStyle !== 'slash' && (
-        <div className={icon.caret}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#455468" viewBox="0 0 256 256">
-            <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
-          </svg>
-        </div>
-      )}
-      <a href={href} className={cn(text.base, activeType && text.activeType[activeType], className)}>
+export const BreadcrumbItem = forwardRef<HTMLLIElement, HTMLAttributes<HTMLLIElement>>(
+  ({ children, className, ...props }, ref: Ref<HTMLLIElement>) => {
+    return (
+      <li
+        {...props}
+        className={cn(
+          'flex cursor-pointer items-center gap-1.5 text-body-4 font-medium text-metal-900 transition-colors duration-300 hover:text-primary-500 dark:text-white dark:hover:text-primary-500',
+          className,
+        )}
+        ref={ref}>
         {children}
-      </a>
-    </div>
-  )
-}
+      </li>
+    )
+  },
+)
+
+BreadcrumbItem.displayName = 'Breadcrumb.Item'

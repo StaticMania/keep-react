@@ -1,27 +1,16 @@
-import type { ComponentProps, FC, PropsWithChildren } from 'react'
+'use client'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { DeepPartial } from '../../helpers/deep-partial'
-import { keepTableCaptionTheme, tableTheme } from './theme'
 
-/**
- * Props for the TableCaption component.
- * @interface TableCaptionProps
- * @extends {PropsWithChildren}
- * @extends {ComponentProps<'caption'>}
- */
-export interface TableCaptionProps extends PropsWithChildren, ComponentProps<'caption'> {
-  /**
-   * Optional theme for the TableCaption component.
-   * @type {DeepPartial<keepTableCaptionTheme>}
-   */
-  theme?: DeepPartial<keepTableCaptionTheme>
-}
+const TableCaption = forwardRef<HTMLTableCaptionElement, HTMLAttributes<HTMLTableCaptionElement>>(
+  ({ className, ...props }, ref) => (
+    <caption
+      ref={ref}
+      className={cn('bg-white px-6 py-4 text-body-4 text-metal-900 dark:bg-metal-900 dark:text-white', className)}
+      {...props}
+    />
+  ),
+)
+TableCaption.displayName = 'TableCaption'
 
-export const TableCaption: FC<TableCaptionProps> = ({ children, className, ...props }) => {
-  const theme = tableTheme.caption.base
-  return (
-    <caption {...props} className={cn(theme, className)}>
-      {children}
-    </caption>
-  )
-}
+export { TableCaption }

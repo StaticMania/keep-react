@@ -1,13 +1,13 @@
 'use client'
-import { FC, HTMLAttributes, Ref, forwardRef } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { avatarTheme } from './theme'
+import { AvatarSizeVariant, avatarTheme } from './theme'
 
 export interface CounterProps extends HTMLAttributes<HTMLDivElement> {
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+  size?: keyof AvatarSizeVariant
 }
 
-const Counter: FC<CounterProps> = forwardRef<HTMLDivElement, CounterProps>(
+const AvatarCounter = forwardRef<HTMLDivElement, CounterProps>(
   ({ children, className, size = 'xl', ...props }: CounterProps, ref: Ref<HTMLDivElement>) => {
     return (
       <div
@@ -24,6 +24,6 @@ const Counter: FC<CounterProps> = forwardRef<HTMLDivElement, CounterProps>(
   },
 )
 
-Counter.displayName = 'Avatar.Counter'
+AvatarCounter.displayName = 'Avatar.Counter'
 
-export { Counter }
+export { AvatarCounter }

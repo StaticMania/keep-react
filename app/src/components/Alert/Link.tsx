@@ -1,14 +1,10 @@
 'use client'
-import { AnchorHTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
+import { AnchorHTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { alertTheme } from './theme'
 
-export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  children?: ReactNode
-}
-
-const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, className, href = '#', ...otherProps }: LinkProps, ref: Ref<HTMLAnchorElement>) => {
+const AlertLink = forwardRef<HTMLAnchorElement, AnchorHTMLAttributes<HTMLAnchorElement>>(
+  ({ children, className, href = '#', ...otherProps }, ref: Ref<HTMLAnchorElement>) => {
     return (
       <a {...otherProps} href={href} className={cn(alertTheme.link.base, className)} ref={ref}>
         {children}
@@ -20,6 +16,6 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   },
 )
 
-Link.displayName = 'Alert.Link'
+AlertLink.displayName = 'Alert.Link'
 
-export { Link }
+export { AlertLink }

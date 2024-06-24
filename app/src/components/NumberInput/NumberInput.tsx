@@ -1,26 +1,28 @@
 'use client'
-import { FC, ReactNode } from 'react'
+import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { NumberButton } from './Button'
-import { NumberInputEl } from './Input'
+import { NumberInputButton } from './Button'
+import { NumberInputBox } from './Input'
 
-interface NumberInputProps {
-  children?: ReactNode
-  className?: string
-}
+const NumberInputComponent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <div
+        {...props}
+        ref={ref}
+        className={cn(
+          'relative flex h-11 max-w-xs items-center justify-between overflow-hidden rounded-md border border-metal-100 bg-white px-2 shadow-sm dark:border-metal-900 dark:bg-metal-900',
+          className,
+        )}>
+        {children}
+      </div>
+    )
+  },
+)
 
-const NumberInputComponent: FC<NumberInputProps> = ({ children, className }) => {
-  return (
-    <div
-      className={cn(
-        'relative flex h-11 max-w-xs items-center justify-between overflow-hidden rounded-md border border-metal-100 bg-white px-2 shadow-sm',
-        className,
-      )}>
-      {children}
-    </div>
-  )
-}
+NumberInputComponent.displayName = 'NumberInput'
+
 export const NumberInput = Object.assign(NumberInputComponent, {
-  Input: NumberInputEl,
-  Button: NumberButton,
+  Input: NumberInputBox,
+  Button: NumberInputButton,
 })

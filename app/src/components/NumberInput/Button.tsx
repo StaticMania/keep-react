@@ -4,15 +4,20 @@ import { cn } from '../../helpers/cn'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export const NumberButton = forwardRef<HTMLButtonElement, ButtonProps>(({ className, children, ...props }, ref) => {
-  return (
-    <button
-      ref={ref}
-      {...props}
-      className={cn('flex h-9 w-9 items-center justify-center rounded hover:bg-metal-25', className)}>
-      {children}
-    </button>
-  )
-})
+export const NumberInputButton = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        {...props}
+        className={cn(
+          'flex h-9 w-9 items-center justify-center rounded hover:bg-metal-25 dark:hover:bg-metal-800',
+          className,
+        )}>
+        {children}
+      </button>
+    )
+  },
+)
 
-NumberButton.displayName = 'NumberInput.Button'
+NumberInputButton.displayName = 'NumberInput.Button'

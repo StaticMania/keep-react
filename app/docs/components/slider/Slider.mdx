@@ -1,7 +1,7 @@
 import { DefaultSlider, DefaultSliderCode } from './variant/DefaultSlider'
-import { SliderWithDots, SliderWithDotsCode } from './variant/SliderWithDots'
-import { SliderTooltipPosition, SliderTooltipPositionCode } from './variant/SliderTooltipPosition'
-import { SliderWithMarks, SliderWithMarksCode } from './variant/SliderWithMarks'
+import { DoubleSlider, DoubleSliderCode } from './variant/DoubleSlider'
+import { SliderSteps, SliderStepsCode } from './variant/SliderSteps'
+
 import { sliderAPIData } from './SliderApi'
 
 import CodePreview from '../../../components/CodePreview'
@@ -14,34 +14,20 @@ The slider component in the Keep React allows users to select a value within a s
 
 ## Default Slider
 
-It's designed for selecting a range of values from 100 to 1000. The initial range is set at 100 to 300. The slider shows value `tooltips` at the `top`. Users can easily drag the range selection thanks to the `draggableTrack={true}` features.
-
 <CodePreview github="Slider" code={DefaultSliderCode}>
   <DefaultSlider />
 </CodePreview>
 
-## Slider With Dots
+## Double Slider
 
-Enabling the dots feature in the slider is done using the dots={true} prop. To further customize the dots, you can include an additional prop called step. This step prop takes a numerical value, and it determines the spacing between the dots on the slider line.
-
-<CodePreview github="Slider" code={SliderWithDotsCode}>
-  <SliderWithDots />
+<CodePreview github="Slider" code={DoubleSliderCode}>
+  <DoubleSlider />
 </CodePreview>
 
-## Slider With Marks
+## Slider Steps
 
-Enabling the `marks` feature in the slider allows you to display specific marked points along the slider line.
-
-<CodePreview github="Slider" code={SliderWithMarksCode}>
-  <SliderWithMarks />
-</CodePreview>
-
-## Slider With Tooltip Position
-
-Control the position of the tooltips in the slider by using the tooltip prop. Setting `tooltip="top"` will display the tooltips above the slider thumb, while `tooltip="bottom"` will display them below the slider thumb. If tooltip position is `tooltip="none"` then tooltip will be hidden.
-
-<CodePreview github="Slider" code={SliderTooltipPositionCode}>
-  <SliderTooltipPosition />
+<CodePreview github="Slider" code={SliderStepsCode}>
+  <SliderSteps />
 </CodePreview>
 
 ## API Reference
