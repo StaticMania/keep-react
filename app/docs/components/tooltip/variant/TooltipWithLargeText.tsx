@@ -6,8 +6,8 @@ const TooltipWithLargeText = () => {
       <Tooltip>
         <TooltipAction>Tooltip</TooltipAction>
         <TooltipContent className="px-4 py-3">
-          <p className="mb-1 text-body-3 font-medium text-white">Tooltips - Title here</p>
-          <p className="text-body-5 font-normal text-white/80">
+          <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
+          <p className="text-body-5 font-normal text-white/80 dark:text-metal-600">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
         </TooltipContent>
@@ -24,8 +24,8 @@ export const TooltipComponent = () => {
     <Tooltip>
       <TooltipAction>Tooltip</TooltipAction>
       <TooltipContent className="px-4 py-3">
-        <p className="mb-1 text-body-3 font-medium text-white">Tooltips - Title here</p>
-        <p className="text-body-5 font-normal text-white/80">
+        <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
+        <p className="text-body-5 font-normal text-white/80 dark:text-metal-600">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
       </TooltipContent>

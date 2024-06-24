@@ -7,7 +7,7 @@ const TooltipTriggering = () => {
         <Tooltip trigger={trigger as 'click' | 'hover' | 'focus'} key={trigger}>
           <TooltipAction>{trigger}</TooltipAction>
           <TooltipContent>
-            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+            <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
           </TooltipContent>
         </Tooltip>
       ))}
@@ -25,7 +25,7 @@ export const TooltipComponent = () => {
         <Tooltip trigger={trigger} key={trigger}>
           <TooltipAction>{trigger}</TooltipAction>
           <TooltipContent>
-            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+            <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
           </TooltipContent>
         </Tooltip>
       ))}

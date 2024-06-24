@@ -1,6 +1,6 @@
 ---
 title: 'Keep React V1.4.0'
-date: 'June 14, 2024'
+date: 'June 24, 2024'
 description: 'Most of the component structures are changed but the UI looks the same as before. In v1.3.0, we used components with a (.) syntax, but now we can use components with detailed JSX tags like `AlertContainer`.'
 author: Md Ariful Islam
 slug: keep-react-v1.4.0

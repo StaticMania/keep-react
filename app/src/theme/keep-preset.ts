@@ -214,7 +214,11 @@ module.exports = {
         'keep-slide-up-back': 'slide-up-back 0.4s',
       },
       content: {
-        img: 'url("/images/avatar/verify.svg")',
+        img: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719144077/verify_uaqa85.svg")',
+        checkedLight: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/checkedLight_xwegqy.svg")',
+        checkedDark: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/checkedDark_g8gcjk.svg")',
+        dashedLight: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/dashedLight_whvevx.svg")',
+        dashedDark: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/dashedDark_vx3paq.svg")',
       },
     },
   },

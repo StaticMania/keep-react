@@ -18,7 +18,7 @@ const DefaultDrawer = () => {
               Elevate your web projects with Keep React&apos;s 40+ customizable components. Access open-source resources
               for efficient development and bring your ideas to life with ease.
             </p>
-            <Button onClick={() => setIsOpen(false)} className="bg-metal-900 dark:bg-metal-800" color="secondary">
+            <Button onClick={() => setIsOpen(false)} color="secondary">
               Explore Now
             </Button>
           </div>
@@ -49,7 +49,7 @@ export const DrawerComponent = () => {
               Elevate your web projects with Keep React&apos;s 40+ customizable components. Access open-source resources
               for efficient development and bring your ideas to life with ease.
             </p>
-            <Button onClick={() => setIsOpen(false)} className="bg-metal-900 dark:bg-metal-800" color="secondary">
+            <Button onClick={() => setIsOpen(false)} color="secondary">
               Explore Now
             </Button>
           </div>

@@ -15,11 +15,25 @@ export interface floatingArrow extends HTMLAttributes<HTMLDivElement> {
   strokeWidth?: number
   children?: ReactNode
   className?: string
+  arrowClassName?: string
 }
 
 export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
   (
-    { children, className, width, height, tipRadius, staticOffset, fill = '#1C222B', stroke, strokeWidth, d, ...props },
+    {
+      children,
+      className,
+      width,
+      height,
+      tipRadius,
+      staticOffset,
+      fill = '#1C222B',
+      stroke,
+      strokeWidth,
+      d,
+      arrowClassName,
+      ...props
+    },
     ref: Ref<HTMLDivElement>,
   ) => {
     const { refs, floatingStyles, arrowRef, context, getFloatingProps, isOpen, showArrow } = useTooltipContext()
@@ -27,7 +41,10 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
       isOpen && (
         <div
           {...props}
-          className={cn('max-w-[263px] rounded-xl border border-metal-900 bg-metal-900 px-2.5 py-2', className)}
+          className={cn(
+            'max-w-[263px] rounded-xl border border-metal-900 bg-metal-900 px-2.5 py-2 dark:border-white dark:bg-white',
+            className,
+          )}
           ref={refs.setFloating || ref}
           {...getFloatingProps()}
           style={floatingStyles}>
@@ -40,9 +57,9 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
               tipRadius={tipRadius}
               staticOffset={staticOffset}
               d={d}
-              fill={fill}
               stroke={stroke}
               strokeWidth={strokeWidth}
+              className={cn('fill-metal-900 dark:fill-white', arrowClassName)}
             />
           )}
           {children}

@@ -19,7 +19,7 @@ const ViteThemeSwitcher = () => {
   }, [])
 
   return client ? (
-    <Dropdown placement="bottom-end">
+    <Dropdown placement="bottom-start">
       <DropdownAction asChild>
         <button className="rounded-lg bg-primary-25 p-2.5 dark:bg-white">
           <MoonStars size={20} color="#1C222B" className="hidden dark:block" />

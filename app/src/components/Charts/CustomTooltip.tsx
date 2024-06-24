@@ -10,7 +10,7 @@ const CustomTooltip = ({
   labelClassName,
   wrapperClassName,
 }: TooltipProps<ValueType, NameType>) => {
-  if (active && payload && payload.length) {
+  if (active && payload?.length) {
     return (
       <div className={cn('max-w-max rounded-md bg-primary-500 p-3', wrapperClassName)}>
         <p className={cn('text-body-3 font-semibold capitalize text-white', labelClassName)}>{label}</p>

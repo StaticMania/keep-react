@@ -465,6 +465,12 @@ export const quickAccessRoute: routerPath[] = [
     href: '/docs/layout/column',
     target: '_self',
   },
+  {
+    id: generatedID(),
+    name: 'Dark Mode',
+    href: '/docs/getting-started/dark-mode',
+    target: '_self',
+  },
 ]
 
 export const layoutRoutes: routerPath[] = [

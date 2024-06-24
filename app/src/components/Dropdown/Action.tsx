@@ -2,8 +2,8 @@
 import { useMergeRefs } from '@floating-ui/react'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
+import { Button } from '../Button'
 import { useDropdownContext } from './Context'
-import { dropdownTheme } from './theme'
 
 export interface DropdownActionProps extends HTMLAttributes<HTMLButtonElement> {
   asChild?: boolean
@@ -28,9 +28,14 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
       )
     }
     return (
-      <button ref={refs.setReference || ref} {...getReferenceProps()} className={cn(dropdownTheme.action, className)}>
+      <Button
+        color="secondary"
+        size="xs"
+        ref={refs.setReference || ref}
+        {...getReferenceProps()}
+        className={cn(className)}>
         {children}
-      </button>
+      </Button>
     )
   },
 )

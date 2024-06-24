@@ -1,13 +1,9 @@
-import { Button, Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
+import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
 
 const DefaultDropdown = () => {
   return (
     <Dropdown>
-      <DropdownAction asChild>
-        <Button color="secondary" size="xs">
-          Dropdown
-        </Button>
-      </DropdownAction>
+      <DropdownAction>Dropdown</DropdownAction>
       <DropdownContent>
         <DropdownList>
           <DropdownItem>Contacts</DropdownItem>
@@ -26,16 +22,12 @@ const DefaultDropdown = () => {
 }
 
 const DefaultDropdownCode = `
-import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList, Button }  from 'keep-react'
+import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList }  from 'keep-react'
 
 export const DropdownComponent = () => {
   return (
     <Dropdown>
-      <DropdownAction asChild>
-        <Button color="secondary" size="xs">
-          Dropdown
-        </Button>
-      </DropdownAction>
+      <DropdownAction>Dropdown</DropdownAction>
       <DropdownContent>
         <DropdownList>
           <DropdownItem>Contacts</DropdownItem>

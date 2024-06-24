@@ -7,7 +7,7 @@ const TooltipPlacement = () => {
         <Tooltip placement={position as 'bottom' | 'top' | 'left' | 'right'} key={position}>
           <TooltipAction>Tooltip</TooltipAction>
           <TooltipContent>
-            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+            <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
           </TooltipContent>
         </Tooltip>
       ))}
@@ -25,7 +25,7 @@ export const TooltipComponent = () => {
         <Tooltip placement={position} key={position}>
           <TooltipAction>Tooltip</TooltipAction>
           <TooltipContent>
-            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+            <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
           </TooltipContent>
         </Tooltip>
       ))}

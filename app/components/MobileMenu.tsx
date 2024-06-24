@@ -12,6 +12,7 @@ import {
   AccordionIcon,
   AccordionPanel,
   AccordionTitle,
+  Button,
   Drawer,
   DrawerContent,
   DrawerOverlay,
@@ -78,11 +79,11 @@ const MobileMenu = () => {
         <button onClick={() => setShowDrawer(!showDrawer)}>
           {active ? (
             <span>
-              <X size={24} color="#455468" />
+              <X size={24} className="text-metal-900 dark:text-white" />
             </span>
           ) : (
             <span>
-              <List size={24} color="#455468" />
+              <List size={24} className="text-metal-900 dark:text-white" />
             </span>
           )}
         </button>
@@ -91,11 +92,9 @@ const MobileMenu = () => {
       <Drawer onClose={() => setShowDrawer(!showDrawer)} isOpen={showDrawer} position="right">
         <DrawerOverlay />
         <DrawerContent className="space-y-3 rounded-none p-6">
-          <button
-            onClick={() => setShowDrawer(!showDrawer)}
-            className="mb-4 max-w-max rounded-lg bg-metal-900 p-3 dark:bg-metal-800">
-            <ArrowLeft className="size-5 text-white dark:text-white" />
-          </button>
+          <Button onClick={() => setShowDrawer(!showDrawer)} color="secondary" className="mb-4 max-w-max p-3">
+            <ArrowLeft className="size-5 text-white dark:text-metal-900" />
+          </Button>
           <Accordion flush openFirstPanel>
             <AccordionPanel className="!border-b-0">
               <AccordionContainer className="p-0">

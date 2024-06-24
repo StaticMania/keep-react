@@ -1,7 +1,7 @@
 'use client'
 import { useMergeRefs } from '@floating-ui/react'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { Button } from '../Button'
 import { useTooltipContext } from './Context'
 
 export interface TooltipActionProps extends HTMLAttributes<HTMLButtonElement> {
@@ -27,12 +27,9 @@ export const TooltipAction = forwardRef<HTMLButtonElement, TooltipActionProps>(
       )
     }
     return (
-      <button
-        ref={refs.setReference || ref}
-        {...getReferenceProps()}
-        className={cn('rounded-lg bg-metal-900 px-3.5 py-2 text-body-5 capitalize text-white', className)}>
+      <Button ref={refs.setReference || ref} {...getReferenceProps()} color="secondary" size="sm">
         {children}
-      </button>
+      </Button>
     )
   },
 )

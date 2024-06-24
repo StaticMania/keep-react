@@ -38,7 +38,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <HouseLine size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Home</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Home
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
             <SidebarItem>
@@ -46,7 +48,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <PresentationChart size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Dashboard</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Dashboard
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
             <SidebarItem>
@@ -54,7 +58,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <Stack size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Projects</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Projects
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
             <SidebarItem>
@@ -62,7 +68,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <CheckSquare size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Tasks</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Tasks
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
             <SidebarItem>
@@ -70,7 +78,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <ChartPie size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Reporting</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Reporting
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
             <SidebarItem>
@@ -78,7 +88,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <Users size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Users</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Users
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
             <SidebarItem>
@@ -86,7 +98,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <Lifebuoy size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Support</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Support
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
             <SidebarItem>
@@ -94,7 +108,9 @@ const SidebarWithIcon = () => {
                 <TooltipAction asChild>
                   <Gear size={20} />
                 </TooltipAction>
-                <TooltipContent className="rounded-none text-body-5 font-normal text-white">Settings</TooltipContent>
+                <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                  Settings
+                </TooltipContent>
               </Tooltip>
             </SidebarItem>
           </SidebarList>
@@ -105,7 +121,9 @@ const SidebarWithIcon = () => {
               <TooltipAction asChild>
                 <SignOut size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Log Out</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">
+                Log Out
+              </TooltipContent>
             </Tooltip>
           </SidebarItem>
         </SidebarFooter>
@@ -154,7 +172,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <HouseLine size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Home</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Home</TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
@@ -162,7 +180,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <PresentationChart size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Dashboard</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Dashboard</TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
@@ -170,7 +188,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <Stack size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Projects</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Projects</TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
@@ -178,7 +196,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <CheckSquare size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Tasks</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Tasks</TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
@@ -186,7 +204,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <ChartPie size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Reporting</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Reporting</TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
@@ -194,7 +212,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <Users size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Users</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Users</TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
@@ -202,7 +220,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <Lifebuoy size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Support</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Support</TooltipContent>
             </Tooltip>
           </SidebarItem>
           <SidebarItem>
@@ -210,7 +228,7 @@ export const SidebarComponent = () => {
               <TooltipAction asChild>
                 <Gear size={20} />
               </TooltipAction>
-              <TooltipContent className="rounded-none text-body-5 font-normal text-white">Settings</TooltipContent>
+              <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Settings</TooltipContent>
             </Tooltip>
           </SidebarItem>
         </SidebarList>
@@ -221,7 +239,7 @@ export const SidebarComponent = () => {
             <TooltipAction asChild>
               <SignOut size={20} />
             </TooltipAction>
-            <TooltipContent className="rounded-none text-body-5 font-normal text-white">Log Out</TooltipContent>
+            <TooltipContent className="rounded-none text-body-5 font-normal text-white dark:text-metal-900">Log Out</TooltipContent>
           </Tooltip>
         </SidebarItem>
       </SidebarFooter>

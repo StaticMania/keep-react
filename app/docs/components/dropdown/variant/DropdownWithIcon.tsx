@@ -1,15 +1,11 @@
 'use client'
 import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Button, Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
+import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
 
 const DropdownWithIcon = () => {
   return (
     <Dropdown>
-      <DropdownAction asChild>
-        <Button color="secondary" size="xs">
-          Dropdown
-        </Button>
-      </DropdownAction>
+      <DropdownAction>Dropdown</DropdownAction>
       <DropdownContent>
         <DropdownList>
           <DropdownItem>
@@ -51,16 +47,12 @@ const DropdownWithIcon = () => {
 const DropdownWithIconCode = `
 'use client'
 import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList, Button} from 'keep-react'
+import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList} from 'keep-react'
 
 export const DropdownComponent = () => {
   return (
     <Dropdown>
-      <DropdownAction asChild>
-        <Button color="secondary" size="xs">
-          Dropdown
-        </Button>
-      </DropdownAction>
+      <DropdownAction>Dropdown</DropdownAction>
       <DropdownContent>
         <DropdownList>
           <DropdownItem>
