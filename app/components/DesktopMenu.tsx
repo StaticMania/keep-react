@@ -71,7 +71,7 @@ const DesktopMenu = () => {
         </Link>
         <Link
           href="/docs/getting-started/introduction"
-          className="rounded-lg bg-metal-600 px-4 py-2.5 text-body-4 font-medium capitalize text-white transition-all duration-300 hover:bg-metal-700 dark:bg-metal-25 dark:text-metal-900">
+          className="rounded-lg bg-metal-900 px-4 py-2.5 text-body-4 font-medium capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-metal-25 dark:text-metal-900">
           get started
         </Link>
         <ThemeSwitcher />
