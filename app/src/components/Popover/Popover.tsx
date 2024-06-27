@@ -7,7 +7,7 @@ import { PopoverContext, PopoverOptions, usePopover } from './Context'
 import { PopoverDescription } from './Description'
 import { PopoverHeading } from './Title'
 
-export function PopoverComponent({
+function PopoverComponent({
   children,
   modal = false,
   ...restOptions
