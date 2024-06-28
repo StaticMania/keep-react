@@ -1,5 +1,5 @@
 'use client'
-import { DialogHTMLAttributes, forwardRef, useEffect } from 'react'
+import { HTMLAttributes, forwardRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import FocusLock from 'react-focus-lock'
 import { RemoveScroll } from 'react-remove-scroll'
@@ -10,12 +10,12 @@ import { ModalFooter } from './Footer'
 import { ModalIcon } from './Icon'
 import { modalTheme } from './theme'
 
-interface ModalProps extends DialogHTMLAttributes<HTMLDialogElement> {
+interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   isOpen: boolean
   onClose: () => void
 }
 
-const ModalComponent = forwardRef<HTMLDialogElement, ModalProps>(({ isOpen, onClose, children, ...props }, ref) => {
+const ModalComponent = forwardRef<HTMLDivElement, ModalProps>(({ isOpen, onClose, children, ...props }, ref) => {
   useEffect(() => {
     const handleEscapeKeyPress = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -44,9 +44,9 @@ const ModalComponent = forwardRef<HTMLDialogElement, ModalProps>(({ isOpen, onCl
     ? createPortal(
         <RemoveScroll enabled={isOpen}>
           <FocusLock disabled={!isOpen} returnFocus>
-            <dialog ref={ref} {...props} className={cn(modalTheme.modal, props.className)}>
+            <div role="dialog" ref={ref} {...props} className={cn(modalTheme.modal, props.className)}>
               {children}
-            </dialog>
+            </div>
           </FocusLock>
         </RemoveScroll>,
         document.body,
