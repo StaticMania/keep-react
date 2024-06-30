@@ -17,9 +17,6 @@ const DesktopMenu = () => {
   const openModal = () => {
     setIsOpen(true)
   }
-  const closeModal = () => {
-    setIsOpen(false)
-  }
 
   useEffect(() => {
     setIsOpen(false)
@@ -43,7 +40,7 @@ const DesktopMenu = () => {
           ))}
         </div>
       </div>
-      <Search setIsOpen={setIsOpen} isOpen={isOpen} closeModal={closeModal} />
+      <Search setIsOpen={setIsOpen} isOpen={isOpen} />
       <div className="hidden items-center gap-3 laptop:flex">
         <button
           onClick={openModal}

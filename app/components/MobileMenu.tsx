@@ -29,9 +29,6 @@ const MobileMenu = () => {
   const openModal = () => {
     setIsOpen(true)
   }
-  const closeModal = () => {
-    setIsOpen(false)
-  }
 
   useEffect(() => {
     setActive(false)
@@ -88,7 +85,7 @@ const MobileMenu = () => {
           )}
         </button>
       </div>
-      <Search setIsOpen={setIsOpen} isOpen={isOpen} closeModal={closeModal} />
+      <Search setIsOpen={setIsOpen} isOpen={isOpen} />
       <Drawer onClose={() => setShowDrawer(!showDrawer)} isOpen={showDrawer} position="right">
         <DrawerOverlay />
         <DrawerContent className="space-y-3 rounded-none p-6">
