@@ -66,10 +66,10 @@ const ToggleComponent: FC<ToggleProps> = ({
   }
 
   return (
-    <div data-testid="toggle-element" {...props} className="inline-flex items-center" id="test-switch">
+    <div {...props} className="inline-flex items-center" id="test-switch">
       <Switch
         id="test-switchId"
-        checked={disabled ? disabled : enabled}
+        checked={disabled || enabled}
         onChange={setEnabled}
         className={cn(
           theme.base,

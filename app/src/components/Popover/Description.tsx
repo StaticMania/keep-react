@@ -4,7 +4,7 @@ import { cn } from '../../helpers/cn'
 import { usePopoverContext } from './Context'
 
 export const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
-  function PopoverDescription(props, ref) {
+  function PopoverDescription({ children, className, ...props }, ref) {
     const { setDescriptionId } = usePopoverContext()
     const id = useId()
     useLayoutEffect(() => {
@@ -17,8 +17,9 @@ export const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTM
         {...props}
         ref={ref}
         id={id}
-        className={cn('text-body-4 font-normal text-metal-600 dark:text-metal-300', props.className)}
-      />
+        className={cn('text-body-4 font-normal text-metal-600 dark:text-metal-300', className)}>
+        {children}
+      </p>
     )
   },
 )

@@ -5,7 +5,7 @@ import { cn } from '../../helpers/cn'
 import { usePopoverContext } from './Context'
 
 export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(function PopoverContent(
-  { style, ...props },
+  { style, className, ...props },
   propRef,
 ) {
   const { context: floatingContext, showArrow, ...context } = usePopoverContext()
@@ -20,7 +20,7 @@ export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElemen
           ref={ref}
           style={{ ...context.floatingStyles, ...style }}
           aria-labelledby={context.labelId}
-          className={cn('!z-20 max-w-xs rounded-xl bg-white dark:bg-metal-900', props.className)}
+          className={cn('!z-20 max-w-xs rounded-xl bg-white dark:bg-metal-900', className)}
           aria-describedby={context.descriptionId}
           {...context.getFloatingProps(props)}>
           {props.children}

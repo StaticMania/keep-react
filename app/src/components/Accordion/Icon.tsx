@@ -1,5 +1,5 @@
 'use client'
-import { HTMLAttributes, Ref, forwardRef } from 'react'
+import { HTMLAttributes, Ref, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
@@ -12,10 +12,22 @@ export interface keepAccordionIconTheme {
   }
 }
 
-const AccordionIcon = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement>>(
-  ({ children, className, ...otherProps }: HTMLAttributes<HTMLSpanElement>, ref: Ref<HTMLSpanElement>) => {
+export interface AccordionIconProps extends HTMLAttributes<HTMLSpanElement> {
+  asChild?: boolean
+}
+
+const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
+  ({ children, asChild, className, ...otherProps }, ref: Ref<HTMLSpanElement>) => {
     const { isOpen } = useAccordionContext()
     const { icon } = accordionTheme
+
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        ...otherProps,
+      })
+    }
+
     return (
       <span
         {...otherProps}

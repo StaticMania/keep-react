@@ -8,14 +8,16 @@ interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
   animation?: boolean
 }
 
-const SkeletonComponent = forwardRef<HTMLDivElement, SkeletonProps>(({ animation = true, children, ...props }, ref) => {
-  const theme = skeletonTheme
-  return (
-    <div {...props} ref={ref} className={cn(animation && theme.animation, theme.base, props.className)}>
-      {children}
-    </div>
-  )
-})
+const SkeletonComponent = forwardRef<HTMLDivElement, SkeletonProps>(
+  ({ animation = true, children, className, ...props }, ref) => {
+    const theme = skeletonTheme
+    return (
+      <div {...props} ref={ref} className={cn(animation && theme.animation, theme.base, className)}>
+        {children}
+      </div>
+    )
+  },
+)
 
 SkeletonComponent.displayName = 'Skeleton'
 

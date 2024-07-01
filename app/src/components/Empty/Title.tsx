@@ -1,17 +1,26 @@
 'use client'
-import { forwardRef, HTMLProps } from 'react'
+import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
-import { emptyTheme } from './theme'
 
-export const EmptyTitle = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadingElement>>(
-  ({ children, ...props }, ref) => {
-    const { title } = emptyTheme
+export interface EmptyTitleProps extends HTMLAttributes<HTMLHeadingElement> {
+  asChild?: boolean
+}
+
+const EmptyTitle = forwardRef<HTMLParagraphElement, EmptyTitleProps>(
+  ({ children, asChild, className, ...props }, ref) => {
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        ...props,
+      })
+    }
     return (
-      <h1 {...props} ref={ref} className={cn(title.base, props.className)}>
+      <h1 ref={ref} className={cn('text-heading-5 font-medium text-metal-700 dark:text-white', className)} {...props}>
         {children}
       </h1>
     )
   },
 )
+EmptyTitle.displayName = 'EmptyTitle'
 
-EmptyTitle.displayName = 'Empty.Title'
+export { EmptyTitle }

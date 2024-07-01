@@ -12,11 +12,13 @@ const EmptyFolder = () => {
           alt="404"
         />
       </EmptyImage>
-      <EmptyTitle>This folder has gone missing</EmptyTitle>
-      <EmptyDescription>
+      <EmptyTitle className="mb-[14px] mt-5">This folder has gone missing</EmptyTitle>
+      <EmptyDescription className="mb-8">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-      <Button>Go to home</Button>
+      <Button color="secondary" size="sm">
+        Go to home
+      </Button>
     </Empty>
   )
 }
@@ -36,11 +38,11 @@ export const EmptyComponent = () => {
           alt="404"
         />
       </EmptyImage>
-      <EmptyTitle>This folder has gone missing</EmptyTitle>
-      <EmptyDescription>
+      <EmptyTitle className="mb-[14px] mt-5">This folder has gone missing</EmptyTitle>
+      <EmptyDescription className="mb-8">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-      <Button>Go to home</Button>
+      <Button color="secondary" size="sm">Go to home</Button>
     </Empty>
   )
 }

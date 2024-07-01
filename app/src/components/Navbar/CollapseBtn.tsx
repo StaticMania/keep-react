@@ -1,11 +1,24 @@
 'use client'
-import { HTMLAttributes, forwardRef } from 'react'
+import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 import { useNavbarContext } from './Context'
 
-const NavbarCollapseBtn = forwardRef<HTMLButtonElement, HTMLAttributes<HTMLButtonElement>>(
-  ({ className, ...props }, ref) => {
+export interface NavbarCollapseBtnProps extends HTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean
+}
+
+const NavbarCollapseBtn = forwardRef<HTMLButtonElement, NavbarCollapseBtnProps>(
+  ({ asChild, className, children, ...props }, ref) => {
     const { open, handleOpen } = useNavbarContext()
+
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        onClick: handleOpen,
+        itemRef: ref,
+        ...props,
+      })
+    }
+
     return (
       <button onClick={handleOpen} ref={ref} {...props} className={cn('block lg:hidden', className)}>
         {open ? (

@@ -4,9 +4,9 @@ import { cn } from '../../helpers/cn'
 import { alertTheme } from './theme'
 
 const AlertTitle = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
-  ({ children, ...props }: HTMLAttributes<HTMLParagraphElement>, ref: Ref<HTMLParagraphElement>) => {
+  ({ children, className, ...props }: HTMLAttributes<HTMLParagraphElement>, ref: Ref<HTMLParagraphElement>) => {
     return (
-      <p {...props} className={cn(alertTheme.title.base, props.className)} ref={ref}>
+      <p {...props} className={cn(alertTheme.title.base, className)} ref={ref}>
         {children}
       </p>
     )
