@@ -11,5 +11,6 @@ const NotificationFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElem
     )
   },
 )
-NotificationFooter.displayName = 'Notification.Footer'
+NotificationFooter.displayName = 'NotificationFooter'
+
 export { NotificationFooter }

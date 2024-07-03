@@ -16,12 +16,12 @@ const NotificationTitle = forwardRef<HTMLParagraphElement, NotificationTitleProp
     }
 
     return (
-      <h3 ref={ref} className={cn('text-heading-6 font-semibold text-metal-900 dark:text-white', className)} {...props}>
+      <h1 ref={ref} className={cn('text-heading-6 font-semibold text-metal-900 dark:text-white', className)} {...props}>
         {children}
-      </h3>
+      </h1>
     )
   },
 )
-NotificationTitle.displayName = 'Notification.Title'
+NotificationTitle.displayName = 'NotificationTitle'
 
 export { NotificationTitle }

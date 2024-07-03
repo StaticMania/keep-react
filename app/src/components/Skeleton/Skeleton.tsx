@@ -1,14 +1,13 @@
 'use client'
 import { forwardRef, HTMLAttributes } from 'react'
 import { cn } from '../../helpers/cn'
-import { SkeletonLine } from './SkeletonLine'
 import { skeletonTheme } from './theme'
 
 interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
   animation?: boolean
 }
 
-const SkeletonComponent = forwardRef<HTMLDivElement, SkeletonProps>(
+const Skeleton = forwardRef<HTMLDivElement, SkeletonProps>(
   ({ animation = true, children, className, ...props }, ref) => {
     const theme = skeletonTheme
     return (
@@ -19,8 +18,6 @@ const SkeletonComponent = forwardRef<HTMLDivElement, SkeletonProps>(
   },
 )
 
-SkeletonComponent.displayName = 'Skeleton'
+Skeleton.displayName = 'Skeleton'
 
-export const Skeleton = Object.assign(SkeletonComponent, {
-  Line: SkeletonLine,
-})
+export { Skeleton }

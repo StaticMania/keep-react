@@ -16,7 +16,7 @@ const PaginationComponent = forwardRef<HTMLDivElement, PaginationProps>(
   ({ className, children, shape = 'rounded', ...props }, ref) => {
     const { root } = paginationTheme
     return (
-      <div {...props} role="navigation" ref={ref} aria-label="pagination" className={cn(root.base, className)}>
+      <div {...props} ref={ref} aria-label="pagination" className={cn(root.base, className)}>
         <PaginationContext.Provider value={{ shape }}>{children}</PaginationContext.Provider>
       </div>
     )

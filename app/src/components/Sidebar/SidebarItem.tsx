@@ -1,14 +1,23 @@
 'use client'
-import { Children, forwardRef, HTMLAttributes, Ref } from 'react'
+import { Children, cloneElement, forwardRef, HTMLAttributes, isValidElement, Ref } from 'react'
 import { cn } from '../../helpers/cn'
 
 export interface SidebarItemProps extends HTMLAttributes<HTMLLIElement> {
   dropdown?: boolean
+  asChild?: boolean
 }
 
 export const SidebarItem = forwardRef<HTMLLIElement, SidebarItemProps>(
-  ({ children, className, dropdown = false, ...props }, ref: Ref<HTMLLIElement>) => {
+  ({ children, className, dropdown = false, asChild, ...props }, ref: Ref<HTMLLIElement>) => {
     const childrenLength: number = Children.count(children)
+
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        ...props,
+      })
+    }
+
     return (
       <li
         {...props}

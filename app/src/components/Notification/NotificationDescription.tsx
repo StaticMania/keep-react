@@ -22,6 +22,6 @@ const NotificationDescription = forwardRef<HTMLParagraphElement, NotificationDes
   },
 )
 
-NotificationDescription.displayName = 'Notification.Description'
+NotificationDescription.displayName = 'NotificationDescription'
 
 export { NotificationDescription }

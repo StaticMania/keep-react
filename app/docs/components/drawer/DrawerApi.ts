@@ -15,9 +15,9 @@ export const drawerAPIData = [
   },
   {
     id: 3,
-    propsName: 'onClose',
+    propsName: 'onOpenChange',
     propsType: 'Function',
-    propsDescription: 'Drawer close function',
+    propsDescription: 'setState function',
     default: 'None',
   },
 ]

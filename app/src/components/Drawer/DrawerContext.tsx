@@ -3,8 +3,7 @@ import { createContext, useContext } from 'react'
 
 export interface DrawerContextProps {
   isOpen?: boolean
-  isClosing?: boolean
-  onClose?: () => void
+  handleOpen?: () => void
   position?: 'left' | 'right' | 'top' | 'bottom'
 }
 
