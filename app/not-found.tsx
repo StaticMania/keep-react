@@ -14,8 +14,8 @@ const NotFound = () => {
           alt="404"
         />
       </EmptyImage>
-      <EmptyTitle>Sorry, No Result Found!</EmptyTitle>
-      <EmptyDescription>The page/topic you are looking for is not found.</EmptyDescription>
+      <EmptyTitle className="mb-[14px] mt-5">Sorry, No Result Found!</EmptyTitle>
+      <EmptyDescription className="mb-8">The page/topic you are looking for is not found.</EmptyDescription>
       <Link
         href="/"
         className="group h-min w-fit justify-center rounded-md border border-slate-900 bg-slate-900 px-4 py-4 text-center text-sm font-medium capitalize text-white transition-all duration-75 ease-in hover:bg-slate-800 focus:ring-4 focus:ring-slate-800 active:bg-slate-900">
