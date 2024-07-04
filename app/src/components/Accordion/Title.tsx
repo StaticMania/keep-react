@@ -8,10 +8,10 @@ export interface keepAccordionTitleTheme {
 }
 
 const AccordionTitle = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElement>>(
-  ({ children, ...props }, ref: Ref<HTMLSpanElement>) => {
+  ({ children, className, ...props }, ref: Ref<HTMLSpanElement>) => {
     const { title } = accordionTheme
     return (
-      <span {...props} className={cn(title.base, props.className)} ref={ref}>
+      <span {...props} className={cn(title.base, className)} ref={ref}>
         {children}
       </span>
     )

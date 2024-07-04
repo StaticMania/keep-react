@@ -8,6 +8,6 @@ const SkeletonLine = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   return <div {...props} ref={ref} className={cn(theme.line, className)}></div>
 })
 
-SkeletonLine.displayName = 'Skeleton.Line'
+SkeletonLine.displayName = 'SkeletonLine'
 
 export { SkeletonLine }

@@ -11,7 +11,7 @@ export interface SpinnerProps extends HTMLAttributes<HTMLSpanElement> {
 export const Spinner = forwardRef<HTMLSpanElement, SpinnerProps>(
   ({ children, className, color = 'info', size = 'md', ...props }, ref) => {
     return (
-      <span className={cn(className)} {...props} ref={ref} role="status">
+      <span className={cn(className)} {...props} ref={ref}>
         {children ?? (
           <svg
             fill="none"

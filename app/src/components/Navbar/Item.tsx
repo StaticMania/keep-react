@@ -1,13 +1,21 @@
 'use client'
-import { forwardRef, HTMLAttributes, Ref } from 'react'
+import { cloneElement, forwardRef, HTMLAttributes, isValidElement, Ref } from 'react'
 import { cn } from '../../helpers/cn'
 
 export interface NavbarItemProps extends HTMLAttributes<HTMLLIElement> {
   active?: boolean
+  asChild?: boolean
 }
 
 export const NavbarItem = forwardRef<HTMLLIElement, NavbarItemProps>(
-  ({ children, className, active, ...props }, ref: Ref<HTMLLIElement>) => {
+  ({ children, className, active, asChild, ...props }, ref: Ref<HTMLLIElement>) => {
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        ...props,
+      })
+    }
+
     return (
       <li
         {...props}

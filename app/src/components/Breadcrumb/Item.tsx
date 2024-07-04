@@ -1,8 +1,19 @@
-import { forwardRef, HTMLAttributes, Ref } from 'react'
+import { cloneElement, forwardRef, HTMLAttributes, isValidElement, Ref } from 'react'
 import { cn } from '../../helpers/cn'
 
-export const BreadcrumbItem = forwardRef<HTMLLIElement, HTMLAttributes<HTMLLIElement>>(
-  ({ children, className, ...props }, ref: Ref<HTMLLIElement>) => {
+export interface BreadcrumbItemProps extends HTMLAttributes<HTMLLIElement> {
+  asChild?: boolean
+}
+
+export const BreadcrumbItem = forwardRef<HTMLLIElement, BreadcrumbItemProps>(
+  ({ children, asChild, className, ...props }, ref: Ref<HTMLLIElement>) => {
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        ...props,
+      })
+    }
+
     return (
       <li
         {...props}

@@ -1,5 +1,5 @@
 'use client'
-import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
+import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 import { AlertContext } from './AlertContext'
 import { AlertBody } from './Body'
@@ -12,7 +12,6 @@ import { AlertTitle } from './Title'
 import { ColorVariant, alertTheme } from './theme'
 
 interface AlertComponentProps extends HTMLAttributes<HTMLDivElement> {
-  children?: ReactNode
   color?: keyof ColorVariant
   withBg?: boolean
   dismiss?: boolean

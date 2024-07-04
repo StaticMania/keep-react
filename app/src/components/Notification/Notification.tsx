@@ -1,68 +1,64 @@
 'use client'
-import { HTMLAttributes, Ref, forwardRef, useEffect } from 'react'
-import { createPortal } from 'react-dom'
-import { cn } from '../../helpers/cn'
-import { NotificationBody } from './Body'
-import { NotificationContent } from './Content'
-import { NotificationContext } from './Context'
-import { NotificationDescription } from './Description'
-import { NotificationFooter } from './Footer'
-import { NotificationHeader } from './Header'
-import { NotificationTitle } from './Title'
+import { Dispatch, FC, ReactNode, SetStateAction, useCallback, useEffect, useState } from 'react'
+import { NotificationContext } from './NotificationContext'
 
-export interface NotificationProps extends HTMLAttributes<HTMLDivElement> {
+export interface NotificationProps {
+  children?: ReactNode
+  onOpenChange?: Dispatch<SetStateAction<boolean>>
   isOpen?: boolean
-  onClose?: () => void
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 
-const NotificationComponent = forwardRef<HTMLDivElement, NotificationProps>(
-  ({ children, className, isOpen, onClose, position = 'bottom-right', ...props }, ref: Ref<HTMLDivElement>) => {
-    useEffect(() => {
-      const handleEscapeKeyPress = (event: KeyboardEvent) => {
-        if (event.key === 'Escape') {
-          onClose && onClose()
-        }
+const Notification: FC<NotificationProps> = ({
+  children,
+  isOpen: isOpenProp,
+  onOpenChange,
+  position = 'bottom-right',
+}) => {
+  const [internalIsOpen, setInternalIsOpen] = useState(false)
+
+  const isControlled = isOpenProp !== undefined && onOpenChange !== undefined
+
+  const isOpen = isControlled ? isOpenProp : internalIsOpen
+  const setIsOpen = isControlled ? onOpenChange : setInternalIsOpen
+
+  useEffect(() => {
+    if (!isControlled) {
+      setInternalIsOpen(isOpenProp ?? false)
+    }
+  }, [isOpenProp, isControlled])
+
+  const handleOpen = useCallback(() => {
+    setIsOpen((prev) => !prev)
+  }, [setIsOpen])
+
+  useEffect(() => {
+    const handleEscapeKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        isOpen && setIsOpen(false)
       }
+    }
 
-      const handleClickOutsideModal = (event: MouseEvent) => {
-        if (!(event.target as HTMLElement).closest('.notification-body')) {
-          onClose && onClose()
-        }
+    const handleClickOutsideModal = (event: MouseEvent) => {
+      if (!(event.target as HTMLElement).closest('.notification-content')) {
+        isOpen && setIsOpen(false)
       }
+    }
 
-      if (isOpen) {
-        document.addEventListener('keydown', handleEscapeKeyPress)
-        document.addEventListener('mousedown', handleClickOutsideModal)
-      }
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscapeKeyPress)
+      document.addEventListener('mousedown', handleClickOutsideModal)
+    }
 
-      return () => {
-        document.removeEventListener('keydown', handleEscapeKeyPress)
-        document.removeEventListener('mousedown', handleClickOutsideModal)
-      }
-    }, [isOpen, onClose])
-    return isOpen
-      ? createPortal(
-          <div {...props} className={cn('fixed inset-0 z-50 overflow-auto', className)} ref={ref}>
-            <NotificationContext.Provider value={{ isOpen, onClose, position }}>
-              {children}
-            </NotificationContext.Provider>
-          </div>,
-          document.body,
-        )
-      : null
-  },
-)
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKeyPress)
+      document.removeEventListener('mousedown', handleClickOutsideModal)
+    }
+  }, [isOpen, setIsOpen])
 
-NotificationComponent.displayName = 'Notification'
-
-const Notification = Object.assign(NotificationComponent, {
-  Header: NotificationHeader,
-  Description: NotificationDescription,
-  Title: NotificationTitle,
-  Content: NotificationContent,
-  Body: NotificationBody,
-  Footer: NotificationFooter,
-})
+  return (
+    <NotificationContext.Provider value={{ isOpen, handleOpen, position }}>{children}</NotificationContext.Provider>
+  )
+}
 
 export { Notification }

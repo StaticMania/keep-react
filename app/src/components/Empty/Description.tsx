@@ -1,17 +1,29 @@
 'use client'
-import { forwardRef, HTMLProps } from 'react'
+import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
-import { emptyTheme } from './theme'
 
-export const EmptyDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
-  ({ children, ...props }, ref) => {
-    const { description } = emptyTheme
+export interface EmptyDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {
+  asChild?: boolean
+}
+
+const EmptyDescription = forwardRef<HTMLParagraphElement, EmptyDescriptionProps>(
+  ({ children, asChild, className, ...props }, ref) => {
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        ...props,
+      })
+    }
     return (
-      <p {...props} ref={ref} className={cn(description.base, props.className)}>
+      <p
+        ref={ref}
+        className={cn('text-center text-body-3 font-normal text-metal-400 dark:text-metal-300', className)}
+        {...props}>
         {children}
       </p>
     )
   },
 )
-
 EmptyDescription.displayName = 'Empty.Description'
+
+export { EmptyDescription }

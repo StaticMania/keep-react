@@ -1,11 +1,8 @@
 'use client'
 import { LiHTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { TimelineContent } from './Content'
-import { TimelineItem } from './Item'
-import { TimelinePoint } from './Point'
 
-const TimelineComponent = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLOListElement>>(
+const Timeline = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLOListElement>>(
   ({ children, className, ...props }, ref) => {
     return (
       <ol
@@ -18,10 +15,6 @@ const TimelineComponent = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLOLis
   },
 )
 
-TimelineComponent.displayName = 'Timeline'
+Timeline.displayName = 'Timeline'
 
-export const Timeline = Object.assign(TimelineComponent, {
-  Item: TimelineItem,
-  Point: TimelinePoint,
-  Content: TimelineContent,
-})
+export { Timeline }

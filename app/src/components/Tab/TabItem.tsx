@@ -1,14 +1,15 @@
 'use client'
-import { ButtonHTMLAttributes, ForwardedRef, forwardRef } from 'react'
+import { ButtonHTMLAttributes, ForwardedRef, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 import { useTabContext } from './Context'
 
 export interface TabItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string
+  asChild?: boolean
 }
 
 const TabItem = forwardRef<HTMLButtonElement, TabItemProps>(
-  ({ children, className, label = '1', ...props }, ref: ForwardedRef<HTMLButtonElement>) => {
+  ({ children, className, label = '1', asChild, ...props }, ref: ForwardedRef<HTMLButtonElement>) => {
     const { activeItem, handleActive, itemType } = useTabContext()
 
     let classNames: string = ''
@@ -28,6 +29,14 @@ const TabItem = forwardRef<HTMLButtonElement, TabItemProps>(
           ? 'border-b-metal-900 dark:border-b-white dark:text-white text-metal-900'
           : 'text-metal-600 dark:text-metal-300 dark:hover:text-metal-200 hover:text-metal-900',
       )
+    }
+
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        onClick: () => handleActive && handleActive(label),
+        ...props,
+      })
     }
 
     return (

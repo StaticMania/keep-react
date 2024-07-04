@@ -40,4 +40,4 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
   },
 )
 
-DropdownAction.displayName = 'Dropdown.Action'
+DropdownAction.displayName = 'DropdownAction'

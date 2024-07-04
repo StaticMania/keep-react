@@ -40,18 +40,18 @@ export const progressTheme: ProgressThemeInterface = {
     root: 'relative',
     svg: {
       base: 'h-full w-full',
-      circle: 'stroke-current text-primary-50',
+      circle: 'stroke-current text-metal-50',
       g: 'origin-center -rotate-90 transform',
-      gCircle: 'stroke-current text-primary-500 transition-all duration-300',
+      gCircle: 'stroke-current text-metal-900 transition-all duration-300',
     },
     text: {
       base: 'absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform',
       content: {
-        sm: 'text-body-5 font-normal text-primary-500',
-        md: 'text-body-4 font-normal text-primary-500',
-        lg: 'text-body-3 font-medium text-primary-500',
-        xl: 'text-body-2 font-semibold text-primary-500',
-        '2xl': 'text-heading-6 font-semibold text-primary-500',
+        sm: 'text-body-5 font-normal text-metal-600',
+        md: 'text-body-4 font-normal text-metal-600',
+        lg: 'text-body-3 font-medium text-metal-600',
+        xl: 'text-body-2 font-semibold text-metal-600',
+        '2xl': 'text-heading-6 font-semibold text-metal-600',
       },
     },
     size: {
@@ -65,17 +65,17 @@ export const progressTheme: ProgressThemeInterface = {
   line: {
     root: 'flex items-center gap-x-3 whitespace-nowrap',
     progress: {
-      base: 'relative flex w-full overflow-hidden rounded-full bg-primary-50',
-      bar: 'relative flex flex-col justify-center overflow-hidden rounded-full bg-gradient-17 transition-all duration-300',
+      base: 'relative flex w-full overflow-hidden rounded-full bg-metal-50 ',
+      bar: 'relative flex flex-col justify-center overflow-hidden m-[1px] rounded-full bg-metal-900 transition-all duration-300',
     },
     text: {
       base: 'w-10 text-end',
       content: {
-        sm: 'text-body-5 font-normal text-primary-500',
-        md: 'text-body-4 font-normal text-primary-500',
-        lg: 'text-body-3 font-medium text-primary-500',
-        xl: 'text-body-2 font-semibold text-primary-500',
-        '2xl': 'text-heading-6 font-semibold text-primary-500',
+        sm: 'text-body-5 font-normal text-metal-600',
+        md: 'text-body-4 font-normal text-metal-600',
+        lg: 'text-body-3 font-medium text-metal-600',
+        xl: 'text-body-2 font-semibold text-metal-600',
+        '2xl': 'text-heading-6 font-semibold text-metal-600',
       },
     },
     size: {

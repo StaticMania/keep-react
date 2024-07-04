@@ -43,9 +43,9 @@ const NotificationPosition = () => {
           Bottom Right
         </Button>
       </ButtonGroup>
-      <Notification isOpen={isOpen} onClose={openController} position={position}>
-        <NotificationBody className="max-w-sm p-6">
-          <NotificationContent>
+      <Notification isOpen={isOpen} onOpenChange={setIsOpen} position={position}>
+        <NotificationBody>
+          <NotificationContent className="max-w-sm p-6">
             <div className="flex items-start gap-2">
               <div>
                 <Avatar img="/images/avatar/avatar-1.png" className="border-2 border-error-100" />
@@ -71,14 +71,48 @@ import { Avatar, Button, ButtonGroup, Notification, NotificationBody, Notificati
 
 export const NotificationComponent = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const control = () => setIsOpen(!isOpen)
+  const [position, setPosition] = useState('bottom-right')
+  const openController = () => setIsOpen(!isOpen)
 
   return (
-    <div className="px-5 py-3">
-      <Button onClick={control}>Show Notification</Button>
-      <Notification isOpen={isOpen} onClose={control}>
-        <NotificationBody className="max-w-sm p-4">
-          <NotificationContent>
+    <>
+      <ButtonGroup>
+        <Button
+          onClick={() => {
+            openController()
+            setPosition('top-left')
+          }}
+          position="start">
+          Top Left
+        </Button>
+        <Button
+          onClick={() => {
+            openController()
+            setPosition('top-right')
+          }}
+          position="center">
+          Top Right
+        </Button>
+        <Button
+          onClick={() => {
+            openController()
+            setPosition('bottom-left')
+          }}
+          position="center">
+          Bottom Left
+        </Button>
+        <Button
+          onClick={() => {
+            openController()
+            setPosition('bottom-right')
+          }}
+          position="end">
+          Bottom Right
+        </Button>
+      </ButtonGroup>
+      <Notification isOpen={isOpen} onOpenChange={setIsOpen} position={position}>
+        <NotificationBody>
+          <NotificationContent className="max-w-sm p-6">
             <div className="flex items-start gap-2">
               <div>
                 <Avatar img="/images/avatar/avatar-1.png" className="border-2 border-error-100" />
@@ -93,9 +127,10 @@ export const NotificationComponent = () => {
           </NotificationContent>
         </NotificationBody>
       </Notification>
-    </div>
+    </>
   )
 }
+
 `
 
 export { NotificationPosition, NotificationPositionCode }

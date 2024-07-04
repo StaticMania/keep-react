@@ -1,9 +1,6 @@
 import { DefaultModal, DefaultModalCode } from './variant/DefaultModal'
-import { ModalWithCheckbox, ModalWithCheckboxCode } from './variant/ModalWithCheckbox'
 import { CustomizeModal, CustomizeModalCode } from './variant/CustomizeModal'
-import { modalApiData } from './modalApi'
 import CodePreview from '../../../components/CodePreview'
-import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -17,14 +14,6 @@ Modal components typically appear as a small window or dialog box that appears o
   <DefaultModal />
 </CodePreview>
 
-## Modal With Checkbox
-
-You can use any other component inside our modal component. We just use the checkbox component.
-
-<CodePreview github="Modal" code={ModalWithCheckboxCode}>
-  <ModalWithCheckbox />
-</CodePreview>
-
 ## Customizable Modal
 
 You can customize our modal as your desire except the modal functionality.
@@ -32,9 +21,3 @@ You can customize our modal as your desire except the modal functionality.
 <CodePreview github="Modal" code={CustomizeModalCode}>
   <CustomizeModal />
 </CodePreview>
-
-## API Reference
-
-Explore the available props for the modal component
-
-<ComponentApi data={modalApiData} />
