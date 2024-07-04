@@ -1,10 +1,19 @@
 'use client'
-import { LabelHTMLAttributes, forwardRef } from 'react'
+import { LabelHTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 
-export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {}
+export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
+  asChild?: boolean
+}
 
-export const Label = forwardRef<HTMLLabelElement, LabelProps>(({ className, children, ...props }, ref) => {
+export const Label = forwardRef<HTMLLabelElement, LabelProps>(({ className, children, asChild, ...props }, ref) => {
+  if (asChild && isValidElement(children)) {
+    return cloneElement(children, {
+      itemRef: ref,
+      ...props,
+    })
+  }
+
   return (
     <label
       ref={ref}

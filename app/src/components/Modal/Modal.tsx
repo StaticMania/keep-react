@@ -1,31 +1,41 @@
 'use client'
-import { DialogHTMLAttributes, forwardRef, useEffect } from 'react'
-import { createPortal } from 'react-dom'
-import FocusLock from 'react-focus-lock'
-import { RemoveScroll } from 'react-remove-scroll'
-import { cn } from '../../helpers/cn'
-import { ModalBody } from './Body'
-import { ModalContent } from './Content'
-import { ModalFooter } from './Footer'
-import { ModalIcon } from './Icon'
-import { modalTheme } from './theme'
+import { Dispatch, FC, ReactNode, SetStateAction, useCallback, useEffect, useState } from 'react'
+import { ModalContext } from './ModalContext'
 
-interface ModalProps extends DialogHTMLAttributes<HTMLDialogElement> {
-  isOpen: boolean
-  onClose: () => void
+interface ModalProps {
+  children: ReactNode
+  isOpen?: boolean
+  onOpenChange?: Dispatch<SetStateAction<boolean>>
 }
 
-const ModalComponent = forwardRef<HTMLDialogElement, ModalProps>(({ isOpen, onClose, children, ...props }, ref) => {
+const Modal: FC<ModalProps> = ({ children, isOpen: isOpenProp, onOpenChange }) => {
+  const [internalIsOpen, setInternalIsOpen] = useState(false)
+
+  const isControlled = isOpenProp !== undefined && onOpenChange !== undefined
+
+  const isOpen = isControlled ? isOpenProp : internalIsOpen
+  const setIsOpen = isControlled ? onOpenChange : setInternalIsOpen
+
+  useEffect(() => {
+    if (!isControlled) {
+      setInternalIsOpen(isOpenProp ?? false)
+    }
+  }, [isOpenProp, isControlled])
+
+  const handleOpen = useCallback(() => {
+    setIsOpen((prev) => !prev)
+  }, [setIsOpen])
+
   useEffect(() => {
     const handleEscapeKeyPress = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        onClose && onClose()
+        isOpen && setIsOpen(false)
       }
     }
 
     const handleClickOutsideModal = (event: MouseEvent) => {
       if (!(event.target as HTMLElement).closest('.modal-content')) {
-        onClose && onClose()
+        isOpen && setIsOpen(false)
       }
     }
 
@@ -38,27 +48,9 @@ const ModalComponent = forwardRef<HTMLDialogElement, ModalProps>(({ isOpen, onCl
       document.removeEventListener('keydown', handleEscapeKeyPress)
       document.removeEventListener('mousedown', handleClickOutsideModal)
     }
-  }, [isOpen, onClose])
+  }, [isOpen, setIsOpen])
 
-  return isOpen
-    ? createPortal(
-        <RemoveScroll enabled={isOpen}>
-          <FocusLock disabled={!isOpen} returnFocus>
-            <dialog ref={ref} {...props} className={cn(modalTheme.modal, props.className)}>
-              {children}
-            </dialog>
-          </FocusLock>
-        </RemoveScroll>,
-        document.body,
-      )
-    : null
-})
+  return <ModalContext.Provider value={{ isOpen, handleOpen }}>{children}</ModalContext.Provider>
+}
 
-ModalComponent.displayName = 'Modal'
-
-export const Modal = Object.assign(ModalComponent, {
-  Footer: ModalFooter,
-  Body: ModalBody,
-  Icon: ModalIcon,
-  Content: ModalContent,
-})
+export { Modal }

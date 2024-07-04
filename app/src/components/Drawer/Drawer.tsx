@@ -1,65 +1,57 @@
 'use client'
-import { ForwardedRef, HTMLAttributes, forwardRef, useCallback, useEffect, useState } from 'react'
-import { createPortal } from 'react-dom'
-import FocusLock from 'react-focus-lock'
-import { RemoveScroll } from 'react-remove-scroll'
-import { DrawerContext } from './Context'
+import { Dispatch, FC, ReactNode, SetStateAction, useCallback, useEffect, useState } from 'react'
+import { DrawerContext } from './DrawerContext'
 
-export interface DrawerProps extends HTMLAttributes<HTMLDivElement> {
+interface DrawerProps {
+  children: ReactNode
   isOpen?: boolean
-  onClose?: () => void
+  onOpenChange?: Dispatch<SetStateAction<boolean>>
   position?: 'left' | 'right' | 'top' | 'bottom'
 }
 
-const Drawer = forwardRef<HTMLDivElement, DrawerProps>(
-  ({ isOpen, onClose, position = 'bottom', children }: DrawerProps, ref: ForwardedRef<HTMLDivElement>) => {
-    const [isClosing, setIsClosing] = useState<boolean>(false)
+const Drawer: FC<DrawerProps> = ({ children, position = 'bottom', onOpenChange, isOpen: isOpenProp }) => {
+  const [internalIsOpen, setInternalIsOpen] = useState(false)
 
-    const handleClose = useCallback(() => {
-      setIsClosing(true)
-      setTimeout(() => {
-        onClose && onClose()
-        setIsClosing(false)
-      }, 300)
-    }, [onClose])
+  const isControlled = isOpenProp !== undefined && onOpenChange !== undefined
 
-    useEffect(() => {
-      const handleEscapeKeyPress = (event: KeyboardEvent) => {
-        if (event.key === 'Escape') {
-          handleClose && handleClose()
-        }
+  const isOpen = isControlled ? isOpenProp : internalIsOpen
+  const setIsOpen = isControlled ? onOpenChange : setInternalIsOpen
+
+  useEffect(() => {
+    if (!isControlled) {
+      setInternalIsOpen(isOpenProp ?? false)
+    }
+  }, [isOpenProp, isControlled])
+
+  const handleOpen = useCallback(() => {
+    setIsOpen((prev) => !prev)
+  }, [setIsOpen])
+
+  useEffect(() => {
+    const handleEscapeKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        isOpen && setIsOpen(false)
       }
+    }
 
-      const handleClickOutsideModal = (event: MouseEvent) => {
-        if (!(event.target as HTMLElement).closest('.drawer-content')) {
-          handleClose && handleClose()
-        }
+    const handleClickOutsideModal = (event: MouseEvent) => {
+      if (!(event.target as HTMLElement).closest('.drawer-content')) {
+        isOpen && setIsOpen(false)
       }
+    }
 
-      if (isOpen) {
-        document.addEventListener('keydown', handleEscapeKeyPress)
-        document.addEventListener('mousedown', handleClickOutsideModal)
-      }
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscapeKeyPress)
+      document.addEventListener('mousedown', handleClickOutsideModal)
+    }
 
-      return () => {
-        document.removeEventListener('keydown', handleEscapeKeyPress)
-        document.removeEventListener('mousedown', handleClickOutsideModal)
-      }
-    }, [isOpen, handleClose])
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKeyPress)
+      document.removeEventListener('mousedown', handleClickOutsideModal)
+    }
+  }, [isOpen, setIsOpen])
 
-    return isOpen
-      ? createPortal(
-          <RemoveScroll enabled={isOpen} ref={ref}>
-            <FocusLock disabled={!isOpen} returnFocus>
-              <DrawerContext.Provider value={{ position, isClosing }}>{children}</DrawerContext.Provider>
-            </FocusLock>
-          </RemoveScroll>,
-          document.body,
-        )
-      : null
-  },
-)
-
-Drawer.displayName = 'Drawer'
+  return <DrawerContext.Provider value={{ position, handleOpen, isOpen }}>{children}</DrawerContext.Provider>
+}
 
 export { Drawer }

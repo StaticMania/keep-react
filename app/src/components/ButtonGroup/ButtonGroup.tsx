@@ -3,9 +3,9 @@ import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
 const ButtonGroup = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
-  ({ children, ...props }, ref: Ref<HTMLDivElement>) => {
+  ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
-      <div {...props} className={cn('flex items-center', props.className)} ref={ref}>
+      <div {...props} className={cn('flex items-center', className)} ref={ref}>
         {children}
       </div>
     )

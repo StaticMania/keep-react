@@ -1,9 +1,9 @@
-'use client'
-import { useState } from 'react'
 import {
   Button,
   Notification,
+  NotificationAction,
   NotificationBody,
+  NotificationClose,
   NotificationContent,
   NotificationDescription,
   NotificationFooter,
@@ -11,28 +11,27 @@ import {
 } from '../../../../src'
 
 const DefaultNotification = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const control = () => setIsOpen(!isOpen)
-
   return (
     <div className="px-5 py-3">
-      <Button onClick={control}>Show Notification</Button>
-      <Notification isOpen={isOpen} onClose={control}>
+      <Notification>
+        <NotificationAction />
         <NotificationBody>
           <NotificationContent>
             <NotificationTitle>Can we store cookies?</NotificationTitle>
             <NotificationDescription>
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </NotificationDescription>
+            <NotificationFooter>
+              <NotificationClose asChild>
+                <Button size="sm">Accept</Button>
+              </NotificationClose>
+              <NotificationClose asChild>
+                <Button variant="outline" size="sm">
+                  Review
+                </Button>
+              </NotificationClose>
+            </NotificationFooter>
           </NotificationContent>
-          <NotificationFooter>
-            <Button onClick={control} size="sm">
-              Accept
-            </Button>
-            <Button onClick={control} variant="outline" size="sm">
-              Review
-            </Button>
-          </NotificationFooter>
         </NotificationBody>
       </Notification>
     </div>
@@ -40,11 +39,10 @@ const DefaultNotification = () => {
 }
 
 const DefaultNotificationCode = `
-'use client'
-import { useState } from 'react'
 import {
   Button,
   Notification,
+  NotificationAction,
   NotificationBody,
   NotificationContent,
   NotificationDescription,
@@ -53,31 +51,28 @@ import {
 } from 'keep-react'
 
 export const NotificationComponent = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const control = () => setIsOpen(!isOpen)
-
   return (
-    <div className="px-5 py-3">
-      <Button onClick={control}>Show Notification</Button>
-      <Notification isOpen={isOpen} onClose={control}>
-        <NotificationBody>
-          <NotificationContent>
-            <NotificationTitle>Can we store cookies?</NotificationTitle>
-            <NotificationDescription>
-              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </NotificationDescription>
-          </NotificationContent>
+    <Notification>
+      <NotificationAction />
+      <NotificationBody>
+        <NotificationContent>
+          <NotificationTitle>Can we store cookies?</NotificationTitle>
+          <NotificationDescription>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </NotificationDescription>
           <NotificationFooter>
-            <Button onClick={control} size="sm">
-              Accept
-            </Button>
-            <Button onClick={control} variant="outline" size="sm">
-              Review
-            </Button>
+            <NotificationClose asChild>
+              <Button size="sm">Accept</Button>
+            </NotificationClose>
+            <NotificationClose asChild>
+              <Button variant="outline" size="sm">
+                Review
+              </Button>
+            </NotificationClose>
           </NotificationFooter>
-        </NotificationBody>
-      </Notification>
-    </div>
+        </NotificationContent>
+      </NotificationBody>
+    </Notification>
   )
 }
 

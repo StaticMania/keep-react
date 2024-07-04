@@ -12,12 +12,6 @@ interface KeepDrawerTheme {
       left: string
       right: string
     }
-    backPosition: {
-      top: string
-      bottom: string
-      left: string
-      right: string
-    }
   }
 }
 
@@ -30,16 +24,10 @@ export const keepDrawerTheme: KeepDrawerTheme = {
   content: {
     base: 'drawer-content fixed z-50 flex flex-col dark:bg-metal-900 bg-white overflow-auto',
     position: {
-      top: 'left-0 right-0 top-0 h-auto animate-keep-slide-down rounded-b-2xl',
-      bottom: 'bottom-0 left-0 right-0 h-auto animate-keep-slide-up rounded-t-2xl',
-      left: 'left-0 top-0 h-full w-3/4 animate-keep-slide-left rounded-r-2xl xl:w-1/4',
-      right: 'right-0 top-0 h-full w-3/4 animate-keep-slide-right rounded-l-2xl xl:w-1/4',
-    },
-    backPosition: {
-      top: 'animate-keep-slide-top-back',
-      bottom: 'animate-keep-slide-up-back',
-      left: 'animate-keep-slide-left-back',
-      right: 'animate-keep-slide-right-back',
+      top: 'left-0 right-0 top-0 h-auto rounded-b-2xl',
+      bottom: 'bottom-0 left-0 right-0 h-auto rounded-t-2xl',
+      left: 'left-0 top-0 h-full w-3/4 rounded-r-2xl xl:w-1/4',
+      right: 'right-0 top-0 h-full w-3/4 rounded-l-2xl xl:w-1/4',
     },
   },
 }

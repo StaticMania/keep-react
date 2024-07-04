@@ -1,13 +1,27 @@
 'use client'
-import { HTMLProps, forwardRef } from 'react'
+import { HTMLProps, cloneElement, forwardRef, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 import { dropdownTheme } from './theme'
 
-export const DropdownItem = forwardRef<HTMLLIElement, HTMLProps<HTMLLIElement>>(function Item(props, ref) {
+export interface DropdownItemProps extends HTMLProps<HTMLLIElement> {
+  asChild?: boolean
+}
+
+const DropdownItem = forwardRef<HTMLLIElement, DropdownItemProps>(({ children, asChild, className, ...props }, ref) => {
+  if (asChild && isValidElement(children)) {
+    return cloneElement(children, {
+      itemRef: ref,
+      ...props,
+    })
+  }
+
   return (
-    <li {...props} ref={ref} className={cn(dropdownTheme.item, props.className)}>
-      {props.children}
+    <li {...props} ref={ref} className={cn(dropdownTheme.item, className)}>
+      {children}
     </li>
   )
 })
-DropdownItem.displayName = 'Dropdown.Item'
+
+DropdownItem.displayName = 'DropdownItem'
+
+export { DropdownItem }

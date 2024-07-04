@@ -1,6 +1,6 @@
 'use client'
 import { EmblaCarouselType } from 'embla-carousel'
-import { ButtonHTMLAttributes, forwardRef, useCallback, useEffect, useState } from 'react'
+import { ButtonHTMLAttributes, cloneElement, forwardRef, isValidElement, useCallback, useEffect, useState } from 'react'
 import { cn } from '../../helpers/cn'
 
 type UseDotButtonType = {
@@ -46,8 +46,19 @@ export const useDotButton = (emblaApi: EmblaCarouselType | undefined): UseDotBut
   }
 }
 
-export const DotButton = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLButtonElement>>(
-  ({ children, className, ...props }, ref) => {
+export interface DotButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean
+}
+
+export const DotButton = forwardRef<HTMLButtonElement, DotButtonProps>(
+  ({ children, asChild, className, ...props }, ref) => {
+    if (asChild && isValidElement(children)) {
+      return cloneElement(children, {
+        itemRef: ref,
+        ...props,
+      })
+    }
+
     return (
       <button ref={ref} type="button" {...props} className={cn(className)}>
         {children}

@@ -7,11 +7,10 @@ import { Input, InputIcon, Modal, ModalBody, ModalContent } from '../src'
 
 interface ModalProps {
   isOpen: boolean
-  closeModal: () => void
   setIsOpen?: Dispatch<SetStateAction<boolean>>
 }
 
-const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
+const Search: FC<ModalProps> = ({ isOpen, setIsOpen }) => {
   const [query, setQuery] = useState('')
   const [data, setData] = useState<routerPath[]>(routes)
   const [isPending, startTransition] = useTransition()
@@ -59,57 +58,59 @@ const Search: FC<ModalProps> = ({ closeModal, isOpen, setIsOpen }) => {
   }, [setIsOpen])
 
   return (
-    <Modal isOpen={isOpen} onClose={closeModal}>
-      <ModalBody className="block bg-white lg:w-[35rem] laptop:p-8">
-        <fieldset className="relative">
-          <Input
-            value={query}
-            onChange={handleSearchData}
-            ref={inputFocus}
-            placeholder="Search Component"
-            className="ps-11"
-          />
-          <InputIcon>
-            <MagnifyingGlass size={19} color="#AFBACA" />
-          </InputIcon>
-        </fieldset>
-        <ModalContent id="search" className="mt-2 max-h-[300px] overflow-y-auto">
-          <div className={query.length ? 'hidden' : 'block'}>
-            <p className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">Quick Access</p>
-            <ul>
-              {quickAccessRoute.map((route) => (
-                <li
-                  key={route.id}
-                  className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                  <Link href={route.href} target={route.target} className="flex items-center gap-1">
-                    <File size={14} />
-                    {route.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">Components</p>
-
-            {isPending ? (
-              <p className="text-left text-body-4 font-normal text-metal-600">Loading...</p>
-            ) : data.length > 0 ? (
+    <Modal isOpen={isOpen} onOpenChange={setIsOpen}>
+      <ModalBody>
+        <ModalContent className="block w-[35rem] bg-white laptop:p-8">
+          <fieldset className="relative">
+            <Input
+              value={query}
+              onChange={handleSearchData}
+              ref={inputFocus}
+              placeholder="Search Component"
+              className="ps-11"
+            />
+            <InputIcon>
+              <MagnifyingGlass size={19} color="#AFBACA" />
+            </InputIcon>
+          </fieldset>
+          <div id="search" className="mt-2 max-h-[300px] overflow-y-auto">
+            <div className={query.length ? 'hidden' : 'block'}>
+              <p className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">Quick Access</p>
               <ul>
-                {data.map((route) => (
+                {quickAccessRoute.map((route) => (
                   <li
                     key={route.id}
                     className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
-                    <Link href={route.href} className="flex items-center gap-1">
-                      <RadioButton size={14} />
+                    <Link href={route.href} target={route.target} className="flex items-center gap-1">
+                      <File size={14} />
                       {route.name}
                     </Link>
                   </li>
                 ))}
               </ul>
-            ) : (
-              <p className="text-left text-body-4 font-normal text-metal-600">No results found.</p>
-            )}
+            </div>
+            <div>
+              <p className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">Components</p>
+
+              {isPending ? (
+                <p className="text-left text-body-4 font-normal text-metal-600">Loading...</p>
+              ) : data.length > 0 ? (
+                <ul>
+                  {data.map((route) => (
+                    <li
+                      key={route.id}
+                      className="rounded-md p-2 text-body-4 font-normal text-metal-900 transition-all duration-300 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800">
+                      <Link href={route.href} className="flex items-center gap-1">
+                        <RadioButton size={14} />
+                        {route.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-left text-body-4 font-normal text-metal-600">No results found.</p>
+              )}
+            </div>
           </div>
         </ModalContent>
       </ModalBody>

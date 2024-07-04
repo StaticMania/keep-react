@@ -1,24 +1,18 @@
 'use client'
 import { HTMLProps, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { EmptyDescription } from './Description'
-import { EmptyImage } from './Image'
-import { EmptyTitle } from './Title'
-import { emptyTheme } from './theme'
 
-const EmptyComponent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(({ children, ...props }, ref) => {
-  const { root } = emptyTheme
+const Empty = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(({ children, className, ...props }, ref) => {
   return (
-    <div {...props} ref={ref} className={cn(root.base, props.className)}>
+    <div
+      {...props}
+      ref={ref}
+      className={cn('mx-auto flex max-w-xl flex-col items-center justify-center p-6', className)}>
       {children}
     </div>
   )
 })
 
-EmptyComponent.displayName = 'Empty'
+Empty.displayName = 'Empty'
 
-export const Empty = Object.assign(EmptyComponent, {
-  Title: EmptyTitle,
-  Description: EmptyDescription,
-  Image: EmptyImage,
-})
+export { Empty }

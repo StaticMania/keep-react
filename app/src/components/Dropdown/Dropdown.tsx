@@ -2,10 +2,7 @@
 import { Placement } from '@floating-ui/react'
 import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { DropdownAction } from './Action'
 import { DropdownContext, useDropdown } from './Context'
-import { DropdownItem } from './Item'
-import { DropdownList } from './List'
 
 interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   showArrow?: boolean
@@ -13,7 +10,7 @@ interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   trigger?: 'hover' | 'focus' | 'click'
 }
 
-export const DropdownComponent = forwardRef<HTMLDivElement, DropdownProps>(
+const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
   ({ children, showArrow = false, className, placement = 'bottom-start', trigger = 'click', ...props }, ref) => {
     const dropdownOptions = useDropdown({ showArrow, placement, trigger })
 
@@ -27,10 +24,6 @@ export const DropdownComponent = forwardRef<HTMLDivElement, DropdownProps>(
   },
 )
 
-DropdownComponent.displayName = 'Dropdown'
+Dropdown.displayName = 'Dropdown'
 
-export const Dropdown = Object.assign(DropdownComponent, {
-  List: DropdownList,
-  Item: DropdownItem,
-  Action: DropdownAction,
-})
+export { Dropdown }

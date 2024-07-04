@@ -12,4 +12,4 @@ export const TimelineContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDiv
   },
 )
 
-TimelineContent.displayName = 'Timeline.Content'
+TimelineContent.displayName = 'TimelineContent'

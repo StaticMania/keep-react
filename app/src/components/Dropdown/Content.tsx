@@ -29,6 +29,6 @@ const DropdownContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement
   },
 )
 
-DropdownContent.displayName = 'Dropdown.Content'
+DropdownContent.displayName = 'DropdownContent'
 
 export { DropdownContent }

@@ -18,4 +18,4 @@ export const TimelinePoint = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivEl
   },
 )
 
-TimelinePoint.displayName = 'Timeline.Point'
+TimelinePoint.displayName = 'TimelinePoint'

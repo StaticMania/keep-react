@@ -1,79 +1,101 @@
 'use client'
 import { Check } from 'phosphor-react'
-import { useState } from 'react'
-import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalIcon } from '../../../../src'
+import {
+  Button,
+  Modal,
+  ModalAction,
+  ModalBody,
+  ModalClose,
+  ModalContent,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalTitle,
+} from '../../../../src'
 
 const CustomizeModal = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const openModal = () => {
-    setIsOpen(true)
-  }
-  const closeModal = () => {
-    setIsOpen(false)
-  }
-
   return (
-    <>
-      <Button onClick={openModal}>Open Modal</Button>
-      <Modal isOpen={isOpen} onClose={closeModal}>
-        <ModalBody className="flex w-[30rem] flex-col items-center p-6 lg:p-8">
-          <ModalIcon className="h-20 w-20 border border-success-100 bg-success-50 text-success-500 dark:border-metal-800">
-            <Check size={60} />
-          </ModalIcon>
-          <ModalContent className="my-4 text-center">
-            <h3 className="mb-2 text-body-1 font-bold text-metal-900 dark:text-white">Payment Successful</h3>
-            <p className="mx-auto max-w-xs text-body-4 font-normal text-metal-600 dark:text-metal-300">
-              Your document has unsaved changes. Discard or save them as a new page to continue.
-            </p>
-          </ModalContent>
-          <ModalFooter>
-            <Button onClick={closeModal} size="sm" color="success">
-              Confirm
-            </Button>
+    <Modal>
+      <ModalAction asChild>
+        <Button color="secondary" size="sm">
+          Modal
+        </Button>
+      </ModalAction>
+      <ModalBody>
+        <ModalContent className="w-[20rem] lg:w-[26rem]">
+          <ModalClose className="absolute right-4 top-4" />
+          <ModalHeader className="mb-6 flex flex-col items-center justify-center space-y-3">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-success-100 bg-success-50 text-success-500 dark:border-metal-800 dark:bg-metal-800">
+              <Check size={60} />
+            </div>
+            <div className="space-y-1 text-center">
+              <ModalTitle>Payment Successful</ModalTitle>
+              <ModalDescription>
+                Your document has unsaved changes. Discard or save them as a new page to continue.
+              </ModalDescription>
+            </div>
+          </ModalHeader>
+          <ModalFooter className="justify-center">
+            <ModalClose asChild>
+              <Button size="sm" color="success">
+                Confirm
+              </Button>
+            </ModalClose>
           </ModalFooter>
-        </ModalBody>
-      </Modal>
-    </>
+        </ModalContent>
+      </ModalBody>
+    </Modal>
   )
 }
 
 const CustomizeModalCode = `
 'use client'
-import { useState } from 'react'
 import { Check } from 'phosphor-react'
-import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalIcon } from 'keep-react'
+import {
+  Button,
+  Modal,
+  ModalAction,
+  ModalBody,
+  ModalClose,
+  ModalContent,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalTitle,
+} from 'keep-react'
 
 export const ModalComponent = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const openModal = () => {
-    setIsOpen(true)
-  }
-  const closeModal = () => {
-    setIsOpen(false)
-  }
-
   return (
-    <>
-      <Button onClick={openModal}>Open Modal</Button>
-      <Modal isOpen={isOpen} onClose={closeModal}>
-        <ModalBody className="flex w-[30rem] flex-col items-center p-6 lg:p-8">
-          <ModalIcon className="h-20 w-20 border border-success-100 bg-success-50 text-success-500">
-            <Check size={60} />
-          </ModalIcon>
-           <ModalContent className="my-4 text-center">
-            <h3 className="mb-2 text-body-1 font-bold text-metal-900">Payment Successful</h3>
-            <p className="mx-auto max-w-xs text-body-4 font-normal text-metal-600">
-              Your document has unsaved changes. Discard or save them as a new page to continue.
-            </p>
-          </ModalContent>
-          <ModalFooter>
-            <Button onClick={closeModal} size="sm" color="success">
-              Confirm
-            </Button>
+    <Modal>
+      <ModalAction asChild>
+        <Button color="secondary" size="sm">
+          Modal
+        </Button>
+      </ModalAction>
+      <ModalBody>
+        <ModalContent>
+          <ModalClose className="absolute right-4 top-4" />
+          <ModalHeader className="mb-6 flex flex-col items-center justify-center space-y-3">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-success-100 bg-success-50 text-success-500 dark:border-metal-800 dark:bg-metal-800">
+              <Check size={60} />
+            </div>
+            <div className="space-y-1 text-center">
+              <ModalTitle>Payment Successful</ModalTitle>
+              <ModalDescription>
+                Your document has unsaved changes. Discard or save them as a new page to continue.
+              </ModalDescription>
+            </div>
+          </ModalHeader>
+          <ModalFooter className="justify-center">
+            <ModalClose asChild>
+              <Button size="sm" color="success">
+                Confirm
+              </Button>
+            </ModalClose>
           </ModalFooter>
-        </ModalBody>
-      </Modal>
-    </>
+        </ModalContent>
+      </ModalBody>
+    </Modal>
   )
 }
 `

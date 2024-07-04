@@ -1,7 +1,7 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { useNotificationContext } from './Context'
+import { useNotificationContext } from './NotificationContext'
 
 const contentTheme = {
   position: {
@@ -13,14 +13,14 @@ const contentTheme = {
   },
 }
 
-const NotificationBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const NotificationContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     const { isOpen, position = 'bottom-right' } = useNotificationContext()
     return (
       <div
         {...props}
         className={cn(
-          'notification-body absolute max-w-sm rounded-lg bg-white p-6 transition-all duration-300 dark:bg-metal-900',
+          'notification-content absolute max-w-sm rounded-lg bg-white p-6 transition-all duration-300 dark:bg-metal-900',
           isOpen && 'animate-keep-bounce',
           contentTheme.position[position],
           className,
@@ -32,6 +32,6 @@ const NotificationBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElemen
   },
 )
 
-NotificationBody.displayName = 'Notification.Body'
+NotificationContent.displayName = 'NotificationContent'
 
-export { NotificationBody }
+export { NotificationContent }

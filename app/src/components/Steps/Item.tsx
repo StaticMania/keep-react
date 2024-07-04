@@ -5,6 +5,7 @@ import { StepContext } from './Context'
 
 export interface StepItemProps extends HTMLProps<HTMLLIElement> {
   active?: boolean
+  asChild?: boolean
 }
 
 export const StepItem = forwardRef<HTMLLIElement, StepItemProps>(

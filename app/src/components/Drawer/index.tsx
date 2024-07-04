@@ -1,3 +1,7 @@
-export { DrawerContent } from './Content'
 export { Drawer } from './Drawer'
+export { DrawerAction } from './DrawerAction'
+export { DrawerBody } from './DrawerBody'
+export { DrawerClose } from './DrawerClose'
+export { DrawerContent } from './DrawerContent'
 export { DrawerOverlay } from './DrawerOverlay'
+export { DrawerPortal } from './DrawerPortal'

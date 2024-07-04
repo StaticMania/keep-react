@@ -3,9 +3,13 @@ import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
 const TableBody = forwardRef<HTMLTableSectionElement, HTMLAttributes<HTMLTableSectionElement>>(
-  ({ className, ...props }, ref) => (
-    <tbody ref={ref} className={cn('[&_tr:last-child]:border-0', className)} {...props} />
-  ),
+  ({ className, children, ...props }, ref) => {
+    return (
+      <tbody ref={ref} className={cn('[&_tr:last-child]:border-0', className)} {...props}>
+        {children}
+      </tbody>
+    )
+  },
 )
 TableBody.displayName = 'TableBody'
 

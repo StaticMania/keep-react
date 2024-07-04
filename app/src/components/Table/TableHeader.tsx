@@ -3,7 +3,13 @@ import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
 
 const TableHeader = forwardRef<HTMLTableSectionElement, HTMLAttributes<HTMLTableSectionElement>>(
-  ({ className, ...props }, ref) => <thead ref={ref} className={cn('[&_tr]:border-b', className)} {...props} />,
+  ({ className, children, ...props }, ref) => {
+    return (
+      <thead ref={ref} className={cn('[&_tr]:border-b', className)} {...props}>
+        {children}
+      </thead>
+    )
+  },
 )
 
 TableHeader.displayName = 'TableHeader'

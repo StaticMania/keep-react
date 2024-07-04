@@ -9,7 +9,7 @@ export interface PopoverTriggerProps {
 }
 
 export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & PopoverTriggerProps>(
-  function PopoverTrigger({ children, asChild = false, ...props }, propRef) {
+  function PopoverTrigger({ children, asChild = false, className, ...props }, propRef) {
     const context = usePopoverContext()
     const childrenRef = (children as any).ref
     const ref = useMergeRefs([context.refs.setReference, propRef, childrenRef])
@@ -32,7 +32,7 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
         type="button"
         className={cn(
           'rounded-xl border border-metal-400 p-2 text-metal-400 dark:border-metal-900 dark:text-metal-300',
-          props.className,
+          className,
         )}
         data-state={context.open ? 'open' : 'closed'}
         {...context.getReferenceProps(props)}>

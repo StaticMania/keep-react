@@ -10,7 +10,10 @@ export interface NavbarItemProps extends HTMLAttributes<HTMLLIElement> {
 export const NavbarItem = forwardRef<HTMLLIElement, NavbarItemProps>(
   ({ children, className, active, asChild, ...props }, ref: Ref<HTMLLIElement>) => {
     if (asChild && isValidElement(children)) {
-      return cloneElement(children, props)
+      return cloneElement(children, {
+        itemRef: ref,
+        ...props,
+      })
     }
 
     return (
