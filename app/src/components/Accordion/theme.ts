@@ -6,12 +6,12 @@ export const accordionTheme: keepAccordionTheme = {
     open: '',
   },
   content: {
-    base: 'select-none text-body-3 font-normal text-metal-500 dark:text-metal-300 pb-5 px-6',
+    base: 'select-none text-body-3 font-normal text-metal-600 dark:text-metal-300 pb-5 px-6',
   },
   panel: {
     flush: {
-      on: 'rounded-none border-b border-metal-100',
-      off: 'rounded-xl border border-metal-100 dark:border-metal-800 bg-white dark:bg-metal-900',
+      on: 'rounded-none border-b border-metal-100 dark:border-metal-900',
+      off: 'rounded-xl border border-metal-100 dark:border-metal-800 bg-transparent dark:bg-transparent',
     },
   },
   icon: {
@@ -22,6 +22,6 @@ export const accordionTheme: keepAccordionTheme = {
     },
   },
   title: {
-    base: 'select-none text-left text-body-1 font-medium text-metal-700 first-letter:mr-1 first-letter:text-primary-500 dark:first-letter:text-primary-500 dark:text-metal-50',
+    base: 'select-none text-left text-body-1 font-medium text-metal-900 first-letter:mr-1 first-letter:text-metal-900 dark:first-letter:text-white dark:text-white',
   },
 }

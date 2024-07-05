@@ -23,6 +23,6 @@ const AccordionContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElemen
   },
 )
 
-AccordionContent.displayName = 'Accordion.Content'
+AccordionContent.displayName = 'AccordionContent'
 
 export { AccordionContent }

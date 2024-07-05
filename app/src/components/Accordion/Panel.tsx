@@ -21,14 +21,12 @@ const AccordionPanel = forwardRef<
   const contextValue = useMemo(() => ({ isOpen, setIsOpen, flush }), [isOpen, setIsOpen, flush])
 
   return (
-    <div
-      className={cn(flush ? panel.flush.on : panel.flush.off, !flush && isOpen && 'shadow-large', className)}
-      {...props}
-      ref={ref}>
+    <div className={cn(flush ? panel.flush.on : panel.flush.off, className)} {...props} ref={ref}>
       <AccordionContext.Provider value={contextValue}>{children}</AccordionContext.Provider>
     </div>
   )
 })
 
-AccordionPanel.displayName = 'Accordion.Panel'
+AccordionPanel.displayName = 'AccordionPanel'
+
 export { AccordionPanel }

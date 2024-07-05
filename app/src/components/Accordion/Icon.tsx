@@ -34,7 +34,11 @@ const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
         className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}
         ref={ref}>
         {children ?? (
-          <svg className="shrink-0 fill-metal-300" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            className="shrink-0 fill-metal-600 dark:fill-metal-300"
+            width="16"
+            height="16"
+            xmlns="http://www.w3.org/2000/svg">
             <rect
               y="7"
               width="16"
@@ -56,6 +60,6 @@ const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
   },
 )
 
-AccordionIcon.displayName = 'Accordion.Icon'
+AccordionIcon.displayName = 'AccordionIcon'
 
 export { AccordionIcon }

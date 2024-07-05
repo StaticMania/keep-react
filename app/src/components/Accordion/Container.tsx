@@ -26,6 +26,6 @@ const AccordionContainer = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HT
   },
 )
 
-AccordionContainer.displayName = 'Accordion.Container'
+AccordionContainer.displayName = 'AccordionContainer'
 
 export { AccordionContainer }

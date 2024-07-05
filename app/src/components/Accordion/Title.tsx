@@ -18,6 +18,6 @@ const AccordionTitle = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElemen
   },
 )
 
-AccordionTitle.displayName = 'Accordion.Title'
+AccordionTitle.displayName = 'AccordionTitle'
 
 export { AccordionTitle }
