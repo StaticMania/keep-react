@@ -15,6 +15,7 @@ const Checkbox = forwardRef<HTMLInputElement, InputProps>(({ className, variant 
   if (variant === 'dashed' || variant === 'checked') {
     btnClass = cn(checkboxTheme.button.base, checkboxTheme.button.shape[variant], className)
   }
+
   return (
     <span>
       <input ref={ref} {...props} type="checkbox" className={cn(checkboxTheme.input.base)} />

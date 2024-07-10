@@ -27,7 +27,7 @@ export const TooltipAction = forwardRef<HTMLButtonElement, TooltipActionProps>(
       )
     }
     return (
-      <Button ref={refs.setReference || ref} {...getReferenceProps()} color="secondary" size="sm">
+      <Button ref={refs.setReference || ref} {...getReferenceProps()}>
         {children}
       </Button>
     )

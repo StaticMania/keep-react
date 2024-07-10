@@ -19,7 +19,7 @@ export const ModalAction = forwardRef<HTMLButtonElement, ModalActionProps>(({ ch
   }
 
   return (
-    <Button ref={ref} size="sm" color="secondary" onClick={handleOpen}>
+    <Button ref={ref} onClick={handleOpen}>
       Modal Action
     </Button>
   )

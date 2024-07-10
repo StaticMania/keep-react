@@ -1,7 +1,7 @@
 'use client'
 import { useMergeRefs } from '@floating-ui/react'
 import { HTMLProps, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { Button } from '../Button'
 import { usePopoverContext } from './Context'
 
 export interface PopoverTriggerProps {
@@ -27,17 +27,13 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
     }
 
     return (
-      <button
+      <Button
+        shape="circle"
         ref={ref}
-        type="button"
-        className={cn(
-          'rounded-xl border border-metal-400 p-2 text-metal-400 dark:border-metal-900 dark:text-metal-300',
-          className,
-        )}
         data-state={context.open ? 'open' : 'closed'}
         {...context.getReferenceProps(props)}>
         {children}
-      </button>
+      </Button>
     )
   },
 )

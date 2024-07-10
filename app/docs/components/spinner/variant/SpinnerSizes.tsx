@@ -1,4 +1,3 @@
-'use client'
 import { Spinner } from '../../../../src'
 
 const SpinnerSizes = () => {
@@ -14,8 +13,7 @@ const SpinnerSizes = () => {
 }
 
 const SpinnerSizesCode = `
-"use client";
-import { Spinner } from "keep-react";
+import { Spinner } from 'keep-react'
 
 export const SpinnerComponent = () => {
   return (

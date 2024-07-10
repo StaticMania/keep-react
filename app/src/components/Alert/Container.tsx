@@ -13,6 +13,6 @@ const AlertContainer = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>
   },
 )
 
-AlertContainer.displayName = 'Alert.Container'
+AlertContainer.displayName = 'AlertContainer'
 
 export { AlertContainer }

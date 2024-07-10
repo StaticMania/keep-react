@@ -12,6 +12,6 @@ const AlertBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-AlertBody.displayName = 'Alert.Body'
+AlertBody.displayName = 'AlertBody'
 
 export { AlertBody }

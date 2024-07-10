@@ -8,7 +8,7 @@ const UploadIcon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
       <div
         {...props}
         className={cn(
-          'flex h-16 w-16 items-center justify-center rounded-full bg-primary-50 dark:bg-metal-800',
+          'flex h-16 w-16 items-center justify-center rounded-full bg-metal-50 dark:bg-metal-800',
           className,
         )}
         ref={ref}>

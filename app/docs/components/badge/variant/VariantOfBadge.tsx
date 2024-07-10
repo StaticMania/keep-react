@@ -2,7 +2,7 @@ import { Badge } from '../../../../src'
 
 const VariantOfBadge = () => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 p-2">
       <div className="space-x-3">
         <Badge variant="base" color="primary">
           Primary
@@ -64,9 +64,9 @@ import { Badge } from 'keep-react'
 export const BadgeComponent = () => {
   return (
     <>
-      <Badge variant="base" color="primary">Base</Badge>
-      <Badge variant="border" color="primary">Border</Badge>
-      <Badge variant="background" color="primary">Background</Badge>
+      <Badge variant="base">Base</Badge>
+      <Badge variant="border">Border</Badge>
+      <Badge variant="background">Background</Badge>
     </>
   );
 };

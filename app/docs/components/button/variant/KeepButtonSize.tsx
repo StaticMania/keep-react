@@ -3,7 +3,7 @@ import { Button } from '../../../../src'
 
 const KeepButtonSize = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
+    <div className="flex flex-wrap items-end gap-2 p-5">
       <Button size="xs">Extra Small</Button>
       <Button size="sm">Small Button</Button>
       <Button size="md">Medium Button</Button>

@@ -23,12 +23,10 @@ const DefaultNotification = () => {
             </NotificationDescription>
             <NotificationFooter>
               <NotificationClose asChild>
-                <Button size="sm">Accept</Button>
+                <Button>Accept</Button>
               </NotificationClose>
               <NotificationClose asChild>
-                <Button variant="outline" size="sm">
-                  Review
-                </Button>
+                <Button variant="outline">Review</Button>
               </NotificationClose>
             </NotificationFooter>
           </NotificationContent>
@@ -62,10 +60,10 @@ export const NotificationComponent = () => {
           </NotificationDescription>
           <NotificationFooter>
             <NotificationClose asChild>
-              <Button size="sm">Accept</Button>
+              <Button>Accept</Button>
             </NotificationClose>
             <NotificationClose asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline">
                 Review
               </Button>
             </NotificationClose>

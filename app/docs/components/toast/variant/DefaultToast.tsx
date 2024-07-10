@@ -2,11 +2,7 @@
 import { Button, toast } from '../../../../src'
 
 const DefaultToast = () => {
-  return (
-    <Button size="sm" color="secondary" className="bg-metal-900" onClick={() => toast('Keep React is Awesome')}>
-      Toast
-    </Button>
-  )
+  return <Button onClick={() => toast('Keep React is Awesome')}>Toast</Button>
 }
 
 const ToastWrapperCode = `
@@ -44,7 +40,7 @@ import { Button, toast } from 'keep-react'
 
 export const ToastComponent = () => {
   return (
-    <Button size="sm" color="secondary" className="bg-metal-900" onClick={() => toast('Keep React is Awesome')}>
+    <Button onClick={() => toast('Keep React is Awesome')}>
       Toast
     </Button>
   )

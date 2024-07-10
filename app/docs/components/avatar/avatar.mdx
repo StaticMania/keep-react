@@ -1,56 +1,35 @@
 import { DefaultAvatar, DefaultAvatarCode } from './variant/DefaultAvatar'
-import { ShapeAvatar, ShapeAvatarCode } from './variant/ShapeAvatar'
-import { SizesOfAvatar, SizesOfAvatarCode } from './variant/SizesOfAvatar'
 import { ImageOfAvatar, ImageOfAvatarCode } from './variant/ImageOfAvatar'
 import { StatusOfAvatar, StatusOfAvatarCode } from './variant/StatusOfAvatar'
 import { AvatarGroupComponent, AvatarGroupCode } from './variant/AvatarGroup'
 
-import { avatarApiData } from './avatarApi'
 import CodePreview from '../../../components/CodePreview'
-
-import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-The Avatar component in the Keep React allows you to display user avatars or profile images in a consistent and visually appealing manner. With customizable options for placeholders, shapes, status icons, and sizes, you can create versatile avatars to suit your design needs.
+The Avatar component in the Keep React allows you to display user avatars or profile images in a consistent and visually appealing manner.
 
 ## Default Avatar
 
 When you enable the placeholder option, a default avatar image appears when there's no user image available.
 
-<CodePreview github="Avatar/Avatar.tsx" code={DefaultAvatarCode}>
+<CodePreview github="Avatar" code={DefaultAvatarCode}>
   <DefaultAvatar />
-</CodePreview>
-
-## Avatar Shapes
-
-Choose between two avatar shapes: rounded and circle. Utilize the shape prop with values `"circle"` or `"rounded"`.
-
-<CodePreview github="Avatar/Avatar.tsx" code={ShapeAvatarCode}>
-  <ShapeAvatar />
-</CodePreview>
-
-## Avatar Sizes
-
-There are various avatar sizes to fit your design. To change the size, use the `size` prop with values: `"sm"`, `"md"`, `"lg"`, `"xl"`, or `"2xl"`.
-
-<CodePreview github="Avatar/Avatar.tsx" code={SizesOfAvatarCode}>
-  <SizesOfAvatar />
 </CodePreview>
 
 ## Using User Images
 
-Display a user's image using the `img` prop. Provide the path to the user's image, whether it's a local or remote URL.
+Display a image using the `src` prop. Provide the path to the user's image, whether it's a local or remote URL.
 
-<CodePreview github="Avatar/Avatar.tsx" code={ImageOfAvatarCode}>
+<CodePreview github="Avatar" code={ImageOfAvatarCode}>
   <ImageOfAvatar />
 </CodePreview>
 
 ## Avatar Status
 
-The avatar's status reflects the user's availability. Show the user's status using the `"active"` prop, and use the `"verified"` prop to indicate a verified status.
+The avatar's status reflects the user's availability.
 
-<CodePreview github="Avatar/Avatar.tsx" code={StatusOfAvatarCode}>
+<CodePreview github="Avatar" code={StatusOfAvatarCode}>
   <StatusOfAvatar />
 </CodePreview>
 
@@ -58,12 +37,6 @@ The avatar's status reflects the user's availability. Show the user's status usi
 
 Display multiple avatars in a group setting. Customize the layout for visually appealing designs.
 
-<CodePreview github="Avatar/Avatar.tsx" code={AvatarGroupCode}>
+<CodePreview github="Avatar" code={AvatarGroupCode}>
   <AvatarGroupComponent />
 </CodePreview>
-
-## API Reference
-
-For detailed information about all the props and options, refer to the API section below.
-
-<ComponentApi data={avatarApiData} />

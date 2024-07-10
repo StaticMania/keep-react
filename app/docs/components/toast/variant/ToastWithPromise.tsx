@@ -5,9 +5,6 @@ const ToastWithPromise = () => {
   const promise = () => new Promise((resolve) => setTimeout(() => resolve({ name: 'Keep React' }), 2000))
   return (
     <Button
-      size="sm"
-      color="secondary"
-      className="bg-metal-900"
       onClick={() =>
         toast.promise(promise, {
           loading: 'Loading...',
@@ -30,9 +27,6 @@ export const ToastComponent = () => {
   const promise = () => new Promise((resolve) => setTimeout(() => resolve({ name: 'Keep React' }), 2000))
   return (
     <Button
-      size="sm"
-      color="secondary"
-      className="bg-metal-900"
       onClick={() =>
         toast.promise(promise, {
           loading: 'Loading...',

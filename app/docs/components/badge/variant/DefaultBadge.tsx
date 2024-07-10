@@ -2,12 +2,8 @@ import { Badge } from '../../../../src'
 
 const DefaultBadge = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2 py-1">
-      <Badge color="primary">Primary</Badge>
-      <Badge color="secondary">Secondary</Badge>
-      <Badge color="success">Success</Badge>
-      <Badge color="warning">Warning</Badge>
-      <Badge color="error">Error</Badge>
+    <div className="p-2">
+      <Badge>Default Badge</Badge>
     </div>
   )
 }
@@ -16,17 +12,8 @@ const DefaultBadgeCode = `
 import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {
-  return (
-    <>
-      <Badge color="primary">Primary</Badge>
-      <Badge color="secondary">Secondary</Badge>
-      <Badge color="success">Success</Badge>
-      <Badge color="warning">Warning</Badge>
-      <Badge color="error">Error</Badge>
-    </>
-  )
+  return <Badge>Default Badge</Badge>
 }
-
 `
 
 export { DefaultBadge, DefaultBadgeCode }

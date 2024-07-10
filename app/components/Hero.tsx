@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Check, Clipboard } from 'phosphor-react'
 import useCopy from '~/hooks/useCopy'
 import HeroImg from '../../public/images/home/hero-1.png'
+import { buttonVariants } from '../src'
 
 const Hero = () => {
   const { copy, copyToClipboard } = useCopy()
@@ -39,14 +40,12 @@ const Hero = () => {
                     {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
                   </button>
                 </div>
-                <Link
-                  href="/docs/getting-started/introduction"
-                  className="rounded-lg bg-metal-900 px-4 py-3 text-body-4 font-normal capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-white dark:text-metal-900">
+                <Link href="/docs/getting-started/introduction" className={buttonVariants({ size: 'lg' })}>
                   Get Started
                 </Link>
               </div>
               <p className="mt-2 text-body-4 font-normal text-metal-600 dark:text-metal-300">
-                ⭐ Got 1.2k stars on Github Repository
+                ⭐ Got 1.3k stars on Github Repository
               </p>
             </div>
           </div>

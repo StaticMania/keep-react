@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Button, Empty, EmptyDescription, EmptyImage, EmptyTitle } from '../../../../src'
+import Link from 'next/link'
+import { buttonVariants, Empty, EmptyDescription, EmptyImage, EmptyTitle } from '../../../../src'
 
 const EmptyFolder = () => {
   return (
@@ -16,16 +17,17 @@ const EmptyFolder = () => {
       <EmptyDescription className="mb-8">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-      <Button color="secondary" size="sm">
+      <Link href="/" className={buttonVariants({ color: 'secondary' })}>
         Go to home
-      </Button>
+      </Link>
     </Empty>
   )
 }
 
 const EmptyFolderCode = `
 import Image from 'next/image'
-import { Button, Empty, EmptyDescription, EmptyImage, EmptyTitle } from 'keep-react'
+import Link from 'next/link'
+import { buttonVariants, Empty, EmptyDescription, EmptyImage, EmptyTitle } from 'keep-react'
 
 export const EmptyComponent = () => {
   return (
@@ -42,7 +44,9 @@ export const EmptyComponent = () => {
       <EmptyDescription className="mb-8">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-      <Button color="secondary" size="sm">Go to home</Button>
+      <Link href="/" className={buttonVariants({ color: 'secondary' })}>
+        Go to home
+      </Link>
     </Empty>
   )
 }

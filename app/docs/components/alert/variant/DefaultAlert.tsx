@@ -10,14 +10,16 @@ import {
 
 const DefaultAlert = () => {
   return (
-    <Alert color="primary">
+    <Alert>
       <AlertContainer>
         <AlertIcon />
-        <AlertTitle>Alert here</AlertTitle>
+        <AlertTitle>Default Alert</AlertTitle>
         <AlertDescription>A short description followed by two actions items.</AlertDescription>
       </AlertContainer>
-      <AlertLink href="/">Learn More</AlertLink>
-      <AlertDismiss />
+      <AlertContainer>
+        <AlertLink href="/">Learn More</AlertLink>
+        <AlertDismiss />
+      </AlertContainer>
     </Alert>
   )
 }
@@ -35,18 +37,19 @@ import {
 
 export const AlertComponent = () => {
   return (
-    <Alert color="primary">
+    <Alert>
       <AlertContainer>
         <AlertIcon />
-        <AlertTitle>Alert here</AlertTitle>
+        <AlertTitle>Default Alert</AlertTitle>
         <AlertDescription>A short description followed by two actions items.</AlertDescription>
       </AlertContainer>
-      <AlertLink href="/">Learn More</AlertLink>
-      <AlertDismiss />
+      <AlertContainer>
+        <AlertLink href="/">Learn More</AlertLink>
+        <AlertDismiss />
+      </AlertContainer>
     </Alert>
   )
 }
-
 `
 
 export { DefaultAlert, DefaultAlertCode }

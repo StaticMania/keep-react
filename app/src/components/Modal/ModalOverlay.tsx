@@ -8,7 +8,7 @@ const ModalOverlay = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
       <div
         {...props}
         className={cn(
-          'keep-modal fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50',
+          'keep-modal fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-80',
           className,
         )}
         ref={ref}>

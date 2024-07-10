@@ -2,6 +2,7 @@
 import { DotsThreeOutlineVertical, MagnifyingGlass, Plus } from 'phosphor-react'
 import {
   Avatar,
+  AvatarImage,
   Badge,
   Button,
   Checkbox,
@@ -30,11 +31,11 @@ const TeamTable = () => {
             <Badge color="secondary">200 Member</Badge>
           </div>
           <div className="flex items-center gap-5">
-            <Button variant="outline" color="secondary" size="sm" className="gap-1.5">
+            <Button variant="outline" className="gap-1.5">
               <Plus className="size-4 fill-metal-900 dark:fill-white" />
               New Member
             </Button>
-            <Button variant="outline" color="secondary" size="sm" className="gap-1.5">
+            <Button variant="outline" className="gap-1.5">
               <MagnifyingGlass className="size-4 fill-metal-900 dark:fill-white" />
               Search
             </Button>
@@ -65,7 +66,9 @@ const TeamTable = () => {
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Avatar size="lg" img={item.user.img} />
+                <Avatar>
+                  <AvatarImage src={item.user.img} />
+                </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>
                   <p className="text-body-5 font-normal">{item.user.position}</p>
@@ -73,21 +76,14 @@ const TeamTable = () => {
               </div>
             </TableCell>
             <TableCell>
-              <Badge showIcon className="text-body-4" color={item.status === 'Active' ? 'success' : 'error'}>
-                {item.status}
-              </Badge>
+              <Badge color={item.status === 'Active' ? 'success' : 'error'}>{item.status}</Badge>
             </TableCell>
             <TableCell>{item.role}</TableCell>
             <TableCell>{item.email}</TableCell>
             <TableCell>
               <div className="flex items-center gap-1">
                 {item.team.map((t, i) => (
-                  <Badge
-                    key={t}
-                    showIcon={i + 1 !== item.team.length}
-                    size="md"
-                    className="text-body-4"
-                    color={i % 2 === 0 ? 'primary' : 'success'}>
+                  <Badge key={t} color={i % 2 === 0 ? 'primary' : 'success'}>
                     {t}
                   </Badge>
                 ))}
@@ -125,6 +121,7 @@ const TeamTableCode = `
 import { DotsThreeOutlineVertical, MagnifyingGlass, Plus } from 'phosphor-react'
 import {
   Avatar,
+  AvatarImage,
   Badge,
   Button,
   Checkbox,
@@ -152,11 +149,11 @@ export const TableComponent = () => {
             <Badge color="secondary">200 Member</Badge>
           </div>
           <div className="flex items-center gap-5">
-            <Button variant="outline" color="secondary" size="sm" className="gap-1.5">
+            <Button variant="outline" className="gap-1.5">
               <Plus className="size-4 fill-metal-900 dark:fill-white" />
               New Member
             </Button>
-            <Button variant="outline" color="secondary" size="sm" className="gap-1.5">
+            <Button variant="outline" className="gap-1.5">
               <MagnifyingGlass className="size-4 fill-metal-900 dark:fill-white" />
               Search
             </Button>
@@ -187,7 +184,9 @@ export const TableComponent = () => {
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Avatar size="lg" img={item.user.img} />
+                <Avatar>
+                  <AvatarImage src={item.user.img} />
+                </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>
                   <p className="text-body-5 font-normal">{item.user.position}</p>

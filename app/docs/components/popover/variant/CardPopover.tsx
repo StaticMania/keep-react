@@ -18,14 +18,12 @@ const CardPopover = () => {
             width={600}
             height={300}
           />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
@@ -41,14 +39,12 @@ const CardPopover = () => {
             width={600}
             height={300}
           />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
@@ -64,14 +60,12 @@ const CardPopover = () => {
             width={600}
             height={300}
           />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
@@ -87,14 +81,12 @@ const CardPopover = () => {
             width={600}
             height={300}
           />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
@@ -113,26 +105,24 @@ export const PopoverComponent = () => {
   return (
     <Popover placement="left">
       <PopoverTrigger>
-          <CaretLeft size={20} />
+        <CaretLeft size={20} />
       </PopoverTrigger>
-      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900 shadow-md">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
-            <PopoverDescription>
-              You can customize the styles and behavior of this component according to your requirements.
-            </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
-          </div>
-      </PopoverContent>
+      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
+        <Image
+          src="https://via.placeholder.com/600x400"
+          className="rounded-t-xl"
+          alt="image"
+          width={600}
+          height={300}
+        />
+        <div className="space-y-2 p-6">
+          <PopoverHeading>Keep Design System</PopoverHeading>
+          <PopoverDescription>
+            You can customize the styles and behavior of this component according to your requirements.
+          </PopoverDescription>
+          <Button>Learn More</Button>
+        </div>
+        </PopoverContent>
     </Popover>
   )
 }

@@ -1,4 +1,3 @@
-'use client'
 import { Tag } from '../../../../src'
 
 const DefaultTag = () => {
@@ -6,11 +5,10 @@ const DefaultTag = () => {
 }
 
 const DefaultTagCode = `
-"use client";
-import { Tag } from "keep-react";
+import { Tag } from 'keep-react'
 
 export const TagComponent = () => {
-  return <Tag color="gray">Default Tag</Tag>;
+  return <Tag color="gray">Default Tag</Tag>
 }
 `
 

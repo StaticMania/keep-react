@@ -10,6 +10,6 @@ const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ),
 )
 
-CardHeader.displayName = 'Card.Header'
+CardHeader.displayName = 'CardHeader'
 
 export { CardHeader }

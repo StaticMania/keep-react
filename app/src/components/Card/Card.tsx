@@ -1,13 +1,8 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../helpers/cn'
-import { CardContent } from './Content'
-import { CardDescription } from './Description'
-import { CardFooter } from './Footer'
-import { CardHeader } from './Header'
-import { CardTitle } from './Title'
 
-const CardComponent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
       <div
@@ -23,14 +18,6 @@ const CardComponent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>
   },
 )
 
-CardComponent.displayName = 'Card'
-
-const Card = Object.assign(CardComponent, {
-  Footer: CardFooter,
-  Content: CardContent,
-  Header: CardHeader,
-  Title: CardTitle,
-  Description: CardDescription,
-})
+Card.displayName = 'Card'
 
 export { Card }

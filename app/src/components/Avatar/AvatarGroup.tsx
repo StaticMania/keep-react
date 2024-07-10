@@ -12,6 +12,6 @@ const AvatarGroup = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-AvatarGroup.displayName = 'Avatar.Group'
+AvatarGroup.displayName = 'AvatarGroup'
 
 export { AvatarGroup }

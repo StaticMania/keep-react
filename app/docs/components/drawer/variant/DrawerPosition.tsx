@@ -15,7 +15,6 @@ const DrawerPosition = () => {
               setIsOpen(!isOpen)
               setPosition(position as 'bottom' | 'top' | 'left' | 'right')
             }}
-            color="secondary"
             className="capitalize">
             {position}
           </Button>
@@ -31,7 +30,7 @@ const DrawerPosition = () => {
                 resources for efficient development and bring your ideas to life with ease.
               </p>
               <DrawerClose asChild>
-                <Button color="secondary">Explore Now</Button>
+                <Button>Explore Now</Button>
               </DrawerClose>
             </div>
           </DrawerContent>
@@ -59,7 +58,6 @@ export const DrawerComponent = () => {
               setIsOpen(!isOpen)
               setPosition(position as 'bottom' | 'top' | 'left' | 'right')
             }}
-            color="secondary"
             className="capitalize">
             {position}
           </Button>
@@ -75,7 +73,7 @@ export const DrawerComponent = () => {
                 resources for efficient development and bring your ideas to life with ease.
               </p>
               <DrawerClose asChild>
-                <Button color="secondary">Explore Now</Button>
+                <Button>Explore Now</Button>
               </DrawerClose>
             </div>
           </DrawerContent>

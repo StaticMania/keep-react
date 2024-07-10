@@ -13,6 +13,7 @@ import {
 } from 'phosphor-react'
 import {
   Avatar,
+  AvatarImage,
   Input,
   InputIcon,
   Sidebar,
@@ -74,7 +75,9 @@ const DefaultSidebar = () => {
           </SidebarList>
         </SidebarBody>
         <SidebarFooter>
-          <Avatar img="/images/avatar/avatar-1.png" alt="avatar" />
+          <Avatar>
+            <AvatarImage src="/images/avatar/avatar-1.png" alt="avatar" />
+          </Avatar>
           <div>
             <p className="text-body-4 font-medium text-metal-400 dark:text-white">Enzo Farnandez</p>
             <p className="text-body-4 font-normal text-metal-300 dark:text-metal-400">enzo123@gmail.com</p>
@@ -101,6 +104,7 @@ import {
 } from 'phosphor-react'
 import {
   Avatar,
+  AvatarImage,
   Input,
   InputIcon,
   Sidebar,
@@ -161,7 +165,9 @@ export const SidebarComponent = () => {
         </SidebarList>
       </SidebarBody>
       <SidebarFooter>
-        <Avatar img="/images/avatar/avatar-1.png" alt="avatar" />
+        <Avatar>
+          <AvatarImage src="/images/avatar/avatar-1.png" alt="avatar" />
+        </Avatar>
         <div>
            <p className="text-body-4 font-medium text-metal-400 dark:text-white">Enzo Farnandez</p>
             <p className="text-body-4 font-normal text-metal-300 dark:text-metal-400">enzo123@gmail.com</p>

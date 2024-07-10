@@ -19,7 +19,7 @@ const DrawerAction = forwardRef<HTMLButtonElement, DrawerActionProps>(({ childre
   }
 
   return (
-    <Button ref={ref} size="sm" color="secondary" onClick={handleOpen}>
+    <Button ref={ref} onClick={handleOpen}>
       Drawer Action
     </Button>
   )

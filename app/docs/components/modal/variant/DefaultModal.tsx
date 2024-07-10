@@ -17,16 +17,14 @@ const DefaultModal = () => {
   return (
     <Modal>
       <ModalAction asChild>
-        <Button color="secondary" size="sm">
-          Modal
-        </Button>
+        <Button>Open Modal</Button>
       </ModalAction>
       <ModalBody>
         <ModalContent>
           <ModalClose className="absolute right-4 top-4" />
           <ModalHeader className="mb-6 space-y-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 dark:bg-metal-800">
-              <CloudArrowUp size={28} color="#1B4DFF" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
+              <CloudArrowUp size={28} />
             </div>
             <div className="space-y-1">
               <ModalTitle>Update Modal Status</ModalTitle>
@@ -37,14 +35,10 @@ const DefaultModal = () => {
           </ModalHeader>
           <ModalFooter>
             <ModalClose asChild>
-              <Button size="sm" variant="outline" color="secondary">
-                Cancel
-              </Button>
+              <Button variant="outline">Cancel</Button>
             </ModalClose>
             <ModalClose asChild>
-              <Button size="sm" color="primary">
-                Confirm
-              </Button>
+              <Button>Confirm</Button>
             </ModalClose>
           </ModalFooter>
         </ModalContent>
@@ -74,16 +68,14 @@ export const ModalComponent = () => {
   return (
     <Modal>
       <ModalAction asChild>
-        <Button color="secondary" size="sm">
-          Modal
-        </Button>
+        <Button>Open Modal</Button>
       </ModalAction>
       <ModalBody>
         <ModalContent>
           <ModalClose className="absolute right-4 top-4" />
           <ModalHeader className="mb-6 space-y-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 dark:bg-metal-800">
-              <CloudArrowUp size={28} color="#1B4DFF" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
+              <CloudArrowUp size={28} />
             </div>
             <div className="space-y-1">
               <ModalTitle>Update Modal Status</ModalTitle>
@@ -94,14 +86,10 @@ export const ModalComponent = () => {
           </ModalHeader>
           <ModalFooter>
             <ModalClose asChild>
-              <Button size="sm" variant="outline" color="secondary">
-                Cancel
-              </Button>
+              <Button variant="outline">Cancel</Button>
             </ModalClose>
             <ModalClose asChild>
-              <Button size="sm" color="primary">
-                Confirm
-              </Button>
+              <Button>Confirm</Button>
             </ModalClose>
           </ModalFooter>
         </ModalContent>

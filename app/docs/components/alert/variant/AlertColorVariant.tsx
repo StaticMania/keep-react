@@ -14,47 +14,57 @@ const AlertWithColorVariant = () => {
       <Alert color="primary">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Primary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href="/">Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="secondary">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Secondary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href="/">Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="success">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Success Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href="/">Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="warning">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Warning Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href="/">Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="error">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Error Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href="/">Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
     </div>
   )
@@ -77,51 +87,62 @@ export const AlertComponent = () => {
       <Alert color="primary">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Primary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href='/'>Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="secondary">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Secondary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href='/'>Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="success">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Success Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href='/'>Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="warning">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Warning Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href='/'>Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
       <Alert color="error">
         <AlertContainer>
           <AlertIcon />
-          <AlertTitle>Alert here</AlertTitle>
-          <AlertDescription>A short description followed by two actions items..</AlertDescription>
+          <AlertTitle>Error Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
         </AlertContainer>
-        <AlertLink href='/'>Learn More</AlertLink>
-        <AlertDismiss />
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
       </Alert>
     </div>
   )
 }
+
 `
 
 export { AlertWithColorVariant, AlertWithColorVariantCode }

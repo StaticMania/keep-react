@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react'
 import { navbarRoutes } from '~/routes/routes'
 import KeepDarkLogo from '../../public/images/keep-dark.svg'
 import KeepLogo from '../../public/images/keep.svg'
+import { buttonVariants } from '../src'
+import { cn } from '../src/helpers/cn'
 import Search from './Search'
 import ThemeSwitcher from './ThemeSwitcher'
 
@@ -21,6 +23,7 @@ const DesktopMenu = () => {
   useEffect(() => {
     setIsOpen(false)
   }, [pathname])
+
   return (
     <>
       <div className="flex items-center space-x-28">
@@ -66,9 +69,7 @@ const DesktopMenu = () => {
           className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50 dark:border dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600">
           <Image src="/images/icon/discord.svg" height={22} width={22} alt="discord" />
         </Link>
-        <Link
-          href="/docs/getting-started/introduction"
-          className="rounded-lg bg-metal-900 px-4 py-2.5 text-body-4 font-medium capitalize text-white transition-all duration-300 hover:bg-metal-800 dark:bg-metal-25 dark:text-metal-900">
+        <Link href="/docs/getting-started/introduction" className={cn(buttonVariants({ size: 'md' }), 'capitalize')}>
           get started
         </Link>
         <ThemeSwitcher />

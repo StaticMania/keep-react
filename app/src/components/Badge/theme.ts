@@ -1,74 +1,39 @@
-export type BadgeColorVariant = {
-  primary: string
-  secondary: string
-  success: string
-  warning: string
-  error: string
-}
+import { cn } from '../../helpers/cn'
 
-export type BadgeSizeVariant = {
-  sm: string
-  md: string
-}
-
-interface BadgeTheme {
-  base: string
-  size: BadgeSizeVariant
-  disabled: string
-  variant: {
-    base: BadgeColorVariant
-    border: BadgeColorVariant
-    background: BadgeColorVariant
-  }
-  icon: {
-    base: string
-    size: BadgeSizeVariant
-    color: BadgeColorVariant
-  }
-}
-
-export const badgeTheme: BadgeTheme = {
-  base: 'inline-flex w-fit items-center font-medium rounded-full cursor-pointer',
-  size: {
-    sm: 'px-1.5 h-4 text-body-5',
-    md: 'px-2.5 h-5 text-body-4',
-  },
-  disabled: 'pointer-events-none cursor-not-allowed select-none bg-metal-300 opacity-30',
-  variant: {
+export const badgeTheme = {
+  base: 'inline-flex h-5 items-center justify-center rounded px-2 py-1 text-body-5 font-medium cursor-pointer transition-all duration-300',
+  color: {
     base: {
-      primary: 'bg-primary-50 text-primary-500',
-      secondary: 'bg-metal-50 text-metal-500',
-      success: 'bg-success-50 text-success-500',
-      warning: 'bg-warning-50 text-warning-500',
-      error: 'bg-error-50 text-error-500',
+      primary: 'bg-primary-25 hover:bg-primary-50 text-primary-500',
+      secondary: 'bg-metal-50 hover:bg-metal-100 text-metal-900',
+      success: 'bg-success-25 hover:bg-success-50 text-success-500',
+      warning: 'bg-warning-25 hover:bg-warning-50 text-warning-500',
+      error: 'bg-error-25 hover:bg-error-50 text-error-500',
     },
     border: {
-      primary: 'border border-primary-100 bg-primary-50 text-primary-500',
-      secondary: 'border border-metal-200 bg-metal-50 text-metal-500',
-      success: 'border border-success-100 bg-success-50 text-success-500',
-      warning: 'border border-warning-200 bg-warning-50 text-warning-500',
-      error: 'border border-error-100 bg-error-50 text-error-500',
+      primary: 'bg-transparent text-primary-500 border border-primary-200',
+      secondary: 'bg-transparent text-metal-900 dark:text-white border border-metal-200',
+      success: 'bg-transparent text-success-500 border border-success-200',
+      warning: 'bg-transparent text-warning-500 border border-warning-200',
+      error: 'bg-transparent text-error-500 border border-error-200',
     },
     background: {
       primary: 'bg-primary-500 text-white',
-      secondary: 'bg-metal-500 text-white',
+      secondary: 'bg-metal-900 dark:bg-white dark:text-metal-900 text-white',
       success: 'bg-success-500 text-white',
       warning: 'bg-warning-500 text-white',
       error: 'bg-error-500 text-white',
     },
   },
-  icon: {
-    base: 'rounded-full',
-    size: {
-      sm: 'h-1.5 w-1.5',
-      md: 'h-2 w-2',
-    },
-    color: {
-      primary: 'bg-primary-500',
-      secondary: 'bg-metal-500',
-      success: 'bg-success-500',
-      warning: 'bg-warning-500',
-      error: 'bg-error-500',
-    },
-  },
 }
+
+type BadgeVariants = (options?: {
+  color?: keyof typeof badgeTheme.color.base
+  variant?: keyof typeof badgeTheme.color
+}) => string
+
+const badgeVariants: BadgeVariants = ({ color = 'secondary', variant = 'background' } = {}) => {
+  return cn(badgeTheme.base, badgeTheme.color[variant][color])
+}
+
+export { badgeVariants }

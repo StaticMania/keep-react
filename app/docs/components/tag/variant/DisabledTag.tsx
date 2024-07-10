@@ -1,4 +1,3 @@
-'use client'
 import { Tag } from '../../../../src'
 
 const DisabledTag = () => {
@@ -6,7 +5,6 @@ const DisabledTag = () => {
 }
 
 const DisabledTagCode = `
-'use client'
 import { Tag } from 'keep-react'
 
 export const TagComponent = () => {

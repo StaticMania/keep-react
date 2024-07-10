@@ -1,4 +1,3 @@
-'use client'
 import { Spinner } from '../../../../src'
 
 const SpinnerColors = () => {
@@ -16,7 +15,6 @@ const SpinnerColors = () => {
 }
 
 const SpinnerColorsCode = `
-"use client";
 import { Spinner } from "keep-react";
 
 export const SpinnerComponent = () => {

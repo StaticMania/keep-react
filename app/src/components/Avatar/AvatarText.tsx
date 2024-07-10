@@ -2,11 +2,11 @@
 import { cloneElement, forwardRef, HTMLAttributes, isValidElement } from 'react'
 import { cn } from '../../helpers/cn'
 
-interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
+export interface AvatarTextProps extends HTMLAttributes<HTMLSpanElement> {
   asChild?: boolean
 }
 
-const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({ children, asChild, className, ...props }, ref) => {
+const AvatarText = forwardRef<HTMLSpanElement, AvatarTextProps>(({ children, className, asChild, ...props }, ref) => {
   if (asChild && isValidElement(children)) {
     return cloneElement(children, {
       itemRef: ref,
@@ -14,18 +14,18 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(({ children, asChild, cla
     })
   }
   return (
-    <div
+    <span
       ref={ref}
       {...props}
       className={cn(
-        'relative flex size-12 shrink-0 items-center justify-center rounded-full border border-metal-200 bg-metal-50 dark:border-metal-800 dark:bg-metal-800',
+        'flex h-full w-full items-center justify-center rounded-full text-body-4 font-semibold text-metal-900 dark:text-white',
         className,
       )}>
       {children}
-    </div>
+    </span>
   )
 })
 
-Avatar.displayName = 'Avatar'
+AvatarText.displayName = 'AvatarText'
 
-export { Avatar }
+export { AvatarText }

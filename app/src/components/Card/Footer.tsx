@@ -12,6 +12,6 @@ const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-CardFooter.displayName = 'Card.Footer'
+CardFooter.displayName = 'CardFooter'
 
 export { CardFooter }

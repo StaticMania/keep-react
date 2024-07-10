@@ -20,7 +20,7 @@ export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElemen
           ref={ref}
           style={{ ...context.floatingStyles, ...style }}
           aria-labelledby={context.labelId}
-          className={cn('!z-20 max-w-xs rounded-xl bg-white dark:bg-metal-900', className)}
+          className={cn('!z-20 max-w-sm rounded-xl bg-white dark:bg-metal-900', className)}
           aria-describedby={context.descriptionId}
           {...context.getFloatingProps(props)}>
           {props.children}

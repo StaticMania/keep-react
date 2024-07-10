@@ -28,12 +28,7 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
       )
     }
     return (
-      <Button
-        color="secondary"
-        size="xs"
-        ref={refs.setReference || ref}
-        {...getReferenceProps()}
-        className={cn(className)}>
+      <Button ref={refs.setReference || ref} {...getReferenceProps()} className={cn(className)}>
         {children}
       </Button>
     )

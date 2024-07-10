@@ -1,22 +1,34 @@
-import { Avatar } from '../../../../src'
+import { Avatar, AvatarBadge, AvatarImage } from '../../../../src'
 
 const StatusOfAvatar = () => {
   return (
-    <div className="my-5 flex items-center gap-3">
-      <Avatar active={true} verified={true} shape="circle" />
-      <Avatar active={true} verified={true} shape="rounded" />
+    <div className="flex items-center gap-3">
+      <Avatar>
+        <AvatarImage />
+        <AvatarBadge />
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="/images/avatar/avatar-4.png" />
+        <AvatarBadge />
+      </Avatar>
     </div>
   )
 }
 
 const StatusOfAvatarCode = `
-import { Avatar } from "keep-react";
+import { Avatar, AvatarBadge, AvatarImage } from 'keep-react'
 
 export const AvatarComponent = () => {
   return (
     <>
-      <Avatar active={true} verified={true} shape="circle" />
-      <Avatar active={true} verified={true} shape="rounded" />
+      <Avatar>
+        <AvatarImage />
+        <AvatarBadge />
+      </Avatar>
+      <Avatar>
+        <AvatarImage src="/images/avatar/avatar-4.png" />
+        <AvatarBadge />
+      </Avatar>
     </>
   );
 }

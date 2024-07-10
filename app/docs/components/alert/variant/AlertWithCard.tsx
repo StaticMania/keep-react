@@ -1,20 +1,7 @@
-import {
-  Alert,
-  AlertBody,
-  AlertContainer,
-  AlertDescription,
-  AlertDismiss,
-  AlertIcon,
-  AlertTitle,
-  Button,
-  Checkbox,
-  Label,
-} from '../../../../src'
-
 const AlertWithCard = () => {
   return (
     <div className="space-y-5">
-      <Alert className="!max-w-[420px]" color="primary" withBg={true}>
+      {/* <Alert className="!max-w-[420px]" color="primary" withBg={true}>
         <AlertContainer className="flex items-start">
           <AlertIcon />
           <AlertBody className="flex flex-col items-start gap-3">
@@ -39,14 +26,15 @@ const AlertWithCard = () => {
           </AlertBody>
           <AlertDismiss />
         </AlertContainer>
-      </Alert>
-      <Alert className="!max-w-[420px]" color="secondary" withBg={true}>
+      </Alert> */}
+      {/* <Alert className="!max-w-[420px]" color="secondary" withBg={true}>
         <AlertContainer className="flex items-start">
           <AlertIcon />
           <AlertBody className="flex flex-col items-start gap-3">
-            <AlertTitle>Alert here</AlertTitle>
+            <AlertTitle>Keep Design System Alert</AlertTitle>
             <AlertDescription className="block w-full sm:line-clamp-none">
-              A short description followed by two actions items.
+              Keep Design System is an world first design system ecosystem for designers, developers, agencies and
+              startups.
             </AlertDescription>
             <fieldset className="flex items-center gap-2">
               <Checkbox id="checked2" variant="checked" className="border-metal-200 peer-checked:bg-metal-500" />
@@ -65,8 +53,8 @@ const AlertWithCard = () => {
           </AlertBody>
           <AlertDismiss />
         </AlertContainer>
-      </Alert>
-      <Alert className="!max-w-[420px]" color="success" withBg={true}>
+      </Alert> */}
+      {/* <Alert className="!max-w-[420px]" color="success" withBg={true}>
         <AlertContainer className="flex items-start">
           <AlertIcon />
           <AlertBody className="flex flex-col items-start gap-3">
@@ -143,7 +131,7 @@ const AlertWithCard = () => {
           </AlertBody>
           <AlertDismiss />
         </AlertContainer>
-      </Alert>
+      </Alert> */}
     </div>
   )
 }

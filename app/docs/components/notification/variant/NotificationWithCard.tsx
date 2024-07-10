@@ -21,8 +21,8 @@ const NotificationWithCard = () => {
             <Image
               src="https://via.placeholder.com/600x400"
               alt="image"
-              width={600}
               className="rounded-lg"
+              width={600}
               height={400}
             />
             <div>
@@ -33,12 +33,10 @@ const NotificationWithCard = () => {
             </div>
             <NotificationFooter>
               <NotificationClose asChild>
-                <Button size="sm">Accept</Button>
+                <Button>Accept</Button>
               </NotificationClose>
               <NotificationClose asChild>
-                <Button variant="outline" size="sm">
-                  Review
-                </Button>
+                <Button variant="outline">Review</Button>
               </NotificationClose>
             </NotificationFooter>
           </NotificationContent>
@@ -73,8 +71,8 @@ export const NotificationComponent = () => {
             src="https://via.placeholder.com/600x400"
             alt="image"
             width={600}
-            className="rounded-lg"
             height={400}
+            className="rounded-lg"
           />
           <div>
             <NotificationTitle>Can we store cookies?</NotificationTitle>
@@ -84,10 +82,10 @@ export const NotificationComponent = () => {
           </div>
           <NotificationFooter>
             <NotificationClose asChild>
-              <Button size="sm">Accept</Button>
+              <Button>Accept</Button>
             </NotificationClose>
             <NotificationClose asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline">
                 Review
               </Button>
             </NotificationClose>

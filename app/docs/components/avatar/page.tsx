@@ -1,10 +1,10 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import AvatarDocs from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
 
 export const metadata: Metadata = {
   description:
-    'The Avatar component in the Keep React allows you to display user avatars or profile images in a consistent and visually appealing manner. With customizable options for placeholders, shapes, status icons, and sizes, you can create versatile avatars to suit your design needs.',
+    'The Avatar component in the Keep React allows you to display user avatars or profile images in a consistent and visually appealing manner.',
   title: 'Avatar - Keep React',
 }
 

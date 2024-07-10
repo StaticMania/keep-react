@@ -52,7 +52,7 @@ const Faq = () => {
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(0, 3).map((faq) => (
-                <AccordionPanel key={faq.id}>
+                <AccordionPanel key={faq.id} className="border-metal-200">
                   <AccordionContainer>
                     <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
                     <AccordionIcon />
@@ -65,7 +65,7 @@ const Faq = () => {
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(3).map((faq) => (
-                <AccordionPanel key={faq.id}>
+                <AccordionPanel key={faq.id} className="border-metal-200">
                   <AccordionContainer>
                     <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
                     <AccordionIcon />

@@ -1,15 +1,22 @@
-import { Avatar } from '../../../../src'
+import { Avatar, AvatarText } from '../../../../src'
 
 const DefaultAvatar = () => {
-  return <Avatar />
+  return (
+    <Avatar>
+      <AvatarText>KR</AvatarText>
+    </Avatar>
+  )
 }
 
 const DefaultAvatarCode = `
-
-import { Avatar } from 'keep-react'
+import { Avatar, AvatarText } from 'keep-react'
 
 export const AvatarComponent = () => {
-  return <Avatar />
+  return (
+    <Avatar>
+      <AvatarText>KR</AvatarText>
+    </Avatar>
+  )
 }
 `
 
