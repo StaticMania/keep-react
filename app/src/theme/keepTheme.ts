@@ -170,7 +170,7 @@ const presetFn = (color: ColorThemeType) => {
   }
 }
 
-const withKT = (config: Config, color = colors) => {
+const keepTheme = (config: Config, color = colors) => {
   const twConfigForKeepReact = {
     darkMode: 'class',
     content: ['node_modules/keep-react/**/*.{js,jsx,ts,tsx}'],
@@ -180,4 +180,4 @@ const withKT = (config: Config, color = colors) => {
   return merge(twConfigForKeepReact, { ...config })
 }
 
-export { withKT }
+export { keepTheme }

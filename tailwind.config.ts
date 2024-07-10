@@ -1,6 +1,6 @@
-import { withKT } from './app/src/theme/WithKT'
+import { keepTheme } from './app/src/theme/keepTheme'
 
-module.exports = withKT({
+module.exports = keepTheme({
   content: [
     './mdx-components.tsx',
     './components/**/*.{js,ts,jsx,tsx,mdx}',

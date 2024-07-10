@@ -30,10 +30,12 @@
         "default": "./lib/cjs/index.js"
       }
     },
-    "./withKT": {
-      "default": "./lib/cjs/theme/WithKT.js"
+    "./keepTheme": {
+      "types": "./lib/esm/theme/keepTheme.d.ts",
+      "default": "./lib/cjs/theme/keepTheme.js"
     },
     "./colors": {
+      "types": "./lib/esm/theme/colors.d.ts",
       "default": "./lib/cjs/theme/colors.js"
     },
     "./css": {

@@ -21,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <KeepThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <KeepThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ToastWrapper
             toastOptions={{
               classNames: {
