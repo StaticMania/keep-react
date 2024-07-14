@@ -11,7 +11,7 @@ const NavbarCollapse = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLUListEl
         ref={ref}
         {...props}
         className={cn(
-          'absolute right-0 top-full z-50 flex h-auto w-full flex-col items-start gap-2.5 rounded-xl border border-metal-100 bg-white p-6 transition-all duration-300 dark:border-metal-800 dark:bg-metal-900 sm:w-[20rem] sm:rounded-t-none lg:hidden',
+          'absolute right-0 top-full z-50 flex h-auto w-full flex-col items-start gap-2.5 rounded-xl border border-metal-100 bg-white p-6 transition-all duration-300 sm:w-[20rem] sm:rounded-t-none lg:hidden dark:border-metal-800 dark:bg-metal-900',
           open ? 'animate-keep-bounce' : 'hidden',
           className,
         )}>

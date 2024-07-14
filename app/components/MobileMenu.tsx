@@ -57,7 +57,7 @@ const MobileMenu = () => {
         </button>
         <button
           onClick={openModal}
-          className="flex rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50 dark:text-metal-900 sm:hidden">
+          className="flex rounded-lg bg-primary-25 p-2.5 transition duration-300 hover:bg-primary-50 sm:hidden dark:text-metal-900">
           <MagnifyingGlass className="size-5" />
         </button>
         <Link

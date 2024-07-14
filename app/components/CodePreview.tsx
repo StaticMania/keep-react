@@ -102,7 +102,7 @@ const CodePreview = ({ children, code, github, className, activeTab, hasData, da
         {active === 0 && (
           <div
             className={cn(
-              'flex w-full items-center justify-center bg-white px-2 py-3 dark:bg-[#0D1015] md:p-6',
+              'flex w-full items-center justify-center bg-white px-2 py-3 md:p-6 dark:bg-[#0D1015]',
               className,
             )}>
             <div className="h-full w-full overflow-auto">{children}</div>

@@ -34,10 +34,6 @@
       "types": "./lib/esm/theme/keepTheme.d.ts",
       "default": "./lib/cjs/theme/keepTheme.js"
     },
-    "./colors": {
-      "types": "./lib/esm/theme/colors.d.ts",
-      "default": "./lib/cjs/theme/colors.js"
-    },
     "./css": {
       "default": "./lib/cjs/theme/main.min.css"
     }
@@ -64,7 +60,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.4",
-    "@headlessui/react": "^1.7.17",
+    "@headlessui/react": "^2.1.2",
     "clsx": "^2.0.0",
     "date-fns": "^3.6.0",
     "deepmerge": "^4.3.1",

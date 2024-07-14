@@ -24,12 +24,12 @@ const Hero = () => {
                   className="h-[40px] w-[200px] lg:h-[54px] lg:w-[250px]"
                 />
               </Link>
-              <h1 className="mt-3 max-w-xl text-heading-6 !font-semibold text-metal-900 dark:text-white md:text-heading-3">
+              <h1 className="mt-3 max-w-xl text-heading-6 !font-semibold text-metal-900 md:text-heading-3 dark:text-white">
                 <span className="block">Supercharge your web</span>
                 <span className="block">development with</span>
                 <span className="hero-text block">Keep React</span>
               </h1>
-              <p className="mb-7 mt-2 w-full text-body-4 font-normal text-metal-600 dark:text-metal-300 md:max-w-[500px] lg:max-w-[526px] lg:text-body-3">
+              <p className="mb-7 mt-2 w-full text-body-4 font-normal text-metal-600 md:max-w-[500px] lg:max-w-[526px] lg:text-body-3 dark:text-metal-300">
                 Elevate your web projects with Keep React&apos;s 40+ customizable components. Access open-source
                 resources for efficient development and bring your ideas to life with ease.
               </p>
