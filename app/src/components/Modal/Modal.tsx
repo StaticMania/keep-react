@@ -50,8 +50,6 @@ const Modal: FC<ModalProps> = ({ children, isOpen: isOpenProp, onOpenChange }) =
     }
   }, [isOpen, setIsOpen])
 
-  console.log(isOpen)
-
   return <ModalContext.Provider value={{ isOpen, handleOpen }}>{children}</ModalContext.Provider>
 }
 

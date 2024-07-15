@@ -20,8 +20,8 @@ const NotificationAction = forwardRef<HTMLButtonElement, NotificationActionProps
     }
 
     return (
-      <Button ref={ref} onClick={handleOpen}>
-        Notification Action
+      <Button ref={ref} onClick={handleOpen} variant="outline">
+        {children ?? 'Notification Action'}
       </Button>
     )
   },

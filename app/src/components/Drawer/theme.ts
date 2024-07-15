@@ -22,7 +22,7 @@ export const keepDrawerTheme: KeepDrawerTheme = {
     off: 'opacity-100',
   },
   content: {
-    base: 'drawer-content fixed z-50 flex flex-col dark:bg-metal-900 bg-white overflow-auto',
+    base: 'drawer-content fixed z-50 flex flex-col dark:bg-metal-800 bg-white overflow-auto',
     position: {
       top: 'inset-x-0 top-0 h-auto rounded-b-2xl',
       bottom: 'bottom-0 inset-x-0 h-auto rounded-t-2xl',
