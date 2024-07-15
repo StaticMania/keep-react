@@ -8,16 +8,14 @@ import { ModalOverlay } from './ModalOverlay'
 
 const ModalPortal = ({ children }: { children: ReactNode }) => {
   const { isOpen } = useModalContext()
-  return isOpen
-    ? createPortal(
-        <RemoveScroll enabled={isOpen}>
-          <ReactFocusLock disabled={!isOpen} returnFocus>
-            <ModalOverlay>{children}</ModalOverlay>
-          </ReactFocusLock>
-        </RemoveScroll>,
-        document.body,
-      )
-    : null
+  return createPortal(
+    <RemoveScroll enabled={isOpen}>
+      <ReactFocusLock disabled={!isOpen} returnFocus>
+        <ModalOverlay>{children}</ModalOverlay>
+      </ReactFocusLock>
+    </RemoveScroll>,
+    document.body,
+  )
 }
 
 ModalPortal.displayName = 'ModalPortal'

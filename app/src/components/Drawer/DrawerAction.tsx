@@ -19,8 +19,8 @@ const DrawerAction = forwardRef<HTMLButtonElement, DrawerActionProps>(({ childre
   }
 
   return (
-    <Button ref={ref} onClick={handleOpen}>
-      Drawer Action
+    <Button ref={ref} onClick={handleOpen} variant="outline">
+      {children ?? 'Drawer Action'}
     </Button>
   )
 })

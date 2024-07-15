@@ -8,17 +8,15 @@ import { DrawerOverlay } from './DrawerOverlay'
 
 const DrawerPortal = ({ children }: { children: ReactNode }) => {
   const { isOpen } = useDrawerContext()
-  return isOpen
-    ? createPortal(
-        <RemoveScroll enabled={isOpen}>
-          <ReactFocusLock disabled={!isOpen} returnFocus>
-            <DrawerOverlay />
-            {children}
-          </ReactFocusLock>
-        </RemoveScroll>,
-        document.body,
-      )
-    : null
+  return createPortal(
+    <RemoveScroll enabled={isOpen}>
+      <ReactFocusLock disabled={!isOpen} returnFocus>
+        <DrawerOverlay />
+        {children}
+      </ReactFocusLock>
+    </RemoveScroll>,
+    document.body,
+  )
 }
 
 export { DrawerPortal }

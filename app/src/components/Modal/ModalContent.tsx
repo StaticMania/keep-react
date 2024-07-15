@@ -1,19 +1,26 @@
 'use client'
-import { HTMLAttributes, Ref, forwardRef } from 'react'
+import { motion, MotionProps } from 'framer-motion'
+import { forwardRef, HTMLAttributes, Ref } from 'react'
 import { cn } from '../../helpers/cn'
 
-const ModalContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+type ModalContentProps = HTMLAttributes<HTMLDivElement> & MotionProps
+
+const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
     return (
-      <div
+      <motion.div
         {...props}
         className={cn(
-          'modal-content relative w-[22rem] animate-keep-bounce rounded-xl bg-white p-5 shadow-xLarge dark:bg-metal-900',
+          'modal-content relative w-[22rem] rounded-xl bg-white p-5 shadow-xLarge dark:bg-metal-900',
           className,
         )}
-        ref={ref}>
+        ref={ref}
+        initial={{ scale: 0.9, opacity: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.2 }}
+        exit={{ opacity: 0, scale: 0.9 }}>
         {children}
-      </div>
+      </motion.div>
     )
   },
 )

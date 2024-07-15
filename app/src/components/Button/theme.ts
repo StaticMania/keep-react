@@ -34,7 +34,7 @@ interface keepButtonTheme {
 }
 
 export const buttonTheme: keepButtonTheme = {
-  base: 'disabled:pointer-events-none focus-visible:ring-1 focus-visible:ring-metal-100 disabled:opacity-50 transition-all focus-visible:outline-none inline-flex items-center justify-center whitespace-nowrap disabled:cursor-not-allowed',
+  base: 'disabled:pointer-events-none focus-visible:ring-1 focus-visible:ring-metal-100 disabled:opacity-50 transition-all focus-visible:outline-none inline-flex items-center justify-center whitespace-nowrap disabled:cursor-not-allowed capitalize',
   color: {
     primary: 'bg-primary-500 hover:bg-primary-600 text-white disabled:bg-primary-100',
     secondary:

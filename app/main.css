@@ -585,3 +585,9 @@ input[type='number'] {
   right: 15%;
 }
 /* ================ TOOLTIP CSS END =========== */
+
+/* .drawer-content {
+  transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+  will-change: transform;
+  touch-action: none;
+} */

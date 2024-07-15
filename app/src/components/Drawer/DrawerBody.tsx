@@ -1,9 +1,12 @@
 'use client'
+import { AnimatePresence } from 'framer-motion'
 import { ReactNode } from 'react'
+import { useDrawerContext } from './DrawerContext'
 import { DrawerPortal } from './DrawerPortal'
 
 const DrawerBody = ({ children }: { children: ReactNode }) => {
-  return <DrawerPortal>{children}</DrawerPortal>
+  const { isOpen } = useDrawerContext()
+  return <AnimatePresence>{isOpen && <DrawerPortal>{children}</DrawerPortal>}</AnimatePresence>
 }
 
 export { DrawerBody }
