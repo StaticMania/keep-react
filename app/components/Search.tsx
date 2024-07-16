@@ -67,7 +67,7 @@ const Search: FC<ModalProps> = ({ isOpen, setIsOpen }) => {
               onChange={handleSearchData}
               ref={inputFocus}
               placeholder="Search Component"
-              className="ps-11"
+              className="ps-11 focus-visible:ring-metal-25"
             />
             <InputIcon>
               <MagnifyingGlass size={19} color="#AFBACA" />

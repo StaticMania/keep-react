@@ -6,7 +6,7 @@ export interface NotificationProps {
   children?: ReactNode
   onOpenChange?: Dispatch<SetStateAction<boolean>>
   isOpen?: boolean
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
 }
 
 const Notification: FC<NotificationProps> = ({

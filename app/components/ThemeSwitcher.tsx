@@ -44,15 +44,17 @@ const ThemeSwitcher = () => {
 
   return client ? (
     <div className="relative">
-      <button onClick={() => setShowTheme(!showTheme)} className="rounded-lg bg-primary-25 p-2.5 dark:bg-white">
-        <MoonStars size={20} color="#1C222B" className="hidden dark:block" />
+      <button
+        onClick={() => setShowTheme(!showTheme)}
+        className="rounded-lg border border-metal-100 bg-white p-2.5 transition-all duration-300 hover:bg-metal-25 dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600 dark:hover:bg-metal-900">
+        <MoonStars size={20} color="#fff" className="hidden dark:block" />
         <SunDim size={20} color="#444" className="block dark:hidden" />
         <span className="sr-only">Toggle theme</span>
       </button>
       <div
-        className={`list-menu absolute right-0 top-[calc(100%+24px)] w-[150px] space-y-1 rounded-xl bg-white p-4 dark:bg-metal-900 ${showTheme ? 'block' : 'hidden'}`}>
+        className={`list-menu absolute right-0 top-[calc(100%+24px)] w-[150px] space-y-1 rounded-xl border border-metal-100 bg-white p-4 dark:border-metal-800 dark:bg-metal-900 ${showTheme ? 'block' : 'hidden'}`}>
         <button
-          className={`flex w-full items-center gap-3 rounded-lg p-2 text-body-4 font-medium text-metal-900 hover:bg-primary-25 dark:text-white dark:hover:bg-metal-800 ${theme === 'light' ? 'bg-metal-25' : ''}`}
+          className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-body-4 font-medium text-metal-900 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800 ${theme === 'light' ? 'bg-metal-25' : ''}`}
           onClick={() => {
             setTheme('light')
             setShowTheme(false)
@@ -61,7 +63,7 @@ const ThemeSwitcher = () => {
           Light
         </button>
         <button
-          className={`${theme === 'dark' ? 'bg-metal-800' : ''} flex w-full items-center gap-3 rounded-lg  p-2 text-body-4 font-medium text-metal-900 hover:bg-primary-25 dark:text-white dark:hover:bg-metal-800`}
+          className={`${theme === 'dark' ? 'bg-metal-800' : ''} flex w-full items-center gap-3 rounded-lg px-3 py-2 text-body-4 font-medium text-metal-900 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800`}
           onClick={() => {
             setTheme('dark')
             setShowTheme(false)
@@ -70,7 +72,7 @@ const ThemeSwitcher = () => {
           Dark
         </button>
         <button
-          className={`${theme === 'system' ? 'bg-metal-25 dark:bg-metal-800' : ''} flex w-full items-center gap-3 rounded-lg  p-2 text-body-4 font-medium text-metal-900 hover:bg-primary-25 dark:text-white dark:hover:bg-metal-800`}
+          className={`${theme === 'system' ? 'bg-metal-25 dark:bg-metal-800' : ''} flex w-full items-center gap-3 rounded-lg px-3 py-2 text-body-4 font-medium text-metal-900 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800`}
           onClick={() => {
             setTheme('system')
             setShowTheme(false)

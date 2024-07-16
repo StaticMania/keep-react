@@ -47,26 +47,26 @@ const DesktopMenu = () => {
       <div className="hidden items-center gap-3 laptop:flex">
         <button
           onClick={openModal}
-          className="flex w-[300px] items-center justify-between rounded-lg bg-primary-25 px-3 py-2.5 text-body-4 font-normal text-metal-600 transition-all duration-300 hover:bg-primary-50 dark:border dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600">
-          <span className="flex items-center gap-2 text-body-4 font-normal text-metal-400">
+          className="flex w-[300px] items-center justify-between rounded-lg border border-metal-100 px-3 py-2.5 text-body-4 font-normal text-metal-600 transition-all duration-300 hover:bg-white dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600 dark:hover:bg-metal-900">
+          <span className="flex items-center gap-2 text-body-4 font-normal text-metal-300 dark:text-white">
             <MagnifyingGlass size={20} />
-            <span>Search component...</span>
+            <span>Search component</span>
           </span>
-          <span className="flex items-center text-body-4 font-normal text-metal-400">
+          <span className="flex items-center text-body-4 font-normal text-metal-200">
             <Command size={20} />K
           </span>
         </button>
         <Link
           href="https://github.com/StaticMania/keep-react"
           target="_blank"
-          className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50 dark:border dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600">
+          className="rounded-lg border border-metal-100 bg-white p-2.5 transition-all duration-300 hover:bg-metal-25 dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600 dark:hover:bg-metal-900">
           <Image src="/images/icon/github.svg" height={22} width={22} alt="github" className="block dark:hidden" />
           <Image src="/images/icon/github-dark.svg" height={22} width={22} alt="github" className="hidden dark:block" />
         </Link>
         <Link
           href="https://discord.gg/fSxDJyvJmr"
           target="_blank"
-          className="rounded-lg bg-primary-25 p-2.5 transition-all duration-300 hover:bg-primary-50 dark:border dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600">
+          className="rounded-lg border border-metal-100 bg-white p-2.5 transition-all duration-300 hover:bg-metal-25 dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600 dark:hover:bg-metal-900">
           <Image src="/images/icon/discord.svg" height={22} width={22} alt="discord" />
         </Link>
         <Link href="/docs/getting-started/introduction" className={cn(buttonVariants({ size: 'md' }), 'capitalize')}>

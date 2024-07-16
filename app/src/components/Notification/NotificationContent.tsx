@@ -20,7 +20,7 @@ const contentTheme = {
     'top-right': 'top-5 right-5',
     'bottom-left': 'bottom-5 left-5',
     'bottom-right': 'bottom-5 right-5',
-    center: 'right-0 left-0',
+    center: 'inset-x-0 top-5 mx-auto',
   },
 }
 
@@ -45,7 +45,11 @@ const NotificationDirection: VariantsProps = {
     animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'anticipate' } },
     exit: { opacity: 0, x: '100%' },
   },
-  center: {},
+  center: {
+    initial: { opacity: 0, y: '-100%' },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'anticipate' } },
+    exit: { opacity: 0, y: '-100%' },
+  },
 }
 
 const NotificationContent = forwardRef<HTMLDivElement, NotificationContentProps>(
@@ -59,7 +63,7 @@ const NotificationContent = forwardRef<HTMLDivElement, NotificationContentProps>
         variants={NotificationDirection[position]}
         {...props}
         className={cn(
-          'notification-content fixed max-w-sm rounded-lg bg-white p-6 dark:bg-metal-900',
+          'notification-content fixed max-w-sm rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900',
           contentTheme.position[position],
           className,
         )}

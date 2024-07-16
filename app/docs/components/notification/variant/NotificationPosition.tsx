@@ -1,72 +1,110 @@
-'use client'
-import { useState } from 'react'
 import {
-  Avatar,
-  AvatarImage,
   Button,
-  ButtonGroup,
   Notification,
+  NotificationAction,
   NotificationBody,
+  NotificationClose,
   NotificationContent,
+  NotificationDescription,
+  NotificationFooter,
+  NotificationTitle,
 } from '../../../../src'
 
 const NotificationPosition = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [position, setPosition] = useState<'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'>('bottom-right')
-  const openController = () => setIsOpen(!isOpen)
-
   return (
-    <div className="px-5 py-3">
-      <ButtonGroup>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('top-left')
-          }}
-          position="start">
-          Top Left
-        </Button>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('top-right')
-          }}
-          position="center">
-          Top Right
-        </Button>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('bottom-left')
-          }}
-          position="center">
-          Bottom Left
-        </Button>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('bottom-right')
-          }}
-          position="end">
-          Bottom Right
-        </Button>
-      </ButtonGroup>
-      <Notification isOpen={isOpen} onOpenChange={setIsOpen} position={position}>
+    <div className="flex items-center gap-5 px-5 py-3">
+      <Notification position="bottom-left">
+        <NotificationAction>Bottom Left</NotificationAction>
         <NotificationBody>
-          <NotificationContent className="max-w-sm p-6">
-            <div className="flex items-start gap-2">
-              <div>
-                <Avatar className="border-2 border-error-100">
-                  <AvatarImage src="/images/avatar/avatar-1.png" />
-                </Avatar>
-              </div>
-              <div className="max-w-[220px]">
-                <p className="text-body-4 font-medium text-metal-600 dark:text-metal-300">
-                  Khairul Islam Ridoy comment on your recent posts
-                </p>
-                <p className="text-body-5 font-normal text-metal-400">5 min ago</p>
-              </div>
-            </div>
+          <NotificationContent>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </NotificationDescription>
+            <NotificationFooter>
+              <NotificationClose asChild>
+                <Button>Accept</Button>
+              </NotificationClose>
+              <NotificationClose asChild>
+                <Button variant="outline">Review</Button>
+              </NotificationClose>
+            </NotificationFooter>
+          </NotificationContent>
+        </NotificationBody>
+      </Notification>
+      <Notification position="bottom-right">
+        <NotificationAction>Bottom Right</NotificationAction>
+        <NotificationBody>
+          <NotificationContent>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </NotificationDescription>
+            <NotificationFooter>
+              <NotificationClose asChild>
+                <Button>Accept</Button>
+              </NotificationClose>
+              <NotificationClose asChild>
+                <Button variant="outline">Review</Button>
+              </NotificationClose>
+            </NotificationFooter>
+          </NotificationContent>
+        </NotificationBody>
+      </Notification>
+      <Notification position="top-left">
+        <NotificationAction>Top Left</NotificationAction>
+        <NotificationBody>
+          <NotificationContent>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </NotificationDescription>
+            <NotificationFooter>
+              <NotificationClose asChild>
+                <Button>Accept</Button>
+              </NotificationClose>
+              <NotificationClose asChild>
+                <Button variant="outline">Review</Button>
+              </NotificationClose>
+            </NotificationFooter>
+          </NotificationContent>
+        </NotificationBody>
+      </Notification>
+      <Notification position="top-right">
+        <NotificationAction>Top Right</NotificationAction>
+        <NotificationBody>
+          <NotificationContent>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </NotificationDescription>
+            <NotificationFooter>
+              <NotificationClose asChild>
+                <Button>Accept</Button>
+              </NotificationClose>
+              <NotificationClose asChild>
+                <Button variant="outline">Review</Button>
+              </NotificationClose>
+            </NotificationFooter>
+          </NotificationContent>
+        </NotificationBody>
+      </Notification>
+      <Notification position="center">
+        <NotificationAction>Center</NotificationAction>
+        <NotificationBody>
+          <NotificationContent>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </NotificationDescription>
+            <NotificationFooter>
+              <NotificationClose asChild>
+                <Button>Accept</Button>
+              </NotificationClose>
+              <NotificationClose asChild>
+                <Button variant="outline">Review</Button>
+              </NotificationClose>
+            </NotificationFooter>
           </NotificationContent>
         </NotificationBody>
       </Notification>
@@ -75,74 +113,41 @@ const NotificationPosition = () => {
 }
 
 const NotificationPositionCode = `
-'use client'
-import { useState } from 'react'
-import { Avatar, AvatarImage, Button, ButtonGroup, Notification, NotificationBody, NotificationContent } from 'keep-react'
+import {
+  Button,
+  Notification,
+  NotificationAction,
+  NotificationBody,
+  NotificationClose,
+  NotificationContent,
+  NotificationDescription,
+  NotificationFooter,
+  NotificationTitle,
+} from 'keep-react'
 
 export const NotificationComponent = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [position, setPosition] = useState('bottom-right')
-  const openController = () => setIsOpen(!isOpen)
-
   return (
-    <>
-      <ButtonGroup>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('top-left')
-          }}
-          position="start">
-          Top Left
-        </Button>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('top-right')
-          }}
-          position="center">
-          Top Right
-        </Button>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('bottom-left')
-          }}
-          position="center">
-          Bottom Left
-        </Button>
-        <Button
-          onClick={() => {
-            openController()
-            setPosition('bottom-right')
-          }}
-          position="end">
-          Bottom Right
-        </Button>
-      </ButtonGroup>
-      <Notification isOpen={isOpen} onOpenChange={setIsOpen} position={position}>
-        <NotificationBody>
-          <NotificationContent className="max-w-sm p-6">
-            <div className="flex items-start gap-2">
-              <div>
-                <Avatar className="border-2 border-error-100">
-                  <AvatarImage src="/images/avatar/avatar-1.png" />
-                </Avatar>
-              </div>
-              <div className="max-w-[220px]">
-                <p className="text-body-4 font-medium text-metal-600 dark:text-metal-300">
-                  Khairul Islam Ridoy comment on your recent posts
-                </p>
-                <p className="text-body-5 font-normal text-metal-400">5 min ago</p>
-              </div>
-            </div>
-          </NotificationContent>
-        </NotificationBody>
-      </Notification>
-    </>
+    <Notification position="bottom-right">
+      <NotificationAction>Bottom Right</NotificationAction>
+      <NotificationBody>
+        <NotificationContent>
+          <NotificationTitle>Can we store cookies?</NotificationTitle>
+          <NotificationDescription>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </NotificationDescription>
+          <NotificationFooter>
+            <NotificationClose asChild>
+              <Button>Accept</Button>
+            </NotificationClose>
+            <NotificationClose asChild>
+              <Button variant="outline">Review</Button>
+            </NotificationClose>
+          </NotificationFooter>
+        </NotificationContent>
+      </NotificationBody>
+    </Notification>
   )
 }
-
 `
 
 export { NotificationPosition, NotificationPositionCode }
