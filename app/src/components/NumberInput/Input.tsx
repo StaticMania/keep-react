@@ -1,21 +1,32 @@
 'use client'
-import { InputHTMLAttributes, forwardRef } from 'react'
+import { motion, MotionProps } from 'framer-motion'
+import { forwardRef, InputHTMLAttributes } from 'react'
 import { cn } from '../../helpers/cn'
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+export type InputProps = InputHTMLAttributes<HTMLInputElement> & MotionProps
 
 export const NumberInputBox = forwardRef<HTMLInputElement, InputProps>(({ className, ...props }, ref) => {
+  const variants = {
+    initial: { opacity: 0, y: '10px' },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: '-10px' },
+  }
   return (
-    <input
-      type="number"
-      ref={ref}
+    <motion.input
+      key={Math.random()}
       {...props}
+      ref={ref}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={variants}
+      type="number"
       className={cn(
-        'h-full bg-white text-center text-body-2 font-medium text-metal-600 outline-none dark:bg-metal-900 dark:text-metal-300',
+        'flex-auto bg-transparent px-3 py-2.5 text-center text-body-3 font-medium text-metal-900  outline-none',
         className,
       )}
     />
   )
 })
 
-NumberInputBox.displayName = 'NumberInput.Input'
+NumberInputBox.displayName = 'NumberInputBox'

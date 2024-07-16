@@ -10,10 +10,7 @@ const DateRangePicker2 = () => {
   return (
     <Popover showArrow={false} placement="bottom-start">
       <PopoverTrigger asChild>
-        <Button
-          className="w-[286px] justify-start gap-2 rounded-xl border border-metal-50 px-4 text-left text-body-4 font-normal text-metal-600 hover:bg-white active:focus:scale-100 dark:border-metal-900 dark:bg-metal-900 dark:text-white dark:hover:bg-metal-800"
-          variant="outline"
-          color="secondary">
+        <Button className="w-[286px] justify-start gap-2" variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
             <>
@@ -43,10 +40,7 @@ export const DatePickerComponent = () => {
   return (
     <Popover showArrow={false} placement="bottom-start">
       <PopoverTrigger asChild>
-        <Button
-          className="w-[286px] justify-start gap-2 rounded-xl border border-metal-50 px-4 text-left text-body-4 font-normal text-metal-600 hover:bg-white active:focus:scale-100 dark:border-metal-900 dark:bg-metal-900 dark:text-white dark:hover:bg-metal-800"
-          variant="outline"
-          color="secondary">
+        <Button className="w-[286px] justify-start gap-2" variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
             <>

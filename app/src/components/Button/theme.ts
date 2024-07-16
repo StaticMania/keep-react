@@ -52,12 +52,12 @@ export const buttonTheme: keepButtonTheme = {
     '2xl': 'text-body-2 px-5 py-[17px] h-[58px] font-medium rounded-xl',
   },
   iconBtn: {
-    xs: 'fill-white size-6 !p-1',
-    sm: 'fill-white size-8 !p-1.5',
-    md: 'fill-white size-9 !p-2',
-    lg: 'fill-white size-12 !p-3',
-    xl: 'fill-white size-14 !p-[14px]',
-    '2xl': 'fill-white w-[58px] h-[58px] !p-[14px]',
+    xs: 'rounded fill-white size-6 !p-1',
+    sm: 'rounded fill-white size-8 !p-1.5',
+    md: 'rounded fill-white size-9 !p-2',
+    lg: 'rounded fill-white size-12 !p-3',
+    xl: 'rounded fill-white size-14 !p-[14px]',
+    '2xl': 'rounded fill-white w-[58px] h-[58px] !p-[14px]',
   },
   variant: {
     link: {

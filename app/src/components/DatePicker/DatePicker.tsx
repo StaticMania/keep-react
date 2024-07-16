@@ -33,7 +33,7 @@ const DatePicker = ({ className, classNames, showOutsideDays = true, ...props }:
             ? '[&:has(>.day-range-end)]:rounded-r-xl [&:has(>.day-range-start)]:rounded-l-xl first:[&:has([aria-selected])]:rounded-l-xl last:[&:has([aria-selected])]:rounded-r-xl'
             : '[&:has([aria-selected])]:rounded-xl',
         ),
-        day: 'h-10 w-10 p-0 font-normal aria-selected:opacity-100 inline-flex items-center justify-center whitespace-nowrap rounded-lg text-body-4 font-medium ring-offset-metal-50 transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-metal-50 focus-visible:ring-offset-1 disabled:pointer-events-none day-outside disabled:opacity-50 hover:bg-metal-50 dark:hover:bg-metal-800 text-metal-900 dark:text-white dark:aria-selected:text-metal-900',
+        day: 'h-10 w-10 p-0 font-normal aria-selected:opacity-100 inline-flex items-center justify-center whitespace-nowrap rounded-lg text-body-4 font-medium ring-offset-metal-50 transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-metal-50 focus-visible:ring-offset-1 disabled:pointer-events-none day-outside disabled:opacity-50 hover:bg-metal-50 dark:hover:bg-metal-800 text-metal-900 dark:text-white dark:aria-selected:text-metal-900 dark:aria-selected:bg-white',
         day_range_end: 'day-range-end',
         day_range_start: 'day-range-start',
         day_selected:
