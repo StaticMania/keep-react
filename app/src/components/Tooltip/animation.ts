@@ -1,13 +1,13 @@
 import { Variants } from 'framer-motion'
 
-export interface PopoverIVariants {
+export interface TooltipIVariants {
   left: Variants
   right: Variants
   top: Variants
   bottom: Variants
 }
 
-const popoverVariants: PopoverIVariants = {
+const TooltipVariants: TooltipIVariants = {
   top: {
     initial: {
       opacity: 0,
@@ -82,4 +82,4 @@ const popoverVariants: PopoverIVariants = {
   },
 }
 
-export { popoverVariants }
+export { TooltipVariants }

@@ -1,5 +1,4 @@
 'use client'
-import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
 import {
   Avatar,
   AvatarImage,
@@ -13,11 +12,9 @@ import {
 
 const DefaultPopover = () => {
   return (
-    <div className="flex h-44 items-center justify-center gap-5 p-5">
+    <div className="flex h-52 items-center justify-center gap-5 p-5">
       <Popover placement="left">
-        <PopoverAction>
-          <CaretLeft size={20} />
-        </PopoverAction>
+        <PopoverAction>Left</PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -32,9 +29,7 @@ const DefaultPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="right">
-        <PopoverAction>
-          <CaretRight size={20} />
-        </PopoverAction>
+        <PopoverAction>Right</PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -49,9 +44,7 @@ const DefaultPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="top">
-        <PopoverAction>
-          <CaretUp size={20} />
-        </PopoverAction>
+        <PopoverAction>Top</PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -66,9 +59,7 @@ const DefaultPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="bottom">
-        <PopoverAction>
-          <CaretDown size={20} />
-        </PopoverAction>
+        <PopoverAction>Bottom</PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -99,14 +90,10 @@ import {
   PopoverAction,
 } from 'keep-react'
 
-import { CaretRight } from 'phosphor-react'
-
 export const PopoverComponent = () => {
   return (
     <Popover placement="right">
-      <PopoverAction>
-        <CaretRight size={20} />
-      </PopoverAction>
+      <PopoverAction>Right</PopoverAction>
       <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
         <div>
           <Avatar>

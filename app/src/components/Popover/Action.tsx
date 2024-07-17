@@ -28,12 +28,11 @@ export const PopoverAction = forwardRef<HTMLElement, HTMLProps<HTMLElement> & Po
 
     return (
       <Button
-        shape="circle"
         variant="outline"
         ref={ref}
         data-state={context.open ? 'open' : 'closed'}
         {...context.getReferenceProps(props)}>
-        {children}
+        {children ?? 'Open Popover'}
       </Button>
     )
   },

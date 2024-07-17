@@ -2,7 +2,7 @@ import { Tooltip, TooltipAction, TooltipContent } from '../../../../src'
 
 const TooltipTriggering = () => {
   return (
-    <div className="flex items-center gap-5 p-2.5">
+    <div className="flex h-44 items-center justify-center gap-5">
       {['click', 'hover', 'focus'].map((trigger) => (
         <Tooltip trigger={trigger as 'click' | 'hover' | 'focus'} key={trigger}>
           <TooltipAction>{trigger}</TooltipAction>

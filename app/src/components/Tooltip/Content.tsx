@@ -1,10 +1,17 @@
 'use client'
 import { FloatingArrow } from '@floating-ui/react'
-import { HTMLAttributes, ReactNode, Ref, forwardRef } from 'react'
+import { AnimatePresence, motion, MotionProps } from 'framer-motion'
+import { forwardRef, HTMLAttributes, ReactNode, Ref } from 'react'
 import { cn } from '../../helpers/cn'
 import { useTooltipContext } from './Context'
+import { TooltipIVariants, TooltipVariants } from './animation'
 
-export interface floatingArrow extends HTMLAttributes<HTMLDivElement> {
+type CombinedProps = Omit<HTMLAttributes<HTMLDivElement>, 'children'> &
+  MotionProps & {
+    children?: ReactNode
+  }
+
+export interface floatingArrow extends CombinedProps {
   width?: number
   height?: number
   tipRadius?: number
@@ -13,8 +20,6 @@ export interface floatingArrow extends HTMLAttributes<HTMLDivElement> {
   fill?: string
   stroke?: string
   strokeWidth?: number
-  children?: ReactNode
-  className?: string
   arrowClassName?: string
 }
 
@@ -36,35 +41,44 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
     },
     ref: Ref<HTMLDivElement>,
   ) => {
-    const { refs, floatingStyles, arrowRef, context, getFloatingProps, isOpen, showArrow } = useTooltipContext()
+    const { refs, floatingStyles, arrowRef, context, getFloatingProps, isOpen, showArrow, placement } =
+      useTooltipContext()
+
+    const getPlacement = placement.split('-')[0] as keyof TooltipIVariants
     return (
-      isOpen && (
-        <div
-          {...props}
-          className={cn(
-            'max-w-[263px] rounded-xl border border-metal-900 bg-metal-900 px-2.5 py-2 dark:border-white dark:bg-white',
-            className,
-          )}
-          ref={refs.setFloating || ref}
-          {...getFloatingProps()}
-          style={floatingStyles}>
-          {showArrow && (
-            <FloatingArrow
-              ref={arrowRef}
-              context={context}
-              width={width}
-              height={height}
-              tipRadius={tipRadius}
-              staticOffset={staticOffset}
-              d={d}
-              stroke={stroke}
-              strokeWidth={strokeWidth}
-              className={cn('fill-metal-900 dark:fill-white', arrowClassName)}
-            />
-          )}
-          {children}
-        </div>
-      )
+      <AnimatePresence>
+        {isOpen && (
+          <div ref={refs.setFloating || ref} {...getFloatingProps()} style={floatingStyles}>
+            <motion.div
+              {...props}
+              className={cn(
+                'max-w-[263px] rounded-xl border border-metal-900 bg-metal-900 px-2.5 py-2 dark:border-white dark:bg-white',
+                className,
+              )}
+              key="tooltip"
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={TooltipVariants[getPlacement]}>
+              {showArrow && (
+                <FloatingArrow
+                  ref={arrowRef}
+                  context={context}
+                  width={width}
+                  height={height}
+                  tipRadius={tipRadius}
+                  staticOffset={staticOffset}
+                  d={d}
+                  stroke={stroke}
+                  strokeWidth={strokeWidth}
+                  className={cn('fill-metal-900 dark:fill-white', arrowClassName)}
+                />
+              )}
+              {children}
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     )
   },
 )
