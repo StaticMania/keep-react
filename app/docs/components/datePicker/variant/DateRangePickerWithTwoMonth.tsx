@@ -3,13 +3,13 @@ import { format } from 'date-fns'
 import { Calendar } from 'phosphor-react'
 import { useState } from 'react'
 import { DateRange } from 'react-day-picker'
-import { Button, DatePicker, Popover, PopoverContent, PopoverTrigger } from '../../../../src'
+import { Button, DatePicker, Popover, PopoverAction, PopoverContent } from '../../../../src'
 
 const DateRangePicker2 = () => {
   const [selected, setSelected] = useState<DateRange>()
   return (
     <Popover showArrow={false} placement="bottom-start">
-      <PopoverTrigger asChild>
+      <PopoverAction asChild>
         <Button className="w-[286px] justify-start gap-2" variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
@@ -20,7 +20,7 @@ const DateRangePicker2 = () => {
             <span>Select Your Date</span>
           )}
         </Button>
-      </PopoverTrigger>
+      </PopoverAction>
       <PopoverContent className="z-50 max-w-min">
         <DatePicker mode="range" numberOfMonths={2} selected={selected} onSelect={setSelected} showOutsideDays={true} />
       </PopoverContent>
@@ -33,13 +33,13 @@ const DateRangePicker2Code = `
 import { useState } from 'react'
 import { format } from 'date-fns'
 import { Calendar } from 'phosphor-react'
-import { Button, DatePicker, Popover, PopoverContent, PopoverTrigger } from 'keep-react'
+import { Button, DatePicker, Popover, PopoverContent, PopoverAction } from 'keep-react'
 
 export const DatePickerComponent = () => {
   const [selected, setSelected] = useState(null)
   return (
     <Popover showArrow={false} placement="bottom-start">
-      <PopoverTrigger asChild>
+      <PopoverAction asChild>
         <Button className="w-[286px] justify-start gap-2" variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
@@ -50,7 +50,7 @@ export const DatePickerComponent = () => {
             <span>Select Your Date</span>
           )}
         </Button>
-      </PopoverTrigger>
+      </PopoverAction>
       <PopoverContent className="z-50 max-w-min">
         <DatePicker mode="range" numberOfMonths={2} selected={selected} onSelect={setSelected} showOutsideDays={true} />
       </PopoverContent>

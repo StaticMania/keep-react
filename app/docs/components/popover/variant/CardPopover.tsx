@@ -1,15 +1,15 @@
 'use client'
 import Image from 'next/image'
 import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
-import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from '../../../../src'
+import { Button, Popover, PopoverAction, PopoverContent, PopoverDescription, PopoverHeading } from '../../../../src'
 
 const CardPopover = () => {
   return (
     <div className="flex h-44 items-center justify-center gap-5 p-5">
       <Popover placement="left">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretLeft size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
@@ -28,9 +28,9 @@ const CardPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="right">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretRight size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
@@ -49,9 +49,9 @@ const CardPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="top">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretUp size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
@@ -70,9 +70,9 @@ const CardPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="bottom">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretDown size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
@@ -98,15 +98,15 @@ const CardPopoverCode = `
 'use client'
 import Image from 'next/image'
 import { CaretRight } from 'phosphor-react'
-import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from 'keep-react'
+import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverAction } from 'keep-react'
 
 
 export const PopoverComponent = () => {
   return (
     <Popover placement="left">
-      <PopoverTrigger>
+      <PopoverAction>
         <CaretLeft size={20} />
-      </PopoverTrigger>
+      </PopoverAction>
       <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
         <Image
           src="https://via.placeholder.com/600x400"

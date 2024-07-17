@@ -4,12 +4,12 @@ import { HTMLProps, cloneElement, forwardRef, isValidElement } from 'react'
 import { Button } from '../Button'
 import { usePopoverContext } from './Context'
 
-export interface PopoverTriggerProps {
+export interface PopoverActionProps {
   asChild?: boolean
 }
 
-export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & PopoverTriggerProps>(
-  function PopoverTrigger({ children, asChild = false, className, ...props }, propRef) {
+export const PopoverAction = forwardRef<HTMLElement, HTMLProps<HTMLElement> & PopoverActionProps>(
+  ({ children, asChild = false, className, ...props }, propRef) => {
     const context = usePopoverContext()
     const childrenRef = (children as any).ref
     const ref = useMergeRefs([context.refs.setReference, propRef, childrenRef])
@@ -29,6 +29,7 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
     return (
       <Button
         shape="circle"
+        variant="outline"
         ref={ref}
         data-state={context.open ? 'open' : 'closed'}
         {...context.getReferenceProps(props)}>
@@ -38,4 +39,4 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
   },
 )
 
-PopoverTrigger.displayName = 'Popover.Action'
+PopoverAction.displayName = 'PopoverAction'

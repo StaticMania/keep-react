@@ -5,19 +5,19 @@ import {
   AvatarImage,
   Button,
   Popover,
+  PopoverAction,
   PopoverContent,
   PopoverDescription,
   PopoverHeading,
-  PopoverTrigger,
 } from '../../../../src'
 
 const DefaultPopover = () => {
   return (
     <div className="flex h-44 items-center justify-center gap-5 p-5">
       <Popover placement="left">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretLeft size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -32,9 +32,9 @@ const DefaultPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="right">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretRight size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -49,9 +49,9 @@ const DefaultPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="top">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretUp size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -66,9 +66,9 @@ const DefaultPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="bottom">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretDown size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
           <div>
             <Avatar>
@@ -96,7 +96,7 @@ import {
   PopoverContent,
   PopoverDescription,
   PopoverHeading,
-  PopoverTrigger,
+  PopoverAction,
 } from 'keep-react'
 
 import { CaretRight } from 'phosphor-react'
@@ -104,9 +104,9 @@ import { CaretRight } from 'phosphor-react'
 export const PopoverComponent = () => {
   return (
     <Popover placement="right">
-      <PopoverTrigger>
+      <PopoverAction>
         <CaretRight size={20} />
-      </PopoverTrigger>
+      </PopoverAction>
       <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
         <div>
           <Avatar>

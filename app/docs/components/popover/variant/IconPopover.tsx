@@ -1,14 +1,14 @@
 'use client'
 import { CaretDown, CaretLeft, CaretRight, CaretUp, Confetti } from 'phosphor-react'
-import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from '../../../../src'
+import { Button, Popover, PopoverAction, PopoverContent, PopoverDescription, PopoverHeading } from '../../../../src'
 
 const IconPopover = () => {
   return (
     <div className="flex h-44 items-center justify-center gap-5 p-5">
       <Popover placement="left">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretLeft size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
@@ -30,9 +30,9 @@ const IconPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="right">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretRight size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
@@ -54,9 +54,9 @@ const IconPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="top">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretUp size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
@@ -78,9 +78,9 @@ const IconPopover = () => {
         </PopoverContent>
       </Popover>
       <Popover placement="bottom">
-        <PopoverTrigger>
+        <PopoverAction>
           <CaretDown size={20} />
-        </PopoverTrigger>
+        </PopoverAction>
         <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
@@ -108,14 +108,14 @@ const IconPopover = () => {
 const IconPopoverCode = `
 'use client'
 import { CaretLeft } from 'phosphor-react'
-import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from 'keep-react'
+import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverAction } from 'keep-react'
 
 export const PopoverComponent = () => {
   return (
     <Popover placement="left">
-      <PopoverTrigger>
+      <PopoverAction>
         <CaretLeft size={20} />
-      </PopoverTrigger>
+      </PopoverAction>
       <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
