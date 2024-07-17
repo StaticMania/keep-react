@@ -5,7 +5,7 @@ import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, Dropd
 const DropdownWithIcon = () => {
   return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction />
       <DropdownContent>
         <DropdownList>
           <DropdownItem>
@@ -52,7 +52,7 @@ import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, Dropd
 export const DropdownComponent = () => {
   return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction />
       <DropdownContent>
         <DropdownList>
           <DropdownItem>

@@ -15,6 +15,7 @@ import {
   useHover,
   useInteractions,
   useRole,
+  useTransitionStyles,
 } from '@floating-ui/react'
 import { createContext, useContext, useMemo, useRef, useState } from 'react'
 
@@ -34,7 +35,7 @@ export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow
     onOpenChange: setIsOpen,
     middleware: [
       offset(10),
-      flip({ fallbackAxisSideDirection: 'end' }),
+      flip(),
       shift(),
       arrow({
         element: arrowRef,
@@ -49,6 +50,7 @@ export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow
   })
 
   const context = data.context
+  const { isMounted, styles } = useTransitionStyles(context)
 
   const hover = useHover(context, {
     enabled: trigger === 'hover',
@@ -62,8 +64,8 @@ export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow
   const interactions = useInteractions([focus, click, hover, role, dismiss])
 
   return useMemo(
-    () => ({ ...interactions, ...data, context, isOpen, arrowRef, showArrow }),
-    [interactions, data, isOpen, context, showArrow],
+    () => ({ ...interactions, ...data, context, isOpen, arrowRef, showArrow, isMounted, styles }),
+    [interactions, data, isOpen, context, showArrow, isMounted, styles],
   )
 }
 

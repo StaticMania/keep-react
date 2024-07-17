@@ -24,7 +24,7 @@ export const useMDXComponents: (components: MDXComponents) => MDXComponents = (c
         <a
           aria-label={`Link to this section: ${props.children}`}
           href={`#${props.id}`}
-          className="ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100">
+          className="relative -z-10 ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100">
           #
         </a>
       </h3>

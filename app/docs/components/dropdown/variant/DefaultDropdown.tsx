@@ -3,7 +3,7 @@ import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, Dropd
 const DefaultDropdown = () => {
   return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction />
       <DropdownContent>
         <DropdownList>
           <DropdownItem>Contacts</DropdownItem>
@@ -27,7 +27,7 @@ import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, Dropd
 export const DropdownComponent = () => {
   return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction />
       <DropdownContent>
         <DropdownList>
           <DropdownItem>Contacts</DropdownItem>
@@ -44,8 +44,6 @@ export const DropdownComponent = () => {
     </Dropdown>
   )
 }
-
-
 `
 
 export { DefaultDropdown, DefaultDropdownCode }

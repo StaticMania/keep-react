@@ -121,3 +121,7 @@ body::-webkit-scrollbar-thumb {
 .post pre {
   @apply my-10 overflow-x-auto rounded-xl bg-metal-900 p-5 text-white;
 }
+
+.theme-switch {
+  @apply flex w-full items-center gap-3 rounded-lg px-3 py-2 text-body-4 font-medium text-metal-900 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800;
+}

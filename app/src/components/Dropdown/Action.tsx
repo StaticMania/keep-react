@@ -13,7 +13,7 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
   ({ children, className, asChild, ...props }, propsRef) => {
     const { refs, getReferenceProps, isOpen } = useDropdownContext()
 
-    const childrenRef = (children as any).ref
+    const childrenRef = (children as any)?.ref
     const ref = useMergeRefs([refs.setReference, propsRef, childrenRef])
 
     if (asChild && isValidElement(children)) {
@@ -28,8 +28,8 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
       )
     }
     return (
-      <Button ref={refs.setReference || ref} {...getReferenceProps()} className={cn(className)}>
-        {children}
+      <Button ref={refs.setReference || ref} {...getReferenceProps()} variant="outline" className={cn(className)}>
+        {children ?? 'Open Dropdown'}
       </Button>
     )
   },

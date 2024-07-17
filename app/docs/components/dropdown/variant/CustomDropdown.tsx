@@ -44,7 +44,7 @@ const dropdownData = [
 const CustomDropdown = () => {
   return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction />
       <DropdownContent>
         <DropdownList>
           {dropdownData.map((data) => (
