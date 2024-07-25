@@ -14,11 +14,9 @@ interface CodePreviewProps {
   github?: string
   className?: string
   activeTab?: number
-  hasData?: boolean
-  data?: any
 }
 
-const CodePreview = ({ children, code, github, className, activeTab, hasData, data }: CodePreviewProps) => {
+const CodePreview = ({ children, code, github, className, activeTab }: CodePreviewProps) => {
   const [active, setActive] = useState(activeTab ?? 0)
   const { copy, copyToClipboard } = useCopy()
   const githubUrl = `https://github.com/StaticMania/keep-react/tree/main/app/src/components/${github}`
@@ -43,17 +41,6 @@ const CodePreview = ({ children, code, github, className, activeTab, hasData, da
           }`}>
           Code
         </button>
-
-        {hasData ? (
-          <button
-            id="code-btn"
-            onClick={() => setActive(2)}
-            className={` flex items-center justify-center border-b border-b-transparent px-5 py-3 text-body-4 font-medium  text-metal-400 first:ml-0 ${
-              active === 2 ? '!border-b-metal-100 text-white' : ''
-            }`}>
-            Data
-          </button>
-        ) : null}
       </div>
 
       <div>
@@ -106,29 +93,6 @@ const CodePreview = ({ children, code, github, className, activeTab, hasData, da
               className,
             )}>
             <div className="h-full w-full overflow-auto">{children}</div>
-          </div>
-        )}
-
-        {active === 2 && (
-          <div>
-            <SyntaxHighlighter
-              language="javascript"
-              style={coldarkDark}
-              showLineNumbers
-              customStyle={{
-                maxHeight: '420px',
-                borderRadius: '0px',
-                paddingLeft: '40px',
-                paddingBottom: '20px',
-                marginTop: '0px',
-                marginBottom: '0px',
-                background: '#1C222B',
-                fontSize: '14px',
-                lineHeight: '22px',
-                letterSpacing: '-0.2px',
-              }}>
-              {data.trim()}
-            </SyntaxHighlighter>
           </div>
         )}
       </div>
