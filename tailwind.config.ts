@@ -1,13 +1,13 @@
+import type { Config } from 'tailwindcss'
 import { keepTheme } from './app/src/theme/keepTheme'
 
-module.exports = keepTheme({
+const config: Config = {
   content: [
     './mdx-components.tsx',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-
   theme: {
     container: {
       center: true,
@@ -27,4 +27,6 @@ module.exports = keepTheme({
       },
     },
   },
-})
+}
+
+export default keepTheme(config)

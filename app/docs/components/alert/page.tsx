@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import React from 'react'
 import AlertDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
+import EditPage from '../../../components/EditPage'
 
 export const metadata: Metadata = {
   description:
@@ -13,6 +13,7 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <AlertDocs />
+      <EditPage pageLink="/docs/components/alert" nextPageLink="/docs/components/areaChart" nextPageName="Area Chart" />
     </DocsContentLayout>
   )
 }

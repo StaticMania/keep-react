@@ -1,6 +1,6 @@
 'use client'
 import { Children, HTMLAttributes, ReactElement, Ref, cloneElement, forwardRef, isValidElement, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { keepAccordionContainerTheme } from './Container'
 import { keepAccordionContentTheme } from './Content'
 import { keepAccordionIconTheme } from './Icon'

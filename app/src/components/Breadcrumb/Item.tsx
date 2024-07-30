@@ -1,5 +1,5 @@
 import { cloneElement, forwardRef, HTMLAttributes, isValidElement, Ref } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface BreadcrumbItemProps extends HTMLAttributes<HTMLLIElement> {
   asChild?: boolean

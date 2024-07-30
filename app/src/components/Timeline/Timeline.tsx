@@ -1,6 +1,6 @@
 'use client'
 import { LiHTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const Timeline = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLOListElement>>(
   ({ children, className, ...props }, ref) => {

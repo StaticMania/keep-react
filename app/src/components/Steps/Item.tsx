@@ -1,6 +1,6 @@
 'use client'
 import { HTMLProps, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { StepContext } from './Context'
 
 export interface StepItemProps extends HTMLProps<HTMLLIElement> {

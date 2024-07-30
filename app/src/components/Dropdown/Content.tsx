@@ -2,7 +2,7 @@
 import { FloatingArrow, FloatingFocusManager } from '@floating-ui/react'
 import { AnimatePresence, MotionProps, motion } from 'framer-motion'
 import { HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useDropdownContext } from './Context'
 import { dropdownTheme } from './theme'
 
@@ -13,14 +13,14 @@ const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(({ clas
   return (
     <AnimatePresence>
       {isOpen && (
-        <FloatingFocusManager context={context} modal={false}>
+        <FloatingFocusManager context={context}>
           <div {...props} ref={refs.setFloating || ref} style={floatingStyles} {...getFloatingProps()}>
             {showArrow && (
               <FloatingArrow width={20} height={10} tipRadius={2} fill="#fff" ref={arrowRef} context={context} />
             )}
             <motion.div
               key="dropdown"
-              className={cn(dropdownTheme.root, className)}
+              className={cn(dropdownTheme.content, className)}
               initial={{ opacity: 0, y: '20px' }}
               animate={{
                 opacity: 1,

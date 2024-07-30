@@ -1,7 +1,7 @@
 'use client'
 import { MotionProps, motion } from 'framer-motion'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 type DrawerOverlayProps = HTMLAttributes<HTMLDivElement> & MotionProps
 

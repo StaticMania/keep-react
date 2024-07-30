@@ -12,7 +12,8 @@ const LayoutThree = () => {
   )
 }
 
-const LayoutThreeCode = `
+const LayoutThreeCode = {
+  Code: `
 export const GridLayoutThree = () => {
   return (
     <div className="grid grid-cols-12 grid-rows-5 gap-5">
@@ -26,6 +27,7 @@ export const GridLayoutThree = () => {
     </div>
   )
 }
-`
+`,
+}
 
 export { LayoutThree, LayoutThreeCode }

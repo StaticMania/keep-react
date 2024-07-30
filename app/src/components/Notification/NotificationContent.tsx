@@ -1,7 +1,7 @@
 'use client'
 import { MotionProps, Variants, motion } from 'framer-motion'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useNotificationContext } from './NotificationContext'
 
 export type NotificationContentProps = HTMLAttributes<HTMLDivElement> & MotionProps

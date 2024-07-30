@@ -1,6 +1,6 @@
 'use client'
 import { DetailsHTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const SidebarDropdown = forwardRef<HTMLDetailsElement, DetailsHTMLAttributes<HTMLDetailsElement>>(
   ({ children, className, ...props }, ref) => {

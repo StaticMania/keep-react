@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
 

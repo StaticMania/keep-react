@@ -22,11 +22,11 @@ const RegisterCard = () => {
           <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
         </CardHeader>
         <div className="flex items-center justify-between gap-3">
-          <Button variant="outline" color="secondary" className="w-full">
+          <Button variant="outline" className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
             Google
           </Button>
-          <Button variant="outline" color="secondary" className="w-full">
+          <Button variant="outline" className="w-full">
             <FacebookLogo size={20} className="mr-1.5" />
             Facebook
           </Button>
@@ -51,7 +51,7 @@ const RegisterCard = () => {
               </InputIcon>
             </div>
           </fieldset>
-          <Button type="submit" className="!mt-3 block w-full" color="secondary">
+          <Button type="submit" className="!mt-3 block w-full">
             Create Account
           </Button>
         </form>
@@ -85,11 +85,11 @@ export const CardComponent = () => {
           <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
         </CardHeader>
         <div className="flex items-center justify-between gap-3">
-          <Button variant="outline" color="secondary" className="w-full">
+          <Button variant="outline"  className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
             Google
           </Button>
-          <Button variant="outline" color="secondary" className="w-full">
+          <Button variant="outline"  className="w-full">
             <FacebookLogo size={20} className="mr-1.5" />
             Facebook
           </Button>
@@ -114,7 +114,7 @@ export const CardComponent = () => {
               </InputIcon>
             </div>
           </fieldset>
-          <Button type="submit" className="!mt-3 block w-full" color="secondary">
+          <Button type="submit" className="!mt-3 block w-full" >
             Create Account
           </Button>
         </form>

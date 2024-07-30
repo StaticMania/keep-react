@@ -1,7 +1,7 @@
 'use client'
 import { motion, MotionProps } from 'framer-motion'
 import { forwardRef, HTMLAttributes, Ref } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 type ModalOverlayProps = HTMLAttributes<HTMLDivElement> & MotionProps
 

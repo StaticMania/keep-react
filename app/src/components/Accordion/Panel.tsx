@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef, useMemo } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { AccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
 

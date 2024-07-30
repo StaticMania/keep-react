@@ -1,15 +1,14 @@
-import { Toggle } from '../../../../src'
+import { Switch } from '../../../../src'
 
 const DefaultSwitch = () => {
-  return <Toggle bgColor="primary" size="md" />
+  return <Switch onCheckedChange={(value) => console.log(value)} />
 }
 
 const DefaultSwitchCode = `
-import { Toggle } from "keep-react";
+import { Switch } from 'keep-react'
 
 export const SwitchComponent = () => {
-  const [toggle, setToggle] = useState(false)
-  return return <Toggle bgColor="primary" size="md" onChange={setToggle} />
+  return <Switch />
 }
 `
 

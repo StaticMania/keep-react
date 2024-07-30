@@ -1,7 +1,7 @@
 'use client'
 import { motion, MotionProps } from 'framer-motion'
 import { forwardRef, InputHTMLAttributes } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & MotionProps
 
@@ -13,7 +13,7 @@ export const NumberInputBox = forwardRef<HTMLInputElement, InputProps>(({ classN
   }
   return (
     <motion.input
-      key={Math.random()}
+      key="input"
       {...props}
       ref={ref}
       initial="initial"

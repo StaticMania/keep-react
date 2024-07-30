@@ -7,31 +7,33 @@ export const ContainerData = [
   { id: 6, name: '', breakpoints: '2xl (1536px)', properties: 'max-width: 1536px' },
 ]
 
-const ContainerCenter = `
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const ContainerCenter = {
+  'tailwind.config.ts': `
+const config = {
   theme: {
     container: {
       center: true
     }
   }
 }
-`
+`,
+}
 
-const ContainerHorizontalPadding = `
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const ContainerHorizontalPadding = {
+  'tailwind.config.ts': `
+const config = {
   theme: {
     container: {
       padding: '2rem',
     },
   },
 }
-`
+`,
+}
 
-const ContainerBreakPointPadding = `
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const ContainerBreakPointPadding = {
+  'tailwind.config.ts': `
+const config = {
   theme: {
     container: {
       padding: {
@@ -44,6 +46,7 @@ module.exports = {
     },
   },
 }
-`
+`,
+}
 
 export { ContainerBreakPointPadding, ContainerCenter, ContainerHorizontalPadding }

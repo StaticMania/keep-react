@@ -1,6 +1,6 @@
 'use client'
 import { forwardRef, HTMLAttributes } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { paginationTheme } from './theme'
 
 const PaginationList = forwardRef<HTMLUListElement, HTMLAttributes<HTMLUListElement>>(

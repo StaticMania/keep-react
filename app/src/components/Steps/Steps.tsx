@@ -1,6 +1,6 @@
 'use client'
 import { HTMLProps, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const Steps = forwardRef<HTMLUListElement, HTMLProps<HTMLUListElement>>(({ className, children, ...props }, ref) => {
   return (

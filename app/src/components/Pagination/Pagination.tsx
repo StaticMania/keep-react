@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { PaginationContext } from './Context'
 import { PaginationGoTo } from './GoTo'
 import { PaginationItem } from './Item'

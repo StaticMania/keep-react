@@ -1,7 +1,7 @@
 'use client'
 import { HTMLAttributes, ReactNode, forwardRef, useMemo } from 'react'
 import { DropzoneOptions } from 'react-dropzone'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { UploadBody } from './Body'
 import { UploadFooter } from './Footer'
 import { UploadIcon } from './Icon'

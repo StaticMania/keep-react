@@ -12,7 +12,8 @@ const LayoutThree = () => {
   )
 }
 
-const LayoutThreeCode = `
+const LayoutThreeCode = {
+  Code: `
 export const LayoutThree = () => {
   return (
     <div className="flex flex-col gap-5">
@@ -26,6 +27,6 @@ export const LayoutThree = () => {
     </div>
   )
 }
-
-`
+`,
+}
 export { LayoutThree, LayoutThreeCode }

@@ -1,15 +1,15 @@
-import { Toggle } from '../../../../src'
+import { Switch } from '../../../../src'
 
 const DisabledSwitch = () => {
-  return <Toggle bgColor="primary" label="Disabled" size="md" disabled={true} />
+  return <Switch disabled />
 }
 
 const DisabledSwitchCode = `
-import { Toggle } from 'keep-react'
+import { Switch } from 'keep-react'
 
 export const SwitchComponent = () => {
   return (
-    <Toggle bgColor="primary" label="Disabled" size="md" disabled={true} />
+    <Switch disabled/>
   )
 }
 `

@@ -1,59 +1,38 @@
 'use client'
-import type { FC, ReactNode } from 'react'
-import { TooltipSlider } from './ToolTipSlider'
+import { Range, Root, Thumb, Track } from '@radix-ui/react-slider'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
+import { cn } from '../../utils/cn'
 
-export interface MarkObj {
-  [key: number]: string | number
+export type SliderProps = ComponentPropsWithoutRef<typeof Root> & {
+  trackClassName?: string
+  rangeClassName?: string
+  thumbClassName?: string
 }
 
-export interface SliderProps {
-  children?: ReactNode
-  min: number
-  max: number
-  step?: number | null
-  range?: boolean
-  dots?: boolean
-  marks?: MarkObj
-  reverse?: boolean
-  disabled?: boolean
-  defaultValue: number | number[]
-  onChange?: (value: number | number[]) => void
-  tooltip?: 'top' | 'bottom' | 'none'
-}
+const Slider = forwardRef<ElementRef<typeof Root>, SliderProps>(
+  ({ className, thumbClassName, trackClassName, rangeClassName, ...props }, ref) => {
+    return (
+      <Root ref={ref} className={cn('relative flex w-full touch-none select-none items-center', className)} {...props}>
+        <Track className={cn('relative h-2 w-full grow overflow-hidden rounded-full bg-metal-100', trackClassName)}>
+          <Range className={cn('absolute h-full bg-metal-900', rangeClassName)} />
+        </Track>
+        <Thumb
+          className={cn(
+            'block h-5 w-5 rounded-full border-2 border-metal-900 bg-metal-100 ring-offset-metal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metal-900 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+            thumbClassName,
+          )}
+        />
+        <Thumb
+          className={cn(
+            'block h-5 w-5 rounded-full border-2 border-metal-900 bg-metal-100 ring-offset-metal-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metal-900 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+            thumbClassName,
+          )}
+        />
+      </Root>
+    )
+  },
+)
 
-export const Slider: FC<SliderProps> = ({
-  min,
-  max,
-  step,
-  defaultValue,
-  range,
-  marks = {},
-  dots = false,
-  disabled = false,
-  reverse = false,
-  tooltip = 'top',
-  onChange,
-  children,
-  ...props
-}) => {
-  return (
-    <div>
-      <TooltipSlider
-        range={range}
-        min={min}
-        max={max}
-        dots={dots}
-        reverse={reverse}
-        disabled={disabled}
-        defaultValue={defaultValue}
-        tipProps={{ placement: tooltip }}
-        tipFormatter={(value: any) => `${value}`}
-        onChange={onChange}
-        marks={{ ...marks }}
-        step={step}
-        {...props}
-      />
-      {children}
-    </div>
-  )
-}
+Slider.displayName = Root.displayName
+
+export { Slider }

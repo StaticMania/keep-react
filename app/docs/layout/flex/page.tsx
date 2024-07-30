@@ -1,6 +1,7 @@
 import type { Metadata, NextPage } from 'next'
 import Flex from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
+import EditPage from '../../../components/EditPage'
 
 export const metadata: Metadata = {
   description:
@@ -12,6 +13,7 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <Flex />
+      <EditPage pageLink="/docs/layout/flex" nextPageLink="/docs/layout/grid" nextPageName="Grid" />
     </DocsContentLayout>
   )
 }

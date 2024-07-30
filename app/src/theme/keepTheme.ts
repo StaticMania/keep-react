@@ -173,70 +173,32 @@ const presetFn = (color: ColorThemeType) => {
           xLarge: '0px 24px 50px -12px rgba(45, 54, 67, 0.12)',
           '2xLarge': '0px 32px 64px -12px rgba(45, 54, 67, 0.14)',
         },
-        keyframes: {
-          'bounce-open': {
-            '0%': { transform: 'scale(0.95)' },
-            '100%': {
-              transform: 'scale(1)',
-            },
-          },
-          'slide-up': {
-            '0%': { opacity: '0', transform: 'translateY(100px)' },
-            '100%': { opacity: '1', transform: 'translateY(0)' },
-          },
-          'slide-down': {
-            '0%': { opacity: '0', transform: 'translateY(-100px)' },
-            '100%': { opacity: '1', transform: 'translateY(0)' },
-          },
-          'slide-left': {
-            '0%': { opacity: '0', transform: 'translateX(-100px)' },
-            '100%': { opacity: '1', transform: 'translateX(0)' },
-          },
-          'slide-right': {
-            '0%': { opacity: '0', transform: 'translateX(100px)' },
-            '100%': { opacity: '1', transform: 'translateX(0)' },
-          },
-          'slide-right-back': {
-            '0%': { opacity: '1', transform: 'translateX(0)' },
-            '100%': { opacity: '0', transform: 'translateX(100px)' },
-          },
-          'slide-left-back': {
-            '0%': { opacity: '1', transform: 'translateX(0)' },
-            '100%': { opacity: '0', transform: 'translateX(-100px)' },
-          },
-          'slide-top-back': {
-            '0%': { opacity: '1', transform: 'translateY(0)' },
-            '100%': { opacity: '0', transform: 'translateY(-100px)' },
-          },
-          'slide-up-back': {
-            '0%': { opacity: '1', transform: 'translateY(0)' },
-            '100%': { opacity: '0', transform: 'translateY(100px)' },
-          },
-        },
-        animation: {
-          'keep-bounce': 'bounce-open 0.1s',
-          'keep-slide-up': 'slide-up 0.4s',
-          'keep-slide-down': 'slide-down 0.4s',
-          'keep-slide-left': 'slide-left 0.4s',
-          'keep-slide-right': 'slide-right 0.4s',
-          'keep-slide-right-back': 'slide-right-back 0.4s',
-          'keep-slide-left-back': 'slide-left-back 0.4s',
-          'keep-slide-top-back': 'slide-top-back 0.4s',
-          'keep-slide-up-back': 'slide-up-back 0.4s',
-        },
         content: {
-          img: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719144077/verify_uaqa85.svg")',
           checkedLight: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/checkedLight_xwegqy.svg")',
           checkedDark: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/checkedDark_g8gcjk.svg")',
           dashedLight: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/dashedLight_whvevx.svg")',
           dashedDark: 'url("https://res.cloudinary.com/arif5577/image/upload/v1719146139/dashedDark_vx3paq.svg")',
+        },
+        keyframes: {
+          zoomIn: {
+            '0%': { transform: 'scale(0.5)' },
+            '50%': { transform: 'scale(1.1)' },
+            '100%': { transform: 'scale(1)' },
+          },
+        },
+        animation: {
+          zoomIn: 'zoomIn 0.3s ease-in-out',
+        },
+        backgroundImage: {
+          sun: "url('https://staticmania.cdn.prismic.io/staticmania/Zqc9bB5LeNNTxjUr_sun.svg')",
+          moon: "url('https://staticmania.cdn.prismic.io/staticmania/Zqc9ax5LeNNTxjUq_moon.svg')",
         },
       },
     },
   }
 }
 
-const keepTheme = (config: Config, color = colors) => {
+const keepTheme = (config: Config, color = colors): Config => {
   const twConfigForKeepReact = {
     darkMode: 'selector',
     content: ['node_modules/keep-react/**/*.{js,jsx,ts,tsx}'],

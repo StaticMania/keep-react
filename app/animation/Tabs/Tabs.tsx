@@ -43,3 +43,23 @@ const Chip = ({
 }
 
 export default ChipTabs
+
+/*
+<div className="flex flex-col items-center gap-5">
+          <Input placeholder="Enter name" type="text" />
+          <div className="relative">
+            <input
+              type="text"
+              id="example13"
+              placeholder=" "
+              className="peer flex h-11 w-full rounded-lg border bg-transparent px-3 py-2 text-body-4 font-normal text-metal-900 placeholder:font-normal placeholder:text-metal-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metal-200 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-metal-800 dark:bg-transparent dark:text-white dark:placeholder:text-metal-300 dark:focus-visible:ring-metal-900"
+            />
+            <label
+              htmlFor="example13"
+              className="peer-focus:base absolute left-2 top-0 z-10 -translate-y-2 transform bg-transparent px-1 text-body-5 text-metal-600 transition-all peer-placeholder-shown:translate-y-3 peer-placeholder-shown:text-sm peer-focus:-translate-y-2 peer-focus:bg-metal-900 peer-focus:text-body-5 peer-disabled:bg-transparent dark:bg-transparent">
+              Full name
+            </label>
+          </div>
+        </div>
+
+*/

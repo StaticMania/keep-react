@@ -1,7 +1,5 @@
 import { DefaultSwitch, DefaultSwitchCode } from './variant/DefaultSwitch'
-import { SwitchSizes, SwitchSizesCode } from './variant/SwitchSizes'
 import { DisabledSwitch, DisabledSwitchCode } from './variant/DisabledSwitch'
-import { SwitchWithBackground, SwitchWithBackgroundCode } from './variant/SwitchWithBackground'
 import { SwitchWithIcon, SwitchWithIconCode } from './variant/SwitchWithIcon'
 import { toggleApiData } from './SwitchApi'
 
@@ -29,22 +27,6 @@ Enhance the visual appeal of the switch by adding icons. Simply enable the withI
   <SwitchWithIcon />
 </CodePreview>
 
-## Switch With Background
-
-Elevate the design by choosing between two background color variants: `bgColor="primary"` and `bgColor="slate"`.
-
-<CodePreview github="Switch" code={SwitchWithBackgroundCode}>
-  <SwitchWithBackground />
-</CodePreview>
-
-## Sizes of Switch
-
-Adapt the switch size to suit your design with three size variants: `sm`, `md`, and `lg`. Simply set the size prop to `"sm"`, `"md"`, or `"lg"`.
-
-<CodePreview github="Switch" code={SwitchSizesCode}>
-  <SwitchSizes />
-</CodePreview>
-
 ## Disabled Switch
 
 Disable the switch component by utilizing the `disabled` prop with `disabled={true}`.
@@ -61,4 +43,4 @@ Refer to the API documentation for detailed information about the Toggle Switch 
 
 ## Reference
 
-Our switch component is built using the `@headlessui/react` package. For more information , follow the documentation [@headlessui/react](https://headlessui.com).
+Our switch component is built using the `@radix-ui/react-switch` package. For more information , follow the documentation [@radix-ui/react-switch](https://www.radix-ui.com/primitives/docs/components/switch#api-reference).

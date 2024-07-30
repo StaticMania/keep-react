@@ -1,7 +1,7 @@
 'use client'
 import { MotionProps, motion } from 'framer-motion'
 import { HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { drawerVariants } from './animation'
 import { useDrawerContext } from './DrawerContext'
 import { keepDrawerTheme } from './theme'

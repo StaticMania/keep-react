@@ -10,7 +10,8 @@ const BodyTypo = () => {
   )
 }
 
-const BodyTypoCode = `
+const BodyTypoCode = {
+  Code: `
 export const BodyTypography = () => {
   return (
     <div className="space-y-4">
@@ -22,6 +23,7 @@ export const BodyTypography = () => {
     </div>
   )
 }
-`
+`,
+}
 
 export { BodyTypo, BodyTypoCode }

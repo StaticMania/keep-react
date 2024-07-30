@@ -1,4 +1,4 @@
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export const badgeTheme = {
   base: 'inline-flex h-5 items-center justify-center rounded px-2 py-1 text-body-5 font-medium cursor-pointer transition-all duration-300',

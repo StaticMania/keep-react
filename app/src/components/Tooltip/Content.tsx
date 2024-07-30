@@ -2,7 +2,7 @@
 import { FloatingArrow } from '@floating-ui/react'
 import { AnimatePresence, motion, MotionProps } from 'framer-motion'
 import { forwardRef, HTMLAttributes, ReactNode, Ref } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useTooltipContext } from './Context'
 import { TooltipIVariants, TooltipVariants } from './animation'
 

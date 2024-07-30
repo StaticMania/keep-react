@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { alertTheme } from './theme'
 
 const AlertContainer = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(

@@ -1,6 +1,6 @@
 'use client'
 import { cloneElement, forwardRef, ImgHTMLAttributes, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface AvatarImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   asChild?: boolean

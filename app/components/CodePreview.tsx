@@ -6,7 +6,7 @@ import { ReactNode, useState } from 'react'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import useCopy from '../../hooks/useCopy'
-import { cn } from '../src/helpers/cn'
+import { cn } from '../src/utils/cn'
 
 interface CodePreviewProps {
   children: ReactNode

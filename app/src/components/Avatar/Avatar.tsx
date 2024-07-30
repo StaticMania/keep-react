@@ -1,6 +1,6 @@
 'use client'
 import { cloneElement, forwardRef, HTMLAttributes, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
   asChild?: boolean

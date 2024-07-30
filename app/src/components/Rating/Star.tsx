@@ -1,6 +1,6 @@
 'use client'
 import { FC, Fragment, ReactNode } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useRatingContext } from './Context'
 
 export interface StarProps {

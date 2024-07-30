@@ -1,6 +1,6 @@
 'use client'
 import { ForwardedRef, HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useTabContext } from './Context'
 
 export interface TabListProps extends HTMLAttributes<HTMLElement> {}

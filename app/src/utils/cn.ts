@@ -145,12 +145,15 @@ const twMerge = extendTailwindMerge({
           ],
         },
       ],
+      'bg-image': [{ bg: ['sun', 'moon'] }],
 
       shadow: ['small', 'default', 'medium', 'large', 'xLarge', '2xLarge'],
     },
   },
 })
 
-export const cn = (...args: ClassValue[]) => {
+const cn = (...args: ClassValue[]) => {
   return twMerge(clsx(args))
 }
+
+export { cn }

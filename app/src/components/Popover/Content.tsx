@@ -2,7 +2,7 @@
 import { FloatingArrow, FloatingFocusManager, FloatingPortal, useMergeRefs } from '@floating-ui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { forwardRef, HTMLProps } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { usePopoverContext } from './Context'
 import { PopoverIVariants, popoverVariants } from './animation'
 

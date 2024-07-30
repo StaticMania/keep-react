@@ -7,7 +7,7 @@ const CardPopover = () => {
     <div className="flex h-52 items-center justify-center gap-5">
       <Popover placement="left">
         <PopoverAction>Left</PopoverAction>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -26,7 +26,7 @@ const CardPopover = () => {
       </Popover>
       <Popover placement="right">
         <PopoverAction>Right</PopoverAction>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -45,7 +45,7 @@ const CardPopover = () => {
       </Popover>
       <Popover placement="top">
         <PopoverAction>Top</PopoverAction>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -64,7 +64,7 @@ const CardPopover = () => {
       </Popover>
       <Popover placement="bottom">
         <PopoverAction>Bottom</PopoverAction>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
           <Image
             src="https://via.placeholder.com/600x400"
             className="rounded-t-xl"
@@ -93,7 +93,7 @@ export const PopoverComponent = () => {
   return (
     <Popover placement="left">
       <PopoverAction>Left</PopoverAction>
-      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
+      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
         <Image
           src="https://via.placeholder.com/600x400"
           className="rounded-t-xl"

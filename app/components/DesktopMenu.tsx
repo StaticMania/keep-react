@@ -8,7 +8,7 @@ import { navbarRoutes } from '~/routes/routes'
 import KeepDarkLogo from '../../public/images/keep-dark.svg'
 import KeepLogo from '../../public/images/keep.svg'
 import { buttonVariants } from '../src'
-import { cn } from '../src/helpers/cn'
+import { cn } from '../src/utils/cn'
 import Search from './Search'
 import ThemeSwitcher from './ThemeSwitcher'
 

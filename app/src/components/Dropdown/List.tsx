@@ -1,22 +1,22 @@
 'use client'
 import { motion, MotionProps, stagger, useAnimate } from 'framer-motion'
 import { cloneElement, forwardRef, HTMLProps, isValidElement, useEffect } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
-export type DropdownListProps = HTMLProps<HTMLUListElement> &
+export type DropdownListProps = HTMLProps<HTMLDivElement> &
   MotionProps & {
     asChild?: boolean
   }
 
-export const DropdownList = forwardRef<HTMLUListElement, DropdownListProps>(
+export const DropdownList = forwardRef<HTMLDivElement, DropdownListProps>(
   ({ children, className, asChild, ...props }, ref) => {
     const [scope, animate] = useAnimate()
 
     useEffect(() => {
       animate(
-        'li',
+        scope.current.children,
         { x: [-50, 0], opacity: [0, 1] },
-        { ease: 'linear', delay: stagger(0.1, { startDelay: 0.1, from: 0 }) },
+        { ease: 'linear', delay: stagger(0.05, { startDelay: 0.01, from: 0 }) },
       )
     })
 
@@ -28,9 +28,9 @@ export const DropdownList = forwardRef<HTMLUListElement, DropdownListProps>(
     }
 
     return (
-      <motion.ul {...props} ref={scope} className={cn('overflow-hidden', className)}>
+      <motion.div {...props} ref={scope} className={cn('overflow-hidden', className)}>
         {children}
-      </motion.ul>
+      </motion.div>
     )
   },
 )

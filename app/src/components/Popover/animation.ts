@@ -23,7 +23,7 @@ const popoverVariants: PopoverIVariants = {
     },
     exit: {
       opacity: 0,
-      y: '8px',
+      y: '4px',
     },
   },
   bottom: {
@@ -41,13 +41,13 @@ const popoverVariants: PopoverIVariants = {
     },
     exit: {
       opacity: 0,
-      y: '8px',
+      y: '4px',
     },
   },
   left: {
     initial: {
       opacity: 0,
-      x: '-20px',
+      x: '-8px',
     },
     animate: {
       opacity: 1,
@@ -59,7 +59,7 @@ const popoverVariants: PopoverIVariants = {
     },
     exit: {
       opacity: 0,
-      x: '-8px',
+      x: '-4px',
     },
   },
   right: {
@@ -77,7 +77,7 @@ const popoverVariants: PopoverIVariants = {
     },
     exit: {
       opacity: 0,
-      x: '8px',
+      x: '4px',
     },
   },
 }

@@ -2,7 +2,7 @@
 import { EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { CarouselButtons } from './Buttons'
 import { CarouselNextButton, CarouselPrevButton } from './CarouselArrowButtons'
 import { CarouselContext } from './CarouselContext'

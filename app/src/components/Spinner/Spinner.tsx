@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { SpinnerColorVariant, SpinnerSizeVariant, spinnerTheme } from './theme'
 
 export interface SpinnerProps extends HTMLAttributes<HTMLSpanElement> {

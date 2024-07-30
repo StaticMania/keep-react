@@ -1,6 +1,6 @@
 'use client'
 import { LiHTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const NavbarList = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLUListElement>>(
   ({ children, className, ...props }, ref) => {
@@ -11,6 +11,6 @@ const NavbarList = forwardRef<HTMLOListElement, LiHTMLAttributes<HTMLUListElemen
     )
   },
 )
-NavbarList.displayName = 'Navbar.List'
+NavbarList.displayName = 'NavbarList'
 
 export { NavbarList }

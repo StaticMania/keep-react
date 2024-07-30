@@ -1,7 +1,7 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { useDropzone } from 'react-dropzone'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useUploadContext } from './UploadContext'
 
 const UploadBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(

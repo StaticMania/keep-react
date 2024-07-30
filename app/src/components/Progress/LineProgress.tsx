@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, forwardRef, useEffect, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { ProgressContext } from './Context'
 import { LineProgressText } from './LineText'
 import { ProgressSizeVariant, progressTheme } from './theme'

@@ -1,6 +1,6 @@
 'use client'
 import { forwardRef, HTMLAttributes } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { skeletonTheme } from './theme'
 
 interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {

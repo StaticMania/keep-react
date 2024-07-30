@@ -1,6 +1,6 @@
 'use client'
 import { forwardRef, HTMLProps } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useStepContext } from './Context'
 
 export const StepTitle = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadingElement>>(

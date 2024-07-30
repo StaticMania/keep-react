@@ -1,6 +1,6 @@
 'use client'
 import { HTMLProps, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const Empty = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(({ children, className, ...props }, ref) => {
   return (

@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface CardDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {
   asChild?: boolean

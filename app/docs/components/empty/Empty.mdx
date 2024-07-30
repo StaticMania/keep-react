@@ -3,12 +3,9 @@ import { EmptyFolder, EmptyFolderCode } from './variant/EmptyFolder'
 import { NoResultPage, NoResultPageCode } from './variant/NoResultPage'
 import { NotFoundPage, NotFoundPageCode } from './variant/NotFoundPage'
 import { NoDataFound, NoDataFoundCode } from './variant/NoDataFound'
-import { emptyTitleAPI, emptyDescriptionAPI } from './EmptyApi'
 import { PageNotAvailable, PageNotAvailableCode } from './variant/PageNotAvailable'
 
 import CodePreview from '../../../components/CodePreview'
-
-import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -59,13 +56,3 @@ The message No Data Found is commonly displayed to users when a search, query, o
 <CodePreview github="Empty" code={NoDataFoundCode}>
   <NoDataFound />
 </CodePreview>
-
-## API Reference
-
-Explore the available props for the `<EmptyTitle/>` component
-
-<ComponentApi data={emptyTitleAPI} />
-
-Explore the available props for the `<EmptyDescription/>` component
-
-<ComponentApi data={emptyDescriptionAPI} />

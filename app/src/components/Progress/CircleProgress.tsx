@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, forwardRef, useEffect, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { CircleProgressLine } from './CircleLine'
 import { CircleProgressText } from './CircleText'
 import { ProgressContext } from './Context'

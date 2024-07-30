@@ -1,15 +1,14 @@
-import { Toggle } from '../../../../src'
+import { Switch } from '../../../../src'
 
 const SwitchWithIcon = () => {
-  return <Toggle bgColor="primary" label="Toggle" size="md" withIcon={true} />
+  return <Switch showIcon />
 }
 
 const SwitchWithIconCode = `
-import { Toggle } from "keep-react"
+import { Switch } from "keep-react"
 
 export const SwitchComponent = () => {
-  const [toggle, setToggle] = useState(false)
-  return <Toggle bgColor="primary" label="Toggle" size="md" withIcon={true} onChange={setToggle} />
+  return <Switch showIcon />
 }
 `
 export { SwitchWithIcon, SwitchWithIconCode }

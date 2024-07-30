@@ -18,7 +18,11 @@ const Dropdown: FC<DropdownProps> = ({
 }) => {
   const dropdownOptions = useDropdown({ showArrow, placement, trigger })
 
-  return <DropdownContext.Provider value={{ ...dropdownOptions }}>{children}</DropdownContext.Provider>
+  return (
+    <DropdownContext.Provider value={{ ...dropdownOptions }}>
+      <div>{children}</div>
+    </DropdownContext.Provider>
+  )
 }
 
 export { Dropdown }

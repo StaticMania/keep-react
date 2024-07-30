@@ -1,6 +1,6 @@
 'use client'
 import { ForwardedRef, HTMLAttributes, forwardRef, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { TabContext } from './Context'
 
 interface TabsProps extends HTMLAttributes<HTMLDivElement> {
