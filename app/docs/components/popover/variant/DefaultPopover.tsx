@@ -87,8 +87,9 @@ import {
   PopoverContent,
   PopoverDescription,
   PopoverHeading,
-  PopoverAction,
+  PopoverTrigger,
 } from 'keep-react'
+import { CaretRight } from 'phosphor-react'
 
 export const PopoverComponent = () => {
   return (

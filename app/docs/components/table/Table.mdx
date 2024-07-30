@@ -4,7 +4,6 @@ import { OrdersTable, OrdersTableCode } from './variant/OrdersTable'
 import { TeamTable, TeamTableCode } from './variant/TeamTable'
 
 import CodePreview from '../../../components/CodePreview'
-import { data1, data2, data3, data4 } from './TableApi'
 
 ## Table of Contents
 
@@ -12,24 +11,24 @@ A Table Component is a fundamental user interface element used to present data i
 
 ## Default Table
 
-<CodePreview github="Table" code={DefaultTableCode} hasData={true} data={JSON.stringify(data1)}>
+<CodePreview github="Table" code={DefaultTableCode}>
   <DefaultTable />
 </CodePreview>
 
 ## Product Table
 
-<CodePreview github="Table" code={ProductTableCode} hasData={true}>
+<CodePreview github="Table" code={ProductTableCode}>
   <ProductTable />
 </CodePreview>
 
 ## Orders Table
 
-<CodePreview github="Table" code={OrdersTableCode} hasData={true}>
+<CodePreview github="Table" code={OrdersTableCode}>
   <OrdersTable />
 </CodePreview>
 
 ## Teams Table
 
-<CodePreview github="Table" code={TeamTableCode} hasData={true}>
+<CodePreview github="Table" code={TeamTableCode}>
   <TeamTable />
 </CodePreview>
