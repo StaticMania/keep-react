@@ -1,8 +1,9 @@
 'use client'
-import { MotionProps, Variants, motion } from 'framer-motion'
+import { AnimatePresence, MotionProps, Variants, motion } from 'framer-motion'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
 import { useNotificationContext } from './NotificationContext'
+import { NotificationPortal } from './NotificationPortal'
 
 export type NotificationContentProps = HTMLAttributes<HTMLDivElement> & MotionProps
 
@@ -54,22 +55,28 @@ const NotificationDirection: VariantsProps = {
 
 const NotificationContent = forwardRef<HTMLDivElement, NotificationContentProps>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
-    const { position = 'bottom-right' } = useNotificationContext()
+    const { position = 'bottom-right', isOpen } = useNotificationContext()
     return (
-      <motion.div
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        variants={NotificationDirection[position]}
-        {...props}
-        className={cn(
-          'notification-content fixed max-w-sm rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900',
-          contentTheme.position[position],
-          className,
+      <AnimatePresence>
+        {isOpen && (
+          <NotificationPortal>
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={NotificationDirection[position]}
+              {...props}
+              className={cn(
+                'notification-content fixed max-w-sm rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900',
+                contentTheme.position[position],
+                className,
+              )}
+              ref={ref}>
+              {children}
+            </motion.div>
+          </NotificationPortal>
         )}
-        ref={ref}>
-        {children}
-      </motion.div>
+      </AnimatePresence>
     )
   },
 )

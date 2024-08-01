@@ -1,6 +1,6 @@
 'use client'
-import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { Button } from '../Button'
+import { HTMLAttributes, forwardRef, isValidElement } from 'react'
+import { KeepSlot } from '../Helpers/KeepSlot'
 import { useModalContext } from './ModalContext'
 
 export interface ModalActionProps extends HTMLAttributes<HTMLButtonElement> {
@@ -10,18 +10,12 @@ export interface ModalActionProps extends HTMLAttributes<HTMLButtonElement> {
 export const ModalAction = forwardRef<HTMLButtonElement, ModalActionProps>(({ children, asChild, ...props }, ref) => {
   const { handleOpen } = useModalContext()
 
-  if (asChild && isValidElement(children)) {
-    return cloneElement(children, {
-      onClick: handleOpen,
-      itemRef: ref,
-      ...props,
-    })
-  }
+  const Slot = asChild && isValidElement(children) ? KeepSlot : 'button'
 
   return (
-    <Button ref={ref} onClick={handleOpen}>
-      Modal Action
-    </Button>
+    <Slot onClick={handleOpen} {...props} ref={ref}>
+      {children}
+    </Slot>
   )
 })
 

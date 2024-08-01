@@ -1,9 +1,13 @@
 'use client'
 import { ReactNode } from 'react'
-import { createPortal } from 'react-dom'
+import { KeepPortal } from '../Helpers/KeepPortal'
 
 const NotificationPortal = ({ children }: { children: ReactNode }) => {
-  return createPortal(<div className="fixed inset-0 z-50 overflow-auto">{children}</div>, document.body)
+  return (
+    <KeepPortal>
+      <div className="fixed inset-0 z-50 overflow-auto">{children}</div>
+    </KeepPortal>
+  )
 }
 
 export { NotificationPortal }

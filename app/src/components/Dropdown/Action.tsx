@@ -28,7 +28,7 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
       )
     }
     return (
-      <Button ref={refs.setReference || ref} {...getReferenceProps()} variant="outline" className={cn(className)}>
+      <Button ref={refs.setReference || ref} {...getReferenceProps()} className={cn(className)}>
         {children ?? 'Open Dropdown'}
       </Button>
     )

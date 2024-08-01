@@ -38,7 +38,7 @@ export const buttonTheme: keepButtonTheme = {
   color: {
     primary: 'bg-primary-500 hover:bg-primary-600 text-white disabled:bg-primary-100',
     secondary:
-      'bg-metal-900 hover:bg-metal-800 dark:bg-white dark:hover:bg-metal-25 dark:text-metal-900 text-white disabled:bg-metal-200 dark:disabled:bg-metal-600',
+      'bg-metal-900 hover:bg-metal-800 dark:bg-white dark:hover:bg-metal-25 dark:text-metal-900 text-white disabled:bg-metal-600 dark:disabled:bg-metal-600 dark:disabled:text-white',
     success: 'bg-success-500 hover:bg-success-600 text-white disabled:bg-success-100',
     warning: 'bg-warning-500 hover:bg-warning-600 text-white disabled:bg-warning-100',
     error: 'bg-error-500 hover:bg-error-600 text-white disabled:bg-error-100',

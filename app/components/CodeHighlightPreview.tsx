@@ -48,7 +48,7 @@ const CodeHighlightPreview = forwardRef<HTMLDivElement, CodeHighlightPreviewProp
                   'border-b border-b-transparent px-6 py-2.5 text-body-4 font-normal',
                   active === index + 1
                     ? 'border-b-metal-200 bg-metal-900/10 text-white'
-                    : 'bg-metal-800 text-white opacity-50',
+                    : 'bg-metal-900 text-white opacity-70',
                 )}>
                 <span>{key}</span>
               </button>

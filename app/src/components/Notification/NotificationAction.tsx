@@ -1,6 +1,6 @@
 'use client'
-import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { Button } from '../Button'
+import { HTMLAttributes, forwardRef, isValidElement } from 'react'
+import { KeepSlot } from '../Helpers/KeepSlot'
 import { useNotificationContext } from './NotificationContext'
 
 export interface NotificationActionProps extends HTMLAttributes<HTMLButtonElement> {
@@ -11,18 +11,12 @@ const NotificationAction = forwardRef<HTMLButtonElement, NotificationActionProps
   ({ children, asChild, ...props }, ref) => {
     const { handleOpen } = useNotificationContext()
 
-    if (asChild && isValidElement(children)) {
-      return cloneElement(children, {
-        onClick: handleOpen,
-        itemRef: ref,
-        ...props,
-      })
-    }
+    const Slot = asChild && isValidElement(children) ? KeepSlot : 'button'
 
     return (
-      <Button ref={ref} onClick={handleOpen} variant="outline">
-        {children ?? 'Notification Action'}
-      </Button>
+      <Slot ref={ref} onClick={handleOpen} {...props}>
+        {children}
+      </Slot>
     )
   },
 )

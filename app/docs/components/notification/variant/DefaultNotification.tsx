@@ -3,7 +3,6 @@ import {
   Button,
   Notification,
   NotificationAction,
-  NotificationBody,
   NotificationClose,
   NotificationContent,
   NotificationDescription,
@@ -13,47 +12,11 @@ import {
 
 const DefaultNotification = () => {
   return (
-    <div className="px-5 py-3">
+    <div className="flex items-center justify-center px-5 py-3">
       <Notification>
-        <NotificationAction />
-        <NotificationBody>
-          <NotificationContent>
-            <NotificationTitle>Can we store cookies?</NotificationTitle>
-            <NotificationDescription>
-              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </NotificationDescription>
-            <NotificationFooter>
-              <NotificationClose asChild>
-                <Button>Accept</Button>
-              </NotificationClose>
-              <NotificationClose asChild>
-                <Button variant="outline">Review</Button>
-              </NotificationClose>
-            </NotificationFooter>
-          </NotificationContent>
-        </NotificationBody>
-      </Notification>
-    </div>
-  )
-}
-
-const DefaultNotificationCode = `
-import {
-  Button,
-  Notification,
-  NotificationAction,
-  NotificationBody,
-  NotificationContent,
-  NotificationDescription,
-  NotificationFooter,
-  NotificationTitle,
-} from 'keep-react'
-
-export const NotificationComponent = () => {
-  return (
-    <Notification>
-      <NotificationAction />
-      <NotificationBody>
+        <NotificationAction asChild>
+          <Button>Open Notification</Button>
+        </NotificationAction>
         <NotificationContent>
           <NotificationTitle>Can we store cookies?</NotificationTitle>
           <NotificationDescription>
@@ -64,17 +27,52 @@ export const NotificationComponent = () => {
               <Button>Accept</Button>
             </NotificationClose>
             <NotificationClose asChild>
-              <Button variant="outline">
-                Review
-              </Button>
+              <Button variant="outline">Review</Button>
             </NotificationClose>
           </NotificationFooter>
         </NotificationContent>
-      </NotificationBody>
-    </Notification>
+      </Notification>
+    </div>
   )
 }
 
-`
+const DefaultNotificationCode = {
+  'NotificationComponent.tsx': `
+import {
+  Button,
+  Notification,
+  NotificationAction,
+  NotificationContent,
+  NotificationDescription,
+  NotificationFooter,
+  NotificationTitle,
+} from 'keep-react'
+
+
+export const NotificationComponent = () => {
+  return (
+    <Notification>
+      <NotificationAction asChild>
+        <Button>Open Notification</Button>
+      </NotificationAction>
+      <NotificationContent>
+        <NotificationTitle>Can we store cookies?</NotificationTitle>
+        <NotificationDescription>
+          Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </NotificationDescription>
+        <NotificationFooter>
+          <NotificationClose asChild>
+            <Button>Accept</Button>
+          </NotificationClose>
+          <NotificationClose asChild>
+            <Button variant="outline">Review</Button>
+          </NotificationClose>
+        </NotificationFooter>
+      </NotificationContent>
+    </Notification>
+  )
+}
+`,
+}
 
 export { DefaultNotification, DefaultNotificationCode }

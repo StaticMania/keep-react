@@ -1,6 +1,8 @@
 import { DefaultModal, DefaultModalCode } from './variant/DefaultModal'
 import { CustomizeModal, CustomizeModalCode } from './variant/CustomizeModal'
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import { modalApi } from './modalApi'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -10,14 +12,20 @@ A modal component is a user interface element commonly used in web and mobile ap
 
 Modal components typically appear as a small window or dialog box that appears on top of the existing content, effectively "blocking" interaction with the underlying interface until the modal is dismissed.
 
-<CodePreview github="Modal" code={DefaultModalCode}>
+<CodeHighlightPreview code={DefaultModalCode}>
   <DefaultModal />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Customizable Modal
 
 You can customize our modal as your desire except the modal functionality.
 
-<CodePreview github="Modal" code={CustomizeModalCode}>
+<CodeHighlightPreview code={CustomizeModalCode}>
   <CustomizeModal />
-</CodePreview>
+</CodeHighlightPreview>
+
+## API Reference
+
+Here is a list of the props that you can pass to the modal component:
+
+<ComponentApi data={modalApi} />
