@@ -24,7 +24,8 @@ const PageNotAvailable = () => {
   )
 }
 
-const PageNotAvailableCode = `
+const PageNotAvailableCode = {
+  'EmptyComponent.tsx': `
 import Image from 'next/image'
 import Link from 'next/link'
 import { buttonVariants, Empty, EmptyDescription, EmptyImage, EmptyTitle } from 'keep-react'
@@ -50,6 +51,7 @@ export const EmptyComponent = () => {
     </Empty>
   )
 }
-`
+`,
+}
 
 export { PageNotAvailable, PageNotAvailableCode }

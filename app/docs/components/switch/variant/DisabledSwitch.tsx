@@ -4,7 +4,8 @@ const DisabledSwitch = () => {
   return <Switch disabled />
 }
 
-const DisabledSwitchCode = `
+const DisabledSwitchCode = {
+  'SwitchComponent.tsx': `
 import { Switch } from 'keep-react'
 
 export const SwitchComponent = () => {
@@ -12,6 +13,7 @@ export const SwitchComponent = () => {
     <Switch disabled/>
   )
 }
-`
+`,
+}
 
 export { DisabledSwitch, DisabledSwitchCode }

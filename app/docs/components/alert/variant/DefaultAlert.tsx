@@ -24,7 +24,8 @@ const DefaultAlert = () => {
   )
 }
 
-const DefaultAlertCode = `
+const DefaultAlertCode = {
+  'AlertComponent.tsx': `
 import {
   Alert,
   AlertContainer,
@@ -50,6 +51,7 @@ export const AlertComponent = () => {
     </Alert>
   )
 }
-`
+`,
+}
 
 export { DefaultAlert, DefaultAlertCode }

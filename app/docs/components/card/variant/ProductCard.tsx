@@ -18,7 +18,8 @@ const ProductCard = () => {
   )
 }
 
-const ProductCardCode = `
+const ProductCardCode = {
+  'CardComponent.tsx': `
 import Image from 'next/image'
 import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from 'keep-react'
 
@@ -38,6 +39,7 @@ export const CardComponent = () => {
     </Card>
   )
 }
-`
+`,
+}
 
 export { ProductCard, ProductCardCode }

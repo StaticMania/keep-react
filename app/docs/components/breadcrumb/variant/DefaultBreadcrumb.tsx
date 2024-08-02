@@ -22,7 +22,8 @@ const DefaultBreadcrumb = () => {
   )
 }
 
-const DefaultBreadcrumbCode = `
+const DefaultBreadcrumbCode = {
+  'BreadcrumbComponent.tsx': `
 'use client'
 import { CaretRight } from 'phosphor-react'
 import { Breadcrumb, BreadcrumbItem } from 'keep-react'
@@ -46,6 +47,7 @@ const BreadcrumbComponent = () => {
     </Breadcrumb>
   )
 }
-`
+`,
+}
 
 export { DefaultBreadcrumb, DefaultBreadcrumbCode }

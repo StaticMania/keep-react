@@ -32,7 +32,8 @@ const CarouselWithLoop = () => {
   )
 }
 
-const CarouselWithLoopCode = `
+const CarouselWithLoopCode = {
+  'CarouselComponent.tsx': `
 import {
   Carousel,
   CarouselButtons,
@@ -66,5 +67,6 @@ export const CarouselComponent = () => (
     </Carousel>
   )
 }
-`
+`,
+}
 export { CarouselWithLoop, CarouselWithLoopCode }

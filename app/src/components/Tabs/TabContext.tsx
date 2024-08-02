@@ -3,9 +3,9 @@ import { createContext, useContext } from 'react'
 
 export type TabPropsContext = {
   activeItem?: string
+  defaultActive?: string
   vertical?: boolean
-  itemType?: 'button' | 'link'
-  handleActive?: (item: string) => void
+  handleActive: (item: string) => void
 }
 
 export const TabContext = createContext<TabPropsContext | undefined>(undefined)

@@ -8,7 +8,8 @@ const DefaultTextArea = () => {
   )
 }
 
-const DefaultTextAreaCode = `
+const DefaultTextAreaCode = {
+  'TextAreaComponent.tsx': `
 import { Textarea } from 'keep-react'
 
 export const TextAreaComponent = () => {
@@ -16,6 +17,7 @@ export const TextAreaComponent = () => {
      <Textarea placeholder="Write your message here." rows={8} />
   )
 }
-`
+`,
+}
 
 export { DefaultTextArea, DefaultTextAreaCode }

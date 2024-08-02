@@ -15,7 +15,8 @@ const TooltipTriggering = () => {
   )
 }
 
-const TooltipTriggeringCode = `
+const TooltipTriggeringCode = {
+  'TooltipComponent.tsx': `
 import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
@@ -32,6 +33,6 @@ export const TooltipComponent = () => {
     </>
   )
 }
-`
-
+`,
+}
 export { TooltipTriggering, TooltipTriggeringCode }

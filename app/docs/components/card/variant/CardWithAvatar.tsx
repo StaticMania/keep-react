@@ -28,7 +28,8 @@ const CardWithAvatar = () => {
   )
 }
 
-const CardWithAvatarCode = `
+const CardWithAvatarCode = {
+  'CardComponent.tsx': `
 import { Avatar, AvatarGroup, AvatarImage, Card, CardContent, CardDescription, CardTitle } from 'keep-react'
 
 export const CardComponent = () => {
@@ -58,5 +59,6 @@ export const CardComponent = () => {
     </Card>
   )
 }
-`
+`,
+}
 export { CardWithAvatar, CardWithAvatarCode }

@@ -3,7 +3,7 @@ import { ImageOfAvatar, ImageOfAvatarCode } from './variant/ImageOfAvatar'
 import { StatusOfAvatar, StatusOfAvatarCode } from './variant/StatusOfAvatar'
 import { AvatarGroupComponent, AvatarGroupCode } from './variant/AvatarGroup'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
@@ -13,30 +13,30 @@ The Avatar component in the Keep React allows you to display user avatars or pro
 
 When you enable the placeholder option, a default avatar image appears when there's no user image available.
 
-<CodePreview github="Avatar" code={DefaultAvatarCode}>
+<CodeHighlightPreview code={DefaultAvatarCode}>
   <DefaultAvatar />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Using User Images
 
 Display a image using the `src` prop. Provide the path to the user's image, whether it's a local or remote URL.
 
-<CodePreview github="Avatar" code={ImageOfAvatarCode}>
+<CodeHighlightPreview code={ImageOfAvatarCode}>
   <ImageOfAvatar />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Avatar Status
 
 The avatar's status reflects the user's availability.
 
-<CodePreview github="Avatar" code={StatusOfAvatarCode}>
+<CodeHighlightPreview code={StatusOfAvatarCode}>
   <StatusOfAvatar />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Avatar Group
 
 Display multiple avatars in a group setting. Customize the layout for visually appealing designs.
 
-<CodePreview github="Avatar" code={AvatarGroupCode}>
+<CodeHighlightPreview code={AvatarGroupCode}>
   <AvatarGroupComponent />
-</CodePreview>
+</CodeHighlightPreview>

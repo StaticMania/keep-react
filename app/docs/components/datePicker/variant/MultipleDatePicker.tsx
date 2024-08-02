@@ -21,7 +21,8 @@ const MultipleDatePicker = () => {
   )
 }
 
-const MultipleDatePickerCode = `
+const MultipleDatePickerCode = {
+  'DatePickerComponent.tsx': `
 'use client'
 import { format } from 'date-fns'
 import { useState } from 'react'
@@ -44,6 +45,7 @@ export const DatePickerComponent = () => {
     </Popover>
   )
 }
-`
+`,
+}
 
 export { MultipleDatePicker, MultipleDatePickerCode }

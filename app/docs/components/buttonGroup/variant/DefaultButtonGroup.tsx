@@ -12,7 +12,8 @@ const DefaultButtonGroup = () => {
   )
 }
 
-const DefaultButtonGroupCode = `
+const DefaultButtonGroupCode = {
+  'ButtonGroupComponent.tsx': `
 import { Button, ButtonGroup } from 'keep-react'
 
 export const ButtonGroupComponent = () => {
@@ -24,6 +25,7 @@ export const ButtonGroupComponent = () => {
     </ButtonGroup>
   )
 }
-`
+`,
+}
 
 export { DefaultButtonGroup, DefaultButtonGroupCode }

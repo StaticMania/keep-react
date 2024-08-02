@@ -4,12 +4,14 @@ const DefaultTag = () => {
   return <Tag>Default Tag</Tag>
 }
 
-const DefaultTagCode = `
+const DefaultTagCode = {
+  'TagComponent.tsx': `
 import { Tag } from 'keep-react'
 
 export const TagComponent = () => {
   return <Tag color="gray">Default Tag</Tag>
 }
-`
+`,
+}
 
 export { DefaultTag, DefaultTagCode }

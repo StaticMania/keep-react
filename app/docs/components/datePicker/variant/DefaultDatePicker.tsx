@@ -21,7 +21,8 @@ const DefaultDatePicker = () => {
   )
 }
 
-const DefaultDatePickerCode = `
+const DefaultDatePickerCode = {
+  'DatePickerComponent.tsx': `
 'use client'
 import { format } from 'date-fns'
 import { useState } from 'react'
@@ -44,6 +45,6 @@ export const DatePickerComponent = () => {
     </Popover>
   )
 }
-`
-
+`,
+}
 export { DefaultDatePicker, DefaultDatePickerCode }

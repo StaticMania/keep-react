@@ -58,7 +58,8 @@ const VariantOfBadge = () => {
   )
 }
 
-const VariantOfBadgeCode = `
+const VariantOfBadgeCode = {
+  'BadgeComponent.tsx': `
 import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {
@@ -68,8 +69,9 @@ export const BadgeComponent = () => {
       <Badge variant="border">Border</Badge>
       <Badge variant="background">Background</Badge>
     </>
-  );
-};
-`
+  )
+}
+`,
+}
 
 export { VariantOfBadge, VariantOfBadgeCode }

@@ -13,7 +13,8 @@ const DefaultTooltip = () => {
   )
 }
 
-const DefaultTooltipCode = `
+const DefaultTooltipCode = {
+  'TooltipComponent.tsx': `
 import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
@@ -27,6 +28,7 @@ export const TooltipComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { DefaultTooltip, DefaultTooltipCode }

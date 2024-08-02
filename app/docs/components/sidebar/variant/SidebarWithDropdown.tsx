@@ -130,7 +130,8 @@ const SidebarWithDropdown = () => {
   )
 }
 
-const SidebarWithDropdownCode = `
+const SidebarWithDropdownCode = {
+  'SidebarComponent.tsx': `
 'use client'
 import Link from 'next/link'
 import {
@@ -260,5 +261,6 @@ export const SidebarComponent = () => {
     </Sidebar>
   )
 }
-`
+`,
+}
 export { SidebarWithDropdown, SidebarWithDropdownCode }

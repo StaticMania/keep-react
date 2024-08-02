@@ -85,7 +85,8 @@ const CardPopover = () => {
   )
 }
 
-const CardPopoverCode = `
+const CardPopoverCode = {
+  'PopoverComponent.tsx': `
 import Image from 'next/image'
 import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverAction } from 'keep-react'
 
@@ -112,6 +113,7 @@ export const PopoverComponent = () => {
     </Popover>
   )
 }
-`
+`,
+}
 
 export { CardPopover, CardPopoverCode }

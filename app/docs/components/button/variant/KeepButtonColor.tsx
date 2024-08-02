@@ -12,7 +12,8 @@ const KeepButtonColor = () => {
   )
 }
 
-const KeepButtonColorCode = `
+const KeepButtonColorCode = {
+  'ButtonComponent.tsx': `
 import { Button } from 'keep-react'
 
 export const ButtonComponent = () => {
@@ -26,6 +27,7 @@ export const ButtonComponent = () => {
     </>
   )
 }
-`
+`,
+}
 
 export { KeepButtonColor, KeepButtonColorCode }

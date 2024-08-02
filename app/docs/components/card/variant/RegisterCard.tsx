@@ -60,7 +60,8 @@ const RegisterCard = () => {
   )
 }
 
-const RegisterCardCode = `
+const RegisterCardCode = {
+  'CardComponent.tsx': `
 'use client'
 import { Envelope, FacebookLogo, GoogleLogo, Lock } from 'phosphor-react'
 import {
@@ -122,6 +123,7 @@ export const CardComponent = () => {
     </Card>
   )
 }
-`
+`,
+}
 
 export { RegisterCard, RegisterCardCode }

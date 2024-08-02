@@ -1,0 +1,45 @@
+import { DefaultTabs, DefaultTabsCode } from './variant/DefaultTabs'
+import { VerticalTab, VerticalTabCode } from './variant/VerticalTabs'
+import { TabsWithIcon, TabsWithIconCode } from './variant/TabsWithIcon'
+import { tabsApiData, tabsItemApiData } from './tabsApi'
+
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
+
+## Table of Contents
+
+The Tabs Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container.
+
+## Default Tabs
+
+The Default Tabs component showcases the basic implementation of tabs.
+
+<CodeHighlightPreview code={DefaultTabsCode} className="bg-metal-50">
+  <DefaultTabs />
+</CodeHighlightPreview>
+
+## Tabs With Icon
+
+<CodeHighlightPreview code={TabsWithIconCode} className="bg-metal-50">
+  <TabsWithIcon />
+</CodeHighlightPreview>
+
+## Vertical Tab
+
+Display tabs vertically by setting the `vertical` prop to `true`.
+
+<CodeHighlightPreview code={VerticalTabCode} className="bg-metal-50">
+  <VerticalTab />
+</CodeHighlightPreview>
+
+## Tabs API Reference
+
+Explore the available props for the `<Tabs>` component
+
+<ComponentApi data={tabsApiData} />
+
+## Tabs Items API Reference
+
+Explore the available props for the `<TabsItem>` component
+
+<ComponentApi data={tabsItemApiData} />

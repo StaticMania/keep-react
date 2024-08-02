@@ -4,7 +4,8 @@ import { ToastWithAction, ToastWithActionCode } from './variant/ToastWithAction'
 import { ToastWithColorVariant, ToastWithColorVariantCode } from './variant/ToastVariant'
 import { ToastWithPromise, ToastWithPromiseCode } from './variant/ToastWithPromise'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlight from '../../../components/CodeHighlight'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
@@ -14,49 +15,47 @@ Toasts typically appear as small, non-intrusive pop-up notifications that appear
 
 Setup the Toast component to display the toast message. First import the `ToastWrapper` component in our root directory and then use the `<ToastWrapper>` component. Now copy paste the default toast variant from the documentation.
 
-<CodePreview github="Toast" code={ToastWrapperCode} activeTab={1}>
-  <DefaultToast />
-</CodePreview>
+<CodeHighlight code={ToastWrapperCode} />
 
 ## Default Toast
 
 The default toast shows a short message to the user.
 
-<CodePreview github="Toast" code={DefaultToastCode}>
+<CodeHighlightPreview code={DefaultToastCode}>
   <DefaultToast />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Toast With Description
 
 Toast with title and description for providing additional details to the user.
 
-<CodePreview github="Toast" code={ToastWithDescriptionCode}>
+<CodeHighlightPreview code={ToastWithDescriptionCode}>
   <ToastWithDescription />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Toast With Action
 
 You can include an action button in the toast component, allowing users to dismiss the toast by clicking on it.
 
-<CodePreview github="Toast" code={ToastWithActionCode}>
+<CodeHighlightPreview code={ToastWithActionCode}>
   <ToastWithAction />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Toast With Color Variant
 
 You can use different color variants such as `success`, `error`, or `info`.
 
-<CodePreview github="Toast" code={ToastWithColorVariantCode}>
+<CodeHighlightPreview code={ToastWithColorVariantCode}>
   <ToastWithColorVariant />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Toast With Promise
 
 You can pass a promise to the toast component.
 
-<CodePreview github="Toast" code={ToastWithPromiseCode}>
+<CodeHighlightPreview code={ToastWithPromiseCode}>
   <ToastWithPromise />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Reference
 

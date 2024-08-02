@@ -17,7 +17,8 @@ const ToastWithAction = () => {
   )
 }
 
-const ToastWithActionCode = `
+const ToastWithActionCode = {
+  'ToastComponent.tsx': `
 'use client'
 import { Button, toast } from 'keep-react'
 
@@ -36,6 +37,7 @@ export const ToastComponent = () => {
     </Button>
   )
 }
-`
+`,
+}
 
 export { ToastWithAction, ToastWithActionCode }

@@ -23,7 +23,8 @@ const ButtonGroupWithIcon = () => {
   )
 }
 
-const ButtonGroupWithIconCode = `
+const ButtonGroupWithIconCode = {
+  'ButtonGroupComponent.tsx': `
 'use client'
 import { Button, ButtonGroup } from 'keep-react'
 import { ChatCircleDots, Cube, Gear } from 'phosphor-react'
@@ -52,6 +53,7 @@ export const ButtonGroupComponent = () => {
     </ButtonGroup>
   )
 }
-`
+`,
+}
 
 export { ButtonGroupWithIcon, ButtonGroupWithIconCode }

@@ -88,7 +88,8 @@ const DefaultSidebar = () => {
   )
 }
 
-const DefaultSidebarCode = `
+const DefaultSidebarCode = {
+  'SidebarComponent.tsx': `
 'use client'
 import Link from 'next/link'
 import {
@@ -176,6 +177,7 @@ export const SidebarComponent = () => {
     </Sidebar>
   )
 }
-`
+`,
+}
 
 export { DefaultSidebar, DefaultSidebarCode }

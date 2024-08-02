@@ -148,7 +148,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 `,
 }
 
-export const viteThemeSwitcherCode = `
+export const viteThemeSwitcherCode = {
+  'ThemeSwitcher.tsx': `
 import {
   Dropdown,
   DropdownAction,
@@ -193,7 +194,8 @@ const ThemeSwitcher = () => {
 };
 
 export default ThemeSwitcher;
-`
+`,
+}
 
 export const viteThemeSwitcherCodeHighlight = {
   'Theme-switcher.tsx': viteThemeSwitcherCode,
@@ -269,7 +271,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   `,
 }
 
-export const nextThemeSwitcher = `
+export const nextThemeSwitcher = {
+  'ThemeSwitcher.tsx': `
 'use client'
 import { useTheme } from 'next-themes'
 import { MoonStars, SunDim } from 'phosphor-react'
@@ -324,4 +327,5 @@ const ThemeSwitcher = () => {
 }
 
 export default ThemeSwitcher
-`
+`,
+}

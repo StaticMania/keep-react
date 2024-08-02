@@ -24,7 +24,8 @@ const NoDataFound = () => {
   )
 }
 
-const NoDataFoundCode = `
+const NoDataFoundCode = {
+  'EmptyComponent.tsx': `
 import Image from 'next/image'
 import Link from 'next/link'
 import { buttonVariants, Empty, EmptyDescription, EmptyImage, EmptyTitle } from 'keep-react'
@@ -50,6 +51,7 @@ export const EmptyComponent = () => {
     </Empty>
   )
 }
-`
+`,
+}
 
 export { NoDataFound, NoDataFoundCode }

@@ -22,7 +22,8 @@ const AvatarGroupComponent = () => {
   )
 }
 
-const AvatarGroupCode = `
+const AvatarGroupCode = {
+  'AvatarComponent.tsx': `
 import { Avatar, AvatarGroup, AvatarImage } from 'keep-react'
 
 const AvatarGroupComponent = () => {
@@ -47,6 +48,7 @@ const AvatarGroupComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { AvatarGroupCode, AvatarGroupComponent }

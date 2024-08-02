@@ -5,7 +5,7 @@ import EditPage from '../../../components/EditPage'
 
 export const metadata: Metadata = {
   description:
-    'The Tab Group Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container.',
+    'The Tabs Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container.',
   title: 'Tabs - Keep React',
 }
 

@@ -3,7 +3,7 @@ import { DisabledSwitch, DisabledSwitchCode } from './variant/DisabledSwitch'
 import { SwitchWithIcon, SwitchWithIconCode } from './variant/SwitchWithIcon'
 import { toggleApiData } from './SwitchApi'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 import ComponentApi from '../../../components/ComponentApi'
 
@@ -15,25 +15,25 @@ The Toggle Switch component provides a user-friendly way to enable or disable a 
 
 The "Default Switch" component provides a visual representation of two states, typically "on" and "off," allowing users to effortlessly toggle between them.
 
-<CodePreview github="Switch" code={DefaultSwitchCode}>
+<CodeHighlightPreview code={DefaultSwitchCode}>
   <DefaultSwitch />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Switch With Icon
 
 Enhance the visual appeal of the switch by adding icons. Simply enable the withIcon prop with withIcon={true}.
 
-<CodePreview github="Switch" code={SwitchWithIconCode}>
+<CodeHighlightPreview code={SwitchWithIconCode}>
   <SwitchWithIcon />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Disabled Switch
 
 Disable the switch component by utilizing the `disabled` prop with `disabled={true}`.
 
-<CodePreview github="Switch" code={DisabledSwitchCode}>
+<CodeHighlightPreview code={DisabledSwitchCode}>
   <DisabledSwitch />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

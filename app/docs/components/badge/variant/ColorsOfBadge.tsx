@@ -12,7 +12,8 @@ const ColorsOfBadge = () => {
   )
 }
 
-const ColorsOfBadgeCode = `
+const ColorsOfBadgeCode = {
+  'BadgeComponent.tsx': `
 import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {
@@ -26,6 +27,7 @@ export const BadgeComponent = () => {
     </>
   )
 }
-`
+`,
+}
 
 export { ColorsOfBadge, ColorsOfBadgeCode }

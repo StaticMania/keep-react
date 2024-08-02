@@ -15,7 +15,8 @@ const TooltipPlacement = () => {
   )
 }
 
-const TooltipPlacementCode = `
+const TooltipPlacementCode = {
+  'TooltipComponent.tsx': `
 import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
@@ -33,6 +34,7 @@ export const TooltipComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { TooltipPlacement, TooltipPlacementCode }

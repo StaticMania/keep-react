@@ -97,7 +97,8 @@ const IconPopover = () => {
   )
 }
 
-const IconPopoverCode = `
+const IconPopoverCode = {
+  'PopoverComponent.tsx': `
 'use client'
 import { Confetti } from 'phosphor-react'
 import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverAction } from 'keep-react'
@@ -128,6 +129,7 @@ export const PopoverComponent = () => {
     </Popover>
   )
 }
-`
+`,
+}
 
 export { IconPopover, IconPopoverCode }

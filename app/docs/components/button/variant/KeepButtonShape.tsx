@@ -15,7 +15,8 @@ const KeepButtonShape = () => {
   )
 }
 
-const KeepButtonShapeCode = `
+const KeepButtonShapeCode = {
+  'ButtonComponent.tsx': `
 'use client'
 import { Button } from 'keep-react'
 import { ShoppingCart } from 'phosphor-react'
@@ -28,6 +29,7 @@ export const ButtonComponent = () => {
     </>
   )
 }
-`
+`,
+}
 
 export { KeepButtonShape, KeepButtonShapeCode }

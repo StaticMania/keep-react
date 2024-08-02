@@ -32,7 +32,8 @@ const DefaultCarousel = () => {
   )
 }
 
-const DefaultCarouselCode = `
+const DefaultCarouselCode = {
+  'CarouselComponent.tsx': `
 import {
   Carousel,
   CarouselButtons,
@@ -66,5 +67,6 @@ export const CarouselComponent = () => (
     </Carousel>
   )
 }
-`
+`,
+}
 export { DefaultCarousel, DefaultCarouselCode }

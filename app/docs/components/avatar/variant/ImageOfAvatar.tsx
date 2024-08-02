@@ -13,7 +13,8 @@ const ImageOfAvatar = () => {
   )
 }
 
-const ImageOfAvatarCode = `
+const ImageOfAvatarCode = {
+  'AvatarComponent.tsx': `
 import { Avatar, AvatarImage } from "keep-react"
 
 export const AvatarComponent = () => {
@@ -28,6 +29,7 @@ export const AvatarComponent = () => {
       </>
   )
 }
-`
+`,
+}
 
 export { ImageOfAvatar, ImageOfAvatarCode }

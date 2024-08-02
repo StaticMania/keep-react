@@ -51,7 +51,8 @@ const DefaultUpload = () => {
   )
 }
 
-const DefaultUploadCode = `
+const DefaultUploadCode = {
+  'UploadComponent.tsx': `
 'use client'
 import { Info,Trash } from 'phosphor-react'
 import { useCallback, useState } from 'react'
@@ -97,6 +98,7 @@ export const UploadComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { DefaultUpload, DefaultUploadCode }

@@ -90,7 +90,8 @@ const ProductTable = () => {
   )
 }
 
-const ProductTableCode = `
+const ProductTableCode = {
+  'TableComponent.tsx': `
 'use client'
 import { DotsThreeOutlineVertical, Funnel, Plus } from 'phosphor-react'
 import {
@@ -184,5 +185,6 @@ export const TableComponent = () => {
   )
 }
 
-`
+`,
+}
 export { ProductTable, ProductTableCode }

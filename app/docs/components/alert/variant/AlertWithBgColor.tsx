@@ -70,7 +70,8 @@ const AlertWithBgColor = () => {
   )
 }
 
-const AlertWithBgColorCode = `
+const AlertWithBgColorCode = {
+  'AlertComponent.tsx': `
 import {
   Alert,
   AlertContainer,
@@ -96,6 +97,7 @@ export const AlertComponent = () => {
     </Alert>
   )
 }
-`
+`,
+}
 
 export { AlertWithBgColor, AlertWithBgColorCode }

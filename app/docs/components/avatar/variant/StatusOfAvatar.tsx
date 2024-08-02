@@ -15,7 +15,8 @@ const StatusOfAvatar = () => {
   )
 }
 
-const StatusOfAvatarCode = `
+const StatusOfAvatarCode = {
+  'AvatarComponent.tsx': `
 import { Avatar, AvatarBadge, AvatarImage } from 'keep-react'
 
 export const AvatarComponent = () => {
@@ -32,6 +33,7 @@ export const AvatarComponent = () => {
     </>
   );
 }
-`
+`,
+}
 
 export { StatusOfAvatar, StatusOfAvatarCode }

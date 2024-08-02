@@ -77,7 +77,8 @@ const DefaultPopover = () => {
   )
 }
 
-const DefaultPopoverCode = `
+const DefaultPopoverCode = {
+  'PopoverComponent.tsx': `
 'use client'
 import {
   Avatar,
@@ -110,6 +111,7 @@ export const PopoverComponent = () => {
     </Popover>
   )
 }
-`
+`,
+}
 
 export { DefaultPopover, DefaultPopoverCode }

@@ -4,7 +4,7 @@ import { PaginationShape, PaginationShapeCode } from './variant/PaginationShape'
 import { PaginationNavigatorComponent, PaginationNavigatorCode } from './variant/PaginationNavigator'
 import { PaginationNavigatorText, PaginationNavigatorTextCode } from './variant/PaginationNavigatorText'
 import { itemApiData, navigatorApiData, paginationApiData } from './PaginationApi'
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -15,41 +15,41 @@ The Pagination component enhances user experience by providing a user-friendly w
 
 The Default Pagination component displays a basic pagination list, allowing users to navigate between pages.
 
-<CodePreview github="Pagination" code={DefaultPaginationCode}>
+<CodeHighlightPreview code={DefaultPaginationCode}>
   <DefaultPagination />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Pagination Shape
 
 You can customize the shape of pagination items using the `shape` prop. Available shapes include `'rounded'` and `'circle'`. By default, pagination items have a `'rounded'` shape.
 
-<CodePreview github="Pagination" code={PaginationShapeCode}>
+<CodeHighlightPreview code={PaginationShapeCode}>
   <PaginationShape />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Navigator With Icon
 
 Enhance the navigational controls with icons to make them more visually appealing and intuitive.
 
-<CodePreview github="Pagination" code={PaginationNavigatorCode}>
+<CodeHighlightPreview code={PaginationNavigatorCode}>
   <PaginationNavigatorComponent />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Navigator With Text
 
 Alternatively, you can use text-based navigational controls for a simpler approach.
 
-<CodePreview github="Pagination" code={PaginationNavigatorTextCode}>
+<CodeHighlightPreview code={PaginationNavigatorTextCode}>
   <PaginationNavigatorText />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Pagination With Input
 
 Allow users to switch to a specific page by entering the page number in an input field.
 
-<CodePreview github="Pagination" code={PaginationInputCode}>
+<CodeHighlightPreview code={PaginationInputCode}>
   <PaginationInput />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Pagination API
 

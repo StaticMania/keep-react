@@ -8,7 +8,8 @@ const DefaultAvatar = () => {
   )
 }
 
-const DefaultAvatarCode = `
+const DefaultAvatarCode = {
+  'AvatarComponent.tsx': `
 import { Avatar, AvatarText } from 'keep-react'
 
 export const AvatarComponent = () => {
@@ -18,6 +19,7 @@ export const AvatarComponent = () => {
     </Avatar>
   )
 }
-`
+`,
+}
 
 export { DefaultAvatar, DefaultAvatarCode }

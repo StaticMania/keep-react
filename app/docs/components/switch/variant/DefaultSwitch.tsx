@@ -4,12 +4,14 @@ const DefaultSwitch = () => {
   return <Switch onCheckedChange={(value) => console.log(value)} />
 }
 
-const DefaultSwitchCode = `
+const DefaultSwitchCode = {
+  'SwitchComponent.tsx': `
 import { Switch } from 'keep-react'
 
 export const SwitchComponent = () => {
   return <Switch />
 }
-`
+`,
+}
 
 export { DefaultSwitch, DefaultSwitchCode }

@@ -13,7 +13,8 @@ const SizesOfProgress = () => {
   )
 }
 
-const SizesOfProgressCode = `
+const SizesOfProgressCode = {
+  'ProgressComponent.tsx': `
 import { CircleProgress, CircleProgressLine, CircleProgressText }  from 'keep-react'
 
 export const ProgressComponent = () => {
@@ -24,6 +25,7 @@ export const ProgressComponent = () => {
     </CircleProgress>
   )
 }
-`
+`,
+}
 
 export { SizesOfProgress, SizesOfProgressCode }

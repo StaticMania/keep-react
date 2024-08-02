@@ -59,11 +59,14 @@ pnpm add keep-react phosphor-react
 following code:
 
 ```jsx
-import keepPreset from 'keep-react/preset'
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', 'node_modules/keep-react/**/*.{js,jsx,ts,tsx}'],
-  presets: [keepPreset],
+import { keepTheme } from 'keep-react/keepTheme'
+
+const config = {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {},
 }
+
+export default keepTheme(config)
 ```
 
 `Step 5:` Add Tailwind CSS to index.css File:
@@ -111,13 +114,14 @@ pnpm add keep-react phosphor-react
 following code
 
 ```js
-module.exports = {
-  content: [
-    // ... (existing content)
-    './node_modules/keep-react/**/*.{js,jsx,ts,tsx}',
-  ],
-  presets: [require('keep-react/preset')],
+import { keepTheme } from 'keep-react/keepTheme'
+
+const config = {
+  content: ['./components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
+  theme: {},
 }
+
+export default keepTheme(config)
 ```
 
 `Step 4:` Add Tailwind CSS to `globals.css` File:
@@ -134,7 +138,6 @@ Congratulations! You have successfully installed the Keep React. Now you can imp
 ## usage
 
 ```jsx
-'use client'
 import { Button } from 'keep-react'
 const App = () => {
   return <Button>Button</Button>

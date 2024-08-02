@@ -63,7 +63,8 @@ const NavbarLayout4 = () => {
   )
 }
 
-const NavbarLayout4Code = `
+const NavbarLayout4Code = {
+  'NavbarComponent.tsx': `
 import {
   Avatar,
   Dropdown,
@@ -122,6 +123,7 @@ export const NavbarComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { NavbarLayout4, NavbarLayout4Code }

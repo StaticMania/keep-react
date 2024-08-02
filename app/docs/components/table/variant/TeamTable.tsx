@@ -116,7 +116,8 @@ const TeamTable = () => {
   )
 }
 
-const TeamTableCode = `
+const TeamTableCode = {
+  'TableComponent.tsx': `
 'use client'
 import { DotsThreeOutlineVertical, MagnifyingGlass, Plus } from 'phosphor-react'
 import {
@@ -241,5 +242,6 @@ export const TableComponent = () => {
   )
 }
 
-`
+`,
+}
 export { TeamTable, TeamTableCode }

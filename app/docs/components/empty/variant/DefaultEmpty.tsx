@@ -24,7 +24,8 @@ const DefaultEmpty = () => {
   )
 }
 
-const DefaultEmptyCode = `
+const DefaultEmptyCode = {
+  'EmptyComponent.tsx': `
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button,buttonVariants, Empty, EmptyDescription, EmptyImage, EmptyTitle } from 'keep-react'
@@ -50,7 +51,7 @@ export const EmptyComponent = () => {
     </Empty>
   )
 }
-
-`
+`,
+}
 
 export { DefaultEmpty, DefaultEmptyCode }

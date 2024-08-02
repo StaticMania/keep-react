@@ -14,7 +14,8 @@ const SpinnerColors = () => {
   )
 }
 
-const SpinnerColorsCode = `
+const SpinnerColorsCode = {
+  'SpinnerComponent.tsx': `
 import { Spinner } from "keep-react";
 
 export const SpinnerComponent = () => {
@@ -30,6 +31,7 @@ export const SpinnerComponent = () => {
     </>
   );
 }
-`
+`,
+}
 
 export { SpinnerColors, SpinnerColorsCode }

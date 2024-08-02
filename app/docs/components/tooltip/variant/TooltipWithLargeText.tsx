@@ -16,7 +16,8 @@ const TooltipWithLargeText = () => {
   )
 }
 
-const TooltipWithLargeTextCode = `
+const TooltipWithLargeTextCode = {
+  'TooltipComponent.tsx': `
 import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
@@ -32,6 +33,7 @@ export const TooltipComponent = () => {
     </Tooltip>
   )
 }
-`
+`,
+}
 
 export { TooltipWithLargeText, TooltipWithLargeTextCode }

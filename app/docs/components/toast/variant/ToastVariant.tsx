@@ -12,7 +12,8 @@ const ToastWithColorVariant = () => {
   )
 }
 
-const ToastWithColorVariantCode = `
+const ToastWithColorVariantCode = {
+  'ToastComponent.tsx': `
 'use client'
 import { Button, toast } from 'keep-react'
 
@@ -26,7 +27,7 @@ export const ToastComponent = () => {
     </div>
   )
 }
-
-`
+`,
+}
 
 export { ToastWithColorVariant, ToastWithColorVariantCode }

@@ -33,7 +33,8 @@ const CarouselWithAutoPlay = () => {
   )
 }
 
-const CarouselWithAutoPlayCode = `
+const CarouselWithAutoPlayCode = {
+  'CarouselComponent.tsx': `
 'use client'
 import autoPlay from 'embla-carousel-autoplay'
 import {
@@ -69,6 +70,7 @@ export const CarouselComponent = () => {
     </Carousel>
   )
 }
-`
+`,
+}
 
 export { CarouselWithAutoPlay, CarouselWithAutoPlayCode }

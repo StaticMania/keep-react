@@ -9,7 +9,8 @@ const DefaultProgress = () => {
   )
 }
 
-const DefaultProgressCode = `
+const DefaultProgressCode = {
+  'ProgressComponent.tsx': `
 import { CircleProgress, CircleProgressLine, CircleProgressText } from 'keep-react'
 
 export const ProgressComponent = () => {
@@ -20,6 +21,7 @@ export const ProgressComponent = () => {
     </CircleProgress>
   )
 }
-`
+`,
+}
 
 export { DefaultProgress, DefaultProgressCode }

@@ -13,7 +13,8 @@ const SizesOfLineProgress = () => {
   )
 }
 
-const SizesOfLineProgressCode = `
+const SizesOfLineProgressCode = {
+  'ProgressComponent.tsx': `
 import { LineProgress, LineProgressBar, LineProgressText } from 'keep-react'
 
 export const ProgressComponent = () => {
@@ -24,6 +25,7 @@ export const ProgressComponent = () => {
     </LineProgress>
   )
 }
-`
+`,
+}
 
 export { SizesOfLineProgress, SizesOfLineProgressCode }

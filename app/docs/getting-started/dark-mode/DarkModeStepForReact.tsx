@@ -1,5 +1,5 @@
 import CodeHighlight from '~/app/components/CodeHighlight'
-import CodePreview from '~/app/components/CodePreview'
+import CodeHighlightPreview from '~/app/components/CodeHighlightPreview'
 import { Timeline, TimelineContent, TimelineItem, TimelinePoint } from '~/app/src'
 import { ThemeProviderWrapper, viteReactDarkModeCode, viteThemeSwitcherCode } from './Code'
 import ViteThemeSwitcher from './ViteThemeSwitch'
@@ -44,9 +44,9 @@ const DarkModeStepForReact = () => {
             Toggle between dark and light modes, use the example code provided to create a simple theme switcher.
           </p>
           <div className="!my-4">
-            <CodePreview github="dark-mode" code={viteThemeSwitcherCode}>
+            <CodeHighlightPreview code={viteThemeSwitcherCode}>
               <ViteThemeSwitcher />
-            </CodePreview>
+            </CodeHighlightPreview>
           </div>
         </TimelineContent>
       </TimelineItem>

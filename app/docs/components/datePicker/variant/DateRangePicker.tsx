@@ -28,7 +28,8 @@ const DateRangePicker = () => {
   )
 }
 
-const DateRangePickerCode = `
+const DateRangePickerCode = {
+  'DatePickerComponent.tsx': `
 'use client'
 import { useState } from 'react'
 import { format } from 'date-fns'
@@ -57,6 +58,7 @@ export const DatePickerComponent = () => {
     </Popover>
   )
 }
-`
+`,
+}
 
 export { DateRangePicker, DateRangePickerCode }

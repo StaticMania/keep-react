@@ -45,7 +45,8 @@ const DefaultTimeline = () => {
   )
 }
 
-const DefaultTimelineCode = `
+const DefaultTimelineCode = {
+  'TimelineComponent.tsx': `
 import { Timeline, TimelineContent, TimelineItem, TimelinePoint } from 'keep-react'
 
 export const TimelineComponent = () => {
@@ -84,6 +85,7 @@ export const TimelineComponent = () => {
     </Timeline>
   )
 }
-`
+`,
+}
 
 export { DefaultTimeline, DefaultTimelineCode }

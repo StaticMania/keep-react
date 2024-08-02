@@ -32,7 +32,8 @@ const SlidesToScroll = () => {
   )
 }
 
-const SlidesToScrollCode = `
+const SlidesToScrollCode = {
+  'CarouselComponent.tsx': `
 import {
   Carousel,
   CarouselButtons,
@@ -66,6 +67,7 @@ export const CarouselComponent = () => (
     </Carousel>
   )
 }
-`
+`,
+}
 
 export { SlidesToScroll, SlidesToScrollCode }

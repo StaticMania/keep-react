@@ -12,7 +12,8 @@ const SpinnerSizes = () => {
   )
 }
 
-const SpinnerSizesCode = `
+const SpinnerSizesCode = {
+  'SpinnerComponent.tsx': `
 import { Spinner } from 'keep-react'
 
 export const SpinnerComponent = () => {
@@ -26,6 +27,7 @@ export const SpinnerComponent = () => {
     </>
   );
 }
-`
+`,
+}
 
 export { SpinnerSizes, SpinnerSizesCode }

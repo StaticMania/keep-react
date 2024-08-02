@@ -30,7 +30,8 @@ const AlertWithDismissIcon = () => {
   )
 }
 
-const AlertWithDismissIconCode = `
+const AlertWithDismissIconCode = {
+  'AlertComponent.tsx': `
 'use client'
 import { useState } from 'react'
 import {
@@ -63,6 +64,7 @@ const AlertComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { AlertWithDismissIcon, AlertWithDismissIconCode }

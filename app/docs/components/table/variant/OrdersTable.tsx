@@ -149,7 +149,8 @@ const OrdersTable = () => {
   )
 }
 
-const OrdersTableCode = `
+const OrdersTableCode = {
+  'TableComponent.tsx': `
 'use client'
 import {
   Avatar,
@@ -299,6 +300,7 @@ export const TableComponent = () => {
     </Table>
   )
 }
-`
+`,
+}
 
 export { OrdersTable, OrdersTableCode }

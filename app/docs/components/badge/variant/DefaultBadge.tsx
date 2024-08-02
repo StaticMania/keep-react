@@ -8,12 +8,14 @@ const DefaultBadge = () => {
   )
 }
 
-const DefaultBadgeCode = `
+const DefaultBadgeCode = {
+  'BadgeComponent.tsx': `
 import { Badge } from 'keep-react'
 
 export const BadgeComponent = () => {
   return <Badge>Default Badge</Badge>
 }
-`
+`,
+}
 
 export { DefaultBadge, DefaultBadgeCode }

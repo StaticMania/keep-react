@@ -16,7 +16,8 @@ const DisabledAccordion = () => {
   )
 }
 
-const DisabledAccordionCode = `
+const DisabledAccordionCode = {
+  'AccordionComponent.tsx': `
 import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from 'keep-react'
 
 export const AccordionComponent = () => {
@@ -34,6 +35,7 @@ export const AccordionComponent = () => {
     </Accordion>
   )
 }
-`
+`,
+}
 
 export { DisabledAccordion, DisabledAccordionCode }

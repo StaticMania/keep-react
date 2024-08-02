@@ -22,7 +22,8 @@ const CustomizeProgress = () => {
   )
 }
 
-const CustomizeProgressCode = `
+const CustomizeProgressCode = {
+  'ProgressComponent.tsx': `
 import {
   CircleProgress,
   CircleProgressLine,
@@ -46,6 +47,7 @@ export const ProgressComponent = () => {
     </div>
   )
 }
-`
+`,
+}
 
 export { CustomizeProgress, CustomizeProgressCode }

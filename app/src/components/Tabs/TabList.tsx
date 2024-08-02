@@ -1,21 +1,20 @@
 'use client'
 import { ForwardedRef, HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
-import { useTabContext } from './Context'
+import { useTabContext } from './TabContext'
 
 export interface TabListProps extends HTMLAttributes<HTMLElement> {}
 
 const TabList = forwardRef<HTMLDivElement, TabListProps>(
   ({ children, className, ...props }, ref: ForwardedRef<HTMLDivElement>) => {
-    const { vertical, itemType } = useTabContext()
+    const { vertical } = useTabContext()
     return (
       <div
         {...props}
         ref={ref}
         className={cn(
-          'flex gap-5',
-          vertical ? 'flex-col' : 'flex-row items-center',
-          itemType === 'link' && 'max-w-2xl border-b border-metal-100 dark:border-metal-900',
+          'mb-2 flex items-center border-b border-b-metal-100 dark:border-b-metal-700',
+          vertical && 'flex-col rounded-xl border-b-0 bg-metal-25 p-4 dark:bg-metal-800',
           className,
         )}>
         {children}

@@ -8,12 +8,14 @@ const DefaultSpinner = () => {
   )
 }
 
-const DefaultSpinnerCode = `
+const DefaultSpinnerCode = {
+  'SpinnerComponent.tsx': `
 import { Spinner } from 'keep-react'
 
 export const SpinnerComponent = () => {
   return <Spinner color="info" size="lg" />
 }
-`
+`,
+}
 
 export { DefaultSpinner, DefaultSpinnerCode }

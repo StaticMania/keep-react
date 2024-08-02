@@ -11,7 +11,8 @@ const DefaultLineProgress = () => {
   )
 }
 
-const DefaultLineProgressCode = `
+const DefaultLineProgressCode = {
+  'ProgressComponent.tsx': `
 import { LineProgress, LineProgressBar, LineProgressText }  from 'keep-react'
 
 export const ProgressComponent = () => {
@@ -22,6 +23,7 @@ export const ProgressComponent = () => {
     </LineProgress>
   )
 }
-`
+`,
+}
 
 export { DefaultLineProgress, DefaultLineProgressCode }

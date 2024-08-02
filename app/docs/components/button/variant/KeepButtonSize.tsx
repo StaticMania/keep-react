@@ -14,7 +14,8 @@ const KeepButtonSize = () => {
   )
 }
 
-const KeepButtonSizeCode = `
+const KeepButtonSizeCode = {
+  'ButtonComponent.tsx': `
 import { Button } from 'keep-react'
 
 export const ButtonComponent = () => {
@@ -27,8 +28,9 @@ export const ButtonComponent = () => {
       <Button size="xl">Extra Large</Button>
       <Button size="2xl">Button of 2xl</Button>
     </>
-  );
-};
-`
+  )
+}
+`,
+}
 
 export { KeepButtonSize, KeepButtonSizeCode }
