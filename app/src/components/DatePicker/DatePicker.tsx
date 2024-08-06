@@ -5,6 +5,11 @@ import { cn } from '../../utils/cn'
 
 export type CalendarProps = ComponentProps<typeof DayPicker>
 
+export type DateRangeType = {
+  from: Date | undefined
+  to: Date | undefined
+}
+
 const DatePicker = ({ className, classNames, showOutsideDays = true, ...props }: CalendarProps) => {
   return (
     <DayPicker

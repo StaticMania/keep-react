@@ -42,7 +42,7 @@ const HorizontalUpload = () => {
 }
 
 const HorizontalUploadCode = {
-  'UploadComponent.tsx': `
+  'UploadComponent.jsx': `
 'use client'
 import { Info } from 'phosphor-react'
 import { useCallback, useState } from 'react'
