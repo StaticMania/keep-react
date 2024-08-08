@@ -13,4 +13,4 @@ export const InputIcon = forwardRef<HTMLDivElement, IconProps>(({ className, chi
   )
 })
 
-InputIcon.displayName = 'Icon'
+InputIcon.displayName = 'InputIcon'

@@ -1,12 +1,12 @@
+'use client'
 import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
-import { BreadcrumbItem } from './Item'
 
 interface BreadcrumbProps extends HTMLAttributes<HTMLUListElement> {
   borderType?: 'border-xy' | 'border-y'
 }
 
-const BreadcrumbComponent = forwardRef<HTMLUListElement, BreadcrumbProps>(
+const Breadcrumb = forwardRef<HTMLUListElement, BreadcrumbProps>(
   ({ children, className, borderType, ...props }, ref) => {
     return (
       <ul
@@ -24,8 +24,6 @@ const BreadcrumbComponent = forwardRef<HTMLUListElement, BreadcrumbProps>(
   },
 )
 
-BreadcrumbComponent.displayName = 'Breadcrumb'
+Breadcrumb.displayName = 'Breadcrumb'
 
-export const Breadcrumb = Object.assign(BreadcrumbComponent, {
-  Item: BreadcrumbItem,
-})
+export { Breadcrumb }

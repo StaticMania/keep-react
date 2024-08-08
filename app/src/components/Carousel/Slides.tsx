@@ -14,4 +14,4 @@ export const CarouselSlides = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivE
   },
 )
 
-CarouselSlides.displayName = 'Carousel.Slides'
+CarouselSlides.displayName = 'CarouselSlides'

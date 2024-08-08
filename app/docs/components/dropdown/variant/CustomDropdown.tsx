@@ -45,7 +45,7 @@ const dropdownData = [
 const CustomDropdown = () => {
   return (
     <div className="flex items-center justify-center px-5 py-3">
-      <Dropdown>
+      <Dropdown showArrow>
         <DropdownAction asChild>
           <Button>Open Dropdown</Button>
         </DropdownAction>

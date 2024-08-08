@@ -16,6 +16,6 @@ const UploadFooter = forwardRef<HTMLDivElement, FooterProps>(
   },
 )
 
-UploadFooter.displayName = 'Upload.Footer'
+UploadFooter.displayName = 'UploadFooter'
 
 export { UploadFooter }

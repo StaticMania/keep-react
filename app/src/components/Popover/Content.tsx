@@ -8,22 +8,22 @@ import { PopoverIVariants, popoverVariants } from './animation'
 
 export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(
   ({ style, className, children, ...props }, propRef) => {
-    const { context: floatingContext, showArrow, placement = 'bottom', ...context } = usePopoverContext()
-    const ref = useMergeRefs([context.refs.setFloating, propRef])
+    const { context: floatingContext, showArrow, placement = 'bottom', ...restContext } = usePopoverContext()
+    const ref = useMergeRefs([restContext.refs.setFloating, propRef])
     const getPlacement = placement.split('-')[0] as keyof PopoverIVariants
 
     return (
       <FloatingPortal>
         <AnimatePresence>
           {floatingContext.open && (
-            <FloatingFocusManager context={floatingContext} modal={context.modal}>
+            <FloatingFocusManager context={floatingContext} modal={restContext.modal}>
               <div
                 className="z-20"
                 ref={ref}
-                style={{ ...context.floatingStyles, ...style }}
-                aria-labelledby={context.labelId}
-                aria-describedby={context.descriptionId}
-                {...context.getFloatingProps(props)}>
+                style={{ ...restContext.floatingStyles, ...style }}
+                aria-labelledby={restContext.labelId}
+                aria-describedby={restContext.descriptionId}
+                {...restContext.getFloatingProps(props)}>
                 <motion.div
                   key="popover"
                   initial="initial"
@@ -38,7 +38,7 @@ export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElemen
                       width={20}
                       height={10}
                       tipRadius={2}
-                      ref={context.arrowRef}
+                      ref={restContext.arrowRef}
                       context={floatingContext}
                     />
                   )}

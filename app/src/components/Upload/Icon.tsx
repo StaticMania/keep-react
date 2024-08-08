@@ -18,6 +18,6 @@ const UploadIcon = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-UploadIcon.displayName = 'Upload.Icon'
+UploadIcon.displayName = 'UploadIcon'
 
 export { UploadIcon }

@@ -1,8 +1,6 @@
 import { DefaultLineProgress, DefaultLineProgressCode } from './variant/DefaultLineProgress'
 import { DefaultProgress, DefaultProgressCode } from './variant/DefaultProgress'
-import { SizesOfProgress, SizesOfProgressCode } from './variant/SizesOfProgress'
 import { VariantOfProgress, VariantOfProgressCode } from './variant/VariantOfProgress'
-import { SizesOfLineProgress, SizesOfLineProgressCode } from './variant/LineProgressSize'
 import { CustomizeProgress, CustomizeProgressCode } from './variant/CustomizeProgress'
 import { LineProgressDataApi, circleProgressDataApi } from './progressApi'
 
@@ -21,14 +19,6 @@ Default Progress allows you to visually represent the progress or completion of 
   <DefaultProgress />
 </CodeHighlightPreview>
 
-## Progress Size Variant
-
-Progress component supports multiple sizes to fit your design needs. Here is available sizes options for the progress component in our design system `sm` `md` `lg` `xl` and `2xl`.
-
-<CodeHighlightPreview github="Progress" code={SizesOfProgressCode}>
-  <SizesOfProgress />
-</CodeHighlightPreview>
-
 ## Progress Variant
 
 The Progress component in our design system comes with two options: `LineProgress` and `CircleProgress`
@@ -41,14 +31,6 @@ The Progress component in our design system comes with two options: `LineProgres
 
 <CodeHighlightPreview github="Progress" code={DefaultLineProgressCode}>
   <DefaultLineProgress />
-</CodeHighlightPreview>
-
-## Line Progress Size
-
-Progress component supports multiple sizes to fit your design needs. Here is available sizes options for the progress component in our design system `sm` `md` `lg` `xl` and `2xl`.
-
-<CodeHighlightPreview github="Progress" code={SizesOfLineProgressCode}>
-  <SizesOfLineProgress />
 </CodeHighlightPreview>
 
 ## How To Customize

@@ -14,4 +14,4 @@ export const CarouselButtons = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDiv
   },
 )
 
-CarouselButtons.displayName = 'Carousel.Buttons'
+CarouselButtons.displayName = 'CarouselButtons'

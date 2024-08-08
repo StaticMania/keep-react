@@ -24,6 +24,6 @@ const EmptyDescription = forwardRef<HTMLParagraphElement, EmptyDescriptionProps>
     )
   },
 )
-EmptyDescription.displayName = 'Empty.Description'
+EmptyDescription.displayName = 'EmptyDescription'
 
 export { EmptyDescription }

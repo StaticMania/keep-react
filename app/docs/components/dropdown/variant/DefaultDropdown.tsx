@@ -3,7 +3,7 @@ import { Button, Divider, Dropdown, DropdownAction, DropdownContent, DropdownIte
 const DefaultDropdown = () => {
   return (
     <div className="flex items-center justify-center px-5 py-3">
-      <Dropdown>
+      <Dropdown showArrow>
         <DropdownAction asChild>
           <Button>Open Dropdown</Button>
         </DropdownAction>
@@ -27,7 +27,7 @@ const DefaultDropdown = () => {
 
 const DefaultDropdownCode = {
   'DropdownComponent.tsx': `
-import { Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList }  from 'keep-react'
+import { Button, Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList }  from 'keep-react'
 
 export const DropdownComponent = () => {
   return (

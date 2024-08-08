@@ -9,7 +9,7 @@ export interface CircleLineProps extends HTMLAttributes<SVGSVGElement> {
 }
 
 const CircleProgressLine = forwardRef<SVGSVGElement, CircleLineProps>(
-  ({ className, strokeWidth = 2.5, strokeColor, ...props }, ref) => {
+  ({ className, strokeWidth = 3.5, strokeColor, ...props }, ref) => {
     const { circle } = progressTheme
     const { progressBar = 0 } = useProgressContext()
     return (
@@ -29,7 +29,7 @@ const CircleProgressLine = forwardRef<SVGSVGElement, CircleLineProps>(
             r={16}
             fill="none"
             className={cn(circle.svg.gCircle, strokeColor)}
-            strokeWidth={strokeWidth}
+            strokeWidth={strokeWidth + 0.2}
             strokeDasharray={100}
             strokeDashoffset={100 - progressBar}
           />
@@ -39,6 +39,6 @@ const CircleProgressLine = forwardRef<SVGSVGElement, CircleLineProps>(
   },
 )
 
-CircleProgressLine.displayName = 'CircleProgress.Circle'
+CircleProgressLine.displayName = 'CircleProgressLine'
 
 export { CircleProgressLine }

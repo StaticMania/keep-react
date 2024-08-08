@@ -32,4 +32,4 @@ export const CarouselIndicators = forwardRef<HTMLDivElement, CarouselIndicatorsP
   },
 )
 
-CarouselIndicators.displayName = 'Carousel.Indicators'
+CarouselIndicators.displayName = 'CarouselIndicators'

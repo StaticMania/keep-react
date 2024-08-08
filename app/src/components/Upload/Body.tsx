@@ -26,6 +26,6 @@ const UploadBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-UploadBody.displayName = 'Upload.Body'
+UploadBody.displayName = 'UploadBody'
 
 export { UploadBody }

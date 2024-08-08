@@ -26,4 +26,4 @@ export const CarouselItem = forwardRef<HTMLDivElement, CarouselItemProps>(
   },
 )
 
-CarouselItem.displayName = 'Carousel.Item'
+CarouselItem.displayName = 'CarouselItem'

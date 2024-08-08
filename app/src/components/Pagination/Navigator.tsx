@@ -27,6 +27,6 @@ const PaginationNavigator = forwardRef<HTMLButtonElement, NavigatorProps>(
   },
 )
 
-PaginationNavigator.displayName = 'Pagination.Navigator'
+PaginationNavigator.displayName = 'PaginationNavigator'
 
 export { PaginationNavigator }

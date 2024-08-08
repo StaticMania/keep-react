@@ -79,7 +79,6 @@ const DefaultPopover = () => {
 
 const DefaultPopoverCode = {
   'PopoverComponent.tsx': `
-'use client'
 import {
   Avatar,
   AvatarImage,
@@ -88,9 +87,8 @@ import {
   PopoverContent,
   PopoverDescription,
   PopoverHeading,
-  PopoverTrigger,
+  PopoverAction,
 } from 'keep-react'
-import { CaretRight } from 'phosphor-react'
 
 export const PopoverComponent = () => {
   return (

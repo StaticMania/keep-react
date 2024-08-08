@@ -2,7 +2,7 @@ import { LineProgress, LineProgressBar, LineProgressText } from '../../../../src
 
 const DefaultLineProgress = () => {
   return (
-    <div className="w-1/2">
+    <div className="mx-auto max-w-lg">
       <LineProgress progress={55}>
         <LineProgressBar />
         <LineProgressText>55%</LineProgressText>

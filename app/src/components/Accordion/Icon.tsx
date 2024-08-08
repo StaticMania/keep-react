@@ -14,10 +14,11 @@ export interface keepAccordionIconTheme {
 
 export interface AccordionIconProps extends HTMLAttributes<HTMLSpanElement> {
   asChild?: boolean
+  animation?: boolean
 }
 
 const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
-  ({ children, asChild, className, ...otherProps }, ref: Ref<HTMLSpanElement>) => {
+  ({ children, asChild, className, animation = true, ...otherProps }, ref: Ref<HTMLSpanElement>) => {
     const { isOpen } = useAccordionContext()
     const { icon } = accordionTheme
 
@@ -31,7 +32,7 @@ const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
     return (
       <span
         {...otherProps}
-        className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}
+        className={cn(icon.base, isOpen && animation ? icon.rotated.full : icon.rotated.half, className)}
         ref={ref}>
         {children ?? (
           <svg

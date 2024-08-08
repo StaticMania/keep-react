@@ -1,7 +1,11 @@
 import { Switch } from '../../../../src'
 
 const DefaultSwitch = () => {
-  return <Switch onCheckedChange={(value) => console.log(value)} />
+  return (
+    <div className="px-5 py-3">
+      <Switch onCheckedChange={(value) => console.log(value)} />
+    </div>
+  )
 }
 
 const DefaultSwitchCode = {

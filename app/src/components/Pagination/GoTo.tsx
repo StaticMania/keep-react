@@ -13,6 +13,6 @@ const PaginationGoTo = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>
     )
   },
 )
-PaginationGoTo.displayName = 'Pagination.GoTo'
+PaginationGoTo.displayName = 'PaginationGoTo'
 
 export { PaginationGoTo }

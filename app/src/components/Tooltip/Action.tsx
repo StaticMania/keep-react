@@ -34,4 +34,4 @@ export const TooltipAction = forwardRef<HTMLButtonElement, TooltipActionProps>(
   },
 )
 
-TooltipAction.displayName = 'Dropdown.Action'
+TooltipAction.displayName = 'DropdownAction'

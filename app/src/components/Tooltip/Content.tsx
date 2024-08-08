@@ -83,4 +83,4 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
   },
 )
 
-TooltipContent.displayName = 'Tooltip.Content'
+TooltipContent.displayName = 'TooltipContent'

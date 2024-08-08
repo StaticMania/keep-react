@@ -12,6 +12,6 @@ const ButtonGroup = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-ButtonGroup.displayName = 'Button.Group'
+ButtonGroup.displayName = 'ButtonGroup'
 
 export { ButtonGroup }

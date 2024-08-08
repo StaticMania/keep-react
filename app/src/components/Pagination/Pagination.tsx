@@ -2,17 +2,13 @@
 import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
 import { PaginationContext } from './Context'
-import { PaginationGoTo } from './GoTo'
-import { PaginationItem } from './Item'
-import { PaginationList } from './List'
-import { PaginationNavigator } from './Navigator'
 import { paginationTheme } from './theme'
 
 export interface PaginationProps extends HTMLAttributes<HTMLDivElement> {
   shape?: 'rounded' | 'circle'
 }
 
-const PaginationComponent = forwardRef<HTMLDivElement, PaginationProps>(
+const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
   ({ className, children, shape = 'rounded', ...props }, ref) => {
     const { root } = paginationTheme
     return (
@@ -23,11 +19,6 @@ const PaginationComponent = forwardRef<HTMLDivElement, PaginationProps>(
   },
 )
 
-PaginationComponent.displayName = 'Pagination'
+Pagination.displayName = 'Pagination'
 
-export const Pagination = Object.assign(PaginationComponent, {
-  List: PaginationList,
-  Item: PaginationItem,
-  Navigator: PaginationNavigator,
-  GoTo: PaginationGoTo,
-})
+export { Pagination }

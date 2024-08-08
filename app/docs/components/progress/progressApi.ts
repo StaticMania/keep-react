@@ -1,12 +1,5 @@
 export const LineProgressDataApi = [
   {
-    id: 1,
-    propsName: 'size',
-    propsType: ['sm', 'md', 'lg', 'xl', '2xl'],
-    propsDescription: 'Defines the available sizes options for progress.',
-    default: 'md',
-  },
-  {
     id: 2,
     propsName: 'progress',
     propsType: 'number',
@@ -23,13 +16,6 @@ export const LineProgressDataApi = [
 ]
 
 export const circleProgressDataApi = [
-  {
-    id: 1,
-    propsName: 'size',
-    propsType: ['sm', 'md', 'lg', 'xl', '2xl'],
-    propsDescription: 'Defines the available sizes options for progress.',
-    default: 'md',
-  },
   {
     id: 2,
     propsName: 'progress',

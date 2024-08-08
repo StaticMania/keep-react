@@ -22,6 +22,6 @@ export const accordionTheme: keepAccordionTheme = {
     },
   },
   title: {
-    base: 'select-none text-left text-body-1 font-medium text-metal-900 first-letter:mr-1 first-letter:text-metal-900 dark:first-letter:text-white dark:text-white',
+    base: 'select-none text-left text-body-1 font-medium text-metal-900 dark:text-white',
   },
 }

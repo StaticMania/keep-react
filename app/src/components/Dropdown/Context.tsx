@@ -2,7 +2,6 @@
 import {
   Placement,
   arrow,
-  autoPlacement,
   autoUpdate,
   flip,
   offset,
@@ -25,7 +24,7 @@ export interface DropdownOptions {
   trigger?: 'hover' | 'focus' | 'click'
 }
 
-export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow = true }: DropdownOptions) {
+export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow = false }: DropdownOptions) {
   const arrowRef = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -38,12 +37,7 @@ export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow
       flip(),
       shift(),
       arrow({
-        element: arrowRef,
-      }),
-      autoPlacement({
-        crossAxis: true,
-        alignment: 'start',
-        allowedPlacements: ['top', 'right', 'bottom', 'left'],
+        element: showArrow ? arrowRef : null,
       }),
     ],
     whileElementsMounted: autoUpdate,

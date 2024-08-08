@@ -2,7 +2,6 @@
 import {
   Placement,
   arrow,
-  autoPlacement,
   autoUpdate,
   flip,
   offset,
@@ -51,11 +50,6 @@ export function usePopover({
       shift({ padding: 5 }),
       arrow({
         element: showArrow ? arrowRef : null,
-      }),
-
-      autoPlacement({
-        alignment: 'start',
-        allowedPlacements: ['top', 'right', 'bottom', 'left'],
       }),
     ],
   })

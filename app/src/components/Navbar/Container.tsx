@@ -12,6 +12,6 @@ const NavbarContainer = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement
   },
 )
 
-NavbarContainer.displayName = 'Navbar.Container'
+NavbarContainer.displayName = 'NavbarContainer'
 
 export { NavbarContainer }

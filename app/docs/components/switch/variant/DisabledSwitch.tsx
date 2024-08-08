@@ -1,7 +1,11 @@
 import { Switch } from '../../../../src'
 
 const DisabledSwitch = () => {
-  return <Switch disabled />
+  return (
+    <div className="px-5 py-3">
+      <Switch disabled />
+    </div>
+  )
 }
 
 const DisabledSwitchCode = {

@@ -146,7 +146,6 @@ const twMerge = extendTailwindMerge({
         },
       ],
       'bg-image': [{ bg: ['sun', 'moon'] }],
-
       shadow: ['small', 'default', 'medium', 'large', 'xLarge', '2xLarge'],
     },
   },

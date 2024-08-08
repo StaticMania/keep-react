@@ -9,15 +9,17 @@ import { dropdownTheme } from './theme'
 export type DropdownContentProps = HTMLAttributes<HTMLDivElement> & MotionProps
 
 const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(({ className, children, ...props }, ref) => {
-  const { context, arrowRef, refs, floatingStyles, getFloatingProps, showArrow, isOpen } = useDropdownContext()
+  const { context: floatingContext, showArrow, placement = 'bottom', ...restContext } = useDropdownContext()
+
   return (
     <AnimatePresence>
-      {isOpen && (
-        <FloatingFocusManager context={context}>
-          <div {...props} ref={refs.setFloating || ref} style={floatingStyles} {...getFloatingProps()}>
-            {showArrow && (
-              <FloatingArrow width={20} height={10} tipRadius={2} fill="#fff" ref={arrowRef} context={context} />
-            )}
+      {floatingContext.open && (
+        <FloatingFocusManager context={floatingContext}>
+          <div
+            {...props}
+            ref={restContext.refs.setFloating || ref}
+            style={restContext.floatingStyles}
+            {...restContext.getFloatingProps()}>
             <motion.div
               key="dropdown"
               className={cn(dropdownTheme.content, className)}
@@ -27,10 +29,21 @@ const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(({ clas
                 y: 0,
                 transition: {
                   duration: 0.3,
+                  type: 'spring',
                 },
               }}
               exit={{ opacity: 0, y: '20px' }}>
               {children}
+              {showArrow && (
+                <FloatingArrow
+                  className="fill-white dark:fill-metal-900"
+                  width={20}
+                  height={10}
+                  tipRadius={2}
+                  ref={restContext.arrowRef}
+                  context={floatingContext}
+                />
+              )}
             </motion.div>
           </div>
         </FloatingFocusManager>

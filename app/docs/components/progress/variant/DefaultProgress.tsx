@@ -2,10 +2,12 @@ import { CircleProgress, CircleProgressLine, CircleProgressText } from '../../..
 
 const DefaultProgress = () => {
   return (
-    <CircleProgress progress={45}>
-      <CircleProgressLine />
-      <CircleProgressText>45%</CircleProgressText>
-    </CircleProgress>
+    <div className="flex items-center justify-center">
+      <CircleProgress progress={45}>
+        <CircleProgressLine />
+        <CircleProgressText>45%</CircleProgressText>
+      </CircleProgress>
+    </div>
   )
 }
 

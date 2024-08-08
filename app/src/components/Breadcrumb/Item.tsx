@@ -28,4 +28,4 @@ export const BreadcrumbItem = forwardRef<HTMLLIElement, BreadcrumbItemProps>(
   },
 )
 
-BreadcrumbItem.displayName = 'Breadcrumb.Item'
+BreadcrumbItem.displayName = 'BreadcrumbItem'

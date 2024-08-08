@@ -12,6 +12,6 @@ const UploadText = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-UploadText.displayName = 'Upload.Text'
+UploadText.displayName = 'UploadText'
 
 export { UploadText }

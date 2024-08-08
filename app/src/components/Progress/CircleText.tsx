@@ -1,19 +1,21 @@
 'use client'
 import { HTMLAttributes, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
-import { useProgressContext } from './Context'
-import { progressTheme } from './theme'
 
 export const CircleProgressText = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, children, ...props }, ref) => {
-    const { circle } = progressTheme
-    const { size = 'md' } = useProgressContext()
     return (
-      <div ref={ref} {...props} className={cn(circle.text.base, circle.text.content[size], className)}>
+      <div
+        ref={ref}
+        {...props}
+        className={cn(
+          'absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-body-4 font-medium text-metal-600',
+          className,
+        )}>
         {children}
       </div>
     )
   },
 )
 
-CircleProgressText.displayName = 'Progress.CircleText'
+CircleProgressText.displayName = 'CircleProgressText'

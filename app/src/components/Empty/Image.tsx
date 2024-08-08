@@ -12,4 +12,4 @@ export const EmptyImage = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(
   },
 )
 
-EmptyImage.displayName = 'Empty.Image'
+EmptyImage.displayName = 'EmptyImage'

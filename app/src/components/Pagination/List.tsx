@@ -14,6 +14,6 @@ const PaginationList = forwardRef<HTMLUListElement, HTMLAttributes<HTMLUListElem
   },
 )
 
-PaginationList.displayName = 'Pagination.List'
+PaginationList.displayName = 'PaginationList'
 
 export { PaginationList }
