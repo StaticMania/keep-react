@@ -2,7 +2,7 @@ import { DefaultRating, DefaultRatingCode } from './variant/DefaultRating'
 import { ValueFromRating, ValueFromRatingCode } from './variant/ValueFromRating'
 import { RatingTypes, RatingTypesCode } from './variant/RatingTypes'
 import { RatingDataApi, RatingStarApi } from './ratingApi'
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -13,25 +13,25 @@ The Rating Component in the Keep React allows users to provide ratings for vario
 
 The "Default Rating" is a pre-configured or initial rating value within the context of a rating component. It represents the default score assigned to an item or content when a user hasn't provided a specific rating.
 
-<CodePreview github="Rating" code={DefaultRatingCode}>
+<CodeHighlightPreview code={DefaultRatingCode}>
   <DefaultRating />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Rating Types
 
 You can use your own rating icon to display the rating star.
 
-<CodePreview github="Rating" code={RatingTypesCode}>
+<CodeHighlightPreview code={RatingTypesCode}>
   <RatingTypes />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Value From Rating
 
 You can access the value from the rating.
 
-<CodePreview github="Rating" code={ValueFromRatingCode}>
+<CodeHighlightPreview code={ValueFromRatingCode}>
   <ValueFromRating />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Rating API Reference
 
@@ -41,6 +41,6 @@ Explore the available props for the `<Rating>` component
 
 ## Star API Reference
 
-Explore the available props for the `<Rating.Star>` component
+Explore the available props for the `<RatingStar>` component
 
 <ComponentApi data={RatingStarApi} />

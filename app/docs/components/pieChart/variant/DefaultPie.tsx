@@ -33,8 +33,8 @@ const DefaultPie = () => {
   )
 }
 
-const DefaultPieCode = `
-
+const DefaultPieCode = {
+  'ChartComponent.tsx': `
 import { Pie, ChartTooltip, PieChart, ResponsiveContainer, CustomTooltip } from 'keep-react'
 
 export const PieChartComponent = () => {
@@ -65,7 +65,7 @@ export const PieChartComponent = () => {
     </ResponsiveContainer>
   )
 }
-
-`
+`,
+}
 
 export { DefaultPie, DefaultPieCode }

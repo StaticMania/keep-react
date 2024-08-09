@@ -2,8 +2,8 @@
 import {
   Placement,
   arrow,
-  autoPlacement,
   autoUpdate,
+  flip,
   offset,
   shift,
   useClick,
@@ -46,15 +46,10 @@ export function usePopover({
     whileElementsMounted: autoUpdate,
     middleware: [
       offset(14),
-
+      flip({ fallbackAxisSideDirection: 'start' }),
       shift({ padding: 5 }),
       arrow({
         element: showArrow ? arrowRef : null,
-      }),
-
-      autoPlacement({
-        alignment: 'start',
-        allowedPlacements: ['top', 'right', 'bottom', 'left'],
       }),
     ],
   })

@@ -2,14 +2,11 @@
 import { Button, toast } from '../../../../src'
 
 const DefaultToast = () => {
-  return (
-    <Button size="sm" color="secondary" className="bg-metal-900" onClick={() => toast('Keep React is Awesome')}>
-      Toast
-    </Button>
-  )
+  return <Button onClick={() => toast('Keep React is Awesome')}>Toast</Button>
 }
 
-const ToastWrapperCode = `
+const ToastWrapperCode = {
+  'main.tsx': `
 import { ToastWrapper } from 'keep-react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
@@ -36,19 +33,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       />
   </React.StrictMode>,
 )
-`
+`,
+}
 
-const DefaultToastCode = `
+const DefaultToastCode = {
+  'ToastComponent.tsx': `
 'use client'
 import { Button, toast } from 'keep-react'
 
 export const ToastComponent = () => {
   return (
-    <Button size="sm" color="secondary" className="bg-metal-900" onClick={() => toast('Keep React is Awesome')}>
+    <Button onClick={() => toast('Keep React is Awesome')}>
       Toast
     </Button>
   )
 }
-`
+`,
+}
 
 export { DefaultToast, DefaultToastCode, ToastWrapperCode }

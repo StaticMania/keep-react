@@ -1,7 +1,7 @@
 'use client'
 import { TooltipProps } from 'recharts'
 import { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const CustomTooltip = ({
   active,

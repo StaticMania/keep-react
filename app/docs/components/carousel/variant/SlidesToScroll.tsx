@@ -12,10 +12,10 @@ import {
 const SlidesToScroll = () => {
   return (
     <Carousel options={{ slidesToScroll: 2 }}>
-      <CarouselSlides>
+      <CarouselSlides className="flex">
         {[1, 2, 3, 4, 5].map((slide) => (
-          <CarouselItem key={slide}>
-            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-primary-25 dark:border-metal-900 dark:bg-metal-900">
+          <CarouselItem key={slide} className="flex-[0_0_50%]">
+            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-metal-50 dark:border-metal-900 dark:bg-metal-900">
               <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
             </div>
           </CarouselItem>
@@ -32,7 +32,8 @@ const SlidesToScroll = () => {
   )
 }
 
-const SlidesToScrollCode = `
+const SlidesToScrollCode = {
+  'CarouselComponent.tsx': `
 import {
   Carousel,
   CarouselButtons,
@@ -47,10 +48,10 @@ import {
 export const CarouselComponent = () => (
   return (
     <Carousel options={{ slidesToScroll: 2 }}>
-      <CarouselSlides>
+      <CarouselSlides className="flex">
         {[1, 2, 3, 4, 5].map((slide) => (
-          <CarouselItem key={slide}>
-            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 h-96 dark:border-metal-900 dark:bg-metal-900">
+          <CarouselItem key={slide} className="flex-[0_0_50%]">
+            <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-metal-50 h-96 dark:border-metal-900 dark:bg-metal-900">
               <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
             </div>
           </CarouselItem>
@@ -66,6 +67,7 @@ export const CarouselComponent = () => (
     </Carousel>
   )
 }
-`
+`,
+}
 
 export { SlidesToScroll, SlidesToScrollCode }

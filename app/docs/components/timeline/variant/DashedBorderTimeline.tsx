@@ -47,7 +47,8 @@ const DashedBorderTimeline = () => {
 
 export default DashedBorderTimeline
 
-const DashedBorderTimelineCode = `
+const DashedBorderTimelineCode = {
+  'TimelineComponent.tsx': `
 import { Timeline, TimelineContent, TimelineItem, TimelinePoint } from 'keep-react'
 
 export const TimelineComponent = () => {
@@ -86,6 +87,7 @@ export const TimelineComponent = () => {
     </Timeline>
   )
 }
-`
+`,
+}
 
 export { DashedBorderTimeline, DashedBorderTimelineCode }

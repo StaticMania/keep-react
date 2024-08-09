@@ -21,8 +21,8 @@ const DefaultRadio = () => {
   )
 }
 
-const DefaultRadioCode = `
-'use client'
+const DefaultRadioCode = {
+  'RadioComponent.tsx': `
 import { Label, Radio } from 'keep-react'
 
 export const RadioComponent = () => {
@@ -44,6 +44,6 @@ export const RadioComponent = () => {
     </form>
   )
 }
-`
-
+`,
+}
 export { DefaultRadio, DefaultRadioCode }

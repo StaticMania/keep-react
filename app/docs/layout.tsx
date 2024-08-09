@@ -5,7 +5,7 @@ import TableOfContent from '../components/TableOfContent'
 const DocsLayout = ({ children }: { children: ReactNode }) => {
   return (
     <section>
-      <div className="sticky top-20 z-30 hidden h-4 w-full bg-primary-25 dark:bg-[#0D1015] lg:block 2xl:h-20"></div>
+      <div className="sticky top-20 z-30 hidden h-4 w-full bg-primary-25 lg:block 2xl:h-20 dark:bg-[#0D1015]"></div>
       <div className="docs-page"></div>
       <div className="container relative z-20 grid grid-cols-12 gap-5 pt-10 2xl:pt-16">
         <DocSidebar />

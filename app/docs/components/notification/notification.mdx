@@ -3,7 +3,7 @@ import { NotificationPosition, NotificationPositionCode } from './variant/Notifi
 import { NotificationWithCard, NotificationWithCardCode } from './variant/NotificationWithCard'
 import { notificationApi } from './notificationApi'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -14,25 +14,25 @@ The Notification component in Keep React allows you to deliver informative messa
 
 Display informative messages or alerts to users with the Default Notification component in Keep React.
 
-<CodePreview github="Notification" code={DefaultNotificationCode}>
+<CodeHighlightPreview code={DefaultNotificationCode}>
   <DefaultNotification />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Notification With Card
 
 Enhance the Notification component with a card layout for a more visually appealing display.
 
-<CodePreview github="Notification" code={NotificationWithCardCode}>
+<CodeHighlightPreview code={NotificationWithCardCode}>
   <NotificationWithCard />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Notification Position
 
 Position notifications according to your preference with available options: `"top-left"`, `"top-right"`, `"bottom-left"`, `"bottom-right"`. Default position is `"bottom-right"`.
 
-<CodePreview github="Notification" code={NotificationPositionCode}>
+<CodeHighlightPreview code={NotificationPositionCode}>
   <NotificationPosition />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

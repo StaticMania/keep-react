@@ -1,6 +1,5 @@
 export { Modal } from './Modal'
 export { ModalAction } from './ModalAction'
-export { ModalBody } from './ModalBody'
 export { ModalClose } from './ModalClose'
 export { ModalContent } from './ModalContent'
 export { ModalDescription } from './ModalDescription'

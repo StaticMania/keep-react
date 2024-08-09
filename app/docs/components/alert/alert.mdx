@@ -2,12 +2,10 @@ import { DefaultAlert, DefaultAlertCode } from './variant/DefaultAlert'
 import { AlertWithDismissIcon, AlertWithDismissIconCode } from './variant/AlertWithDismissIcon'
 import { AlertWithColorVariant, AlertWithColorVariantCode } from './variant/AlertColorVariant'
 import { AlertWithBgColor, AlertWithBgColorCode } from './variant/AlertWithBgColor'
-import { AlertWithCard, AlertWithCardCode } from './variant/AlertWithCard'
 
-import CodePreview from '../../../components/CodePreview'
-
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
-import { alertApiData, dismissButtonApi } from './alertApi'
+import { alertApiData } from './alertApi'
 
 ## Table of Contents
 
@@ -17,50 +15,36 @@ The Alert component in the Keep React allows you to display important messages, 
 
 The Default Alert is a clean and simple design, ideal for conveying straightforward notifications without any elaborate visuals.
 
-<CodePreview github="Alert" code={DefaultAlertCode}>
+<CodeHighlightPreview code={DefaultAlertCode}>
   <DefaultAlert />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Color Variants of Alerts
 
 Colors can convey the nature of alerts. While the default color is `primary`, you can choose from `secondary`, `success`, `warning`, or `error`. Simply set the `color` prop accordingly.
 
-<CodePreview github="Alert" code={AlertWithColorVariantCode}>
+<CodeHighlightPreview code={AlertWithColorVariantCode}>
   <AlertWithColorVariant />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Alert With Background Color
 
 Switch the background color of alerts using the `withBg={true}` prop. By default, `withBg` is set to `false`.
 
-<CodePreview github="Alert" code={AlertWithBgColorCode}>
+<CodeHighlightPreview code={AlertWithBgColorCode}>
   <AlertWithBgColor />
-</CodePreview>
-
-## Alert With Card
-
-Display the alert message with a card view, and access all the available props for customization.
-
-<CodePreview github="Alert" code={AlertWithCardCode}>
-  <AlertWithCard />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Dismissible Alerts
 
 Dismiss alert messages by using the `dismiss` prop. The default behavior is server-side rendering. If you want to use a click event handler, set the alert as a client-side component.
 
-<CodePreview github="Alert" code={AlertWithDismissIconCode}>
+<CodeHighlightPreview code={AlertWithDismissIconCode}>
   <AlertWithDismissIcon />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 
 Explore the available props for the Alert component
 
 <ComponentApi data={alertApiData} />
-
-## Dismiss Button API Reference
-
-Explore the available props for the `<Alert.Dismiss/>` component
-
-<ComponentApi data={dismissButtonApi} />

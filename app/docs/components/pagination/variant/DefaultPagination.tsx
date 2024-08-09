@@ -19,7 +19,8 @@ const DefaultPagination = () => {
   )
 }
 
-const DefaultPaginationCode = `
+const DefaultPaginationCode = {
+  'Pagination.tsx': `
 'use client'
 import { DotsThree } from 'phosphor-react'
 import { Pagination, PaginationItem, PaginationList } from 'keep-react'
@@ -40,6 +41,7 @@ export const PaginationComponent = () => {
     </Pagination>
   )
 }
-`
+`,
+}
 
 export { DefaultPagination, DefaultPaginationCode }

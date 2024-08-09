@@ -1,84 +1,124 @@
-const twConfig = `
-import keepPreset from "keep-react/preset";
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "node_modules/keep-react/**/*.{js,jsx,ts,tsx}"
-  ],
-  presets: [keepPreset],
-};
-`
-const twCss = `
+const twCssForReact = {
+  'src/index.css': `
   @import "keep-react/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  `
-const reactCodeString = `
+  `,
+}
+const twCssForNext = {
+  'app/globals.css': `
+  @import "keep-react/css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  `,
+}
+const importInReact = {
+  'src/App.tsx': `
   import { Button } from "keep-react";
-  const App=()=>{
-    return (
-      <Button size="md">Default</Button>
-    )
-  }
-export default App;
-  `
-
-const nextCodeString = `
-import { Button } from 'keep-react'
-
-const App=()=>{
+  
+const App = () => {
   return (
-    <Button>Button</Button>
+    <Button>Keep React</Button>
   )
 }
 
-export default App
-  `
-const twNpmInstall = 'npm i autoprefixer postcss tailwindcss\nnpx tailwindcss init -p'
+export default App;
+  `,
+}
+const importInNext = {
+  'app/page.tsx': `
+  import { Button } from "keep-react";
 
-const keepNpmInstall = 'npm i keep-react phosphor-react'
-const keepPnpmInstall = 'pnpm add keep-react phosphor-react'
-const keepYarnInstall = 'yarn add keep-react phosphor-react'
-
-const twConfigForNextJs = `
-module.exports = {
-  content: [
-    // ... (existing content)
-    "./node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
-  ],
-  presets: [require("keep-react/preset")],
-};
-`
-const viteReact = `
+const page = () => {
+  return (
+    <Button>Keep React</Button>
+  )
+}
+    
+export default page;
+  `,
+}
+const twNpmInstall = {
+  'Install-Tailwind-CSS': 'npm i autoprefixer postcss tailwindcss\nnpx tailwindcss init -p',
+}
+const keepInstall = {
+  npm: 'npm i keep-react phosphor-react',
+  yarn: 'yarn add keep-react phosphor-react',
+  pnpm: 'pnpm add keep-react phosphor-react',
+}
+const viteReact = {
+  'Vite-React': `
 npm create vite@latest my-project -- --template react
 cd my-project
-`
+`,
+}
+const nextJsInstall = {
+  'Create-NextJS-Project': `npx create-next-app@latest`,
+}
+const twConfigForReact = {
+  'tailwind.config.js': `
+import { keepTheme } from "keep-react/keepTheme";
 
-const nextJsInstall = `npx create-next-app@latest`
+const config = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {},
+}
 
-const NextJsQnA = () => {
-  return (
-    <div className="my-5">
-      <ul className="-space-y-0 rounded-xl bg-metal-50 p-4 text-body-4 text-metal-700 dark:bg-metal-900 dark:text-white">
-        <li>Would you like to use Tailwind CSS? Yes</li>
-      </ul>
-    </div>
-  )
+export default keepTheme(config);
+`,
+  'tailwind.config.ts': `
+  import type { Config } from 'tailwindcss'
+import { keepTheme } from "keep-react/keepTheme";
+
+const config : Config = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {},
+}
+
+export default keepTheme(config);
+  `,
+}
+const twConfigForNextJS = {
+  'tailwind.config.js': `
+import { keepTheme } from "keep-react/keepTheme";
+
+const config = {
+  content: [
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {},
+};
+
+export default keepTheme(config);
+`,
+  'tailwind.config.ts': `
+  import type { Config } from 'tailwindcss'
+import { keepTheme } from "keep-react/keepTheme";
+
+const config : Config = {
+  content: [
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {},
+};
+
+export default keepTheme(config);
+  `,
 }
 
 export {
-  NextJsQnA,
-  keepNpmInstall,
-  keepPnpmInstall,
-  keepYarnInstall,
-  nextCodeString,
+  importInNext,
+  importInReact,
+  keepInstall,
   nextJsInstall,
-  reactCodeString,
-  twConfig,
-  twConfigForNextJs,
-  twCss,
+  twConfigForNextJS,
+  twConfigForReact,
+  twCssForNext,
+  twCssForReact,
   twNpmInstall,
   viteReact,
 }

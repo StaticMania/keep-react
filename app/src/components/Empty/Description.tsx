@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface EmptyDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {
   asChild?: boolean
@@ -24,6 +24,6 @@ const EmptyDescription = forwardRef<HTMLParagraphElement, EmptyDescriptionProps>
     )
   },
 )
-EmptyDescription.displayName = 'Empty.Description'
+EmptyDescription.displayName = 'EmptyDescription'
 
 export { EmptyDescription }

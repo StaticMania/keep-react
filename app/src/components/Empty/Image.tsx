@@ -1,6 +1,6 @@
 'use client'
 import { forwardRef, HTMLProps } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export const EmptyImage = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(
   ({ children, className, ...props }, ref) => {
@@ -12,4 +12,4 @@ export const EmptyImage = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(
   },
 )
 
-EmptyImage.displayName = 'Empty.Image'
+EmptyImage.displayName = 'EmptyImage'

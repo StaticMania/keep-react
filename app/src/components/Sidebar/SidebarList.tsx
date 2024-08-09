@@ -1,6 +1,6 @@
 'use client'
 import { LiHTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const SidebarList = forwardRef<HTMLUListElement, LiHTMLAttributes<HTMLUListElement>>(
   ({ children, className, ...props }, ref) => {

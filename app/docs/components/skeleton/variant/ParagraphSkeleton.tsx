@@ -11,7 +11,8 @@ const ParagraphSkeleton = () => {
   )
 }
 
-const ParagraphSkeletonCode = `
+const ParagraphSkeletonCode = {
+  'SkeletonComponent.tsx': `
 import { Skeleton, SkeletonLine } from "keep-react";
 
 export const SkeletonComponent = () => {
@@ -24,6 +25,7 @@ export const SkeletonComponent = () => {
     </Skeleton>
   )
 }
-`
+`,
+}
 
 export { ParagraphSkeleton, ParagraphSkeletonCode }

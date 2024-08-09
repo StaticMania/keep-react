@@ -27,7 +27,8 @@ const PaginationNavigatorText = () => {
   )
 }
 
-const PaginationNavigatorTextCode = `
+const PaginationNavigatorTextCode = {
+  'Pagination.tsx': `
 'use client'
 import { Pagination, PaginationItem, PaginationList, PaginationNavigator } from 'keep-react'
 import { CaretLeft, CaretRight, DotsThree } from 'phosphor-react'
@@ -56,6 +57,7 @@ export const PaginationComponent = () => {
     </Pagination>
   )
 }
-`
+`,
+}
 
 export { PaginationNavigatorText, PaginationNavigatorTextCode }

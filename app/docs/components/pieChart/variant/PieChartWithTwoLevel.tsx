@@ -75,7 +75,8 @@ const PieChartWithTwoLevel = () => {
   )
 }
 
-const PieChartWithTwoLevelCode = `
+const PieChartWithTwoLevelCode = {
+  'ChartComponent.tsx': `
 
 import { Pie, PieChart, ResponsiveContainer, CustomTooltip } from 'keep-react'
 
@@ -146,6 +147,7 @@ export const PieChartComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { PieChartWithTwoLevel, PieChartWithTwoLevelCode }

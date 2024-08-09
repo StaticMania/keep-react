@@ -43,7 +43,8 @@ const NavbarLayout3 = () => {
   )
 }
 
-const NavbarLayout3Code = `
+const NavbarLayout3Code = {
+  'NavbarComponent.tsx': `
 import Image from 'next/image'
 import {
   Navbar,
@@ -83,6 +84,7 @@ export const NavbarComponent = () => {
     </Navbar>
   )
 }
-`
+`,
+}
 
 export { NavbarLayout3, NavbarLayout3Code }

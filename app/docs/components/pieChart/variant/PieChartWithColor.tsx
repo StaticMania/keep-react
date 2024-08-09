@@ -27,8 +27,8 @@ const PieChartWithColor = () => {
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>
         <Pie cx="50%" cy="50%" labelLine={false} data={data} dataKey="value" nameKey="name" fill="#1C222B">
-          {data.map((item, index) => (
-            <Cell key={`cell-${index}`} fill={item.color} />
+          {data.map((item) => (
+            <Cell key={item.value} fill={item.color} />
           ))}
         </Pie>
         <ChartTooltip content={<CustomTooltip />} />
@@ -37,7 +37,8 @@ const PieChartWithColor = () => {
   )
 }
 
-const PieChartWithColorCode = `
+const PieChartWithColorCode = {
+  'ChartComponent.tsx': `
 import { Cell, ChartTooltip, Pie, PieChart, ResponsiveContainer, CustomTooltip } from 'keep-react'
 
 export const PieChartComponent = () => {
@@ -67,8 +68,8 @@ export const PieChartComponent = () => {
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>
         <Pie cx="50%" cy="50%" labelLine={false} data={data} dataKey="value" nameKey="name" fill="#1C222B">
-          {data.map((item, index) => (
-            <Cell key={index} fill={item.color} />
+          {data.map((item) => (
+            <Cell key={item.color} fill={item.color} />
           ))}
         </Pie>
         <ChartTooltip content={<CustomTooltip />} />
@@ -76,6 +77,7 @@ export const PieChartComponent = () => {
     </ResponsiveContainer>
   )
 }
-`
+`,
+}
 
 export { PieChartWithColor, PieChartWithColorCode }

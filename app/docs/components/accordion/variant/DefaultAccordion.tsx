@@ -25,7 +25,8 @@ const DefaultAccordion = () => {
   )
 }
 
-const DefaultAccordionCode = `
+const DefaultAccordionCode = {
+  'AccordionComponent.tsx': `
 import {
   Accordion,
   AccordionContainer,
@@ -52,6 +53,7 @@ export const AccordionComponent = () => {
     </Accordion>
   )
 }
-`
+`,
+}
 
 export { DefaultAccordion, DefaultAccordionCode }

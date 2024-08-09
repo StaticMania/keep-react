@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => (
@@ -10,6 +10,6 @@ const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ),
 )
 
-CardHeader.displayName = 'Card.Header'
+CardHeader.displayName = 'CardHeader'
 
 export { CardHeader }

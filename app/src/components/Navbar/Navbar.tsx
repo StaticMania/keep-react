@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, forwardRef, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { NavbarContext } from './Context'
 
 const Navbar = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(({ children, className, ...props }, ref) => {

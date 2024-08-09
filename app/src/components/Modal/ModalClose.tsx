@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useModalContext } from './ModalContext'
 
 export interface ModalCloseProps extends HTMLAttributes<HTMLButtonElement> {

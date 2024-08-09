@@ -17,7 +17,8 @@ const LayoutOne = () => {
   )
 }
 
-const LayoutOneCode = `
+const LayoutOneCode = {
+  Code: `
 export const LayoutOne = () => {
   return (
     <div className="columns-1 space-y-4 lg:columns-3">
@@ -36,5 +37,6 @@ export const LayoutOne = () => {
     </div>
   )
 }
-`
+`,
+}
 export { LayoutOne, LayoutOneCode }

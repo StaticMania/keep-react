@@ -43,7 +43,8 @@ const SingleUpload = () => {
   )
 }
 
-const SingleUploadCode = `
+const SingleUploadCode = {
+  'UploadComponent.tsx': `
 'use client'
 import { Info,Trash } from 'phosphor-react'
 import { useCallback, useState } from 'react'
@@ -87,6 +88,7 @@ export const UploadComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { SingleUpload, SingleUploadCode }

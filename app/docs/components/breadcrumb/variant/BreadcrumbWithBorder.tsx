@@ -51,7 +51,8 @@ const BreadcrumbWithBorder = () => {
   )
 }
 
-const BreadcrumbWithBorderCode = `
+const BreadcrumbWithBorderCode = {
+  'BreadcrumbComponent.tsx': `
 'use client'
 import { CaretRight, HouseLine } from 'phosphor-react'
 import { Breadcrumb, BreadcrumbItem } from 'keep-react'
@@ -81,6 +82,7 @@ export const BreadcrumbComponent = () => {
     </Breadcrumb>
   )
 }
-`
+`,
+}
 
 export { BreadcrumbWithBorder, BreadcrumbWithBorderCode }

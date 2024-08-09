@@ -46,7 +46,8 @@ const TimelineWithImage = () => {
   )
 }
 
-const TimelineWithImageCode = `
+const TimelineWithImageCode = {
+  'TimelineComponent.tsx': `
 import { Timeline, TimelineContent, TimelineItem, TimelinePoint } from 'keep-react'
 
 export const TimelineComponent = () => {
@@ -89,5 +90,6 @@ export const TimelineComponent = () => {
   )
 }
 
-`
+`,
+}
 export { TimelineWithImage, TimelineWithImageCode }

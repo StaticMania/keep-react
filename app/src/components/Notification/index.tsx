@@ -1,6 +1,5 @@
 export { Notification } from './Notification'
 export { NotificationAction } from './NotificationAction'
-export { NotificationBody } from './NotificationBody'
 export { NotificationClose } from './NotificationClose'
 export { NotificationContent } from './NotificationContent'
 export { NotificationDescription } from './NotificationDescription'

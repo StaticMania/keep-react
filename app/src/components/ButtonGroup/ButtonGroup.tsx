@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const ButtonGroup = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
@@ -12,6 +12,6 @@ const ButtonGroup = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   },
 )
 
-ButtonGroup.displayName = 'Button.Group'
+ButtonGroup.displayName = 'ButtonGroup'
 
 export { ButtonGroup }

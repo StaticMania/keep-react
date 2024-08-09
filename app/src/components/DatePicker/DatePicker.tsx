@@ -1,9 +1,14 @@
 'use client'
 import { ComponentProps } from 'react'
 import { DayPicker } from 'react-day-picker'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export type CalendarProps = ComponentProps<typeof DayPicker>
+
+export type DateRangeType = {
+  from: Date | undefined
+  to: Date | undefined
+}
 
 const DatePicker = ({ className, classNames, showOutsideDays = true, ...props }: CalendarProps) => {
   return (
@@ -37,13 +42,13 @@ const DatePicker = ({ className, classNames, showOutsideDays = true, ...props }:
         day_range_end: 'day-range-end',
         day_range_start: 'day-range-start',
         day_selected:
-          'bg-metal-900 dark:bg-white text-white hover:bg-metal-800 dark:hover:bg-white dark:text-metal-900 hover:text-white focus:bg-metal-900 focus:text-white ',
+          'bg-metal-900 dark:aria-selected:bg-white dark:bg-white text-white hover:bg-metal-800 dark:hover:bg-white dark:text-metal-900 hover:text-white focus:bg-metal-900 focus:text-white ',
         day_today: 'bg-metal-50 dark:bg-metal-800 dark:text-white text-metal-900 dark:aria-selected:text-metal-900',
         day_outside:
           'day-outside !text-metal-300 aria-selected:text-metal-400 aria-selected:bg-metal-100 aria-selected:text-metal-400 dark:!text-metal-600 dark:aria-selected:!text-metal-300 dark:aria-selected:bg-metal-700',
         day_disabled: 'text-metal-100 opacity-50',
         day_range_middle:
-          'aria-selected:bg-metal-50 aria-selected:text-metal-500 dark:aria-selected:bg-metal-700 dark:aria-selected:!text-white',
+          'aria-selected:bg-metal-50 aria-selected:text-metal-500 dark:aria-selected:!bg-metal-700 dark:aria-selected:!text-white',
         day_hidden: 'invisible',
         ...classNames,
       }}

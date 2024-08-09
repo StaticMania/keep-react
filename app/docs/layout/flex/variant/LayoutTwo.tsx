@@ -6,16 +6,17 @@ const LayoutTwo = () => {
         <div className="basis-1/2 rounded-xl border border-dashed bg-metal-25 p-10 dark:border-metal-800 dark:bg-metal-900"></div>
       </div>
       <div className="flex flex-wrap gap-5 lg:flex-nowrap">
-        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 dark:border-metal-800 dark:bg-metal-900 lg:basis-1/4"></div>
-        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 dark:border-metal-800 dark:bg-metal-900 lg:basis-1/4"></div>
-        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 dark:border-metal-800 dark:bg-metal-900 lg:basis-1/4"></div>
-        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 dark:border-metal-800 dark:bg-metal-900 lg:basis-1/4"></div>
+        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 lg:basis-1/4 dark:border-metal-800 dark:bg-metal-900"></div>
+        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 lg:basis-1/4 dark:border-metal-800 dark:bg-metal-900"></div>
+        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 lg:basis-1/4 dark:border-metal-800 dark:bg-metal-900"></div>
+        <div className="basis-full rounded-xl border border-dashed bg-metal-25 p-10 lg:basis-1/4 dark:border-metal-800 dark:bg-metal-900"></div>
       </div>
     </div>
   )
 }
 
-const LayoutTwoCode = `
+const LayoutTwoCode = {
+  Code: `
 export const LayoutTwo = () => {
   return (
     <div className="flex flex-col gap-5">
@@ -32,5 +33,6 @@ export const LayoutTwo = () => {
     </div>
   )
 }
-`
+`,
+}
 export { LayoutTwo, LayoutTwoCode }

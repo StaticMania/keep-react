@@ -11,7 +11,8 @@ const Heading = () => {
   )
 }
 
-const HeadingCode = `
+const HeadingCode = {
+  Code: `
 export const HeadingTypography = () => {
   return (
     <div className="space-y-4">
@@ -24,6 +25,7 @@ export const HeadingTypography = () => {
     </div>
   )
 }
-`
+`,
+}
 
 export { Heading, HeadingCode }

@@ -1,6 +1,6 @@
 'use client'
 import { forwardRef, HTMLAttributes, Ref } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export const TimelineItem = forwardRef<HTMLLIElement, HTMLAttributes<HTMLLIElement>>(
   ({ children, className, ...props }, ref: Ref<HTMLLIElement>) => {

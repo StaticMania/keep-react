@@ -1,6 +1,6 @@
 'use client'
 import { ButtonHTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { usePaginationContext } from './Context'
 import { paginationTheme } from './theme'
 
@@ -34,6 +34,6 @@ const PaginationItem = forwardRef<HTMLButtonElement, ItemProps>(
   },
 )
 
-PaginationItem.displayName = 'Pagination.Item'
+PaginationItem.displayName = 'PaginationItem'
 
 export { PaginationItem }

@@ -22,7 +22,8 @@ const NumberInputWithState = () => {
   )
 }
 
-const NumberInputWithStateCode = `
+const NumberInputWithStateCode = {
+  'NumberInput.tsx': `
 'use client'
 import { useState } from 'react'
 import { Minus, Plus } from 'phosphor-react'
@@ -48,6 +49,7 @@ export const NumberInputComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { NumberInputWithState, NumberInputWithStateCode }

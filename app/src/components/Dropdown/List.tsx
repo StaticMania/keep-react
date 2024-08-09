@@ -1,23 +1,36 @@
 'use client'
-import { HTMLProps, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { motion, MotionProps } from 'framer-motion'
+import { forwardRef, HTMLProps } from 'react'
+import { cn } from '../../utils/cn'
 
-export interface DropdownListProps extends HTMLProps<HTMLUListElement> {
-  asChild?: boolean
-}
+export type DropdownListProps = HTMLProps<HTMLDivElement> &
+  MotionProps & {
+    asChild?: boolean
+  }
 
-export const DropdownList = forwardRef<HTMLUListElement, DropdownListProps>(
+export const DropdownList = forwardRef<HTMLDivElement, DropdownListProps>(
   ({ children, className, asChild, ...props }, ref) => {
-    if (asChild && isValidElement(children)) {
-      return cloneElement(children, {
-        itemRef: ref,
-        ...props,
-      })
-    }
     return (
-      <ul {...props} ref={ref} className={cn(className)}>
+      <motion.div
+        initial={{ opacity: 0, y: '10px', height: 0 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          height: '100%',
+          transition: {
+            type: 'spring',
+            duration: 0.3,
+            delay: 0.1,
+            damping: 25,
+            stiffness: 500,
+          },
+        }}
+        exit={{ opacity: 0, y: '10px', height: 0 }}
+        {...props}
+        ref={ref}
+        className={cn('overflow-hidden', className)}>
         {children}
-      </ul>
+      </motion.div>
     )
   },
 )

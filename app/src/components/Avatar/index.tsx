@@ -1,3 +1,5 @@
 export { Avatar } from './Avatar'
-export { AvatarCounter } from './Counter'
-export { AvatarGroup } from './Group'
+export { AvatarBadge } from './AvatarBadge'
+export { AvatarGroup } from './AvatarGroup'
+export { AvatarImage } from './AvatarImage'
+export { AvatarText } from './AvatarText'

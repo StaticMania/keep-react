@@ -11,7 +11,8 @@ const ValueFromRating = () => {
   )
 }
 
-const ValueFromRatingCode = `
+const ValueFromRatingCode = {
+  'RatingComponent.tsx': `
 import { Rating, RatingStar } from 'keep-react'
 
 export const RatingComponent = () => {
@@ -26,6 +27,6 @@ export const RatingComponent = () => {
     </Rating>
   )
 }
-`
-
+`,
+}
 export { ValueFromRating, ValueFromRatingCode }

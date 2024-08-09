@@ -1,32 +1,21 @@
-'use client'
 import { Slider } from '../../../../src'
 
 const DoubleSlider = () => {
   return (
     <div className="p-6">
-      <Slider
-        min={100}
-        max={1000}
-        defaultValue={[100, 300]}
-        range={true}
-        onChange={(value: number | number[]) => console.log(value)}></Slider>
+      <Slider min={0} max={100} defaultValue={[33, 75]} />
     </div>
   )
 }
 
-const DoubleSliderCode = `
+const DoubleSliderCode = {
+  'SliderComponent.tsx': `
 import { Slider } from 'keep-react'
 
 export const SliderComponent = () => {
-  return (
-    <Slider
-      min={100}
-      max={1000}
-      defaultValue={[100, 300]}
-      range={true}
-      onChange={(value: number | number[]) => console.log(value)}></Slider>
-  )
+  return <Slider min={0} max={100} defaultValue={[33, 75]} />
 }
-`
+`,
+}
 
 export { DoubleSlider, DoubleSliderCode }

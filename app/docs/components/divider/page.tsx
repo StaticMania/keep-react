@@ -1,6 +1,7 @@
 import type { Metadata, NextPage } from 'next'
 import DividerDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
+import EditPage from '../../../components/EditPage'
 
 export const metadata: Metadata = {
   description:
@@ -12,6 +13,11 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <DividerDocs />
+      <EditPage
+        pageLink="/docs/components/divider"
+        nextPageLink="/docs/components/datePicker"
+        nextPageName="Date Picker"
+      />
     </DocsContentLayout>
   )
 }

@@ -45,7 +45,8 @@ const NavbarLayout2 = () => {
   )
 }
 
-const NavbarLayout2Code = `
+const NavbarLayout2Code = {
+  'NavbarComponent.tsx': `
 import {
   Navbar,
   NavbarBrand,
@@ -86,6 +87,7 @@ export const NavbarComponent = () => {
     </Navbar>
   )
 }
-`
+`,
+}
 
 export { NavbarLayout2, NavbarLayout2Code }

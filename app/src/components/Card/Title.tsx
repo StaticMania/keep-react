@@ -1,8 +1,8 @@
 'use client'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
-export interface CardTitleProps extends HTMLAttributes<HTMLHeadingElement> {
+export interface CardTitleProps extends HTMLAttributes<HTMLParagraphElement> {
   asChild?: boolean
 }
 
@@ -15,9 +15,9 @@ const CardTitle = forwardRef<HTMLParagraphElement, CardTitleProps>(
       })
     }
     return (
-      <h1 ref={ref} className={cn('text-heading-6 font-semibold text-metal-800 dark:text-white', className)} {...props}>
+      <p ref={ref} className={cn('text-heading-6 font-semibold text-metal-800 dark:text-white', className)} {...props}>
         {children}
-      </h1>
+      </p>
     )
   },
 )

@@ -4,7 +4,7 @@ import { createContext, useContext } from 'react'
 export interface NotificationContextProps {
   isOpen?: boolean
   handleOpen?: () => void
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
 }
 
 export const NotificationContext = createContext<NotificationContextProps | undefined>(undefined)

@@ -24,7 +24,8 @@ const RatingTypes = () => {
   )
 }
 
-const RatingTypesCode = `
+const RatingTypesCode = {
+  'RatingComponent.tsx': `
 'use client'
 import { Star } from 'phosphor-react'
 import { Rating, RatingStar } from 'keep-react'
@@ -51,6 +52,7 @@ export const RatingComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { RatingTypes, RatingTypesCode }

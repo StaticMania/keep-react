@@ -21,8 +21,8 @@ const RadioVariant = () => {
   )
 }
 
-const RadioVariantCode = `
-'use client'
+const RadioVariantCode = {
+  'RadioComponent.tsx': `
 import { Label, Radio } from 'keep-react'
 
 export const RadioComponent = () => {
@@ -44,6 +44,7 @@ export const RadioComponent = () => {
     </form>
   )
 }
-`
+`,
+}
 
 export { RadioVariant, RadioVariantCode }

@@ -4,7 +4,6 @@ import { createContext, useContext } from 'react'
 type ProgressContextProps = {
   progressBar?: number
   lineProgressBar?: number
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 }
 
 export const ProgressContext = createContext<ProgressContextProps | undefined>(undefined)

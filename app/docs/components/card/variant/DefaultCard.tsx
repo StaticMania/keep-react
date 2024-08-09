@@ -14,7 +14,8 @@ const DefaultCard = () => {
   )
 }
 
-const DefaultCardCode = `
+const DefaultCardCode = {
+  'CardComponent.tsx': `
 import { Card, CardContent, CardDescription, CardTitle }  from 'keep-react'
 
 export const CardComponent = () => {
@@ -30,6 +31,7 @@ export const CardComponent = () => {
     </Card>
   )
 }
-`
+`,
+}
 
 export { DefaultCard, DefaultCardCode }

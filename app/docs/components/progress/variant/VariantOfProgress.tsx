@@ -9,7 +9,7 @@ import {
 
 const VariantOfProgress = () => {
   return (
-    <div className="flex w-1/2 flex-col gap-5">
+    <div className="mx-auto flex max-w-lg flex-col gap-5">
       <CircleProgress progress={55}>
         <CircleProgressLine />
         <CircleProgressText>55%</CircleProgressText>
@@ -22,7 +22,8 @@ const VariantOfProgress = () => {
   )
 }
 
-const VariantOfProgressCode = `
+const VariantOfProgressCode = {
+  'ProgressComponent.tsx': `
 import {
   CircleProgress,
   CircleProgressLine,
@@ -46,6 +47,7 @@ export const ProgressComponent = () => {
     </div>
   )
 }
-`
+`,
+}
 
 export { VariantOfProgress, VariantOfProgressCode }

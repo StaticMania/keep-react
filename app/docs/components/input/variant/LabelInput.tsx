@@ -9,7 +9,8 @@ const LabelInput = () => {
   )
 }
 
-const LabelInputCode = `
+const LabelInputCode = {
+  'InputComponent.tsx': `
 import { Input, Label } from 'keep-react'
 
 const LabelInput = () => {
@@ -20,6 +21,7 @@ const LabelInput = () => {
     </fieldset>
   )
 }
-`
+`,
+}
 
 export { LabelInput, LabelInputCode }

@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface ModalHeaderProps extends HTMLAttributes<HTMLDivElement> {
   asChild?: boolean

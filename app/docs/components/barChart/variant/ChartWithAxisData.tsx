@@ -78,7 +78,8 @@ const ChartWithAxisData = () => {
   )
 }
 
-const ChartWithAxisDataCode = `
+const ChartWithAxisDataCode = {
+  'ChartComponent.tsx': `
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'keep-react'
 
 export const BarChartComponent = () => {
@@ -159,5 +160,6 @@ export const BarChartComponent = () => {
   )
 }
 
-`
+`,
+}
 export { ChartWithAxisData, ChartWithAxisDataCode }

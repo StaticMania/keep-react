@@ -1,4 +1,3 @@
-'use client'
 import { Divider } from '../../../../src'
 
 const DefaultDivider = () => {
@@ -13,8 +12,8 @@ const DefaultDivider = () => {
   )
 }
 
-const DefaultDividerCode = `
-'use client'
+const DefaultDividerCode = {
+  'DividerComponent.tsx': `
 import { Divider } from 'keep-react'
 
 export const DividerComponent = () => {
@@ -28,6 +27,7 @@ export const DividerComponent = () => {
     </section>
   )
 }
-`
+`,
+}
 
 export { DefaultDivider, DefaultDividerCode }

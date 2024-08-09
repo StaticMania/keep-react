@@ -4,7 +4,7 @@ import { HorizontalUpload, HorizontalUploadCode } from './variant/HorizontalUplo
 import { SingleUpload, SingleUploadCode } from './variant/SingleUpload'
 import { uploadApiData } from './UploadApi'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -15,33 +15,33 @@ Upload Component is a user interface element that enables users to upload files 
 
 The Default Upload component allows users to select and upload a file. When a file is selected, the `onDrop` callback is triggered to handle the file selection and update the name of the selected file.
 
-<CodePreview github="Upload" code={DefaultUploadCode}>
+<CodeHighlightPreview code={DefaultUploadCode}>
   <DefaultUpload />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Horizontal Upload
 
 To display the upload component in a `horizontal` layout, set the `horizontal` prop to `true`.
 
-<CodePreview github="Upload" code={HorizontalUploadCode}>
+<CodeHighlightPreview code={HorizontalUploadCode}>
   <HorizontalUpload />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Single Upload
 
 By default, the upload component allows users to select multiple files. To restrict users to uploading a single file, set the `multiple` prop to `false` within the `options` object.
 
-<CodePreview github="Upload" code={SingleUploadCode}>
+<CodeHighlightPreview code={SingleUploadCode}>
   <SingleUpload />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Upload Disabled
 
 To prevent users from uploading files, use the `disabled` prop set to `true` within the `options` props.
 
-<CodePreview github="Upload" code={DisabledUploadCode}>
+<CodeHighlightPreview code={DisabledUploadCode}>
   <DisabledUpload />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

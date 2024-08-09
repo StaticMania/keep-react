@@ -25,7 +25,8 @@ const TextAreaWithForm = () => {
   )
 }
 
-const TextAreaWithFormCode = `
+const TextAreaWithFormCode = {
+  'TextAreaComponent.tsx': `
 'use client'
 import { Envelope } from 'phosphor-react'
 import { Button, InputIcon, Input, Label, Textarea } from 'keep-react'
@@ -52,6 +53,7 @@ export const TextAreaComponent = () => {
     </form>
   )
 }
-`
+`,
+}
 
 export { TextAreaWithForm, TextAreaWithFormCode }

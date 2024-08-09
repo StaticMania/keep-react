@@ -69,7 +69,8 @@ const DefaultAreaChart = () => {
   )
 }
 
-const DefaultAreaChartCode = `
+const DefaultAreaChartCode = {
+  'ChartComponent.tsx': `
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip ,CustomTooltip} from 'keep-react'
 
 export const AreaChartComponent = () => {
@@ -140,6 +141,7 @@ export const AreaChartComponent = () => {
     </ResponsiveContainer>
   )
 }
-`
+`,
+}
 
 export { DefaultAreaChart, DefaultAreaChartCode }

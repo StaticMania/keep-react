@@ -1,7 +1,7 @@
 'use client'
 import { Check, Copy } from 'phosphor-react'
 import { FC } from 'react'
-import { cn } from '~/app/src/helpers/cn'
+import { cn } from '~/app/src/utils/cn'
 import useCopy from '~/hooks/useCopy'
 
 interface CodeBoxProps {

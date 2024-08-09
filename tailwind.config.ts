@@ -1,12 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+import { keepTheme } from './app/src/theme/keepTheme'
+
+const config: Config = {
   content: [
     './mdx-components.tsx',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     container: {
       center: true,
@@ -26,5 +27,6 @@ module.exports = {
       },
     },
   },
-  presets: [require('./app/src/theme/keep-preset.ts')],
 }
+
+export default keepTheme(config)

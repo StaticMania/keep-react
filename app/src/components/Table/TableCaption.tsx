@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 const TableCaption = forwardRef<HTMLTableCaptionElement, HTMLAttributes<HTMLTableCaptionElement>>(
   ({ className, children, ...props }, ref) => {

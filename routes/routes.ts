@@ -346,9 +346,9 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
-    name: 'Tab',
-    folderName: 'Tab',
-    href: '/docs/components/tab',
+    name: 'Tabs',
+    folderName: 'Tabs',
+    href: '/docs/components/tabs',
     tag: false,
     deprecate: false,
   },

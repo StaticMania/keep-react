@@ -2,7 +2,7 @@ import { Tooltip, TooltipAction, TooltipContent } from '../../../../src'
 
 const TooltipWithLargeText = () => {
   return (
-    <div className="p-2.5">
+    <div className="flex h-52 items-center justify-center gap-5">
       <Tooltip>
         <TooltipAction>Tooltip</TooltipAction>
         <TooltipContent className="px-4 py-3">
@@ -16,7 +16,8 @@ const TooltipWithLargeText = () => {
   )
 }
 
-const TooltipWithLargeTextCode = `
+const TooltipWithLargeTextCode = {
+  'TooltipComponent.tsx': `
 import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
@@ -32,6 +33,7 @@ export const TooltipComponent = () => {
     </Tooltip>
   )
 }
-`
+`,
+}
 
 export { TooltipWithLargeText, TooltipWithLargeTextCode }

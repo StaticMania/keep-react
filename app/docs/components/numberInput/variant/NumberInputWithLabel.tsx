@@ -20,7 +20,8 @@ const NumberInputWithLabel = () => {
   )
 }
 
-const NumberInputWithLabelCode = `
+const NumberInputWithLabelCode = {
+  'NumberInput.tsx': `
 'use client'
 import { Minus, Plus } from 'phosphor-react'
 import { Label, NumberInput, NumberInputBox, NumberInputButton } from 'keep-react'
@@ -42,6 +43,7 @@ export const NumberInputComponent = () => {
     </fieldset>
   )
 }
-`
+`,
+}
 
 export { NumberInputWithLabel, NumberInputWithLabelCode }

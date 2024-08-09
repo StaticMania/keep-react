@@ -11,7 +11,8 @@ const LayoutOne = () => {
   )
 }
 
-const LayoutOneCode = `
+const LayoutOneCode = {
+  Code: `
 export const LayoutOne = () => {
   return (
     <div className="flex flex-col gap-5 lg:flex-row">
@@ -24,5 +25,6 @@ export const LayoutOne = () => {
     </div>
   )
 }
-`
+`,
+}
 export { LayoutOne, LayoutOneCode }

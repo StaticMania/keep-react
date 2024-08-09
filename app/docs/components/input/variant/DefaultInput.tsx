@@ -8,12 +8,14 @@ const DefaultInput = () => {
   )
 }
 
-const DefaultInputCode = `
+const DefaultInputCode = {
+  'InputComponent.tsx': `
 import { Input } from 'keep-react'
 
 export const InputComponent = () => {
   return <Input placeholder="Enter name" type="text" />
 }
-`
+`,
+}
 
 export { DefaultInput, DefaultInputCode }

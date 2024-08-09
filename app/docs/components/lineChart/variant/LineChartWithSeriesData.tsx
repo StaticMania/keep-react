@@ -63,7 +63,8 @@ const LineChartWithSeriesData = () => {
   )
 }
 
-const LineChartWithSeriesDataCode = `
+const LineChartWithSeriesDataCode = {
+  'ChartComponent.tsx': `
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis , ChartTooltip, CustomTooltip} from 'keep-react'
 
 export const LineChartComponent = () => {
@@ -119,8 +120,7 @@ export const LineChartComponent = () => {
     </ResponsiveContainer>
   )
 }
-
-
-`
+`,
+}
 
 export { LineChartWithSeriesData, LineChartWithSeriesDataCode }

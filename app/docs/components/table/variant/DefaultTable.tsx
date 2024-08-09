@@ -45,8 +45,8 @@ const DefaultTable = () => {
   )
 }
 
-const DefaultTableCode = `
-'use client'
+const DefaultTableCode = {
+  'TableComponent.tsx': `
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from 'keep-react'
 
 export const TableComponent = () => {
@@ -91,5 +91,6 @@ export const TableComponent = () => {
     </Table>
   )
 }
-`
+`,
+}
 export { DefaultTable, DefaultTableCode }

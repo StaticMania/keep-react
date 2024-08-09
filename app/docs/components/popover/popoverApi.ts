@@ -1,13 +1,6 @@
 export const popoverAPI = [
   {
     id: 1,
-    propsName: 'className',
-    propsType: ['string'],
-    propsDescription: 'Custom CSS class for styling the popover.',
-    default: 'None',
-  },
-  {
-    id: 2,
     propsName: 'placement',
     propsType: [
       'top',

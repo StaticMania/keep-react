@@ -16,7 +16,8 @@ const DefaultNumberInput = () => {
   )
 }
 
-const DefaultNumberInputCode = `
+const DefaultNumberInputCode = {
+  'NumberInput.tsx': `
 'use client'
 import { Minus, Plus } from 'phosphor-react'
 import { NumberInput, NumberInputBox, NumberInputButton } from 'keep-react'
@@ -35,6 +36,6 @@ export const NumberInputComponent = () => {
   )
 }
 
-`
-
+`,
+}
 export { DefaultNumberInput, DefaultNumberInputCode }

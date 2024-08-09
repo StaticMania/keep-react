@@ -6,7 +6,7 @@ interface DocsContentLayoutProps {
   children: ReactNode
 }
 
-export const DocsContentLayout: FC<DocsContentLayoutProps> = function ({ title, description, children }) {
+export const DocsContentLayout: FC<DocsContentLayoutProps> = ({ title, description, children }) => {
   return (
     <div>
       <div className="mb-[50px]">

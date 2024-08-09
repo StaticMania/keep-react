@@ -21,7 +21,8 @@ const TagWithIcon = () => {
   )
 }
 
-const TagWithIconCode = `
+const TagWithIconCode = {
+  'TagComponent.tsx': `
 'use client'
 import { Tag } from 'keep-react'
 import { Clock, X } from 'phosphor-react'
@@ -45,6 +46,7 @@ export const TagComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { TagWithIcon, TagWithIconCode }

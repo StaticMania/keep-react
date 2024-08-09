@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { ArrowLineUpRight } from 'phosphor-react'
 import { useEffect, useState } from 'react'
-import { Avatar, AvatarGroup } from '../src'
+import { Avatar, AvatarGroup, AvatarImage } from '../src'
 
 interface Contributor {
   login: string
@@ -36,10 +36,10 @@ const Community = () => {
     <section className="community py-20">
       <div className="mx-auto max-w-7xl px-6 py-6 2xl:px-0">
         <div className="mb-12 text-center">
-          <h4 className="mb-1 text-body-1 !font-semibold text-black dark:text-white lg:text-heading-5">
+          <h4 className="mb-1 text-body-1 !font-semibold text-black lg:text-heading-5 dark:text-white">
             Join The Community
           </h4>
-          <p className="mx-auto max-w-sm text-body-4 font-normal text-metal-600 dark:text-metal-300 md:text-body-3">
+          <p className="mx-auto max-w-sm text-body-4 font-normal text-metal-600 md:text-body-3 dark:text-metal-300">
             Become a member of a community of developers by supporting Keep React
           </p>
         </div>
@@ -51,13 +51,9 @@ const Community = () => {
                   {contributors?.length ? (
                     <AvatarGroup>
                       {contributors?.map((user) => (
-                        <Avatar
-                          key={user?.id}
-                          shape="circle"
-                          size="lg"
-                          img={user?.avatar_url}
-                          className="border-2 border-[#9686E5] p-0"
-                        />
+                        <Avatar key={user?.id} className="size-14">
+                          <AvatarImage src={user?.avatar_url} />
+                        </Avatar>
                       ))}
                     </AvatarGroup>
                   ) : null}

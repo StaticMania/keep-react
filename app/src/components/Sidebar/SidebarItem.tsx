@@ -1,6 +1,6 @@
 'use client'
 import { Children, cloneElement, forwardRef, HTMLAttributes, isValidElement, Ref } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface SidebarItemProps extends HTMLAttributes<HTMLLIElement> {
   dropdown?: boolean

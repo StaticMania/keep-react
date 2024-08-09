@@ -30,7 +30,8 @@ const InputUseCases = () => {
   )
 }
 
-const InputUseCaseCode = `
+const InputUseCaseCode = {
+  'InputComponent.tsx': `
 'use client'
 import { Envelope, Lock } from 'phosphor-react'
 import { Button, InputIcon, Input, Label } from 'keep-react'
@@ -62,6 +63,7 @@ export const InputComponent = () => {
     </form>
   )
 }
-`
+`,
+}
 
 export { InputUseCaseCode, InputUseCases }

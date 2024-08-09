@@ -1,4 +1,4 @@
-import { Avatar, AvatarCounter, AvatarGroup, Card, CardContent, CardDescription, CardTitle } from '../../../../src'
+import { Avatar, AvatarGroup, AvatarImage, Card, CardContent, CardDescription, CardTitle } from '../../../../src'
 
 const CardWithAvatar = () => {
   return (
@@ -7,19 +7,30 @@ const CardWithAvatar = () => {
         <CardTitle>Our Contributors</CardTitle>
         <CardDescription>They help us to grow up the keep react component library</CardDescription>
         <AvatarGroup className="mt-3">
-          <Avatar img="/images/avatar/avatar-2.png" />
-          <Avatar img="/images/avatar/avatar-3.png" />
-          <Avatar img="/images/avatar/avatar-4.png" />
-          <Avatar img="/images/avatar/avatar-5.png" />
-          <AvatarCounter>+9</AvatarCounter>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-1.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-2.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-3.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-4.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-5.png" />
+          </Avatar>
         </AvatarGroup>
       </CardContent>
     </Card>
   )
 }
 
-const CardWithAvatarCode = `
-import { Avatar, AvatarCounter, AvatarGroup, Card, CardContent, CardDescription, CardTitle } from 'keep-react'
+const CardWithAvatarCode = {
+  'CardComponent.tsx': `
+import { Avatar, AvatarGroup, AvatarImage, Card, CardContent, CardDescription, CardTitle } from 'keep-react'
 
 export const CardComponent = () => {
   return (
@@ -28,15 +39,26 @@ export const CardComponent = () => {
         <CardTitle>Our Contributors</CardTitle>
         <CardDescription>They help us to grow up the keep react component library</CardDescription>
         <AvatarGroup className="mt-3">
-          <Avatar img="/images/avatar/avatar-2.png" />
-          <Avatar img="/images/avatar/avatar-3.png" />
-          <Avatar img="/images/avatar/avatar-4.png" />
-          <Avatar img="/images/avatar/avatar-5.png" />
-          <AvatarCounter>+9</AvatarCounter>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-1.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-2.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-3.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-4.png" />
+          </Avatar>
+          <Avatar className="size-14">
+            <AvatarImage src="/images/avatar/avatar-5.png" />
+          </Avatar>
         </AvatarGroup>
       </CardContent>
     </Card>
   )
 }
-`
+`,
+}
 export { CardWithAvatar, CardWithAvatarCode }

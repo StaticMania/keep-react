@@ -42,7 +42,8 @@ const KeepButtonType = () => {
   )
 }
 
-const KeepButtonTypeCode = `
+const KeepButtonTypeCode = {
+  'ButtonComponent.tsx': `
 import { Button } from 'keep-react'
 
 export const ButtonComponent = () => {
@@ -81,6 +82,7 @@ export const ButtonComponent = () => {
     </>
   )
 }
-`
+`,
+}
 
 export { KeepButtonType, KeepButtonTypeCode }

@@ -149,11 +149,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/statistic',
-        destination: '/docs/components/statistic',
-        permanent: true,
-      },
-      {
         source: '/upload',
         destination: '/docs/components/upload',
         permanent: true,
@@ -189,23 +184,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/searchBar',
-        destination: '/docs/components/searchBar',
-        permanent: true,
-      },
-      {
         source: '/datePicker',
         destination: '/docs/components/datePicker',
-        permanent: true,
-      },
-      {
-        source: '/checkboxGroup',
-        destination: '/docs/components/checkboxGroup',
-        permanent: true,
-      },
-      {
-        source: '/tree',
-        destination: '/docs/components/tree',
         permanent: true,
       },
       {

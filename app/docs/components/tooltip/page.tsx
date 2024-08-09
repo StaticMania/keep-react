@@ -1,6 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import TooltipDocs from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
+import EditPage from '../../../components/EditPage'
 
 export const metadata: Metadata = {
   description:
@@ -12,6 +13,7 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <TooltipDocs />
+      <EditPage pageLink="/docs/components/tooltip" nextPageLink="/docs/components/upload" nextPageName="Upload" />
     </DocsContentLayout>
   )
 }

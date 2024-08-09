@@ -1,4 +1,13 @@
-import { Avatar, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
+import {
+  Avatar,
+  AvatarImage,
+  Button,
+  Dropdown,
+  DropdownAction,
+  DropdownContent,
+  DropdownItem,
+  DropdownList,
+} from '../../../../src'
 
 const dropdownData = [
   {
@@ -35,14 +44,60 @@ const dropdownData = [
 
 const CustomDropdown = () => {
   return (
+    <div className="flex items-center justify-center px-5 py-3">
+      <Dropdown showArrow>
+        <DropdownAction asChild>
+          <Button>Open Dropdown</Button>
+        </DropdownAction>
+        <DropdownContent>
+          <DropdownList>
+            {dropdownData.map((data) => (
+              <DropdownItem key={data.id}>
+                <div>
+                  <Avatar>
+                    <AvatarImage src={data.img} />
+                  </Avatar>
+                </div>
+                <div>
+                  <p className="text-body-4 font-medium text-metal-900 dark:text-white">{data.name}</p>
+                  <p className="text-body-5 font-normal text-metal-400 dark:text-metal-500">{data.title}</p>
+                </div>
+              </DropdownItem>
+            ))}
+          </DropdownList>
+        </DropdownContent>
+      </Dropdown>
+    </div>
+  )
+}
+
+const CustomDropdownCode = {
+  'DropdownComponent.tsx': `
+import {
+  Button,
+  Avatar,
+  AvatarImage,
+  Dropdown,
+  DropdownAction,
+  DropdownContent,
+  DropdownItem,
+  DropdownList,
+} from 'keep-react'
+
+export const DropdownComponent = () => {
+  return (
     <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
+      <DropdownAction asChild>
+        <Button>Open Dropdown</Button>
+      </DropdownAction>
       <DropdownContent>
         <DropdownList>
           {dropdownData.map((data) => (
             <DropdownItem key={data.id}>
               <div>
-                <Avatar size="lg" color="secondary" img={data.img} />
+                <Avatar>
+                  <AvatarImage src={data.img} />
+                </Avatar>
               </div>
               <div>
                 <p className="text-body-4 font-medium text-metal-900 dark:text-white">{data.name}</p>
@@ -55,33 +110,7 @@ const CustomDropdown = () => {
     </Dropdown>
   )
 }
-
-const CustomDropdownCode = `
-import { Avatar, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from 'keep-react'
-
-export const DropdownComponent = () => {
-  return (
-    <Dropdown>
-      <DropdownAction>Dropdown</DropdownAction>
-      <DropdownContent>
-        <DropdownList>
-          {dropdownData.map((data) => (
-            <DropdownItem key={data.id}>
-              <div>
-                <Avatar size="lg" color="secondary" img={data.img} />
-              </div>
-              <div>
-                <p className="text-body-4 font-medium text-metal-900">{data.name}</p>
-                <p className="text-body-5 font-normal text-metal-400">{data.title}</p>
-              </div>
-            </DropdownItem>
-          ))}
-        </DropdownList>
-      </DropdownContent>
-    </Dropdown>
-  )
+`,
 }
-
-`
 
 export { CustomDropdown, CustomDropdownCode }

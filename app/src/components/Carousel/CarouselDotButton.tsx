@@ -1,7 +1,7 @@
 'use client'
 import { EmblaCarouselType } from 'embla-carousel'
 import { ButtonHTMLAttributes, cloneElement, forwardRef, isValidElement, useCallback, useEffect, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 type UseDotButtonType = {
   selectedIndex: number

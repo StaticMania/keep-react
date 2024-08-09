@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useDrawerContext } from './DrawerContext'
 
 export interface DrawerCloseProps extends HTMLAttributes<HTMLButtonElement> {

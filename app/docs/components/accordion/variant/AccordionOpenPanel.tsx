@@ -47,7 +47,8 @@ const AccordionOpenPanel = () => {
   )
 }
 
-const AccordionOpenPanelCode = `
+const AccordionOpenPanelCode = {
+  'AccordionComponent.tsx': `
 'use client'
 import {
   Accordion,
@@ -98,6 +99,7 @@ export const AccordionComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { AccordionOpenPanel, AccordionOpenPanelCode }

@@ -15,7 +15,8 @@ const InputWithIcon = () => {
   )
 }
 
-const InputWithIconCode = `
+const InputWithIconCode = {
+  'InputComponent.tsx': `
 'use client'
 import { Envelope } from 'phosphor-react'
 import { InputIcon, Input } from 'keep-react'
@@ -30,6 +31,7 @@ const InputWithIcon = () => {
     </fieldset>
   )
 }
-`
+`,
+}
 
 export { InputWithIcon, InputWithIconCode }

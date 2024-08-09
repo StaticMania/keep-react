@@ -132,7 +132,8 @@ const SidebarWithIcon = () => {
   )
 }
 
-const SidebarWithIconCode = `
+const SidebarWithIconCode = {
+  'SidebarComponent.tsx': `
 'use client'
 import Link from 'next/link'
 import {
@@ -247,6 +248,7 @@ export const SidebarComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { SidebarWithIcon, SidebarWithIconCode }

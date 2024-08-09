@@ -34,7 +34,8 @@ const PaginationInput = () => {
   )
 }
 
-const PaginationInputCode = `
+const PaginationInputCode = {
+  'Pagination.tsx': `
 'use client'
 import { CaretLeft, CaretRight, DotsThree } from 'phosphor-react'
 import { Pagination, PaginationGoTo, PaginationItem, PaginationList, PaginationNavigator } from 'keep-react'
@@ -70,5 +71,6 @@ export const PaginationComponent = () => {
     </Pagination>
   )
 }
-`
+`,
+}
 export { PaginationInput, PaginationInputCode }

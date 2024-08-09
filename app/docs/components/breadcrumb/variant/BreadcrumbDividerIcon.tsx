@@ -28,7 +28,8 @@ const BreadcrumbDividerIcon = () => {
   )
 }
 
-const BreadcrumbDividerIconCode = `
+const BreadcrumbDividerIconCode = {
+  'BreadcrumbComponent.tsx': `
 'use client'
 import { CaretDoubleRight, HouseLine } from 'phosphor-react'
 import { Breadcrumb, BreadcrumbItem } from 'keep-react'
@@ -58,6 +59,7 @@ export const BreadcrumbComponent = () => {
     </Breadcrumb>
   )
 }
-`
+`,
+}
 
 export { BreadcrumbDividerIcon, BreadcrumbDividerIconCode }

@@ -1,6 +1,6 @@
 'use client'
 import { FC, ReactNode } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { DividerColorVariant, DividerSizeVariant, dividerTheme } from './theme'
 
 interface DividerProps {
