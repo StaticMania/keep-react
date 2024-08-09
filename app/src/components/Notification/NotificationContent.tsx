@@ -27,28 +27,53 @@ const contentTheme = {
 
 const NotificationDirection: VariantsProps = {
   'top-left': {
-    initial: { opacity: 0, y: '-100%' },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'anticipate' } },
+    initial: { opacity: 0, y: '-100%', scale: 0.9 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
+    },
     exit: { opacity: 0, x: '-100%' },
   },
   'top-right': {
-    initial: { opacity: 0, y: '-100%' },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'anticipate' } },
+    initial: { opacity: 0, y: '-100%', scale: 0.9 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
+    },
     exit: { opacity: 0, x: '100%' },
   },
   'bottom-left': {
-    initial: { opacity: 0, y: '100%' },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'anticipate' } },
+    initial: { opacity: 0, y: '100%', scale: 0.9 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
+    },
     exit: { opacity: 0, x: '-100%' },
   },
   'bottom-right': {
-    initial: { opacity: 0, y: '100%' },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'anticipate' } },
+    initial: { opacity: 0, y: '100%', scale: 0.9 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
+    },
     exit: { opacity: 0, x: '100%' },
   },
   center: {
-    initial: { opacity: 0, y: '-100%' },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'anticipate' } },
+    initial: { opacity: 0, y: '-100%', scale: 0.9 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
+    },
     exit: { opacity: 0, y: '-100%' },
   },
 }

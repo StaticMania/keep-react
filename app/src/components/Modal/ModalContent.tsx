@@ -13,7 +13,7 @@ const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
     return (
       <AnimatePresence>
         {isOpen && (
-          <ModalPortal>
+          <ModalPortal key="modal">
             <motion.div
               {...props}
               className={cn(
@@ -21,10 +21,10 @@ const ModalContent = forwardRef<HTMLDivElement, ModalContentProps>(
                 className,
               )}
               ref={ref}
-              initial={{ scale: 0.9, opacity: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.2 }}
-              exit={{ opacity: 0, scale: 0.9 }}>
+              initial={{ scale: 0.5, opacity: 0, y: 40 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.3, type: 'spring', damping: 25, stiffness: 500 }}
+              exit={{ opacity: 0.5, scale: 0.5, y: 40 }}>
               {children}
             </motion.div>
           </ModalPortal>

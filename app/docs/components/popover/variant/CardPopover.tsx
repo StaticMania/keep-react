@@ -8,13 +8,7 @@ const CardPopover = () => {
       <Popover placement="left">
         <PopoverAction>Left</PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
           <div className="space-y-2 p-6">
             <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
@@ -27,13 +21,7 @@ const CardPopover = () => {
       <Popover placement="right">
         <PopoverAction>Right</PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
           <div className="space-y-2 p-6">
             <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
@@ -46,13 +34,7 @@ const CardPopover = () => {
       <Popover placement="top">
         <PopoverAction>Top</PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
           <div className="space-y-2 p-6">
             <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
@@ -65,13 +47,7 @@ const CardPopover = () => {
       <Popover placement="bottom">
         <PopoverAction>Bottom</PopoverAction>
         <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
           <div className="space-y-2 p-6">
             <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
@@ -95,13 +71,7 @@ export const PopoverComponent = () => {
     <Popover placement="left">
       <PopoverAction>Left</PopoverAction>
       <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
-        <Image
-          src="https://via.placeholder.com/600x400"
-          className="rounded-t-xl"
-          alt="image"
-          width={600}
-          height={300}
-        />
+        <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
         <div className="space-y-2 p-6">
           <PopoverHeading>Keep Design System</PopoverHeading>
           <PopoverDescription>

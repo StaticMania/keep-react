@@ -7,7 +7,7 @@ const IconPopover = () => {
     <div className="flex h-52 items-center justify-center gap-5">
       <Popover placement="left">
         <PopoverAction>Left</PopoverAction>
-        <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-6 shadow-sm dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
           </div>
@@ -29,7 +29,7 @@ const IconPopover = () => {
       </Popover>
       <Popover placement="right">
         <PopoverAction>Right</PopoverAction>
-        <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-6 shadow-sm dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
           </div>
@@ -51,7 +51,7 @@ const IconPopover = () => {
       </Popover>
       <Popover placement="top">
         <PopoverAction>Top</PopoverAction>
-        <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-6 shadow-sm dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
           </div>
@@ -73,7 +73,7 @@ const IconPopover = () => {
       </Popover>
       <Popover placement="bottom">
         <PopoverAction>Bottom</PopoverAction>
-        <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
+        <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-6 shadow-sm dark:border-metal-800 dark:bg-metal-900">
           <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <Confetti size={24} weight="fill" />
           </div>
@@ -107,7 +107,7 @@ export const PopoverComponent = () => {
   return (
     <Popover placement="right">
       <PopoverAction>Right</PopoverAction>
-      <PopoverContent className="z-20 max-w-xs rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900">
+      <PopoverContent className="z-20 max-w-xs rounded-xl bg-white p-6 dark:border-metal-800 dark:bg-metal-900 shadow-sm">
         <div className="flex size-14 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
           <Confetti size={24} weight="fill" />
         </div>
