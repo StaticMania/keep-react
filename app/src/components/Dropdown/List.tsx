@@ -18,8 +18,11 @@ export const DropdownList = forwardRef<HTMLDivElement, DropdownListProps>(
           y: 0,
           height: '100%',
           transition: {
-            duration: 0.2,
-            delay: 0.3,
+            type: 'spring',
+            duration: 0.3,
+            delay: 0.1,
+            damping: 25,
+            stiffness: 500,
           },
         }}
         exit={{ opacity: 0, y: '10px', height: 0 }}

@@ -5,7 +5,7 @@ const ProductCard = () => {
   return (
     <Card>
       <CardHeader>
-        <Image src="https://via.placeholder.com/600x400" alt="image" width={600} height={400} />
+        <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
       </CardHeader>
       <CardContent className="space-y-3">
         <CardTitle>Lorem ipsum dolor sit</CardTitle>
@@ -27,7 +27,7 @@ export const CardComponent = () => {
   return (
     <Card>
       <CardHeader>
-        <Image src="https://via.placeholder.com/600x400" alt="image" width={600} height={400} />
+        <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
       </CardHeader>
       <CardContent className="space-y-3">
         <CardTitle>Lorem ipsum dolor sit</CardTitle>
