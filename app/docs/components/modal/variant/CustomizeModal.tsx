@@ -16,7 +16,7 @@ const CustomizeModal = () => {
   return (
     <div className="flex items-center justify-center px-5 py-3">
       <Modal>
-        <ModalAction>
+        <ModalAction asChild>
           <Button>Open Modal</Button>
         </ModalAction>
         <ModalContent className="w-[20rem] lg:w-[26rem]">
