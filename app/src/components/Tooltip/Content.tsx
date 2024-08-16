@@ -48,14 +48,13 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
     return (
       <AnimatePresence>
         {isOpen && (
-          <div ref={refs.setFloating || ref} {...getFloatingProps()} style={floatingStyles}>
+          <div key="tooltip" ref={refs.setFloating || ref} {...getFloatingProps()} style={floatingStyles}>
             <motion.div
               {...props}
               className={cn(
-                'max-w-[263px] rounded-xl border border-metal-900 bg-metal-900 px-2.5 py-2 dark:border-white dark:bg-white',
+                'max-w-[263px] rounded-xl border border-primary-500 bg-primary-500 px-2.5 py-2 dark:border-primary-500 dark:bg-primary-500',
                 className,
               )}
-              key="tooltip"
               initial="initial"
               animate="animate"
               exit="exit"
@@ -71,7 +70,7 @@ export const TooltipContent = forwardRef<HTMLDivElement, floatingArrow>(
                   d={d}
                   stroke={stroke}
                   strokeWidth={strokeWidth}
-                  className={cn('fill-metal-900 dark:fill-white', arrowClassName)}
+                  className={cn('fill-primary-500 dark:fill-primary-500', arrowClassName)}
                 />
               )}
               {children}

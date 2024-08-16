@@ -36,21 +36,21 @@ const ChartWithDoubleData = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} barGap={10}>
-        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-metal-900 dark:fill-metal-25" />
-        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="sell" className="fill-metal-600 dark:fill-metal-100" />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-primary-500 dark:fill-primary-600" />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="sell" className="fill-primary-100 dark:fill-primary-100" />
         <XAxis
-          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
+          className="text-body-4 font-medium text-metal-600"
           dataKey="name"
-          stroke="#8897AE"
+          stroke="#afbaca"
           tickSize={10}
           tickLine={false}
           strokeWidth={0.5}
         />
         <YAxis
-          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
+          className="text-body-4 font-medium text-metal-600"
           tickSize={10}
           dataKey="price"
-          stroke="#8897AE"
+          stroke="#afbaca"
           tickLine={false}
           strokeWidth={0.5}
         />
@@ -99,21 +99,21 @@ export const BarChartComponent = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} barGap={10}>
-        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-metal-900 dark:fill-metal-25" />
-        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="sell" className="fill-metal-600 dark:fill-metal-100" />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="price" className="fill-primary-500 dark:fill-primary-600" />
+        <Bar radius={[8, 8, 0, 0]} barSize={40} dataKey="sell" className="fill-primary-100 dark:fill-primary-100" />
         <XAxis
-          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
+          className="text-body-4 font-medium text-metal-600"
           dataKey="name"
-          stroke="#8897AE"
+          stroke="#afbaca"
           tickSize={10}
           tickLine={false}
           strokeWidth={0.5}
         />
         <YAxis
-          className="text-body-4 font-medium text-metal-600 dark:text-metal-300"
+          className="text-body-4 font-medium text-metal-600"
           tickSize={10}
           dataKey="price"
-          stroke="#8897AE"
+          stroke="#afbaca"
           tickLine={false}
           strokeWidth={0.5}
         />

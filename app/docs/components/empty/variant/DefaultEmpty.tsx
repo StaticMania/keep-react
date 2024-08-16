@@ -17,7 +17,7 @@ const DefaultEmpty = () => {
       <EmptyDescription className="mb-8">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-      <Link href="/" className={buttonVariants({ color: 'secondary' })}>
+      <Link href="/" className={buttonVariants({ color: 'primary' })}>
         Go to home
       </Link>
     </Empty>
@@ -45,7 +45,7 @@ export const EmptyComponent = () => {
       <EmptyDescription className="mb-8">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.
       </EmptyDescription>
-       <Link href="/" className={buttonVariants({ color: 'secondary' })}>
+       <Link href="/" className={buttonVariants({ color: 'primary' })}>
         Go to home
       </Link>
     </Empty>

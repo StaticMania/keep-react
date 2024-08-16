@@ -7,14 +7,14 @@ export interface TabListProps extends HTMLAttributes<HTMLElement> {}
 
 const TabList = forwardRef<HTMLDivElement, TabListProps>(
   ({ children, className, ...props }, ref: ForwardedRef<HTMLDivElement>) => {
-    const { vertical } = useTabContext()
+    const { variant } = useTabContext()
     return (
       <div
         {...props}
         ref={ref}
         className={cn(
-          'mb-2 flex items-center border-b border-b-metal-100 dark:border-b-metal-700',
-          vertical && 'flex-col rounded-xl border-b-0 bg-metal-25 p-4 dark:bg-metal-800',
+          'mb-2 flex items-center',
+          variant === 'underline' && 'border-y border-y-metal-100 dark:border-y-metal-800',
           className,
         )}>
         {children}

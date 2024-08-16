@@ -13,7 +13,7 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <TableDocs />
-      <EditPage pageLink="/docs/components/table" nextPageLink="/docs/components/tab" nextPageName="Tab" />
+      <EditPage pageLink="/docs/components/table" nextPageLink="/docs/components/tabs" nextPageName="Tabs" />
     </DocsContentLayout>
   )
 }

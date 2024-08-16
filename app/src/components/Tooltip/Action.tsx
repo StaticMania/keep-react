@@ -27,7 +27,7 @@ export const TooltipAction = forwardRef<HTMLButtonElement, TooltipActionProps>(
       )
     }
     return (
-      <Button variant="outline" ref={refs.setReference || ref} {...getReferenceProps()}>
+      <Button ref={refs.setReference || ref} {...getReferenceProps()}>
         {children ?? 'Open Tooltip'}
       </Button>
     )

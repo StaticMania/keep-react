@@ -133,7 +133,7 @@ const OrdersTable = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] p-3">
+                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
                   <DropdownList>
                     <DropdownItem>Edit</DropdownItem>
                     <DropdownItem>Move</DropdownItem>
@@ -285,7 +285,7 @@ export const TableComponent = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] p-3">
+                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
                   <DropdownList>
                     <DropdownItem>Edit</DropdownItem>
                     <DropdownItem>Move</DropdownItem>

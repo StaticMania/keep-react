@@ -33,16 +33,16 @@ export const progressTheme: ProgressThemeInterface = {
     root: 'relative w-32 h-32',
     svg: {
       base: 'h-full w-full',
-      circle: 'stroke-metal-100 text-metal-50 fill-white',
+      circle: 'stroke-primary-25 text-metal-50 fill-white',
       g: 'origin-center -rotate-90 transform',
-      gCircle: 'stroke-metal-900 text-metal-900 transition-all duration-300',
+      gCircle: 'stroke-primary-500 text-primary-500 transition-all duration-300',
     },
   },
   line: {
     root: 'flex items-center gap-x-3 whitespace-nowrap',
     progress: {
-      base: 'relative flex w-full overflow-hidden rounded-full bg-metal-50 ',
-      bar: 'relative flex flex-col justify-center overflow-hidden m-[1px] rounded-full bg-metal-900 transition-all duration-300',
+      base: 'relative flex w-full overflow-hidden rounded-full bg-primary-25',
+      bar: 'relative flex flex-col justify-center overflow-hidden m-[1px] rounded-full bg-primary-500 transition-all duration-300',
     },
     text: {
       base: 'w-10 text-end text-body-4 font-medium text-metal-600',

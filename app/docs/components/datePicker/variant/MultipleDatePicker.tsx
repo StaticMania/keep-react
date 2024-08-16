@@ -9,7 +9,11 @@ const MultipleDatePicker = () => {
   return (
     <Popover showArrow={false} placement="bottom-start">
       <PopoverAction asChild>
-        <Button className="w-[286px] justify-start gap-2" variant="outline">
+        <Button
+          color="secondary"
+          size="lg"
+          className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4"
+          variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {date ? format(date ?? new Date(), 'PPP') : <span>Select Your Date</span>}
         </Button>
@@ -22,7 +26,7 @@ const MultipleDatePicker = () => {
 }
 
 const MultipleDatePickerCode = {
-  'DatePickerComponent.tsx': `
+  'DatePickerComponent.jsx': `
 'use client'
 import { format } from 'date-fns'
 import { useState } from 'react'
@@ -34,7 +38,37 @@ export const DatePickerComponent = () => {
   return (
     <Popover showArrow={false} placement="bottom-start">
       <PopoverAction asChild>
-        <Button className="w-[286px] justify-start gap-2" variant="outline">
+        <Button
+          color="secondary"
+          size="lg"
+          className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4" variant="outline">
+          <Calendar size={20} className="text-metal-400 dark:text-white" />
+          {date ? format(date ?? new Date(), 'PPP') : <span>Select Your Date</span>}
+        </Button>
+      </PopoverAction>
+      <PopoverContent className="z-50 max-w-min">
+        <DatePicker numberOfMonths={2} mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
+      </PopoverContent>
+    </Popover>
+  )
+}
+`,
+  'DatePickerComponent.tsx': `
+'use client'
+import { format } from 'date-fns'
+import { Calendar } from 'phosphor-react'
+import { useState } from 'react'
+import { Button, DatePicker, Popover, PopoverAction, PopoverContent } from 'keep-react'
+
+export const DatePickerComponent = () => {
+  const [date, setDate] = useState<Date>()
+  return (
+    <Popover showArrow={false} placement="bottom-start">
+      <PopoverAction asChild>
+        <Button color="secondary"
+          size="lg"
+          className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4"
+          variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {date ? format(date ?? new Date(), 'PPP') : <span>Select Your Date</span>}
         </Button>

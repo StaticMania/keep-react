@@ -56,11 +56,11 @@
 }
 
 #visible-table-of-contents li {
-  @apply my-2 -ml-px border-l border-l-transparent pl-3 text-body-4 text-metal-500 hover:border-l-metal-900 hover:text-metal-900 active:text-metal-900 dark:text-metal-400;
+  @apply my-2 -ml-px border-l border-l-transparent pl-3 text-body-4 text-metal-500 hover:border-l-metal-900 hover:text-metal-900 active:text-metal-900 dark:text-metal-400 dark:hover:text-white;
 }
 
 #visible-table-of-contents li:has(.active-link) {
-  @apply border-l-metal-900 text-metal-900 transition-colors duration-300 hover:text-metal-900 active:text-metal-900 dark:border-l-white dark:text-white;
+  @apply border-l-metal-900 text-metal-900 transition-colors duration-300 hover:text-metal-900 active:text-metal-900 dark:border-l-white dark:text-white dark:hover:text-white;
 }
 
 #componentListSidebar::-webkit-scrollbar {

@@ -12,7 +12,7 @@ interface AlertComponentProps extends HTMLAttributes<HTMLDivElement> {
 
 const Alert = forwardRef<HTMLDivElement, AlertComponentProps>(
   (
-    { children, color = 'secondary', withBg, dismiss, className, ...props }: AlertComponentProps,
+    { children, color = 'primary', withBg, dismiss, className, ...props }: AlertComponentProps,
     ref: Ref<HTMLDivElement>,
   ) => {
     return (

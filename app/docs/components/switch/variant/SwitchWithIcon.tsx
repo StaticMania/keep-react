@@ -3,7 +3,7 @@ import { Switch } from '../../../../src'
 const SwitchWithIcon = () => {
   return (
     <div className="px-5 py-3">
-      <Switch showIcon />
+      <Switch variant="icon" />
     </div>
   )
 }
@@ -13,7 +13,7 @@ const SwitchWithIconCode = {
 import { Switch } from "keep-react"
 
 export const SwitchComponent = () => {
-  return <Switch showIcon />
+  return <Switch variant='icon' />
 }
 `,
 }

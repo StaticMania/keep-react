@@ -10,7 +10,11 @@ const DateRangePicker = () => {
   return (
     <Popover showArrow={false} placement="bottom-start">
       <PopoverAction asChild>
-        <Button className="w-[286px] justify-start gap-2" variant="outline">
+        <Button
+          color="secondary"
+          size="lg"
+          className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4"
+          variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
             <>
@@ -41,7 +45,7 @@ export const DatePickerComponent = () => {
   return (
     <Popover showArrow={false} placement="bottom-start">
       <PopoverAction asChild>
-        <Button className="w-[286px] justify-start gap-2" variant="outline">
+        <Button color="secondary" size="lg" className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4" variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
             <>
@@ -70,12 +74,12 @@ type DateRange = {
     to?: Date | undefined;
 }
 
-export const DateRangePicker = () => {
+export const DatePickerComponent = () => {
   const [selected, setSelected] = useState<DateRange>()
   return (
     <Popover showArrow={false} placement="bottom-start">
       <PopoverAction asChild>
-        <Button className="w-[286px] justify-start gap-2" variant="outline">
+        <Button color="secondary" size="lg" className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4" variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
             <>

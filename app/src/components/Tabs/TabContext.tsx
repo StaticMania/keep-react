@@ -4,8 +4,8 @@ import { createContext, useContext } from 'react'
 export type TabPropsContext = {
   activeItem?: string
   defaultActive?: string
-  vertical?: boolean
   handleActive: (item: string) => void
+  variant?: 'default' | 'fill' | 'underline'
 }
 
 export const TabContext = createContext<TabPropsContext | undefined>(undefined)

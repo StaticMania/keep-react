@@ -22,11 +22,11 @@ const RegisterCard = () => {
           <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
         </CardHeader>
         <div className="flex items-center justify-between gap-3">
-          <Button variant="outline" className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
             Google
           </Button>
-          <Button variant="outline" className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <FacebookLogo size={20} className="mr-1.5" />
             Facebook
           </Button>
@@ -86,11 +86,11 @@ export const CardComponent = () => {
           <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
         </CardHeader>
         <div className="flex items-center justify-between gap-3">
-          <Button variant="outline"  className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
             Google
           </Button>
-          <Button variant="outline"  className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <FacebookLogo size={20} className="mr-1.5" />
             Facebook
           </Button>

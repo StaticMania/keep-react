@@ -8,6 +8,7 @@ export interface NotificationProps {
   isOpen?: boolean
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
   autoCloseTime?: number
+  autoClose?: boolean
 }
 
 const Notification: FC<NotificationProps> = ({
@@ -16,6 +17,7 @@ const Notification: FC<NotificationProps> = ({
   onOpenChange,
   position = 'bottom-right',
   autoCloseTime = 3000,
+  autoClose = true,
 }) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false)
 
@@ -48,13 +50,15 @@ const Notification: FC<NotificationProps> = ({
     }
     let autoCloseTimeout: ReturnType<typeof setTimeout>
 
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscapeKeyPress)
-      document.addEventListener('mousedown', handleClickOutsideModal)
-
+    if (isOpen && autoClose) {
       autoCloseTimeout = setTimeout(() => {
         setIsOpen(false)
       }, autoCloseTime)
+    }
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscapeKeyPress)
+      document.addEventListener('mousedown', handleClickOutsideModal)
     }
 
     return () => {
@@ -65,7 +69,7 @@ const Notification: FC<NotificationProps> = ({
         clearTimeout(autoCloseTimeout)
       }
     }
-  }, [isOpen, setIsOpen, autoCloseTime])
+  }, [isOpen, setIsOpen, autoCloseTime, autoClose])
 
   return (
     <NotificationContext.Provider value={{ isOpen, handleOpen, position }}>{children}</NotificationContext.Provider>

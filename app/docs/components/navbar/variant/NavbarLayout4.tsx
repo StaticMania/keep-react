@@ -39,7 +39,7 @@ const NavbarLayout4 = () => {
                   <AvatarImage src="/images/avatar/avatar-3.png" />
                 </Avatar>
               </DropdownAction>
-              <DropdownContent>
+              <DropdownContent className="border border-metal-100">
                 <DropdownList>
                   <DropdownItem>Statistics</DropdownItem>
                   <DropdownItem>Duplicate</DropdownItem>
@@ -100,7 +100,7 @@ export const NavbarComponent = () => {
                 <AvatarImage src="/images/avatar/avatar-3.png" />
               </Avatar>
             </DropdownAction>
-            <DropdownContent>
+            <DropdownContent className='border border-metal-100'>
               <DropdownList>
                 <DropdownItem>Statistics</DropdownItem>
                 <DropdownItem>Duplicate</DropdownItem>

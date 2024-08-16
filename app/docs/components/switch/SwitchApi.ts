@@ -1,10 +1,10 @@
 export const toggleApiData = [
   {
     id: 1,
-    propsName: 'showIcon',
-    propsType: 'Boolean',
-    propsDescription: 'Indicates if an icon should be included with the toggle.',
-    default: 'false',
+    propsName: 'variant',
+    propsType: ['default', 'icon'],
+    propsDescription: 'Switch variant',
+    default: 'default',
   },
   {
     id: 2,

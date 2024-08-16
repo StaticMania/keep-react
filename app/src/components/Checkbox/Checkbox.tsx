@@ -14,16 +14,17 @@ const Checkbox = forwardRef<ElementRef<typeof Root>, CheckboxProps>(
       <Root
         ref={ref}
         className={cn(
-          'peer relative h-5 w-5 shrink-0 border border-metal-900 ring-offset-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-metal-900 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:text-metal-900 dark:border-white dark:ring-offset-metal-900 dark:focus-visible:ring-white dark:data-[state=checked]:text-white',
+          'peer relative h-5 w-5 shrink-0 border border-metal-200 ring-offset-primary-500 focus-visible:outline-none focus-visible:ring-1  focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-primary-500 data-[state=checked]:text-primary-500 dark:border-metal-100 dark:ring-offset-primary-500 dark:focus-visible:ring-primary-500 dark:data-[state=checked]:text-primary-500',
+          variant === 'default' && 'data-[state=checked]:bg-primary-500 dark:data-[state=checked]:bg-primary-500',
           variant !== 'default' &&
-            'data-[state=checked]:before:absolute data-[state=checked]:before:left-1/2 data-[state=checked]:before:top-1/2 data-[state=checked]:before:h-2.5 data-[state=checked]:before:w-2.5 data-[state=checked]:before:-translate-x-1/2 data-[state=checked]:before:-translate-y-1/2 data-[state=checked]:before:bg-metal-900 data-[state=checked]:before:content-[""] dark:data-[state=checked]:before:bg-white',
+            'data-[state=checked]:before:absolute data-[state=checked]:before:left-1/2 data-[state=checked]:before:top-1/2 data-[state=checked]:before:h-2.5 data-[state=checked]:before:w-2.5 data-[state=checked]:before:-translate-x-1/2 data-[state=checked]:before:-translate-y-1/2 data-[state=checked]:before:bg-primary-500 data-[state=checked]:before:content-[""] dark:data-[state=checked]:before:bg-primary-500',
           variant === 'circle' && 'rounded-full data-[state=checked]:before:rounded-full',
           variant !== 'circle' && 'rounded data-[state=checked]:before:rounded-sm',
           className,
         )}
         {...props}>
         {variant === 'default' && (
-          <Indicator className={cn('flex items-center justify-center text-current', iconClassName)}>
+          <Indicator className={cn('flex items-center justify-center text-white', iconClassName)}>
             {children ?? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"

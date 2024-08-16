@@ -10,7 +10,6 @@ export type DropdownContentProps = HTMLAttributes<HTMLDivElement> & MotionProps
 
 const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(({ className, children, ...props }, ref) => {
   const { context: floatingContext, showArrow, placement = 'bottom', ...restContext } = useDropdownContext()
-
   return (
     <AnimatePresence>
       {floatingContext.open && (
@@ -29,7 +28,10 @@ const DropdownContent = forwardRef<HTMLDivElement, DropdownContentProps>(({ clas
                 y: 0,
                 transition: {
                   duration: 0.3,
+                  delay: 0.1,
                   type: 'spring',
+                  damping: 25,
+                  stiffness: 500,
                 },
               }}
               exit={{ opacity: 0, y: '20px' }}>

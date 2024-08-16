@@ -8,17 +8,23 @@ const DefaultStep = () => {
     <div className="space-y-6 p-6">
       <Steps>
         <StepPoint completed={active >= 1}>
-          <p className="flex size-5 items-center justify-center rounded-full border text-body-5 font-medium">1</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
+            1
+          </p>
           <p className="text-body-4 font-medium">general info</p>
         </StepPoint>
         <StepLine completed={active >= 1} />
         <StepPoint completed={active >= 2}>
-          <p className="flex size-5 items-center justify-center rounded-full border text-body-5 font-medium">2</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
+            2
+          </p>
           <p className="text-body-4 font-medium">payment details</p>
         </StepPoint>
         <StepLine completed={active >= 2} />
         <StepPoint completed={active >= 3}>
-          <p className="flex size-5 items-center justify-center rounded-full border text-body-5 font-medium">3</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
+            3
+          </p>
           <p className="text-body-4 font-medium">benefits & extras</p>
         </StepPoint>
       </Steps>
@@ -51,17 +57,17 @@ export const StepComponent = () => {
     <div className="space-y-6">
       <Steps>
         <StepPoint completed={active >= 1}>
-          <p className="flex size-5 items-center justify-center rounded-full border text-body-5 font-medium">1</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">1</p>
           <p className="text-body-4 font-medium">general info</p>
         </StepPoint>
         <StepLine completed={active >= 1} />
         <StepPoint completed={active >= 2}>
-          <p className="flex size-5 items-center justify-center rounded-full border text-body-5 font-medium">2</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">2</p>
           <p className="text-body-4 font-medium">payment details</p>
         </StepPoint>
         <StepLine completed={active >= 2} />
         <StepPoint completed={active >= 3}>
-          <p className="flex size-5 items-center justify-center rounded-full border text-body-5 font-medium">3</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">3</p>
           <p className="text-body-4 font-medium">benefits & extras</p>
         </StepPoint>
       </Steps>

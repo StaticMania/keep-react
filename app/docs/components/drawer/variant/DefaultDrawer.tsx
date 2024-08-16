@@ -8,6 +8,7 @@ const DefaultDrawer = () => {
           <Button>Open Drawer</Button>
         </DrawerAction>
         <DrawerContent>
+          <DrawerClose className="absolute right-5 top-5" />
           <div className="mx-auto max-w-sm space-y-3 px-6 py-20 lg:px-0">
             <h1 className="text-heading-3 font-bold text-metal-900 lg:text-heading-2 dark:text-white">Keep React</h1>
             <p className="text-body-3 font-normal text-metal-600 dark:text-metal-300">
@@ -35,6 +36,7 @@ export const DrawerComponent = () => {
         <Button>Open Drawer</Button>
       </DrawerAction>
       <DrawerContent>
+        <DrawerClose className="absolute right-5 top-5" />
         <div className="mx-auto max-w-sm space-y-3 px-6 py-20 lg:px-0">
           <h1 className="text-heading-3 font-bold text-metal-900 lg:text-heading-2 dark:text-white">Keep React</h1>
           <p className="text-body-3 font-normal text-metal-600 dark:text-metal-300">

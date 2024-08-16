@@ -12,7 +12,7 @@ export type TabItemProps = HTMLAttributes<HTMLButtonElement> & {
 
 const TabItem = forwardRef<HTMLButtonElement, TabItemProps>(
   ({ children, contentClassName, bgClassName, className, value, ...props }, ref) => {
-    const { activeItem, handleActive, defaultActive, vertical } = useTabContext()
+    const { activeItem, handleActive, defaultActive, variant } = useTabContext()
 
     const handleClick = () => {
       handleActive(value)
@@ -26,7 +26,10 @@ const TabItem = forwardRef<HTMLButtonElement, TabItemProps>(
         ref={ref}
         {...props}
         className={cn(
-          'relative h-9 min-w-28 max-w-max px-5 text-body-4 font-medium text-metal-900 data-[active=false]:text-metal-900 data-[active=true]:text-white dark:data-[active=false]:text-white dark:data-[active=true]:text-metal-900',
+          'relative h-10 px-5 text-body-4 font-medium',
+          variant === 'underline' && 'data-[active=true]:text-primary-500 dark:data-[active=true]:text-primary-500',
+          variant === 'fill' &&
+            'data-[active=false]:text-metal-900 data-[active=true]:text-metal-900 dark:data-[active=false]:text-white dark:data-[active=true]:text-metal-900',
           className,
         )}>
         {activeItem === value ? (
@@ -34,8 +37,10 @@ const TabItem = forwardRef<HTMLButtonElement, TabItemProps>(
             layoutId={defaultActive}
             transition={{ duration: 0.4, type: 'spring' }}
             className={cn(
-              'absolute inset-0 bg-metal-900 dark:bg-white',
-              vertical ? 'rounded-lg' : 'rounded-t-lg',
+              'absolute inset-0',
+              variant === 'fill' && 'rounded-lg border border-metal-100 bg-white shadow-medium',
+              variant === 'default' && 'rounded-lg border border-metal-100 bg-transparent',
+              variant === 'underline' && '-mb-[1px] rounded-none border-b-2 border-b-primary-500',
               bgClassName,
             )}></motion.span>
         ) : null}

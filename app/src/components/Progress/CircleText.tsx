@@ -9,7 +9,7 @@ export const CircleProgressText = forwardRef<HTMLDivElement, HTMLAttributes<HTML
         ref={ref}
         {...props}
         className={cn(
-          'absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-body-4 font-medium text-metal-600',
+          'absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-body-4 font-medium text-primary-500',
           className,
         )}>
         {children}

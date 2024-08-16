@@ -8,10 +8,10 @@ export const tabsApiData = [
   },
   {
     id: 2,
-    propsName: 'vertical',
-    propsType: 'boolean',
-    propsDescription: 'Tabs show vertical position',
-    default: 'false',
+    propsName: 'variant',
+    propsType: ['default', 'fill', 'underline'],
+    propsDescription: 'Tabs item variant',
+    default: 'default',
   },
 ]
 

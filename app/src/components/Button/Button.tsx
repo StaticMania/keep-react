@@ -13,7 +13,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, className, size = 'md', color = 'secondary', variant, shape, position, ...props },
+    { children, className, size = 'md', color = 'primary', variant, shape, position, ...props },
     ref: Ref<HTMLButtonElement>,
   ) => {
     return (

@@ -5,11 +5,11 @@ import { TabContext } from './TabContext'
 
 interface TabsProps extends HTMLAttributes<HTMLDivElement> {
   defaultActive?: string
-  vertical?: boolean
+  variant?: 'default' | 'fill' | 'underline'
 }
 
 const Tabs = forwardRef<HTMLDivElement, TabsProps>(
-  ({ children, defaultActive = '', vertical = false, className, ...props }, ref) => {
+  ({ children, defaultActive = '', variant = 'default', className, ...props }, ref) => {
     const [activeItem, setActiveItem] = useState<string>(defaultActive)
 
     const handleActive = (item: string) => {
@@ -17,11 +17,8 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     }
 
     return (
-      <div
-        ref={ref}
-        {...props}
-        className={cn('rounded-xl bg-white p-6 dark:bg-metal-900', vertical && 'flex items-center gap-5', className)}>
-        <TabContext.Provider value={{ activeItem, handleActive, defaultActive, vertical }}>
+      <div ref={ref} {...props} className={cn(className)}>
+        <TabContext.Provider value={{ activeItem, handleActive, defaultActive, variant }}>
           {children}
         </TabContext.Provider>
       </div>

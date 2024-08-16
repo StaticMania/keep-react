@@ -2,28 +2,28 @@
 import { Buildings, Gear, ShieldWarning, User } from 'phosphor-react'
 import { Skeleton, SkeletonLine, TabContent, TabItem, TabList, Tabs } from '../../../../src'
 
-const VerticalTab = () => {
+const TabsUnderline = () => {
   return (
-    <Tabs vertical defaultActive="item-9" className="mx-auto max-w-xl">
+    <Tabs variant="underline" defaultActive="5" className="mx-auto max-w-xl">
       <TabList>
-        <TabItem value="item-9">
+        <TabItem value="5">
           <User size={16} />
           Profile
         </TabItem>
-        <TabItem value="item-10">
+        <TabItem value="6">
           <Gear size={16} />
           Settings
         </TabItem>
-        <TabItem value="item-11">
+        <TabItem value="7">
           <Buildings size={16} />
           Company
         </TabItem>
-        <TabItem value="item-12">
+        <TabItem value="8">
           <ShieldWarning size={16} />
           Privacy
         </TabItem>
       </TabList>
-      <TabContent value="item-9">
+      <TabContent value="5">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -31,7 +31,7 @@ const VerticalTab = () => {
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
       </TabContent>
-      <TabContent value="item-10">
+      <TabContent value="6">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -39,7 +39,7 @@ const VerticalTab = () => {
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
       </TabContent>
-      <TabContent value="item-11">
+      <TabContent value="7">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -47,7 +47,7 @@ const VerticalTab = () => {
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
       </TabContent>
-      <TabContent value="item-12">
+      <TabContent value="8">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -59,7 +59,7 @@ const VerticalTab = () => {
   )
 }
 
-const VerticalTabCode = {
+const TabsUnderlineCode = {
   'TabsComponent.tsx': `
 'use client'
 import { Buildings, Gear, ShieldWarning, User } from 'phosphor-react'
@@ -67,26 +67,26 @@ import { Skeleton, SkeletonLine, TabContent, TabItem, TabList, Tabs } from 'keep
 
 export const TabsComponent = () => {
   return (
-    <Tabs vertical defaultActive="item-9" className="mx-auto max-w-xl">
+    <Tabs variant="underline" defaultActive="5" className="mx-auto max-w-xl">
       <TabList>
-        <TabItem value="item-9">
+        <TabItem value="5">
           <User size={16} />
           Profile
         </TabItem>
-        <TabItem value="item-10">
+        <TabItem value="6">
           <Gear size={16} />
           Settings
         </TabItem>
-        <TabItem value="item-11">
+        <TabItem value="7">
           <Buildings size={16} />
           Company
         </TabItem>
-        <TabItem value="item-12">
+        <TabItem value="8">
           <ShieldWarning size={16} />
           Privacy
         </TabItem>
       </TabList>
-      <TabContent value="item-9">
+      <TabContent value="5">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -94,7 +94,7 @@ export const TabsComponent = () => {
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
       </TabContent>
-      <TabContent value="item-10">
+      <TabContent value="6">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -102,7 +102,7 @@ export const TabsComponent = () => {
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
       </TabContent>
-      <TabContent value="item-11">
+      <TabContent value="7">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -110,7 +110,7 @@ export const TabsComponent = () => {
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
       </TabContent>
-      <TabContent value="item-12">
+      <TabContent value="8">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
@@ -121,8 +121,7 @@ export const TabsComponent = () => {
     </Tabs>
   )
 }
-
 `,
 }
 
-export { VerticalTab, VerticalTabCode }
+export { TabsUnderline, TabsUnderlineCode }
