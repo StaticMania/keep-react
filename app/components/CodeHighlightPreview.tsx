@@ -68,9 +68,7 @@ const CodeHighlightPreview = forwardRef<HTMLDivElement, CodeHighlightPreviewProp
                 </button>
               </TooltipAction>
               <TooltipContent>
-                <p className="text-body-5 font-medium text-white dark:text-metal-900">
-                  {copy ? 'Copied' : 'Copy Code'}
-                </p>
+                <p className="text-body-5 font-medium text-white dark:text-white">{copy ? 'Copied' : 'Copy Code'}</p>
               </TooltipContent>
             </Tooltip>
           </div>
