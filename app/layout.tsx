@@ -21,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <KeepThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <KeepThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ToastWrapper
             toastOptions={{
               classNames: {
@@ -31,7 +31,6 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
                 actionButton: 'dark:!bg-metal-800 !bg-metal-900 !text-white',
                 cancelButton: 'dark:!bg-metal-800 !bg-metal-900 !text-white',
                 closeButton: 'dark:!bg-metal-800 !bg-metal-900 !text-white',
-
                 error: '!text-error-500',
                 success: '!text-success-500',
                 warning: '!text-warning-500',

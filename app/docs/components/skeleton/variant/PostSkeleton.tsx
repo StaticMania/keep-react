@@ -21,7 +21,8 @@ const PostSkeleton = () => {
   )
 }
 
-const PostSkeletonCode = `
+const PostSkeletonCode = {
+  'SkeletonComponent.tsx': `
 import { Skeleton, SkeletonLine } from 'keep-react'
 
 export const SkeletonComponent = () => {
@@ -44,6 +45,7 @@ export const SkeletonComponent = () => {
     </div>
   )
 }
-`
+`,
+}
 
 export { PostSkeleton, PostSkeletonCode }

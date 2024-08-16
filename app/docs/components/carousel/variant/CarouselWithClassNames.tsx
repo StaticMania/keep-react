@@ -31,7 +31,8 @@ const CarouselWithClassNames = () => {
   )
 }
 
-const CarouselWithClassNamesCode = `
+const CarouselWithClassNamesCode = {
+  'CarouselComponent.tsx': `
 'use client'
 import classNames from 'embla-carousel-class-names'
 import {
@@ -65,6 +66,7 @@ export const CarouselComponent = () => {
     </Carousel>
   )
 }
-`
+`,
+}
 
 export { CarouselWithClassNames, CarouselWithClassNamesCode }

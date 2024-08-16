@@ -1,14 +1,14 @@
 'use client'
 import { cloneElement, forwardRef, HTMLAttributes, isValidElement, Ref } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
-export interface NavbarItemProps extends HTMLAttributes<HTMLLIElement> {
+export interface NavbarItemProps extends HTMLAttributes<HTMLDivElement> {
   active?: boolean
   asChild?: boolean
 }
 
-export const NavbarItem = forwardRef<HTMLLIElement, NavbarItemProps>(
-  ({ children, className, active, asChild, ...props }, ref: Ref<HTMLLIElement>) => {
+export const NavbarItem = forwardRef<HTMLDivElement, NavbarItemProps>(
+  ({ children, className, active, asChild, ...props }, ref: Ref<HTMLDivElement>) => {
     if (asChild && isValidElement(children)) {
       return cloneElement(children, {
         itemRef: ref,
@@ -17,20 +17,20 @@ export const NavbarItem = forwardRef<HTMLLIElement, NavbarItemProps>(
     }
 
     return (
-      <li
+      <div
         {...props}
         className={cn(
           'cursor-pointer rounded-md bg-transparent px-4 py-2 text-body-4 font-medium transition-all duration-300 active:scale-95',
           active
-            ? 'bg-metal-900 text-white hover:bg-metal-800 dark:bg-white dark:text-metal-900 dark:hover:bg-white'
-            : 'text-metal-700 hover:bg-metal-100 hover:text-metal-900 dark:text-white dark:hover:bg-white dark:hover:text-metal-900',
+            ? 'bg-primary-500 text-white hover:bg-primary-600 dark:bg-primary-500 dark:text-white dark:hover:bg-primary-600'
+            : 'text-metal-600 hover:bg-metal-50 hover:text-metal-900 dark:text-white dark:hover:bg-primary-600 dark:hover:text-white',
           className,
         )}
         ref={ref}>
         {children}
-      </li>
+      </div>
     )
   },
 )
 
-NavbarItem.displayName = 'Navbar.Item'
+NavbarItem.displayName = 'NavbarItem'

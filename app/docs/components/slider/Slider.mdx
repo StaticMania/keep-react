@@ -1,11 +1,8 @@
 import { DefaultSlider, DefaultSliderCode } from './variant/DefaultSlider'
 import { DoubleSlider, DoubleSliderCode } from './variant/DoubleSlider'
-import { SliderSteps, SliderStepsCode } from './variant/SliderSteps'
 
 import { sliderAPIData } from './SliderApi'
-
-import CodePreview from '../../../components/CodePreview'
-
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -14,28 +11,22 @@ The slider component in the Keep React allows users to select a value within a s
 
 ## Default Slider
 
-<CodePreview github="Slider" code={DefaultSliderCode}>
+<CodeHighlightPreview code={DefaultSliderCode}>
   <DefaultSlider />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Double Slider
 
-<CodePreview github="Slider" code={DoubleSliderCode}>
+<CodeHighlightPreview code={DoubleSliderCode}>
   <DoubleSlider />
-</CodePreview>
-
-## Slider Steps
-
-<CodePreview github="Slider" code={SliderStepsCode}>
-  <SliderSteps />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 
-Explore the available props for the slider component
+Explore the available props for the slider component. For more information [API Reference](https://www.radix-ui.com/primitives/docs/components/slider#api-reference)
 
 <ComponentApi data={sliderAPIData} />
 
 ## Reference
 
-We've built a slider component using two third-party packages: `rc-slider` and `rc-tooltip`. These packages are handy for creating sliders with tooltips. If you'd like to explore these packages further and understand their features, please check out the documentation for [Rc-slider](https://www.npmjs.com/package/rc-slider) and [Rc-tooltip](https://www.npmjs.com/package/rc-tooltip).
+We've built a slider component using `'@radix-ui/react-slider` package. This package is handy for creating slider component. If you'd like to explore this package further and understand their features, please check out the documentation for [@radix-ui/react-slider](https://www.radix-ui.com/primitives/docs/components/slider).

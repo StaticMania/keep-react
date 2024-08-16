@@ -2,7 +2,6 @@
 import {
   Placement,
   arrow,
-  autoPlacement,
   autoUpdate,
   flip,
   offset,
@@ -15,6 +14,7 @@ import {
   useHover,
   useInteractions,
   useRole,
+  useTransitionStyles,
 } from '@floating-ui/react'
 import { createContext, useContext, useMemo, useRef, useState } from 'react'
 
@@ -24,7 +24,7 @@ export interface DropdownOptions {
   trigger?: 'hover' | 'focus' | 'click'
 }
 
-export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow = true }: DropdownOptions) {
+export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow = false }: DropdownOptions) {
   const arrowRef = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -34,21 +34,17 @@ export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow
     onOpenChange: setIsOpen,
     middleware: [
       offset(10),
-      flip({ fallbackAxisSideDirection: 'end' }),
+      flip(),
       shift(),
       arrow({
-        element: arrowRef,
-      }),
-      autoPlacement({
-        crossAxis: true,
-        alignment: 'start',
-        allowedPlacements: ['top', 'right', 'bottom', 'left'],
+        element: showArrow ? arrowRef : null,
       }),
     ],
     whileElementsMounted: autoUpdate,
   })
 
   const context = data.context
+  const { isMounted, styles } = useTransitionStyles(context)
 
   const hover = useHover(context, {
     enabled: trigger === 'hover',
@@ -62,8 +58,8 @@ export function useDropdown({ placement = 'bottom', trigger = 'hover', showArrow
   const interactions = useInteractions([focus, click, hover, role, dismiss])
 
   return useMemo(
-    () => ({ ...interactions, ...data, context, isOpen, arrowRef, showArrow }),
-    [interactions, data, isOpen, context, showArrow],
+    () => ({ ...interactions, ...data, context, isOpen, arrowRef, showArrow, isMounted, styles }),
+    [interactions, data, isOpen, context, showArrow, isMounted, styles],
   )
 }
 

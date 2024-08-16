@@ -27,11 +27,11 @@ export const TooltipAction = forwardRef<HTMLButtonElement, TooltipActionProps>(
       )
     }
     return (
-      <Button ref={refs.setReference || ref} {...getReferenceProps()} color="secondary" size="sm">
-        {children}
+      <Button ref={refs.setReference || ref} {...getReferenceProps()}>
+        {children ?? 'Open Tooltip'}
       </Button>
     )
   },
 )
 
-TooltipAction.displayName = 'Dropdown.Action'
+TooltipAction.displayName = 'DropdownAction'

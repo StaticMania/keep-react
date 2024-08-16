@@ -1,100 +1,59 @@
 'use client'
 import Image from 'next/image'
-import { CaretDown, CaretLeft, CaretRight, CaretUp } from 'phosphor-react'
-import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from '../../../../src'
+import { Button, Popover, PopoverAction, PopoverContent, PopoverDescription, PopoverHeading } from '../../../../src'
 
 const CardPopover = () => {
   return (
-    <div className="flex h-44 items-center justify-center gap-5 p-5">
+    <div className="flex h-52 items-center justify-center gap-5">
       <Popover placement="left">
-        <PopoverTrigger>
-          <CaretLeft size={20} />
-        </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+        <PopoverAction>Left</PopoverAction>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
       <Popover placement="right">
-        <PopoverTrigger>
-          <CaretRight size={20} />
-        </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+        <PopoverAction>Right</PopoverAction>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
       <Popover placement="top">
-        <PopoverTrigger>
-          <CaretUp size={20} />
-        </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+        <PopoverAction>Top</PopoverAction>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
       <Popover placement="bottom">
-        <PopoverTrigger>
-          <CaretDown size={20} />
-        </PopoverTrigger>
-        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white shadow-md dark:bg-metal-900">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
+        <PopoverAction>Bottom</PopoverAction>
+        <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
+          <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
+          <div className="space-y-2 p-6">
+            <PopoverHeading>Keep Design System</PopoverHeading>
             <PopoverDescription>
               You can customize the styles and behavior of this component according to your requirements.
             </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
+            <Button>Learn More</Button>
           </div>
         </PopoverContent>
       </Popover>
@@ -102,40 +61,29 @@ const CardPopover = () => {
   )
 }
 
-const CardPopoverCode = `
-'use client'
+const CardPopoverCode = {
+  'PopoverComponent.tsx': `
 import Image from 'next/image'
-import { CaretRight } from 'phosphor-react'
-import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverTrigger } from 'keep-react'
-
+import { Button, Popover, PopoverContent, PopoverDescription, PopoverHeading, PopoverAction } from 'keep-react'
 
 export const PopoverComponent = () => {
   return (
     <Popover placement="left">
-      <PopoverTrigger>
-          <CaretLeft size={20} />
-      </PopoverTrigger>
-      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900 shadow-md">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            className="rounded-t-xl"
-            alt="image"
-            width={600}
-            height={300}
-          />
-          <div className="space-y-3 p-4">
-            <PopoverHeading>Popover title</PopoverHeading>
-            <PopoverDescription>
-              You can customize the styles and behavior of this component according to your requirements.
-            </PopoverDescription>
-            <Button size="sm" color="primary">
-              Learn More
-            </Button>
-          </div>
-      </PopoverContent>
+      <PopoverAction>Left</PopoverAction>
+      <PopoverContent className="z-20 max-w-[300px] rounded-xl bg-white dark:bg-metal-900">
+        <Image src="/images/keep-card.jpg" className="rounded-t-xl" alt="image" width={600} height={300} />
+        <div className="space-y-2 p-6">
+          <PopoverHeading>Keep Design System</PopoverHeading>
+          <PopoverDescription>
+            You can customize the styles and behavior of this component according to your requirements.
+          </PopoverDescription>
+          <Button>Learn More</Button>
+        </div>
+        </PopoverContent>
     </Popover>
   )
 }
-`
+`,
+}
 
 export { CardPopover, CardPopoverCode }

@@ -1,19 +1,15 @@
 'use client'
 import { HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
-import { useProgressContext } from './Context'
-import { progressTheme } from './theme'
+import { cn } from '../../utils/cn'
 
 export const LineProgressText = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, children, ...props }, ref) => {
-    const { line } = progressTheme
-    const { size = 'md' } = useProgressContext()
     return (
-      <div ref={ref} {...props} className={cn(line.text.base, line.text.content[size], className)}>
+      <div ref={ref} {...props} className={cn('w-10 text-end text-body-4 font-medium text-primary-500', className)}>
         {children}
       </div>
     )
   },
 )
 
-LineProgressText.displayName = 'LineProgress.Text'
+LineProgressText.displayName = 'LineProgressText'

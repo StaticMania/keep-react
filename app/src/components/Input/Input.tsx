@@ -1,6 +1,6 @@
 'use client'
 import { InputHTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { inputTheme } from './theme'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}

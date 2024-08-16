@@ -1,12 +1,10 @@
 import { DefaultLineProgress, DefaultLineProgressCode } from './variant/DefaultLineProgress'
 import { DefaultProgress, DefaultProgressCode } from './variant/DefaultProgress'
-import { SizesOfProgress, SizesOfProgressCode } from './variant/SizesOfProgress'
 import { VariantOfProgress, VariantOfProgressCode } from './variant/VariantOfProgress'
-import { SizesOfLineProgress, SizesOfLineProgressCode } from './variant/LineProgressSize'
 import { CustomizeProgress, CustomizeProgressCode } from './variant/CustomizeProgress'
 import { LineProgressDataApi, circleProgressDataApi } from './progressApi'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -17,45 +15,29 @@ The Progress Bar Component in the Keep React allows you to visually represent th
 
 Default Progress allows you to visually represent the progress or completion of a task or process.
 
-<CodePreview github="Progress" code={DefaultProgressCode}>
+<CodeHighlightPreview github="Progress" code={DefaultProgressCode}>
   <DefaultProgress />
-</CodePreview>
-
-## Progress Size Variant
-
-Progress component supports multiple sizes to fit your design needs. Here is available sizes options for the progress component in our design system `sm` `md` `lg` `xl` and `2xl`.
-
-<CodePreview github="Progress" code={SizesOfProgressCode}>
-  <SizesOfProgress />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Progress Variant
 
 The Progress component in our design system comes with two options: `LineProgress` and `CircleProgress`
 
-<CodePreview github="Progress" code={VariantOfProgressCode}>
+<CodeHighlightPreview github="Progress" code={VariantOfProgressCode}>
   <VariantOfProgress />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Line Progress
 
-<CodePreview github="Progress" code={DefaultLineProgressCode}>
+<CodeHighlightPreview github="Progress" code={DefaultLineProgressCode}>
   <DefaultLineProgress />
-</CodePreview>
-
-## Line Progress Size
-
-Progress component supports multiple sizes to fit your design needs. Here is available sizes options for the progress component in our design system `sm` `md` `lg` `xl` and `2xl`.
-
-<CodePreview github="Progress" code={SizesOfLineProgressCode}>
-  <SizesOfLineProgress />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## How To Customize
 
-<CodePreview github="Progress" code={CustomizeProgressCode}>
+<CodeHighlightPreview github="Progress" code={CustomizeProgressCode}>
   <CustomizeProgress />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Circle Progress API
 

@@ -1,7 +1,7 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
 import { Collapse } from 'react-collapse'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
 
@@ -23,6 +23,6 @@ const AccordionContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElemen
   },
 )
 
-AccordionContent.displayName = 'Accordion.Content'
+AccordionContent.displayName = 'AccordionContent'
 
 export { AccordionContent }

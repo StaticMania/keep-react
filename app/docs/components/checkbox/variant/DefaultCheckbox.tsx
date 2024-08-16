@@ -1,29 +1,41 @@
-'use client'
-import { useState } from 'react'
 import { Checkbox, Label } from '../../../../src'
 
 const DefaultCheckbox = () => {
-  const [checked, setChecked] = useState(true)
   return (
-    <fieldset className="flex items-center gap-2">
-      <Checkbox id="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
-      <Label htmlFor="checkbox">Checkbox</Label>
-    </fieldset>
+    <div className="space-y-3 p-3">
+      <p className="text-body-3 font-normal">Keep Design System License</p>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="single" />
+        <Label htmlFor="single">Single License</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="team" />
+        <Label htmlFor="team">Team License</Label>
+      </fieldset>
+    </div>
   )
 }
 
-const DefaultCheckboxCode = `
-'use client'
+const DefaultCheckboxCode = {
+  'CheckBox.tsx': `
 import { Checkbox, Label } from 'keep-react'
 
 export const CheckboxComponent = () => {
   return (
-    <fieldset className="flex items-center gap-2">
-      <Checkbox checked id="checkbox" />
-      <Label htmlFor="checkbox">Checkbox</Label>
-    </fieldset>
+    <div className="space-y-3">
+      <p className="text-body-3 font-normal">Keep Design System License</p>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="single" />
+        <Label htmlFor="single">Single License</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="team" />
+        <Label htmlFor="team">Team License</Label>
+      </fieldset>
+    </div>
   )
 }
-`
+`,
+}
 
 export { DefaultCheckbox, DefaultCheckboxCode }

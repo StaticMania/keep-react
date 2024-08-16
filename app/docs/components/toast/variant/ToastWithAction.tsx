@@ -4,9 +4,6 @@ import { Button, toast } from '../../../../src'
 const ToastWithAction = () => {
   return (
     <Button
-      size="sm"
-      color="secondary"
-      className="bg-metal-900"
       onClick={() =>
         toast('Keep React is Awesome', {
           action: {
@@ -20,16 +17,14 @@ const ToastWithAction = () => {
   )
 }
 
-const ToastWithActionCode = `
+const ToastWithActionCode = {
+  'ToastComponent.tsx': `
 'use client'
 import { Button, toast } from 'keep-react'
 
 export const ToastComponent = () => {
   return (
     <Button
-      size="sm"
-      color="secondary"
-      className="bg-metal-900"
       onClick={() =>
         toast('Keep React is Awesome', {
           action: {
@@ -42,6 +37,7 @@ export const ToastComponent = () => {
     </Button>
   )
 }
-`
+`,
+}
 
 export { ToastWithAction, ToastWithActionCode }

@@ -1,6 +1,6 @@
 'use client'
 import { HTMLProps, forwardRef, useId, useLayoutEffect } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { usePopoverContext } from './Context'
 
 export const PopoverHeading = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadingElement>>(function PopoverHeading(
@@ -19,7 +19,7 @@ export const PopoverHeading = forwardRef<HTMLHeadingElement, HTMLProps<HTMLHeadi
       {...props}
       ref={ref}
       id={id}
-      className={cn('text-body-1 font-medium text-metal-900 dark:text-white', className)}>
+      className={cn('text-body-3 font-medium text-metal-900 dark:text-white', className)}>
       {children}
     </h2>
   )

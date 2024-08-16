@@ -1,17 +1,15 @@
 'use client'
 import { HTMLAttributes, forwardRef, useEffect, useState } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { ProgressContext } from './Context'
-import { LineProgressText } from './LineText'
-import { ProgressSizeVariant, progressTheme } from './theme'
+import { progressTheme } from './theme'
 
 interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
   progress?: number
-  size?: keyof ProgressSizeVariant
 }
 
-export const LineProgressComponent = forwardRef<HTMLDivElement, ProgressProps>(
-  ({ progress = 0, size = 'md', children, className, ...props }, ref) => {
+const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
+  ({ progress = 0, children, className, ...props }, ref) => {
     const [progressBar, setProgressBar] = useState(0)
     const { line } = progressTheme
 
@@ -22,15 +20,12 @@ export const LineProgressComponent = forwardRef<HTMLDivElement, ProgressProps>(
 
     return (
       <div ref={ref} {...props} className={cn(line.root, className)}>
-        <ProgressContext.Provider value={{ lineProgressBar: progressBar, size }}>{children}</ProgressContext.Provider>
+        <ProgressContext.Provider value={{ lineProgressBar: progressBar }}>{children}</ProgressContext.Provider>
       </div>
     )
   },
 )
 
-LineProgressComponent.displayName = 'LineProgress'
+LineProgress.displayName = 'LineProgress'
 
-export const LineProgress = Object.assign(LineProgressComponent, {
-  Text: LineProgressText,
-  Bar: LineProgressText,
-})
+export { LineProgress }

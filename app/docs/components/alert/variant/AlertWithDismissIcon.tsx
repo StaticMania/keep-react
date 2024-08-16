@@ -16,19 +16,22 @@ const AlertWithDismissIcon = () => {
     setShowAlert(!showAlert)
   }
   return (
-    <Alert color="primary" dismiss={showAlert}>
+    <Alert dismiss={showAlert}>
       <AlertContainer>
         <AlertIcon />
         <AlertTitle>Alert here</AlertTitle>
         <AlertDescription>A short description followed by two actions items.</AlertDescription>
       </AlertContainer>
-      <AlertLink href="/">Learn More</AlertLink>
-      <AlertDismiss onClick={onDismiss} />
+      <AlertContainer>
+        <AlertLink href="/">Learn More</AlertLink>
+        <AlertDismiss onClick={onDismiss} />
+      </AlertContainer>
     </Alert>
   )
 }
 
-const AlertWithDismissIconCode = `
+const AlertWithDismissIconCode = {
+  'AlertComponent.tsx': `
 'use client'
 import { useState } from 'react'
 import {
@@ -47,18 +50,21 @@ const AlertComponent = () => {
     setShowAlert(!showAlert)
   }
   return (
-    <Alert color="primary" dismiss={showAlert}>
+    <Alert dismiss={showAlert}>
       <AlertContainer>
         <AlertIcon />
         <AlertTitle>Alert here</AlertTitle>
         <AlertDescription>A short description followed by two actions items.</AlertDescription>
       </AlertContainer>
-      <AlertLink href="/">Learn More</AlertLink>
-      <AlertDismiss onClick={onDismiss} />
+      <AlertContainer>
+        <AlertLink href="/">Learn More</AlertLink>
+        <AlertDismiss onClick={onDismiss} />
+      </AlertContainer>
     </Alert>
   )
 }
 
-`
+`,
+}
 
 export { AlertWithDismissIcon, AlertWithDismissIconCode }

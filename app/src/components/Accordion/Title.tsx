@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { accordionTheme } from './theme'
 
 export interface keepAccordionTitleTheme {
@@ -18,6 +18,6 @@ const AccordionTitle = forwardRef<HTMLSpanElement, HTMLAttributes<HTMLSpanElemen
   },
 )
 
-AccordionTitle.displayName = 'Accordion.Title'
+AccordionTitle.displayName = 'AccordionTitle'
 
 export { AccordionTitle }

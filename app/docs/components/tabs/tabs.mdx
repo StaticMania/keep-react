@@ -1,0 +1,54 @@
+import { DefaultTabs, DefaultTabsCode } from './variant/DefaultTabs'
+import { TabsUnderline, TabsUnderlineCode } from './variant/TabsUnderline'
+import { TabsFill, TabsFillCode } from './variant/TabsFill'
+import { TabsWithIcon, TabsWithIconCode } from './variant/TabsWithIcon'
+import { tabsApiData, tabsItemApiData } from './tabsApi'
+
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
+
+## Table of Contents
+
+The Tabs Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container.
+
+## Default Tabs
+
+The Default Tabs component showcases the basic implementation of tabs.
+
+<CodeHighlightPreview code={DefaultTabsCode}>
+  <DefaultTabs />
+</CodeHighlightPreview>
+
+## Tabs With Icon
+
+<CodeHighlightPreview code={TabsWithIconCode}>
+  <TabsWithIcon />
+</CodeHighlightPreview>
+
+## Tabs Fill variant
+
+Display tabs fill variant by setting the `variant` prop to `fill`.
+
+<CodeHighlightPreview code={TabsFillCode}>
+  <TabsFill />
+</CodeHighlightPreview>
+
+## Tabs Underline variant
+
+Display tabs underline variant by setting the `variant` prop to `underline`.
+
+<CodeHighlightPreview code={TabsUnderlineCode}>
+  <TabsUnderline />
+</CodeHighlightPreview>
+
+## Tabs API Reference
+
+Explore the available props for the `<Tabs>` component
+
+<ComponentApi data={tabsApiData} />
+
+## Tabs Items API Reference
+
+Explore the available props for the `<TabsItem>` component
+
+<ComponentApi data={tabsItemApiData} />

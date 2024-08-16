@@ -6,7 +6,9 @@ export interface NotificationProps {
   children?: ReactNode
   onOpenChange?: Dispatch<SetStateAction<boolean>>
   isOpen?: boolean
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
+  autoCloseTime?: number
+  autoClose?: boolean
 }
 
 const Notification: FC<NotificationProps> = ({
@@ -14,6 +16,8 @@ const Notification: FC<NotificationProps> = ({
   isOpen: isOpenProp,
   onOpenChange,
   position = 'bottom-right',
+  autoCloseTime = 3000,
+  autoClose = true,
 }) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false)
 
@@ -44,6 +48,13 @@ const Notification: FC<NotificationProps> = ({
         isOpen && setIsOpen(false)
       }
     }
+    let autoCloseTimeout: ReturnType<typeof setTimeout>
+
+    if (isOpen && autoClose) {
+      autoCloseTimeout = setTimeout(() => {
+        setIsOpen(false)
+      }, autoCloseTime)
+    }
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscapeKeyPress)
@@ -53,8 +64,12 @@ const Notification: FC<NotificationProps> = ({
     return () => {
       document.removeEventListener('keydown', handleEscapeKeyPress)
       document.removeEventListener('mousedown', handleClickOutsideModal)
+
+      if (autoCloseTimeout) {
+        clearTimeout(autoCloseTimeout)
+      }
     }
-  }, [isOpen, setIsOpen])
+  }, [isOpen, setIsOpen, autoCloseTime, autoClose])
 
   return (
     <NotificationContext.Provider value={{ isOpen, handleOpen, position }}>{children}</NotificationContext.Provider>

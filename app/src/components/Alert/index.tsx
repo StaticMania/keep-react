@@ -1,5 +1,4 @@
 export { Alert } from './Alert'
-export { AlertBody } from './Body'
 export { AlertContainer } from './Container'
 export { AlertDescription } from './Description'
 export { AlertDismiss } from './Dismiss'

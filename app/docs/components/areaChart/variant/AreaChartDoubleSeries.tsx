@@ -85,7 +85,8 @@ const AreaChartWithDoubleSeries = () => {
   )
 }
 
-const AreaChartWithDoubleSeriesCode = `
+const AreaChartWithDoubleSeriesCode = {
+  'ChartComponent.tsx': `
 import { Area, AreaChart, ChartTooltip, CustomTooltip, ResponsiveContainer, XAxis, YAxis } from 'keep-react'
 
 export const AreaChartComponent = () => {
@@ -172,6 +173,7 @@ export const AreaChartComponent = () => {
     </ResponsiveContainer>
   )
 }
-`
+`,
+}
 
 export { AreaChartWithDoubleSeries, AreaChartWithDoubleSeriesCode }

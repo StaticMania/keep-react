@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
 
@@ -14,10 +14,11 @@ export interface keepAccordionIconTheme {
 
 export interface AccordionIconProps extends HTMLAttributes<HTMLSpanElement> {
   asChild?: boolean
+  animation?: boolean
 }
 
 const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
-  ({ children, asChild, className, ...otherProps }, ref: Ref<HTMLSpanElement>) => {
+  ({ children, asChild, className, animation = true, ...otherProps }, ref: Ref<HTMLSpanElement>) => {
     const { isOpen } = useAccordionContext()
     const { icon } = accordionTheme
 
@@ -31,10 +32,14 @@ const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
     return (
       <span
         {...otherProps}
-        className={cn(icon.base, isOpen ? icon.rotated.full : icon.rotated.half, className)}
+        className={cn(icon.base, isOpen && animation ? icon.rotated.full : icon.rotated.half, className)}
         ref={ref}>
         {children ?? (
-          <svg className="shrink-0 fill-metal-300" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            className="shrink-0 fill-metal-600 dark:fill-metal-300"
+            width="16"
+            height="16"
+            xmlns="http://www.w3.org/2000/svg">
             <rect
               y="7"
               width="16"
@@ -56,6 +61,6 @@ const AccordionIcon = forwardRef<HTMLSpanElement, AccordionIconProps>(
   },
 )
 
-AccordionIcon.displayName = 'Accordion.Icon'
+AccordionIcon.displayName = 'AccordionIcon'
 
 export { AccordionIcon }

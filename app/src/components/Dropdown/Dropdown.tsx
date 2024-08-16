@@ -1,29 +1,28 @@
 'use client'
 import { Placement } from '@floating-ui/react'
-import { HTMLAttributes, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { FC, ReactNode } from 'react'
 import { DropdownContext, useDropdown } from './Context'
 
-interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
+interface DropdownProps {
+  children: ReactNode
   showArrow?: boolean
   placement?: Placement
   trigger?: 'hover' | 'focus' | 'click'
 }
 
-const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
-  ({ children, showArrow = false, className, placement = 'bottom-start', trigger = 'click', ...props }, ref) => {
-    const dropdownOptions = useDropdown({ showArrow, placement, trigger })
+const Dropdown: FC<DropdownProps> = ({
+  children,
+  showArrow = false,
+  placement = 'bottom-start',
+  trigger = 'click',
+}) => {
+  const dropdownOptions = useDropdown({ showArrow, placement, trigger })
 
-    return (
-      <DropdownContext.Provider value={{ ...dropdownOptions }}>
-        <div className={cn(className)} {...props} ref={ref}>
-          {children}
-        </div>
-      </DropdownContext.Provider>
-    )
-  },
-)
-
-Dropdown.displayName = 'Dropdown'
+  return (
+    <DropdownContext.Provider value={{ ...dropdownOptions }}>
+      <div>{children}</div>
+    </DropdownContext.Provider>
+  )
+}
 
 export { Dropdown }

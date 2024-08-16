@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, Ref, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { carouselTheme } from './theme'
 
 export interface CarouselItemProps extends HTMLAttributes<HTMLDivElement> {
@@ -26,4 +26,4 @@ export const CarouselItem = forwardRef<HTMLDivElement, CarouselItemProps>(
   },
 )
 
-CarouselItem.displayName = 'Carousel.Item'
+CarouselItem.displayName = 'CarouselItem'

@@ -22,13 +22,6 @@ export const dividerDataAPI = [
   },
   {
     id: 4,
-    propsName: 'className',
-    propsType: 'string',
-    propsDescription: 'Additional CSS classes to customize the divider appearance.',
-    default: '',
-  },
-  {
-    id: 5,
     propsName: 'children',
     propsType: 'ReactNode',
     propsDescription: 'Content to be placed within the divider, if any.',

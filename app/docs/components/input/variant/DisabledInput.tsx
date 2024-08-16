@@ -8,12 +8,14 @@ const DisabledInput = () => {
   )
 }
 
-const DisabledInputCode = `
+const DisabledInputCode = {
+  'InputComponent.tsx': `
 import { Input } from 'keep-react'
 
 export const InputComponent = () => {
   return <Input disabled={true} placeholder="Enter name" />
 }
-`
+`,
+}
 
 export { DisabledInput, DisabledInputCode }

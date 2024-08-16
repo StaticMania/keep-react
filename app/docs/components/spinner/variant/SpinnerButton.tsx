@@ -1,47 +1,47 @@
-'use client'
 import { Button, Spinner } from '../../../../src'
 
 const SpinnerButton = () => {
   return (
     <div className="flex w-full items-end gap-3">
-      <Button size="md">
+      <Button>
         <span className="pr-2">
-          <Spinner color="info" size="md" />
+          <Spinner color="gray" size="sm" />
         </span>
-        Loading...
+        Loading
       </Button>
       <Button variant="outline">
         <span className="pr-2">
-          <Spinner color="info" size="md" />
+          <Spinner color="gray" size="sm" />
         </span>
-        Loading...
+        Loading
       </Button>
     </div>
   )
 }
 
-const SpinnerButtonCode = `
-"use client";
-import { Button,Spinner } from "keep-react";
+const SpinnerButtonCode = {
+  'SpinnerComponent.tsx': `
+import { Button, Spinner } from 'keep-react'
 
-export const SpinnerButtonComponent = () => {
+export const SpinnerComponent = () => {
   return (
     <>
-      <Button  size="md">
+      <Button>
         <span className="pr-2">
-          <Spinner color="info" size="md" />
+          <Spinner color="gray" size="sm" />
         </span>
-        Loading...
+        Loading
       </Button>
-      <Button variant="outline" size="md">
+      <Button variant="outline">
         <span className="pr-2">
-          <Spinner color="info" size="md" />
+          <Spinner color="gray" size="sm" />
         </span>
-        Loading...
+        Loading
       </Button>
     </>
-  );
+  )
 }
-`
+`,
+}
 
 export { SpinnerButton, SpinnerButtonCode }

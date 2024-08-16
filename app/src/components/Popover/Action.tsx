@@ -1,15 +1,15 @@
 'use client'
 import { useMergeRefs } from '@floating-ui/react'
 import { HTMLProps, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { Button } from '../Button'
 import { usePopoverContext } from './Context'
 
-export interface PopoverTriggerProps {
+export interface PopoverActionProps {
   asChild?: boolean
 }
 
-export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & PopoverTriggerProps>(
-  function PopoverTrigger({ children, asChild = false, className, ...props }, propRef) {
+export const PopoverAction = forwardRef<HTMLElement, HTMLProps<HTMLElement> & PopoverActionProps>(
+  ({ children, asChild = false, className, ...props }, propRef) => {
     const context = usePopoverContext()
     const childrenRef = (children as any).ref
     const ref = useMergeRefs([context.refs.setReference, propRef, childrenRef])
@@ -27,19 +27,11 @@ export const PopoverTrigger = forwardRef<HTMLElement, HTMLProps<HTMLElement> & P
     }
 
     return (
-      <button
-        ref={ref}
-        type="button"
-        className={cn(
-          'rounded-xl border border-metal-400 p-2 text-metal-400 dark:border-metal-900 dark:text-metal-300',
-          className,
-        )}
-        data-state={context.open ? 'open' : 'closed'}
-        {...context.getReferenceProps(props)}>
-        {children}
-      </button>
+      <Button ref={ref} data-state={context.open ? 'open' : 'closed'} {...context.getReferenceProps(props)}>
+        {children ?? 'Open Popover'}
+      </Button>
     )
   },
 )
 
-PopoverTrigger.displayName = 'Popover.Action'
+PopoverAction.displayName = 'PopoverAction'

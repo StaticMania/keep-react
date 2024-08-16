@@ -3,7 +3,7 @@ import { DividerColor, DividerColorCode } from './variant/DividerColor'
 import { DividerSize, DividerSizeCode } from './variant/DividerSize'
 import { DividerAlign, DividerAlignCode } from './variant/DividerAlign'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 import { dividerDataAPI } from './DividerAPI'
 
@@ -15,33 +15,33 @@ The Divider component serves as a visual separator, helping to organize content 
 
 Displays a default divider with the secondary color.
 
-<CodePreview github="Divider" code={DefaultDividerCode}>
+<CodeHighlightPreview code={DefaultDividerCode}>
   <DefaultDivider />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Divider color variant
 
 You can customize the color of the divider using the `color` prop. Available options are `'primary'`, `'secondary'`, `'success'`, `'warning'`, and `'error'`.
 
-<CodePreview github="Divider" code={DividerColorCode}>
+<CodeHighlightPreview code={DividerColorCode}>
   <DividerColor />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Divider size variant
 
 Adjust the size of the divider with the `size` prop. Options include `'sm'`, `'md'`, `'lg'`, `'xl'`, and `'2xl'`.
 
-<CodePreview github="Divider" code={DividerSizeCode}>
+<CodeHighlightPreview code={DividerSizeCode}>
   <DividerSize />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Divider align variant
 
 Control the alignment of the divider with the `variant` prop. Choose from `'start'`, `'end'`, or `'center'`.
 
-<CodePreview github="Divider" code={DividerAlignCode}>
+<CodeHighlightPreview code={DividerAlignCode}>
   <DividerAlign />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

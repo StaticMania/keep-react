@@ -6,10 +6,12 @@ const Display = () => {
   )
 }
 
-const DisplayCode = `
+const DisplayCode = {
+  Code: `
 export const Display = () => {
   return <h1 className="text-display">Display</h1>
 }
-`
+`,
+}
 
 export { Display, DisplayCode }

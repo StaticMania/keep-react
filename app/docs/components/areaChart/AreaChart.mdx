@@ -2,8 +2,7 @@ import { DefaultAreaChart, DefaultAreaChartCode } from './variant/DefaultAreaCha
 import { AreaChartWithDoubleSeries, AreaChartWithDoubleSeriesCode } from './variant/AreaChartDoubleSeries'
 import { AreaChartType, AreaChartTypeCode } from './variant/AreaChartType'
 
-import CodePreview from '../../../components/CodePreview'
-import ComponentApi from '../../../components/ComponentApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
@@ -13,25 +12,25 @@ An Area Chart is a visual way to show data as a line that turns into a colored s
 
 The AreaChart component is used to render an area chart based on the data.
 
-<CodePreview github="Charts" code={DefaultAreaChartCode}>
+<CodeHighlightPreview code={DefaultAreaChartCode}>
   <DefaultAreaChart />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Area Chart With Double Series
 
 The AreaChart component now uses both `"price"` and `"amount"` data for the two series. This creates a chart that shows how both `"price"` and `"amount"` values change over the `"name"` categories, providing insights into both series simultaneously.
 
-<CodePreview github="Charts" code={AreaChartWithDoubleSeriesCode}>
+<CodeHighlightPreview code={AreaChartWithDoubleSeriesCode}>
   <AreaChartWithDoubleSeries />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Area Chart Type
 
 We can change the area chart type by using `'type'` props in `<Area>` component.
 
-<CodePreview github="Charts" code={AreaChartTypeCode}>
+<CodeHighlightPreview code={AreaChartTypeCode}>
   <AreaChartType />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Reference
 

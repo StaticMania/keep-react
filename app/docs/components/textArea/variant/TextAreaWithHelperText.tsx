@@ -1,4 +1,3 @@
-'use client'
 import { Label, Textarea } from '../../../../src'
 
 const TextAreaWithHelperText = () => {
@@ -11,8 +10,8 @@ const TextAreaWithHelperText = () => {
   )
 }
 
-const TextAreaWithHelperTextCode = `
-'use client'
+const TextAreaWithHelperTextCode = {
+  'TextAreaComponent.tsx': `
 import { Label, Textarea } from 'keep-react'
 
 const TextAreaWithHelperText = () => {
@@ -24,6 +23,7 @@ const TextAreaWithHelperText = () => {
     </fieldset>
   )
 }
-`
+`,
+}
 
 export { TextAreaWithHelperText, TextAreaWithHelperTextCode }

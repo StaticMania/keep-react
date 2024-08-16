@@ -2,8 +2,8 @@ import { DefaultDrawer, DefaultDrawerCode } from './variant/DefaultDrawer'
 import { DrawerPosition, DrawerPositionCode } from './variant/DrawerPosition'
 
 import { drawerAPIData } from './DrawerApi'
-import CodePreview from '../../../components/CodePreview'
 import ComponentApi from '../../../components/ComponentApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
@@ -13,17 +13,17 @@ The Drawer component provides a flexible and customizable way to create drawers 
 
 The Default Drawer component showcases a simple content inside the drawer.
 
-<CodePreview github="Drawer" code={DefaultDrawerCode}>
+<CodeHighlightPreview code={DefaultDrawerCode}>
   <DefaultDrawer />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Drawer Position
 
 You can position the drawer in a specific direction, such as `left`, `right`, `top`, or `bottom`.
 
-<CodePreview github="Drawer" code={DrawerPositionCode}>
+<CodeHighlightPreview code={DrawerPositionCode}>
   <DrawerPosition />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

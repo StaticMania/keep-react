@@ -1,4 +1,4 @@
-export { PopoverTrigger } from './Action'
+export { PopoverAction } from './Action'
 export { PopoverClose } from './Close'
 export { PopoverContent } from './Content'
 export { PopoverDescription } from './Description'

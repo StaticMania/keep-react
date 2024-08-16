@@ -1,14 +1,7 @@
 'use client'
 import { HTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { AlertContext } from './AlertContext'
-import { AlertBody } from './Body'
-import { AlertContainer } from './Container'
-import { AlertDescription } from './Description'
-import { AlertDismiss } from './Dismiss'
-import { AlertIcon } from './Icon'
-import { AlertLink } from './Link'
-import { AlertTitle } from './Title'
 import { ColorVariant, alertTheme } from './theme'
 
 interface AlertComponentProps extends HTMLAttributes<HTMLDivElement> {
@@ -17,14 +10,14 @@ interface AlertComponentProps extends HTMLAttributes<HTMLDivElement> {
   dismiss?: boolean
 }
 
-const AlertComponent = forwardRef<HTMLDivElement, AlertComponentProps>(
+const Alert = forwardRef<HTMLDivElement, AlertComponentProps>(
   (
-    { children, color = 'primary', withBg, dismiss, className, ...otherProps }: AlertComponentProps,
+    { children, color = 'primary', withBg, dismiss, className, ...props }: AlertComponentProps,
     ref: Ref<HTMLDivElement>,
   ) => {
     return (
       <div
-        {...otherProps}
+        {...props}
         ref={ref}
         className={cn(
           alertTheme.root.base,
@@ -38,16 +31,6 @@ const AlertComponent = forwardRef<HTMLDivElement, AlertComponentProps>(
   },
 )
 
-AlertComponent.displayName = 'Alert'
-
-const Alert = Object.assign(AlertComponent, {
-  Container: AlertContainer,
-  Description: AlertDescription,
-  Title: AlertTitle,
-  Dismiss: AlertDismiss,
-  Link: AlertLink,
-  Icon: AlertIcon,
-  Body: AlertBody,
-})
+Alert.displayName = 'Alert'
 
 export { Alert }

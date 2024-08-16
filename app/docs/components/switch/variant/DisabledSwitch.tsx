@@ -1,17 +1,23 @@
-import { Toggle } from '../../../../src'
+import { Switch } from '../../../../src'
 
 const DisabledSwitch = () => {
-  return <Toggle bgColor="primary" label="Disabled" size="md" disabled={true} />
+  return (
+    <div className="px-5 py-3">
+      <Switch disabled />
+    </div>
+  )
 }
 
-const DisabledSwitchCode = `
-import { Toggle } from 'keep-react'
+const DisabledSwitchCode = {
+  'SwitchComponent.tsx': `
+import { Switch } from 'keep-react'
 
 export const SwitchComponent = () => {
   return (
-    <Toggle bgColor="primary" label="Disabled" size="md" disabled={true} />
+    <Switch disabled/>
   )
 }
-`
+`,
+}
 
 export { DisabledSwitch, DisabledSwitchCode }

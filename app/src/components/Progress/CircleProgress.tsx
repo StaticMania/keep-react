@@ -1,18 +1,15 @@
 'use client'
 import { HTMLAttributes, forwardRef, useEffect, useState } from 'react'
-import { cn } from '../../helpers/cn'
-import { CircleProgressLine } from './CircleLine'
-import { CircleProgressText } from './CircleText'
+import { cn } from '../../utils/cn'
 import { ProgressContext } from './Context'
-import { ProgressSizeVariant, progressTheme } from './theme'
+import { progressTheme } from './theme'
 
 interface ProgressCircleProps extends HTMLAttributes<HTMLDivElement> {
   progress?: number
-  size?: keyof ProgressSizeVariant
 }
 
-export const ProgressCircleComponent = forwardRef<HTMLDivElement, ProgressCircleProps>(
-  ({ progress = 0, size = 'md', children, className, ...props }, ref) => {
+const CircleProgress = forwardRef<HTMLDivElement, ProgressCircleProps>(
+  ({ progress = 0, children, className, ...props }, ref) => {
     const [progressBar, setProgressBar] = useState(0)
     const { circle } = progressTheme
 
@@ -22,16 +19,13 @@ export const ProgressCircleComponent = forwardRef<HTMLDivElement, ProgressCircle
     }, [progress])
 
     return (
-      <div ref={ref} {...props} className={cn(circle.root, circle.size[size], className)}>
-        <ProgressContext.Provider value={{ progressBar: progressBar, size }}>{children}</ProgressContext.Provider>
+      <div ref={ref} {...props} className={cn(circle.root, className)}>
+        <ProgressContext.Provider value={{ progressBar: progressBar }}>{children}</ProgressContext.Provider>
       </div>
     )
   },
 )
 
-ProgressCircleComponent.displayName = 'CircleProgress'
+CircleProgress.displayName = 'CircleProgress'
 
-export const CircleProgress = Object.assign(ProgressCircleComponent, {
-  Text: CircleProgressText,
-  Circle: CircleProgressLine,
-})
+export { CircleProgress }

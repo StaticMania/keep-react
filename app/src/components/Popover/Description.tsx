@@ -1,10 +1,10 @@
 'use client'
 import { HTMLProps, forwardRef, useId, useLayoutEffect } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { usePopoverContext } from './Context'
 
 export const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
-  function PopoverDescription({ children, className, ...props }, ref) {
+  ({ children, className, ...props }, ref) => {
     const { setDescriptionId } = usePopoverContext()
     const id = useId()
     useLayoutEffect(() => {
@@ -23,3 +23,5 @@ export const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTM
     )
   },
 )
+
+PopoverDescription.displayName = 'PopoverDescription'

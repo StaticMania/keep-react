@@ -15,7 +15,7 @@ const DefaultCarousel = () => {
       <CarouselSlides>
         {[1, 2, 3, 4, 5].map((slide) => (
           <CarouselItem key={slide}>
-            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-primary-25 dark:border-metal-900 dark:bg-metal-900">
+            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-metal-50 dark:border-metal-900 dark:bg-metal-900">
               <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
             </div>
           </CarouselItem>
@@ -32,7 +32,8 @@ const DefaultCarousel = () => {
   )
 }
 
-const DefaultCarouselCode = `
+const DefaultCarouselCode = {
+  'CarouselComponent.tsx': `
 import {
   Carousel,
   CarouselButtons,
@@ -50,7 +51,7 @@ export const CarouselComponent = () => (
       <CarouselSlides>
         {[1, 2, 3, 4, 5].map((slide) => (
           <CarouselItem key={slide}>
-            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-primary-25 dark:border-metal-900 dark:bg-metal-900">
+            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-metal-50 dark:border-metal-900 dark:bg-metal-900">
               <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
             </div>
           </CarouselItem>
@@ -66,5 +67,6 @@ export const CarouselComponent = () => (
     </Carousel>
   )
 }
-`
+`,
+}
 export { DefaultCarousel, DefaultCarouselCode }

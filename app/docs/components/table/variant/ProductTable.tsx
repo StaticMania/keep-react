@@ -25,16 +25,14 @@ const ProductTable = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-5">
             <h2 className="text-heading-6 font-semibold text-metal-900 dark:text-white">Total Product</h2>
-            <Badge color="secondary" className="dark:bg-metal-800 dark:text-white">
-              500 Product
-            </Badge>
+            <Badge>500 Product</Badge>
           </div>
           <div className="flex items-center gap-5">
-            <Button variant="outline" color="secondary" size="xs" className="flex gap-1.5">
+            <Button variant="outline" className="flex gap-1.5">
               <Plus className="size-4 fill-metal-900 dark:fill-white" />
               Add Product
             </Button>
-            <Button variant="outline" color="secondary" size="xs" className="flex gap-1.5">
+            <Button variant="outline" className="flex gap-1.5">
               <Funnel className="size-4 fill-metal-900 dark:fill-white" />
               Filter Product
             </Button>
@@ -76,7 +74,7 @@ const ProductTable = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] p-3">
+                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
                   <DropdownList>
                     <DropdownItem>Edit</DropdownItem>
                     <DropdownItem>Move</DropdownItem>
@@ -92,7 +90,8 @@ const ProductTable = () => {
   )
 }
 
-const ProductTableCode = `
+const ProductTableCode = {
+  'TableComponent.tsx': `
 'use client'
 import { DotsThreeOutlineVertical, Funnel, Plus } from 'phosphor-react'
 import {
@@ -119,16 +118,16 @@ export const TableComponent = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-5">
             <h2 className="text-heading-6 font-semibold text-metal-900 dark:text-white">Total Product</h2>
-            <Badge color="secondary" className="dark:bg-metal-800 dark:text-white">
+            <Badge className="dark:bg-metal-800 dark:text-white">
               500 Product
             </Badge>
           </div>
           <div className="flex items-center gap-5">
-            <Button variant="outline" color="secondary" size="xs" className="flex gap-1.5">
+            <Button variant="outline" className="flex gap-1.5">
               <Plus className="size-4 fill-metal-900 dark:fill-white" />
               Add Product
             </Button>
-            <Button variant="outline" color="secondary" size="xs" className="flex gap-1.5">
+            <Button variant="outline" className="flex gap-1.5">
               <Funnel className="size-4 fill-metal-900 dark:fill-white" />
               Filter Product
             </Button>
@@ -170,7 +169,7 @@ export const TableComponent = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] p-3">
+                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
                   <DropdownList>
                     <DropdownItem>Edit</DropdownItem>
                     <DropdownItem>Move</DropdownItem>
@@ -186,5 +185,6 @@ export const TableComponent = () => {
   )
 }
 
-`
+`,
+}
 export { ProductTable, ProductTableCode }

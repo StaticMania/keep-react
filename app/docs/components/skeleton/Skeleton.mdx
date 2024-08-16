@@ -4,7 +4,7 @@ import { PostSkeleton, PostSkeletonCode } from './variant/PostSkeleton'
 import { ParagraphSkeleton, ParagraphSkeletonCode } from './variant/ParagraphSkeleton'
 import { SkeletonApiData } from './SkeletonApi'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 import ComponentApi from '../../../components/ComponentApi'
 
@@ -16,33 +16,33 @@ The Preloader component in the Keep React provides a visual indication of an ong
 
 The Default Skeleton component provides a visual placeholder that mimics the appearance of loading content. It presents a line of skeleton components and serves as a foundation for different skeleton layouts.
 
-<CodePreview github="Skeleton" code={DefaultSkeletonCode}>
+<CodeHighlightPreview code={DefaultSkeletonCode}>
   <DefaultSkeleton />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Comment Layout
 
 The Comment Layout skeleton mimics a comment structure with a larger line, an avatar-like circle, and a description skeleton. You can customize this layout to fit your design seamlessly.
 
-<CodePreview github="Skeleton" code={CommentLayoutCode}>
+<CodeHighlightPreview code={CommentLayoutCode}>
   <CommentLayout />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Paragraph Skeleton
 
 The Paragraph Skeleton incorporates multiple lines of skeleton components, resembling a paragraph. It's a versatile choice for loading various content blocks.
 
-<CodePreview github="Skeleton" code={ParagraphSkeletonCode}>
+<CodeHighlightPreview code={ParagraphSkeletonCode}>
   <ParagraphSkeleton />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Post Skeleton
 
 The Post Skeleton demonstrates a skeleton representing a post-like structure, ideal for showcasing loading placeholders in a social media or content platform.
 
-<CodePreview github="Skeleton" code={PostSkeletonCode}>
+<CodeHighlightPreview code={PostSkeletonCode}>
   <PostSkeleton />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

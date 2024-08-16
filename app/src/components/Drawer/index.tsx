@@ -1,6 +1,5 @@
 export { Drawer } from './Drawer'
 export { DrawerAction } from './DrawerAction'
-export { DrawerBody } from './DrawerBody'
 export { DrawerClose } from './DrawerClose'
 export { DrawerContent } from './DrawerContent'
 export { DrawerOverlay } from './DrawerOverlay'

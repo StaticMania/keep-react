@@ -1,6 +1,6 @@
 'use client'
 import { LabelHTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   asChild?: boolean

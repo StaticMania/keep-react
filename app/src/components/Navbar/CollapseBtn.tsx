@@ -1,6 +1,6 @@
 'use client'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useNavbarContext } from './Context'
 
 export interface NavbarCollapseBtnProps extends HTMLAttributes<HTMLButtonElement> {
@@ -36,6 +36,6 @@ const NavbarCollapseBtn = forwardRef<HTMLButtonElement, NavbarCollapseBtnProps>(
   },
 )
 
-NavbarCollapseBtn.displayName = 'Navbar.CollapseBtn'
+NavbarCollapseBtn.displayName = 'NavbarCollapseBtn'
 
 export { NavbarCollapseBtn }

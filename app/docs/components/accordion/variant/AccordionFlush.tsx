@@ -47,7 +47,8 @@ const AccordionFlush = () => {
   )
 }
 
-const AccordionFlushCode = `
+const AccordionFlushCode = {
+  'AccordionComponent.tsx': `
 import {
   Accordion,
   AccordionContainer,
@@ -96,7 +97,7 @@ export const AccordionComponent = () => {
     </Accordion>
   )
 }
-
-`
+`,
+}
 
 export { AccordionFlush, AccordionFlushCode }

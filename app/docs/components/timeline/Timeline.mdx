@@ -1,8 +1,9 @@
 import { DefaultTimeline, DefaultTimelineCode } from './variant/DefaultTimeline'
 import { DashedBorderTimeline, DashedBorderTimelineCode } from './variant/DashedBorderTimeline'
+import { DottedBorderTimeline, DottedBorderTimelineCode } from './variant/DottedBorderTimeline'
 import { TimelineWithImage, TimelineWithImageCode } from './variant/TimelineWithImage'
 
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
@@ -12,22 +13,30 @@ Timeline Component is a graphical representation used to visualize a sequence of
 
 The Default Timeline is a fundamental component that visually presents a sequence of events over time.
 
-<CodePreview github="Timeline" code={DefaultTimelineCode}>
+<CodeHighlightPreview code={DefaultTimelineCode}>
   <DefaultTimeline />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Dashed Border Timeline
 
 The Dashed Border Timeline component represents a timeline with dashed borders.
 
-<CodePreview github="Timeline" code={DashedBorderTimelineCode}>
+<CodeHighlightPreview code={DashedBorderTimelineCode}>
   <DashedBorderTimeline />
-</CodePreview>
+</CodeHighlightPreview>
+
+## Dotted Border Timeline
+
+The Dotted Border Timeline component represents a timeline with dotted borders.
+
+<CodeHighlightPreview code={DottedBorderTimelineCode}>
+  <DottedBorderTimeline />
+</CodeHighlightPreview>
 
 ## Timeline With Image
 
 The Image Timeline is a dynamic component that showcases a sequence of events along with corresponding images.
 
-<CodePreview github="Timeline" code={TimelineWithImageCode}>
+<CodeHighlightPreview code={TimelineWithImageCode}>
   <TimelineWithImage />
-</CodePreview>
+</CodeHighlightPreview>

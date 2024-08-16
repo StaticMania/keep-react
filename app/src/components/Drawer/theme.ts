@@ -22,10 +22,10 @@ export const keepDrawerTheme: KeepDrawerTheme = {
     off: 'opacity-100',
   },
   content: {
-    base: 'drawer-content fixed z-50 flex flex-col dark:bg-metal-900 bg-white overflow-auto',
+    base: 'drawer-content fixed z-50 flex flex-col dark:bg-metal-800 bg-white overflow-auto',
     position: {
-      top: 'left-0 right-0 top-0 h-auto rounded-b-2xl',
-      bottom: 'bottom-0 left-0 right-0 h-auto rounded-t-2xl',
+      top: 'inset-x-0 top-0 h-auto rounded-b-2xl',
+      bottom: 'bottom-0 inset-x-0 h-auto rounded-t-2xl',
       left: 'left-0 top-0 h-full w-3/4 rounded-r-2xl xl:w-1/4',
       right: 'right-0 top-0 h-full w-3/4 rounded-l-2xl xl:w-1/4',
     },

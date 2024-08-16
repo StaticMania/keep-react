@@ -1,6 +1,7 @@
 import { ContainerContent } from './Content'
 import { ContainerCenter, ContainerHorizontalPadding, ContainerBreakPointPadding } from './ContainerData'
-import HighlightCode from '../../../components/HighlightCode'
+
+import CodeHighlight from '../../../components/CodeHighlight'
 
 ## Table of Contents
 
@@ -14,21 +15,21 @@ The `container` class sets the maximum width of an element to match the minimum 
 
 ## Centering Container
 
-To automatically center containers, you can enable the `center` option as `true` in your `tailwind.config.js` file:
+To automatically center containers, you can enable the `center` option as `true` in your `tailwind.config.ts` file:
 
-<HighlightCode code={ContainerCenter} />
+<CodeHighlight code={ContainerCenter} />
 
 ## Horizontal padding
 
-You can add horizontal padding to containers by setting the `padding` option in your `tailwind.config.js` file:
+You can add horizontal padding to containers by setting the `padding` option in your `tailwind.config.ts` file:
 
-<HighlightCode code={ContainerHorizontalPadding} />
+<CodeHighlight code={ContainerHorizontalPadding} />
 
 ## Breakpoints padding
 
 If you need different padding for each screen size, you can specify a default value and override it for specific breakpoints using an object:
 
-<HighlightCode code={ContainerBreakPointPadding} />
+<CodeHighlight code={ContainerBreakPointPadding} />
 
 ## Reference
 

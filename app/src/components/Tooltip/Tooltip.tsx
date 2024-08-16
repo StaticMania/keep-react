@@ -1,10 +1,8 @@
 'use client'
 import { ReactNode } from 'react'
-import { TooltipAction } from './Action'
-import { TooltipContent } from './Content'
 import { TooltipContext, TooltipOptions, useTooltip } from './Context'
 
-const TooltipComponent = ({
+const Tooltip = ({
   children,
   initialOpen,
   ...restOptions
@@ -15,7 +13,4 @@ const TooltipComponent = ({
   return <TooltipContext.Provider value={{ ...tooltip }}>{children}</TooltipContext.Provider>
 }
 
-export const Tooltip = Object.assign(TooltipComponent, {
-  Action: TooltipAction,
-  Content: TooltipContent,
-})
+export { Tooltip }

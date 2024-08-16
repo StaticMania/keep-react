@@ -1,7 +1,7 @@
 'use client'
 import { useMergeRefs } from '@floating-ui/react'
 import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { Button } from '../Button'
 import { useDropdownContext } from './Context'
 
@@ -13,7 +13,7 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
   ({ children, className, asChild, ...props }, propsRef) => {
     const { refs, getReferenceProps, isOpen } = useDropdownContext()
 
-    const childrenRef = (children as any).ref
+    const childrenRef = (children as any)?.ref
     const ref = useMergeRefs([refs.setReference, propsRef, childrenRef])
 
     if (asChild && isValidElement(children)) {
@@ -28,13 +28,8 @@ export const DropdownAction = forwardRef<HTMLButtonElement, DropdownActionProps>
       )
     }
     return (
-      <Button
-        color="secondary"
-        size="xs"
-        ref={refs.setReference || ref}
-        {...getReferenceProps()}
-        className={cn(className)}>
-        {children}
+      <Button ref={refs.setReference || ref} {...getReferenceProps()} className={cn(className)}>
+        {children ?? 'Open Dropdown'}
       </Button>
     )
   },

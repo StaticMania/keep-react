@@ -1,4 +1,3 @@
-'use client'
 import { Divider } from '../../../../src'
 
 const DividerSize = () => {
@@ -13,8 +12,8 @@ const DividerSize = () => {
   )
 }
 
-const DividerSizeCode = `
-'use client'
+const DividerSizeCode = {
+  'DividerComponent.tsx': `
 import { Divider } from 'keep-react'
 
 export const DividerComponent = () => {
@@ -28,6 +27,7 @@ export const DividerComponent = () => {
     </section>
   )
 }
-`
+`,
+}
 
 export { DividerSize, DividerSizeCode }

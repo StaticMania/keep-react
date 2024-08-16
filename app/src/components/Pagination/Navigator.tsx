@@ -1,6 +1,6 @@
 'use client'
 import { ButtonHTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { paginationTheme } from './theme'
 
 export interface NavigatorProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -27,6 +27,6 @@ const PaginationNavigator = forwardRef<HTMLButtonElement, NavigatorProps>(
   },
 )
 
-PaginationNavigator.displayName = 'Pagination.Navigator'
+PaginationNavigator.displayName = 'PaginationNavigator'
 
 export { PaginationNavigator }

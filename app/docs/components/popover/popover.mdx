@@ -2,7 +2,7 @@ import { DefaultPopover, DefaultPopoverCode } from './variant/DefaultPopover'
 import { CardPopover, CardPopoverCode } from './variant/CardPopover'
 import { IconPopover, IconPopoverCode } from './variant/IconPopover'
 import { popoverAPI } from './popoverApi'
-import CodePreview from '../../../components/CodePreview'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
@@ -13,25 +13,25 @@ The Popover component serves as a user interface element that conveniently displ
 
 The Default Popover demonstrates a basic popover component.
 
-<CodePreview github="Popover" code={DefaultPopoverCode} className="bg-metal-50">
+<CodeHighlightPreview code={DefaultPopoverCode} className="bg-metal-50 dark:bg-[#0D1015]">
   <DefaultPopover />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Card Popover
 
 The Card Popover showcases a popover with a card view, providing a visually appealing way to present additional information or options.
 
-<CodePreview github="Popover" code={CardPopoverCode} className="bg-metal-50">
+<CodeHighlightPreview code={CardPopoverCode} className="bg-metal-50 dark:bg-[#0D1015]">
   <CardPopover />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Icon Popover
 
 The Icon Popover displays a popover with an icon, offering a compact and visually engaging way to provide additional context or actions.
 
-<CodePreview github="Popover" code={IconPopoverCode} className="bg-metal-50">
+<CodeHighlightPreview code={IconPopoverCode} className="bg-metal-50 dark:bg-[#0D1015]">
   <IconPopover />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

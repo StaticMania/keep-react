@@ -43,7 +43,8 @@ const DisabledUpload = () => {
   )
 }
 
-const DisabledUploadCode = `
+const DisabledUploadCode = {
+  'UploadComponent.tsx': `
 'use client'
 import { Info,Trash } from 'phosphor-react'
 import { useCallback, useState } from 'react'
@@ -84,6 +85,7 @@ export const UploadComponent = () => {
     </Upload>
   )
 }
-`
+`,
+}
 
 export { DisabledUpload, DisabledUploadCode }

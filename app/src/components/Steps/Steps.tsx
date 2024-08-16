@@ -1,14 +1,18 @@
 'use client'
-import { HTMLProps, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { forwardRef, HTMLAttributes } from 'react'
+import { cn } from '../../utils/cn'
 
-const Steps = forwardRef<HTMLUListElement, HTMLProps<HTMLUListElement>>(({ className, children, ...props }, ref) => {
+const Steps = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(({ children, className, ...props }, ref) => {
   return (
-    <ul {...props} ref={ref} className={cn('relative flex max-w-5xl flex-col gap-2 md:flex-row', className)}>
+    <div
+      ref={ref}
+      {...props}
+      className={cn('relative mx-auto flex w-full items-center justify-between gap-x-5', className)}>
       {children}
-    </ul>
+    </div>
   )
 })
+
 Steps.displayName = 'Steps'
 
 export { Steps }

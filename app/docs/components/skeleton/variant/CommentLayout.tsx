@@ -12,7 +12,8 @@ const CommentLayout = () => {
   )
 }
 
-const CommentLayoutCode = `
+const CommentLayoutCode = {
+  'SkeletonComponent.tsx': `
 import { Skeleton, SkeletonLine } from 'keep-react'
 
 export const SkeletonComponent = () => {
@@ -26,6 +27,7 @@ export const SkeletonComponent = () => {
     </Skeleton>
   )
 }
-`
+`,
+}
 
 export { CommentLayout, CommentLayoutCode }

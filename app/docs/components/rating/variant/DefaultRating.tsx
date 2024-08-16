@@ -12,7 +12,8 @@ const DefaultRating = () => {
   )
 }
 
-const DefaultRatingCode = `
+const DefaultRatingCode = {
+  'RatingComponent.tsx': `
 import { Rating, RatingStar }  from 'keep-react'
 
 export const RatingComponent = () => {
@@ -26,6 +27,7 @@ export const RatingComponent = () => {
     </Rating>
   )
 }
-`
+`,
+}
 
 export { DefaultRating, DefaultRatingCode }

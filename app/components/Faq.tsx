@@ -44,7 +44,7 @@ const Faq = () => {
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-6 2xl:px-0">
         <div className="mx-auto mb-4 px-5 text-center md:max-w-[500px] md:px-0">
-          <h3 className="text-body-1 !font-semibold text-black dark:text-white lg:text-heading-5">
+          <h3 className="text-body-1 !font-semibold text-black lg:text-heading-5 dark:text-white">
             Frequently Asked Questions
           </h3>
         </div>
@@ -52,7 +52,7 @@ const Faq = () => {
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(0, 3).map((faq) => (
-                <AccordionPanel key={faq.id}>
+                <AccordionPanel key={faq.id} className="border-metal-200">
                   <AccordionContainer>
                     <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
                     <AccordionIcon />
@@ -65,7 +65,7 @@ const Faq = () => {
           <div className="w-full lg:col-span-1">
             <Accordion className="space-y-3">
               {faqs.slice(3).map((faq) => (
-                <AccordionPanel key={faq.id}>
+                <AccordionPanel key={faq.id} className="border-metal-200">
                   <AccordionContainer>
                     <AccordionTitle className="text-body-4 md:text-body-3">{faq.question}</AccordionTitle>
                     <AccordionIcon />

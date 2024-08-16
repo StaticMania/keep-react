@@ -1,5 +1,5 @@
 import { cloneElement, forwardRef, HTMLAttributes, isValidElement, Ref } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 
 export interface BreadcrumbItemProps extends HTMLAttributes<HTMLLIElement> {
   asChild?: boolean
@@ -28,4 +28,4 @@ export const BreadcrumbItem = forwardRef<HTMLLIElement, BreadcrumbItemProps>(
   },
 )
 
-BreadcrumbItem.displayName = 'Breadcrumb.Item'
+BreadcrumbItem.displayName = 'BreadcrumbItem'

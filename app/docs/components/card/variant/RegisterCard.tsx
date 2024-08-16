@@ -22,11 +22,11 @@ const RegisterCard = () => {
           <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
         </CardHeader>
         <div className="flex items-center justify-between gap-3">
-          <Button size="xs" variant="outline" color="secondary" className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
             Google
           </Button>
-          <Button size="xs" variant="outline" color="secondary" className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <FacebookLogo size={20} className="mr-1.5" />
             Facebook
           </Button>
@@ -51,7 +51,7 @@ const RegisterCard = () => {
               </InputIcon>
             </div>
           </fieldset>
-          <Button className="!mt-3 block w-full" size="sm" color="secondary">
+          <Button type="submit" className="!mt-3 block w-full">
             Create Account
           </Button>
         </form>
@@ -60,7 +60,8 @@ const RegisterCard = () => {
   )
 }
 
-const RegisterCardCode = `
+const RegisterCardCode = {
+  'CardComponent.tsx': `
 'use client'
 import { Envelope, FacebookLogo, GoogleLogo, Lock } from 'phosphor-react'
 import {
@@ -71,8 +72,8 @@ import {
   CardHeader,
   CardTitle,
   Divider,
-  InputIcon,
   Input,
+  InputIcon,
   Label,
 } from 'keep-react'
 
@@ -85,11 +86,11 @@ export const CardComponent = () => {
           <CardDescription>If you don&apos;t have any account then just click here</CardDescription>
         </CardHeader>
         <div className="flex items-center justify-between gap-3">
-          <Button size="xs" variant="outline" color="secondary" className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <GoogleLogo size={20} className="mr-1.5" />
             Google
           </Button>
-          <Button size="xs" variant="outline" color="secondary" className="w-full">
+          <Button variant="outline" color="secondary" className="w-full">
             <FacebookLogo size={20} className="mr-1.5" />
             Facebook
           </Button>
@@ -114,7 +115,7 @@ export const CardComponent = () => {
               </InputIcon>
             </div>
           </fieldset>
-          <Button className="!mt-3 block w-full" size="sm" color="secondary">
+          <Button type="submit" className="!mt-3 block w-full" >
             Create Account
           </Button>
         </form>
@@ -122,6 +123,7 @@ export const CardComponent = () => {
     </Card>
   )
 }
-`
+`,
+}
 
 export { RegisterCard, RegisterCardCode }

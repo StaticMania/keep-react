@@ -2,14 +2,17 @@ import { CircleProgress, CircleProgressLine, CircleProgressText } from '../../..
 
 const DefaultProgress = () => {
   return (
-    <CircleProgress progress={45}>
-      <CircleProgressLine />
-      <CircleProgressText>45%</CircleProgressText>
-    </CircleProgress>
+    <div className="flex items-center justify-center">
+      <CircleProgress progress={45}>
+        <CircleProgressLine />
+        <CircleProgressText>45%</CircleProgressText>
+      </CircleProgress>
+    </div>
   )
 }
 
-const DefaultProgressCode = `
+const DefaultProgressCode = {
+  'ProgressComponent.tsx': `
 import { CircleProgress, CircleProgressLine, CircleProgressText } from 'keep-react'
 
 export const ProgressComponent = () => {
@@ -20,6 +23,7 @@ export const ProgressComponent = () => {
     </CircleProgress>
   )
 }
-`
+`,
+}
 
 export { DefaultProgress, DefaultProgressCode }

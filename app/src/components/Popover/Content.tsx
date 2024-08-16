@@ -1,41 +1,55 @@
 'use client'
 import { FloatingArrow, FloatingFocusManager, FloatingPortal, useMergeRefs } from '@floating-ui/react'
-import { HTMLProps, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { AnimatePresence, motion } from 'framer-motion'
+import { forwardRef, HTMLProps } from 'react'
+import { cn } from '../../utils/cn'
 import { usePopoverContext } from './Context'
+import { PopoverIVariants, popoverVariants } from './animation'
 
-export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(function PopoverContent(
-  { style, className, ...props },
-  propRef,
-) {
-  const { context: floatingContext, showArrow, ...context } = usePopoverContext()
-  const ref = useMergeRefs([context.refs.setFloating, propRef])
+export const PopoverContent = forwardRef<HTMLDivElement, HTMLProps<HTMLDivElement>>(
+  ({ style, className, children, ...props }, propRef) => {
+    const { context: floatingContext, showArrow, placement = 'bottom', ...restContext } = usePopoverContext()
+    const ref = useMergeRefs([restContext.refs.setFloating, propRef])
+    const getPlacement = placement.split('-')[0] as keyof PopoverIVariants
 
-  if (!floatingContext.open) return null
-
-  return (
-    <FloatingPortal>
-      <FloatingFocusManager context={floatingContext} modal={context.modal}>
-        <div
-          ref={ref}
-          style={{ ...context.floatingStyles, ...style }}
-          aria-labelledby={context.labelId}
-          className={cn('!z-20 max-w-xs rounded-xl bg-white dark:bg-metal-900', className)}
-          aria-describedby={context.descriptionId}
-          {...context.getFloatingProps(props)}>
-          {props.children}
-          {showArrow && (
-            <FloatingArrow
-              className="fill-white dark:fill-metal-900"
-              width={20}
-              height={10}
-              tipRadius={2}
-              ref={context.arrowRef}
-              context={floatingContext}
-            />
+    return (
+      <FloatingPortal>
+        <AnimatePresence>
+          {floatingContext.open && (
+            <FloatingFocusManager context={floatingContext} modal={restContext.modal}>
+              <div
+                className="z-20"
+                ref={ref}
+                style={{ ...restContext.floatingStyles, ...style }}
+                aria-labelledby={restContext.labelId}
+                aria-describedby={restContext.descriptionId}
+                {...restContext.getFloatingProps(props)}>
+                <motion.div
+                  key="popover"
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  variants={popoverVariants[getPlacement]}
+                  className={cn('max-w-sm rounded-xl bg-white dark:bg-metal-900', className)}>
+                  {children}
+                  {showArrow && (
+                    <FloatingArrow
+                      className="fill-white dark:fill-metal-900"
+                      width={20}
+                      height={10}
+                      tipRadius={2}
+                      ref={restContext.arrowRef}
+                      context={floatingContext}
+                    />
+                  )}
+                </motion.div>
+              </div>
+            </FloatingFocusManager>
           )}
-        </div>
-      </FloatingFocusManager>
-    </FloatingPortal>
-  )
-})
+        </AnimatePresence>
+      </FloatingPortal>
+    )
+  },
+)
+
+PopoverContent.displayName = 'PopoverContent'

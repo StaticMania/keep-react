@@ -3,6 +3,7 @@ import KeepDarkLogo from '../../../../../public/images/keep-dark.svg'
 import KeepLogo from '../../../../../public/images/keep.svg'
 import {
   Avatar,
+  AvatarImage,
   Dropdown,
   DropdownAction,
   DropdownContent,
@@ -34,9 +35,11 @@ const NavbarLayout4 = () => {
           <NavbarList>
             <Dropdown placement="bottom-end">
               <DropdownAction asChild>
-                <Avatar size="lg" shape="circle" img="/images/avatar/avatar-3.png" />
+                <Avatar>
+                  <AvatarImage src="/images/avatar/avatar-3.png" />
+                </Avatar>
               </DropdownAction>
-              <DropdownContent>
+              <DropdownContent className="border border-metal-100">
                 <DropdownList>
                   <DropdownItem>Statistics</DropdownItem>
                   <DropdownItem>Duplicate</DropdownItem>
@@ -60,7 +63,8 @@ const NavbarLayout4 = () => {
   )
 }
 
-const NavbarLayout4Code = `
+const NavbarLayout4Code = {
+  'NavbarComponent.tsx': `
 import {
   Avatar,
   Dropdown,
@@ -92,9 +96,11 @@ export const NavbarComponent = () => {
         <NavbarList>
           <Dropdown placement="bottom-end">
             <DropdownAction asChild>
-              <Avatar size="lg" shape="circle" img="/images/avatar/avatar-3.png" />
+              <Avatar>
+                <AvatarImage src="/images/avatar/avatar-3.png" />
+              </Avatar>
             </DropdownAction>
-            <DropdownContent>
+            <DropdownContent className='border border-metal-100'>
               <DropdownList>
                 <DropdownItem>Statistics</DropdownItem>
                 <DropdownItem>Duplicate</DropdownItem>
@@ -117,6 +123,7 @@ export const NavbarComponent = () => {
   )
 }
 
-`
+`,
+}
 
 export { NavbarLayout4, NavbarLayout4Code }

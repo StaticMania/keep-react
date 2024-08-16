@@ -1,6 +1,6 @@
 'use client'
 import { forwardRef, HTMLAttributes } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { paginationTheme } from './theme'
 
 const PaginationList = forwardRef<HTMLUListElement, HTMLAttributes<HTMLUListElement>>(
@@ -14,6 +14,6 @@ const PaginationList = forwardRef<HTMLUListElement, HTMLAttributes<HTMLUListElem
   },
 )
 
-PaginationList.displayName = 'Pagination.List'
+PaginationList.displayName = 'PaginationList'
 
 export { PaginationList }

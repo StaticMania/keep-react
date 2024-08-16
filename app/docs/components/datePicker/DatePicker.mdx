@@ -3,8 +3,7 @@ import { MultipleDatePicker, MultipleDatePickerCode } from './variant/MultipleDa
 import { DateRangePicker, DateRangePickerCode } from './variant/DateRangePicker'
 import { DateRangePicker2, DateRangePicker2Code } from './variant/DateRangePickerWithTwoMonth'
 
-import CodePreview from '../../../components/CodePreview'
-import ComponentApi from '../../../components/ComponentApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
@@ -14,34 +13,34 @@ The Date Picker component offers an intuitive way for users to select dates from
 
 The Default Date Picker component provides a simple interface for selecting a single date. Users can choose a date, and the selected date is managed using state.
 
-<CodePreview github="DatePicker" code={DefaultDatePickerCode}>
+<CodeHighlightPreview code={DefaultDatePickerCode}>
   <DefaultDatePicker />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Multiple Date Picker
 
 The Multiple Date Picker allows users to view and select dates from multiple months. You can customize the number of months displayed using the `numberOfMonths` prop.
 
-<CodePreview github="DatePicker" code={MultipleDatePickerCode}>
+<CodeHighlightPreview code={MultipleDatePickerCode}>
   <MultipleDatePicker />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Date Range Picker
 
 The Date Range Picker enables users to select a range of dates. Set the mode prop to `"range"` to enable this functionality.
 
-<CodePreview github="DatePicker" code={DateRangePickerCode}>
+<CodeHighlightPreview code={DateRangePickerCode}>
   <DateRangePicker />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Multiple Month Date Picker
 
 The Multiple Month Date Picker lets users select date ranges spanning across multiple months.
 
-<CodePreview github="DatePicker" code={DateRangePicker2Code}>
+<CodeHighlightPreview code={DateRangePicker2Code}>
   <DateRangePicker2 />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Reference
 
-For further details and advanced usage, refer to the documentation of [React Day Picker](https://react-day-picker.js.org/)
+For further details and advanced usage, refer to the documentation of [React Day Picker](https://daypicker.dev/api)

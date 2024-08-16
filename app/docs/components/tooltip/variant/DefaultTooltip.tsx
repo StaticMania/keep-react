@@ -2,18 +2,19 @@ import { Tooltip, TooltipAction, TooltipContent } from '../../../../src'
 
 const DefaultTooltip = () => {
   return (
-    <div className="p-2.5">
+    <div className="flex h-44 items-center justify-center">
       <Tooltip>
         <TooltipAction>Tooltip</TooltipAction>
         <TooltipContent>
-          <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
+          <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
         </TooltipContent>
       </Tooltip>
     </div>
   )
 }
 
-const DefaultTooltipCode = `
+const DefaultTooltipCode = {
+  'TooltipComponent.tsx': `
 import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
@@ -21,12 +22,13 @@ export const TooltipComponent = () => {
     <Tooltip>
       <TooltipAction>Tooltip</TooltipAction>
       <TooltipContent>
-        <p className="text-body-5 font-medium text-white dark:text-metal-900">Tooltips - Title here</p>
+        <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
       </TooltipContent>
     </Tooltip>
   )
 }
 
-`
+`,
+}
 
 export { DefaultTooltip, DefaultTooltipCode }

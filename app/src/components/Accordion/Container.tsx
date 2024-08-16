@@ -1,6 +1,6 @@
 'use client'
 import { ButtonHTMLAttributes, Ref, forwardRef } from 'react'
-import { cn } from '../../helpers/cn'
+import { cn } from '../../utils/cn'
 import { useAccordionContext } from './AccordionContext'
 import { accordionTheme } from './theme'
 
@@ -26,6 +26,6 @@ const AccordionContainer = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HT
   },
 )
 
-AccordionContainer.displayName = 'Accordion.Container'
+AccordionContainer.displayName = 'AccordionContainer'
 
 export { AccordionContainer }
