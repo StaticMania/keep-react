@@ -11,15 +11,15 @@ const StepWithIcon = () => {
         <StepPoint variant="icon" completed={active >= 1}>
           <Hourglass size={20} />
         </StepPoint>
-        <StepLine completed={active >= 1} />
+        <StepLine completed={active >= 2} />
         <StepPoint variant="icon" completed={active >= 2}>
           <Recycle size={20} />
         </StepPoint>
-        <StepLine completed={active >= 2} />
+        <StepLine completed={active >= 3} />
         <StepPoint variant="icon" completed={active >= 3}>
           <Gear size={20} />
         </StepPoint>
-        <StepLine completed={active >= 3} />
+        <StepLine completed={active >= 4} />
         <StepPoint variant="icon" completed={active >= 4}>
           <Package size={20} />
         </StepPoint>
@@ -31,7 +31,7 @@ const StepWithIcon = () => {
         <SkeletonLine className="h-4 w-7/12" />
       </Skeleton>
       <div className="flex items-center justify-between">
-        <Button disabled={active === 0} onClick={() => setActive(active - 1)}>
+        <Button disabled={active === 1} onClick={() => setActive(active - 1)}>
           Previous
         </Button>
         <Button disabled={active === 4} onClick={() => setActive(active + 1)}>
@@ -51,20 +51,20 @@ import { Button, Skeleton, SkeletonLine, StepLine, StepPoint, Steps } from 'keep
 export const StepComponent = () => {
   const [active, setActive] = useState(1)
   return (
-    <div className="space-y-6 p-6">
+    <div className="space-y-6">
       <Steps>
         <StepPoint variant="icon" completed={active >= 1}>
           <Hourglass size={20} />
         </StepPoint>
-        <StepLine completed={active >= 1} />
+        <StepLine completed={active >= 2} />
         <StepPoint variant="icon" completed={active >= 2}>
           <Recycle size={20} />
         </StepPoint>
-        <StepLine completed={active >= 2} />
+        <StepLine completed={active >= 3} />
         <StepPoint variant="icon" completed={active >= 3}>
           <Gear size={20} />
         </StepPoint>
-        <StepLine completed={active >= 3} />
+        <StepLine completed={active >= 4} />
         <StepPoint variant="icon" completed={active >= 4}>
           <Package size={20} />
         </StepPoint>
@@ -76,7 +76,7 @@ export const StepComponent = () => {
         <SkeletonLine className="h-4 w-7/12" />
       </Skeleton>
       <div className="flex items-center justify-between">
-        <Button disabled={active === 0} onClick={() => setActive(active - 1)}>
+        <Button disabled={active === 1} onClick={() => setActive(active - 1)}>
           Previous
         </Button>
         <Button disabled={active === 4} onClick={() => setActive(active + 1)}>

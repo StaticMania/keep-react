@@ -16,7 +16,7 @@ const StepLine = forwardRef<HTMLDivElement, StepLineProps>(({ className, complet
         initial={{ width: '0%' }}
         animate={{ width: completed ? '100%' : '0%' }}
         transition={{ duration: 0.3, type: 'tween' }}
-        className={cn('absolute bottom-0 left-0 top-0 rounded-full bg-metal-900 dark:bg-white', className)}
+        className={cn('absolute bottom-0 left-0 top-0 rounded-full bg-primary-500', className)}
       />
     </motion.div>
   )

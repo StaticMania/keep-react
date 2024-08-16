@@ -13,14 +13,14 @@ const DefaultStep = () => {
           </p>
           <p className="text-body-4 font-medium">general info</p>
         </StepPoint>
-        <StepLine completed={active >= 1} />
+        <StepLine completed={active >= 2} />
         <StepPoint completed={active >= 2}>
           <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
             2
           </p>
           <p className="text-body-4 font-medium">payment details</p>
         </StepPoint>
-        <StepLine completed={active >= 2} />
+        <StepLine completed={active >= 3} />
         <StepPoint completed={active >= 3}>
           <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
             3
@@ -35,7 +35,7 @@ const DefaultStep = () => {
         <SkeletonLine className="h-4 w-7/12" />
       </Skeleton>
       <div className="flex items-center justify-between">
-        <Button disabled={active === 0} onClick={() => setActive(active - 1)}>
+        <Button disabled={active === 1} onClick={() => setActive(active - 1)}>
           Previous
         </Button>
         <Button disabled={active === 3} onClick={() => setActive(active + 1)}>
@@ -57,17 +57,23 @@ export const StepComponent = () => {
     <div className="space-y-6">
       <Steps>
         <StepPoint completed={active >= 1}>
-          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">1</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
+            1
+          </p>
           <p className="text-body-4 font-medium">general info</p>
         </StepPoint>
-        <StepLine completed={active >= 1} />
+        <StepLine completed={active >= 2} />
         <StepPoint completed={active >= 2}>
-          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">2</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
+            2
+          </p>
           <p className="text-body-4 font-medium">payment details</p>
         </StepPoint>
-        <StepLine completed={active >= 2} />
+        <StepLine completed={active >= 3} />
         <StepPoint completed={active >= 3}>
-          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">3</p>
+          <p className="flex size-5 items-center justify-center rounded-full border border-current text-body-5 font-medium">
+            3
+          </p>
           <p className="text-body-4 font-medium">benefits & extras</p>
         </StepPoint>
       </Steps>
@@ -78,7 +84,7 @@ export const StepComponent = () => {
         <SkeletonLine className="h-4 w-7/12" />
       </Skeleton>
       <div className="flex items-center justify-between">
-        <Button disabled={active === 0} onClick={() => setActive(active - 1)}>
+        <Button disabled={active === 1} onClick={() => setActive(active - 1)}>
           Previous
         </Button>
         <Button disabled={active === 3} onClick={() => setActive(active + 1)}>
