@@ -1,0 +1,44 @@
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import { DefaultInputOTP, DefaultInputOTPCode } from './variant/DefaultInputOTP'
+import { GroupInputOTP, GroupInputOTPCode } from './variant/GroupInputOTP'
+import { InputOTPCodeValue, InputOTPValue } from './variant/InputOTPValue'
+import { inputOTPApiData } from './InputOTPApi'
+import ComponentApi from '../../../components/ComponentApi'
+
+## Table of Contents
+
+The OTP (One-Time Password) Inputs component is a secure and intuitive interface designed to capture verification codes typically sent via SMS or email. It consists of multiple input fields that allow users to enter each digit of the OTP separately, ensuring accurate and quick entry. The component often includes features like automatic focus shift, clear functionality, and input validation to enhance user experience. Ideal for authentication processes, account verification, and secure transactions, the OTP Inputs component plays a crucial role in reinforcing security while maintaining ease of use.
+
+## Default Input OTP
+
+A basic OTP input component designed for straightforward entry of one-time passwords, with automatic focus shift and input validation for a smooth user experience.
+
+<CodeHighlightPreview code={DefaultInputOTPCode}>
+  <DefaultInputOTP />
+</CodeHighlightPreview>
+
+## Group Input OTP
+
+An OTP input component that groups input fields together, providing a more organized and compact layout for entering one-time passwords efficiently.
+
+<CodeHighlightPreview code={GroupInputOTPCode}>
+  <GroupInputOTP />
+</CodeHighlightPreview>
+
+## Control Input OTP
+
+A more advanced OTP input component with value handling.
+
+<CodeHighlightPreview code={InputOTPCodeValue}>
+  <InputOTPValue />
+</CodeHighlightPreview>
+
+## API Reference
+
+Here is a list of the props that you can pass to the input OTP component:
+
+<ComponentApi data={inputOTPApiData} />
+
+## Reference
+
+Our OTP component is built using the `input-otp` package. For more information , follow the documentation [input-otp](https://input-otp.rodz.dev).
