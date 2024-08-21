@@ -3,7 +3,7 @@ html {
 }
 
 .ReactCollapse--collapse {
-  transition: height 300ms;
+  transition: height 300ms ease-in-out;
 }
 
 input[type='number']::-webkit-inner-spin-button,

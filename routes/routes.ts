@@ -314,6 +314,14 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Select',
+    folderName: 'Select',
+    href: '/docs/components/select',
+    tag: false,
+    deprecate: false,
+  },
+  {
+    id: generatedID(),
     name: 'Spinner',
     folderName: 'Spinner',
     href: '/docs/components/spinner',

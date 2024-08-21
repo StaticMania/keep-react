@@ -83,6 +83,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/select',
+        destination: '/docs/components/select',
+        permanent: true,
+      },
+      {
         source: '/modal',
         destination: '/docs/components/modal',
         permanent: true,
