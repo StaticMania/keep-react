@@ -2,7 +2,7 @@ import { Button } from '../../../../src'
 
 const KeepButtonColor = () => {
   return (
-    <div className="flex h-20 flex-wrap items-center gap-2 p-4">
+    <div className="flex items-center justify-center gap-x-5 px-5 py-3">
       <Button color="primary">Button</Button>
       <Button color="secondary">Button</Button>
       <Button color="success">Button</Button>

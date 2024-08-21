@@ -4,7 +4,7 @@ import { Button } from '../../../../src'
 
 const KeepButtonIcon = () => {
   return (
-    <div className="flex h-24 flex-wrap items-center gap-2 p-4">
+    <div className="flex items-center justify-center gap-x-5 px-5 py-3">
       <Button>
         <ChatText size={20} className="mr-1.5" />
         Messages

@@ -69,7 +69,7 @@ const DesktopMenu = () => {
           className="rounded-lg border border-metal-100 bg-white p-2.5 transition-all duration-300 hover:bg-metal-25 dark:border-metal-800 dark:bg-metal-900 dark:hover:border-metal-600 dark:hover:bg-metal-900">
           <Image src="/images/icon/discord.svg" height={22} width={22} alt="discord" />
         </Link>
-        <Link href="/docs/getting-started/introduction" className={cn(buttonVariants({ size: 'md' }), 'capitalize')}>
+        <Link href="/docs/getting-started/introduction" className={cn(buttonVariants({ color: 'secondary' }))}>
           get started
         </Link>
         <ThemeSwitcher />

@@ -4,7 +4,7 @@ import { Button } from '../../../../src'
 
 const KeepButtonShape = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2 px-2 py-3">
+    <div className="flex items-center justify-center gap-x-5 px-5 py-3">
       <Button shape="icon">
         <ShoppingCart size={16} />
       </Button>

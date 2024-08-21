@@ -3,41 +3,11 @@ import { Button } from '../../../../src'
 
 const KeepButtonType = () => {
   return (
-    <div className="flex h-32 flex-wrap items-center gap-2 p-4">
-      <div className="flex flex-wrap items-center gap-2">
-        <Button color="primary" variant="outline">
-          Button
-        </Button>
-        <Button color="secondary" variant="outline">
-          Button
-        </Button>
-        <Button color="success" variant="outline">
-          Button
-        </Button>
-        <Button color="warning" variant="outline">
-          Button
-        </Button>
-        <Button color="error" variant="outline">
-          Button
-        </Button>
-      </div>
-      <div className="flex flex-wrap items-center gap-2">
-        <Button color="primary" variant="link">
-          Button
-        </Button>
-        <Button color="secondary" variant="link">
-          Button
-        </Button>
-        <Button color="success" variant="link">
-          Button
-        </Button>
-        <Button color="warning" variant="link">
-          Button
-        </Button>
-        <Button color="error" variant="link">
-          Button
-        </Button>
-      </div>
+    <div className="flex items-center justify-center gap-x-5 px-5 py-3">
+      <Button variant="default">Button</Button>
+      <Button variant="softBg">Button</Button>
+      <Button variant="outline">Button</Button>
+      <Button variant="link">Button</Button>
     </div>
   )
 }
@@ -49,34 +19,13 @@ import { Button } from 'keep-react'
 export const ButtonComponent = () => {
   return (
     <>
+      <Button color="primary" variant="softBg">
+        Button
+      </Button>
       <Button color="primary" variant="outline">
         Button
       </Button>
-      <Button color="secondary" variant="outline">
-        Button
-      </Button>
-      <Button color="success" variant="outline">
-        Button
-      </Button>
-      <Button color="warning" variant="outline">
-        Button
-      </Button>
-      <Button color="error" variant="outline">
-        Button
-      </Button>
       <Button color="primary" variant="link">
-        Button
-      </Button>
-      <Button color="secondary" variant="link">
-        Button
-      </Button>
-      <Button color="success" variant="link">
-        Button
-      </Button>
-      <Button color="warning" variant="link">
-        Button
-      </Button>
-      <Button color="error" variant="link">
         Button
       </Button>
     </>
