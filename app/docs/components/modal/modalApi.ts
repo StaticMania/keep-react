@@ -1,16 +1,16 @@
 export const modalApi = [
   {
     id: 1,
-    propsName: 'isOpen',
+    propsName: 'open',
     propsType: 'boolean',
-    propsDescription: 'Notification show or not.',
+    propsDescription: 'The controlled open state of the modal.',
     default: 'false',
   },
   {
     id: 2,
     propsName: 'onOpenChange',
     propsType: 'setState',
-    propsDescription: 'Function to call when the notification is dismissed.',
+    propsDescription: 'Event handler called when the open state of the modal changes.',
     default: 'Null',
   },
 ]

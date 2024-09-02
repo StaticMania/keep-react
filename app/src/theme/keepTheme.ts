@@ -219,6 +219,7 @@ const keepTheme = (config: Config, color = colors): Config => {
     darkMode: 'selector',
     content: ['node_modules/keep-react/**/*.{js,jsx,ts,tsx}'],
     presets: [presetFn(color)],
+    plugins: [require('tailwindcss-animate')],
   }
 
   return merge(twConfigForKeepReact, { ...config })

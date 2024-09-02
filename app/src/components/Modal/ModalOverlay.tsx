@@ -1,30 +1,20 @@
 'use client'
-import { motion, MotionProps } from 'framer-motion'
-import { forwardRef, HTMLAttributes, Ref } from 'react'
+import { Overlay } from '@radix-ui/react-dialog'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
 
-type ModalOverlayProps = HTMLAttributes<HTMLDivElement> & MotionProps
-
-const ModalOverlay = forwardRef<HTMLDivElement, ModalOverlayProps>(
-  ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        {...props}
-        className={cn(
-          'keep-modal fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-80',
-          className,
-        )}
-        ref={ref}>
-        {children}
-      </motion.div>
-    )
-  },
+const ModalOverlay = forwardRef<ElementRef<typeof Overlay>, ComponentPropsWithoutRef<typeof Overlay>>(
+  ({ className, ...props }, ref) => (
+    <Overlay
+      ref={ref}
+      className={cn(
+        'fixed inset-0 z-50 bg-black bg-opacity-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+        className,
+      )}
+      {...props}
+    />
+  ),
 )
-
-ModalOverlay.displayName = 'ModalOverlay'
+ModalOverlay.displayName = Overlay.displayName
 
 export { ModalOverlay }

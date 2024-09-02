@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Command, MagnifyingGlass } from 'phosphor-react'
+import { MagnifyingGlass } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { navbarRoutes } from '~/routes/routes'
 import KeepDarkLogo from '../../public/images/keep-dark.svg'
@@ -51,9 +51,6 @@ const DesktopMenu = () => {
           <span className="flex items-center gap-2 text-body-4 font-normal text-metal-300 dark:text-white">
             <MagnifyingGlass size={20} />
             <span>Search component</span>
-          </span>
-          <span className="flex items-center text-body-4 font-normal text-metal-200">
-            <Command size={20} />K
           </span>
         </button>
         <Link

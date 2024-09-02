@@ -1,9 +1,9 @@
 'use client'
 import Link from 'next/link'
 import { File, MagnifyingGlass, RadioButton } from 'phosphor-react'
-import { ChangeEvent, Dispatch, FC, SetStateAction, useCallback, useEffect, useState, useTransition } from 'react'
+import { ChangeEvent, Dispatch, FC, SetStateAction, useCallback, useState, useTransition } from 'react'
 import { quickAccessRoute, routerPath, routes } from '~/routes/routes'
-import { Input, InputIcon, Modal, ModalContent } from '../src'
+import { Input, InputIcon, Modal, ModalContent, ModalDescription, ModalTitle } from '../src'
 
 interface ModalProps {
   isOpen: boolean
@@ -36,30 +36,9 @@ const Search: FC<ModalProps> = ({ isOpen, setIsOpen }) => {
     })
   }
 
-  useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || e.key === '/') {
-        if (
-          (e.target instanceof HTMLElement && e.target.isContentEditable) ||
-          e.target instanceof HTMLInputElement ||
-          e.target instanceof HTMLTextAreaElement ||
-          e.target instanceof HTMLSelectElement
-        ) {
-          return
-        }
-
-        e.preventDefault()
-        setIsOpen && setIsOpen((open) => !open)
-      }
-    }
-
-    document.addEventListener('keydown', down)
-    return () => document.removeEventListener('keydown', down)
-  }, [setIsOpen])
-
   return (
-    <Modal isOpen={isOpen} onOpenChange={setIsOpen}>
-      <ModalContent className="block w-[35rem] bg-white laptop:p-8">
+    <Modal open={isOpen} onOpenChange={setIsOpen}>
+      <ModalContent className="block max-w-[35rem] bg-white laptop:p-8">
         <fieldset className="relative">
           <Input
             value={query}
@@ -74,7 +53,9 @@ const Search: FC<ModalProps> = ({ isOpen, setIsOpen }) => {
         </fieldset>
         <div id="search" className="mt-2 max-h-[300px] overflow-y-auto">
           <div className={query.length ? 'hidden' : 'block'}>
-            <p className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">Quick Access</p>
+            <ModalTitle className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">
+              Quick Access
+            </ModalTitle>
             <ul>
               {quickAccessRoute.map((route) => (
                 <li
@@ -89,7 +70,9 @@ const Search: FC<ModalProps> = ({ isOpen, setIsOpen }) => {
             </ul>
           </div>
           <div>
-            <p className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">Components</p>
+            <ModalDescription className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">
+              Components
+            </ModalDescription>
 
             {isPending ? (
               <p className="text-left text-body-4 font-normal text-metal-600">Loading...</p>
