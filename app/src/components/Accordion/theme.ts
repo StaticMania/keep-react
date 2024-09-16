@@ -1,6 +1,7 @@
+import { keepTw } from '../../utils/keepTw'
 import { keepAccordionTheme } from './Accordion'
 
-export const accordionTheme: keepAccordionTheme = {
+export const accordionTheme: keepAccordionTheme = keepTw({
   container: {
     base: 'flex cursor-pointer items-center w-full justify-between px-6 py-5',
     open: '',
@@ -24,4 +25,4 @@ export const accordionTheme: keepAccordionTheme = {
   title: {
     base: 'select-none text-left text-body-1 font-medium text-metal-900 dark:text-white',
   },
-}
+})

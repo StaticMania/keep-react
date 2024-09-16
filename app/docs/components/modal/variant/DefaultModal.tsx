@@ -20,7 +20,7 @@ const DefaultModal = () => {
           <Button>Open Modal</Button>
         </ModalAction>
         <ModalContent>
-          <ModalClose className="absolute right-4 top-4" />
+          <ModalClose />
           <ModalHeader className="mb-6 space-y-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
               <CloudArrowUp size={28} />
@@ -70,7 +70,7 @@ export const ModalComponent = () => {
         <Button>Open Modal</Button>
       </ModalAction>
       <ModalContent>
-        <ModalClose className="absolute right-4 top-4" />
+        <ModalClose />
         <ModalHeader className="mb-6 space-y-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <CloudArrowUp size={28} />

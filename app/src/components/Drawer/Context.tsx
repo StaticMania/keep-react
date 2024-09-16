@@ -1,9 +1,7 @@
 'use client'
 import { createContext, useContext } from 'react'
 
-export interface DrawerContextProps {
-  isOpen?: boolean
-  handleOpen?: () => void
+type DrawerContextProps = {
   position?: 'left' | 'right' | 'top' | 'bottom'
 }
 

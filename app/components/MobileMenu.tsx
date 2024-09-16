@@ -85,8 +85,8 @@ const MobileMenu = () => {
         </button>
       </div>
       <Search setIsOpen={setIsOpen} isOpen={isOpen} />
-      <Drawer onOpenChange={setShowDrawer} isOpen={showDrawer} position="right">
-        <DrawerContent className="space-y-3 rounded-none p-6">
+      <Drawer onOpenChange={setShowDrawer} open={showDrawer}>
+        <DrawerContent position="right" className="space-y-3 rounded-none p-6">
           <Button onClick={() => setShowDrawer(!showDrawer)} color="secondary" className="mb-4 max-w-max p-3">
             <ArrowLeft className="size-5 text-white dark:text-metal-900" />
           </Button>

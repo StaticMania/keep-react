@@ -20,7 +20,7 @@ const CustomizeModal = () => {
           <Button>Open Modal</Button>
         </ModalAction>
         <ModalContent className="max-w-[20rem] lg:max-w-[26rem]">
-          <ModalClose className="absolute right-4 top-4" />
+          <ModalClose />
           <ModalHeader className="mb-6 flex flex-col items-center justify-center space-y-3">
             <div className="flex h-20 w-20 items-center justify-center rounded-full border border-metal-100 bg-metal-50 text-metal-600 dark:border-metal-800 dark:bg-metal-800 dark:text-white">
               <Check size={60} />
@@ -66,7 +66,7 @@ export const ModalComponent = () => {
         <Button>Open Modal</Button>
       </ModalAction>
       <ModalContent className="w-[20rem] lg:w-[26rem]">
-        <ModalClose className="absolute right-4 top-4" />
+        <ModalClose />
         <ModalHeader className="mb-6 flex flex-col items-center justify-center space-y-3">
           <div className="flex h-20 w-20 items-center justify-center rounded-full border border-metal-100 bg-metal-50 text-metal-600 dark:border-metal-800 dark:bg-metal-800 dark:text-white">
             <Check size={60} />
