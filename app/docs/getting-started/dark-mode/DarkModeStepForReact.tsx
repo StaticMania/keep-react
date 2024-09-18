@@ -11,9 +11,9 @@ const DarkModeStepForReact = () => {
         <TimelinePoint />
         <TimelineContent>
           <p className="text-body-5 font-normal leading-[1.4] text-metal-400 dark:text-metal-300">Step 1</p>
-          <h1 className="text-body-3 font-medium text-metal-900 dark:text-white">
+          <p className="text-body-3 font-medium text-metal-900 dark:text-white">
             Create a new file called `Theme-provider.tsx` in the `components` folder
-          </h1>
+          </p>
           <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">
             Copy and paste the provided theme provider code into Theme-provider.tsx.
           </p>
@@ -26,7 +26,7 @@ const DarkModeStepForReact = () => {
         <TimelinePoint />
         <TimelineContent>
           <p className="text-body-5 font-normal leading-[1.4] text-metal-400 dark:text-metal-300">Step 2</p>
-          <h1 className="text-body-3 font-medium text-metal-900 dark:text-white">Open the `main.tsx` file</h1>
+          <p className="text-body-3 font-medium text-metal-900 dark:text-white">Open the `main.tsx` file</p>
           <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">
             Wrap the `App` component with the `ThemeProvider` component.
           </p>
@@ -39,13 +39,15 @@ const DarkModeStepForReact = () => {
         <TimelinePoint />
         <TimelineContent>
           <p className="text-body-5 font-normal leading-[1.4] text-metal-400 dark:text-metal-300">Step 3</p>
-          <h1 className="text-body-3 font-medium text-metal-900 dark:text-white">Create a Theme Switcher component</h1>
+          <p className="text-body-3 font-medium text-metal-900 dark:text-white">Create a Theme Switcher component</p>
           <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">
             Toggle between dark and light modes, use the example code provided to create a simple theme switcher.
           </p>
           <div className="!my-4">
             <CodeHighlightPreview code={viteThemeSwitcherCode}>
-              <ViteThemeSwitcher />
+              <div className="p-3">
+                <ViteThemeSwitcher />
+              </div>
             </CodeHighlightPreview>
           </div>
         </TimelineContent>

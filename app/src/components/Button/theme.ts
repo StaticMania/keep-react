@@ -39,7 +39,7 @@ interface keepButtonTheme {
 }
 
 export const buttonTheme: keepButtonTheme = {
-  base: 'disabled:pointer-events-none disabled:opacity-50 transition-all focus-visible:outline-none inline-flex items-center justify-center whitespace-nowrap disabled:cursor-not-allowed capitalize active:scale-[0.98]',
+  base: 'disabled:pointer-events-none disabled:opacity-50 transition-all focus-visible:outline-none inline-flex items-center justify-center whitespace-nowrap disabled:cursor-not-allowed capitalize active:scale-[0.98] ',
   size: {
     base: {
       xs: 'text-body-5 px-2 py-1 h-6 font-medium',
@@ -106,7 +106,7 @@ export const buttonTheme: keepButtonTheme = {
     },
     default: {
       primary:
-        'bg-primary-500 hover:bg-primary-600 text-white disabled:bg-primary-100 focus-visible:ring-2 focus-visible:ring-primary-100 ring-offset-4 dark:ring-offset-metal-900 dark:focus-visible:ring-primary-500',
+        'bg-primary-500 hover:bg-primary-600 text-white disabled:bg-primary-100 focus-visible:ring-2 focus-visible:ring-primary-100 focus-visible:ring-offset-4 dark:ring-offset-metal-900 dark:focus-visible:ring-primary-500',
       secondary:
         'bg-metal-900 hover:bg-metal-800 dark:bg-white dark:hover:bg-metal-25 dark:text-metal-900 text-white disabled:bg-metal-600 dark:disabled:bg-metal-600 dark:disabled:text-white focus-visible:ring-2 focus-visible:ring-metal-200 ring-offset-4 dark:ring-offset-metal-900',
       success:

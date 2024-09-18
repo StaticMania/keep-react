@@ -11,7 +11,7 @@ const DarkModeStepForNext = () => {
         <TimelinePoint />
         <TimelineContent>
           <p className="text-body-5 font-normal leading-[1.4] text-metal-400 dark:text-metal-300">Step 1</p>
-          <h1 className="text-body-3 font-medium text-metal-900 dark:text-white">Start by installing `next-themes`</h1>
+          <p className="text-body-3 font-medium text-metal-900 dark:text-white">Start by installing `next-themes`</p>
           <div className="!my-4">
             <CodeHighlight code={nextThemeInstall} />
           </div>
@@ -21,9 +21,9 @@ const DarkModeStepForNext = () => {
         <TimelinePoint />
         <TimelineContent>
           <p className="text-body-5 font-normal leading-[1.4] text-metal-400 dark:text-metal-300">Step 2</p>
-          <h1 className="text-body-3 font-medium text-metal-900 dark:text-white">
+          <p className="text-body-3 font-medium text-metal-900 dark:text-white">
             Create a new file called `theme-provider.tsx` in the `components` folder
-          </h1>
+          </p>
           <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">
             Copy and paste the provided theme provider code into `theme-provider.tsx`.
           </p>
@@ -36,9 +36,9 @@ const DarkModeStepForNext = () => {
         <TimelinePoint />
         <TimelineContent>
           <p className="text-body-5 font-normal leading-[1.4] text-metal-400 dark:text-metal-300">Step 3</p>
-          <h1 className="text-body-3 font-medium text-metal-900 dark:text-white">
+          <p className="text-body-3 font-medium text-metal-900 dark:text-white">
             Wrap your root layout. Add the `ThemeProvider` to your root layout.
-          </h1>
+          </p>
           <div className="!my-4">
             <CodeHighlight code={nextThemeWrapper} />
           </div>
@@ -48,13 +48,15 @@ const DarkModeStepForNext = () => {
         <TimelinePoint />
         <TimelineContent>
           <p className="text-body-5 font-normal leading-[1.4] text-metal-400 dark:text-metal-300">Step 4</p>
-          <h1 className="text-body-3 font-medium text-metal-900 dark:text-white">Create a Theme Switcher component</h1>
+          <p className="text-body-3 font-medium text-metal-900 dark:text-white">Create a Theme Switcher component</p>
           <p className="text-body-4 font-normal text-metal-600 dark:text-metal-300">
             Toggle between dark and light modes, use the example code provided to create a simple theme switcher.
           </p>
           <div className="!my-4">
             <CodeHighlightPreview code={nextThemeSwitcher}>
-              <ViteThemeSwitcher />
+              <div className="p-3">
+                <ViteThemeSwitcher />
+              </div>
             </CodeHighlightPreview>
           </div>
         </TimelineContent>
