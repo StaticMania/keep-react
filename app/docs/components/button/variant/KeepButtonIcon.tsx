@@ -1,53 +1,51 @@
 'use client'
-import { Button } from '~/src'
-import { Gear, SquaresFour } from 'phosphor-react'
+import { ChatText, Gear, SignIn } from 'phosphor-react'
+import { Button } from '../../../../src'
 
 const KeepButtonIcon = () => {
   return (
     <div className="flex h-24 flex-wrap items-center gap-2 p-4">
-      <Button notificationLabel="100" type="primary" size="md">
+      <Button>
+        <ChatText size={20} className="mr-1.5" />
         Messages
       </Button>
-      <Button type="primary" size="md">
-        <span className="pr-2">
-          <Gear size={24} />
-        </span>
+      <Button>
+        <Gear size={20} className="mr-1.5" />
         Settings
       </Button>
-      <Button type="primary" size="md">
-        Dashboard
-        <span className="pl-2">
-          <SquaresFour size={24} />
-        </span>
+      <Button>
+        <SignIn size={20} className="mr-1.5" />
+        Sign In
       </Button>
     </div>
   )
 }
 
-const KeepButtonIconCode = `
-"use client";
-import { Button } from "keep-react";
-import { Gear, SquaresFour, Cube } from "phosphor-react";
+const KeepButtonIconCode = {
+  'ButtonComponent.tsx': `
+'use client'
+import { Button } from 'keep-react'
+import { ChatText, Gear, SignIn } from 'phosphor-react'
 
 export const ButtonComponent = () => {
   return (
     <>
-      <Button notificationLabel="100" type="primary" size="md">Messages</Button>
-      <Button type="primary" size="md">
-        <span className="pr-2">
-          <Gear size={24} />
-        </span>
+      <Button>
+        <ChatText size={20} className="mr-1.5" />
+        Messages
+      </Button>
+      <Button>
+        <Gear size={20} className="mr-1.5" />
         Settings
       </Button>
-      <Button type="primary" size="md">
-        Dashboard
-        <span className="pl-2">
-          <SquaresFour size={24} />
-        </span>
+      <Button>
+        <SignIn size={20} className="mr-1.5" />
+        Sign In
       </Button>
     </>
-  );
-};
-`
+  )
+}
+`,
+}
 
 export { KeepButtonIcon, KeepButtonIconCode }

@@ -1,63 +1,59 @@
 'use client'
-import { Button } from '~/src'
 import { ChatCircleDots, Cube, Gear } from 'phosphor-react'
+import { Button, ButtonGroup } from '../../../../src'
 
 const ButtonGroupWithIcon = () => {
   return (
     <div className="h-20 p-4">
-      <Button.Group>
-        <Button type="primary" positionInGroup="start">
-          <span className="pr-2">
-            <Cube size={24} />
-          </span>
+      <ButtonGroup>
+        <Button position="start">
+          <Cube size={20} className="mr-1.5" />
           Profile
         </Button>
-        <Button type="primary" positionInGroup="middle">
-          <span className="pr-2">
-            <Gear size={24} />
-          </span>
+        <Button position="center">
+          <Gear size={20} className="mr-1.5" />
           Settings
         </Button>
-        <Button type="primary" positionInGroup="end">
-          <span className="pr-2">
-            <ChatCircleDots size={24} />
-          </span>
+        <Button position="end">
+          <ChatCircleDots size={24} className="mr-1.5" />
           Messages
         </Button>
-      </Button.Group>
+      </ButtonGroup>
     </div>
   )
 }
 
-const ButtonGroupWithIconCode = `
-"use client";
-import { Button } from "keep-react";
-import { ChatCircleDots, Cube, Gear } from "phosphor-react";
+const ButtonGroupWithIconCode = {
+  'ButtonGroupComponent.tsx': `
+'use client'
+import { Button, ButtonGroup } from 'keep-react'
+import { ChatCircleDots, Cube, Gear } from 'phosphor-react'
 
 export const ButtonGroupComponent = () => {
   return (
-    <Button.Group>
-      <Button type="primary" positionInGroup="start">
+    <ButtonGroup>
+      <Button position="start">
         <span className="pr-2">
           <Cube size={24} />
         </span>
         Profile
       </Button>
-      <Button type="primary" positionInGroup="middle">
+      <Button position="center">
         <span className="pr-2">
           <Gear size={24} />
         </span>
         Settings
       </Button>
-      <Button type="primary" positionInGroup="end">
+      <Button position="end">
         <span className="pr-2">
           <ChatCircleDots size={24} />
         </span>
         Messages
       </Button>
-    </Button.Group>
-  );
-};
-`
+    </ButtonGroup>
+  )
+}
+`,
+}
 
 export { ButtonGroupWithIcon, ButtonGroupWithIconCode }

@@ -1,13 +1,9 @@
 import { DefaultSlider, DefaultSliderCode } from './variant/DefaultSlider'
-import { SliderWithDots, SliderWithDotsCode } from './variant/SliderWithDots'
-import { SliderTooltipPosition, SliderTooltipPositionCode } from './variant/SliderTooltipPosition'
-import { SliderWithMarks, SliderWithMarksCode } from './variant/SliderWithMarks'
+import { DoubleSlider, DoubleSliderCode } from './variant/DoubleSlider'
+
 import { sliderAPIData } from './SliderApi'
-
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
-
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -15,42 +11,22 @@ The slider component in the Keep React allows users to select a value within a s
 
 ## Default Slider
 
-It's designed for selecting a range of values from 100 to 1000. The initial range is set at 100 to 300. The slider shows value `tooltips` at the `top`. Users can easily drag the range selection thanks to the `draggableTrack={true}` features.
-
-<CodePreview github="Slider" code={DefaultSliderCode}>
+<CodeHighlightPreview code={DefaultSliderCode}>
   <DefaultSlider />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Slider With Dots
+## Double Slider
 
-Enabling the dots feature in the slider is done using the dots={true} prop. To further customize the dots, you can include an additional prop called step. This step prop takes a numerical value, and it determines the spacing between the dots on the slider line.
-
-<CodePreview github="Slider" code={SliderWithDotsCode}>
-  <SliderWithDots />
-</CodePreview>
-
-## Slider With Marks
-
-Enabling the `marks` feature in the slider allows you to display specific marked points along the slider line.
-
-<CodePreview github="Slider" code={SliderWithMarksCode}>
-  <SliderWithMarks />
-</CodePreview>
-
-## Slider With Tooltip Position
-
-Control the position of the tooltips in the slider by using the tooltip prop. Setting `tooltip="top"` will display the tooltips above the slider thumb, while `tooltip="bottom"` will display them below the slider thumb. If tooltip position is `tooltip="none"` then tooltip will be hidden.
-
-<CodePreview github="Slider" code={SliderTooltipPositionCode}>
-  <SliderTooltipPosition />
-</CodePreview>
+<CodeHighlightPreview code={DoubleSliderCode}>
+  <DoubleSlider />
+</CodeHighlightPreview>
 
 ## API Reference
 
-Explore the available props for the slider component
+Explore the available props for the slider component. For more information [API Reference](https://www.radix-ui.com/primitives/docs/components/slider#api-reference)
 
 <ComponentApi data={sliderAPIData} />
 
 ## Reference
 
-We've built a slider component using two third-party packages: `rc-slider` and `rc-tooltip`. These packages are handy for creating sliders with tooltips. If you'd like to explore these packages further and understand their features, please check out the documentation for [Rc-slider](https://www.npmjs.com/package/rc-slider) and [Rc-tooltip](https://www.npmjs.com/package/rc-tooltip).
+We've built a slider component using `'@radix-ui/react-slider` package. This package is handy for creating slider component. If you'd like to explore this package further and understand their features, please check out the documentation for [@radix-ui/react-slider](https://www.radix-ui.com/primitives/docs/components/slider).

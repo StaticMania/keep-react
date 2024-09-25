@@ -1,6 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '~/components/DocsContentLayout'
 import AccordionDocs from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
+import EditPage from '../../../components/EditPage'
 
 export const metadata: Metadata = {
   description:
@@ -12,6 +13,7 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <AccordionDocs />
+      <EditPage pageLink="/docs/components/accordion" nextPageLink="/docs/components/alert" nextPageName="Alert" />
     </DocsContentLayout>
   )
 }

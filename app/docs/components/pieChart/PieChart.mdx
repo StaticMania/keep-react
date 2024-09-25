@@ -1,0 +1,37 @@
+import { DefaultPie, DefaultPieCode } from './variant/DefaultPie'
+import { PieChartWithColor, PieChartWithColorCode } from './variant/PieChartWithColor'
+import { PieChartWithTwoLevel, PieChartWithTwoLevelCode } from './variant/PieChartWithTwoLevel'
+
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+
+## Table of Contents
+
+The Pie Chart component offers an intuitive and visually compelling way to represent data distribution. With its circular graph divided into slices, users can easily visualize proportions and percentages of different categories within their dataset. Customizable features such as colors and hierarchical levels enhance the chart's versatility, making it an essential tool for data analysis and presentation.
+
+## Default Pie Chart
+
+The Default Pie Chart component provides a simple yet effective way to represent data distribution using a circular graph divided into slices. Each slice represents a proportion of the whole dataset, making it easy to visualize relative sizes and percentages.
+
+<CodeHighlightPreview code={DefaultPieCode}>
+  <DefaultPie />
+</CodeHighlightPreview>
+
+## Pie Chart With Color
+
+The Pie Chart With Color component enhances the visual appeal of the default pie chart by adding customizable colors to each slice. This feature allows users to highlight specific data points or categories, improving the chart's readability and aesthetic appeal.
+
+<CodeHighlightPreview code={PieChartWithColorCode}>
+  <PieChartWithColor />
+</CodeHighlightPreview>
+
+## Pie Chart With Two Level
+
+The Pie Chart With Two Level component introduces a hierarchical representation of data, with nested pie charts displaying multiple levels of categorization. This advanced feature enables users to explore complex data structures and relationships in an intuitive and visually engaging manner.
+
+<CodeHighlightPreview code={PieChartWithTwoLevelCode}>
+  <PieChartWithTwoLevel />
+</CodeHighlightPreview>
+
+## Reference
+
+To learn more about the Pie chart, please see the documentation of [Recharts](https://recharts.org/en-US)

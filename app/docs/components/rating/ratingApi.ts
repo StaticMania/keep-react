@@ -1,30 +1,40 @@
 export const RatingDataApi = [
   {
     id: 1,
-    propsName: 'Size',
+    propsName: 'handleRating',
+    propsType: 'function',
+    propsDescription: 'Get value from the rating',
+    default: '',
+  },
+]
+
+export const RatingStarApi = [
+  {
+    id: 1,
+    propsName: 'value',
     propsType: 'number',
-    propsDescription: 'rating icon size in number format',
-    default: '30',
+    propsDescription: 'Set value in the rating star',
+    default: '1',
   },
   {
     id: 2,
-    propsName: 'filledType',
-    propsType: ['fill', 'regular', 'duotone', 'bold', 'light', 'thin'],
-    propsDescription: 'rating start icon type',
-    default: 'fill',
+    propsName: 'children',
+    propsType: 'ReactNode',
+    propsDescription: 'Pass your own icon as children',
+    default: '',
   },
   {
     id: 3,
-    propsName: 'starType',
-    propsType: ['full', 'half'],
-    propsDescription: 'Rating start icon type.',
-    default: 'full',
+    propsName: 'className',
+    propsType: '',
+    propsDescription: 'Custom class name',
+    default: '',
   },
   {
     id: 4,
-    propsName: 'percentFilled',
-    propsType: 'number',
-    propsDescription: 'rating progress number',
-    default: '70',
+    propsName: 'inputStyle',
+    propsType: '',
+    propsDescription: 'Custom class name for input styles',
+    default: '',
   },
 ]

@@ -1,17 +1,21 @@
-'use client'
-import { Toggle } from '~/src'
+import { Switch } from '../../../../src'
 
 const DefaultSwitch = () => {
-  return <Toggle bgColor="primary" size="md" />
+  return (
+    <div className="px-5 py-3">
+      <Switch onCheckedChange={(value) => console.log(value)} />
+    </div>
+  )
 }
 
-const DefaultSwitchCode = `
-"use client";
-import { Toggle } from "keep-react";
+const DefaultSwitchCode = {
+  'SwitchComponent.tsx': `
+import { Switch } from 'keep-react'
 
 export const SwitchComponent = () => {
-  return <Toggle bgColor="primary" size="md" />;
+  return <Switch />
 }
-`
+`,
+}
 
 export { DefaultSwitch, DefaultSwitchCode }

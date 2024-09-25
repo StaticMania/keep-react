@@ -1,6 +1,6 @@
 {
   "name": "keep-react",
-  "version": "1.0.1",
+  "version": "1.4.3",
   "description": "Official React components built for React and Tailwind CSS",
   "license": "MIT",
   "keywords": [
@@ -15,14 +15,33 @@
   "homepage": "https://react.keepdesign.io/",
   "bugs": "https://github.com/StaticMania/keep-react/issues",
   "files": [
-    "./lib/",
-    "./src"
+    "./lib/"
   ],
   "main": "./lib/cjs/index.js",
-  "style": "./src/main.min.css",
-  "preset": "./src/keep-preset.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "default": "./lib/cjs/index.js"
+      }
+    },
+    "./keepTheme": {
+      "types": "./lib/esm/theme/keepTheme.d.ts",
+      "default": "./lib/cjs/theme/keepTheme.js"
+    },
+    "./utils": {
+      "types": "./lib/esm/utils/cn.d.ts",
+      "default": "./lib/cjs/utils/cn.js"
+    },
+    "./css": {
+      "default": "./lib/cjs/theme/main.min.css"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/StaticMania/keep-react"
@@ -31,84 +50,100 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "newApp": "rm -rf node_modules && rm -rf .next && yarn install",
+    "newApp": "rm -rf node_modules && rm -rf yarn.lock && rm -rf .next && yarn install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:lib": "rm -rf ./lib/ && yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
+    "build:lib": "rm -rf ./lib/ && yarn build:lib:dev",
+    "build:lib:dev": "yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
     "build:css": "css-minify -f ./app/main.css -o ./lib/cjs/theme",
     "build:lib:cjs": "tsc -p tsconfig.lib.json",
-    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm"
+    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm",
+    "lint": "eslint app --ext ts,tsx,js,jsx,cjs --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint app --ext js,jsx,ts,tsx,cjs --fix",
+    "format": "prettier --write 'app/**/*.{js,jsx,ts,tsx,css,html}'"
   },
   "dependencies": {
-    "@floating-ui/react": "^0.25.3",
-    "@headlessui/react": "^1.7.16",
+    "@floating-ui/react": "^0.26.4",
+    "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-switch": "^1.1.0",
     "clsx": "^2.0.0",
-    "phosphor-react": "^1.4.1",
-    "rc-slider": "^10.2.1",
-    "rc-tooltip": "^6.0.1",
-    "react": "18.2.0",
+    "date-fns": "^3.6.0",
+    "deepmerge": "^4.3.1",
+    "embla-carousel": "^8.0.2",
+    "embla-carousel-react": "^8.0.2",
+    "framer-motion": "^11.3.2",
+    "react": "^18.3.1",
     "react-collapse": "^5.1.1",
-    "react-datepicker": "^4.16.0",
-    "react-dom": "18.2.0",
-    "react-indiana-drag-scroll": "^2.2.0",
-    "react-syntax-highlighter": "^15.5.0",
-    "recharts": "^2.8.0",
-    "tailwind-merge": "1.14.0"
+    "react-day-picker": "^8.10.0",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.2.3",
+    "react-focus-lock": "^2.11.2",
+    "react-remove-scroll": "^2.5.9",
+    "recharts": "^2.10.3",
+    "sonner": "^1.4.41",
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
+    "@babel/core": "^7.23.6",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
-    "@next/mdx": "^14.0.2",
-    "@storybook/addon-essentials": "7.5.2",
-    "@storybook/addon-interactions": "7.5.2",
-    "@storybook/addon-links": "7.5.2",
-    "@storybook/addon-onboarding": "1.0.8",
-    "@storybook/blocks": "7.5.2",
-    "@storybook/nextjs": "7.5.2",
-    "@storybook/react": "7.5.2",
-    "@storybook/testing-library": "0.2.2",
-    "@tailwindcss/forms": "^0.5.4",
-    "@types/babel__core": "^7.20.3",
-    "@types/babel__generator": "^7.6.6",
+    "@next/mdx": "^14.0.4",
+    "@tailwindcss/forms": "^0.5.7",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__generator": "^7.6.8",
     "@types/mdx": "^2.0.10",
-    "@types/node": "^20.9.0",
-    "@types/rc-slider": "^9.3.1",
-    "@types/react": "^18.2.22",
-    "@types/react-collapse": "^5.0.2",
-    "@types/react-datepicker": "^4.15.0",
-    "@types/react-dom": "18.2.7",
-    "@types/react-syntax-highlighter": "^15.5.7",
-    "@types/recharts": "^1.8.24",
-    "autoprefixer": "10.4.14",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-collapse": "^5.0.4",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "@types/recharts": "^1.8.29",
+    "@types/uuid": "^9.0.8",
+    "autoprefixer": "^10.4.16",
     "css-minify": "^2.0.0",
-    "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12",
+    "embla-carousel-autoplay": "^8.0.2",
+    "embla-carousel-class-names": "^8.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.1",
     "eslint-plugin-storybook": "^0.6.15",
-    "next": "^13.5.6",
-    "postcss": "^8.4.31",
+    "gray-matter": "^4.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "next": "^14.2.3",
+    "next-nprogress-bar": "^2.1.2",
+    "next-themes": "^0.3.0",
+    "phosphor-react": "^1.4.1",
+    "postcss": "^8.4.32",
     "postcss-loader": "^7.3.3",
-    "prettier": "^3.0.3",
+    "prettier": "^3.1.1",
     "prettier-plugin-css-order": "^2.0.1",
-    "prettier-plugin-tailwindcss": "^0.5.7",
+    "prettier-plugin-tailwindcss": "^0.5.9",
     "prismjs": "^1.29.0",
     "prop-types": "^15.8.1",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
     "rehype-slug": "^6.0.0",
-    "remark-toc": "^8.0.1",
-    "storybook": "^7.5.2",
-    "tailwindcss": "3.3.3",
+    "remark-toc": "^9.0.0",
+    "tailwindcss": "^3.4.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
-    "typescript": "5.1.6"
+    "typescript": "^5.3.3",
+    "uuid": "^9.0.1"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run lint && npm run format"
+    }
+  },
+  "lint-staged": {
+    "app/**/*.{ts,tsx,js,jsx}": [
+      "npm run lint",
+      "npm run format"
     ]
-  },
-  "rules": {
-    "@typescript-eslint/consistent-type-imports": "warn",
-    "@next/next/no-img-element": "off",
-    "jsx-a11y/anchor-is-valid": "off"
   }
 }

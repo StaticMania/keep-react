@@ -1,41 +1,29 @@
-'use client'
-import { Textarea } from '~/src'
+import { Label, Textarea } from '../../../../src'
 
 const TextAreaWithHelperText = () => {
   return (
-    <Textarea
-      id="comment"
-      placeholder="Leave a comment..."
-      withBg={true}
-      border={false}
-      color="info"
-      rows={4}
-      helperText={<span className="text-metal-500 font-medium">Info that helps a user with this field!</span>}
-    />
+    <fieldset className="space-y-1.5 p-2">
+      <Label htmlFor="message">Your message*</Label>
+      <Textarea id="message" placeholder="Write your message here" rows={8} />
+      <p className="text-body-4 font-normal text-metal-300">Message must be a at least 100 words.</p>
+    </fieldset>
   )
 }
 
-const TextAreaWithHelperTextCode = `
-"use client";
-import { Textarea } from "keep-react";
+const TextAreaWithHelperTextCode = {
+  'TextAreaComponent.tsx': `
+import { Label, Textarea } from 'keep-react'
 
-export const TextAreaComponent = () => {
+const TextAreaWithHelperText = () => {
   return (
-    <Textarea
-      id="comment"
-      placeholder="Leave a comment..."
-      withBg={true}
-      border={false}
-      color="info"
-      rows={4}
-      helperText={
-        <span className="font-medium text-metal-500">
-          Info that helps a user with this field!
-        </span>
-      }
-    />
-  );
+    <fieldset className="space-y-1.5 p-2">
+      <Label htmlFor="message">Your message*</Label>
+      <Textarea id="message" placeholder="Write your message here" rows={8} />
+      <p className="text-body-4 font-normal text-metal-300">Message must be a at least 100 words.</p>
+    </fieldset>
+  )
 }
-`
+`,
+}
 
 export { TextAreaWithHelperText, TextAreaWithHelperTextCode }

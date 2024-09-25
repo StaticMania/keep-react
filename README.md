@@ -19,102 +19,115 @@ Keep React is an open-source component library built on Tailwind CSS and React.j
 
 ## Installation
 
-### Vite React Application
+## Vite React Application
 
-After creating a React application with Vite, follow these steps to
-install Keep React:
+Setting Up Keep React in Vite React Application
 
-`Step 1:` Install Tailwind CSS
+`Step 1:` Create a Vite React Application
+
+```console
+npm create vite@latest my-project -- --template react
+cd my-project
+```
+
+`Step 2:` Install Tailwind CSS
 
 ```console
 npm i autoprefixer postcss tailwindcss
 npx tailwindcss init -p
 ```
 
-`Step 2:` Install Keep React:
+`Step 3:` Install Keep React:
 
 ```console
-npm i keep-react
+npm i keep-react phosphor-react
 ```
 
 Or with Yarn
 
 ```console
-yarn add keep-react
+yarn add keep-react phosphor-react
 ```
 
 Or with Pnpm
 
 ```console
-pnpm add keep-react
+pnpm add keep-react phosphor-react
 ```
 
-`Step 3:` Go to the `tailwind.config.js` file and paste the
+`Step 4:` Go to the `tailwind.config.js` file and paste the
 following code:
 
 ```jsx
-import keepPreset from "keep-react/src/keep-preset.js";
-export default {
-  content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
-  presets: [keepPreset],
+import { keepTheme } from 'keep-react/keepTheme'
+
+const config = {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {},
 }
+
+export default keepTheme(config)
 ```
 
-`Step 4:` Add Tailwind CSS to index.css File:
+`Step 5:` Add Tailwind CSS to index.css File:
 
 ```css
-@import "keep-react/src/main.min.css";
+@import 'keep-react/css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-### Next JS Application
+## Next JS Application
 
-You can easily integrate `keep-react` into your Next.js application. Starting from Next.js version 13.4, the app router automatically installs Tailwind CSS, eliminating the need for a separate Tailwind CSS installation. If you have already installed Tailwind CSS as part of the Next.js application setup, you can proceed with Step 2. Otherwise, start with Step 1.
+You can easily integrate `keep-react` into your Next.js application.
 
-After creating a Next JS application, follow these steps to
-install Keep React:
-
-`Step 1:` Install Tailwind CSS
+`Step 1:` Install Next Js Application
 
 ```console
-npm i autoprefixer postcss tailwindcss
-npx tailwindcss init -p
+npx create-next-app@latest
 ```
+
+Ensure that you select `tailwindcss` as a dependency for your application during the setup.
+
+`Would you like to use Tailwind CSS? -- Yes`
 
 `Step 2:` Install Keep React
 
 ```console
-npm i keep-react
+npm i keep-react phosphor-react
 ```
 
 Or with Yarn
 
 ```console
-yarn add keep-react
+yarn add keep-react phosphor-react
 ```
 
 Or with Pnpm
 
 ```console
-pnpm add keep-react
+pnpm add keep-react phosphor-react
 ```
 
 `Step 3:` Go to the `tailwind.config.js` file and paste the
 following code
 
 ```js
-module.exports = {
-    content: ["node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
-    presets: [require("keep-react/src/keep-preset.js")],
-};
+import { keepTheme } from 'keep-react/keepTheme'
+
+const config = {
+  content: ['./components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
+  theme: {},
+}
+
+export default keepTheme(config)
 ```
 
-`Step 4:` Add Tailwind CSS to globals.css File:
+`Step 4:` Add Tailwind CSS to `globals.css` File:
 
 ```css
-@import "keep-react/src/main.min.css";
+@import 'keep-react/css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -125,23 +138,28 @@ Congratulations! You have successfully installed the Keep React. Now you can imp
 ## usage
 
 ```jsx
-'use client';
-import { Button } from "keep-react";
-  const App = () => {
-    return (
-      <Button size="md">Default</Button>
-    )
-  }
-export default App;
+import { Button } from 'keep-react'
+const App = () => {
+  return <Button>Button</Button>
+}
+export default App
 ```
 
 ## Components
 
-The Keep React offers a wide range of components to build your user interfaces. For detailed usage and examples of each component, refer to our [component documentation](https://react.keepdesign.io/docs/getting-started/Introduction).
+The Keep React offers a wide range of components to build your user interfaces. For detailed usage and examples of each component, refer to our [component documentation](https://react.keepdesign.io/docs/getting-started/introduction).
 
 ## Contributing
 
 If you want to contribute to the Keep React, you can follow the [contributing guide](https://github.com/StaticMania/keep-react/blob/main/Contribute.md).
+
+## Contributors
+
+This project exists thanks to all the people who contribute:
+
+<a href="https://github.com/StaticMania/keep-react/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=StaticMania/keep-react"/>
+</a>
 
 ## Figma
 

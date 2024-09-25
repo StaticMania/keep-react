@@ -1,137 +1,100 @@
 'use client'
-import { useState } from 'react'
 import { CloudArrowUp } from 'phosphor-react'
-import { Button, Modal } from '~/src'
+import {
+  Button,
+  Modal,
+  ModalAction,
+  ModalClose,
+  ModalContent,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalTitle,
+} from '../../../../src'
 
 const DefaultModal = () => {
-  const [showModal, setShowModal] = useState(false)
-  const [showModalX, setShowModalX] = useState(false)
-
-  const onClickOne = () => {
-    setShowModal(!showModal)
-  }
-  const onClickTwo = () => {
-    setShowModalX(!showModalX)
-  }
-
   return (
-    <div className="flex flex-wrap items-end gap-2 px-2 py-3">
-      <Button onClick={onClickOne} type="primary">
-        Modal
-      </Button>
-      <Button onClick={onClickTwo} type="primary">
-        Modal With Cross
-      </Button>
-      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModal} position="center">
-        <Modal.Header>Do you want to upload this file?</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </p>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickOne}>
-            Cancel
-          </Button>
-          <Button type="primary" onClick={onClickOne}>
-            Confirm
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      <Modal icon={<CloudArrowUp size={28} color="#1B4DFF" />} size="md" show={showModalX} onClose={onClickTwo}>
-        <Modal.Header>Do you want to upload this file?</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-metal-500 text-body-5 leading-relaxed md:text-body-4">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </p>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickTwo}>
-            Cancel
-          </Button>
-          <Button type="primary" onClick={onClickTwo}>
-            Confirm
-          </Button>
-        </Modal.Footer>
+    <div className="flex items-center justify-center px-5 py-3">
+      <Modal>
+        <ModalAction asChild>
+          <Button>Open Modal</Button>
+        </ModalAction>
+        <ModalContent>
+          <ModalClose className="absolute right-4 top-4" />
+          <ModalHeader className="mb-6 space-y-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
+              <CloudArrowUp size={28} />
+            </div>
+            <div className="space-y-1">
+              <ModalTitle>Update Modal Status</ModalTitle>
+              <ModalDescription>
+                Your document has unsaved changes. Discard or save them as a new page to continue.
+              </ModalDescription>
+            </div>
+          </ModalHeader>
+          <ModalFooter>
+            <ModalClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </ModalClose>
+            <ModalClose asChild>
+              <Button>Confirm</Button>
+            </ModalClose>
+          </ModalFooter>
+        </ModalContent>
       </Modal>
     </div>
   )
 }
 
-const DefaultModalCode = `
-"use client";
-import { useState } from "react";
-import { Modal,Button } from "keep-react";
-import { CloudArrowUp } from "phosphor-react";
+const DefaultModalCode = {
+  'ModalComponent.tsx': `
+'use client'
+import { CloudArrowUp } from 'phosphor-react'
+import {
+  Button,
+  Modal,
+  ModalAction,
+  ModalClose,
+  ModalContent,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalTitle,
+} from 'keep-react'
 
-export const ModalComponent = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [showModalX, setShowModalX] = useState(false);
 
-  const onClickOne = () => {
-    setShowModal(!showModal);
-  };
-  const onClickTwo = () => {
-    setShowModalX(!showModalX);
-  };
-
+export const ModalComponent = () => {  
   return (
-    <>
-      <Button onClick={onClickOne} type='primary' >Modal</Button>
-      <Button onClick={onClickTwo} type='primary' >Modal With Cross</Button>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModal}
-        position="center"
-      >
-        <Modal.Header>Do you want to upload this file?</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-body-5 md:text-body-4 leading-relaxed text-metal-500">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </p>
+    <Modal>
+      <ModalAction asChild>
+        <Button>Open Modal</Button>
+      </ModalAction>
+      <ModalContent>
+        <ModalClose className="absolute right-4 top-4" />
+        <ModalHeader className="mb-6 space-y-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
+            <CloudArrowUp size={28} />
           </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickOne}>
-            Cancel
-          </Button>
-          <Button type="primary" onClick={onClickOne}>
-            Confirm
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      <Modal
-        icon={<CloudArrowUp size={28} color="#1B4DFF" />}
-        size="md"
-        show={showModalX}
-        onClose={onClickTwo}
-      >
-        <Modal.Header>Do you want to upload this file?</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-body-5 md:text-body-4 leading-relaxed text-metal-500">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </p>
+          <div className="space-y-1">
+            <ModalTitle>Update Modal Status</ModalTitle>
+            <ModalDescription>
+              Your document has unsaved changes. Discard or save them as a new page to continue.
+            </ModalDescription>
           </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button type="outlineGray" onClick={onClickTwo}>
-            Cancel
-          </Button>
-          <Button type="primary" onClick={onClickTwo}>
-            Confirm
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
+        </ModalHeader>
+        <ModalFooter>
+          <ModalClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </ModalClose>
+          <ModalClose asChild>
+            <Button>Confirm</Button>
+          </ModalClose>
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
+  )
 }
-`
+`,
+}
 
 export { DefaultModal, DefaultModalCode }

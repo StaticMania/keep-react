@@ -1,139 +1,49 @@
 'use client'
-import { useState } from 'react'
-import { Label, Radio } from '~/src'
+import { Label, Radio } from '../../../../src'
 
 const DefaultRadio = () => {
-  const [selected, setSelected] = useState('')
-  const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value)
-  }
-
   return (
-    <fieldset className="flex flex-col gap-3" id="radio">
-      <legend className="mb-3">Choose your favorite country</legend>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-1"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="USA"
-        />
-        <Label htmlFor="country-1">United States</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-2"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="Germany"
-        />
-        <Label htmlFor="country-2">Germany</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-3"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="Spain"
-        />
-        <Label htmlFor="country-3">Spain</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-4"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="China"
-          disabled={true}
-        />
-        <Label htmlFor="country-4" disabled={true}>
-          China (disabled)
-        </Label>
-      </div>
-    </fieldset>
+    <form className="flex flex-col gap-2">
+      <legend className="mb-1 text-body-3 text-metal-600 dark:text-metal-300">Choose your favorite country</legend>
+      <fieldset className="flex items-center gap-2">
+        <Radio id="bd" name="country" />
+        <Label htmlFor="bd">Bangladesh</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Radio id="usa" name="country" />
+        <Label htmlFor="usa">United State</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Radio id="pk" name="country" />
+        <Label htmlFor="pk">Pakistan</Label>
+      </fieldset>
+    </form>
   )
 }
 
-const DefaultRadioCode = `
-"use client";
-import { useState } from "react";
-import { Label,Radio } from "keep-react";
+const DefaultRadioCode = {
+  'RadioComponent.tsx': `
+import { Label, Radio } from 'keep-react'
 
 export const RadioComponent = () => {
-  const [selected, setSelected] = useState("");
-  const handleOptionChange = (event) => {
-    setSelected(event.target.value);
-  };
-
   return (
-    <fieldset className="flex flex-col gap-3" id="radio">
-      <legend className="mb-3">Choose your favorite country</legend>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-1"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="USA"
-        />
-        <Label htmlFor="country-1">United States</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-2"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="Germany"
-        />
-        <Label htmlFor="country-2">Germany</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-3"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="Spain"
-        />
-        <Label htmlFor="country-3">Spain</Label>
-      </div>
-      <div className="flex items-center gap-2">
-        <Radio
-          sizing="lg"
-          id="country-4"
-          name="favorite-country"
-          selected={selected}
-          onOptionChange={handleOptionChange}
-          radioShape="circle"
-          value="China"
-          disabled={true}
-        />
-        <Label htmlFor="country-4" disabled={true}>
-          China (disabled)
-        </Label>
-      </div>
-    </fieldset>
-  );
+    <form className="flex flex-col gap-2">
+      <legend className="mb-1 text-body-3 text-metal-600 dark:text-metal-300">Choose your favorite country</legend>
+      <fieldset className="flex items-center gap-2">
+        <Radio id="bd" name="country" />
+        <Label htmlFor="bd">Bangladesh</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Radio id="usa" name="country" />
+        <Label htmlFor="usa">United State</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Radio id="pk" name="country" />
+        <Label htmlFor="pk">Pakistan</Label>
+      </fieldset>
+    </form>
+  )
 }
-`
-
+`,
+}
 export { DefaultRadio, DefaultRadioCode }

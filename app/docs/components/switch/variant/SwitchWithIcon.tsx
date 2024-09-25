@@ -1,16 +1,20 @@
-'use client'
-import { Toggle } from '~/src'
+import { Switch } from '../../../../src'
 
 const SwitchWithIcon = () => {
-  return <Toggle bgColor="primary" label="Toggle" size="md" withIcon={true} />
+  return (
+    <div className="px-5 py-3">
+      <Switch variant="icon" />
+    </div>
+  )
 }
 
-const SwitchWithIconCode = `
-"use client";
-import { Toggle } from "keep-react";
+const SwitchWithIconCode = {
+  'SwitchComponent.tsx': `
+import { Switch } from "keep-react"
 
 export const SwitchComponent = () => {
-  return <Toggle bgColor="primary" label="Toggle" size="md" withIcon={true} />;
+  return <Switch variant='icon' />
 }
-`
+`,
+}
 export { SwitchWithIcon, SwitchWithIconCode }

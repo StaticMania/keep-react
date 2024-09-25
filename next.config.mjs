@@ -1,240 +1,218 @@
 /** @type {import('next').NextConfig} */
-import slug from "rehype-slug";
-import mdx from "@next/mdx";
-import tableOfContents from "remark-toc";
+import mdx from '@next/mdx'
+import slug from 'rehype-slug'
+import tableOfContents from 'remark-toc'
 const nextConfig = {
-  pageExtensions: ["mdx", "tsx"],
+  pageExtensions: ['mdx', 'tsx'],
   reactStrictMode: true,
   async redirects() {
     return [
       {
-        source: "/introduction",
-        destination: "/docs/getting-started/Introduction",
+        source: '/introduction',
+        destination: '/docs/getting-started/introduction',
         permanent: true,
       },
       {
-        source: "/installation",
-        destination: "/docs/getting-started/Installation",
+        source: '/alert',
+        destination: '/docs/components/alert',
         permanent: true,
       },
       {
-        source: "/alert",
-        destination: "/docs/components/alert",
+        source: '/avatar',
+        destination: '/docs/components/avatar',
         permanent: true,
       },
       {
-        source: "/avatar",
-        destination: "/docs/components/avatar",
+        source: '/avatarGroup',
+        destination: '/docs/components/avatarGroup',
         permanent: true,
       },
       {
-        source: "/avatarGroup",
-        destination: "/docs/components/avatarGroup",
+        source: '/accordion',
+        destination: '/docs/components/accordion',
         permanent: true,
       },
       {
-        source: "/accordion",
-        destination: "/docs/components/accordion",
+        source: '/button',
+        destination: '/docs/components/button',
         permanent: true,
       },
       {
-        source: "/button",
-        destination: "/docs/components/button",
+        source: '/buttonGroup',
+        destination: '/docs/components/buttonGroup',
         permanent: true,
       },
       {
-        source: "/buttonGroup",
-        destination: "/docs/components/buttonGroup",
+        source: '/badge',
+        destination: '/docs/components/badge',
         permanent: true,
       },
       {
-        source: "/badge",
-        destination: "/docs/components/badge",
+        source: '/breadcrumb',
+        destination: '/docs/components/breadcrumb',
         permanent: true,
       },
       {
-        source: "/breadcrumb",
-        destination: "/docs/components/breadcrumb",
+        source: '/card',
+        destination: '/docs/components/card',
         permanent: true,
       },
       {
-        source: "/card",
-        destination: "/docs/components/card",
+        source: '/carousel',
+        destination: '/docs/components/carousel',
         permanent: true,
       },
       {
-        source: "/carousel",
-        destination: "/docs/components/carousel",
+        source: '/playButton',
+        destination: '/docs/components/playButton',
         permanent: true,
       },
       {
-        source: "/playButton",
-        destination: "/docs/components/playButton",
+        source: '/progress',
+        destination: '/docs/components/progress',
         permanent: true,
       },
       {
-        source: "/progress",
-        destination: "/docs/components/progress",
+        source: '/notification',
+        destination: '/docs/components/notification',
         permanent: true,
       },
       {
-        source: "/notification",
-        destination: "/docs/components/notification",
+        source: '/tooltip',
+        destination: '/docs/components/tooltip',
         permanent: true,
       },
       {
-        source: "/tooltip",
-        destination: "/docs/components/tooltip",
+        source: '/modal',
+        destination: '/docs/components/modal',
         permanent: true,
       },
       {
-        source: "/modal",
-        destination: "/docs/components/modal",
+        source: '/rating',
+        destination: '/docs/components/rating',
         permanent: true,
       },
       {
-        source: "/rating",
-        destination: "/docs/components/rating",
+        source: '/spinner',
+        destination: '/docs/components/spinner',
         permanent: true,
       },
       {
-        source: "/spinner",
-        destination: "/docs/components/spinner",
+        source: '/toast',
+        destination: '/docs/components/toast',
         permanent: true,
       },
       {
-        source: "/toast",
-        destination: "/docs/components/toast",
+        source: '/slider',
+        destination: '/docs/components/slider',
         permanent: true,
       },
       {
-        source: "/slider",
-        destination: "/docs/components/slider",
+        source: '/tabs',
+        destination: '/docs/components/tabs',
         permanent: true,
       },
       {
-        source: "/tabs",
-        destination: "/docs/components/tabs",
+        source: '/sidebar',
+        destination: '/docs/components/sidebar',
         permanent: true,
       },
       {
-        source: "/sidebar",
-        destination: "/docs/components/sidebar",
+        source: '/switch',
+        destination: '/docs/components/switch',
         permanent: true,
       },
       {
-        source: "/switch",
-        destination: "/docs/components/switch",
+        source: '/skeleton',
+        destination: '/docs/components/skeleton',
+        permanent: true,
+      },
+      { source: '/tag', destination: '/docs/components/tag', permanent: true },
+      {
+        source: '/table',
+        destination: '/docs/components/table',
         permanent: true,
       },
       {
-        source: "/skeleton",
-        destination: "/docs/components/skeleton",
-        permanent: true,
-      },
-      { source: "/tag", destination: "/docs/components/tag", permanent: true },
-      {
-        source: "/table",
-        destination: "/docs/components/table",
+        source: '/step',
+        destination: '/docs/components/step',
         permanent: true,
       },
       {
-        source: "/step",
-        destination: "/docs/components/step",
+        source: '/timeline',
+        destination: '/docs/components/timeline',
         permanent: true,
       },
       {
-        source: "/timeline",
-        destination: "/docs/components/timeline",
+        source: '/empty',
+        destination: '/docs/components/empty',
         permanent: true,
       },
       {
-        source: "/empty",
-        destination: "/docs/components/empty",
+        source: '/upload',
+        destination: '/docs/components/upload',
         permanent: true,
       },
       {
-        source: "/statistic",
-        destination: "/docs/components/statistic",
+        source: '/dropdown',
+        destination: '/docs/components/dropdown',
         permanent: true,
       },
       {
-        source: "/upload",
-        destination: "/docs/components/upload",
+        source: '/checkbox',
+        destination: '/docs/components/checkbox',
         permanent: true,
       },
       {
-        source: "/dropdown",
-        destination: "/docs/components/dropdown",
+        source: '/textInput',
+        destination: '/docs/components/textInput',
         permanent: true,
       },
       {
-        source: "/checkbox",
-        destination: "/docs/components/checkbox",
+        source: '/radio',
+        destination: '/docs/components/radio',
         permanent: true,
       },
       {
-        source: "/textInput",
-        destination: "/docs/components/textInput",
+        source: '/textArea',
+        destination: '/docs/components/textArea',
         permanent: true,
       },
       {
-        source: "/radio",
-        destination: "/docs/components/radio",
+        source: '/numberInput',
+        destination: '/docs/components/numberInput',
         permanent: true,
       },
       {
-        source: "/textArea",
-        destination: "/docs/components/textArea",
+        source: '/datePicker',
+        destination: '/docs/components/datePicker',
         permanent: true,
       },
       {
-        source: "/numberInput",
-        destination: "/docs/components/numberInput",
+        source: '/navbar',
+        destination: '/docs/components/navbar',
         permanent: true,
       },
       {
-        source: "/searchBar",
-        destination: "/docs/components/searchBar",
+        source: '/areaChart',
+        destination: '/docs/components/areaChart',
         permanent: true,
       },
-      {
-        source: "/datePicker",
-        destination: "/docs/components/datePicker",
-        permanent: true,
-      },
-      {
-        source: "/checkboxGroup",
-        destination: "/docs/components/checkboxGroup",
-        permanent: true,
-      },
-      {
-        source: "/tree",
-        destination: "/docs/components/tree",
-        permanent: true,
-      },
-      {
-        source: "/navbar",
-        destination: "/docs/components/navbar",
-        permanent: true,
-      },
-      {
-        source: "/areaChart",
-        destination: "/docs/components/areaChart",
-        permanent: true,
-      },
-    ];
+    ]
   },
   images: {
-    domains: ["images.prismic.io"],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "images.prismic.io",
+        protocol: 'https',
+        hostname: 'images.prismic.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
       },
     ],
   },
-};
+}
 
 const withMDX = mdx({
   extension: /\.mdx?$/,
@@ -242,5 +220,5 @@ const withMDX = mdx({
     rehypePlugins: [slug],
     remarkPlugins: [tableOfContents],
   },
-});
-export default withMDX(nextConfig);
+})
+export default withMDX(nextConfig)

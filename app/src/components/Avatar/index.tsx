@@ -1,0 +1,5 @@
+export { Avatar } from './Avatar'
+export { AvatarBadge } from './AvatarBadge'
+export { AvatarGroup } from './AvatarGroup'
+export { AvatarImage } from './AvatarImage'
+export { AvatarText } from './AvatarText'

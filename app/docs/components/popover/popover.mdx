@@ -1,65 +1,44 @@
 import { DefaultPopover, DefaultPopoverCode } from './variant/DefaultPopover'
-import { TriggerVariantPopover, TriggerVariantPopoverCode } from './variant/TriggerVariant'
-import { PopoverPosition, PopoverPositionCode } from './variant/PopoverPosition'
-import { SingleLinePopover, SingleLinePopoverCode } from './variant/SingleLinePopover'
-import { OneParagraphPopover, OneParagraphPopoverCode } from './variant/OneParagraphPopover'
-
+import { CardPopover, CardPopoverCode } from './variant/CardPopover'
+import { IconPopover, IconPopoverCode } from './variant/IconPopover'
 import { popoverAPI } from './popoverApi'
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
-
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-Popover component is a user interface element that displays additional information or options when a user interacts with a specific trigger, such as hovering over text or clicking a button.
+The Popover component serves as a user interface element that conveniently displays additional information or options when a user interacts with a specific trigger. This trigger could be hovering over text, clicking a button, or any other user action.
 
 ## Default Popover
 
 The Default Popover demonstrates a basic popover component.
 
-<CodePreview github="Popover" code={DefaultPopoverCode}>
+<CodeHighlightPreview code={DefaultPopoverCode} className="bg-metal-50 dark:bg-[#0D1015]">
   <DefaultPopover />
-</CodePreview>
+</CodeHighlightPreview>
 
-## One Paragraph Popover
+## Card Popover
 
-The One Paragraph Popover showcases a popover with a single paragraph of text.
+The Card Popover showcases a popover with a card view, providing a visually appealing way to present additional information or options.
 
-<CodePreview github="Popover" code={OneParagraphPopoverCode}>
-  <OneParagraphPopover />
-</CodePreview>
+<CodeHighlightPreview code={CardPopoverCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <CardPopover />
+</CodeHighlightPreview>
 
-## Single Line Popover
+## Icon Popover
 
-The Single Line Popover displays a popover with content confined to a single line.
+The Icon Popover displays a popover with an icon, offering a compact and visually engaging way to provide additional context or actions.
 
-<CodePreview github="Popover" code={SingleLinePopoverCode}>
-  <SingleLinePopover />
-</CodePreview>
-
-## Trigger Variant Popover
-
-The Trigger Variant Popover exhibits different trigger interactions for the popover. There are two variants of trigger interactions such as `trigger='click'` and `trigger='hover'`.
-
-<CodePreview github="Popover" code={TriggerVariantPopoverCode}>
-  <TriggerVariantPopover />
-</CodePreview>
-
-## Popover Position
-
-The Popover Position component demonstrates various popover positions relative to the trigger element. There are lots of position for popover. Please see the `API Reference` sections to apply the position.
-
-<CodePreview github="Popover" code={PopoverPositionCode}>
-  <PopoverPosition />
-</CodePreview>
+<CodeHighlightPreview code={IconPopoverCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <IconPopover />
+</CodeHighlightPreview>
 
 ## API Reference
 
-Explore the available props for the Popover component
+Explore the available props for the Popover component:
 
 <ComponentApi data={popoverAPI} />
 
 ## Reference
 
-To learn more about the Floating-UI, please see the documentation of [Floating-UI](https://floating-ui.com/docs/react)
+To learn more about the Floating-UI library and its capabilities, please refer to the comprehensive documentation provided on the [Floating-UI website](https://floating-ui.com/docs/react).

@@ -1,0 +1,53 @@
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
+import { Heading, HeadingCode } from './variant/Heading'
+import { Display, DisplayCode } from './variant/Display'
+import { BodyTypo, BodyTypoCode } from './variant/Body'
+import { PropertiesTable } from '../../../components/PropertiesTable'
+import { HeadingContent, BodyContent, DisplayContent } from './Content'
+
+## Table of Contents
+
+Typography in Keep React is a reusable className that simplifies text styling, offering a consistent way to format and present text across a web application. It allows developers to easily add properties like font size, line height and letter spacing.
+
+## Heading Typography
+
+The Heading Typography component in Keep React allows you to style headings easily.
+
+<CodeHighlightPreview code={HeadingCode} activeTab={1}>
+  <Heading />
+</CodeHighlightPreview>
+
+Utilities for controlling the font size of an element.
+
+<PropertiesTable>
+  <HeadingContent />
+</PropertiesTable>
+
+## Body Typography
+
+Elevate the readability of your text with the Body Typography component in Keep React.
+
+<CodeHighlightPreview code={BodyTypoCode} activeTab={1}>
+  <BodyTypo />
+</CodeHighlightPreview>
+
+Utilities for controlling the font size of an element.
+
+<PropertiesTable>
+  <BodyContent />
+</PropertiesTable>
+
+## Display Typography
+
+Make a visual impact with the Display Typography component in Keep React.
+
+<CodeHighlightPreview code={DisplayCode} activeTab={1}>
+  <Display />
+</CodeHighlightPreview>
+
+Utilities for controlling the font size of an element.
+
+<PropertiesTable>
+  <DisplayContent />
+</PropertiesTable>

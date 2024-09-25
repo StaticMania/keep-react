@@ -1,17 +1,25 @@
-'use client'
-import { Avatar } from '~/src'
+import { Avatar, AvatarText } from '../../../../src'
 
 const DefaultAvatar = () => {
-  return <Avatar />
+  return (
+    <Avatar>
+      <AvatarText>KR</AvatarText>
+    </Avatar>
+  )
 }
 
-const DefaultAvatarCode = `
-"use client";
-import { Avatar } from "keep-react";
+const DefaultAvatarCode = {
+  'AvatarComponent.tsx': `
+import { Avatar, AvatarText } from 'keep-react'
 
 export const AvatarComponent = () => {
-  return <Avatar/>;
+  return (
+    <Avatar>
+      <AvatarText>KR</AvatarText>
+    </Avatar>
+  )
 }
-`
+`,
+}
 
 export { DefaultAvatar, DefaultAvatarCode }

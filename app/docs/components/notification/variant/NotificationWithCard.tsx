@@ -1,100 +1,91 @@
-'use client'
-import { useState } from 'react'
-import { Button, Notification } from '~/src'
+import Image from 'next/image'
+import {
+  Button,
+  Notification,
+  NotificationAction,
+  NotificationClose,
+  NotificationContent,
+  NotificationDescription,
+  NotificationFooter,
+  NotificationTitle,
+} from '../../../../src'
 
 const NotificationWithCard = () => {
-  const [showNotification, setShowNotification] = useState(false)
-  const onDismiss = () => {
-    setShowNotification(!showNotification)
-  }
-
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification)
-  }
   return (
-    <div className="px-2 py-3">
-      <Button type="primary" onClick={handleShowNotification}>
-        Show Notification
-      </Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        position="bottom-right"
-        className="max-w-sm"
-        headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
-        additionalContent={
-          <div className="mt-2.5 text-body-5 font-normal text-metal-500 md:text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info" width="half">
-                Download
-              </Button>
-              <Button size="xs" type="outlineGray" color="info" className="ml-3" width="half">
-                View Figma
-              </Button>
-            </div>
+    <div className="flex items-center justify-center px-5 py-3">
+      <Notification>
+        <NotificationAction asChild>
+          <Button>Open Notification</Button>
+        </NotificationAction>
+        <NotificationContent className="mb-2 max-w-xs space-y-4 overflow-hidden rounded-xl">
+          <Image
+            src="https://via.placeholder.com/600x400"
+            alt="image"
+            className="rounded-lg"
+            width={600}
+            height={400}
+          />
+          <div>
+            <NotificationTitle>Can we store cookies?</NotificationTitle>
+            <NotificationDescription>
+              Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </NotificationDescription>
           </div>
-        }>
-        <h3 className="text-body-4 font-medium text-metal-700 md:text-body-2">Welcome Keep Design</h3>
+          <NotificationFooter>
+            <NotificationClose asChild>
+              <Button>Accept</Button>
+            </NotificationClose>
+            <NotificationClose asChild>
+              <Button variant="outline">Review</Button>
+            </NotificationClose>
+          </NotificationFooter>
+        </NotificationContent>
       </Notification>
     </div>
   )
 }
 
-const NotificationWithCardCode = `
-"use client";
-import { useState } from "react";
-import { Button, Notification } from "keep-react";
+const NotificationWithCardCode = {
+  'NotificationComponent.tsx': `
+import Image from 'next/image'
+import {
+  Button,
+  Notification,
+  NotificationAction,
+  NotificationClose,
+  NotificationContent,
+  NotificationDescription,
+  NotificationFooter,
+  NotificationTitle,
+} from 'keep-react'
 
 export const NotificationComponent = () => {
-  
-  const [showNotification, setShowNotification] = useState(false);
-  const onDismiss = () => {
-    setShowNotification(!showNotification);
-  };
-
-  const handleShowNotification = () => {
-    setShowNotification(!showNotification);
-  };
   return (
-    <>
-      <Button type="primary" onClick={handleShowNotification}>Show Notification</Button>
-      <Notification
-        showNotification={showNotification}
-        dismiss={!showNotification}
-        onDismiss={onDismiss}
-        position="bottom-right"
-        className="max-w-sm"
-        headerBannerSrc="https://images.prismic.io/staticmania/58497239-b7e5-44e9-8185-25d467f6c551_banner.png?auto=compress,format"
-        additionalContent={
-          <div className="mt-2.5 text-body-5 md:text-body-4 font-normal text-metal-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry.
-            <div className="mt-6 flex">
-              <Button size="xs" type="primary" color="info" width="half">
-                Download
-              </Button>
-              <Button
-                size="xs"
-                type="outlineGray"
-                color="info"
-                className="ml-3"
-                width="half"
-              >
-                View Figma
-              </Button>
-            </div>
-          </div>
-        }
-      >
-        <h3 className="text-body-4 md:text-body-2 font-medium text-metal-700">
-          Welcome Keep Design
-        </h3>
-      </Notification>
-    </>
-  );
+    <Notification>
+      <NotificationAction asChild>
+        <Button>Open Notification</Button>
+      </NotificationAction>
+      <NotificationContent className="mb-2 max-w-xs space-y-4 overflow-hidden rounded-xl">
+        <Image src="https://via.placeholder.com/600x400" alt="image" className="rounded-lg" width={600} height={400} />
+        <div>
+          <NotificationTitle>Can we store cookies?</NotificationTitle>
+          <NotificationDescription>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </NotificationDescription>
+        </div>
+        <NotificationFooter>
+          <NotificationClose asChild>
+            <Button>Accept</Button>
+          </NotificationClose>
+          <NotificationClose asChild>
+            <Button variant="outline">Review</Button>
+          </NotificationClose>
+        </NotificationFooter>
+      </NotificationContent>
+    </Notification>
+  )
 }
-`
+`,
+}
 
 export { NotificationWithCard, NotificationWithCardCode }

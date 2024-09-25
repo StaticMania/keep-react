@@ -21,31 +21,16 @@ export const dropdownAPIData = [
   },
   {
     id: 2,
-    propsName: 'trigger',
-    propsType: ['hover', 'click'],
-    propsDescription: 'Specifies the trigger behavior for the dropdown.',
-    default: 'click',
-  },
-  {
-    id: 3,
-    propsName: 'label',
-    propsType: 'string',
-    propsDescription: 'The content to display within the dropdown.',
-    default: 'Dropdown Button',
-  },
-
-  {
-    id: 4,
-    propsName: 'floatingArrow',
+    propsName: 'showArrow',
     propsType: 'boolean',
     propsDescription: 'Enables or disables the floating arrow within the dropdown.',
     default: 'false',
   },
   {
-    id: 5,
-    propsName: 'arrowIcon',
-    propsType: 'boolean',
-    propsDescription: 'Enables or disables the arrow icon.',
-    default: 'true',
+    id: 3,
+    propsName: 'trigger',
+    propsType: ['hover', 'click', 'focus'],
+    propsDescription: 'Trigger mode for displaying the dropdown.',
+    default: 'click',
   },
 ]

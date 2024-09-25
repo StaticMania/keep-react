@@ -1,10 +1,11 @@
 import type { Metadata, NextPage } from 'next'
-import { DocsContentLayout } from '~/components/DocsContentLayout'
 import PaginationDocs from '.'
+import { DocsContentLayout } from '../../../components/DocsContentLayout'
+import EditPage from '../../../components/EditPage'
 
 export const metadata: Metadata = {
   description:
-    'The Pagination component provides a user-friendly way to navigate through large sets of content by breaking it down into manageable pages. It enhances user experience by allowing easy access to various sections of data or results, such as articles, search results, or product listings, through page numbers or next/previous controls.',
+    'The Pagination component enhances user experience by providing a user-friendly way to navigate through large sets of content. Whether its articles, search results, or product listings, Pagination breaks down the data into manageable pages, allowing users to easily access different sections.',
   title: 'Pagination - Keep React',
 }
 
@@ -12,6 +13,7 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <PaginationDocs />
+      <EditPage pageLink="/docs/components/pagination" nextPageLink="/docs/components/popover" nextPageName="Popover" />
     </DocsContentLayout>
   )
 }

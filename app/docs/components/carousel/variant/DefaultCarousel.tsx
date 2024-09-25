@@ -1,72 +1,72 @@
-'use client'
-import Image from 'next/image'
-import { Carousel } from '~/src'
+import {
+  Carousel,
+  CarouselButtons,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselItem,
+  CarouselNextButton,
+  CarouselPrevButton,
+  CarouselSlides,
+} from '../../../../src'
 
 const DefaultCarousel = () => {
   return (
-    <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image
-        src="https://images.prismic.io/staticmania/ecd45179-4b86-4a34-b245-0078e022db5a_1.png?auto=compress,format"
-        alt="slider-1"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/dee3ff09-3ddc-4340-bc8f-ea0028bb4a61_2.png?auto=compress,format"
-        alt="slider-2"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/a5c7143d-24dd-4531-9f00-243f4eb27e28_3.png?auto=compress,format"
-        alt="slider-3"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/c5cf46a8-b10c-43c8-a60e-6692838cdee1_4.png?auto=compress,format"
-        alt="slider-4"
-        height={400}
-        width={910}
-      />
+    <Carousel>
+      <CarouselSlides>
+        {[1, 2, 3, 4, 5].map((slide) => (
+          <CarouselItem key={slide}>
+            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-metal-50 dark:border-metal-900 dark:bg-metal-900">
+              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselSlides>
+      <CarouselControl>
+        <CarouselButtons>
+          <CarouselPrevButton />
+          <CarouselNextButton />
+        </CarouselButtons>
+        <CarouselIndicators />
+      </CarouselControl>
     </Carousel>
   )
 }
 
-const DefaultCarouselCode = `
-"use client";
-import Image from "next/image";
-import { Carousel } from "keep-react";
+const DefaultCarouselCode = {
+  'CarouselComponent.tsx': `
+import {
+  Carousel,
+  CarouselButtons,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselItem,
+  CarouselNextButton,
+  CarouselPrevButton,
+  CarouselSlides,
+} from 'keep-react'
 
-export const CarouselComponent = () => {
+export const CarouselComponent = () => (
   return (
-    <Carousel slideInterval={5000} showControls={true} indicators={true}>
-      <Image
-        src="https://images.prismic.io/staticmania/ecd45179-4b86-4a34-b245-0078e022db5a_1.png?auto=compress,format"
-        alt="slider-1"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/dee3ff09-3ddc-4340-bc8f-ea0028bb4a61_2.png?auto=compress,format"
-        alt="slider-2"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/a5c7143d-24dd-4531-9f00-243f4eb27e28_3.png?auto=compress,format"
-        alt="slider-3"
-        height={400}
-        width={910}
-      />
-      <Image
-        src="https://images.prismic.io/staticmania/c5cf46a8-b10c-43c8-a60e-6692838cdee1_4.png?auto=compress,format"
-        alt="slider-4"
-        height={400}
-        width={910}
-      />
+    <Carousel>
+      <CarouselSlides>
+        {[1, 2, 3, 4, 5].map((slide) => (
+          <CarouselItem key={slide}>
+            <div className="flex h-96 items-center justify-center rounded-xl border border-metal-100 bg-metal-50 dark:border-metal-900 dark:bg-metal-900">
+              <h1 className="text-heading-1 font-medium text-metal-900 dark:text-white">{slide}</h1>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselSlides>
+      <CarouselControl>
+        <CarouselButtons>
+          <CarouselPrevButton />
+          <CarouselNextButton />
+        </CarouselButtons>
+        <CarouselIndicators />
+      </CarouselControl>
     </Carousel>
   )
 }
-`
+`,
+}
 export { DefaultCarousel, DefaultCarouselCode }

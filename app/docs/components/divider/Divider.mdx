@@ -1,0 +1,50 @@
+import { DefaultDivider, DefaultDividerCode } from './variant/DefaultDivider'
+import { DividerColor, DividerColorCode } from './variant/DividerColor'
+import { DividerSize, DividerSizeCode } from './variant/DividerSize'
+import { DividerAlign, DividerAlignCode } from './variant/DividerAlign'
+
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
+import { dividerDataAPI } from './DividerAPI'
+
+## Table of Contents
+
+The Divider component serves as a visual separator, helping to organize content and improve readability in user interfaces. It allows you to add horizontal lines or dividers between different sections of a page or within a component. With customizable options for color, size, and alignment, the Divider component enhances the overall design and structure of your application.
+
+## Default Divider
+
+Displays a default divider with the secondary color.
+
+<CodeHighlightPreview code={DefaultDividerCode}>
+  <DefaultDivider />
+</CodeHighlightPreview>
+
+## Divider color variant
+
+You can customize the color of the divider using the `color` prop. Available options are `'primary'`, `'secondary'`, `'success'`, `'warning'`, and `'error'`.
+
+<CodeHighlightPreview code={DividerColorCode}>
+  <DividerColor />
+</CodeHighlightPreview>
+
+## Divider size variant
+
+Adjust the size of the divider with the `size` prop. Options include `'sm'`, `'md'`, `'lg'`, `'xl'`, and `'2xl'`.
+
+<CodeHighlightPreview code={DividerSizeCode}>
+  <DividerSize />
+</CodeHighlightPreview>
+
+## Divider align variant
+
+Control the alignment of the divider with the `variant` prop. Choose from `'start'`, `'end'`, or `'center'`.
+
+<CodeHighlightPreview code={DividerAlignCode}>
+  <DividerAlign />
+</CodeHighlightPreview>
+
+## API Reference
+
+Here is a list of the props that you can pass to the Divider component:
+
+<ComponentApi data={dividerDataAPI} />

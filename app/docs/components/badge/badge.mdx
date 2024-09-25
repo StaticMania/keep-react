@@ -1,13 +1,11 @@
 import { DefaultBadge, DefaultBadgeCode } from './variant/DefaultBadge'
-import { SizesOfBadge, SizesOfBadgeCode } from './variant/SizesOfBadge'
 import { VariantOfBadge, VariantOfBadgeCode } from './variant/VariantOfBadge'
-import { IconWithBadge, IconWithBadgeCode } from './variant/IconWithBadge'
-import { BadgeWithDot, BadgeWithDotCode } from './variant/BadgeWithDot'
-import { OnlyIconOfBadge, OnlyIconOfBadgeCode } from './variant/BadgeWithOnlyIcon'
+import { ColorsOfBadge, ColorsOfBadgeCode } from './variant/ColorsOfBadge'
+
 import { badgeApiData } from './badgeApi'
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -15,51 +13,27 @@ The Badge component in the Keep React allows you to add visual indicators or lab
 
 ## Default Badge
 
-The default badge offers a simple yet effective way to highlight information. It's a versatile component that can be customized to suit various design requirements.
+The default badge is a versatile component that allows you to add visual indicators or labels to highlight specific information. It offers a simple yet effective way to enhance your design.
 
-<CodePreview github="Badge" code={DefaultBadgeCode}>
+<CodeHighlightPreview code={DefaultBadgeCode}>
   <DefaultBadge />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Sizes of Badge
+## Colors of Badge
 
-The Badge component provides two available sizes: `xs` (extra small) and `sm` (small), allowing you to choose the appropriate size for your specific design needs.
+Here are the available color variants for the Badge component, each with its own unique color scheme: `primary` `secondary` `success` `warning` and `error`.
 
-<CodePreview github="Badge" code={SizesOfBadgeCode}>
-  <SizesOfBadge />
-</CodePreview>
+<CodeHighlightPreview code={ColorsOfBadgeCode}>
+  <ColorsOfBadge />
+</CodeHighlightPreview>
 
 ## Variant of Badge
 
-The Badge component offers three variants: `colorType="light"`,`colorType="strong"` and `badgeType="text"`. These variants provide options for different visual styles, allowing you to choose the one that best suits your design and helps highlight the badge content effectively.
+The Badge component offers three variants: `variant="base"`, `variant="border"`, and `variant="background"`. These variants provide options for different visual styles, allowing you to choose the one that best suits your design and effectively highlights the badge content.
 
-<CodePreview github="Badge" code={VariantOfBadgeCode}>
+<CodeHighlightPreview code={VariantOfBadgeCode}>
   <VariantOfBadge />
-</CodePreview>
-
-## Icon With Badge
-
-The Badge component can be combined with an icon to create an enhanced visual element that conveys additional information or status. You can position the icon on either the `iconPosition="left"` or `iconPosition="right"` side of the badge, allowing you to customize the badge's appearance and ensure its compatibility with your design.
-
-<CodePreview github="Badge" code={IconWithBadgeCode}>
-  <IconWithBadge />
-</CodePreview>
-
-## Badge With Dot
-
-You can display a badge with a dot by setting the `dot` prop to `true`. Additionally, you can customize the position of the dot by using the `dotPosition` prop, allowing you to choose between `left` and `right`.
-
-<CodePreview github="Badge" code={BadgeWithDotCode}>
-  <BadgeWithDot />
-</CodePreview>
-
-## Only Icon With Badge
-
-You can utilize the Badge component to create badges with just icons. This is especially useful when you want to display a compact and visually informative badge alongside an icon.
-
-<CodePreview github="Badge" code={OnlyIconOfBadgeCode}>
-  <OnlyIconOfBadge />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 

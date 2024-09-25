@@ -1,220 +1,150 @@
-'use client'
-import Link from 'next/link'
-import { Alert } from '~/src'
-import { useState } from 'react'
-import { CheckCircle, Info, WarningCircle, XCircle } from 'phosphor-react'
+import {
+  Alert,
+  AlertContainer,
+  AlertDescription,
+  AlertDismiss,
+  AlertIcon,
+  AlertLink,
+  AlertTitle,
+} from '../../../../src'
 
 const AlertWithColorVariant = () => {
-  const [showAlert, setShowAlert] = useState(false)
-  const onDismiss = () => {
-    setShowAlert(!showAlert)
-  }
   return (
     <div className="space-y-5">
-      <Alert
-        color="info"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="text-metal-500 mt-1 text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        icon={<Info size={24} color="#0F3CD9" />}
-        title="Default message - make it short"></Alert>
-      <Alert
-        color="gray"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        withBorderAccentPosition="left"
-        onDismiss={onDismiss}
-        additionalContent={
-          <div className="text-metal-500 mt-1 text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        title="Default message - make it short"
-        icon={<Info size={24} color="gray" />}></Alert>
-      <Alert
-        color="success"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="text-metal-500 mt-1 text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        title="Default message - make it short"
-        icon={<CheckCircle size={24} color="#0A9952" />}
-      />
-      <Alert
-        color="warning"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="text-metal-500 mt-1 text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        icon={<WarningCircle size={24} color="#D8A800" />}
-        title="Default message - make it short"
-      />
-      <Alert
-        color="error"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="text-metal-500 mt-1 text-body-4">
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        icon={<XCircle size={24} color="#E92215" />}
-        title="Default message - make it short"
-      />
+      <Alert color="primary">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Primary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="secondary">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Secondary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="success">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Success Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="warning">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Warning Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="error">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Error Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
     </div>
   )
 }
 
-const AlertWithColorVariantCode = `
-"use client";
-import Link from "next/link";
-import { useState } from "react";
-import { Alert } from "keep-react";
-import { CheckCircle, Info, WarningCircle, XCircle } from "phosphor-react";
+const AlertWithColorVariantCode = {
+  'AlertComponent.tsx': `
+import {
+  Alert,
+  AlertContainer,
+  AlertDescription,
+  AlertDismiss,
+  AlertIcon,
+  AlertLink,
+  AlertTitle,
+} from 'keep-react'
 
 export const AlertComponent = () => {
-  const [showAlert, setShowAlert] = useState(false);
-  const onDismiss = () => {
-    setShowAlert(!showAlert);
-  };
   return (
     <div className="space-y-5">
-      <Alert
-        color="info"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="mt-1 text-body-4 text-metal-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        icon={<Info size={24} color="#0F3CD9" />}
-        title="Default message - make it short"
-      ></Alert>
-      <Alert
-        color="gray"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        withBorderAccentPosition="left"
-        onDismiss={onDismiss}
-        additionalContent={
-          <div className="mt-1 text-body-4 text-metal-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        title="Default message - make it short"
-        icon={<Info size={24} color="gray" />}
-      ></Alert>
-      <Alert
-        color="success"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="mt-1 text-body-4 text-metal-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        title="Default message - make it short"
-        icon={<CheckCircle size={24} color="#0A9952" />}
-      />
-      <Alert
-        color="warning"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="mt-1 text-body-4 text-metal-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        icon={<WarningCircle size={24} color="#D8A800" />}
-        title="Default message - make it short"
-      />
-      <Alert
-        color="error"
-        rounded={true}
-        withBorder={true}
-        withBorderAccent
-        onDismiss={onDismiss}
-        withBorderAccentPosition="left"
-        additionalContent={
-          <div className="mt-1 text-body-4 text-metal-500">
-            Default message - Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry
-            <Link href="/" className="ml-2 text-primary-500 underline">
-              Link style
-            </Link>
-          </div>
-        }
-        icon={<XCircle size={24} color="#E92215" />}
-        title="Default message - make it short"
-      />
+      <Alert color="primary">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Primary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="secondary">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Secondary Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="success">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Success Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="warning">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Warning Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
+      <Alert color="error">
+        <AlertContainer>
+          <AlertIcon />
+          <AlertTitle>Error Alert</AlertTitle>
+          <AlertDescription>A short description followed by two actions items.</AlertDescription>
+        </AlertContainer>
+        <AlertContainer>
+          <AlertLink href="/">Learn More</AlertLink>
+          <AlertDismiss />
+        </AlertContainer>
+      </Alert>
     </div>
-  );
+  )
 }
-`
+
+`,
+}
 
 export { AlertWithColorVariant, AlertWithColorVariantCode }

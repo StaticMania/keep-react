@@ -1,33 +1,33 @@
-'use client'
-import { Rating } from '~/src'
+import { Rating, RatingStar } from '../../../../src'
 
 const DefaultRating = () => {
   return (
-    <Rating size={30}>
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
+    <Rating>
+      <RatingStar value={1} />
+      <RatingStar value={2} />
+      <RatingStar value={3} />
+      <RatingStar value={4} />
+      <RatingStar value={5} />
     </Rating>
   )
 }
 
-const DefaultRatingCode = `
-"use client";
-import { Rating } from "keep-react";
+const DefaultRatingCode = {
+  'RatingComponent.tsx': `
+import { Rating, RatingStar }  from 'keep-react'
 
 export const RatingComponent = () => {
   return (
-    <Rating size={30}>
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
-      <Rating.Star filledType="fill" />
+    <Rating>
+      <RatingStar value={1} />
+      <RatingStar value={2} />
+      <RatingStar value={3} />
+      <RatingStar value={4} />
+      <RatingStar value={5} />
     </Rating>
-  );
+  )
 }
-`
+`,
+}
 
 export { DefaultRating, DefaultRatingCode }

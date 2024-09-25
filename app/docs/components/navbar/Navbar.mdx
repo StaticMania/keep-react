@@ -1,68 +1,34 @@
-import { DefaultNavbar, DefaultNavbarCode } from './variant/DefaultNavbar'
-import { NavbarWithSearchBar, NavbarWithSearchBarCode } from './variant/NavbarWithSearchBar'
-import { NavbarWithMobileMenu, NavbarWithMobileMenuCode } from './variant/NavbarWithMobileMenu'
-import { NavbarWithCenterLogo, NavbarWithCenterLogoCode } from './variant/NavbarWithCenterLogo'
+import { NavbarLayout1, NavbarLayout1Code } from './variant/NavbarLayout1'
+import { NavbarLayout2, NavbarLayout2Code } from './variant/NavbarLayout2'
+import { NavbarLayout3, NavbarLayout3Code } from './variant/NavbarLayout3'
+import { NavbarLayout4, NavbarLayout4Code } from './variant/NavbarLayout4'
 
-import { EcommerceNavbar, EcommerceNavbarCode } from './variant/EcommerceNavbar'
-
-import { NavbarApiData, NavLinksAPIData } from './NavbarApi'
-
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
 The Navbar component is a fundamental UI element used in web development to create a navigation bar at the top of a webpage. It provides a structured and organized way to display links, menus, and other navigation-related content to users.
 
-## Default Navbar
+## Navbar Layout 1
 
-It provides a sleek and modern default style that developers can use as a starting point for their navigation needs.
+<CodeHighlightPreview code={NavbarLayout1Code}>
+  <NavbarLayout1 />
+</CodeHighlightPreview>
 
-<CodePreview github="Navigation" code={DefaultNavbarCode}>
-  <DefaultNavbar />
-</CodePreview>
+## Navbar Layout 2
 
-## Navbar With Center Logo
+<CodeHighlightPreview code={NavbarLayout2Code}>
+  <NavbarLayout2 />
+</CodeHighlightPreview>
 
-It is ideal for web applications and websites that want to prominently showcase their brand or logo at the center of the navigation bar.
+## Navbar Layout 3
 
-<CodePreview github="Navigation" code={NavbarWithCenterLogoCode}>
-  <NavbarWithCenterLogo />
-</CodePreview>
+<CodeHighlightPreview code={NavbarLayout3Code}>
+  <NavbarLayout3 />
+</CodeHighlightPreview>
 
-## Navbar With Mobile Menu
+## Navbar Layout 4
 
-It includes a collapsible menu that is hidden by default and can be toggled open and closed by tapping on a menu icon.
-
-<CodePreview github="Navigation" code={NavbarWithMobileMenuCode}>
-  <NavbarWithMobileMenu />
-</CodePreview>
-
-## Navbar With SearchBar
-
-This component is designed to enhance user interactions by providing a convenient search feature within the navigation bar.
-
-<CodePreview github="Navigation" code={NavbarWithSearchBarCode}>
-  <NavbarWithSearchBar />
-</CodePreview>
-
-## Ecommerce Navbar
-
-This component is designed to enhance user interactions by providing a convenient search feature within the navigation bar.
-
-<CodePreview github="Navigation" code={EcommerceNavbarCode}>
-  <EcommerceNavbar />
-</CodePreview>
-
-## Navbar API Reference
-
-Explore the available props for the `<Navbar>` component
-
-<ComponentApi data={NavbarApiData} />
-
-## Nav Link API Reference
-
-Explore the available props for the `<Navbar.Link>` component
-
-<ComponentApi data={NavLinksAPIData} />
+<CodeHighlightPreview code={NavbarLayout4Code}>
+  <NavbarLayout4 />
+</CodeHighlightPreview>

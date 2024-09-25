@@ -1,55 +1,38 @@
-'use client'
-import { Button, Tooltip } from '~/src'
+import { Tooltip, TooltipAction, TooltipContent } from '../../../../src'
 
 const TooltipTriggering = () => {
   return (
-    <div className="flex flex-wrap items-end gap-2">
-      <Tooltip content="Tooltips text here" trigger="hover" placement="top" animation="duration-300" style="dark">
-        <Button size="sm" type="primary">
-          Tooltip Hover
-        </Button>
-      </Tooltip>
-      <Tooltip content="Tooltips text here" trigger="click" placement="bottom" animation="duration-300" style="dark">
-        <Button size="sm" type="primary">
-          Tooltip Click
-        </Button>
-      </Tooltip>
+    <div className="flex h-44 items-center justify-center gap-5">
+      {['click', 'hover', 'focus'].map((trigger) => (
+        <Tooltip trigger={trigger as 'click' | 'hover' | 'focus'} key={trigger}>
+          <TooltipAction>{trigger}</TooltipAction>
+          <TooltipContent>
+            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+          </TooltipContent>
+        </Tooltip>
+      ))}
     </div>
   )
 }
 
-const TooltipTriggeringCode = `
-"use client";
-import {Tooltip,Button } from "keep-react";
+const TooltipTriggeringCode = {
+  'TooltipComponent.tsx': `
+import { Tooltip, TooltipAction, TooltipContent } from 'keep-react'
 
 export const TooltipComponent = () => {
   return (
     <>
-      <Tooltip
-        content="Tooltips text here"
-        trigger="hover"
-        placement="top"
-        animation="duration-300"
-        style="dark"
-      >
-        <Button size="sm" type="primary">
-          Tooltip Hover
-        </Button>
-      </Tooltip>
-      <Tooltip
-        content="Tooltips text here"
-        trigger="click"
-        placement="bottom"
-        animation="duration-300"
-        style="dark"
-      >
-        <Button size="sm" type="primary">
-          Tooltip Click
-        </Button>
-      </Tooltip>
+      {['click', 'hover', 'focus'].map((trigger) => (
+        <Tooltip trigger={trigger} key={trigger}>
+          <TooltipAction>{trigger}</TooltipAction>
+          <TooltipContent>
+            <p className="text-body-5 font-medium text-white">Tooltips - Title here</p>
+          </TooltipContent>
+        </Tooltip>
+      ))}
     </>
-  );
+  )
 }
-`
-
+`,
+}
 export { TooltipTriggering, TooltipTriggeringCode }

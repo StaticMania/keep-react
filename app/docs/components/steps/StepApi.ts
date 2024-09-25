@@ -1,89 +1,26 @@
-export const stepPropsAPI = [
+export const StepPointAPI = [
   {
     id: 1,
-    propsName: 'stepType',
-    propsType: ['point', 'icon', 'number'],
-    propsDescription: 'Type of step item to display.',
-    default: 'point',
-  },
-  {
-    id: 2,
-    propsName: 'children',
-    propsType: 'ReactNode',
-    propsDescription: 'Optional children elements.',
-    default: 'ReactNode',
-  },
-  {
-    id: 3,
-    propsName: 'borderType',
-    propsType: ['solid', 'dashed', 'none'],
-    propsDescription: 'Type of border for the step item.',
-    default: 'solid',
-  },
-]
-
-export const StepItemsAPI = [
-  {
-    id: 1,
-    propsName: 'title',
-    propsType: 'string',
-    propsDescription: 'Title for the step item.',
-    default: 'text',
-  },
-  {
-    id: 2,
-    propsName: 'description',
-    propsType: 'string',
-    propsDescription: 'Description for the step item.',
-    default: 'text',
-  },
-  {
-    id: 3,
-    propsName: 'numberOfSteps',
-    propsType: 'number',
-    propsDescription: 'The step number for this item.',
-    default: '1',
-  },
-  {
-    id: 4,
     propsName: 'completed',
     propsType: 'boolean',
     propsDescription: 'Indicates if the step is completed.',
     default: 'false',
   },
   {
-    id: 5,
-    propsName: 'icon',
-    propsType: 'ReactNode',
-    propsDescription: 'An optional icon element to display.',
-    default: 'Icon',
+    id: 2,
+    propsName: 'variant',
+    propsType: ['default', 'border', 'icon'],
+    propsDescription: 'Variant of the step point.',
+    default: 'default',
   },
+]
+
+export const StepLineAPI = [
   {
-    id: 6,
-    propsName: 'active',
+    id: 1,
+    propsName: 'completed',
     propsType: 'boolean',
-    propsDescription: 'Indicates if the step is active.',
+    propsDescription: 'Indicates if the step line is completed.',
     default: 'false',
-  },
-  {
-    id: 7,
-    propsName: 'titleStyle',
-    propsType: 'string',
-    propsDescription: 'Custom class to style the step title.',
-    default: 'None',
-  },
-  {
-    id: 8,
-    propsName: 'descriptionStyle',
-    propsType: 'string',
-    propsDescription: 'Custom class to style the step description.',
-    default: 'None',
-  },
-  {
-    id: 9,
-    propsName: 'stepStyle',
-    propsType: 'string',
-    propsDescription: 'Custom class to style the step type.',
-    default: 'None',
   },
 ]

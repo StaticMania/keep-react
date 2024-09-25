@@ -1,13 +1,9 @@
 import { DefaultRating, DefaultRatingCode } from './variant/DefaultRating'
-import { VariantOfRating, VariantOfRatingCode } from './variant/RatingVariant'
+import { ValueFromRating, ValueFromRatingCode } from './variant/ValueFromRating'
 import { RatingTypes, RatingTypesCode } from './variant/RatingTypes'
-import { RatingWithProgress, RatingWithProgressCode } from './variant/RatingWithProgress'
-import { RatingDataApi } from './ratingApi'
-
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
-
+import { RatingDataApi, RatingStarApi } from './ratingApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -17,36 +13,34 @@ The Rating Component in the Keep React allows users to provide ratings for vario
 
 The "Default Rating" is a pre-configured or initial rating value within the context of a rating component. It represents the default score assigned to an item or content when a user hasn't provided a specific rating.
 
-<CodePreview github="Rating" code={DefaultRatingCode}>
+<CodeHighlightPreview code={DefaultRatingCode}>
   <DefaultRating />
-</CodePreview>
-
-## Rating Variant
-
-Rating Variant refers to the different visual styles or appearances that can be applied to a rating component in order to match various design preferences or themes. Each variant alters the way the rating symbols.The variants you've mentioned, `fill` `regular` `duotone` `bold` `light` and `thin` likely correspond to different styles.
-
-<CodePreview github="Rating" code={VariantOfRatingCode}>
-  <VariantOfRating />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Rating Types
 
-Rating Type refers to the specific behavior and appearance of individual rating symbols (such as stars) within a rating component. The two types you've mentioned, `starType` being `full` or `half` define how each rating symbol is displayed based on the level of rating assigned.
+You can use your own rating icon to display the rating star.
 
-<CodePreview github="Rating" code={RatingTypesCode}>
+<CodeHighlightPreview code={RatingTypesCode}>
   <RatingTypes />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Rating With Progress
+## Value From Rating
 
-The Rating component appears to be used to render each rating item. The `percentFilled` prop is utilized to indicate the percentage of the rating that should be filled. This creates a visually meaningful representation of each rating with varying levels of filled content, akin to a progress bar that indicates the level of the rating's completeness.
+You can access the value from the rating.
 
-<CodePreview github="Rating" code={RatingWithProgressCode}>
-  <RatingWithProgress />
-</CodePreview>
+<CodeHighlightPreview code={ValueFromRatingCode}>
+  <ValueFromRating />
+</CodeHighlightPreview>
 
-## API Reference
+## Rating API Reference
 
-Explore the available props for the rating component
+Explore the available props for the `<Rating>` component
 
 <ComponentApi data={RatingDataApi} />
+
+## Star API Reference
+
+Explore the available props for the `<RatingStar>` component
+
+<ComponentApi data={RatingStarApi} />

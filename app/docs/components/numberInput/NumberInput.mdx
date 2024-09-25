@@ -1,42 +1,33 @@
 import { DefaultNumberInput, DefaultNumberInputCode } from './variant/DefaultNumberInput'
-import { SizesOfNumberInput, SizesOfNumberInputCode } from './variant/SizesOfNumberInput'
-import { DisabledNumberInput, DisabledNumberInputCode } from './variant/DisabledNumberInput'
+import { NumberInputWithLabel, NumberInputWithLabelCode } from './variant/NumberInputWithLabel'
+import { NumberInputWithState, NumberInputWithStateCode } from './variant/NumberInputWithState'
 import { numberInputApiData } from './NumberInputApi'
-
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
-
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
-Number Input Component is a user interface element designed for collecting numeric input from users. It provides a field where users can enter numerical values, such as integers or decimals, using keyboard input or arrow buttons.
+The Number Input Component is a user interface element designed for collecting numeric input from users. It provides a field where users can enter numerical values, such as integers or decimals, using keyboard input or arrow buttons.
 
 ## Default Number Input
 
-Default Number Input a simple numeric input field with two buttons for incrementing and decrementing the value.
+Default Number Input is a simple numeric input field with two buttons for incrementing and decrementing the value.
 
-<CodePreview github="FormControls/NumberInput.tsx" code={DefaultNumberInputCode}>
+<CodeHighlightPreview code={DefaultNumberInputCode}>
   <DefaultNumberInput />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Sizes Of Number Input
+## Number Input With Label
 
-The NumberInput component in the Keep React offers three available sizes: `"sm"` `"md"` and `"lg"`.
+You can show a label and helper text to assist the user.
 
-<CodePreview github="FormControls/NumberInput.tsx" code={SizesOfNumberInputCode}>
-  <SizesOfNumberInput />
-</CodePreview>
+<CodeHighlightPreview code={NumberInputWithLabelCode}>
+  <NumberInputWithLabel />
+</CodeHighlightPreview>
 
-## Disabled Number Input
+## Number Input With State
 
-<CodePreview github="FormControls/NumberInput.tsx" code={DisabledNumberInputCode}>
-  <DisabledNumberInput />
-</CodePreview>
+You can manage the input state with React state.
 
-## API Reference
-
-Explore the available props for the number input component
-
-<ComponentApi data={numberInputApiData} />
-
+<CodeHighlightPreview code={NumberInputWithStateCode}>
+  <NumberInputWithState />
+</CodeHighlightPreview>

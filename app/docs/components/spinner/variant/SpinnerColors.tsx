@@ -1,5 +1,4 @@
-'use client'
-import { Spinner } from '~/src'
+import { Spinner } from '../../../../src'
 
 const SpinnerColors = () => {
   return (
@@ -15,8 +14,8 @@ const SpinnerColors = () => {
   )
 }
 
-const SpinnerColorsCode = `
-"use client";
+const SpinnerColorsCode = {
+  'SpinnerComponent.tsx': `
 import { Spinner } from "keep-react";
 
 export const SpinnerComponent = () => {
@@ -32,6 +31,7 @@ export const SpinnerComponent = () => {
     </>
   );
 }
-`
+`,
+}
 
 export { SpinnerColors, SpinnerColorsCode }

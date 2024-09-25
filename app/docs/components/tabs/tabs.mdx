@@ -1,50 +1,45 @@
 import { DefaultTabs, DefaultTabsCode } from './variant/DefaultTabs'
-import { BorderedTabs, BorderedTabsCode } from './variant/BorderedTabs'
+import { TabsUnderline, TabsUnderlineCode } from './variant/TabsUnderline'
+import { TabsFill, TabsFillCode } from './variant/TabsFill'
 import { TabsWithIcon, TabsWithIconCode } from './variant/TabsWithIcon'
-
-import { TabsWithNotification, TabsWithNotificationCode } from './variant/TabsWithNotification'
 import { tabsApiData, tabsItemApiData } from './tabsApi'
 
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
-
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-The Tab Group Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container. With customizable options for size, type, and status, you can create versatile and visually appealing tab groups that align with your design aesthetic.
+The Tabs Component in the Keep React allows you to organize and display content in a tabbed interface. It provides a convenient way to switch between different sections or views within a single container.
 
 ## Default Tabs
 
-The default Tabs component presents a collection of `pills` style button that include both tab elements and corresponding tab content.
+The Default Tabs component showcases the basic implementation of tabs.
 
-<CodePreview github="Tabs" code={DefaultTabsCode}>
+<CodeHighlightPreview code={DefaultTabsCode}>
   <DefaultTabs />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Bordered Tabs
+## Tabs With Icon
 
-By setting `borderPosition="top"`, you can make the border appear at the top of the tab group. Conversely, setting `borderPosition="bottom"` will cause the border to appear at the bottom of the tab group.
-
-<CodePreview github="Tabs" code={BorderedTabsCode}>
-  <BorderedTabs />
-</CodePreview>
-
-## Tabs with Icon
-
-Tabs items with icons are a user interface design element where each tab in a tabbed navigation system is accompanied by an icon. You can change the icon position by using `iconPosition` props as `"right" | "left"`.
-
-<CodePreview github="Tabs" code={TabsWithIconCode}>
+<CodeHighlightPreview code={TabsWithIconCode}>
   <TabsWithIcon />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Tab Notifications
+## Tabs Fill variant
 
-Keep users informed by adding notifications to tabs. Utilize badges to indicate new or important content.
+Display tabs fill variant by setting the `variant` prop to `fill`.
 
-<CodePreview github="Tabs" code={TabsWithNotificationCode}>
-  <TabsWithNotification />
-</CodePreview>
+<CodeHighlightPreview code={TabsFillCode}>
+  <TabsFill />
+</CodeHighlightPreview>
+
+## Tabs Underline variant
+
+Display tabs underline variant by setting the `variant` prop to `underline`.
+
+<CodeHighlightPreview code={TabsUnderlineCode}>
+  <TabsUnderline />
+</CodeHighlightPreview>
 
 ## Tabs API Reference
 
@@ -54,6 +49,6 @@ Explore the available props for the `<Tabs>` component
 
 ## Tabs Items API Reference
 
-Explore the available props for the `<Tabs.Item>` component
+Explore the available props for the `<TabsItem>` component
 
 <ComponentApi data={tabsItemApiData} />

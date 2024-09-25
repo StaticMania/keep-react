@@ -1,52 +1,115 @@
 'use client'
-import { Button, Popover } from '~/src'
+import {
+  Avatar,
+  AvatarImage,
+  Button,
+  Popover,
+  PopoverAction,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeading,
+} from '../../../../src'
 
 const DefaultPopover = () => {
   return (
-    <div className="px-3 py-2">
-      <Popover
-        title="Popover title here"
-        description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
-        additionalContent={
-          <div className="mt-3 flex items-center gap-3">
-            <Button type="outlinePrimary" size="xs">
-              Checkout
-            </Button>
-            <button className="text-body-5 font-medium text-primary-400 underline underline-offset-[3px]">
-              Skip Now
-            </button>
+    <div className="flex h-52 items-center justify-center gap-5 p-5">
+      <Popover placement="left">
+        <PopoverAction>Left</PopoverAction>
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
+          <div>
+            <Avatar>
+              <AvatarImage src="/images/avatar/avatar-3.png" />
+            </Avatar>
           </div>
-        }>
-        <Button size="xs">Popover</Button>
+          <div>
+            <PopoverHeading>Keep Designer</PopoverHeading>
+            <PopoverDescription>keepdesign@email.com</PopoverDescription>
+          </div>
+          <Button variant="outline">Follow</Button>
+        </PopoverContent>
+      </Popover>
+      <Popover placement="right">
+        <PopoverAction>Right</PopoverAction>
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
+          <div>
+            <Avatar>
+              <AvatarImage src="/images/avatar/avatar-3.png" />
+            </Avatar>
+          </div>
+          <div>
+            <PopoverHeading>Keep Designer</PopoverHeading>
+            <PopoverDescription>keepdesign@email.com</PopoverDescription>
+          </div>
+          <Button variant="outline">Follow</Button>
+        </PopoverContent>
+      </Popover>
+      <Popover placement="top">
+        <PopoverAction>Top</PopoverAction>
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
+          <div>
+            <Avatar>
+              <AvatarImage src="/images/avatar/avatar-3.png" />
+            </Avatar>
+          </div>
+          <div>
+            <PopoverHeading>Keep Designer</PopoverHeading>
+            <PopoverDescription>keepdesign@email.com</PopoverDescription>
+          </div>
+          <Button variant="outline">Follow</Button>
+        </PopoverContent>
+      </Popover>
+      <Popover placement="bottom">
+        <PopoverAction>Bottom</PopoverAction>
+        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
+          <div>
+            <Avatar>
+              <AvatarImage src="/images/avatar/avatar-3.png" />
+            </Avatar>
+          </div>
+          <div>
+            <PopoverHeading>Keep Designer</PopoverHeading>
+            <PopoverDescription>keepdesign@email.com</PopoverDescription>
+          </div>
+          <Button variant="outline">Follow</Button>
+        </PopoverContent>
       </Popover>
     </div>
   )
 }
 
-const DefaultPopoverCode = `
-"use client";
-import { Button, Popover } from "keep-react";
+const DefaultPopoverCode = {
+  'PopoverComponent.tsx': `
+import {
+  Avatar,
+  AvatarImage,
+  Button,
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeading,
+  PopoverAction,
+} from 'keep-react'
 
 export const PopoverComponent = () => {
   return (
-    <Popover
-      title="Popover title here"
-      description="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
-      additionalContent={
-        <div className="flex items-center gap-3 mt-3">
-          <Button type="outlinePrimary" size="xs">
-            Checkout
-          </Button>
-          <button className="text-body-5 font-medium underline text-primary-400 underline-offset-[3px]">
-            Skip Now
-          </button>
+    <Popover placement="right">
+      <PopoverAction>Right</PopoverAction>
+      <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
+        <div>
+          <Avatar>
+            <AvatarImage src="/images/avatar/avatar-3.png" />
+          </Avatar>
         </div>
-      }
-    >
-      <Button size="xs">Popover</Button>
+        <div>
+          <PopoverHeading>Keep Designer</PopoverHeading>
+          <PopoverDescription>keepdesign@email.com</PopoverDescription>
+        </div>
+        <Button variant="outline">Follow</Button>
+      </PopoverContent>
     </Popover>
-  );
+  )
 }
-`
+`,
+}
 
 export { DefaultPopover, DefaultPopoverCode }

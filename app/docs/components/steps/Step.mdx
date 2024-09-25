@@ -1,66 +1,48 @@
 import { DefaultStep, DefaultStepCode } from './variant/DefaultStep'
-import { StepWithNumber, StepWithNumberCode } from './variant/StepWithNumber'
 import { StepWithIcon, StepWithIconCode } from './variant/StepWithIcon'
-import { InterActiveStep, InterActiveStepCode } from './variant/InterActiveStep'
-import { StepWithDashedBorder, StepWithDashedBorderCode } from './variant/DashedBorderStep'
-import { DashedBorderStep, DashedBorderStepCode } from './variant/DashedBorderStep'
+import { StepWithBorder, StepWithBorderCode } from './variant/StepWithBorder'
 
-import { stepPropsAPI, StepItemsAPI } from './StepApi'
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
+import { StepPointAPI, StepLineAPI } from './StepApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-Steps Component is a user interface element used to guide users through a multi-step process or workflow. It presents a visual representation of the various stages or steps a user needs to complete in a sequential order. Each step is typically accompanied by a title, description, and an indicator of completion status, helping users track their progress.
+The Steps Component is a user interface element used to guide users through a multi-step process or workflow. It presents a visual representation of the various stages or steps a user needs to complete in sequential order.
 
 ## Default Step
 
 The Default Step refers to the fundamental and default configuration of a Steps Component within a user interface. It provides a clear visual representation of each step in a multi-step process.
 
-<CodePreview github="Steps" code={DefaultStepCode}>
+<CodeHighlightPreview github="Steps" code={DefaultStepCode}>
   <DefaultStep />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Step With Number
+## Step With Border
 
-To change the step style use the `stepType="number"` prop.
+The `border` variant of the Step Point adds a border around the step indicator, making it more prominent and visually distinct.
 
-<CodePreview github="Steps" code={StepWithNumberCode}>
-  <StepWithNumber />
-</CodePreview>
+<CodeHighlightPreview github="Steps" code={StepWithBorderCode}>
+  <StepWithBorder />
+</CodeHighlightPreview>
 
 ## Step With Icon
 
-To change the step style use the `stepType="icon"` prop and use the `icon` props in steps items.
+The `icon` variant of the Step Point includes an icon within the step indicator, providing an additional visual cue.
 
-<CodePreview github="Steps" code={StepWithIconCode}>
+<CodeHighlightPreview github="Steps" code={StepWithIconCode}>
   <StepWithIcon />
-</CodePreview>
+</CodeHighlightPreview>
 
-## Step With Dashed Border
+## Step Point API Reference
 
-To change the border style between two steps and apply a dashed line, use the `borderType="dashed"` prop.
+Explore the available props for the `<StepPoint/>` component
 
-<CodePreview github="Steps" code={StepWithDashedBorderCode}>
-  <StepWithDashedBorder />
-</CodePreview>
+<ComponentApi data={StepPointAPI} />
 
-## Interactive Step
+## Step Line API Reference
 
-<CodePreview github="Steps" code={InterActiveStepCode}>
-  <InterActiveStep />
-</CodePreview>
+Explore the available props for the `<StepLine/>` component
 
-## Step API Reference
-
-Explore the available props for the `<Step/>` component
-
-<ComponentApi data={stepPropsAPI} />
-
-## Step Item API Reference
-
-Explore the available props for the `<Step.Item/>` component
-
-<ComponentApi data={StepItemsAPI} />
+<ComponentApi data={StepLineAPI} />

@@ -1,11 +1,9 @@
 import { DefaultCheckbox, DefaultCheckboxCode } from './variant/DefaultCheckbox'
 import { CheckboxVariant, CheckboxVariantCode } from './variant/CheckboxVariant'
-import { DisabledCheckbox, DisabledCheckboxCode } from './variant/DisabledCheckbox'
-
 import { CheckBoxApiData } from './CheckboxApi'
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -15,25 +13,17 @@ The Checkbox component is a user interface element that allows users to toggle b
 
 The default checkbox is a square checkbox that can be checked or unchecked.
 
-<CodePreview github="CheckBox" code={DefaultCheckboxCode}>
+<CodeHighlightPreview code={DefaultCheckboxCode}>
   <DefaultCheckbox />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Checkbox Variant
 
-The Checkbox component offers two variants: `square` and `circle`. You can use the `variant` prop to specify the desired variant.
+The Checkbox component offers three variants: `rounded`,`circle` and `default`. You can use the `variant` prop to specify the desired variant.
 
-<CodePreview github="CheckBox" code={CheckboxVariantCode}>
+<CodeHighlightPreview code={CheckboxVariantCode}>
   <CheckboxVariant />
-</CodePreview>
-
-## Disabled Checkbox
-
-You can disable the checkbox by setting the `disabled` prop to `true`.
-
-<CodePreview github="CheckBox" code={DisabledCheckboxCode}>
-  <DisabledCheckbox />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## API Reference
 
@@ -41,4 +31,6 @@ Here is a list of the props that you can pass to the Checkbox component:
 
 <ComponentApi data={CheckBoxApiData} />
 
+## Reference
 
+Our checkbox component is built using the `@radix-ui/react-checkbox` package. For more information , follow the documentation [@radix-ui/react-checkbox](https://www.radix-ui.com/primitives/docs/components/checkbox#api-reference).

@@ -1,82 +1,53 @@
 'use client'
-import { Breadcrumb } from '~/src'
 import { CaretRight } from 'phosphor-react'
+import { Breadcrumb, BreadcrumbItem } from '../../../../src'
 
 const DefaultBreadcrumb = () => {
   return (
-    <div className="flex w-full flex-col gap-5">
-      <Breadcrumb aria-label="Default breadcrumb example" separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
-        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="base" href="#">
-          Product
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb aria-label="Default breadcrumb example" separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
-        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="border" href="#">
-          Product
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb aria-label="Default breadcrumb example" separatorIcon={<CaretRight size={20} color="#AFBACA" />}>
-        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="bar" href="#">
-          Product
-        </Breadcrumb.Item>
-      </Breadcrumb>
-    </div>
+    <Breadcrumb>
+      <BreadcrumbItem>Overview</BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Pools
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Token
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Colors
+      </BreadcrumbItem>
+    </Breadcrumb>
   )
 }
 
-const DefaultBreadcrumbCode = `
-"use client";
-import { Breadcrumb } from "keep-react";
-import { CaretRight } from "phosphor-react";
+const DefaultBreadcrumbCode = {
+  'BreadcrumbComponent.tsx': `
+'use client'
+import { CaretRight } from 'phosphor-react'
+import { Breadcrumb, BreadcrumbItem } from 'keep-react'
 
-export const BreadcrumbComponent = () => {
+const BreadcrumbComponent = () => {
   return (
-    <div className="flex w-full flex-col gap-5">
-      <Breadcrumb
-        aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
-        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="base" href="#">
-          Product
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb
-        aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
-        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="border" href="#">
-          Product
-        </Breadcrumb.Item>
-      </Breadcrumb>
-      <Breadcrumb
-        aria-label="Default breadcrumb example"
-        separatorIcon={<CaretRight size={20} color="#AFBACA" />}
-      >
-        <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Category</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">.....</Breadcrumb.Item>
-        <Breadcrumb.Item active="bar" href="#">
-          Product
-        </Breadcrumb.Item>
-      </Breadcrumb>
-    </div>
-  );
+    <Breadcrumb>
+      <BreadcrumbItem>Overview</BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Pools
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Token
+      </BreadcrumbItem>
+      <BreadcrumbItem>
+        <CaretRight size={18} color="#455468" />
+        Colors
+      </BreadcrumbItem>
+    </Breadcrumb>
+  )
 }
-`
+`,
+}
 
 export { DefaultBreadcrumb, DefaultBreadcrumbCode }

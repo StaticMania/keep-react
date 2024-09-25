@@ -1,17 +1,11 @@
 import { DefaultDropdown, DefaultDropdownCode } from './variant/DefaultDropdown'
-
-import { DropdownSearchBar, DropdownSearchBarCode } from './variant/DropdownSearchBar'
-import { DropdownWithBothSideIcon, DropdownWithBothSideIconCode } from './variant/DropdownWithBothSideIcon'
-
-import { DropdownWithIconAndSearchBar, DropdownWithIconAndSearchBarCode } from './variant/DropdownWithIconAndSearchBar'
-
-import { DropdownWithTitleDescription, DropdownWithTitleDescriptionCode } from './variant/DropdownWithTitleDescription'
+import { DropdownWithIcon, DropdownWithIconCode } from './variant/DropdownWithIcon'
+import { CustomDropdown, CustomDropdownCode } from './variant/CustomDropdown'
+import { DropdownTrigger, DropdownTriggerCode } from './variant/DropdownTrigger'
 
 import { dropdownAPIData } from './DropdownApi'
-import CodePreview from '~/components/CodePreview'
-import CssThemePreview from '~/components/CssThemePreview'
-import ComponentApi from '~/components/ComponentApi'
-
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
@@ -19,47 +13,38 @@ The Dropdown Component is a versatile user interface element that provides users
 
 ## Default Dropdown
 
-The Default Dropdown represents some list items as a dropdown items with `<Dropdown.Item>` components and the `<Dropdown>` is a wrapper button where user can click to show the dropdown items. `dismissOnClick={true}` props means when the user select a dropdown item dropdown will be closed.
+The Default Dropdown represents a list of items as dropdown items with `<DropdownItem>` components.
 
-<CodePreview github="Dropdown" code={DefaultDropdownCode}>
+<CodeHighlightPreview code={DefaultDropdownCode} className="bg-metal-50 dark:bg-[#0D1015]">
   <DefaultDropdown />
-</CodePreview>
-
-## Dropdown With Search Bar
-
-The Dropdown with Search Bar component features a search bar that allows users to filter and select from a list of fruit options.
-
-<CodePreview github="Dropdown" code={DropdownSearchBarCode}>
-  <DropdownSearchBar />
-</CodePreview>
+</CodeHighlightPreview>
 
 ## Dropdown With Icon
 
-The Dropdown with Both Side Icon component combines dropdown items with icons on both sides of the label.
+The Dropdown with Icon component allows you to include icons within dropdown items.
 
-<CodePreview github="Dropdown" code={DropdownWithBothSideIconCode}>
-  <DropdownWithBothSideIcon />
-</CodePreview>
+<CodeHighlightPreview code={DropdownWithIconCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownWithIcon />
+</CodeHighlightPreview>
 
-## Dropdown With Icon And SearchBar
+## Customize Dropdown
 
-The Dropdown with Both Side Icon component combines dropdown items with search bar `<TextInput>` component.
+Customize the dropdown according to your preferences.
 
-<CodePreview github="Dropdown" code={DropdownWithIconAndSearchBarCode}>
-  <DropdownWithIconAndSearchBar />
-</CodePreview>
+<CodeHighlightPreview code={CustomDropdownCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <CustomDropdown />
+</CodeHighlightPreview>
 
-## Dropdown With Title Description
+## Trigger Variant
 
-The dropdown with title description component represents the title and description in every dropdown items.
+Dropdown has three variants of trigger. Such as `"click"`, `"hover"`, and `"focus"`.
 
-<CodePreview github="Dropdown" code={DropdownWithTitleDescriptionCode}>
-  <DropdownWithTitleDescription />
-</CodePreview>
+<CodeHighlightPreview code={DropdownTriggerCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownTrigger />
+</CodeHighlightPreview>
 
 ## API Reference
 
 Here is a list of the props that you can pass to the dropdown component:
 
 <ComponentApi data={dropdownAPIData} />
-

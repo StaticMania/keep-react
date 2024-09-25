@@ -1,44 +1,41 @@
-'use client'
-import { CheckBox } from '~/src'
+import { Checkbox, Label } from '../../../../src'
 
 const DefaultCheckbox = () => {
-  const handleChecked = (value: boolean) => {
-    console.log(value)
-  }
   return (
-    <div className="py-3">
-      <CheckBox
-        variant="square"
-        label="Checkbox"
-        id="two"
-        name="countries"
-        color="info"
-        handleChecked={handleChecked}
-      />
+    <div className="space-y-3 p-3">
+      <p className="text-body-3 font-normal">Keep Design System License</p>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="single" />
+        <Label htmlFor="single">Single License</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="team" />
+        <Label htmlFor="team">Team License</Label>
+      </fieldset>
     </div>
   )
 }
 
-const DefaultCheckboxCode = `
-"use client";
-import { CheckBox } from "keep-react";
+const DefaultCheckboxCode = {
+  'CheckBox.tsx': `
+import { Checkbox, Label } from 'keep-react'
 
-export const CheckboxComponent = () => { 
-  const handleChecked = (value) => {
-    console.log(value);
-  };
+export const CheckboxComponent = () => {
   return (
-      <CheckBox
-        size="md"
-        variant="square"
-        label="Checkbox"
-        id="two"
-        name="countries"
-        color="info"
-        handleChecked={handleChecked}
-      />
-  );
+    <div className="space-y-3">
+      <p className="text-body-3 font-normal">Keep Design System License</p>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="single" />
+        <Label htmlFor="single">Single License</Label>
+      </fieldset>
+      <fieldset className="flex items-center gap-2">
+        <Checkbox defaultChecked={true} id="team" />
+        <Label htmlFor="team">Team License</Label>
+      </fieldset>
+    </div>
+  )
 }
-`
+`,
+}
 
 export { DefaultCheckbox, DefaultCheckboxCode }

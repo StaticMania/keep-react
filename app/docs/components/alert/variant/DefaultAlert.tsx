@@ -1,48 +1,57 @@
-'use client'
-import { Alert } from '~/src'
-import Link from 'next/link'
-import { Info } from 'phosphor-react'
+import {
+  Alert,
+  AlertContainer,
+  AlertDescription,
+  AlertDismiss,
+  AlertIcon,
+  AlertLink,
+  AlertTitle,
+} from '../../../../src'
 
 const DefaultAlert = () => {
   return (
-    <Alert
-      additionalContent={
-        <div className="text-metal-500 mt-1 text-body-4">
-          Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry
-          <Link href="/" className="ml-2 text-primary-600 underline">
-            Link style
-          </Link>
-        </div>
-      }
-      icon={<Info size={24} color="#0F3CD9" />}
-      title="Default message - make it short"
-    />
+    <Alert>
+      <AlertContainer>
+        <AlertIcon />
+        <AlertTitle>Default Alert</AlertTitle>
+        <AlertDescription>A short description followed by two actions items.</AlertDescription>
+      </AlertContainer>
+      <AlertContainer>
+        <AlertLink href="/">Learn More</AlertLink>
+        <AlertDismiss />
+      </AlertContainer>
+    </Alert>
   )
 }
 
-const DefaultAlertCode = `
-"use client";
-import Link from "next/link";
-import { Alert } from "keep-react";
-import { Info } from "phosphor-react";
+const DefaultAlertCode = {
+  'AlertComponent.tsx': `
+import {
+  Alert,
+  AlertContainer,
+  AlertDescription,
+  AlertDismiss,
+  AlertIcon,
+  AlertLink,
+  AlertTitle,
+} from 'keep-react'
 
 export const AlertComponent = () => {
   return (
-   <Alert
-      additionalContent={
-        <div className="mt-1 text-body-4 text-metal-500">
-          Default message - Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry
-          <Link href="/" className="ml-2 text-primary-600 underline">
-            Link style
-          </Link>
-        </div>
-      }
-      icon={<Info size={24} color="#0F3CD9" />}
-      title="Default message - make it short"
-    />
-  );
-};
-`
+    <Alert>
+      <AlertContainer>
+        <AlertIcon />
+        <AlertTitle>Default Alert</AlertTitle>
+        <AlertDescription>A short description followed by two actions items.</AlertDescription>
+      </AlertContainer>
+      <AlertContainer>
+        <AlertLink href="/">Learn More</AlertLink>
+        <AlertDismiss />
+      </AlertContainer>
+    </Alert>
+  )
+}
+`,
+}
 
 export { DefaultAlert, DefaultAlertCode }
