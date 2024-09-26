@@ -18,6 +18,7 @@ const UploadBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
           horizontal ? 'gap-4 px-3' : 'flex-col border-metal-50 p-3 text-center',
           isDragActive && 'border-blue-500 bg-sky-100 dark:bg-blue-900',
           isDragReject && 'border-red-500 bg-red-100 dark:bg-red-900',
+          options?.disabled && 'cursor-not-allowed hover:bg-transparent',
           className,
         )}>
         <input {...getInputProps()} />
