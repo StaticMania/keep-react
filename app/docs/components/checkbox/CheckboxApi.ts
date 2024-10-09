@@ -7,6 +7,13 @@ export const CheckBoxApiData = [
     default: 'default',
   },
   {
+    id: 5,
+    propsName: 'color',
+    propsType: ['primary', 'secondary', 'success', 'warning', 'error'],
+    propsDescription: 'Checkbox color',
+    default: 'primary',
+  },
+  {
     id: 2,
     propsName: 'defaultChecked',
     propsType: 'boolean',

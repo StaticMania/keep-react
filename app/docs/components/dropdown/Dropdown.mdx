@@ -1,6 +1,8 @@
 import { DefaultDropdown, DefaultDropdownCode } from './variant/DefaultDropdown'
 import { DropdownWithIcon, DropdownWithIconCode } from './variant/DropdownWithIcon'
-import { CustomDropdown, CustomDropdownCode } from './variant/CustomDropdown'
+import { DropdownWithSubmenu, DropdownWithSubmenuCode } from './variant/DropdownWithSubmenu'
+import { DropdownWithCheckbox, DropdownWithCheckboxCode } from './variant/DropdownWithCheckbox'
+import { DropdownWithRadio, DropdownWithRadioCode } from './variant/DropdownWithRadio'
 
 import { dropdownAPIData, dropdownContentAPIData } from './DropdownApi'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
@@ -26,12 +28,28 @@ The Dropdown with Icon component allows you to include icons within dropdown ite
   <DropdownWithIcon />
 </CodeHighlightPreview>
 
-## Customize Dropdown
+## Dropdown Submenu
 
-Customize the dropdown according to your preferences.
+The Dropdown with submenu component allows you to include submenu within dropdown items.
 
-<CodeHighlightPreview code={CustomDropdownCode} className="bg-metal-50 dark:bg-[#0D1015]">
-  <CustomDropdown />
+<CodeHighlightPreview code={DropdownWithSubmenuCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownWithSubmenu />
+</CodeHighlightPreview>
+
+## Dropdown with checkbox
+
+The Dropdown component allows you to include checkbox within dropdown items.
+
+<CodeHighlightPreview code={DropdownWithCheckboxCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownWithCheckbox />
+</CodeHighlightPreview>
+
+## Dropdown with radio
+
+The Dropdown component allows you to include radio button within dropdown items.
+
+<CodeHighlightPreview code={DropdownWithRadioCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownWithRadio />
 </CodeHighlightPreview>
 
 ## API Reference

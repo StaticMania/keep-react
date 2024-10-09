@@ -3,7 +3,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "module": "ES2015",
-    "outDir": "./lib/cjs"
+    "outDir": "./lib"
   },
   "exclude": ["app/**/*.stories.tsx"],
   "include": ["./app/src"]

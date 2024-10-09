@@ -1,7 +1,7 @@
 export const tabsApiData = [
   {
     id: 1,
-    propsName: 'defaultActive',
+    propsName: 'defaultValue',
     propsType: 'string',
     propsDescription: 'Which tabs by default will be active',
     default: '',
@@ -9,7 +9,7 @@ export const tabsApiData = [
   {
     id: 2,
     propsName: 'variant',
-    propsType: ['default', 'fill', 'underline'],
+    propsType: ['default', 'underline'],
     propsDescription: 'Tabs item variant',
     default: 'default',
   },
@@ -21,20 +21,6 @@ export const tabsItemApiData = [
     propsName: 'value',
     propsType: 'string',
     propsDescription: 'This value connect to the content',
-    default: '',
-  },
-  {
-    id: 2,
-    propsName: 'contentClassName',
-    propsType: 'string',
-    propsDescription: 'Content className',
-    default: '',
-  },
-  {
-    id: 3,
-    propsName: 'bgClassName',
-    propsType: 'string',
-    propsDescription: 'Content Background className',
-    default: '',
+    default: 'item-',
   },
 ]

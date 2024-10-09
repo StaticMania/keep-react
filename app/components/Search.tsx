@@ -37,8 +37,8 @@ const Search: FC<ModalProps> = ({ isOpen, setIsOpen }) => {
   }
 
   return (
-    <Modal open={isOpen} onOpenChange={setIsOpen}>
-      <ModalContent className="block max-w-[35rem] bg-white laptop:p-8">
+    <Modal showCloseIcon={false} open={isOpen} onOpenChange={setIsOpen}>
+      <ModalContent className="block w-[35rem] bg-white laptop:p-8">
         <fieldset className="relative">
           <Input
             value={query}
@@ -53,7 +53,7 @@ const Search: FC<ModalProps> = ({ isOpen, setIsOpen }) => {
         </fieldset>
         <div id="search" className="mt-2 max-h-[300px] overflow-y-auto">
           <div className={query.length ? 'hidden' : 'block'}>
-            <ModalTitle className="my-2 text-body-4 font-normal text-metal-400 dark:text-metal-300">
+            <ModalTitle className="my-2 font-normal text-metal-400 lg:text-body-4 dark:text-metal-300">
               Quick Access
             </ModalTitle>
             <ul>

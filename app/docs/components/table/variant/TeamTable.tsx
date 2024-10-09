@@ -2,6 +2,7 @@
 import { DotsThreeOutlineVertical, MagnifyingGlass, Plus } from 'phosphor-react'
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Badge,
   Button,
@@ -67,6 +68,7 @@ const TeamTable = () => {
               <div className="flex items-center gap-2">
                 <Avatar>
                   <AvatarImage src={item.user.img} />
+                  <AvatarFallback>{item.user.name.slice(0, 2).toUpperCase()}</AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>
@@ -183,6 +185,7 @@ export const TableComponent = () => {
               <div className="flex items-center gap-2">
                 <Avatar>
                   <AvatarImage src={item.user.img} />
+                  <AvatarFallback>KR</AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>

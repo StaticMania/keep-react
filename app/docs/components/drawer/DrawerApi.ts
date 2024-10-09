@@ -6,13 +6,19 @@ export const drawerAPIData = [
     propsDescription: 'Drawer show or not?',
     default: 'false',
   },
-
   {
-    id: 3,
+    id: 2,
     propsName: 'onOpenChange',
     propsType: 'Function',
     propsDescription: 'setState function',
     default: 'None',
+  },
+  {
+    id: 3,
+    propsName: 'showCloseIcon',
+    propsType: 'boolean',
+    propsDescription: 'Drawer close button show or not?',
+    default: 'true',
   },
 ]
 

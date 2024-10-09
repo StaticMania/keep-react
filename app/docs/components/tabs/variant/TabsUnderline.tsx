@@ -1,123 +1,99 @@
 'use client'
-import { Buildings, Gear, ShieldWarning, User } from 'phosphor-react'
-import { Skeleton, SkeletonLine, TabContent, TabItem, TabList, Tabs } from '../../../../src'
+import { Skeleton, SkeletonLine, Tabs, TabsContent, TabsItem, TabsList } from '../../../../src'
 
 const TabsUnderline = () => {
   return (
-    <Tabs variant="underline" defaultActive="5" className="mx-auto max-w-xl">
-      <TabList>
-        <TabItem value="5">
-          <User size={16} />
-          Profile
-        </TabItem>
-        <TabItem value="6">
-          <Gear size={16} />
-          Settings
-        </TabItem>
-        <TabItem value="7">
-          <Buildings size={16} />
-          Company
-        </TabItem>
-        <TabItem value="8">
-          <ShieldWarning size={16} />
-          Privacy
-        </TabItem>
-      </TabList>
-      <TabContent value="5">
-        <Skeleton className="max-w-full space-y-2.5">
-          <SkeletonLine className="h-4 w-11/12" />
-          <SkeletonLine className="h-4 w-9/12" />
-          <SkeletonLine className="h-4 w-10/12" />
-          <SkeletonLine className="h-4 w-7/12" />
-        </Skeleton>
-      </TabContent>
-      <TabContent value="6">
-        <Skeleton className="max-w-full space-y-2.5">
-          <SkeletonLine className="h-4 w-11/12" />
-          <SkeletonLine className="h-4 w-9/12" />
-          <SkeletonLine className="h-4 w-10/12" />
-          <SkeletonLine className="h-4 w-7/12" />
-        </Skeleton>
-      </TabContent>
-      <TabContent value="7">
-        <Skeleton className="max-w-full space-y-2.5">
-          <SkeletonLine className="h-4 w-11/12" />
-          <SkeletonLine className="h-4 w-9/12" />
-          <SkeletonLine className="h-4 w-10/12" />
-          <SkeletonLine className="h-4 w-7/12" />
-        </Skeleton>
-      </TabContent>
-      <TabContent value="8">
-        <Skeleton className="max-w-full space-y-2.5">
-          <SkeletonLine className="h-4 w-11/12" />
-          <SkeletonLine className="h-4 w-9/12" />
-          <SkeletonLine className="h-4 w-10/12" />
-          <SkeletonLine className="h-4 w-7/12" />
-        </Skeleton>
-      </TabContent>
-    </Tabs>
+    <div className="py-3">
+      <Tabs variant="underline" defaultValue="1" className="mx-auto max-w-xl">
+        <TabsList>
+          <TabsItem value="1">Profile</TabsItem>
+          <TabsItem value="2">Settings</TabsItem>
+          <TabsItem value="3">Company</TabsItem>
+          <TabsItem value="4">Privacy</TabsItem>
+        </TabsList>
+        <TabsContent value="1">
+          <Skeleton className="max-w-full space-y-2.5">
+            <SkeletonLine className="h-4 w-11/12" />
+            <SkeletonLine className="h-4 w-9/12" />
+            <SkeletonLine className="h-4 w-7/12" />
+            <SkeletonLine className="h-4 w-10/12" />
+          </Skeleton>
+        </TabsContent>
+        <TabsContent value="2">
+          <Skeleton className="max-w-full space-y-2.5">
+            <SkeletonLine className="h-4 w-9/12" />
+            <SkeletonLine className="h-4 w-11/12" />
+            <SkeletonLine className="h-4 w-10/12" />
+            <SkeletonLine className="h-4 w-7/12" />
+          </Skeleton>
+        </TabsContent>
+        <TabsContent value="3">
+          <Skeleton className="max-w-full space-y-2.5">
+            <SkeletonLine className="h-4 w-11/12" />
+            <SkeletonLine className="h-4 w-9/12" />
+            <SkeletonLine className="h-4 w-7/12" />
+            <SkeletonLine className="h-4 w-10/12" />
+          </Skeleton>
+        </TabsContent>
+        <TabsContent value="4">
+          <Skeleton className="max-w-full space-y-2.5">
+            <SkeletonLine className="h-4 w-9/12" />
+            <SkeletonLine className="h-4 w-11/12" />
+            <SkeletonLine className="h-4 w-10/12" />
+            <SkeletonLine className="h-4 w-7/12" />
+          </Skeleton>
+        </TabsContent>
+      </Tabs>
+    </div>
   )
 }
 
 const TabsUnderlineCode = {
   'TabsComponent.tsx': `
 'use client'
-import { Buildings, Gear, ShieldWarning, User } from 'phosphor-react'
-import { Skeleton, SkeletonLine, TabContent, TabItem, TabList, Tabs } from 'keep-react'
+import { Skeleton, SkeletonLine, Tabs, TabsContent, TabsItem, TabsList } from 'keep-react'
 
 export const TabsComponent = () => {
   return (
-    <Tabs variant="underline" defaultActive="5" className="mx-auto max-w-xl">
-      <TabList>
-        <TabItem value="5">
-          <User size={16} />
-          Profile
-        </TabItem>
-        <TabItem value="6">
-          <Gear size={16} />
-          Settings
-        </TabItem>
-        <TabItem value="7">
-          <Buildings size={16} />
-          Company
-        </TabItem>
-        <TabItem value="8">
-          <ShieldWarning size={16} />
-          Privacy
-        </TabItem>
-      </TabList>
-      <TabContent value="5">
+    <Tabs variant="underline" defaultValue="1" className="mx-auto max-w-xl">
+      <TabsList>
+        <TabsItem value="1">Profile</TabsItem>
+        <TabsItem value="2">Settings</TabsItem>
+        <TabsItem value="3">Company</TabsItem>
+        <TabsItem value="4">Privacy</TabsItem>
+      </TabsList>
+      <TabsContent value="1">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
+          <SkeletonLine className="h-4 w-7/12" />
+          <SkeletonLine className="h-4 w-10/12" />
+        </Skeleton>
+      </TabsContent>
+      <TabsContent value="2">
+        <Skeleton className="max-w-full space-y-2.5">
+          <SkeletonLine className="h-4 w-9/12" />
+          <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-10/12" />
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
-      </TabContent>
-      <TabContent value="6">
+      </TabsContent>
+      <TabsContent value="3">
         <Skeleton className="max-w-full space-y-2.5">
           <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
-          <SkeletonLine className="h-4 w-10/12" />
           <SkeletonLine className="h-4 w-7/12" />
+          <SkeletonLine className="h-4 w-10/12" />
         </Skeleton>
-      </TabContent>
-      <TabContent value="7">
+      </TabsContent>
+      <TabsContent value="4">
         <Skeleton className="max-w-full space-y-2.5">
-          <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-9/12" />
+          <SkeletonLine className="h-4 w-11/12" />
           <SkeletonLine className="h-4 w-10/12" />
           <SkeletonLine className="h-4 w-7/12" />
         </Skeleton>
-      </TabContent>
-      <TabContent value="8">
-        <Skeleton className="max-w-full space-y-2.5">
-          <SkeletonLine className="h-4 w-11/12" />
-          <SkeletonLine className="h-4 w-9/12" />
-          <SkeletonLine className="h-4 w-10/12" />
-          <SkeletonLine className="h-4 w-7/12" />
-        </Skeleton>
-      </TabContent>
+      </TabsContent>
     </Tabs>
   )
 }

@@ -3,56 +3,74 @@ import { KeepButtonColor, KeepButtonColorCode } from './variant/KeepButtonColor'
 import { KeepButtonSize, KeepButtonSizeCode } from './variant/KeepButtonSize'
 import { KeepButtonShape, KeepButtonShapeCode } from './variant/KeepButtonShape'
 import { KeepButtonIcon, KeepButtonIconCode } from './variant/KeepButtonIcon'
+import { DefaultButton, DefaultButtonCode } from './variant/DefaultButton'
+import { RadiusButton, RadiusButtonCode } from './variant/RadiusButton'
 import { buttonApiData } from './buttonApi'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-The Buttons component in the Keep React offers a variety of button types, sizes, and states to meet your design needs. With options for icons and destructiveness, you can create visually appealing and functional buttons for your product.
+The Buttons component in Keep React offers a versatile range of styles, colors, shapes, and sizes to help you design functional and visually appealing buttons. Whether you need to emphasize a primary action, add an icon, or create circular buttons, Keep Buttons has you covered.
 
-## Button Variant Type
+## Default Button
 
-There are two kinds of button variant types. Available types :`"default"`, `"link"`, `"outline"`, `"softBg"`.
+The Default Button is the most basic button style. It serves as a foundation for all button variations.
 
-<CodeHighlightPreview code={KeepButtonTypeCode}>
-  <KeepButtonType />
+<CodeHighlightPreview code={DefaultButtonCode}>
+  <DefaultButton />
 </CodeHighlightPreview>
 
 ## Button Colors Variant
 
-Here are the available color variants for the Button component, each with its own unique color scheme: `primary` `secondary` `success` `warning` and `error`.
+You can customize your buttons with different color schemes to match your design requirements. Available color options include: `primary` `secondary` `success` `warning` and `error`.
 
 <CodeHighlightPreview code={KeepButtonColorCode}>
   <KeepButtonColor />
 </CodeHighlightPreview>
 
-## Button Sizes Variant
+## Button Variant Type
 
-Here are the available size options for the Button component : `xs` `sm` `md` `lg` `xl` and `2xl`.
+Choose from different button types depending on your use case. The available types include: `default` `softBg` `outline` and `link`.
 
-<CodeHighlightPreview code={KeepButtonSizeCode}>
-  <KeepButtonSize />
+<CodeHighlightPreview code={KeepButtonTypeCode}>
+  <KeepButtonType />
 </CodeHighlightPreview>
 
 ## Button Shape Variant
 
-There are two available button shape variant: `icon` and `circle` props for added variety and style.
+Create unique button shapes by using the following options: `icon` and `circle` props for added variety and style.
 
 <CodeHighlightPreview code={KeepButtonShapeCode}>
   <KeepButtonShape />
 </CodeHighlightPreview>
 
+## Button Radius Variant
+
+Define the button's border radius for different looks radius props as `full`.
+
+<CodeHighlightPreview code={RadiusButtonCode}>
+  <RadiusButton />
+</CodeHighlightPreview>
+
 ## Button With Icon
 
-Our design system, you have the flexibility to position icons on either the `left` or `right` side of the button.
+Enhance buttons by including icons alongside text.
 
 <CodeHighlightPreview code={KeepButtonIconCode}>
   <KeepButtonIcon />
 </CodeHighlightPreview>
 
+## Button Sizes Variant
+
+Buttons come in various sizes to fit different contexts. Available size options include: `xs` `sm` `md` `lg` `xl` and `2xl`.
+
+<CodeHighlightPreview code={KeepButtonSizeCode}>
+  <KeepButtonSize />
+</CodeHighlightPreview>
+
 ## API Reference
 
-Explore the available props for the button component
+Refer to the following table to explore all available props and options for the Button component.
 
 <ComponentApi data={buttonApiData} />

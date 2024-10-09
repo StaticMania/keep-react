@@ -4,7 +4,7 @@ import { forwardRef, HTMLAttributes, useState } from 'react'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import useCopy from '~/hooks/useCopy'
-import { Tooltip, TooltipAction, TooltipContent } from '../src'
+import { toast } from '../src'
 import { cn } from '../src/utils/cn'
 
 interface CodeHighlightPreviewProps extends HTMLAttributes<HTMLDivElement> {
@@ -55,22 +55,14 @@ const CodeHighlightPreview = forwardRef<HTMLDivElement, CodeHighlightPreviewProp
             ))}
           </div>
           <div>
-            <Tooltip placement="top">
-              <TooltipAction asChild>
-                <button
-                  onClick={() => copyToClipboard(Object.values(code)[active === 0 ? 0 : active - 1])}
-                  className="mx-6 my-2.5">
-                  {copy ? (
-                    <Check size={20} weight="light" color="#fff" />
-                  ) : (
-                    <Copy size={20} weight="light" color="#fff" />
-                  )}
-                </button>
-              </TooltipAction>
-              <TooltipContent>
-                <p className="text-body-5 font-medium text-white dark:text-white">{copy ? 'Copied' : 'Copy Code'}</p>
-              </TooltipContent>
-            </Tooltip>
+            <button
+              onClick={() => {
+                copyToClipboard(Object.values(code)[active === 0 ? 0 : active - 1])
+                toast.info('Copied to clipboard')
+              }}
+              className="mx-6 my-2.5">
+              {copy ? <Check size={20} weight="light" color="#fff" /> : <Copy size={20} weight="light" color="#fff" />}
+            </button>
           </div>
         </div>
 

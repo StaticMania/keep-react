@@ -1,21 +1,18 @@
 'use client'
-import { ChatText, Gear, SignIn } from 'phosphor-react'
+import { ChatText, ShoppingCart } from 'phosphor-react'
 import { Button } from '../../../../src'
 
 const KeepButtonIcon = () => {
   return (
-    <div className="flex items-center justify-center gap-x-5 px-5 py-3">
+    <div className="flex flex-wrap items-center justify-center gap-5 px-5 py-3">
       <Button>
-        <ChatText size={20} className="mr-1.5" />
-        Messages
+        <ShoppingCart size={18} className="mr-1.5" />
+        Add to cart
       </Button>
+
       <Button>
-        <Gear size={20} className="mr-1.5" />
-        Settings
-      </Button>
-      <Button>
-        <SignIn size={20} className="mr-1.5" />
-        Sign In
+        Message
+        <ChatText size={18} className="ml-1.5" />
       </Button>
     </div>
   )
@@ -25,23 +22,12 @@ const KeepButtonIconCode = {
   'ButtonComponent.tsx': `
 'use client'
 import { Button } from 'keep-react'
-import { ChatText, Gear, SignIn } from 'phosphor-react'
+import { ChatText, Gear, Heart, ShoppingCart, SignIn, Trash } from 'phosphor-react'
 
 export const ButtonComponent = () => {
-  return (
     <>
-      <Button>
-        <ChatText size={20} className="mr-1.5" />
-        Messages
-      </Button>
-      <Button>
-        <Gear size={20} className="mr-1.5" />
-        Settings
-      </Button>
-      <Button>
-        <SignIn size={20} className="mr-1.5" />
-        Sign In
-      </Button>
+      <Button><ShoppingCart size={18} className="mr-1.5" />Add to cart</Button>
+      <Button>Message<ChatText size={18} className="ml-1.5" /></Button>
     </>
   )
 }

@@ -7,6 +7,10 @@ const DropdownContent = forwardRef<ElementRef<typeof Content>, ComponentPropsWit
   ({ className, sideOffset = 4, children, ...props }, ref) => (
     <Portal>
       <Content
+        onCloseAutoFocus={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
         ref={ref}
         sideOffset={sideOffset}
         className={cn(

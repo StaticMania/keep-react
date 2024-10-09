@@ -1,6 +1,7 @@
 'use client'
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Button,
   Popover,
@@ -21,6 +22,7 @@ const DefaultPopover = () => {
           <div>
             <Avatar>
               <AvatarImage src="/images/avatar/avatar-3.png" />
+              <AvatarFallback>KR</AvatarFallback>
             </Avatar>
           </div>
           <div>
@@ -38,6 +40,7 @@ const DefaultPopoverCode = {
   'PopoverComponent.tsx': `
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Button,
   Popover,
@@ -57,6 +60,7 @@ export const PopoverComponent = () => {
         <div>
           <Avatar>
             <AvatarImage src="/images/avatar/avatar-3.png" />
+            <AvatarFallback>KR</AvatarFallback>
           </Avatar>
         </div>
         <div>

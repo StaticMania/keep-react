@@ -15,7 +15,7 @@ const DefaultDropdown = () => {
         <DropdownAction asChild>
           <Button>Open Dropdown</Button>
         </DropdownAction>
-        <DropdownContent>
+        <DropdownContent onClick={(e) => e.stopPropagation()}>
           <DropdownArrow />
           <DropdownItem>Contacts</DropdownItem>
           <DropdownItem>Phone</DropdownItem>

@@ -39,7 +39,7 @@ interface keepButtonTheme {
 }
 
 export const buttonTheme: keepButtonTheme = {
-  base: 'disabled:pointer-events-none disabled:opacity-50 transition-all focus-visible:outline-none inline-flex items-center justify-center whitespace-nowrap disabled:cursor-not-allowed capitalize active:scale-[0.98] ',
+  base: 'disabled:pointer-events-none disabled:opacity-50 transition-all focus-visible:outline-none inline-flex items-center justify-center whitespace-nowrap disabled:cursor-not-allowed capitalize',
   size: {
     base: {
       xs: 'text-body-5 px-2 py-1 h-6 font-medium',
@@ -94,7 +94,7 @@ export const buttonTheme: keepButtonTheme = {
     },
     softBg: {
       primary:
-        'hover:bg-primary-100/30 bg-primary-50 dark:bg-primary-900 dark:hover:bg-primary-900 hover:text-primary-600 text-primary-500 disabled:bg-primary-50 disabled:text-primary-200 focus-visible:ring-2 focus-visible:ring-primary-100 ring-offset-4 dark:ring-offset-metal-900 dark:focus-visible:ring-primary-500',
+        'hover:bg-primary-100/30 bg-primary-50 dark:bg-primary-800 dark:text-white dark:hover:bg-primary-800 hover:text-primary-600 text-primary-500 disabled:bg-primary-50 disabled:text-primary-200 focus-visible:ring-2 focus-visible:ring-primary-100 dark:hover:text-white ring-offset-4 dark:ring-offset-metal-900 dark:focus-visible:ring-primary-500',
       secondary:
         'hover:bg-metal-100 dark:hover:bg-metal-800 dark:hover:text-metal-100 bg-metal-50 dark:bg-metal-700 dark:text-metal-50 hover:text-metal-900 text-metal-600 disabled:bg-metal-100 disabled:text-metal-600 dark:disabled:bg-metal-800 dark:disabled:text-metal-300 disabled:cursor-not-allowed dark:disabled:text-white focus-visible:ring-2 focus-visible:ring-metal-200 ring-offset-4 dark:ring-offset-metal-900',
       success:

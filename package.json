@@ -17,34 +17,33 @@
   "files": [
     "./lib/"
   ],
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "exports": {
     ".": {
       "import": {
-        "types": "./lib/esm/index.d.ts",
-        "default": "./lib/esm/index.js"
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
       },
       "require": {
-        "default": "./lib/cjs/index.js"
+        "default": "./lib/index.js"
       }
     },
     "./keepTheme": {
-      "types": "./lib/esm/theme/keepTheme.d.ts",
-      "default": "./lib/cjs/theme/keepTheme.js"
+      "types": "./lib/theme/keepTheme.d.ts",
+      "default": "./lib/theme/keepTheme.js"
     },
     "./utils": {
-      "types": "./lib/esm/utils/cn.d.ts",
-      "default": "./lib/cjs/utils/cn.js"
+      "types": "./lib/utils/cn.d.ts",
+      "default": "./lib/utils/cn.js"
     },
     "./css": {
-      "default": "./lib/cjs/theme/main.min.css"
+      "default": "./lib/theme/main.min.css"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/StaticMania/keep-react"
+    "url": "git+https://github.com/StaticMania/keep-react"
   },
   "scripts": {
     "dev": "next dev",
@@ -53,17 +52,18 @@
     "newApp": "rm -rf node_modules && rm -rf yarn.lock && rm -rf .next && yarn install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:lib": "rm -rf ./lib/ && yarn build:lib:dev",
-    "build:lib:dev": "yarn build:lib:esm && yarn build:lib:cjs && yarn build:css",
-    "build:css": "css-minify -f ./app/main.css -o ./lib/cjs/theme",
-    "build:lib:cjs": "tsc -p tsconfig.lib.json",
-    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib/esm",
     "lint": "eslint app --ext ts,tsx,js,jsx,cjs --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint app --ext js,jsx,ts,tsx,cjs --fix",
-    "format": "prettier --write 'app/**/*.{js,jsx,ts,tsx,css,html}'"
+    "format": "prettier --write 'app/**/*.{js,jsx,ts,tsx,css,html}'",
+    "build:lib": "rm -rf ./lib/ && yarn build:lib:dev",
+    "build:lib:dev": "yarn build:lib:esm && yarn build:lib:types && yarn build:css",
+    "build:css": "css-minify -f ./app/main.css -o ./lib/theme",
+    "build:lib:types": "tsc -p tsconfig.lib.json",
+    "build:lib:esm": "tsc -p tsconfig.lib.json --module esnext --declaration --outDir ./lib"
   },
   "dependencies": {
-    "@floating-ui/react": "^0.26.4",
+    "@radix-ui/react-accordion": "^1.2.1",
+    "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
@@ -71,6 +71,9 @@
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slider": "^1.2.0",
     "@radix-ui/react-switch": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.2",
+    "@radix-ui/react-visually-hidden": "^1.1.0",
     "clsx": "^2.0.0",
     "date-fns": "^3.6.0",
     "deepmerge": "^4.3.1",
@@ -79,7 +82,6 @@
     "framer-motion": "^11.3.2",
     "input-otp": "^1.2.4",
     "react": "^18.3.1",
-    "react-collapse": "^5.1.1",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18.3.1",
     "react-dropzone": "^14.2.3",
@@ -101,7 +103,6 @@
     "@types/mdx": "^2.0.10",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
-    "@types/react-collapse": "^5.0.4",
     "@types/react-dom": "^18.2.18",
     "@types/react-syntax-highlighter": "^15.5.11",
     "@types/recharts": "^1.8.29",

@@ -1,9 +1,19 @@
-html {
-  -webkit-font-smoothing: antialiased;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  :root {
+    --fill-bar-bg: 227, 100%, 95%;
+  }
+
+  .dark {
+    --fill-bar-bg: 220, 100%, 63%;
+  }
 }
 
-.ReactCollapse--collapse {
-  transition: height 300ms ease-in-out;
+html {
+  -webkit-font-smoothing: antialiased;
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -151,3 +161,5 @@ input[type='number'] {
 #tableScrollBar::-webkit-scrollbar-thumb {
   @apply rounded-[10px] bg-metal-200 dark:bg-metal-700;
 }
+
+/* CHARTS */

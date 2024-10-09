@@ -1,17 +1,10 @@
 'use client'
-import { HTMLProps, forwardRef } from 'react'
+import { forwardRef, HTMLProps } from 'react'
 import { cn } from '../../utils/cn'
 
-const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
-  ({ children, className, ...props }, ref) => {
-    return (
-      <p {...props} ref={ref} className={cn('text-body-4 font-normal text-metal-600 dark:text-metal-300', className)}>
-        {children}
-      </p>
-    )
-  },
+export const PopoverDescription = forwardRef<HTMLParagraphElement, HTMLProps<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <p {...props} ref={ref} className={cn('text-body-4 font-normal text-metal-600 dark:text-metal-300', className)} />
+  ),
 )
-
 PopoverDescription.displayName = 'PopoverDescription'
-
-export { PopoverDescription }

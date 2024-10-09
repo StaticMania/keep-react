@@ -1,12 +1,22 @@
 import { DefaultLineChart, DefaultLineChartCode } from './variant/DefaultLineChart'
-import { LineChartWithSeriesData, LineChartWithSeriesDataCode } from './variant/LineChartWithSeriesData'
-import { LineChartType, LineChartTypeCode } from './variant/LineChartType'
-
+import { LinearLineChart, LinearLineChartCode } from './variant/LinearLineChart'
+import { StepLineChart, StepLineChartCode } from './variant/StepLineChart'
+import { DoubleLineChart, DoubleLineChartCode } from './variant/DoubleLineChart'
+import { DotLineChart, DotLineChartCode } from './variant/DotLineChart'
+import { LabelLineChart, LabelLineChartCode } from './variant/LabelLineChart'
+import { rechartsInstall } from './variant/Installation'
+import CodeHighlight from '../../../components/CodeHighlight'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
 The Line Chart component is a powerful tool for visualizing numerical data trends over time or across categories. With its clear and intuitive presentation, it enables users to easily identify patterns, correlations, and outliers within their datasets. Whether tracking stock prices, monitoring sales performance, or analyzing temperature fluctuations, the Line Chart offers a comprehensive view of data dynamics.
+
+## Installation
+
+This component uses Recharts for chart rendering. You need to install the `Recharts` library to use the Line Chart component in your project.
+
+<CodeHighlight code={rechartsInstall} />
 
 ## Default Line Chart
 
@@ -16,22 +26,36 @@ The Default Line Chart component showcases a basic line chart, providing a simpl
   <DefaultLineChart />
 </CodeHighlightPreview>
 
-## Double Series Line Chart
+## Linear Line Chart
 
-The Double Series Line Chart component extends the functionality of the Default Line Chart by allowing the visualization of multiple data series simultaneously. This feature-rich chart is ideal for comparing trends between different datasets.
-
-<CodeHighlightPreview code={LineChartWithSeriesDataCode}>
-  <LineChartWithSeriesData />
+<CodeHighlightPreview code={LinearLineChartCode}>
+  <LinearLineChart />
 </CodeHighlightPreview>
 
-## Line Chart Line Type
+## Step Line Chart
 
-The Line Chart Line Type component explores the various line types available in the line chart, offering flexibility in visual representation. This component allows users to customize the appearance of lines to suit their specific needs.
+<CodeHighlightPreview code={StepLineChartCode}>
+  <StepLineChart />
+</CodeHighlightPreview>
 
-<CodeHighlightPreview code={LineChartTypeCode}>
-  <LineChartType />
+## Double Line Chart
+
+<CodeHighlightPreview code={DoubleLineChartCode}>
+  <DoubleLineChart />
+</CodeHighlightPreview>
+
+## Dot Line Chart
+
+<CodeHighlightPreview code={DotLineChartCode}>
+  <DotLineChart />
+</CodeHighlightPreview>
+
+## Label Line Chart
+
+<CodeHighlightPreview code={LabelLineChartCode}>
+  <LabelLineChart />
 </CodeHighlightPreview>
 
 ## Reference
 
-To learn more about the Line chart, please see the documentation of [Recharts](https://recharts.org/en-US)
+To learn more about the Line chart, please see the documentation of [LineChart](https://recharts.org/en-US/examples/SimpleLineChart)

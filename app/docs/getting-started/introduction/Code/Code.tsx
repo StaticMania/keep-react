@@ -48,6 +48,7 @@ const keepInstall = {
   yarn: 'yarn add keep-react phosphor-react',
   pnpm: 'pnpm add keep-react phosphor-react',
 }
+
 const viteReact = {
   'Vite-React': `
 npm create vite@latest my-project -- --template react

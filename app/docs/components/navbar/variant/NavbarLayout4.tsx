@@ -3,6 +3,7 @@ import KeepDarkLogo from '../../../../../public/images/keep-dark.svg'
 import KeepLogo from '../../../../../public/images/keep.svg'
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Dropdown,
   DropdownAction,
@@ -36,6 +37,7 @@ const NavbarLayout4 = () => {
               <DropdownAction asChild>
                 <Avatar>
                   <AvatarImage src="/images/avatar/avatar-3.png" />
+                  <AvatarFallback>KR</AvatarFallback>
                 </Avatar>
               </DropdownAction>
               <DropdownContent align="end" className="border border-metal-100 dark:border-metal-800">
@@ -64,6 +66,7 @@ const NavbarLayout4Code = {
   'NavbarComponent.tsx': `
 import {
   Avatar,
+  AvatarFallback,
   Dropdown,
   DropdownAction,
   DropdownContent,
@@ -94,6 +97,7 @@ export const NavbarComponent = () => {
             <DropdownAction asChild>
               <Avatar>
                 <AvatarImage src="/images/avatar/avatar-3.png" />
+                 <AvatarFallback>KR</AvatarFallback>
               </Avatar>
             </DropdownAction>
             <DropdownContent align="end" className="border border-metal-100 dark:border-metal-800">

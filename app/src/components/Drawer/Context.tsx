@@ -2,7 +2,7 @@
 import { createContext, useContext } from 'react'
 
 type DrawerContextProps = {
-  position?: 'left' | 'right' | 'top' | 'bottom'
+  showCloseIcon?: boolean
 }
 
 export const DrawerContext = createContext<DrawerContextProps | undefined>(undefined)

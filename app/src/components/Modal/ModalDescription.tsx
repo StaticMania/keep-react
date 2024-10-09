@@ -7,7 +7,7 @@ const ModalDescription = forwardRef<ElementRef<typeof Description>, ComponentPro
   ({ className, ...props }, ref) => (
     <Description
       ref={ref}
-      className={cn('text-body-4 font-normal text-metal-600 dark:text-metal-300', className)}
+      className={cn('text-body-5 font-normal text-metal-600 lg:text-body-4 dark:text-metal-300', className)}
       {...props}
     />
   ),

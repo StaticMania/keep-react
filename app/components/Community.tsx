@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { ArrowLineUpRight } from 'phosphor-react'
 import { useEffect, useState } from 'react'
-import { Avatar, AvatarGroup, AvatarImage } from '../src'
+import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from '../src'
 
 interface Contributor {
   login: string
@@ -32,6 +32,7 @@ const Community = () => {
       ignore = true
     }
   }, [])
+
   return (
     <section className="community py-20">
       <div className="mx-auto max-w-7xl px-6 py-6 2xl:px-0">
@@ -53,6 +54,7 @@ const Community = () => {
                       {contributors?.map((user) => (
                         <Avatar key={user?.id} className="size-14">
                           <AvatarImage src={user?.avatar_url} />
+                          <AvatarFallback>CB</AvatarFallback>
                         </Avatar>
                       ))}
                     </AvatarGroup>
