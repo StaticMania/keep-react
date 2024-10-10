@@ -1,10 +1,10 @@
 'use client'
 import { createContext, useContext } from 'react'
+import { notificationTheme } from './theme'
 
-export interface NotificationContextProps {
-  isOpen?: boolean
-  handleOpen?: () => void
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
+type NotificationContextProps = {
+  showCloseIcon?: boolean
+  position?: keyof typeof notificationTheme.position
 }
 
 export const NotificationContext = createContext<NotificationContextProps | undefined>(undefined)

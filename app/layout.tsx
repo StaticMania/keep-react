@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import { KeepThemeProvider } from './components/ThemeProvider'
 import TopProgressBar from './components/TopProgressBar'
 import './docs.css'
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body className={inter.className} suppressHydrationWarning={true}>
         <KeepThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ToastWrapper />
-          <Navbar />
+          <Header />
           <main className="relative pt-20">{children}</main>
           <Footer />
           <TopProgressBar />

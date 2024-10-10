@@ -3,10 +3,8 @@ import {
   Button,
   Notification,
   NotificationAction,
-  NotificationClose,
   NotificationContent,
   NotificationDescription,
-  NotificationFooter,
   NotificationTitle,
 } from '../../../../src'
 
@@ -22,14 +20,6 @@ const DefaultNotification = () => {
           <NotificationDescription>
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </NotificationDescription>
-          <NotificationFooter>
-            <NotificationClose asChild>
-              <Button>Accept</Button>
-            </NotificationClose>
-            <NotificationClose asChild>
-              <Button variant="outline">Review</Button>
-            </NotificationClose>
-          </NotificationFooter>
         </NotificationContent>
       </Notification>
     </div>
@@ -44,10 +34,8 @@ import {
   NotificationAction,
   NotificationContent,
   NotificationDescription,
-  NotificationFooter,
   NotificationTitle,
 } from 'keep-react'
-
 
 export const NotificationComponent = () => {
   return (
@@ -60,14 +48,6 @@ export const NotificationComponent = () => {
         <NotificationDescription>
           Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </NotificationDescription>
-        <NotificationFooter>
-          <NotificationClose asChild>
-            <Button>Accept</Button>
-          </NotificationClose>
-          <NotificationClose asChild>
-            <Button variant="outline">Review</Button>
-          </NotificationClose>
-        </NotificationFooter>
       </NotificationContent>
     </Notification>
   )

@@ -1,27 +1,17 @@
 'use client'
-import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
+import { Title } from '@radix-ui/react-dialog'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
 
-export interface NotificationTitleProps extends HTMLAttributes<HTMLHeadingElement> {
-  asChild?: boolean
-}
-
-const NotificationTitle = forwardRef<HTMLParagraphElement, NotificationTitleProps>(
-  ({ className, children, asChild, ...props }, ref) => {
-    if (asChild && isValidElement(children)) {
-      return cloneElement(children, {
-        itemRef: ref,
-        ...props,
-      })
-    }
-
-    return (
-      <h1 ref={ref} className={cn('text-heading-6 font-semibold text-metal-900 dark:text-white', className)} {...props}>
-        {children}
-      </h1>
-    )
-  },
+const NotificationTitle = forwardRef<ElementRef<typeof Title>, ComponentPropsWithoutRef<typeof Title>>(
+  ({ className, ...props }, ref) => (
+    <Title
+      ref={ref}
+      className={cn('text-body-4 font-medium text-metal-900 lg:text-body-1 dark:text-white', className)}
+      {...props}
+    />
+  ),
 )
-NotificationTitle.displayName = 'NotificationTitle'
+NotificationTitle.displayName = Title.displayName
 
 export { NotificationTitle }

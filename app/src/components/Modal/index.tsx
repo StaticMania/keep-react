@@ -1,5 +1,6 @@
 'use client'
 import { Portal, Trigger } from '@radix-ui/react-dialog'
+import type { ModalProps } from './Modal'
 import { Modal } from './Modal'
 import { ModalContent } from './ModalContent'
 import { ModalDescription } from './ModalDescription'
@@ -20,5 +21,6 @@ export {
   ModalHeader,
   ModalOverlay,
   ModalPortal,
+  ModalProps,
   ModalTitle,
 }

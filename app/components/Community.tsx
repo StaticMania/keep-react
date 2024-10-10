@@ -52,7 +52,7 @@ const Community = () => {
                   {contributors?.length ? (
                     <AvatarGroup>
                       {contributors?.map((user) => (
-                        <Avatar key={user?.id} className="size-14">
+                        <Avatar key={user?.id} className="size-10">
                           <AvatarImage src={user?.avatar_url} />
                           <AvatarFallback>CB</AvatarFallback>
                         </Avatar>

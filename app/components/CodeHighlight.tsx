@@ -36,7 +36,7 @@ const CodeHighlight: FC<CodeHighlightProps> = ({ code }) => {
           <button
             onClick={() => {
               copyToClipboard(Object.values(code)[codeType])
-              toast.info('Copied to clipboard')
+              toast.success('Copied to clipboard')
             }}
             className="mx-6 my-2.5">
             {copy ? <Check size={20} weight="light" color="#fff" /> : <Copy size={20} weight="light" color="#fff" />}
