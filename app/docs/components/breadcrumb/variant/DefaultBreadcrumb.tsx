@@ -1,49 +1,61 @@
-'use client'
-import { CaretRight } from 'phosphor-react'
-import { Breadcrumb, BreadcrumbItem } from '../../../../src'
+import {
+  Breadcrumb,
+  BreadcrumbDivider,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+} from '../../../../src'
 
 const DefaultBreadcrumb = () => {
   return (
-    <Breadcrumb>
-      <BreadcrumbItem>Overview</BreadcrumbItem>
-      <BreadcrumbItem>
-        <CaretRight size={18} color="#455468" />
-        Pools
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        <CaretRight size={18} color="#455468" />
-        Token
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        <CaretRight size={18} color="#455468" />
-        Colors
-      </BreadcrumbItem>
-    </Breadcrumb>
+    <div className="px-4 py-3">
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbDivider />
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbDivider />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+    </div>
   )
 }
 
 const DefaultBreadcrumbCode = {
   'BreadcrumbComponent.tsx': `
-'use client'
-import { CaretRight } from 'phosphor-react'
-import { Breadcrumb, BreadcrumbItem } from 'keep-react'
+import {
+  Breadcrumb,
+  BreadcrumbDivider,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+} from 'keep-react'
 
 const BreadcrumbComponent = () => {
   return (
     <Breadcrumb>
-      <BreadcrumbItem>Overview</BreadcrumbItem>
-      <BreadcrumbItem>
-        <CaretRight size={18} color="#455468" />
-        Pools
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        <CaretRight size={18} color="#455468" />
-        Token
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        <CaretRight size={18} color="#455468" />
-        Colors
-      </BreadcrumbItem>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbDivider />
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbDivider />
+        <BreadcrumbItem>
+          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbList>
     </Breadcrumb>
   )
 }

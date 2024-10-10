@@ -7,18 +7,18 @@ import { Button, DatePicker, Popover, PopoverAction, PopoverContent } from '../.
 const DefaultDatePicker = () => {
   const [date, setDate] = useState<Date>()
   return (
-    <Popover showArrow={false} placement="bottom-start">
+    <Popover>
       <PopoverAction asChild>
         <Button
           color="secondary"
           size="lg"
-          className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4"
+          className="w-[280px] justify-start gap-2.5 border border-metal-100 text-body-4"
           variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {date ? format(date ?? new Date(), 'PPP') : <span>Select Your Date</span>}
         </Button>
       </PopoverAction>
-      <PopoverContent className="z-50 max-w-min">
+      <PopoverContent align="start" className="max-w-min border-0">
         <DatePicker mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
       </PopoverContent>
     </Popover>
@@ -36,14 +36,14 @@ import { Button, DatePicker, Popover, PopoverContent, PopoverAction } from 'keep
 export const DatePickerComponent = () => {
   const [date, setDate] = useState(null)
   return (
-    <Popover showArrow={false} placement="bottom-start">
+    <Popover>
       <PopoverAction asChild>
         <Button color="secondary" size="lg" className="w-[286px] justify-start gap-2 border border-metal-100" variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {date ? format(date ?? new Date(), 'PPP') : <span>Select Your Date</span>}
         </Button>
       </PopoverAction>
-      <PopoverContent className="z-50 max-w-min">
+      <PopoverContent align="start" className="max-w-min border-0">
         <DatePicker mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
       </PopoverContent>
     </Popover>
@@ -60,7 +60,7 @@ import { Button, DatePicker, Popover, PopoverAction, PopoverContent } from 'keep
 export const DatePickerComponent = () => {
   const [date, setDate] = useState<Date>()
   return (
-    <Popover showArrow={false} placement="bottom-start">
+    <Popover>
       <PopoverAction asChild>
         <Button
           color="secondary"
@@ -71,7 +71,7 @@ export const DatePickerComponent = () => {
           {date ? format(date ?? new Date(), 'PPP') : <span>Select Your Date</span>}
         </Button>
       </PopoverAction>
-      <PopoverContent className="z-50 max-w-min">
+      <PopoverContent align="start" className="max-w-min border-0">
         <DatePicker mode="single" selected={date} onSelect={setDate} showOutsideDays={true} />
       </PopoverContent>
     </Popover>

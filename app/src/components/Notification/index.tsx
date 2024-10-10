@@ -1,8 +1,18 @@
-export { Notification } from './Notification'
-export { NotificationAction } from './NotificationAction'
-export { NotificationClose } from './NotificationClose'
-export { NotificationContent } from './NotificationContent'
-export { NotificationDescription } from './NotificationDescription'
-export { NotificationFooter } from './NotificationFooter'
-export { NotificationPortal } from './NotificationPortal'
-export { NotificationTitle } from './NotificationTitle'
+'use client'
+import { Portal, Trigger } from '@radix-ui/react-dialog'
+import { Notification } from './Notification'
+import { NotificationContent } from './NotificationContent'
+import { NotificationDescription } from './NotificationDescription'
+import { NotificationTitle } from './NotificationTitle'
+
+const NotificationAction = Trigger
+const NotificationPortal = Portal
+
+export {
+  Notification,
+  NotificationAction,
+  NotificationContent,
+  NotificationDescription,
+  NotificationPortal,
+  NotificationTitle,
+}

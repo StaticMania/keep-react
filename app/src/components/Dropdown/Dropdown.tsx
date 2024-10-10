@@ -1,28 +1,15 @@
 'use client'
-import { Placement } from '@floating-ui/react'
-import { FC, ReactNode } from 'react'
-import { DropdownContext, useDropdown } from './Context'
+import { DropdownMenuProps, Root } from '@radix-ui/react-dropdown-menu'
+import { ComponentPropsWithoutRef, FC } from 'react'
 
-interface DropdownProps {
-  children: ReactNode
-  showArrow?: boolean
-  placement?: Placement
-  trigger?: 'hover' | 'focus' | 'click'
-}
-
-const Dropdown: FC<DropdownProps> = ({
-  children,
-  showArrow = false,
-  placement = 'bottom-start',
-  trigger = 'click',
-}) => {
-  const dropdownOptions = useDropdown({ showArrow, placement, trigger })
-
+const Dropdown: FC<DropdownMenuProps> = ({ children, ...props }) => {
   return (
-    <DropdownContext.Provider value={{ ...dropdownOptions }}>
-      <div>{children}</div>
-    </DropdownContext.Provider>
+    <Root modal={false} {...props}>
+      {children}
+    </Root>
   )
 }
 
 export { Dropdown }
+
+export type DropdownProps = ComponentPropsWithoutRef<typeof Dropdown>

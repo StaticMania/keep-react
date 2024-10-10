@@ -1,9 +1,10 @@
 import { DefaultDropdown, DefaultDropdownCode } from './variant/DefaultDropdown'
 import { DropdownWithIcon, DropdownWithIconCode } from './variant/DropdownWithIcon'
-import { CustomDropdown, CustomDropdownCode } from './variant/CustomDropdown'
-import { DropdownTrigger, DropdownTriggerCode } from './variant/DropdownTrigger'
+import { DropdownWithSubmenu, DropdownWithSubmenuCode } from './variant/DropdownWithSubmenu'
+import { DropdownWithCheckbox, DropdownWithCheckboxCode } from './variant/DropdownWithCheckbox'
+import { DropdownWithRadio, DropdownWithRadioCode } from './variant/DropdownWithRadio'
 
-import { dropdownAPIData } from './DropdownApi'
+import { dropdownAPIData, dropdownContentAPIData } from './DropdownApi'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
@@ -27,20 +28,28 @@ The Dropdown with Icon component allows you to include icons within dropdown ite
   <DropdownWithIcon />
 </CodeHighlightPreview>
 
-## Customize Dropdown
+## Dropdown Submenu
 
-Customize the dropdown according to your preferences.
+The Dropdown with submenu component allows you to include submenu within dropdown items.
 
-<CodeHighlightPreview code={CustomDropdownCode} className="bg-metal-50 dark:bg-[#0D1015]">
-  <CustomDropdown />
+<CodeHighlightPreview code={DropdownWithSubmenuCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownWithSubmenu />
 </CodeHighlightPreview>
 
-## Trigger Variant
+## Dropdown with checkbox
 
-Dropdown has three variants of trigger. Such as `"click"`, `"hover"`, and `"focus"`.
+The Dropdown component allows you to include checkbox within dropdown items.
 
-<CodeHighlightPreview code={DropdownTriggerCode} className="bg-metal-50 dark:bg-[#0D1015]">
-  <DropdownTrigger />
+<CodeHighlightPreview code={DropdownWithCheckboxCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownWithCheckbox />
+</CodeHighlightPreview>
+
+## Dropdown with radio
+
+The Dropdown component allows you to include radio button within dropdown items.
+
+<CodeHighlightPreview code={DropdownWithRadioCode} className="bg-metal-50 dark:bg-[#0D1015]">
+  <DropdownWithRadio />
 </CodeHighlightPreview>
 
 ## API Reference
@@ -48,3 +57,13 @@ Dropdown has three variants of trigger. Such as `"click"`, `"hover"`, and `"focu
 Here is a list of the props that you can pass to the dropdown component:
 
 <ComponentApi data={dropdownAPIData} />
+
+## Content API Reference
+
+Here is a list of the props that you can pass to the dropdown content component:
+
+<ComponentApi data={dropdownContentAPIData} />
+
+## Reference
+
+Our dropdown component is built using the `@radix-ui/react-dropdown-menu` package. For more information , follow the documentation [@radix-ui/react-dropdown-menu](https://www.radix-ui.com/primitives/docs/components/dropdown-menu#api-reference).

@@ -51,6 +51,16 @@ body {
   @apply rounded-full bg-metal-100 dark:bg-metal-600;
 }
 
+[role='listbox']::-webkit-scrollbar {
+  @apply w-2.5;
+}
+[role='listbox']::-webkit-scrollbar-track {
+  @apply rounded-full bg-metal-25 dark:bg-metal-800;
+}
+[role='listbox']::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-metal-100 dark:bg-metal-600;
+}
+
 main::-webkit-scrollbar {
   width: 10px;
 }

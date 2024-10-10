@@ -1,147 +1,125 @@
-import { Area, AreaChart, ChartTooltip, CustomTooltip, ResponsiveContainer, XAxis, YAxis } from '../../../../src'
+'use client'
+
+import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts'
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+} from '../../../../src'
 
 const DefaultAreaChart = () => {
-  const data = [
-    {
-      name: 'Jan',
-      price: 340,
-    },
-    {
-      name: 'Feb',
-      price: 300,
-    },
-    {
-      name: 'Mar',
-      price: 170,
-    },
-    {
-      name: 'Apr',
-      price: 190,
-    },
-    {
-      name: 'May',
-      price: 450,
-    },
-    {
-      name: 'Jun',
-      price: 400,
-    },
-    {
-      name: 'Jul',
-      price: 250,
-    },
-    {
-      name: 'Aug',
-      price: 320,
-    },
-    {
-      name: 'Sep',
-      price: 280,
-    },
+  const chartData = [
+    { month: 'January', desktop: 186 },
+    { month: 'February', desktop: 305 },
+    { month: 'March', desktop: 237 },
+    { month: 'April', desktop: 73 },
+    { month: 'May', desktop: 209 },
+    { month: 'June', desktop: 214 },
   ]
+
+  const chartConfig = {
+    desktop: {
+      label: 'Desktop',
+      color: '#1B4DFF',
+    },
+  } satisfies ChartConfig
+
   return (
-    <ResponsiveContainer width="100%" height={350}>
-      <AreaChart data={data}>
+    <ChartContainer config={chartConfig} className="mx-auto min-h-[200px] w-[600px]">
+      <AreaChart
+        accessibilityLayer
+        data={chartData}
+        margin={{
+          left: 12,
+          right: 12,
+        }}>
         <defs>
           <linearGradient id="price" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#1B4DFF" stopOpacity={0.3} />
             <stop offset="95%" stopColor="#1B4DFF" stopOpacity={0} />
           </linearGradient>
         </defs>
-        <Area type="natural" dataKey="price" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
+        <ChartLegend verticalAlign="top" align="right" content={<ChartLegendContent />} />
+        <CartesianGrid vertical={false} />
+
         <XAxis
-          className="text-body-4 font-medium text-metal-600"
-          dataKey="name"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-          dy={12}
+          dataKey="month"
+          tickLine={false}
+          axisLine={false}
+          tickMargin={8}
+          tickFormatter={(value) => value.slice(0, 3)}
         />
-        <YAxis
-          className="text-body-4 font-medium text-metal-600"
-          dx={-12}
-          dataKey="price"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-        />
-        <ChartTooltip content={<CustomTooltip />} />
+        <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
+        <Area dataKey="desktop" type="natural" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
       </AreaChart>
-    </ResponsiveContainer>
+    </ChartContainer>
   )
 }
 
 const DefaultAreaChartCode = {
-  'ChartComponent.tsx': `
-import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip ,CustomTooltip} from 'keep-react'
+  'AreaChartComponent.tsx': `'use client'
+
+import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts'
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+} from 'keep-react'
 
 export const AreaChartComponent = () => {
-  const data = [
-    {
-      name: 'Jan',
-      price: 340,
-    },
-    {
-      name: 'Feb',
-      price: 300,
-    },
-    {
-      name: 'Mar',
-      price: 170,
-    },
-    {
-      name: 'Apr',
-      price: 190,
-    },
-    {
-      name: 'May',
-      price: 450,
-    },
-    {
-      name: 'Jun',
-      price: 400,
-    },
-    {
-      name: 'Jul',
-      price: 250,
-    },
-    {
-      name: 'Aug',
-      price: 320,
-    },
-    {
-      name: 'Sep',
-      price: 280,
-    },
+  const chartData = [
+    { month: 'January', desktop: 186 },
+    { month: 'February', desktop: 305 },
+    { month: 'March', desktop: 237 },
+    { month: 'April', desktop: 73 },
+    { month: 'May', desktop: 209 },
+    { month: 'June', desktop: 214 },
   ]
+
+  const chartConfig = {
+    desktop: {
+      label: 'Desktop',
+      color: '#1B4DFF',
+    },
+  } satisfies ChartConfig
+
   return (
-    <ResponsiveContainer width="100%" height={350}>
-      <AreaChart data={data}>
+    <ChartContainer config={chartConfig} className="min-h-[200px]">
+      <AreaChart
+        accessibilityLayer
+        data={chartData}
+        margin={{
+          left: 12,
+          right: 12,
+        }}>
         <defs>
           <linearGradient id="price" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#1B4DFF" stopOpacity={0.3} />
             <stop offset="95%" stopColor="#1B4DFF" stopOpacity={0} />
           </linearGradient>
         </defs>
-        <Area type="natural" dataKey="price" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
+        <ChartLegend verticalAlign="top" align="right" content={<ChartLegendContent />} />
+        <CartesianGrid vertical={false} />
+
         <XAxis
-          className="text-body-4 font-medium text-metal-600"
-          dataKey="name"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-          dy={12}
+          dataKey="month"
+          tickLine={false}
+          axisLine={false}
+          tickMargin={8}
+          tickFormatter={(value) => value.slice(0, 3)}
         />
-        <YAxis
-          className="text-body-4 font-medium text-metal-600"
-          dx={-12}
-          dataKey="price"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-        />
-        <ChartTooltip content={<CustomTooltip />} />
+        <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
+        <Area dataKey="desktop" type="natural" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
       </AreaChart>
-    </ResponsiveContainer>
+    </ChartContainer>
   )
-}
-`,
+}`,
 }
 
 export { DefaultAreaChart, DefaultAreaChartCode }

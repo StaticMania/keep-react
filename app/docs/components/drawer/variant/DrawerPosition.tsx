@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Button, Drawer, DrawerClose, DrawerContent } from '../../../../src'
+import { Button, Drawer, DrawerContent, Skeleton, SkeletonLine } from '../../../../src'
 
 const DrawerPosition = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -19,18 +19,17 @@ const DrawerPosition = () => {
           </Button>
         ))}
       </div>
-      <Drawer isOpen={isOpen} onOpenChange={setIsOpen} position={position}>
-        <DrawerContent>
-          <DrawerClose className="absolute right-5 top-5" />
-          <div className="mx-auto max-w-sm space-y-3 px-6 py-20 lg:px-0">
-            <h1 className="text-heading-3 font-bold text-metal-900 lg:text-heading-2 dark:text-white">Keep React</h1>
-            <p className="text-body-3 font-normal text-metal-600 dark:text-metal-300">
-              Elevate your web projects with Keep React&apos;s 40+ customizable components. Access open-source resources
-              for efficient development and bring your ideas to life with ease.
-            </p>
-            <DrawerClose asChild>
-              <Button>Explore Now</Button>
-            </DrawerClose>
+      <Drawer open={isOpen} onOpenChange={setIsOpen}>
+        <DrawerContent position={position}>
+          <div className="mx-auto max-w-md space-y-3 px-6 py-8 lg:px-0">
+            <Skeleton className="space-y-2.5">
+              <SkeletonLine className="h-[200px]" />
+              <SkeletonLine className="h-4" />
+              <SkeletonLine className="h-4" />
+              <SkeletonLine className="h-4" />
+              <SkeletonLine className="h-4" />
+              <SkeletonLine className="h-10 w-1/3" />
+            </Skeleton>
           </div>
         </DrawerContent>
       </Drawer>
@@ -40,25 +39,24 @@ const DrawerPosition = () => {
 
 const DrawerPositionCode = {
   'DrawerComponent.tsx': `
-import { Button, Drawer, DrawerClose, DrawerContent } from 'keep-react'
+import { Button, Drawer, DrawerAction, DrawerContent, Skeleton, SkeletonLine } from 'keep-react'
 
 export const DrawerComponent = () => {
   return (
-    <Drawer position="left">
+    <Drawer>
       <DrawerAction asChild>
-        <Button>Left Drawer</Button>
+        <Button>Open Drawer</Button>
       </DrawerAction>
-      <DrawerContent>
-        <DrawerClose className="absolute right-5 top-5" />
-        <div className="mx-auto max-w-sm space-y-3 px-6 py-20 lg:px-0">
-          <h1 className="text-heading-3 font-bold text-metal-900 lg:text-heading-2 dark:text-white">Keep React</h1>
-          <p className="text-body-3 font-normal text-metal-600 dark:text-metal-300">
-            Elevate your web projects with Keep React&apos;s 40+ customizable components. Access open-source resources
-            for efficient development and bring your ideas to life with ease.
-          </p>
-          <DrawerClose asChild>
-            <Button>Explore Now</Button>
-          </DrawerClose>
+      <DrawerContent position="bottom">
+        <div className="mx-auto max-w-md space-y-3 px-6 py-8 lg:px-0">
+          <Skeleton className="space-y-2.5">
+            <SkeletonLine className="h-[200px]" />
+            <SkeletonLine className="h-4" />
+            <SkeletonLine className="h-4" />
+            <SkeletonLine className="h-4" />
+            <SkeletonLine className="h-4" />
+            <SkeletonLine className="h-10 w-1/3" />
+          </Skeleton>
         </div>
       </DrawerContent>
     </Drawer>

@@ -2,6 +2,7 @@
 import { DotsThreeOutlineVertical, MagnifyingGlass, Plus } from 'phosphor-react'
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Badge,
   Button,
@@ -10,7 +11,6 @@ import {
   DropdownAction,
   DropdownContent,
   DropdownItem,
-  DropdownList,
   Table,
   TableBody,
   TableCaption,
@@ -68,6 +68,7 @@ const TeamTable = () => {
               <div className="flex items-center gap-2">
                 <Avatar>
                   <AvatarImage src={item.user.img} />
+                  <AvatarFallback>{item.user.name.slice(0, 2).toUpperCase()}</AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>
@@ -100,12 +101,10 @@ const TeamTable = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
-                  <DropdownList>
-                    <DropdownItem>Edit</DropdownItem>
-                    <DropdownItem>Move</DropdownItem>
-                    <DropdownItem>Delete</DropdownItem>
-                  </DropdownList>
+                <DropdownContent align="end" className="w-[200px] border border-metal-100 p-3 dark:border-metal-800">
+                  <DropdownItem>Edit</DropdownItem>
+                  <DropdownItem>Move</DropdownItem>
+                  <DropdownItem>Delete</DropdownItem>
                 </DropdownContent>
               </Dropdown>
             </TableCell>
@@ -130,7 +129,6 @@ import {
   DropdownAction,
   DropdownContent,
   DropdownItem,
-  DropdownList,
   Table,
   TableBody,
   TableCaption,
@@ -187,6 +185,7 @@ export const TableComponent = () => {
               <div className="flex items-center gap-2">
                 <Avatar>
                   <AvatarImage src={item.user.img} />
+                  <AvatarFallback>KR</AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>
@@ -226,12 +225,10 @@ export const TableComponent = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
-                  <DropdownList>
-                    <DropdownItem>Edit</DropdownItem>
-                    <DropdownItem>Move</DropdownItem>
-                    <DropdownItem>Delete</DropdownItem>
-                  </DropdownList>
+                <DropdownContent align="end" className="w-[200px] border border-metal-100 p-3 dark:border-metal-800">
+                  <DropdownItem>Edit</DropdownItem>
+                  <DropdownItem>Move</DropdownItem>
+                  <DropdownItem>Delete</DropdownItem>
                 </DropdownContent>
               </Dropdown>
             </TableCell>

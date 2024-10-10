@@ -19,12 +19,9 @@ export const CarouselIndicators = forwardRef<HTMLDivElement, CarouselIndicatorsP
         {scrollSnaps.map((number, index) => (
           <DotButton
             key={number}
+            data-active={index === selectedIndex}
             onClick={() => onDotButtonClick(index)}
-            className={cn(
-              theme.controls.indicators.dot,
-              index === selectedIndex && 'border-metal-900 dark:border-metal-100',
-              dotButtonStyle,
-            )}
+            className={cn(theme.controls.indicators.dot, dotButtonStyle)}
           />
         ))}
       </div>

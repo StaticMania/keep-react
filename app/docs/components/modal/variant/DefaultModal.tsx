@@ -4,7 +4,6 @@ import {
   Button,
   Modal,
   ModalAction,
-  ModalClose,
   ModalContent,
   ModalDescription,
   ModalFooter,
@@ -20,7 +19,6 @@ const DefaultModal = () => {
           <Button>Open Modal</Button>
         </ModalAction>
         <ModalContent>
-          <ModalClose className="absolute right-4 top-4" />
           <ModalHeader className="mb-6 space-y-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
               <CloudArrowUp size={28} />
@@ -33,12 +31,8 @@ const DefaultModal = () => {
             </div>
           </ModalHeader>
           <ModalFooter>
-            <ModalClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </ModalClose>
-            <ModalClose asChild>
-              <Button>Confirm</Button>
-            </ModalClose>
+            <Button variant="outline">Cancel</Button>
+            <Button>Confirm</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -54,7 +48,6 @@ import {
   Button,
   Modal,
   ModalAction,
-  ModalClose,
   ModalContent,
   ModalDescription,
   ModalFooter,
@@ -63,14 +56,13 @@ import {
 } from 'keep-react'
 
 
-export const ModalComponent = () => {  
+export const ModalComponent = () => {
   return (
     <Modal>
       <ModalAction asChild>
         <Button>Open Modal</Button>
       </ModalAction>
       <ModalContent>
-        <ModalClose className="absolute right-4 top-4" />
         <ModalHeader className="mb-6 space-y-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
             <CloudArrowUp size={28} />
@@ -83,12 +75,8 @@ export const ModalComponent = () => {
           </div>
         </ModalHeader>
         <ModalFooter>
-          <ModalClose asChild>
-            <Button variant="outline">Cancel</Button>
-          </ModalClose>
-          <ModalClose asChild>
-            <Button>Confirm</Button>
-          </ModalClose>
+          <Button variant="outline">Cancel</Button>
+          <Button>Confirm</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>

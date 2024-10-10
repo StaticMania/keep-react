@@ -2,8 +2,8 @@ import { Spinner } from '../../../../src'
 
 const DefaultSpinner = () => {
   return (
-    <div className="h-16 p-4">
-      <Spinner color="info" size="lg" />
+    <div className="px-3 py-4">
+      <Spinner />
     </div>
   )
 }
@@ -13,7 +13,7 @@ const DefaultSpinnerCode = {
 import { Spinner } from 'keep-react'
 
 export const SpinnerComponent = () => {
-  return <Spinner color="info" size="lg" />
+  return <Spinner />
 }
 `,
 }

@@ -3,12 +3,12 @@ import KeepDarkLogo from '../../../../../public/images/keep-dark.svg'
 import KeepLogo from '../../../../../public/images/keep.svg'
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Dropdown,
   DropdownAction,
   DropdownContent,
   DropdownItem,
-  DropdownList,
   Navbar,
   NavbarBrand,
   NavbarCollapse,
@@ -33,19 +33,18 @@ const NavbarLayout4 = () => {
             <NavbarItem>Contact</NavbarItem>
           </NavbarList>
           <NavbarList>
-            <Dropdown placement="bottom-end">
+            <Dropdown>
               <DropdownAction asChild>
                 <Avatar>
                   <AvatarImage src="/images/avatar/avatar-3.png" />
+                  <AvatarFallback>KR</AvatarFallback>
                 </Avatar>
               </DropdownAction>
-              <DropdownContent className="border border-metal-100">
-                <DropdownList>
-                  <DropdownItem>Statistics</DropdownItem>
-                  <DropdownItem>Duplicate</DropdownItem>
-                  <DropdownItem>Account</DropdownItem>
-                  <DropdownItem>Logout</DropdownItem>
-                </DropdownList>
+              <DropdownContent align="end" className="border border-metal-100 dark:border-metal-800">
+                <DropdownItem>Statistics</DropdownItem>
+                <DropdownItem>Duplicate</DropdownItem>
+                <DropdownItem>Account</DropdownItem>
+                <DropdownItem>Logout</DropdownItem>
               </DropdownContent>
             </Dropdown>
           </NavbarList>
@@ -67,11 +66,11 @@ const NavbarLayout4Code = {
   'NavbarComponent.tsx': `
 import {
   Avatar,
+  AvatarFallback,
   Dropdown,
   DropdownAction,
   DropdownContent,
   DropdownItem,
-  DropdownList,
   Navbar,
   NavbarBrand,
   NavbarCollapse,
@@ -98,15 +97,14 @@ export const NavbarComponent = () => {
             <DropdownAction asChild>
               <Avatar>
                 <AvatarImage src="/images/avatar/avatar-3.png" />
+                 <AvatarFallback>KR</AvatarFallback>
               </Avatar>
             </DropdownAction>
-            <DropdownContent className='border border-metal-100'>
-              <DropdownList>
-                <DropdownItem>Statistics</DropdownItem>
-                <DropdownItem>Duplicate</DropdownItem>
-                <DropdownItem>Account</DropdownItem>
-                <DropdownItem>Logout</DropdownItem>
-              </DropdownList>
+            <DropdownContent align="end" className="border border-metal-100 dark:border-metal-800">
+              <DropdownItem>Statistics</DropdownItem>
+              <DropdownItem>Duplicate</DropdownItem>
+              <DropdownItem>Account</DropdownItem>
+              <DropdownItem>Logout</DropdownItem>
             </DropdownContent>
           </Dropdown>
         </NavbarList>

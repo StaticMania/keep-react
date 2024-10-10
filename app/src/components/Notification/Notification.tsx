@@ -1,79 +1,28 @@
 'use client'
-import { Dispatch, FC, ReactNode, SetStateAction, useCallback, useEffect, useState } from 'react'
-import { NotificationContext } from './NotificationContext'
+import { DialogProps, Root } from '@radix-ui/react-dialog'
+import { ComponentPropsWithoutRef, FC, ReactNode } from 'react'
+import { NotificationContext } from './Context'
+import { notificationTheme } from './theme'
 
-export interface NotificationProps {
-  children?: ReactNode
-  onOpenChange?: Dispatch<SetStateAction<boolean>>
-  isOpen?: boolean
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center'
-  autoCloseTime?: number
-  autoClose?: boolean
+export interface INotificationProps extends DialogProps {
+  showCloseIcon?: boolean
+  position?: keyof typeof notificationTheme.position
+  children: ReactNode
 }
 
-const Notification: FC<NotificationProps> = ({
+const Notification: FC<INotificationProps> = ({
   children,
-  isOpen: isOpenProp,
-  onOpenChange,
+  showCloseIcon = true,
   position = 'bottom-right',
-  autoCloseTime = 3000,
-  autoClose = true,
+  ...props
 }) => {
-  const [internalIsOpen, setInternalIsOpen] = useState(false)
-
-  const isControlled = isOpenProp !== undefined && onOpenChange !== undefined
-
-  const isOpen = isControlled ? isOpenProp : internalIsOpen
-  const setIsOpen = isControlled ? onOpenChange : setInternalIsOpen
-
-  useEffect(() => {
-    if (!isControlled) {
-      setInternalIsOpen(isOpenProp ?? false)
-    }
-  }, [isOpenProp, isControlled])
-
-  const handleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev)
-  }, [setIsOpen])
-
-  useEffect(() => {
-    const handleEscapeKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        isOpen && setIsOpen(false)
-      }
-    }
-
-    const handleClickOutsideModal = (event: MouseEvent) => {
-      if (!(event.target as HTMLElement).closest('.notification-content')) {
-        isOpen && setIsOpen(false)
-      }
-    }
-    let autoCloseTimeout: ReturnType<typeof setTimeout>
-
-    if (isOpen && autoClose) {
-      autoCloseTimeout = setTimeout(() => {
-        setIsOpen(false)
-      }, autoCloseTime)
-    }
-
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscapeKeyPress)
-      document.addEventListener('mousedown', handleClickOutsideModal)
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscapeKeyPress)
-      document.removeEventListener('mousedown', handleClickOutsideModal)
-
-      if (autoCloseTimeout) {
-        clearTimeout(autoCloseTimeout)
-      }
-    }
-  }, [isOpen, setIsOpen, autoCloseTime, autoClose])
-
   return (
-    <NotificationContext.Provider value={{ isOpen, handleOpen, position }}>{children}</NotificationContext.Provider>
+    <Root {...props}>
+      <NotificationContext.Provider value={{ showCloseIcon, position }}>{children}</NotificationContext.Provider>
+    </Root>
   )
 }
 
 export { Notification }
+
+export type NotificationProps = ComponentPropsWithoutRef<typeof Notification>

@@ -1,4 +1,13 @@
-import { Avatar, AvatarGroup, AvatarImage, Card, CardContent, CardDescription, CardTitle } from '../../../../src'
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarImage,
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from '../../../../src'
 
 const CardWithAvatar = () => {
   return (
@@ -7,20 +16,25 @@ const CardWithAvatar = () => {
         <CardTitle>Our Contributors</CardTitle>
         <CardDescription>They help us to grow up the keep react component library</CardDescription>
         <AvatarGroup className="mt-3">
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-1.png" />
+            <AvatarFallback>KR</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-2.png" />
+            <AvatarFallback>BR</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-3.png" />
+            <AvatarFallback>MR</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-4.png" />
+            <AvatarFallback>DD</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-5.png" />
+            <AvatarFallback>CX</AvatarFallback>
           </Avatar>
         </AvatarGroup>
       </CardContent>
@@ -30,7 +44,7 @@ const CardWithAvatar = () => {
 
 const CardWithAvatarCode = {
   'CardComponent.tsx': `
-import { Avatar, AvatarGroup, AvatarImage, Card, CardContent, CardDescription, CardTitle } from 'keep-react'
+import { Avatar, AvatarFallback, AvatarGroup, AvatarImage, Card, CardContent, CardDescription, CardTitle } from 'keep-react'
 
 export const CardComponent = () => {
   return (
@@ -39,20 +53,25 @@ export const CardComponent = () => {
         <CardTitle>Our Contributors</CardTitle>
         <CardDescription>They help us to grow up the keep react component library</CardDescription>
         <AvatarGroup className="mt-3">
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-1.png" />
+            <AvatarFallback>KR</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-2.png" />
+            <AvatarFallback>BR</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-3.png" />
+            <AvatarFallback>MR</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-4.png" />
+            <AvatarFallback>DD</AvatarFallback>
           </Avatar>
-          <Avatar className="size-14">
+          <Avatar>
             <AvatarImage src="/images/avatar/avatar-5.png" />
+            <AvatarFallback>CX</AvatarFallback>
           </Avatar>
         </AvatarGroup>
       </CardContent>

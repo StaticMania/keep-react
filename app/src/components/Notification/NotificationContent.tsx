@@ -1,111 +1,45 @@
 'use client'
-import { AnimatePresence, MotionProps, Variants, motion } from 'framer-motion'
-import { HTMLAttributes, Ref, forwardRef } from 'react'
+import { Close, Content, Portal } from '@radix-ui/react-dialog'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
-import { useNotificationContext } from './NotificationContext'
-import { NotificationPortal } from './NotificationPortal'
+import { useNotificationContext } from './Context'
+import { notificationTheme } from './theme'
 
-export type NotificationContentProps = HTMLAttributes<HTMLDivElement> & MotionProps
-
-interface VariantsProps {
-  'top-left': Variants
-  'top-right': Variants
-  'bottom-left': Variants
-  'bottom-right': Variants
-  center: Variants
+export interface NotificationContentProps extends ComponentPropsWithoutRef<typeof Content> {
+  closeIconStyle?: string
 }
 
-const contentTheme = {
-  position: {
-    'top-left': 'top-5 left-5',
-    'top-right': 'top-5 right-5',
-    'bottom-left': 'bottom-5 left-5',
-    'bottom-right': 'bottom-5 right-5',
-    center: 'inset-x-0 top-5 mx-auto',
-  },
-}
-
-const NotificationDirection: VariantsProps = {
-  'top-left': {
-    initial: { opacity: 0, y: '-100%', scale: 0.9 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
-    },
-    exit: { opacity: 0, x: '-100%' },
-  },
-  'top-right': {
-    initial: { opacity: 0, y: '-100%', scale: 0.9 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
-    },
-    exit: { opacity: 0, x: '100%' },
-  },
-  'bottom-left': {
-    initial: { opacity: 0, y: '100%', scale: 0.9 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
-    },
-    exit: { opacity: 0, x: '-100%' },
-  },
-  'bottom-right': {
-    initial: { opacity: 0, y: '100%', scale: 0.9 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
-    },
-    exit: { opacity: 0, x: '100%' },
-  },
-  center: {
-    initial: { opacity: 0, y: '-100%', scale: 0.9 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.3, type: 'spring', damping: 30, stiffness: 500 },
-    },
-    exit: { opacity: 0, y: '-100%' },
-  },
-}
-
-const NotificationContent = forwardRef<HTMLDivElement, NotificationContentProps>(
-  ({ children, className, ...props }, ref: Ref<HTMLDivElement>) => {
-    const { position = 'bottom-right', isOpen } = useNotificationContext()
+const NotificationContent = forwardRef<ElementRef<typeof Content>, NotificationContentProps>(
+  ({ className, children, closeIconStyle, ...props }, ref) => {
+    const { showCloseIcon, position } = useNotificationContext()
     return (
-      <AnimatePresence>
-        {isOpen && (
-          <NotificationPortal>
-            <motion.div
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={NotificationDirection[position]}
-              {...props}
-              className={cn(
-                'notification-content fixed max-w-sm rounded-xl border border-metal-100 bg-white p-6 dark:border-metal-800 dark:bg-metal-900',
-                contentTheme.position[position],
-                className,
-              )}
-              ref={ref}>
-              {children}
-            </motion.div>
-          </NotificationPortal>
-        )}
-      </AnimatePresence>
+      <Portal>
+        <Content
+          ref={ref}
+          className={cn(
+            notificationTheme.base,
+            notificationTheme.position[position as keyof typeof notificationTheme.position],
+            className,
+          )}
+          {...props}>
+          {children}
+          <Close
+            className={cn(
+              'absolute right-4 top-4 rounded-xl opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-metal-50 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-white dark:fill-white dark:ring-offset-metal-900 dark:focus:ring-metal-800',
+              !showCloseIcon && 'hidden',
+              closeIconStyle,
+            )}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 256 256">
+              <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+            </svg>
+            <span className="sr-only">Close</span>
+          </Close>
+        </Content>
+      </Portal>
     )
   },
 )
 
-NotificationContent.displayName = 'NotificationContent'
+NotificationContent.displayName = Content.displayName
 
 export { NotificationContent }

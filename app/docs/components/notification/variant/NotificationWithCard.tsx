@@ -3,42 +3,30 @@ import {
   Button,
   Notification,
   NotificationAction,
-  NotificationClose,
   NotificationContent,
   NotificationDescription,
-  NotificationFooter,
   NotificationTitle,
 } from '../../../../src'
 
 const NotificationWithCard = () => {
   return (
     <div className="flex items-center justify-center px-5 py-3">
-      <Notification>
+      <Notification showCloseIcon={false}>
         <NotificationAction asChild>
           <Button>Open Notification</Button>
         </NotificationAction>
-        <NotificationContent className="mb-2 max-w-xs space-y-4 overflow-hidden rounded-xl">
-          <Image
-            src="https://via.placeholder.com/600x400"
-            alt="image"
-            className="rounded-lg"
-            width={600}
-            height={400}
-          />
-          <div>
+        <NotificationContent className="max-w-xs overflow-hidden rounded-xl">
+          <Image src="/images/keep-card.jpg" className="rounded-lg" alt="image" width={600} height={300} />
+          <div className="my-4 space-y-1.5">
             <NotificationTitle>Can we store cookies?</NotificationTitle>
             <NotificationDescription>
               Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </NotificationDescription>
           </div>
-          <NotificationFooter>
-            <NotificationClose asChild>
-              <Button>Accept</Button>
-            </NotificationClose>
-            <NotificationClose asChild>
-              <Button variant="outline">Review</Button>
-            </NotificationClose>
-          </NotificationFooter>
+          <div className="flex gap-2.5">
+            <Button>Accept</Button>
+            <Button variant="outline">Review</Button>
+          </div>
         </NotificationContent>
       </Notification>
     </div>
@@ -52,35 +40,29 @@ import {
   Button,
   Notification,
   NotificationAction,
-  NotificationClose,
   NotificationContent,
   NotificationDescription,
-  NotificationFooter,
   NotificationTitle,
 } from 'keep-react'
 
 export const NotificationComponent = () => {
   return (
-    <Notification>
+    <Notification showCloseIcon={false}>
       <NotificationAction asChild>
         <Button>Open Notification</Button>
       </NotificationAction>
-      <NotificationContent className="mb-2 max-w-xs space-y-4 overflow-hidden rounded-xl">
-        <Image src="https://via.placeholder.com/600x400" alt="image" className="rounded-lg" width={600} height={400} />
-        <div>
+      <NotificationContent className="max-w-xs overflow-hidden rounded-xl">
+        <Image src="/images/keep-card.jpg" className="rounded-lg" alt="image" width={600} height={300} />
+        <div className="my-4 space-y-1.5">
           <NotificationTitle>Can we store cookies?</NotificationTitle>
           <NotificationDescription>
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </NotificationDescription>
         </div>
-        <NotificationFooter>
-          <NotificationClose asChild>
-            <Button>Accept</Button>
-          </NotificationClose>
-          <NotificationClose asChild>
-            <Button variant="outline">Review</Button>
-          </NotificationClose>
-        </NotificationFooter>
+        <div className="flex gap-2.5">
+          <Button>Accept</Button>
+          <Button variant="outline">Review</Button>
+        </div>
       </NotificationContent>
     </Notification>
   )

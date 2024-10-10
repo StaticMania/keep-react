@@ -1,8 +1,6 @@
+import { BreadcrumbCollapsed, BreadcrumbCollapsedCode } from './variant/BreadcrumbCollapsed'
 import { DefaultBreadcrumb, DefaultBreadcrumbCode } from './variant/DefaultBreadcrumb'
-import { BreadcrumbWithBorder, BreadcrumbWithBorderCode } from './variant/BreadcrumbWithBorder'
-import { BreadcrumbDividerIcon, BreadcrumbDividerIconCode } from './variant/BreadcrumbDividerIcon'
-
-import { breadcrumbApiData } from './breadcrumbApi'
+import { BreadcrumbWithIcon, BreadcrumbWithIconCode } from './variant/BreadcrumbWithIcon'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 import ComponentApi from '../../../components/ComponentApi'
@@ -19,24 +17,18 @@ The default Breadcrumbs component offers a simple and intuitive way for users to
   <DefaultBreadcrumb />
 </CodeHighlightPreview>
 
-## Border Types
+## Breadcrumb Collapsed
 
-The Breadcrumbs component includes the `borderType` prop with two possible values: `"border-xy"` and `"border-y"`.
+We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when the breadcrumb is too long.
 
-<CodeHighlightPreview code={BreadcrumbWithBorderCode}>
-  <BreadcrumbWithBorder />
+<CodeHighlightPreview code={BreadcrumbCollapsedCode}>
+  <BreadcrumbCollapsed />
 </CodeHighlightPreview>
 
-## Divider Icon Type
+## Breadcrumb with Icons
 
-You can use any kind of divider icon desire to your application design.
+We can use icon inside the breadcrumb items.
 
-<CodeHighlightPreview code={BreadcrumbDividerIconCode}>
-  <BreadcrumbDividerIcon />
+<CodeHighlightPreview code={BreadcrumbWithIconCode}>
+  <BreadcrumbWithIcon />
 </CodeHighlightPreview>
-
-## Breadcrumb API Reference
-
-Explore the available props for the `<Breadcrumb>` component.
-
-<ComponentApi data={breadcrumbApiData} />

@@ -4,17 +4,19 @@ import { Button, ButtonGroup } from '../../../../src'
 
 const ButtonGroupWithOnlyIcon = () => {
   return (
-    <ButtonGroup>
-      <Button position="start" shape="icon">
-        <Cube size={20} />
-      </Button>
-      <Button position="center" shape="icon">
-        <Gear size={20} />
-      </Button>
-      <Button position="end" shape="icon">
-        <ChatCircleDots size={20} />
-      </Button>
-    </ButtonGroup>
+    <div className="flex items-center justify-center px-5 py-3">
+      <ButtonGroup>
+        <Button position="start" shape="icon">
+          <Cube size={20} />
+        </Button>
+        <Button position="center" shape="icon">
+          <Gear size={20} />
+        </Button>
+        <Button position="end" shape="icon">
+          <ChatCircleDots size={20} />
+        </Button>
+      </ButtonGroup>
+    </div>
   )
 }
 
