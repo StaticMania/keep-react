@@ -21,7 +21,7 @@ interface CommandDialogProps extends ModalProps {}
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
     <Modal {...props}>
-      <ModalContent className="max-w-[35rem] overflow-hidden rounded-xl bg-white p-5 text-metal-600 shadow-xLarge dark:bg-metal-900 dark:text-white">
+      <ModalContent className="max-w-[35rem] overflow-hidden rounded-xl bg-white px-5 pb-5 pt-2 text-metal-600 shadow-xLarge dark:bg-metal-900 dark:text-white">
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-metal-600 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:p-2 [&_[cmdk-item]_svg]:h-4 [&_[cmdk-item]_svg]:w-4">
           {children}
         </Command>
