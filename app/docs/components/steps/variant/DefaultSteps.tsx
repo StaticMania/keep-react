@@ -1,9 +1,7 @@
-'use client'
-import { Check } from 'phosphor-react'
 import { Steps, StepsContent, StepsDescription, StepsItem, StepsPoint, StepsTitle } from '../../../../src'
 
-const StepWithIcon = () => {
-  const data = [
+const DefaultSteps = () => {
+  const stepsData = [
     {
       id: 1,
       title: 'Personal Information',
@@ -26,13 +24,9 @@ const StepWithIcon = () => {
   return (
     <div className="space-y-6 p-6">
       <Steps>
-        {data.map((step) => (
+        {stepsData.map((step) => (
           <StepsItem key={step.id}>
-            <StepsPoint
-              className="data-[completed=true]:bg-primary-500 data-[completed=true]:text-white"
-              isComplete={step.isComplete}>
-              <Check />
-            </StepsPoint>
+            <StepsPoint isComplete={step.isComplete} />
             <StepsContent>
               <StepsTitle>{step.title}</StepsTitle>
               <StepsDescription>{step.description}</StepsDescription>
@@ -44,12 +38,11 @@ const StepWithIcon = () => {
   )
 }
 
-const StepWithIconCode = {
-  'StepComponent.tsx': `'use client'
-import { Check } from 'phosphor-react'
+const DefaultStepsCode = {
+  'StepComponent.tsx': `
 import { Steps, StepsContent, StepsDescription, StepsItem, StepsPoint, StepsTitle } from 'keep-react'
 
-const StepWithIcon = () => {
+export const StepsComponent = () => {
   const data = [
     {
       id: 1,
@@ -74,11 +67,7 @@ const StepWithIcon = () => {
     <Steps>
       {data.map((step) => (
         <StepsItem key={step.id}>
-          <StepsPoint
-            className="data-[completed=true]:bg-primary-500 data-[completed=true]:text-white"
-            isComplete={step.isComplete}>
-            <Check />
-          </StepsPoint>
+          <StepsPoint isComplete={step.isComplete} />
           <StepsContent>
             <StepsTitle>{step.title}</StepsTitle>
             <StepsDescription>{step.description}</StepsDescription>
@@ -90,5 +79,4 @@ const StepWithIcon = () => {
 }
 `,
 }
-
-export { StepWithIcon, StepWithIconCode }
+export { DefaultSteps, DefaultStepsCode }

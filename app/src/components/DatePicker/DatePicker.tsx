@@ -15,7 +15,7 @@ export type DateRangeType = {
 const DatePicker = ({
   className,
   classNames,
-  dayShape = 'rounded',
+  dayShape = 'circle',
   showOutsideDays = true,
   ...props
 }: CalendarProps) => {

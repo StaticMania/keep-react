@@ -95,7 +95,9 @@ const Header = () => {
                 </span>
               )}
             </button>
-            <Link href="/docs/getting-started/introduction" className={cn(buttonVariants({ color: 'secondary' }))}>
+            <Link
+              href="/docs/getting-started/introduction"
+              className={cn(buttonVariants({ color: 'secondary' }), 'hidden sm:block')}>
               get started
             </Link>
             <Drawer showCloseIcon={false} onOpenChange={setActive} open={active}>

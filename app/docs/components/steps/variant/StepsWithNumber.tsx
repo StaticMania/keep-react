@@ -1,8 +1,6 @@
-'use client'
-import { Check } from 'phosphor-react'
 import { Steps, StepsContent, StepsDescription, StepsItem, StepsPoint, StepsTitle } from '../../../../src'
 
-const StepWithIcon = () => {
+const StepsWithNumber = () => {
   const data = [
     {
       id: 1,
@@ -28,11 +26,7 @@ const StepWithIcon = () => {
       <Steps>
         {data.map((step) => (
           <StepsItem key={step.id}>
-            <StepsPoint
-              className="data-[completed=true]:bg-primary-500 data-[completed=true]:text-white"
-              isComplete={step.isComplete}>
-              <Check />
-            </StepsPoint>
+            <StepsPoint isComplete={step.isComplete}>{step.id}</StepsPoint>
             <StepsContent>
               <StepsTitle>{step.title}</StepsTitle>
               <StepsDescription>{step.description}</StepsDescription>
@@ -44,12 +38,11 @@ const StepWithIcon = () => {
   )
 }
 
-const StepWithIconCode = {
-  'StepComponent.tsx': `'use client'
-import { Check } from 'phosphor-react'
+const StepsWithNumberCode = {
+  'StepComponent.tsx': `
 import { Steps, StepsContent, StepsDescription, StepsItem, StepsPoint, StepsTitle } from 'keep-react'
 
-const StepWithIcon = () => {
+export const StepsComponent = () => {
   const data = [
     {
       id: 1,
@@ -74,11 +67,7 @@ const StepWithIcon = () => {
     <Steps>
       {data.map((step) => (
         <StepsItem key={step.id}>
-          <StepsPoint
-            className="data-[completed=true]:bg-primary-500 data-[completed=true]:text-white"
-            isComplete={step.isComplete}>
-            <Check />
-          </StepsPoint>
+          <StepsPoint isComplete={step.isComplete}>{step.id}</StepsPoint>
           <StepsContent>
             <StepsTitle>{step.title}</StepsTitle>
             <StepsDescription>{step.description}</StepsDescription>
@@ -90,5 +79,4 @@ const StepWithIcon = () => {
 }
 `,
 }
-
-export { StepWithIcon, StepWithIconCode }
+export { StepsWithNumber, StepsWithNumberCode }
