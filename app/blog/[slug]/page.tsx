@@ -1,33 +1,34 @@
-import Markdown from 'react-markdown'
-import getMarkDownContent from '~/utils/GetMarkDownContent'
-import getMarkDownData from '~/utils/GetMarkDownData'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import { Suspense } from 'react'
+import rehypePrettyCode from 'rehype-pretty-code'
+import BlogHeader from '~/app/components/BlogHeader'
+import { getBlogs } from '~/utils/getMdxContent'
 
 export async function generateStaticParams() {
-  const posts = getMarkDownData('data/blogs')
-
+  const posts = getBlogs()
   return posts.map((post) => ({
     slug: post.slug,
   }))
 }
 
 const page = async ({ params }: { params: { slug: string } }) => {
-  const folder = 'data/blogs/'
-  const slug = params.slug
-  const post: { [key: string]: any } = getMarkDownContent(folder, slug)
-
-  const { title, date } = post.data
+  const posts = getBlogs()
+  const post = posts.find((post) => post.slug === params.slug)
 
   return (
     <section>
-      <div className="mx-auto my-12 max-w-7xl px-6 text-center 2xl:px-0">
-        <div className="py-12 text-left">
-          <p className="mb-1 text-body-3 font-medium text-primary-500">{date}</p>
-          <p className="text-heading-5 font-medium text-metal-900 dark:text-white">{title}</p>
-          <hr className="my-5 block border-b border-b-metal-100 dark:border-b-metal-800" />
-          <div className="mt-10">
-            <Markdown className="post">{post.content}</Markdown>
-          </div>
-        </div>
+      <div id="blog-content" className="mx-auto max-w-5xl overflow-hidden px-6 py-12 2xl:px-0">
+        <Suspense fallback={<>Loading...</>}>
+          <MDXRemote
+            components={{ BlogHeader }}
+            source={post?.content ? post.content : ''}
+            options={{
+              mdxOptions: {
+                rehypePlugins: [[rehypePrettyCode, { theme: 'poimandres' }]],
+              },
+            }}
+          />
+        </Suspense>
       </div>
     </section>
   )

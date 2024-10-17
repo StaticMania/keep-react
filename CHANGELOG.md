@@ -57,6 +57,7 @@ We are thrilled to announce the initial release of Keep React, our open-source c
 - Notification Animation changed
 - Popover component package changed
 - Select component added
+- Steps component updated
 - Slider component color updated
 - Spinner component remove extra color variant
 - Tabs component package changed

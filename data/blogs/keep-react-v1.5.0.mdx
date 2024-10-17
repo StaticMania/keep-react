@@ -1,18 +1,12 @@
 ---
 title: 'Keep React V1.5.0'
 date: 'August 8, 2024'
-description: ''
 author: Md Ariful Islam
-slug: keep-react-v1.5.0
-keyFeatures:
-  - 'Framer Motion Added'
-  - 'Remove keep presets'
-  - 'cn function & asChild'
-  - 'Alert Structure update'
-  - 'Avatar structure update'
-  - 'Introduce Some Radix UI'
-  - 'And more...'
+tag: Releases
+version: V1.5.0
 ---
+
+<BlogHeader title="Keep React v1.5.0" />
 
 ## Release Notes
 
@@ -36,7 +30,7 @@ We are excited to announce that we are now using the highly popular animation fr
 
 We have simplified the integration process. You can now import `keepTheme` from `keep-react/keepTheme` to achieve the same functionality. For more details, please check out the installation docs [`here`](docs/getting-started/introduction).
 
-```js
+```tsx {1,8} showLineNumbers
 import { keepTheme } from 'keep-react/keepTheme'
 
 const config = {
@@ -51,33 +45,33 @@ export default keepTheme(config)
 
 We have integrated several components with Radix UI for enhanced functionality and accessibility. Here is the list of components now using Radix UI:
 
-- [`Checkbox`](/docs/components/checkbox)
-- [`Slider`](/docs/components/slider)
-- [`Switch`](/docs/components/switch)
+- [Checkbox](/docs/components/checkbox)
+- [Slider](/docs/components/slider)
+- [Switch](/docs/components/switch)
 
 ## Updated Component Styles
 
 We have updated the styles for some of our components to improve their appearance and usability:
 
-- [`Alert`](/docs/components/alert)
-- [`Badge`](/docs/components/badge)
+- [Alert](/docs/components/alert)
+- [Badge](/docs/components/badge)
 
 ## Removal of Extra div Elements
 
 To optimize our components, we have removed extra div elements from the following components:
 
-- [`Modal`](/docs/components/modal)
-- [`Notification`](/docs/components/notification)
-- [`Drawer`](/docs/components/drawer)
+- [Modal](/docs/components/modal)
+- [Notification](/docs/components/notification)
+- [Drawer](/docs/components/drawer)
 
 ## Structural Updates to Components
 
 We have made structural updates to several components for better performance and flexibility:
 
-- [`Avatar`](/docs/components/avatar)
-- [`Number Input`](/docs/components/numberInput)
-- [`Steps`](/docs/components/steps)
-- [`Tabs`](/docs/components/tabs)
+- [Avatar](/docs/components/avatar)
+- [Number Input](/docs/components/numberInput)
+- [Steps](/docs/components/steps)
+- [Tabs](/docs/components/tabs)
 
 ## Contributors
 
@@ -85,4 +79,4 @@ This release was made possible by the hard work and dedication of our contributo
 
 - [Arifulislam5577](https://github.com/Arifulislam5577)
 
-These updates aim to improve your development experience and the performance of your applications. For detailed documentation and examples, please visit our official [`documentation`](docs/getting-started/introduction). Thank you for using Keep React!
+These updates aim to improve your development experience and the performance of your applications. For detailed documentation and examples, please visit our official [`documentation`](/docs/getting-started/introduction). Thank you for using Keep React!
