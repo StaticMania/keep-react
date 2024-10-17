@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 import mdx from '@next/mdx'
 import slug from 'rehype-slug'
 import tableOfContents from 'remark-toc'
@@ -80,6 +79,11 @@ const nextConfig = {
       {
         source: '/tooltip',
         destination: '/docs/components/tooltip',
+        permanent: true,
+      },
+      {
+        source: '/select',
+        destination: '/docs/components/select',
         permanent: true,
       },
       {

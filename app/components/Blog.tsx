@@ -1,29 +1,34 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-import { Card, CardContent, CardTitle } from '../src'
+import KeepDarkLogo from '../../public/images/keep-dark.svg'
 
 export interface BlogProps {
   [key: string]: any
 }
 
-const Blog: FC<BlogProps> = ({ title, date, keyFeatures, slug }) => {
+const Blog: FC<BlogProps> = ({ title, date, tag, slug, version }) => {
   return (
-    <Card className="max-w-full lg:col-span-1">
-      <CardContent className="flex flex-col justify-between gap-y-3 text-left">
-        <p className="text-body-4 text-metal-600 dark:text-white">{date}</p>
-        <CardTitle>{title}</CardTitle>
-        <ul className="!mt-4 ml-5 list-disc space-y-1 text-body-4 font-normal text-metal-600 dark:text-metal-300">
-          {keyFeatures?.map((item: string) => <li key={item}>{item}</li>)}
-        </ul>
-
-        <Link
-          href={`/blog/${slug}`}
-          className="flex w-full items-center justify-center rounded-lg bg-metal-900 px-5 py-2.5 text-body-4 font-medium text-white transition-all duration-150 hover:bg-metal-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metal-200 focus-visible:ring-offset-2 active:focus:scale-95 disabled:cursor-not-allowed disabled:bg-metal-200 dark:bg-metal-800">
-          Read More
-        </Link>
-      </CardContent>
-    </Card>
+    <div className="space-y-2.5">
+      <Link
+        href={`/blog/${slug}`}
+        className="blog-post relative flex h-[200px] w-full flex-col items-center justify-center gap-2 rounded-xl border border-metal-800 bg-[#0D1015]">
+        <Image src={KeepDarkLogo} alt="Keep React" width="100" height="40" />
+        <p className="text-body-2 font-semibold text-white">{version}</p>
+      </Link>
+      <div className="space-y-2.5">
+        <p className="text-body-5 text-primary-500">{tag}</p>
+        <div className="flex items-center justify-between">
+          <Link
+            href={`/blog/${slug}`}
+            className="cursor-pointer text-body-3 text-metal-900 dark:text-white dark:hover:text-primary-500">
+            {title}
+          </Link>
+          <p className="text-body-4 text-metal-600 dark:text-metal-300">{date}</p>
+        </div>
+      </div>
+    </div>
   )
 }
 

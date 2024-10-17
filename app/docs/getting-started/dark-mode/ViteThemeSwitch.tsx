@@ -2,7 +2,7 @@
 import { useTheme } from 'next-themes'
 import { MoonStars, SunDim } from 'phosphor-react'
 import { useEffect, useState } from 'react'
-import { Dropdown, DropdownAction, DropdownContent, DropdownList } from '../../../src'
+import { Dropdown, DropdownAction, DropdownContent, DropdownItem } from '../../../src'
 
 const ViteThemeSwitcher = () => {
   const { setTheme } = useTheme()
@@ -19,7 +19,7 @@ const ViteThemeSwitcher = () => {
   }, [])
 
   return client ? (
-    <Dropdown placement="bottom-start">
+    <Dropdown>
       <DropdownAction asChild>
         <button className="rounded-lg bg-primary-25 p-2.5 dark:bg-white">
           <MoonStars size={20} color="#1C222B" className="hidden dark:block" />
@@ -27,24 +27,12 @@ const ViteThemeSwitcher = () => {
           <span className="sr-only">Toggle theme</span>
         </button>
       </DropdownAction>
-      <DropdownContent className="w-[150px] dark:bg-metal-900">
-        <DropdownList className="flex flex-col items-start">
-          <button
-            className="block w-full rounded-lg p-2 text-body-4 font-medium text-metal-900 hover:bg-primary-25 dark:text-white dark:hover:bg-metal-800"
-            onClick={() => setTheme('light')}>
-            Light
-          </button>
-          <button
-            className="block w-full rounded-lg p-2 text-body-4 font-medium text-metal-900 hover:bg-primary-25 dark:text-white dark:hover:bg-metal-800"
-            onClick={() => setTheme('dark')}>
-            Dark
-          </button>
-          <button
-            className="block w-full rounded-lg p-2 text-body-4 font-medium text-metal-900 hover:bg-primary-25 dark:text-white dark:hover:bg-metal-800"
-            onClick={() => setTheme('system')}>
-            System
-          </button>
-        </DropdownList>
+      <DropdownContent
+        align="start"
+        className="w-[180px] border border-metal-100 dark:border-metal-800 dark:bg-metal-900">
+        <DropdownItem onClick={() => setTheme('light')}>Light</DropdownItem>
+        <DropdownItem onClick={() => setTheme('dark')}>Dark</DropdownItem>
+        <DropdownItem onClick={() => setTheme('system')}>System</DropdownItem>
       </DropdownContent>
     </Dropdown>
   ) : null

@@ -8,12 +8,12 @@ import { Button, DatePicker, Popover, PopoverAction, PopoverContent } from '../.
 const DateRangePicker2 = () => {
   const [selected, setSelected] = useState<DateRange>()
   return (
-    <Popover showArrow={false} placement="bottom-start">
+    <Popover>
       <PopoverAction asChild>
         <Button
           color="secondary"
           size="lg"
-          className="w-[286px] justify-start gap-2.5 border border-metal-100 text-body-4"
+          className="w-[280px] justify-start gap-2.5 border border-metal-100 text-body-4"
           variant="outline">
           <Calendar size={20} className="text-metal-400 dark:text-white" />
           {selected ? (
@@ -25,7 +25,7 @@ const DateRangePicker2 = () => {
           )}
         </Button>
       </PopoverAction>
-      <PopoverContent className="z-50 max-w-min">
+      <PopoverContent align="start" className="max-w-min border-0">
         <DatePicker mode="range" numberOfMonths={2} selected={selected} onSelect={setSelected} showOutsideDays={true} />
       </PopoverContent>
     </Popover>
@@ -43,7 +43,7 @@ import { Button, DatePicker, Popover, PopoverContent, PopoverAction } from 'keep
 export const DatePickerComponent = () => {
   const [selected, setSelected] = useState(null)
   return (
-    <Popover showArrow={false} placement="bottom-start">
+    <Popover>
       <PopoverAction asChild>
         <Button
           color="secondary"
@@ -60,7 +60,7 @@ export const DatePickerComponent = () => {
           )}
         </Button>
       </PopoverAction>
-      <PopoverContent className="z-50 max-w-min">
+      <PopoverContent align="start" className="max-w-min border-0">
         <DatePicker mode="range" numberOfMonths={2} selected={selected} onSelect={setSelected} showOutsideDays={true} />
       </PopoverContent>
     </Popover>
@@ -82,7 +82,7 @@ type DateRange = {
 export const DatePickerComponent = () => {
   const [selected, setSelected] = useState<DateRange>()
   return (
-    <Popover showArrow={false} placement="bottom-start">
+    <Popover>
       <PopoverAction asChild>
         <Button color="secondary"
           size="lg"
@@ -98,7 +98,7 @@ export const DatePickerComponent = () => {
           )}
         </Button>
       </PopoverAction>
-      <PopoverContent className="z-50 max-w-min">
+      <PopoverContent align="start" className="max-w-min border-0">
         <DatePicker mode="range" numberOfMonths={2} selected={selected} onSelect={setSelected} showOutsideDays={true} />
       </PopoverContent>
     </Popover>

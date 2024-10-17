@@ -1,7 +1,7 @@
 import { DefaultDrawer, DefaultDrawerCode } from './variant/DefaultDrawer'
 import { DrawerPosition, DrawerPositionCode } from './variant/DrawerPosition'
 
-import { drawerAPIData } from './DrawerApi'
+import { drawerAPIData, drawerContentAPIData } from './DrawerApi'
 import ComponentApi from '../../../components/ComponentApi'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
@@ -30,3 +30,13 @@ You can position the drawer in a specific direction, such as `left`, `right`, `t
 Here is a list of the props that you can pass to the drawer component:
 
 <ComponentApi data={drawerAPIData} />
+
+## Content API Reference
+
+Here is a list of the props that you can pass to the drawer content component:
+
+<ComponentApi data={drawerContentAPIData} />
+
+## Reference
+
+Our drawer component is built using the `@radix-ui/react-dialog` package. For more information , follow the documentation [@radix-ui/react-dialog](https://www.radix-ui.com/primitives/docs/components/dialog#api-reference).

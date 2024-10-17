@@ -1,28 +1,54 @@
-import { ChartWithAxisData, ChartWithAxisDataCode } from './variant/ChartWithAxisData'
-import { ChartWithDoubleData, ChartWithDoubleDataCode } from './variant/ChartWithDoubleData'
-
+import { DefaultBarChart, DefaultBarChartCode } from './variant/DefaultBarChart'
+import { FillColoredBar, FillColoredBarCode } from './variant/FillColoredBar'
+import { FillColoredSeries, FillColoredSeriesCode } from './variant/FillColoredSeries'
+import { FillBarLabel, FillBarLabelCode } from './variant/FillBarLabel'
+import { StackBar, StackBarCode } from './variant/StackBar'
+import { rechartsInstall } from './variant/Installation'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+import CodeHighlight from '../../../components/CodeHighlight'
 
 ## Table of Contents
 
-The Bar Chart component provides a visual representation of data through bars of varying lengths. It's a graphical representation commonly used to display and compare the values of different categories or groups. The Bar Chart component is highly customizable and can be tailored to fit various data visualization needs.
+The Bar Chart component provides a visual representation of data through bars of varying lengths. It's a graphical representation commonly used to display and compare the values of different categories or groups. The component is highly customizable to suit different data visualization needs.
 
-## Chart Axis Data
+## Installation
 
-Learn how to populate your bar chart with custom data for both the X and Y axes.
+This component uses Recharts for chart rendering. You need to install the `Recharts` library to use the Bar Chart component in your project.
 
-<CodeHighlightPreview code={ChartWithAxisDataCode}>
-  <ChartWithAxisData />
+<CodeHighlight code={rechartsInstall} />
+
+## Default Bar Chart
+
+This is the simplest form of a Bar Chart, ideal for basic data visualization.
+
+<CodeHighlightPreview code={DefaultBarChartCode}>
+  <DefaultBarChart />
 </CodeHighlightPreview>
 
-## Series Data
+## Fill colored bars
 
-Discover how to create a bar chart with multiple data series for more detailed insights.
+<CodeHighlightPreview code={FillColoredBarCode}>
+  <FillColoredBar />
+</CodeHighlightPreview>
 
-<CodeHighlightPreview code={ChartWithDoubleDataCode}>
-  <ChartWithDoubleData />
+## Fill colored series
+
+<CodeHighlightPreview code={FillColoredSeriesCode}>
+  <FillColoredSeries />
+</CodeHighlightPreview>
+
+## Fill series label
+
+<CodeHighlightPreview code={FillBarLabelCode}>
+  <FillBarLabel />
+</CodeHighlightPreview>
+
+## Stack colored bars
+
+<CodeHighlightPreview code={StackBarCode}>
+  <StackBar />
 </CodeHighlightPreview>
 
 ## Reference
 
-To learn more about the Bar chart, please see the documentation of [Recharts](https://recharts.org/en-US)
+To learn more about the Line chart, please see the documentation of [BarChart](https://recharts.org/en-US/examples/TinyBarChart)

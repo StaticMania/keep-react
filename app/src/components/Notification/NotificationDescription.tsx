@@ -1,27 +1,18 @@
 'use client'
-import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
+import { Description } from '@radix-ui/react-dialog'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
 
-export interface NotificationDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {
-  asChild?: boolean
-}
-
-const NotificationDescription = forwardRef<HTMLParagraphElement, NotificationDescriptionProps>(
-  ({ className, asChild, children, ...props }, ref) => {
-    if (asChild && isValidElement(children)) {
-      return cloneElement(children, {
-        itemRef: ref,
-        ...props,
-      })
-    }
-    return (
-      <p ref={ref} className={cn('text-body-4 font-normal text-metal-600 dark:text-metal-300', className)} {...props}>
-        {children}
-      </p>
-    )
-  },
-)
-
-NotificationDescription.displayName = 'NotificationDescription'
+const NotificationDescription = forwardRef<
+  ElementRef<typeof Description>,
+  ComponentPropsWithoutRef<typeof Description>
+>(({ className, ...props }, ref) => (
+  <Description
+    ref={ref}
+    className={cn('text-body-5 font-normal text-metal-600 lg:text-body-4 dark:text-metal-300', className)}
+    {...props}
+  />
+))
+NotificationDescription.displayName = Description.displayName
 
 export { NotificationDescription }

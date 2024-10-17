@@ -20,18 +20,4 @@ export const notificationApi = [
     propsDescription: 'Sets the position of the notification.',
     default: 'bottom-right',
   },
-  {
-    id: 4,
-    propsName: 'autoCloseTime',
-    propsType: 'number',
-    propsDescription: 'Auto close time of the notification.',
-    default: '3000',
-  },
-  {
-    id: 5,
-    propsName: 'autoClose',
-    propsType: 'boolean',
-    propsDescription: 'Notification auto close or not.',
-    default: 'true',
-  },
 ]

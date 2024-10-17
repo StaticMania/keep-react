@@ -1,21 +1,23 @@
-import { Avatar, AvatarText } from '../../../../src'
+import { Avatar, AvatarFallback, AvatarImage } from '../../../../src'
 
 const DefaultAvatar = () => {
   return (
     <Avatar>
-      <AvatarText>KR</AvatarText>
+      <AvatarImage src="/images/avatar/avatar-4.png" />
+      <AvatarFallback>KR</AvatarFallback>
     </Avatar>
   )
 }
 
 const DefaultAvatarCode = {
   'AvatarComponent.tsx': `
-import { Avatar, AvatarText } from 'keep-react'
+import { Avatar, AvatarFallback, AvatarImage } from 'keep-react'
 
 export const AvatarComponent = () => {
   return (
     <Avatar>
-      <AvatarText>KR</AvatarText>
+      <AvatarImage src="/images/avatar/avatar-4.png" />
+      <AvatarFallback>KR</AvatarFallback>
     </Avatar>
   )
 }

@@ -1,53 +1,64 @@
-import { Avatar, AvatarGroup, AvatarImage } from '../../../../src'
+import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from '../../../../src'
 
 const AvatarGroupComponent = () => {
   return (
-    <AvatarGroup>
-      <Avatar className="size-14">
-        <AvatarImage src="/images/avatar/avatar-1.png" />
-      </Avatar>
-      <Avatar className="size-14">
-        <AvatarImage src="/images/avatar/avatar-2.png" />
-      </Avatar>
-      <Avatar className="size-14">
-        <AvatarImage src="/images/avatar/avatar-3.png" />
-      </Avatar>
-      <Avatar className="size-14">
-        <AvatarImage src="/images/avatar/avatar-4.png" />
-      </Avatar>
-      <Avatar className="size-14">
-        <AvatarImage src="/images/avatar/avatar-5.png" />
-      </Avatar>
-    </AvatarGroup>
+    <div className="px-5 py-3">
+      <AvatarGroup>
+        <Avatar>
+          <AvatarImage src="/images/avatar/avatar-1.png" />
+          <AvatarFallback>KR</AvatarFallback>
+        </Avatar>
+        <Avatar>
+          <AvatarImage src="/images/avatar/avatar-2.png" />
+          <AvatarFallback>DR</AvatarFallback>
+        </Avatar>
+        <Avatar>
+          <AvatarImage src="/images/avatar/avatar-3.png" />
+          <AvatarFallback>NR</AvatarFallback>
+        </Avatar>
+        <Avatar>
+          <AvatarImage src="/images/avatar/avatar-4.png" />
+          <AvatarFallback>MR</AvatarFallback>
+        </Avatar>
+        <Avatar>
+          <AvatarImage src="/images/avatar/avatar-5.png" />
+          <AvatarFallback>NC</AvatarFallback>
+        </Avatar>
+      </AvatarGroup>
+    </div>
   )
 }
 
 const AvatarGroupCode = {
   'AvatarComponent.tsx': `
-import { Avatar, AvatarGroup, AvatarImage } from 'keep-react'
+import { Avatar, AvatarGroup, AvatarImage, AvatarFallback } from 'keep-react'
 
 const AvatarGroupComponent = () => {
   return (
     <AvatarGroup>
-      <Avatar className="size-14">
+      <Avatar>
         <AvatarImage src="/images/avatar/avatar-1.png" />
+        <AvatarFallback>KR</AvatarFallback>
       </Avatar>
-      <Avatar className="size-14">
+      <Avatar>
         <AvatarImage src="/images/avatar/avatar-2.png" />
+        <AvatarFallback>DR</AvatarFallback>
       </Avatar>
-      <Avatar className="size-14">
+      <Avatar>
         <AvatarImage src="/images/avatar/avatar-3.png" />
+        <AvatarFallback>NR</AvatarFallback>
       </Avatar>
-      <Avatar className="size-14">
+      <Avatar>
         <AvatarImage src="/images/avatar/avatar-4.png" />
+        <AvatarFallback>MR</AvatarFallback>
       </Avatar>
-      <Avatar className="size-14">
+      <Avatar>
         <AvatarImage src="/images/avatar/avatar-5.png" />
+        <AvatarFallback>NC</AvatarFallback>
       </Avatar>
     </AvatarGroup>
   )
 }
-
 `,
 }
 

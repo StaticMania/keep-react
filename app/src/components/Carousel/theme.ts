@@ -32,7 +32,7 @@ export const carouselTheme: KeepCarouselTheme = {
     },
     indicators: {
       container: 'flex flex-wrap items-center gap-2',
-      dot: 'inline-flex size-3 rounded-full border-2 border-metal-300 dark:border-metal-800',
+      dot: 'inline-flex size-3 rounded-full border-2 border-metal-300 dark:border-metal-800 data-[active=true]:border-metal-900 dark:data-[active=true]:border-metal-100',
     },
   },
   item: {

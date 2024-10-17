@@ -2,6 +2,7 @@ import { DefaultDatePicker, DefaultDatePickerCode } from './variant/DefaultDateP
 import { MultipleDatePicker, MultipleDatePickerCode } from './variant/MultipleDatePicker'
 import { DateRangePicker, DateRangePickerCode } from './variant/DateRangePicker'
 import { DateRangePicker2, DateRangePicker2Code } from './variant/DateRangePickerWithTwoMonth'
+import { CircleDatePicker, CircleDatePickerCode } from './variant/CircleDatePicker'
 
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
@@ -15,6 +16,14 @@ The Default Date Picker component provides a simple interface for selecting a si
 
 <CodeHighlightPreview code={DefaultDatePickerCode}>
   <DefaultDatePicker />
+</CodeHighlightPreview>
+
+## Circle day shape
+
+We can change day picker day shape by using dayShape props using `"circle"` and `'rounded'`. By default it will be `'rounded'`.
+
+<CodeHighlightPreview code={CircleDatePickerCode}>
+  <CircleDatePicker />
 </CodeHighlightPreview>
 
 ## Multiple Date Picker

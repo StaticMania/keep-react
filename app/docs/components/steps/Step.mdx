@@ -1,48 +1,41 @@
-import { DefaultStep, DefaultStepCode } from './variant/DefaultStep'
+import { DefaultSteps, DefaultStepsCode } from './variant/DefaultSteps'
 import { StepWithIcon, StepWithIconCode } from './variant/StepWithIcon'
-import { StepWithBorder, StepWithBorderCode } from './variant/StepWithBorder'
-
-import { StepPointAPI, StepLineAPI } from './StepApi'
+import { StepsWithNumber, StepsWithNumberCode } from './variant/StepsWithNumber'
+import { StepPointAPI } from './StepApi'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 import ComponentApi from '../../../components/ComponentApi'
 
 ## Table of Contents
 
-The Steps Component is a user interface element used to guide users through a multi-step process or workflow. It presents a visual representation of the various stages or steps a user needs to complete in sequential order.
+The Steps Component is a UI element that guides users through a multi-step process or workflow. It visually represents the different stages a user needs to complete in sequence.
 
-## Default Step
+## Default Steps
 
-The Default Step refers to the fundamental and default configuration of a Steps Component within a user interface. It provides a clear visual representation of each step in a multi-step process.
+The Default Steps configuration showcases the basic setup of the Steps Component within the UI.
 
-<CodeHighlightPreview github="Steps" code={DefaultStepCode}>
-  <DefaultStep />
+<CodeHighlightPreview github="Steps" code={DefaultStepsCode}>
+  <DefaultSteps />
 </CodeHighlightPreview>
 
-## Step With Border
+## Steps Number Point
 
-The `border` variant of the Step Point adds a border around the step indicator, making it more prominent and visually distinct.
+You can display numbers as step indicators by passing them as children to the `<StepsPoint>` component.
 
-<CodeHighlightPreview github="Steps" code={StepWithBorderCode}>
-  <StepWithBorder />
+<CodeHighlightPreview github="Steps" code={StepsWithNumberCode}>
+  <StepsWithNumber />
 </CodeHighlightPreview>
 
-## Step With Icon
+## Steps With Icon
 
-The `icon` variant of the Step Point includes an icon within the step indicator, providing an additional visual cue.
+To use icons as step indicators, pass the desired icon as children to the `<StepsPoint>` component.
 
 <CodeHighlightPreview github="Steps" code={StepWithIconCode}>
   <StepWithIcon />
 </CodeHighlightPreview>
 
-## Step Point API Reference
+## Steps Point API Reference
 
-Explore the available props for the `<StepPoint/>` component
+Below are the available props for the `<StepsPoint>` component:
 
 <ComponentApi data={StepPointAPI} />
-
-## Step Line API Reference
-
-Explore the available props for the `<StepLine/>` component
-
-<ComponentApi data={StepLineAPI} />

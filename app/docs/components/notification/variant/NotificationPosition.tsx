@@ -2,35 +2,14 @@ import {
   Button,
   Notification,
   NotificationAction,
-  NotificationClose,
   NotificationContent,
   NotificationDescription,
-  NotificationFooter,
   NotificationTitle,
 } from '../../../../src'
 
 const NotificationPosition = () => {
   return (
     <div className="flex items-center justify-center gap-5 px-5 py-3">
-      <Notification position="bottom-left">
-        <NotificationAction asChild>
-          <Button>Bottom Left</Button>
-        </NotificationAction>
-        <NotificationContent>
-          <NotificationTitle>Can we store cookies?</NotificationTitle>
-          <NotificationDescription>
-            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </NotificationDescription>
-          <NotificationFooter>
-            <NotificationClose asChild>
-              <Button>Accept</Button>
-            </NotificationClose>
-            <NotificationClose asChild>
-              <Button variant="outline">Review</Button>
-            </NotificationClose>
-          </NotificationFooter>
-        </NotificationContent>
-      </Notification>
       <Notification position="bottom-right">
         <NotificationAction asChild>
           <Button>Bottom Right</Button>
@@ -40,33 +19,17 @@ const NotificationPosition = () => {
           <NotificationDescription>
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </NotificationDescription>
-          <NotificationFooter>
-            <NotificationClose asChild>
-              <Button>Accept</Button>
-            </NotificationClose>
-            <NotificationClose asChild>
-              <Button variant="outline">Review</Button>
-            </NotificationClose>
-          </NotificationFooter>
         </NotificationContent>
       </Notification>
-      <Notification position="top-left">
+      <Notification position="bottom-left">
         <NotificationAction asChild>
-          <Button>Top Left</Button>
+          <Button>Bottom Left</Button>
         </NotificationAction>
         <NotificationContent>
           <NotificationTitle>Can we store cookies?</NotificationTitle>
           <NotificationDescription>
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </NotificationDescription>
-          <NotificationFooter>
-            <NotificationClose asChild>
-              <Button>Accept</Button>
-            </NotificationClose>
-            <NotificationClose asChild>
-              <Button variant="outline">Review</Button>
-            </NotificationClose>
-          </NotificationFooter>
         </NotificationContent>
       </Notification>
       <Notification position="top-right">
@@ -78,14 +41,17 @@ const NotificationPosition = () => {
           <NotificationDescription>
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </NotificationDescription>
-          <NotificationFooter>
-            <NotificationClose asChild>
-              <Button>Accept</Button>
-            </NotificationClose>
-            <NotificationClose asChild>
-              <Button variant="outline">Review</Button>
-            </NotificationClose>
-          </NotificationFooter>
+        </NotificationContent>
+      </Notification>
+      <Notification position="top-left">
+        <NotificationAction asChild>
+          <Button>Top Left</Button>
+        </NotificationAction>
+        <NotificationContent>
+          <NotificationTitle>Can we store cookies?</NotificationTitle>
+          <NotificationDescription>
+            Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </NotificationDescription>
         </NotificationContent>
       </Notification>
       <Notification position="center">
@@ -97,14 +63,6 @@ const NotificationPosition = () => {
           <NotificationDescription>
             Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </NotificationDescription>
-          <NotificationFooter>
-            <NotificationClose asChild>
-              <Button>Accept</Button>
-            </NotificationClose>
-            <NotificationClose asChild>
-              <Button variant="outline">Review</Button>
-            </NotificationClose>
-          </NotificationFooter>
         </NotificationContent>
       </Notification>
     </div>
@@ -117,10 +75,8 @@ import {
   Button,
   Notification,
   NotificationAction,
-  NotificationClose,
   NotificationContent,
   NotificationDescription,
-  NotificationFooter,
   NotificationTitle,
 } from 'keep-react'
 
@@ -135,14 +91,6 @@ export const NotificationComponent = () => {
         <NotificationDescription>
           Default message - Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </NotificationDescription>
-        <NotificationFooter>
-          <NotificationClose asChild>
-            <Button>Accept</Button>
-          </NotificationClose>
-          <NotificationClose asChild>
-            <Button variant="outline">Review</Button>
-          </NotificationClose>
-        </NotificationFooter>
       </NotificationContent>
     </Notification>
   )

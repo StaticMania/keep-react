@@ -1,16 +1,26 @@
 'use client'
 import { ChartPieSlice, Copy, Pen, Phone, SignOut, UserCircle, Users } from 'phosphor-react'
-import { Button, Divider, Dropdown, DropdownAction, DropdownContent, DropdownItem, DropdownList } from '../../../../src'
+import {
+  Button,
+  Dropdown,
+  DropdownAction,
+  DropdownArrow,
+  DropdownContent,
+  DropdownDivider,
+  DropdownGroup,
+  DropdownItem,
+} from '../../../../src'
 
 const DropdownWithIcon = () => {
   return (
     <div className="flex items-center justify-center px-5 py-3">
-      <Dropdown showArrow>
+      <Dropdown>
         <DropdownAction asChild>
           <Button>Open Dropdown</Button>
         </DropdownAction>
         <DropdownContent>
-          <DropdownList>
+          <DropdownArrow />
+          <DropdownGroup>
             <DropdownItem>
               <Users size={20} />
               Contacts
@@ -23,7 +33,9 @@ const DropdownWithIcon = () => {
               <ChartPieSlice size={20} />
               Statistics
             </DropdownItem>
-            <Divider />
+          </DropdownGroup>
+          <DropdownDivider />
+          <DropdownGroup>
             <DropdownItem>
               <Pen size={20} />
               Rename
@@ -32,7 +44,9 @@ const DropdownWithIcon = () => {
               <Copy size={20} />
               Duplicate
             </DropdownItem>
-            <Divider />
+          </DropdownGroup>
+          <DropdownDivider />
+          <DropdownGroup>
             <DropdownItem>
               <UserCircle size={20} />
               Account
@@ -41,7 +55,7 @@ const DropdownWithIcon = () => {
               <SignOut size={20} />
               Logout
             </DropdownItem>
-          </DropdownList>
+          </DropdownGroup>
         </DropdownContent>
       </Dropdown>
     </div>
@@ -74,7 +88,7 @@ export const DropdownComponent = () => {
             <ChartPieSlice size={20} />
             Statistics
           </DropdownItem>
-          <Divider />
+          <DropdownDivider />
           <DropdownItem>
             <Pen size={20} />
             Rename
@@ -83,7 +97,7 @@ export const DropdownComponent = () => {
             <Copy size={20} />
             Duplicate
           </DropdownItem>
-          <Divider />
+          <DropdownDivider />
           <DropdownItem>
             <UserCircle size={20} />
             Account

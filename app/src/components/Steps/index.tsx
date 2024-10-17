@@ -1,3 +1,6 @@
-export { StepLine } from './StepLine'
-export { StepPoint } from './StepPoint'
 export { Steps } from './Steps'
+export { StepsContent } from './StepsContent'
+export { StepsDescription } from './StepsDescription'
+export { StepsItem } from './StepsItem'
+export { StepsPoint } from './StepsPoint'
+export { StepsTitle } from './StepsTitle'

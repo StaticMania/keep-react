@@ -1,37 +1,53 @@
-import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from '../../../../src'
+import {
+  Accordion,
+  AccordionAction,
+  AccordionContent,
+  AccordionIcon,
+  AccordionItem,
+  AccordionTitle,
+} from '../../../../src'
 
 const DisabledAccordion = () => {
   return (
-    <Accordion disabled={true}>
-      <AccordionPanel>
-        <AccordionContainer>
-          <AccordionTitle>Q. What is keep Design?</AccordionTitle>
-        </AccordionContainer>
+    <Accordion type="single" collapsible disabled>
+      <AccordionItem value="item-1">
+        <AccordionAction>
+          <AccordionTitle className="first-letter:text-primary-500">Q. What is keep Design?</AccordionTitle>
+          <AccordionIcon />
+        </AccordionAction>
         <AccordionContent>
           keep Design is an open-source library of interactive components built on top of Tailwind CSS including
           buttons, dropdowns, modals, navbar, and more.
         </AccordionContent>
-      </AccordionPanel>
+      </AccordionItem>
     </Accordion>
   )
 }
 
 const DisabledAccordionCode = {
   'AccordionComponent.tsx': `
-import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from 'keep-react'
+import {
+  Accordion,
+  AccordionAction,
+  AccordionContent,
+  AccordionIcon,
+  AccordionItem,
+  AccordionTitle,
+} from 'keep-react'
 
 export const AccordionComponent = () => {
   return (
-    <Accordion disabled={true}>
-      <AccordionPanel>
-        <AccordionContainer>
-          <AccordionTitle>What is keep Design?</AccordionTitle>
-        </AccordionContainer>
+    <Accordion type="single" collapsible disabled>
+      <AccordionItem value="item-1">
+        <AccordionAction>
+          <AccordionTitle className="first-letter:text-primary-500">Q. What is keep Design?</AccordionTitle>
+          <AccordionIcon />
+        </AccordionAction>
         <AccordionContent>
           keep Design is an open-source library of interactive components built on top of Tailwind CSS including
           buttons, dropdowns, modals, navbar, and more.
         </AccordionContent>
-      </AccordionPanel>
+      </AccordionItem>
     </Accordion>
   )
 }

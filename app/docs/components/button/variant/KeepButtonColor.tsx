@@ -2,12 +2,12 @@ import { Button } from '../../../../src'
 
 const KeepButtonColor = () => {
   return (
-    <div className="flex h-20 flex-wrap items-center gap-2 p-4">
-      <Button color="primary">Button</Button>
-      <Button color="secondary">Button</Button>
-      <Button color="success">Button</Button>
-      <Button color="warning">Button</Button>
-      <Button color="error">Button</Button>
+    <div className="flex flex-wrap items-center justify-center gap-5 px-5 py-3">
+      <Button color="primary">Primary</Button>
+      <Button color="secondary">Secondary</Button>
+      <Button color="success">Success</Button>
+      <Button color="warning">Warning</Button>
+      <Button color="error">Error</Button>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { Button, ButtonGroup } from '../../../../src'
 
 const ButtonGroupWithIcon = () => {
   return (
-    <div className="h-20 p-4">
+    <div className="flex items-center justify-center px-5 py-3">
       <ButtonGroup>
         <Button position="start">
           <Cube size={20} className="mr-1.5" />

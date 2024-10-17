@@ -314,6 +314,14 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Select',
+    folderName: 'Select',
+    href: '/docs/components/select',
+    tag: true,
+    deprecate: false,
+  },
+  {
+    id: generatedID(),
     name: 'Spinner',
     folderName: 'Spinner',
     href: '/docs/components/spinner',
@@ -368,13 +376,20 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
   },
-
   {
     id: generatedID(),
     name: 'Input',
     folderName: 'Input',
     href: '/docs/components/input',
     tag: false,
+    deprecate: false,
+  },
+  {
+    id: generatedID(),
+    name: 'Input OTP',
+    folderName: 'Input OTP',
+    href: '/docs/components/inputOtp',
+    tag: true,
     deprecate: false,
   },
   {

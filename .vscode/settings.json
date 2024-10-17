@@ -1,4 +1,8 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  "cSpell.words": ["embla", "Nuxt"]
+  "cSpell.words": ["embla", "Nuxt"],
+  "tailwindCSS.experimental.classRegex": [
+    ["keepTw\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
 }

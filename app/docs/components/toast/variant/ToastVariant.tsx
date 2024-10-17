@@ -4,10 +4,18 @@ import { Button, toast } from '../../../../src'
 const ToastWithColorVariant = () => {
   return (
     <div className="flex items-center gap-3">
-      <Button onClick={() => toast.info('Keep React info toast')}>Info</Button>
-      <Button onClick={() => toast.success('Keep React success toast')}>Success</Button>
-      <Button onClick={() => toast.warning('Keep React warning toast')}>Warning</Button>
-      <Button onClick={() => toast.error('Keep React error toast')}>Error</Button>
+      <Button color="primary" onClick={() => toast.info('Keep React info toast')}>
+        Info
+      </Button>
+      <Button color="success" onClick={() => toast.success('Keep React success toast')}>
+        Success
+      </Button>
+      <Button color="warning" onClick={() => toast.warning('Keep React warning toast')}>
+        Warning
+      </Button>
+      <Button color="error" onClick={() => toast.error('Keep React error toast')}>
+        Error
+      </Button>
     </div>
   )
 }

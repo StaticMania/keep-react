@@ -1,6 +1,4 @@
 import { DefaultAvatar, DefaultAvatarCode } from './variant/DefaultAvatar'
-import { ImageOfAvatar, ImageOfAvatarCode } from './variant/ImageOfAvatar'
-import { StatusOfAvatar, StatusOfAvatarCode } from './variant/StatusOfAvatar'
 import { AvatarGroupComponent, AvatarGroupCode } from './variant/AvatarGroup'
 
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
@@ -15,22 +13,6 @@ When you enable the placeholder option, a default avatar image appears when ther
 
 <CodeHighlightPreview code={DefaultAvatarCode}>
   <DefaultAvatar />
-</CodeHighlightPreview>
-
-## Using User Images
-
-Display a image using the `src` prop. Provide the path to the user's image, whether it's a local or remote URL.
-
-<CodeHighlightPreview code={ImageOfAvatarCode}>
-  <ImageOfAvatar />
-</CodeHighlightPreview>
-
-## Avatar Status
-
-The avatar's status reflects the user's availability.
-
-<CodeHighlightPreview code={StatusOfAvatarCode}>
-  <StatusOfAvatar />
 </CodeHighlightPreview>
 
 ## Avatar Group
