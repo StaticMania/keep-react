@@ -25,9 +25,6 @@ const config: Config = {
         laptop: '1140px',
         '4k': '1980px',
       },
-      colors: {
-        'bar-bg': 'hsl(var(--fill-bar-bg))',
-      },
     },
   },
 }
