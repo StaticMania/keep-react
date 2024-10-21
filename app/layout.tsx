@@ -4,10 +4,10 @@ import { ReactNode } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { KeepThemeProvider } from './components/ThemeProvider'
+import ToastTheme from './components/ToastTheme'
 import TopProgressBar from './components/TopProgressBar'
 import './docs.css'
 import './globals.css'
-import { ToastWrapper } from './src'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
         <KeepThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <ToastWrapper />
+          <ToastTheme />
           <Header />
           <main className="relative pt-20">{children}</main>
           <Footer />
