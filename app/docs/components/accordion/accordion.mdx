@@ -2,18 +2,19 @@ import { DefaultAccordion, DefaultAccordionCode } from './variant/DefaultAccordi
 import { AccordionFlush, AccordionFlushCode } from './variant/AccordionFlush'
 import { AccordionOpenPanel, AccordionOpenPanelCode } from './variant/AccordionOpenPanel'
 import { DisabledAccordionCode, DisabledAccordion } from './variant/DisabledAccordion'
+import { AccordionMultipleOpenCode, AccordionMultipleOpen } from './variant/AccordionMultiple'
 
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
-import { accordionApiData } from './accordionApi'
+import { accordionData, accordionItemData } from './accordionApi'
 
 ## Table of Contents
 
-The Accordion Component in the Keep React allows you to create collapsible sections of content, commonly known as accordions. Users can toggle the visibility of the content by clicking on the disclosure button. With customizable options for the theme, open state, type, and state, you can create accordion components that fit seamlessly into your design and provide an intuitive user experience.
+The Accordion component in the Keep React Library allows you to create collapsible sections of content, commonly referred to as accordions. These sections can be toggled open or closed by the user, offering a compact and intuitive way to display content. The Accordion is customizable, allowing you to configure its appearance, behavior, and interaction states.
 
 ## Default Accordion
 
-The default Accordion component allows users to reveal and hide content by simply clicking on the disclosure button.
+The default Accordion component lets users expand and collapse sections by clicking on the header or button.
 
 <CodeHighlightPreview code={DefaultAccordionCode}>
   <DefaultAccordion />
@@ -21,30 +22,44 @@ The default Accordion component allows users to reveal and hide content by simpl
 
 ## Flush Accordion
 
-Control the initial state of accordion panels with the `flush` property.
+The `flush` property removes the outer border and background color, giving the accordion a minimalistic, seamless look.
 
 <CodeHighlightPreview code={AccordionFlushCode}>
   <AccordionFlush />
 </CodeHighlightPreview>
 
-## Accordion First Open Panel
+## Default Open item
 
-Use the `openFirstPanel` property to set the first accordion panel to be open by default.
+If you need one or more accordion items to be open by default, use the `defaultValue` prop with the corresponding item's `value` property.
 
 <CodeHighlightPreview code={AccordionOpenPanelCode}>
   <AccordionOpenPanel />
 </CodeHighlightPreview>
 
-## Disabled Accordions
+## Open Multiple Panel
 
-Control user interactions by making specific AccordionPanel components non-interactive with the `disabled` property.
+To allow multiple accordion items to be open at the same time, set the accordion's `type` prop to `"multiple"`.
+
+<CodeHighlightPreview code={AccordionMultipleOpenCode}>
+  <AccordionMultipleOpen />
+</CodeHighlightPreview>
+
+## Disabled Accordion
+
+To prevent interaction with certain accordion, use the `disabled` property on specific Accordion components.
 
 <CodeHighlightPreview code={DisabledAccordionCode}>
   <DisabledAccordion />
 </CodeHighlightPreview>
 
-## API Reference
+## Accordion API Reference
 
-Explore the available props for the Accordion component
+Explore the full range of props available for the Accordion component:
 
-<ComponentApi data={accordionApiData} />
+<ComponentApi data={accordionData} />
+
+## Item API Reference
+
+Learn about the properties available for individual Accordion items:
+
+<ComponentApi data={accordionItemData} />

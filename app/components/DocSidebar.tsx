@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { gettingStartedRoutes, layoutRoutes, routes } from '../../routes/routes'
-import { Accordion, AccordionContainer, AccordionContent, AccordionPanel, AccordionTitle } from '../src'
+import { gettingStartedRoutes, routes } from '../../routes/routes'
+import { Accordion, AccordionAction, AccordionContent, AccordionItem, AccordionTitle } from '../src'
 
 const DocSidebar = () => {
   const pathname = usePathname()
@@ -17,13 +17,13 @@ const DocSidebar = () => {
       <aside
         id="componentListSidebar"
         className="sticky top-28 h-[75vh] space-y-5 overflow-auto 2xl:top-56 2xl:py-6 2xl:pl-8">
-        <Accordion flush openFirstPanel>
-          <AccordionPanel className="!border-b-0">
-            <AccordionContainer className="p-0">
-              <AccordionTitle className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900 dark:text-white dark:first-letter:!text-white">
+        <Accordion collapsible type="single" flush defaultValue="getting-started">
+          <AccordionItem value="getting-started" className="border-b-0">
+            <AccordionAction className="px-0 py-0">
+              <AccordionTitle className="text-body-4 font-semibold text-metal-900 dark:text-white">
                 Getting Started
               </AccordionTitle>
-            </AccordionContainer>
+            </AccordionAction>
             <AccordionContent className="p-0">
               <ul className="mt-3 space-y-1.5 border-l border-l-metal-100 dark:border-l-metal-800">
                 {gettingStartedRoutes.map((route) => (
@@ -41,41 +41,15 @@ const DocSidebar = () => {
                 ))}
               </ul>
             </AccordionContent>
-          </AccordionPanel>
+          </AccordionItem>
         </Accordion>
-        <Accordion flush openFirstPanel>
-          <AccordionPanel className="!border-b-0">
-            <AccordionContainer className="p-0">
-              <AccordionTitle className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900 dark:text-white dark:first-letter:!text-white">
-                Layout
-              </AccordionTitle>
-            </AccordionContainer>
-            <AccordionContent className="p-0">
-              <ul className="mt-3 space-y-1.5 border-l border-l-metal-100 dark:border-l-metal-800">
-                {layoutRoutes.map((route) => (
-                  <li key={route.id}>
-                    <Link
-                      className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 dark:text-metal-400 dark:hover:border-white dark:hover:text-white ${
-                        IsActive(route.href)
-                          ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150 hover:text-primary-500 dark:!border-white dark:text-white dark:hover:text-white'
-                          : ''
-                      }`}
-                      href={route.href}>
-                      {route.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </AccordionContent>
-          </AccordionPanel>
-        </Accordion>
-        <Accordion openFirstPanel flush>
-          <AccordionPanel className="!border-b-0">
-            <AccordionContainer className="p-0">
-              <AccordionTitle className="text-body-4 font-semibold text-metal-900 first-letter:!mr-0 first-letter:!text-metal-900 dark:text-white dark:first-letter:!text-white">
+        <Accordion collapsible type="single" flush defaultValue="components">
+          <AccordionItem className="border-b-0" value="components">
+            <AccordionAction className="px-0 py-0">
+              <AccordionTitle className="text-body-4 font-semibold text-metal-900 dark:text-white">
                 Components
               </AccordionTitle>
-            </AccordionContainer>
+            </AccordionAction>
             <AccordionContent className="p-0">
               <ul className="mt-3 space-y-1.5 border-l border-l-metal-100 dark:border-l-metal-800">
                 {routes.map((route) => (
@@ -93,7 +67,7 @@ const DocSidebar = () => {
                 ))}
               </ul>
             </AccordionContent>
-          </AccordionPanel>
+          </AccordionItem>
         </Accordion>
       </aside>
     </div>

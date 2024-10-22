@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import SliderDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import SliderDocs from './Slider.mdx'
 
 export const metadata: Metadata = {
   description:
@@ -13,7 +13,7 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <SliderDocs />
-      <EditPage pageLink="/docs/components/slider" nextPageLink="/docs/components/spinner" nextPageName="Spinner" />
+      <EditPage pageLink="/docs/components/slider" nextPageLink="/docs/components/select" nextPageName="Select" />
     </DocsContentLayout>
   )
 }

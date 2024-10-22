@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import Popover from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import Popover from './popover.mdx'
 
 export const metadata: Metadata = {
   description:

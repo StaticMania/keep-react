@@ -314,6 +314,14 @@ export const routes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Select',
+    folderName: 'Select',
+    href: '/docs/components/select',
+    tag: true,
+    deprecate: false,
+  },
+  {
+    id: generatedID(),
     name: 'Spinner',
     folderName: 'Spinner',
     href: '/docs/components/spinner',
@@ -368,13 +376,20 @@ export const routes: routerPath[] = [
     tag: false,
     deprecate: false,
   },
-
   {
     id: generatedID(),
     name: 'Input',
     folderName: 'Input',
     href: '/docs/components/input',
     tag: false,
+    deprecate: false,
+  },
+  {
+    id: generatedID(),
+    name: 'Input OTP',
+    folderName: 'Input OTP',
+    href: '/docs/components/inputOtp',
+    tag: true,
     deprecate: false,
   },
   {
@@ -406,8 +421,8 @@ export const routes: routerPath[] = [
 export const gettingStartedRoutes: routerPath[] = [
   {
     id: generatedID(),
-    name: 'Introduction',
-    href: '/docs/getting-started/introduction',
+    name: 'Installation',
+    href: '/docs/getting-started/installation',
   },
   {
     id: generatedID(),
@@ -430,7 +445,7 @@ export const quickAccessRoute: routerPath[] = [
   {
     id: generatedID(),
     name: 'Installation',
-    href: '/docs/getting-started/introduction',
+    href: '/docs/getting-started/installation',
     target: '_self',
   },
   {
@@ -453,38 +468,9 @@ export const quickAccessRoute: routerPath[] = [
   },
   {
     id: generatedID(),
-    name: 'Layout',
-    href: '/docs/layout/column',
-    target: '_self',
-  },
-  {
-    id: generatedID(),
     name: 'Dark Mode',
     href: '/docs/getting-started/dark-mode',
     target: '_self',
-  },
-]
-
-export const layoutRoutes: routerPath[] = [
-  {
-    id: generatedID(),
-    name: 'Container',
-    href: '/docs/layout/container',
-  },
-  {
-    id: generatedID(),
-    name: 'Column',
-    href: '/docs/layout/column',
-  },
-  {
-    id: generatedID(),
-    name: 'Flex',
-    href: '/docs/layout/flex',
-  },
-  {
-    id: generatedID(),
-    name: 'Grid',
-    href: '/docs/layout/grid',
   },
 ]
 
@@ -497,7 +483,7 @@ export const navbarRoutes: routerPath[] = [
   },
   {
     id: generatedID(),
-    href: '/docs/getting-started/introduction',
+    href: '/docs/getting-started/installation',
     name: 'Documentation',
     redirect: false,
   },

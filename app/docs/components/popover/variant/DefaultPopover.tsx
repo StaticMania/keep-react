@@ -1,73 +1,32 @@
 'use client'
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Button,
   Popover,
   PopoverAction,
   PopoverContent,
   PopoverDescription,
-  PopoverHeading,
+  PopoverTitle,
 } from '../../../../src'
 
 const DefaultPopover = () => {
   return (
     <div className="flex h-52 items-center justify-center gap-5 p-5">
-      <Popover placement="left">
-        <PopoverAction>Left</PopoverAction>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
+      <Popover>
+        <PopoverAction asChild>
+          <Button>Open Popover</Button>
+        </PopoverAction>
+        <PopoverContent className="flex items-center gap-3 bg-white p-5 dark:bg-metal-900">
           <div>
             <Avatar>
               <AvatarImage src="/images/avatar/avatar-3.png" />
+              <AvatarFallback>KR</AvatarFallback>
             </Avatar>
           </div>
           <div>
-            <PopoverHeading>Keep Designer</PopoverHeading>
-            <PopoverDescription>keepdesign@email.com</PopoverDescription>
-          </div>
-          <Button variant="outline">Follow</Button>
-        </PopoverContent>
-      </Popover>
-      <Popover placement="right">
-        <PopoverAction>Right</PopoverAction>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
-          <div>
-            <Avatar>
-              <AvatarImage src="/images/avatar/avatar-3.png" />
-            </Avatar>
-          </div>
-          <div>
-            <PopoverHeading>Keep Designer</PopoverHeading>
-            <PopoverDescription>keepdesign@email.com</PopoverDescription>
-          </div>
-          <Button variant="outline">Follow</Button>
-        </PopoverContent>
-      </Popover>
-      <Popover placement="top">
-        <PopoverAction>Top</PopoverAction>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
-          <div>
-            <Avatar>
-              <AvatarImage src="/images/avatar/avatar-3.png" />
-            </Avatar>
-          </div>
-          <div>
-            <PopoverHeading>Keep Designer</PopoverHeading>
-            <PopoverDescription>keepdesign@email.com</PopoverDescription>
-          </div>
-          <Button variant="outline">Follow</Button>
-        </PopoverContent>
-      </Popover>
-      <Popover placement="bottom">
-        <PopoverAction>Bottom</PopoverAction>
-        <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
-          <div>
-            <Avatar>
-              <AvatarImage src="/images/avatar/avatar-3.png" />
-            </Avatar>
-          </div>
-          <div>
-            <PopoverHeading>Keep Designer</PopoverHeading>
+            <PopoverTitle>Keep Designer</PopoverTitle>
             <PopoverDescription>keepdesign@email.com</PopoverDescription>
           </div>
           <Button variant="outline">Follow</Button>
@@ -81,27 +40,31 @@ const DefaultPopoverCode = {
   'PopoverComponent.tsx': `
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Button,
   Popover,
   PopoverContent,
   PopoverDescription,
-  PopoverHeading,
+  PopoverTitle,
   PopoverAction,
 } from 'keep-react'
 
 export const PopoverComponent = () => {
   return (
-    <Popover placement="right">
-      <PopoverAction>Right</PopoverAction>
-      <PopoverContent className="z-20 flex items-center gap-3 rounded-xl bg-white p-4 dark:bg-metal-900">
+    <Popover>
+      <PopoverAction asChild>
+        <Button>Open Popover</Button>
+      </PopoverAction>
+      <PopoverContent className="flex items-center gap-3 bg-white p-5 dark:bg-metal-900">
         <div>
           <Avatar>
             <AvatarImage src="/images/avatar/avatar-3.png" />
+            <AvatarFallback>KR</AvatarFallback>
           </Avatar>
         </div>
         <div>
-          <PopoverHeading>Keep Designer</PopoverHeading>
+          <PopoverTitle>Keep Designer</PopoverTitle>
           <PopoverDescription>keepdesign@email.com</PopoverDescription>
         </div>
         <Button variant="outline">Follow</Button>

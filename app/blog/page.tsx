@@ -1,9 +1,8 @@
-import getMarkDownData from '~/utils/GetMarkDownData'
+import { getBlogs } from '~/utils/getMdxContent'
 import Blog from '../components/Blog'
 
 const page = () => {
-  const blogs: { slug: string; content: string; [key: string]: any }[] = getMarkDownData('data/blogs')
-
+  const blogs = getBlogs()
   return (
     <section>
       <div className="-mt-2 py-20 ">
@@ -16,7 +15,7 @@ const page = () => {
               Keep React library continues to evolve with new features, bug fixes, and performance improvements.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 ">
             {blogs?.map((blog) => <Blog key={blog.slug} {...blog} />)}
           </div>
         </div>

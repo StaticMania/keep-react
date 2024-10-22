@@ -1,31 +1,18 @@
 'use client'
-import { forwardRef, HTMLAttributes, useState } from 'react'
-import { cn } from '../../utils/cn'
-import { TabContext } from './TabContext'
+import { Root, TabsProps } from '@radix-ui/react-tabs'
+import { FC } from 'react'
+import { TabsContext } from './TabsContext'
 
-interface TabsProps extends HTMLAttributes<HTMLDivElement> {
-  defaultActive?: string
-  variant?: 'default' | 'fill' | 'underline'
+interface ITabsProps extends TabsProps {
+  variant?: 'default' | 'underline'
 }
 
-const Tabs = forwardRef<HTMLDivElement, TabsProps>(
-  ({ children, defaultActive = '', variant = 'default', className, ...props }, ref) => {
-    const [activeItem, setActiveItem] = useState<string>(defaultActive)
-
-    const handleActive = (item: string) => {
-      setActiveItem(item)
-    }
-
-    return (
-      <div ref={ref} {...props} className={cn(className)}>
-        <TabContext.Provider value={{ activeItem, handleActive, defaultActive, variant }}>
-          {children}
-        </TabContext.Provider>
-      </div>
-    )
-  },
-)
-
-Tabs.displayName = 'Tabs'
+const Tabs: FC<ITabsProps> = ({ variant = 'default', children, className, ...props }) => {
+  return (
+    <Root className={className} {...props}>
+      <TabsContext.Provider value={{ variant }}>{children}</TabsContext.Provider>
+    </Root>
+  )
+}
 
 export { Tabs }

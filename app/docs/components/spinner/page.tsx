@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import SpinnerDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import SpinnerDocs from './spinner.mdx'
 
 export const metadata: Metadata = {
   description:

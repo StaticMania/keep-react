@@ -13,7 +13,7 @@ const Navbar = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(({ children,
       ref={ref}
       {...props}
       className={cn(
-        'relative border border-metal-100 bg-white py-5 dark:border-metal-800 dark:bg-metal-900',
+        'relative rounded-lg border border-metal-100 bg-white py-5 dark:border-metal-900 dark:bg-metal-900',
         className,
       )}>
       <NavbarContext.Provider value={{ open, handleOpen }}>{children}</NavbarContext.Provider>

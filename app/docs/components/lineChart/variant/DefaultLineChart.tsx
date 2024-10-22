@@ -1,115 +1,109 @@
+'use client'
+import { CartesianGrid, Line, LineChart, XAxis } from 'recharts'
 import {
-  CartesianGrid,
+  ChartConfig,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
   ChartTooltip,
-  CustomTooltip,
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
+  ChartTooltipContent,
 } from '../../../../src'
 
 const DefaultLineChart = () => {
-  const data = [
-    {
-      name: 'A',
-      price: 0,
-    },
-    {
-      name: 'B',
-      price: 120,
-    },
-    {
-      name: 'C',
-      price: 300,
-    },
-    {
-      name: 'D',
-      price: 500,
-    },
-    {
-      name: 'E',
-      price: 130,
-    },
+  const chartData = [
+    { month: 'January', desktop: 186 },
+    { month: 'February', desktop: 305 },
+    { month: 'March', desktop: 237 },
+    { month: 'April', desktop: 73 },
+    { month: 'May', desktop: 209 },
+    { month: 'June', desktop: 214 },
   ]
+
+  const chartConfig = {
+    desktop: {
+      label: 'Desktop',
+      color: '#1B4DFF',
+    },
+  } satisfies ChartConfig
   return (
-    <ResponsiveContainer width="100%" height={350}>
-      <LineChart data={data}>
+    <ChartContainer config={chartConfig} className="mx-auto min-h-[200px] w-full max-w-[600px]">
+      <LineChart
+        accessibilityLayer
+        data={chartData}
+        margin={{
+          left: 12,
+          right: 12,
+        }}>
+        <CartesianGrid vertical={false} />
         <XAxis
-          className="text-body-4 font-medium text-metal-600"
-          dataKey="name"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-          tickSize={10}
+          dataKey="month"
+          tickLine={false}
+          axisLine={false}
+          tickMargin={8}
+          tickFormatter={(value) => value.slice(0, 3)}
         />
-        <YAxis
-          className="text-body-4 font-medium text-metal-600"
-          tickSize={10}
-          dataKey="price"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-        />
-        <ChartTooltip content={<CustomTooltip />} />
-        <CartesianGrid stroke="#F0F3F9" strokeDasharray="2" />
-        <Line type="natural" dataKey="price" stroke="#8897AE" />
+        <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
+        <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
+        <Line dataKey="desktop" type="natural" stroke="#1B4DFF" strokeWidth={2} dot={false} />
       </LineChart>
-    </ResponsiveContainer>
+    </ChartContainer>
   )
 }
 
 const DefaultLineChartCode = {
-  'ChartComponent.tsx': `
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis, ChartTooltip, CustomTooltip } from 'keep-react'
+  'LineChartComponent.tsx': `
+    'use client'
+import { CartesianGrid, Line, LineChart, XAxis } from 'recharts'
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+} from 'keep-react'
 
 export const LineChartComponent = () => {
-  const data = [
-    {
-      name: 'A',
-      price: 0,
-    },
-    {
-      name: 'B',
-      price: 120,
-    },
-    {
-      name: 'C',
-      price: 300,
-    },
-    {
-      name: 'D',
-      price: 500,
-    },
-    {
-      name: 'E',
-      price: 130,
-    },
+  const chartData = [
+    { month: 'January', desktop: 186 },
+    { month: 'February', desktop: 305 },
+    { month: 'March', desktop: 237 },
+    { month: 'April', desktop: 73 },
+    { month: 'May', desktop: 209 },
+    { month: 'June', desktop: 214 },
   ]
+
+  const chartConfig = {
+    desktop: {
+      label: 'Desktop',
+      color: '#1B4DFF',
+    },
+  } satisfies ChartConfig
   return (
-    <ResponsiveContainer width="100%" height={350}>
-      <LineChart data={data}>
+    <ChartContainer config={chartConfig}>
+      <LineChart
+        accessibilityLayer
+        data={chartData}
+        margin={{
+          left: 12,
+          right: 12,
+        }}>
+        <CartesianGrid vertical={false} />
         <XAxis
-          className="text-body-4 font-medium text-metal-600"
-          dataKey="name"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-          tickSize={10}
+          dataKey="month"
+          tickLine={false}
+          axisLine={false}
+          tickMargin={8}
+          tickFormatter={(value) => value.slice(0, 3)}
         />
-        <YAxis
-          className="text-body-4 font-medium text-metal-600"
-          tickSize={10}
-          dataKey="price"
-          stroke="#8897AE"
-          strokeWidth={0.5}
-        />
-        <ChartTooltip content={<CustomTooltip />} />
-        <CartesianGrid stroke="#F0F3F9" strokeDasharray="2" />
-        <Line type="natural" dataKey="price" stroke="#8897AE" />
+        <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
+        <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
+        <Line dataKey="desktop" type="natural" stroke="#1B4DFF" strokeWidth={2} dot={false} />
       </LineChart>
-    </ResponsiveContainer>
+    </ChartContainer>
   )
 }
-
-`,
+  `,
 }
 
 export { DefaultLineChart, DefaultLineChartCode }

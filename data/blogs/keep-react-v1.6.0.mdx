@@ -1,0 +1,197 @@
+---
+title: 'Keep React V1.6.0'
+date: 'August 8, 2024'
+author: Md Ariful Islam
+tag: Releases
+version: V1.6.0
+---
+
+<BlogHeader title="Keep React v1.6.0" />
+
+## Release Notes
+
+Welcome to the **Keep React v1.6.0** release! This update focuses on improving accessibility, adding new components, and enhancing customization options for developers. Here’s a quick look at what's new:
+
+## Animation Update
+
+We’ve added the `tailwindcss-animate` library to enhance component interactions with smoother animations.
+
+## Component Update
+
+Several components have been updated to give developers more control and improve the overall user experience.
+
+## Accordion
+
+The Accordion component now supports keyboard accessibility, and its structure has been slightly modified:
+
+- `type` prop (required): Specifies the accordion's behavior. Use `"single"` to allow closing items by clicking the trigger.
+- AccordionPanel ➔ AccordionItem
+- AccordionContainer ➔ AccordionAction
+
+Here’s an example of the updated Accordion anatomy:
+
+```tsx {2,3} showLineNumbers /type/ /collapsible/ /value/
+<Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionAction>
+      <AccordionTitle></AccordionTitle>
+      <AccordionIcon />
+    </AccordionAction>
+    <AccordionContent></AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+Check out the [Accordion documentation](/docs/components/accordion) for more examples.
+
+## Avatar
+
+The Avatar component now displays fallback text when the image fails to load. This change improves user experience.
+
+```tsx {3} showLineNumbers
+<Avatar>
+  <AvatarImage src="..." />
+  <AvatarFallback>...</AvatarFallback>
+</Avatar>
+```
+
+If you are using the `AvatarGroup` component, wrap the `Avatar` component like this:
+
+```tsx {1,2,6,10} showLineNumbers
+<AvatarGroup>
+  <Avatar>
+    <AvatarImage src="..." />
+    <AvatarFallback>...</AvatarFallback>
+  </Avatar>
+  <Avatar>
+    <AvatarImage src="..." />
+    <AvatarFallback>...</AvatarFallback>
+  </Avatar>
+</AvatarGroup>
+```
+
+More examples can be found in the [Avatar documentation](/docs/components/avatar).
+
+## Chart
+
+To use the updated chart components, install the `"recharts"` library. We no longer export recharts components directly—only our custom chart components.
+
+```tsx showLineNumbers
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+} from 'keep-react'
+```
+
+Find more in the [Chart documentation](/docs/components/barChart)
+
+## Breadcrumb
+
+The Breadcrumb component has been restructured for better flexibility, including new variants:
+
+- BreadcrumbList, BreadcrumbLink
+- BreadcrumbDivider (Separator)
+- BreadcrumbPage, BreadcrumbEllipsis
+
+Updated anatomy:
+
+```tsx {2,4,6,11,13} showLineNumbers
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="...">...</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbDivider />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="...">...</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <BreadcrumbEllipsis />
+    </BreadcrumbItem>
+    <BreadcrumbDivider />
+    <BreadcrumbItem>
+      <BreadcrumbPage>...</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+Visit the [Breadcrumb documentation](/docs/components/breadcrumb) for more.
+
+## Steps
+
+The Steps component has also been simplified:
+
+- StepLine component removed
+
+Updated anatomy:
+
+```tsx showLineNumbers
+<Steps>
+  <StepsItem>
+    <StepsPoint />
+    <StepsContent>
+      <StepsTitle>...</StepsTitle>
+      <StepsDescription>...</StepsDescription>
+    </StepsContent>
+  </StepsItem>
+</Steps>
+```
+
+More details in the [Steps documentation](/docs/components/steps).
+
+## Input OTP
+
+A new `InputOTP` component is now available! Use it to create OTP (one-time password) input fields.
+
+Anatomy:
+
+```tsx showLineNumbers
+<InputOTP maxLength={6}>
+  <InputOTPGroup>
+    <InputOTPItem index={0} />
+    <InputOTPItem index={1} />
+    <InputOTPItem index={2} />
+    <InputOTPItem index={3} />
+    <InputOTPItem index={4} />
+    <InputOTPItem index={5} />
+  </InputOTPGroup>
+</InputOTP>
+```
+
+More examples in the [InputOTP documentation](/docs/components/inputOtp)
+
+## Select
+
+The new Select component offers better customization and accessibility.
+
+Anatomy:
+
+```tsx showLineNumbers
+<Select>
+  <SelectAction>
+    <SelectValue placeholder="..." />
+  </SelectAction>
+  <SelectContent>
+    <SelectGroup>
+      <SelectLabel>...</SelectLabel>
+      <SelectItem value="...">...</SelectItem>
+      <SelectItem value="...">...</SelectItem>
+    </SelectGroup>
+  </SelectContent>
+</Select>
+```
+
+Check the [Select documentation](/docs/components/select) for more examples.
+
+## Contributors
+
+Thanks to all the contributors for making this release possible! Special shout-out to:
+
+- [Arifulislam5577](https://github.com/Arifulislam5577)
+
+These updates aim to improve your development experience and the performance of your applications. For detailed documentation and examples, please visit our official [`documentation`](/docs/getting-started/installation). Thank you for using Keep React!

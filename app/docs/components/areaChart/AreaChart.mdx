@@ -1,37 +1,54 @@
+import { rechartsInstall } from './variant/Installation'
+import CodeHighlight from '../../../components/CodeHighlight'
+import { FillColoredSeries, FillColoredSeriesCode } from './variant/FillColoredSeries'
 import { DefaultAreaChart, DefaultAreaChartCode } from './variant/DefaultAreaChart'
-import { AreaChartWithDoubleSeries, AreaChartWithDoubleSeriesCode } from './variant/AreaChartDoubleSeries'
-import { AreaChartType, AreaChartTypeCode } from './variant/AreaChartType'
-
+import { GradientColorSeries, GradientColorSeriesCode } from './variant/GradientColorSeries'
+import { FillColoredChart, FillColoredChartCode } from './variant/FillColoredChart'
+import { GradientColor, GradientColorCode } from './variant/GradientColor'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 
 ## Table of Contents
 
 An Area Chart is a visual way to show data as a line that turns into a colored shape below it. This shape helps you understand how the data changes over time or categories. It's like coloring under a line graph to see where the data is bigger or smaller. People use Area Charts to see trends, compare things, and notice patterns in data. The colored area makes it clear which parts are higher or lower in value.
 
-## Default Area Chart
+## Installation
 
-The AreaChart component is used to render an area chart based on the data.
+This component uses Recharts for chart rendering. You need to install the `Recharts` library to use the Area Chart component in your project.
+
+<CodeHighlight code={rechartsInstall} />
+
+## Default AreaChart
+
+This is the simplest form of a Area Chart, ideal for basic data visualization.
 
 <CodeHighlightPreview code={DefaultAreaChartCode}>
   <DefaultAreaChart />
 </CodeHighlightPreview>
 
-## Area Chart With Double Series
+## Fill colored Chart
 
-The AreaChart component now uses both `"price"` and `"amount"` data for the two series. This creates a chart that shows how both `"price"` and `"amount"` values change over the `"name"` categories, providing insights into both series simultaneously.
-
-<CodeHighlightPreview code={AreaChartWithDoubleSeriesCode}>
-  <AreaChartWithDoubleSeries />
+<CodeHighlightPreview code={FillColoredChartCode}>
+  <FillColoredChart />
 </CodeHighlightPreview>
 
-## Area Chart Type
+## Fill colored Series
 
-We can change the area chart type by using `'type'` props in `<Area>` component.
+<CodeHighlightPreview code={FillColoredSeriesCode}>
+  <FillColoredSeries />
+</CodeHighlightPreview>
 
-<CodeHighlightPreview code={AreaChartTypeCode}>
-  <AreaChartType />
+## Gradient colored Chart
+
+<CodeHighlightPreview code={GradientColorSeriesCode}>
+  <GradientColorSeries />
+</CodeHighlightPreview>
+
+## Gradient Chart
+
+<CodeHighlightPreview code={GradientColorCode}>
+  <GradientColor />
 </CodeHighlightPreview>
 
 ## Reference
 
-To learn more about the area chart, please see the documentation of [Recharts](https://recharts.org/en-US)
+To learn more about the Line chart, please see the documentation of [AreaChart](https://recharts.org/en-US/examples/SimpleAreaChart)

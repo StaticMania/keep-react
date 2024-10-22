@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import { KeepThemeProvider } from './components/ThemeProvider'
+import ToastTheme from './components/ToastTheme'
 import TopProgressBar from './components/TopProgressBar'
 import './docs.css'
 import './globals.css'
-import { ToastWrapper } from './src'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -22,23 +22,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
         <KeepThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <ToastWrapper
-            toastOptions={{
-              classNames: {
-                toast: 'dark:!bg-metal-900 border dark:!border-metal-800 !border-white !bg-white',
-                title: 'text-metal-900 dark:!text-white',
-                description: 'dark:!text-metal-300 text-metal-600',
-                actionButton: 'dark:!bg-metal-800 !bg-metal-900 !text-white',
-                cancelButton: 'dark:!bg-metal-800 !bg-metal-900 !text-white',
-                closeButton: 'dark:!bg-metal-800 !bg-metal-900 !text-white',
-                error: '!text-error-500',
-                success: '!text-success-500',
-                warning: '!text-warning-500',
-                info: '!text-primary-500',
-              },
-            }}
-          />
-          <Navbar />
+          <ToastTheme />
+          <Header />
           <main className="relative pt-20">{children}</main>
           <Footer />
           <TopProgressBar />

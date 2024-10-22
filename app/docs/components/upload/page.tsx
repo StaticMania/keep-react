@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
-import UploadDocs from '.'
+import UploadDocs from './Upload.mdx'
 
 export const metadata: Metadata = {
   description:

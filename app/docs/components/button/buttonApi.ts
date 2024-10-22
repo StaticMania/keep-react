@@ -9,7 +9,7 @@ export const buttonApiData = [
   {
     id: 2,
     propsName: 'variant',
-    propsType: ['link', 'outline'],
+    propsType: ['link', 'outline', 'softBg', 'default'],
     propsDescription: 'Variant of the button.',
     default: 'outline',
   },
@@ -22,13 +22,20 @@ export const buttonApiData = [
   },
   {
     id: 4,
+    propsName: 'radius',
+    propsType: ['default', 'full'],
+    propsDescription: 'Button radius',
+    default: 'default',
+  },
+  {
+    id: 5,
     propsName: 'position',
     propsType: ['start', 'end', 'center'],
     propsDescription: 'Position of the button within a button group.',
     default: 'start',
   },
   {
-    id: 5,
+    id: 6,
     propsName: 'size',
     propsType: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
     propsDescription: 'Size variant of the button.',

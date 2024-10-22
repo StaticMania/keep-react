@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import PaginationDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import PaginationDocs from './Pagination.mdx'
 
 export const metadata: Metadata = {
   description:

@@ -34,7 +34,7 @@ const ComponentUI = () => {
         </div>
         <div className="mt-9 flex items-center justify-center">
           <Link
-            href="/docs/getting-started/introduction"
+            href="/docs/getting-started/installation"
             className="flex items-center gap-2 rounded-lg border border-dashed border-metal-200 bg-white px-6 py-2.5 transition-all duration-300 hover:bg-metal-900 hover:text-white dark:bg-metal-900 dark:hover:bg-metal-800">
             View All Component <ArrowUpRight size={18} />
           </Link>

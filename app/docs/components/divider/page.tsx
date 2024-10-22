@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import DividerDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import DividerDocs from './Divider.mdx'
 
 export const metadata: Metadata = {
   description:

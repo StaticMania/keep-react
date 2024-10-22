@@ -1,3 +1,4 @@
+'use client'
 import { Switch } from '../../../../src'
 
 const SwitchWithIcon = () => {

@@ -1,0 +1,36 @@
+import { DefaultSelect, DefaultSelectCode } from './variant/DefaultSelect'
+import { SelectWithActionIcon, SelectWithActionIconCode } from './variant/SelectWithActionIcon'
+import { SelectWithItemIcon, SelectWithItemIconCode } from './variant/SelectWithItemIcon'
+import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
+
+## Table of Contents
+
+The Select component is a versatile and user-friendly interface element that enables users to choose from a list of options presented in a dropdown menu. It can be customized with various features, such as icons and actions, to enhance the user experience. Whether used in forms, settings, or filtering options, the Select component provides a clean and efficient way to navigate and select items from a predefined list. With additional customization options like action icons or item-specific icons, it can be tailored to fit different use cases and design requirements.
+
+## Default Select
+
+A simple and basic select component for general use cases, allowing users to choose an option from a dropdown list.
+
+<CodeHighlightPreview code={DefaultSelectCode}>
+  <DefaultSelect />
+</CodeHighlightPreview>
+
+## Select With Action Icon
+
+An enhanced select component that includes an action icon, allowing users to perform additional actions directly within the dropdown.
+
+<CodeHighlightPreview code={SelectWithActionIconCode}>
+  <SelectWithActionIcon />
+</CodeHighlightPreview>
+
+## Select With Item Icon
+
+A select component where each item includes an icon, providing a more visual representation of the options available in the dropdown.
+
+<CodeHighlightPreview code={SelectWithItemIconCode}>
+  <SelectWithItemIcon />
+</CodeHighlightPreview>
+
+## Reference
+
+Our select component is built using the `@radix-ui/react-select` package. For more information , follow the documentation [@radix-ui/react-select](https://www.radix-ui.com/primitives/docs/components/select#api-reference).

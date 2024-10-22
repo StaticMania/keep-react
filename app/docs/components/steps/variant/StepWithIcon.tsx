@@ -1,91 +1,94 @@
 'use client'
-import { Gear, Hourglass, Package, Recycle } from 'phosphor-react'
-import { useState } from 'react'
-import { Button, Skeleton, SkeletonLine, StepLine, StepPoint, Steps } from '../../../../src'
+import { Check } from 'phosphor-react'
+import { Steps, StepsContent, StepsDescription, StepsItem, StepsPoint, StepsTitle } from '../../../../src'
 
 const StepWithIcon = () => {
-  const [active, setActive] = useState(1)
+  const data = [
+    {
+      id: 1,
+      title: 'Personal Information',
+      description: 'Enter your personal details to create an account.',
+      isComplete: true,
+    },
+    {
+      id: 2,
+      title: 'Verify Email',
+      description: 'Check email for a verification link to confirm your account.',
+      isComplete: false,
+    },
+    {
+      id: 3,
+      title: 'Setup Profile',
+      description: 'Complete your profile by adding a profile picture and bio.',
+      isComplete: false,
+    },
+  ]
   return (
     <div className="space-y-6 p-6">
       <Steps>
-        <StepPoint variant="icon" completed={active >= 1}>
-          <Hourglass size={20} />
-        </StepPoint>
-        <StepLine completed={active >= 2} />
-        <StepPoint variant="icon" completed={active >= 2}>
-          <Recycle size={20} />
-        </StepPoint>
-        <StepLine completed={active >= 3} />
-        <StepPoint variant="icon" completed={active >= 3}>
-          <Gear size={20} />
-        </StepPoint>
-        <StepLine completed={active >= 4} />
-        <StepPoint variant="icon" completed={active >= 4}>
-          <Package size={20} />
-        </StepPoint>
+        {data.map((step) => (
+          <StepsItem key={step.id}>
+            <StepsPoint
+              className="data-[completed=true]:bg-primary-500 data-[completed=true]:text-white"
+              isComplete={step.isComplete}>
+              <Check />
+            </StepsPoint>
+            <StepsContent>
+              <StepsTitle>{step.title}</StepsTitle>
+              <StepsDescription>{step.description}</StepsDescription>
+            </StepsContent>
+          </StepsItem>
+        ))}
       </Steps>
-      <Skeleton animation={false} className="w-full space-y-2.5">
-        <SkeletonLine className="h-4 w-11/12" />
-        <SkeletonLine className="h-4 w-9/12" />
-        <SkeletonLine className="h-4 w-10/12" />
-        <SkeletonLine className="h-4 w-7/12" />
-      </Skeleton>
-      <div className="flex items-center justify-between">
-        <Button disabled={active === 1} onClick={() => setActive(active - 1)}>
-          Previous
-        </Button>
-        <Button disabled={active === 4} onClick={() => setActive(active + 1)}>
-          Next Step
-        </Button>
-      </div>
     </div>
   )
 }
 
 const StepWithIconCode = {
   'StepComponent.tsx': `'use client'
-  import { useState } from 'react'
-import { Gear, Hourglass, Package, Recycle } from 'phosphor-react'
-import { Button, Skeleton, SkeletonLine, StepLine, StepPoint, Steps } from 'keep-react'
+import { Check } from 'phosphor-react'
+import { Steps, StepsContent, StepsDescription, StepsItem, StepsPoint, StepsTitle } from 'keep-react'
 
-export const StepComponent = () => {
-  const [active, setActive] = useState(1)
+const StepWithIcon = () => {
+  const data = [
+    {
+      id: 1,
+      title: 'Personal Information',
+      description: 'Enter your personal details to create an account.',
+      isComplete: true,
+    },
+    {
+      id: 2,
+      title: 'Verify Email',
+      description: 'Check email for a verification link to confirm your account.',
+      isComplete: false,
+    },
+    {
+      id: 3,
+      title: 'Setup Profile',
+      description: 'Complete your profile by adding a profile picture and bio.',
+      isComplete: false,
+    },
+  ]
   return (
-    <div className="space-y-6">
-      <Steps>
-        <StepPoint variant="icon" completed={active >= 1}>
-          <Hourglass size={20} />
-        </StepPoint>
-        <StepLine completed={active >= 2} />
-        <StepPoint variant="icon" completed={active >= 2}>
-          <Recycle size={20} />
-        </StepPoint>
-        <StepLine completed={active >= 3} />
-        <StepPoint variant="icon" completed={active >= 3}>
-          <Gear size={20} />
-        </StepPoint>
-        <StepLine completed={active >= 4} />
-        <StepPoint variant="icon" completed={active >= 4}>
-          <Package size={20} />
-        </StepPoint>
-      </Steps>
-      <Skeleton animation={false} className="w-full space-y-2.5">
-        <SkeletonLine className="h-4 w-11/12" />
-        <SkeletonLine className="h-4 w-9/12" />
-        <SkeletonLine className="h-4 w-10/12" />
-        <SkeletonLine className="h-4 w-7/12" />
-      </Skeleton>
-      <div className="flex items-center justify-between">
-        <Button disabled={active === 1} onClick={() => setActive(active - 1)}>
-          Previous
-        </Button>
-        <Button disabled={active === 4} onClick={() => setActive(active + 1)}>
-          Next Step
-        </Button>
-      </div>
-    </div>
+    <Steps>
+      {data.map((step) => (
+        <StepsItem key={step.id}>
+          <StepsPoint
+            className="data-[completed=true]:bg-primary-500 data-[completed=true]:text-white"
+            isComplete={step.isComplete}>
+            <Check />
+          </StepsPoint>
+          <StepsContent>
+            <StepsTitle>{step.title}</StepsTitle>
+            <StepsDescription>{step.description}</StepsDescription>
+          </StepsContent>
+        </StepsItem>
+      ))}
+    </Steps>
   )
-}`,
+}
+`,
 }
 
 export { StepWithIcon, StepWithIconCode }

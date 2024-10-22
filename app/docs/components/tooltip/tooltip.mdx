@@ -1,9 +1,9 @@
 import { DefaultTooltip, DefaultTooltipCode } from './variant/DefaultTooltip'
-import { TooltipWithLargeText, TooltipWithLargeTextCode } from './variant/TooltipWithLargeText'
-import { TooltipTriggering, TooltipTriggeringCode } from './variant/TooltipTriggering'
+import { TooltipWithArrow, TooltipWithArrowCode } from './variant/TooltipWithArrow'
 import { TooltipPlacement, TooltipPlacementCode } from './variant/TooltipPlacement'
+import { TooltipInstantlyOpen, TooltipInstantlyOpenCode } from './variant/TooltipInstantlyOpen'
 
-import { tooltipDataApi } from './tooltipApi'
+import { tooltipContentApi, tooltipApi, tooltipProviderApi } from './tooltipApi'
 import CodeHighlightPreview from '../../../components/CodeHighlightPreview'
 import ComponentApi from '../../../components/ComponentApi'
 
@@ -19,36 +19,48 @@ Tooltips appear on hover over an element and help convey concise explanations, t
   <DefaultTooltip />
 </CodeHighlightPreview>
 
+## Tooltip Arrow
+
+An optional arrow element to render alongside the tooltip. This can be used to help visually link the trigger with the `TooltipContent`. Must be rendered inside `TooltipContent`.
+
+<CodeHighlightPreview code={TooltipWithArrowCode}>
+  <TooltipWithArrow />
+</CodeHighlightPreview>
+
 ## Tooltip Placement
 
-To set the placement of a tooltip, use the placement prop with the desired value, such as `placement="top"`.
+To set the placement of a tooltip, use the `side` prop with the desired value, such as `"top"`,`"bottom"`,`"left"` and `"right"`.
 
 <CodeHighlightPreview code={TooltipPlacementCode}>
   <TooltipPlacement />
 </CodeHighlightPreview>
 
-## Tooltip With Large Text
+## Tooltip Instantly Open
 
-Feel free to adjust the text content and other attributes as needed for your application's context.
+Use the `delayDuration` prop to control the time it takes for the tooltip to open.
 
-<CodeHighlightPreview code={TooltipWithLargeTextCode}>
-  <TooltipWithLargeText />
-</CodeHighlightPreview>
-
-## Tooltip Trigger
-
-Tooltips within the Keep React can be triggered using three different methods: `hover`, `click` and `focus`. You can choose the trigger that best suits your user experience and interaction design.
-
-<CodeHighlightPreview code={TooltipTriggeringCode}>
-  <TooltipTriggering />
+<CodeHighlightPreview code={TooltipInstantlyOpenCode}>
+  <TooltipInstantlyOpen />
 </CodeHighlightPreview>
 
 ## API Reference
 
 Explore the available props for the tooltip component
 
-<ComponentApi data={tooltipDataApi} />
+<ComponentApi data={tooltipApi} />
+
+## Content API
+
+Explore the available props for the tooltip content component
+
+<ComponentApi data={tooltipContentApi} />
+
+## Provider API
+
+Explore the available props for the tooltip provider component
+
+<ComponentApi data={tooltipProviderApi} />
 
 ## Reference
 
-Our Tooltip component is built using the `@floating-ui` package. For more information , follow the documentation [@floating-ui](https://floating-ui.com).
+Our modal component is built using the `@radix-ui/react-tooltip` package. For more information , follow the documentation [@radix-ui/react-tooltip](https://www.radix-ui.com/primitives/docs/components/tooltip#api-reference).

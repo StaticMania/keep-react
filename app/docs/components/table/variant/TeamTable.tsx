@@ -2,6 +2,7 @@
 import { DotsThreeOutlineVertical, MagnifyingGlass, Plus } from 'phosphor-react'
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Badge,
   Button,
@@ -10,7 +11,6 @@ import {
   DropdownAction,
   DropdownContent,
   DropdownItem,
-  DropdownList,
   Table,
   TableBody,
   TableCaption,
@@ -68,6 +68,7 @@ const TeamTable = () => {
               <div className="flex items-center gap-2">
                 <Avatar>
                   <AvatarImage src={item.user.img} />
+                  <AvatarFallback>{item.user.name.slice(0, 2).toUpperCase()}</AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>
@@ -100,12 +101,10 @@ const TeamTable = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
-                  <DropdownList>
-                    <DropdownItem>Edit</DropdownItem>
-                    <DropdownItem>Move</DropdownItem>
-                    <DropdownItem>Delete</DropdownItem>
-                  </DropdownList>
+                <DropdownContent align="end" className="w-[200px] border border-metal-100 p-3 dark:border-metal-800">
+                  <DropdownItem>Edit</DropdownItem>
+                  <DropdownItem>Move</DropdownItem>
+                  <DropdownItem>Delete</DropdownItem>
                 </DropdownContent>
               </Dropdown>
             </TableCell>
@@ -130,7 +129,6 @@ import {
   DropdownAction,
   DropdownContent,
   DropdownItem,
-  DropdownList,
   Table,
   TableBody,
   TableCaption,
@@ -187,6 +185,7 @@ export const TableComponent = () => {
               <div className="flex items-center gap-2">
                 <Avatar>
                   <AvatarImage src={item.user.img} />
+                  <AvatarFallback>KR</AvatarFallback>
                 </Avatar>
                 <div>
                   <p className="text-body-4 font-medium">{item.user.name}</p>
@@ -226,12 +225,10 @@ export const TableComponent = () => {
                     <DotsThreeOutlineVertical className="size-4 fill-metal-900 dark:fill-white" />
                   </button>
                 </DropdownAction>
-                <DropdownContent className="max-w-[200px] border border-metal-100 p-3">
-                  <DropdownList>
-                    <DropdownItem>Edit</DropdownItem>
-                    <DropdownItem>Move</DropdownItem>
-                    <DropdownItem>Delete</DropdownItem>
-                  </DropdownList>
+                <DropdownContent align="end" className="w-[200px] border border-metal-100 p-3 dark:border-metal-800">
+                  <DropdownItem>Edit</DropdownItem>
+                  <DropdownItem>Move</DropdownItem>
+                  <DropdownItem>Delete</DropdownItem>
                 </DropdownContent>
               </Dropdown>
             </TableCell>
@@ -243,5 +240,74 @@ export const TableComponent = () => {
 }
 
 `,
+  'TableData.ts': `
+  const tableData = [
+  {
+    id: 1,
+    user: {
+      img: '/images/avatar/avatar-1.png',
+      name: 'Robert Fox',
+      position: 'Software Engineer',
+    },
+    status: 'Active',
+    role: 'Manager',
+    email: 'robert@staticmania.com',
+    team: ['Product', 'Marketing', '+3'],
+    performance: '/images/series/series-1.svg',
+  },
+  {
+    id: 2,
+    user: {
+      img: '/images/avatar/avatar-2.png',
+      name: 'Jane Doe',
+      position: 'UI/UX Designer',
+    },
+    status: 'Inactive',
+    role: 'Designer',
+    email: 'jane@staticmania.com',
+    team: ['Design', 'Development', '+2'],
+    performance: '/images/series/series-2.svg',
+  },
+  {
+    id: 3,
+    user: {
+      img: '/images/avatar/avatar-3.png',
+      name: 'John Smith',
+      position: 'Backend Developer',
+    },
+    status: 'Active',
+    role: 'CTO',
+    email: 'john@staticmania.com',
+    team: ['Development', 'Operations', '+4'],
+    performance: '/images/series/series-3.svg',
+  },
+  {
+    id: 4,
+    user: {
+      img: '/images/avatar/avatar-4.png',
+      name: 'Alice Johnson',
+      position: 'Project Manager',
+    },
+    status: 'Inactive',
+    role: 'Manager',
+    email: 'alice@staticmania.com',
+    team: ['Project Management', 'HR', '+1'],
+    performance: '/images/series/series-4.svg',
+  },
+  {
+    id: 5,
+    user: {
+      img: '/images/avatar/avatar-5.png',
+      name: 'Michael Brown',
+      position: 'Data Scientist',
+    },
+    status: 'Active',
+    role: 'Data Analyst',
+    email: 'michael@staticmania.com',
+    team: ['Data Science', 'Marketing', '+2'],
+    performance: '/images/series/series-5.svg',
+  },
+]
+  `,
 }
 export { TeamTable, TeamTableCode }

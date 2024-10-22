@@ -16,6 +16,7 @@ import {
 
 import {
   Avatar,
+  AvatarFallback,
   AvatarImage,
   Input,
   InputIcon,
@@ -118,6 +119,7 @@ const SidebarWithDropdown = () => {
           <div className="flex items-center gap-2">
             <Avatar>
               <AvatarImage src="/images/avatar/avatar-1.png" alt="avatar" />
+              <AvatarFallback>KR</AvatarFallback>
             </Avatar>
             <div>
               <p className="text-body-4 font-medium text-metal-400 dark:text-white">Enzo Farnandez</p>
@@ -151,6 +153,7 @@ import {
 import {
   Avatar,
   AvatarImage,
+  AvatarFallback,
   Input,
   InputIcon,
   Sidebar,
@@ -251,6 +254,7 @@ export const SidebarComponent = () => {
         <div className="flex items-center gap-2">
           <Avatar>
             <AvatarImage src="/images/avatar/avatar-1.png" alt="avatar" />
+            <AvatarFallback>KR</AvatarFallback>
           </Avatar>
           <div>
             <p className="text-body-4 font-medium text-metal-400">Enzo Farnandez</p>

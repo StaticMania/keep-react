@@ -8,8 +8,17 @@
 #mainContent > p a {
   @apply text-primary-600 underline;
 }
+
 #mainContent > ul li {
-  @apply mb-3 mt-4 text-body-4 font-normal text-metal-600 dark:text-metal-300;
+  @apply my-3 text-body-4 font-normal text-metal-600 dark:text-metal-300;
+}
+
+#mainContent > ul li strong {
+  @apply text-metal-900  dark:text-primary-500;
+}
+
+#mainContent > ul li a {
+  @apply text-primary-500 underline dark:text-primary-500;
 }
 
 #mainContent code {
@@ -124,4 +133,75 @@ body::-webkit-scrollbar-thumb {
 
 .theme-switch {
   @apply flex w-full items-center gap-3 rounded-lg px-3 py-2 text-body-4 font-medium text-metal-900 hover:bg-metal-25 dark:text-white dark:hover:bg-metal-800;
+}
+
+#blog-content {
+  h2 {
+    @apply my-4 border-b pb-2.5 text-body-1 font-medium dark:border-b-metal-800;
+  }
+
+  p {
+    @apply text-body-3 font-normal;
+  }
+
+  ul {
+    li {
+      @apply text-body-4 font-normal;
+    }
+    @apply my-3 space-y-2 *:ml-4 *:list-inside *:list-disc;
+  }
+
+  pre {
+    @apply overflow-auto;
+  }
+
+  a {
+    @apply text-primary-500 hover:underline;
+  }
+
+  [data-rehype-pretty-code-figure] {
+    @apply my-4 border border-metal-800 font-serif;
+  }
+
+  [data-rehype-pretty-code-figure] code {
+    @apply py-6;
+  }
+
+  [data-line] {
+    @apply my-0.5 px-5;
+  }
+
+  code[data-line-numbers] {
+    counter-reset: line;
+  }
+
+  code[data-line-numbers] > [data-line]::before {
+    display: inline-block;
+    counter-increment: line;
+    margin-right: 2rem;
+    width: 0.75rem;
+    content: counter(line);
+    text-align: right;
+  }
+
+  [data-rehype-pretty-code-figure] [data-highlighted-chars] {
+    @apply rounded bg-metal-800 px-1;
+  }
+
+  [data-rehype-pretty-code-figure] [data-highlighted-line] {
+    background: rgba(200, 200, 255, 0.1);
+    @apply border-l-blue-400;
+  }
+
+  code[data-line-numbers-max-digits='2'] > [data-line]::before {
+    width: 1.25rem;
+  }
+
+  code[data-line-numbers-max-digits='3'] > [data-line]::before {
+    width: 1.75rem;
+  }
+
+  code[data-line-numbers-max-digits='4'] > [data-line]::before {
+    width: 2.25rem;
+  }
 }

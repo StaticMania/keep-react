@@ -1,27 +1,17 @@
 'use client'
-import { HTMLAttributes, cloneElement, forwardRef, isValidElement } from 'react'
+import { Description } from '@radix-ui/react-dialog'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { cn } from '../../utils/cn'
 
-export interface ModalDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {
-  asChild?: boolean
-}
-
-const ModalDescription = forwardRef<HTMLParagraphElement, ModalDescriptionProps>(
-  ({ children, className, asChild, ...props }, ref) => {
-    if (asChild && isValidElement(children)) {
-      return cloneElement(children, {
-        itemRef: ref,
-        ...props,
-      })
-    }
-    return (
-      <p className={cn('text-body-4 font-normal text-metal-600 dark:text-metal-300', className)} {...props} ref={ref}>
-        {children}
-      </p>
-    )
-  },
+const ModalDescription = forwardRef<ElementRef<typeof Description>, ComponentPropsWithoutRef<typeof Description>>(
+  ({ className, ...props }, ref) => (
+    <Description
+      ref={ref}
+      className={cn('text-body-5 font-normal text-metal-600 lg:text-body-4 dark:text-metal-300', className)}
+      {...props}
+    />
+  ),
 )
-
-ModalDescription.displayName = 'ModalDescription'
+ModalDescription.displayName = Description.displayName
 
 export { ModalDescription }

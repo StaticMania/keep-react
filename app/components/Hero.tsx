@@ -40,7 +40,9 @@ const Hero = () => {
                     {copy ? <Check size={18} color="#8897AE" /> : <Clipboard size={18} color="#8897AE" />}
                   </button>
                 </div>
-                <Link href="/docs/getting-started/introduction" className={buttonVariants({ size: 'lg' })}>
+                <Link
+                  href="/docs/getting-started/installation"
+                  className={buttonVariants({ size: 'lg', color: 'secondary' })}>
                   Get Started
                 </Link>
               </div>
