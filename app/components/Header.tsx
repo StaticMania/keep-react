@@ -96,7 +96,7 @@ const Header = () => {
               )}
             </button>
             <Link
-              href="/docs/getting-started/introduction"
+              href="/docs/getting-started/installation"
               className={cn(buttonVariants({ color: 'secondary' }), 'hidden sm:block')}>
               get started
             </Link>

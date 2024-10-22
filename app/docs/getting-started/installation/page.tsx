@@ -4,7 +4,8 @@ import EditPage from '../../../components/EditPage'
 import Installation from './Installation.mdx'
 
 export const metadata: Metadata = {
-  description: 'Install Keep React in your React application or NextJs Application following step bellow.',
+  description:
+    'Keep React is an open-source component library built on top of React and Tailwind CSS. It offers a collection of pre-designed UI components and styles that you can easily integrate into your web applications. Install Keep React in your React application or NextJs Application following step bellow.',
   title: 'Installation - Keep React',
 }
 

@@ -32,7 +32,7 @@ const GradientColor = () => {
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="mx-auto min-h-[200px] w-[600px]">
+    <ChartContainer config={chartConfig} className="mx-auto max-h-[250px] w-[600px]">
       <AreaChart
         accessibilityLayer
         data={chartData}
@@ -102,7 +102,7 @@ export const AreaChartComponent = () => {
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="min-h-[200px]">
+    <ChartContainer config={chartConfig} className="max-h-[250px]">
       <AreaChart
         accessibilityLayer
         data={chartData}

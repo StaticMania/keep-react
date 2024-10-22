@@ -41,7 +41,7 @@ const Hero = () => {
                   </button>
                 </div>
                 <Link
-                  href="/docs/getting-started/introduction"
+                  href="/docs/getting-started/installation"
                   className={buttonVariants({ size: 'lg', color: 'secondary' })}>
                   Get Started
                 </Link>
