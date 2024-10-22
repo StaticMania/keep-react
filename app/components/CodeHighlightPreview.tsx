@@ -23,10 +23,10 @@ const CodeHighlightPreview = forwardRef<HTMLDivElement, CodeHighlightPreviewProp
       <div
         ref={ref}
         className={cn(
-          'my-10 max-w-full overflow-hidden rounded-xl border border-metal-200 dark:border-metal-800 ',
+          'my-10 max-w-full overflow-hidden rounded-xl border border-metal-200 dark:border-metal-800',
           className,
         )}>
-        <div className="flex items-center justify-between bg-[#0D1015] dark:bg-metal-900/60">
+        <div className="flex items-center justify-between bg-[#0D1015] dark:bg-metal-900/90">
           <div className="flex items-center">
             <button
               type="button"
@@ -58,7 +58,12 @@ const CodeHighlightPreview = forwardRef<HTMLDivElement, CodeHighlightPreviewProp
             <button
               onClick={() => {
                 copyToClipboard(Object.values(code)[active === 0 ? 0 : active - 1])
-                toast.success('Copied to clipboard')
+                toast.success('Code Copied!', {
+                  classNames: {
+                    toast:
+                      'dark:!bg-metal-900/30 dark:!text-white dark:!border-metal-800 !bg-white !text-metal-900 !border-metal-50',
+                  },
+                })
               }}
               className="mx-6 my-2.5">
               {copy ? <Check size={20} weight="light" color="#fff" /> : <Copy size={20} weight="light" color="#fff" />}

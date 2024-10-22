@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import EmptyDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import EmptyDocs from './Empty.mdx'
 
 export const metadata: Metadata = {
   description:

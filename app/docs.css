@@ -8,8 +8,17 @@
 #mainContent > p a {
   @apply text-primary-600 underline;
 }
+
 #mainContent > ul li {
-  @apply mb-3 mt-4 text-body-4 font-normal text-metal-600 dark:text-metal-300;
+  @apply my-3 text-body-4 font-normal text-metal-600 dark:text-metal-300;
+}
+
+#mainContent > ul li strong {
+  @apply text-metal-900  dark:text-primary-500;
+}
+
+#mainContent > ul li a {
+  @apply text-primary-500 underline dark:text-primary-500;
 }
 
 #mainContent code {

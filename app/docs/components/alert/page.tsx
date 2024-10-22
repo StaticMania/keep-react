@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import AlertDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import AlertDocsContent from './alert.mdx'
 
 export const metadata: Metadata = {
   description:
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
-      <AlertDocs />
+      <AlertDocsContent />
       <EditPage pageLink="/docs/components/alert" nextPageLink="/docs/components/areaChart" nextPageName="Area Chart" />
     </DocsContentLayout>
   )

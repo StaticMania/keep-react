@@ -1,12 +1,12 @@
 import type { Metadata, NextPage } from 'next'
-import Introduction from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import Introduction from './Introduction.mdx'
 
 export const metadata: Metadata = {
   description:
-    'Keep React is an open-source component library built on top of React and Tailwind CSS. It offers a collection of pre-designed UI components and styles that you can easily integrate into your web applications. Install Keep React in your React application or NextJs Application following step bellow.',
-  title: 'Introduction - Keep React',
+    'Keep React is an open-source component library built on top of React and Tailwind CSS. It offers a collection of pre-designed UI components and styles that you can easily integrate into your web applications.',
+  title: 'Keep React',
 }
 
 const page: NextPage = () => {
@@ -15,8 +15,8 @@ const page: NextPage = () => {
       <Introduction />
       <EditPage
         pageLink="/docs/getting-started/introduction"
-        nextPageLink="/docs/getting-started/typography"
-        nextPageName="Typography"
+        nextPageLink="/docs/getting-started/installation"
+        nextPageName="Installation"
       />
     </DocsContentLayout>
   )

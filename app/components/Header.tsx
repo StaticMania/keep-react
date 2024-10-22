@@ -6,7 +6,7 @@ import { List, X } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import KeepDarkLogo from '../../public/images/keep-dark.svg'
 import KeepLogo from '../../public/images/keep.svg'
-import { gettingStartedRoutes, layoutRoutes, navbarRoutes, routes } from '../../routes/routes'
+import { gettingStartedRoutes, navbarRoutes, routes } from '../../routes/routes'
 import {
   Accordion,
   AccordionAction,
@@ -123,32 +123,6 @@ const Header = () => {
                     <AccordionContent className="p-0">
                       <ul className="mt-3 space-y-1.5 border-l border-l-metal-100 dark:border-l-metal-800">
                         {gettingStartedRoutes.map((route) => (
-                          <li key={route.id}>
-                            <Link
-                              className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 dark:text-metal-400 dark:hover:border-white dark:hover:text-white ${
-                                IsActive(route.href)
-                                  ? 'border-l !border-primary-500 text-primary-500 transition-colors duration-150 hover:text-primary-500 dark:!border-white dark:text-white dark:hover:text-white'
-                                  : ''
-                              }`}
-                              href={route.href}>
-                              {route.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-                <Accordion collapsible type="single" flush defaultValue="layout">
-                  <AccordionItem className="border-b-0" value="layout">
-                    <AccordionAction className="px-0 py-0">
-                      <AccordionTitle className="text-body-4 font-semibold text-metal-900 dark:text-white">
-                        Layout
-                      </AccordionTitle>
-                    </AccordionAction>
-                    <AccordionContent className="p-0">
-                      <ul className="mt-3 space-y-1.5 border-l border-l-metal-100 dark:border-l-metal-800">
-                        {layoutRoutes.map((route) => (
                           <li key={route.id}>
                             <Link
                               className={`-ml-px border-l border-l-transparent pl-3 text-body-4 font-medium text-metal-500 hover:-ml-px hover:border-l hover:border-metal-500 hover:text-metal-900 dark:text-metal-400 dark:hover:border-white dark:hover:text-white ${

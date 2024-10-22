@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import BreadcrumbDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import BreadcrumbDocsContent from './breadcrumb.mdx'
 
 export const metadata: Metadata = {
   description:
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
-      <BreadcrumbDocs />
+      <BreadcrumbDocsContent />
       <EditPage pageLink="/docs/components/breadcrumb" nextPageLink="/docs/components/button" nextPageName="Button" />
     </DocsContentLayout>
   )

@@ -426,6 +426,11 @@ export const gettingStartedRoutes: routerPath[] = [
   },
   {
     id: generatedID(),
+    name: 'Installation',
+    href: '/docs/getting-started/installation',
+  },
+  {
+    id: generatedID(),
     name: 'Typography',
     href: '/docs/getting-started/typography',
   },
@@ -481,26 +486,26 @@ export const quickAccessRoute: routerPath[] = [
 ]
 
 export const layoutRoutes: routerPath[] = [
-  {
-    id: generatedID(),
-    name: 'Container',
-    href: '/docs/layout/container',
-  },
-  {
-    id: generatedID(),
-    name: 'Column',
-    href: '/docs/layout/column',
-  },
-  {
-    id: generatedID(),
-    name: 'Flex',
-    href: '/docs/layout/flex',
-  },
-  {
-    id: generatedID(),
-    name: 'Grid',
-    href: '/docs/layout/grid',
-  },
+  // {
+  //   id: generatedID(),
+  //   name: 'Container',
+  //   href: '/docs/layout/container',
+  // },
+  // {
+  //   id: generatedID(),
+  //   name: 'Column',
+  //   href: '/docs/layout/column',
+  // },
+  // {
+  //   id: generatedID(),
+  //   name: 'Flex',
+  //   href: '/docs/layout/flex',
+  // },
+  // {
+  //   id: generatedID(),
+  //   name: 'Grid',
+  //   href: '/docs/layout/grid',
+  // },
 ]
 
 export const navbarRoutes: routerPath[] = [

@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import RadioDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import RadioDocs from './Radio.mdx'
 
 export const metadata: Metadata = {
   description:

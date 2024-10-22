@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import DarkMode from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import DarkMode from './DarkMode.mdx'
 
 export const metadata: Metadata = {
   description:

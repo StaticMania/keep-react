@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import AccordionDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import AccordionDocsContent from './accordion.mdx'
 
 export const metadata: Metadata = {
   description:
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
-      <AccordionDocs />
+      <AccordionDocsContent />
       <EditPage pageLink="/docs/components/accordion" nextPageLink="/docs/components/alert" nextPageName="Alert" />
     </DocsContentLayout>
   )

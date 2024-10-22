@@ -1,19 +1,22 @@
 import type { Metadata, NextPage } from 'next'
-import Grid from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import Installation from './Installation.mdx'
 
 export const metadata: Metadata = {
-  description:
-    'A grid layout is a design technique that organizes content into rows and columns, providing a structured and flexible way to arrange elements on a webpage.',
-  title: 'Grid - Keep React',
+  description: 'Install Keep React in your React application or NextJs Application following step bellow.',
+  title: 'Installation - Keep React',
 }
 
 const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
-      <Grid />
-      <EditPage pageLink="/docs/layout/grid" nextPageLink="/docs/components/accordion" nextPageName="Accordion" />
+      <Installation />
+      <EditPage
+        pageLink="/docs/getting-started/installation"
+        nextPageLink="/docs/getting-started/typography"
+        nextPageName="Typography"
+      />
     </DocsContentLayout>
   )
 }

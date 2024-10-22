@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next'
-import SwitchDocs from '.'
 import { DocsContentLayout } from '../../../components/DocsContentLayout'
 import EditPage from '../../../components/EditPage'
+import SwitchDocs from './Switch.mdx'
 
 export const metadata: Metadata = {
   description:

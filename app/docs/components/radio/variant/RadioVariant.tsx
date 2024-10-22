@@ -1,3 +1,4 @@
+'use client'
 import { Label, Radio } from '../../../../src'
 
 const RadioVariant = () => {
