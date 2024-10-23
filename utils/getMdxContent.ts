@@ -16,7 +16,11 @@ export const getBlogs = () => {
 
     return {
       slug: fileName.replace(/\.mdx$/, ''),
-      ...data,
+      title: data?.title,
+      tag: data?.tag,
+      date: data?.date,
+      version: data?.version,
+      author: data?.author,
       content,
     }
   })

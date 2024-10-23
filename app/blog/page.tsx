@@ -1,5 +1,10 @@
+import { Metadata } from 'next'
 import { getBlogs } from '~/utils/getMdxContent'
 import Blog from '../components/Blog'
+
+export const metadata: Metadata = {
+  title: 'Blog || Keep React',
+}
 
 const page = () => {
   const blogs = getBlogs()

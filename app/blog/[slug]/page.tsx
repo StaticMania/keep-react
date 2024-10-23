@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { Suspense } from 'react'
 import rehypePrettyCode from 'rehype-pretty-code'
@@ -9,6 +10,22 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
   }))
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const posts = getBlogs()
+  const post = posts.find((post) => post.slug === params.slug)
+
+  if (!post) {
+    return {
+      title: 'Keep React - Supercharge Your Web Development',
+      description:
+        'Explore our library of 40+ open-source React UI components and interactive elements, empowering you to create stunning web projects effortlessly.',
+    }
+  }
+  return {
+    title: post?.title,
+  }
 }
 
 const page = async ({ params }: { params: { slug: string } }) => {
