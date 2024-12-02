@@ -3,7 +3,7 @@ import { FC, ReactNode } from 'react'
 import { cn } from '../../utils/cn'
 import { DividerColorVariant, DividerSizeVariant, dividerTheme } from './theme'
 
-interface DividerProps {
+export interface DividerProps {
   color?: keyof DividerColorVariant
   size?: keyof DividerSizeVariant
   variant?: 'start' | 'end' | 'center'

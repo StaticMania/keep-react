@@ -1,5 +1,5 @@
 # Ignore artifacts:
 .next/
-
+lib
 # Ignore specific files:
 package-lock.json

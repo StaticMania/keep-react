@@ -98,7 +98,6 @@ import {
   DropdownAction,
   DropdownContent,
   DropdownItem,
-  DropdownList,
   Table,
   TableBody,
   TableCaption,
