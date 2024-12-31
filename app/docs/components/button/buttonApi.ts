@@ -41,4 +41,11 @@ export const buttonApiData = [
     propsDescription: 'Size variant of the button.',
     default: 'md',
   },
+  {
+    id: 7,
+    propsName: 'asChild',
+    propsType: ['true', 'false'],
+    propsDescription: 'Set button styles and functionality to her child component.',
+    default: 'false',
+  },
 ]

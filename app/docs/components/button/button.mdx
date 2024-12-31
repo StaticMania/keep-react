@@ -1,6 +1,7 @@
 import { KeepButtonTypeCode, KeepButtonType } from './variant/KeepButtonType'
 import { KeepButtonColor, KeepButtonColorCode } from './variant/KeepButtonColor'
 import { KeepButtonSize, KeepButtonSizeCode } from './variant/KeepButtonSize'
+import { KeepButtonLink, KeepButtonLinkCode } from './variant/KeepButtonLink'
 import { KeepButtonShape, KeepButtonShapeCode } from './variant/KeepButtonShape'
 import { KeepButtonIcon, KeepButtonIconCode } from './variant/KeepButtonIcon'
 import { DefaultButton, DefaultButtonCode } from './variant/DefaultButton'
@@ -27,6 +28,14 @@ You can customize your buttons with different color schemes to match your design
 
 <CodeHighlightPreview code={KeepButtonColorCode}>
   <KeepButtonColor />
+</CodeHighlightPreview>
+
+## Button with link
+
+You can add a link to a button component by passing asChild props.
+
+<CodeHighlightPreview code={KeepButtonLinkCode}>
+  <KeepButtonLink />
 </CodeHighlightPreview>
 
 ## Button Variant Type
