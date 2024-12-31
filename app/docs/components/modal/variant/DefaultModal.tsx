@@ -4,6 +4,7 @@ import {
   Button,
   Modal,
   ModalAction,
+  ModalClose,
   ModalContent,
   ModalDescription,
   ModalFooter,
@@ -31,7 +32,9 @@ const DefaultModal = () => {
             </div>
           </ModalHeader>
           <ModalFooter>
-            <Button variant="outline">Cancel</Button>
+            <ModalClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </ModalClose>
             <Button>Confirm</Button>
           </ModalFooter>
         </ModalContent>
