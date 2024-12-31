@@ -24,7 +24,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'default',
       radius = 'default',
       shape,
-      asChild,
+      asChild = false,
       position,
       ...props
     },
