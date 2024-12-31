@@ -1,5 +1,5 @@
 'use client'
-import { Portal, Trigger } from '@radix-ui/react-dialog'
+import { Close, Portal, Trigger } from '@radix-ui/react-dialog'
 import type { ModalProps } from './Modal'
 import { Modal } from './Modal'
 import { ModalContent } from './ModalContent'
@@ -11,9 +11,11 @@ import { ModalTitle } from './ModalTitle'
 
 const ModalAction = Trigger
 const ModalPortal = Portal
+const ModalClose = Close
 
 export {
   Modal,
+  ModalClose,
   ModalAction,
   ModalContent,
   ModalDescription,
