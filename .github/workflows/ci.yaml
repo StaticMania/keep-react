@@ -18,13 +18,13 @@ jobs:
           node-version: '20.9.0'
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Run lint
-        run: npm run lint
+        run: yarn lint
 
       - name: Run format check
-        run: npm run format
+        run: yarn format
 
       - name: Check commit messages
         uses: wagoid/commitlint-github-action@v3
