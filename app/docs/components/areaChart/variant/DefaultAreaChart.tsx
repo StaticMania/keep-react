@@ -12,23 +12,23 @@ import {
 
 const DefaultAreaChart = () => {
   const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 305 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 73 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 214 },
+    { month: 'January', sales: 186 },
+    { month: 'February', sales: 305 },
+    { month: 'March', sales: 237 },
+    { month: 'April', sales: 73 },
+    { month: 'May', sales: 209 },
+    { month: 'June', sales: 214 },
   ]
 
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="mx-auto max-h-[250px] w-[600px]">
+    <ChartContainer config={chartConfig} className="mx-auto max-h-[250px] w-full">
       <AreaChart
         accessibilityLayer
         data={chartData}
@@ -53,7 +53,7 @@ const DefaultAreaChart = () => {
           tickFormatter={(value) => value.slice(0, 3)}
         />
         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
-        <Area dataKey="desktop" type="natural" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
+        <Area dataKey="sales" type="natural" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
       </AreaChart>
     </ChartContainer>
   )
@@ -74,23 +74,23 @@ import {
 
 export const AreaChartComponent = () => {
   const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 305 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 73 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 214 },
+    { month: 'January', sales: 186 },
+    { month: 'February', sales: 305 },
+    { month: 'March', sales: 237 },
+    { month: 'April', sales: 73 },
+    { month: 'May', sales: 209 },
+    { month: 'June', sales: 214 },
   ]
 
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="max-h-[250px]">
+    <ChartContainer config={chartConfig} className="max-h-[250px] w-full">
       <AreaChart
         accessibilityLayer
         data={chartData}
@@ -115,7 +115,7 @@ export const AreaChartComponent = () => {
           tickFormatter={(value) => value.slice(0, 3)}
         />
         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
-        <Area dataKey="desktop" type="natural" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
+        <Area dataKey="sales" type="natural" stroke="#1B4DFF" fillOpacity={1} fill="url(#price)" />
       </AreaChart>
     </ChartContainer>
   )

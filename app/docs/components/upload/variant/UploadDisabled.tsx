@@ -11,7 +11,7 @@ const DisabledUpload = () => {
     setFiles(acceptedFiles)
   }, [])
   return (
-    <Upload options={{ onDrop, disabled: true }}>
+    <Upload options={{ onDrop, disabled: true }} className="w-full">
       <UploadBody>
         <UploadIcon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />

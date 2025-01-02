@@ -2,7 +2,7 @@ import { Slider } from '../../../../src'
 
 const DefaultSlider = () => {
   return (
-    <div className="p-6">
+    <div className="w-full p-6">
       <Slider min={0} max={100} defaultValue={[55]} />
     </div>
   )

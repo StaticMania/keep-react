@@ -2,7 +2,7 @@ import { Divider } from '../../../../src'
 
 const DefaultDivider = () => {
   return (
-    <section className="max-w-xl space-y-3">
+    <section className="w-full space-y-3">
       <p>I am alone, and feel the charm of existence in this spot.</p>
       <Divider />
       <p>I should be incapable of drawing a single stroke at the present moment.</p>
@@ -18,7 +18,7 @@ import { Divider } from 'keep-react'
 
 export const DividerComponent = () => {
   return (
-    <section className="max-w-xl space-y-3">
+    <section className="w-full space-y-3">
       <p>I am alone, and feel the charm of existence in this spot.</p>
       <Divider />
       <p>I should be incapable of drawing a single stroke at the present moment.</p>

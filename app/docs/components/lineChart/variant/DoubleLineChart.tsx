@@ -11,25 +11,25 @@ import {
 
 const DoubleLineChart = () => {
   const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 },
+    { month: 'January', sales: 186, profit: 80 },
+    { month: 'February', sales: 305, profit: 200 },
+    { month: 'March', sales: 237, profit: 120 },
+    { month: 'April', sales: 73, profit: 190 },
+    { month: 'May', sales: 209, profit: 130 },
+    { month: 'June', sales: 214, profit: 140 },
   ]
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
-    mobile: {
-      label: 'Mobile',
+    profit: {
+      label: 'Profit',
       color: '#ff3838',
     },
   } satisfies ChartConfig
   return (
-    <ChartContainer config={chartConfig} className="mx-auto min-h-[200px] w-full max-w-[600px]">
+    <ChartContainer config={chartConfig} className="max-h-[300px] w-full">
       <LineChart
         accessibilityLayer
         data={chartData}
@@ -47,8 +47,8 @@ const DoubleLineChart = () => {
         />
         <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
         <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
-        <Line dataKey="desktop" type="natural" stroke="#1B4DFF" strokeWidth={2} dot={false} />
-        <Line dataKey="mobile" type="natural" stroke="#ff3838" strokeWidth={2} dot={false} />
+        <Line dataKey="sales" type="natural" stroke="#1B4DFF" strokeWidth={2} dot={false} />
+        <Line dataKey="profit" type="natural" stroke="#ff3838" strokeWidth={2} dot={false} />
       </LineChart>
     </ChartContainer>
   )
@@ -69,26 +69,26 @@ import {
 
 export const LineChartComponent = () => {
   const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 },
+    { month: 'January', sales: 186, profit: 80 },
+    { month: 'February', sales: 305, profit: 200 },
+    { month: 'March', sales: 237, profit: 120 },
+    { month: 'April', sales: 73, profit: 190 },
+    { month: 'May', sales: 209, profit: 130 },
+    { month: 'June', sales: 214, profit: 140 },
   ]
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
-    mobile: {
-      label: 'Mobile',
+    profit: {
+      label: 'Profit',
       color: '#ff3838',
     },
   } satisfies ChartConfig
    
   return (
-    <ChartContainer config={chartConfig}>
+    <ChartContainer config={chartConfig} className="max-h-[300px] w-full">
       <LineChart
         accessibilityLayer
         data={chartData}
@@ -106,8 +106,8 @@ export const LineChartComponent = () => {
         />
         <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
         <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
-        <Line dataKey="desktop" type="natural" stroke="#1B4DFF" strokeWidth={2} dot={false} />
-        <Line dataKey="mobile" type="natural" stroke="#ff3838" strokeWidth={2} dot={false} />
+        <Line dataKey="sales" type="natural" stroke="#1B4DFF" strokeWidth={2} dot={false} />
+        <Line dataKey="profit" type="natural" stroke="#ff3838" strokeWidth={2} dot={false} />
       </LineChart>
     </ChartContainer>
   )

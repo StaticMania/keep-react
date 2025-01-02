@@ -1,6 +1,6 @@
 const Heading = () => {
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4 text-center">
       <h1 className="text-heading-1">The quick brown fox</h1>
       <h2 className="text-heading-2">The quick brown fox</h2>
       <h3 className="text-heading-3">The quick brown fox</h3>

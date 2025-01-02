@@ -2,7 +2,7 @@ import { Textarea } from '../../../../src'
 
 const DisabledTextArea = () => {
   return (
-    <div className="p-2">
+    <div className="w-full">
       <Textarea disabled={true} placeholder="Write your message here" rows={8} />
     </div>
   )

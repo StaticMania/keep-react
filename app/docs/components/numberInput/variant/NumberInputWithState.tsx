@@ -12,7 +12,7 @@ const NumberInputWithState = () => {
         <NumberInputButton disabled={number === 0} onClick={() => setNumber((prev) => prev - 1)}>
           <Minus size={16} />
         </NumberInputButton>
-        <NumberInputBox min={0} max={100} value={number} onChange={(e) => setNumber(+e.target.value)} />
+        <NumberInputBox value={number} onChange={(e) => setNumber(+e.target.value)} />
         <NumberInputButton disabled={number === 100} onClick={() => setNumber((prev) => prev + 1)}>
           <Plus size={16} />
         </NumberInputButton>

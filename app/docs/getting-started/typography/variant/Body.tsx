@@ -1,6 +1,6 @@
 const BodyTypo = () => {
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4 text-center">
       <p className="text-body-1">The quick brown fox jumps over the lazy dog</p>
       <p className="text-body-2">The quick brown fox jumps over the lazy dog</p>
       <p className="text-body-3">The quick brown fox jumps over the lazy dog</p>

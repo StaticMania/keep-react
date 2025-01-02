@@ -44,7 +44,7 @@ const PieChartLegend = () => {
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[350px]">
+    <ChartContainer config={chartConfig} className="h-[300px]">
       <PieChart>
         <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
         <Pie data={chartData} dataKey="visitors" nameKey="browser"></Pie>
@@ -104,7 +104,7 @@ const PieChartLegend = () => {
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="aspect-square max-h-[350px]">
+    <ChartContainer config={chartConfig} className="h-[300px]">
       <PieChart>
         <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
         <Pie data={chartData} dataKey="visitors" nameKey="browser"></Pie>

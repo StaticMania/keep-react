@@ -13,7 +13,11 @@ const page: NextPage = () => {
   return (
     <DocsContentLayout description={`${metadata.description}`} title={`${metadata.title}`}>
       <ModalDocs />
-      <EditPage pageLink="/docs/components/modal" nextPageLink="/docs/components/navbar" nextPageName="Navbar" />
+      <EditPage
+        pageLink="/docs/components/modal"
+        nextPageLink="/docs/components/notification"
+        nextPageName="Notification"
+      />
     </DocsContentLayout>
   )
 }

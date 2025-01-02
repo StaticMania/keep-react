@@ -2,7 +2,7 @@ import { Skeleton, SkeletonLine } from '../../../../src'
 
 const ParagraphSkeleton = () => {
   return (
-    <Skeleton className="max-w-xl space-y-2.5">
+    <Skeleton className="mx-auto max-w-md space-y-2.5">
       <SkeletonLine className="h-4 w-11/12" />
       <SkeletonLine className="h-4 w-9/12" />
       <SkeletonLine className="h-4 w-10/12" />
@@ -17,7 +17,7 @@ import { Skeleton, SkeletonLine } from "keep-react";
 
 export const SkeletonComponent = () => {
   return (
-    <Skeleton className="max-w-xl space-y-2.5">
+    <Skeleton className="max-w-md mx-auto space-y-2.5">
       <SkeletonLine className="h-4 w-11/12" />
       <SkeletonLine className="h-4 w-9/12" />
       <SkeletonLine className="h-4 w-10/12" />

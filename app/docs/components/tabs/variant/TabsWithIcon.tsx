@@ -4,7 +4,7 @@ import { Skeleton, SkeletonLine, Tabs, TabsContent, TabsItem, TabsList } from '.
 
 const TabsWithIcon = () => {
   return (
-    <div className="py-3">
+    <div className="w-full">
       <Tabs defaultValue="item-1" className="mx-auto max-w-xl">
         <TabsList>
           <TabsItem value="item-1">

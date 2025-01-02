@@ -11,7 +11,7 @@ const HorizontalUpload = () => {
     setFiles(acceptedFiles)
   }, [])
   return (
-    <Upload horizontal options={{ onDrop }}>
+    <Upload horizontal options={{ onDrop }} className="w-full">
       <UploadBody>
         <UploadIcon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />

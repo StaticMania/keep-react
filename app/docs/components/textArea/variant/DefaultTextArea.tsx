@@ -2,7 +2,7 @@ import { Textarea } from '../../../../src'
 
 const DefaultTextArea = () => {
   return (
-    <div className="p-2">
+    <div className="w-full">
       <Textarea placeholder="Write your message here." rows={8} />
     </div>
   )

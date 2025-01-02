@@ -9,7 +9,7 @@ import {
 
 const VariantOfProgress = () => {
   return (
-    <div className="mx-auto flex max-w-lg flex-col gap-5">
+    <div className="flex w-full max-w-xl flex-col gap-5">
       <CircleProgress progress={55}>
         <CircleProgressLine />
         <CircleProgressText>55%</CircleProgressText>

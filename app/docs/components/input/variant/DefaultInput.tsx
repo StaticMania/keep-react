@@ -2,7 +2,7 @@ import { Input } from '../../../../src'
 
 const DefaultInput = () => {
   return (
-    <div className="max-w-md p-2">
+    <div className="mx-auto w-1/2 p-2">
       <Input placeholder="Enter name" type="text" />
     </div>
   )

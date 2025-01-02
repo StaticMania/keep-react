@@ -15,7 +15,7 @@ export type DateRangeType = {
 const DatePicker = ({
   className,
   classNames,
-  dayShape = 'circle',
+  dayShape = 'rounded',
   showOutsideDays = true,
   ...props
 }: CalendarProps) => {
@@ -23,7 +23,7 @@ const DatePicker = ({
     <DayPicker
       showOutsideDays={showOutsideDays}
       className={cn(
-        'flex max-w-min rounded-xl border border-metal-50 bg-white p-5 dark:border-metal-800 dark:bg-metal-900',
+        'flex max-w-min rounded-xl border border-metal-50 bg-white p-5 dark:border-metal-800/50 dark:bg-metal-900',
         className,
       )}
       classNames={{
@@ -37,7 +37,7 @@ const DatePicker = ({
         nav_button_previous: 'absolute left-1',
         nav_button_next: 'absolute right-1',
         table: 'w-full border-collapse space-y-1',
-        head_row: 'flex border-y border-metal-50 dark:border-metal-800',
+        head_row: 'flex ',
         head_cell: 'text-metal-400 dark:text-white rounded-xl w-10 font-normal text-body-4',
         row: 'flex w-full mt-2',
         cell: cn(

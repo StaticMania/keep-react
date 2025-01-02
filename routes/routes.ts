@@ -1,7 +1,6 @@
 import {
   BatteryWarning,
   BellRinging,
-  Browser,
   Browsers,
   Calendar,
   Cards,
@@ -221,15 +220,15 @@ export const routes: routerPath[] = [
     deprecate: false,
     Icon: PictureInPicture,
   },
-  {
-    id: generatedID(),
-    name: 'Navbar',
-    folderName: 'Navbar',
-    href: '/docs/components/navbar',
-    tag: false,
-    deprecate: false,
-    Icon: Browser,
-  },
+  // {
+  //   id: generatedID(),
+  //   name: 'Navbar',
+  //   folderName: 'Navbar',
+  //   href: '/docs/components/navbar',
+  //   tag: false,
+  //   deprecate: false,
+  //   Icon: Browser,
+  // },
   {
     id: generatedID(),
     name: 'Notification',

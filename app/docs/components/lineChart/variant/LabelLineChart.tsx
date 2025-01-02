@@ -11,22 +11,22 @@ import {
 
 const LabelLineChart = () => {
   const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 305 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 73 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 214 },
+    { month: 'January', sales: 186 },
+    { month: 'February', sales: 305 },
+    { month: 'March', sales: 237 },
+    { month: 'April', sales: 73 },
+    { month: 'May', sales: 209 },
+    { month: 'June', sales: 214 },
   ]
 
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
   } satisfies ChartConfig
   return (
-    <ChartContainer config={chartConfig} className="mx-auto min-h-[200px] w-full max-w-[600px]">
+    <ChartContainer config={chartConfig} className="max-h-[300px] w-full">
       <LineChart
         accessibilityLayer
         data={chartData}
@@ -46,7 +46,7 @@ const LabelLineChart = () => {
         <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
         <Line
-          dataKey="desktop"
+          dataKey="sales"
           type="natural"
           stroke="#1B4DFF"
           strokeWidth={2}
@@ -78,22 +78,22 @@ import {
 
 export const LineChartComponent = () => {
   const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 305 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 73 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 214 },
+    { month: 'January', sales: 186 },
+    { month: 'February', sales: 305 },
+    { month: 'March', sales: 237 },
+    { month: 'April', sales: 73 },
+    { month: 'May', sales: 209 },
+    { month: 'June', sales: 214 },
   ]
 
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
   } satisfies ChartConfig
   return (
-    <ChartContainer config={chartConfig}>
+    <ChartContainer config={chartConfig} className="max-h-[300px] w-full">
       <LineChart
         accessibilityLayer
         data={chartData}
@@ -112,7 +112,7 @@ export const LineChartComponent = () => {
         />
         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
         <Line
-          dataKey="desktop"
+          dataKey="sales"
           type="natural"
           stroke="#1B4DFF"
           strokeWidth={2}

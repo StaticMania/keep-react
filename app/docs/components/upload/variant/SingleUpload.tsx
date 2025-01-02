@@ -11,7 +11,7 @@ const SingleUpload = () => {
     setFiles(acceptedFiles)
   }, [])
   return (
-    <Upload options={{ onDrop, multiple: false }}>
+    <Upload options={{ onDrop, multiple: false }} className="w-full">
       <UploadBody>
         <UploadIcon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />

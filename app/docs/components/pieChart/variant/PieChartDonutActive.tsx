@@ -38,7 +38,7 @@ const PieChartDonutActive = () => {
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
+    <ChartContainer config={chartConfig} className="h-[300px]">
       <PieChart>
         <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
         <Pie
@@ -98,7 +98,7 @@ export const PieChartComponent = () => {
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
+    <ChartContainer config={chartConfig} className="h-[300px]">
       <PieChart>
         <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
         <Pie

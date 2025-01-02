@@ -12,27 +12,27 @@ import {
 
 const GradientColor = () => {
   const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 },
+    { month: 'January', sales: 186, profit: 80 },
+    { month: 'February', sales: 305, profit: 200 },
+    { month: 'March', sales: 237, profit: 120 },
+    { month: 'April', sales: 73, profit: 190 },
+    { month: 'May', sales: 209, profit: 130 },
+    { month: 'June', sales: 214, profit: 140 },
   ]
 
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
-    mobile: {
-      label: 'Mobile',
+    profit: {
+      label: 'Profit',
       color: '#60a5fa',
     },
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="mx-auto max-h-[250px] w-[600px]">
+    <ChartContainer config={chartConfig} className="max-h-[300px] w-full">
       <AreaChart
         accessibilityLayer
         data={chartData}
@@ -49,18 +49,18 @@ const GradientColor = () => {
           tickFormatter={(value) => value.slice(0, 3)}
         />
         <defs>
-          <linearGradient id="mobile" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="profit" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#1B4DFF" stopOpacity={0.4} />
             <stop offset="95%" stopColor="#1B4DFF" stopOpacity={0} />
           </linearGradient>
-          <linearGradient id="desktop" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="sales" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#1B4DFF" stopOpacity={0.4} />
             <stop offset="95%" stopColor="#1B4DFF" stopOpacity={0} />
           </linearGradient>
         </defs>
         <ChartLegend verticalAlign="top" align="right" content={<ChartLegendContent />} />
-        <Area stackId="a" type="natural" dataKey="mobile" stroke="#1B4DFF" fillOpacity={1} fill="url(#mobile)" />
-        <Area stackId="a" type="natural" dataKey="desktop" stroke="#1B4DFF" fillOpacity={1} fill="url(#desktop)" />
+        <Area stackId="a" type="natural" dataKey="profit" stroke="#1B4DFF" fillOpacity={1} fill="url(#profit)" />
+        <Area stackId="a" type="natural" dataKey="sales" stroke="#1B4DFF" fillOpacity={1} fill="url(#sales)" />
         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
       </AreaChart>
     </ChartContainer>
@@ -82,21 +82,21 @@ import {
 
 export const AreaChartComponent = () => {
   const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 },
+    { month: 'January', sales: 186, profit: 80 },
+    { month: 'February', sales: 305, profit: 200 },
+    { month: 'March', sales: 237, profit: 120 },
+    { month: 'April', sales: 73, profit: 190 },
+    { month: 'May', sales: 209, profit: 130 },
+    { month: 'June', sales: 214, profit: 140 },
   ]
 
   const chartConfig = {
-    desktop: {
-      label: 'Desktop',
+    sales: {
+      label: 'Sales',
       color: '#1B4DFF',
     },
-    mobile: {
-      label: 'Mobile',
+    profit: {
+      label: 'Profit',
       color: '#60a5fa',
     },
   } satisfies ChartConfig
@@ -119,18 +119,18 @@ export const AreaChartComponent = () => {
           tickFormatter={(value) => value.slice(0, 3)}
         />
         <defs>
-          <linearGradient id="mobile" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="profit" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#1B4DFF" stopOpacity={0.4} />
             <stop offset="95%" stopColor="#1B4DFF" stopOpacity={0} />
           </linearGradient>
-          <linearGradient id="desktop" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="sales" x1="0" y1="0" x2="0" y2="1">
             <stop offset="5%" stopColor="#1B4DFF" stopOpacity={0.4} />
             <stop offset="95%" stopColor="#1B4DFF" stopOpacity={0} />
           </linearGradient>
         </defs>
         <ChartLegend verticalAlign="top" align="right" content={<ChartLegendContent />} />
-        <Area stackId="a" type="natural" dataKey="mobile" stroke="#1B4DFF" fillOpacity={1} fill="url(#mobile)" />
-        <Area stackId="a" type="natural" dataKey="desktop" stroke="#1B4DFF" fillOpacity={1} fill="url(#desktop)" />
+        <Area stackId="a" type="natural" dataKey="profit" stroke="#1B4DFF" fillOpacity={1} fill="url(#profit)" />
+        <Area stackId="a" type="natural" dataKey="sales" stroke="#1B4DFF" fillOpacity={1} fill="url(#sales)" />
         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
       </AreaChart>
     </ChartContainer>

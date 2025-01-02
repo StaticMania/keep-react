@@ -2,7 +2,7 @@ import { Divider } from '../../../../src'
 
 const DividerSize = () => {
   return (
-    <section className="max-w-xl space-y-3">
+    <section className="w-full space-y-3">
       <Divider size="sm" />
       <Divider size="md" />
       <Divider size="lg" />
@@ -18,7 +18,7 @@ import { Divider } from 'keep-react'
 
 export const DividerComponent = () => {
   return (
-    <section className="max-w-xl space-y-3">
+    <section className="w-full space-y-3">
       <Divider size="sm" />
       <Divider size="md" />
       <Divider size="lg" />

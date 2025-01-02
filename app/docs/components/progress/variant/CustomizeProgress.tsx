@@ -9,7 +9,7 @@ import {
 
 const CustomizeProgress = () => {
   return (
-    <div className="mx-auto max-w-lg space-y-4">
+    <div className="mx-auto w-full max-w-xl space-y-4">
       <CircleProgress progress={45}>
         <CircleProgressLine className="stroke-error-50" strokeColor="stroke-error-500" />
         <CircleProgressText className="text-error-500">45%</CircleProgressText>

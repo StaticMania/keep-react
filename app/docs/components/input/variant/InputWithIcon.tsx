@@ -4,7 +4,7 @@ import { Input, InputIcon } from '../../../../src'
 
 const InputWithIcon = () => {
   return (
-    <div className="p-2">
+    <div className="mx-auto w-1/2 p-2">
       <fieldset className="relative max-w-md">
         <Input placeholder="Enter email" className="ps-11" />
         <InputIcon>

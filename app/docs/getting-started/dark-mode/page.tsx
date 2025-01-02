@@ -15,8 +15,8 @@ const page: NextPage = () => {
       <DarkMode />
       <EditPage
         pageLink="/docs/getting-started/dark-mode"
-        nextPageLink="/docs/layout/container"
-        nextPageName="Container"
+        nextPageLink="/docs/components/accordion"
+        nextPageName="Accordion"
       />
     </DocsContentLayout>
   )

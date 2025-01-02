@@ -19,7 +19,7 @@ const DefaultUpload = () => {
     setFiles(acceptedFiles)
   }, [])
   return (
-    <Upload options={{ onDrop }}>
+    <Upload options={{ onDrop }} className="w-full">
       <UploadBody>
         <UploadIcon>
           <Image src="/images/icon/folder.svg" alt="folder" height={28} width={28} />
